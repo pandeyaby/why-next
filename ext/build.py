@@ -18,8 +18,9 @@ import dsl  # noqa: E402
 import src_matter, src_energy, src_algebra, src_functions, src_forces  # noqa: F401,E402
 import src_waves, src_electricity, src_geometry, src_stats, src_calculus  # noqa: F401,E402  (wave 2)
 import src_organic, src_hypothesis, src_matrices, src_series  # noqa: F401,E402  (wave 3)
+import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  # noqa: F401,E402  (wave 4)
 
-EXT_VERSION = "v1-secondary-ext.0.3"
+EXT_VERSION = "v1-secondary-ext.0.4"
 ID_NAMESPACE = "marble-os-taxonomy/secondary-ext/v1:"
 CENTRALITY_SCALE = 731  # max descendant count in the v1 graph; see README_EXT.md
 
@@ -85,7 +86,7 @@ standards_ext = {
     "note": ("Standards added by the secondary extension. Only NGSS high-school physical-science codes were missing from v1; "
              "every CCSS-Math and UK KS3 key used by the extension already exists in v1 curriculum-standards.json. "
              "NGSS is codes-only (see PROVENANCE.md). Codes verified against nextgenscience.org DCI arrangement pages "
-             "HS-PS1, HS-PS2 and HS-PS3 on 2026-10-18 (re-checked for wave 3 on the same day), and HS-PS4 on 2026-10-18 (wave 2): "
+             "HS-PS1, HS-PS2 and HS-PS3 on 2026-10-18 (re-checked for wave 3 on the same day), and HS-PS4 on 2026-10-18 (wave 2; re-checked for wave 4 on the same day): "
              "https://www.nextgenscience.org/dci-arrangement/hs-ps1-matter-and-its-interactions , "
              "https://www.nextgenscience.org/dci-arrangement/hs-ps2-motion-and-stability-forces-and-interactions , "
              "https://www.nextgenscience.org/dci-arrangement/hs-ps3-energy , "
@@ -237,7 +238,7 @@ for t in all_topics: by_subj[t["subject"]] += 1
 m_manifest = copy.deepcopy(manifest_v1)
 m_manifest.update({
     "taxonomyVersion": EXT_VERSION,
-    "extension": {"name": "Secondary extension (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling, Waves, Electricity & Circuits, Geometry & Trigonometry, Statistics & Probability, Calculus, Organic Chemistry, Hypothesis Testing, Matrices & Complex Numbers, Series",
+    "extension": {"name": "Secondary extension (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling, Waves, Electricity & Circuits, Geometry & Trigonometry, Statistics & Probability, Calculus, Organic Chemistry, Hypothesis Testing, Matrices & Complex Numbers, Series, Poisson & t-tests, Eigenvalues & 3-D Vectors, Polar Coordinates, Aromatic Chemistry, Spectroscopy",
                   "baseTaxonomyVersion": manifest_v1["taxonomyVersion"], "status": "unofficial draft, not published by Marble"},
     "codesOnlySources": m_stds["codesOnlySources"],
 })

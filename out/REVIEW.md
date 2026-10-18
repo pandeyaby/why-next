@@ -1,4 +1,4 @@
-# Review log: secondary extension (wave 1: v1-secondary-ext.0.1 · wave 2: v1-secondary-ext.0.2 · wave 3: v1-secondary-ext.0.3)
+# Review log: secondary extension (wave 1: v1-secondary-ext.0.1 · wave 2: v1-secondary-ext.0.2 · wave 3: v1-secondary-ext.0.3 · wave 4: v1-secondary-ext.0.4)
 
 **Who reviewed it:** the same agent that wrote the topics did this review as a separate second pass. **No human, and no separate reviewer, has checked this work yet.** Please treat it as a first QA pass, not as independent expert review.
 
@@ -131,3 +131,69 @@ Net effect: 137 wave-3 topics (613 in total), 330 wave-3 edges. After the fixes,
   - KS3 EA.3 on *Biofuels and carbon neutrality*.
 - **Age bands for Further-Maths content** are a judgment: matrices, polar-form complex numbers, Maclaurin series, chi-squared tests, and type I/II errors and power.
 - **Short edge reasons.** 248 of the 330 wave-3 edge reasons are under 42 characters.
+
+---
+
+# Wave 4 review (Poisson & t-tests, eigenvalues & 3-D vectors, polar coordinates, aromatic chemistry, spectroscopy)
+
+## Method
+I did this review myself; nobody independent reviewed it.
+1. **Build checks while authoring.** The extension checks run on every build. They caught one age violation (W4-1).
+2. **Overlap audit (all 127 wave-4 topics).** Same method as wave 3: Jaccard similarity on content words against every v1, wave-1–3 and wave-4 topic in the same subject, flagged above 0.22 (57 pairs), each judged by hand. I also checked by hand against the earlier topics wave 4 builds on: the wave-3 binomial, normal-mean, confidence-interval and chi-squared topics, *Invariant points and lines*, *Modulus–argument form*, *Relative atomic mass*, *Relative formula mass* and *Solving trigonometric equations*.
+3. **Random sample of 30 items** (seed `20261021`, Python `random.Random`):
+   - 20 topics, 4 from each requested area (Poisson & t; eigenvalues & 3-D vectors; polar; aromatic; spectroscopy).
+   - 10 edges drawn from wave-4 topics outside the topic sample.
+   - Each topic was checked for correctness (chemistry and maths facts, worked numbers), age band, type, standards fit, evidence and prompt, and every incoming edge (necessity, hard/soft, reason).
+4. **Standards pass (all 15 tagged wave-4 topics).** I compared each tag with the standard's text in `curriculum-standards.json` (CCSS) or on the nextgenscience.org HS-PS1 and HS-PS4 pages (HS-PS4 re-read on 2026-10-18).
+5. **Re-check.** I rebuilt and re-ran every validator after the fixes.
+
+## Findings and fixes (all applied)
+| # | Finding | Fix |
+|---|---|---|
+| W4-1 | Soft edge *The transpose of a matrix* (age 16) ← *Inverse of a product* (age 17) broke age monotonicity; the build check caught it | Edge replaced by a soft edge → *Matrices: notation and order* (16). The transpose stays at 16 because it is a basic operation |
+| W4-2 | *Polar coordinates and modulus–argument form* repeated wave-3 *Modulus–argument form*, whose evidence already includes explaining why both forms describe the same point | Refocused on what is new: the different angle conventions (0 ≤ θ < 2π and negative r in polar work, against the principal argument in −π < θ ≤ π). The third evidence item now converts such points to a principal argument. The N-CN.4 tag is kept because representing complex numbers in polar form is still the topic |
+| W4-3 | *Halogenation of benzene* said "a halogen carrier such as FeBr₃ or AlCl₃", which could be read as pairing AlCl₃ with bromine | Now "FeBr₃ for bromine or AlCl₃ for chlorine" |
+| W4-4 | *The molecular ion peak*: the prompt used an unknown alcohol, but alcohols often give a weak or missing M⁺ peak, so the task could mislead | Prompt changed to an unknown hydrocarbon |
+| W4-5 | *How a mass spectrometer works* hard-depended on *Isotopes*; the working of the instrument does not need isotopes | Made soft ("Separating isotopes by mass is a key use") |
+| W4-6 | Sampled edge *The Kekulé model of benzene* ← *Skeletal formulae* was hard, but the Kekulé structure can be drawn and understood as a displayed formula | Made soft |
+| W4-7 | *The Cayley–Hamilton theorem* has the evidence "Uses it to find A⁻¹" but no link to inverse matrices | Added a soft prerequisite → *Inverse of a 2×2 matrix* |
+
+The remaining sampled items had no problems. I checked the following and found them correct:
+- **Statistics:** E(X) = Var(X) = λ, and over-dispersion as evidence against a Poisson model (mean 2.1 with variance 6.3); the standard error of a difference of means; that pairing usually increases power.
+- **Matrices:** trace 7 and determinant 10 give eigenvalues 2 and 5; A² − 5A + 6I = 0 gives A⁻¹ = (5I − A)/6; Aⁿ = PDⁿP⁻¹.
+- **Polar:** r = 4 cos θ is the circle centred at (2, 0) with radius 2; y = x² becomes r = tan θ sec θ; r = 2 sec θ is x = 2; ∫sin²θ from 0 to π = π/2.
+- **Chemistry:** directing effects (–OH, –NH₂ and –CH₃ to positions 2 and 4; –NO₂ to position 3, so nitrate first to make 3-bromonitrobenzene); phenylamine is a weaker base than ammonia; the M+1 rule (about 1.1% per carbon); Cl and Br M+2 ratios; molecular formulae from CH₂ (Mr 56) and CH₂O (Mr 60).
+- **Numbers checked outside the sample:**
+  - Cl₂ peaks in the ratio 9:6:1.
+  - Accurate masses: CO 27.9949, N₂ 28.0061, C₂H₄ 28.0313, C₂H₄O 44.0262.
+  - Benzene hydrogenation: about −208 kJ mol⁻¹, against −360 predicted.
+  - C–C bond lengths: 0.154, 0.139 and 0.134 nm.
+  - The NO₂⁺ equation, balanced for atoms and charge.
+  - Rose-curve petal counts and the cardioid area 3πa²/2.
+
+Of the 10 sampled edges, one was changed (W4-6) and nine were kept. Two examples: *Tangents to polar curves* ← *Polar curves as parametric curves* (hard), and *Goodness of fit to binomial and Poisson models* ← *Degrees of freedom* (hard).
+
+Every other flagged overlap pair is an intended neighbour, for example:
+- the Poisson topics against their binomial counterparts;
+- *One-sample t-test* / *Hypothesis test for a normal mean*;
+- *Areas between polar curves* / *Areas between curves*;
+- *Mass spectra of elements* / *Relative atomic mass* (it reads the spectrum and then uses that topic);
+- pairs inside the same new area, such as lines vs planes.
+
+Chi-squared goodness of fit and contingency tables were already covered in wave 3. Wave 4 therefore adds only fitting binomial or Poisson models with estimated parameters, and interpreting cell contributions. I dropped a planned topic on combining small expected frequencies because wave-3 *Chi-squared goodness-of-fit test* already has it as evidence.
+
+Standards pass: all 15 tags kept.
+
+Net effect: 127 wave-4 topics (740 in total), 358 wave-4 edges. After the fixes, every check passes: the repo validator on merged and v1, JSON Schema on all 7 files, the extension checks, and wave-1–3 stability (613/613 topics unchanged apart from centrality, 1413/1413 edges unchanged, 0 earlier → wave-4 edges).
+
+## Not fixed: open doubts (wave 4)
+- **Standards coverage is very thin** (15 of 127 topics). This is because there are no fitting codes. I added nothing to fill the gap.
+- **Several tags are judgment calls:**
+  - S-IC.5 on *Two-sample t-test*: the standard compares two treatments by simulation, while the topic uses a t-distribution.
+  - S-IC.4 on *Confidence intervals using the t-distribution*, by the same reasoning as the wave-3 precedent.
+  - HS-PS1-4 on *Enthalpy of hydrogenation and benzene's stability*: the topic uses an energy-level model, not bond-energy totals, which the assessment boundary excludes.
+  - N-VM.12 on *Interpreting eigenvalues geometrically*.
+- **Some prerequisites lie outside the requested areas.** These were added because nothing earlier covered them: variance of a random variable, unbiased estimates, the transpose, compound-angle formulae, s/p orbitals, σ/π bonds, empirical formulae. Wave-3 *Mean and variance of a binomial distribution* uses variance but cannot be linked to the new topic, because earlier topics never get new prerequisites.
+- **Data ranges follow common A-level data sheets, which differ slightly between exam boards.** This applies to the IR ranges (O–H in alcohols about 3200–3550 cm⁻¹, O–H in acids about 2500–3300 cm⁻¹, C=O about 1680–1750 cm⁻¹) and to the diazonium temperature limit (below 10 °C).
+- **Wave 4 sits deep in the graph.** Only 7 edges go straight to v1, and many chains are 25 or more topics long from early-years v1 topics. Age bands are almost all 16–18 or 17–18.
+- **Short edge reasons.** 217 of the 358 wave-4 edge reasons are under 42 characters.
