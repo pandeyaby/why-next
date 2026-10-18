@@ -1,7 +1,7 @@
 # Reference JavaScript (read-only snapshots)
 
 `infer.js` and `soften.js` are verbatim snapshots of `site/assets/infer.js` and `site/assets/soften.js`
-from the website draft (branch `site-draft`, working copy as of 2026-10-18 15:22 PDT;
+from the website draft (branch `site-draft`, identical to commit `ec77059`;
 infer.js sha256 `be80d45e2c0b752313dd5ba5bd015b4c3ebececa37795b98cf2bd315c7acc174`).
 
 They are not shipped in the app. They are the source of truth that the Swift port in
