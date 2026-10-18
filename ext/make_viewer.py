@@ -1,4 +1,5 @@
-"""Generate out/viewer.html: single-file viewer of the secondary extension subgraph."""
+"""Generate out/viewer.html: single-file Why Next? viewer (new topics plus their upstream v1 ancestors)."""
+import html as _html
 import json
 T = json.load(open("out/merged/data/topics.json"))["topics"]
 by = {t["id"]: t for t in T}
@@ -24,6 +25,7 @@ edges = [{"t": e["topicId"], "p": e["prerequisiteId"], "h": e["strength"] == "ha
 C = json.load(open("out/merged/data/clusters.json"))["clusters"]
 clusters = {f"{c['subject']}|{c['domain']}|{c['ageRangeStart']}": c["summary"] for c in C}
 data = json.dumps({"nodes": nodes, "edges": edges, "clusters": clusters}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-html = open("ext/viewer_template.html").read().replace("/*__DATA__*/null", data)
+credit = _html.escape(open("ext/CREDIT.txt", encoding="utf-8").read().strip())
+html = open("ext/viewer_template.html").read().replace("/*__DATA__*/null", data).replace("/*__CREDIT__*/", credit)
 open("out/viewer.html", "w").write(html)
 print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries")

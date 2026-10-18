@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Marble Skill Taxonomy: secondary extension viewer (unofficial draft)</title>
+<title>Why Next? A learning map: what to learn next, and why</title>
 <style>
 :root{--new:#2563eb;--old:#6b7280;--bridge:#d97706;--bg:#f8fafc}
 *{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#111827;background:var(--bg);display:flex;height:100vh}
@@ -24,23 +24,23 @@ ul.tree{list-style:none;padding-left:18px;margin:2px 0;border-left:1px dashed #d
 svg{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px}
 .legend span{margin-right:12px;font-size:12px}.muted{color:#6b7280}
 </style></head><body>
-<div id="side"><header><h1>Secondary extension (ages 11–18)</h1>
-<small>Unofficial draft extension of the Marble Skill Taxonomy v1. <span id="cnt"></span></small>
+<div id="side"><header><h1>Why Next?</h1>
+<small>A family-friendly learning map for ages 11–18: what to learn next, and why. <span id="cnt"></span></small>
 <input id="q" placeholder="Search topics…">
-<div id="filters"><label><input type="checkbox" id="showOld"> include v1 ancestors</label></div></header>
+<div id="filters"><label><input type="checkbox" id="showOld"> include upstream v1 ancestors</label></div></header>
 <div id="list"></div></div>
 <div id="main"><div class="card"><b>How to use:</b> pick a topic on the left. You'll see its full prerequisite chain, with the reason for each link.
-<span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a new topic into Marble v1</span>
-<span style="color:var(--new)">■ new topic</span> <span style="color:var(--old)">■ v1 topic</span></span>
-<p class="muted" id="stats"></p></div><div id="detail"></div></div>
+<span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
+<span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
+<p class="muted" id="stats"></p><p class="muted" style="font-size:12px;margin-bottom:0">/*__CREDIT__*/</p></div><div id="detail"></div></div>
 <script>
 const DATA=/*__DATA__*/null;
 const N=new Map(DATA.nodes.map(n=>[n.id,n]));const PRE=new Map();const POST=new Map();
 for(const e of DATA.edges){(PRE.get(e.t)||PRE.set(e.t,[]).get(e.t)).push(e);(POST.get(e.p)||POST.set(e.p,[]).get(e.p)).push(e)}
 const isBridge=e=>N.get(e.t).new&&!N.get(e.p).new;
 const nNew=DATA.nodes.filter(n=>n.new).length,nB=DATA.edges.filter(isBridge).length,nNE=DATA.edges.filter(e=>N.get(e.t).new).length;
-document.getElementById('cnt').textContent=`${nNew} new topics.`;
-document.getElementById('stats').textContent=`${nNew} new topics · ${nNE} new edges (${nB} bridge edges into v1) · ${DATA.nodes.length-nNew} v1 ancestor topics shown for context.`;
+document.getElementById('cnt').textContent=`${nNew} topics.`;
+document.getElementById('stats').textContent=`${nNew} Why Next? topics · ${nNE} Why Next? edges (${nB} bridge edges into upstream v1) · ${DATA.nodes.length-nNew} upstream v1 ancestor topics shown for context.`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let sel=null;
 function renderList(){const q=document.getElementById('q').value.toLowerCase(),old=document.getElementById('showOld').checked;
@@ -70,7 +70,7 @@ function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class=
 function select(id){sel=id;const n=N.get(id);renderList();const anc=ancestors(id,false);
  const clu=(DATA.clusters||{})[n.s+'|'+n.d+'|'+n.a[0]];const prim=[...anc].filter(u=>!N.get(u).new&&N.get(u).a[0]<=10).length;const users=(POST.get(id)||[]).map(e=>N.get(e.t));
  document.getElementById('detail').innerHTML=`<div class="card"><h2 style="margin:0 0 4px">${esc(n.n)}</h2>
- <span class="tag ${n.new?'new':'old'}">${n.new?'new':'v1'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">${n.ty}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span><span class="tag" title="Marble centrality on the merged graph: (ancestors + descendants) / max">centrality ${n.c}</span>
+ <span class="tag ${n.new?'new':'old'}">${n.new?'Why Next?':'upstream v1'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">${n.ty}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span><span class="tag" title="Centrality on the merged graph: (ancestors + descendants) / max">centrality ${n.c}</span>
  <p>${esc(n.desc)}</p>${n.ev.length?'<b>Evidence</b><ul>'+n.ev.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':''}
  <b>Standards:</b> ${n.st.length?n.st.map(esc).join(', '):'<span class="muted">none</span>'}<br>
  <span class="muted">${anc.size-1} ancestor topics (${prim} at primary ages ≤10).</span>

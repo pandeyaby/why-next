@@ -1,10 +1,13 @@
-# Marble Skill Taxonomy: secondary extension (ages 11–18), **unofficial draft**
+# Why Next? A learning map for ages 11–18: what to learn next, and why (**draft**)
 
-> **Status:** unofficial draft extension by Abhinav Pandey, built on top of the open [Marble Skill Taxonomy v1](https://github.com/withmarbleapp/os-taxonomy).
-> **Generative Spark, Inc. (Marble) has not reviewed or endorsed it.** Version label: `v1-secondary-ext.0.6` (waves 1–5 plus a polish pass over reasons, clusters and centrality). Nothing has been published.
+> **Status:** draft by Abhinav Pandey. Version label: `whynext-0.6` (waves 1–5 plus a polish pass over reasons, clusters and centrality; earlier internal labels were `v1-secondary-ext.0.1`–`0.6`). Nothing has been published.
+>
+> **Credit:** Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.
+>
+> In this document, **upstream v1** (or just *v1*) means that original taxonomy. Its 1590 topic ids are kept verbatim, and `id-map.json` maps every Why Next? topic back to the upstream v1 topics it builds on.
 
 ## Scope
-This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3–KS4/post-16)**. They plug into Marble v1's existing primary graph and its coarse KS3 topics. It was built in five waves on the same branch with the same method. Earlier ids and edge structure are never changed: after wave 5, all 740 wave-1–4 topics were unchanged (apart from their recomputed centrality), all 1771 wave-1–4 edges were unchanged, and no earlier topic depends on a later one. The later polish pass changed only edge-reason text and centrality values; no topic, id, edge or strength changed (see *Polish pass* below).
+This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3–KS4/post-16)**. They plug into the upstream v1 primary graph and its coarse KS3 topics. It was built in five waves on the same branch with the same method. Earlier ids and edge structure are never changed: after wave 5, all 740 wave-1–4 topics were unchanged (apart from their recomputed centrality), all 1771 wave-1–4 edges were unchanged, and no earlier topic depends on a later one. The later polish pass changed only edge-reason text and centrality values; no topic, id, edge or strength changed (see *Polish pass* below).
 
 | Subject / domain | v1 | Wave 1 | Wave 2 | Wave 3 | Wave 4 | Wave 5 | Total |
 |---|---|---|---|---|---|---|---|
@@ -62,7 +65,8 @@ This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3�
 | `dependencies.ext.json` | The 2031 new edges (same schema as `data/dependencies.json`) |
 | `standards.ext.json` | The new `ngss-hs` curriculum (24 codes, codes only) |
 | `clusters.ext.json` | 61 parent-facing cluster summaries, one per (subject, domain, starting age) group the new topics occupy (same schema as `data/clusters.json`) |
-| `merged/data/*.json` | Full merged dataset (v1 + extension) with an updated `manifest.json` (counts, sha256, `extension` block) |
+| `merged/data/*.json` | Full merged dataset (upstream v1 + Why Next?) with an updated `manifest.json` (dataset name, attribution, counts, sha256, `extension` block) |
+| `id-map.json` | Mapping back to the upstream v1 topic ids: all 1590 upstream ids (kept verbatim) and, for each of the 826 Why Next? topics, its authoring key, the upstream topics it links to directly (`bridgeTo`) and all upstream topics among its prerequisites (`upstreamAncestors`) |
 | `merged/scripts/validate.mjs` | Unmodified copy of the repo validator, so it can check the merged data |
 | `build-report.json` | Machine-readable output of the extension checks |
 | `viewer.html` | Single-file interactive viewer (works offline; open it in a browser). Each topic shows its centrality and the cluster summary for its subject, domain and starting age. |
@@ -79,30 +83,30 @@ To rebuild: `python3 ext/build.py && python3 ext/check_schema.py && python3 ext/
 
 ## Method
 - **Format.** Every topic has the same fields as v1: id, type, subject, domain, name, description, age range, centrality, evidence (2–4 observable items), an `assessmentPrompt` containing `{{name}}`, and standards.
-- **Deterministic ids.** Each id is `"mt_" + base64url(sha256("marble-os-taxonomy/secondary-ext/v1:" + key))[:10]`, where `key` is a stable slug such as `al_quad_formula`. A salt would be appended on collision; none occurred. No id collides with v1.
+- **Deterministic ids.** Each id is `"mt_" + base64url(sha256("marble-os-taxonomy/secondary-ext/v1:" + key))[:10]`, where `key` is a stable slug such as `al_quad_formula`. The namespace string is kept unchanged from the first wave so that ids stay stable across versions; it is an opaque hash input, not a brand. A salt would be appended on collision; none occurred. No id collides with v1.
 - **Placement.** New topics go into v1's existing domains where one fits (Matter & Materials, Energy, Forces & Motion, Algebra, Waves Light & Sound, Geometry, Data & Statistics, Probability). *Functions & Modeling*, *Electricity & Circuits*, *Calculus* and *Matrices & Complex Numbers* are new domains.
-- **Centrality** uses Marble's own method, reproduced exactly and recomputed on the merged graph (see *Polish pass → Centrality*).
+- **Centrality** uses the upstream v1 method, reproduced exactly and recomputed on the merged graph (see *Polish pass → Centrality*).
 - **Standards policy.** Only codes that are real and verified are used. CCSS and KS3 keys were taken from v1's `curriculum-standards.json`.
   - NGSS HS codes were checked against the official nextgenscience.org DCI arrangement pages (HS-PS1, HS-PS2, HS-PS3, and for wave 2 [HS-PS4](https://www.nextgenscience.org/dci-arrangement/hs-ps4-waves-and-their-applications-technologies-information-transfer)) on 2026-10-18.
   - **Wave 4 is mostly untagged.** CCSS-Math has no codes for the Poisson or t-distributions, eigenvalues, polar coordinates or 3-D lines and planes, and NGSS/KS3 have no aromatic-chemistry or spectroscopy PEs beyond the general ones used; only clear fits were tagged (see the standards bullet above).
   - **Calculus and most series/hypothesis-testing topics have no standards.** CCSS-Math has no codes for sigma notation, sums to infinity, Maclaurin/Taylor series, parametric equations, p-values, critical regions or type I/II errors, and the brief forbids guessing; wave-3 topics without a good fit are left empty.
   - **Calculus (wave 2) has no standards.** CCSS-Math has no calculus standards. AP Calculus CED identifiers (e.g. unit/topic numbers and learning objectives) are College Board material, are not in the repo's curricula, and have no repo-compatible, verifiable code format, so per the brief they were left empty rather than guessed.
   - When no code fit well, the topic's standards were left empty rather than guessed. **No codes were invented.**
-- **NGSS text.** The brief asked for official text, but NGSS text is **not** included. Marble's `PROVENANCE.md` makes NGSS a codes-only source, because its licence cannot be relicensed under ODbL and limits commercial use. `ngss-hs` follows that rule, so it has no `data` field and is listed in `codesOnlySources`.
+- **NGSS text.** The brief asked for official text, but NGSS text is **not** included. The upstream `PROVENANCE.md` makes NGSS a codes-only source, because its licence cannot be relicensed under ODbL and limits commercial use. `ngss-hs` follows that rule, so it has no `data` field and is listed in `codesOnlySources`.
 
 ## Polish pass (v0.6): reasons, clusters, centrality
 Only reason text and centrality changed. Every topic, id, edge and strength is the same as in the wave-5 commit (checked; see *Validation*).
 
 ### Edge reasons
 - **Target:** every new edge whose reason was under 60 characters or started with the formula "Builds on…": 1723 of 2031 edges (1707 short, plus generic ones).
-- **How:** the edges were dumped in 15 batches with the dependent topic's description and the prerequisite's name. Each reason was rewritten by hand to say what the dependent topic actually uses from the prerequisite (a fact, a formula, a method or a picture), in Marble's tone: one plain sentence, no full stop. A checker flagged reasons under 60 or over 140 characters, unknown or duplicate edges and missing coverage. The new text was written into `ext/src_*.py` by an AST-based script that replaces only the reason string of each matching `(ref, strength, reason)` tuple. The build then confirmed the edge set and strengths were unchanged.
+- **How:** the edges were dumped in 15 batches with the dependent topic's description and the prerequisite's name. Each reason was rewritten by hand to say what the dependent topic actually uses from the prerequisite (a fact, a formula, a method or a picture), in the upstream v1 tone: one plain sentence, no full stop. A checker flagged reasons under 60 or over 140 characters, unknown or duplicate edges and missing coverage. The new text was written into `ext/src_*.py` by an AST-based script that replaces only the reason string of each matching `(ref, strength, reason)` tuple. The build then confirmed the edge set and strengths were unchanged.
 - **Spot check:** 40 rewritten reasons (seeded random sample) were checked for accuracy. Three were fixed: one was inaccurate (velocity as the gradient of displacement attributed to velocity–time graphs) and two were vague. See REVIEW.md, P-1 to P-3.
 
 | Reason length (characters) | mean | median | p10 | p90 | min | max | under 60 |
 |---|---|---|---|---|---|---|---|
-| Extension, before (2031 edges) | 44.8 | 43 | 28 | 65 | 9 | 111 | 1707 |
-| Extension, after (2031 edges) | 78.8 | 79 | 64 | 92 | 60 | 115 | 0 |
-| Marble v1, for comparison (3221 edges) | 83.2 | 76 | 54 | 122 | 22 | 275 | 572 |
+| Why Next?, before (2031 edges) | 44.8 | 43 | 28 | 65 | 9 | 111 | 1707 |
+| Why Next?, after (2031 edges) | 78.8 | 79 | 64 | 92 | 60 | 115 | 0 |
+| Upstream v1, for comparison (3221 edges) | 83.2 | 76 | 54 | 122 | 22 | 275 | 572 |
 
 ### Clusters
 - `out/clusters.ext.json` holds **61 clusters**, one for every (subject, domain, starting age) group the new topics occupy: 12 domains across ages 11–17. They use v1's format and its parent-facing "Your child is learning…" style. Lengths are 129–253 characters (mean 209; v1 mean 202, range 123–310).
@@ -110,7 +114,7 @@ Only reason text and centrality changed. Every topic, id, edge and strength is t
 - The merged `clusters.json` keeps v1's 183 clusters unchanged and appends the 61, giving 244. Both files validate against `schema/clusters.schema.json`.
 
 ### Centrality
-- **Marble's method, reproduced exactly:** `centrality = (ancestors + descendants) / max over all topics of (ancestors + descendants)`. Ancestors and descendants are every topic connected to the topic through prerequisite edges (hard or soft) in either direction.
+- **The upstream v1 method, reproduced exactly:** `centrality = (ancestors + descendants) / max over all topics of (ancestors + descendants)`. Ancestors and descendants are every topic connected to the topic through prerequisite edges (hard or soft) in either direction.
 - **How it was found:** every v1 value is an exact multiple of 1/731. Candidate measures were compared on the v1 graph: descendants (Spearman 0.46 with v1; exact for 100 topics), PageRank, betweenness, harmonic, degree and others (Spearman 0.17–0.49). Ancestors plus descendants matched **all 1590 v1 values exactly** (maximum absolute error 5.6e-17; the maximum count is 731, for *One-to-one counting*). `build.py` checks this reproduction on every build.
 - **Recomputed on the merged graph** for all 2416 topics. The new maximum is 1497 (still *One-to-one counting*). The extension file and the merged copy carry the same recomputed values for new topics (mean 0.156, range 0.005–0.368). The merged copy also carries recomputed v1 values; `data/topics.json` is untouched.
 - **Previous method:** waves 1–5 used an approximation, `min(1, descendants / 731)`. It reproduces v1 poorly (Spearman 0.46) and ranks the new topics almost unrelated to the exact method (Spearman −0.12), so it has been replaced.
@@ -144,7 +148,7 @@ merged v1 topics identical except centrality: yes · merged v1 edges identical i
 merged v1 clusters preserved (183) + 61 new = 244 · v1→new edges: 0
 ```
 
-## Example prerequisite chains (hard edges; NEW = extension topic)
+## Example prerequisite chains (hard edges; NEW = Why Next? topic)
 ### Wave 5
 The longest hard-edge path into each topic, shown from the last v1 topic on it. Read left to right as "is needed for".
 
@@ -229,25 +233,23 @@ Each chain is the longest hard-edge path through new topics, then the shortest h
 ← Speed and energy (v1, primary, ages 9–10)
 
 ## License and attribution
-This is a derivative of the Marble Skill Taxonomy, so it carries **the same licences, with share-alike**:
+Why Next? is a derived database and adapted content, so it carries **the same licences, with share-alike**:
 - **Database** (structure, ids, edges, topic↔standard links): [ODbL 1.0](../LICENSE).
 - **Text** (names, descriptions, evidence, prompts, reasons): [CC BY-SA 4.0](../LICENSE-CONTENT).
 
-Required attribution:
-> Marble Skill Taxonomy (v1) · © Generative Spark, Inc. (Marble) · https://withmarble.com · licensed under ODbL 1.0 (database) and CC BY-SA 4.0 (content).
-> Secondary extension (unofficial draft) by Abhinav Pandey, distributed under the same licences.
+Attribution: the credit line at the top of this file is the single required credit; it also appears in `merged/data/manifest.json` (`attribution`), `id-map.json` and the viewer footer. Why Next? additions by Abhinav Pandey are distributed under the same licences. The licence texts are included as `LICENSE` (ODbL 1.0) and `LICENSE-CONTENT` (CC BY-SA 4.0).
 
-Upstream standards notices (see `PROVENANCE.md`):
+Upstream standards notices (see the upstream `PROVENANCE.md`):
 - **NGSS:** codes only. *"NGSS is a registered trademark of WestEd. Neither WestEd nor the lead states and partners that developed the Next Generation Science Standards were involved in the production of this product, and do not endorse it."*
-- **CCSS-Math:** © 2010 NGA Center and CCSSO, under the CCSS Public License (not ODbL). This extension adds no CCSS text; it only references existing v1 keys.
+- **CCSS-Math:** © 2010 NGA Center and CCSSO, under the CCSS Public License (not ODbL). Why Next? adds no CCSS text; it only references existing v1 keys.
 - **UK National Curriculum:** *"Contains public sector information licensed under the Open Government Licence v3.0."* Only existing v1 KS3 keys are referenced.
 
 ## Known gaps and caveats
-- **No KS4 or A-level codes.** England publishes no official codes for KS4 or A level (the `uk-nc-2013` KS3 keys in v1 were built by Marble). To avoid inventing codes I added none, so topics at ages 14–18 are tagged only with CCSS/NGSS codes or left empty.
+- **No KS4 or A-level codes.** England publishes no official codes for KS4 or A level (the `uk-nc-2013` KS3 keys in v1 were built by the upstream authors). To avoid inventing codes I added none, so topics at ages 14–18 are tagged only with CCSS/NGSS codes or left empty.
 - **428 topics have no standard** (31 wave 1, 108 wave 2, 94 wave 3, 112 wave 4, 83 wave 5). In wave 5 only the three focus/directrix conics topics are tagged, because no verified code fit well. In wave 4 only 15 of 127 topics are tagged: the Poisson and t-distributions, eigenvalues beyond N-VM.11/12, polar coordinates, 3-D lines and planes, aromatic chemistry and NMR/IR/mass-spectrum interpretation have no matching CCSS, NGSS or KS3 codes. This includes all 51 wave-2 calculus topics and, in wave 3, most series (27 of 31), hypothesis-testing (25 of 30) and organic-chemistry (29 of 38) topics. NGSS has no organic-chemistry PEs beyond general bonding/reaction ones, and CCSS has no codes for sigma notation, convergence, Maclaurin/Taylor series, parametric equations or formal hypothesis tests (p-values, critical regions, type I/II errors). AP and A-level identifiers were not used because they are not in the repo and can't be verified in its format.
 - **NGSS text is omitted** (codes-only, as v1 does). The repo's licensing policy takes precedence.
 - **Clusters are one per starting age.** v1 clusters skip some ages within a domain; the extension writes one for every starting age the new topics occupy (11–17), so a few clusters cover only one to four topics (for example *Geometry* at 12, *Matter & Materials* at 11).
-- **Merged centrality changes v1 values.** Recomputing on the merged graph raises the maximum from 731 to 1497, so v1 values in the merged copy change (1051 go down, 538 go up), even for the 848 v1 topics whose ancestor-plus-descendant count did not change. The files under `data/` are untouched. Because Marble's measure counts ancestors as well as descendants, topics at the end of long chains (for example *Racemic products and single-enantiomer medicines*, 0.368) score higher than their foundations.
+- **Merged centrality changes v1 values.** Recomputing on the merged graph raises the maximum from 731 to 1497, so v1 values in the merged copy change (1051 go down, 538 go up), even for the 848 v1 topics whose ancestor-plus-descendant count did not change. The files under `data/` are untouched. Because the upstream measure counts ancestors as well as descendants, topics at the end of long chains (for example *Racemic products and single-enantiomer medicines*, 0.368) score higher than their foundations.
 - **Overlap.** Wave 1 removed four duplicates and renamed ten topics; wave 2 removed four more duplicates (polygon angles, Earth's magnetic field, colour filters, lens ray diagrams) and refocused two; wave 3 refocused three topics that partly repeated wave-1 topics (see REVIEW.md, W3-2 to W3-4). Wave 4 refocused one topic that repeated wave 3 (*Polar coordinates and modulus–argument form*, W4-2) and does not repeat wave-3 chi-squared tests, *Invariant points and lines* or wave-1 *Relative atomic mass*; it builds on them. Wave 3 deliberately does not repeat wave-1 *Sum of an arithmetic series*, *Sum of a finite geometric series* and *Complex solutions of quadratics*; it builds on them.
 - **Series is split across domains** (Algebra, Calculus, Functions & Modeling), and electricity across Energy and Electricity & Circuits.
 - **Self-review only.** A teacher or subject expert should review the topics, age bands and hard/soft calls before anyone relies on them. Edge reasons were rewritten and spot-checked (40 of 1723), but not reviewed one by one by a subject expert.

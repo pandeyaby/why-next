@@ -1,7 +1,7 @@
 from dsl import T, C, P, R, L, M
 D = "Calculus"
 # No standards: CCSS has no calculus standards, and AP Calculus framework
-# identifiers are not part of this repository's curricula (see README_EXT.md).
+# identifiers are not part of this repository's curricula (see out/README.md).
 
 # ---------------------------------------------------------------- limits and the derivative
 T("ca_secant_tangent", C, D, "From average to instantaneous rate of change", "16-18",

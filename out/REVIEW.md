@@ -1,4 +1,6 @@
-# Review log: secondary extension (wave 1: v1-secondary-ext.0.1 · wave 2: v1-secondary-ext.0.2 · wave 3: v1-secondary-ext.0.3 · wave 4: v1-secondary-ext.0.4 · wave 5: v1-secondary-ext.0.5 · polish pass: v1-secondary-ext.0.6)
+# Review log: Why Next? (wave 1: whynext-0.1 · wave 2: whynext-0.2 · wave 3: whynext-0.3 · wave 4: whynext-0.4 · wave 5: whynext-0.5 · polish pass: whynext-0.6; earlier internal labels v1-secondary-ext.0.x)
+
+*Upstream v1* below means the original taxonomy credited in README.md.
 
 **Who reviewed it:** the same agent that wrote the topics did this review as a separate second pass. **No human, and no separate reviewer, has checked this work yet.** Please treat it as a first QA pass, not as independent expert review.
 
@@ -30,7 +32,7 @@
 | 17 | Edge *Measuring rates from graphs* ← *Factors affecting rate*: either can come first | Changed to soft |
 | 18 | One reason was truncated ("Exponential functions are the other side") | Rewritten |
 
-Net effect: 234 → 230 topics. After the fixes I rebuilt everything and re-ran all checks; they pass (see README_EXT.md).
+Net effect: 234 → 230 topics. After the fixes I rebuilt everything and re-ran all checks; they pass (see README.md).
 
 ## Not fixed: open doubts
 - Most edge reasons are fine but short (about 75 are under 42 characters). A domain expert could make many of them more specific.
@@ -258,7 +260,7 @@ Net effect: 86 wave-5 topics (826 in total), 260 wave-5 edges. After the fixes, 
 | P-3 | Spot check, *Families of polar curves* ← *Sketching polar curves*: "sketched with the usual methods" was vague | Now names the method: finding where r is largest, smallest and zero, for limaçons with a dimple or loop |
 | P-4 | While rewriting, several old reasons turned out to be loose or wrong, not just short. Examples: current described without drifting free electrons, a radians reason whose formula needed correcting, and alcohol oxidation not placed at the carbon bearing –OH | Corrected in the rewrite; each new reason states the specific fact used |
 | P-5 | Cluster checks: *Algebra* at 16 claimed "rational inequalities", but the group has quadratic inequalities and rational *equations*; *Energy* at 12 had an ambiguous phrase linking height to stored energy | Both reworded to match the topics |
-| P-6 | Centrality: the approximation used in waves 1–5 (`descendants / 731`) does not match Marble's method (Spearman 0.46 with v1). (Ancestors + descendants) / max reproduces all 1590 v1 values exactly | Replaced. Recomputed on the merged graph for all topics. The extension file and merged copy share the values; `data/` is untouched. `build.py` asserts the v1 reproduction on every build |
+| P-6 | Centrality: the approximation used in waves 1–5 (`descendants / 731`) does not match the upstream v1 method (Spearman 0.46 with v1). (Ancestors + descendants) / max reproduces all 1590 v1 values exactly | Replaced. Recomputed on the merged graph for all topics. The extension file and merged copy share the values; `data/` is untouched. `build.py` asserts the v1 reproduction on every build |
 
 The other 37 sampled reasons were correct and specific. Examples: the derivative of arsinh via cosh y = √(1 + x²); ¹²C giving no NMR signal; isotope abundances as weights in relative atomic mass; Var(X ± Y) needing independence; √(−12) = 2i√3.
 
@@ -267,5 +269,5 @@ Reason-length statistics (all 2031 extension edges): before, mean 44.8, median 4
 ## Not fixed: open doubts (polish pass)
 - **Only 40 of the 1723 rewritten reasons were spot-checked.** The sample error rate was 3 in 40 (1 factual, 2 wording), so roughly 40 more weak reasons may remain across the set. An expert read-through by domain is still needed.
 - **Reasons of 60 characters or more that did not start "Builds on" were not rewritten** (308 edges). Some may still be generic.
-- **Merged centrality changes every v1 value** because the maximum rises from 731 to 1497. Anyone comparing with v1 should use `data/topics.json`. Marble's measure also rewards long ancestor chains, so advanced leaf topics score above many of their foundations. That is faithful to v1's method but may not be what a "centrality" consumer expects.
+- **Merged centrality changes every v1 value** because the maximum rises from 731 to 1497. Anyone comparing with v1 should use `data/topics.json`. The upstream measure also rewards long ancestor chains, so advanced leaf topics score above many of their foundations. That is faithful to v1's method but may not be what a "centrality" consumer expects.
 - **Clusters at sparse ages** (for example *Matter & Materials* at 11 with one topic, *Geometry* at 12 with one topic) are short and narrow. v1 tends to skip such ages instead.

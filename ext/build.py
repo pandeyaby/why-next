@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Marble secondary (grades 6-12) extension.
+"""Build "Why Next?", the secondary (grades 6-12) learning map built on the upstream v1 taxonomy.
 
 Reads the authored topics in ext/src_*.py, assigns deterministic ids, resolves
 prerequisite references, writes out/*.ext.json and merged copies of the full
@@ -21,9 +21,11 @@ import src_organic, src_hypothesis, src_matrices, src_series  # noqa: F401,E402 
 import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  # noqa: F401,E402  (wave 4)
 import src_hyperbolic, src_conics, src_carbonyl, src_amino  # noqa: F401,E402  (wave 5)
 
-EXT_VERSION = "v1-secondary-ext.0.6"
-ID_NAMESPACE = "marble-os-taxonomy/secondary-ext/v1:"
-CENTRALITY_SCALE = 731  # max (ancestors + descendants) in the v1 graph; see README_EXT.md
+EXT_VERSION = "whynext-0.6"
+PROJECT_NAME = "Why Next?"
+CREDIT_LINE = open(os.path.join(HERE, "CREDIT.txt"), encoding="utf-8").read().strip()
+ID_NAMESPACE = "marble-os-taxonomy/secondary-ext/v1:"  # frozen: changing it would change every new topic id
+CENTRALITY_SCALE = 731  # max (ancestors + descendants) in the v1 graph; see out/README.md
 
 def load(name):
     with open(os.path.join(DATA, name), encoding="utf-8") as f:
@@ -122,11 +124,11 @@ all_edges = deps_v1["dependencies"] + new_edges
 by_id = {t["id"]: t for t in all_topics}
 new_ids = {t["id"] for t in new_topics}
 
-# centrality: Marble's v1 method, reproduced exactly (all 1590 v1 values):
+# centrality: the upstream v1 method, reproduced exactly (all 1590 v1 values):
 #   centrality = (ancestors + descendants) / max over the graph of (ancestors + descendants)
 # where ancestors/descendants count topics connected through prerequisite edges of either
 # strength. Recomputed here on the merged graph for every topic; v1 files under data/ are
-# untouched, and the merged copy carries the recomputed values (see README_EXT.md).
+# untouched, and the merged copy carries the recomputed values (see out/README.md).
 children = defaultdict(list); parents_all = defaultdict(list)
 for e in all_edges:
     children[e["prerequisiteId"]].append(e["topicId"]); parents_all[e["topicId"]].append(e["prerequisiteId"])
@@ -275,9 +277,11 @@ by_subj = defaultdict(int)
 for t in all_topics: by_subj[t["subject"]] += 1
 m_manifest = copy.deepcopy(manifest_v1)
 m_manifest.update({
+    "dataset": PROJECT_NAME,
+    "attribution": CREDIT_LINE,
     "taxonomyVersion": EXT_VERSION,
-    "extension": {"name": "Secondary extension (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling, Waves, Electricity & Circuits, Geometry & Trigonometry, Statistics & Probability, Calculus, Organic Chemistry, Hypothesis Testing, Matrices & Complex Numbers, Series, Poisson & t-tests, Eigenvalues & 3-D Vectors, Polar Coordinates, Aromatic Chemistry, Spectroscopy, Hyperbolic Functions, Conics, Carbonyl Chemistry, Amino Acids",
-                  "baseTaxonomyVersion": manifest_v1["taxonomyVersion"], "status": "unofficial draft, not published by Marble"},
+    "extension": {"name": "Why Next? secondary learning map (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling, Waves, Electricity & Circuits, Geometry & Trigonometry, Statistics & Probability, Calculus, Organic Chemistry, Hypothesis Testing, Matrices & Complex Numbers, Series, Poisson & t-tests, Eigenvalues & 3-D Vectors, Polar Coordinates, Aromatic Chemistry, Spectroscopy, Hyperbolic Functions, Conics, Carbonyl Chemistry, Amino Acids",
+                  "baseDataset": manifest_v1["dataset"], "baseTaxonomyVersion": manifest_v1["taxonomyVersion"], "status": "draft, unpublished", "idMap": "id-map.json"},
     "codesOnlySources": m_stds["codesOnlySources"],
 })
 m_manifest["counts"].update({
@@ -288,6 +292,32 @@ m_manifest["counts"].update({
 m_manifest["files"] = files
 m_manifest.pop("generatedAt", None)
 dump(m_manifest, os.path.join(M, "manifest.json"))
+
+# ---------------------------------------------------------------- id map back to the upstream v1 topic ids
+new_by_id = {t["id"]: t for t in new_topics}
+id_map = {
+    "version": EXT_VERSION,
+    "attribution": CREDIT_LINE,
+    "note": ("Upstream v1 topic ids are kept verbatim in the merged data; no upstream id was renamed. "
+             "Each Why Next? topic lists the upstream v1 topics it builds on directly (bridgeTo) and all upstream "
+             "v1 topics among its prerequisite ancestors (upstreamAncestors)."),
+    "upstreamTopicCount": len(topics_v1["topics"]),
+    "upstreamTopics": [{"id": t["id"], "name": t["name"]} for t in topics_v1["topics"]],
+    "whyNextTopics": [],
+}
+for t in new_topics:
+    anc, st = set(), [t["id"]]
+    while st:
+        for p_ in parents_all[st.pop()]:
+            if p_ not in anc:
+                anc.add(p_); st.append(p_)
+    id_map["whyNextTopics"].append({
+        "id": t["id"], "key": next(k for k, v in key2id.items() if v == t["id"]), "name": t["name"],
+        "bridgeTo": sorted(e["prerequisiteId"] for e in new_edges if e["topicId"] == t["id"] and e["prerequisiteId"] in old_by_id),
+        "upstreamAncestors": sorted(a_ for a_ in anc if a_ in old_by_id),
+    })
+id_map["whyNextTopicCount"] = len(id_map["whyNextTopics"])
+dump(id_map, os.path.join(OUT, "id-map.json"))
 
 dump(report, os.path.join(OUT, "build-report.json"))
 print(json.dumps({k: v for k, v in report.items() if k != "problems"}, indent=2, ensure_ascii=False))

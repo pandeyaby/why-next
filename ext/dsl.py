@@ -1,7 +1,7 @@
-"""Tiny authoring DSL for the Marble secondary extension.
+"""Tiny authoring DSL for Why Next? (secondary learning map).
 
 Each topic is declared with T(...). Prerequisite refs are either a local key
-(defined somewhere in ext/src_*.py) or an existing Marble id (starts with 'mt_').
+(defined somewhere in ext/src_*.py) or an existing upstream v1 id (starts with 'mt_').
 """
 TOPICS = []
 
