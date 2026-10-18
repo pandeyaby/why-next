@@ -1,50 +1,52 @@
 # Marble Skill Taxonomy: secondary extension (ages 11–18), **unofficial draft**
 
 > **Status:** unofficial draft extension by Abhinav Pandey, built on top of the open [Marble Skill Taxonomy v1](https://github.com/withmarbleapp/os-taxonomy).
-> **Generative Spark, Inc. (Marble) has not reviewed or endorsed it.** Version label: `v1-secondary-ext.0.2` (wave 1 + wave 2). Nothing has been published.
+> **Generative Spark, Inc. (Marble) has not reviewed or endorsed it.** Version label: `v1-secondary-ext.0.3` (waves 1–3). Nothing has been published.
 
 ## Scope
-This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3–KS4/post-16)**. They plug into Marble v1's existing primary graph and its coarse KS3 topics. It was built in two waves on the same branch with the same method; wave-1 ids and edges are unchanged (521/521 wave-1 edges preserved).
+This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3–KS4/post-16)**. They plug into Marble v1's existing primary graph and its coarse KS3 topics. It was built in three waves on the same branch with the same method. Earlier ids and edges are never changed: after wave 3, all 476 wave-1/2 topic ids and all 1083 wave-1/2 edges are unchanged, and no earlier topic depends on a later one.
 
-| Subject / domain | Wave | v1 topics | New topics | Total |
-|---|---|---|---|---|
-| Science / Matter & Materials: particle model, states, atoms, periodic table, bonding, reactions, moles, rates, equilibrium, nuclear | 1 | 40 | 64 | 104 |
-| Science / Energy: stores and transfers, conservation, KE/GPE, work, power, heat transfer, resources | 1 | 28 | 30 | 58 |
-| Mathematics / Algebra: expressions, exponents, linear, systems, polynomials, quadratics, exponentials, sequences | 1 | 25 | 74 | 99 |
-| Mathematics / Functions & Modeling *(new domain)* | 1 | 0 | 31 | 31 |
-| Science / Forces & Motion: kinematics, Newton's laws, momentum, vectors, projectiles, fields | 1 | 27 | 31 | 58 |
-| Science / Waves, Light & Sound: wave properties, sound, EM spectrum, reflection/refraction, lenses, analog vs digital | 2 | 25 | 43 | 68 |
-| Science / Electricity & Circuits *(new domain)*: charge, current, pd, resistance, Ohm's law, series/parallel, mains, magnetism/electromagnetism, induction, transformers, National Grid | 2 | 0 | 42 | 42 |
-| Mathematics / Geometry: angle reasoning, congruence/similarity, transformations, Pythagoras, area/volume, circle theorems, coordinate geometry, trig, sine/cosine rules, unit circle/radians, proof, vectors | 2 | 69 | 59 | 128 |
-| Mathematics / Data & Statistics: displays, averages/spread, distributions, correlation/regression, sampling/bias, study design, normal distribution, inference basics | 2 | 18 | 36 | 54 |
-| Mathematics / Probability: probability rules, independence, conditional probability, counting, distributions, expected value | 2 | 15 | 15 | 30 |
-| Mathematics / Calculus *(new domain)*: limits intuition, rates of change, derivative, rules, applications, integral as accumulation, FTC, simple differential equations | 2 | 0 | 51 | 51 |
-| **Total** | | | **476** (wave 1: 230 · wave 2: 246) | |
+| Subject / domain | v1 | Wave 1 | Wave 2 | Wave 3 | Total |
+|---|---|---|---|---|---|
+| Science / Matter & Materials: particle model, atoms, bonding, reactions, moles, rates, equilibrium, nuclear (w1); **organic chemistry** (w3) | 40 | 64 | – | 38 | 142 |
+| Science / Energy | 28 | 30 | – | – | 58 |
+| Science / Forces & Motion | 27 | 31 | – | – | 58 |
+| Science / Waves, Light & Sound | 25 | – | 43 | – | 68 |
+| Science / Electricity & Circuits *(new domain, w2)* | 0 | – | 42 | – | 42 |
+| Mathematics / Algebra: expressions … sequences (w1); **sigma notation, convergence, sums to infinity, binomial expansion, partial fractions, induction** (w3) | 25 | 74 | – | 18 | 117 |
+| Mathematics / Functions & Modeling *(new domain, w1)*; **parametric curves and modelling** (w3) | 0 | 31 | – | 2 | 33 |
+| Mathematics / Geometry (incl. trigonometry) | 69 | – | 59 | – | 128 |
+| Mathematics / Data & Statistics (w2); **hypothesis testing** (w3) | 18 | – | 36 | 23 | 77 |
+| Mathematics / Probability (w2); **binomial distribution** (w3) | 15 | – | 15 | 7 | 37 |
+| Mathematics / Calculus *(new domain, w2)*; **Maclaurin/Taylor series, parametric calculus, partial-fraction integration** (w3) | 0 | – | 51 | 11 | 62 |
+| Mathematics / Matrices & Complex Numbers *(new domain, w3)* | 0 | – | – | 38 | 38 |
+| **New topics** | | **230** | **246** | **137** | **613** |
 
-**Domain placement (wave 2).** As in wave 1, new topics go into an existing v1 domain wherever one fits:
-- Waves → *Waves, Light & Sound*; Geometry & Trigonometry → *Geometry*; Statistics & Probability → *Data & Statistics* + *Probability*.
-- *Electricity & Circuits* is a new domain, because v1 files its few electricity topics under *Energy*. Wave-1 electrical topics (*Electrical power*, *Generating electricity by induction*, *Paying for electricity (kWh)*) stay in Energy and are used as prerequisites rather than duplicated.
-- *Calculus* is a new domain (v1 has no calculus).
+**Wave 3 by requested area:** organic chemistry 38 · hypothesis testing (incl. binomial) 30 · matrices 19 + complex numbers 19 = 38 · series (incl. Maclaurin/Taylor and parametric) 31.
 
-- **Topic types (all 476):** 198 conceptual, 195 procedural, 42 representational, 36 meta, 5 language.
-- **Starting ages:** 11: 9 · 12: 29 · 13: 57 · 14: 108 · 15: 133 · 16: 117 · 17: 23.
+**Domain placement (same rule as before: use an existing domain wherever one fits).**
+- Wave 2: Waves → *Waves, Light & Sound*; geometry & trig → *Geometry*; statistics & probability → *Data & Statistics* + *Probability*; *Electricity & Circuits* and *Calculus* are new domains.
+- Wave 3: organic chemistry → *Matter & Materials* (alongside wave-1 bonding and reactions). Binomial distribution → *Probability*; hypothesis tests → *Data & Statistics*. Series split by content: sigma notation, convergence, geometric/binomial series, partial fractions and induction → *Algebra*; Maclaurin/Taylor, series–integral comparison, parametric differentiation/integration and partial-fraction integration → *Calculus*; parametric curves and parametric modelling → *Functions & Modeling*. *Matrices & Complex Numbers* is a new domain (v1 and waves 1–2 have no home for it).
 
-**Edges:** 1083 new dependency edges (824 hard, 259 soft), each with a one-line reason.
-- **404 bridge edges** go from a new topic into a v1 topic (263 hard), reaching 165 distinct v1 topics.
-- **Wave 2 alone:** 562 edges (441 hard). 179 go to v1 (127 hard; 82 distinct v1 topics), 94 go to wave-1 topics (65 hard), and 289 stay among wave-2 topics (21 of those cross wave-2 domains).
-- Main cross-domain feeds into wave 2: Calculus ← Functions & Modeling (16), Calculus ← Algebra (16), Electricity ← Energy (10), Geometry ← Algebra (7), Statistics ← Functions & Modeling (7), Calculus ← Geometry (7, trig/radians), Calculus ← Forces & Motion (6, kinematics), Waves ← Energy (2, energy transfer).
+- **Topic types (all 613):** 249 conceptual, 252 procedural, 56 representational, 48 meta, 8 language.
+- **Starting ages:** 11: 9 · 12: 29 · 13: 57 · 14: 121 · 15: 148 · 16: 183 · 17: 66.
+
+**Edges:** 1413 new dependency edges (1076 hard, 337 soft), each with a one-line reason.
+- **427 bridge edges** go from a new topic into a v1 topic (271 hard), reaching 174 distinct v1 topics.
+- **Wave 3 alone:** 330 edges (252 hard). 23 go to v1 (8 hard; 19 distinct v1 topics), 60 to wave-1 topics (39 hard), 55 to wave-2 topics (39 hard), and 192 stay among wave-3 topics.
+- Main feeds into wave 3: Matrices & Complex ← wave-1 Algebra (20: systems, quadratics/complex roots, polynomials) and ← wave-2 Geometry (13: vectors, transformations, unit circle, radians); Organic ← wave-1 Matter (16: bonding, combustion, equilibrium, acids) and ← v1 Matter (11); Hypothesis testing ← wave-2 Statistics (15) and Probability (8); Series ← wave-1 Algebra (15: sequences, geometric series) and ← wave-2 Calculus (15).
+- Wave 2 alone (for reference): 562 edges (441 hard); 179 to v1, 94 to wave 1.
 - No v1 topic depends on a new topic. v1 data is unchanged apart from the appended records.
 
-**Standards:** 337 of the 476 topics carry at least one standard, with 451 topic–standard links: CCSS-Math 265, NGSS HS 100, UK NC KS3 64, NGSS MS 22.
-- Wave 2: 138 of 246 topics tagged (CCSS-Math 120, KS3 32, NGSS HS 22, NGSS MS 4). All 51 calculus topics are untagged on purpose (see below).
-- The only new standard records are **24 NGSS high-school PS codes** in the new curriculum `ngss-hs`: HS-PS1-1…8, HS-PS2-1…6, HS-PS3-1…5 (wave 1) and **HS-PS4-1…5 (wave 2)**.
-- Every CCSS-Math (G-CO, G-SRT, G-C, G-GPE, G-GMD, G-MG, S-ID, S-IC, S-CP, S-MD, F-TF, N-VM, 6–8.G/SP), NGSS-MS (MS-PS4-1…3) and KS3 key used was already in v1.
+**Standards:** 380 of the 613 topics carry at least one standard, with 496 topic–standard links: CCSS-Math 301, NGSS HS 106, UK NC KS3 67, NGSS MS 22.
+- Wave 3: 43 of 137 topics tagged (CCSS-Math 36, NGSS HS 6, KS3 3). Matrices & complex 25 of 38 (N-VM.6–12, A-REI.8–9, N-CN.1–9); organic 9 of 38 (HS-PS1-1, -3, -4, -6, -7, HS-PS2-6, KS3 EA.3/EA.5); hypothesis testing 5 of 30 (S-MD.2, S-MD.3, S-IC.2, S-IC.4, S-IC.5); series 4 of 31 (A-APR.5, A-SSE.4).
+- The only new standard records are **24 NGSS high-school PS codes** in `ngss-hs` (HS-PS1-1…8, HS-PS2-1…6, HS-PS3-1…5 from wave 1; HS-PS4-1…5 from wave 2). **Wave 3 added no new standard records:** every code it uses already existed in v1 or `ngss-hs`. The HS-PS1 and HS-PS2 pages were re-read on nextgenscience.org on 2026-10-18 to check the organic-chemistry fits.
 
 ## Files (`out/`)
 | File | Contents |
 |---|---|
-| `topics.ext.json` | The 476 new topics (same schema as `data/topics.json`) |
-| `dependencies.ext.json` | The 1083 new edges (same schema as `data/dependencies.json`) |
+| `topics.ext.json` | The 613 new topics (same schema as `data/topics.json`) |
+| `dependencies.ext.json` | The 1413 new edges (same schema as `data/dependencies.json`) |
 | `standards.ext.json` | The new `ngss-hs` curriculum (24 codes, codes only) |
 | `merged/data/*.json` | Full merged dataset (v1 + extension) with an updated `manifest.json` (counts, sha256, `extension` block) |
 | `merged/scripts/validate.mjs` | Unmodified copy of the repo validator, so it can check the merged data |
@@ -63,18 +65,19 @@ To rebuild: `python3 ext/build.py && python3 ext/check_schema.py && python3 ext/
 ## Method
 - **Format.** Every topic has the same fields as v1: id, type, subject, domain, name, description, age range, centrality, evidence (2–4 observable items), an `assessmentPrompt` containing `{{name}}`, and standards.
 - **Deterministic ids.** Each id is `"mt_" + base64url(sha256("marble-os-taxonomy/secondary-ext/v1:" + key))[:10]`, where `key` is a stable slug such as `al_quad_formula`. A salt would be appended on collision; none occurred. No id collides with v1.
-- **Placement.** New topics go into v1's existing domains where one fits (Matter & Materials, Energy, Forces & Motion, Algebra, Waves Light & Sound, Geometry, Data & Statistics, Probability). *Functions & Modeling*, *Electricity & Circuits* and *Calculus* are new domains.
+- **Placement.** New topics go into v1's existing domains where one fits (Matter & Materials, Energy, Forces & Motion, Algebra, Waves Light & Sound, Geometry, Data & Statistics, Probability). *Functions & Modeling*, *Electricity & Circuits*, *Calculus* and *Matrices & Complex Numbers* are new domains.
 - **Centrality** is an approximation: `min(1, descendants_in_merged_graph / 731)`, where 731 is the largest descendant count in v1. **v1 centralities were not recomputed.**
 - **Standards policy.** Only codes that are real and verified are used. CCSS and KS3 keys were taken from v1's `curriculum-standards.json`.
   - NGSS HS codes were checked against the official nextgenscience.org DCI arrangement pages (HS-PS1, HS-PS2, HS-PS3, and for wave 2 [HS-PS4](https://www.nextgenscience.org/dci-arrangement/hs-ps4-waves-and-their-applications-technologies-information-transfer)) on 2026-10-18.
-  - **Calculus has no standards.** CCSS-Math has no calculus standards. AP Calculus CED identifiers (e.g. unit/topic numbers and learning objectives) are College Board material, are not in the repo's curricula, and have no repo-compatible, verifiable code format, so per the brief they were left empty rather than guessed.
+  - **Calculus and most series/hypothesis-testing topics have no standards.** CCSS-Math has no codes for sigma notation, sums to infinity, Maclaurin/Taylor series, parametric equations, p-values, critical regions or type I/II errors, and the brief forbids guessing; wave-3 topics without a good fit are left empty.
+  - **Calculus (wave 2) has no standards.** CCSS-Math has no calculus standards. AP Calculus CED identifiers (e.g. unit/topic numbers and learning objectives) are College Board material, are not in the repo's curricula, and have no repo-compatible, verifiable code format, so per the brief they were left empty rather than guessed.
   - When no code fit well, the topic's standards were left empty rather than guessed. **No codes were invented.**
 - **NGSS text.** The brief asked for official text, but NGSS text is **not** included. Marble's `PROVENANCE.md` makes NGSS a codes-only source, because its licence cannot be relicensed under ODbL and limits commercial use. `ngss-hs` follows that rule, so it has no `data` field and is listed in `codesOnlySources`.
 
-## Validation results (on the merged dataset, after wave 2)
+## Validation results (on the merged dataset, after wave 3)
 ```
 $ node scripts/validate.mjs        # repo validator, run in out/merged
-✓ valid — 2066 topics, 4304 dependencies, 3285 standards, 183 clusters. Referential integrity + checksums OK.
+✓ valid — 2203 topics, 4634 dependencies, 3285 standards, 183 clusters. Referential integrity + checksums OK.
 $ node scripts/validate.mjs        # original v1, unchanged
 ✓ valid — 1590 topics, 3221 dependencies, 3261 standards, 183 clusters. Referential integrity + checksums OK.
 $ python3 ext/check_schema.py      # JSON Schema (schema/*.schema.json)
@@ -87,11 +90,22 @@ age decreasing along hard edges: 0 · along soft edges: 0   (prereq.ageRangeStar
 new topics not reaching v1: 0 (via any edges) · 0 (via hard edges only)
 every new topic has ≥1 prerequisite and an assessmentPrompt with {{name}}: yes
 ✓ extension checks passed
-$ # extra check vs the wave-1 commit (eb444c2)
-wave-1 ids changed: 0 · wave-1 edges preserved: 521/521 · v1→new edges: 0
+$ # extra checks vs the wave-2 commit (761e874)
+wave-1/2 ids changed: 0 (476/476) · wave-1/2 edges preserved: 1083/1083 · earlier-topic → wave-3 edges: 0 · v1→new edges: 0
 ```
 
 ## Example prerequisite chains (hard edges; NEW = extension topic)
+### Wave 3
+Same method as wave 2: the longest hard-edge path through new topics, then the shortest hard path inside v1 to a topic starting at age ≤10. Read left to right as "is needed for".
+
+**Maclaurin series** (NEW, 17–18): Number Pattern Relationships (v1, 10) → What makes a function (13) → Qualitative graphs (13) → Key features of graphs (14) → Average rate of change (14) → Average to instantaneous rate of change (16) → Derivative from first principles (16) → Derivative notation (16) → Differentiating powers of x (16) → Sums and multiples (16) → Tangents and normals (16) → Small changes and linear approximation (17) → Approximating functions with polynomials (17) → **Maclaurin series** (17). *(14 topics)*
+
+**De Moivre's theorem** (NEW, 17–18): Order of operations (v1, 10) → Ratio (v1, 11) → Square and cube numbers (v1, 11) → Solving x² = p and x³ = p (13) → Solving quadratics by square roots (14) → The quadratic formula (15) → The discriminant (15) → Complex solutions of quadratics (16) → The complex number system (16) → The Argand diagram (16) → Modulus and argument (16) → Modulus–argument form (16) → Multiplying and dividing in modulus–argument form (17) → **De Moivre's theorem** (17). *(14 topics)*
+
+**Hypothesis test for a normal mean** (NEW, 17–18): Statistical Analysis Vocabulary (v1, 9) → Statistical questions and variability (11) → Populations and samples (12) → Random sampling methods (13) → Inferring about a population from a sample (13) → Sampling variability and sample size (14) → The logic of a hypothesis test (16) → Null and alternative hypotheses (16) → Test statistics and their null distribution (16) → p-values (16) → **Hypothesis test for a normal mean** (17).
+
+**Condensation polymerisation** (NEW, 15–17): Drawing Particle Diagrams (v1, 7) → The Particle Model (v1, 11) → Atoms, Elements & Compounds (v1, 11) → Charges and masses of subatomic particles (12) → Atomic number and mass number (13) → Electron shells (14) → Covalent bonding (14) → Why carbon forms so many compounds (14) → Hydrocarbons (14) → Alkanes (14) → Homologous series (14) → Functional groups (15) → Alcohols (15) → Esters (15) → **Condensation polymerisation** (15). *(15 topics)*
+
 ### Wave 2
 Each chain is the longest hard-edge path through new topics, then the shortest hard path inside v1 to a topic starting at age ≤10. Read left to right as "is needed for".
 
@@ -150,13 +164,14 @@ Upstream standards notices (see `PROVENANCE.md`):
 - **UK National Curriculum:** *"Contains public sector information licensed under the Open Government Licence v3.0."* Only existing v1 KS3 keys are referenced.
 
 ## Known gaps and caveats
-- **No KS4 codes.** The English National Curriculum publishes no official codes for KS4 (or for KS3: the `uk-nc-2013` KS3 keys in v1 were built by Marble). To avoid inventing codes I added no KS4 keys, so topics at ages 14–16 are tagged only with CCSS/NGSS codes.
-- **139 topics have no standard** (31 wave 1, 108 wave 2), because no verified code fit well. This includes **all 51 calculus topics** (no CCSS calculus; AP CED identifiers not verifiable in repo format) and much GCSE/A-level physics with no NGSS/KS3 counterpart (e.g. Snell's law, lenses, Doppler, resistivity, Kirchhoff, capacitors, transformers, Lenz/Faraday, mains safety), plus UK-specific maths (histograms with unequal widths, cumulative frequency, capture–recapture, loci, bearings beyond KS3).
+- **No KS4 or A-level codes.** England publishes no official codes for KS4 or A level (the `uk-nc-2013` KS3 keys in v1 were built by Marble). To avoid inventing codes I added none, so topics at ages 14–18 are tagged only with CCSS/NGSS codes or left empty.
+- **233 topics have no standard** (31 wave 1, 108 wave 2, 94 wave 3), because no verified code fit well. This includes all 51 wave-2 calculus topics and, in wave 3, most series (27 of 31), hypothesis-testing (25 of 30) and organic-chemistry (29 of 38) topics. NGSS has no organic-chemistry PEs beyond general bonding/reaction ones, and CCSS has no codes for sigma notation, convergence, Maclaurin/Taylor series, parametric equations or formal hypothesis tests (p-values, critical regions, type I/II errors). AP and A-level identifiers were not used because they are not in the repo and can't be verified in its format.
 - **NGSS text is omitted** (codes-only, as v1 does). The repo's licensing policy takes precedence.
-- **No clusters** were added for the new topics, the new domains (*Functions & Modeling*, *Electricity & Circuits*, *Calculus*), or the 14–18 age bands. `clusters.json` is unchanged.
+- **No clusters** were added for the new topics, the new domains (*Functions & Modeling*, *Electricity & Circuits*, *Calculus*, *Matrices & Complex Numbers*), or the 14–18 age bands. `clusters.json` is unchanged.
 - **v1 centralities are not updated**, even though many v1 topics now have more descendants. New-topic centrality is an approximation.
-- **Overlap with v1's coarse KS3 topics** (ages 11–14). Wave 1 removed four duplicates and renamed ten topics; wave 2 removed four more duplicates (polygon angles, Earth's magnetic field, colour filters, lens ray diagrams) and refocused two (see REVIEW.md). A few close neighbours remain on purpose, e.g. wave-2 *Potential difference as energy per charge* (V = E/Q) next to wave-1 *Electrical power* (which also uses E = QV).
-- **Electricity is split across two domains.** v1 and wave-1 electrical-energy topics live in *Energy*; the new circuit/electromagnetism topics live in *Electricity & Circuits*.
-- **Self-review only.** A teacher or subject expert should review the topics, age bands and hard/soft calls before anyone relies on them. Most wave-2 edge reasons are short one-liners.
-- **US vs UK sequencing.** Age bands follow the KS3/KS4/A-level order. US geometry, Algebra II/precalculus and AP Calculus placement varies; calculus is banded 16–18 to cover both A-level and AP.
-- **Not covered yet:** organic chemistry, binomial distribution and hypothesis testing, vectors/mechanics beyond basics, complex numbers, matrices, some (+) CCSS standards (e.g. G-GPE.A.2–3 parabola/conics, N-VM matrices), further calculus (series, parametric/polar), biology and earth science at secondary level.
+- **Overlap.** Wave 1 removed four duplicates and renamed ten topics; wave 2 removed four more duplicates (polygon angles, Earth's magnetic field, colour filters, lens ray diagrams) and refocused two; wave 3 refocused three topics that partly repeated wave-1 topics (see REVIEW.md, W3-2 to W3-4). Wave 3 deliberately does not repeat wave-1 *Sum of an arithmetic series*, *Sum of a finite geometric series* and *Complex solutions of quadratics*; it builds on them.
+- **Series is split across domains** (Algebra, Calculus, Functions & Modeling), and electricity across Energy and Electricity & Circuits.
+- **Self-review only.** A teacher or subject expert should review the topics, age bands and hard/soft calls before anyone relies on them. Most edge reasons are short one-liners.
+- **US vs UK sequencing.** Age bands follow the KS3/KS4/A-level order. Matrices, complex numbers in polar form, chi-squared tests and Maclaurin series sit in A-level *Further* Mathematics in England and in (+) CCSS standards or AP/college courses in the US; they are banded 16–18 or 17–18.
+- **Wave 3 is mostly downstream.** Only 23 of its 330 edges reach v1 directly, because it builds on waves 1–2; every wave-3 topic still reaches v1 through hard edges.
+- **Not covered yet:** Poisson and geometric distributions, t-tests, eigenvalues/eigenvectors, vectors in 3-D (lines and planes), hyperbolic functions, polar coordinates, aromatic chemistry and organic synthesis beyond simple routes, spectroscopy, biology and earth science at secondary level.

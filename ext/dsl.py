@@ -18,6 +18,8 @@ SUBJECT_BY_DOMAIN = {
     "Data & Statistics": "Mathematics",
     "Probability": "Mathematics",
     "Calculus": "Mathematics",
+    # wave 3
+    "Matrices & Complex Numbers": "Mathematics",
 }
 
 def std(code):

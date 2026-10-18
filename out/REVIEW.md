@@ -1,4 +1,4 @@
-# Review log: secondary extension (wave 1: v1-secondary-ext.0.1 · wave 2: v1-secondary-ext.0.2)
+# Review log: secondary extension (wave 1: v1-secondary-ext.0.1 · wave 2: v1-secondary-ext.0.2 · wave 3: v1-secondary-ext.0.3)
 
 **Who reviewed it:** the same agent that wrote the topics did this review as a separate second pass. **No human, and no separate reviewer, has checked this work yet.** Please treat it as a first QA pass, not as independent expert review.
 
@@ -78,3 +78,56 @@ Net effect: 250 → 246 wave-2 topics (476 in total). After the fixes, every che
 - **Short edge reasons.** Most wave-2 edge reasons are short (364 of 562 are under 42 characters). A domain expert could make them more specific.
 - **Calculus age bands.** I banded calculus 16–18 (differentiation) and 17–18 (chain/product/quotient rules, integration techniques, differential equations) to follow A-level Year 12/13. AP Calculus sequencing differs.
 - **Standards fit judgments.** Several HS-PS4 tags are judgment calls against the performance expectation's clarification statement, e.g. HS-PS4-1 on refraction with wavefronts, HS-PS4-5 on solar cells and optical fibres, and HS-PS4-3 on diffraction and interference. An NGSS specialist should confirm them.
+
+---
+
+# Wave 3 review (organic chemistry, hypothesis testing, matrices & complex numbers, series)
+
+## Method
+I did this review myself; nobody independent reviewed it.
+1. **Build checks while authoring.** The extension checks run on every build. They caught one age violation (W3-1).
+2. **Overlap audit (all 137 wave-3 topics).** I compared each topic's name and description with every v1, wave-1 and wave-2 topic in the same subject (Jaccard similarity on content words, flagged above 0.22, the wave-1 method) and judged each flagged pair by hand. I also checked by hand against the wave-1 topics wave 3 builds on: *Sum of an arithmetic series*, *Sum of a finite geometric series*, *Complex solutions of quadratics*, *Combustion of fuels* and *Systems of three linear equations*.
+3. **Random sample of 30 items** (seed `20261020`, Python `random.Random`):
+   - 20 topics, 5 from each requested area.
+   - 10 edges drawn from wave-3 topics outside the topic sample.
+   - Each topic was checked for correctness (chemistry and maths facts, worked numbers), age band, type, standards fit, evidence and prompt, and every incoming edge (necessity, hard/soft, reason).
+4. **Standards pass (all 43 tagged wave-3 topics).** I compared each tag with the standard's text in `curriculum-standards.json` (CCSS, KS3) or on the nextgenscience.org HS-PS1/HS-PS2 pages, re-read on 2026-10-18.
+5. **Re-check.** I rebuilt and re-ran every validator after the fixes.
+
+## Findings and fixes (all applied)
+| # | Finding | Fix |
+|---|---|---|
+| W3-1 | Soft edge *Cracking* (age 14) ← *Factors affecting the rate of reaction* (age 15) broke age monotonicity; the build check caught it | Edge removed (the catalyst point does not need it) |
+| W3-2 | *Pollutants from burning fuels* repeated wave-1 *Combustion of fuels* (carbon monoxide and soot from incomplete combustion) | Refocused as *Sulfur dioxide, nitrogen oxides and particulates from fuels*; added a soft prerequisite → v1 *Acids, Alkalis & pH* for acid rain |
+| W3-3 | *Balanced equations for burning alkanes* repeated the incomplete-combustion evidence from *Combustion of fuels* | Evidence and description now cover balancing any alkane and the oxygen needed per molecule |
+| W3-4 | *Geometry of three-variable systems* partly repeated wave-1 *Systems of three linear equations*, which already interprets a unique solution as three planes meeting at a point | Renamed *Arrangements of three planes and consistency* and refocused on non-unique and inconsistent cases and the zero determinant |
+| W3-5 | *Hypothesis test for a binomial proportion*: two edge reasons were sentence fragments ("Uses a p-value or" / "a critical region to decide") | Rewritten as complete reasons |
+| W3-6 | *Complex conjugates and division* hard-depended on *Perfect squares and difference of squares*; (a + bi)(a − bi) can simply be multiplied out | Made soft, with a specific reason |
+| W3-7 | *Summing series by the method of differences* has evidence "finds the limit of the sum as n → ∞" but no prerequisite on limits of sums | Added a soft prerequisite → *Partial sums and convergent series* |
+| W3-8 | KS3.Sci.Chem.PIS.2 (filtration, distillation, crystallisation, chromatography) on *Fractional distillation of crude oil*: KS3 covers simple distillation, and fractional distillation of crude oil is KS4 content, the same reasoning that rejected a KS3 tag in wave 2 (W2-14) | Tag removed. The topic keeps a hard prerequisite on v1 *Separating Mixtures* |
+
+The remaining sampled items had no problems. I checked the following and found them correct:
+- **Chemistry facts:** alkane/alkene general formulae; E/Z (but-2-ene has E/Z isomers, but-1-ene does not); oxidation of primary, secondary and tertiary alcohols; the dichromate and bromine-water tests; conditions for hydrogenation, hydration and fermentation.
+- **Statistics:** the binomial conditions; the complement step P(X ≥ 4) = 1 − P(X ≤ 3); the standard error σ/√n; one- and two-tailed splits.
+- **Algebra and series:** non-commutativity, with (A + B)² ≠ A² + 2AB + B²; ranges of validity (ln(1 + x) for −1 < x ≤ 1, √(4 + x) for |x| < 4); Σr(r + 1) = n(n + 1)(n + 2)/3.
+
+All 10 sampled edges were kept unchanged. Two examples: *Taylor series about a point* ← *Maclaurin series* (hard), and *Natural polymers* ← v1 *Chromosomes, Genes & DNA* (soft).
+
+Every other flagged overlap pair is an intended neighbour, for example:
+- *Alkanes* / *Alkenes*;
+- *Determinant* / *Inverse*;
+- the two chi-squared tests;
+- *Maclaurin* / *Taylor*;
+- a few false positives against primary "adding" topics.
+
+Net effect: 137 wave-3 topics (613 in total), 330 wave-3 edges. After the fixes, every check passes: the repo validator on merged and v1, JSON Schema on all 7 files, the extension checks, and wave-1/2 stability (476/476 ids, 1083/1083 edges).
+
+## Not fixed: open doubts (wave 3)
+- **Standards coverage is thin outside matrices and complex numbers** (series 4/31, hypothesis testing 5/30, organic 9/38). This is because CCSS and NGSS have no codes that fit; I added nothing to fill the gap.
+- **Several organic tags are judgment calls against the clarification statements:**
+  - HS-PS1-4 on *Comparing fuels by energy released*: its assessment boundary excludes bond-energy totals, but the topic's reasoning matches the PE.
+  - HS-PS1-6 on *Esterification as a reversible reaction*.
+  - HS-PS1-7 on *Balanced equations for burning alkanes*.
+  - KS3 EA.3 on *Biofuels and carbon neutrality*.
+- **Age bands for Further-Maths content** are a judgment: matrices, polar-form complex numbers, Maclaurin series, chi-squared tests, and type I/II errors and power.
+- **Short edge reasons.** 248 of the 330 wave-3 edge reasons are under 42 characters.
