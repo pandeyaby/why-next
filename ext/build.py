@@ -19,8 +19,9 @@ import src_matter, src_energy, src_algebra, src_functions, src_forces  # noqa: F
 import src_waves, src_electricity, src_geometry, src_stats, src_calculus  # noqa: F401,E402  (wave 2)
 import src_organic, src_hypothesis, src_matrices, src_series  # noqa: F401,E402  (wave 3)
 import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  # noqa: F401,E402  (wave 4)
+import src_hyperbolic, src_conics, src_carbonyl, src_amino  # noqa: F401,E402  (wave 5)
 
-EXT_VERSION = "v1-secondary-ext.0.4"
+EXT_VERSION = "v1-secondary-ext.0.5"
 ID_NAMESPACE = "marble-os-taxonomy/secondary-ext/v1:"
 CENTRALITY_SCALE = 731  # max descendant count in the v1 graph; see README_EXT.md
 
@@ -238,7 +239,7 @@ for t in all_topics: by_subj[t["subject"]] += 1
 m_manifest = copy.deepcopy(manifest_v1)
 m_manifest.update({
     "taxonomyVersion": EXT_VERSION,
-    "extension": {"name": "Secondary extension (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling, Waves, Electricity & Circuits, Geometry & Trigonometry, Statistics & Probability, Calculus, Organic Chemistry, Hypothesis Testing, Matrices & Complex Numbers, Series, Poisson & t-tests, Eigenvalues & 3-D Vectors, Polar Coordinates, Aromatic Chemistry, Spectroscopy",
+    "extension": {"name": "Secondary extension (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling, Waves, Electricity & Circuits, Geometry & Trigonometry, Statistics & Probability, Calculus, Organic Chemistry, Hypothesis Testing, Matrices & Complex Numbers, Series, Poisson & t-tests, Eigenvalues & 3-D Vectors, Polar Coordinates, Aromatic Chemistry, Spectroscopy, Hyperbolic Functions, Conics, Carbonyl Chemistry, Amino Acids",
                   "baseTaxonomyVersion": manifest_v1["taxonomyVersion"], "status": "unofficial draft, not published by Marble"},
     "codesOnlySources": m_stds["codesOnlySources"],
 })

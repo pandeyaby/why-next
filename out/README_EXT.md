@@ -1,26 +1,28 @@
 # Marble Skill Taxonomy: secondary extension (ages 11–18), **unofficial draft**
 
 > **Status:** unofficial draft extension by Abhinav Pandey, built on top of the open [Marble Skill Taxonomy v1](https://github.com/withmarbleapp/os-taxonomy).
-> **Generative Spark, Inc. (Marble) has not reviewed or endorsed it.** Version label: `v1-secondary-ext.0.4` (waves 1–4). Nothing has been published.
+> **Generative Spark, Inc. (Marble) has not reviewed or endorsed it.** Version label: `v1-secondary-ext.0.5` (waves 1–5). Nothing has been published.
 
 ## Scope
-This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3–KS4/post-16)**. They plug into Marble v1's existing primary graph and its coarse KS3 topics. It was built in four waves on the same branch with the same method. Earlier ids and edges are never changed: after wave 4, all 613 wave-1–3 topics are unchanged (apart from their recomputed centrality), all 1413 wave-1–3 edges are unchanged, and no earlier topic depends on a later one.
+This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3–KS4/post-16)**. They plug into Marble v1's existing primary graph and its coarse KS3 topics. It was built in five waves on the same branch with the same method. Earlier ids and edges are never changed: after wave 5, all 740 wave-1–4 topics are unchanged (apart from their recomputed centrality), all 1771 wave-1–4 edges are unchanged, and no earlier topic depends on a later one.
 
-| Subject / domain | v1 | Wave 1 | Wave 2 | Wave 3 | Wave 4 | Total |
-|---|---|---|---|---|---|---|
-| Science / Matter & Materials: particle model, atoms, bonding, reactions, moles, rates, equilibrium, nuclear (w1); organic chemistry (w3); **aromatic chemistry, spectroscopy** (w4) | 40 | 64 | – | 38 | 49 | 191 |
-| Science / Energy | 28 | 30 | – | – | – | 58 |
-| Science / Forces & Motion | 27 | 31 | – | – | – | 58 |
-| Science / Waves, Light & Sound | 25 | – | 43 | – | – | 68 |
-| Science / Electricity & Circuits *(new domain, w2)* | 0 | – | 42 | – | – | 42 |
-| Mathematics / Algebra: expressions … sequences (w1); **sigma notation, convergence, sums to infinity, binomial expansion, partial fractions, induction** (w3) | 25 | 74 | – | 18 | – | 117 |
-| Mathematics / Functions & Modeling *(new domain, w1)*; **parametric curves and modelling** (w3) | 0 | 31 | – | 2 | – | 33 |
-| Mathematics / Geometry (incl. trigonometry) (w2); **3-D vectors, lines and planes; polar coordinates and curves; compound-angle formulae** (w4) | 69 | – | 59 | – | 25 | 153 |
-| Mathematics / Data & Statistics (w2); hypothesis testing (w3); **t-tests, Poisson tests, chi-squared extensions** (w4) | 18 | – | 36 | 23 | 14 | 91 |
-| Mathematics / Probability (w2); binomial distribution (w3); **Poisson and geometric distributions, combining random variables** (w4) | 15 | – | 15 | 7 | 16 | 53 |
-| Mathematics / Calculus *(new domain, w2)*; **Maclaurin/Taylor series, parametric calculus, partial-fraction integration** (w3); **polar areas and tangents** (w4) | 0 | – | 51 | 11 | 5 | 67 |
-| Mathematics / Matrices & Complex Numbers *(new domain, w3)*; **eigenvalues, diagonalisation, Markov chains; polar links** (w4) | 0 | – | – | 38 | 18 | 56 |
-| **New topics** | | **230** | **246** | **137** | **127** | **740** |
+| Subject / domain | v1 | Wave 1 | Wave 2 | Wave 3 | Wave 4 | Wave 5 | Total |
+|---|---|---|---|---|---|---|---|
+| Science / Matter & Materials: particle model, atoms, bonding, reactions, moles, rates, equilibrium, nuclear (w1); organic chemistry (w3); aromatic chemistry, spectroscopy (w4); **carbonyl chemistry, amino acids, proteins, chromatography** (w5) | 40 | 64 | – | 38 | 49 | 44 | 235 |
+| Science / Energy | 28 | 30 | – | – | – | – | 58 |
+| Science / Forces & Motion | 27 | 31 | – | – | – | – | 58 |
+| Science / Waves, Light & Sound | 25 | – | 43 | – | – | – | 68 |
+| Science / Electricity & Circuits *(new domain, w2)* | 0 | – | 42 | – | – | – | 42 |
+| Mathematics / Algebra: expressions … sequences (w1); **sigma notation, convergence, sums to infinity, binomial expansion, partial fractions, induction** (w3) | 25 | 74 | – | 18 | – | – | 117 |
+| Mathematics / Functions & Modeling *(new domain, w1)*; parametric curves and modelling (w3); **hyperbolic functions, identities and inverses** (w5) | 0 | 31 | – | 2 | – | 12 | 45 |
+| Mathematics / Geometry (incl. trigonometry) (w2); **3-D vectors, lines and planes; polar coordinates and curves; compound-angle formulae** (w4); **conics** (w5) | 69 | – | 59 | – | 25 | 19 | 172 |
+| Mathematics / Data & Statistics (w2); hypothesis testing (w3); **t-tests, Poisson tests, chi-squared extensions** (w4) | 18 | – | 36 | 23 | 14 | – | 91 |
+| Mathematics / Probability (w2); binomial distribution (w3); **Poisson and geometric distributions, combining random variables** (w4) | 15 | – | 15 | 7 | 16 | – | 53 |
+| Mathematics / Calculus *(new domain, w2)*; **Maclaurin/Taylor series, parametric calculus, partial-fraction integration** (w3); polar areas and tangents (w4); **hyperbolic calculus, arc length, area of an ellipse** (w5) | 0 | – | 51 | 11 | 5 | 11 | 78 |
+| Mathematics / Matrices & Complex Numbers *(new domain, w3)*; **eigenvalues, diagonalisation, Markov chains; polar links** (w4) | 0 | – | – | 38 | 18 | – | 56 |
+| **New topics** | | **230** | **246** | **137** | **127** | **86** | **826** |
+
+**Wave 5 by requested area:** hyperbolic functions 22 (12 definitions/graphs/identities/inverses/log forms + 10 calculus, incl. arc length and Maclaurin series) · conics 20 (incl. area of an ellipse in *Calculus*) · carbonyl chemistry 25 (aldehydes and ketones, tests, nucleophilic addition, acid derivatives, amines and amides, nitriles, practical techniques, functional-group map and multi-step synthesis) · amino acids 19 (shapes of molecules, chirality and optical isomerism, zwitterions, peptides and proteins, enzymes, chromatography). Prerequisites that nothing earlier covered were added inside these areas: odd and even functions, intermolecular forces and hydrogen bonding, nucleophiles, shapes of molecules (VSEPR), and chromatography with Rf values.
 
 **Wave 4 by requested area:** Poisson & t-tests (incl. geometric distribution, combining random variables, chi-squared extensions) 30 · eigenvalues 15 + 3-D vectors/lines/planes 12 = 27 · polar coordinates (incl. compound-angle prerequisites and complex links) 21 · aromatic chemistry 23 · spectroscopy 26. Chi-squared goodness of fit and contingency tables were already covered in wave 3, so wave 4 adds only fitting binomial/Poisson models with estimated parameters and interpreting cell contributions.
 
@@ -31,11 +33,15 @@ This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3�
 - Wave 3: organic chemistry → *Matter & Materials* (alongside wave-1 bonding and reactions). Binomial distribution → *Probability*; hypothesis tests → *Data & Statistics*. Series split by content: sigma notation, convergence, geometric/binomial series, partial fractions and induction → *Algebra*; Maclaurin/Taylor, series–integral comparison, parametric differentiation/integration and partial-fraction integration → *Calculus*; parametric curves and parametric modelling → *Functions & Modeling*. *Matrices & Complex Numbers* is a new domain (v1 and waves 1–2 have no home for it).
 - Wave 4: no new domains. Poisson/geometric/combinations of random variables → *Probability*; t-tests, Poisson tests and chi-squared extensions → *Data & Statistics*. Eigenvalues, transposes, matrix powers and Markov chains → *Matrices & Complex Numbers*; 3-D vectors, lines and planes → *Geometry* (next to wave-2 *Column vectors*). Polar coordinates, curves and compound-angle formulae → *Geometry*; polar areas, sin²/cos² integrals and tangents → *Calculus*; the three links to complex numbers → *Matrices & Complex Numbers*. Aromatic chemistry and spectroscopy → *Matter & Materials*.
 
-- **Topic types (all 740):** 283 conceptual, 326 procedural, 64 representational, 57 meta, 10 language.
-- **Starting ages:** 11: 9 · 12: 29 · 13: 57 · 14: 121 · 15: 148 · 16: 210 · 17: 166.
+- Wave 5: no new domains. Hyperbolic definitions, graphs, identities, equations and inverses → *Functions & Modeling*; hyperbolic calculus, arc length, Maclaurin series and modelling → *Calculus*. Conics → *Geometry* (next to wave-2 *The equation of a circle*), apart from *Area of an ellipse* → *Calculus*. Carbonyl chemistry and amino acids → *Matter & Materials*.
 
-**Edges:** 1771 new dependency edges (1322 hard, 449 soft), each with a one-line reason.
-- **434 bridge edges** go from a new topic into a v1 topic (273 hard), reaching 176 distinct v1 topics.
+- **Topic types (all 826):** 313 conceptual, 369 procedural, 70 representational, 64 meta, 10 language.
+- **Starting ages:** 11: 9 · 12: 29 · 13: 57 · 14: 121 · 15: 148 · 16: 221 · 17: 241.
+
+**Edges:** 2031 new dependency edges (1504 hard, 527 soft), each with a one-line reason.
+- **442 bridge edges** go from a new topic into a v1 topic (275 hard), reaching 177 distinct v1 topics.
+- **Wave 5 alone:** 260 edges (182 hard). 8 go to v1 (2 hard; 4 distinct v1 topics: separating mixtures, pure substances and mixtures, digestion and enzymes, ratio notation), 125 to wave-1–4 topics, and 127 stay among wave-5 topics.
+- Main feeds into wave 5: Hyperbolic ← wave-1 exponentials/logarithms and quadratics, wave-2 calculus and trigonometry, wave-3 Maclaurin series; Conics ← wave-1 completing the square and inverse proportion, wave-2 circle equation, loci, transformations and tangents, wave-3 parametric differentiation, wave-4 polar coordinates; Carbonyl ← wave-3 organic (alcohols, acids, esters, mechanisms, tests) and wave-4 aromatic and spectroscopy topics; Amino acids ← wave-1 bonding, wave-2 polarisation and electric fields, wave-3 stereoisomers and natural polymers, wave-4 GC–MS, and wave-5 carbonyl topics.
 - **Wave 4 alone:** 358 edges (246 hard). 7 go to v1 (2 hard; 6 distinct v1 topics: the electromagnetic spectrum, white light and colour, ratio notation, compound units, degrees and turns, separating mixtures), 40 to wave-1 topics, 56 to wave-2 topics, 84 to wave-3 topics, and 171 stay among wave-4 topics.
 - Main feeds into wave 4: Poisson & t ← wave-3 hypothesis testing and binomial (24) and wave-2 Statistics/Probability (18); Eigenvalues & 3-D vectors ← wave-3 Matrices (20), wave-1 Algebra (8) and wave-2 Geometry (6); Polar ← wave-2 Geometry/trigonometry (18) and Calculus (6), plus wave-3 complex numbers (3); Aromatic ← wave-3 organic (17) and wave-1 bonding/reactions (13); Spectroscopy ← wave-3 organic (14), wave-1 Matter/Energy (12) and wave-2 Waves (4: photon energy, EM uses and hazards).
 - **Wave 3 alone:** 330 edges (252 hard). 23 go to v1 (8 hard; 19 distinct v1 topics), 60 to wave-1 topics (39 hard), 55 to wave-2 topics (39 hard), and 192 stay among wave-3 topics.
@@ -43,7 +49,8 @@ This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3�
 - Wave 2 alone (for reference): 562 edges (441 hard); 179 to v1, 94 to wave 1.
 - No v1 topic depends on a new topic. v1 data is unchanged apart from the appended records.
 
-**Standards:** 395 of the 740 topics carry at least one standard, with 512 topic–standard links: CCSS-Math 314, NGSS HS 109, UK NC KS3 67, NGSS MS 22.
+**Standards:** 398 of the 826 topics carry at least one standard, with 515 topic–standard links: CCSS-Math 317, NGSS HS 109, UK NC KS3 67, NGSS MS 22.
+- Wave 5: 3 of 86 topics tagged, all conics: HSG-GPE.A.2 (*The parabola from focus and directrix*) and HSG-GPE.A.3 (*Foci of an ellipse*, *Foci of a hyperbola*), checked against the text in v1's `curriculum-standards.json`. CCSS has no hyperbolic-function codes. NGSS HS-PS1 and KS3 have no carbonyl, amino-acid or chirality PEs. KS3 *Pure and impure substances* covers basic chromatography, but the wave-5 chromatography topics (stationary/mobile phases, Rf values, TLC) are KS4/post-16 material, so, following the wave-3 rule (W3-8), they are not tagged. No new standard records.
 - Wave 4: 15 of 127 topics tagged (16 links: CCSS-Math 13, NGSS HS 3). Poisson & t 6 of 30 (S-MD.2, S-MD.3, S-IC.4, S-IC.5); eigenvalues & 3-D vectors 4 of 27 (N-VM.1, N-VM.2, N-VM.8, N-VM.11, N-VM.12); polar 2 of 21 (F-TF.9 on compound-angle formulae, N-CN.4 on the complex link); aromatic 1 of 23 (HS-PS1-4 on the hydrogenation-enthalpy evidence); spectroscopy 2 of 26 (HS-PS4-5 on IR breathalysers/gas sensors and on MRI). No new standard records; the HS-PS4 page was re-read on 2026-10-18 for the spectroscopy fits.
 - Wave 3: 43 of 137 topics tagged (CCSS-Math 36, NGSS HS 6, KS3 3). Matrices & complex 25 of 38 (N-VM.6–12, A-REI.8–9, N-CN.1–9); organic 9 of 38 (HS-PS1-1, -3, -4, -6, -7, HS-PS2-6, KS3 EA.3/EA.5); hypothesis testing 5 of 30 (S-MD.2, S-MD.3, S-IC.2, S-IC.4, S-IC.5); series 4 of 31 (A-APR.5, A-SSE.4).
 - The only new standard records are **24 NGSS high-school PS codes** in `ngss-hs` (HS-PS1-1…8, HS-PS2-1…6, HS-PS3-1…5 from wave 1; HS-PS4-1…5 from wave 2). **Wave 3 added no new standard records:** every code it uses already existed in v1 or `ngss-hs`. The HS-PS1 and HS-PS2 pages were re-read on nextgenscience.org on 2026-10-18 to check the organic-chemistry fits.
@@ -51,8 +58,8 @@ This adds secondary-school micro-topics for **grades 6–12 (ages ~11–18; KS3�
 ## Files (`out/`)
 | File | Contents |
 |---|---|
-| `topics.ext.json` | The 740 new topics (same schema as `data/topics.json`) |
-| `dependencies.ext.json` | The 1771 new edges (same schema as `data/dependencies.json`) |
+| `topics.ext.json` | The 826 new topics (same schema as `data/topics.json`) |
+| `dependencies.ext.json` | The 2031 new edges (same schema as `data/dependencies.json`) |
 | `standards.ext.json` | The new `ngss-hs` curriculum (24 codes, codes only) |
 | `merged/data/*.json` | Full merged dataset (v1 + extension) with an updated `manifest.json` (counts, sha256, `extension` block) |
 | `merged/scripts/validate.mjs` | Unmodified copy of the repo validator, so it can check the merged data |
@@ -81,10 +88,10 @@ To rebuild: `python3 ext/build.py && python3 ext/check_schema.py && python3 ext/
   - When no code fit well, the topic's standards were left empty rather than guessed. **No codes were invented.**
 - **NGSS text.** The brief asked for official text, but NGSS text is **not** included. Marble's `PROVENANCE.md` makes NGSS a codes-only source, because its licence cannot be relicensed under ODbL and limits commercial use. `ngss-hs` follows that rule, so it has no `data` field and is listed in `codesOnlySources`.
 
-## Validation results (on the merged dataset, after wave 4)
+## Validation results (on the merged dataset, after wave 5)
 ```
 $ node scripts/validate.mjs        # repo validator, run in out/merged
-✓ valid — 2330 topics, 4992 dependencies, 3285 standards, 183 clusters. Referential integrity + checksums OK.
+✓ valid — 2416 topics, 5252 dependencies, 3285 standards, 183 clusters. Referential integrity + checksums OK.
 $ node scripts/validate.mjs        # original v1, unchanged
 ✓ valid — 1590 topics, 3221 dependencies, 3261 standards, 183 clusters. Referential integrity + checksums OK.
 $ python3 ext/check_schema.py      # JSON Schema (schema/*.schema.json)
@@ -97,11 +104,27 @@ age decreasing along hard edges: 0 · along soft edges: 0   (prereq.ageRangeStar
 new topics not reaching v1: 0 (via any edges) · 0 (via hard edges only)
 every new topic has ≥1 prerequisite and an assessmentPrompt with {{name}}: yes
 ✓ extension checks passed
-$ # extra checks vs the wave-3 commit (b2ef372)
-wave-1–3 topics present and unchanged apart from centrality: 613/613 · wave-1–3 edges preserved (same strength and reason): 1413/1413 · earlier-topic → wave-4 edges: 0 · v1→new edges: 0
+$ # extra checks vs the wave-4 commit (5f05613)
+wave-1–4 topics present and unchanged apart from centrality: 740/740 · wave-1–4 edges preserved (same strength and reason): 1771/1771 · earlier-topic → wave-5 edges: 0 · v1→new edges: 0
 ```
 
 ## Example prerequisite chains (hard edges; NEW = extension topic)
+### Wave 5
+The longest hard-edge path into each topic, shown from the last v1 topic on it. Read left to right as "is needed for".
+
+**Hyperbolic substitutions in integration** (15 topics from the v1 entry point): Plotting Linear Graphs (v1, 12) → What makes a function (13) → Sketching and describing qualitative graphs (13) → Key features of graphs (14) → Average rate of change (14) → From average to instantaneous rate of change (16) → The derivative from first principles (16) → Derivative notation (16) → Differentiating powers of x (16) → Differentiating sums and multiples (16) → Antiderivatives (16) → Integrating eˣ, 1/x, sin x and cos x (17) → Integration by substitution (17) → Integrals giving inverse hyperbolic functions (17) → Hyperbolic substitutions in integration (17)
+
+missing Conics and planetary orbits
+**Planning multi-step syntheses** (21 topics from the v1 entry point): Atoms, Elements & Compounds (v1, 11) → Charges and masses of subatomic particles (12) → Atomic number and mass number (13) → Electron shells and configurations (14) → Covalent bonding (14) → Why carbon forms so many compounds (14) → Hydrocarbons (14) → Alkanes (14) → Homologous series (14) → Alkenes (14) → The puzzle of benzene's structure (16) → The Kekulé model of benzene (16) → Enthalpy of hydrogenation and benzene's stability (17) → Evidence against the Kekulé model (17) → The delocalised model of benzene (17) → Electrophiles (17) → Electrophilic substitution mechanism (17) → Halogenation of benzene (17) → Friedel–Crafts alkylation and acylation (17) → Forming carbon–carbon bonds (17) → Planning multi-step syntheses (17)
+
+**Choosing a chromatography method** (19 topics from the v1 entry point): Atoms, Elements & Compounds (v1, 11) → Charges and masses of subatomic particles (12) → Atomic number and mass number (13) → Electron shells and configurations (14) → Covalent bonding (14) → Why carbon forms so many compounds (14) → Hydrocarbons (14) → Alkanes (14) → Homologous series (14) → Alkenes (14) → Addition reactions of alkenes (15) → Curly arrows and reaction mechanisms (16) → Nucleophiles (17) → Amines as bases and nucleophiles (17) → Structure of amino acids (17) → Peptide bonds and dipeptides (17) → Hydrolysis of peptides and proteins (17) → Thin-layer chromatography of amino acids (17) → Choosing a chromatography method (17)
+
+**Identifying an unknown carbonyl compound** (10 topics from the v1 entry point): Substituting into Formulae (v1, 11) → Calculating wave speed (v = fλ) (13) → Shared properties of electromagnetic waves (14) → Wave and particle models of light (16) → Photon energy (E = hf) (16) → Spectroscopy across the electromagnetic spectrum (16) → Bonds absorb infrared radiation by vibrating (16) → Reading an infrared spectrum (16) → Identifying functional groups from IR absorptions (16) → Identifying an unknown carbonyl compound (17)
+
+**Conics in orbits and engineering** (8 topics from the v1 entry point): Proportion (v1, 12) → Constant of proportionality (y = kx) (13) → Inverse proportion equations (y = k/x) (14) → Limits at infinity and asymptotes (16) → The hyperbola (17) → Foci of a hyperbola (17) → Eccentricity and the focus–directrix definition (17) → Conics in orbits and engineering (17)
+
+**Racemic products and single-enantiomer medicines** (16 topics from the v1 entry point): Atoms, Elements & Compounds (v1, 11) → Charges and masses of subatomic particles (12) → Atomic number and mass number (13) → Electron shells and configurations (14) → Covalent bonding (14) → Why carbon forms so many compounds (14) → Hydrocarbons (14) → Alkanes (14) → Homologous series (14) → Alkenes (14) → Addition reactions of alkenes (15) → Curly arrows and reaction mechanisms (16) → Nucleophiles (17) → Nucleophilic addition to carbonyl compounds (17) → Adding cyanide: hydroxynitriles (17) → Racemic products and single-enantiomer medicines (17)
+
 ### Wave 4
 The longest hard-edge path, shown from the last v1 topic on it. Read left to right as "is needed for".
 
@@ -185,7 +208,7 @@ Upstream standards notices (see `PROVENANCE.md`):
 
 ## Known gaps and caveats
 - **No KS4 or A-level codes.** England publishes no official codes for KS4 or A level (the `uk-nc-2013` KS3 keys in v1 were built by Marble). To avoid inventing codes I added none, so topics at ages 14–18 are tagged only with CCSS/NGSS codes or left empty.
-- **345 topics have no standard** (31 wave 1, 108 wave 2, 94 wave 3, 112 wave 4), because no verified code fit well. In wave 4 only 15 of 127 topics are tagged: the Poisson and t-distributions, eigenvalues beyond N-VM.11/12, polar coordinates, 3-D lines and planes, aromatic chemistry and NMR/IR/mass-spectrum interpretation have no matching CCSS, NGSS or KS3 codes. This includes all 51 wave-2 calculus topics and, in wave 3, most series (27 of 31), hypothesis-testing (25 of 30) and organic-chemistry (29 of 38) topics. NGSS has no organic-chemistry PEs beyond general bonding/reaction ones, and CCSS has no codes for sigma notation, convergence, Maclaurin/Taylor series, parametric equations or formal hypothesis tests (p-values, critical regions, type I/II errors). AP and A-level identifiers were not used because they are not in the repo and can't be verified in its format.
+- **428 topics have no standard** (31 wave 1, 108 wave 2, 94 wave 3, 112 wave 4, 83 wave 5). In wave 5 only the three focus/directrix conics topics are tagged, because no verified code fit well. In wave 4 only 15 of 127 topics are tagged: the Poisson and t-distributions, eigenvalues beyond N-VM.11/12, polar coordinates, 3-D lines and planes, aromatic chemistry and NMR/IR/mass-spectrum interpretation have no matching CCSS, NGSS or KS3 codes. This includes all 51 wave-2 calculus topics and, in wave 3, most series (27 of 31), hypothesis-testing (25 of 30) and organic-chemistry (29 of 38) topics. NGSS has no organic-chemistry PEs beyond general bonding/reaction ones, and CCSS has no codes for sigma notation, convergence, Maclaurin/Taylor series, parametric equations or formal hypothesis tests (p-values, critical regions, type I/II errors). AP and A-level identifiers were not used because they are not in the repo and can't be verified in its format.
 - **NGSS text is omitted** (codes-only, as v1 does). The repo's licensing policy takes precedence.
 - **No clusters** were added for the new topics (wave 4 included), the new domains (*Functions & Modeling*, *Electricity & Circuits*, *Calculus*, *Matrices & Complex Numbers*), or the 14–18 age bands. `clusters.json` is unchanged.
 - **v1 centralities are not updated**, even though many v1 topics now have more descendants. New-topic centrality is an approximation.
@@ -196,4 +219,5 @@ Upstream standards notices (see `PROVENANCE.md`):
 - **Wave 4 is even more downstream:** only 7 of its 358 edges reach v1 directly; it builds mainly on waves 2–3. Every wave-4 topic still reaches v1 through hard edges.
 - **Some wave-4 prerequisites sit outside the requested areas** because nothing earlier covered them: variance of a random variable, unbiased estimates, transposes, compound/double-angle formulae, s/p orbitals, σ/π bonds and empirical formulae.
 - **Wave 3 is mostly downstream.** Only 23 of its 330 edges reach v1 directly, because it builds on waves 1–2; every wave-3 topic still reaches v1 through hard edges.
-- **Not covered yet:** hyperbolic functions, conics, arc length and surface area, differential-equation systems, non-parametric tests (sign, Wilcoxon), continuous random variables beyond the normal, UV-visible spectroscopy and colorimetry, amino acids, carbonyl chemistry beyond simple oxidation, multi-step organic synthesis in general, and biology and earth science at secondary level.
+- **Wave 5 adds some prerequisites inside the requested areas** because nothing earlier covered them: odd and even functions, intermolecular forces and hydrogen bonding, nucleophiles, shapes of molecules (VSEPR), and the principles of chromatography with Rf values.
+- **Not covered yet:** surface area of revolution, differential-equation systems, non-parametric tests (sign, Wilcoxon), continuous random variables beyond the normal, UV-visible spectroscopy and colorimetry, Grignard reagents and other organometallics, DNA and nucleotide structure, the general second-degree conic with an xy term, and biology and earth science at secondary level.

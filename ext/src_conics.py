@@ -1,0 +1,228 @@
+from dsl import T, C, P, R, L, M
+GE = "Geometry"
+CA = "Calculus"
+
+# ---------------------------------------------------------------- conics (wave 5)
+T("cn_conic_sections", C, GE, "Conic sections", "16-18",
+  "Recognise the circle, ellipse, parabola and hyperbola as the curves made by slicing a double cone with a plane at different angles, and match each to its typical Cartesian equation",
+  ["Describes how the angle of the plane gives each conic",
+   "Matches standard equations to the four conics",
+   "Identifies conics in real objects and images"],
+  "If {{name}} is shown a torch beam hitting a wall at different angles, can they name the conic formed each time?",
+  [],
+  [("gt_cross_sections", "h", "Conics are cross-sections of a cone cut at different angles"),
+   ("gt_circle_equation", "h", "The circle is the conic whose Cartesian equation is already known"),
+   ("al_quad_function", "s", "The graph of a quadratic function is already known to be a parabola")])
+
+T("cn_parabola_focus", P, GE, "The parabola from focus and directrix", "16-18",
+  "Derive the equation of a parabola as the locus of points equidistant from a focus and a directrix, for example y² = 4ax from the focus (a, 0) and the directrix x = −a, or y = x²/(4p) from (0, p) and y = −p",
+  ["Writes the distances to the focus and directrix algebraically",
+   "Derives y² = 4ax by squaring and simplifying",
+   "Finds the equation from a given focus and directrix"],
+  "If {{name}} is given the focus (0, 2) and the directrix y = −2, can they derive the equation of the parabola?",
+  ["HSG-GPE.A.2"],
+  [("gt_loci", "h", "Treats the parabola as the locus of points equidistant from a point and a line"),
+   ("gt_coord_area", "h", "Uses the distance formula between two points from coordinates"),
+   ("al_quad_vertex_form", "s", "Recognises the result as a parabola in vertex form"),
+   ("cn_conic_sections", "s", "Places the parabola in the family of conic sections")])
+
+T("cn_parabola_features", P, GE, "Features of the parabola y² = 4ax", "16-18",
+  "Identify the vertex, focus, directrix and axis of parabolas such as y² = 4ax, x² = 4ay and translated forms (y − k)² = 4a(x − h)",
+  ["States the focus and directrix of y² = 12x",
+   "Finds the vertex and focus of (y − 1)² = 8(x + 2)",
+   "Sketches a parabola opening to the left"],
+  "If {{name}} is given (y + 3)² = −8(x − 1), can they find the vertex, focus and directrix and sketch the curve?",
+  [],
+  [("cn_parabola_focus", "h", "Reads the focus and directrix back from the standard equation"),
+   ("fm_transformations", "h", "Translates the standard parabola by replacing x and y with x − h and y − k")])
+
+T("cn_ellipse_equation", R, GE, "The ellipse", "17-18",
+  "Sketch the ellipse x²/a² + y²/b² = 1, identify its intercepts and major and minor axes, and see it as a circle stretched in one direction",
+  ["Sketches an ellipse from its equation",
+   "States the lengths of the major and minor axes",
+   "Explains the ellipse as a stretched circle"],
+  "If {{name}} is given x²/25 + y²/9 = 1, can they sketch the ellipse and mark its intercepts?",
+  [],
+  [("cn_conic_sections", "h", "Introduces the ellipse as one of the conic sections"),
+   ("gt_circle_equation", "h", "Starts from the circle x² + y² = r² and generalises it"),
+   ("fm_transformations", "h", "Gets the ellipse by stretching a circle parallel to an axis")])
+
+T("cn_ellipse_foci", P, GE, "Foci of an ellipse", "17-18",
+  "Use the fact that the sum of the distances from any point on an ellipse to the two foci is constant (2a) to derive its equation, and locate the foci using b² = a² − c²",
+  ["Finds the foci of x²/25 + y²/16 = 1",
+   "Derives the equation of an ellipse from its foci",
+   "Explains how to draw an ellipse with string and two pins"],
+  "If {{name}} is told the foci of an ellipse are (±4, 0) and the sum of distances is 10, can they find its equation?",
+  ["HSG-GPE.A.3"],
+  [("cn_ellipse_equation", "h", "Works with the standard form x²/a² + y²/b² = 1"),
+   ("gt_loci", "h", "The ellipse is the locus of points with a constant sum of distances to two points"),
+   ("al_radical_rational_eq", "s", "Squares twice to remove the square roots in the distance equation")])
+
+T("cn_hyperbola_equation", R, GE, "The hyperbola", "17-18",
+  "Sketch the hyperbola x²/a² − y²/b² = 1 with its two branches, vertices and asymptotes y = ±(b/a)x",
+  ["Sketches a hyperbola from its equation",
+   "Finds the equations of the asymptotes",
+   "Explains why there are no points with |x| < a"],
+  "If {{name}} is given x²/16 − y²/9 = 1, can they sketch the hyperbola with its asymptotes?",
+  [],
+  [("cn_conic_sections", "h", "Introduces the hyperbola as one of the conic sections"),
+   ("ca_limits_infinity", "h", "Finds the asymptotes from the behaviour as x grows large"),
+   ("fm_inverse_variation", "s", "y = k/x is already known as a hyperbola with the axes as asymptotes")])
+
+T("cn_hyperbola_foci", P, GE, "Foci of a hyperbola", "17-18",
+  "Use the fact that the difference of the distances from any point on a hyperbola to the two foci is constant (2a) to derive its equation, and locate the foci using b² = c² − a²",
+  ["Finds the foci of x²/9 − y²/16 = 1",
+   "Derives the equation of a hyperbola from its foci",
+   "Contrasts the hyperbola's focal property with the ellipse's"],
+  "If {{name}} is told the foci of a hyperbola are (±5, 0) and the difference of distances is 6, can they find its equation?",
+  ["HSG-GPE.A.3"],
+  [("cn_hyperbola_equation", "h", "Works with the standard form x²/a² − y²/b² = 1"),
+   ("gt_loci", "h", "The hyperbola is the locus of points with a constant difference of distances to two points"),
+   ("cn_ellipse_foci", "s", "Uses the same derivation as for the ellipse with a difference instead of a sum")])
+
+T("cn_rectangular_hyperbola", R, GE, "The rectangular hyperbola xy = c²", "17-18",
+  "Recognise xy = c² as a hyperbola with perpendicular asymptotes (the coordinate axes), use the parametric form (ct, c/t), and link it to y = k/x",
+  ["Sketches xy = 16 and states its asymptotes",
+   "Writes the parametric form of a rectangular hyperbola",
+   "Explains the link with inverse proportion"],
+  "If {{name}} is given xy = 9, can they explain why it is a hyperbola and give a parametric form?",
+  [],
+  [("cn_hyperbola_equation", "h", "A rectangular hyperbola is a hyperbola with perpendicular asymptotes"),
+   ("fm_inverse_variation", "h", "xy = c² is the inverse-proportion graph y = c²/x")])
+
+T("cn_eccentricity", C, GE, "Eccentricity and the focus–directrix definition", "17-18",
+  "Define every conic as the locus where the distance to a focus is e times the distance to a directrix, with e < 1 for an ellipse, e = 1 for a parabola and e > 1 for a hyperbola, and find foci and directrices x = ±a/e",
+  ["Calculates the eccentricity of an ellipse and a hyperbola",
+   "Finds the directrices from a and e",
+   "Explains how the shape changes as e varies"],
+  "If {{name}} is given the ellipse x²/25 + y²/16 = 1, can they find its eccentricity, foci and directrices?",
+  [],
+  [("cn_parabola_focus", "h", "The parabola is the case e = 1 of the focus–directrix definition"),
+   ("cn_ellipse_foci", "h", "Uses c = ae to locate the foci of an ellipse"),
+   ("cn_hyperbola_foci", "h", "Uses c = ae to locate the foci of a hyperbola")])
+
+T("cn_parametric", R, GE, "Parametric equations of conics", "17-18",
+  "Use parametric forms of the conics: (at², 2at) for y² = 4ax, (a cos θ, b sin θ) for an ellipse, (a cosh t, b sinh t) or (a sec θ, b tan θ) for a hyperbola, and (ct, c/t) for xy = c²",
+  ["Verifies that a parametric point satisfies the Cartesian equation",
+   "Converts each parametric form to Cartesian form",
+   "Chooses a convenient parameter for a problem"],
+  "If {{name}} is given x = 3 cos θ, y = 2 sin θ, can they show the curve is an ellipse and find its Cartesian equation?",
+  [],
+  [("sr_parametric_curves", "h", "Eliminates the parameter to obtain a Cartesian equation"),
+   ("cn_parabola_features", "h", "Uses the standard parabola y² = 4ax"),
+   ("cn_ellipse_equation", "h", "Uses the standard ellipse x²/a² + y²/b² = 1"),
+   ("cn_hyperbola_equation", "h", "Uses the standard hyperbola x²/a² − y²/b² = 1"),
+   ("gt_pythagorean_identity", "h", "cos²θ + sin²θ = 1 shows (a cos θ, b sin θ) lies on the ellipse"),
+   ("hy_identities", "s", "cosh²t − sinh²t = 1 shows (a cosh t, b sinh t) lies on the hyperbola")])
+
+T("cn_tangents_normals", P, GE, "Tangents and normals to conics", "17-18",
+  "Find equations of tangents and normals to conics using implicit or parametric differentiation, including standard results such as the tangent ty = x + at² to y² = 4ax",
+  ["Finds the tangent to an ellipse at a given point",
+   "Derives the tangent to y² = 4ax at (at², 2at)",
+   "Finds where a normal meets the curve again"],
+  "If {{name}} is given the point (2 cos θ, sin θ) on an ellipse, can they find the equation of the tangent there?",
+  [],
+  [("ca_tangents_normals", "h", "Uses the gradient to write equations of tangents and normals"),
+   ("cn_parametric", "h", "Works with general points written in parametric form"),
+   ("ca_implicit", "h", "Differentiates Cartesian equations such as x²/a² + y²/b² = 1 implicitly"),
+   ("sr_parametric_differentiation", "s", "Finds dy/dx as (dy/dt)/(dx/dt) for a parametric point")])
+
+T("cn_line_conic", P, GE, "Intersections of lines and conics", "17-18",
+  "Find where a line meets a conic by substitution, and use the discriminant to find conditions for a line to be a tangent, such as c = a/m for y = mx + c and y² = 4ax",
+  ["Finds the intersections of a line and an ellipse",
+   "Uses the discriminant to show a line is a tangent",
+   "Finds the values of m for which a line through a point is a tangent"],
+  "If {{name}} has the line y = mx + 2 and the ellipse x² + 4y² = 8, can they find the values of m for which the line is a tangent?",
+  [],
+  [("al_linear_quadratic_sys", "h", "Substitutes the line into the curve to get a quadratic"),
+   ("al_discriminant", "h", "A repeated root (discriminant zero) means the line touches the curve"),
+   ("cn_ellipse_equation", "h", "Works with the equation of an ellipse"),
+   ("cn_parabola_features", "s", "Applies the same method to parabolas")])
+
+T("cn_focal_chords", P, GE, "Focal chords of a parabola", "17-18",
+  "Use the parametric form to show that the endpoints of a focal chord of y² = 4ax have parameters with pq = −1, and find the length of the latus rectum (4a)",
+  ["Shows that pq = −1 for a focal chord",
+   "Finds the length of the latus rectum",
+   "Finds the other end of a focal chord"],
+  "If {{name}} knows one end of a focal chord of y² = 8x is at (2, 4), can they find the other end?",
+  [],
+  [("cn_parametric", "h", "Represents the ends of the chord as (ap², 2ap) and (aq², 2aq)"),
+   ("cn_parabola_features", "h", "Uses the position of the focus at (a, 0)")])
+
+T("cn_loci_problems", P, GE, "Locus problems with conics", "17-18",
+  "Find the locus of a point defined using a conic, such as the midpoint of a chord or the intersection of two tangents, by writing it in terms of a parameter and eliminating the parameter",
+  ["Finds the locus of midpoints of chords of a parabola",
+   "Finds where two tangents meet in terms of parameters",
+   "Eliminates the parameter to find a Cartesian locus"],
+  "If {{name}} considers the midpoints of all chords of y² = 4x through the origin, can they find the locus of the midpoints?",
+  [],
+  [("cn_parametric", "h", "Writes the moving point in terms of a parameter"),
+   ("cn_tangents_normals", "h", "Many loci are defined by tangents or normals"),
+   ("gt_partition_segment", "s", "Finds midpoints of chords from their endpoints")])
+
+T("cn_general_conic", P, GE, "Recognising conics from their equations", "17-18",
+  "Identify a conic from an equation such as 4x² + 9y² − 16x + 18y = 11 by completing the square, and find its centre, axes and foci",
+  ["Completes the square in x and y",
+   "Writes the equation in standard form",
+   "Finds the centre and foci of the translated conic"],
+  "If {{name}} is given 9x² − 4y² − 36x − 8y = 4, can they identify the conic and find its centre?",
+  [],
+  [("al_complete_square", "h", "Completes the square separately in x and y"),
+   ("cn_ellipse_equation", "h", "Recognises the standard form of an ellipse"),
+   ("cn_hyperbola_equation", "h", "Recognises the standard form of a hyperbola"),
+   ("cn_conic_sections", "s", "Sorts equations into the conic families")])
+
+T("cn_transformations", P, GE, "Transforming conics", "17-18",
+  "Apply translations, stretches, reflections and rotations through 90° to conics and find the transformed equations, including using matrices",
+  ["Finds the equation after a translation by a vector",
+   "Finds the image of an ellipse under a stretch",
+   "Uses a matrix to transform a conic"],
+  "If {{name}} translates y² = 8x by the vector (3, −1), can they write the new equation and state the new focus?",
+  [],
+  [("fm_transformations", "h", "Replaces x and y to translate or stretch a graph"),
+   ("cn_general_conic", "h", "Interprets translated equations of conics"),
+   ("mx_transformations", "s", "Represents stretches and reflections with matrices")])
+
+T("cn_polar_conics", P, GE, "Conics in polar form", "17-18",
+  "Use the polar equation r = l/(1 + e cos θ), with a focus at the pole, to describe ellipses, parabolas and hyperbolas, and relate l and e to the shape",
+  ["Identifies the conic from a polar equation",
+   "Converts r = 6/(2 + cos θ) to Cartesian form",
+   "Finds the nearest and furthest distances from the focus"],
+  "If {{name}} is given r = 8/(1 + 0.5 cos θ), can they identify the conic and find its closest distance to the pole?",
+  [],
+  [("cn_eccentricity", "h", "The polar form comes from the focus–directrix definition with eccentricity e"),
+   ("po_convert_equations", "h", "Converts between polar and Cartesian equations")])
+
+T("cn_reflective_properties", C, GE, "Reflective properties of conics", "17-18",
+  "Explain the reflective properties of conics: rays parallel to the axis of a parabola reflect through the focus, and rays from one focus of an ellipse reflect through the other",
+  ["Explains why a satellite dish is parabolic",
+   "Explains the whispering-gallery effect in an elliptical room",
+   "Justifies a reflective property using a tangent"],
+  "If {{name}} is asked why a car headlight has a parabolic mirror with the bulb at the focus, can they explain?",
+  [],
+  [("cn_tangents_normals", "h", "Reflection is described using the tangent and normal at a point"),
+   ("cn_ellipse_foci", "h", "Uses the two foci of an ellipse"),
+   ("wv_reflection_types", "s", "Applies the law of reflection for specular reflection")])
+
+T("cn_orbits", M, GE, "Conics in orbits and engineering", "17-18",
+  "Use conics to model real situations: planetary orbits as ellipses with the Sun at a focus, comet paths, reflectors and hyperbolic navigation, judging which conic and parameters fit",
+  ["Describes a planetary orbit using eccentricity",
+   "Finds the closest and furthest distances of an orbit",
+   "Explains why a parabolic or hyperbolic path means an object does not return"],
+  "If {{name}} is given the eccentricity and major axis of Earth's orbit, can they find its closest and furthest distances from the Sun?",
+  [],
+  [("cn_eccentricity", "h", "Describes orbits by their eccentricity and foci"),
+   ("cn_reflective_properties", "s", "Applies reflective properties in engineering designs"),
+   ("mo_gravitation", "s", "Gravity provides the central force that produces conic orbits")])
+
+T("cn_area_ellipse", P, CA, "Area of an ellipse", "17-18",
+  "Show that an ellipse with semi-axes a and b has area πab, by parametric integration or by stretching a circle",
+  ["Sets up a parametric integral for the area of an ellipse",
+   "Evaluates the integral using a double-angle identity",
+   "Explains the result as a stretch of a circle of area πa²"],
+  "If {{name}} is given x²/16 + y²/9 = 1, can they find the area of the ellipse and justify the formula?",
+  [],
+  [("cn_parametric", "h", "Uses the parametric form (a cos θ, b sin θ)"),
+   ("sr_parametric_integration", "h", "Finds the area using ∫ y (dx/dθ) dθ"),
+   ("po_trig_integrals", "h", "Integrates sin²θ using a double-angle identity"),
+   ("gt_area_volume_scale", "s", "A one-way stretch by b/a scales the area of a circle by b/a")])

@@ -1,4 +1,4 @@
-# Review log: secondary extension (wave 1: v1-secondary-ext.0.1 · wave 2: v1-secondary-ext.0.2 · wave 3: v1-secondary-ext.0.3 · wave 4: v1-secondary-ext.0.4)
+# Review log: secondary extension (wave 1: v1-secondary-ext.0.1 · wave 2: v1-secondary-ext.0.2 · wave 3: v1-secondary-ext.0.3 · wave 4: v1-secondary-ext.0.4 · wave 5: v1-secondary-ext.0.5 · polish pass)
 
 **Who reviewed it:** the same agent that wrote the topics did this review as a separate second pass. **No human, and no separate reviewer, has checked this work yet.** Please treat it as a first QA pass, not as independent expert review.
 
@@ -197,3 +197,47 @@ Net effect: 127 wave-4 topics (740 in total), 358 wave-4 edges. After the fixes,
 - **Data ranges follow common A-level data sheets, which differ slightly between exam boards.** This applies to the IR ranges (O–H in alcohols about 3200–3550 cm⁻¹, O–H in acids about 2500–3300 cm⁻¹, C=O about 1680–1750 cm⁻¹) and to the diazonium temperature limit (below 10 °C).
 - **Wave 4 sits deep in the graph.** Only 7 edges go straight to v1, and many chains are 25 or more topics long from early-years v1 topics. Age bands are almost all 16–18 or 17–18.
 - **Short edge reasons.** 217 of the 358 wave-4 edge reasons are under 42 characters.
+
+# Wave 5 review (hyperbolic functions, conics, carbonyl chemistry, amino acids)
+
+## Method
+I did this review myself; nobody independent reviewed it.
+1. **Build checks while authoring.** The extension checks run on every build. None failed on the first full wave-5 build. Ages were planned so that every prerequisite starts no later than its dependent: for example, *Nucleophiles* is 17 because *Electrophiles* is 17.
+2. **Overlap audit (all 86 wave-5 topics).** Jaccard similarity on content words against every merged topic, flagged above 0.22 (40 pairs), each judged by hand. Before writing, I also checked by hand against the earlier topics that wave 5 builds on:
+   - *Primary, secondary and tertiary alcohols* and *Oxidising alcohols*, which already give the oxidation products, so wave 5 adds only distillation versus reflux;
+   - *Condensation polymers*, which already has polyester and polyamide repeat units, so wave 5 adds diacyl chlorides, named polymers and hydrolysis;
+   - *Making ethanol* (atom economy), *Terminal velocity*, *Volumes of revolution*, *Equations of tangents and normals*, *The equation of a circle* and *Electrophiles*.
+3. **Random sample of 30 topics** (seed `20261022`, Python `random`). For each I checked the facts and worked numbers, the age band, type, standards, evidence and prompt, and every incoming edge (necessity, hard/soft, reason).
+4. **Standards pass.** Three tags, all compared with the CCSS text in `curriculum-standards.json`: HSG-GPE.A.2 ("Derive the equation of a parabola given a focus and directrix") and HSG-GPE.A.3 ("(+) Derive the equations of ellipses and hyperbolas given the foci, using the fact that the sum or difference of distances from the foci is constant"). I also looked for any other fitting codes and found none. CCSS has no hyperbolic-function codes. NGSS HS-PS1 has no carbonyl or chirality PEs; HS-LS1-1 (DNA and protein structure) concerns DNA coding for proteins, not protein chemistry. KS3 chromatography is basic paper chromatography (the W3-8 rule applies).
+5. **Re-check.** I rebuilt and re-ran every validator after the fixes.
+
+## Findings and fixes (all applied)
+| # | Finding | Fix |
+|---|---|---|
+| W5-1 | Edge reason *Distillation versus reflux* ← *Physical properties of aldehydes and ketones* said the aldehyde "has the lowest boiling point because it lacks hydrogen bonding". It is lowest only among the alcohol, aldehyde and acid, and aldehydes can hydrogen-bond to water | Now "The aldehyde boils lower than the alcohol and the acid because its molecules cannot hydrogen bond to each other" |
+| W5-2 | *Odd and even functions* described odd functions as having "rotational symmetry about the origin", which is true of any order of rotation | Now "unchanged by a half-turn about the origin" |
+| W5-3 | Overlap check: *Foci of an ellipse* / *Foci of a hyperbola* (0.79) and *Inverse hyperbolic functions in logarithmic form* / *Differentiating inverse hyperbolic functions* (0.58) | Kept as distinct skills. The first pair are parallel derivations (sum against difference of focal distances, matching the wording of HSG-GPE.A.3). The second pair share names of functions, but one solves a quadratic in eʸ and the other differentiates implicitly |
+| W5-4 | Planned topics that would repeat earlier ones (alcohol oxidation products, polyester/polyamide repeat units, atom economy) | Refocused before writing, as described in Method item 2 |
+
+The remaining sampled items had no problems. I checked the following and found them correct:
+- **Conics:** x²/25 + y²/16 = 1 has c = 3, e = 3/5 and directrices x = ±25/3; foci (±5, 0) with 2a = 6 gives x²/9 − y²/16 = 1; foci (±4, 0) with sum 10 gives x²/25 + y²/9 = 1; the tangent to y² = 4ax at (at², 2at) is ty = x + at²; y = mx + c touches y² = 4ax when c = a/m; r = 6/(2 + cos θ) is an ellipse with e = ½.
+- **Hyperbolic:** the log forms of arsinh, arcosh and artanh; the derivatives 1/√(x² ± 1) and 1/(1 − x²); v = V tanh(gt/V) solves dv/dt = g(1 − v²/V²); the catenary arc length reduces to ∫cosh x dx.
+- **Chemistry:**
+  - Ethanol boils at 78 °C and propane at −42 °C (Mr 46 and 44).
+  - Butane, propanal and propan-1-ol have Mr 58, 58 and 60.
+  - Glycine melts (with decomposition) above 200 °C; ethanoic acid melts at 17 °C.
+  - Glycine at pH 2 is cationic and moves to the cathode.
+  - Bond angles: 107° in NH₃ and 104.5° in H₂O.
+  - Ethanal + HCN gives racemic 2-hydroxypropanenitrile.
+  - Ethene → bromoethane → propanenitrile → propanoic acid is a valid chain-lengthening route.
+  - The overall yield for 80%, 70% and 90% steps is 50.4%.
+
+Standards pass: all 3 tags kept.
+
+Net effect: 86 wave-5 topics (826 in total), 260 wave-5 edges. After the fixes, every check passes: the repo validator on merged and v1, JSON Schema on all 7 files, the extension checks, and wave-1–4 stability (740/740 topics unchanged apart from centrality, 1771/1771 edges unchanged, 0 earlier → wave-5 edges).
+
+## Not fixed: open doubts (wave 5)
+- **Standards coverage is very thin** (3 of 86 topics). There are no fitting codes.
+- **Prerequisites added inside the requested areas** because nothing earlier covered them: odd and even functions, intermolecular forces, nucleophiles, shapes of molecules and chromatography. Earlier topics that would naturally use them, such as wave-1 *Properties of simple molecular substances*, cannot be linked, because earlier topics never get new prerequisites.
+- **Exam-board variation.** Hyperbolic functions, conics beyond the circle and parabola, and the 2,4-DNP, Tollens' and Fehling's tests follow common A-level (Further) Mathematics and Chemistry specifications. Their placement differs between boards and from US courses. The names arsinh/arcosh/artanh follow UK usage (sinh⁻¹ etc. are also common).
+- **Wave 5 is deep in the graph.** Only 8 of its 260 edges go straight to v1, and almost every topic starts at 17.
