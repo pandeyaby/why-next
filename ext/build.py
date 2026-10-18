@@ -236,7 +236,7 @@ for t in all_topics: by_subj[t["subject"]] += 1
 m_manifest = copy.deepcopy(manifest_v1)
 m_manifest.update({
     "taxonomyVersion": EXT_VERSION,
-    "extension": {"name": "Secondary extension (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling",
+    "extension": {"name": "Secondary extension (grades 6-12): Matter & Energy, Algebra, Forces & Motion, Functions & Modeling, Waves, Electricity & Circuits, Geometry & Trigonometry, Statistics & Probability, Calculus",
                   "baseTaxonomyVersion": manifest_v1["taxonomyVersion"], "status": "unofficial draft, not published by Marble"},
     "codesOnlySources": m_stds["codesOnlySources"],
 })
