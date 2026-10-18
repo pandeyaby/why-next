@@ -21,7 +21,7 @@ T("hy_definitions", C, FM, "Hyperbolic functions: definitions", "17-18",
   "If {{name}} is asked what cosh x means, can they write its definition in terms of eˣ and find cosh 0?",
   [],
   [("al_exp_functions", "h", "Builds sinh and cosh by combining the exponential graphs of eˣ and e⁻ˣ"),
-   ("ca_exp_derivative", "h", "Uses the natural exponential function eˣ and the constant e"),
+   ("ca_exp_derivative", "h", "sinh x and cosh x are defined as half the difference and half the sum of eˣ and e⁻ˣ"),
    ("fm_combine_functions", "s", "Forms new functions as sums, differences and quotients of known functions")])
 
 T("hy_graphs", R, FM, "Graphs of sinh, cosh and tanh", "17-18",
@@ -31,7 +31,7 @@ T("hy_graphs", R, FM, "Graphs of sinh, cosh and tanh", "17-18",
    "Explains the shapes from the graphs of eˣ and e⁻ˣ"],
   "If {{name}} sketches y = cosh x and y = sinh x on the same axes, can they explain why the graphs get closer as x increases?",
   [],
-  [("hy_definitions", "h", "Plots the functions from their exponential definitions"),
+  [("hy_definitions", "h", "The graphs are plotted from the exponential definitions, such as cosh 0 = (1 + 1)/2 = 1"),
    ("fm_key_features", "h", "Describes intercepts, minima, asymptotes and range of each graph"),
    ("hy_odd_even", "s", "Recognises cosh as even and sinh and tanh as odd from their symmetry")])
 
@@ -64,7 +64,7 @@ T("hy_identities", P, FM, "Hyperbolic identities", "17-18",
   [],
   [("hy_definitions", "h", "Expands squares of the exponential definitions to prove each identity"),
    ("al_identities", "h", "Uses the structure of an algebraic proof, working on one side until it matches the other"),
-   ("gt_pythagorean_identity", "s", "Compares with sin²x + cos²x = 1, which differs only in sign")])
+   ("gt_pythagorean_identity", "s", "cosh²x − sinh²x = 1 is compared with sin²x + cos²x = 1, which differs only in sign")])
 
 T("hy_osborn", P, FM, "Osborn's rule", "17-18",
   "Use Osborn's rule to turn a trigonometric identity into the corresponding hyperbolic identity by changing the sign of every product (or implied product) of two sines, and check the result from the definitions",
@@ -85,7 +85,7 @@ T("hy_equations", P, FM, "Solving hyperbolic equations", "17-18",
   [],
   [("hy_exact_values", "h", "Moves between hyperbolic expressions, powers of e and logarithms"),
    ("al_quad_formula", "h", "Solves the resulting quadratic in eˣ or in a hyperbolic function"),
-   ("al_exp_equations", "h", "Solves eˣ = k by taking natural logarithms"),
+   ("al_exp_equations", "h", "After forming a quadratic in eˣ, each root is solved from eˣ = k by taking natural logarithms"),
    ("hy_identities", "s", "Replaces cosh²x by 1 + sinh²x to get an equation in one function")])
 
 T("hy_inverses", C, FM, "Inverse hyperbolic functions", "17-18",
@@ -106,9 +106,9 @@ T("hy_log_forms", P, FM, "Inverse hyperbolic functions in logarithmic form", "17
    "Evaluates artanh(1/2) exactly"],
   "If {{name}} is asked to show that arsinh x = ln(x + √(x² + 1)), can they derive it from x = sinh y?",
   [],
-  [("hy_inverses", "h", "Starts from y = arsinh x written as x = sinh y"),
+  [("hy_inverses", "h", "The derivation starts from y = arsinh x written as x = sinh y, valid on the inverse's domain"),
    ("hy_equations", "h", "Solves the resulting quadratic in eʸ and rejects the impossible root"),
-   ("fm_logarithms", "h", "Takes natural logarithms to make y the subject")])
+   ("fm_logarithms", "h", "Once eʸ is found from the quadratic, taking natural logarithms makes y the subject")])
 
 T("hy_circular_comparison", M, FM, "Comparing hyperbolic and circular functions", "17-18",
   "Compare hyperbolic and circular functions: (cos t, sin t) traces the unit circle while (cosh t, sinh t) traces the right branch of x² − y² = 1, and the exponential definitions mirror Euler's formula",
@@ -118,7 +118,7 @@ T("hy_circular_comparison", M, FM, "Comparing hyperbolic and circular functions"
   "If {{name}} is asked why sinh and cosh are called hyperbolic functions, can they link them to a hyperbola as sin and cos are linked to a circle?",
   [],
   [("hy_identities", "h", "Uses cosh²t − sinh²t = 1 to show the point lies on x² − y² = 1"),
-   ("gt_unit_circle", "h", "Compares with (cos t, sin t) tracing the unit circle"),
+   ("gt_unit_circle", "h", "(cosh t, sinh t) on x² − y² = 1 is compared with (cos t, sin t) tracing the unit circle"),
    ("cx_exponential_form", "s", "Euler's formula gives cos x = (e^(ix) + e^(−ix))/2, mirroring cosh x")])
 
 T("hy_catenary", M, FM, "The catenary", "17-18",
@@ -128,7 +128,7 @@ T("hy_catenary", M, FM, "The catenary", "17-18",
    "Finds a from the sag of a cable"],
   "If {{name}} photographs a hanging chain, can they explain why a cosh curve models it better than a parabola?",
   [],
-  [("hy_graphs", "h", "Uses the shape and minimum point of the cosh graph"),
+  [("hy_graphs", "h", "The hanging chain's U shape and lowest point match the cosh graph and its minimum at (0, 1)"),
    ("fm_quadratic_model", "s", "Compares the catenary with a parabolic model of the same shape"),
    ("fm_transformations", "s", "Interprets a in y = a cosh(x/a) as a combination of stretches")])
 
@@ -139,11 +139,11 @@ T("hy_differentiate", P, CA, "Differentiating hyperbolic functions", "17-18",
    "Explains why there is no minus sign, unlike for cos x"],
   "If {{name}} needs dy/dx for y = x² cosh 2x, can they differentiate it correctly?",
   [],
-  [("hy_definitions", "h", "Differentiates the exponential definitions term by term"),
-   ("ca_exp_derivative", "h", "Uses d/dx(eˣ) = eˣ and d/dx(e⁻ˣ) = −e⁻ˣ"),
+  [("hy_definitions", "h", "Each hyperbolic function is differentiated term by term from its exponential definition"),
+   ("ca_exp_derivative", "h", "d/dx(eˣ) = eˣ and d/dx(e⁻ˣ) = −e⁻ˣ turn the derivative of sinh x into cosh x"),
    ("ca_chain_rule", "h", "Differentiates composite hyperbolic functions such as sinh(3x²)"),
    ("ca_quotient_rule", "s", "Finds the derivative of tanh x as a quotient of sinh and cosh"),
-   ("hy_reciprocal", "s", "Writes the derivative of tanh x as sech²x")])
+   ("hy_reciprocal", "s", "The derivative of tanh x, 1/cosh²x, is written as sech²x using the reciprocal function")])
 
 T("hy_integrate", P, CA, "Integrating hyperbolic functions", "17-18",
   "Integrate sinh, cosh and sech² and use identities such as cosh²x = ½(cosh 2x + 1) to integrate powers and products of hyperbolic functions",
@@ -152,7 +152,7 @@ T("hy_integrate", P, CA, "Integrating hyperbolic functions", "17-18",
    "Evaluates a definite integral of a hyperbolic function"],
   "If {{name}} needs the integral of cosh²x from 0 to 1, can they choose an identity and evaluate it?",
   [],
-  [("hy_differentiate", "h", "Reverses the hyperbolic derivatives to find antiderivatives"),
+  [("hy_differentiate", "h", "Reversing d/dx(sinh x) = cosh x and its partners gives the basic hyperbolic integrals"),
    ("ca_antiderivatives", "h", "Uses integration as the reverse of differentiation, with a constant"),
    ("hy_identities", "s", "Rewrites cosh²x and sinh²x with double-argument identities before integrating")])
 
@@ -163,9 +163,9 @@ T("hy_diff_inverse", P, CA, "Differentiating inverse hyperbolic functions", "17-
    "Checks a result by differentiating the logarithmic form"],
   "If {{name}} needs d/dx of arsinh(x/3), can they find it and simplify the answer?",
   [],
-  [("hy_inverses", "h", "Works with the inverse functions and their domains"),
-   ("hy_differentiate", "h", "Uses d/dy(sinh y) = cosh y when differentiating x = sinh y"),
-   ("ca_implicit", "h", "Differentiates x = sinh y implicitly with respect to x"),
+  [("hy_inverses", "h", "The derivatives are found for arsinh, arcosh and artanh on their restricted domains"),
+   ("hy_differentiate", "h", "Writing x = sinh y gives dx/dy = cosh y, the derivative of sinh"),
+   ("ca_implicit", "h", "x = sinh y is differentiated implicitly with respect to x, then cosh y = √(1 + x²) is used"),
    ("hy_log_forms", "s", "Can check each result by differentiating the logarithmic form")])
 
 T("hy_inverse_trig_calculus", P, CA, "Calculus of inverse trigonometric functions", "17-18",
@@ -176,9 +176,9 @@ T("hy_inverse_trig_calculus", P, CA, "Calculus of inverse trigonometric function
   "If {{name}} needs the integral of 1/√(4 − x²) from 0 to 1, can they find its exact value?",
   [],
   [("fm_inverse_functions", "h", "Works with arcsin and arctan as inverses of restricted functions"),
-   ("ca_implicit", "h", "Differentiates x = sin y implicitly to find dy/dx"),
-   ("ca_trig_derivative", "h", "Uses d/dy(sin y) = cos y and d/dy(tan y) via sin and cos"),
-   ("gt_pythagorean_identity", "s", "Rewrites cos y as √(1 − sin²y) = √(1 − x²)")])
+   ("ca_implicit", "h", "y = arcsin x is written as x = sin y and differentiated implicitly to find dy/dx"),
+   ("ca_trig_derivative", "h", "d/dy(sin y) = cos y gives dx/dy, and tan y is differentiated via sin y and cos y"),
+   ("gt_pythagorean_identity", "s", "cos y is rewritten as √(1 − sin²y) = √(1 − x²) using sin²y + cos²y = 1")])
 
 T("hy_standard_integrals", P, CA, "Integrals giving inverse hyperbolic functions", "17-18",
   "Use ∫1/√(x² + a²) dx = arsinh(x/a) + c and ∫1/√(x² − a²) dx = arcosh(x/a) + c, completing the square where needed, and give definite answers in logarithmic form",
@@ -187,10 +187,10 @@ T("hy_standard_integrals", P, CA, "Integrals giving inverse hyperbolic functions
    "Writes a definite answer as a logarithm"],
   "If {{name}} needs the integral of 1/√(x² − 9) from 3 to 5, can they give the exact answer as a logarithm?",
   [],
-  [("hy_diff_inverse", "h", "Reverses the derivatives of arsinh and arcosh"),
+  [("hy_diff_inverse", "h", "Reversing d/dx(arsinh x) = 1/√(x² + 1) gives ∫1/√(x² + a²) dx after scaling by a"),
    ("ca_substitution", "h", "Uses a linear substitution to handle x/a and shifted quadratics"),
-   ("al_complete_square", "s", "Rewrites x² + bx + c as (x + p)² + q before integrating"),
-   ("hy_inverse_trig_calculus", "s", "Contrasts with ∫1/√(a² − x²), which gives arcsin")])
+   ("al_complete_square", "s", "x² + bx + c is rewritten as (x + p)² + q to reach a standard form before integrating"),
+   ("hy_inverse_trig_calculus", "s", "The arsinh integral is contrasted with ∫1/√(a² − x²) dx, which gives arcsin(x/a)")])
 
 T("hy_substitution", P, CA, "Hyperbolic substitutions in integration", "17-18",
   "Integrate expressions containing √(a² + x²) or √(x² − a²) by substituting x = a sinh u or x = a cosh u and simplifying with hyperbolic identities",
@@ -199,9 +199,9 @@ T("hy_substitution", P, CA, "Hyperbolic substitutions in integration", "17-18",
    "Converts the answer back to x"],
   "If {{name}} needs the integral of √(x² + 4), can they choose a substitution and complete the integration?",
   [],
-  [("hy_standard_integrals", "h", "Builds on integrals that give inverse hyperbolic functions"),
-   ("hy_identities", "h", "Simplifies √(1 + sinh²u) to cosh u with the identity"),
-   ("ca_substitution", "h", "Changes variable, including dx and the limits")])
+  [("hy_standard_integrals", "h", "The substitution x = a sinh u explains, and extends, the standard arsinh integral"),
+   ("hy_identities", "h", "√(a² + a²sinh²u) simplifies to a cosh u using cosh²u − sinh²u = 1"),
+   ("ca_substitution", "h", "Changing variable needs dx = a cosh u du and new limits in terms of u")])
 
 T("hy_maclaurin", P, CA, "Maclaurin series of hyperbolic functions", "17-18",
   "Find the Maclaurin series of sinh x and cosh x, and compare them with the series for sin x, cos x and eˣ",
@@ -210,9 +210,9 @@ T("hy_maclaurin", P, CA, "Maclaurin series of hyperbolic functions", "17-18",
    "Explains why the signs do not alternate, unlike sin x"],
   "If {{name}} is asked for the first three non-zero terms of the series for cosh 2x, can they find them?",
   [],
-  [("sr_maclaurin", "h", "Applies the Maclaurin series method to new functions"),
-   ("hy_differentiate", "h", "Needs repeated derivatives of sinh and cosh at x = 0"),
-   ("sr_series_from_known", "s", "Combines the series for eˣ and e⁻ˣ term by term")])
+  [("sr_maclaurin", "h", "The Maclaurin method of evaluating derivatives at 0 is applied to sinh and cosh"),
+   ("hy_differentiate", "h", "The derivatives of sinh x and cosh x alternate, so their values at 0 alternate 0 and 1"),
+   ("sr_series_from_known", "s", "The series for sinh x is half the difference of the series for eˣ and e⁻ˣ")])
 
 T("hy_arc_length", P, CA, "Arc length of a curve", "17-18",
   "Find the length of a curve with s = ∫√(1 + (dy/dx)²) dx, or the parametric form, and use the catenary as a case where 1 + sinh²x = cosh²x makes the integral simple",
@@ -221,10 +221,10 @@ T("hy_arc_length", P, CA, "Arc length of a curve", "17-18",
    "Sets up an arc length integral in parametric form"],
   "If {{name}} needs the length of the curve y = cosh x between x = 0 and x = 1, can they set up and evaluate the integral?",
   [],
-  [("ca_evaluating_integrals", "h", "Evaluates the definite integral that gives the length"),
-   ("ca_tangents_normals", "h", "Uses dy/dx as the gradient of each small piece of curve"),
+  [("ca_evaluating_integrals", "h", "The length is a definite integral evaluated between the x-values of the endpoints"),
+   ("ca_tangents_normals", "h", "dy/dx gives the slope of each small piece of curve, whose length is √(1 + (dy/dx)²) δx"),
    ("gt_pythag_proof", "s", "Each small piece of curve is approximated by the hypotenuse of a right-angled triangle"),
-   ("hy_integrate", "s", "The catenary case reduces to integrating cosh x")])
+   ("hy_integrate", "s", "For the catenary the integrand becomes cosh x, which integrates to sinh x")])
 
 T("hy_area_volume", P, CA, "Areas and volumes with hyperbolic functions", "17-18",
   "Find areas under hyperbolic curves and volumes of revolution such as y = cosh x rotated about the x-axis, using hyperbolic identities to integrate squares",
@@ -233,8 +233,8 @@ T("hy_area_volume", P, CA, "Areas and volumes with hyperbolic functions", "17-18
    "Gives an exact answer in terms of e or logarithms"],
   "If {{name}} rotates y = cosh x from 0 to 1 about the x-axis, can they find the exact volume?",
   [],
-  [("hy_integrate", "h", "Integrates sinh, cosh and their squares"),
-   ("ca_volumes_revolution", "h", "Uses V = π∫y² dx for a volume of revolution"),
+  [("hy_integrate", "h", "Volumes need ∫cosh²x dx, which is integrated after rewriting cosh²x = ½(cosh 2x + 1)"),
+   ("ca_volumes_revolution", "h", "The volume formed by rotating y = cosh x about the x-axis is V = π∫y² dx"),
    ("hy_identities", "h", "Rewrites cosh²x with the double-argument identity to integrate it")])
 
 T("hy_tanh_models", M, CA, "Modelling with tanh: terminal velocity", "17-18",
@@ -244,7 +244,7 @@ T("hy_tanh_models", M, CA, "Modelling with tanh: terminal velocity", "17-18",
    "Explains why v approaches V but never reaches it"],
   "If {{name}} models a skydiver with air resistance proportional to v², can they show the speed approaches a terminal value and find it?",
   [],
-  [("hy_differentiate", "h", "Checks the solution by differentiating V tanh(gt/V)"),
-   ("ca_separable", "h", "Separates the variables in dv/dt = g(1 − v²/V²)"),
-   ("mo_terminal_velocity", "s", "Interprets the limit V as the physical terminal velocity"),
+  [("hy_differentiate", "h", "The solution is checked by differentiating V tanh(gt/V) using d/dx(tanh x) = sech²x"),
+   ("ca_separable", "h", "dv/dt = g(1 − v²/V²) is solved by separating v and t and integrating each side"),
+   ("mo_terminal_velocity", "s", "As t grows, tanh tends to 1, so v approaches V, the terminal velocity met in mechanics"),
    ("sr_partial_fraction_integration", "s", "Integrates 1/(V² − v²) with partial fractions as an alternative to artanh")])

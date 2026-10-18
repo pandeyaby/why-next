@@ -68,13 +68,14 @@ function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class=
   s+=`<g class="gn" data-id="${u}" style="cursor:pointer"><circle cx="${x}" cy="${y}" r="${u===id?8:5}" fill="${n.new?'#2563eb':'#9ca3af'}"/><text x="${x}" y="${y-9}" font-size="10" text-anchor="middle" fill="#111">${esc(lab)}<title>${esc(n.n)} (${n.a[0]}–${n.a[1]})</title></text></g>`});
  return s+'</svg><p class="muted" style="font-size:12px">Hard prerequisites only; the earliest foundations are at the bottom. Orange lines are bridge edges. Hover a line to see its reason; click a node to open it.</p>'}
 function select(id){sel=id;const n=N.get(id);renderList();const anc=ancestors(id,false);
- const prim=[...anc].filter(u=>!N.get(u).new&&N.get(u).a[0]<=10).length;const users=(POST.get(id)||[]).map(e=>N.get(e.t));
+ const clu=(DATA.clusters||{})[n.s+'|'+n.d+'|'+n.a[0]];const prim=[...anc].filter(u=>!N.get(u).new&&N.get(u).a[0]<=10).length;const users=(POST.get(id)||[]).map(e=>N.get(e.t));
  document.getElementById('detail').innerHTML=`<div class="card"><h2 style="margin:0 0 4px">${esc(n.n)}</h2>
- <span class="tag ${n.new?'new':'old'}">${n.new?'new':'v1'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">${n.ty}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span>
+ <span class="tag ${n.new?'new':'old'}">${n.new?'new':'v1'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">${n.ty}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span><span class="tag" title="Marble centrality on the merged graph: (ancestors + descendants) / max">centrality ${n.c}</span>
  <p>${esc(n.desc)}</p>${n.ev.length?'<b>Evidence</b><ul>'+n.ev.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':''}
  <b>Standards:</b> ${n.st.length?n.st.map(esc).join(', '):'<span class="muted">none</span>'}<br>
  <span class="muted">${anc.size-1} ancestor topics (${prim} at primary ages ≤10).</span>
  ${users.length?`<br><b>Unlocks:</b> ${users.map(u=>`<span class="nm ${u.new?'new':'old'}" data-id="${u.id}">${esc(u.n)}</span>`).join(' · ')}`:''}</div>
+ ${clu?`<div class="card"><b>Cluster: ${esc(n.s)} / ${esc(n.d)}, from age ${n.a[0]}</b><p style="margin:6px 0 0">${esc(clu)}</p></div>`:''}
  <div class="card"><b>Hard-prerequisite graph</b>${graph(id)}</div>
  <div class="card"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span>${tree(id,new Set([id]),0)||'<p class="muted">No prerequisites in this view.</p>'}</div>`;
  document.getElementById('main').scrollTop=0}

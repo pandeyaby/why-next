@@ -1,6 +1,6 @@
 """JSON-schema check of extension + merged files against the repo's schema/*.json."""
 import json, jsonschema, sys
-pairs = [("out/topics.ext.json","topics"),("out/dependencies.ext.json","dependencies"),("out/standards.ext.json","curriculum-standards"),
+pairs = [("out/topics.ext.json","topics"),("out/dependencies.ext.json","dependencies"),("out/standards.ext.json","curriculum-standards"),("out/clusters.ext.json","clusters"),
  ("out/merged/data/topics.json","topics"),("out/merged/data/dependencies.json","dependencies"),
  ("out/merged/data/curriculum-standards.json","curriculum-standards"),("out/merged/data/clusters.json","clusters")]
 bad = 0

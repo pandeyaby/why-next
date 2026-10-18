@@ -17,11 +17,13 @@ while stack:
             keep.add(e["prerequisiteId"]); stack.append(e["prerequisiteId"])
 nodes = [{"id": i, "n": by[i]["name"], "d": by[i]["domain"], "s": by[i]["subject"], "ty": by[i]["type"],
           "a": [by[i]["ageRangeStart"], by[i]["ageRangeEnd"]], "desc": by[i]["description"],
-          "ev": by[i].get("evidence", []), "st": by[i].get("standards", []), "new": i in newset}
+          "ev": by[i].get("evidence", []), "st": by[i].get("standards", []), "c": round(by[i]["centrality"], 3), "new": i in newset}
          for i in sorted(keep, key=lambda i: (by[i]["subject"], by[i]["domain"], by[i]["ageRangeStart"], by[i]["name"]))]
 edges = [{"t": e["topicId"], "p": e["prerequisiteId"], "h": e["strength"] == "hard", "r": e["reason"]}
          for e in D if e["topicId"] in keep and e["prerequisiteId"] in keep]
-data = json.dumps({"nodes": nodes, "edges": edges}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+C = json.load(open("out/merged/data/clusters.json"))["clusters"]
+clusters = {f"{c['subject']}|{c['domain']}|{c['ageRangeStart']}": c["summary"] for c in C}
+data = json.dumps({"nodes": nodes, "edges": edges, "clusters": clusters}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 html = open("ext/viewer_template.html").read().replace("/*__DATA__*/null", data)
 open("out/viewer.html", "w").write(html)
-print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges")
+print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries")

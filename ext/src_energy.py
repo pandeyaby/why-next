@@ -9,7 +9,7 @@ T("en_system", M, D, "Defining a system and its boundary", "13-15",
   "If {{name}} is describing a pan of water heating on a stove, can they say what they're counting as 'the system' and which energy transfers go in or out of it?",
   ["KS3.Sci.Phys.Energy.1"],
   [("mt_Jvg_r4yWaY", "h", "Tracking flows across a boundary uses the KS3 language of stores and transfers"),
-   ("mt_68pIoiiG4g", "h", "A closed system's constant total is conservation of energy")])
+   ("mt_68pIoiiG4g", "h", "A closed system's total energy stays constant, which is conservation of energy applied to a boundary")])
 
 T("en_transfer_pathways", C, D, "Energy transfer pathways", "12-14",
   "Identify the four ways energy is transferred between stores — mechanically (by a force doing work), electrically (by a current), by heating, and by radiation (light and other electromagnetic waves) — noting that sound also carries energy as a mechanical wave, and describe a chain of transfers for a familiar device",
@@ -18,8 +18,8 @@ T("en_transfer_pathways", C, D, "Energy transfer pathways", "12-14",
    "Distinguishes a store from a pathway"],
   "If {{name}} switches on a battery torch, can they describe the energy stores and how energy moves between them until it lights the room?",
   ["KS3.Sci.Phys.Energy.1"],
-  [("mt_Jvg_r4yWaY", "h", "Pathways connect the energy stores introduced at KS3"),
-   ("mt_X_aDUBh-HF", "h", "Builds on the primary observation that energy travels by sound, light, heat and current")])
+  [("mt_Jvg_r4yWaY", "h", "The four pathways describe how energy moves between the KS3 stores, such as kinetic and thermal"),
+   ("mt_X_aDUBh-HF", "h", "Primary ideas of energy travelling as sound, light, heat and current are grouped into the four pathways")])
 
 T("en_ke_qualitative", C, D, "Kinetic energy depends on mass and speed", "12-13",
   "Explain, using data, that an object's kinetic energy increases with its mass and increases much more steeply with its speed (doubling speed quadruples kinetic energy)",
@@ -28,8 +28,8 @@ T("en_ke_qualitative", C, D, "Kinetic energy depends on mass and speed", "12-13"
    "Explains why speed limits matter so much for crash damage"],
   "If {{name}} compares a car at 30 mph with the same car at 60 mph, can they explain why the faster car carries far more than twice the energy?",
   ["MS-PS3-1"],
-  [("mt_2Um22lTBZV", "h", "Builds on the primary link between an object's speed and its energy"),
-   ("mt_Jvg_r4yWaY", "h", "Kinetic energy is one of the KS3 energy stores")])
+  [("mt_2Um22lTBZV", "h", "The primary link between an object's speed and its energy is made precise using data on mass and speed"),
+   ("mt_Jvg_r4yWaY", "h", "Kinetic energy is the KS3 energy store of a moving object, now linked to its mass and speed")])
 
 T("en_ke_calc", P, D, "Calculating kinetic energy", "14-16",
   "Calculate kinetic energy using KE = ½mv², with mass in kg and speed in m/s, and rearrange to find mass or speed",
@@ -39,8 +39,8 @@ T("en_ke_calc", P, D, "Calculating kinetic energy", "14-16",
   "If {{name}} knows a 60 kg cyclist is travelling at 5 m/s, can they work out the cyclist's kinetic energy?",
   ["HS-PS3-1"],
   [("en_ke_qualitative", "h", "The formula quantifies the mass and speed dependence already explored"),
-   ("mt_vHzVa3SURC", "h", "Using KE = ½mv² requires substituting into a formula"),
-   ("mt_hCVPYlF-7Y", "s", "The v² term needs fluency with squares")])
+   ("mt_vHzVa3SURC", "h", "Calculating kinetic energy means substituting mass and speed into KE = ½mv² in the right units"),
+   ("mt_hCVPYlF-7Y", "s", "The v² term means squaring the speed, so doubling the speed gives four times the energy")])
 
 T("en_gpe_qualitative", C, D, "Gravitational potential energy and height", "12-13",
   "Explain that lifting an object stores energy in the gravitational store, and that the amount depends on its mass, its height and the strength of gravity",
@@ -49,7 +49,7 @@ T("en_gpe_qualitative", C, D, "Gravitational potential energy and height", "12-1
    "Explains why the same object would store less energy at the same height on the Moon"],
   "If {{name}} carries a heavy bag up the stairs, can they explain where the energy they used has gone and how it could be got back?",
   ["MS-PS3-2"],
-  [("mt_Jvg_r4yWaY", "h", "Gravitational potential is one of the KS3 energy stores"),
+  [("mt_Jvg_r4yWaY", "h", "Gravitational potential is the KS3 energy store that fills when an object is lifted"),
    ("mt_sUVeVXzRuq", "s", "Weight (mass × g) is the force that sets the energy per metre of height")])
 
 T("en_gpe_calc", P, D, "Calculating gravitational potential energy", "14-16",
@@ -60,7 +60,7 @@ T("en_gpe_calc", P, D, "Calculating gravitational potential energy", "14-16",
   "If {{name}} lifts a 2 kg box onto a shelf 1.5 m high, can they calculate how much gravitational potential energy it gained?",
   ["HS-PS3-1"],
   [("en_gpe_qualitative", "h", "The formula quantifies the mass, height and gravity dependence"),
-   ("mt_vHzVa3SURC", "h", "Using mgh requires substituting into a formula")])
+   ("mt_vHzVa3SURC", "h", "Finding the change in gravitational potential energy means substituting into ΔGPE = mgh")])
 
 T("en_elastic", P, D, "Elastic potential energy", "15-17",
   "Calculate the energy stored in a stretched spring using E = ½ke² (within the limit of proportionality) and relate it to the area under a force–extension graph",
@@ -80,7 +80,7 @@ T("en_field_energy", C, D, "Energy stored in fields", "15-17",
   "If {{name}} pushes the like poles of two magnets together and lets go, can they explain where the energy that makes them spring apart was stored?",
   ["HS-PS3-5", "MS-PS3-2"],
   [("en_gpe_qualitative", "h", "Gravitational potential energy is the familiar case of energy stored in a field"),
-   ("mo_fields", "h", "Requires the idea of a field causing forces at a distance"),
+   ("mo_fields", "h", "Energy stored in a field needs the idea that gravitational, magnetic and electric fields exert forces at a distance"),
    ("mt_2_YoprauaJ", "s", "Static charges provide examples of electric field interactions")])
 
 T("en_particle_energy", C, D, "Energy as motion and position of particles", "15-17",
@@ -90,8 +90,8 @@ T("en_particle_energy", C, D, "Energy as motion and position of particles", "15-
    "Describes friction converting kinetic energy into thermal energy of particles"],
   "If {{name}} rubs their hands together and they get warm, can they explain what has happened to the energy in terms of particles?",
   ["HS-PS3-2"],
-  [("pm_kinetic", "h", "Particle kinetic energy is one half of the model"),
-   ("en_ke_qualitative", "h", "Kinetic energy of objects is scaled down to particles"),
+  [("pm_kinetic", "h", "Temperature as a measure of particle motion gives the kinetic half of the internal-energy model"),
+   ("en_ke_qualitative", "h", "Kinetic energy depending on mass and speed is applied to individual particles as well as whole objects"),
    ("en_field_energy", "s", "Particle potential energy is energy stored in fields between particles")])
 
 T("en_conservation_calc", P, D, "Energy conservation calculations", "15-17",
@@ -101,10 +101,10 @@ T("en_conservation_calc", P, D, "Energy conservation calculations", "15-17",
    "Explains why real speeds are lower than calculated"],
   "If {{name}} drops a ball from 5 m, can they use energy ideas to work out how fast it is going just before it hits the ground?",
   ["HS-PS3-1"],
-  [("en_ke_calc", "h", "The calculation needs kinetic energy"),
-   ("en_gpe_calc", "h", "The calculation needs gravitational potential energy"),
-   ("mt_68pIoiiG4g", "h", "Equating energy before and after is conservation of energy"),
-   ("al_formula_powers", "h", "Finding speed means rearranging a formula with a square")])
+  [("en_ke_calc", "h", "Problems on falling objects and pendulums need the kinetic energy ½mv² at each point"),
+   ("en_gpe_calc", "h", "Problems on falling objects and pendulums need the gravitational potential energy mgh at each height"),
+   ("mt_68pIoiiG4g", "h", "Setting energy before equal to energy after is conservation of energy applied to the problem"),
+   ("al_formula_powers", "h", "Finding a speed from ½mv² = mgh means rearranging and taking a square root")])
 
 T("en_dissipation", C, D, "Why dissipated energy is less useful", "13-15",
   "Explain that energy dissipated to the thermal store of the surroundings spreads out thinly over many particles, so although none is destroyed it becomes much harder to use again — the idea behind 'wasted' energy",
@@ -123,8 +123,8 @@ T("en_reduce_waste", C, D, "Reducing unwanted energy transfers", "14-16",
    "Compares two design improvements by their effect on efficiency"],
   "If {{name}} is asked how to make a bicycle more efficient, can they suggest two changes and explain what wasted energy each one reduces?",
   ["HS-PS3-3"],
-  [("en_dissipation", "h", "Reducing waste requires knowing where energy is dissipated"),
-   ("mt_JyfLtl_nhw", "h", "Efficiency is the measure of improvement")])
+  [("en_dissipation", "h", "Reducing waste starts from knowing where energy is dissipated, for example as heat through friction"),
+   ("mt_JyfLtl_nhw", "h", "Improvements are judged by efficiency, the useful output as a fraction of the total input")])
 
 T("en_work_energy", C, D, "The work–energy principle", "16-18",
   "Use the principle that the net work done on an object equals its change in kinetic energy, and apply it to braking distances and accelerating vehicles",
@@ -134,8 +134,8 @@ T("en_work_energy", C, D, "The work–energy principle", "16-18",
   "If {{name}} is told a car's speed doubles, can they use energy and work ideas to explain why its braking distance becomes about four times longer?",
   ["HS-PS3-1"],
   [("mt_JyfLtl_nhw", "h", "The principle relates work done (force × distance) to energy transferred"),
-   ("mo_f_ma_problems", "s", "Net force from F = ma is the force doing the net work"),
-   ("en_ke_calc", "h", "The change in kinetic energy must be calculated")])
+   ("mo_f_ma_problems", "s", "The resultant force found with F = ma is the force whose work changes the kinetic energy"),
+   ("en_ke_calc", "h", "Applying the principle means calculating the change in ½mv² between two speeds")])
 
 T("en_kwh", P, D, "Energy bills and kilowatt-hours", "14-16",
   "Calculate energy transferred by appliances using E = P × t in both joules and kilowatt-hours, and use unit prices to work out running costs",
@@ -144,7 +144,7 @@ T("en_kwh", P, D, "Energy bills and kilowatt-hours", "14-16",
    "Works out the cost of running an appliance"],
   "If {{name}} runs a 2 kW heater for 3 hours and electricity costs 30p per kWh, can they work out how much it costs?",
   [],
-  [("mt_ckpA3oZQ44", "h", "Builds on KS3 power as energy per second"),
+  [("mt_ckpA3oZQ44", "h", "KS3 power as energy per second gives E = P × t, now with power in kW and time in hours"),
    ("mt_tpT9brpI6D", "s", "Unit conversion is needed between W and kW, seconds and hours")])
 
 T("en_electrical_power", P, D, "Electrical energy and power", "15-17",
@@ -155,8 +155,8 @@ T("en_electrical_power", P, D, "Electrical energy and power", "15-17",
   "If {{name}} knows a kettle draws 10 A from a 230 V supply, can they work out its power?",
   ["KS3.Sci.Phys.ElectricityAndElectromagnetism.1"],
   [("mt_H3ZDK0EYNV", "h", "Uses KS3 relationships between voltage, current and resistance"),
-   ("mt_ckpA3oZQ44", "h", "Power is the rate of energy transfer"),
-   ("al_formula_powers", "s", "P = I²R involves a squared quantity in a formula")])
+   ("mt_ckpA3oZQ44", "h", "Power as the rate of energy transfer links the electrical formulae P = IV and E = QV"),
+   ("al_formula_powers", "s", "Using P = I²R to find a current means rearranging a formula with a squared quantity")])
 
 T("en_thermal_vs_temp", C, D, "Temperature versus thermal energy", "12-14",
   "Distinguish temperature (average particle kinetic energy) from the total thermal energy of an object, which also depends on how much matter it contains and what it is made of",
@@ -166,7 +166,7 @@ T("en_thermal_vs_temp", C, D, "Temperature versus thermal energy", "12-14",
   "If {{name}} compares a cup of boiling water with a bath of warm water, can they explain which has more thermal energy and why that's different from which is hotter?",
   ["MS-PS3-4"],
   [("pm_kinetic", "h", "Temperature as average particle kinetic energy is the key distinction"),
-   ("mt_Jvg_r4yWaY", "s", "Thermal energy is one of the KS3 energy stores")])
+   ("mt_Jvg_r4yWaY", "s", "Thermal energy is the KS3 energy store that depends on mass and material as well as temperature")])
 
 T("en_specific_heat", C, D, "Specific heat capacity", "13-15",
   "Explain specific heat capacity as the energy needed to raise 1 kg of a substance by 1 °C, compare materials, and use it to explain why water heats and cools slowly and moderates coastal climates",
@@ -195,8 +195,8 @@ T("en_mixing_calc", P, D, "Calculating final temperature when mixing", "16-18",
    "Explains why real results differ from calculated ones"],
   "If {{name}} mixes 200 g of water at 80 °C with 200 g of water at 20 °C, can they predict the final temperature and set up an equation that would work for unequal amounts?",
   ["HS-PS3-4"],
-  [("en_thermal_equilibrium", "h", "The calculation finds the equilibrium temperature"),
-   ("en_specific_heat", "h", "Q = mcΔT is used for both objects"),
+  [("en_thermal_equilibrium", "h", "The final temperature found is the common temperature reached when the objects are in thermal equilibrium"),
+   ("en_specific_heat", "h", "Energy lost and gained are both written with Q = mcΔT, one for each object"),
    ("mt_QhFEDyIwSO", "h", "The unknown temperature appears on both sides of a linear equation")])
 
 T("en_second_law", C, D, "Heat flows from hot to cold", "16-18",
@@ -207,7 +207,7 @@ T("en_second_law", C, D, "Heat flows from hot to cold", "16-18",
   "If {{name}} is asked why an ice cube in a warm room never gets colder on its own, can they explain the rule about which way heat flows?",
   ["HS-PS3-4"],
   [("en_thermal_equilibrium", "h", "The second law generalises the approach to thermal equilibrium"),
-   ("en_dissipation", "s", "Dissipation is the everyday face of energy spreading out")])
+   ("en_dissipation", "s", "Dissipated energy spreading into the surroundings is the everyday example of the second law")])
 
 T("en_rate_heat", R, D, "Cooling curves and rate of heat loss", "13-15",
   "Interpret cooling curves — steep at first and levelling off as the object approaches room temperature — and explain how temperature difference, insulation thickness, material and surface area change the rate of heat loss",
@@ -217,7 +217,7 @@ T("en_rate_heat", R, D, "Cooling curves and rate of heat loss", "13-15",
   "If {{name}} records the temperature of a cup of tea every minute, can they explain why it cools quickly at first and more slowly later?",
   ["KS3.Sci.Phys.Energy.5"],
   [("mt_ySnOkVIu22", "h", "Rate depends on the heat-transfer mechanisms introduced at KS3"),
-   ("mt_bESTSBB0wK", "s", "Cooling curves are line graphs")])
+   ("mt_bESTSBB0wK", "s", "A cooling curve is a line graph of temperature against time, read for its changing gradient")])
 
 T("en_insulation_design", P, D, "Designing to reduce heat transfer", "12-14",
   "Design, test and improve a device that minimises or maximises thermal energy transfer (e.g. an insulated cup or a solar cooker), controlling variables and measuring temperature change",
@@ -227,8 +227,8 @@ T("en_insulation_design", P, D, "Designing to reduce heat transfer", "12-14",
   "If {{name}} is challenged to keep an ice cube from melting for as long as possible, can they design a container and explain how each part reduces heat transfer?",
   ["MS-PS3-3"],
   [("mt_ySnOkVIu22", "h", "Design choices rely on understanding the three heat-transfer mechanisms"),
-   ("mt_d-EKO-pKkP", "s", "Builds on the primary idea of thermal and electrical insulators"),
-   ("mt_Ae56umVlTT", "s", "Fair testing of designs requires controlling variables")])
+   ("mt_d-EKO-pKkP", "s", "Choosing materials for an insulated cup builds on the primary idea of thermal conductors and insulators"),
+   ("mt_Ae56umVlTT", "s", "Testing designs fairly means keeping the starting temperature and volume of water the same")])
 
 T("en_conduction_particles", C, D, "Conduction explained by particles", "13-15",
   "Explain conduction in solids as vibrating particles passing energy to neighbours, and why metals conduct so well (free electrons), while gases are poor conductors",
@@ -238,7 +238,7 @@ T("en_conduction_particles", C, D, "Conduction explained by particles", "13-15",
   "If {{name}} holds a metal spoon in hot soup, can they explain how the heat travels up the spoon to their hand?",
   [],
   [("mt_ySnOkVIu22", "h", "Gives the particle explanation for the KS3 description of conduction"),
-   ("pm_kinetic", "h", "Requires linking temperature to particle vibration")])
+   ("pm_kinetic", "h", "Conduction is explained by hotter particles vibrating more and passing energy to their neighbours")])
 
 T("en_convection_density", C, D, "Convection currents and density", "13-15",
   "Explain convection currents as warmer fluid expanding, becoming less dense and rising while cooler, denser fluid sinks, and apply this to heaters, sea breezes and the atmosphere",
@@ -247,8 +247,8 @@ T("en_convection_density", C, D, "Convection currents and density", "13-15",
    "Explains why convection cannot happen in solids"],
   "If {{name}} sees a radiator under a window, can they draw how air moves around the room and explain why using density?",
   [],
-  [("mt_ySnOkVIu22", "h", "Gives a deeper explanation of convection described at KS3"),
-   ("pm_density", "h", "Convection is driven by density differences")])
+  [("mt_ySnOkVIu22", "h", "The KS3 description of convection is explained here through expansion and changes in density"),
+   ("pm_density", "h", "Warm fluid rises because it is less dense than the cooler fluid around it")])
 
 T("en_ir_surfaces", C, D, "Infrared radiation and surfaces", "13-15",
   "Explain that all objects emit and absorb infrared radiation, that hotter objects emit more, and that dark matt surfaces are better emitters and absorbers than light shiny ones",
@@ -257,8 +257,8 @@ T("en_ir_surfaces", C, D, "Infrared radiation and surfaces", "13-15",
    "Explains why emergency blankets are shiny"],
   "If {{name}} is asked why marathon runners are wrapped in shiny foil blankets, can they explain how it keeps them warm?",
   [],
-  [("mt_ySnOkVIu22", "h", "Extends KS3 radiation as a heat-transfer mechanism"),
-   ("mt_XSp-S0wter", "s", "Infrared is part of the electromagnetic spectrum")])
+  [("mt_ySnOkVIu22", "h", "Radiation, met at KS3 as one way heat travels, is studied here as infrared emitted and absorbed by surfaces"),
+   ("mt_XSp-S0wter", "s", "Infrared is the part of the electromagnetic spectrum that warm objects emit most strongly")])
 
 T("en_generators", C, D, "Generating electricity by induction", "15-17",
   "Explain that moving a magnet near a coil (or a coil in a magnetic field) induces a current, and that generators in power stations use this to transform kinetic energy into electrical energy",
@@ -268,7 +268,7 @@ T("en_generators", C, D, "Generating electricity by induction", "15-17",
   "If {{name}} moves a magnet in and out of a coil connected to a meter, can they explain why the needle flicks and how that relates to a power station?",
   ["HS-PS2-5", "HS-PS3-3", "KS3.Sci.Phys.ElectricityAndElectromagnetism.3"],
   [("mo_current_field", "h", "Induction is the reverse of a current producing a magnetic field"),
-   ("mt_56aspHjU19", "h", "Requires the idea of a magnetic field")])
+   ("mt_56aspHjU19", "h", "Induction needs a coil moving through, or cutting, the lines of a magnetic field")])
 
 T("en_power_station", C, D, "Energy transformations in power stations", "15-17",
   "Trace the energy chain in a thermal power station (fuel → thermal → kinetic in turbine → electrical) and in renewable alternatives, identifying where energy is dissipated",
@@ -277,9 +277,9 @@ T("en_power_station", C, D, "Energy transformations in power stations", "15-17",
    "Identifies the largest source of waste in a thermal power station"],
   "If {{name}} is asked how burning gas ends up lighting a lamp in their house, can they describe each energy transfer along the way?",
   ["HS-PS3-3"],
-  [("en_generators", "h", "Every power-station chain ends in a generator"),
-   ("en_dissipation", "s", "Identifying waste requires the idea of dissipation"),
-   ("mt_w2A8D76ymp", "s", "Builds on KS3 comparison of renewable and non-renewable resources")])
+  [("en_generators", "h", "Every thermal and most renewable power stations end the energy chain at a generator turned by a turbine"),
+   ("en_dissipation", "s", "Finding where energy is wasted in the chain uses the idea that dissipated energy heats the surroundings"),
+   ("mt_w2A8D76ymp", "s", "The KS3 comparison of renewable and non-renewable resources is extended to how each station works")])
 
 T("en_device_design", P, D, "Designing an energy-conversion device", "15-18",
   "Design, build and refine a device that converts energy from one form to another within constraints (e.g. a solar oven, wind turbine or generator), measuring input and output to evaluate efficiency",
@@ -288,9 +288,9 @@ T("en_device_design", P, D, "Designing an energy-conversion device", "15-18",
    "Refines the design based on test results"],
   "If {{name}} builds a small wind turbine for a school project, can they explain how they would measure how well it works and decide what to improve?",
   ["HS-PS3-3"],
-  [("en_reduce_waste", "h", "Refining a design means reducing unwanted transfers"),
+  [("en_reduce_waste", "h", "Refining a design means applying insulation, lubrication and streamlining to cut unwanted transfers"),
    ("mt_K1-HopEJAB", "h", "Extends the primary-school energy-converting device project with quantitative evaluation"),
-   ("en_power_station", "s", "Real generators provide models for the design")])
+   ("en_power_station", "s", "Real energy chains in power stations are models for planning the device's own conversion steps")])
 
 T("en_energy_model", P, D, "Building an energy-accounting model", "16-18",
   "Create a computational model (equations or a spreadsheet) that calculates the change in energy of one part of a system when the changes in the other parts and the flows in and out are known, and explain what each expression represents",
@@ -299,8 +299,8 @@ T("en_energy_model", P, D, "Building an energy-accounting model", "16-18",
    "Explains the meaning of each term in the model"],
   "If {{name}} models a roller coaster car with friction, can they set up a calculation that tracks kinetic, potential and dissipated energy at each point?",
   ["HS-PS3-1"],
-  [("en_conservation_calc", "h", "The model generalises energy conservation calculations"),
-   ("en_system", "h", "Energy accounting requires a defined system and boundary"),
+  [("en_conservation_calc", "h", "The spreadsheet model generalises single conservation calculations to many parts and flows"),
+   ("en_system", "h", "Energy accounting needs a defined boundary to decide which flows count as inputs and outputs"),
    ("fm_iterative_model", "s", "Spreadsheet step-by-step modelling is the computational tool")])
 
 T("en_compare_resources", P, D, "Comparing energy resources with data", "15-17",
@@ -310,6 +310,6 @@ T("en_compare_resources", P, D, "Comparing energy resources with data", "15-17",
    "Writes a justified recommendation for an energy mix"],
   "If {{name}} is given data on wind, gas and nuclear power, can they compare them on cost and carbon and argue for a sensible mix?",
   [],
-  [("mt_w2A8D76ymp", "h", "Builds on the qualitative KS3 comparison of energy resources"),
-   ("en_kwh", "h", "Comparisons are made per kilowatt-hour"),
-   ("mt_Wzj1RETm9A", "s", "Net-zero goals provide the context for the comparison")])
+  [("mt_w2A8D76ymp", "h", "The qualitative KS3 comparison of resources becomes an argument backed by cost and emissions data"),
+   ("en_kwh", "h", "Costs and emissions are compared per kilowatt-hour, so the unit must be understood"),
+   ("mt_Wzj1RETm9A", "s", "Net-zero targets give the reason for comparing low-carbon resources and choosing an energy mix")])

@@ -21,9 +21,9 @@ import src_organic, src_hypothesis, src_matrices, src_series  # noqa: F401,E402 
 import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  # noqa: F401,E402  (wave 4)
 import src_hyperbolic, src_conics, src_carbonyl, src_amino  # noqa: F401,E402  (wave 5)
 
-EXT_VERSION = "v1-secondary-ext.0.5"
+EXT_VERSION = "v1-secondary-ext.0.6"
 ID_NAMESPACE = "marble-os-taxonomy/secondary-ext/v1:"
-CENTRALITY_SCALE = 731  # max descendant count in the v1 graph; see README_EXT.md
+CENTRALITY_SCALE = 731  # max (ancestors + descendants) in the v1 graph; see README_EXT.md
 
 def load(name):
     with open(os.path.join(DATA, name), encoding="utf-8") as f:
@@ -122,19 +122,36 @@ all_edges = deps_v1["dependencies"] + new_edges
 by_id = {t["id"]: t for t in all_topics}
 new_ids = {t["id"] for t in new_topics}
 
-# centrality: descendants (topics that transitively depend on this one) / v1 max, floored at 1
-children = defaultdict(list)
+# centrality: Marble's v1 method, reproduced exactly (all 1590 v1 values):
+#   centrality = (ancestors + descendants) / max over the graph of (ancestors + descendants)
+# where ancestors/descendants count topics connected through prerequisite edges of either
+# strength. Recomputed here on the merged graph for every topic; v1 files under data/ are
+# untouched, and the merged copy carries the recomputed values (see README_EXT.md).
+children = defaultdict(list); parents_all = defaultdict(list)
 for e in all_edges:
-    children[e["prerequisiteId"]].append(e["topicId"])
-def n_desc(i):
+    children[e["prerequisiteId"]].append(e["topicId"]); parents_all[e["topicId"]].append(e["prerequisiteId"])
+def reach(i, nbr):
     seen, st = set(), [i]
     while st:
-        for c in children[st.pop()]:
+        for c in nbr[st.pop()]:
             if c not in seen:
                 seen.add(c); st.append(c)
     return len(seen)
+def centrality_counts(ids):
+    return {i: reach(i, children) + reach(i, parents_all) for i in ids}
+# sanity: the method must reproduce v1 on the v1 graph alone
+_v1c, _v1p = defaultdict(list), defaultdict(list)
+for e in deps_v1["dependencies"]:
+    _v1c[e["prerequisiteId"]].append(e["topicId"]); _v1p[e["topicId"]].append(e["prerequisiteId"])
+_v1k = {t["id"]: reach(t["id"], _v1c) + reach(t["id"], _v1p) for t in topics_v1["topics"]}
+_v1max = max(_v1k.values())
+CENTRALITY_V1_MAX_ABS_ERROR = max(abs(_v1k[t["id"]] / _v1max - t["centrality"]) for t in topics_v1["topics"])
+assert _v1max == CENTRALITY_SCALE and CENTRALITY_V1_MAX_ABS_ERROR < 1e-12, CENTRALITY_V1_MAX_ABS_ERROR
+cent_k = centrality_counts(by_id)
+CENTRALITY_MERGED_MAX = max(cent_k.values())
+merged_centrality = {i: k / CENTRALITY_MERGED_MAX for i, k in cent_k.items()}
 for t in new_topics:
-    t["centrality"] = round(min(1.0, max(1, n_desc(t["id"])) / CENTRALITY_SCALE), 6)
+    t["centrality"] = merged_centrality[t["id"]]
 
 # ---------------------------------------------------------------- checks
 problems, report = [], {}
@@ -221,13 +238,33 @@ dump(standards_ext, os.path.join(OUT, "standards.ext.json"))
 
 # ---------------------------------------------------------------- merged dataset (same layout as data/)
 M = os.path.join(OUT, "merged", "data")
-m_topics = {"version": EXT_VERSION, "topicCount": len(all_topics), "topics": all_topics}
+m_all_topics = []
+for t in all_topics:
+    t2 = dict(t); t2["centrality"] = merged_centrality[t["id"]]; m_all_topics.append(t2)
+m_topics = {"version": EXT_VERSION, "topicCount": len(m_all_topics), "topics": m_all_topics}
 m_deps = {"version": EXT_VERSION, "note": deps_v1.get("note"), "edgeCount": len(all_edges), "dependencies": all_edges}
 m_stds = copy.deepcopy(stds_v1)
 m_stds["codesOnlySources"] = sorted(set(m_stds.get("codesOnlySources", [])) | {"ngss-hs"})
 m_stds["curricula"].append(ngss_hs)
 m_stds["curriculumCount"] = len(m_stds["curricula"])
-m_clusters = clusters_v1
+from clusters_ext import CLUSTERS  # noqa: E402
+occupied = sorted({(t["subject"], t["domain"], t["ageRangeStart"]) for t in new_topics}, key=lambda k: (k[0], k[1], k[2]))
+v1_cluster_keys = {(c["subject"], c["domain"], c["ageRangeStart"]) for c in clusters_v1["clusters"]}
+ext_clusters = []
+for subj, dom, age in occupied:
+    if (dom, age) not in CLUSTERS: problems.append(f"missing cluster summary: {subj} / {dom} / {age}")
+    elif (subj, dom, age) in v1_cluster_keys: problems.append(f"cluster clashes with v1: {subj} / {dom} / {age}")
+    else: ext_clusters.append({"subject": subj, "domain": dom, "ageRangeStart": age, "summary": CLUSTERS[(dom, age)]})
+unused = set(CLUSTERS) - {(d, a) for _, d, a in occupied}
+if unused: problems.append(f"cluster summaries for unoccupied groups: {sorted(unused)}")
+report["counts"]["clusters"] = len(ext_clusters)
+report["centrality"] = {"method": "(ancestors + descendants) / max over graph", "v1MaxAbsError": CENTRALITY_V1_MAX_ABS_ERROR,
+                        "v1Max": _v1max, "mergedMax": CENTRALITY_MERGED_MAX}
+dump({"version": EXT_VERSION, "clusterCount": len(ext_clusters), "clusters": ext_clusters}, os.path.join(OUT, "clusters.ext.json"))
+m_clusters = copy.deepcopy(clusters_v1)
+m_clusters["version"] = EXT_VERSION
+m_clusters["clusters"] += ext_clusters
+m_clusters["clusterCount"] = len(m_clusters["clusters"])
 for name, obj in (("topics.json", m_topics), ("dependencies.json", m_deps), ("curriculum-standards.json", m_stds), ("clusters.json", m_clusters)):
     dump(obj, os.path.join(M, name))
 files = {}

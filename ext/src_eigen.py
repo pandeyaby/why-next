@@ -10,9 +10,9 @@ T("v3_vectors_3d", R, GE, "Vectors in three dimensions", "16-18",
    "Calculates the magnitude of a 3-D vector"],
   "If {{name}} has the points A(1, 2, −1) and B(4, 0, 5), can they find the vector from A to B and its length?",
   ["N-VM.1", "N-VM.2"],
-  [("gt_vectors_notation", "h", "Extends column vectors from two to three dimensions"),
-   ("gt_3d_trig", "h", "The magnitude uses Pythagoras in three dimensions"),
-   ("mo_scalar_vector", "s", "Builds on vectors having magnitude and direction")])
+  [("gt_vectors_notation", "h", "Column vectors and their arithmetic are extended from two to three components"),
+   ("gt_3d_trig", "h", "The magnitude √(x² + y² + z²) is Pythagoras in three dimensions, as for a space diagonal"),
+   ("mo_scalar_vector", "s", "A 3-D vector, such as a displacement or force, still has a magnitude and a direction")])
 
 T("v3_unit_vectors", P, GE, "Unit vectors and parallel vectors", "16-18",
   "Find a unit vector in the direction of a given vector, and decide whether vectors are parallel by checking whether one is a scalar multiple of the other",
@@ -21,8 +21,8 @@ T("v3_unit_vectors", P, GE, "Unit vectors and parallel vectors", "16-18",
    "Finds the value of a constant that makes two vectors parallel"],
   "If {{name}} is given the vectors (3, −6, 9) and (−1, 2, k), can they find k so that the vectors are parallel?",
   [],
-  [("v3_vectors_3d", "h", "Uses 3-D vectors and their magnitudes"),
-   ("gt_vector_proofs", "s", "Extends the parallel-vector test used in vector proofs")])
+  [("v3_vectors_3d", "h", "A unit vector divides a 3-D vector by its magnitude √(x² + y² + z²)"),
+   ("gt_vector_proofs", "s", "The test that one vector is a scalar multiple of another was used in vector proofs")])
 
 T("v3_scalar_product", P, GE, "The scalar (dot) product", "17-18",
   "Calculate the scalar product a·b = a₁b₁ + a₂b₂ + a₃b₃ = |a||b|cos θ, and use a·b = 0 to test whether vectors are perpendicular",
@@ -31,8 +31,8 @@ T("v3_scalar_product", P, GE, "The scalar (dot) product", "17-18",
    "Explains how the two forms of the scalar product are related"],
   "If {{name}} is given the vectors (2, −1, 3) and (1, 5, 1), can they decide whether the vectors are perpendicular?",
   [],
-  [("v3_vectors_3d", "h", "Works with components and magnitudes of vectors"),
-   ("gt_cosine_rule", "s", "The cosine rule links the two forms of the scalar product")])
+  [("v3_vectors_3d", "h", "a·b = a₁b₁ + a₂b₂ + a₃b₃ uses the components, and |a||b|cos θ the magnitudes"),
+   ("gt_cosine_rule", "s", "Applying the cosine rule to the triangle formed by a and b shows the two forms agree")])
 
 T("v3_angle_between", P, GE, "Angle between two vectors", "17-18",
   "Find the angle between two vectors using cos θ = a·b/(|a||b|), including angles in 3-D shapes",
@@ -41,8 +41,8 @@ T("v3_angle_between", P, GE, "Angle between two vectors", "17-18",
    "Explains why a negative scalar product gives an obtuse angle"],
   "If {{name}} has the vertices of a triangle in 3-D, can they find one of its angles using vectors?",
   [],
-  [("v3_scalar_product", "h", "Rearranges the scalar product to find the angle"),
-   ("gt_trig_equations", "s", "Finds an angle from its cosine")])
+  [("v3_scalar_product", "h", "cos θ = a·b/(|a||b|) rearranges the two forms of the scalar product"),
+   ("gt_trig_equations", "s", "The angle is found from its cosine with inverse cosine, giving a value from 0° to 180°")])
 
 T("v3_line_equation", R, GE, "Vector equation of a line", "17-18",
   "Write the equation of a line as r = a + tb in two or three dimensions, interpret a and b, and convert between vector, parametric and Cartesian forms",
@@ -51,10 +51,10 @@ T("v3_line_equation", R, GE, "Vector equation of a line", "17-18",
    "Converts a vector equation to Cartesian form"],
   "If {{name}} is given the points (1, 0, 2) and (3, 4, −1), can they write a vector equation of the line through them and check whether (5, 8, −4) lies on it?",
   [],
-  [("v3_vectors_3d", "h", "Uses position and direction vectors"),
-   ("v3_unit_vectors", "h", "Any multiple of the direction vector gives the same line"),
-   ("al_line_from_points", "s", "Generalises the equation of a straight line"),
-   ("sr_parametric_curves", "s", "The parameter t works as in parametric equations")])
+  [("v3_vectors_3d", "h", "r = a + tb uses a position vector a and a direction vector b"),
+   ("v3_unit_vectors", "h", "Any non-zero multiple of the direction vector describes the same line"),
+   ("al_line_from_points", "s", "A line through a point with a given direction generalises y = mx + c"),
+   ("sr_parametric_curves", "s", "The parameter t works as in parametric equations, giving each point on the line")])
 
 T("v3_line_intersections", P, GE, "Intersecting, parallel and skew lines", "17-18",
   "Decide whether two lines in 3-D are parallel, intersect or are skew by comparing direction vectors and solving for the parameters, and find any point of intersection",
@@ -63,9 +63,9 @@ T("v3_line_intersections", P, GE, "Intersecting, parallel and skew lines", "17-1
    "Explains why skew lines cannot happen in two dimensions"],
   "If {{name}} is given two lines in vector form, can they show whether they intersect, are parallel or are skew?",
   [],
-  [("v3_line_equation", "h", "Works with vector equations of lines"),
-   ("al_sys_elimination", "h", "Solves simultaneous equations for the parameters"),
-   ("al_sys_types", "s", "An inconsistent system shows the lines do not meet")])
+  [("v3_line_equation", "h", "Both lines are written as r = a + tb with different parameters"),
+   ("al_sys_elimination", "h", "Equating components gives simultaneous equations for the two parameters"),
+   ("al_sys_types", "s", "Inconsistent equations for non-parallel lines show they are skew")])
 
 T("v3_line_angles", P, GE, "Angle between two lines", "17-18",
   "Find the acute angle between two lines using the scalar product of their direction vectors",
@@ -74,8 +74,8 @@ T("v3_line_angles", P, GE, "Angle between two lines", "17-18",
    "Gives the acute angle when the scalar product is negative"],
   "If {{name}} has two lines in vector form, can they find the acute angle between them?",
   [],
-  [("v3_line_equation", "h", "Uses the direction vectors of lines"),
-   ("v3_angle_between", "h", "Finds the angle between the direction vectors")])
+  [("v3_line_equation", "h", "The angle between lines is the angle between their direction vectors"),
+   ("v3_angle_between", "h", "cos θ = a·b/(|a||b|) is applied to the two direction vectors")])
 
 T("v3_vector_product", P, GE, "The vector (cross) product", "17-18",
   "Calculate the vector product a × b, a vector perpendicular to both a and b with magnitude |a||b|sin θ, and use it to find normals and areas",
@@ -84,9 +84,9 @@ T("v3_vector_product", P, GE, "The vector (cross) product", "17-18",
    "Uses |a × b| to find the area of a triangle"],
   "If {{name}} has two direction vectors in a plane, can they find a vector perpendicular to both?",
   [],
-  [("v3_scalar_product", "h", "Checks perpendicularity with the scalar product"),
-   ("mx_3x3", "s", "Uses the same pattern as a 3×3 determinant"),
-   ("gt_area_sine", "s", "The magnitude matches the ½ab sin C area idea")])
+  [("v3_scalar_product", "h", "The result is checked to be perpendicular by showing its scalar product with a and b is 0"),
+   ("mx_3x3", "s", "a × b is calculated with the same pattern of 2×2 minors as a 3×3 determinant"),
+   ("gt_area_sine", "s", "|a × b| = |a||b|sin θ is twice the area ½ab sin C of the triangle formed")])
 
 T("v3_plane_equation", R, GE, "Equations of a plane", "17-18",
   "Write the equation of a plane in the forms r·n = a·n, ax + by + cz = d and r = a + sb + tc, and identify a normal vector",
@@ -95,9 +95,9 @@ T("v3_plane_equation", R, GE, "Equations of a plane", "17-18",
    "Finds the plane through three points"],
   "If {{name}} has three points that are not on one line, can they find the Cartesian equation of the plane through them?",
   [],
-  [("v3_scalar_product", "h", "A normal is perpendicular to every vector in the plane"),
-   ("v3_line_equation", "h", "Extends vector equations from lines to planes"),
-   ("v3_vector_product", "s", "Finds a normal from two direction vectors"),
+  [("v3_scalar_product", "h", "r·n = a·n says every vector in the plane is perpendicular to the normal n"),
+   ("v3_line_equation", "h", "r = a + sb + tc extends the vector line equation with a second direction"),
+   ("v3_vector_product", "s", "A normal to the plane is found as the vector product of two directions in it"),
    ("al_sys_three", "s", "A plane is the graph of a linear equation in three variables")])
 
 T("v3_line_plane", P, GE, "Where a line meets a plane", "17-18",
@@ -107,8 +107,8 @@ T("v3_line_plane", P, GE, "Where a line meets a plane", "17-18",
    "Finds the angle between a line and a plane using the normal"],
   "If {{name}} has a line and a plane, can they find where the line crosses the plane and the angle between them?",
   [],
-  [("v3_plane_equation", "h", "Uses equations of planes"),
-   ("v3_line_angles", "s", "Uses angles between direction vectors and normals")])
+  [("v3_plane_equation", "h", "The line's general point is substituted into the plane's equation to find t"),
+   ("v3_line_angles", "s", "The angle with a plane uses the angle between the line's direction and the normal")])
 
 T("v3_plane_intersections", P, GE, "Intersections of planes and angles between planes", "17-18",
   "Find the line of intersection of two planes and the angle between two planes using their normals",
@@ -117,9 +117,9 @@ T("v3_plane_intersections", P, GE, "Intersections of planes and angles between p
    "Explains why parallel planes have parallel normals"],
   "If {{name}} has two plane equations, can they find their line of intersection and the angle between the planes?",
   [],
-  [("v3_plane_equation", "h", "Uses the normals and equations of planes"),
+  [("v3_plane_equation", "h", "The angle between planes is the angle between their normals, read from the equations"),
    ("al_sys_three", "h", "Solves two equations in three unknowns for a line of solutions"),
-   ("mx_planes", "s", "Builds on arrangements of planes and consistency")])
+   ("mx_planes", "s", "Two planes meeting in a line is one of the arrangements studied as consistent systems")])
 
 T("v3_distances", P, GE, "Shortest distances to lines and planes", "17-18",
   "Find the shortest distance from a point to a line and from a point to a plane, using perpendicularity and the scalar product",
@@ -128,8 +128,8 @@ T("v3_distances", P, GE, "Shortest distances to lines and planes", "17-18",
    "Explains why the shortest distance is perpendicular"],
   "If {{name}} has a point and a plane, can they find how far the point is from the plane?",
   [],
-  [("v3_line_plane", "h", "Finds where a perpendicular line meets the plane"),
-   ("v3_scalar_product", "h", "Uses a·b = 0 to find the perpendicular")])
+  [("v3_line_plane", "h", "The foot of the perpendicular is where the line through the point along the normal meets the plane"),
+   ("v3_scalar_product", "h", "The closest point is found by setting a scalar product with the direction vector to 0")])
 
 # ---------------------------------------------------------------- matrix tools
 T("ev_transpose", P, MC, "The transpose of a matrix", "16-18",
@@ -139,8 +139,8 @@ T("ev_transpose", P, MC, "The transpose of a matrix", "16-18",
    "Identifies symmetric matrices"],
   "If {{name}} is given two matrices, can they show that the transpose of their product is the product of the transposes in reverse order?",
   [],
-  [("mx_multiply", "h", "Uses matrix multiplication"),
-   ("mx_notation", "s", "Rows and columns swap, so the order of the matrix changes")])
+  [("mx_multiply", "h", "(AB)ᵀ = BᵀAᵀ is checked by multiplying matrices in both orders"),
+   ("mx_notation", "s", "Rows and columns swap, so an m × n matrix becomes an n × m matrix")])
 
 T("ev_matrix_powers", P, MC, "Powers of a matrix", "17-18",
   "Calculate powers of a square matrix by repeated multiplication, spot patterns, and prove a formula for Aⁿ by induction",
@@ -149,9 +149,9 @@ T("ev_matrix_powers", P, MC, "Powers of a matrix", "17-18",
    "Proves the formula by induction"],
   "If {{name}} is given the matrix with rows (1, 2) and (0, 1), can they find a formula for its nth power and prove it?",
   ["N-VM.8"],
-  [("mx_multiply", "h", "Multiplies matrices repeatedly"),
-   ("mx_properties", "h", "Uses associativity of matrix multiplication"),
-   ("sr_induction", "s", "Proves the general formula by induction")])
+  [("mx_multiply", "h", "A², A³ and higher powers are found by multiplying the matrix by itself repeatedly"),
+   ("mx_properties", "h", "Associativity means A³ can be found as A²A or AA², giving the same result"),
+   ("sr_induction", "s", "A conjectured formula for Aⁿ, spotted from A², A³ and A⁴, is proved by induction on n")])
 
 T("ev_transition_matrices", P, MC, "Transition matrices and Markov chains", "17-18",
   "Model a system that moves between states with fixed probabilities using a transition matrix, find the state distribution after n steps, and estimate the long-run distribution",
@@ -160,9 +160,9 @@ T("ev_transition_matrices", P, MC, "Transition matrices and Markov chains", "17-
    "Estimates the long-run distribution with technology"],
   "If {{name}} knows the probabilities that a customer switches between two brands each month, can they predict the market shares after six months?",
   [],
-  [("ev_matrix_powers", "h", "Uses powers of the transition matrix"),
-   ("mx_matrix_vector", "h", "Applies the matrix to a state vector"),
-   ("pb_conditional_formula", "s", "Entries are conditional probabilities")])
+  [("ev_matrix_powers", "h", "The distribution after n steps uses the nth power of the transition matrix"),
+   ("mx_matrix_vector", "h", "Multiplying the state vector by the transition matrix gives the next distribution"),
+   ("pb_conditional_formula", "s", "Each entry is a conditional probability of moving to one state given the current one")])
 
 # ---------------------------------------------------------------- eigenvalues and eigenvectors
 T("ev_eigen_meaning", C, MC, "Eigenvectors and eigenvalues", "17-18",
@@ -172,9 +172,9 @@ T("ev_eigen_meaning", C, MC, "Eigenvectors and eigenvalues", "17-18",
    "Explains why the zero vector is excluded"],
   "If {{name}} is given a matrix and the vector (1, 2), can they check whether it is an eigenvector and find the eigenvalue?",
   ["N-VM.11"],
-  [("mx_matrix_vector", "h", "Multiplies a matrix by a vector"),
-   ("mx_invariants", "h", "Invariant lines through the origin motivate eigenvectors"),
-   ("v3_unit_vectors", "s", "Av = λv means Av is parallel to v")])
+  [("mx_matrix_vector", "h", "Av = λv compares the result of multiplying a matrix by a vector with the vector itself"),
+   ("mx_invariants", "h", "Invariant lines through the origin are exactly the directions of eigenvectors"),
+   ("v3_unit_vectors", "s", "Av = λv says Av is a scalar multiple of v, so the two vectors are parallel")])
 
 T("ev_characteristic_equation", P, MC, "The characteristic equation", "17-18",
   "Derive the characteristic equation det(A − λI) = 0 from Av = λv and solve it to find the eigenvalues of a 2×2 matrix",
@@ -183,10 +183,10 @@ T("ev_characteristic_equation", P, MC, "The characteristic equation", "17-18",
    "Solves it to find the eigenvalues"],
   "If {{name}} is given a 2×2 matrix, can they form its characteristic equation and find its eigenvalues?",
   [],
-  [("ev_eigen_meaning", "h", "Starts from the definition Av = λv"),
-   ("mx_determinant", "h", "Uses the determinant of a 2×2 matrix"),
-   ("mx_identity_zero", "h", "Writes λv as λIv"),
-   ("al_quad_formula", "h", "Solves the quadratic characteristic equation")])
+  [("ev_eigen_meaning", "h", "Rearranging Av = λv to (A − λI)v = 0 is the first step of the derivation"),
+   ("mx_determinant", "h", "A non-zero solution needs det(A − λI) = 0, using the 2×2 determinant ad − bc"),
+   ("mx_identity_zero", "h", "λv is written as λIv so that it can be subtracted from Av as the matrix A − λI"),
+   ("al_quad_formula", "h", "For a 2×2 matrix the characteristic equation is a quadratic in λ, solved by formula if needed")])
 
 T("ev_eigenvectors_2x2", P, MC, "Finding eigenvectors of a 2×2 matrix", "17-18",
   "Find an eigenvector for each eigenvalue of a 2×2 matrix by solving (A − λI)v = 0, recognising that the equations are dependent",
@@ -195,8 +195,8 @@ T("ev_eigenvectors_2x2", P, MC, "Finding eigenvectors of a 2×2 matrix", "17-18"
    "Checks the answer by calculating Av"],
   "If {{name}} has found that a matrix has eigenvalues 2 and 5, can they find an eigenvector for each?",
   [],
-  [("ev_characteristic_equation", "h", "Needs the eigenvalues first"),
-   ("al_sys_types", "h", "Solves a system with infinitely many solutions")])
+  [("ev_characteristic_equation", "h", "Each eigenvalue from the characteristic equation is substituted into (A − λI)v = 0"),
+   ("al_sys_types", "h", "The two equations are dependent, giving infinitely many solutions along one direction")])
 
 T("ev_eigen_geometry", C, MC, "Interpreting eigenvalues geometrically", "17-18",
   "Interpret eigenvectors of a 2×2 transformation as directions of invariant lines through the origin and eigenvalues as scale factors along them (λ = 1 gives a line of invariant points, λ < 0 a reversal, λ = 0 a collapse onto a line)",
@@ -205,9 +205,9 @@ T("ev_eigen_geometry", C, MC, "Interpreting eigenvalues geometrically", "17-18",
    "Explains why a rotation through 90° has no real eigenvectors"],
   "If {{name}} is given the eigenvalues and eigenvectors of a transformation, can they describe what it does to the plane?",
   ["N-VM.12"],
-  [("ev_eigenvectors_2x2", "h", "Uses eigenvectors of 2×2 matrices"),
-   ("mx_transformations", "h", "Interprets matrices as transformations"),
-   ("mx_invariants", "s", "Builds on invariant points and lines")])
+  [("ev_eigenvectors_2x2", "h", "The eigenvectors found give the directions of the invariant lines"),
+   ("mx_transformations", "h", "Each matrix is read as a transformation, such as a stretch or reflection, of the plane"),
+   ("mx_invariants", "s", "Invariant lines and lines of invariant points are explained by eigenvalues λ and 1")])
 
 T("ev_trace_det", P, MC, "Trace, determinant and eigenvalues", "17-18",
   "Use the facts that the eigenvalues sum to the trace and multiply to the determinant, and that a zero eigenvalue means the matrix is singular",
@@ -216,8 +216,8 @@ T("ev_trace_det", P, MC, "Trace, determinant and eigenvalues", "17-18",
    "Explains why a singular matrix has an eigenvalue of 0"],
   "If {{name}} knows a 2×2 matrix has trace 7 and determinant 10, can they find its eigenvalues without the matrix entries?",
   [],
-  [("ev_characteristic_equation", "h", "Rewrites the characteristic equation"),
-   ("cx_roots_coefficients", "s", "Uses sums and products of roots")])
+  [("ev_characteristic_equation", "h", "The characteristic equation is λ² − (trace)λ + det = 0, written out in full"),
+   ("cx_roots_coefficients", "s", "The sum and product of the roots of a quadratic give the trace and determinant")])
 
 T("ev_complex_eigenvalues", C, MC, "Complex and repeated eigenvalues", "17-18",
   "Recognise that a real 2×2 matrix can have complex conjugate eigenvalues (as for a rotation) or a repeated eigenvalue with only one independent eigenvector (as for a shear), and interpret each case",
@@ -226,9 +226,9 @@ T("ev_complex_eigenvalues", C, MC, "Complex and repeated eigenvalues", "17-18",
    "Shows that a shear has only one eigenvector direction"],
   "If {{name}} is given the matrix for a rotation of 60°, can they find its eigenvalues and explain why there are no real eigenvectors?",
   [],
-  [("ev_eigen_geometry", "h", "Explains the missing real eigenvectors"),
-   ("cx_conjugate_roots", "h", "Complex roots of a real quadratic come in conjugate pairs"),
-   ("cx_modulus_argument", "s", "Interprets complex eigenvalues by modulus and argument")])
+  [("ev_eigen_geometry", "h", "A rotation leaves no line invariant, explaining why it has no real eigenvectors"),
+   ("cx_conjugate_roots", "h", "Complex roots of a real characteristic quadratic come in conjugate pairs"),
+   ("cx_modulus_argument", "s", "The modulus and argument of a complex eigenvalue give the scale and rotation angle")])
 
 T("ev_eigen_3x3", P, MC, "Eigenvalues and eigenvectors of a 3×3 matrix", "17-18",
   "Find the eigenvalues of a 3×3 matrix from a cubic characteristic equation, using the factor theorem or technology, and find the corresponding eigenvectors",
@@ -237,11 +237,11 @@ T("ev_eigen_3x3", P, MC, "Eigenvalues and eigenvectors of a 3×3 matrix", "17-18
    "Finds an eigenvector for each eigenvalue"],
   "If {{name}} is told that 2 is an eigenvalue of a 3×3 matrix, can they find the other eigenvalues and all the eigenvectors?",
   [],
-  [("ev_eigenvectors_2x2", "h", "Extends the method from 2×2 matrices"),
-   ("mx_3x3", "h", "Uses 3×3 determinants"),
-   ("al_poly_division", "h", "Factorises the cubic with the factor theorem"),
-   ("v3_vectors_3d", "h", "Eigenvectors are 3-D vectors"),
-   ("v3_vector_product", "s", "An eigenvector can be found as a vector product of two rows")])
+  [("ev_eigenvectors_2x2", "h", "Solving (A − λI)v = 0 for each eigenvalue is extended from 2×2 to 3×3 matrices"),
+   ("mx_3x3", "h", "The characteristic equation det(A − λI) = 0 needs a 3×3 determinant"),
+   ("al_poly_division", "h", "The cubic characteristic equation is factorised using the factor theorem"),
+   ("v3_vectors_3d", "h", "The eigenvectors of a 3×3 matrix are vectors in three dimensions"),
+   ("v3_vector_product", "s", "An eigenvector is perpendicular to two rows of A − λI, so it can be found as their vector product")])
 
 T("ev_diagonalisation", P, MC, "Diagonalising a matrix", "17-18",
   "Write a matrix as A = PDP⁻¹, with eigenvectors as the columns of P and eigenvalues on the diagonal of D, and know that this needs a full set of independent eigenvectors",
@@ -250,9 +250,9 @@ T("ev_diagonalisation", P, MC, "Diagonalising a matrix", "17-18",
    "Explains why a shear cannot be diagonalised"],
   "If {{name}} has found the eigenvalues and eigenvectors of a 2×2 matrix, can they write it in the form PDP⁻¹?",
   [],
-  [("ev_eigenvectors_2x2", "h", "The columns of P are eigenvectors"),
-   ("mx_inverse", "h", "Finds P⁻¹"),
-   ("ev_complex_eigenvalues", "s", "Repeated eigenvalues may prevent diagonalisation")])
+  [("ev_eigenvectors_2x2", "h", "The eigenvectors found for each eigenvalue become the columns of the matrix P"),
+   ("mx_inverse", "h", "A = PDP⁻¹ needs the inverse of P, found with the 2×2 inverse formula"),
+   ("ev_complex_eigenvalues", "s", "A repeated eigenvalue with one eigenvector, as for a shear, cannot be diagonalised")])
 
 T("ev_powers_diagonal", P, MC, "Matrix powers by diagonalisation", "17-18",
   "Use Aⁿ = PDⁿP⁻¹ to find a general formula for powers of a diagonalisable matrix and to describe its long-run behaviour",
@@ -261,8 +261,8 @@ T("ev_powers_diagonal", P, MC, "Matrix powers by diagonalisation", "17-18",
    "Describes what happens to Aⁿ as n grows"],
   "If {{name}} has diagonalised a matrix, can they find a formula for its 20th power?",
   [],
-  [("ev_diagonalisation", "h", "Needs the matrix in the form PDP⁻¹"),
-   ("ev_matrix_powers", "h", "Extends direct calculation of powers")])
+  [("ev_diagonalisation", "h", "Aⁿ = PDⁿP⁻¹ needs A already written as PDP⁻¹, so the inner P⁻¹P pairs cancel"),
+   ("ev_matrix_powers", "h", "The formula replaces repeated multiplication and can be checked against it")])
 
 T("ev_symmetric", C, MC, "Symmetric matrices and orthogonal eigenvectors", "17-18",
   "Recognise that a real symmetric matrix has real eigenvalues and perpendicular eigenvectors, so it can be diagonalised with an orthogonal matrix P where P⁻¹ = Pᵀ",
@@ -271,10 +271,10 @@ T("ev_symmetric", C, MC, "Symmetric matrices and orthogonal eigenvectors", "17-1
    "Writes A = PDPᵀ"],
   "If {{name}} is given a 2×2 symmetric matrix, can they diagonalise it with an orthogonal matrix?",
   [],
-  [("ev_diagonalisation", "h", "Special case of diagonalisation"),
-   ("ev_transpose", "h", "Uses transposes and symmetric matrices"),
-   ("v3_scalar_product", "h", "Checks that eigenvectors are perpendicular"),
-   ("ev_eigen_3x3", "s", "Applies to 3×3 symmetric matrices too")])
+  [("ev_diagonalisation", "h", "A symmetric matrix is a special case that can always be diagonalised"),
+   ("ev_transpose", "h", "A symmetric matrix satisfies Aᵀ = A, and an orthogonal P has P⁻¹ = Pᵀ"),
+   ("v3_scalar_product", "h", "Eigenvectors are checked to be perpendicular by showing their scalar product is 0"),
+   ("ev_eigen_3x3", "s", "The results apply to 3×3 symmetric matrices, whose eigenvectors are found the same way")])
 
 T("ev_cayley_hamilton", P, MC, "The Cayley–Hamilton theorem", "17-18",
   "Use the Cayley–Hamilton theorem (a square matrix satisfies its own characteristic equation) to express powers and the inverse of a matrix in terms of lower powers",
@@ -283,9 +283,9 @@ T("ev_cayley_hamilton", P, MC, "The Cayley–Hamilton theorem", "17-18",
    "Uses it to find A⁻¹"],
   "If {{name}} knows a matrix satisfies A² − 5A + 6I = 0, can they use this to find A⁻¹?",
   [],
-  [("ev_characteristic_equation", "h", "Substitutes the matrix into its characteristic equation"),
-   ("ev_matrix_powers", "h", "Works with powers of the matrix"),
-   ("mx_inverse", "s", "Checks the result against the 2×2 inverse formula")])
+  [("ev_characteristic_equation", "h", "The matrix A is substituted for λ in its own characteristic equation"),
+   ("ev_matrix_powers", "h", "Higher powers such as A³ are expressed in terms of A and I instead of multiplied out"),
+   ("mx_inverse", "s", "The inverse found from Cayley–Hamilton is checked against the 2×2 inverse formula")])
 
 T("ev_long_run", M, MC, "Long-term behaviour from eigenvalues", "17-18",
   "Use eigenvalues and eigenvectors to predict the long-run behaviour of matrix models such as Markov chains and stage-structured populations: an eigenvalue of 1 gives a steady state, and the largest eigenvalue sets the growth rate",
@@ -294,6 +294,6 @@ T("ev_long_run", M, MC, "Long-term behaviour from eigenvalues", "17-18",
    "Explains why other terms die away"],
   "If {{name}} has a transition matrix for brand switching, can they find the long-run market shares as an eigenvector?",
   [],
-  [("ev_transition_matrices", "h", "Models systems with matrices"),
-   ("ev_powers_diagonal", "h", "Uses PDⁿP⁻¹ to see which terms dominate"),
-   ("mx_networks", "s", "Extends matrix models of networks and data")])
+  [("ev_transition_matrices", "h", "A Markov chain's transition matrix is a main example of a long-run matrix model"),
+   ("ev_powers_diagonal", "h", "In PDⁿP⁻¹ the largest eigenvalue's term dominates as n grows"),
+   ("mx_networks", "s", "Matrix models of populations and networks are extended to predict long-run behaviour")])

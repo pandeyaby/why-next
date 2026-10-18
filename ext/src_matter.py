@@ -52,7 +52,7 @@ T("pm_evap_cooling", C, D, "Evaporation causes cooling", "12-14",
    "Lists factors that speed up evaporation (temperature, surface area, airflow)"],
   "If {{name}} gets out of a swimming pool on a windy day and feels cold, can they explain why the evaporating water makes their skin cooler?",
   ["MS-PS1-4"],
-  [("mt_Qkewo5M3_c", "h", "Builds on the primary idea that evaporation rate depends on temperature, now explained at particle level"),
+  [("mt_Qkewo5M3_c", "h", "Primary work on faster evaporation in warm conditions is now explained by the fastest particles escaping"),
    ("pm_kinetic", "h", "Explaining cooling needs the idea that temperature reflects average particle kinetic energy")])
 
 T("pm_density", P, D, "Calculating density", "12-14",
@@ -96,7 +96,7 @@ T("pm_latent_heat", P, D, "Specific latent heat", "15-17",
   ["HS-PS3-2"],
   [("pm_heating_curve", "h", "The flat sections of heating curves are what latent heat quantifies"),
    ("en_specific_heat", "s", "Comparing E = mL with energy for temperature rise helps separate the two ideas"),
-   ("mt_vHzVa3SURC", "h", "Using E = mL requires substituting values into a formula")])
+   ("mt_vHzVa3SURC", "h", "Finding the energy for a change of state means substituting mass and specific latent heat into E = mL")])
 
 T("pm_gas_laws", C, D, "Gas laws: pressure, volume and temperature", "15-17",
   "Describe and use the relationships between pressure, volume and temperature for a fixed mass of gas — pressure × volume is constant at constant temperature (Boyle's law), and volume or pressure is proportional to kelvin temperature — explaining each with particle collisions",
@@ -107,7 +107,7 @@ T("pm_gas_laws", C, D, "Gas laws: pressure, volume and temperature", "15-17",
   [],
   [("pm_gas_pressure", "h", "The gas laws quantify the particle-collision explanation of pressure"),
    ("pm_absolute_zero", "h", "Temperature relationships only become proportional on the Kelvin scale"),
-   ("fm_inverse_variation", "h", "Boyle's law is an inverse-proportion relationship")])
+   ("fm_inverse_variation", "h", "Boyle's law says pressure × volume is constant, which is the inverse-proportion relationship y = k/x")])
 
 # ---------------------------------------------------------------- atoms
 T("at_subatomic", C, D, "Charges and masses of subatomic particles", "12-14",
@@ -128,7 +128,7 @@ T("at_numbers", P, D, "Atomic number and mass number", "13-15",
   "If {{name}} sees sodium written as ²³₁₁Na, can they work out how many protons, neutrons and electrons a sodium atom has?",
   ["HS-PS1-1"],
   [("at_subatomic", "h", "Counting particles requires knowing what protons, neutrons and electrons are and where they sit"),
-   ("mt_wfEfQuHOG-", "s", "Atomic numbers are read from the periodic table")])
+   ("mt_wfEfQuHOG-", "s", "Each element's atomic number is read from its position in the periodic table before counting particles")])
 
 T("at_isotopes", C, D, "Isotopes", "14-16",
   "Explain that isotopes are atoms of the same element with the same number of protons but different numbers of neutrons, so they have different mass numbers but almost identical chemical properties",
@@ -146,9 +146,9 @@ T("at_relative_mass", P, D, "Relative atomic mass", "15-17",
    "Locates relative atomic masses on a periodic table"],
   "If {{name}} learns that chlorine is 75% chlorine-35 and 25% chlorine-37, can they show why its relative atomic mass is 35.5?",
   [],
-  [("at_isotopes", "h", "Relative atomic mass is a weighted average over isotopes"),
+  [("at_isotopes", "h", "Relative atomic mass is a weighted mean, so it needs the idea that one element has isotopes of different mass"),
    ("mt_Cg8VPguS_V", "s", "Weighted means extend the primary idea of calculating a mean"),
-   ("mt_iEXqN48w3x", "s", "Isotope abundances are given as percentages")])
+   ("mt_iEXqN48w3x", "s", "Isotope abundances are given as percentages, which become the weights in the mean")])
 
 T("at_model_history", M, D, "How the model of the atom developed", "13-15",
   "Trace how evidence changed the model of the atom — Dalton's solid spheres, Thomson's plum pudding, Rutherford's gold-foil experiment revealing the nucleus, Bohr's electron shells and Chadwick's discovery of the neutron",
@@ -167,8 +167,8 @@ T("at_shells", R, D, "Electron shells and configurations", "14-15",
    "Identifies the number of outer-shell electrons"],
   "If {{name}} is told magnesium has 12 electrons, can they draw how those electrons are arranged in shells?",
   ["HS-PS1-1", "KS3.Sci.Chem.AEC.1"],
-  [("at_numbers", "h", "Electron number comes from the atomic number"),
-   ("mt_Z_Wu_77ybI", "s", "Builds on the KS3 Bohr model of electrons in shells")])
+  [("at_numbers", "h", "The number of electrons to place in shells equals the atomic number of the neutral atom"),
+   ("mt_Z_Wu_77ybI", "s", "The KS3 picture of electrons orbiting in shells becomes a written 2, 8, 8 configuration")])
 
 T("at_scale", C, D, "The size of atoms and nuclei", "13-15",
   "Appreciate the scale of atoms (about 10⁻¹⁰ m across) and nuclei (about 10⁻¹⁴ to 10⁻¹⁵ m), using scientific notation and analogies to show that an atom is mostly empty space",
@@ -208,7 +208,7 @@ T("pt_group7", C, D, "Halogens (Group 7)", "14-16",
    "Explains decreasing reactivity in terms of attracting an extra electron"],
   "If {{name}} adds chlorine water to potassium bromide solution, can they predict what happens and explain why chlorine wins?",
   ["HS-PS1-1", "HS-PS1-2"],
-  [("pt_electron_pattern", "h", "Halogen trends are explained by outer-electron arrangement"),
+  [("pt_electron_pattern", "h", "Halogen trends are explained by seven outer electrons held less strongly further down the group"),
    ("mt_v0K6GRi4ZL", "s", "Displacement reactions were introduced among the KS3 reaction types")])
 
 T("pt_group0", C, D, "Noble gases and stable outer shells", "14-16",
@@ -278,7 +278,7 @@ T("bd_giant_covalent", C, D, "Giant covalent structures", "15-17",
    "Contrasts the hardness of diamond with the slipperiness of graphite layers"],
   "If {{name}} is asked why pencil 'lead' (graphite) leaves marks on paper while diamond can cut glass — though both are pure carbon — can they explain using structure?",
   ["HS-PS1-3", "HS-PS2-6"],
-  [("bd_covalent", "h", "Giant structures are networks of covalent bonds"),
+  [("bd_covalent", "h", "Diamond, graphite and silica are huge networks of the same shared-pair covalent bonds found in small molecules"),
    ("bd_simple_molecular", "s", "Contrast with simple molecules shows why network structure matters")])
 
 T("bd_metallic", C, D, "Metallic bonding", "15-17",
@@ -299,9 +299,9 @@ T("bd_compare_structures", P, D, "Inferring bonding from bulk properties", "15-1
   "If {{name}} is given a white solid that melts at 801 °C and conducts only when dissolved, can they decide what kind of structure it has and justify it?",
   ["HS-PS1-3"],
   [("bd_ionic", "h", "Ionic structures are one of the four categories to recognise"),
-   ("bd_simple_molecular", "h", "Simple molecular structures are one of the four categories"),
-   ("bd_giant_covalent", "h", "Giant covalent structures are one of the four categories"),
-   ("bd_metallic", "h", "Metallic structures are one of the four categories"),
+   ("bd_simple_molecular", "h", "Low melting points and non-conduction identify simple molecular substances, one of the four categories to infer"),
+   ("bd_giant_covalent", "h", "Very high melting points with no conduction (graphite apart) identify giant covalent structures"),
+   ("bd_metallic", "h", "Conduction in the solid state and malleability identify metallic structures among the four categories"),
    ("mt_MBTVB-E-S7", "s", "Using melting points to identify substances begins with KS3 pure-substance identification")])
 
 T("bd_designed_materials", C, D, "Molecular structure in designed materials", "15-18",
@@ -311,8 +311,8 @@ T("bd_designed_materials", C, D, "Molecular structure in designed materials", "1
    "Writes a short technical explanation linking a material's structure to a use"],
   "If {{name}} is asked why plastic bags stretch rather than snap, can they explain it in terms of the long molecules the plastic is made from?",
   ["HS-PS2-6"],
-  [("bd_metallic", "h", "Metal and alloy examples depend on metallic bonding"),
-   ("bd_simple_molecular", "s", "Forces between molecules explain polymer flexibility"),
+  [("bd_metallic", "h", "Explaining how alloys and conducting metals work relies on layers of ions in a sea of delocalised electrons"),
+   ("bd_simple_molecular", "s", "Weak forces between polymer chains explain why many plastics are flexible and soften on heating"),
    ("mt_w83U-_noVR", "h", "Extends the KS3 qualitative properties of ceramics, polymers and composites")])
 
 T("bd_ionic_formulae", P, D, "Writing formulae of ionic compounds", "14-16",
@@ -322,7 +322,7 @@ T("bd_ionic_formulae", P, D, "Writing formulae of ionic compounds", "14-16",
    "Explains why the total charge in the formula must be zero"],
   "If {{name}} knows calcium forms Ca²⁺ and chloride is Cl⁻, can they work out the formula of calcium chloride and explain why?",
   ["KS3.Sci.Chem.AEC.3"],
-  [("bd_ions", "h", "Balancing charges requires knowing the charges on ions"),
+  [("bd_ions", "h", "Balancing charges in a formula needs the charge each ion forms, such as Na⁺, Mg²⁺ and O²⁻"),
    ("ch_formulae", "h", "Writing formulae requires reading subscripts and brackets in formulae")])
 
 # ---------------------------------------------------------------- chemical reactions & conservation of mass
@@ -355,7 +355,7 @@ T("ch_atoms_rearranged", C, D, "Reactions rearrange atoms", "12-14",
   ["MS-PS1-5", "KS3.Sci.Chem.AEC.4"],
   [("mt_ehC1wsdmUz", "h", "Explains the primary-school observation that mass is conserved in terms of atoms"),
    ("ch_formulae", "h", "Counting atoms in reactants and products requires reading formulae"),
-   ("mt_htAYR-iCFF", "s", "Drawing particle diagrams is the representation used")])
+   ("mt_htAYR-iCFF", "s", "Particle diagrams of reactants and products are how the rearrangement of atoms is shown and checked")])
 
 T("ch_balancing", P, D, "Balancing chemical equations", "13-15",
   "Balance symbol equations by changing only the numbers in front of formulae so that the number of atoms of each element is the same on both sides",
@@ -364,9 +364,9 @@ T("ch_balancing", P, D, "Balancing chemical equations", "13-15",
    "Checks a balanced equation by counting atoms of each element"],
   "If {{name}} is given H₂ + O₂ → H₂O, can they balance it and explain why they can't just change H₂O to H₂O₂?",
   ["MS-PS1-5", "HS-PS1-7"],
-  [("ch_atoms_rearranged", "h", "Balancing is the symbolic form of conservation of atoms"),
-   ("ch_word_equations", "h", "Symbol equations are built from word equations"),
-   ("mt_xhoOWnhtHq", "s", "Finding common multiples speeds up balancing")])
+  [("ch_atoms_rearranged", "h", "Balancing an equation is the symbolic statement that no atoms are created or destroyed in a reaction"),
+   ("ch_word_equations", "h", "A word equation names the reactants and products whose formulae are then balanced"),
+   ("mt_xhoOWnhtHq", "s", "Spotting lowest common multiples of atom counts speeds up finding the balancing numbers")])
 
 T("ch_state_symbols", R, D, "State symbols", "14-15",
   "Add state symbols (s), (l), (g) and (aq) to equations and use them to tell, for example, which product is a gas that escapes or a precipitate that forms",
@@ -375,8 +375,8 @@ T("ch_state_symbols", R, D, "State symbols", "14-15",
    "Uses state symbols to spot a precipitate or gas"],
   "If {{name}} sees CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g), can they say which product bubbles out of the beaker?",
   [],
-  [("ch_balancing", "h", "State symbols are added to balanced symbol equations"),
-   ("mt_Mf-T-fYRLX", "s", "Understanding dissolving is needed to use (aq)")])
+  [("ch_balancing", "h", "State symbols are added to a correctly balanced symbol equation, so balancing comes first"),
+   ("mt_Mf-T-fYRLX", "s", "Using (aq) correctly means knowing which substances dissolve in water to form a solution")])
 
 T("ch_open_closed", C, D, "Mass changes in open and closed systems", "13-15",
   "Explain why mass seems to change when a reaction happens in an open container (a gas escapes or is gained from the air) but stays the same in a sealed container",
@@ -386,7 +386,7 @@ T("ch_open_closed", C, D, "Mass changes in open and closed systems", "13-15",
   "If {{name}} weighs a fizzing tablet dissolving in an open cup and sees the mass go down, can they explain why mass hasn't really been destroyed?",
   ["MS-PS1-5", "KS3.Sci.Chem.AEC.4"],
   [("ch_atoms_rearranged", "h", "Apparent mass change is explained by atoms entering or leaving as gas"),
-   ("mt_ehC1wsdmUz", "s", "Builds on primary measurements that mass is conserved")])
+   ("mt_ehC1wsdmUz", "s", "Primary measurements showing mass is conserved are used to explain apparent mass changes in open containers")])
 
 T("ch_formula_mass", P, D, "Relative formula mass", "14-16",
   "Calculate the relative formula mass of a compound by adding the relative atomic masses of all the atoms in its formula",
@@ -405,7 +405,7 @@ T("ch_mole", C, D, "The mole", "15-17",
    "Uses the Avogadro constant to find a number of particles"],
   "If {{name}} has 36 g of water (Mr 18), can they work out how many moles that is and roughly how many molecules?",
   ["HS-PS1-7"],
-  [("ch_formula_mass", "h", "Converting mass to moles uses relative formula mass"),
+  [("ch_formula_mass", "h", "Converting between mass and moles divides by the relative formula mass of the substance"),
    ("mt_bO-njVOige", "h", "The Avogadro constant is a number written in standard form (scientific notation)")])
 
 T("ch_reacting_masses", P, D, "Calculating reacting masses", "15-17",
@@ -415,8 +415,8 @@ T("ch_reacting_masses", P, D, "Calculating reacting masses", "15-17",
    "Checks that the total mass of reactants equals total mass of products"],
   "If {{name}} burns 12 g of carbon completely, can they use C + O₂ → CO₂ to work out the mass of carbon dioxide made?",
   ["HS-PS1-7"],
-  [("ch_mole", "h", "Reacting masses are calculated through moles"),
-   ("ch_balancing", "h", "Mole ratios come from the balanced equation"),
+  [("ch_mole", "h", "Reacting-mass calculations convert mass to moles, apply the ratio, then convert back to mass"),
+   ("ch_balancing", "h", "The mole ratio between reactant and product comes from the balancing numbers in the equation"),
    ("mt_5mIcmKRCgA", "h", "Scaling quantities by a fixed ratio is proportional reasoning")])
 
 T("ch_limiting_yield", P, D, "Limiting reactants and percentage yield", "16-18",
@@ -427,7 +427,7 @@ T("ch_limiting_yield", P, D, "Limiting reactants and percentage yield", "16-18",
   "If {{name}} makes sandwiches with 10 slices of bread and 3 slices of cheese, can they use that idea to explain what a limiting reactant is in a chemical reaction?",
   ["HS-PS1-7"],
   [("ch_reacting_masses", "h", "Finding the limiting reactant compares calculated reacting amounts"),
-   ("mt_iEXqN48w3x", "s", "Percentage yield is a percentage calculation")])
+   ("mt_iEXqN48w3x", "s", "Percentage yield expresses the actual mass as a percentage of the theoretical mass")])
 
 T("ch_concentration", P, D, "Concentration of solutions", "15-17",
   "Calculate the concentration of a solution in g/dm³ and mol/dm³, and explain how dilution changes concentration but not the amount of solute",
@@ -436,9 +436,9 @@ T("ch_concentration", P, D, "Concentration of solutions", "15-17",
    "Explains dilution in terms of the same solute in more solvent"],
   "If {{name}} dissolves 20 g of salt in 500 cm³ of water, can they work out the concentration in grams per dm³?",
   [],
-  [("ch_mole", "h", "Molar concentration depends on moles"),
-   ("mt_kLQOzZYrd5", "h", "Concentration is a compound unit (amount per volume)"),
-   ("mt_Mf-T-fYRLX", "s", "Builds on the primary picture of a solute dissolving in a solvent")])
+  [("ch_mole", "h", "Concentration in mol/dm³ needs the amount of solute in moles, found from its mass"),
+   ("mt_kLQOzZYrd5", "h", "Concentration is a compound unit, amount of solute per unit volume, such as g/dm³ or mol/dm³"),
+   ("mt_Mf-T-fYRLX", "s", "The primary picture of a solute dissolving in a solvent is what concentration then quantifies")])
 
 T("ch_predict_products", C, D, "Predicting reaction outcomes from the periodic table", "15-17",
   "Predict and explain the products of simple reactions between main-group elements (e.g. sodium and chlorine, carbon and oxygen) using outer-electron arrangements and periodic trends",
@@ -447,9 +447,9 @@ T("ch_predict_products", C, D, "Predicting reaction outcomes from the periodic t
    "Predicts which of two similar reactions will be more vigorous"],
   "If {{name}} is asked what forms when potassium reacts with bromine, can they predict the product, write its formula and say why it forms?",
   ["HS-PS1-2"],
-  [("bd_ionic", "h", "Metal–non-metal products are ionic compounds"),
-   ("pt_group1", "h", "Group 1 reactivity patterns inform the prediction"),
-   ("pt_group7", "h", "Halogen reactivity patterns inform the prediction")])
+  [("bd_ionic", "h", "A metal reacting with a non-metal forms an ionic compound, so predicting its formula uses ionic bonding"),
+   ("pt_group1", "h", "Knowing that Group 1 metals form 1+ ions and react vigorously helps predict their products"),
+   ("pt_group7", "h", "Knowing that halogens form 1− ions and that a more reactive one displaces a less reactive one guides predictions")])
 
 T("ch_combustion", C, D, "Combustion of fuels", "13-15",
   "Describe complete combustion of hydrocarbon fuels to carbon dioxide and water, incomplete combustion producing carbon monoxide and soot, and why incomplete combustion is dangerous",
@@ -458,8 +458,8 @@ T("ch_combustion", C, D, "Combustion of fuels", "13-15",
    "Explains why carbon monoxide alarms are needed"],
   "If {{name}} sees a gas flame burning yellow and sooty instead of blue, can they explain what is different about how the fuel is burning and why it matters?",
   ["HS-PS1-2", "KS3.Sci.Chem.CR.1"],
-  [("mt_v0K6GRi4ZL", "h", "Combustion was introduced as a KS3 reaction type"),
-   ("ch_word_equations", "h", "Describing combustion requires writing equations")])
+  [("mt_v0K6GRi4ZL", "h", "Combustion was met at KS3 as a reaction type; here complete and incomplete combustion are compared"),
+   ("ch_word_equations", "h", "Describing complete and incomplete combustion means writing word equations for each case")])
 
 T("ch_redox", C, D, "Oxidation and reduction as electron transfer", "16-18",
   "Define oxidation as loss of electrons and reduction as gain of electrons, identify what is oxidised and reduced in displacement reactions, and connect this to extracting metals",
@@ -468,7 +468,7 @@ T("ch_redox", C, D, "Oxidation and reduction as electron transfer", "16-18",
    "Explains why carbon can extract iron but not aluminium from their oxides"],
   "If {{name}} puts an iron nail in copper sulfate solution and it turns pink, can they explain which substance lost electrons and which gained them?",
   ["HS-PS1-2"],
-  [("bd_ions", "h", "Electron transfer requires understanding ion formation"),
+  [("bd_ions", "h", "Seeing oxidation as electron loss relies on knowing how atoms gain or lose electrons to form ions"),
    ("mt_zsYW61cn_q", "h", "Displacement and extraction examples come from the reactivity series"),
    ("ch_combustion", "s", "Combustion is the familiar 'gain of oxygen' meaning of oxidation that this generalises")])
 
@@ -479,7 +479,7 @@ T("ch_electrolysis", C, D, "Electrolysis of ionic compounds", "15-17",
    "Explains why aluminium is extracted by electrolysis rather than with carbon"],
   "If {{name}} passes electricity through molten lead bromide, can they predict what appears at each electrode and explain why?",
   [],
-  [("bd_ionic", "h", "Electrolysis relies on mobile ions from ionic compounds"),
+  [("bd_ionic", "h", "Electrolysis works only when the ions of an ionic compound are free to move, molten or dissolved"),
    ("mt_2bnXrfS4Iq", "s", "Understanding electric current is needed to explain ion movement")])
 
 T("ch_acid_ions", C, D, "Acids, alkalis and hydrogen ions", "15-17",
@@ -489,9 +489,9 @@ T("ch_acid_ions", C, D, "Acids, alkalis and hydrogen ions", "15-17",
    "Distinguishes strong from dilute acids"],
   "If {{name}} compares lemon juice at pH 2 with vinegar at pH 3, can they say how many times more hydrogen ions the lemon juice has?",
   ["KS3.Sci.Chem.CR.2"],
-  [("mt_AN2kJE6I0s", "h", "Extends KS3 acids, alkalis and pH to the ionic explanation"),
-   ("bd_ions", "h", "Hydrogen and hydroxide ions require the idea of ions"),
-   ("mt_bO-njVOige", "s", "The tenfold pH scale is a powers-of-ten idea")])
+  [("mt_AN2kJE6I0s", "h", "KS3 acids, alkalis and the pH scale are explained here in terms of H⁺ and OH⁻ ions"),
+   ("bd_ions", "h", "Acids and alkalis are defined by the H⁺ and OH⁻ ions they release, so the idea of ions is needed"),
+   ("mt_bO-njVOige", "s", "Each pH unit is a tenfold change in H⁺ concentration, which is a powers-of-ten idea")])
 
 T("ch_hand_warmer", P, D, "Designing a hand warmer or cold pack", "13-15",
   "Design, test and refine a device that uses an exothermic or endothermic process to warm or cool, choosing amounts of substances and measuring temperature change to evaluate the design",
@@ -501,7 +501,7 @@ T("ch_hand_warmer", P, D, "Designing a hand warmer or cold pack", "13-15",
   "If {{name}} is asked to make an instant cold pack for a sports injury, can they choose a suitable reaction and describe how they'd test which mix works best?",
   ["MS-PS1-6"],
   [("mt_UoqUPI_uNz", "h", "Design requires knowing which processes release or absorb heat"),
-   ("mt_Ae56umVlTT", "s", "Fair comparison of designs needs control of variables")])
+   ("mt_Ae56umVlTT", "s", "Comparing hand-warmer designs fairly means changing one variable at a time and controlling the rest")])
 
 T("ch_bond_energy", C, D, "Bond energies and energy change", "15-17",
   "Explain that breaking bonds takes in energy and making bonds releases energy, so whether a reaction is exothermic or endothermic depends on the balance of total bond energies",
@@ -511,7 +511,7 @@ T("ch_bond_energy", C, D, "Bond energies and energy change", "15-17",
   "If {{name}} is asked where the energy of burning methane comes from, can they explain it in terms of bonds broken and bonds made?",
   ["HS-PS1-4"],
   [("mt_UoqUPI_uNz", "h", "Extends KS3 exothermic/endothermic reactions to a bond-level explanation"),
-   ("bd_covalent", "h", "Bond energies require understanding covalent bonds")])
+   ("bd_covalent", "h", "Bond-energy calculations count the covalent bonds broken and made, so molecules must be drawn with their bonds")])
 
 T("ch_energy_profile", R, D, "Reaction profiles and activation energy", "15-17",
   "Draw and interpret reaction profile diagrams showing the energy of reactants and products, the overall energy change and the activation energy, including the effect of a catalyst",
@@ -520,7 +520,7 @@ T("ch_energy_profile", R, D, "Reaction profiles and activation energy", "15-17",
    "Shows how a catalyst lowers activation energy"],
   "If {{name}} is shown an energy diagram where the products are lower than the reactants, can they say whether the reaction heats or cools its surroundings and point out the activation energy?",
   ["HS-PS1-4"],
-  [("ch_bond_energy", "h", "Profiles represent the bond-energy balance graphically")])
+  [("ch_bond_energy", "h", "A reaction profile shows the bond-energy balance as a drawing, with products above or below reactants")])
 
 T("ch_collision_theory", C, D, "Collision theory", "14-16",
   "Explain that reactions happen only when particles collide with enough energy (at least the activation energy), so the rate depends on the frequency and energy of collisions",
@@ -530,7 +530,7 @@ T("ch_collision_theory", C, D, "Collision theory", "14-16",
   "If {{name}} is asked why food goes off more slowly in the fridge, can they explain using collisions between particles?",
   ["HS-PS1-5"],
   [("pm_kinetic", "h", "Collision energy depends on particle speed and hence temperature"),
-   ("ch_atoms_rearranged", "s", "Collisions are how atoms get rearranged into new substances")])
+   ("ch_atoms_rearranged", "s", "Collisions between particles are the events in which atoms are rearranged into new substances")])
 
 T("ch_rate_factors", C, D, "Factors affecting the rate of reaction", "15-16",
   "Explain how temperature, concentration (or gas pressure), surface area and catalysts change the rate of a reaction, in terms of the frequency and energy of collisions",
@@ -539,8 +539,8 @@ T("ch_rate_factors", C, D, "Factors affecting the rate of reaction", "15-16",
    "Explains why powdered solids react faster than lumps"],
   "If {{name}} drops a whole indigestion tablet and a crushed one into water, can they predict which fizzes away faster and explain why?",
   ["HS-PS1-5"],
-  [("ch_collision_theory", "h", "Each factor is explained through collision theory"),
-   ("ch_energy_profile", "s", "Catalysts are explained by lowered activation energy")])
+  [("ch_collision_theory", "h", "Each factor is explained by how it changes the frequency or energy of collisions between particles"),
+   ("ch_energy_profile", "s", "A catalyst's effect is explained by an alternative route with a lower activation energy on the profile")])
 
 T("ch_measuring_rate", P, D, "Measuring rates from graphs", "15-17",
   "Measure the rate of a reaction by tracking mass lost or gas produced over time, plot the results and use the gradient to compare rates, including the gradient of a tangent for an instantaneous rate",
@@ -549,9 +549,9 @@ T("ch_measuring_rate", P, D, "Measuring rates from graphs", "15-17",
    "Explains why the curve levels off as the reaction finishes"],
   "If {{name}} plots the volume of gas from a reaction every 10 seconds, can they use the graph to tell when the reaction was fastest and when it stopped?",
   ["HS-PS1-5"],
-  [("ch_rate_factors", "s", "Measurements test predictions about what changes the rate"),
-   ("fm_avg_rate", "h", "Rate is an average rate of change read from a graph"),
-   ("mt_YHsUhi4Prc", "s", "Recording and graphing data is the inquiry skill used")])
+  [("ch_rate_factors", "s", "Rate experiments test predictions about how temperature, concentration or surface area change the rate"),
+   ("fm_avg_rate", "h", "The rate between two times is the gradient of the mass or volume graph, an average rate of change"),
+   ("mt_YHsUhi4Prc", "s", "Results for mass lost or gas made over time are recorded in tables and plotted as graphs")])
 
 T("ch_equilibrium", C, D, "Reversible reactions and dynamic equilibrium", "16-18",
   "Explain that some reactions are reversible and that in a closed system they reach dynamic equilibrium, where the forward and backward reactions continue at equal rates so amounts stay constant",
@@ -560,8 +560,8 @@ T("ch_equilibrium", C, D, "Reversible reactions and dynamic equilibrium", "16-18
    "Gives an example of a reversible reaction (e.g. heating hydrated copper sulfate)"],
   "If {{name}} sees blue copper sulfate turn white when heated and blue again when water is added, can they explain what makes this reaction reversible?",
   ["HS-PS1-6"],
-  [("ch_rate_factors", "h", "Equilibrium is defined as equal forward and backward rates"),
-   ("mt_UKmtuAsSLN", "s", "Builds on the primary idea that some changes can be reversed")])
+  [("ch_rate_factors", "h", "Dynamic equilibrium is defined as the forward and backward reactions running at equal rates"),
+   ("mt_UKmtuAsSLN", "s", "The primary idea that some changes can be reversed becomes reversible reactions in a closed system")])
 
 T("ch_le_chatelier", C, D, "Shifting equilibrium (Le Chatelier's principle)", "16-18",
   "Predict how changing concentration, temperature or pressure shifts the position of an equilibrium, and use this to refine conditions that increase the yield of a product (e.g. in the Haber process)",
@@ -591,7 +591,7 @@ T("nu_decay", C, D, "Radioactive decay", "15-17",
    "Explains that alpha and beta decay change one element into another, but gamma emission does not"],
   "If {{name}} is told a single atom of radon might decay in a second or in a week, can they explain how scientists can still predict what a big sample will do?",
   ["HS-PS1-8"],
-  [("nu_nucleus", "h", "Decay is a property of unstable nuclei"),
+  [("nu_nucleus", "h", "Decay happens to nuclei with an unstable balance of protons and neutrons, so nuclear composition is needed"),
    ("at_isotopes", "h", "Radioactive isotopes (e.g. carbon-14) are the examples of unstable nuclei")])
 
 T("nu_radiation_types", C, D, "Alpha, beta and gamma radiation", "15-17",
@@ -601,8 +601,8 @@ T("nu_radiation_types", C, D, "Alpha, beta and gamma radiation", "15-17",
    "Explains why alpha is most dangerous inside the body but least outside"],
   "If {{name}} is told a radiation source is stopped by a sheet of paper, can they identify which type it is and explain why it would still be dangerous if swallowed?",
   ["HS-PS1-8"],
-  [("nu_decay", "h", "These are the products of radioactive decay"),
-   ("mt_XSp-S0wter", "s", "Gamma rays are part of the electromagnetic spectrum")])
+  [("nu_decay", "h", "Alpha particles, beta particles and gamma rays are what unstable nuclei emit when they decay"),
+   ("mt_XSp-S0wter", "s", "Gamma rays are placed at the high-frequency end of the electromagnetic spectrum")])
 
 T("nu_decay_equations", P, D, "Nuclear decay equations", "16-18",
   "Write balanced nuclear equations for alpha and beta decay, showing that the total mass number and total atomic number are conserved even though the element changes",
@@ -611,9 +611,9 @@ T("nu_decay_equations", P, D, "Nuclear decay equations", "16-18",
    "Checks that mass numbers and atomic numbers balance"],
   "If {{name}} is told uranium-238 undergoes alpha decay, can they work out the mass number and atomic number of the nucleus it becomes?",
   ["HS-PS1-8"],
-  [("nu_radiation_types", "h", "Each equation depends on what alpha and beta particles are"),
+  [("nu_radiation_types", "h", "Writing an equation needs alpha as a helium nucleus (4, 2) and beta as an electron (0, −1)"),
    ("ch_balancing", "s", "Balancing chemical equations is a parallel conservation bookkeeping skill"),
-   ("at_numbers", "h", "Nuclear symbols use mass and atomic numbers")])
+   ("at_numbers", "h", "Nuclear equations balance the mass number and atomic number written on each nuclear symbol")])
 
 T("nu_half_life", P, D, "Half-life", "16-18",
   "Define half-life as the time for half the unstable nuclei (or the activity) of a sample to decay, read half-life from a decay graph and calculate how much remains after a number of half-lives",
@@ -622,8 +622,8 @@ T("nu_half_life", P, D, "Half-life", "16-18",
    "Explains how half-life makes radiocarbon dating possible"],
   "If {{name}} is told a sample has a half-life of 6 hours, can they work out what fraction is left after a day?",
   ["HS-PS1-8"],
-  [("nu_decay", "h", "Half-life describes the statistical behaviour of decay"),
-   ("fm_exp_decay", "h", "Halving repeatedly is an exponential decay model")])
+  [("nu_decay", "h", "Half-life describes the random decay of many nuclei, which is predictable only in large numbers"),
+   ("fm_exp_decay", "h", "Halving the remaining nuclei in each half-life is an exponential decay model with factor ½")])
 
 T("nu_fission", C, D, "Nuclear fission and chain reactions", "16-18",
   "Explain nuclear fission as a large nucleus splitting into two smaller nuclei and releasing neutrons and energy, and how a controlled chain reaction is used in a nuclear power station",
@@ -632,7 +632,7 @@ T("nu_fission", C, D, "Nuclear fission and chain reactions", "16-18",
    "Compares nuclear power with fossil fuels"],
   "If {{name}} is asked what control rods in a nuclear reactor are for, can they explain using the idea of a chain reaction?",
   ["HS-PS1-8"],
-  [("nu_nucleus", "h", "Fission is a change in nuclear composition"),
+  [("nu_nucleus", "h", "Fission splits a large nucleus into two smaller ones, so it needs the idea of protons and neutrons in a nucleus"),
    ("mt_w2A8D76ymp", "s", "Nuclear power is one of the energy resources compared at KS3")])
 
 T("nu_fusion", C, D, "Nuclear fusion in stars", "16-18",
@@ -642,7 +642,7 @@ T("nu_fusion", C, D, "Nuclear fusion in stars", "16-18",
    "Contrasts fusion with fission"],
   "If {{name}} is asked how the Sun produces its energy, can they explain fusion and why it needs such a hot core?",
   ["HS-PS1-8"],
-  [("nu_nucleus", "h", "Fusion is a change in nuclear composition"),
+  [("nu_nucleus", "h", "Fusion joins light nuclei such as hydrogen isotopes, so it needs the idea of protons and neutrons in a nucleus"),
    ("mt_KYx0m4OyZv", "s", "Stellar nucleosynthesis provides the context of fusion in stars")])
 
 T("nu_energy_scale", C, D, "The scale of nuclear energy", "16-18",
@@ -652,7 +652,7 @@ T("nu_energy_scale", C, D, "The scale of nuclear energy", "16-18",
    "Explains why protons + neutrons are conserved in nuclear processes even though atoms are not"],
   "If {{name}} hears that a small pellet of nuclear fuel releases as much energy as a tonne of coal, can they explain where that enormous energy comes from?",
   ["HS-PS1-8"],
-  [("nu_fission", "h", "Fission gives a concrete example of nuclear energy release"),
+  [("nu_fission", "h", "Fission in a reactor gives the worked example for comparing nuclear and chemical energy per kilogram"),
    ("ch_bond_energy", "s", "Comparing with chemical bond energy shows the difference in scale")])
 
 T("nu_radiation_safety", C, D, "Radiation risks and uses", "16-18",
@@ -662,5 +662,5 @@ T("nu_radiation_safety", C, D, "Radiation risks and uses", "16-18",
    "Evaluates a medical use of radiation (e.g. tracers or radiotherapy)"],
   "If {{name}} is asked why a hospital tracer should have a short half-life, can they explain the trade-off between doing its job and keeping the patient safe?",
   [],
-  [("nu_radiation_types", "h", "Risk depends on the type of radiation"),
-   ("nu_half_life", "h", "Risk depends on how long a source stays active")])
+  [("nu_radiation_types", "h", "Risk depends on how far each type penetrates and how strongly it ionises, inside or outside the body"),
+   ("nu_half_life", "h", "A source with a long half-life stays active for longer, which affects the risk of contamination")])

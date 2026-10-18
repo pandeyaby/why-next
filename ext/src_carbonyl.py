@@ -22,7 +22,7 @@ T("cb_carbonyl_group", C, D, "Aldehydes, ketones and the carbonyl group", "16-18
   [],
   [("og_functional_groups", "h", "Treats C=O as a functional group that sets the compound's reactions"),
    ("og_naming", "h", "Extends naming rules with the -al and -one suffixes and position numbers"),
-   ("ar_sigma_pi", "s", "The C=O double bond is a σ bond plus a π bond, like C=C"),
+   ("ar_sigma_pi", "s", "The C=O double bond is a σ bond plus a π bond, like the C=C bond in alkenes"),
    ("cb_intermolecular", "s", "The C=O bond is polar because oxygen is more electronegative than carbon")])
 
 T("cb_carbonyl_properties", C, D, "Physical properties of aldehydes and ketones", "16-18",
@@ -32,7 +32,7 @@ T("cb_carbonyl_properties", C, D, "Physical properties of aldehydes and ketones"
    "Explains why longer-chain aldehydes are less soluble"],
   "If {{name}} is given butane, propanal and propan-1-ol, can they put them in order of boiling point and explain the order?",
   [],
-  [("cb_carbonyl_group", "h", "Uses the polar C=O group to explain dipole–dipole forces"),
+  [("cb_carbonyl_group", "h", "The polar C=O group gives permanent dipole–dipole forces between molecules"),
    ("cb_intermolecular", "h", "Compares London forces, dipole–dipole forces and hydrogen bonds")])
 
 T("cb_distil_reflux", P, D, "Distillation versus reflux in alcohol oxidation", "16-18",
@@ -66,8 +66,8 @@ T("cb_dnp", P, D, "Detecting carbonyl compounds with 2,4-DNP", "17-18",
   "If {{name}} gets an orange precipitate with 2,4-DNP, can they explain what this shows and how to identify the exact compound?",
   [],
   [("cb_carbonyl_group", "h", "The test detects the C=O group common to aldehydes and ketones"),
-   ("og_functional_group_tests", "h", "Adds a further test to the functional-group toolkit"),
-   ("mt_MBTVB-E-S7", "s", "A sharp, known melting point identifies a pure substance")])
+   ("og_functional_group_tests", "h", "2,4-DNP is a further test-tube test, positive for both aldehydes and ketones"),
+   ("mt_MBTVB-E-S7", "s", "The derivative is identified by its sharp melting point, a sign of a pure substance")])
 
 T("cb_nucleophiles", C, D, "Nucleophiles", "17-18",
   "Explain that a nucleophile is an electron-pair donor that attacks a δ+ atom, identify nucleophiles such as OH⁻, CN⁻, NH₃ and the hydride ion from NaBH₄, and contrast them with electrophiles",
@@ -87,9 +87,9 @@ T("cb_nucleophilic_addition", C, D, "Nucleophilic addition to carbonyl compounds
    "Contrasts nucleophilic addition with electrophilic addition to C=C"],
   "If {{name}} is given propanal and the CN⁻ ion, can they draw the mechanism of the reaction?",
   [],
-  [("cb_nucleophiles", "h", "The attacking species is a nucleophile"),
-   ("cb_carbonyl_group", "h", "The δ+ carbon of the polar C=O bond is the site of attack"),
-   ("og_mechanisms", "h", "Draws the mechanism with curly arrows and intermediates")])
+  [("cb_nucleophiles", "h", "The attacking species, such as CN⁻ or H⁻, is a nucleophile donating an electron pair"),
+   ("cb_carbonyl_group", "h", "The δ+ carbon of the polar C=O bond is the site the nucleophile attacks"),
+   ("og_mechanisms", "h", "The mechanism is drawn with curly arrows to the δ+ carbon and onto oxygen")])
 
 T("cb_reduction", P, D, "Reducing aldehydes and ketones", "17-18",
   "Reduce aldehydes to primary alcohols and ketones to secondary alcohols with NaBH₄, writing equations with [H], and recognise this as the reverse of oxidation",
@@ -99,9 +99,9 @@ T("cb_reduction", P, D, "Reducing aldehydes and ketones", "17-18",
   "If {{name}} reduces butanal and butanone with NaBH₄, can they name both products and classify them?",
   [],
   [("cb_carbonyl_group", "h", "Identifies whether the starting compound is an aldehyde or a ketone"),
-   ("og_alcohol_classes", "h", "Classifies the alcohol product as primary or secondary"),
-   ("ch_redox", "h", "Recognises the gain of hydrogen as reduction"),
-   ("cb_nucleophilic_addition", "s", "The hydride ion from NaBH₄ adds by nucleophilic addition")])
+   ("og_alcohol_classes", "h", "Aldehydes reduce to primary alcohols and ketones to secondary alcohols"),
+   ("ch_redox", "h", "Adding hydrogen to C=O, shown as [H] in equations, counts as a reduction"),
+   ("cb_nucleophilic_addition", "s", "The hydride ion from NaBH₄ adds to the carbonyl carbon by nucleophilic addition")])
 
 T("cb_hydroxynitriles", P, D, "Adding cyanide: hydroxynitriles", "17-18",
   "Describe the reaction of aldehydes and ketones with KCN followed by dilute acid to form hydroxynitriles, explain the mechanism, and recognise it as a way to add a carbon atom to a chain",
@@ -110,9 +110,9 @@ T("cb_hydroxynitriles", P, D, "Adding cyanide: hydroxynitriles", "17-18",
    "Explains why this lengthens the carbon chain"],
   "If {{name}} reacts ethanal with KCN and acid, can they draw the product and explain how its carbon chain has changed?",
   [],
-  [("cb_nucleophilic_addition", "h", "The cyanide ion adds by nucleophilic addition"),
+  [("cb_nucleophilic_addition", "h", "The cyanide ion attacks the δ+ carbon by nucleophilic addition"),
    ("ch_acid_ions", "s", "The acid protonates the intermediate and releases HCN from cyanide"),
-   ("og_naming", "s", "Names the product, counting the nitrile carbon in the chain")])
+   ("og_naming", "s", "The product is named by counting the nitrile carbon as part of the longest chain")])
 
 # ---------------------------------------------------------------- carboxylic acids and derivatives
 T("cb_acid_derivatives", C, D, "Carboxylic acid derivatives", "17-18",
@@ -122,9 +122,9 @@ T("cb_acid_derivatives", C, D, "Carboxylic acid derivatives", "17-18",
    "Ranks the derivatives by reactivity"],
   "If {{name}} is shown ethanoyl chloride, ethanoic anhydride, ethyl ethanoate and ethanamide, can they explain how each is related to ethanoic acid?",
   [],
-  [("og_carboxylic_acids", "h", "Each derivative replaces the –OH of a –COOH group"),
-   ("og_esters", "h", "Esters are a derivative already met"),
-   ("cb_carbonyl_group", "h", "All derivatives keep the polar C=O group")])
+  [("og_carboxylic_acids", "h", "Each derivative replaces the –OH of the –COOH group with another group"),
+   ("og_esters", "h", "Esters, already met from acids and alcohols, are one of the derivatives"),
+   ("cb_carbonyl_group", "h", "All the derivatives keep the polar C=O group, which governs their reactivity")])
 
 T("cb_acyl_chlorides", P, D, "Reactions of acyl chlorides", "17-18",
   "Describe the vigorous reactions of acyl chlorides with water (carboxylic acid), alcohols (esters), ammonia (amides) and amines (N-substituted amides), each releasing HCl, and explain why they are better than carboxylic acids for making esters",
@@ -133,7 +133,7 @@ T("cb_acyl_chlorides", P, D, "Reactions of acyl chlorides", "17-18",
    "Explains why ester formation from an acyl chloride goes to completion"],
   "If {{name}} needs to make ethyl ethanoate in high yield, can they explain why ethanoyl chloride works better than ethanoic acid?",
   [],
-  [("cb_acid_derivatives", "h", "Acyl chlorides are the most reactive acid derivatives"),
+  [("cb_acid_derivatives", "h", "Acyl chlorides are the most reactive derivatives because Cl⁻ leaves easily"),
    ("og_ester_equilibrium", "s", "Esterification of a carboxylic acid is reversible, so it gives a lower yield")])
 
 T("cb_addition_elimination", C, D, "Nucleophilic addition–elimination", "17-18",
@@ -143,8 +143,8 @@ T("cb_addition_elimination", C, D, "Nucleophilic addition–elimination", "17-18
    "Identifies the leaving group"],
   "If {{name}} is given ethanoyl chloride and ammonia, can they draw the full mechanism?",
   [],
-  [("cb_acyl_chlorides", "h", "Explains the reactions of acyl chlorides already described"),
-   ("cb_nucleophilic_addition", "h", "Begins with nucleophilic attack on the carbonyl carbon")])
+  [("cb_acyl_chlorides", "h", "The mechanism explains the reactions of acyl chlorides with water, alcohols and ammonia"),
+   ("cb_nucleophilic_addition", "h", "The first step is the same nucleophilic attack on the δ+ carbonyl carbon")])
 
 T("cb_acid_anhydrides", P, D, "Acid anhydrides and making aspirin", "17-18",
   "Describe acid anhydrides reacting like acyl chlorides but more slowly, and explain why ethanoic anhydride is preferred industrially, for example in making aspirin from 2-hydroxybenzoic acid",
@@ -153,7 +153,7 @@ T("cb_acid_anhydrides", P, D, "Acid anhydrides and making aspirin", "17-18",
    "Identifies the ester group formed in aspirin"],
   "If {{name}} is asked why aspirin is made with ethanoic anhydride rather than ethanoyl chloride, can they give at least two reasons?",
   [],
-  [("cb_acyl_chlorides", "h", "Anhydrides undergo the same reactions as acyl chlorides"),
+  [("cb_acyl_chlorides", "h", "Anhydrides react with water, alcohols and ammonia like acyl chlorides, but more slowly"),
    ("ar_phenols", "s", "The –OH of 2-hydroxybenzoic acid is a phenol group that is acylated")])
 
 T("cb_amines", C, D, "Amines as bases and nucleophiles", "17-18",
@@ -164,7 +164,7 @@ T("cb_amines", C, D, "Amines as bases and nucleophiles", "17-18",
   "If {{name}} reacts bromoethane with ammonia, can they explain why several amine products form and how to favour ethylamine?",
   [],
   [("og_haloalkanes", "h", "Amines form when ammonia replaces the halogen in a haloalkane"),
-   ("ch_acid_ions", "h", "Amines act as bases by accepting H⁺"),
+   ("ch_acid_ions", "h", "Amines act as bases by accepting H⁺ on the nitrogen lone pair"),
    ("cb_nucleophiles", "h", "The nitrogen lone pair makes ammonia and amines nucleophiles"),
    ("ar_amines", "s", "Compares with phenylamine, whose lone pair is less available")])
 
@@ -175,8 +175,8 @@ T("cb_amides", C, D, "Amides", "17-18",
    "Identifies the amide link in a longer molecule"],
   "If {{name}} reacts ethanoyl chloride with methylamine, can they draw and name the product?",
   [],
-  [("cb_acyl_chlorides", "h", "Amides are made from acyl chlorides and ammonia or amines"),
-   ("cb_amines", "h", "The amine supplies the nitrogen of an N-substituted amide")])
+  [("cb_acyl_chlorides", "h", "Amides are made by reacting acyl chlorides with ammonia or amines"),
+   ("cb_amines", "h", "The amine supplies the nitrogen and its substituent in an N-substituted amide")])
 
 T("cb_ester_hydrolysis", P, D, "Hydrolysis of esters", "17-18",
   "Compare acid hydrolysis of esters (reversible, giving a carboxylic acid and an alcohol) with alkaline hydrolysis (irreversible, giving a carboxylate salt), and apply alkaline hydrolysis of fats to soap making",
@@ -186,8 +186,8 @@ T("cb_ester_hydrolysis", P, D, "Hydrolysis of esters", "17-18",
   "If {{name}} heats ethyl ethanoate with sodium hydroxide, can they name the products and explain why the reaction does not reverse?",
   [],
   [("og_ester_equilibrium", "h", "Acid hydrolysis is the reverse of the reversible esterification reaction"),
-   ("og_esters", "h", "Identifies the acid and alcohol parts of an ester"),
-   ("cb_acid_derivatives", "s", "Esters are one of the carboxylic acid derivatives")])
+   ("og_esters", "h", "Hydrolysis splits the ester back into the acid and alcohol it was made from"),
+   ("cb_acid_derivatives", "s", "Esters are acid derivatives, so hydrolysis returns the carboxylic acid or its salt")])
 
 T("cb_polymer_hydrolysis", P, D, "Polyesters and polyamides: synthesis and hydrolysis", "17-18",
   "Draw repeat units of polyesters and polyamides made from diols, diamines and dicarboxylic acids or diacyl chlorides (such as PET and nylon-6,6), and explain their hydrolysis by acids and alkalis and their biodegradability",
@@ -197,7 +197,7 @@ T("cb_polymer_hydrolysis", P, D, "Polyesters and polyamides: synthesis and hydro
   "If {{name}} is given a section of nylon-6,6, can they identify the monomers and explain how it could be broken down?",
   [],
   [("og_condensation_polymers", "h", "Extends condensation polymers to diacyl chloride monomers and named polymers"),
-   ("cb_amides", "h", "The amide link in polyamides is formed as in simple amides"),
+   ("cb_amides", "h", "The amide links in nylon form, and hydrolyse, as in simple amides"),
    ("cb_ester_hydrolysis", "h", "Polyesters hydrolyse at the ester links, as simple esters do"),
    ("og_polymer_disposal", "s", "Links hydrolysis to biodegradability and disposal of plastics")])
 
@@ -208,9 +208,9 @@ T("cb_nitriles", P, D, "Nitriles: hydrolysis and reduction", "17-18",
    "Plans a route that adds one carbon atom to a chain"],
   "If {{name}} needs to convert ethanal into 2-hydroxypropanoic acid, can they plan the steps?",
   [],
-  [("cb_hydroxynitriles", "h", "Nitriles are made by adding cyanide"),
-   ("cb_amines", "s", "Reduction of a nitrile gives a primary amine"),
-   ("ch_redox", "s", "Identifies hydrogenation of C≡N as a reduction")])
+  [("cb_hydroxynitriles", "h", "Nitriles are made by adding cyanide, which extends the carbon chain by one"),
+   ("cb_amines", "s", "Reducing a nitrile gives a primary amine, with the C≡N becoming –CH₂NH₂"),
+   ("ch_redox", "s", "Adding hydrogen across C≡N to make an amine is classified as a reduction")])
 
 # ---------------------------------------------------------------- synthesis
 T("cb_cc_bonds", C, D, "Forming carbon–carbon bonds", "17-18",
@@ -221,7 +221,7 @@ T("cb_cc_bonds", C, D, "Forming carbon–carbon bonds", "17-18",
   "If {{name}} needs a product with one more carbon than the starting material, can they choose a reaction that forms a new C–C bond?",
   [],
   [("cb_hydroxynitriles", "h", "Cyanide addition is one of the main ways to form a new C–C bond"),
-   ("ar_friedel_crafts", "h", "Friedel–Crafts reactions form C–C bonds to aromatic rings"),
+   ("ar_friedel_crafts", "h", "Friedel–Crafts reactions are one way to form a C–C bond, to an aromatic ring"),
    ("cb_nitriles", "s", "Nitrile groups are converted into acids or amines after the C–C bond forms")])
 
 T("cb_practical_techniques", P, D, "Organic practical techniques", "17-18",
@@ -231,9 +231,9 @@ T("cb_practical_techniques", P, D, "Organic practical techniques", "17-18",
    "Explains how a melting point shows purity"],
   "If {{name}} has made an impure solid product, can they describe how to purify it and check its purity?",
   [],
-  [("cb_distil_reflux", "h", "Builds on choosing between distillation and reflux"),
+  [("cb_distil_reflux", "h", "Choosing between distillation and reflux is extended to a full set of techniques"),
    ("mt_U_tJvy3cbB", "h", "Extends separation techniques such as filtration and distillation"),
-   ("mt_MBTVB-E-S7", "s", "Uses melting point as a test of purity")])
+   ("mt_MBTVB-E-S7", "s", "A sharp melting point at the expected value shows that a solid product is pure")])
 
 T("cb_fg_map", R, D, "Functional-group interconversions", "17-18",
   "Build and use a map of conversions between alkanes, alkenes, haloalkanes, alcohols, aldehydes, ketones, carboxylic acids, esters, acyl chlorides, amides, amines and nitriles, with reagents and conditions for each step",
@@ -243,9 +243,9 @@ T("cb_fg_map", R, D, "Functional-group interconversions", "17-18",
   "If {{name}} is asked how to turn propan-1-ol into propanamide, can they use a reaction map to find a route?",
   [],
   [("og_reaction_types", "h", "Links compounds by addition, substitution, oxidation and condensation"),
-   ("cb_reduction", "h", "Adds reduction of carbonyls to the map"),
-   ("cb_acyl_chlorides", "h", "Adds the conversions of acyl chlorides to the map"),
-   ("cb_nitriles", "s", "Adds nitrile conversions to the map")])
+   ("cb_reduction", "h", "Reducing aldehydes and ketones to alcohols adds a backward arrow to the map"),
+   ("cb_acyl_chlorides", "h", "Acyl chlorides link to acids, esters and amides on the map through their reactions"),
+   ("cb_nitriles", "s", "Nitrile hydrolysis and reduction link nitriles to acids and amines on the map")])
 
 T("cb_synthesis", M, D, "Planning multi-step syntheses", "17-18",
   "Plan two- to four-step syntheses by working back from the target (retrosynthesis), choosing reagents and conditions, and judging routes by number of steps, yield, safety and cost",
@@ -254,9 +254,9 @@ T("cb_synthesis", M, D, "Planning multi-step syntheses", "17-18",
    "Compares two routes and justifies a choice"],
   "If {{name}} needs to make propanoic acid from ethene, can they plan a route that adds the extra carbon?",
   [],
-  [("cb_fg_map", "h", "Uses known conversions between functional groups"),
-   ("cb_cc_bonds", "h", "Some routes need a new carbon–carbon bond"),
-   ("ar_aromatic_synthesis", "s", "Extends route planning beyond aromatic compounds")])
+  [("cb_fg_map", "h", "Routes are built by chaining known conversions between functional groups"),
+   ("cb_cc_bonds", "h", "When the target has more carbons, a route needs a C–C bond-forming step"),
+   ("ar_aromatic_synthesis", "s", "Planning aromatic routes, with reagents and conditions for each step, is extended to all compounds")])
 
 T("cb_route_yield", P, D, "Overall yield and atom economy of a route", "17-18",
   "Calculate the overall yield of a multi-step synthesis by multiplying the yields of each step, and compare routes using atom economy and the number of steps",
@@ -265,9 +265,9 @@ T("cb_route_yield", P, D, "Overall yield and atom economy of a route", "17-18",
    "Explains why fewer steps usually give a higher overall yield"],
   "If {{name}} has a three-step route with yields of 80%, 70% and 90%, can they find the overall yield and suggest how to improve it?",
   [],
-  [("cb_synthesis", "h", "Evaluates a planned multi-step route"),
-   ("ch_limiting_yield", "h", "Uses percentage yield for each step"),
-   ("og_making_ethanol", "s", "Atom economy was compared for two ways of making ethanol")])
+  [("cb_synthesis", "h", "The planned multi-step route is evaluated by its overall yield and atom economy"),
+   ("ch_limiting_yield", "h", "The percentage yield of each step is multiplied to give the overall yield"),
+   ("og_making_ethanol", "s", "Atom economy was first compared for fermentation and hydration routes to ethanol")])
 
 T("cb_identify_unknown", M, D, "Identifying an unknown carbonyl compound", "17-18",
   "Identify an unknown carbonyl compound by combining 2,4-DNP, Tollens' or Fehling's results, the melting point of a derivative, and IR and NMR evidence such as the aldehyde proton near δ 9–10",
@@ -277,6 +277,6 @@ T("cb_identify_unknown", M, D, "Identifying an unknown carbonyl compound", "17-1
   "If {{name}} is given test results and spectra for a C₄H₈O compound, can they decide whether it is butanal or butanone?",
   [],
   [("cb_dnp", "h", "Confirms a carbonyl group and identifies it from a derivative"),
-   ("cb_oxidation_tests", "h", "Tells aldehydes from ketones"),
-   ("sp_ir_groups", "h", "Confirms C=O from its infrared absorption"),
-   ("sp_h1_interpret", "s", "Uses proton NMR to locate the aldehyde hydrogen")])
+   ("cb_oxidation_tests", "h", "Tollens' or Fehling's results show whether the unknown is an aldehyde or a ketone"),
+   ("sp_ir_groups", "h", "A strong absorption near 1700 cm⁻¹ in the IR spectrum confirms the C=O group"),
+   ("sp_h1_interpret", "s", "Proton NMR shows the aldehyde hydrogen near 9–10 ppm and the rest of the structure")])
