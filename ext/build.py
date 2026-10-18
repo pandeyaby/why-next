@@ -16,8 +16,9 @@ sys.path.insert(0, HERE)
 
 import dsl  # noqa: E402
 import src_matter, src_energy, src_algebra, src_functions, src_forces  # noqa: F401,E402
+import src_waves, src_electricity, src_geometry, src_stats, src_calculus  # noqa: F401,E402  (wave 2)
 
-EXT_VERSION = "v1-secondary-ext.0.1"
+EXT_VERSION = "v1-secondary-ext.0.2"
 ID_NAMESPACE = "marble-os-taxonomy/secondary-ext/v1:"
 CENTRALITY_SCALE = 731  # max descendant count in the v1 graph; see README_EXT.md
 
@@ -67,11 +68,11 @@ def resolve(ref):
     return key2id[ref]
 
 # ---------------------------------------------------------------- standards extension (NGSS HS, codes only)
-NGSS_HS_CODES = [f"HS-PS1-{i}" for i in range(1, 9)] + [f"HS-PS2-{i}" for i in range(1, 7)] + [f"HS-PS3-{i}" for i in range(1, 6)]
+NGSS_HS_CODES = [f"HS-PS1-{i}" for i in range(1, 9)] + [f"HS-PS2-{i}" for i in range(1, 7)] + [f"HS-PS3-{i}" for i in range(1, 6)] + [f"HS-PS4-{i}" for i in range(1, 6)]
 ngss_hs = {
     "slug": "ngss-hs",
     "country": "US",
-    "name": "Next Generation Science Standards (NGSS) High School — Physical Science (PS1–PS3)",
+    "name": "Next Generation Science Standards (NGSS) High School — Physical Science (PS1–PS4)",
     "version": "2013",
     "sourceUrl": "https://www.nextgenscience.org/overview-dci#high-school",
     "textIncluded": False,
@@ -83,10 +84,11 @@ standards_ext = {
     "note": ("Standards added by the secondary extension. Only NGSS high-school physical-science codes were missing from v1; "
              "every CCSS-Math and UK KS3 key used by the extension already exists in v1 curriculum-standards.json. "
              "NGSS is codes-only (see PROVENANCE.md). Codes verified against nextgenscience.org DCI arrangement pages "
-             "HS-PS1, HS-PS2 and HS-PS3 on 2026-10-18: "
+             "HS-PS1, HS-PS2 and HS-PS3 on 2026-10-18, and HS-PS4 on 2026-10-18 (wave 2): "
              "https://www.nextgenscience.org/dci-arrangement/hs-ps1-matter-and-its-interactions , "
              "https://www.nextgenscience.org/dci-arrangement/hs-ps2-motion-and-stability-forces-and-interactions , "
-             "https://www.nextgenscience.org/dci-arrangement/hs-ps3-energy"),
+             "https://www.nextgenscience.org/dci-arrangement/hs-ps3-energy , "
+             "https://www.nextgenscience.org/dci-arrangement/hs-ps4-waves-and-their-applications-technologies-information-transfer"),
     "codesOnlySources": ["ngss-hs"],
     "curriculumCount": 1,
     "curricula": [ngss_hs],

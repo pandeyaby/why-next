@@ -11,6 +11,13 @@ SUBJECT_BY_DOMAIN = {
     "Forces & Motion": "Science",
     "Algebra": "Mathematics",
     "Functions & Modeling": "Mathematics",
+    # wave 2
+    "Waves, Light & Sound": "Science",
+    "Electricity & Circuits": "Science",
+    "Geometry": "Mathematics",
+    "Data & Statistics": "Mathematics",
+    "Probability": "Mathematics",
+    "Calculus": "Mathematics",
 }
 
 def std(code):
