@@ -18,15 +18,21 @@
   {
    "type": "mc",
    "id": "p1",
-   "prompt": "Sam counts 5 apples but touches one apple twice. What number does Sam say at the end?",
+   "prompt": "Sam counts {n} apples but touches one apple twice. What number does Sam say at the end?",
    "choices": [
-    "4",
-    "5",
-    "6"
+    "{=n-1}",
+    "{n}",
+    "{=n+1}"
    ],
    "answer": 2,
    "hint": "Each touch gets a number word. One apple got two words.",
-   "explain": "Five apples plus one extra touch gives six number words, so Sam says 6, one too many."
+   "explain": "{n} apples plus one extra touch gives {=n+1} number words, one too many.",
+   "params": {
+    "n": [
+     4,
+     8
+    ]
+   }
   },
   {
    "type": "numeric",
@@ -62,6 +68,20 @@
    ],
    "hint": "Start with the smallest number.",
    "explain": "Counting words always come in the same order: one, two, three, four, five."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Ben touches each of {n} shells once, saying one number for each. What number does he say last?",
+   "answer": "n",
+   "hint": "One touch, one number.",
+   "explain": "He says {n}: one number for each shell.",
+   "params": {
+    "n": [
+     4,
+     10
+    ]
+   }
   }
  ],
  "mastery": {

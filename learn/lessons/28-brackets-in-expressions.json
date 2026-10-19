@@ -1,0 +1,231 @@
+{
+ "topicId": "mt_8jFSnXxqQD",
+ "title": "Brackets in expressions",
+ "audience": "learner",
+ "keyIdea": "Work out what is inside brackets first. Brackets group numbers together.",
+ "explain": {
+  "kid": [
+   "Brackets (in the US, parentheses) tell you which part to work out first. In 3 × (4 + 2), you add first: 4 + 2 = 6, then 3 × 6 = 18.",
+   "Without brackets, 3 × 4 + 2 means 12 + 2 = 14. So brackets can change the answer."
+  ],
+  "adult": [
+   "Grouping symbols mark part of an expression to treat as one number. They are round brackets ( ), square brackets [ ] and braces { }. Work out the innermost group first: 2 × [10 − (3 + 1)] = 2 × [10 − 4] = 2 × 6 = 12.",
+   "Brackets let you write exactly the calculation you mean. 'Add 4 and 2, then multiply by 3' is 3 × (4 + 2), not 3 × 4 + 2."
+  ]
+ },
+ "familyTip": "Take a calculation like 3 × 4 + 2 and see how many different answers you can make just by adding brackets.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Work out 3 × (4 + 2).",
+   "answer": 18,
+   "hint": "Do the bracket first.",
+   "explain": "4 + 2 = 6, then 3 × 6 = 18."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Work out {a} × ({b} + {c}).",
+   "answer": "a*(b+c)",
+   "hint": "Do the bracket first.",
+   "explain": "{b} + {c} = {=b+c}, then {a} × {=b+c} = {=a*(b+c)}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Work out ({a} − {b}) × {c}.",
+   "answer": "(a-b)*c",
+   "hint": "Do the bracket first.",
+   "explain": "{a} − {b} = {=a-b}, then {=a-b} × {c} = {=(a-b)*c}.",
+   "params": {
+    "a": [
+     6,
+     15
+    ],
+    "b": [
+     1,
+     5
+    ],
+    "c": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which expression means 'add 4 and 2, then multiply by 3'?",
+   "choices": [
+    "3 × (4 + 2)",
+    "3 × 4 + 2",
+    "3 + 4 × 2"
+   ],
+   "answer": 0,
+   "hint": "The adding must happen first, so it needs brackets.",
+   "explain": "3 × (4 + 2) adds first, then multiplies."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Work out 2 × [10 − (3 + 1)].",
+   "answer": 12,
+   "hint": "Start with the innermost bracket.",
+   "explain": "3 + 1 = 4, then 10 − 4 = 6, then 2 × 6 = 12."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Calculate {a} × ({b} + {c}).",
+    "answer": "a*(b+c)",
+    "hint": "Bracket first.",
+    "explain": "{b} + {c} = {=b+c}, and {a} × {=b+c} = {=a*(b+c)}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ],
+     "c": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Calculate ({a} + {=c*k-a}) ÷ {c}.",
+    "answer": "k",
+    "hint": "Bracket first, then divide.",
+    "explain": "{a} + {=c*k-a} = {=c*k}, and {=c*k} ÷ {c} = {k}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "c": [
+      2,
+      6
+     ],
+     "k": [
+      2,
+      9
+     ]
+    },
+    "where": "c*k>a"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Calculate {a} × [{b} − ({c} + {d})].",
+    "answer": "a*(b-c-d)",
+    "hint": "Start with the innermost bracket.",
+    "explain": "{c} + {d} = {=c+d}, then {b} − {=c+d} = {=b-c-d}, then {a} × {=b-c-d} = {=a*(b-c-d)}.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      10,
+      20
+     ],
+     "c": [
+      1,
+      4
+     ],
+     "d": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Do the brackets change the answer? Compare {a} × ({b} + {c}) with {a} × {b} + {c}.",
+    "choices": [
+     "Yes: they give {=a*(b+c)} and {=a*b+c}",
+     "No: both give {=a*(b+c)}",
+     "No: both give {=a*b+c}"
+    ],
+    "answer": 0,
+    "hint": "Work out each one.",
+    "explain": "{a} × ({b} + {c}) = {=a*(b+c)}, but {a} × {b} + {c} = {=a*b+c}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      2,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Work out (12 − 4) ÷ 2.",
+    "answer": 4,
+    "hint": "Bracket first.",
+    "explain": "12 − 4 = 8, then 8 ÷ 2 = 4."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is 5 × (6 − 1)?",
+    "choices": [
+     "25",
+     "29",
+     "35"
+    ],
+    "answer": 0,
+    "hint": "Do 6 − 1 first.",
+    "explain": "6 − 1 = 5, and 5 × 5 = 25. (29 would be 5 × 6 − 1.)"
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In 2 × [10 − (3 + 1)], what do you work out first?",
+    "choices": [
+     "3 + 1",
+     "2 × 10",
+     "10 − 3"
+    ],
+    "answer": 0,
+    "hint": "Find the innermost bracket.",
+    "explain": "The round bracket (3 + 1) is inside the square one, so it comes first."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

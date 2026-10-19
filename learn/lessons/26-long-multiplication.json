@@ -1,0 +1,192 @@
+{
+ "topicId": "mt_XLP1IM3Qbb",
+ "title": "Long multiplication",
+ "audience": "learner",
+ "keyIdea": "Multiply by each digit of the second number separately, then add the rows.",
+ "explain": {
+  "kid": [
+   "To work out 34 × 26, split 26 into 20 and 6. First 34 × 6 = 204. Then 34 × 20 = 680. Add them: 204 + 680 = 884.",
+   "Line the digits up in columns. The second row is for the tens, so it is ten times bigger and ends in a 0."
+  ],
+  "adult": [
+   "Long multiplication uses the distributive law: 346 × 27 = 346 × 20 + 346 × 7. Write each partial product on its own row, then add: 6,920 + 2,422 = 9,342.",
+   "Two checks catch most mistakes. Estimate first: 346 × 27 is about 350 × 30 = 10,500, so 9,342 is believable. And make sure the tens row has its placeholder 0."
+  ]
+ },
+ "familyTip": "Before you multiply, round both numbers and estimate. After you multiply, compare your answer with the estimate.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Work out 34 × 26.",
+   "answer": 884,
+   "hint": "Do 34 × 6, then 34 × 20, then add.",
+   "explain": "34 × 6 = 204 and 34 × 20 = 680, so 34 × 26 = 884."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Work out {a} × {b}.",
+   "answer": "a*b",
+   "hint": "Multiply by the ones digit, then by the tens, then add the two rows.",
+   "explain": "{a} × {=b%10} = {=a*(b%10)} and {a} × {=b-b%10} = {=a*(b-b%10)}, so {a} × {b} = {=a*b}.",
+   "params": {
+    "a": [
+     12,
+     99
+    ],
+    "b": [
+     11,
+     39
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "In 346 × 27, what is the tens row (346 × 20)?",
+   "choices": [
+    "6920",
+    "692",
+    "2422"
+   ],
+   "answer": 0,
+   "hint": "346 × 2 = 692. Now make it ten times bigger.",
+   "explain": "346 × 20 = 692 × 10 = 6920."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why does the second row of 52 × 34 end in 0?",
+   "choices": [
+    "Because that row is 52 × 30, not 52 × 3",
+    "Because 52 ends in 2",
+    "Because it's a carried digit"
+   ],
+   "answer": 0,
+   "hint": "What is the 3 in 34 really worth?",
+   "explain": "The 3 in 34 means 30, and 52 × 30 = 1560, which ends in 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Work out the tens row: {a} × {=t*10}.",
+   "answer": "a*t*10",
+   "hint": "Work out {a} × {t}, then make it ten times bigger.",
+   "explain": "{a} × {t} = {=a*t}, so {a} × {=t*10} = {=a*t*10}.",
+   "params": {
+    "a": [
+     12,
+     99
+    ],
+    "t": [
+     2,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Calculate {a} × {b}.",
+    "answer": "a*b",
+    "hint": "Split {b} into tens and ones.",
+    "explain": "{a} × {=b-b%10} = {=a*(b-b%10)} and {a} × {=b%10} = {=a*(b%10)}, so the answer is {=a*b}.",
+    "params": {
+     "a": [
+      21,
+      99
+     ],
+     "b": [
+      12,
+      49
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Use long multiplication: {a} × {b}.",
+    "answer": "a*b",
+    "hint": "Two rows: one for the ones, one for the tens.",
+    "explain": "{a} × {=b%10} = {=a*(b%10)} and {a} × {=b-b%10} = {=a*(b-b%10)}, so {a} × {b} = {=a*b}.",
+    "params": {
+     "a": [
+      100,
+      999
+     ],
+     "b": [
+      12,
+      29
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A box holds {b} pens. How many pens are in {a} boxes?",
+    "answer": "a*b",
+    "hint": "Multiply the number of boxes by the pens in each.",
+    "explain": "{a} × {b} = {=a*b} pens.",
+    "params": {
+     "a": [
+      12,
+      60
+     ],
+     "b": [
+      12,
+      36
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Work out 1234 × 12.",
+    "answer": 14808,
+    "hint": "1234 × 2, then 1234 × 10, then add.",
+    "explain": "1234 × 2 = 2468 and 1234 × 10 = 12340, so the total is 14808."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is the best estimate for 489 × 31?",
+    "choices": [
+     "About 15,000",
+     "About 1,500",
+     "About 150,000"
+    ],
+    "answer": 0,
+    "hint": "Round to 500 × 30.",
+    "explain": "500 × 30 = 15,000. (The exact answer is 15,159.)"
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Sam works out 23 × 14 as 92 + 23 = 115. What went wrong?",
+    "choices": [
+     "He forgot the 0: 23 × 10 = 230, so the answer is 322",
+     "He forgot to carry a 1",
+     "Nothing, 115 is right"
+    ],
+    "answer": 0,
+    "hint": "What is the 1 in 14 worth?",
+    "explain": "The tens row should be 23 × 10 = 230, so 92 + 230 = 322."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A school orders 24 boxes of 144 pencils. How many pencils is that?",
+    "answer": 3456,
+    "hint": "Work out 144 × 24.",
+    "explain": "144 × 4 = 576 and 144 × 20 = 2880, so 576 + 2880 = 3456."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

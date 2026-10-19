@@ -30,10 +30,25 @@
   {
    "type": "numeric",
    "id": "p2",
-   "prompt": "8 + 4 = □ + 5. What number goes in the box?",
-   "answer": 7,
-   "hint": "The left side makes 12. What plus 5 makes 12?",
-   "explain": "8 + 4 = 12 and 7 + 5 = 12, so the box is 7 (not 12)."
+   "prompt": "{a} + {b} = □ + {c}. What number goes in the box?",
+   "answer": "a+b-c",
+   "hint": "The left side makes {=a+b}. What plus {c} makes {=a+b}?",
+   "explain": "{a} + {b} = {=a+b} and {=a+b-c} + {c} = {=a+b}, so the box is {=a+b-c}.",
+   "params": {
+    "a": [
+     3,
+     9
+    ],
+    "b": [
+     2,
+     9
+    ],
+    "c": [
+     1,
+     9
+    ]
+   },
+   "where": "a+b>c"
   },
   {
    "type": "mc",
@@ -58,6 +73,28 @@
    "answer": 1,
    "hint": "Work out each side.",
    "explain": "2 + 6 = 8 but 6 + 3 = 9, so it is false."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "True or false: {a} + {b} = {=a+1} + {=b-1}",
+   "choices": [
+    "True",
+    "False"
+   ],
+   "answer": 0,
+   "hint": "Work out each side.",
+   "explain": "Both sides make {=a+b}, so it is true.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
   }
  ],
  "mastery": {

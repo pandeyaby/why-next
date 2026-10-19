@@ -18,10 +18,20 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "x + 3 = 7. What is x?",
-   "answer": 4,
-   "hint": "Take 3 from both sides.",
-   "explain": "x = 7 − 3 = 4."
+   "prompt": "x + {a} = {=a+b}. Find x.",
+   "answer": "b",
+   "hint": "Take {a} from both sides.",
+   "explain": "x = {=a+b} − {a} = {b}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
   },
   {
    "type": "mc",
@@ -56,6 +66,24 @@
    ],
    "hint": "First undo the + 1, then undo the × 2.",
    "explain": "Subtract 1 from both sides, divide both sides by 2, then check."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "{a}x = {=a*b}. Find x.",
+   "answer": "b",
+   "hint": "Divide both sides by {a}.",
+   "explain": "x = {=a*b} ÷ {a} = {b}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
   }
  ],
  "mastery": {

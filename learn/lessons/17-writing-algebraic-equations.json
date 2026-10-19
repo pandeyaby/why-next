@@ -57,10 +57,43 @@
   {
    "type": "numeric",
    "id": "p4",
-   "prompt": "In n + 7 = 12, what is n?",
-   "answer": 5,
-   "hint": "What do you add to 7 to make 12?",
-   "explain": "n = 12 − 7 = 5."
+   "prompt": "In n + {a} = {b}, what is n?",
+   "answer": "b-a",
+   "hint": "What do you add to {a} to make {b}?",
+   "explain": "n = {b} − {a} = {=b-a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     10,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "{a} bags with the same number of marbles hold {=a*k} marbles in total. Let m be the number in one bag. Which equation matches?",
+   "choices": [
+    "{a}m = {=a*k}",
+    "m + {a} = {=a*k}",
+    "m = {a} × {=a*k}"
+   ],
+   "answer": 0,
+   "hint": "{a} bags of m marbles is {a} × m.",
+   "explain": "{a}m = {=a*k}, so m = {k}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "k": [
+     2,
+     9
+    ]
+   }
   }
  ],
  "mastery": {

@@ -44,10 +44,20 @@
   {
    "type": "numeric",
    "id": "p3",
-   "prompt": "4(x + 2) = 4x + ?",
-   "answer": 8,
-   "hint": "Multiply 2 by 4.",
-   "explain": "4 × 2 = 8, so 4(x + 2) = 4x + 8."
+   "prompt": "{a}(x + {b}) = {a}x + □. What number goes in the box?",
+   "answer": "a*b",
+   "hint": "Multiply {b} by {a}.",
+   "explain": "{a} × {b} = {=a*b}, so {a}(x + {b}) = {a}x + {=a*b}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     6
+    ]
+   }
   },
   {
    "type": "mc",
@@ -61,6 +71,29 @@
    "answer": 0,
    "hint": "−2 × −3 is positive.",
    "explain": "−2 × x = −2x and −2 × −3 = +6, so you get −2x + 6."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Expand {a}(x − {b}).",
+   "choices": [
+    "{a}x − {=a*b}",
+    "{a}x − {b}",
+    "{a}x + {=a*b}"
+   ],
+   "answer": 0,
+   "hint": "Multiply both terms by {a}, and keep the minus sign.",
+   "explain": "{a} × x − {a} × {b} = {a}x − {=a*b}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     6
+    ]
+   }
   }
  ],
  "mastery": {

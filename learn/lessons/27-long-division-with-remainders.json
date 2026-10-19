@@ -1,0 +1,232 @@
+{
+ "topicId": "mt_WsM4EmdOLe",
+ "title": "Long division and remainders",
+ "audience": "learner",
+ "keyIdea": "Divide, then decide what the remainder means: leftover, fraction, decimal, or round up or down.",
+ "explain": {
+  "kid": [
+   "Long division by a two-digit number works like short division, with more writing. For 432 ÷ 15: 15 goes into 43 twice (30), leaving 13. Bring down the 2 to make 132. 15 goes into 132 eight times (120), leaving 12. So 432 ÷ 15 = 28 remainder 12.",
+   "What you do with the remainder depends on the question. If a minibus holds 15 people, 432 people need 29 minibuses, so that nobody is left behind."
+  ],
+  "adult": [
+   "It helps to write out a few multiples of the divisor first (15, 30, 45, …). Then divide, multiply, subtract and bring down, one digit at a time.",
+   "The remainder can be written as a whole number (r 12), as a fraction (28 12/15 = 28 4/5), or as a decimal (28.8). In a word problem, decide whether to round up (buses needed) or down (full boxes you can fill)."
+  ]
+ },
+ "familyTip": "Check a division by multiplying back: 28 × 15 + 12 should give 432.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "432 ÷ 15 = 28 remainder what?",
+   "answer": 12,
+   "hint": "28 × 15 = 420. How far is that from 432?",
+   "explain": "28 × 15 = 420, and 432 − 420 = 12."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{=d*q+r} ÷ {d} = {q} remainder what?",
+   "answer": "r",
+   "hint": "Work out {q} × {d}, then subtract it from {=d*q+r}.",
+   "explain": "{q} × {d} = {=d*q}, and {=d*q+r} − {=d*q} = {r}.",
+   "params": {
+    "d": [
+     12,
+     25
+    ],
+    "q": [
+     5,
+     30
+    ],
+    "r": [
+     1,
+     11
+    ]
+   },
+   "where": "r<d"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What is {=d*q} ÷ {d}?",
+   "answer": "q",
+   "hint": "List multiples of {d} to help.",
+   "explain": "{d} × {q} = {=d*q}, so {=d*q} ÷ {d} = {q}.",
+   "params": {
+    "d": [
+     12,
+     25
+    ],
+    "q": [
+     11,
+     40
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "432 people are going on a trip. Each minibus holds 15 people. How many minibuses are needed?",
+   "choices": [
+    "29",
+    "28",
+    "28 r 12"
+   ],
+   "answer": 0,
+   "hint": "What happens to the 12 people left over?",
+   "explain": "432 ÷ 15 = 28 r 12. The 12 extra people need one more minibus, so 29."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Eggs are packed in boxes of {d}. How many full boxes can you make from {=d*q+r} eggs?",
+   "answer": "q",
+   "hint": "Divide, then ignore the eggs left over.",
+   "explain": "{=d*q+r} ÷ {d} = {q} r {r}, so you can fill {q} boxes.",
+   "params": {
+    "d": [
+     6,
+     12
+    ],
+    "q": [
+     10,
+     40
+    ],
+    "r": [
+     1,
+     5
+    ]
+   },
+   "where": "r<d"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Work out {=d*q} ÷ {d}.",
+    "answer": "q",
+    "hint": "How many {d}s make {=d*q}?",
+    "explain": "{d} × {q} = {=d*q}, so the answer is {q}.",
+    "params": {
+     "d": [
+      11,
+      30
+     ],
+     "q": [
+      12,
+      60
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "{=d*q+r} ÷ {d} leaves a remainder. What is it?",
+    "answer": "r",
+    "hint": "Find the biggest multiple of {d} that fits.",
+    "explain": "{d} × {q} = {=d*q}, and {=d*q+r} − {=d*q} = {r}.",
+    "params": {
+     "d": [
+      11,
+      25
+     ],
+     "q": [
+      10,
+      40
+     ],
+     "r": [
+      1,
+      10
+     ]
+    },
+    "where": "r<d"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{=d*q+r} children go on a trip. Each coach holds {d}. How many coaches are needed?",
+    "answer": "q+1",
+    "hint": "Divide, then think about the children left over.",
+    "explain": "{=d*q+r} ÷ {d} = {q} r {r}. The {r} extra children need one more coach, so {=q+1}.",
+    "params": {
+     "d": [
+      20,
+      50
+     ],
+     "q": [
+      2,
+      9
+     ],
+     "r": [
+      1,
+      15
+     ]
+    },
+    "where": "r<d"
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Pencils come in packs of {d}. How many full packs can you make from {=d*q+r} pencils?",
+    "answer": "q",
+    "hint": "Divide, then ignore the pencils left over.",
+    "explain": "{=d*q+r} ÷ {d} = {q} r {r}, so {q} full packs.",
+    "params": {
+     "d": [
+      12,
+      24
+     ],
+     "q": [
+      5,
+      20
+     ],
+     "r": [
+      1,
+      11
+     ]
+    },
+    "where": "r<d"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "432 ÷ 15 = 28 r 12. Which mixed number is the same?",
+    "choices": [
+     "28 4/5",
+     "28 12/100",
+     "28 1/12"
+    ],
+    "answer": 0,
+    "hint": "The remainder 12 is out of 15.",
+    "explain": "12/15 simplifies to 4/5, so the answer is 28 4/5."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Give 432 ÷ 15 as a decimal.",
+    "answer": 28.8,
+    "hint": "28 r 12 is 28 and 12/15, which is 28 and 4/5.",
+    "explain": "4/5 = 0.8, so 432 ÷ 15 = 28.8."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "When should you round a division answer up?",
+    "choices": [
+     "When everyone or everything must fit, like buses for a trip",
+     "Always",
+     "When the remainder is less than half"
+    ],
+    "answer": 0,
+    "hint": "Think about who would be left behind.",
+    "explain": "Round up when leftovers still need a place, such as an extra bus or box."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

@@ -1,0 +1,237 @@
+{
+ "topicId": "mt_RXnyhCRYXA",
+ "title": "Multi-step problems",
+ "audience": "learner",
+ "keyIdea": "Break the problem into steps, choose the operation for each step, and check the answer makes sense.",
+ "explain": {
+  "kid": [
+   "Some problems need more than one step. 'Pens cost 45p each. Mia buys 6 pens and pays with £5. How much change does she get?' Step 1: 6 × 45p = 270p = £2.70. Step 2: £5 − £2.70 = £2.30.",
+   "Ask yourself: what do I need to find first? Which operation does that need: add, subtract, multiply or divide?"
+  ],
+  "adult": [
+   "Multi-step problems are mostly about planning. Underline what you're asked, list what you know, and decide the order of the steps before calculating. Key words help, but they can mislead ('more' doesn't always mean add), so picture what is actually happening.",
+   "Finish by checking units and size. If 6 pens seem to cost more than £5, something has gone wrong. A rounded estimate first (6 × 50p = £3) gives a quick check."
+  ]
+ },
+ "familyTip": "When you shop, estimate the total before you reach the till, then see how close you were.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Pens cost 45p each. Mia buys 6 pens and pays with £5. How much change does she get, in pence?",
+   "answer": 230,
+   "hint": "First find the cost of 6 pens, then subtract it from 500p.",
+   "explain": "6 × 45p = 270p, and 500p − 270p = 230p (£2.30)."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A cinema has {r} rows of {s} seats. {t} seats are taken. How many seats are free?",
+   "answer": "r*s-t",
+   "hint": "First find the total number of seats.",
+   "explain": "{r} × {s} = {=r*s} seats, and {=r*s} − {t} = {=r*s-t} are free.",
+   "params": {
+    "r": [
+     8,
+     15
+    ],
+    "s": [
+     10,
+     20
+    ],
+    "t": [
+     20,
+     79
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "{n} friends share a £{=n*e} bill equally, then each adds a £{t} tip. How much does each person pay in total, in £?",
+   "answer": "e+t",
+   "hint": "First share the bill, then add the tip.",
+   "explain": "£{=n*e} ÷ {n} = £{e}, and £{e} + £{t} = £{=e+t}.",
+   "params": {
+    "n": [
+     2,
+     6
+    ],
+    "e": [
+     5,
+     15
+    ],
+    "t": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Juice costs £1.20 a bottle. You need 30 bottles and you have £30. What should you work out?",
+   "choices": [
+    "30 × £1.20 = £36, so you don't have enough",
+    "£30 − £1.20 = £28.80 change",
+    "£30 ÷ £1.20 = 25, so you get £5 change"
+   ],
+   "answer": 0,
+   "hint": "First find what 30 bottles cost.",
+   "explain": "30 bottles cost £36, which is more than £30, so you are £6 short."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A book has {p} pages. Leo reads {r} pages a day for {d} days. How many pages are left?",
+   "answer": "p-r*d",
+   "hint": "First find how many pages he has read.",
+   "explain": "{r} × {d} = {=r*d} pages read, so {p} − {=r*d} = {=p-r*d} are left.",
+   "params": {
+    "p": [
+     100,
+     300
+    ],
+    "r": [
+     10,
+     25
+    ],
+    "d": [
+     3,
+     7
+    ]
+   },
+   "where": "p>r*d"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A box holds {b} apples. A shop has {n} full boxes and sells {s} apples. How many apples are left?",
+    "answer": "b*n-s",
+    "hint": "First find how many apples there were.",
+    "explain": "{n} × {b} = {=b*n}, and {=b*n} − {s} = {=b*n-s}.",
+    "params": {
+     "b": [
+      12,
+      30
+     ],
+     "n": [
+      3,
+      9
+     ],
+     "s": [
+      10,
+      35
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Tickets cost £{p} for adults and £{c} for children. What do {a} adults and {k} children pay in total, in £?",
+    "answer": "p*a+c*k",
+    "hint": "Find the adult cost and the child cost, then add.",
+    "explain": "{a} × £{p} = £{=p*a} and {k} × £{c} = £{=c*k}, so £{=p*a+c*k} in total.",
+    "params": {
+     "p": [
+      8,
+      15
+     ],
+     "c": [
+      3,
+      7
+     ],
+     "a": [
+      1,
+      3
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A {=2*n*q} m rope is cut into {n} equal pieces, then each piece is cut in half. How long is each small piece, in m?",
+    "answer": "q",
+    "hint": "Divide by {n}, then halve.",
+    "explain": "{=2*n*q} ÷ {n} = {=2*q} m, and half of that is {q} m.",
+    "params": {
+     "n": [
+      2,
+      5
+     ],
+     "q": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Sam saves £{s} a week. A bike costs £{=s*w+r}. How many weeks until he can afford it?",
+    "answer": "w+1",
+    "hint": "Divide the price by his weekly savings, then think about the remainder.",
+    "explain": "After {w} weeks he has £{=s*w}, which is £{r} short, so he needs {=w+1} weeks.",
+    "params": {
+     "s": [
+      5,
+      15
+     ],
+     "w": [
+      4,
+      12
+     ],
+     "r": [
+      1,
+      14
+     ]
+    },
+    "where": "r<s"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A coach holds 52 people. How do you work out how many coaches 300 people need?",
+    "choices": [
+     "Divide 300 by 52, then round up",
+     "Multiply 300 by 52",
+     "Subtract 52 from 300 once"
+    ],
+    "answer": 0,
+    "hint": "Each coach takes 52 people.",
+    "explain": "300 ÷ 52 = 5 r 40, so 6 coaches are needed."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Pens cost 45p each. How many pens can you buy with £3?",
+    "answer": 6,
+    "hint": "£3 = 300p. How many 45s fit into 300?",
+    "explain": "300 ÷ 45 = 6 r 30, so you can buy 6 pens."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Your working says 6 pens cost £14.70, but your estimate was 6 × 50p = £3. What should you do?",
+    "choices": [
+     "Recheck: £14.70 is far bigger than the estimate",
+     "Trust the working",
+     "Round it to £15"
+    ],
+    "answer": 0,
+    "hint": "Do the two numbers agree?",
+    "explain": "An answer far from the estimate means there's a mistake to find."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

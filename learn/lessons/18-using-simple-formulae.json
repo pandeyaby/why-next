@@ -18,10 +18,20 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "Perimeter = 2 × (length + width). Length 6 cm, width 4 cm. What is the perimeter in cm?",
-   "answer": 20,
+   "prompt": "Perimeter = 2 × (length + width). What is the perimeter of a {l} cm by {w} cm rectangle, in cm?",
+   "answer": "2*(l+w)",
    "hint": "Add length and width first.",
-   "explain": "2 × (6 + 4) = 2 × 10 = 20 cm."
+   "explain": "2 × ({l} + {w}) = 2 × {=l+w} = {=2*(l+w)} cm.",
+   "params": {
+    "l": [
+     3,
+     10
+    ],
+    "w": [
+     2,
+     8
+    ]
+   }
   },
   {
    "type": "numeric",
@@ -51,6 +61,24 @@
    "answer": 0,
    "hint": "Brackets first.",
    "explain": "Work out length + width, then double it."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Cost = price × quantity. Apples cost {p}p each and you buy {q}. What is the cost in pence?",
+   "answer": "p*q",
+   "hint": "Multiply the price by how many.",
+   "explain": "{p}p × {q} = {=p*q}p.",
+   "params": {
+    "p": [
+     10,
+     40
+    ],
+    "q": [
+     2,
+     6
+    ]
+   }
   }
  ],
  "mastery": {

@@ -5,11 +5,11 @@
  "keyIdea": "Brackets first, then × and ÷ (left to right), then + and − (left to right).",
  "explain": {
   "kid": [
-   "When a calculation has more than one operation, everyone follows the same order so they all get the same answer. You do brackets first, then multiply and divide, then add and subtract.",
+   "When a sum has more than one operation, everyone follows the same order so they all get the same answer. Do brackets first (in the US these are called parentheses), then multiply and divide, then add and subtract.",
    "So 2 + 3 × 4 is 2 + 12 = 14, not 5 × 4 = 20. When two operations are on the same level, you work from left to right."
   ],
   "adult": [
-   "You've probably met BIDMAS, BODMAS or PEMDAS. They all describe one convention: brackets, then powers (indices), then × and ÷, then + and −. Operations on the same level are done left to right.",
+   "You may know this as BIDMAS or BODMAS (UK) or PEMDAS (US). They all describe one convention: brackets/parentheses, then powers (indices/exponents), then × and ÷, then + and −. Operations on the same level are done left to right.",
    "The two classic mistakes are working strictly left to right (2 + 3 × 4 = 20) and assuming addition always comes before subtraction. In fact 10 − 4 + 2 = 8, because + and − share a level and you go left to right."
   ]
  },
@@ -18,10 +18,25 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "Work out 2 + 3 × 4.",
-   "answer": 14,
-   "hint": "Multiply before you add.",
-   "explain": "3 × 4 = 12, then 2 + 12 = 14."
+   "prompt": "Calculate {a} × {b} − {c}.",
+   "answer": "a*b-c",
+   "hint": "Multiply before you subtract.",
+   "explain": "{a} × {b} = {=a*b}, then {=a*b} − {c} = {=a*b-c}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     2,
+     6
+    ],
+    "c": [
+     1,
+     9
+    ]
+   },
+   "where": "a*b>c"
   },
   {
    "type": "numeric",
@@ -51,6 +66,28 @@
    "answer": 0,
    "hint": "Look for brackets.",
    "explain": "Brackets first: 2 + 4 = 6, then 12 ÷ 6 = 2."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Calculate {a} × ({b} + {c}).",
+   "answer": "a*(b+c)",
+   "hint": "Brackets first.",
+   "explain": "{b} + {c} = {=b+c}, then {a} × {=b+c} = {=a*(b+c)}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     6
+    ],
+    "c": [
+     1,
+     6
+    ]
+   }
   }
  ],
  "mastery": {

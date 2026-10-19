@@ -5,12 +5,12 @@
  "keyIdea": "The denominator says how many equal parts the whole has; the numerator says how many of them you mean.",
  "explain": {
   "kid": [
-   "A fraction like 3/4 has two numbers. The bottom number (the denominator) tells you how many equal parts the whole is cut into. The top number (the numerator) tells you how many of those parts we mean.",
-   "So 3/4 means: cut into 4 equal parts and take 3. A fraction with 1 on top, like 1/4, is called a unit fraction."
+   "A fraction like 3/4 has two numbers. The bottom number is the denominator. It tells you how many equal parts the whole is cut into. The top number is the numerator. It tells you how many of those parts we mean.",
+   "So 3/4 means: cut it into 4 equal parts and take 3. A fraction with 1 on top, like 1/4, is called a unit fraction."
   ],
   "adult": [
-   "Key words: numerator (how many parts), denominator (how many equal parts make the whole), unit fraction (numerator 1), proper fraction (numerator smaller than denominator), improper fraction (numerator equal to or bigger than the denominator, e.g. 7/4), mixed number (1¾), equivalent fractions (same value, e.g. 1/2 = 2/4).",
-   "Simplest form means the numerator and denominator have no common factor except 1, as in 3/7 but not 6/9."
+   "The numerator counts the parts. The denominator says how many equal parts make the whole. A unit fraction has 1 on top. A proper fraction is less than 1, like 3/4. An improper fraction has a top number equal to or bigger than the bottom, like 7/4. A mixed number, like 1¾, is a whole number and a fraction.",
+   "Equivalent fractions have the same value, like 1/2 and 2/4. A fraction is in simplest form when no number except 1 divides both the top and the bottom, as in 3/7 (but not 6/9)."
   ]
  },
  "familyTip": "When cutting a sandwich or pizza, name it: 'four equal pieces, so each is one quarter, 1/4'.",
@@ -57,15 +57,50 @@
   {
    "type": "mc",
    "id": "p4",
-   "prompt": "A pizza is cut into 8 equal slices and you eat 3. What fraction did you eat?",
+   "prompt": "A pizza is cut into {d} equal slices and you eat {n}. What fraction did you eat?",
    "choices": [
-    "3/8",
-    "8/3",
-    "3/5"
+    "{n}/{d}",
+    "{d}/{n}",
+    "{n}/{=d-n}"
    ],
    "answer": 0,
-   "hint": "The whole is 8 slices.",
-   "explain": "3 of 8 equal slices is 3/8."
+   "hint": "The whole is {d} slices.",
+   "explain": "{n} of {d} equal slices is {n}/{d}.",
+   "params": {
+    "n": [
+     1,
+     5
+    ],
+    "d": [
+     3,
+     8
+    ]
+   },
+   "where": "n<d"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "In {n}/{d}, which number is the numerator?",
+   "choices": [
+    "{n}",
+    "{d}",
+    "{=n+d}"
+   ],
+   "answer": 0,
+   "hint": "The numerator is the top number.",
+   "explain": "The numerator is {n}: it counts how many parts we mean.",
+   "params": {
+    "n": [
+     1,
+     7
+    ],
+    "d": [
+     2,
+     9
+    ]
+   },
+   "where": "n<d"
   }
  ],
  "mastery": {

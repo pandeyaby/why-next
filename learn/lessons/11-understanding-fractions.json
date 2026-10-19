@@ -18,10 +18,16 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "1/2 of 6 = ?",
-   "answer": 3,
-   "hint": "Split 6 into 2 equal groups.",
-   "explain": "6 ÷ 2 = 3."
+   "prompt": "What is half of {=2*k}? (That's 1/2 of {=2*k}.)",
+   "answer": "k",
+   "hint": "Split {=2*k} into 2 equal groups.",
+   "explain": "{=2*k} ÷ 2 = {k}.",
+   "params": {
+    "k": [
+     3,
+     9
+    ]
+   }
   },
   {
    "type": "mc",
@@ -56,6 +62,20 @@
    "answer": 0,
    "hint": "A quarter is 1/4, and 'is' becomes =.",
    "explain": "1/4 of 12 = 3."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "1/3 of {=3*k} = ?",
+   "answer": "k",
+   "hint": "Split {=3*k} into 3 equal groups.",
+   "explain": "{=3*k} ÷ 3 = {k}.",
+   "params": {
+    "k": [
+     2,
+     5
+    ]
+   }
   }
  ],
  "mastery": {

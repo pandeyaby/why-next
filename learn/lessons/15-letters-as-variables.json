@@ -18,10 +18,16 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "If n = 5, what is 2n?",
-   "answer": 10,
+   "prompt": "If n = {n}, what is 2n?",
+   "answer": "2*n",
    "hint": "2n means 2 × n.",
-   "explain": "2 × 5 = 10."
+   "explain": "2 × {n} = {=2*n}.",
+   "params": {
+    "n": [
+     2,
+     9
+    ]
+   }
   },
   {
    "type": "mc",
@@ -51,6 +57,20 @@
    "answer": 5,
    "hint": "Work out 3a first.",
    "explain": "3 × 1 + 2 = 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "If a = {a}, what is a + a + a?",
+   "answer": "3*a",
+   "hint": "Replace each a with {a}.",
+   "explain": "{a} + {a} + {a} = {=3*a} (and that's 3a).",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
   }
  ],
  "mastery": {

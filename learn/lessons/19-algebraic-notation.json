@@ -57,10 +57,30 @@
   {
    "type": "numeric",
    "id": "p4",
-   "prompt": "If a = 3, what is a²?",
-   "answer": 9,
+   "prompt": "Work out a² when a = {a}.",
+   "answer": "a*a",
    "hint": "a² = a × a.",
-   "explain": "3 × 3 = 9."
+   "explain": "{a} × {a} = {=a*a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "If p = {=4*h}, what is p/4?",
+   "answer": "h",
+   "hint": "p/4 means p ÷ 4.",
+   "explain": "{=4*h} ÷ 4 = {h}.",
+   "params": {
+    "h": [
+     2,
+     9
+    ]
+   }
   }
  ],
  "mastery": {
@@ -135,7 +155,7 @@
    {
     "type": "mc",
     "id": "m5",
-    "prompt": "Which is written in standard notation?",
+    "prompt": "Which is written the usual way in algebra?",
     "choices": [
      "3ab",
      "ab3",
@@ -143,7 +163,7 @@
     ],
     "answer": 0,
     "hint": "Numbers go first.",
-    "explain": "Standard form puts the number first: 3ab."
+    "explain": "By convention the number goes first: 3ab."
    },
    {
     "type": "mc",

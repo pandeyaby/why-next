@@ -18,10 +18,24 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "Solve 2x + 3 = 11.",
-   "answer": 4,
-   "hint": "Subtract 3 from both sides, then divide by 2.",
-   "explain": "2x = 8, so x = 4."
+   "prompt": "Find x: {a}x + {b} = {=a*x+b}.",
+   "answer": "x",
+   "hint": "Subtract {b} from both sides, then divide by {a}.",
+   "explain": "{a}x = {=a*x}, so x = {x}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "x": [
+     1,
+     9
+    ]
+   }
   },
   {
    "type": "numeric",
@@ -46,6 +60,29 @@
    "answer": 4,
    "hint": "Subtract 2x from both sides first.",
    "explain": "3x + 2 = 14, then 3x = 12, so x = 4."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Find x: {a}(x − {b}) = {=a*(x-b)}.",
+   "answer": "x",
+   "hint": "Divide both sides by {a} first.",
+   "explain": "x − {b} = {=x-b}, so x = {x}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     4
+    ],
+    "x": [
+     2,
+     9
+    ]
+   },
+   "where": "x>b"
   }
  ],
  "mastery": {
@@ -143,7 +180,8 @@
       1,
       9
      ]
-    }
+    },
+    "where": "a-c>=2"
    },
    {
     "type": "numeric",

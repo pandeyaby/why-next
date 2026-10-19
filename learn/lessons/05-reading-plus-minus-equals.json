@@ -31,15 +31,25 @@
   {
    "type": "mc",
    "id": "p2",
-   "prompt": "Which symbol goes in the box? 3 □ 4 = 7",
+   "prompt": "Fill the gap: {a} □ {b} = {=a+b}. Which symbol goes in the box?",
    "choices": [
     "+",
     "−",
     "="
    ],
    "answer": 0,
-   "hint": "Does 3 and 4 make 7 by putting together or taking away?",
-   "explain": "3 + 4 = 7."
+   "hint": "Is {=a+b} bigger or smaller than {a}?",
+   "explain": "{a} + {b} = {=a+b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
   },
   {
    "type": "mc",
@@ -51,7 +61,7 @@
     "="
    ],
    "answer": 1,
-   "hint": "6 is smaller than 9, so something was taken away.",
+   "hint": "Is 6 smaller or bigger than 9? Smaller means something was taken away.",
    "explain": "9 − 3 = 6."
   },
   {
@@ -67,6 +77,29 @@
    ],
    "hint": "Start with the number you begin with.",
    "explain": "5 − 1 = 4."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Fill the gap: {a} □ {b} = {=a-b}. Which symbol goes in the box?",
+   "choices": [
+    "+",
+    "−",
+    "="
+   ],
+   "answer": 1,
+   "hint": "Is {=a-b} bigger or smaller than {a}?",
+   "explain": "{a} − {b} = {=a-b}.",
+   "params": {
+    "a": [
+     6,
+     12
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
   }
  ],
  "mastery": {

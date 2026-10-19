@@ -18,10 +18,24 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "v = u + at. If u = 2, a = 3 and t = 4, what is v?",
-   "answer": 14,
+   "prompt": "v = u + at. Find v when u = {u}, a = {a} and t = {t}.",
+   "answer": "u+a*t",
    "hint": "Multiply a × t first.",
-   "explain": "3 × 4 = 12, then 2 + 12 = 14."
+   "explain": "{a} × {t} = {=a*t}, then {u} + {=a*t} = {=u+a*t}.",
+   "params": {
+    "u": [
+     1,
+     9
+    ],
+    "a": [
+     2,
+     5
+    ],
+    "t": [
+     2,
+     6
+    ]
+   }
   },
   {
    "type": "numeric",
@@ -51,6 +65,24 @@
    "answer": 0,
    "hint": "Square x first, then multiply by 3.",
    "explain": "x² = 16, and 3 × 16 = 48. (144 would be (3x)².)"
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "P = 2l + 2w. Find P when l = {l} and w = {w}.",
+   "answer": "2*l+2*w",
+   "hint": "2l means 2 × l.",
+   "explain": "2 × {l} + 2 × {w} = {=2*l} + {=2*w} = {=2*l+2*w}.",
+   "params": {
+    "l": [
+     2,
+     9
+    ],
+    "w": [
+     2,
+     9
+    ]
+   }
   }
  ],
  "mastery": {

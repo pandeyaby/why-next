@@ -18,15 +18,21 @@
   {
    "type": "mc",
    "id": "p1",
-   "prompt": "Which expression means '5 more than n'?",
+   "prompt": "Which expression means '{k} more than n'?",
    "choices": [
-    "n + 5",
-    "5n",
-    "5 − n"
+    "n + {k}",
+    "{k}n",
+    "{k} − n"
    ],
    "answer": 0,
    "hint": "'More than' means add.",
-   "explain": "n + 5."
+   "explain": "n + {k}.",
+   "params": {
+    "k": [
+     2,
+     9
+    ]
+   }
   },
   {
    "type": "mc",
@@ -66,6 +72,24 @@
    "answer": 0,
    "hint": "Sharing means dividing n.",
    "explain": "n ÷ 4 = n/4."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "If n = {n}, what is the value of 'twice n, minus {c}'?",
+   "answer": "2*n-c",
+   "hint": "Write it as 2n − {c}, then substitute.",
+   "explain": "2 × {n} − {c} = {=2*n-c}.",
+   "params": {
+    "n": [
+     3,
+     9
+    ],
+    "c": [
+     1,
+     5
+    ]
+   }
   }
  ],
  "mastery": {

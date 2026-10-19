@@ -18,10 +18,20 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "Tom has some stickers. He gets 6 more and now has 20. How many did he have at the start?",
-   "answer": 14,
-   "hint": "s + 6 = 20.",
-   "explain": "s = 20 − 6 = 14. Check: 14 + 6 = 20 ✓."
+   "prompt": "Tom has some stickers. He gets {a} more and now has {=s+a}. How many did he have at the start?",
+   "answer": "s",
+   "hint": "s + {a} = {=s+a}.",
+   "explain": "s = {=s+a} − {a} = {s}. Check: {s} + {a} = {=s+a} ✓.",
+   "params": {
+    "a": [
+     3,
+     9
+    ],
+    "s": [
+     5,
+     20
+    ]
+   }
   },
   {
    "type": "numeric",
@@ -46,6 +56,28 @@
    "answer": 5,
    "hint": "Let the width be w. Then the length is w + 3, and the perimeter is 2(w + w + 3).",
    "explain": "2(2w + 3) = 26, so 4w + 6 = 26, 4w = 20 and w = 5. Check: 2 × (5 + 8) = 26 ✓."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A gym charges a £{f} joining fee plus £{r} a week. Sam paid £{=f+r*w} in total. How many weeks was that?",
+   "answer": "w",
+   "hint": "Write {f} + {r}w = {=f+r*w}.",
+   "explain": "{r}w = {=r*w}, so w = {w}. Check: {f} + {r} × {w} = {=f+r*w} ✓.",
+   "params": {
+    "f": [
+     10,
+     30
+    ],
+    "r": [
+     5,
+     9
+    ],
+    "w": [
+     2,
+     10
+    ]
+   }
   }
  ],
  "mastery": {

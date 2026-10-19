@@ -18,10 +18,20 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "What is 1/2 of 10?",
-   "answer": 5,
-   "hint": "Split 10 into 2 equal groups.",
-   "explain": "10 ÷ 2 = 5."
+   "prompt": "Find 1/{d} of {=d*k}.",
+   "answer": "k",
+   "hint": "Split {=d*k} into {d} equal groups.",
+   "explain": "{=d*k} ÷ {d} = {k}.",
+   "params": {
+    "d": [
+     2,
+     5
+    ],
+    "k": [
+     2,
+     5
+    ]
+   }
   },
   {
    "type": "numeric",
@@ -42,15 +52,38 @@
   {
    "type": "mc",
    "id": "p4",
-   "prompt": "A rectangle is cut into 4 pieces of different sizes. Is one piece 1/4 of the rectangle?",
+   "prompt": "A rectangle is cut into 4 pieces of different sizes. Does that show quarters?",
    "choices": [
-    "No, quarters must be equal parts",
+    "No, quarters must be 4 equal parts",
     "Yes, there are 4 pieces",
-    "Only the biggest piece is"
+    "Yes, if you count the biggest piece"
    ],
    "answer": 0,
    "hint": "What does a fraction need its parts to be?",
-   "explain": "Quarters are 4 equal parts. Unequal pieces aren't quarters."
+   "explain": "Quarters are 4 equal parts. Four pieces of different sizes don't show quarters."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Find {n}/{d} of {=d*k}.",
+   "answer": "n*k",
+   "hint": "First find 1/{d} of {=d*k}.",
+   "explain": "1/{d} of {=d*k} is {k}, so {n}/{d} is {n} × {k} = {=n*k}.",
+   "params": {
+    "d": [
+     3,
+     5
+    ],
+    "n": [
+     2,
+     4
+    ],
+    "k": [
+     2,
+     4
+    ]
+   },
+   "where": "n<d"
   }
  ],
  "mastery": {

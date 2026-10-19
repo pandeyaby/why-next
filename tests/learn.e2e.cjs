@@ -8,11 +8,11 @@ const URL = 'file://' + path.resolve(__dirname, '../out/viewer.html');
 let failures = 0;
 async function test(name, fn) { try { await fn(); console.log('ok  ', name) } catch (e) { failures++; console.log('FAIL', name, '\n     ', e.message) } }
 
-async function page(browser, vp, mobile) {
+async function page(browser, vp, mobile, q = '?seed=42') {
   const ctx = await browser.newContext({ viewport: vp, isMobile: !!mobile, hasTouch: !!mobile, deviceScaleFactor: mobile ? 2 : 1 });
   const p = await ctx.newPage(); p.errors = [];
   p.on('pageerror', e => p.errors.push(e.message)); p.on('console', m => { if (m.type() === 'error') p.errors.push(m.text()) });
-  await p.goto(URL); return p;
+  await p.goto(URL + q); return p;
 }
 async function profile(p, age, goal) { await p.selectOption('#pAge', age); await p.selectOption('#pGoal', goal) }
 const nextNodes = p => p.evaluate(() => LEARN.nextList(6).map(n => ({ id: n.id, n: n.n, a: n.a, s: n.s, d: n.d })));
@@ -64,22 +64,21 @@ async function axe(p, label) {
     assert.ok(nx.length && nx.every(n => n.a[0] >= 13), nx.map(n => `${n.n} ${n.a}`).join(', '));
     console.log('      next:', nx.map(n => n.n).join(' | '));
   });
-  await test('10-12 + algebra starts at age-10 topics; mastering them unlocks the 10-16 lessons', async () => {
+  await test('10-12 + algebra: age-10 lessons are reachable directly, with at least 3 suggestions', async () => {
     await profile(p, '10-12', 'algebra');
     const nx = await nextNodes(p);
-    assert.ok(nx.length && nx.every(n => n.a[0] >= 10), nx.map(n => `${n.n} ${n.a}`).join(', '));
-    await p.evaluate(ids => ids.forEach(id => LEARN.setProg(id, { status: 'known' })), ['mt_8jFSnXxqQD', 'mt_XLP1IM3Qbb', 'mt_WsM4EmdOLe', 'mt_RXnyhCRYXA', 'mt_4WaKWECpcv']);
-    const after = await nextNodes(p);
-    assert.ok(await p.evaluate(id => LEARN.has(id), after[0].id), 'after: ' + after.map(n => n.n).join(', '));
-    await p.evaluate(ids => ids.forEach(id => LEARN.clear(id)), ['mt_8jFSnXxqQD', 'mt_XLP1IM3Qbb', 'mt_WsM4EmdOLe', 'mt_RXnyhCRYXA', 'mt_4WaKWECpcv']);
-    console.log('      after marking known:', after.map(n => n.n).join(' | '));
+    assert.ok(nx.length >= 3, 'fewer than 3 suggestions: ' + nx.map(n => n.n).join(', '));
+    assert.ok(nx.every(n => n.a[0] >= 10), nx.map(n => `${n.n} ${n.a}`).join(', '));
+    const withLesson = await p.evaluate(ids => ids.filter(i => LEARN.has(i)).length, nx.map(n => n.id));
+    assert.ok(withLesson >= 3, `only ${withLesson} suggestions have lessons`);
     console.log('      next:', nx.map(n => n.n).join(' | '));
   });
   await test('lesson flow: hint on a wrong answer, practice, mastery check, persisted after reload', async () => {
     const id = 'mt_jHgRQ4hR0g';
     await p.evaluate(id => select(id), id);
     const cur = await p.evaluate(() => LEARN_PANEL.cur());
-    for (const [k, it] of cur.p.entries()) await answer(p, 'p', it, k === 3);
+    const firstMc = cur.p.findIndex(x => x.type === 'mc');
+    for (const [k, it] of cur.p.entries()) await answer(p, 'p', it, k === firstMc);
     for (const it of cur.m) await answer(p, 'm', it);
     assert.match(await p.textContent('#mres'), /mastered/);
     await p.reload();
@@ -96,6 +95,42 @@ async function axe(p, label) {
     for (let i = 0; i < 6; i++) { await p.evaluate(() => select('mt_QhFEDyIwSO')); seen.add(await p.$$eval('#mbox .qp', q => q.map(x => x.textContent).join('|'))) }
     assert.ok(seen.size >= 4, `only ${seen.size} distinct sets in 6 tries`);
   });
+  await test('same seed gives the same practice; "New practice questions" gives fresh ones', async () => {
+    const b = await page(browser, { width: 1000, height: 800 }), c = await page(browser, { width: 1000, height: 800 });
+    const get = q => q.$$eval('#pbox .qp', x => x.map(e => e.textContent).join('|'));
+    for (const q of [b, c]) await q.evaluate(() => select('mt_XLP1IM3Qbb'));
+    assert.strictEqual(await get(b), await get(c), 'seeded pages differ');
+    const seen = new Set([await get(b)]);
+    for (let i = 0; i < 4; i++) { await b.click('[data-act=newp]'); seen.add(await get(b)) }
+    assert.ok(seen.size >= 3, `only ${seen.size} distinct practice sets`);
+    await b.context().close(); await c.context().close();
+  });
+  await test('order item can be reordered by pointer drag', async () => {
+    await p.evaluate(() => select('mt_WcfaSfVT33'));
+    const it = await p.evaluate(() => LEARN_PANEL.cur().p.find(x => x.type === 'order'));
+    const q = `#p-${it.id} .ord li`, before = await p.$$eval(q, l => l.map(x => x.dataset.v));
+    await p.$eval(`#p-${it.id}`, e => e.scrollIntoView({ block: 'center' }));
+    const lis = await p.$$(q), last = await lis[lis.length - 1].boundingBox(), first = await lis[0].boundingBox();
+    await p.mouse.move(last.x + 20, last.y + last.height / 2); await p.mouse.down();
+    await p.mouse.move(first.x + 20, first.y + 2, { steps: 12 }); await p.mouse.up();
+    const after = await p.$$eval(q, l => l.map(x => x.dataset.v));
+    assert.strictEqual(after[0], before[before.length - 1], `drag did not move item: ${before} -> ${after}`);
+  });
+  await test('spaced review: a mastered topic comes back for a 2-question refresh after a few days', async () => {
+    const id = 'mt_jHgRQ4hR0g';
+    const due = await p.evaluate(id => LEARN.prog(id).review.due, id);
+    await p.goto(URL + '?seed=3&today=' + due);
+    await profile(p, '13-15', 'algebra');
+    assert.match(await p.textContent('#learnHome'), /Quick review/);
+    await p.evaluate(id => select(id), id);
+    const r = await p.evaluate(() => LEARN_PANEL.cur().r);
+    assert.strictEqual(r.length, 2);
+    for (const it of r) await answer(p, 'r', it);
+    assert.match(await p.textContent('#rres'), /Still got it/);
+    const rv = await p.evaluate(id => LEARN.prog(id).review, id);
+    assert.ok(rv.step === 1 && rv.due > due, JSON.stringify(rv));
+    await p.goto(URL + '?seed=42');
+  });
   await test('topics without a lesson show "Lessons coming" with a verified link', async () => {
     await p.evaluate(() => select(DATA.nodes.find(n => n.n === 'Solving quadratics by factorising').id));
     assert.match(await p.textContent('#learn'), /Lessons coming/); assert.ok(await p.$('#learn a[href^="https://www.bbc.co.uk/bitesize/"]'));
@@ -103,7 +138,7 @@ async function axe(p, label) {
   await test('axe: desktop, lesson open', async () => { await p.evaluate(() => select('mt_jHgRQ4hR0g')); await axe(p, 'desktop') });
   if (process.env.SHOTS) {
     await p.evaluate(() => { LEARN.clear('mt_aZENxGikHn'); select('mt_aZENxGikHn') });
-    await p.click('#p-p1 .choice[data-k="0"]'); await p.click('#p-p2 .choice[data-k="1"]');
+    { const c = await p.evaluate(() => LEARN_PANEL.cur().p); await answer(p, 'p', c[0]) }
     await p.setViewportSize({ width: 1440, height: 1100 });
     await p.evaluate(() => document.querySelector('#learnHome h2').scrollIntoView());
     await p.screenshot({ path: path.join(process.env.SHOTS, 'whynext-learn-desktop.png') });
@@ -116,7 +151,7 @@ async function axe(p, label) {
     await axe(m, 'mobile');
   });
   if (process.env.SHOTS) {
-    await m.click('#p-p1 .choice[data-k="0"]'); await m.evaluate(() => document.getElementById('learn').scrollIntoView());
+    { const c = await m.evaluate(() => LEARN_PANEL.cur().p); await answer(m, 'p', c[0]) } await m.evaluate(() => document.getElementById('learn').scrollIntoView());
     await m.screenshot({ path: path.join(process.env.SHOTS, 'whynext-learn-mobile.png') });
   }
   await test('no console or page errors', async () => { assert.deepStrictEqual([...p.errors, ...m.errors], []) });

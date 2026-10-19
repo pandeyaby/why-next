@@ -5,8 +5,8 @@
  "keyIdea": "The last number you say when counting tells you how many there are.",
  "explain": {
   "kid": [
-   "When you finish counting, the last number you said tells you how many there are altogether.",
-   "It doesn't matter which object you start with, or how the objects are arranged. A line of 6 and a messy pile of 6 are both 6."
+   "When you finish counting, the last number you say tells you how many there are.",
+   "It does not matter which one you start with. It does not matter how they are laid out. A line of 6 and a messy pile of 6 are both 6."
   ],
   "adult": [
    "This is the cardinality principle: the final number word names the size of the whole set. A child who recounts from one when asked 'how many?' can recite numbers but hasn't yet linked the last word to the total.",
@@ -18,15 +18,21 @@
   {
    "type": "mc",
    "id": "p1",
-   "prompt": "You count shells: 'one, two, three, four, five, six, seven.' How many shells are there?",
+   "prompt": "You count shells, and the last number you say is {n}. How many shells are there?",
    "choices": [
     "1",
-    "7",
-    "8"
+    "{n}",
+    "{=n+1}"
    ],
    "answer": 1,
    "hint": "Which number did you say last?",
-   "explain": "The last number said was seven, so there are 7 shells."
+   "explain": "The last number you said was {n}, so there are {n} shells.",
+   "params": {
+    "n": [
+     5,
+     12
+    ]
+   }
   },
   {
    "type": "mc",
@@ -61,6 +67,20 @@
    "answer": 0,
    "hint": "Does the starting point change how many toys there are?",
    "explain": "The number of toys is the same whatever order you count them in, so Jo also gets 6."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "{n} counters in a line are pushed together into a pile. How many counters are there now?",
+   "answer": "n",
+   "hint": "Did any counters get added or taken away?",
+   "explain": "Moving counters doesn't add or take any away, so there are still {n}.",
+   "params": {
+    "n": [
+     5,
+     12
+    ]
+   }
   }
  ],
  "mastery": {

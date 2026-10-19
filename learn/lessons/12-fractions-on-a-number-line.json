@@ -18,15 +18,21 @@
   {
    "type": "mc",
    "id": "p1",
-   "prompt": "0 to 1 is split into 3 equal jumps. What is the first mark?",
+   "prompt": "0 to 1 is split into {d} equal jumps. What is the first mark?",
    "choices": [
-    "1/3",
-    "1/2",
-    "3"
+    "1/{d}",
+    "{d}",
+    "1/{=d+1}"
    ],
    "answer": 0,
-   "hint": "Each jump is one of three equal parts.",
-   "explain": "One jump of three equal jumps is 1/3."
+   "hint": "Each jump is one of {d} equal parts.",
+   "explain": "One jump out of {d} equal jumps is 1/{d}.",
+   "params": {
+    "d": [
+     3,
+     8
+    ]
+   }
   },
   {
    "type": "mc",
@@ -66,6 +72,30 @@
    ],
    "hint": "Think of quarters on the line: 1/2 is the same as 2/4.",
    "explain": "1/4 < 2/4 (= 1/2) < 3/4 < 4/4 (= 1)."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is smaller, 1/{a} or 1/{b}?",
+   "choices": [
+    "1/{b}",
+    "1/{a}",
+    "They are equal"
+   ],
+   "answer": 0,
+   "hint": "More equal parts means smaller parts.",
+   "explain": "Splitting into {b} gives smaller parts than splitting into {a}, so 1/{b} is smaller.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     9
+    ]
+   },
+   "where": "a<b"
   }
  ],
  "mastery": {

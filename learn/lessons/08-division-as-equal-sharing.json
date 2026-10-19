@@ -18,10 +18,20 @@
   {
    "type": "numeric",
    "id": "p1",
-   "prompt": "10 stickers are shared equally between 2 friends. How many does each get?",
-   "answer": 5,
+   "prompt": "{=a*b} grapes are shared fairly between {a} children. How many grapes does each child get?",
+   "answer": "b",
    "hint": "Give one each in turn until they run out.",
-   "explain": "10 ÷ 2 = 5."
+   "explain": "{=a*b} ÷ {a} = {b}.",
+   "params": {
+    "a": [
+     2,
+     4
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
   },
   {
    "type": "numeric",
@@ -56,6 +66,24 @@
    "answer": 0,
    "hint": "Division undoes multiplication.",
    "explain": "3 × 5 = 15, so 15 ÷ 3 = 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "How many groups of {a} can you make from {=a*b} cupcakes?",
+   "answer": "b",
+   "hint": "Keep taking {a} away until none are left.",
+   "explain": "{=a*b} ÷ {a} = {b}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     2,
+     4
+    ]
+   }
   }
  ],
  "mastery": {
