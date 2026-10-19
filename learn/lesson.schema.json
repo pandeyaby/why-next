@@ -3,45 +3,262 @@
  "title": "Why Next? lesson",
  "type": "object",
  "additionalProperties": false,
- "required": ["topicId", "title", "keyIdea", "explain", "practice", "mastery", "status"],
+ "required": [
+  "topicId",
+  "title",
+  "keyIdea",
+  "explain",
+  "practice",
+  "mastery",
+  "status"
+ ],
  "properties": {
-  "topicId": {"type": "string", "pattern": "^[a-z]{2}_[A-Za-z0-9_-]{10}$"},
-  "title": {"type": "string", "minLength": 3},
-  "keyIdea": {"type": "string", "minLength": 10},
-  "status": {"enum": ["self-checked", "expert-reviewed"]},
-  "familyTip": {"type": "string", "minLength": 10},
+  "topicId": {
+   "type": "string",
+   "pattern": "^[a-z]{2}_[A-Za-z0-9_-]{10}$"
+  },
+  "title": {
+   "type": "string",
+   "minLength": 3
+  },
+  "keyIdea": {
+   "type": "string",
+   "minLength": 10
+  },
+  "status": {
+   "enum": [
+    "self-checked",
+    "expert-reviewed"
+   ]
+  },
+  "familyTip": {
+   "type": "string",
+   "minLength": 10
+  },
   "explain": {
-   "type": "object", "additionalProperties": false, "required": ["kid", "adult"],
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "kid",
+    "adult"
+   ],
    "properties": {
-    "kid": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "string", "minLength": 20}},
-    "adult": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "string", "minLength": 20}}
+    "kid": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "items": {
+      "type": "string",
+      "minLength": 20
+     }
+    },
+    "adult": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 4,
+     "items": {
+      "type": "string",
+      "minLength": 20
+     }
+    }
    }
   },
-  "practice": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"$ref": "#/definitions/item"}},
-  "mastery": {
-   "type": "object", "additionalProperties": false, "required": ["passMark", "items"],
-   "properties": {
-    "passMark": {"type": "integer", "minimum": 1},
-    "items": {"type": "array", "minItems": 2, "maxItems": 5, "items": {"$ref": "#/definitions/item"}}
+  "practice": {
+   "type": "array",
+   "minItems": 3,
+   "maxItems": 5,
+   "items": {
+    "$ref": "#/definitions/item"
    }
+  },
+  "mastery": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "passMark",
+    "draw",
+    "pool"
+   ],
+   "properties": {
+    "passMark": {
+     "type": "integer",
+     "minimum": 1
+    },
+    "draw": {
+     "type": "integer",
+     "minimum": 2,
+     "maximum": 5
+    },
+    "pool": {
+     "type": "array",
+     "minItems": 6,
+     "maxItems": 12,
+     "items": {
+      "$ref": "#/definitions/item"
+     }
+    }
+   }
+  },
+  "audience": {
+   "enum": [
+    "family",
+    "learner"
+   ],
+   "description": "family: early topics a grown-up explores with a child; learner: written to the learner directly"
   }
  },
  "definitions": {
-  "text": {"type": "string", "minLength": 2},
+  "text": {
+   "type": "string",
+   "minLength": 2
+  },
   "item": {
    "type": "object",
-   "required": ["type", "id", "prompt", "hint", "explain"],
-   "properties": {"id": {"type": "string", "pattern": "^[pm][0-9]+$"}, "prompt": {"$ref": "#/definitions/text"},
-                  "hint": {"$ref": "#/definitions/text"}, "explain": {"$ref": "#/definitions/text"}},
+   "required": [
+    "type",
+    "id",
+    "prompt",
+    "hint",
+    "explain"
+   ],
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^[pm][0-9]+$"
+    },
+    "prompt": {
+     "$ref": "#/definitions/text"
+    },
+    "hint": {
+     "$ref": "#/definitions/text"
+    },
+    "explain": {
+     "$ref": "#/definitions/text"
+    }
+   },
    "oneOf": [
-    {"additionalProperties": false, "properties": {"type": {"const": "mc"}, "id": {}, "prompt": {}, "hint": {}, "explain": {},
-      "choices": {"type": "array", "minItems": 2, "maxItems": 5, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
-      "answer": {"type": "integer", "minimum": 0}}, "required": ["choices", "answer"]},
-    {"additionalProperties": false, "properties": {"type": {"const": "numeric"}, "id": {}, "prompt": {}, "hint": {}, "explain": {},
-      "answer": {"type": "number"}, "tolerance": {"type": "number", "minimum": 0}}, "required": ["answer"]},
-    {"additionalProperties": false, "properties": {"type": {"const": "order"}, "id": {}, "prompt": {}, "hint": {}, "explain": {},
-      "items": {"type": "array", "minItems": 3, "maxItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}}, "required": ["items"]}
+    {
+     "additionalProperties": false,
+     "properties": {
+      "type": {
+       "const": "mc"
+      },
+      "id": {},
+      "prompt": {},
+      "hint": {},
+      "explain": {},
+      "choices": {
+       "type": "array",
+       "minItems": 2,
+       "maxItems": 5,
+       "uniqueItems": true,
+       "items": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "answer": {
+       "type": "integer",
+       "minimum": 0
+      },
+      "params": {
+       "$ref": "#/definitions/params"
+      },
+      "where": {
+       "$ref": "#/definitions/expr"
+      }
+     },
+     "required": [
+      "choices",
+      "answer"
+     ]
+    },
+    {
+     "additionalProperties": false,
+     "properties": {
+      "type": {
+       "const": "numeric"
+      },
+      "id": {},
+      "prompt": {},
+      "hint": {},
+      "explain": {},
+      "answer": {
+       "oneOf": [
+        {
+         "type": "number"
+        },
+        {
+         "$ref": "#/definitions/expr"
+        }
+       ]
+      },
+      "tolerance": {
+       "type": "number",
+       "minimum": 0
+      },
+      "params": {
+       "$ref": "#/definitions/params"
+      },
+      "where": {
+       "$ref": "#/definitions/expr"
+      }
+     },
+     "required": [
+      "answer"
+     ]
+    },
+    {
+     "additionalProperties": false,
+     "properties": {
+      "type": {
+       "const": "order"
+      },
+      "id": {},
+      "prompt": {},
+      "hint": {},
+      "explain": {},
+      "items": {
+       "type": "array",
+       "minItems": 3,
+       "maxItems": 6,
+       "uniqueItems": true,
+       "items": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "params": {
+       "$ref": "#/definitions/params"
+      },
+      "where": {
+       "$ref": "#/definitions/expr"
+      }
+     },
+     "required": [
+      "items"
+     ]
+    }
    ]
+  },
+  "params": {
+   "type": "object",
+   "minProperties": 1,
+   "propertyNames": {
+    "pattern": "^[a-z]$"
+   },
+   "additionalProperties": {
+    "type": "array",
+    "items": {
+     "type": "integer"
+    },
+    "minItems": 2,
+    "maxItems": 2
+   }
+  },
+  "expr": {
+   "type": "string",
+   "pattern": "^[a-z0-9+\\-*/%(). <>=!&|]+$"
   }
  }
 }

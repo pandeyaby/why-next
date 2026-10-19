@@ -1,6 +1,7 @@
 {
  "topicId": "mt_OvyoRo47K-",
  "title": "Adding by putting groups together",
+ "audience": "family",
  "keyIdea": "Adding means putting groups together to find how many altogether.",
  "explain": {
   "kid": [
@@ -59,7 +60,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -88,6 +90,84 @@
     "answer": 2,
     "hint": "Work out each one.",
     "explain": "3 + 3 and 4 + 2 both make 6, but 5 + 2 = 7."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "What is {a} + {b}?",
+    "answer": "a+b",
+    "hint": "Start at the bigger number and count on.",
+    "explain": "{a} + {b} = {=a+b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "There are {a} ducks on a pond. {b} more ducks land. How many ducks are there now?",
+    "answer": "a+b",
+    "hint": "Put the two groups together.",
+    "explain": "{a} + {b} = {=a+b} ducks.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the same as {a} + {b}?",
+    "choices": [
+     "{b} + {a}",
+     "{a} − {b}",
+     "{=a+b+1}"
+    ],
+    "answer": 0,
+    "hint": "You can add in either order.",
+    "explain": "{a} + {b} and {b} + {a} both make {=a+b}.",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "b": [
+      2,
+      8
+     ]
+    },
+    "where": "a!=b"
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "You have {a} red pencils and {b} blue pencils. How many pencils do you have altogether?",
+    "answer": "a+b",
+    "hint": "Combine both colours.",
+    "explain": "{a} + {b} = {=a+b} pencils.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
    }
   ]
  },

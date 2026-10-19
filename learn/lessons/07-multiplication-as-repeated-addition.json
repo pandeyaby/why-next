@@ -1,6 +1,7 @@
 {
  "topicId": "mt_PZ909yPrEC",
  "title": "Multiplying as repeated adding",
+ "audience": "family",
  "keyIdea": "Multiplying is a quick way to add equal groups.",
  "explain": {
   "kid": [
@@ -59,7 +60,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -88,6 +90,79 @@
     "answer": 10,
     "hint": "5 groups of 2.",
     "explain": "5 × 2 = 10."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{a} bags each hold {b} sweets. How many sweets altogether?",
+    "answer": "a*b",
+    "hint": "{a} groups of {b}.",
+    "explain": "{a} × {b} = {=a*b}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which multiplication matches adding {b} again and again, {a} times?",
+    "choices": [
+     "{a} × {b}",
+     "{a} + {b}",
+     "{=a+b} × {b}"
+    ],
+    "answer": 0,
+    "hint": "How many groups, and how many in each?",
+    "explain": "{a} groups of {b} is {a} × {b} = {=a*b}.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      2,
+      9
+     ]
+    },
+    "where": "a!=b"
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "An array has {a} rows with {b} dots in each row. How many dots?",
+    "answer": "a*b",
+    "hint": "Add one row at a time.",
+    "explain": "{a} × {b} = {=a*b} dots.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which of these shows equal groups?",
+    "choices": [
+     "3 plates with 4 grapes on each",
+     "Plates with 2, 5 and 3 grapes",
+     "One plate with 12 grapes next to an empty plate"
+    ],
+    "answer": 0,
+    "hint": "Equal groups all hold the same number.",
+    "explain": "Only the 3 plates of 4 have the same number in each group, so that is 3 × 4."
    }
   ]
  },

@@ -1,0 +1,175 @@
+{
+ "topicId": "mt_vHzVa3SURC",
+ "title": "Substituting into formulae",
+ "audience": "learner",
+ "keyIdea": "Replace each letter with its value, then calculate in the right order.",
+ "explain": {
+  "kid": [
+   "Substituting means swapping each letter for its number. If v = u + at, with u = 2, a = 3 and t = 4, then v = 2 + 3 × 4 = 14.",
+   "Put the numbers in, then use the order of operations: multiply before you add."
+  ],
+  "adult": [
+   "Substitution is how you use formulae in science and maths: replace each letter with its value, then evaluate using the order of operations. For v = u + at with u = 2, a = 3 and t = 4: v = 2 + 3 × 4 = 14.",
+   "Writing out the substituted line in full, with brackets around negative values, prevents most errors. With a = −2, 3a² means 3 × (−2)² = 3 × 4 = 12."
+  ]
+ },
+ "familyTip": "Use F = 9C/5 + 32 to convert today's temperature from °C to °F, and compare it with a weather app.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "v = u + at. If u = 2, a = 3 and t = 4, what is v?",
+   "answer": 14,
+   "hint": "Multiply a × t first.",
+   "explain": "3 × 4 = 12, then 2 + 12 = 14."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "P = 2l + 2w. If l = 5 and w = 3, what is P?",
+   "answer": 16,
+   "hint": "2l means 2 × l.",
+   "explain": "2 × 5 + 2 × 3 = 10 + 6 = 16."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A = ½bh. If b = 6 and h = 4, what is A?",
+   "answer": 12,
+   "hint": "Multiply b and h, then halve.",
+   "explain": "6 × 4 = 24, and half of 24 is 12."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "If x = 4, what is 3x²?",
+   "choices": [
+    "48",
+    "144",
+    "24"
+   ],
+   "answer": 0,
+   "hint": "Square x first, then multiply by 3.",
+   "explain": "x² = 16, and 3 × 16 = 48. (144 would be (3x)².)"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "v = u + at. If u = {u}, a = {a} and t = {t}, what is v?",
+    "answer": "u+a*t",
+    "hint": "Multiply a × t first.",
+    "explain": "{a} × {t} = {=a*t}, then {u} + {=a*t} = {=u+a*t}.",
+    "params": {
+     "u": [
+      1,
+      9
+     ],
+     "a": [
+      2,
+      5
+     ],
+     "t": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "P = 2l + 2w. If l = {l} and w = {w}, what is P?",
+    "answer": "2*l+2*w",
+    "hint": "2l means 2 × l.",
+    "explain": "2 × {l} + 2 × {w} = {=2*l} + {=2*w} = {=2*l+2*w}.",
+    "params": {
+     "l": [
+      2,
+      9
+     ],
+     "w": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A = ½bh. If b = {b} and h = {h}, what is A?",
+    "answer": "b*h/2",
+    "hint": "Multiply b and h, then halve.",
+    "explain": "{b} × {h} = {=b*h}, and half of that is {=b*h/2}.",
+    "params": {
+     "b": [
+      2,
+      10
+     ],
+     "h": [
+      2,
+      10
+     ]
+    },
+    "where": "(b*h)%2==0"
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "If x = {x}, what is {k}x²?",
+    "answer": "k*x*x",
+    "hint": "Square first, then multiply.",
+    "explain": "{x}² = {=x*x}, then {k} × {=x*x} = {=k*x*x}.",
+    "params": {
+     "x": [
+      2,
+      6
+     ],
+     "k": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "F = 9C/5 + 32. If C = {=5*k}, what is F?",
+    "answer": "9*k+32",
+    "hint": "Work out 9C/5 first.",
+    "explain": "9 × {=5*k} ÷ 5 = {=9*k}, then {=9*k} + 32 = {=9*k+32}.",
+    "params": {
+     "k": [
+      0,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "s = d/t. If d = 100 and t = 4, what is s?",
+    "answer": 25,
+    "hint": "d/t means d ÷ t.",
+    "explain": "100 ÷ 4 = 25."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "If a = −3, what is a²?",
+    "choices": [
+     "9",
+     "−9",
+     "−6"
+    ],
+    "answer": 0,
+    "hint": "(−3) × (−3): a negative times a negative is positive.",
+    "explain": "(−3)² = (−3) × (−3) = 9."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

@@ -1,0 +1,201 @@
+{
+ "topicId": "mt_aZENxGikHn",
+ "title": "Writing expressions from words",
+ "audience": "learner",
+ "keyIdea": "Translate phrase by phrase, and watch the order for subtraction and division.",
+ "explain": {
+  "kid": [
+   "You can turn words into algebra. If n is a number, '5 more than n' is n + 5, 'twice n' is 2n, and '3 less than n' is n − 3.",
+   "Careful with 'less than': '3 less than n' means start with n and take 3 away. That's n − 3, not 3 − n."
+  ],
+  "adult": [
+   "Turning words into expressions is mostly vocabulary: 'more than' or 'increased by' means +; 'less than' or 'decreased by' means −; 'twice' or 'the product of' means ×; 'shared between' or 'the quotient of' means ÷.",
+   "Order matters for − and ÷: '7 less than n' is n − 7, and 'n divided by 3' is n/3. For combined phrases, build from the inside out: '5 more than twice a number' is 2n + 5."
+  ]
+ },
+ "familyTip": "Describe a phone plan or bus fare in words (such as '£10 a month plus £2 per extra GB'), then write it as an expression.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which expression means '5 more than n'?",
+   "choices": [
+    "n + 5",
+    "5n",
+    "5 − n"
+   ],
+   "answer": 0,
+   "hint": "'More than' means add.",
+   "explain": "n + 5."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which expression means '3 less than n'?",
+   "choices": [
+    "n − 3",
+    "3 − n",
+    "3n"
+   ],
+   "answer": 0,
+   "hint": "Start with n, then take 3 away.",
+   "explain": "n − 3."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which expression means '5 more than twice a number n'?",
+   "choices": [
+    "2n + 5",
+    "2(n + 5)",
+    "5n + 2"
+   ],
+   "answer": 0,
+   "hint": "Twice n is 2n. Then add 5.",
+   "explain": "2n + 5."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which expression means 'a number n shared equally between 4 people'?",
+   "choices": [
+    "n/4",
+    "4/n",
+    "n − 4"
+   ],
+   "answer": 0,
+   "hint": "Sharing means dividing n.",
+   "explain": "n ÷ 4 = n/4."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which expression means '{k} less than n'?",
+    "choices": [
+     "n − {k}",
+     "{k} − n",
+     "{k}n"
+    ],
+    "answer": 0,
+    "hint": "Start with n and take away {k}.",
+    "explain": "n − {k}.",
+    "params": {
+     "k": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which expression means '{c} more than {k} times a number n'?",
+    "choices": [
+     "{k}n + {c}",
+     "{k}(n + {c})",
+     "{c}n + {k}"
+    ],
+    "answer": 0,
+    "hint": "Build it from the inside: {k} times n first.",
+    "explain": "{k}n + {c}.",
+    "params": {
+     "k": [
+      2,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ]
+    },
+    "where": "k!=c"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "If n = {n}, what is the value of '{c} more than {k} times n'?",
+    "answer": "k*n+c",
+    "hint": "Write it as {k}n + {c}, then substitute.",
+    "explain": "{k} × {n} + {c} = {=k*n+c}.",
+    "params": {
+     "k": [
+      2,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ],
+     "n": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which expression means 'n divided by {k}'?",
+    "choices": [
+     "n/{k}",
+     "{k}/n",
+     "n − {k}"
+    ],
+    "answer": 0,
+    "hint": "n goes on top.",
+    "explain": "n ÷ {k} = n/{k}.",
+    "params": {
+     "k": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which expression means 'the product of a and b'?",
+    "choices": [
+     "ab",
+     "a + b",
+     "a/b"
+    ],
+    "answer": 0,
+    "hint": "'Product' means multiply.",
+    "explain": "ab = a × b."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which expression means 'twice the sum of x and 3'?",
+    "choices": [
+     "2(x + 3)",
+     "2x + 3",
+     "x + 3 + 2"
+    ],
+    "answer": 0,
+    "hint": "Find the sum first, then double it.",
+    "explain": "The sum is x + 3; twice that is 2(x + 3)."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Sam is s years old. His sister is 4 years younger. Which expression gives her age?",
+    "choices": [
+     "s − 4",
+     "4 − s",
+     "s + 4"
+    ],
+    "answer": 0,
+    "hint": "Younger means fewer years.",
+    "explain": "s − 4."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

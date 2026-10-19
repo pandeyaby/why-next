@@ -1,0 +1,203 @@
+{
+ "topicId": "mt_FX4a2Q8XXN",
+ "title": "Expanding single brackets",
+ "audience": "learner",
+ "keyIdea": "Multiply everything inside the bracket by the term outside: 3(2x + 5) = 6x + 15.",
+ "explain": {
+  "kid": [
+   "To expand a bracket, multiply each thing inside by the number outside. 3(x + 4) = 3 × x + 3 × 4 = 3x + 12.",
+   "Think of 3 bags, each holding x sweets plus 4 more sweets: altogether you have 3x + 12 sweets."
+  ],
+  "adult": [
+   "Expanding uses the distributive law: a(b + c) = ab + ac. So 3(2x + 5) = 6x + 15, and 4(x − 2) = 4x − 8.",
+   "The most common slip is multiplying only the first term: 3(x + 4) is not 3x + 4. With a negative outside, every sign inside flips: −2(x − 3) = −2x + 6."
+  ]
+ },
+ "familyTip": "Check an expansion by substituting a number: if x = 2, then 3(x + 4) = 18 and 3x + 12 = 18. If the two disagree, there's a mistake.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Expand 3(x + 4).",
+   "choices": [
+    "3x + 12",
+    "3x + 4",
+    "x + 12"
+   ],
+   "answer": 0,
+   "hint": "Multiply both x and 4 by 3.",
+   "explain": "3 × x + 3 × 4 = 3x + 12."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Expand 2(5 − y).",
+   "choices": [
+    "10 − 2y",
+    "10 − y",
+    "7 − 2y"
+   ],
+   "answer": 0,
+   "hint": "Multiply both 5 and y by 2.",
+   "explain": "2 × 5 − 2 × y = 10 − 2y."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "4(x + 2) = 4x + ?",
+   "answer": 8,
+   "hint": "Multiply 2 by 4.",
+   "explain": "4 × 2 = 8, so 4(x + 2) = 4x + 8."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Expand −2(x − 3).",
+   "choices": [
+    "−2x + 6",
+    "−2x − 6",
+    "−2x − 3"
+   ],
+   "answer": 0,
+   "hint": "−2 × −3 is positive.",
+   "explain": "−2 × x = −2x and −2 × −3 = +6, so you get −2x + 6."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Expand {a}(x + {b}).",
+    "choices": [
+     "{a}x + {=a*b}",
+     "{a}x + {b}",
+     "x + {=a*b}"
+    ],
+    "answer": 0,
+    "hint": "Multiply both terms by {a}.",
+    "explain": "{a} × x + {a} × {b} = {a}x + {=a*b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "{a}(x + {b}) = {a}x + ?",
+    "answer": "a*b",
+    "hint": "Multiply {b} by {a}.",
+    "explain": "{a} × {b} = {=a*b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Expand {a}({b}x − {c}).",
+    "choices": [
+     "{=a*b}x − {=a*c}",
+     "{=a*b}x − {c}",
+     "{=a+b}x − {=a*c}"
+    ],
+    "answer": 0,
+    "hint": "Multiply both terms by {a}.",
+    "explain": "{a} × {b}x = {=a*b}x and {a} × {c} = {=a*c}, so you get {=a*b}x − {=a*c}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      2,
+      6
+     ],
+     "c": [
+      1,
+      9
+     ]
+    },
+    "where": "a*b!=a+b"
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Check by substituting: if x = {x}, what is {a}(x + {b})?",
+    "answer": "a*(x+b)",
+    "hint": "Work out the bracket first.",
+    "explain": "{a} × ({x} + {b}) = {a} × {=x+b} = {=a*(x+b)}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "x": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Expand 5(2a + 3b).",
+    "choices": [
+     "10a + 15b",
+     "10a + 3b",
+     "7a + 8b"
+    ],
+    "answer": 0,
+    "hint": "Multiply both terms by 5.",
+    "explain": "5 × 2a = 10a and 5 × 3b = 15b."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which expansion is correct?",
+    "choices": [
+     "6(x − 1) = 6x − 6",
+     "6(x − 1) = 6x − 1",
+     "6(x − 1) = 6x + 6"
+    ],
+    "answer": 0,
+    "hint": "Multiply both terms by 6.",
+    "explain": "6 × x − 6 × 1 = 6x − 6."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Expand −3(y + 2).",
+    "choices": [
+     "−3y − 6",
+     "−3y + 6",
+     "−3y + 2"
+    ],
+    "answer": 0,
+    "hint": "−3 × +2 is negative.",
+    "explain": "−3 × y = −3y and −3 × 2 = −6."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

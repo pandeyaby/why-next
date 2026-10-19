@@ -8,6 +8,11 @@
   "homepage": "https://github.com/pandeyaby/why-next",
   "scripts": {
     "validate": "node scripts/validate.mjs",
-    "validate:merged": "cd out/merged && node scripts/validate.mjs"
+    "validate:merged": "cd out/merged && node scripts/validate.mjs",
+    "test:learn": "node tests/learn.e2e.cjs"
+  },
+  "devDependencies": {
+    "axe-core": "4.14.0",
+    "playwright": "1.64.1"
   }
 }

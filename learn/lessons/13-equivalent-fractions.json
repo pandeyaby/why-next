@@ -1,6 +1,7 @@
 {
  "topicId": "mt_FbDKeLfBCo",
  "title": "Equivalent fractions",
+ "audience": "family",
  "keyIdea": "Equivalent fractions are different names for the same amount.",
  "explain": {
   "kid": [
@@ -59,7 +60,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -88,6 +90,93 @@
     "answer": 3,
     "hint": "6 ÷ 3 = 2.",
     "explain": "Divide the bottom by 3 as well: 9 ÷ 3 = 3."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{n}/{d} = ?/{=d*k}. What is the missing numerator?",
+    "answer": "n*k",
+    "hint": "What was the denominator multiplied by?",
+    "explain": "{d} × {k} = {=d*k}, so the numerator is {n} × {k} = {=n*k}.",
+    "params": {
+     "n": [
+      1,
+      4
+     ],
+     "d": [
+      2,
+      5
+     ],
+     "k": [
+      2,
+      5
+     ]
+    },
+    "where": "n<d"
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{n}/{d} = {=n*k}/?. What is the missing denominator?",
+    "answer": "d*k",
+    "hint": "What was the numerator multiplied by?",
+    "explain": "{n} × {k} = {=n*k}, so the denominator is {d} × {k} = {=d*k}.",
+    "params": {
+     "n": [
+      1,
+      4
+     ],
+     "d": [
+      2,
+      5
+     ],
+     "k": [
+      2,
+      5
+     ]
+    },
+    "where": "n<d"
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which fraction equals {n}/{d}?",
+    "choices": [
+     "{=n*k}/{=d*k}",
+     "{=n+k}/{=d+k}",
+     "{=n*k}/{d}"
+    ],
+    "answer": 0,
+    "hint": "Multiply the top and bottom by the same number.",
+    "explain": "{n}/{d} = ({n} × {k})/({d} × {k}) = {=n*k}/{=d*k}.",
+    "params": {
+     "n": [
+      1,
+      4
+     ],
+     "d": [
+      2,
+      5
+     ],
+     "k": [
+      2,
+      4
+     ]
+    },
+    "where": "n<d"
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Can you add the same number to the top and bottom to get an equivalent fraction?",
+    "choices": [
+     "No, you multiply or divide both by the same number",
+     "Yes, always",
+     "Only with even numbers"
+    ],
+    "answer": 0,
+    "hint": "Try it with 1/2 → 2/3.",
+    "explain": "1/2 isn't equal to 2/3, so adding doesn't work. Multiplying or dividing both does."
    }
   ]
  },

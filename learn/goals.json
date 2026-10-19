@@ -1,10 +1,80 @@
 {
- "note": "Profile goals. Each points at a target topic; 'learn next' favours topics on the way to it.",
+ "note": "Profile goals and age-band defaults. Each goal points at a target topic; 'learn next' only suggests topics on the way to it, ranked by distance to it.",
  "goals": [
-  {"id": "fractions", "label": "Fractions", "target": "mt_FbDKeLfBCo"},
-  {"id": "algebra", "label": "Algebra", "target": "mt_ddCyW84sRo"},
-  {"id": "calculus", "label": "Calculus", "target": "mt_lt75XjH3E2"},
-  {"id": "chemistry", "label": "Chemistry", "target": "mt_iVG1uH2wlK"},
-  {"id": "explore", "label": "Just exploring", "target": null}
- ]
+  {
+   "id": "fractions",
+   "label": "Fractions",
+   "target": "mt_FbDKeLfBCo"
+  },
+  {
+   "id": "algebra",
+   "label": "Algebra: linear equations",
+   "target": "mt_mmUVPwnv3o"
+  },
+  {
+   "id": "calculus",
+   "label": "Calculus",
+   "target": "mt_lt75XjH3E2"
+  },
+  {
+   "id": "chemistry",
+   "label": "Chemistry",
+   "target": "mt_iVG1uH2wlK"
+  },
+  {
+   "id": "explore",
+   "label": "Just exploring",
+   "target": null
+  }
+ ],
+ "bands": [
+  {
+   "id": "u10",
+   "label": "Under 10",
+   "assumeKnownUpTo": 0,
+   "reading": "kid"
+  },
+  {
+   "id": "10-12",
+   "label": "10–12",
+   "assumeKnownUpTo": 10,
+   "reading": "kid"
+  },
+  {
+   "id": "13-15",
+   "label": "13–15",
+   "assumeKnownUpTo": 12,
+   "reading": "adult"
+  },
+  {
+   "id": "16-18",
+   "label": "16–18",
+   "assumeKnownUpTo": 14,
+   "reading": "adult"
+  },
+  {
+   "id": "adult",
+   "label": "Adult",
+   "assumeKnownUpTo": 14,
+   "reading": "adult"
+  },
+  {
+   "id": "grand",
+   "label": "Grandparent",
+   "assumeKnownUpTo": 14,
+   "reading": "adult"
+  }
+ ],
+ "skipFromBand10": {
+  "note": "Early-years skills that aren't meaningful 'next steps' for learners aged 10+; treated as done for them.",
+  "subjects": [
+   "Personal & Social Development",
+   "Learning to Learn",
+   "Life Skills"
+  ],
+  "domains": [
+   "Handwriting & Transcription",
+   "Phonics & Word Reading"
+  ]
+ }
 }

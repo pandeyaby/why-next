@@ -1,6 +1,7 @@
 {
  "topicId": "mt_cFltwUQi-d",
  "title": "Fractions of amounts",
+ "audience": "family",
  "keyIdea": "To find a fraction of an amount, split it into equal groups, then take some of the groups.",
  "explain": {
   "kid": [
@@ -54,7 +55,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -78,6 +80,78 @@
     "answer": 9,
     "hint": "1/4 of 12 cm is 3 cm.",
     "explain": "3 × 3 = 9 cm."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "What is 1/{d} of {=d*k}?",
+    "answer": "k",
+    "hint": "Split {=d*k} into {d} equal groups.",
+    "explain": "{=d*k} ÷ {d} = {k}.",
+    "params": {
+     "d": [
+      2,
+      6
+     ],
+     "k": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "What is {n}/{d} of {=d*k}?",
+    "answer": "n*k",
+    "hint": "Find 1/{d} first.",
+    "explain": "1/{d} of {=d*k} is {k}, so {n}/{d} is {n} × {k} = {=n*k}.",
+    "params": {
+     "d": [
+      3,
+      6
+     ],
+     "n": [
+      2,
+      5
+     ],
+     "k": [
+      2,
+      5
+     ]
+    },
+    "where": "n<d"
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A ribbon is {=d*k} cm long. How many cm is 1/{d} of it?",
+    "answer": "k",
+    "hint": "Divide the length by {d}.",
+    "explain": "{=d*k} ÷ {d} = {k} cm.",
+    "params": {
+     "d": [
+      2,
+      5
+     ],
+     "k": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "How do you find 1/5 of 20?",
+    "choices": [
+     "Divide 20 by 5",
+     "Multiply 20 by 5",
+     "Subtract 5 from 20"
+    ],
+    "answer": 0,
+    "hint": "1/5 means one of 5 equal parts.",
+    "explain": "20 ÷ 5 = 4, so 1/5 of 20 is 4."
    }
   ]
  },

@@ -1,0 +1,194 @@
+{
+ "topicId": "mt_QhFEDyIwSO",
+ "title": "Solving linear equations",
+ "audience": "learner",
+ "keyIdea": "Undo operations in reverse order, doing the same to both sides. If x is on both sides, gather the x terms first.",
+ "explain": {
+  "kid": [
+   "To solve 2x + 3 = 11, undo the + 3 first (take 3 from both sides: 2x = 8), then undo the × 2 (divide both sides by 2: x = 4).",
+   "If there's a bracket, you can expand it first: 3(x + 1) = 18 becomes 3x + 3 = 18."
+  ],
+  "adult": [
+   "Solving a linear equation means isolating the unknown using operations that keep both sides equal. Undo things in reverse order: for 5x − 7 = 18, add 7 (5x = 25), then divide by 5 (x = 5).",
+   "When x appears on both sides, gather the x terms on one side first: 5x + 2 = 2x + 14 → 3x + 2 = 14 → 3x = 12 → x = 4. Always check by substituting back into the original equation."
+  ]
+ },
+ "familyTip": "After solving, substitute your answer back into the original equation. If both sides match, you know you're right without looking at the answers.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Solve 2x + 3 = 11.",
+   "answer": 4,
+   "hint": "Subtract 3 from both sides, then divide by 2.",
+   "explain": "2x = 8, so x = 4."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Solve 5x − 7 = 18.",
+   "answer": 5,
+   "hint": "Add 7 to both sides first.",
+   "explain": "5x = 25, so x = 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Solve 3(x + 1) = 18.",
+   "answer": 5,
+   "hint": "Expand, or divide both sides by 3 first.",
+   "explain": "x + 1 = 6, so x = 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Solve 5x + 2 = 2x + 14.",
+   "answer": 4,
+   "hint": "Subtract 2x from both sides first.",
+   "explain": "3x + 2 = 14, then 3x = 12, so x = 4."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Solve {a}x + {b} = {=a*x+b}.",
+    "answer": "x",
+    "hint": "Subtract {b}, then divide by {a}.",
+    "explain": "{a}x = {=a*x}, so x = {x}. Check: {a} × {x} + {b} = {=a*x+b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      15
+     ],
+     "x": [
+      1,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Solve {a}x − {b} = {=a*x-b}.",
+    "answer": "x",
+    "hint": "Add {b} to both sides first.",
+    "explain": "{a}x = {=a*x}, so x = {x}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      15
+     ],
+     "x": [
+      2,
+      10
+     ]
+    },
+    "where": "a*x>b"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Solve {a}(x + {b}) = {=a*(x+b)}.",
+    "answer": "x",
+    "hint": "Divide both sides by {a} first.",
+    "explain": "x + {b} = {=x+b}, so x = {x}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      1,
+      6
+     ],
+     "x": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Solve {a}x + {b} = {c}x + {=(a-c)*x+b}.",
+    "answer": "x",
+    "hint": "Subtract {c}x from both sides first.",
+    "explain": "{=a-c}x + {b} = {=(a-c)*x+b}, so {=a-c}x = {=(a-c)*x} and x = {x}.",
+    "params": {
+     "a": [
+      5,
+      9
+     ],
+     "c": [
+      2,
+      4
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "x": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Solve x/{d} + {b} = {=k+b}.",
+    "answer": "d*k",
+    "hint": "Subtract {b}, then multiply by {d}.",
+    "explain": "x/{d} = {k}, so x = {k} × {d} = {=d*k}.",
+    "params": {
+     "d": [
+      2,
+      5
+     ],
+     "k": [
+      1,
+      6
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which step is correct for 4x − 5 = 23?",
+    "choices": [
+     "Add 5 to both sides to get 4x = 28",
+     "Subtract 5 from both sides to get 4x = 18",
+     "Divide only 4x by 4 to get x − 5 = 23"
+    ],
+    "answer": 0,
+    "hint": "Undo the − 5, and do it to both sides.",
+    "explain": "Adding 5 to both sides gives 4x = 28, so x = 7."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Solve 7 − x = 2.",
+    "answer": 5,
+    "hint": "What do you take from 7 to leave 2?",
+    "explain": "7 − 5 = 2, so x = 5. (Or add x to both sides: 7 = 2 + x.)"
+   }
+  ]
+ },
+ "status": "self-checked"
+}

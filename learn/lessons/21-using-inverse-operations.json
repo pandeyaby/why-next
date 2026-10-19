@@ -1,0 +1,184 @@
+{
+ "topicId": "mt_VUQNveSYjQ",
+ "title": "Using inverse operations",
+ "audience": "learner",
+ "keyIdea": "+ undoes −, and × undoes ÷, so you can work backwards and check your answers.",
+ "explain": {
+  "kid": [
+   "Inverse operations undo each other. Add 5 then subtract 5 and you're back where you started. Multiplying by 3 and dividing by 3 work the same way.",
+   "You can use this to check answers: if 56 ÷ 7 = 8, then 8 × 7 should be 56. You can also work backwards: 'I doubled a number and got 18', so halve 18 to get 9."
+  ],
+  "adult": [
+   "Each operation has an inverse that undoes it: + and −, × and ÷. That gives you two tools. Checking: verify 437 − 189 = 248 by adding 248 + 189. Working backwards: to undo 'multiply by 4 then add 3', subtract 3 and then divide by 4. You undo the last step first.",
+   "That reverse-order idea is exactly what you'll do when you solve equations."
+  ]
+ },
+ "familyTip": "Next time you do a subtraction or division, check it with the inverse. It takes seconds and catches most slips.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which calculation checks 56 ÷ 7 = 8?",
+   "choices": [
+    "8 × 7",
+    "56 × 7",
+    "8 + 7"
+   ],
+   "answer": 0,
+   "hint": "× undoes ÷.",
+   "explain": "8 × 7 = 56, so the division is right."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "I double a number and get 18. What was the number?",
+   "answer": 9,
+   "hint": "Undo doubling by halving.",
+   "explain": "18 ÷ 2 = 9."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "I multiply a number by 4, then add 3, and get 23. What was the number?",
+   "answer": 5,
+   "hint": "Undo the last step first: subtract 3, then divide by 4.",
+   "explain": "23 − 3 = 20, and 20 ÷ 4 = 5."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "To undo 'add 6, then multiply by 2', what do you do?",
+   "choices": [
+    "Divide by 2, then subtract 6",
+    "Subtract 6, then divide by 2",
+    "Multiply by 2, then add 6"
+   ],
+   "answer": 0,
+   "hint": "Undo the steps in reverse order.",
+   "explain": "The last step was × 2, so undo that first (÷ 2), then undo + 6 (− 6)."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which calculation checks {=a*b} ÷ {a} = {b}?",
+    "choices": [
+     "{b} × {a}",
+     "{=a*b} × {a}",
+     "{b} + {a}"
+    ],
+    "answer": 0,
+    "hint": "× undoes ÷.",
+    "explain": "{b} × {a} = {=a*b}, which confirms the division.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "I multiply a number by {k}, then add {c}, and get {=k*n+c}. What was the number?",
+    "answer": "n",
+    "hint": "Undo the last step first.",
+    "explain": "{=k*n+c} − {c} = {=k*n}, then {=k*n} ÷ {k} = {n}.",
+    "params": {
+     "n": [
+      2,
+      12
+     ],
+     "k": [
+      2,
+      5
+     ],
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "I add {c} to a number and get {=n+c}. What was the number?",
+    "answer": "n",
+    "hint": "Undo + {c} with − {c}.",
+    "explain": "{=n+c} − {c} = {n}.",
+    "params": {
+     "n": [
+      2,
+      20
+     ],
+     "c": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "I think of a number, subtract {k}, then double it, and get {=2*(n-k)}. What was the number?",
+    "answer": "n",
+    "hint": "Undo the doubling first, then the subtraction.",
+    "explain": "Halve {=2*(n-k)} to get {=n-k}, then add {k} to get {n}.",
+    "params": {
+     "n": [
+      3,
+      15
+     ],
+     "k": [
+      1,
+      9
+     ]
+    },
+    "where": "n>k"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is the inverse of dividing by 5?",
+    "choices": [
+     "Multiplying by 5",
+     "Adding 5",
+     "Subtracting 5"
+    ],
+    "answer": 0,
+    "hint": "What undoes ÷ 5?",
+    "explain": "× 5 undoes ÷ 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "To check 437 − 189 = 248, you work out 248 + 189. What do you get?",
+    "answer": 437,
+    "hint": "Add the two numbers.",
+    "explain": "248 + 189 = 437, so the subtraction was right."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "To undo 'subtract 4, then divide by 3', what do you do?",
+    "choices": [
+     "Multiply by 3, then add 4",
+     "Add 4, then multiply by 3",
+     "Divide by 3, then subtract 4"
+    ],
+    "answer": 0,
+    "hint": "Undo the last step first.",
+    "explain": "The last step was ÷ 3, so undo it with × 3, then undo − 4 with + 4."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

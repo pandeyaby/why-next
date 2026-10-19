@@ -1,0 +1,169 @@
+{
+ "topicId": "mt_mmUVPwnv3o",
+ "title": "Word problems with linear equations",
+ "audience": "learner",
+ "keyIdea": "Name the unknown, write an equation, solve it, then check the answer makes sense.",
+ "explain": {
+  "kid": [
+   "Word problems get easier once you write an equation. 'Tom has some stickers. He gets 6 more and now has 20.' Let s be Tom's stickers at the start: s + 6 = 20, so s = 14.",
+   "Always check: 14 + 6 = 20 ✓. Also ask whether the answer makes sense: you can't have −3 stickers."
+  ],
+  "adult": [
+   "A reliable routine: (1) say what the letter stands for, (2) write the equation from the story, (3) solve it, (4) check it against the original words, not just your equation.",
+   "Example: a taxi charges £3 plus £2 per mile and the fare was £17. Let m = miles: 3 + 2m = 17, so 2m = 14 and m = 7. Check: £3 + 7 × £2 = £17 ✓."
+  ]
+ },
+ "familyTip": "Find a real pricing rule (a taxi, a gym, a phone plan) and work out the unknown from a total, such as how many miles a £20 fare covers.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Tom has some stickers. He gets 6 more and now has 20. How many did he have at the start?",
+   "answer": 14,
+   "hint": "s + 6 = 20.",
+   "explain": "s = 20 − 6 = 14. Check: 14 + 6 = 20 ✓."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A taxi charges £3 plus £2 per mile. The fare was £17. How many miles was the trip?",
+   "answer": 7,
+   "hint": "3 + 2m = 17.",
+   "explain": "2m = 14, so m = 7."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Three friends share a bill equally and each pays £12. What was the total bill in £?",
+   "answer": 36,
+   "hint": "b ÷ 3 = 12.",
+   "explain": "b = 12 × 3 = 36."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A rectangle's length is 3 cm more than its width. Its perimeter is 26 cm. What is the width in cm?",
+   "answer": 5,
+   "hint": "Let the width be w. Then the length is w + 3, and the perimeter is 2(w + w + 3).",
+   "explain": "2(2w + 3) = 26, so 4w + 6 = 26, 4w = 20 and w = 5. Check: 2 × (5 + 8) = 26 ✓."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A taxi charges £{f} plus £{r} per mile. The fare was £{=f+r*m}. How many miles was the trip?",
+    "answer": "m",
+    "hint": "Write {f} + {r}m = {=f+r*m}.",
+    "explain": "{r}m = {=r*m}, so m = {m}. Check: {f} + {r} × {m} = {=f+r*m} ✓.",
+    "params": {
+     "f": [
+      2,
+      5
+     ],
+     "r": [
+      2,
+      4
+     ],
+     "m": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Mia has some sweets. She gets {a} more and now has {=s+a}. How many did she have at first?",
+    "answer": "s",
+    "hint": "s + {a} = {=s+a}.",
+    "explain": "s = {=s+a} − {a} = {s}.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "s": [
+      5,
+      20
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{n} friends share a bill equally and each pays £{k}. What was the bill in £?",
+    "answer": "n*k",
+    "hint": "b ÷ {n} = {k}.",
+    "explain": "b = {k} × {n} = {=n*k}.",
+    "params": {
+     "n": [
+      2,
+      5
+     ],
+     "k": [
+      5,
+      15
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A rectangle's length is {d} cm more than its width. Its perimeter is {=4*w+2*d} cm. What is the width in cm?",
+    "answer": "w",
+    "hint": "Perimeter = 2(w + w + {d}) = 4w + {=2*d}.",
+    "explain": "4w + {=2*d} = {=4*w+2*d}, so 4w = {=4*w} and w = {w}.",
+    "params": {
+     "w": [
+      2,
+      10
+     ],
+     "d": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Two consecutive whole numbers add up to {=2*x+1}. What is the smaller one?",
+    "answer": "x",
+    "hint": "Call them n and n + 1.",
+    "explain": "n + n + 1 = {=2*x+1}, so 2n = {=2*x} and n = {x}.",
+    "params": {
+     "x": [
+      5,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You're solving a problem about the number of people on a bus and get x = −4. What should you do?",
+    "choices": [
+     "Recheck the equation: a negative number of people doesn't make sense",
+     "Write −4 as the answer",
+     "Round it to 4"
+    ],
+    "answer": 0,
+    "hint": "Does the answer fit the story?",
+    "explain": "Answers must make sense in context. A negative count means the equation or the working has a mistake."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Ali is 3 times as old as his sister. Together they are 32. How old is his sister?",
+    "answer": 8,
+    "hint": "Let her age be s. Then Ali is 3s, and s + 3s = 32.",
+    "explain": "4s = 32, so s = 8 (and Ali is 24). Check: 8 + 24 = 32 ✓."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

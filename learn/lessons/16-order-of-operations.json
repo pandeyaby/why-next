@@ -1,0 +1,180 @@
+{
+ "topicId": "mt_jHgRQ4hR0g",
+ "title": "Order of operations",
+ "audience": "learner",
+ "keyIdea": "Brackets first, then × and ÷ (left to right), then + and − (left to right).",
+ "explain": {
+  "kid": [
+   "When a calculation has more than one operation, everyone follows the same order so they all get the same answer. You do brackets first, then multiply and divide, then add and subtract.",
+   "So 2 + 3 × 4 is 2 + 12 = 14, not 5 × 4 = 20. When two operations are on the same level, you work from left to right."
+  ],
+  "adult": [
+   "You've probably met BIDMAS, BODMAS or PEMDAS. They all describe one convention: brackets, then powers (indices), then × and ÷, then + and −. Operations on the same level are done left to right.",
+   "The two classic mistakes are working strictly left to right (2 + 3 × 4 = 20) and assuming addition always comes before subtraction. In fact 10 − 4 + 2 = 8, because + and − share a level and you go left to right."
+  ]
+ },
+ "familyTip": "Type 2 + 3 × 4 into a phone calculator and a basic calculator. Do they agree? Which one follows the convention?",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Work out 2 + 3 × 4.",
+   "answer": 14,
+   "hint": "Multiply before you add.",
+   "explain": "3 × 4 = 12, then 2 + 12 = 14."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Work out (2 + 3) × 4.",
+   "answer": 20,
+   "hint": "Brackets come first.",
+   "explain": "2 + 3 = 5, then 5 × 4 = 20."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Work out 10 − 4 + 2.",
+   "answer": 8,
+   "hint": "+ and − are on the same level, so go left to right.",
+   "explain": "10 − 4 = 6, then 6 + 2 = 8."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What do you do first in 12 ÷ (2 + 4)?",
+   "choices": [
+    "2 + 4",
+    "12 ÷ 2",
+    "It doesn't matter"
+   ],
+   "answer": 0,
+   "hint": "Look for brackets.",
+   "explain": "Brackets first: 2 + 4 = 6, then 12 ÷ 6 = 2."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Work out {a} + {b} × {c}.",
+    "answer": "a+b*c",
+    "hint": "Multiply first.",
+    "explain": "{b} × {c} = {=b*c}, then {a} + {=b*c} = {=a+b*c}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ],
+     "c": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Work out ({a} + {b}) × {c}.",
+    "answer": "(a+b)*c",
+    "hint": "Brackets first.",
+    "explain": "{a} + {b} = {=a+b}, then {=a+b} × {c} = {=(a+b)*c}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ],
+     "c": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Work out {a} − {b} + {c}.",
+    "answer": "a-b+c",
+    "hint": "+ and − share a level: go left to right.",
+    "explain": "{a} − {b} = {=a-b}, then {=a-b} + {c} = {=a-b+c}.",
+    "params": {
+     "a": [
+      10,
+      30
+     ],
+     "b": [
+      2,
+      9
+     ],
+     "c": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Work out {=a*b} ÷ {b} + {c}.",
+    "answer": "a+c",
+    "hint": "Divide before you add.",
+    "explain": "{=a*b} ÷ {b} = {a}, then {a} + {c} = {=a+c}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      6
+     ],
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Work out 20 − 2 × 5.",
+    "answer": 10,
+    "hint": "Multiply first.",
+    "explain": "2 × 5 = 10, then 20 − 10 = 10."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ana says 6 + 4 ÷ 2 = 5. What is the right answer?",
+    "choices": [
+     "8",
+     "5",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Which operation comes first?",
+    "explain": "Divide first: 4 ÷ 2 = 2, then 6 + 2 = 8."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Work out 3 × (8 − 5) + 1.",
+    "answer": 10,
+    "hint": "Brackets, then multiply, then add.",
+    "explain": "8 − 5 = 3, then 3 × 3 = 9, then 9 + 1 = 10."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

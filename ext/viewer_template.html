@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Why Next? A learning map: what to learn next, and why</title>
 <style>
-:root{--new:#2563eb;--old:#6b7280;--bridge:#d97706;--bg:#f8fafc}
+#side h1{color:#111827}:root{--new:#1d4ed8;--old:#4b5563;--bridge:#b45309;--bg:#f8fafc}
 *{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#111827;background:var(--bg);display:flex;height:100vh}
 #side{width:340px;border-right:1px solid #e5e7eb;display:flex;flex-direction:column;background:#fff}
 #side header{padding:12px;border-bottom:1px solid #e5e7eb}#side h1{font-size:15px;margin:0 0 4px}
@@ -11,7 +11,7 @@
 #filters{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}#filters label{font-size:12px;background:#f3f4f6;padding:2px 6px;border-radius:10px;cursor:pointer}
 #list{overflow:auto;flex:1}.dom{font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#374151;padding:10px 12px 4px;position:sticky;top:0;background:#fff}
 .item{padding:5px 12px;cursor:pointer;display:flex;justify-content:space-between;gap:6px}.item:hover{background:#eff6ff}.item.sel{background:#dbeafe}
-.age{color:#6b7280;font-size:12px;white-space:nowrap}
+.age{color:#4b5563;font-size:12px;white-space:nowrap}
 #main{flex:1;overflow:auto;padding:16px 20px}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;margin-bottom:14px}
 .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;margin-right:4px;background:#f3f4f6}
@@ -25,11 +25,11 @@ svg{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px}
 .legend span{margin-right:12px;font-size:12px}.muted{color:#6b7280}
 /*__LEARN_CSS__*/
 </style></head><body>
-<div id="side"><header><h1>Why Next?</h1>
+<aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
 <small>A family-friendly learning map for ages 11–18: what to learn next, and why. <span id="cnt"></span></small>
 <label class="sr" for="q">Search topics</label><input id="q" type="search" placeholder="Search topics…">
 <div id="filters"><label><input type="checkbox" id="showOld"> include upstream v1 ancestors</label><label><input type="checkbox" id="onlyLes"> only topics with lessons</label></div></header>
-<div id="list" role="list" aria-label="Topics"></div></div>
+<nav id="list" aria-label="Topic list"></nav></aside>
 <main id="main"><div class="card"><b>How to use:</b> pick a topic on the left. You'll see its full prerequisite chain, with the reason for each link.
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
@@ -47,9 +47,9 @@ document.getElementById('stats').textContent=`${nNew} Why Next? topics · ${nNE}
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let sel=null;
 function renderList(){const q=document.getElementById('q').value.toLowerCase(),old=document.getElementById('showOld').checked,only=document.getElementById('onlyLes').checked;LEARN.refreshNext();
- let h='',dom='';for(const n of DATA.nodes){if(only&&!LEARN.has(n.id))continue;if(!n.new&&!old&&!LEARN.has(n.id)&&!LEARN.done(n.id))continue;if(q&&!(n.n+' '+n.desc).toLowerCase().includes(q))continue;
+ let h='',dom='';for(const n of DATA.nodes){if(only&&!LEARN.has(n.id))continue;if(!n.new&&!old&&!LEARN.has(n.id)&&!LEARN.isNext(n.id))continue;if(q&&!(n.n+' '+n.desc).toLowerCase().includes(q))continue;
  const d=n.s+' / '+n.d;if(d!==dom){dom=d;h+=`<div class="dom">${esc(d)}</div>`}
- h+=`<div class="item${sel===n.id?' sel':''}" role="listitem button" tabindex="0" data-id="${n.id}"${sel===n.id?' aria-current="true"':''}><span class="nm ${n.new?'new':'old'}">${esc(n.n)}</span><span class="lbs"><span class="age">${n.a[0]}–${n.a[1]}</span>${LEARN.badge(n.id)}</span></div>`}
+ h+=`<div class="item${sel===n.id?' sel':''}" role="button" tabindex="0" data-id="${n.id}"${sel===n.id?' aria-current="true"':''}><span class="nm ${n.new?'new':'old'}">${esc(n.n)}</span><span class="lbs"><span class="age">${n.a[0]}–${n.a[1]}</span>${LEARN.badge(n.id)}</span></div>`}
  document.getElementById('list').innerHTML=h||'<p class="muted" style="padding:12px">No matches</p>'}
 document.getElementById('list').onclick=e=>{const it=e.target.closest('.item');if(it)select(it.dataset.id)};
 document.getElementById('list').onkeydown=e=>{const it=e.target.closest('.item');if(it&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(it.dataset.id);const l=document.getElementById('learn');if(l)l.focus()}};
@@ -79,8 +79,8 @@ function select(id){sel=id;const n=N.get(id);renderList();const anc=ancestors(id
  <b>Standards:</b> ${n.st.length?n.st.map(esc).join(', '):'<span class="muted">none</span>'}<br>
  <span class="muted">${anc.size-1} ancestor topics (${prim} at primary ages ≤10).</span>
  ${users.length?`<br><b>Unlocks:</b> ${users.map(u=>`<span class="nm ${u.new?'new':'old'}" data-id="${u.id}">${esc(u.n)}</span>`).join(' · ')}`:''}</div>
- ${clu?`<div class="card"><b>Cluster: ${esc(n.s)} / ${esc(n.d)}, from age ${n.a[0]}</b><p style="margin:6px 0 0">${esc(clu)}</p></div>`:''}
 ${LEARN_PANEL.panel(id)}
+ ${clu?`<div class="card"><b>Cluster: ${esc(n.s)} / ${esc(n.d)}, from age ${n.a[0]}</b><p style="margin:6px 0 0">${esc(clu)}</p></div>`:''}
  <div class="card"><b>Hard-prerequisite graph</b>${graph(id)}</div>
  <div class="card"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span>${tree(id,new Set([id]),0)||'<p class="muted">No prerequisites in this view.</p>'}</div>`;
  LEARN_PANEL.mount(id);document.getElementById('main').scrollTop=0}

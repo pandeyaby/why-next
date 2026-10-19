@@ -1,6 +1,7 @@
 {
  "topicId": "mt_vKcxX6iNOA",
  "title": "Fraction words and notation",
+ "audience": "family",
  "keyIdea": "The denominator says how many equal parts the whole has; the numerator says how many of them you mean.",
  "explain": {
   "kid": [
@@ -69,7 +70,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "mc",
     "id": "m1",
@@ -108,6 +110,80 @@
     "answer": 0,
     "hint": "Can the top and bottom both be divided by the same number (other than 1)?",
     "explain": "2/4 simplifies to 1/2 and 6/9 to 2/3, but 3/7 can't be simplified."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "In {n}/{d}, which number is the denominator?",
+    "choices": [
+     "{d}",
+     "{n}",
+     "{=n+d}"
+    ],
+    "answer": 0,
+    "hint": "The denominator is on the bottom.",
+    "explain": "The denominator is {d}: the whole is cut into {d} equal parts.",
+    "params": {
+     "n": [
+      1,
+      8
+     ],
+     "d": [
+      2,
+      9
+     ]
+    },
+    "where": "n<d"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A cake is cut into {d} equal slices and you eat {n}. What fraction of the cake did you eat?",
+    "choices": [
+     "{n}/{d}",
+     "{d}/{n}",
+     "{n}/{=n+d}"
+    ],
+    "answer": 0,
+    "hint": "The bottom number is the number of equal slices in the whole cake.",
+    "explain": "{n} of {d} equal slices is {n}/{d}.",
+    "params": {
+     "n": [
+      1,
+      8
+     ],
+     "d": [
+      2,
+      9
+     ]
+    },
+    "where": "n<d"
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is a proper fraction?",
+    "choices": [
+     "3/5",
+     "5/3",
+     "4/4"
+    ],
+    "answer": 0,
+    "hint": "In a proper fraction the numerator is smaller than the denominator.",
+    "explain": "3/5 is less than one whole; 5/3 and 4/4 are improper."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is a mixed number?",
+    "choices": [
+     "A whole number and a fraction together, like 1¾",
+     "A fraction with 1 on top",
+     "Two fractions added together"
+    ],
+    "answer": 0,
+    "hint": "Think of '1 and three quarters'.",
+    "explain": "A mixed number combines a whole number and a fraction, such as 1¾."
    }
   ]
  },

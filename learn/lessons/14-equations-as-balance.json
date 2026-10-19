@@ -1,6 +1,7 @@
 {
  "topicId": "mt_ddCyW84sRo",
  "title": "Equations as a balance",
+ "audience": "family",
  "keyIdea": "Do the same thing to both sides and the equation stays balanced.",
  "explain": {
   "kid": [
@@ -59,7 +60,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -88,6 +90,82 @@
     "answer": 0,
     "hint": "Both sides must change in the same way.",
     "explain": "Taking 5 from both sides gives x = 4, and the equation stays balanced."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "x + {a} = {=a+b}. What is x?",
+    "answer": "b",
+    "hint": "Take {a} from both sides.",
+    "explain": "x = {=a+b} − {a} = {b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      3,
+      15
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{a}x = {=a*b}. What is x?",
+    "answer": "b",
+    "hint": "Divide both sides by {a}.",
+    "explain": "x = {=a*b} ÷ {a} = {b}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{a}x + {b} = {=a*c+b}. What is x?",
+    "answer": "c",
+    "hint": "Take {b} from both sides first.",
+    "explain": "Subtract {b}: {a}x = {=a*c}. Divide by {a}: x = {c}.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "x − {a} = {b}. What is x?",
+    "answer": "a+b",
+    "hint": "Add {a} to both sides.",
+    "explain": "x = {b} + {a} = {=a+b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
    }
   ]
  },

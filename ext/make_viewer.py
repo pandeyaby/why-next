@@ -37,9 +37,9 @@ for f in sorted(glob.glob("learn/lessons/*.json")):
 missing = sorted(set(lessons) - keep)
 assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
-learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json"))["goals"], "resources": res["resources"],
+learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-js = open("learn/learn_core.js").read() + open("learn/learn_panel.js").read()
+js = "".join(open(f"learn/{f}").read() for f in ("learn_gen.js", "learn_core.js", "learn_panel.js"))
 html = (open("ext/viewer_template.html").read().replace("/*__DATA__*/null", data).replace("/*__CREDIT__*/", credit)
         .replace("/*__LESSONS__*/null", learn).replace("/*__LEARN_JS__*/", js).replace("/*__LEARN_CSS__*/", open("learn/learn.css").read()))
 open(os.environ.get("WHYNEXT_VIEWER_OUT", "out/viewer.html"), "w").write(html)

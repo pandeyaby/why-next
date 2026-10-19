@@ -1,6 +1,7 @@
 {
  "topicId": "mt_Kr3IyA6m-O",
  "title": "Fractions on a number line",
+ "audience": "family",
  "keyIdea": "Fractions are numbers with their own place on the number line.",
  "explain": {
   "kid": [
@@ -69,7 +70,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "mc",
     "id": "m1",
@@ -108,6 +110,80 @@
     ],
     "hint": "Thirds: split 0 to 1 into 3 equal jumps.",
     "explain": "0 < 1/3 < 2/3 < 1."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "0 to 1 is split into {d} equal jumps. Which fraction is at the mark after {n} jumps?",
+    "choices": [
+     "{n}/{d}",
+     "{d}/{n}",
+     "1/{=n+d}"
+    ],
+    "answer": 0,
+    "hint": "Count the jumps from 0, out of the total number of jumps.",
+    "explain": "{n} jumps out of {d} is {n}/{d}.",
+    "params": {
+     "n": [
+      1,
+      7
+     ],
+     "d": [
+      3,
+      8
+     ]
+    },
+    "where": "n<d"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is bigger, 1/{a} or 1/{b}?",
+    "choices": [
+     "1/{a}",
+     "1/{b}",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "Fewer equal parts means bigger parts.",
+    "explain": "Splitting into {a} gives bigger parts than splitting into {b}, so 1/{a} is bigger.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    },
+    "where": "a<b"
+   },
+   {
+    "type": "order",
+    "id": "m6",
+    "prompt": "Put these fifths in order, smallest first.",
+    "items": [
+     "1/5",
+     "2/5",
+     "4/5",
+     "6/5"
+    ],
+    "hint": "They all have the same denominator, so compare the numerators.",
+    "explain": "1/5 < 2/5 < 4/5 < 6/5 (and 6/5 is past 1)."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Where does 5/4 go on the number line?",
+    "choices": [
+     "Just past 1",
+     "Between 0 and 1",
+     "At 5"
+    ],
+    "answer": 0,
+    "hint": "4/4 is at 1.",
+    "explain": "5/4 is one more quarter after 4/4 = 1."
    }
   ]
  },

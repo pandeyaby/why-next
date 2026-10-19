@@ -1,6 +1,7 @@
 {
  "topicId": "mt_LpSuPgL31x",
  "title": "Dividing by sharing equally",
+ "audience": "family",
  "keyIdea": "Dividing means sharing fairly into equal groups.",
  "explain": {
   "kid": [
@@ -59,7 +60,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -83,6 +85,78 @@
     "answer": 2,
     "hint": "Share one at a time.",
     "explain": "6 ÷ 3 = 2."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{=a*b} stickers are shared equally between {a} friends. How many does each friend get?",
+    "answer": "b",
+    "hint": "Share them out one at a time.",
+    "explain": "{=a*b} ÷ {a} = {b}, because {a} × {b} = {=a*b}.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "How many groups of {a} can you make from {=a*b} counters?",
+    "answer": "b",
+    "hint": "How many {a}s make {=a*b}?",
+    "explain": "{a} × {b} = {=a*b}, so you can make {b} groups.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which fact helps you work out {=a*b} ÷ {a}?",
+    "choices": [
+     "{a} × {b} = {=a*b}",
+     "{=a*b} − {a} = {=a*b-a}",
+     "{a} + {b} = {=a+b}"
+    ],
+    "answer": 0,
+    "hint": "Division undoes multiplication.",
+    "explain": "{a} × {b} = {=a*b}, so {=a*b} ÷ {a} = {b}.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Is it fair to share 10 grapes as 5 and 5?",
+    "choices": [
+     "Yes, both shares are equal",
+     "No, 10 can't be shared",
+     "No, one share is bigger"
+    ],
+    "answer": 0,
+    "hint": "Compare the two shares.",
+    "explain": "5 and 5 are equal shares, so it's fair: 10 ÷ 2 = 5."
    }
   ]
  },

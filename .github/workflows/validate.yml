@@ -32,3 +32,16 @@ jobs:
         env:
           WHYNEXT_SINGLE_FILE: ${{ runner.temp }}/why-next-site.html
         run: sh scripts/check_deterministic.sh
+  learn-e2e:
+    # Headless Chromium test of the Learn panel (about 15 s plus browser download), including an axe accessibility scan.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps --only-shell chromium
+      - run: npm run test:learn

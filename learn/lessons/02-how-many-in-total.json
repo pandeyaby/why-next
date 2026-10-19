@@ -1,6 +1,7 @@
 {
  "topicId": "mt_dmNvjroCPT",
  "title": "How many in total?",
+ "audience": "family",
  "keyIdea": "The last number you say when counting tells you how many there are.",
  "explain": {
   "kid": [
@@ -64,7 +65,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "mc",
     "id": "m1",
@@ -98,6 +100,65 @@
     "answer": 2,
     "hint": "Count each set in your head.",
     "explain": "Both sets have ten coins; the arrangement doesn't change the number."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "You count leaves and the last number you say is {n}. How many leaves are there?",
+    "answer": "n",
+    "hint": "The last number tells you.",
+    "explain": "There are {n} leaves: the last number said is the total.",
+    "params": {
+     "n": [
+      5,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Stars are in two groups: {a} on the left and {b} on the right. You count every star, one by one. How many stars are there?",
+    "answer": "a+b",
+    "hint": "Keep counting from the left group straight into the right group.",
+    "explain": "{a} and {b} more makes {=a+b} stars.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A tower of {n} blocks gets knocked over and the blocks scatter across the floor. How many blocks are there now?",
+    "answer": "n",
+    "hint": "Did any blocks disappear?",
+    "explain": "Still {n}. Moving the blocks doesn't change how many there are.",
+    "params": {
+     "n": [
+      6,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Jay counts 7 cars starting from the red one. Kim counts them again starting from the blue one. What should Kim get?",
+    "choices": [
+     "7",
+     "More than 7",
+     "Fewer than 7"
+    ],
+    "answer": 0,
+    "hint": "Does the starting car change how many cars there are?",
+    "explain": "Kim also gets 7. The order you count in doesn't change the total."
    }
   ]
  },

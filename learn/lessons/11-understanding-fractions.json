@@ -1,6 +1,7 @@
 {
  "topicId": "mt_MyGblah2yY",
  "title": "Writing fraction facts",
+ "audience": "family",
  "keyIdea": "We can write fraction facts like 1/2 of 6 = 3, and different fractions can name the same amount.",
  "explain": {
   "kid": [
@@ -59,7 +60,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -87,6 +89,65 @@
     "answer": 7,
     "hint": "Split 14 into 2 equal groups.",
     "explain": "14 ÷ 2 = 7."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "1/2 of {=2*k} = ?",
+    "answer": "k",
+    "hint": "Split {=2*k} into 2 equal groups.",
+    "explain": "{=2*k} ÷ 2 = {k}.",
+    "params": {
+     "k": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "2/4 of {=4*k} = ?",
+    "answer": "2*k",
+    "hint": "1/4 of {=4*k} is {k}.",
+    "explain": "2 × {k} = {=2*k}, the same as 1/2 of {=4*k}.",
+    "params": {
+     "k": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "True or false: 2/4 of {=4*k} = 1/2 of {=4*k}",
+    "choices": [
+     "True",
+     "False"
+    ],
+    "answer": 0,
+    "hint": "Are 2/4 and 1/2 the same amount?",
+    "explain": "Both are {=2*k}, because 2/4 = 1/2.",
+    "params": {
+     "k": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is the same amount as 2/4?",
+    "choices": [
+     "1/2",
+     "1/4",
+     "2/2"
+    ],
+    "answer": 0,
+    "hint": "Picture 2 quarters of a pizza.",
+    "explain": "Two quarters make one half."
    }
   ]
  },

@@ -1,6 +1,7 @@
 {
  "topicId": "mt_WcfaSfVT33",
  "title": "One-to-one counting",
+ "audience": "family",
  "keyIdea": "Every object gets exactly one number word.",
  "explain": {
   "kid": [
@@ -65,7 +66,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -99,6 +101,61 @@
     "answer": 0,
     "hint": "Compare the number of words with the number of pencils.",
     "explain": "He said four words for three pencils, so his words and his pointing did not match one-to-one."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Leo touches each of {n} toy cars once and says one number for each. What number does he say last?",
+    "answer": "n",
+    "hint": "One touch, one number.",
+    "explain": "He says {n}: one number for each of the {n} cars.",
+    "params": {
+     "n": [
+      4,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Zara counts {n} beads but touches one bead twice. What number does she say at the end?",
+    "answer": "n+1",
+    "hint": "The bead touched twice got two numbers.",
+    "explain": "{n} beads plus one extra touch gives {=n+1} number words, one too many.",
+    "params": {
+     "n": [
+      4,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Omar counts {n} spoons but skips one by mistake. What number does he say last?",
+    "answer": "n-1",
+    "hint": "The skipped spoon got no number.",
+    "explain": "He gives numbers to only {=n-1} of the {n} spoons, so he says {=n-1}.",
+    "params": {
+     "n": [
+      5,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is the best way to make sure you don't count a sock twice?",
+    "choices": [
+     "Move each sock to a new pile as you count it",
+     "Count as fast as you can",
+     "Only count the socks you can see from far away"
+    ],
+    "answer": 0,
+    "hint": "How can you tell which socks are already counted?",
+    "explain": "Moving each counted sock to a new pile means it can't be counted again."
    }
   ]
  },

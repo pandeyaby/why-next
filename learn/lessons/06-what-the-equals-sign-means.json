@@ -1,6 +1,7 @@
 {
  "topicId": "mt_oIzycTBeE4",
  "title": "What the equals sign means",
+ "audience": "family",
  "keyIdea": "= means both sides are worth the same, like a balanced seesaw.",
  "explain": {
   "kid": [
@@ -61,7 +62,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -90,6 +92,93 @@
     "answer": 0,
     "hint": "Check whether each pair of sides joined by = really is equal.",
     "explain": "8 + 4 = 12, which is not 12 + 5. Each = must join two things of equal value."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{a} + {b} = {c} + □. What goes in the box?",
+    "answer": "a+b-c",
+    "hint": "Work out the left side first.",
+    "explain": "The left side is {=a+b}, and {c} + {=a+b-c} = {=a+b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ],
+     "c": [
+      1,
+      8
+     ]
+    },
+    "where": "a+b>c"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "True or false: {a} + {b} = {b} + {a}",
+    "choices": [
+     "True",
+     "False"
+    ],
+    "answer": 0,
+    "hint": "Work out each side.",
+    "explain": "Both sides make {=a+b}, so it's true.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    },
+    "where": "a!=b"
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "True or false: {a} + {b} = {=a+b+1}",
+    "choices": [
+     "True",
+     "False"
+    ],
+    "answer": 1,
+    "hint": "Work out the left side.",
+    "explain": "{a} + {b} = {=a+b}, not {=a+b+1}, so it's false.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "{a} = {b} + □. What goes in the box?",
+    "answer": "a-b",
+    "hint": "{b} plus what makes {a}?",
+    "explain": "{b} + {=a-b} = {a}.",
+    "params": {
+     "a": [
+      5,
+      15
+     ],
+     "b": [
+      1,
+      9
+     ]
+    },
+    "where": "a>b"
    }
   ]
  },

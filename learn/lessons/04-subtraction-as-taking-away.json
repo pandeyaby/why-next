@@ -1,6 +1,7 @@
 {
  "topicId": "mt_zuKAX6lcYR",
  "title": "Subtracting by taking away",
+ "audience": "family",
  "keyIdea": "Subtracting means taking some away and finding how many are left.",
  "explain": {
   "kid": [
@@ -59,7 +60,8 @@
  ],
  "mastery": {
   "passMark": 3,
-  "items": [
+  "draw": 4,
+  "pool": [
    {
     "type": "numeric",
     "id": "m1",
@@ -88,6 +90,84 @@
     "answer": 0,
     "hint": "Try it with real objects: can you take 6 away from 2?",
     "explain": "6 − 2 = 4, but 2 − 6 is not 4: taking 6 from 2 goes below zero (to −4, which you'll meet later). Order matters in subtraction."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "What is {a} − {b}?",
+    "answer": "a-b",
+    "hint": "Count back {b} from {a}.",
+    "explain": "{a} − {b} = {=a-b}.",
+    "params": {
+     "a": [
+      6,
+      15
+     ],
+     "b": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{a} birds sit on a fence. {b} fly away. How many are left?",
+    "answer": "a-b",
+    "hint": "Take away the birds that flew off.",
+    "explain": "{a} − {b} = {=a-b} birds.",
+    "params": {
+     "a": [
+      5,
+      12
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which addition fact helps you work out {=a+b} − {a}?",
+    "choices": [
+     "{a} + {b} = {=a+b}",
+     "{=a+b} + {a} = {=2*a+b}",
+     "{a} + {a} = {=2*a}"
+    ],
+    "answer": 0,
+    "hint": "Look for a fact where {=a+b} is the total.",
+    "explain": "{a} + {b} = {=a+b}, so {=a+b} − {a} = {b}.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    },
+    "where": "a!=b"
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "□ + {a} = {=a+b}. What number goes in the box?",
+    "answer": "b",
+    "hint": "What do you add to {a} to make {=a+b}?",
+    "explain": "{b} + {a} = {=a+b}, so the box is {b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
    }
   ]
  },
