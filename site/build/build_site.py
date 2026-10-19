@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Build the draft site.
-  site/index.html            (uses assets/*.css|js and fetches data/demo.json)
+"""Build the Why Next? site.
+  index.html (repo root)     the GitHub Pages homepage; loads site/assets/* and fetches site/data/demo.json
+  site/index.html            same page served from site/ (uses assets/*.css|js and fetches data/demo.json)
   /workspace/why-next-site.html (single self-contained file: CSS, JS and data inlined)
-Run: python3 site/build/build_site.py"""
+Run: python3 site/build/build_site.py  [--noindex to add a robots noindex meta]"""
 import json, os, re, html, subprocess, sys
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(SITE)
@@ -79,15 +80,19 @@ import base64
 font_b64 = base64.b64encode(open(os.path.join(SITE, 'assets/fonts/fraunces-latin-wght.woff2'), 'rb').read()).decode()
 ROBOTS = '<meta name="robots" content="noindex">' if '--noindex' in sys.argv else ''
 js_app = open(os.path.join(SITE, 'assets/app.js'), encoding='utf-8').read()
-multi = (out.replace('<!--ROBOTS-->', ROBOTS)
-            .replace('<!--CSS-->', '<link rel="preload" href="assets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="assets/styles.css">')
+def multi(base, viewer):
+    attr = ' data-viewer="%s"' % viewer + (' data-base="%s"' % base if base else '')
+    return (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--HTMLATTR-->', attr).replace('%%VIEWER%%', viewer)
+            .replace('<!--CSS-->', '<link rel="preload" href="%sassets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="%sassets/styles.css">' % (base, base))
             .replace('<!--DATA-->', '')
-            .replace('<!--JS-->', '<script src="assets/soften.js" defer></script>\n<script src="assets/infer.js" defer></script>\n<script src="assets/app.js" defer></script>'))
-open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8').write(multi)
+            .replace('<!--JS-->', ''.join('<script src="%sassets/%s.js" defer></script>\n' % (base, n) for n in ('soften', 'infer', 'app')).rstrip()))
+open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8').write(multi('', '../out/viewer.html'))
+# Repo root index.html: the GitHub Pages homepage (https://pandeyaby.github.io/why-next/), assets served from site/
+open(os.path.join(SITE, '..', 'index.html'), 'w', encoding='utf-8').write(multi('site/', 'out/viewer.html'))
 safe_json = demo_raw.replace('</', '<\\/')
-single = (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--CSS-->', '<style>\n' + css.replace('url("fonts/fraunces-latin-wght.woff2")', 'url(data:font/woff2;base64,' + font_b64 + ')') + '\n</style>')
+single = (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--HTMLATTR-->', '').replace('%%VIEWER%%', 'https://pandeyaby.github.io/why-next/out/viewer.html').replace('<!--CSS-->', '<style>\n' + css.replace('url("fonts/fraunces-latin-wght.woff2")', 'url(data:font/woff2;base64,' + font_b64 + ')') + '\n</style>')
              .replace('<!--DATA-->', '<script type="application/json" id="whynext-data">' + safe_json + '</script>')
              .replace('<!--JS-->', '<script>\n' + js_soft + '\n</script>\n<script>\n' + js_inf + '\n</script>\n<script>\n' + js_app + '\n</script>'))
 dest = '/workspace/why-next-site.html'
 open(dest, 'w', encoding='utf-8').write(single)
-print('site/index.html', os.path.getsize(os.path.join(SITE, 'index.html')), 'bytes;', dest, os.path.getsize(dest), 'bytes')
+print('index.html', os.path.getsize(os.path.join(SITE, '..', 'index.html')), 'bytes; site/index.html', os.path.getsize(os.path.join(SITE, 'index.html')), 'bytes;', dest, os.path.getsize(dest), 'bytes')

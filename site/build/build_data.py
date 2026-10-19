@@ -82,7 +82,7 @@ for A in AREAS:
     for a, b in zip(pids, pids[1:]):
         assert a in clos(b, pre), f"{A['id']}: probe chain broken {T[a]['name']} -> {T[b]['name']}"
     topics = {}
-    for i in sorted(S, key=lambda i: (T[i]['ageRangeStart'], T[i]['name'])):
+    for i in sorted(S, key=lambda i: (T[i]['ageRangeStart'], T[i]['name'], i)):
         t = T[i]
         topics[node(i)] = {
             'desc': t['description'],
@@ -94,7 +94,7 @@ for A in AREAS:
         }
     probes = []
     for p in pids:
-        probes.append({'t': node(p), 'q': T[p]['assessmentPrompt'], 'anc': sorted(node(x) for x in clos(p, pre))})
+        probes.append({'t': node(p), 'q': T[p]['assessmentPrompt'], 'anc': sorted(node(x) for x in sorted(clos(p, pre)))})
     areas_out.append({'id': A['id'], 'label': A['label'], 'icon': A['icon'],
                       'domains': [d for _, d in A['doms']], 'count': len(S),
                       'ages': [min(T[i]['ageRangeStart'] for i in S), max(T[i]['ageRangeEnd'] for i in S)],
@@ -106,17 +106,17 @@ clusters_out = [{'d': C[inv[j]]['domain'], 'a': C[inv[j]]['ageRangeStart'], 's':
 # ---------- stats (all computed) ----------
 order = []  # topological order for longest chain
 indeg = {i: len(set(pre[i])) for i in T}
-q = [i for i in T if indeg[i] == 0]
+q = sorted(i for i in T if indeg[i] == 0)
 while q:
     x = q.pop(); order.append(x)
-    for y in post[x]:
+    for y in sorted(post[x]):
         indeg[y] -= 1
         if indeg[y] == 0: q.append(y)
 assert len(order) == len(T), 'graph must be acyclic'
 best = {}; prev = {}
 for x in order:
     best[x] = 1; prev[x] = None
-    for p in set(pre[x]):
+    for p in sorted(set(pre[x])):
         if best[p] + 1 > best[x]: best[x] = best[p] + 1; prev[x] = p
 end = max(best, key=lambda k: best[k]); chain = []
 while end: chain.append(T[end]['name']); end = prev[end]

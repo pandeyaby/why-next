@@ -1,8 +1,10 @@
-# Why Next? marketing site (DRAFT)
+# Why Next? website
 
-A static, dependency-free draft of the Why Next? marketing page. It is not deployed anywhere.
+A static, dependency-free website for Why Next?, live at https://pandeyaby.github.io/why-next/ through GitHub Pages on `main`, served from the repo root.
 
-- `index.html`: the built page. It loads:
+- `../index.html` (repo root): the homepage. It is built from the same template, loads `site/assets/*`, fetches `site/data/demo.json`, and links to `out/viewer.html`.
+
+- `index.html`: the same page served from `/site/`. It loads:
   - `assets/styles.css`
   - `assets/soften.js`
   - `assets/infer.js`
@@ -11,7 +13,7 @@ A static, dependency-free draft of the Why Next? marketing page. It is not deplo
   - `data/demo.json`, lazy-loaded when the reader nears the demo
 - `src/index.html`: the template. Numbers and examples are filled in from the data at build time.
 - `build/build_data.py`: builds `data/demo.json` and `data/stats.json` from `../out/merged/data`. Every topic, reason, prompt, summary and number comes from the dataset.
-- `build/build_site.py`: writes `index.html` and a single self-contained file to `/workspace/why-next-site.html`, with CSS, JS, font and data all inlined. Add `--noindex` to emit `<meta name="robots" content="noindex">`.
+- `build/build_site.py`: writes the root `index.html`, `site/index.html` and a single self-contained file to `/workspace/why-next-site.html`, with CSS, JS, font and data all inlined. Add `--noindex` to emit `<meta name="robots" content="noindex">`.
 - `build/test_infer.cjs`: runs the demo for every answer combination (6 subjects × 27). It checks that there is always something up next, and that the age caps hold: up next is within about 1 year of the inferred level, coming up within about 2.
 
 How the demo works:
@@ -27,4 +29,4 @@ node site/build/test_infer.cjs          # or: node site/build/test_infer.cjs alg
 cd site && python3 -m http.server 8000  # then open http://localhost:8000
 ```
 
-There are no external requests, cookies or trackers. The page works from any static host, for example GitHub Pages under `/site`, or Vercel.
+There are no external requests, cookies or trackers. All paths are relative, so the page works under the `/why-next/` base path or on any static host. `build_data.py` is deterministic: rebuilding from the same data gives byte-identical JSON.

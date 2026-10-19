@@ -1,8 +1,10 @@
-/* Why Next? draft site: navigation, reveal motion, demo and kitchen-table ideas.
+/* Why Next? site: navigation, reveal motion, demo and kitchen-table ideas.
    No network calls except loading data/demo.json from this site. */
 (function () {
   'use strict';
-  var VIEWER = 'https://pandeyaby.github.io/why-next/out/viewer.html';
+  var ROOT = document.documentElement;
+  var VIEWER = ROOT.getAttribute('data-viewer') || 'https://pandeyaby.github.io/why-next/out/viewer.html';
+  var BASE = ROOT.getAttribute('data-base') || '';
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
@@ -214,7 +216,7 @@
   else {
     var loaded = false, load = function () {
       if (loaded) return; loaded = true;
-      fetch('data/demo.json').then(function (r) { return r.json(); }).then(start).catch(function () {
+      fetch(BASE + 'data/demo.json').then(function (r) { return r.json(); }).then(start).catch(function () {
         $('#areas').innerHTML = '<p class="note">The demo data couldn’t be loaded. You can still <a href="' + VIEWER + '">explore the full map</a>.</p>';
       });
     };

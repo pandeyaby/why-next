@@ -8,9 +8,12 @@ Why Next? breaks secondary-school maths and science into 826 small, concrete top
 
 Status: draft (`whynext-0.6`). Topics, age bands and links were written and self-reviewed but have not yet been checked by a teacher or subject expert. See [`out/REVIEW.md`](out/REVIEW.md).
 
+**Website:** https://pandeyaby.github.io/why-next/ has a one-minute demo and kitchen-table ideas. The full map is at https://pandeyaby.github.io/why-next/out/viewer.html.
+
 ## What's here
 | Path | What it is |
 |---|---|
+| `index.html`, [`site/`](site/README.md) | The website (GitHub Pages homepage). It is built from `site/src` and the merged data by `site/build/build_site.py` |
 | [`out/viewer.html`](out/viewer.html) | Single-file interactive viewer. It works offline, so just open it in a browser |
 | [`out/README.md`](out/README.md) | Full documentation: scope, method, standards policy, validation, example chains, known gaps |
 | [`out/REVIEW.md`](out/REVIEW.md) | Review log, with every finding and fix |
