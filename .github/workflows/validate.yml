@@ -1,0 +1,32 @@
+name: validate
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: pip install jsonschema
+      - name: Upstream validator
+        run: node scripts/validate.mjs
+      - name: Merged validator
+        run: node scripts/validate.mjs
+        working-directory: out/merged
+      - name: Schema check
+        run: python3 ext/check_schema.py
+      - name: Demo test (162 answer combinations)
+        run: node site/build/test_infer.cjs
+      - name: Deterministic build check
+        env:
+          WHYNEXT_SINGLE_FILE: ${{ runner.temp }}/why-next-site.html
+        run: sh scripts/check_deterministic.sh

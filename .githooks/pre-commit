@@ -1,0 +1,63 @@
+#!/bin/sh
+# Why Next? pre-commit hook: block oversized source files.
+# Enable once per clone:  git config core.hooksPath .githooks
+#
+# A source file over MAX_BYTES (default 20000 bytes, roughly 5,000 tokens) is hard
+# for people and coding agents to read in one go. Data JSON, generated output, the
+# bundled single-file HTML and binaries are exempt. Files already over the limit
+# when this hook was added are listed in .githooks/size-allowlist: they may be
+# committed as long as they do not grow.
+MAX_BYTES=${WHYNEXT_MAX_BYTES:-20000}
+ROOT=$(git rev-parse --show-toplevel)
+ALLOW="$ROOT/.githooks/size-allowlist"
+fail=0
+
+is_exempt() {
+  case "$1" in
+    *.json|*.woff2|*.png|*.jpg|*.gif|*.mp4|*.pdf) return 0 ;;   # data and binaries
+    index.html|site/index.html|out/viewer.html|why-next-site.html|*/why-next-site.html) return 0 ;;  # generated
+    LICENSE|LICENSE-*|*.txt|*.cff) return 0 ;;                  # legal text
+  esac
+  return 1
+}
+is_source() {
+  case "$1" in
+    *.py|*.js|*.cjs|*.mjs|*.ts|*.css|*.html|*.sh|*.yml|*.yaml|*.md|.githooks/*) return 0 ;;
+  esac
+  return 1
+}
+
+for f in $(git diff --cached --name-only --diff-filter=ACMR); do
+  is_exempt "$f" && continue
+  is_source "$f" || continue
+  size=$(git cat-file -s ":$f" 2>/dev/null) || continue
+  [ "$size" -le "$MAX_BYTES" ] && continue
+  if [ -f "$ALLOW" ] && grep -v "^#" "$ALLOW" | grep -qxF "$f"; then
+    old=$(git cat-file -s "HEAD:$f" 2>/dev/null || echo 0)
+    [ "$size" -le "$old" ] && continue
+    echo "pre-commit: $f is on the size allowlist but grew from $old to $size bytes." >&2
+  else
+    echo "pre-commit: $f is $size bytes (about $((size / 4)) tokens); the limit is $MAX_BYTES bytes (~$((MAX_BYTES / 4)) tokens)." >&2
+  fi
+  fail=1
+done
+
+if [ "$fail" -ne 0 ]; then
+  cat >&2 <<'MSG'
+
+How to split it:
+  - ext/src_*.py topic sources: move a coherent group of topics (one strand or age
+    band) into a new ext/src_<area>_<part>.py and register it alongside the others
+    in ext/build.py.
+  - JS/CSS: move one concern (e.g. demo rendering, menu, kitchen ideas; or one
+    section's styles) into its own file under site/assets/ and load it from
+    site/src/index.html and site/build/build_site.py.
+  - HTML templates: move large inline SVG or sections into partials that
+    build_site.py stitches in.
+  - Docs: split by topic and link the parts from the main page.
+Then rebuild (python3 site/build/build_site.py) and run the checks.
+Emergency override (avoid): git commit --no-verify
+MSG
+  exit 1
+fi
+exit 0

@@ -93,6 +93,6 @@ safe_json = demo_raw.replace('</', '<\\/')
 single = (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--HTMLATTR-->', '').replace('%%VIEWER%%', 'https://pandeyaby.github.io/why-next/out/viewer.html').replace('<!--CSS-->', '<style>\n' + css.replace('url("fonts/fraunces-latin-wght.woff2")', 'url(data:font/woff2;base64,' + font_b64 + ')') + '\n</style>')
              .replace('<!--DATA-->', '<script type="application/json" id="whynext-data">' + safe_json + '</script>')
              .replace('<!--JS-->', '<script>\n' + js_soft + '\n</script>\n<script>\n' + js_inf + '\n</script>\n<script>\n' + js_app + '\n</script>'))
-dest = '/workspace/why-next-site.html'
+dest = os.environ.get('WHYNEXT_SINGLE_FILE', '/workspace/why-next-site.html')  # CI points this at a temp dir
 open(dest, 'w', encoding='utf-8').write(single)
 print('index.html', os.path.getsize(os.path.join(SITE, '..', 'index.html')), 'bytes; site/index.html', os.path.getsize(os.path.join(SITE, 'index.html')), 'bytes;', dest, os.path.getsize(dest), 'bytes')

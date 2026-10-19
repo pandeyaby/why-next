@@ -24,6 +24,11 @@ Status: draft (`whynext-0.6`). Topics, age bands and links were written and self
 | `ext/` | Sources: topic definitions (`src_*.py`), the build script and the viewer generator |
 | [`UPSTREAM_README.md`](UPSTREAM_README.md), [`UPSTREAM_CITATION.cff`](UPSTREAM_CITATION.cff) | The original upstream README and citation, kept for reference |
 
+## Contributing checks
+- **One-time setup per clone:** `git config core.hooksPath .githooks`. This turns on the pre-commit hook, which blocks staged source files over about 20 KB (roughly 5,000 tokens). Data JSON, generated pages, the single-file HTML and binaries are exempt. Files that were already larger are listed in `.githooks/size-allowlist` and may not grow. The hook's error message explains how to split a file.
+- **Run everything CI runs:** `sh scripts/check_all.sh`. This runs both validators, the schema check (needs `pip install jsonschema`), the 162-combination demo test and the deterministic-build check. CI runs the same steps on every push and pull request (`.github/workflows/validate.yml`).
+- **Weekly tidy-up:** see [`JANITOR.md`](JANITOR.md). It only ever opens a PR and never merges.
+
 ## Open the viewer
 Download or clone the repo and open `out/viewer.html` in any modern browser. Choose a topic on the left to see its prerequisite chain with the reason for each link, the cluster summary for its subject and age, and the topics it unlocks.
 
