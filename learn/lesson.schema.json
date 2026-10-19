@@ -1,0 +1,47 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Why Next? lesson",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["topicId", "title", "keyIdea", "explain", "practice", "mastery", "status"],
+ "properties": {
+  "topicId": {"type": "string", "pattern": "^[a-z]{2}_[A-Za-z0-9_-]{10}$"},
+  "title": {"type": "string", "minLength": 3},
+  "keyIdea": {"type": "string", "minLength": 10},
+  "status": {"enum": ["self-checked", "expert-reviewed"]},
+  "familyTip": {"type": "string", "minLength": 10},
+  "explain": {
+   "type": "object", "additionalProperties": false, "required": ["kid", "adult"],
+   "properties": {
+    "kid": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "string", "minLength": 20}},
+    "adult": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"type": "string", "minLength": 20}}
+   }
+  },
+  "practice": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"$ref": "#/definitions/item"}},
+  "mastery": {
+   "type": "object", "additionalProperties": false, "required": ["passMark", "items"],
+   "properties": {
+    "passMark": {"type": "integer", "minimum": 1},
+    "items": {"type": "array", "minItems": 2, "maxItems": 5, "items": {"$ref": "#/definitions/item"}}
+   }
+  }
+ },
+ "definitions": {
+  "text": {"type": "string", "minLength": 2},
+  "item": {
+   "type": "object",
+   "required": ["type", "id", "prompt", "hint", "explain"],
+   "properties": {"id": {"type": "string", "pattern": "^[pm][0-9]+$"}, "prompt": {"$ref": "#/definitions/text"},
+                  "hint": {"$ref": "#/definitions/text"}, "explain": {"$ref": "#/definitions/text"}},
+   "oneOf": [
+    {"additionalProperties": false, "properties": {"type": {"const": "mc"}, "id": {}, "prompt": {}, "hint": {}, "explain": {},
+      "choices": {"type": "array", "minItems": 2, "maxItems": 5, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+      "answer": {"type": "integer", "minimum": 0}}, "required": ["choices", "answer"]},
+    {"additionalProperties": false, "properties": {"type": {"const": "numeric"}, "id": {}, "prompt": {}, "hint": {}, "explain": {},
+      "answer": {"type": "number"}, "tolerance": {"type": "number", "minimum": 0}}, "required": ["answer"]},
+    {"additionalProperties": false, "properties": {"type": {"const": "order"}, "id": {}, "prompt": {}, "hint": {}, "explain": {},
+      "items": {"type": "array", "minItems": 3, "maxItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}}, "required": ["items"]}
+   ]
+  }
+ }
+}

@@ -24,6 +24,8 @@ jobs:
         working-directory: out/merged
       - name: Schema check
         run: python3 ext/check_schema.py
+      - name: Lessons validator (schema, content checks, viewer bundle)
+        run: python3 learn/validate_lessons.py
       - name: Demo test (162 answer combinations)
         run: node site/build/test_infer.cjs
       - name: Deterministic build check
