@@ -9,6 +9,7 @@
    "When you multiply by 10, every digit moves one place to the left. When you divide by 10, every digit moves one place to the right. The decimal point stays still. A zero holds an empty place."
   ],
   "adult": [
+   "Apples cost £0.35 each, so a crate of 10 costs £3.50 and a pallet of 100 costs £35. Multiplying by 10 moves every digit one place left; the decimal point does not move.",
    "× 10 shifts each digit one column left: 4.7 × 10 = 47 and 4.7 × 100 = 470, with a zero as a placeholder. ÷ 10 shifts right: 47 ÷ 10 = 4.7 and 3 ÷ 100 = 0.03.",
    "'Add a zero' fails for decimals: 4.7 × 10 is not 4.70. 'The digits move and the point stays' always works."
   ]
@@ -170,6 +171,20 @@
     "answer": 0,
     "hint": "Next place to the left.",
     "explain": "Each place is worth 10 times the one to its right."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam says 4.7 × 10 = 4.70 because “× 10 adds a zero”. What is the right answer?",
+    "choices": [
+     "47",
+     "4.70",
+     "4.07",
+     "470"
+    ],
+    "answer": 0,
+    "hint": "Does 4.70 have a different value from 4.7?",
+    "explain": "4.70 is the same number as 4.7. × 10 moves each digit one place left: 47."
    }
   ]
  },
@@ -179,6 +194,13 @@
   "caption": "Press × 10 or ÷ 10 and watch the digits slide. The decimal point stays put.",
   "opts": {
    "n": 4.7
+  }
+ },
+ "lab": {
+  "type": "flagplace",
+  "caption": "Flagship lab: the apple stall. Watch the digits glide between columns while the decimal point stays put.",
+  "opts": {
+   "step": 0
   }
  }
 }
