@@ -1,0 +1,231 @@
+{
+ "topicId": "mt_hdlI0Sacpa",
+ "title": "Scalars and vectors",
+ "audience": "learner",
+ "keyIdea": "A scalar has only a size; a vector has a size and a direction.",
+ "explain": {
+  "kid": [
+   "Some amounts just have a size, like 5 kg or 20 seconds. These are scalars.",
+   "Others need a direction too, like 5 m north or a push to the left. These are vectors. We draw them as arrows."
+  ],
+  "adult": [
+   "Scalars: distance, speed, mass, time, energy, temperature. Vectors: displacement, velocity, force, acceleration, momentum.",
+   "A vector arrow's length shows its size and its direction shows the way. Run one lap of a 400 m track: the distance is 400 m, but the displacement is 0, because you end at the start."
+  ]
+ },
+ "familyTip": "Name things around you and decide together: would a direction help describe it?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is a vector?",
+   "choices": [
+    "Velocity",
+    "Speed",
+    "Mass"
+   ],
+   "answer": 0,
+   "hint": "Needs a direction.",
+   "explain": "Velocity has a direction."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which is a scalar?",
+   "choices": [
+    "Temperature",
+    "Force",
+    "Displacement"
+   ],
+   "answer": 0,
+   "hint": "No direction.",
+   "explain": "Temperature has no direction."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Two forces push right: {a} N and {b} N. What is the total, in N?",
+   "answer": "a+b",
+   "hint": "Same direction: add.",
+   "explain": "{a} + {b} = {=a+b} N.",
+   "params": {
+    "a": [
+     2,
+     20
+    ],
+    "b": [
+     2,
+     20
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{a} N right and {b} N left. What is the resultant to the right, in N?",
+   "answer": "a-b",
+   "hint": "Opposite: subtract.",
+   "explain": "{a} − {b} = {=a-b} N right.",
+   "params": {
+    "a": [
+     12,
+     30
+    ],
+    "b": [
+     1,
+     11
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Run one lap of a 400 m track. Displacement is…",
+    "choices": [
+     "0 m",
+     "400 m",
+     "200 m"
+    ],
+    "answer": 0,
+    "hint": "End = start.",
+    "explain": "You end at the start: 0 m."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which pair is (scalar, vector)?",
+    "choices": [
+     "(speed, velocity)",
+     "(force, mass)",
+     "(velocity, distance)"
+    ],
+    "answer": 0,
+    "hint": "Speed has no direction.",
+    "explain": "Speed is scalar, velocity is vector."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Acceleration is…",
+    "choices": [
+     "a vector",
+     "a scalar"
+    ],
+    "answer": 0,
+    "hint": "Change in velocity.",
+    "explain": "It has a direction, so it is a vector."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{a} m north then {b} m south. Displacement north, in m?",
+    "answer": "a-b",
+    "hint": "Opposite directions.",
+    "explain": "{a} − {b} = {=a-b} m.",
+    "params": {
+     "a": [
+      20,
+      50
+     ],
+     "b": [
+      1,
+      19
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{a} m north then {b} m south. Distance, in m?",
+    "answer": "a+b",
+    "hint": "Scalar: add.",
+    "explain": "{a} + {b} = {=a+b} m.",
+    "params": {
+     "a": [
+      20,
+      50
+     ],
+     "b": [
+      1,
+      19
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A vector arrow's length shows…",
+    "choices": [
+     "its size",
+     "its direction",
+     "its time"
+    ],
+    "answer": 0,
+    "hint": "Longer is bigger.",
+    "explain": "Length shows size; direction shows the way."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Energy is…",
+    "choices": [
+     "a scalar",
+     "a vector"
+    ],
+    "answer": 0,
+    "hint": "Does it point anywhere?",
+    "explain": "Energy has no direction."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Sort each quantity: does it need a direction?",
+  "opts": {
+   "bins": [
+    "Scalar (size only)",
+    "Vector (size and direction)"
+   ],
+   "items": [
+    [
+     "Speed",
+     0
+    ],
+    [
+     "Mass",
+     0
+    ],
+    [
+     "Energy",
+     0
+    ],
+    [
+     "Time",
+     0
+    ],
+    [
+     "Velocity",
+     1
+    ],
+    [
+     "Force",
+     1
+    ],
+    [
+     "Displacement",
+     1
+    ],
+    [
+     "Acceleration",
+     1
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "topicId": "mt_mq4eGlJDk9",
+ "title": "Zero and negative exponents",
+ "audience": "learner",
+ "keyIdea": "Each step down in the power divides by the base, so a⁰ = 1 and a⁻ⁿ = 1/aⁿ.",
+ "explain": {
+  "kid": [
+   "Look at 2³ = 8, 2² = 4, 2¹ = 2. Each time the power goes down by 1, we halve.",
+   "Halve once more: 2⁰ = 1. Then 2⁻¹ = 1/2 and 2⁻² = 1/4. A minus power means a fraction."
+  ],
+  "adult": [
+   "Going down the pattern divides by the base each time, so a⁰ = 1 for any a that is not 0. The laws agree: a³ ÷ a³ = a⁰, and it also equals 1.",
+   "Continue the pattern: a⁻ⁿ = 1/aⁿ. So 10⁻² = 1/100 = 0.01 and 2⁻³ = 1/8. A negative power is small but still positive."
+  ]
+ },
+ "familyTip": "Write the powers of 10 down a page, from 1000 to 0.001. Label each with its power.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "5⁰ = ?",
+   "choices": [
+    "1",
+    "0",
+    "5"
+   ],
+   "answer": 0,
+   "hint": "Follow the pattern.",
+   "explain": "Any non-zero number to the power 0 is 1."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "2^-{n} = 1/? (give the denominator)",
+   "answer": "2**n",
+   "hint": "2⁻ⁿ = 1/2ⁿ.",
+   "explain": "2^{n} = {=2**n}, so the answer is 1/{=2**n}.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "10^-{n} as a decimal: how many places after the point is the 1?",
+   "answer": "n",
+   "hint": "10⁻¹ = 0.1.",
+   "explain": "10⁻{n} has the 1 in place {n}.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Is 3⁻² negative?",
+   "choices": [
+    "No, it is 1/9",
+    "Yes, it is −9",
+    "Yes, it is −6"
+   ],
+   "answer": 0,
+   "hint": "Negative power, not negative number.",
+   "explain": "3⁻² = 1/9, a small positive number."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "{b}^-1 = 1/? (give the denominator)",
+    "answer": "b",
+    "hint": "Flip it.",
+    "explain": "{b}⁻¹ = 1/{b}.",
+    "params": {
+     "b": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "4^-{n} = 1/? (give the denominator)",
+    "answer": "4**n",
+    "hint": "4ⁿ underneath.",
+    "explain": "4^{n} = {=4**n}.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "10⁻² = ?",
+    "choices": [
+     "0.01",
+     "−100",
+     "0.2"
+    ],
+    "answer": 0,
+    "hint": "1/10².",
+    "explain": "1/100 = 0.01."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why is a⁰ = 1?",
+    "choices": [
+     "a³ ÷ a³ is a⁰ and also 1",
+     "Zero times anything is 0",
+     "It is just a rule with no reason"
+    ],
+    "answer": 0,
+    "hint": "Use the divide law.",
+    "explain": "a³ ÷ a³ = a³⁻³ = a⁰, and any number ÷ itself = 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "x^{a} × x^-{b} = x^? What is the power?",
+    "answer": "a-b",
+    "hint": "Add the powers.",
+    "explain": "{a} + (−{b}) = {=a-b}.",
+    "params": {
+     "a": [
+      5,
+      9
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "What is 2^-{n} × 2^{n}?",
+    "answer": "1",
+    "hint": "Powers add to 0.",
+    "explain": "−{n} + {n} = 0, and 2⁰ = 1.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is the largest?",
+    "choices": [
+     "2⁰",
+     "2⁻¹",
+     "2⁻³"
+    ],
+    "answer": 0,
+    "hint": "1, 1/2, 1/8.",
+    "explain": "2⁰ = 1 is the largest."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "expo",
+  "caption": "Step down the ladder. Each step divides by 2 and lowers the power by 1.",
+  "opts": {
+   "mode": "ladder",
+   "base": 2,
+   "n": 3
+  }
+ }
+}

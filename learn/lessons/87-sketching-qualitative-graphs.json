@@ -1,0 +1,221 @@
+{
+ "topicId": "mt_Sa5JjOvfhX",
+ "title": "Sketching and describing qualitative graphs",
+ "audience": "learner",
+ "keyIdea": "A graph without numbers can still tell a story: rising, falling, flat, steeper or levelling off.",
+ "explain": {
+  "kid": [
+   "You can draw a graph from a story, even with no numbers. 'I ran to the bus stop' is a steep line going up.",
+   "'I waited' is a flat line. 'The bus took me home fast' is a steep line going back down."
+  ],
+  "adult": [
+   "Match each part of a story to a shape. Steady change is a straight line. Faster change is steeper. No change is flat. Change that slows down is a curve that levels off.",
+   "When you describe a graph, use words like increasing, decreasing, constant, steeper and levelling off. Always say what the axes stand for."
+  ]
+ },
+ "familyTip": "Tell a short story about a trip, then each person sketches it. Compare the sketches.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A flat line on a distance–time graph means…",
+   "choices": [
+    "not moving",
+    "moving fast",
+    "coming back"
+   ],
+   "answer": 0,
+   "hint": "Distance doesn't change.",
+   "explain": "No change in distance: standing still."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Walk for {a} min, then wait for {b} min. For how many minutes is the graph flat?",
+   "answer": "b",
+   "hint": "Flat means waiting.",
+   "explain": "The flat part lasts {b} min.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Walk {a} km in {t} min, then rest. How far from home is the flat part, in km?",
+   "answer": "a",
+   "hint": "Flat means no change.",
+   "explain": "It stays at {a} km.",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "t": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A hot drink cooling quickly, then more slowly. The temperature graph…",
+   "choices": [
+    "falls steeply, then levels off",
+    "is a straight line down",
+    "rises"
+   ],
+   "answer": 0,
+   "hint": "Cooling slows down.",
+   "explain": "Steep fall, then levelling off."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Running to the bus stop, then waiting, looks like…",
+    "choices": [
+     "steep up, then flat",
+     "flat, then steep",
+     "a straight line down"
+    ],
+    "answer": 0,
+    "hint": "Distance from home.",
+    "explain": "Distance rises fast, then stays the same."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A line sloping back down to zero distance from home means…",
+    "choices": [
+     "going back home",
+     "slowing down",
+     "waiting"
+    ],
+    "answer": 0,
+    "hint": "Distance shrinks.",
+    "explain": "Getting closer to home."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Filling a bath, the water depth graph rises then is flat. The flat part means…",
+    "choices": [
+     "the tap is off",
+     "the bath is draining",
+     "the tap is fast"
+    ],
+    "answer": 0,
+    "hint": "No change.",
+    "explain": "Depth stays the same, so the tap is off."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A plant's height rises fast, then levels off. Describe it.",
+    "choices": [
+     "Increasing, then levelling off",
+     "Decreasing",
+     "Constant"
+    ],
+    "answer": 0,
+    "hint": "Growth slows.",
+    "explain": "It grows quickly at first, then hardly at all."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Walk {a} min, wait {b} min, walk {c} min. How many minutes long is the graph?",
+    "answer": "a+b+c",
+    "hint": "Add all the times.",
+    "explain": "{a} + {b} + {c} = {=a+b+c} min.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      5
+     ],
+     "c": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Walk {a} km at a steady pace in {t} min. What is the gradient, in km per min?",
+    "answer": "a/t",
+    "hint": "Rise ÷ run.",
+    "explain": "{a} ÷ {t} = {=a/t} km/min.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "t": [
+      10,
+      20
+     ]
+    },
+    "where": "(a*100)%t==0"
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which story matches 'rises steadily, flat, then rises more gently'?",
+    "choices": [
+     "Walk, rest, walk more slowly",
+     "Run, rest, run faster",
+     "Walk home and stop"
+    ],
+    "answer": 0,
+    "hint": "Gentler means slower.",
+    "explain": "Second walking part is less steep, so slower."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "journey",
+  "caption": "Run to the bus stop, wait, then ride the bus. Play the story and watch each part of the graph.",
+  "opts": {
+   "pts": [
+    [
+     0,
+     0
+    ],
+    [
+     5,
+     0.6
+    ],
+    [
+     12,
+     0.6
+    ],
+    [
+     20,
+     4
+    ]
+   ],
+   "tu": "min",
+   "du": "km",
+   "step": 1
+  }
+ }
+}

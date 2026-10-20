@@ -7,4 +7,5 @@ echo "== merged validator";    (cd out/merged && node scripts/validate.mjs)
 echo "== schema check";        python3 ext/check_schema.py
 echo "== demo 162-combo test"; node site/build/test_infer.cjs
 echo "== lessons validator"; python3 learn/validate_lessons.py
+echo "== goal-path coverage"; python3 learn/goal_coverage.py
 echo "== deterministic build"; sh scripts/check_deterministic.sh

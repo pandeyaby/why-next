@@ -172,3 +172,19 @@ and the sorter lessons (61, 63) are closer to an interactive quiz than a model.
 
 **Remaining gaps.** The integration goal path for 16–18 still has 13 topics without lessons (polynomial algebra,
 exponent laws, functions, kinematics prerequisites). Lessons are self-checked, not expert-reviewed.
+
+## Round 7: integration path complete (visual-draft)
+
+The 16–18 "Calculus: integration and area" goal path now has a lesson for every topic a 16–18 learner still has to
+learn: 30 of 30. `learn/goal_coverage.py` mirrors the app's goal-path logic (hard prerequisites back from the
+target, minus topics assumed known for the band or skipped). It runs in `check_all.sh` and fails if any required
+goal/band pair has a lessonless topic. New lessons 76–88: polynomial vocabulary, laws of exponents, zero and
+negative exponents, fractional exponents and radicals, solving x² = p and x³ = p, what makes a function,
+multiplying polynomials, adding and subtracting polynomials, acceleration, displacement and velocity in a line, key
+features of graphs, sketching qualitative graphs, scalars and vectors. New visual types (31 in all): `expo`
+(exponent laws as factor tiles, the ÷ base ladder to negative powers, roots as equal factors), `roots` (level line
+on y = x² / x³: two, one or no solutions) and `grid` (polynomial multiplication area grid that collects like terms).
+
+Fit: the exponent, roots and grid visuals model the idea directly. Weaker: functions, polynomial vocabulary,
+like terms and scalars/vectors use the card sorter (classification practice, not a model; a draggable vertical-line
+test would fit functions better). Lessons 05, 46, 47, 49, 61, 63 unchanged this round.

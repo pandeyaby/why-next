@@ -17,6 +17,8 @@ OPTS = {
     "sorter": {"bins": L, "items": L}, "phscale": {"ph": I}, "energy": {"dh": I, "ea": I, "reactants": S, "products": S},
     "placevalue": {"n": N}, "percent": {"p": I, "of": N, "mode": S}, "coords": {"max": I, "x": I, "y": I, "target": L}, "wholes": {"a": I, "b": I}, "thermo": {"min": I, "max": I, "t": N, "step": N, "from": N},
     "journey": {"pts": L, "tu": S, "du": S, "start": N, "step": N},
+    "expo": {"mode": S, "base": I, "n": I, "m": I, "k": I, "a": I, "op": S}, "roots": {"k": I, "p": I, "xr": L, "yr": L},
+    "grid": {"a": L, "b": L},
     "formula": {"name": S, "expr": S, "vars": dict, "pic": S, "what": S, "unit": S},
 }
 SAFE_F = re.compile(r"^[x0-9+\-*/(). ]+$")
@@ -106,6 +108,10 @@ def check(v):
                 for pick in (0, 1, 2):
                     env = {k: r[pick] for k, r in V.items()}
                     eval(re.sub(r"[a-z]", lambda m: str(env[m.group()]), e).replace("−", "-").replace("×", "*").replace("÷", "/"), {"__builtins__": {}})
+        if t == "expo" and o.get("mode", "laws") not in ("laws", "ladder", "root"): errs.append("expo: unknown mode")
+        if t == "expo" and o.get("op", "mul") not in ("mul", "div", "pow"): errs.append("expo: op is mul, div or pow")
+        if t == "roots" and o.get("k", 2) not in (2, 3): errs.append("roots: k is 2 or 3")
+        if t == "grid" and not all(isinstance(x, int) for x in o["a"] + o["b"]): errs.append("grid: coefficients are whole numbers")
     except Exception as ex:  # noqa: BLE001
         errs.append(f"{t}: {ex}")
     return errs

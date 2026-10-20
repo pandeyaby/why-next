@@ -1,0 +1,237 @@
+{
+ "topicId": "mt_3AuVh--Vla",
+ "title": "Displacement and velocity in a line",
+ "audience": "learner",
+ "keyIdea": "Displacement is how far you end up from the start in a chosen direction; average velocity is displacement ÷ time.",
+ "explain": {
+  "kid": [
+   "Pick a direction to be positive, like east. Walking east is plus, walking west is minus.",
+   "Walk 30 m east, then 10 m west. You walked 40 m in all. But you are only 20 m east of the start. That 20 m is your displacement."
+  ],
+  "adult": [
+   "Distance and speed ignore direction. Displacement and velocity are signed: choose a positive direction and give each move a sign.",
+   "Average speed = total distance ÷ time. Average velocity = displacement ÷ time. For 30 m east then 10 m west in 20 s, the average speed is 40 ÷ 20 = 2 m/s. The average velocity is 20 ÷ 20 = 1 m/s east."
+  ]
+ },
+ "familyTip": "Walk along a hallway, forward then back. Measure both the steps you took and how far you ended from the start.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Walk {a} m east, then {b} m west. What is the displacement east, in m?",
+   "answer": "a-b",
+   "hint": "East +, west −.",
+   "explain": "{a} − {b} = {=a-b} m east.",
+   "params": {
+    "a": [
+     20,
+     60
+    ],
+    "b": [
+     5,
+     19
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Walk {a} m east, then {b} m west. What is the distance, in m?",
+   "answer": "a+b",
+   "hint": "Add every step.",
+   "explain": "{a} + {b} = {=a+b} m.",
+   "params": {
+    "a": [
+     20,
+     60
+    ],
+    "b": [
+     5,
+     19
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "One full lap of a 400 m track. Displacement?",
+   "choices": [
+    "0 m",
+    "400 m",
+    "200 m"
+   ],
+   "answer": 0,
+   "hint": "Where do you end?",
+   "explain": "You end where you started, so 0 m."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Velocity is speed with…",
+   "choices": [
+    "a direction",
+    "a time",
+    "a mass"
+   ],
+   "answer": 0,
+   "hint": "Signed.",
+   "explain": "Velocity includes direction."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "{d} m east in {t} s. What is the average velocity, in m/s east?",
+    "answer": "d/t",
+    "hint": "Displacement ÷ time.",
+    "explain": "{d} ÷ {t} = {=d/t} m/s.",
+    "params": {
+     "d": [
+      20,
+      90
+     ],
+     "t": [
+      2,
+      5
+     ]
+    },
+    "where": "(d*100)%t==0"
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "{a} m east then {b} m west in {t} s. Average speed in m/s?",
+    "answer": "(a+b)/t",
+    "hint": "Distance ÷ time.",
+    "explain": "{=a+b} ÷ {t} = {=(a+b)/t} m/s.",
+    "params": {
+     "a": [
+      20,
+      40
+     ],
+     "b": [
+      10,
+      20
+     ],
+     "t": [
+      5,
+      10
+     ]
+    },
+    "where": "((a+b)*100)%t==0"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{a} m east then {b} m west in {t} s. Average velocity (east), in m/s?",
+    "answer": "(a-b)/t",
+    "hint": "Displacement ÷ time.",
+    "explain": "{=a-b} ÷ {t} = {=(a-b)/t} m/s.",
+    "params": {
+     "a": [
+      20,
+      40
+     ],
+     "b": [
+      10,
+      19
+     ],
+     "t": [
+      5,
+      10
+     ]
+    },
+    "where": "((a-b)*100)%t==0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A velocity of −3 m/s (east positive) means…",
+    "choices": [
+     "3 m/s west",
+     "slowing down",
+     "3 m/s east"
+    ],
+    "answer": 0,
+    "hint": "Sign is direction.",
+    "explain": "Negative means the other way: west."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Can average velocity be 0 when speed is not?",
+    "choices": [
+     "Yes, if you return to the start",
+     "No, never",
+     "Only if you stop"
+    ],
+    "answer": 0,
+    "hint": "Round trip.",
+    "explain": "Back to the start means zero displacement."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is a vector?",
+    "choices": [
+     "Displacement",
+     "Distance",
+     "Speed"
+    ],
+    "answer": 0,
+    "hint": "Has a direction.",
+    "explain": "Displacement has size and direction."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Start at +{a} m, end at −{b} m. Displacement, in m?",
+    "answer": "-b-a",
+    "hint": "End − start.",
+    "explain": "−{b} − {a} = {=-b-a} m.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "journey",
+  "caption": "Position east of the start: 30 m out, then 10 m back. Play it and compare distance with displacement.",
+  "opts": {
+   "pts": [
+    [
+     0,
+     0
+    ],
+    [
+     12,
+     30
+    ],
+    [
+     15,
+     30
+    ],
+    [
+     20,
+     20
+    ]
+   ],
+   "tu": "s",
+   "du": "m",
+   "step": 1
+  }
+ }
+}

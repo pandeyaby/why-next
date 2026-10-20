@@ -1,0 +1,200 @@
+{
+ "topicId": "mt_ZBFDXdwUNC",
+ "title": "Key features of graphs",
+ "audience": "learner",
+ "keyIdea": "Read a graph's story from its features: intercepts, where it rises or falls, its highest and lowest points, symmetry and end behaviour.",
+ "explain": {
+  "kid": [
+   "A graph tells a story. Going up means getting bigger. Going down means getting smaller.",
+   "The top of a hill is a maximum. The bottom of a valley is a minimum. Where the graph crosses an axis is an intercept."
+  ],
+  "adult": [
+   "Increasing means y rises as x moves right, so the tangent slopes up. Decreasing means it slopes down. At a maximum or minimum, the tangent is flat.",
+   "The y-intercept is where x = 0. The x-intercepts are the zeros. Symmetry and end behaviour describe the overall shape, such as a parabola that rises at both ends."
+  ]
+ },
+ "familyTip": "Look at a weather app's temperature graph. When was it warmest? When was it rising?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where is a graph's y-intercept?",
+   "choices": [
+    "Where x = 0",
+    "Where y = 0",
+    "At the top"
+   ],
+   "answer": 0,
+   "hint": "It's on the y-axis.",
+   "explain": "On the y-axis, x = 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "y = (x − {h})² − 4. At what x is the minimum?",
+   "answer": "h",
+   "hint": "The square is smallest at 0.",
+   "explain": "x − {h} = 0 gives x = {h}.",
+   "params": {
+    "h": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "y = {a}x + {b}. What is the y-intercept?",
+   "answer": "b",
+   "hint": "Put x = 0.",
+   "explain": "y = {b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "At a maximum, the tangent is…",
+   "choices": [
+    "flat",
+    "steep upwards",
+    "vertical"
+   ],
+   "answer": 0,
+   "hint": "Top of a hill.",
+   "explain": "Its gradient is 0, so it is flat."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "y = −(x − 3)² + 9 increases when…",
+    "choices": [
+     "x < 3",
+     "x > 3",
+     "always"
+    ],
+    "answer": 0,
+    "hint": "It's a hill with its top at 3.",
+    "explain": "It rises up to x = 3, then falls."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "y = −(x − {h})² + {k}. What is the maximum value?",
+    "answer": "k",
+    "hint": "The squared part is 0 at best.",
+    "explain": "The maximum is {k}.",
+    "params": {
+     "h": [
+      1,
+      6
+     ],
+     "k": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "y = x² − {=r*r}. Give the positive x-intercept.",
+    "answer": "r",
+    "hint": "Set y = 0.",
+    "explain": "x² = {=r*r}, so x = {r}.",
+    "params": {
+     "r": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A graph of temperature over a day peaks at 3 pm. That is…",
+    "choices": [
+     "the maximum",
+     "an intercept",
+     "the end behaviour"
+    ],
+    "answer": 0,
+    "hint": "Highest point.",
+    "explain": "The highest point is the maximum."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "y = x² is symmetric about…",
+    "choices": [
+     "the y-axis",
+     "the x-axis",
+     "the line y = x"
+    ],
+    "answer": 0,
+    "hint": "Mirror left and right.",
+    "explain": "f(−x) = f(x): symmetric about the y-axis."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "As x gets very large, y = −x² …",
+    "choices": [
+     "goes down without end",
+     "goes up",
+     "levels off at 0"
+    ],
+    "answer": 0,
+    "hint": "End behaviour.",
+    "explain": "−x² becomes more and more negative."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A tangent slopes down. The graph there is…",
+    "choices": [
+     "decreasing",
+     "increasing",
+     "at a maximum"
+    ],
+    "answer": 0,
+    "hint": "Gradient sign.",
+    "explain": "A negative gradient means decreasing."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "A hill-shaped graph. Drag the point: the tangent slopes up while increasing, is flat at the maximum, and slopes down after.",
+  "opts": {
+   "mode": "tangent",
+   "f": "-(x-3)*(x-3)+9",
+   "a": 1,
+   "xr": [
+    -1,
+    7
+   ],
+   "yr": [
+    -4,
+    11
+   ],
+   "step": 0.5,
+   "label": "f(x)"
+  }
+ }
+}

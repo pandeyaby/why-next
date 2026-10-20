@@ -1,0 +1,178 @@
+{
+ "topicId": "mt_OcSj7J9q1t",
+ "title": "Fractional exponents and radicals",
+ "audience": "learner",
+ "keyIdea": "a^(1/n) is the nth root of a, and a^(m/n) is that root raised to the power m.",
+ "explain": {
+  "kid": [
+   "9 = 3 × 3. So 3 is the square root of 9. We can also write it as 9 to the power 1/2.",
+   "27 = 3 × 3 × 3. So the cube root of 27 is 3, and 27 to the power 1/3 is 3."
+  ],
+  "adult": [
+   "Use the power-of-a-power law: (a^(1/n))ⁿ = a¹ = a. So a^(1/n) is the number that gives a when it is multiplied n times: the nth root.",
+   "For a^(m/n), take the root first, then the power: 8^(2/3) = (∛8)² = 2² = 4. Taking the root first keeps the numbers small."
+  ]
+ },
+ "familyTip": "Find numbers that are perfect squares and cubes, like 64. Then try 64 to the powers 1/2, 1/3 and 2/3.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "What is {=r*r}^(1/2)?",
+   "answer": "r",
+   "hint": "Which number squared gives it?",
+   "explain": "{r} × {r} = {=r*r}, so the answer is {r}.",
+   "params": {
+    "r": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is {=r*r*r}^(1/3)?",
+   "answer": "r",
+   "hint": "Which number cubed gives it?",
+   "explain": "{r}³ = {=r*r*r}, so the answer is {r}.",
+   "params": {
+    "r": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "x^(1/2) is the same as…",
+   "choices": [
+    "√x",
+    "x/2",
+    "x²"
+   ],
+   "answer": 0,
+   "hint": "A half power.",
+   "explain": "A power of 1/2 is a square root."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "8^(2/3) = ?",
+   "choices": [
+    "4",
+    "16",
+    "5.33"
+   ],
+   "answer": 0,
+   "hint": "Cube root first, then square.",
+   "explain": "∛8 = 2 and 2² = 4."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Find the square root of {=r*r}, written as a power: {=r*r}^(1/2).",
+    "answer": "r",
+    "hint": "Square root.",
+    "explain": "√{=r*r} = {r}.",
+    "params": {
+     "r": [
+      3,
+      15
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "What is {=r*r*r}^(2/3)?",
+    "answer": "r*r",
+    "hint": "Cube root, then square.",
+    "explain": "∛{=r*r*r} = {r} and {r}² = {=r*r}.",
+    "params": {
+     "r": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Write ∛x as a power.",
+    "choices": [
+     "x^(1/3)",
+     "x³",
+     "x/3"
+    ],
+    "answer": 0,
+    "hint": "Cube root is 1/3.",
+    "explain": "∛x = x^(1/3)."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "16^(3/4) = ?",
+    "choices": [
+     "8",
+     "12",
+     "64"
+    ],
+    "answer": 0,
+    "hint": "Fourth root first.",
+    "explain": "16^(1/4) = 2 and 2³ = 8."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "x^(1/2) × x^(1/2) = x^? Give the power.",
+    "answer": 1,
+    "hint": "Add the powers.",
+    "explain": "1/2 + 1/2 = 1, so x¹ = x."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is 25^(1/2) = 5?",
+    "choices": [
+     "(25^(1/2))² = 25¹ = 25, and 5² = 25",
+     "25 ÷ 2 is about 5",
+     "Half of 10 is 5"
+    ],
+    "answer": 0,
+    "hint": "Power of a power.",
+    "explain": "Squaring 25^(1/2) gives 25, so it must be 5."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Write x^(3/2) with a root.",
+    "choices": [
+     "(√x)³",
+     "∛(x²)",
+     "3√x/2"
+    ],
+    "answer": 0,
+    "hint": "Denominator is the root.",
+    "explain": "The 2 means a square root, the 3 means cubed: (√x)³."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "expo",
+  "caption": "Split 8 into equal factors. Change the root and the power to see a^(m/k).",
+  "opts": {
+   "mode": "root",
+   "a": 8,
+   "k": 3,
+   "m": 1
+  }
+ }
+}

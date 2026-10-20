@@ -33,7 +33,7 @@ Every lesson has a required `visual`: `{ "type", "caption", "opts" }`. It render
 `figure.vis` with a "Try it" caption, controls and a live text description (`p.vis-desc`, `aria-live`)
 that is the text alternative and updates after every action.
 
-Types, 28 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
+Types, 31 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
 
 | Area | Types |
 |---|---|
@@ -43,6 +43,7 @@ Types, 28 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`)
 | Chemistry | `particles` (canvas, temperature slider), `atom`, `ptable`, `balancer` (coefficients, atom tally, scale) |
 | Integration | `area` (Riemann rectangles/trapezia, signed definite integral with draggable limits, fundamental theorem with the area function, antiderivative family + C, velocity–time displacement) |
 | Science | `sorter` (drag or tap cards into boxes, then check), `phscale` (universal-indicator colours), `energy` (exo/endothermic profile with a thermometer) |
+| Powers and polynomials | `expo` (exponent laws as factor tiles; `mode: ladder` to zero/negative powers; `mode: root` for fractional powers), `roots` (level line on y = x² or x³), `grid` (polynomial multiplication grid) |
 | More number | `placevalue` (digits slide on × 10 / ÷ 10), `percent` (hundred square; `mode: change` for multipliers), `thermo` (negative temperatures, change across zero), `journey` (distance–time graph with a walker), `formula` (substitute with sliders, optional rectangle picture), `coords`, `wholes` (a ÷ b as sharing) |
 
 `learn/validate_visuals.py` whitelists options per type and checks the content: solvable balance equations,
@@ -63,3 +64,5 @@ a progress ring; next-step map nodes glow; mastery shows a small celebration. Te
 first lesson after loading only the chunks that topic needs; other chunks load when a topic needs them, and all of
 them load on the first search. Chunks are plain scripts, so the viewer works on GitHub Pages and from `file://`.
 `out/viewer-offline.html` is the same app in one file. Measure with `node scripts/serve_static.cjs out` (gzip, like Pages) and Lighthouse.
+
+`python3 learn/goal_coverage.py --list` lists every topic on a goal path for an age band and whether it has a lesson; `check_all.sh` fails if a required goal/band pair (now: integration, 16–18) has a gap.

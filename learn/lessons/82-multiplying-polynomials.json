@@ -1,0 +1,210 @@
+{
+ "topicId": "mt_Vn2yQGKnvi",
+ "title": "Multiplying polynomials",
+ "audience": "learner",
+ "keyIdea": "To multiply polynomials, multiply every term in one by every term in the other, then collect like terms.",
+ "explain": {
+  "kid": [
+   "(x + 2)(x + 3) means x + 2 lots of x + 3. Draw a grid: put x and 2 down the side, x and 3 along the top.",
+   "Fill each box by multiplying: x², 3x, 2x, 6. Add the like terms: x² + 5x + 6."
+  ],
+  "adult": [
+   "Every term of the first bracket multiplies every term of the second. A binomial times a trinomial makes 2 × 3 = 6 products before you simplify.",
+   "(x − 1)(x² + x + 1) = x³ + x² + x − x² − x − 1 = x³ − 1. A grid keeps track of each product and its sign. For three brackets, multiply two first, then the third."
+  ]
+ },
+ "familyTip": "Multiply 12 × 13 with a grid: (10 + 2)(10 + 3). It's the same method as (x + 2)(x + 3).",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "(x + {a})(x + {b}) = x² + kx + c. What is k?",
+   "answer": "a+b",
+   "hint": "Add the two middle boxes.",
+   "explain": "{a}x + {b}x = {=a+b}x.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "(x + {a})(x + {b}) = x² + kx + c. What is c?",
+   "answer": "a*b",
+   "hint": "Multiply the numbers.",
+   "explain": "{a} × {b} = {=a*b}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How many products before simplifying (x + 1)(x² + 2x + 3)?",
+   "choices": [
+    "6",
+    "5",
+    "3"
+   ],
+   "answer": 0,
+   "hint": "2 terms × 3 terms.",
+   "explain": "2 × 3 = 6."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "(x − 1)(x² + x + 1) = ?",
+   "choices": [
+    "x³ − 1",
+    "x³ + 1",
+    "x³ − x − 1"
+   ],
+   "answer": 0,
+   "hint": "Most terms cancel.",
+   "explain": "x³ + x² + x − x² − x − 1 = x³ − 1."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "(x − {a})(x + {b}) = x² + kx + c. What is c?",
+    "answer": "-a*b",
+    "hint": "Watch the sign.",
+    "explain": "−{a} × {b} = {=-a*b}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "(x − {a})(x + {b}) = x² + kx + c. What is k?",
+    "answer": "b-a",
+    "hint": "−{a}x + {b}x.",
+    "explain": "{b} − {a} = {=b-a}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "({p}x + 1)(x + {q}) = ax² + bx + c. What is a?",
+    "answer": "p",
+    "hint": "x² terms only.",
+    "explain": "{p}x × x = {p}x².",
+    "params": {
+     "p": [
+      2,
+      6
+     ],
+     "q": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "(x + 1)³ = ?",
+    "choices": [
+     "x³ + 3x² + 3x + 1",
+     "x³ + 1",
+     "x³ + 3x + 1"
+    ],
+    "answer": 0,
+    "hint": "Multiply two brackets first.",
+    "explain": "(x + 1)² = x² + 2x + 1; times (x + 1) gives x³ + 3x² + 3x + 1."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What degree is (x² + 1)(x³ − 2)?",
+    "choices": [
+     "5",
+     "6",
+     "3"
+    ],
+    "answer": 0,
+    "hint": "Highest powers multiply.",
+    "explain": "x² × x³ = x⁵, degree 5."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "(x + 3)² = ?",
+    "choices": [
+     "x² + 6x + 9",
+     "x² + 9",
+     "x² + 3x + 9"
+    ],
+    "answer": 0,
+    "hint": "(x + 3)(x + 3).",
+    "explain": "x² + 3x + 3x + 9 = x² + 6x + 9."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "(x + {a})(x − {a}) = x² + kx + c. What is k?",
+    "answer": "0",
+    "hint": "The middle terms cancel.",
+    "explain": "{a}x − {a}x = 0.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "grid",
+  "caption": "Each box is one term times one term. Change the numbers and watch the like terms collect.",
+  "opts": {
+   "a": [
+    1,
+    -1
+   ],
+   "b": [
+    1,
+    1,
+    1
+   ]
+  }
+ }
+}

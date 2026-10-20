@@ -1,0 +1,222 @@
+{
+ "topicId": "mt_93GREOFJAe",
+ "title": "Laws of exponents",
+ "audience": "learner",
+ "keyIdea": "When you multiply powers of the same base you add the powers, when you divide you subtract them, and a power of a power multiplies them.",
+ "explain": {
+  "kid": [
+   "x³ means x × x × x. The small number counts how many x's are multiplied.",
+   "x³ × x⁵ puts 3 x's next to 5 more. That is 8 x's, so it is x⁸. You add the powers."
+  ],
+  "adult": [
+   "Multiply: aᵐ × aⁿ = aᵐ⁺ⁿ. Divide: aᵐ ÷ aⁿ = aᵐ⁻ⁿ, because n factors cancel. Power of a power: (aᵐ)ⁿ = aᵐⁿ.",
+   "The laws need the same base. 2³ × 3² cannot be combined this way. A common slip is x³ × x⁵ = x¹⁵. Counting the factors shows it is x⁸."
+  ]
+ },
+ "familyTip": "Write x³ × x⁵ the long way, with every x. Count them together.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "x^{a} × x^{b} = x^? What is the power?",
+   "answer": "a+b",
+   "hint": "Add the powers.",
+   "explain": "{a} + {b} = {=a+b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "x^{a} ÷ x^{b} = x^? What is the power?",
+   "answer": "a-b",
+   "hint": "Subtract the powers.",
+   "explain": "{a} − {b} = {=a-b}.",
+   "params": {
+    "a": [
+     8,
+     12
+    ],
+    "b": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "(x^{a})^{b} = x^? What is the power?",
+   "answer": "a*b",
+   "hint": "Multiply the powers.",
+   "explain": "{a} × {b} = {=a*b}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why is x³ × x⁵ not x¹⁵?",
+   "choices": [
+    "There are only 3 + 5 = 8 factors of x",
+    "Because 15 is too big",
+    "You should subtract"
+   ],
+   "answer": 0,
+   "hint": "Count the x's.",
+   "explain": "3 x's and 5 x's make 8 x's: x⁸."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Simplify 2^{a} × 2^{b} as 2 to what power?",
+    "answer": "a+b",
+    "hint": "Same base, add.",
+    "explain": "{a} + {b} = {=a+b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Simplify y^{a} ÷ y^{b}. What is the power?",
+    "answer": "a-b",
+    "hint": "Same base, subtract.",
+    "explain": "{a} − {b} = {=a-b}.",
+    "params": {
+     "a": [
+      9,
+      15
+     ],
+     "b": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Simplify (a^{p})^{q}. What is the power?",
+    "answer": "p*q",
+    "hint": "Multiply.",
+    "explain": "{p} × {q} = {=p*q}.",
+    "params": {
+     "p": [
+      2,
+      6
+     ],
+     "q": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which can the laws NOT combine into one power?",
+    "choices": [
+     "2³ × 3²",
+     "2³ × 2²",
+     "5⁴ ÷ 5"
+    ],
+    "answer": 0,
+    "hint": "Bases must match.",
+    "explain": "2 and 3 are different bases."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{c}x^{a} × {d}x^{b} = kx^n. What is k?",
+    "answer": "c*d",
+    "hint": "Multiply the numbers, add the powers.",
+    "explain": "{c} × {d} = {=c*d}.",
+    "params": {
+     "c": [
+      2,
+      6
+     ],
+     "d": [
+      2,
+      6
+     ],
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "x⁷ ÷ x⁷ = ?",
+    "choices": [
+     "1",
+     "0",
+     "x"
+    ],
+    "answer": 0,
+    "hint": "Anything divided by itself.",
+    "explain": "Every factor cancels: the answer is 1."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "(x²)³ is…",
+    "choices": [
+     "x⁶",
+     "x⁵",
+     "x⁸"
+    ],
+    "answer": 0,
+    "hint": "Three lots of x².",
+    "explain": "x² × x² × x² = x⁶."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "expo",
+  "caption": "Choose a law and change the powers. Count the tiles to check the rule.",
+  "opts": {
+   "mode": "laws",
+   "m": 3,
+   "n": 2,
+   "op": "mul"
+  }
+ }
+}

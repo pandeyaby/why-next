@@ -1,0 +1,224 @@
+{
+ "topicId": "mt_o2vTJv1KoM",
+ "title": "Acceleration",
+ "audience": "learner",
+ "keyIdea": "Acceleration is how quickly velocity changes: a = change in velocity ÷ time, measured in m/s².",
+ "explain": {
+  "kid": [
+   "Speeding up is called acceleration. A bike that goes 2 faster each second has an acceleration of 2.",
+   "Slowing down is a minus acceleration. We call it slowing down."
+  ],
+  "adult": [
+   "a = (v − u) ÷ t, where u is the starting velocity and v is the final one. A car going from 0 to 20 m/s in 5 s has a = 4 m/s². Each second it gains 4 m/s.",
+   "If v is less than u, a is negative: the object is slowing down. On a velocity–time graph, acceleration is the gradient."
+  ]
+ },
+ "familyTip": "In a car or on a bike, notice the speed every few seconds while speeding up. Work out how much faster each second.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "0 to {v} m/s in {t} s. What is the acceleration, in m/s²?",
+   "answer": "v/t",
+   "hint": "Change ÷ time.",
+   "explain": "{v} ÷ {t} = {=v/t} m/s².",
+   "params": {
+    "v": [
+     10,
+     40
+    ],
+    "t": [
+     2,
+     5
+    ]
+   },
+   "where": "(v*100)%t==0"
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "What does 3 m/s² mean?",
+   "choices": [
+    "Velocity rises by 3 m/s every second",
+    "It moves 3 m each second",
+    "It takes 3 s to stop"
+   ],
+   "answer": 0,
+   "hint": "Per second, per second.",
+   "explain": "Each second, 3 m/s faster."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "From {u} m/s to {v} m/s in {t} s. What is a, in m/s²?",
+   "answer": "(v-u)/t",
+   "hint": "(v − u) ÷ t.",
+   "explain": "({v} − {u}) ÷ {t} = {=(v-u)/t} m/s².",
+   "params": {
+    "u": [
+     2,
+     9
+    ],
+    "v": [
+     12,
+     30
+    ],
+    "t": [
+     2,
+     5
+    ]
+   },
+   "where": "((v-u)*100)%t==0"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A negative acceleration means…",
+   "choices": [
+    "slowing down",
+    "going backwards",
+    "standing still"
+   ],
+   "answer": 0,
+   "hint": "Velocity is falling.",
+   "explain": "Velocity drops: deceleration."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A bike slows from {u} m/s to 0 in {t} s. What is a, in m/s²?",
+    "answer": "-u/t",
+    "hint": "Final minus start.",
+    "explain": "(0 − {u}) ÷ {t} = {=-u/t} m/s².",
+    "params": {
+     "u": [
+      4,
+      20
+     ],
+     "t": [
+      2,
+      5
+     ]
+    },
+    "where": "(u*100)%t==0"
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "a = {a} m/s² from rest for {t} s. What is the final velocity, in m/s?",
+    "answer": "a*t",
+    "hint": "v = u + at.",
+    "explain": "0 + {a} × {t} = {=a*t} m/s.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "t": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "On a velocity–time graph, acceleration is…",
+    "choices": [
+     "the gradient",
+     "the area",
+     "the y-intercept"
+    ],
+    "answer": 0,
+    "hint": "Rise over run.",
+    "explain": "Change in velocity ÷ time = gradient."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The unit m/s² means…",
+    "choices": [
+     "metres per second, per second",
+     "metres per square second of distance",
+     "metres times seconds"
+    ],
+    "answer": 0,
+    "hint": "Velocity change per second.",
+    "explain": "(m/s) gained each second."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "a = {a} m/s², starting at {u} m/s, for {t} s. Final velocity in m/s?",
+    "answer": "u+a*t",
+    "hint": "v = u + at.",
+    "explain": "{u} + {a} × {t} = {=u+a*t} m/s.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "u": [
+      2,
+      10
+     ],
+     "t": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A car moves at a steady 30 m/s. Its acceleration is…",
+    "choices": [
+     "0",
+     "30 m/s²",
+     "1 m/s²"
+    ],
+    "answer": 0,
+    "hint": "No change.",
+    "explain": "Velocity isn't changing, so a = 0."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which has the greater acceleration?",
+    "choices": [
+     "0 to 10 m/s in 2 s",
+     "0 to 20 m/s in 10 s",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "Work out both.",
+    "explain": "5 m/s² beats 2 m/s²."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "rate",
+  "caption": "Velocity v = 2t + 1. Drag the two points: the gradient between them is the acceleration.",
+  "opts": {
+   "f": "2*x+1",
+   "a": 1,
+   "b": 4,
+   "xr": [
+    -0.5,
+    6
+   ],
+   "yr": [
+    -1,
+    14
+   ],
+   "ux": "s",
+   "uy": "m/s"
+  }
+ }
+}

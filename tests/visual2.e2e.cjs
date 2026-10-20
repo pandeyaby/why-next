@@ -20,7 +20,8 @@ async function axe(p, label) {
 }
 const L = { riemann: 'mt_XW5d2G7v01', family: 'mt_gbnMvpN_Lj', definite: 'mt_P-VlHqNpca', ftc: 'mt_ckLHNZCBUi', velocity: 'mt_g7J4GJuLrf', sorter: 'mt_1hgck6ucII',
   phscale: 'mt_AN2kJE6I0s', energy: 'mt_UoqUPI_uNz', placevalue: 'mt_EDgw64OmfA', percent: 'mt_iEXqN48w3x', thermo: 'mt_RVK655t391', journey: 'mt_OUv-QXmW7_',
-  formula: 'mt_mGBtwKr7Wl', coords: 'mt_oDlduFnemk', wholes: 'mt_4Km38F4L-6' };
+  formula: 'mt_mGBtwKr7Wl', coords: 'mt_oDlduFnemk', wholes: 'mt_4Km38F4L-6',
+  expo: 'mt_93GREOFJAe', ladder: 'mt_mq4eGlJDk9', root: 'mt_OcSj7J9q1t', roots: 'mt_iHEB0g_nCc', grid: 'mt_Vn2yQGKnvi' };
 
 (async () => {
   const browser = await chromium.launch();
@@ -53,6 +54,11 @@ const L = { riemann: 'mt_XW5d2G7v01', family: 'mt_gbnMvpN_Lj', definite: 'mt_P-V
   await test('formula: sliders substitute and the picture follows', async () => { await open(p, L.formula); await setRange(p, 'l', 7); await expectDesc(p, /l = 7, w = 3.*P = 20 cm/); assert.match(await p.textContent('#vbox .vis-steps'), /2 × \(7 \+ 3\)/) });
   await test('coordinates: arrow keys reach the target', async () => { await open(p, L.coords); await keys(p, '#vbox [role=slider]', 'ArrowRight', 'ArrowRight', 'ArrowRight', 'ArrowUp', 'ArrowUp', 'ArrowUp', 'ArrowUp', 'ArrowUp'); await expectDesc(p, /\(3, 5\).*You found \(3, 5\)/) });
   await test('sharing wholes: share out gives a/b each', async () => { await open(p, L.wholes); await btn(p, 'Share out'); await expectDesc(p, /3 ÷ 4 = 3\/4/) });
+  await test('exponent laws: add, subtract, multiply the powers', async () => { await open(p, L.expo); await expectDesc(p, /3 \+ 2 = 5/); await btn(p, 'Divide'); await expectDesc(p, /3 − 2 = 1/); await btn(p, 'Power of a power'); await expectDesc(p, /3 × 2 = 6/) });
+  await test('power ladder: stepping below zero gives fractions', async () => { await open(p, L.ladder); for (let i = 0; i < 5; i++) await btn(p, 'Power down (÷ 2)'); await expectDesc(p, /2⁻² = 1 ÷ 2² = 1\/4 = 0\.25/) });
+  await test('fractional power: root then power', async () => { await open(p, L.root); await setRange(p, 'Power m', 2); await expectDesc(p, /power 2\/3 take 2 of those factors: 4/) });
+  await test('x² = p: two, one or no solutions', async () => { await open(p, L.roots); await expectDesc(p, /−3 and 3\. Two answers/); await keys(p, '#vbox [role=slider]', ...Array(9).fill('ArrowDown')); await expectDesc(p, /Only x = 0/); await keys(p, '#vbox [role=slider]', 'ArrowDown'); await expectDesc(p, /no real answer/) });
+  await test('polynomial grid: products collect into like terms', async () => { await open(p, L.grid); assert.match(await p.textContent('#vbox .vis-line.cur'), /= x³ − 1$/); await setRange(p, 'Number in first bracket', 2); assert.match(await p.textContent('#vbox .vis-line.cur'), /= x³ \+ 3x² \+ 3x \+ 2$/) });
   await test('axe: no violations in the newer visuals', async () => { for (const [t, id] of Object.entries(L)) { await open(p, id); await axe(p, t) } });
   await test('no console errors or visual failures', async () => assert.deepStrictEqual(errors, []));
   const m = await (await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true })).newPage(); await m.goto(URL);
