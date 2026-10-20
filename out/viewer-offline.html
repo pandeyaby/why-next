@@ -57,6 +57,13 @@ circle.g-done{fill:#16a34a}circle.g-next{stroke:#d97706;stroke-width:3}
 .review{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:4px 12px 8px;margin:8px 0}
 .ord li{touch-action:none;user-select:none}.ord li.dragging{box-shadow:0 4px 12px rgba(0,0,0,.18);border-color:#6d28d9;background:#f5f3ff}
 .worked{border-left:4px solid #6d28d9;padding:4px 10px;margin:8px 0;background:rgba(109,40,217,.06);border-radius:0 8px 8px 0}.worked ol{margin:4px 0 0;padding-left:1.4em}.worked li{margin:2px 0}
+/* Coming-soon card */
+.learn.soon .eyebrow{margin:0;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--muted,#555)}
+.learn.soon h2{margin:.15rem 0 .9rem}
+.soon-block{border-left:3px solid var(--accent,#2563eb);padding:.15rem 0 .15rem .85rem;margin:0 0 1rem}
+.soon-block h3{margin:0 0 .35rem;font-size:.95rem}
+.soon-block p{margin:0;line-height:1.55}
+.soon-pre{margin:.2rem 0 0;padding-left:1.2rem;line-height:1.9}
 /* Why Next? interactive visuals */
 .vis{margin:14px 0;padding:12px;border:1px solid #c7d2fe;border-radius:12px;background:#fafbff}
 .vis figcaption{font-weight:600;margin-bottom:6px}
@@ -275,7 +282,8 @@ const WN=(()=>{const C=window.WN_CORE,done=new Set(),pend=new Map();
  function les(k,x){Object.assign(store,x);if(typeof LEARN!=='undefined')Object.assign(LEARN.L,x);ldone.add(k)}
  function lone(k){if(ldone.has(k)||!C.lv[k])return Promise.resolve();if(!lpend.has(k))lpend.set(k,new Promise((ok,no)=>{const s=document.createElement('script');
   s.src=`${window.WN_BASE||""}wn/l${k}.js?v=${C.lv[k]}`;s.onload=ok;s.onerror=()=>{lpend.delete(k);no(new Error('could not load wn/l'+k+'.js'))};document.head.appendChild(s)}));return lpend.get(k)}
- const api={data,chunk,les,store,lload:lone,flag:id=>(byId.get(id)||{}).ls||0,has:ks=>ks.every(k=>done.has(k)),load:ks=>Promise.all(ks.map(one)),all:false,
+ const SHOW_DRAFTS=(()=>{try{return /[?&]drafts=1/.test(location.search)||localStorage.getItem("wn_drafts")==="1"}catch(e){return false}})();   // auto-drafted starters stay hidden unless asked for
+ const api={data,chunk,les,store,lload:lone,flag:id=>SHOW_DRAFTS?((byId.get(id)||{}).ls||0):0,has:ks=>ks.every(k=>done.has(k)),load:ks=>Promise.all(ks.map(one)),all:false,
   loadAll(){return api.load(C.v.map((_,k)=>k)).then(()=>{api.all=true})}};return api})();
 const DATA=WN.data;
 </script><script>WN.chunk(0,{"n":[[0,"Understand that reading is about making meaning, not just saying words correctly — a text that can be decoded but not understood has not been read",["Simple View of Reading (Gough & Tunmer)","reading comprehension research on comprehension-decoding separation"],[]],[1,"Notice the difference between decoding words and actually understanding them — recognise when you've read the words but not grasped the meaning, and do something about it",["comprehension monitoring research","Metacognitive Monitoring in Reading Comprehension (MDPI 2024)"],[]]],"r":[[562,"Noticing the decoding/understanding gap is the English-specific form of the universal comprehension-monitoring habit"],[563,"Noticing the gap between decoding and understanding requires first having the foundational idea that reading means making meaning"],[1062,"Understanding that reading means making meaning is the English-domain grounding of the universal habit of noticing when you don't understand"]],"c":{}});
@@ -1599,10 +1607,12 @@ function itemHtml(it,pre,i){const id=`${pre}-${it.id}`,lab=`${id}-q`;let body=''
  <div class="qfoot">${pre==='p'?'<button type="button" class="linkish" data-act="hint">Show a hint</button>':''}</div><p class="fb" role="status" aria-live="polite"></p></div>`}
 const list=(pre)=>CUR[pre].map((it,i)=>itemHtml(it,pre,i)).join('');
 function comingSoon(id){const n=N.get(id),r=LEARN.resource(id),k=LEARN.known(id);
- return `<section class="card learn" id="learn" tabindex="-1" aria-labelledby="learnH"><h2 id="learnH" class="lh">Learn: ${esc(n.n)}</h2>
- <p><b>Lessons coming.</b> Interactive lessons are written so far for a counting → fractions → algebra path. Until this one is ready:</p>
- <ul><li>Read the description and prerequisite chain below; the reasons say what each step reuses.</li>${r?`<li>Free resource: <a href="${r.url}" target="_blank" rel="noopener">${esc(r.label)}</a> <span class="muted">(link checked ${LEARN_DATA.resourcesVerified})</span></li>`:''}</ul>
- ${LEARN.isNext(id)?`<p class="why">★ Recommended next. ${esc(LEARN.why(id))}</p>`:''}
+ const pre=(typeof PRE!=='undefined'&&PRE.get(id)||[]).map(e=>N.get(e.p)).filter(Boolean).sort((x,y)=>(LEARN.has(y.id)?1:0)-(LEARN.has(x.id)?1:0)).slice(0,5);
+ const goal=n.desc?String(n.desc).split(/(?<=\.)\s/)[0]:'';
+ return `<section class="card learn soon" id="learn" tabindex="-1" aria-labelledby="learnH"><p class="eyebrow">Coming soon</p><h2 id="learnH" class="lh">${esc(n.n)}</h2>
+ ${goal?`<div class="soon-block"><h3>What you will learn</h3><p>${esc(goal)}</p></div>`:''}
+ ${pre.length?`<div class="soon-block"><h3>Learn these first</h3><ol class="soon-pre">${pre.map(p=>`<li><button type="button" class="linkish" data-go="${p.id}">${esc(p.n)}</button>${LEARN.has(p.id)?' <span class="tag new">lesson ready</span>':''}</li>`).join('')}</ol></div>`:'<p class="muted">A starting point: nothing needs to come first.</p>'}
+ ${r?`<p>Meanwhile, a free resource: <a href="${r.url}" target="_blank" rel="noopener">${esc(r.label)}</a></p>`:''}
  <button type="button" class="lbtn ghost" data-act="known">${k?'✓ Marked as known (undo)':'I already know this'}</button></section>`}
 function panel(id){const les=LEARN.L[id];if(!les)return(typeof WN!=='undefined'&&WN.flag(id))?'<section class="learn card" id="learn" aria-busy="true"><p class="muted">Loading the lesson and lab…</p></section>':comingSoon(id);
  const lv=LEARN.level(),pr=LEARN.prog(id),st=pr.status,due=LEARN.reviewDue(id),fam=les.audience!=='learner';
@@ -1667,6 +1677,7 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
  const g=document.getElementById('goNext');if(g)g.onclick=()=>{const nx=LEARN.nextList(1)[0];if(nx){select(nx.id);document.getElementById('learn').focus()}};
  const r=document.getElementById('retry');if(r)r.onclick=()=>{select(id);const m=document.getElementById('mbox');if(m)m.scrollIntoView()}}
 return{panel,mount,parseNum,scramble,gloss,cur:()=>CUR}})();
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('#learn.soon [data-go]');if(b){select(b.dataset.go);const l=document.getElementById('learn');if(l)l.focus()}});
 </script><script>const N=new Map(DATA.nodes.map(n=>[n.id,n]));const PRE=new Map();const POST=new Map();
 for(const e of DATA.edges){(PRE.get(e.t)||PRE.set(e.t,[]).get(e.t)).push(e);(POST.get(e.p)||POST.set(e.p,[]).get(e.p)).push(e)}
 const isBridge=e=>N.get(e.t).new&&!N.get(e.p).new;

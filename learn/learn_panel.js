@@ -18,10 +18,12 @@ function itemHtml(it,pre,i){const id=`${pre}-${it.id}`,lab=`${id}-q`;let body=''
  <div class="qfoot">${pre==='p'?'<button type="button" class="linkish" data-act="hint">Show a hint</button>':''}</div><p class="fb" role="status" aria-live="polite"></p></div>`}
 const list=(pre)=>CUR[pre].map((it,i)=>itemHtml(it,pre,i)).join('');
 function comingSoon(id){const n=N.get(id),r=LEARN.resource(id),k=LEARN.known(id);
- return `<section class="card learn" id="learn" tabindex="-1" aria-labelledby="learnH"><h2 id="learnH" class="lh">Learn: ${esc(n.n)}</h2>
- <p><b>Lessons coming.</b> Interactive lessons are written so far for a counting → fractions → algebra path. Until this one is ready:</p>
- <ul><li>Read the description and prerequisite chain below; the reasons say what each step reuses.</li>${r?`<li>Free resource: <a href="${r.url}" target="_blank" rel="noopener">${esc(r.label)}</a> <span class="muted">(link checked ${LEARN_DATA.resourcesVerified})</span></li>`:''}</ul>
- ${LEARN.isNext(id)?`<p class="why">★ Recommended next. ${esc(LEARN.why(id))}</p>`:''}
+ const pre=(typeof PRE!=='undefined'&&PRE.get(id)||[]).map(e=>N.get(e.p)).filter(Boolean).sort((x,y)=>(LEARN.has(y.id)?1:0)-(LEARN.has(x.id)?1:0)).slice(0,5);
+ const goal=n.desc?String(n.desc).split(/(?<=\.)\s/)[0]:'';
+ return `<section class="card learn soon" id="learn" tabindex="-1" aria-labelledby="learnH"><p class="eyebrow">Coming soon</p><h2 id="learnH" class="lh">${esc(n.n)}</h2>
+ ${goal?`<div class="soon-block"><h3>What you will learn</h3><p>${esc(goal)}</p></div>`:''}
+ ${pre.length?`<div class="soon-block"><h3>Learn these first</h3><ol class="soon-pre">${pre.map(p=>`<li><button type="button" class="linkish" data-go="${p.id}">${esc(p.n)}</button>${LEARN.has(p.id)?' <span class="tag new">lesson ready</span>':''}</li>`).join('')}</ol></div>`:'<p class="muted">A starting point: nothing needs to come first.</p>'}
+ ${r?`<p>Meanwhile, a free resource: <a href="${r.url}" target="_blank" rel="noopener">${esc(r.label)}</a></p>`:''}
  <button type="button" class="lbtn ghost" data-act="known">${k?'✓ Marked as known (undo)':'I already know this'}</button></section>`}
 function panel(id){const les=LEARN.L[id];if(!les)return(typeof WN!=='undefined'&&WN.flag(id))?'<section class="learn card" id="learn" aria-busy="true"><p class="muted">Loading the lesson and lab…</p></section>':comingSoon(id);
  const lv=LEARN.level(),pr=LEARN.prog(id),st=pr.status,due=LEARN.reviewDue(id),fam=les.audience!=='learner';
@@ -86,3 +88,4 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
  const g=document.getElementById('goNext');if(g)g.onclick=()=>{const nx=LEARN.nextList(1)[0];if(nx){select(nx.id);document.getElementById('learn').focus()}};
  const r=document.getElementById('retry');if(r)r.onclick=()=>{select(id);const m=document.getElementById('mbox');if(m)m.scrollIntoView()}}
 return{panel,mount,parseNum,scramble,gloss,cur:()=>CUR}})();
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('#learn.soon [data-go]');if(b){select(b.dataset.go);const l=document.getElementById('learn');if(l)l.focus()}});

@@ -11,7 +11,7 @@ const LABS = ['problab', 'statlab', 'numzoom', 'graphlab', 'geolab', 'matrixlab'
 (async () => {
   const browser = await chromium.launch(), p = await browser.newPage({ viewport: { width: 1200, height: 900 } }); const errors = [];
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error') errors.push(m.text()) });
-  await p.addInitScript(() => { window.__buzz = []; Object.defineProperty(navigator, 'vibrate', { value: ms => (window.__buzz.push(ms), true), configurable: true }) });
+  await p.addInitScript(() => { try { localStorage.setItem('wn_drafts', '1') } catch (e) {} window.__buzz = []; Object.defineProperty(navigator, 'vibrate', { value: ms => (window.__buzz.push(ms), true), configurable: true }) });
   await p.goto(URL);
   const open = async (lab, sel) => { await p.evaluate(t => select(Object.keys(LEARN.L).find(id => LEARN.L[id].lab && LEARN.L[id].lab.type === t)), lab); await p.waitForSelector(sel, { timeout: 10000 }) };
   const btn = (box, label) => p.click(`${box} button:text-is("${label}")`);
