@@ -45,6 +45,17 @@ const LABS = ['problab', 'statlab', 'numzoom', 'graphlab', 'geolab', 'matrixlab'
       assert.deepStrictEqual(r.violations.map(v => `${v.id}: ${v.nodes.map(n => n.target.join(' ')).slice(0, 3).join(', ')}`), [], `${t} in ${theme}`);
     }
   });
+  await test('flagship (derivative): guided steps, challenge win with misconception feedback, axe in both themes', async () => {
+    await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForSelector('.vis.flag .fl-cv', { timeout: 10000 });
+    for (let i = 0; i < 6; i++) await p.click('.fl-nav button:last-child');
+    const t = await p.evaluate(() => +document.querySelector('.fl-chal b').textContent.match(/[\d.]+/)[0]);
+    await p.fill('.fl-in', String(Math.round(4.9 * t * t / t * 100) / 100)); await p.click('.fl-chal .lbtn');
+    assert.match(await p.textContent('.fl-fb'), /since the start/);
+    await p.fill('.fl-in', String(Math.round(98 * t) / 10)); await p.click('.fl-chal .lbtn'); assert.match(await p.textContent('.fl-fb'), /✓/);
+    if (!(await p.evaluate(() => !!window.axe))) await p.addScriptTag({ path: AXE });
+    for (let k = 0; k < 2; k++) { const r = await p.evaluate(() => axe.run('.vis.flag', { runOnly: ['wcag2a', 'wcag2aa', 'wcag21aa'] }));
+      assert.deepStrictEqual(r.violations.map(v => v.id + ': ' + v.nodes.map(n => n.target.join(' ')).slice(0, 3).join(', ')), []); await p.click('#themeBtn'); await p.waitForTimeout(200) }
+  });
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }
 })();

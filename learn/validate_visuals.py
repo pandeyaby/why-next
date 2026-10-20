@@ -24,7 +24,7 @@ OPTS = {
     "objects": {"objects": L}, "squares": {"n": I}, "slopes": {"m": N, "start": N}, "vectors": {"a": L, "b": L},
     "problab": {"kind": S, "labels": L, "p": L}, "statlab": {"vals": L, "max": I, "target": N}, "numzoom": {"neg": B, "start": N, "target": N},
     "graphlab": {"f": S, "a": N, "b": N, "c": N, "xr": L, "yr": L, "equal": B, "targets": L}, "geolab": {"pts": L, "grid": I, "area": N}, "matrixlab": {"m": L},
-    "gaslab": {"n": I, "temp": N, "vol": N}, "reactlab": {"acid": I, "indicator": B}, "wavelab": {"a": N, "f": N, "v": N, "target": L}, "platelab": {"mode": S, "speed": N, "years": N}, "celllab": {"kind": S}, "cyclelab": {"heat": N, "cold": N}, "chainlab": {"chain": L}, "bodylab": {"system": S}, "ecolab": {"prey": S, "pred": S, "food": S, "b": N, "k": N, "d": N, "e": N, "n0": N, "p0": N}, "forcelab": {"f": N, "m": N, "mu": N, "zone": L},
+    "gaslab": {"n": I, "temp": N, "vol": N}, "reactlab": {"acid": I, "indicator": B}, "wavelab": {"a": N, "f": N, "v": N, "target": L}, "platelab": {"mode": S, "speed": N, "years": N}, "celllab": {"kind": S}, "cyclelab": {"heat": N, "cold": N}, "chainlab": {"chain": L}, "flagderiv": {"step": I}, "bodylab": {"system": S}, "ecolab": {"prey": S, "pred": S, "food": S, "b": N, "k": N, "d": N, "e": N, "n0": N, "p0": N}, "forcelab": {"f": N, "m": N, "mu": N, "zone": L},
     "formula": {"name": S, "expr": S, "vars": dict, "pic": S, "what": S, "unit": S},
 }
 SAFE_F = re.compile(r"^[x0-9+\-*/(). ]+$")

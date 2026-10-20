@@ -144,6 +144,36 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .lab-wall.on,.lab-cell.on,.lab-vac.on,.lab-nuc.on,.lab-mito.on,.lab-ribo.on,.lab-chl.on,.lab-organ.on{stroke:#dc2626;stroke-width:4}
 .lab-sea{fill:#0ea5e9;opacity:.7}.lab-sun{fill:#facc15;stroke:#ca8a04}.lab-cloud{fill:#94a3b8;opacity:.8}.lab-rain{stroke:#0284c7;stroke-width:2}
 .lab-card{fill:rgba(99,102,241,.16);stroke:#6366f1;stroke-width:2}.lab-body{fill:rgba(244,114,182,.15);stroke:#db2777;stroke-width:2}.lab-organ{fill:#e2e8f0;stroke:#64748b;stroke-width:2}.lab-organ.on{fill:#ef4444}
+/* Flagship labs */
+.vis.flag{padding:0;overflow:hidden}
+.fl-wrap{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:0}
+@media (max-width:760px){.fl-wrap{grid-template-columns:1fr}}
+.fl-story{padding:1.1rem 1.1rem 1rem;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:.55rem;background:color-mix(in srgb,var(--panel) 92%,var(--new) 8%)}
+@media (max-width:760px){.fl-story{border-right:0;border-bottom:1px solid var(--line)}}
+.fl-dots{display:flex;gap:6px}
+.fl-dot{width:24px;height:24px;border-radius:50%;border:2px solid var(--line);background:transparent;padding:0;cursor:pointer;transition:background .25s,border-color .25s,transform .25s}
+.fl-dot.done{background:var(--line)}
+.fl-dot[aria-selected=true]{border-color:var(--new);background:var(--new);transform:scale(1.12)}
+.fl-h{margin:.2rem 0 0;font-size:1.06rem;line-height:1.3}
+.fl-p{margin:0;line-height:1.6;font-size:.95rem;animation:flIn .35s ease}
+@keyframes flIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fl-p{animation:none}.fl-dot{transition:none}}
+.fl-nav{display:flex;justify-content:space-between;margin-top:auto;padding-top:.4rem}
+.fl-stage{padding:.8rem;display:flex;flex-direction:column;gap:.6rem;min-width:0}
+.fl-cv{display:block;max-width:100%;border-radius:10px;cursor:grab}
+.fl-cv:active{cursor:grabbing}
+.fl-read{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;font-variant-numeric:tabular-nums;font-size:.95rem}
+.fl-big b{font-size:1.15rem}
+.fl-ctl{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;align-items:center;font-variant-numeric:tabular-nums}
+.fl-ctl label{display:flex;align-items:center;gap:.4rem}
+.fl-tbl{border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:.88rem;max-width:300px}
+.fl-tbl caption{text-align:left;color:var(--mu);font-size:.82rem;padding-bottom:.2rem}
+.fl-tbl th,.fl-tbl td{padding:.2rem .7rem;border-bottom:1px solid var(--line);text-align:right}
+.fl-tbl tr:last-child td{font-weight:700}
+.fl-chal{border-top:1px solid var(--line);padding-top:.5rem}
+.fl-chal p{margin:.2rem 0}
+.fl-in{width:6em}
+.vis.flag.lab-won .fl-stage{box-shadow:inset 0 0 0 3px var(--gr);transition:box-shadow .3s}
 /* Why Next? feedback and progress cues (gentle; off under prefers-reduced-motion) */
 .pring{vertical-align:middle}.pring .pr-bg{fill:none;stroke:#e5e7eb;stroke-width:3}.pring .pr-fg{fill:none;stroke:#7c3aed;stroke-width:3;stroke-linecap:round}.pring .pr-fg.done{stroke:#15803d}
 .qi.ok{animation:fxok .45s ease}.fb.bad{animation:fxno .35s ease}
@@ -268,4 +298,4 @@ html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;borde
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=a59289ca07"></script><script defer src="wn/learn.js?v=3c2f993303"></script><script defer src="wn/app.js?v=ea49145e03"></script></body></html>
+<script defer src="wn/core.js?v=a59289ca07"></script><script defer src="wn/learn.js?v=cf1bcd95be"></script><script defer src="wn/app.js?v=ea49145e03"></script></body></html>
