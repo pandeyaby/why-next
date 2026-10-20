@@ -1,0 +1,171 @@
+{
+ "topicId": "mt_Y5xC--f9Eh",
+ "title": "From average to instantaneous rate",
+ "audience": "learner",
+ "keyIdea": "Shrink the gap between two points: the average rate closes in on the rate at a single instant, the gradient of the tangent.",
+ "explain": {
+  "kid": [
+   "A speedometer shows your speed right now, not your average. How do we find a rate at one moment? Take a second point very close to the first. Then find the average rate over that tiny gap.",
+   "For y = x² at x = 3: from 3 to 4 the rate is 7. From 3 to 3.1 it is 6.1. From 3 to 3.01 it is 6.01. These close in on 6. So the rate at x = 3 is 6."
+  ],
+  "adult": [
+   "A line through two points on a curve is a chord. As the second point slides towards the first, the chord turns into the tangent: the line that just touches the curve there.",
+   "The gradient of the tangent is the instantaneous rate of change. For y = x², the chord from 3 to 3 + h has gradient 6 + h. As h shrinks towards 0, this gets closer to 6."
+  ]
+ },
+ "familyTip": "In a car, compare the speedometer with the average speed for the whole trip.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "For y = x², find the average rate of change from x = 3 to x = 4.",
+   "answer": 7,
+   "hint": "(16 − 9) ÷ 1.",
+   "explain": "(16 − 9) ÷ 1 = 7."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "For y = x², find the average rate of change from x = 3 to x = 3.1.",
+   "answer": 6.1,
+   "hint": "3.1² = 9.61.",
+   "explain": "(9.61 − 9) ÷ 0.1 = 0.61 ÷ 0.1 = 6.1."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "For y = x², the chord from x = {a} to x = {a} + h has gradient {=2*a} + h. What does this approach as h shrinks to 0?",
+   "answer": "2*a",
+   "hint": "What is {=2*a} + 0?",
+   "explain": "As h shrinks, {=2*a} + h gets closer to {=2*a}. That is the gradient of the tangent at x = {a}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is a tangent to a curve?",
+   "choices": [
+    "A line that just touches the curve at a point, with the same steepness there",
+    "Any line that crosses the curve twice",
+    "A line through the origin"
+   ],
+   "answer": 0,
+   "hint": "Think of a ruler resting on the curve.",
+   "explain": "A tangent touches the curve at a point and has the curve's steepness there."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "For y = x², find the chord gradient from x = {a} to x = {=a+1}.",
+   "answer": "2*a+1",
+   "hint": "Rise ÷ run, and the run is 1.",
+   "explain": "{=(a+1)*(a+1)} − {=a*a} = {=2*a+1}, and the run is 1, so the gradient is {=2*a+1}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "For y = x², the chord from x = {a} to x = {a} + h has gradient {=2*a} + h. Find it when h = 0.1.",
+    "answer": "2*a+0.1",
+    "hint": "Add 0.1.",
+    "explain": "{=2*a} + 0.1 = {=2*a+0.1}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Chords of y = x² near x = {a} have gradients {=2*a+1}, {=2*a+0.1}, {=2*a+0.01}, … What is the gradient at x = {a}?",
+    "answer": "2*a",
+    "hint": "What number are they closing in on?",
+    "explain": "They close in on {=2*a}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A speedometer reads 50 km/h. This is…",
+    "choices": [
+     "an instantaneous rate of change",
+     "the average over the whole trip",
+     "the distance travelled"
+    ],
+    "answer": 0,
+    "hint": "Is it about one moment, or the whole trip?",
+    "explain": "It shows the rate at that moment: an instantaneous rate."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why can't we use a gap of exactly 0 to find the rate at a point?",
+    "choices": [
+     "Change in y ÷ change in x would be 0 ÷ 0, which has no value",
+     "Because the answer is always 0",
+     "Because tangents don't exist"
+    ],
+    "answer": 0,
+    "hint": "What is the run if the gap is 0?",
+    "explain": "Both changes would be 0, and 0 ÷ 0 has no value. So we let the gap shrink instead."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "As the second point slides towards the first, the chord…",
+    "choices": [
+     "gets closer and closer to the tangent",
+     "gets steeper and steeper for ever",
+     "turns into the x-axis"
+    ],
+    "answer": 0,
+    "hint": "Picture it on a curve.",
+    "explain": "The chord turns until it matches the tangent at that point."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "For y = x², what is the gradient of the chord from x = 1 to x = 1.5?",
+    "answer": 2.5,
+    "hint": "1.5² = 2.25.",
+    "explain": "(2.25 − 1) ÷ 0.5 = 1.25 ÷ 0.5 = 2.5."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The tangent to y = x² at x = 0 is…",
+    "choices": [
+     "flat (gradient 0)",
+     "vertical",
+     "the line y = x"
+    ],
+    "answer": 0,
+    "hint": "The chord gradient from 0 to h is h.",
+    "explain": "The chord gradient h shrinks to 0, so the tangent is flat."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

@@ -1,0 +1,200 @@
+{
+ "topicId": "mt_a-yA19-IoO",
+ "title": "The derivative from first principles",
+ "audience": "learner",
+ "keyIdea": "The derivative is the limit of the chord gradient (f(x + h) − f(x)) ÷ h as h tends to 0.",
+ "explain": {
+  "kid": [
+   "To find the gradient of a curve at a point, take a chord to a point a tiny step h further along. Its gradient is (f(x + h) − f(x)) ÷ h. Then let h shrink to 0.",
+   "For f(x) = x², f(x + h) = x² + 2xh + h². Take away x² to get 2xh + h². Divide by h to get 2x + h. As h → 0 this becomes 2x. So the gradient of y = x² at any point is 2x."
+  ],
+  "adult": [
+   "This is called differentiating from first principles. The derivative is f′(x) = lim (h → 0) of (f(x + h) − f(x)) ÷ h.",
+   "The key step is to expand and simplify before letting h → 0, so that you never divide by zero. For f(x) = 3x²: (3(x + h)² − 3x²) ÷ h = 6x + 3h, which tends to 6x."
+  ]
+ },
+ "familyTip": "Draw y = x² carefully. Measure the steepness at x = 1 and x = 2, and compare with 2x.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In (f(x + h) − f(x)) ÷ h, what does h stand for?",
+   "choices": [
+    "A small step along the x-axis",
+    "The height of the curve",
+    "The gradient"
+   ],
+   "answer": 0,
+   "hint": "It's the run of the chord.",
+   "explain": "h is the small step in x between the two points."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "For f(x) = x², the gradient at any point is 2x. What is the gradient at x = {a}?",
+   "answer": "2*a",
+   "hint": "Double it.",
+   "explain": "2 × {a} = {=2*a}.",
+   "params": {
+    "a": [
+     1,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "For f(x) = x², (f(x + h) − f(x)) ÷ h simplifies to…",
+   "choices": [
+    "2x + h",
+    "2x",
+    "x² + h"
+   ],
+   "answer": 0,
+   "hint": "Expand (x + h)² first.",
+   "explain": "(x² + 2xh + h² − x²) ÷ h = (2xh + h²) ÷ h = 2x + h. Only then do we let h → 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "For f(x) = {a}x², the chord gradient simplifies to {=2*a}x + {a}h. What is the gradient at x = {c}?",
+   "answer": "2*a*c",
+   "hint": "Let h → 0, then substitute.",
+   "explain": "As h → 0 it becomes {=2*a}x. At x = {c}: {=2*a} × {c} = {=2*a*c}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "c": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "For f(x) = x² + {b}x, the chord gradient is 2x + {b} + h. What is the gradient at x = {c}?",
+   "answer": "2*c+b",
+   "hint": "Let h → 0 first.",
+   "explain": "As h → 0 it becomes 2x + {b}. At x = {c}: {=2*c} + {b} = {=2*c+b}.",
+   "params": {
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "f(x) = x² has derivative 2x. Find the gradient at x = −{a}.",
+    "answer": "0-2*a",
+    "hint": "Double a negative number.",
+    "explain": "2 × (−{a}) = −{=2*a}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why do we simplify before letting h → 0?",
+    "choices": [
+     "To cancel h first, so we never divide by 0",
+     "Because h is always 1",
+     "To make the answer bigger"
+    ],
+    "answer": 0,
+    "hint": "What would h = 0 do to ÷ h?",
+    "explain": "Cancelling h first avoids dividing by zero."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Expand (x + h)².",
+    "choices": [
+     "x² + 2xh + h²",
+     "x² + h²",
+     "x² + xh + h²"
+    ],
+    "answer": 0,
+    "hint": "(x + h)(x + h).",
+    "explain": "x² + xh + xh + h² = x² + 2xh + h². Forgetting the middle term is a common mistake."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "For f(x) = {a}x, simplify the chord gradient ({a}(x + h) − {a}x) ÷ h.",
+    "answer": "a",
+    "hint": "Expand the bracket.",
+    "explain": "{a}x + {a}h − {a}x = {a}h, and {a}h ÷ h = {a}. A straight line has the same gradient everywhere.",
+    "params": {
+     "a": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "f(x) = {a}x² has derivative {=2*a}x. Find the gradient at x = {c}.",
+    "answer": "2*a*c",
+    "hint": "Substitute x = {c}.",
+    "explain": "{=2*a} × {c} = {=2*a*c}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "c": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "lim (h → 0) of (f(x + h) − f(x)) ÷ h is the gradient of…",
+    "choices": [
+     "the tangent at x",
+     "the chord from 0 to x",
+     "the x-axis"
+    ],
+    "answer": 0,
+    "hint": "A chord with zero width.",
+    "explain": "As the chord shrinks it becomes the tangent at x."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "For f(x) = x³, f(x + h) = x³ + 3x²h + 3xh² + h³. What is the derivative?",
+    "choices": [
+     "3x²",
+     "3x² + 3xh + h²",
+     "x³"
+    ],
+    "answer": 0,
+    "hint": "Subtract x³, divide by h, then let h → 0.",
+    "explain": "You get 3x² + 3xh + h², which tends to 3x² as h → 0."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

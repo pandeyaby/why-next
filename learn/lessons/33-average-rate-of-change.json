@@ -1,0 +1,202 @@
+{
+ "topicId": "mt_lRy8j6tZXT",
+ "title": "Average rate of change",
+ "audience": "learner",
+ "keyIdea": "Average rate of change = change in output ÷ change in input. On a graph it is the gradient of the straight line joining two points.",
+ "explain": {
+  "kid": [
+   "A car travels 120 km in 2 hours. Its average speed is 120 ÷ 2 = 60 km per hour. That is an average rate of change.",
+   "On a graph, join the two points with a straight line. Its gradient is the average rate of change. It doesn't matter how the graph wiggles in between."
+  ],
+  "adult": [
+   "For f between x = a and x = b, the average rate of change is (f(b) − f(a)) ÷ (b − a). For f(x) = x² from x = 1 to x = 3, that is (9 − 1) ÷ 2 = 4.",
+   "The units are output units per input unit, such as km per hour or pounds per year. A negative answer means the amount fell on average."
+  ]
+ },
+ "familyTip": "On a journey, note the time and distance twice. Work out your average speed between them.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A car travels 120 km in 2 hours. What is its average speed in km per hour?",
+   "answer": 60,
+   "hint": "Distance ÷ time.",
+   "explain": "120 ÷ 2 = 60 km per hour."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A plant is {h} cm tall on day 0 and {=h+r*d} cm tall on day {d}. What is its average growth in cm per day?",
+   "answer": "r",
+   "hint": "Change in height ÷ change in time.",
+   "explain": "It grows {=r*d} cm in {d} days: {=r*d} ÷ {d} = {r} cm per day.",
+   "params": {
+    "h": [
+     2,
+     9
+    ],
+    "r": [
+     1,
+     5
+    ],
+    "d": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "f(x) = x². Find the average rate of change from x = 1 to x = 3.",
+   "answer": 4,
+   "hint": "(f(3) − f(1)) ÷ (3 − 1).",
+   "explain": "f(3) − f(1) = 9 − 1 = 8, and 8 ÷ 2 = 4."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "f(x) = x². Find the average rate of change from x = {a} to x = {b}.",
+   "answer": "a+b",
+   "hint": "(f({b}) − f({a})) ÷ ({b} − {a}).",
+   "explain": "f({b}) − f({a}) = {=b*b} − {=a*a} = {=b*b-a*a}. Divide by {=b-a} to get {=a+b}.",
+   "params": {
+    "a": [
+     0,
+     6
+    ],
+    "b": [
+     1,
+     8
+    ]
+   },
+   "where": "b>a"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A tank holds 50 litres at 2 pm and 20 litres at 5 pm. What is the average rate of change?",
+   "choices": [
+    "−10 litres per hour",
+    "10 litres per hour",
+    "−30 litres per hour"
+   ],
+   "answer": 0,
+   "hint": "Change in litres ÷ change in hours. Did it go up or down?",
+   "explain": "(20 − 50) ÷ 3 = −10 litres per hour. Negative means it emptied."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A cyclist rides {=v*t} km in {t} hours. What is her average speed in km/h?",
+    "answer": "v",
+    "hint": "Distance ÷ time.",
+    "explain": "{=v*t} ÷ {t} = {v} km/h.",
+    "params": {
+     "v": [
+      8,
+      25
+     ],
+     "t": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "f(x) = {a}x + {b}. Find the average rate of change from x = 1 to x = 5.",
+    "answer": "a",
+    "hint": "(f(5) − f(1)) ÷ 4.",
+    "explain": "f(5) − f(1) = {=a*4}, and {=a*4} ÷ 4 = {a}. For a straight line it is always the gradient.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "f(x) = x² + {c}. Find the average rate of change from x = {a} to x = {b}.",
+    "answer": "a+b",
+    "hint": "The + {c} cancels when you subtract.",
+    "explain": "f({b}) − f({a}) = {=b*b-a*a} and {b} − {a} = {=b-a}, so {=b*b-a*a} ÷ {=b-a} = {=a+b}.",
+    "params": {
+     "a": [
+      0,
+      5
+     ],
+     "b": [
+      1,
+      7
+     ],
+     "c": [
+      1,
+      9
+     ]
+    },
+    "where": "b>a"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "On a graph, the average rate of change between two points is…",
+    "choices": [
+     "the gradient of the straight line joining them",
+     "the height of the higher point",
+     "the area under the graph"
+    ],
+    "answer": 0,
+    "hint": "Think rise over run.",
+    "explain": "It is the gradient of the line (chord) joining the two points."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A phone cost £600 new and £360 after 3 years. What is the average rate of change of its value?",
+    "choices": [
+     "−£80 per year",
+     "£80 per year",
+     "−£240 per year"
+    ],
+    "answer": 0,
+    "hint": "(360 − 600) ÷ 3.",
+    "explain": "(360 − 600) ÷ 3 = −240 ÷ 3 = −80. It lost £80 per year on average."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A runner's average speed over a race was 4 m/s. Which must be true?",
+    "choices": [
+     "Total distance ÷ total time was 4 m/s",
+     "She ran at exactly 4 m/s all the way",
+     "Her top speed was 4 m/s"
+    ],
+    "answer": 0,
+    "hint": "An average can hide changes.",
+    "explain": "She may have sped up and slowed down; only the overall distance ÷ time is 4 m/s."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "f(x) = x². Find the average rate of change from x = 2 to x = 4.",
+    "answer": 6,
+    "hint": "(f(4) − f(2)) ÷ 2.",
+    "explain": "(16 − 4) ÷ (4 − 2) = 12 ÷ 2 = 6."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_q0LJXMQe70",
+ "title": "Gradient and the equation of a line",
+ "audience": "learner",
+ "keyIdea": "A straight line is y = mx + c. The gradient m is the steepness, and c is where the line crosses the y-axis.",
+ "explain": {
+  "kid": [
+   "Gradient tells you how steep a line is. Pick two points. Gradient = change in y ÷ change in x. From (1, 3) to (3, 7), y goes up 4 while x goes up 2. So the gradient is 4 ÷ 2 = 2.",
+   "Every straight line can be written as y = mx + c. Here m is the gradient. c is where the line crosses the y-axis. This line is y = 2x + 1."
+  ],
+  "adult": [
+   "Gradient = (y₂ − y₁) ÷ (x₂ − x₁), or rise over run. A line going down from left to right has a negative gradient. A flat line has gradient 0.",
+   "To find the equation, work out m. Then put one point into y = mx + c to find c. Through (1, 3) with m = 2: 3 = 2 + c, so c = 1 and y = 2x + 1. In the US this is often written y = mx + b."
+  ]
+ },
+ "familyTip": "Find a ramp or a step. Measure how far it rises and how far it runs, then work out its gradient.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Find the gradient of the line through (1, 3) and (3, 7).",
+   "answer": 2,
+   "hint": "Rise ÷ run.",
+   "explain": "Rise 7 − 3 = 4 and run 3 − 1 = 2, so the gradient is 4 ÷ 2 = 2."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Find the gradient of the line from (0, {b}) to ({r}, {=b+m*r}).",
+   "answer": "m",
+   "hint": "Rise ÷ run.",
+   "explain": "Rise {=m*r}, run {r}, so the gradient is {=m*r} ÷ {r} = {m}.",
+   "params": {
+    "b": [
+     0,
+     9
+    ],
+    "r": [
+     1,
+     5
+    ],
+    "m": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "In y = 5x − 2, what is the gradient?",
+   "choices": [
+    "5",
+    "−2",
+    "5x"
+   ],
+   "answer": 0,
+   "hint": "Compare with y = mx + c.",
+   "explain": "m is the number in front of x, so the gradient is 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A line has gradient {m} and passes through (1, {=m+c}). Find c in y = mx + c.",
+   "answer": "c",
+   "hint": "Put x = 1 and y = {=m+c} into y = {m}x + c.",
+   "explain": "{=m+c} = {m} × 1 + c, so c = {c}.",
+   "params": {
+    "m": [
+     2,
+     9
+    ],
+    "c": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which line is steeper: y = {a}x + 1 or y = {b}x + 9?",
+   "choices": [
+    "y = {a}x + 1",
+    "y = {b}x + 9",
+    "They are equally steep"
+   ],
+   "answer": 0,
+   "hint": "Steepness comes from m, not c.",
+   "explain": "The gradients are {a} and {b}. The +9 only moves the line up; it doesn't make it steeper.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     8
+    ]
+   },
+   "where": "a>b"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Find the gradient of the line through ({p}, {q}) and ({=p+r}, {=q+m*r}).",
+    "answer": "m",
+    "hint": "Rise ÷ run.",
+    "explain": "Rise {=m*r} ÷ run {r} = {m}.",
+    "params": {
+     "p": [
+      0,
+      5
+     ],
+     "q": [
+      0,
+      5
+     ],
+     "r": [
+      1,
+      4
+     ],
+     "m": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Find the gradient of the line through (0, {=q+m*r}) and ({r}, {q}).",
+    "answer": "0-m",
+    "hint": "y goes down, so the gradient is negative.",
+    "explain": "Rise {q} − {=q+m*r} = −{=m*r}, run {r}, so the gradient is −{m}.",
+    "params": {
+     "q": [
+      0,
+      5
+     ],
+     "r": [
+      1,
+      4
+     ],
+     "m": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is the gradient of a horizontal line?",
+    "choices": [
+     "0",
+     "1",
+     "It has no gradient"
+    ],
+    "answer": 0,
+    "hint": "How much does y change?",
+    "explain": "y doesn't change, so rise = 0 and the gradient is 0."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A line has gradient {m} and passes through ({x}, {=m*x+c}). Find c.",
+    "answer": "c",
+    "hint": "Substitute into y = {m}x + c.",
+    "explain": "{=m*x+c} = {m} × {x} + c = {=m*x} + c, so c = {c}.",
+    "params": {
+     "m": [
+      2,
+      5
+     ],
+     "x": [
+      1,
+      4
+     ],
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which equation is the line with gradient 3 that crosses the y-axis at −4?",
+    "choices": [
+     "y = 3x − 4",
+     "y = −4x + 3",
+     "y = 3x + 4"
+    ],
+    "answer": 0,
+    "hint": "y = mx + c.",
+    "explain": "m = 3 and c = −4, so y = 3x − 4."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ana says the gradient from (2, 1) to (6, 9) is 4 ÷ 8 = 0.5. What went wrong?",
+    "choices": [
+     "She did run ÷ rise; it should be 8 ÷ 4 = 2",
+     "She should add, not divide",
+     "Nothing: 0.5 is right"
+    ],
+    "answer": 0,
+    "hint": "Which goes on top?",
+    "explain": "Rise is 9 − 1 = 8 and run is 6 − 2 = 4. Gradient = rise ÷ run = 2."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A line goes down from left to right. Its gradient is…",
+    "choices": [
+     "negative",
+     "positive",
+     "zero"
+    ],
+    "answer": 0,
+    "hint": "As x increases, y decreases.",
+    "explain": "y falls as x rises, so the gradient is negative."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

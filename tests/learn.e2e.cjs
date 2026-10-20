@@ -131,6 +131,39 @@ async function axe(p, label) {
     assert.ok(rv.step === 1 && rv.due > due, JSON.stringify(rv));
     await p.goto(URL + '?seed=42');
   });
+  async function walk(age, goal) {
+    const q = await page(browser, { width: 1000, height: 800 }); await profile(q, age, goal);
+    const r = await q.evaluate(() => { const seen = []; for (let i = 0; i < 40; i++) { const nx = LEARN.nextList(6); if (!nx.length) break;
+      const l = nx.find(n => LEARN.has(n.id)), t = l || nx[0]; if (l) seen.push(t.n); LEARN.setProg(t.id, { status: l ? 'mastered' : 'known' }) } return seen });
+    await q.context().close(); return r;
+  }
+  const inOrder = (seen, want) => { const ix = want.map(w => seen.indexOf(w)); assert.ok(ix.every((v, i) => v >= 0 && (i === 0 || v > ix[i - 1])), `expected in order ${want.join(' > ')}; got ${seen.join(' | ')}`) };
+  await test('16-18 + calculus: learn-next walks the calculus slice up to tangents', async () => {
+    const seen = await walk('16-18', 'calculus');
+    inOrder(seen, ['Writing the equation of a line', 'Average rate of change', 'From average to instantaneous rate of change', 'The derivative from first principles', 'Derivative notation', 'Differentiating powers of x', 'Differentiating sums and multiples', 'Equations of tangents and normals']);
+    assert.ok(seen.includes('Function notation') && seen.includes('Limits: what a function approaches'));
+    console.log('      path:', seen.join(' > '));
+  });
+  await test('10-12 + chemistry: learn-next walks particles to balanced equations, staying in science', async () => {
+    const seen = await walk('10-12', 'chemistry');
+    inOrder(seen, ['Matter Is Made of Particles', 'The Particle Model', 'Atoms, Elements & Compounds', 'Counting atoms in formulae and equations', 'Reactions rearrange atoms', 'Balancing chemical equations']);
+    assert.ok(seen.includes('Conservation of Mass') && seen.includes('Word equations'));
+    assert.ok(!seen.includes('Long multiplication (age 10+)'), 'maths lessons leaked into the chemistry path');
+    console.log('      path:', seen.join(' > '));
+  });
+  for (const [id, label] of [['mt_vqlq_sKWKm', 'tangents (negative answers)'], ['mt_BXj4pfdhxO', 'balancing equations']]) await test(`new slice lesson can be practised and mastered: ${label}`, async () => {
+    await p.evaluate(id => { LEARN.clear(id); select(id) }, id);
+    const cur = await p.evaluate(() => LEARN_PANEL.cur());
+    for (const it of cur.p) await answer(p, 'p', it);
+    for (const it of cur.m) await answer(p, 'm', it);
+    assert.match(await p.textContent('#mres'), /mastered/);
+    await p.evaluate(id => LEARN.clear(id), id);
+  });
+  await test('multiple-choice options are shuffled, so the answer is not always first', async () => {
+    const pos = new Set();
+    for (let i = 0; i < 8; i++) { await p.evaluate(() => select('mt_BXj4pfdhxO')); (await p.evaluate(() => LEARN_PANEL.cur().m)).filter(x => x.type === 'mc').forEach(x => pos.add(x.answer)) }
+    assert.ok(pos.size >= 2, 'answer position never varies');
+  });
   await test('topics without a lesson show "Lessons coming" with a verified link', async () => {
     await p.evaluate(() => select(DATA.nodes.find(n => n.n === 'Solving quadratics by factorising').id));
     assert.match(await p.textContent('#learn'), /Lessons coming/); assert.ok(await p.$('#learn a[href^="https://www.bbc.co.uk/bitesize/"]'));

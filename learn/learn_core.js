@@ -21,7 +21,7 @@ const goal=()=>GOALS.find(g=>g.id===P.goal)||GOALS[GOALS.length-1];
 /* distance (in prerequisite links) from every ancestor to the goal topic */
 let distFor=null,dist=new Map();
 function goalDist(){const g=goal();if(distFor!==g.target){distFor=g.target;dist=new Map();if(g.target){dist.set(g.target,0);const q=[g.target];
- while(q.length){const u=q.shift();for(const e of PRE.get(u)||[])if(!dist.has(e.p)){dist.set(e.p,dist.get(u)+1);q.push(e.p)}}}}return dist}
+ while(q.length){const u=q.shift();for(const e of PRE.get(u)||[])if(e.h&&!dist.has(e.p)){dist.set(e.p,dist.get(u)+1);q.push(e.p)}}}}return dist}
 const hard=id=>(PRE.get(id)||[]).filter(e=>e.h);
 /* "Next" = not done, not skipped, every hard prerequisite done, and (with a goal) on the way to it. */
 const ready=id=>!done(id)&&!skipped(id)&&hard(id).every(e=>done(e.p));
@@ -33,7 +33,7 @@ function nextList(limit){const g=goal(),d=goalDist(),ag=assumeAge(),out=[];
  const key=n=>g.target?d.get(n.id):Math.abs(n.a[0]-ag);
  out.sort((a,b)=>(key(a)-key(b))||(has(b.id)-has(a.id))||(a.a[0]-b.a[0])||(b.c-a.c)||a.n.localeCompare(b.n));
  offPath=new Set();
- if(g.target&&out.length<3){const extra=DATA.nodes.filter(n=>has(n.id)&&!d.has(n.id)&&ready(n.id))
+ if(g.target&&out.length<3){const extra=DATA.nodes.filter(n=>has(n.id)&&!d.has(n.id)&&ready(n.id)&&n.s===N.get(g.target).s)
    .sort((a,b)=>Math.abs(a.a[0]-ag)-Math.abs(b.a[0]-ag)||a.a[0]-b.a[0]||a.n.localeCompare(b.n)).slice(0,3-out.length);
   extra.forEach(n=>{offPath.add(n.id);out.push(n)})}
  return limit?out.slice(0,limit):out}
@@ -71,7 +71,7 @@ function home(){refreshNext();const el=document.getElementById('learnHome');if(!
  <button type="button" id="pReset" class="lbtn ghost">Clear my data</button></form>${mem?'<p class="muted">Storage is blocked in this browser, so progress lasts only until you close the page.</p>':''}</details>
  ${(()=>{const du=dueList();return du.length?`<h2 class="lh">Quick review <span class="muted">· ${du.length} due</span></h2><ul class="nextl">${du.map(id=>`<li><button type="button" class="linkish" data-go="${id}">${esc(N.get(id).n)}</button> <span class="muted small">2-question refresh of a topic you mastered</span></li>`).join('')}</ul>`:''})()}
  <h2 class="lh" id="lnH">Learn next${g.target?` <span class="muted">towards ${esc(N.get(g.target).n)}</span>`:''}</h2>
- ${nx.length?`<ol class="nextl">${nx.map(n=>`<li><button type="button" class="linkish" data-go="${n.id}">${esc(n.n)}</button> ${has(n.id)?'<span class="tag new">lesson</span>':'<span class="tag">lessons coming</span>'}${offPath.has(n.id)?' <span class="tag">nearby</span>':''} <span class="age">ages ${n.a[0]}–${n.a[1]}</span><div class="why">${esc(why(n.id))}</div></li>`).join('')}</ol>`:`<p class="muted">${g.target&&done(g.target)?'You’ve reached this goal':'Nothing to suggest on this path yet'}. ${assumeAge()?`From your age band we assume you know topics up to age ${assumeAge()}: choose a harder goal, or set “Assume I know” lower to review.`:'Try another goal.'}</p>`}
+ ${nx.every(n=>offPath.has(n.id))?`<p class="muted">${g.target&&done(g.target)?'You’ve reached this goal':(nx.length?'Nothing left on this goal path, so here are nearby topics':'Nothing to suggest on this path yet')}. ${assumeAge()?`From your age band we assume you know topics up to age ${assumeAge()}: choose a harder goal, or set “Assume I know” lower to review.`:'Try another goal.'}</p>`:''}${nx.length?`<ol class="nextl">${nx.map(n=>`<li><button type="button" class="linkish" data-go="${n.id}">${esc(n.n)}</button> ${has(n.id)?'<span class="tag new">lesson</span>':'<span class="tag">lessons coming</span>'}${offPath.has(n.id)?' <span class="tag">nearby</span>':''} <span class="age">ages ${n.a[0]}–${n.a[1]}</span><div class="why">${esc(why(n.id))}</div></li>`).join('')}</ol>`:''}
  ${P.age?'':'<p class="muted small">Tip: choose an age band so we can skip topics you almost certainly know.</p>'}
  <p class="muted lkey"><span class="lb lb-m">✓</span> mastered <span class="lb lb-k">✓</span> already known <span class="lb lb-n">★</span> learn next <span class="lb lb-l">◆</span> has a lesson</p></section>`;
  document.getElementById('pDet').ontoggle=e=>{formOpen=e.target.open};

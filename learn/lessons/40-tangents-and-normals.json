@@ -1,0 +1,182 @@
+{
+ "topicId": "mt_vqlq_sKWKm",
+ "title": "Equations of tangents and normals",
+ "audience": "learner",
+ "keyIdea": "The tangent at x = a has gradient f′(a) and passes through (a, f(a)). The normal is perpendicular to it.",
+ "explain": {
+  "kid": [
+   "To find the tangent to a curve at a point, you need a gradient and a point. The derivative gives the gradient. The curve gives the point.",
+   "For y = x² at x = 3, the point is (3, 9). dy/dx = 2x, so the gradient is 6. Then 9 = 6 × 3 + c gives c = −9. So the tangent is y = 6x − 9."
+  ],
+  "adult": [
+   "Use y − y₁ = m(x − x₁), with m = f′(a) and the point (a, f(a)). Rearrange into y = mx + c if needed.",
+   "The normal is the line at right angles to the tangent at the same point. Its gradient is −1 ÷ m, because perpendicular gradients multiply to −1. For y = x² at (3, 9), the normal has gradient −1/6."
+  ]
+ },
+ "familyTip": "Plot y = x² on graph paper. Draw your tangent at x = 3 and check that it just touches the curve.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "The tangent to y = x² at x = 3 is y = 6x + c. Find c.",
+   "answer": -9,
+   "hint": "The point is (3, 9).",
+   "explain": "9 = 6 × 3 + c = 18 + c, so c = −9."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Find the gradient of the tangent to y = x² at x = {a}.",
+   "answer": "2*a",
+   "hint": "dy/dx = 2x.",
+   "explain": "dy/dx = 2x, so at x = {a} the gradient is {=2*a}.",
+   "params": {
+    "a": [
+     1,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "The tangent to y = x² at x = {a} is y = {=2*a}x + c. Find c.",
+   "answer": "0-a*a",
+   "hint": "The point is ({a}, {=a*a}).",
+   "explain": "{=a*a} = {=2*a} × {a} + c = {=2*a*a} + c, so c = −{=a*a}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A tangent has gradient 2. What is the gradient of the normal at the same point?",
+   "choices": [
+    "−1/2",
+    "1/2",
+    "−2"
+   ],
+   "answer": 0,
+   "hint": "Perpendicular gradients multiply to −1.",
+   "explain": "2 × (−1/2) = −1, so the normal's gradient is −1/2."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "To find the tangent at x = a, which two things do you need?",
+   "choices": [
+    "The gradient f′(a) and the point (a, f(a))",
+    "Only f(a)",
+    "The gradient f(a) and the point (a, f′(a))"
+   ],
+   "answer": 0,
+   "hint": "A line needs a gradient and a point.",
+   "explain": "The gradient comes from f′(a); the point is (a, f(a))."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Find the gradient of the tangent to y = x³ at x = {a}.",
+    "answer": "3*a*a",
+    "hint": "dy/dx = 3x².",
+    "explain": "3 × {=a*a} = {=3*a*a}.",
+    "params": {
+     "a": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "The tangent to y = x² + {b} at x = {a} is y = {=2*a}x + c. Find c.",
+    "answer": "b-a*a",
+    "hint": "The point is ({a}, {=a*a+b}).",
+    "explain": "{=a*a+b} = {=2*a*a} + c, so c = {=b-a*a}.",
+    "params": {
+     "a": [
+      1,
+      6
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is the tangent to y = x² at (1, 1)?",
+    "choices": [
+     "y = 2x − 1",
+     "y = 2x + 1",
+     "y = x"
+    ],
+    "answer": 0,
+    "hint": "Gradient 2x = 2, then find c.",
+    "explain": "1 = 2 × 1 + c, so c = −1: y = 2x − 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A tangent has gradient {m}. What is the gradient of the normal, as a decimal?",
+    "answer": "0-1/m",
+    "hint": "−1 ÷ {m}.",
+    "explain": "−1 ÷ {m} = {=0-1/m}.",
+    "params": {
+     "m": [
+      1,
+      20
+     ]
+    },
+    "where": "100%m==0"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "The normal to a curve at a point is…",
+    "choices": [
+     "perpendicular to the tangent there",
+     "parallel to the tangent",
+     "always the x-axis"
+    ],
+    "answer": 0,
+    "hint": "Normal means at right angles.",
+    "explain": "It meets the tangent at a right angle."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ben finds the tangent to y = x² at x = 2 and writes y = 2x. What went wrong?",
+    "choices": [
+     "He used 2 as the gradient; it's 2 × 2 = 4, giving y = 4x − 4",
+     "Nothing",
+     "He forgot to square 2"
+    ],
+    "answer": 0,
+    "hint": "Work out dy/dx at x = 2.",
+    "explain": "The gradient is 4 and the point is (2, 4), so 4 = 8 + c and c = −4."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "What is the gradient of the tangent to y = x² − 4x at x = 3?",
+    "answer": 2,
+    "hint": "dy/dx = 2x − 4.",
+    "explain": "2 × 3 − 4 = 6 − 4 = 2."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

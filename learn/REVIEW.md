@@ -35,6 +35,46 @@ This is an author self-review, **not** a teacher review. All 30 lessons are stil
 | 02 kid, 09 kid/adult, 13 kid | FK above target (5.2, 5.2/12.3, 7.7) | Rewrote with shorter sentences |
 | 26–30 (new) | Written for this round, and re-solved by hand. They cover rounding a remainder up or down in context, and the forgotten placeholder 0 in long multiplication | n/a |
 
+## Round 2: calculus and chemistry slices (2026-10-19)
+Lessons 31–40 (calculus) and 41–50 (chemistry) follow hard prerequisite links in the map. I re-solved every item by hand. The validator enumerates every parameter combination, and every lesson passes the reading-level targets.
+
+**Calculus path:** gradient and line equation → function notation → limits → average rate of change → average to instantaneous → first principles → notation → power rule → sums and multiples → tangents and normals.
+- The Calculus goal now targets *Equations of tangents and normals*, a simple application.
+- Integration is not included. In the map, *The definite integral* needs a long chain (*Velocity–time graphs*, *Net change as accumulated rate*, *Estimating areas*) that has no lessons yet.
+
+**Chemistry path:** particles → particle model and density → atoms, elements and compounds → pure substances and mixtures → periodic table → counting atoms → conservation of mass → reactions rearrange atoms → word equations → balancing equations.
+- The Chemistry goal now targets *Balancing chemical equations*.
+
+**Engine changes**
+- Goal paths now follow hard prerequisites only. Soft links had been pulling maths lessons into the chemistry path.
+- "Nearby" top-ups now stay in the goal's subject.
+- Multiple-choice options are now shuffled on display. Before this, the correct answer was stored first in 146 of 157 items, and the panel showed choices in stored order. That was a real flaw in rounds 1 and 2.
+
+**Accuracy checks**
+- Quoted data checked: oxygen melts at −218 °C and boils at −183 °C; Mendeleev 1869; Group 1 reactivity; potassium burns with a lilac flame.
+- Reacting masses use real ratios: Fe:S 7:4, Mg:O 3:2, H₂:O₂ 4:32, CaCO₃ → CaO + CO₂ 100:56:44, MgCO₃ 84:40:44, Na:Cl 23:35.5.
+
+**Misconceptions targeted**
+- Calculus:
+  - f(x) read as f × x
+  - run ÷ rise
+  - "+c makes a line steeper"
+  - (x + h)² = x² + h²
+  - the power-rule slip −1 → 0
+  - multiplying derivatives of a product
+  - f′(3) read as 3f′
+  - a negative dy/dx read as negative y
+- Chemistry:
+  - air between gas particles
+  - particles expanding or melting
+  - O₂ thought to be a compound
+  - "pure" juice
+  - burning destroying mass
+  - changing subscripts to balance
+  - 4 + 3 instead of 4 × 3 for brackets in formulae
+
+**Fix during writing:** the lesson 43 kid text was at FK 7.5, so I rewrote it to 6.3.
+
 ## UK/US policy
 - UK spelling, £ and pence, and metric units throughout.
 - Where the terms differ, both are given: brackets (parentheses), BIDMAS/BODMAS (PEMDAS), indices (exponents).
@@ -73,9 +113,31 @@ This is an author self-review, **not** a teacher review. All 30 lessons are stil
 | 28-brackets-in-expressions | learner | 1.9 | 4.3 |
 | 29-multi-step-problems | learner | 0.5 | 5.3 |
 | 30-writing-number-sentences | learner | 3.6 | 7.8 |
+| 31-function-notation | learner | -0.2 | 2.4 |
+| 32-gradient-and-equation-of-a-line | learner | 0.5 | 1.6 |
+| 33-average-rate-of-change | learner | 1.8 | 4.2 |
+| 34-average-to-instantaneous-rate | learner | 0.7 | 3.2 |
+| 35-limits | learner | -0.3 | 2.3 |
+| 36-derivative-from-first-principles | learner | 0.8 | 5.1 |
+| 37-derivative-notation | learner | 0.5 | 3.7 |
+| 38-differentiating-powers-of-x | learner | 2.8 | 5.7 |
+| 39-differentiating-sums-and-multiples | learner | 1.3 | 6.0 |
+| 40-tangents-and-normals | learner | 0.8 | 3.7 |
+| 41-matter-is-made-of-particles | learner | 3.1 | 5.9 |
+| 42-the-particle-model | learner | 4.0 | 3.1 |
+| 43-atoms-elements-and-compounds | learner | 6.3 | 7.0 |
+| 44-pure-substances-and-mixtures | learner | 6.0 | 7.1 |
+| 45-the-periodic-table | learner | 4.8 | 7.0 |
+| 46-counting-atoms-in-formulae | learner | 5.8 | 6.7 |
+| 47-conservation-of-mass | learner | 5.8 | 5.0 |
+| 48-reactions-rearrange-atoms | learner | 6.3 | 6.0 |
+| 49-word-equations | learner | 3.9 | 7.4 |
+| 50-balancing-chemical-equations | learner | 3.5 | 4.5 |
 
 ## What a teacher review should focus on
-1. **Pedagogical sequence and prerequisites.** Do the age-10 bridge lessons (26–30) and the learner slice match how UK KS2/KS3 classes actually teach these topics?
+1. **Calculus slice** (16–18): is the limits intuition rigorous enough without being off-putting? Is it right to end at tangents without integration? Is the notation (f′, dy/dx, lim) at the right level?
+2. **Chemistry slice** (10–14): check accuracy, especially the simplified atom model, purity tests, and the reacting-mass numbers. Check the reading load for 10-year-olds.
+3. **Pedagogical sequence and prerequisites.** Do the age-10 bridge lessons (26–30) and the learner slice match how UK KS2/KS3 classes actually teach these topics?
 2. **Misconceptions.** Are the wrong choices the mistakes children really make? Are any common ones missing (for example "multiplying always makes bigger" in fractions or decimals, and sign errors when solving equations)?
 3. **Wording for real 10-year-olds**, especially the multi-step and remainder problems, which are reading-heavy.
 4. **The family slice for under-7s.** Is it realistic for a parent to deliver, and are the "Try it at home" activities sensible?

@@ -1,0 +1,167 @@
+{
+ "topicId": "mt_t20A6RuTJn",
+ "title": "Counting atoms in formulae",
+ "audience": "learner",
+ "keyIdea": "A small number after a symbol counts that atom. A big number in front counts whole molecules. Brackets multiply everything inside.",
+ "explain": {
+  "kid": [
+   "In H₂O, the small 2 belongs to the H. So there are 2 hydrogen atoms and 1 oxygen atom: 3 atoms in all.",
+   "A big number in front counts molecules. 3H₂O means 3 water molecules. That is 3 × 2 = 6 hydrogen atoms and 3 oxygen atoms."
+  ],
+  "adult": [
+   "Brackets multiply everything inside them. In Ca(OH)₂ there is 1 calcium, 2 oxygen and 2 hydrogen atoms: 5 atoms in total.",
+   "Use both rules together when needed. 2Ca(OH)₂ has 2 calcium, 4 oxygen and 4 hydrogen atoms. In an equation, count each element on each side. A balanced equation has the same totals on both sides."
+  ]
+ },
+ "familyTip": "Write formulae on cards (H₂O, CO₂, 2NH₃) and race each other to count the atoms.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "How many atoms in total are in one H₂O molecule?",
+   "answer": 3,
+   "hint": "2 hydrogen + 1 oxygen.",
+   "explain": "2 + 1 = 3 atoms."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "How many hydrogen atoms are in {n}H₂O?",
+   "answer": "2*n",
+   "hint": "{n} molecules, each with 2 hydrogen atoms.",
+   "explain": "{n} × 2 = {=2*n} hydrogen atoms.",
+   "params": {
+    "n": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "How many oxygen atoms are in Ca(OH)₂?",
+   "answer": 2,
+   "hint": "The bracket is doubled.",
+   "explain": "(OH) × 2 gives 2 oxygen atoms."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many oxygen atoms are in {n}CO₂?",
+   "answer": "2*n",
+   "hint": "Each CO₂ has 2 oxygen atoms.",
+   "explain": "{n} × 2 = {=2*n} oxygen atoms.",
+   "params": {
+    "n": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "In 3H₂O, what does the 3 mean?",
+   "choices": [
+    "3 water molecules",
+    "3 hydrogen atoms",
+    "3 oxygen atoms"
+   ],
+   "answer": 0,
+   "hint": "A big number in front counts molecules.",
+   "explain": "3H₂O is three whole water molecules."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "How many atoms in total are in {n}CH₄?",
+    "answer": "5*n",
+    "hint": "Each CH₄ has 1 + 4 atoms.",
+    "explain": "Each CH₄ has 5 atoms, so {n} × 5 = {=5*n}.",
+    "params": {
+     "n": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How many oxygen atoms are in {n}Ca(OH)₂?",
+    "answer": "2*n",
+    "hint": "Each Ca(OH)₂ has 2 oxygen atoms.",
+    "explain": "{n} × 2 = {=2*n} oxygen atoms.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "How many hydrogen atoms are in 2NH₃?",
+    "answer": 6,
+    "hint": "2 molecules × 3 hydrogen atoms.",
+    "explain": "2 × 3 = 6."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "How many atoms in total are in Mg(NO₃)₂?",
+    "answer": 9,
+    "hint": "The bracket doubles N and O₃.",
+    "explain": "1 Mg + 2 N + 6 O = 9 atoms."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How many oxygen atoms are in Al₂(SO₄)₃?",
+    "choices": [
+     "12",
+     "4",
+     "7"
+    ],
+    "answer": 0,
+    "hint": "The bracket is multiplied by 3.",
+    "explain": "4 oxygen atoms × 3 = 12. Adding 4 + 3 = 7 is a common slip."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "How many atoms of each element are in H₂SO₄?",
+    "choices": [
+     "2 H, 1 S, 4 O",
+     "2 H, 2 S, 4 O",
+     "1 H, 1 S, 1 O"
+    ],
+    "answer": 0,
+    "hint": "Each small number belongs to the symbol just before it.",
+    "explain": "H₂ gives 2 H, S has no number so 1, O₄ gives 4."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "The right-hand side of an equation has {n}H₂O. How many hydrogen atoms must the left-hand side have?",
+    "answer": "2*n",
+    "hint": "Atoms are not made or destroyed.",
+    "explain": "{n} × 2 = {=2*n}, so the left needs {=2*n} hydrogen atoms too.",
+    "params": {
+     "n": [
+      2,
+      8
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked"
+}

@@ -11,7 +11,10 @@ function ev(expr,v){if(!SAFE.test(expr))throw new Error('unsafe expression');con
 const fmt=x=>{const r=Math.round(x*100)/100;return (r<0?'−':'')+String(Math.abs(r))};
 function fill(s,v){return s.replace(/\{=([^}]+)\}/g,(_,e)=>fmt(ev(e,v))).replace(/\{([a-z])\}/g,(_,k)=>k in v?fmt(v[k]):_)}
 const rnd=(lo,hi)=>lo+Math.floor(rand()*(hi-lo+1));
-function make(it){if(!it.params)return it;let v;
+function make(it){const o=it.params?inst(it):Object.assign({},it);
+ /* shuffle multiple-choice options so the right answer isn't always in the same place */
+ if(o.type==='mc'){const ord=shuffle(o.choices.map((_,k)=>k));o.answer=ord.indexOf(o.answer);o.choices=ord.map(k=>o.choices[k])}return o}
+function inst(it){let v;
  for(let t=0;t<500;t++){v={};for(const[k,[lo,hi]]of Object.entries(it.params))v[k]=rnd(lo,hi);if(!it.where||ev(it.where,v))break}
  const o=Object.assign({},it,{prompt:fill(it.prompt,v),hint:fill(it.hint,v),explain:fill(it.explain,v),vars:v});
  if(it.choices)o.choices=it.choices.map(c=>fill(c,v));if(it.type==='numeric')o.answer=ev(String(it.answer),v);return o}

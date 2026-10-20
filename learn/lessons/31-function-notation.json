@@ -1,0 +1,220 @@
+{
+ "topicId": "mt_v8xr0RK1hL",
+ "title": "Function notation",
+ "audience": "learner",
+ "keyIdea": "f(x) is the output of the rule f when the input is x.",
+ "explain": {
+  "kid": [
+   "f(x) = 2x + 3 is a rule. The letter f is its name and x is the input. To find f(4), put 4 in place of x: 2 × 4 + 3 = 11. So f(4) = 11.",
+   "f(x) does not mean f times x. Read it as 'f of x': the output when x goes in."
+  ],
+  "adult": [
+   "Function notation names a rule and its input. If f(x) = x² − 1, then f(3) = 9 − 1 = 8 and f(−2) = 4 − 1 = 3. The brackets after f show the input. They do not mean multiply.",
+   "You can also work backwards. If f(x) = 2x + 3 and f(a) = 11, then 2a + 3 = 11, so a = 4. In context, f(3) = 10 might mean 'after 3 hours, 10 litres are left'."
+  ]
+ },
+ "familyTip": "Make a function machine: write a rule like 'double it and add 3', then test each other with inputs.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "f(x) = 2x + 3. Find f(4).",
+   "answer": 11,
+   "hint": "Put 4 in place of x.",
+   "explain": "f(4) = 2 × 4 + 3 = 11."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "f(x) = {a}x + {b}. Find f({c}).",
+   "answer": "a*c+b",
+   "hint": "Put {c} in place of x.",
+   "explain": "f({c}) = {a} × {c} + {b} = {=a*c+b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What does f(5) mean?",
+   "choices": [
+    "The output when the input is 5",
+    "f multiplied by 5",
+    "The input when the output is 5"
+   ],
+   "answer": 0,
+   "hint": "Read it as 'f of 5'.",
+   "explain": "f(5) is the output of the rule when 5 goes in."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "g(x) = x² − {b}. Find g({c}).",
+   "answer": "c*c-b",
+   "hint": "Square {c} first, then subtract.",
+   "explain": "g({c}) = {c}² − {b} = {=c*c} − {b} = {=c*c-b}.",
+   "params": {
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     2,
+     9
+    ]
+   },
+   "where": "c*c>b"
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "f(x) = {a}x + {b} and f(k) = {=a*k+b}. Find k.",
+   "answer": "k",
+   "hint": "Solve {a}k + {b} = {=a*k+b}.",
+   "explain": "{a}k + {b} = {=a*k+b}, so {a}k = {=a*k}, so k = {k}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "k": [
+     2,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "f(x) = {a}x − {b}. Find f({c}).",
+    "answer": "a*c-b",
+    "hint": "Put {c} in place of x.",
+    "explain": "f({c}) = {a} × {c} − {b} = {=a*c-b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      2,
+      9
+     ]
+    },
+    "where": "a*c>b"
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "h(x) = x² + {b}. Find h(−{c}).",
+    "answer": "c*c+b",
+    "hint": "A negative times a negative is positive.",
+    "explain": "(−{c})² = {=c*c}, so h(−{c}) = {=c*c} + {b} = {=c*c+b}.",
+    "params": {
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "f(x) = 3x. Sam says f(2) means 'f × 2'. What is wrong?",
+    "choices": [
+     "f(2) means put 2 into the rule, so f(2) = 6",
+     "Nothing: f(2) = 2f",
+     "f(2) means 3 + 2"
+    ],
+    "answer": 0,
+    "hint": "The brackets show the input.",
+    "explain": "f(2) is 'f of 2': 3 × 2 = 6."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "f(x) = {a}x + {b}. For which x is f(x) = {=a*k+b}?",
+    "answer": "k",
+    "hint": "Set {a}x + {b} = {=a*k+b} and solve.",
+    "explain": "{a}x + {b} = {=a*k+b}, so {a}x = {=a*k}, so x = {k}.",
+    "params": {
+     "a": [
+      2,
+      7
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "k": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A taxi ride costs C(m) = 3 + 2m pounds, where m is the number of miles. What does C(5) = 13 mean?",
+    "choices": [
+     "A 5-mile ride costs £13",
+     "A £5 ride goes 13 miles",
+     "5 rides cost £13"
+    ],
+    "answer": 0,
+    "hint": "The input is miles; the output is pounds.",
+    "explain": "C(5) = 13: an input of 5 miles gives an output of £13."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "f(x) = x² − 1. Find f(−2).",
+    "answer": 3,
+    "hint": "Square −2 first.",
+    "explain": "(−2)² = 4, and 4 − 1 = 3."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "f(x) = 2x + 1. What is f(3) + f(1)?",
+    "choices": [
+     "10",
+     "9",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Work out f(3) and f(1) separately.",
+    "explain": "f(3) = 7 and f(1) = 3, so the sum is 10. It is not f(4) = 9: you can't just add the inputs."
+   }
+  ]
+ },
+ "status": "self-checked"
+}

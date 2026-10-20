@@ -1,0 +1,203 @@
+{
+ "topicId": "mt_P9vcHUW9CJ",
+ "title": "Limits: what a function approaches",
+ "audience": "learner",
+ "keyIdea": "A limit is the value f(x) gets closer to as x gets closer to a number, even if f can't be worked out exactly there.",
+ "explain": {
+  "kid": [
+   "Look at f(x) = (x² − 1) ÷ (x − 1). At x = 1 you get 0 ÷ 0, which has no value. Now try x = 0.9, 0.99 and 0.999. You get 1.9, 1.99 and 1.999. The outputs close in on 2.",
+   "We say the limit as x tends to 1 is 2. It is about where f is heading, not what happens at the point itself."
+  ],
+  "adult": [
+   "Often algebra shows the limit. x² − 1 = (x − 1)(x + 1), so for x ≠ 1, f(x) = x + 1. As x → 1, x + 1 → 2. We write lim (x → 1) f(x) = 2.",
+   "If f is a smooth expression that can be worked out at a, the limit is just f(a). Limits matter most when you can't substitute, as with 0 ÷ 0. That is exactly what happens when a chord shrinks to a point."
+  ]
+ },
+ "familyTip": "Halve a number again and again: 1, 0.5, 0.25, … What value is it heading for?",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "What is the limit of 2x + 1 as x tends to 3?",
+   "answer": 7,
+   "hint": "It's a smooth expression, so substitute.",
+   "explain": "2 × 3 + 1 = 7."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Find the limit of {a}x + {b} as x tends to {c}.",
+   "answer": "a*c+b",
+   "hint": "Substitute x = {c}.",
+   "explain": "{a} × {c} + {b} = {=a*c+b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "f(x) = (x² − 1) ÷ (x − 1) gives 1.9, 1.99, 1.999 at x = 0.9, 0.99, 0.999. What is the limit as x → 1?",
+   "choices": [
+    "2",
+    "1.999",
+    "There is no limit, because f(1) is 0 ÷ 0"
+   ],
+   "answer": 0,
+   "hint": "Where are the outputs heading?",
+   "explain": "They close in on 2. f(1) having no value doesn't stop the limit existing."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "For x ≠ {a}, (x² − {=a*a}) ÷ (x − {a}) = x + {a}. Find the limit as x → {a}.",
+   "answer": "2*a",
+   "hint": "Substitute into x + {a}.",
+   "explain": "x + {a} → {a} + {a} = {=2*a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Find the limit of x² + {b} as x tends to {c}.",
+   "answer": "c*c+b",
+   "hint": "Substitute x = {c}.",
+   "explain": "{c}² + {b} = {=c*c} + {b} = {=c*c+b}.",
+   "params": {
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Find the limit of {a}x − {b} as x → {c}.",
+    "answer": "a*c-b",
+    "hint": "Substitute.",
+    "explain": "{a} × {c} − {b} = {=a*c-b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      5
+     ]
+    },
+    "where": "a*c>b"
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Simplify, then find the limit as x → {a}: (x² − {=a*a}) ÷ (x − {a}).",
+    "answer": "2*a",
+    "hint": "Factorise the top as a difference of two squares.",
+    "explain": "x² − {=a*a} = (x − {a})(x + {a}), so the expression is x + {a}, which tends to {=2*a}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "f(1.9) = 4.9, f(1.99) = 4.99, f(2.01) = 5.01 and f(2.1) = 5.1. What is the likely limit as x → 2?",
+    "choices": [
+     "5",
+     "4.99",
+     "5.1"
+    ],
+    "answer": 0,
+    "hint": "Look from both sides.",
+    "explain": "From below and above the outputs close in on 5."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which statement is true?",
+    "choices": [
+     "A limit can exist where the function has no value",
+     "A limit always equals f(a)",
+     "If f(a) is 0 ÷ 0, the limit is 0"
+    ],
+    "answer": 0,
+    "hint": "Think of (x² − 1) ÷ (x − 1) at x = 1.",
+    "explain": "That function has no value at 1, but its limit there is 2."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Find the limit of (x² − 9) ÷ (x − 3) as x → 3.",
+    "answer": 6,
+    "hint": "x² − 9 = (x − 3)(x + 3).",
+    "explain": "It simplifies to x + 3, which tends to 6."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What does lim (x → 4) f(x) = 10 mean?",
+    "choices": [
+     "As x gets closer to 4, f(x) gets closer to 10",
+     "f(10) = 4",
+     "f(x) is never more than 10"
+    ],
+    "answer": 0,
+    "hint": "Read it aloud: the limit as x tends to 4.",
+    "explain": "As x approaches 4, the outputs approach 10."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Find the limit of ({a}x² + {b}x) ÷ x as x → 0.",
+    "answer": "b",
+    "hint": "Divide each term by x first.",
+    "explain": "For x ≠ 0 it is {a}x + {b}, which tends to {b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked"
+}

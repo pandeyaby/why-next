@@ -1,0 +1,204 @@
+{
+ "topicId": "mt_h07IxxUQwx",
+ "title": "Derivative notation",
+ "audience": "learner",
+ "keyIdea": "f′(x) and dy/dx both mean the derivative: the gradient function.",
+ "explain": {
+  "kid": [
+   "There are two common ways to write the derivative. If y = f(x), we can write f′(x), said 'f dash x' (or 'f prime x'). Or we can write dy/dx, said 'dee y by dee x'.",
+   "dy/dx is not a fraction you can cancel. It means the rate of change of y as x changes. If y = x², then dy/dx = 2x. At x = 3, dy/dx = 6."
+  ],
+  "adult": [
+   "Leibniz's dy/dx reminds you of 'change in y over change in x'. Lagrange's f′(x) is shorter when a function has a name. Both describe the gradient function.",
+   "Other letters work too. If distance s depends on time t, then ds/dt is how fast distance changes: the velocity. f′(3) means the gradient at x = 3, not 3 times f′."
+  ]
+ },
+ "familyTip": "Spot rates in daily life (litres per minute, pounds per hour) and write each one as d(something)/d(something).",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "How is f′(x) usually read?",
+   "choices": [
+    "f dash x (or f prime x)",
+    "f times x",
+    "f to the power x"
+   ],
+   "answer": 0,
+   "hint": "The mark is a dash.",
+   "explain": "f′(x) is read 'f dash x' in the UK and 'f prime of x' in the US."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "f′(x) = 2x. Find f′({a}).",
+   "answer": "2*a",
+   "hint": "Put {a} into f′.",
+   "explain": "f′({a}) = 2 × {a} = {=2*a}.",
+   "params": {
+    "a": [
+     1,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What does dy/dx mean?",
+   "choices": [
+    "The rate of change of y as x changes",
+    "d × y ÷ (d × x)",
+    "y divided by x"
+   ],
+   "answer": 0,
+   "hint": "It's notation, not a fraction to cancel.",
+   "explain": "dy/dx is the rate of change of y with respect to x. You can't cancel the d's."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "dy/dx = {a}x + {b}. Find the gradient when x = {c}.",
+   "answer": "a*c+b",
+   "hint": "Substitute x = {c}.",
+   "explain": "{a} × {c} + {b} = {=a*c+b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "s is distance and t is time. What is ds/dt?",
+   "choices": [
+    "Velocity: how fast distance changes",
+    "Distance × time",
+    "The total distance"
+   ],
+   "answer": 0,
+   "hint": "Rate of change of s with respect to t.",
+   "explain": "ds/dt is the rate of change of distance: the velocity."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "f′(x) = {a}x². Find f′({c}).",
+    "answer": "a*c*c",
+    "hint": "Square {c}, then multiply.",
+    "explain": "{a} × {c}² = {a} × {=c*c} = {=a*c*c}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "c": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sam writes f′(3) = 3f′. What is wrong?",
+    "choices": [
+     "f′(3) means the gradient at x = 3, not 3 times anything",
+     "Nothing",
+     "It should be f(3)′"
+    ],
+    "answer": 0,
+    "hint": "Brackets show the input.",
+    "explain": "f′(3) is the gradient function evaluated at x = 3."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "For y = f(x), which pair mean the same thing?",
+    "choices": [
+     "dy/dx and f′(x)",
+     "dy/dx and y ÷ x",
+     "f′(x) and f(x)"
+    ],
+    "answer": 0,
+    "hint": "Both are names for the gradient function.",
+    "explain": "dy/dx and f′(x) both mean the derivative."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "V is volume in litres and t is time in minutes. dV/dt = {r} and stays the same. How many litres flow in during 3 minutes?",
+    "answer": "3*r",
+    "hint": "Rate × time.",
+    "explain": "{r} litres per minute × 3 minutes = {=3*r} litres.",
+    "params": {
+     "r": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "If dy/dx = 0 at a point, the graph there is…",
+    "choices": [
+     "flat (horizontal tangent)",
+     "vertical",
+     "crossing the x-axis"
+    ],
+    "answer": 0,
+    "hint": "A gradient of 0.",
+    "explain": "Zero gradient means the tangent is horizontal."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "If dy/dx is negative at a point, then…",
+    "choices": [
+     "y is decreasing as x increases",
+     "y is negative",
+     "x is negative"
+    ],
+    "answer": 0,
+    "hint": "dy/dx describes the slope, not the value.",
+    "explain": "A negative gradient means the graph goes down there. y itself could be positive."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "dy/dx = 3x² − {b}. Find dy/dx at x = {c}.",
+    "answer": "3*c*c-b",
+    "hint": "Square first, then multiply by 3.",
+    "explain": "3 × {=c*c} − {b} = {=3*c*c} − {b} = {=3*c*c-b}.",
+    "params": {
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      4
+     ]
+    },
+    "where": "3*c*c>b"
+   }
+  ]
+ },
+ "status": "self-checked"
+}

@@ -1,0 +1,225 @@
+{
+ "topicId": "mt_jRXV4nBsz_",
+ "title": "Differentiating sums and multiples",
+ "audience": "learner",
+ "keyIdea": "Differentiate term by term. A number multiplying a term stays; a number on its own disappears.",
+ "explain": {
+  "kid": [
+   "You can differentiate a sum one term at a time. For y = x³ + x², dy/dx = 3x² + 2x.",
+   "A number in front stays in front, so 5x² becomes 5 × 2x = 10x. A number on its own, like + 4, becomes 0. So y = 5x² + 3x + 4 gives dy/dx = 10x + 3."
+  ],
+  "adult": [
+   "In symbols, the derivative of af + bg is af′ + bg′. This is what lets you differentiate any polynomial quickly.",
+   "Products are different. The derivative of x²(x + 1) is not 2x × 1. Expand it first to x³ + x², then differentiate to get 3x² + 2x."
+  ]
+ },
+ "familyTip": "Write a polynomial, swap with a friend, differentiate each other's, then check together.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "y = {a}x² + {b}x + {c}. Find dy/dx at x = 1.",
+   "answer": "2*a+b",
+   "hint": "dy/dx = {=2*a}x + {b}.",
+   "explain": "dy/dx = {=2*a}x + {b}. At x = 1: {=2*a} + {b} = {=2*a+b}.",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Differentiate 5x² + 3x + 4.",
+   "choices": [
+    "10x + 3",
+    "10x + 7",
+    "5x + 3"
+   ],
+   "answer": 0,
+   "hint": "What happens to the + 4?",
+   "explain": "10x + 3. The constant 4 has gradient 0, so it disappears."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "y = x³ + {b}x. Find the gradient at x = {c}.",
+   "answer": "3*c*c+b",
+   "hint": "dy/dx = 3x² + {b}.",
+   "explain": "dy/dx = 3x² + {b}. At x = {c}: {=3*c*c} + {b} = {=3*c*c+b}.",
+   "params": {
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Differentiate x²(x + 1).",
+   "choices": [
+    "3x² + 2x",
+    "2x",
+    "2x(x + 1)"
+   ],
+   "answer": 0,
+   "hint": "Expand first.",
+   "explain": "x²(x + 1) = x³ + x², so the derivative is 3x² + 2x. You can't just multiply the derivatives."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "f(x) = {a}x² − {b}x. Find f′({c}).",
+   "answer": "2*a*c-b",
+   "hint": "f′(x) = {=2*a}x − {b}.",
+   "explain": "f′(x) = {=2*a}x − {b}, so f′({c}) = {=2*a*c} − {b} = {=2*a*c-b}.",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     5
+    ]
+   },
+   "where": "2*a*c>b"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "y = {a}x³ + {b}. Find dy/dx at x = {c}.",
+    "answer": "3*a*c*c",
+    "hint": "The + {b} disappears.",
+    "explain": "dy/dx = {=3*a}x², so at x = {c} it is {=3*a*c*c}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "f(x) = x² + {b}x + {c}. Find f′({d}).",
+    "answer": "2*d+b",
+    "hint": "f′(x) = 2x + {b}.",
+    "explain": "f′(x) = 2x + {b}, so f′({d}) = {=2*d} + {b} = {=2*d+b}.",
+    "params": {
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ],
+     "d": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is the derivative of a constant, such as 12?",
+    "choices": [
+     "0",
+     "12",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "y = 12 is flat.",
+    "explain": "A flat line has gradient 0."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Differentiate 4x³ − 2x.",
+    "choices": [
+     "12x² − 2",
+     "12x² − 2x",
+     "4x² − 2"
+    ],
+    "answer": 0,
+    "hint": "Term by term.",
+    "explain": "4 × 3x² = 12x² and −2x becomes −2."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Differentiate (x + 2)².",
+    "choices": [
+     "2x + 4",
+     "2x + 2",
+     "2(x + 2)²"
+    ],
+    "answer": 0,
+    "hint": "Expand first.",
+    "explain": "(x + 2)² = x² + 4x + 4, so the derivative is 2x + 4."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "f(x) = x² − {=2*k}x. At what x is the gradient 0?",
+    "answer": "k",
+    "hint": "f′(x) = 2x − {=2*k}.",
+    "explain": "2x − {=2*k} = 0, so x = {k}.",
+    "params": {
+     "k": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "f(x) = 3x² + 5. Which is correct?",
+    "choices": [
+     "f′(x) = 6x",
+     "f′(x) = 6x + 5",
+     "f′(x) = 3x"
+    ],
+    "answer": 0,
+    "hint": "What happens to the 5?",
+    "explain": "3 × 2x = 6x, and the constant 5 disappears."
+   }
+  ]
+ },
+ "status": "self-checked"
+}
