@@ -175,6 +175,13 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-in{width:6em}
 .vis.flag.lab-won .fl-stage{box-shadow:inset 0 0 0 3px var(--gr);transition:box-shadow .3s}
 .fl-ctl[hidden],.fl-read[hidden],.fl-chal[hidden]{display:none}
+.fl-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.fl-snd{border:1px solid var(--line);background:transparent;color:var(--tx);border-radius:999px;width:34px;height:34px;cursor:pointer;font-size:1rem}
+.fl-snd[aria-pressed=true]{border-color:var(--new)}
+.fl-below{display:flex;flex-direction:column;gap:.6rem}
+.fl-extra:empty{display:none}
+.fl-cv{box-shadow:0 10px 30px -12px rgba(0,0,0,.45),0 0 0 1px var(--line)}
+@media (max-width:520px){.fl-stage{padding:.5rem}.fl-story{padding:.9rem}}
 /* Why Next? feedback and progress cues (gentle; off under prefers-reduced-motion) */
 .pring{vertical-align:middle}.pring .pr-bg{fill:none;stroke:#e5e7eb;stroke-width:3}.pring .pr-fg{fill:none;stroke:#7c3aed;stroke-width:3;stroke-linecap:round}.pring .pr-fg.done{stroke:#15803d}
 .qi.ok{animation:fxok .45s ease}.fb.bad{animation:fxno .35s ease}
@@ -299,4 +306,4 @@ html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;borde
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=a59289ca07"></script><script defer src="wn/learn.js?v=cf1bcd95be"></script><script defer src="wn/app.js?v=ea49145e03"></script></body></html>
+<script defer src="wn/core.js?v=a59289ca07"></script><script defer src="wn/learn.js?v=325411bc80"></script><script defer src="wn/app.js?v=ea49145e03"></script></body></html>

@@ -175,6 +175,13 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-in{width:6em}
 .vis.flag.lab-won .fl-stage{box-shadow:inset 0 0 0 3px var(--gr);transition:box-shadow .3s}
 .fl-ctl[hidden],.fl-read[hidden],.fl-chal[hidden]{display:none}
+.fl-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.fl-snd{border:1px solid var(--line);background:transparent;color:var(--tx);border-radius:999px;width:34px;height:34px;cursor:pointer;font-size:1rem}
+.fl-snd[aria-pressed=true]{border-color:var(--new)}
+.fl-below{display:flex;flex-direction:column;gap:.6rem}
+.fl-extra:empty{display:none}
+.fl-cv{box-shadow:0 10px 30px -12px rgba(0,0,0,.45),0 0 0 1px var(--line)}
+@media (max-width:520px){.fl-stage{padding:.5rem}.fl-story{padding:.9rem}}
 /* Why Next? feedback and progress cues (gentle; off under prefers-reduced-motion) */
 .pring{vertical-align:middle}.pring .pr-bg{fill:none;stroke:#e5e7eb;stroke-width:3}.pring .pr-fg{fill:none;stroke:#7c3aed;stroke-width:3;stroke-linecap:round}.pring .pr-fg.done{stroke:#15803d}
 .qi.ok{animation:fxok .45s ease}.fb.bad{animation:fxno .35s ease}
@@ -1607,99 +1614,134 @@ R('bodylab',c=>{const o=c.opts;let sys=o.system||'digestive',found=new Set();con
  const L=VIS.lab(c,[{goal:`Find every organ of the ${SYS[sys][0].toLowerCase()} system (and nothing else).`,test:all,set:()=>{found.clear();draw()},win:'Organs work together as a system.'},{goal:'Switch to the circulatory system and find its organs.',test:()=>sys==='circulatory'&&all(),set:()=>{found.clear();draw()}},{goal:'Find the organs of the respiratory system.',test:()=>sys==='respiratory'&&all(),set:()=>{found.clear();draw()}}]);
  c.btn('Next system',()=>{const k=Object.keys(SYS);sys=k[(k.indexOf(sys)+1)%k.length];found.clear();draw()});Object.keys(POS).forEach(k=>c.btn(k,()=>{found.has(k)?found.delete(k):found.add(k);draw()},'ghost'));c.cueEl=s;draw()});
 })();
-/* Flagship: the derivative as the slope you get by zooming in. A phone falls from a tower (s = 4.9t² m).
-   Guided discovery (hook → average speed → shrink the gap → zoom → limit), then a free sandbox and a challenge.
-   Canvas with devicePixelRatio, rAF animation with easing, pointer + keyboard control, reduced-motion aware. */
-(()=>{const g=9.8,S=t=>g/2*t*t,V=t=>g*t,T=3,SM=S(T);
-const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,f2=v=>(Math.round(v*100)/100).toFixed(2),f3=v=>(Math.round(v*1000)/1000).toString();
-const STEPS=[
- {k:'hook',h:'A phone slips from a 44 m tower',p:'Its height drops slowly at first, then faster and faster. A speed camera flashes at exactly t = 2 s. What speed does it record? Speed is distance ÷ time, but at one instant no time passes. Let’s find out what “speed at an instant” can mean.',go:s=>{s.to({t0:2,h:1,z:1});s.play=true}},
- {k:'avg',h:'Step 1 · Average speed over one second',p:'From 2 s to 3 s the phone falls Δs metres in Δt = 1 s. The slope of the line through P and Q, Δs ÷ Δt, is the average speed. Drag the hollow point Q to change the gap.',go:s=>{s.play=false;s.to({t0:2,h:1,z:1})}},
- {k:'shrink',h:'Step 2 · Shrink the gap',p:'Watch the table: as Q slides towards P, the average speed settles down. Which number is it closing in on?',go:s=>{s.to({h:.05},2400)}},
- {k:'zoom',h:'Step 3 · Zoom in on P',p:'Magnify the curve around t = 2 s. The closer you look, the straighter it gets: up close, a smooth curve looks like a line. The slope of that line is the speed at that instant.',go:s=>{s.to({h:.05,z:30},2200)}},
- {k:'limit',h:'Step 4 · Let the gap go to zero',p:'With Δt = 0.001 s the average is 19.60 m/s. The secant (the line through P and Q) has become the tangent. This limit is the derivative: ds/dt = 9.8t, so at t = 2 s the speed is 19.6 m/s.',go:s=>{s.to({h:.001,z:1},1800)}},
- {k:'free',h:'Sandbox',p:'Drag P and Q, zoom in and out, and try other times. Is the speed ever the same at two different times?',go:s=>{}},
- {k:'chal',h:'Challenge',p:'',go:s=>s.newChal()}];
-VIS.reg('flagderiv',c=>{const st=c.stage,fig=c.fig;fig.classList.add('flag');
- const wrap=c.el('div',{class:'fl-wrap'},st);
- const story=c.el('div',{class:'fl-story'},wrap),dots=c.el('div',{class:'fl-dots',role:'tablist','aria-label':'Steps'},story),H=c.el('h4',{class:'fl-h'},story,''),P=c.el('p',{class:'fl-p'},story,''),chal=c.el('div',{class:'fl-chal',hidden:''},story);
- const nav=c.el('div',{class:'fl-nav'},story),bp=c.el('button',{type:'button',class:'lbtn ghost sm'},nav,'← Back'),bn=c.el('button',{type:'button',class:'lbtn sm'},nav,'Next →');
- const stage=c.el('div',{class:'fl-stage'},wrap),cv=c.el('canvas',{class:'fl-cv',role:'img'},stage);
- const read=c.el('div',{class:'fl-read'},stage),tbl=c.el('table',{class:'fl-tbl'},stage);
- const ctl=c.el('div',{class:'fl-ctl'},stage),r1=c.el('label',{},ctl),r1s=c.el('span',{},r1,'P at t = '),i1=c.el('input',{type:'range',min:.2,max:2.6,step:.01,value:2},r1),r2=c.el('label',{},ctl),r2s=c.el('span',{},r2,'gap Δt = '),i2=c.el('input',{type:'range',min:-3,max:0,step:.01,value:0,'aria-label':'gap Δt (log scale)'},r2);
- const bz=c.el('button',{type:'button',class:'lbtn ghost sm','aria-pressed':'false'},ctl,'🔍 Zoom in');
- i1.setAttribute('aria-label','time of point P in seconds');
- const s={t0:2,h:1,z:1,play:false,ph:0,anim:null,seen:new Map(),won:false,ct:0};let step=0,raf=0,dirty=true,lastT=0;
- const lim=()=>Math.min(T-s.t0,1);
- s.to=(tg,ms=1200)=>{const from={t0:s.t0,h:s.h,z:s.z};if(c.reduced&&c.reduced()){Object.assign(s,tg);sync();dirty=true;return}
-  s.anim={from,tg,t:performance.now(),ms};kick()};
- const sync=()=>{bz.textContent=s.z>2?'🔍 Zoom out':'🔍 Zoom in';bz.setAttribute('aria-pressed',String(s.z>2));s.h=Math.max(.001,Math.min(s.h,lim()));i1.value=s.t0;i2.value=Math.log10(s.h);r1s.textContent=`P at t = ${f2(s.t0)} s `;r2s.textContent=`gap Δt = ${f3(s.h)} s `;
-  const k=f3(s.h);if(step>=1&&!s.seen.has(k)&&s.seen.size<40){s.seen.set(k,(S(s.t0+s.h)-S(s.t0))/s.h)}
-  const avg=(S(s.t0+s.h)-S(s.t0))/s.h;
+/* Flagship rendering kit: shared, high-fidelity building blocks so every flagship looks premium and behaves alike.
+   FK.shell(c, cfg)  – story panel (step dots, heading, text, back/next) + stage + crisp HiDPI canvas + sound toggle
+   FK.loop           – rAF loop that only runs while something animates; tweens with easing; reduced-motion aware
+   FK.paint helpers  – theme colours, gradients, soft shadows, glow, rounded shapes, labels that avoid collisions
+   FK.particles      – lightweight particle system (bubbles, sparks, confetti, steam)
+   FK.sound          – tiny WebAudio blips/chimes, OFF by default, remembered per device */
+const FK=(()=>{const ease={io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,out:x=>1-Math.pow(1-x,3),back:x=>{const c=1.7;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)},el:x=>x===0||x===1?x:Math.pow(2,-10*x)*Math.sin((x*10-.75)*2.094)+1};
+ let AC=null,SND=false;try{SND=localStorage.getItem('wn_sound')==='1'}catch(e){}
+ const tone=(f,d=.12,type='sine',vol=.06,glide)=>{if(!SND)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain(),t=AC.currentTime;o.type=type;o.frequency.setValueAtTime(f,t);if(glide)o.frequency.exponentialRampToValueAtTime(glide,t+d);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g).connect(AC.destination);o.start(t);o.stop(t+d+.02)}catch(e){}};
+ const sound={on:()=>SND,set:v=>{SND=v;try{localStorage.setItem('wn_sound',v?'1':'0')}catch(e){}},tick:()=>tone(880,.05,'triangle',.035),step:()=>tone(520,.09,'sine',.05,660),
+  win:()=>{tone(523,.16);setTimeout(()=>tone(659,.16),110);setTimeout(()=>tone(784,.28),220)},miss:()=>tone(220,.18,'sine',.05,180),pop:()=>tone(300,.07,'triangle',.05,900),whoosh:()=>tone(900,.35,'sawtooth',.012,120)};
+ const theme=el=>{const cs=getComputedStyle(el),v=(n,d)=>(cs.getPropertyValue(n)||'').trim()||d;return{tx:v('--tx','#111'),mu:v('--mu','#666'),ln:v('--line','#ccc'),bg:v('--bg','#fff'),pn:v('--panel','#fff'),ac:v('--new','#2563eb'),cy:v('--cy','#0891b2'),or:v('--am','#d97706'),gr:v('--gr','#059669'),rd:v('--rd','#dc2626'),vi:v('--vi','#7c3aed'),pk:v('--pk','#db2777'),dark:(()=>{const b=rgb(v('--bg','#fff'));return b[0]*.3+b[1]*.59+b[2]*.11<110})()}};
+ const cx0=document.createElement('canvas').getContext('2d'),rgb=c=>{cx0.fillStyle='#000';cx0.fillStyle=c;const v=cx0.fillStyle;if(v[0]==='#')return[1,3,5].map(i=>parseInt(v.slice(i,i+2),16)).concat(1);const m=v.match(/[\d.]+/g)||[0,0,0,1];return[+m[0],+m[1],+m[2],m[3]==null?1:+m[3]]};
+ const mix=(a,b,t)=>{const A=rgb(a),B=rgb(b);return`rgb(${A.slice(0,3).map((x,i)=>Math.round(x+(B[i]-x)*t)).join(',')})`},alpha=(c,a)=>{const A=rgb(c);return`rgba(${A[0]},${A[1]},${A[2]},${a})`};
+ const paint=ctx=>({
+  rrect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()},
+  shadow(blur=12,dy=4,a=.28){ctx.shadowColor=`rgba(0,0,0,${a})`;ctx.shadowBlur=blur;ctx.shadowOffsetY=dy;ctx.shadowOffsetX=0},
+  noShadow(){ctx.shadowColor='transparent';ctx.shadowBlur=0;ctx.shadowOffsetY=0},
+  glow(col,blur=14){ctx.shadowColor=col;ctx.shadowBlur=blur;ctx.shadowOffsetY=0},
+  lin(x0,y0,x1,y1,stops){const g=ctx.createLinearGradient(x0,y0,x1,y1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
+  rad(x,y,r0,r1,stops){const g=ctx.createRadialGradient(x,y,r0,x,y,r1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
+  ball(x,y,r,col,hi='#fff'){ctx.fillStyle=this.rad(x-r*.35,y-r*.4,r*.1,r*1.1,[[0,mix(col,hi,.65)],[.45,col],[1,mix(col,'#000000',.35)]]);ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill()},
+  label(txt,x,y,opt={}){ctx.save();ctx.font=opt.font||'600 13px system-ui,sans-serif';const w=ctx.measureText(txt).width+12,h=20;let bx=x-(opt.align==='left'?0:opt.align==='right'?w:w/2),by=y-h/2;
+   const CW=ctx.canvas.width/(ctx.getTransform().a||1);bx=Math.max(4,Math.min(CW-w-4,bx));if(opt.avoid)for(const r of opt.avoid){if(bx<r.x+r.w&&bx+w>r.x&&by<r.y+r.h&&by+h>r.y)by=r.y+r.h+3}
+   if(opt.pill!==false){ctx.fillStyle=opt.bg||'rgba(0,0,0,.55)';this.rrect(bx,by,w,h,10);ctx.fill()}ctx.fillStyle=opt.col||'#fff';ctx.textBaseline='middle';ctx.textAlign='left';ctx.fillText(txt,bx+6,by+h/2+.5);ctx.restore();return{x:bx,y:by,w,h}}});
+ function particles(){const P=[];return{P,add(n,f){for(let i=0;i<n;i++)P.push(Object.assign({x:0,y:0,vx:0,vy:0,life:1,age:0,r:3,g:0,col:'#fff',drag:0},f(i)))},
+  step(dt){for(let i=P.length-1;i>=0;i--){const p=P[i];p.age+=dt;p.vx*=1-p.drag*dt;p.vy=(p.vy+p.g*dt)*(1-p.drag*dt);p.x+=p.vx*dt;p.y+=p.vy*dt;if(p.age>=p.life)P.splice(i,1)}return P.length>0},
+  draw(ctx){for(const p of P){const a=1-p.age/p.life;ctx.globalAlpha=Math.max(0,a);ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x,p.y,p.r*(p.shrink?a:1),0,7);ctx.fill()}ctx.globalAlpha=1}}}
+ function shell(c,cfg){const fig=c.fig,st=c.stage,E=c.el;fig.classList.add('flag');const reduced=()=>!!(c.reduced&&c.reduced());
+  const wrap=E('div',{class:'fl-wrap'},st),story=E('div',{class:'fl-story'},wrap),top=E('div',{class:'fl-top'},story),dots=E('div',{class:'fl-dots',role:'tablist','aria-label':'Steps'},top);
+  const sb=E('button',{type:'button',class:'fl-snd','aria-pressed':String(sound.on()),'aria-label':'Sound effects'},top,sound.on()?'🔊':'🔈');sb.onclick=()=>{sound.set(!sound.on());sb.textContent=sound.on()?'🔊':'🔈';sb.setAttribute('aria-pressed',String(sound.on()));sound.step()};
+  const H=E('h4',{class:'fl-h'},story,''),Pp=E('p',{class:'fl-p'},story,''),extra=E('div',{class:'fl-extra'},story),nav=E('div',{class:'fl-nav'},story);
+  const bp=E('button',{type:'button',class:'lbtn ghost sm'},nav,'← Back'),bn=E('button',{type:'button',class:'lbtn sm'},nav,'Next →');
+  const stage=E('div',{class:'fl-stage'},wrap),cv=E('canvas',{class:'fl-cv',role:'img'},stage),below=E('div',{class:'fl-below'},stage);
+  const ctx=cv.getContext('2d'),api={fig,stage,below,extra,cv,ctx,paint:paint(ctx),col:theme(fig),W:640,H:400,dpr:1,step:0,reduced,sound,ease,particles,mix,alpha};
+  let raf=0,last=0,dirty=true;const tws=[],tick=[];
+  api.redraw=()=>{dirty=true;kick()};api.every=f=>tick.push(f);
+  api.tween=(obj,to,ms=900,e='io',done)=>{if(reduced()){Object.assign(obj,to);api.redraw();done&&done();return}const from={};for(const k in to)from[k]=obj[k];tws.push({obj,from,to,ms,e:ease[e]||ease.io,log:e==='log',t:performance.now(),done});kick()};
+  const frame=now=>{raf=0;const dt=Math.min(.05,(now-(last||now))/1000);last=now;let more=false;
+   for(let i=tws.length-1;i>=0;i--){const w=tws[i],u=Math.min(1,(now-w.t)/w.ms),k=w.e(u);for(const p in w.to){const a=w.from[p],b=w.to[p];w.obj[p]=w.log?Math.exp(Math.log(a)+(Math.log(b)-Math.log(a))*k):a+(b-a)*k}if(u>=1){tws.splice(i,1);w.done&&w.done()}else more=true;dirty=true}
+   for(const f of tick)if(f(dt,now))more=dirty=true;
+   if(dirty){dirty=false;ctx.setTransform(api.dpr,0,0,api.dpr,0,0);ctx.clearRect(0,0,api.W,api.H);cfg.draw(api,dt)}if(more)kick();else last=0};
+  const kick=()=>{if(!raf)raf=requestAnimationFrame(frame)};api.kick=kick;
+  const size=()=>{const w=Math.max(280,Math.min(stage.clientWidth-2||640,820)),narrow=w<520;api.W=w;api.H=Math.round(w*(narrow?(cfg.tall||.9):(cfg.ratio||.6)));api.dpr=Math.min(2.5,window.devicePixelRatio||1);cv.width=Math.round(api.W*api.dpr);cv.height=Math.round(api.H*api.dpr);cv.style.width=api.W+'px';cv.style.height=api.H+'px';api.col=theme(fig);api.narrow=narrow;api.redraw()};
+  const go=i=>{api.step=Math.max(0,Math.min(cfg.steps.length-1,i));const x=cfg.steps[api.step];H.textContent=x.h;Pp.textContent=x.p||'';Pp.style.animation='none';void Pp.offsetWidth;Pp.style.animation='';extra.innerHTML='';
+   [...dots.children].forEach((d,j)=>{d.setAttribute('aria-selected',String(j===api.step));d.classList.toggle('done',j<api.step)});bp.disabled=api.step===0;bn.textContent=api.step===cfg.steps.length-1?'Restart':api.step===0?'Start →':'Next →';
+   fig.classList.remove('lab-won');x.go&&x.go(api);cfg.onStep&&cfg.onStep(api,x);api.redraw()};
+  cfg.steps.forEach((x,i)=>{const d=E('button',{type:'button',role:'tab',class:'fl-dot','aria-label':`Step ${i+1}: ${x.h}`},dots);d.onclick=()=>{sound.step();go(i)}});
+  bp.onclick=()=>{sound.step();go(api.step-1)};bn.onclick=()=>{sound.step();go(api.step===cfg.steps.length-1?0:api.step+1)};api.go=go;
+  api.win=(msg)=>{fig.classList.add('lab-won');sound.win();try{navigator.vibrate&&navigator.vibrate(18)}catch(e){}if(cfg.confetti!==false&&!reduced()){const C=api.col,cols=[C.or,C.cy,C.gr,C.pk,C.vi];api.fx.add(46,i=>({x:api.W/2,y:api.H*.35,vx:(Math.random()-.5)*520,vy:-Math.random()*420-80,g:700,life:1.4+Math.random()*.6,r:3+Math.random()*3,col:cols[i%5],drag:.6}));api.kick()}};
+  api.fx=particles();api.every(dt=>api.fx.step(dt));
+  api.toT=e=>{const r=cv.getBoundingClientRect();return{x:(e.clientX-r.left)*api.W/r.width,y:(e.clientY-r.top)*api.H/r.height}};cv.style.touchAction='none';
+  const ro=typeof ResizeObserver!=='undefined'?new ResizeObserver(size):null;if(ro)ro.observe(stage);c.stops.push(()=>{if(raf)cancelAnimationFrame(raf);if(ro)ro.disconnect()});
+  api.start=()=>{size();cfg.init&&cfg.init(api);go(c.opts.step||0)};return api}
+ return{shell,ease,sound,theme,mix,alpha,particles}})();
+/* Flagship 1 – the derivative as the slope you see when you zoom in. A phone falls from a 44 m tower (s = 4.9t² m).
+   Hook scene (illustrated), then average speed → shrink the gap → zoom → limit → sandbox → misconception-aware challenge. */
+(()=>{const g=9.8,S=t=>g/2*t*t,V=t=>g*t,T=3,SM=S(T),f2=v=>(Math.round(v*100)/100).toFixed(2),f3=v=>String(Math.round(v*1000)/1000);
+VIS.reg('flagderiv',c=>{const s={t0:2,h:1,z:1,ph:0,ct:0,won:false,seen:new Map()};let A,drag=null,read,tbl,ctl,i1,i2,bz,chal;
+ const lim=()=>Math.min(T-s.t0,1),fix=()=>{s.h=Math.max(.001,Math.min(s.h,lim()))};
+ const to=(tg,ms=1400)=>{if('h'in tg||'z'in tg){const L={};if('h'in tg)L.h=tg.h;if('z'in tg)L.z=tg.z;A.tween(s,L,ms,'log',sync)}if('t0'in tg)A.tween(s,{t0:tg.t0},ms,'io')};
+ const steps=[
+  {h:'A phone slips from a 44 m tower',p:'It falls slowly at first, then faster and faster. A speed camera halfway down flashes at exactly t = 2 s. What speed does it record? Speed is distance ÷ time, but at a single instant no time passes at all…',go:()=>{s.ph=0;A.sound.whoosh()}},
+  {h:'1 · Average speed over one second',p:'From 2 s to 3 s the phone falls Δs metres in Δt = 1 s. The slope of the line through P and Q, Δs ÷ Δt, is the average speed. Drag Q (hollow) to change the gap.',go:()=>to({t0:2,h:1,z:1},700)},
+  {h:'2 · Shrink the gap',p:'Watch the table as Q slides towards P: the average speed settles. Which number is it closing in on?',go:()=>to({h:.02},2600)},
+  {h:'3 · Zoom in on P',p:'Magnify the curve around t = 2 s. The closer you look, the straighter it gets: up close, a smooth curve looks like a line. Its slope is the speed at that instant.',go:()=>to({h:.02,z:30},2200)},
+  {h:'4 · Let the gap go to zero',p:'At Δt = 0.001 s the average is 19.60 m/s. The line through P and Q has become the tangent. This limit is the derivative: ds/dt = 9.8t, so at 2 s the speed is 19.6 m/s.',go:()=>to({h:.001,z:1},1800)},
+  {h:'Sandbox',p:'Drag P and Q, zoom in and out, try other times. Does the speed ever stay the same?'},
+  {h:'Challenge',p:'',go:()=>newChal()}];
+ const sync=()=>{fix();if(!read)return;const avg=(S(s.t0+s.h)-S(s.t0))/s.h,k=f3(s.h);if(A.step>=1&&s.seen.size<60&&!s.seen.has(k))s.seen.set(k,avg);
+  i1.value=s.t0;i2.value=Math.log10(s.h);i1.previousSibling.textContent=`P at t = ${f2(s.t0)} s `;i2.previousSibling.textContent=`gap Δt = ${f3(s.h)} s `;bz.textContent=s.z>2?'🔍 Zoom out':'🔍 Zoom in';bz.setAttribute('aria-pressed',String(s.z>2));
   read.innerHTML=`<span><b>Δs</b> = ${f2(S(s.t0+s.h)-S(s.t0))} m</span><span><b>Δt</b> = ${f3(s.h)} s</span><span class="fl-big">average speed = <b>${f2(avg)}</b> m/s</span>`;
-  const rows=[...s.seen.entries()].sort((a,b)=>b[0]-a[0]),byDec=new Map();rows.forEach(r=>{const k=Math.floor(Math.log10(+r[0])*2);if(!byDec.has(k))byDec.set(k,r)});const pick=[...byDec.values()].slice(0,6);
-  tbl.innerHTML=step>=2?`<caption>Average speed from t = ${f2(s.t0)} s</caption><tr><th scope="col">Δt (s)</th><th scope="col">Δs ÷ Δt (m/s)</th></tr>`+pick.map(([h,v])=>`<tr><td>${h}</td><td>${f2(v)}</td></tr>`).join(''):'';
-  cv.setAttribute('aria-label',`Graph of distance fallen s = 4.9t² metres against time t seconds. P at ${f2(s.t0)} s, Q at ${f2(s.t0+s.h)} s. Average speed between them ${f2(avg)} m/s${s.h<.01?', which is the instantaneous speed '+f2(V(s.t0))+' m/s':''}.`);
-  c.say(`Average speed ${f2(avg)} m/s over ${f3(s.h)} s from t = ${f2(s.t0)} s.`)};
- // drawing
- let W=640,Hh=360,dpr=1,col={};const ctx=cv.getContext('2d');
- const size=()=>{const w=Math.max(280,Math.min(stage.clientWidth||640,760));W=w;Hh=Math.round(w*.56);dpr=Math.min(2,window.devicePixelRatio||1);cv.width=W*dpr;cv.height=Hh*dpr;cv.style.width=W+'px';cv.style.height=Hh+'px';
-  const cs=getComputedStyle(fig);const v=(n,d)=>(cs.getPropertyValue(n)||'').trim()||d;col={tx:v('--tx','#111'),mu:v('--mu','#666'),ln:v('--line','#ccc'),bg:v('--panel','#fff'),ac:v('--cy','#0891b2'),or:v('--am','#d97706'),gr:v('--gr','#059669')};dirty=true};
- const pad={l:52,r:56,t:16,b:40};
- const view=()=>{const z=s.z,cx=s.t0,cy=S(s.t0),wx=T/z,wy=SM/z;let x0=cx-wx*(z>1?.5:cx/T),y0=cy-wy*(z>1?.5:cy/SM);if(z<=1){x0=0;y0=0}return{x0,x1:x0+wx,y0,y1:y0+wy}};
- const draw=()=>{const vw=view(),X=t=>pad.l+(t-vw.x0)/(vw.x1-vw.x0)*(W-pad.l-pad.r),Y=v=>Hh-pad.b-(v-vw.y0)/(vw.y1-vw.y0)*(Hh-pad.t-pad.b);
-  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,Hh);ctx.font='12px system-ui,sans-serif';ctx.lineCap='round';
-  // grid with nice ticks
-  const tick=(a,b)=>{const r=(b-a)/5,p=Math.pow(10,Math.floor(Math.log10(r))),m=r/p;return(m<1.5?1:m<3.5?2:m<7.5?5:10)*p};
-  const tx=tick(vw.x0,vw.x1),ty=tick(vw.y0,vw.y1);ctx.strokeStyle=col.ln;ctx.lineWidth=1;ctx.fillStyle=col.mu;
-  for(let t=Math.ceil(vw.x0/tx)*tx;t<=vw.x1+1e-9;t+=tx){const x=X(t);ctx.globalAlpha=.55;ctx.beginPath();ctx.moveTo(x,pad.t);ctx.lineTo(x,Hh-pad.b);ctx.stroke();ctx.globalAlpha=1;ctx.textAlign='center';ctx.fillText(+t.toFixed(4)+'',x,Hh-pad.b+16)}
-  for(let v=Math.ceil(vw.y0/ty)*ty;v<=vw.y1+1e-9;v+=ty){const y=Y(v);ctx.globalAlpha=.55;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(W-pad.r,y);ctx.stroke();ctx.globalAlpha=1;ctx.textAlign='right';ctx.fillText(+v.toFixed(3)+'',pad.l-6,y+4)}
-  ctx.fillStyle=col.tx;ctx.textAlign='center';ctx.fillText('time t (s)',(pad.l+W-pad.r)/2,Hh-6);ctx.save();ctx.translate(13,(pad.t+Hh-pad.b)/2);ctx.rotate(-Math.PI/2);ctx.fillText('distance fallen s (m)',0,0);ctx.restore();
-  ctx.save();ctx.beginPath();ctx.rect(pad.l,pad.t,W-pad.l-pad.r,Hh-pad.t-pad.b);ctx.clip();
-  // curve
-  ctx.strokeStyle=col.ac;ctx.lineWidth=4;ctx.globalAlpha=.9;ctx.beginPath();for(let i=0;i<=240;i++){const t=vw.x0+(vw.x1-vw.x0)*i/240;i?ctx.lineTo(X(t),Y(S(t))):ctx.moveTo(X(t),Y(S(t)))}ctx.stroke();ctx.globalAlpha=1;ctx.globalAlpha=1;
-  const a=s.t0,b=s.t0+s.h,m=(S(b)-S(a))/(b-a),lx=t=>S(a)+m*(t-a);
-  // tangent fades in as the gap closes
-  const tg=Math.max(0,Math.min(1,(Math.log10(.05)-Math.log10(s.h))/1.3));if(tg>0){ctx.globalAlpha=tg;ctx.strokeStyle=col.gr;ctx.lineWidth=2;ctx.setLineDash([6,5]);ctx.beginPath();ctx.moveTo(X(vw.x0),Y(S(a)+V(a)*(vw.x0-a)));ctx.lineTo(X(vw.x1),Y(S(a)+V(a)*(vw.x1-a)));ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1}
-  // secant + rise/run
-  ctx.strokeStyle=col.or;ctx.lineWidth=2.4;ctx.beginPath();ctx.moveTo(X(vw.x0),Y(lx(vw.x0)));ctx.lineTo(X(vw.x1),Y(lx(vw.x1)));ctx.stroke();
-  if(X(b)-X(a)>18){ctx.lineWidth=1.5;ctx.setLineDash([4,4]);ctx.beginPath();ctx.moveTo(X(a),Y(S(a)));ctx.lineTo(X(b),Y(S(a)));ctx.lineTo(X(b),Y(S(b)));ctx.stroke();ctx.setLineDash([]);ctx.fillStyle=col.or;ctx.textAlign='center';ctx.fillText('Δt',(X(a)+X(b))/2,Y(S(a))+15);ctx.textAlign='left';ctx.fillText('Δs',X(b)+6,(Y(S(a))+Y(S(b)))/2)}
-  const dot=(t,fill,lab)=>{const x=X(t),y=Y(S(t));ctx.beginPath();ctx.arc(x,y,7,0,7);ctx.fillStyle=fill?col.or:col.bg;ctx.fill();ctx.lineWidth=2.5;ctx.strokeStyle=col.or;ctx.stroke();ctx.fillStyle=col.tx;ctx.font='bold 13px system-ui,sans-serif';ctx.textAlign='right';ctx.fillText(lab,x-10,y-9);ctx.font='12px system-ui,sans-serif'};
-  const near=Math.abs(X(b)-X(a))<16;if(!near)dot(b,false,'Q');dot(a,true,near?'P, Q':'P');ctx.restore();
-  // tower strip: the phone at its current height while playing
-  if(step===0){const fx=W-pad.r+14,top=pad.t,bot=Hh-pad.b,tt=(s.ph%3.6);const tf=Math.min(T,tt);ctx.fillStyle=col.ln;ctx.fillRect(fx,top,10,bot-top);ctx.fillStyle=col.or;const y=top+(bot-top)*S(tf)/SM;ctx.beginPath();ctx.roundRect?ctx.roundRect(fx+14,y-9,12,18,3):ctx.rect(fx+14,y-9,12,18);ctx.fill();ctx.fillStyle=col.mu;ctx.textAlign='left';ctx.fillText(f2(tf)+' s',fx-2,bot+16)}
-  if(s.z>1.05){ctx.fillStyle=col.mu;ctx.textAlign='right';ctx.fillText('×'+Math.round(s.z)+' zoom',W-pad.r,pad.t+12)}};
- const frame=now=>{raf=0;const dt=Math.min(.05,(now-(lastT||now))/1000);lastT=now;let more=false;
-  if(s.anim){const A=s.anim,u=Math.min(1,(now-A.t)/A.ms),e=ease(u);for(const k in A.tg){const f=A.from[k],t=A.tg[k];s[k]=k==='h'||k==='z'?Math.exp(Math.log(f)+(Math.log(t)-Math.log(f))*e):f+(t-f)*e}sync();dirty=true;if(u>=1)s.anim=null;else more=true}
-  if(s.play&&!(c.reduced&&c.reduced())){s.ph+=dt;dirty=true;more=true}
-  if(dirty){draw();dirty=false}if(more)kick();else lastT=0};
- const kick=()=>{if(!raf)raf=requestAnimationFrame(frame)};
- // pointer dragging of P or Q
- let drag=null;const toT=e=>{const r=cv.getBoundingClientRect(),vw=view();return vw.x0+(e.clientX-r.left-pad.l)/(W-pad.l-pad.r)*(vw.x1-vw.x0)};
- cv.addEventListener('pointerdown',e=>{if(step===0)return;const t=toT(e),vw=view(),tol=(vw.x1-vw.x0)*.06;drag=Math.abs(t-(s.t0+s.h))<tol?'Q':Math.abs(t-s.t0)<tol?'P':'Q';cv.setPointerCapture(e.pointerId);move(e)});
- const move=e=>{if(!drag)return;const t=toT(e);s.anim=null;if(drag==='P')s.t0=Math.max(.2,Math.min(2.6,t));else s.h=t-s.t0;sync();dirty=true;kick()};
- cv.addEventListener('pointermove',move);cv.addEventListener('pointerup',()=>{drag=null});cv.style.touchAction='none';
- i1.oninput=()=>{s.anim=null;s.t0=+i1.value;sync();dirty=true;kick()};i2.oninput=()=>{s.anim=null;s.h=Math.pow(10,+i2.value);sync();dirty=true;kick()};
- bz.onclick=()=>{const zin=s.z<2;s.to({z:zin?30:1},1600)};
- // challenge
- s.newChal=()=>{const opts=[.5,1,1.5,2.5].filter(x=>x!==s.ct);s.ct=opts[Math.floor(Math.random()*opts.length)];s.won=false;s.to({t0:s.ct,h:.5,z:1});
-  chal.hidden=false;chal.innerHTML=`<p><b>Speed camera at t = ${s.ct} s.</b> Use the graph to find the phone’s speed at that instant (to 1 decimal place).</p><label>Speed <input type="number" step="0.1" inputmode="decimal" class="fl-in" aria-label="speed in metres per second"> m/s</label> <button type="button" class="lbtn sm">Check</button><p class="fl-fb" role="status" aria-live="polite"></p>`;
-  const inp=chal.querySelector('input'),fb=chal.querySelector('.fl-fb');chal.querySelector('button').onclick=()=>{const v=parseFloat(inp.value),want=V(s.ct);
-   if(!isFinite(v)){fb.textContent='Type a number first.';return}
-   if(Math.abs(v-want)<=.15){fb.innerHTML=`✓ Yes: ${f2(want)} m/s. ${s.won?'':'Shrinking the gap to zero gave you the derivative.'} <button type="button" class="linkish">Another time →</button>`;s.won=true;fig.classList.add('lab-won');try{navigator.vibrate&&navigator.vibrate(18)}catch(e){}fb.querySelector('button').onclick=()=>{fig.classList.remove('lab-won');s.newChal()}}
-   else if(Math.abs(v-(S(s.ct+.5)-S(s.ct))/.5)<.2)fb.textContent='That is the average over half a second. Shrink Δt until the number stops changing.';
-   else if(Math.abs(v-S(s.ct)/s.ct)<.2)fb.textContent='That is distance ÷ time since the start (the average from 0 s). You need the slope at P itself.';
-   else if(Math.abs(v-S(s.ct))<.2)fb.textContent='That is the distance fallen, in metres, not the speed.';
-   else fb.textContent='Not quite. Drag Q very close to P and read the average speed.'}};
- // steps
- STEPS.forEach((x,i)=>{const d=c.el('button',{type:'button',role:'tab',class:'fl-dot','aria-label':`Step ${i+1}: ${x.h}`},dots);d.onclick=()=>go(i)});
- const go=i=>{step=Math.max(0,Math.min(STEPS.length-1,i));const x=STEPS[step];H.textContent=x.h;P.textContent=x.p;chal.hidden=x.k!=='chal';
-  [...dots.children].forEach((d,j)=>{d.setAttribute('aria-selected',String(j===step));d.classList.toggle('done',j<step)});
-  bp.disabled=step===0;bn.textContent=step===STEPS.length-1?'Restart':step===0?'Start →':'Next →';ctl.hidden=step===0;read.hidden=step===0;s.seen.clear();x.go(s);sync();dirty=true;kick()};
- bp.onclick=()=>go(step-1);bn.onclick=()=>go(step===STEPS.length-1?0:step+1);
- const ro=typeof ResizeObserver!=='undefined'?new ResizeObserver(()=>{size();kick()}):null;if(ro)ro.observe(stage);
- c.stops.push(()=>{if(raf)cancelAnimationFrame(raf);if(ro)ro.disconnect()});
- size();go(c.opts.step||0)})})();
+  const byDec=new Map();[...s.seen.entries()].sort((a,b)=>b[0]-a[0]).forEach(r=>{const d=Math.floor(Math.log10(+r[0])*2);if(!byDec.has(d))byDec.set(d,r)});
+  tbl.innerHTML=A.step>=2?`<caption>Average speed from t = ${f2(s.t0)} s</caption><tr><th scope="col">Δt (s)</th><th scope="col">Δs ÷ Δt (m/s)</th></tr>`+[...byDec.values()].slice(0,6).map(([h,v])=>`<tr><td>${h}</td><td>${f2(v)}</td></tr>`).join(''):'';
+  A.cv.setAttribute('aria-label',A.step===0?'Illustration: a phone falling past a speed camera beside a tall tower.':`Graph of distance fallen s = 4.9t² m against time t s. P at ${f2(s.t0)} s, Q at ${f2(s.t0+s.h)} s; average speed ${f2(avg)} m/s.`);
+  c.say(A.step===0?'A phone falls from a 44 metre tower past a speed camera.':`Average speed ${f2(avg)} m/s over ${f3(s.h)} s from t = ${f2(s.t0)} s.`);A.redraw()};
+ // ---------- hook scene ----------
+ const scene=(A,dt)=>{const{ctx,W,H,paint:P,col:C}=A,dk=C.dark;const sky=P.lin(0,0,0,H,dk?[[0,'#0b1430'],[.6,'#1d2b5a'],[1,'#3a3f6e']]:[[0,'#7cc4ff'],[.65,'#cfe9ff'],[1,'#fde7c8']]);ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+  ctx.fillStyle=P.rad(W*.82,H*.18,4,H*.35,dk?[[0,'rgba(255,240,200,.9)'],[.08,'rgba(255,240,200,.35)'],[1,'rgba(255,240,200,0)']]:[[0,'rgba(255,255,230,1)'],[.1,'rgba(255,240,180,.6)'],[1,'rgba(255,240,180,0)']]);ctx.fillRect(0,0,W,H);
+  for(let i=0;i<9;i++){const x=(i*97)%W,hh=H*(.12+((i*37)%30)/160);ctx.fillStyle=dk?'#141b38':'#9cb6d6';ctx.fillRect(x-30,H*.86-hh,60+(i%3)*14,hh)}// far city
+  const gy=H*.86;ctx.fillStyle=P.lin(0,gy,0,H,dk?[[0,'#1f2a33'],[1,'#0d1318']]:[[0,'#7fb069'],[1,'#557a44']]);ctx.fillRect(0,gy,W,H-gy);
+  const tx=W*.18,tw=Math.max(64,W*.14),top=H*.08;P.shadow(18,8,.35);ctx.fillStyle=P.lin(tx,0,tx+tw,0,dk?[[0,'#2c3550'],[1,'#454f73']]:[[0,'#8a94a8'],[1,'#c3cad6']]);ctx.fillRect(tx,top,tw,gy-top);P.noShadow();
+  for(let y=top+10;y<gy-14;y+=16)for(let x=tx+8;x<tx+tw-10;x+=14){ctx.fillStyle=((x*7+y*3)%5<2)?(dk?'#ffd77a':'#eaf6ff'):(dk?'#1b2238':'#6f7a90');ctx.fillRect(x,y,8,9)}
+  const yOf=t=>top+(gy-top-12)*S(t)/SM,cy=yOf(2),camx=tx+tw+W*.12;// camera on a pole at the 2 s height
+  ctx.strokeStyle=dk?'#8892b0':'#4b5563';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(camx+14,cy);ctx.lineTo(camx+14,gy);ctx.stroke();P.shadow(8,3,.3);ctx.fillStyle=dk?'#cbd5e1':'#374151';P.rrect(camx,cy-12,30,22,5);ctx.fill();P.noShadow();ctx.fillStyle='#111827';ctx.beginPath();ctx.arc(camx,cy-1,6,0,7);ctx.fill();
+  s.ph+=A.reduced()?0:dt;const t=Math.min(T,(s.ph%4.2)),py=yOf(t),px=tx+tw+18;
+  for(let k=1;k<=6;k++){const tt=Math.max(0,t-k*.035);ctx.globalAlpha=.14*(7-k)/6;ctx.fillStyle=C.cy;P.rrect(px-7,yOf(tt)-12,14,24,4);ctx.fill()}ctx.globalAlpha=1;
+  ctx.save();ctx.translate(px,py);ctx.rotate(t*2.2);P.shadow(10,4,.35);ctx.fillStyle='#111827';P.rrect(-8,-13,16,26,4);ctx.fill();P.noShadow();ctx.fillStyle=P.lin(-6,-11,6,11,[[0,'#60a5fa'],[1,'#a78bfa']]);P.rrect(-6,-10,12,20,3);ctx.fill();ctx.restore();
+  if(Math.abs(t-2)<.06){ctx.fillStyle=P.rad(camx,cy,2,90,[[0,'rgba(255,255,255,.95)'],[1,'rgba(255,255,255,0)']]);ctx.fillRect(camx-90,cy-90,180,180);if(!s.fl){s.fl=1;A.sound.pop()}}else s.fl=0;
+  P.label(`t = ${t.toFixed(2)} s`,px+20,py,{align:'left'});P.label('speed camera · t = 2 s',camx+40,cy-26,{align:'left',bg:'rgba(17,24,39,.75)'});
+  P.label(`fallen ${S(t).toFixed(1)} m`,tx+tw/2,gy+16,{bg:'rgba(17,24,39,.75)'});return true};
+ // ---------- graph ----------
+ const pad=A0=>({l:A0.narrow?44:56,r:A0.narrow?14:24,t:18,b:42});
+ const view=()=>{const z=s.z;if(z<=1.001)return{x0:0,x1:T*1.07,y0:0,y1:SM*1.08};const wx=T/z,wy=SM/z;return{x0:s.t0-wx/2,x1:s.t0+wx/2,y0:S(s.t0)-wy/2,y1:S(s.t0)+wy/2}};
+ const graph=(A)=>{const{ctx,W,H,paint:P,col:C}=A,pd=pad(A),vw=view(),X=t=>pd.l+(t-vw.x0)/(vw.x1-vw.x0)*(W-pd.l-pd.r),Y=v=>H-pd.b-(v-vw.y0)/(vw.y1-vw.y0)*(H-pd.t-pd.b);
+  ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.06)],[1,C.pn]]);P.rrect(0,0,W,H,12);ctx.fill();
+  const tick=(a,b)=>{const r=(b-a)/(A.narrow?4:6),p=Math.pow(10,Math.floor(Math.log10(r))),m=r/p;return(m<1.5?1:m<3.5?2:m<7.5?5:10)*p},tx=tick(vw.x0,vw.x1),ty=tick(vw.y0,vw.y1);
+  ctx.font='12px system-ui,sans-serif';ctx.lineWidth=1;
+  for(let t=Math.ceil(vw.x0/tx)*tx;t<=vw.x1+1e-9;t+=tx){const x=X(t);ctx.strokeStyle=C.ln;ctx.globalAlpha=.5;ctx.beginPath();ctx.moveTo(x,pd.t);ctx.lineTo(x,H-pd.b);ctx.stroke();ctx.globalAlpha=1;ctx.fillStyle=C.mu;ctx.textAlign='center';ctx.fillText(String(+t.toFixed(4)),x,H-pd.b+16)}
+  for(let v=Math.ceil(vw.y0/ty)*ty;v<=vw.y1+1e-9;v+=ty){const y=Y(v);ctx.strokeStyle=C.ln;ctx.globalAlpha=.5;ctx.beginPath();ctx.moveTo(pd.l,y);ctx.lineTo(W-pd.r,y);ctx.stroke();ctx.globalAlpha=1;ctx.fillStyle=C.mu;ctx.textAlign='right';ctx.fillText(String(+v.toFixed(3)),pd.l-6,y+4)}
+  ctx.fillStyle=C.tx;ctx.textAlign='center';ctx.font='600 12px system-ui,sans-serif';ctx.fillText('time t (s)',(pd.l+W-pd.r)/2,H-8);ctx.save();ctx.translate(13,(pd.t+H-pd.b)/2);ctx.rotate(-Math.PI/2);ctx.fillText('distance fallen s (m)',0,0);ctx.restore();
+  ctx.save();ctx.beginPath();ctx.rect(pd.l,pd.t,W-pd.l-pd.r,H-pd.t-pd.b);ctx.clip();
+  const a=s.t0,b=s.t0+s.h,m=(S(b)-S(a))/(b-a),pts=[];for(let i=0;i<=260;i++){const t=vw.x0+(vw.x1-vw.x0)*i/260;pts.push([X(t),Y(S(t))])}
+  ctx.beginPath();pts.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.lineTo(X(vw.x1),H-pd.b);ctx.lineTo(X(vw.x0),H-pd.b);ctx.closePath();ctx.fillStyle=P.lin(0,pd.t,0,H-pd.b,[[0,A.alpha(A.mix(C.cy,C.pn,.6),.55)],[1,A.alpha(C.pn,0)]]);ctx.fill();
+  P.glow(C.cy,10);ctx.strokeStyle=C.cy;ctx.lineWidth=4;ctx.lineCap='round';ctx.beginPath();pts.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));ctx.stroke();P.noShadow();
+  const tg=Math.max(0,Math.min(1,(Math.log10(.05)-Math.log10(s.h))/1.3));if(tg>0){ctx.globalAlpha=tg;ctx.strokeStyle=C.gr;ctx.lineWidth=2.5;ctx.setLineDash([8,6]);ctx.beginPath();ctx.moveTo(X(vw.x0),Y(S(a)+V(a)*(vw.x0-a)));ctx.lineTo(X(vw.x1),Y(S(a)+V(a)*(vw.x1-a)));ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1}
+  ctx.strokeStyle=C.or;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(X(vw.x0),Y(S(a)+m*(vw.x0-a)));ctx.lineTo(X(vw.x1),Y(S(a)+m*(vw.x1-a)));ctx.stroke();
+  const used=[],xa=X(a),xb=X(b),ya=Y(S(a)),yb=Y(S(b)),wide=xb-xa;
+  if(wide>26){ctx.fillStyle=A.alpha(A.mix(C.or,C.pn,.6),.45);ctx.beginPath();ctx.moveTo(xa,ya);ctx.lineTo(xb,ya);ctx.lineTo(xb,yb);ctx.closePath();ctx.fill();ctx.strokeStyle=C.or;ctx.lineWidth=1.6;ctx.setLineDash([5,4]);ctx.beginPath();ctx.moveTo(xa,ya);ctx.lineTo(xb,ya);ctx.lineTo(xb,yb);ctx.stroke();ctx.setLineDash([]);
+   if(wide>58)used.push(P.label('Δt '+f3(s.h)+' s',(xa+xb)/2,ya+16,{bg:C.or,col:'#111'}));if(ya-yb>30)used.push(P.label('Δs',xb+8,(ya+yb)/2,{align:'left',bg:C.or,col:'#111',avoid:used}))}
+  const dot=(x,y,fill)=>{P.shadow(8,2,.35);ctx.beginPath();ctx.arc(x,y,8,0,7);ctx.fillStyle=fill?C.or:C.pn;ctx.fill();P.noShadow();ctx.lineWidth=3;ctx.strokeStyle=C.or;ctx.stroke()};
+  const near=wide<20;if(!near){dot(xb,yb,false);used.push(P.label('Q',xb-14,yb-16,{avoid:used}))}dot(xa,ya,true);P.label(near?'P, Q':'P',xa-16,ya-18,{avoid:used});ctx.restore();
+  if(s.z>1.05)P.label('×'+Math.round(s.z)+' zoom',W-pd.r-6,pd.t+12,{align:'right'})};
+ A=FK.shell(c,{steps,ratio:.58,tall:1.05,draw:(A,dt)=>A.step===0?scene(A,dt):graph(A),onStep:A=>{const hook=A.step===0;ctl.hidden=read.hidden=hook;tbl.hidden=A.step<2;chal.hidden=A.step!==steps.length-1;s.seen.clear();sync()},
+  init:A=>{const E=c.el,B=A.below;read=E('div',{class:'fl-read'},B);ctl=E('div',{class:'fl-ctl'},B);tbl=E('table',{class:'fl-tbl'},B);chal=E('div',{class:'fl-chal'},A.extra.parentNode);A.extra.parentNode.insertBefore(chal,A.extra.nextSibling);
+   const r1=E('label',{},ctl);E('span',{},r1,'');i1=E('input',{type:'range',min:.2,max:2.6,step:.01,value:2,'aria-label':'time of point P in seconds'},r1);
+   const r2=E('label',{},ctl);E('span',{},r2,'');i2=E('input',{type:'range',min:-3,max:0,step:.01,value:0,'aria-label':'gap Δt, log scale'},r2);bz=E('button',{type:'button',class:'lbtn ghost sm','aria-pressed':'false'},ctl,'🔍 Zoom in');
+   i1.oninput=()=>{s.t0=+i1.value;sync()};i2.oninput=()=>{s.h=Math.pow(10,+i2.value);A.sound.tick();sync()};bz.onclick=()=>to({z:s.z<2?30:1},1500);
+   A.every(()=>{if(s.h!==s._lh||s.t0!==s._lt||s.z!==s._lz){s._lh=s.h;s._lt=s.t0;s._lz=s.z;sync()}return false});
+   A.cv.addEventListener('pointerdown',e=>{if(A.step===0)return;const p=A.toT(e),pd=pad(A),vw=view(),t=vw.x0+(p.x-pd.l)/(A.W-pd.l-pd.r)*(vw.x1-vw.x0),tol=(vw.x1-vw.x0)*.07;drag=Math.abs(t-(s.t0+s.h))<tol?'Q':Math.abs(t-s.t0)<tol?'P':'Q';A.cv.setPointerCapture(e.pointerId);mv(e)});
+   const mv=e=>{if(!drag)return;const p=A.toT(e),pd=pad(A),vw=view(),t=vw.x0+(p.x-pd.l)/(A.W-pd.l-pd.r)*(vw.x1-vw.x0);if(drag==='P')s.t0=Math.max(.2,Math.min(2.6,t));else s.h=t-s.t0;sync()};
+   A.cv.addEventListener('pointermove',mv);A.cv.addEventListener('pointerup',()=>{drag=null})}});
+ const newChal=()=>{const o=[.5,1,1.5,2.5].filter(x=>x!==s.ct);s.ct=o[Math.floor(Math.random()*o.length)];s.won=false;to({t0:s.ct,h:.5,z:1},800);
+  chal.innerHTML=`<p><b>Speed camera at t = ${s.ct} s.</b> Use the graph to find the phone’s speed at that instant (1 decimal place).</p><label>Speed <input type="number" step="0.1" inputmode="decimal" class="fl-in" aria-label="speed in metres per second"> m/s</label> <button type="button" class="lbtn sm">Check</button><p class="fl-fb" role="status" aria-live="polite"></p>`;
+  const inp=chal.querySelector('input'),fb=chal.querySelector('.fl-fb');chal.querySelector('button').onclick=()=>{const v=parseFloat(inp.value),want=V(s.ct);if(!isFinite(v)){fb.textContent='Type a number first.';return}
+   if(Math.abs(v-want)<=.15){fb.innerHTML=`✓ Yes: ${f2(want)} m/s. Shrinking the gap to zero gave you the derivative. <button type="button" class="linkish">Another time →</button>`;A.win();fb.querySelector('button').onclick=newChal;return}
+   A.sound.miss();fb.textContent=Math.abs(v-(S(s.ct+.5)-S(s.ct))/.5)<.2?'That is the average over half a second. Shrink Δt until the number stops changing.':Math.abs(v-S(s.ct)/s.ct)<.2?'That is distance ÷ time since the start (the average from 0 s). You need the slope at P itself.':Math.abs(v-S(s.ct))<.2?'That is the distance fallen, in metres, not the speed.':'Not quite. Drag Q very close to P and read the average speed.'}};
+ A.every(()=>A.step===0&&!A.reduced());A.start()})})();
 /* Why Next? visual cues for progress: per-topic progress rings and a subtle mastery celebration (skipped under reduced motion). */
 const LEARN_FX=(()=>{
 function progress(id){if(LEARN.mastered(id)||LEARN.known(id))return 1;const les=LEARN.L[id];if(!les)return 0;const pr=LEARN.prog(id);
