@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
 <title>Why Next? A learning map: what to learn next, and why</title>
 <style>
 #side h1{color:#111827}:root{--new:#1d4ed8;--old:#4b5563;--bridge:#b45309;--bg:#f8fafc}
@@ -22,6 +22,7 @@ ul.tree{list-style:none;padding-left:18px;margin:2px 0;border-left:1px dashed #d
 .st.h{background:#111827;color:#fff}.st.s{border:1px solid #9ca3af;color:#4b5563}.st.b{background:var(--bridge);color:#fff}
 .tog{cursor:pointer;color:#9ca3af;width:14px;display:inline-block;user-select:none}
 svg{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px}
+.grp{content-visibility:auto;contain-intrinsic-size:auto 600px}.cv{content-visibility:auto;contain-intrinsic-size:auto 700px}
 .legend span{margin-right:12px;font-size:12px}.muted{color:#6b7280}
 /*__LEARN_CSS__*/
 </style></head><body>
@@ -34,57 +35,4 @@ svg{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px}
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats"></p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">/*__CREDIT__*/</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script>
-const DATA=/*__DATA__*/null;
-const LEARN_DATA=/*__LESSONS__*/null;
-/*__LEARN_JS__*/
-const N=new Map(DATA.nodes.map(n=>[n.id,n]));const PRE=new Map();const POST=new Map();
-for(const e of DATA.edges){(PRE.get(e.t)||PRE.set(e.t,[]).get(e.t)).push(e);(POST.get(e.p)||POST.set(e.p,[]).get(e.p)).push(e)}
-const isBridge=e=>N.get(e.t).new&&!N.get(e.p).new;
-const nNew=DATA.nodes.filter(n=>n.new).length,nB=DATA.edges.filter(isBridge).length,nNE=DATA.edges.filter(e=>N.get(e.t).new).length;
-document.getElementById('cnt').textContent=`${nNew} topics.`;
-document.getElementById('stats').textContent=`${nNew} Why Next? topics · ${nNE} Why Next? edges (${nB} bridge edges into upstream v1) · ${DATA.nodes.length-nNew} upstream v1 ancestor topics shown for context.`;
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let sel=null;
-function renderList(){const q=document.getElementById('q').value.toLowerCase(),old=document.getElementById('showOld').checked,only=document.getElementById('onlyLes').checked;LEARN.refreshNext();
- let h='',dom='';for(const n of DATA.nodes){if(only&&!LEARN.has(n.id))continue;if(!n.new&&!old&&!LEARN.has(n.id)&&!LEARN.isNext(n.id))continue;if(q&&!(n.n+' '+n.desc).toLowerCase().includes(q))continue;
- const d=n.s+' / '+n.d;if(d!==dom){dom=d;h+=`<div class="dom">${esc(d)}</div>`}
- h+=`<div class="item${sel===n.id?' sel':''}" role="button" tabindex="0" data-id="${n.id}"${sel===n.id?' aria-current="true"':''}><span class="nm ${n.new?'new':'old'}">${esc(n.n)}</span><span class="lbs"><span class="age">${n.a[0]}–${n.a[1]}</span>${LEARN.badge(n.id)}</span></div>`}
- document.getElementById('list').innerHTML=h||'<p class="muted" style="padding:12px">No matches</p>'}
-document.getElementById('list').onclick=e=>{const it=e.target.closest('.item');if(it)select(it.dataset.id)};
-document.getElementById('list').onkeydown=e=>{const it=e.target.closest('.item');if(it&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(it.dataset.id);const l=document.getElementById('learn');if(l)l.focus()}};
-document.getElementById('q').oninput=renderList;document.getElementById('showOld').onchange=renderList;document.getElementById('onlyLes').onchange=renderList;
-function ancestors(id,hardOnly){const s=new Set([id]),st=[id];while(st.length){const u=st.pop();for(const e of PRE.get(u)||[]){if(hardOnly&&!e.h)continue;if(!s.has(e.p)){s.add(e.p);st.push(e.p)}}}return s}
-function tree(id,seen,depth){const es=(PRE.get(id)||[]).slice().sort((a,b)=>b.h-a.h);if(!es.length)return'';let h='<ul class="tree">';
- for(const e of es){const p=N.get(e.p),br=isBridge(e),rep=seen.has(e.p);seen.add(e.p);
-  const kids=rep?'':tree(e.p,seen,depth+1),open=depth<2;
-  h+=`<li class="node"><span class="tog">${kids?(open?'▾':'▸'):(rep?'↺':'·')}</span><span class="st ${e.h?'h':'s'}">${e.h?'hard':'soft'}</span>${br?'<span class="st b">bridge</span>':''}<span class="nm ${p.new?'new':'old'}" data-id="${p.id}">${esc(p.n)}</span> <span class="age">${p.a[0]}–${p.a[1]} · ${esc(p.d)}</span>${rep?' <span class="muted">(shown above)</span>':''}<div class="why${br?' bridge':''}">↳ ${esc(e.r)}</div>${kids?`<div style="display:${open?'block':'none'}">${kids}</div>`:''}</li>`}
- return h+'</ul>'}
-function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class="muted">Hard-prerequisite graph has ${anc.size} topics, too many to draw. Use the chain below.</p>`;
- const depth=new Map();const dfs=u=>{if(depth.has(u))return depth.get(u);let d=0;for(const e of PRE.get(u)||[])if(e.h&&anc.has(e.p))d=Math.max(d,dfs(e.p)+1);depth.set(u,d);return d};anc.forEach(dfs);
- const L=[];anc.forEach(u=>{const d=depth.get(u);(L[d]=L[d]||[]).push(u)});L.forEach(l=>l.sort((a,b)=>N.get(a).d.localeCompare(N.get(b).d)));
- const W=Math.max(700,Math.max(...L.map(l=>l.length))*150),RH=70,H=L.length*RH+30,pos=new Map();
- L.forEach((l,d)=>l.forEach((u,i)=>pos.set(u,[(i+.5)*W/l.length,H-20-d*RH-10])));
- let s=`<svg viewBox="0 0 ${W} ${H}" style="height:${Math.min(H,900)}px">`;
- anc.forEach(u=>{for(const e of PRE.get(u)||[]){if(!e.h||!anc.has(e.p))continue;const[a,b]=pos.get(u),[c,d]=pos.get(e.p);
-  s+=`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="${isBridge(e)?'#d97706':'#cbd5e1'}" stroke-width="${isBridge(e)?2:1}"><title>${esc(e.r)}</title></line>`}});
- anc.forEach(u=>{const[x,y]=pos.get(u),n=N.get(u),lab=n.n.length>24?n.n.slice(0,23)+'…':n.n;
-  s+=`<g class="gn" data-id="${u}" style="cursor:pointer"><circle class="${LEARN.cls(u)}" cx="${x}" cy="${y}" r="${u===id?8:5}" fill="${n.new?'#2563eb':'#9ca3af'}"/><text x="${x}" y="${y-9}" font-size="10" text-anchor="middle" fill="#111">${esc(lab)}<title>${esc(n.n)} (${n.a[0]}–${n.a[1]})</title></text></g>`});
- return s+'</svg><p class="muted" style="font-size:12px">Hard prerequisites only; the earliest foundations are at the bottom. Orange lines are bridge edges. Hover a line to see its reason; click a node to open it.</p>'}
-function select(id){sel=id;const n=N.get(id);renderList();const anc=ancestors(id,false);
- const clu=(DATA.clusters||{})[n.s+'|'+n.d+'|'+n.a[0]];const prim=[...anc].filter(u=>!N.get(u).new&&N.get(u).a[0]<=10).length;const users=(POST.get(id)||[]).map(e=>N.get(e.t));
- document.getElementById('detail').innerHTML=`<div class="card"><h2 style="margin:0 0 4px">${esc(n.n)}</h2>
- <span class="tag ${n.new?'new':'old'}">${n.new?'Why Next?':'upstream v1'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">${n.ty}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span>${LEARN.badge(id)} <span class="tag" title="Centrality on the merged graph: (ancestors + descendants) / max">centrality ${n.c}</span>
- <p>${esc(n.desc)}</p>${n.ev.length?'<b>Evidence</b><ul>'+n.ev.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':''}
- <b>Standards:</b> ${n.st.length?n.st.map(esc).join(', '):'<span class="muted">none</span>'}<br>
- <span class="muted">${anc.size-1} ancestor topics (${prim} at primary ages ≤10).</span>
- ${users.length?`<br><b>Unlocks:</b> ${users.map(u=>`<span class="nm ${u.new?'new':'old'}" data-id="${u.id}">${esc(u.n)}</span>`).join(' · ')}`:''}</div>
-${LEARN_PANEL.panel(id)}
- ${clu?`<div class="card"><b>Cluster: ${esc(n.s)} / ${esc(n.d)}, from age ${n.a[0]}</b><p style="margin:6px 0 0">${esc(clu)}</p></div>`:''}
- <div class="card"><b>Hard-prerequisite graph</b>${graph(id)}</div>
- <div class="card"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span>${tree(id,new Set([id]),0)||'<p class="muted">No prerequisites in this view.</p>'}</div>`;
- LEARN_PANEL.mount(id);document.getElementById('main').scrollTop=0}
-document.getElementById('detail').onclick=e=>{if(e.target.closest('.learn'))return;const t=e.target.closest('.tog');if(t){const li=t.parentElement,box=li.querySelector(':scope>div[style]');if(box){const o=box.style.display!=='none';box.style.display=o?'none':'block';t.textContent=o?'▸':'▾'}return}
- const g=e.target.closest('[data-id]');if(g)select(g.dataset.id)};
-LEARN.home();renderList();const first=LEARN.nextList(0).find(n=>LEARN.has(n.id))||DATA.nodes.find(n=>n.new&&n.n==='Solving quadratics by factorising')||DATA.nodes.find(n=>n.new);select(first.id);
-</script></body></html>
+/*__SCRIPTS__*/</body></html>

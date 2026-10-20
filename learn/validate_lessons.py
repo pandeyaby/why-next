@@ -92,13 +92,16 @@ for name, key in (("resources", "resources"), ("goals", "goals"), ("goals", "ban
         if name == "resources" and not r["url"].startswith("https://"): err(f"learn/{name}.json", f"non-https url {r['url']}")
         if key == "goals" and r["target"] and r["target"] not in topics: err(f"learn/{name}.json", f"unknown target {r['target']}")
 
-# the single-file viewer must bundle exactly the current lessons
+# the viewer (split build in out/viewer.html + out/wn/, and out/viewer-offline.html) must match a fresh build
 if not errors:
     with tempfile.TemporaryDirectory() as tmp:
-        out = os.path.join(tmp, "viewer.html")
-        subprocess.run([sys.executable, "ext/make_viewer.py"], check=True, stdout=subprocess.DEVNULL, env={**os.environ, "WHYNEXT_VIEWER_OUT": out})
-        if open(out, "rb").read() != open("out/viewer.html", "rb").read():
-            err("out/viewer.html", "out of date; run python3 ext/make_viewer.py and commit")
+        subprocess.run([sys.executable, "ext/make_viewer.py"], check=True, stdout=subprocess.DEVNULL, env={**os.environ, "WHYNEXT_VIEWER_DIR": tmp})
+        rel = lambda root: sorted(os.path.relpath(f, root) for f in glob.glob(f"{root}/viewer*.html") + glob.glob(f"{root}/wn/*.js"))
+        if rel(tmp) != rel("out"):
+            err("out/wn", "file list out of date; run python3 ext/make_viewer.py and commit")
+        for f in rel(tmp):
+            if not os.path.exists(f"out/{f}") or open(f"{tmp}/{f}", "rb").read() != open(f"out/{f}", "rb").read():
+                err(f"out/{f}", "out of date; run python3 ext/make_viewer.py and commit"); break
 
 if errors:
     print("\n".join("FAIL " + e for e in errors)); sys.exit(1)

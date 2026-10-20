@@ -15,7 +15,7 @@ fail=0
 is_exempt() {
   case "$1" in
     *.json|*.woff2|*.png|*.jpg|*.gif|*.mp4|*.pdf) return 0 ;;   # data and binaries
-    index.html|site/index.html|out/viewer.html|why-next-site.html|*/why-next-site.html) return 0 ;;  # generated
+    index.html|site/index.html|out/viewer.html|out/viewer-offline.html|out/wn/*.js|why-next-site.html|*/why-next-site.html) return 0 ;;  # generated
     LICENSE|LICENSE-*|*.txt|*.cff) return 0 ;;                  # legal text
   esac
   return 1

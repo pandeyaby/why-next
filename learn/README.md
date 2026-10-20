@@ -5,7 +5,7 @@ Interactive lessons inside `out/viewer.html`. Clicking a topic opens a Learn pan
 - `lessons/*.json`: one lesson per topic, validated against `lesson.schema.json`.
 - `goals.json`: profile goals and their target topics. `resources.json`: free links shown for topics without a lesson. Each link was fetched and its title checked on `verifiedOn`.
 - `learn_core.js` (profile, progress, "learn next"), `learn_panel.js` (panel UI), `learn.css`: bundled into the viewer by `ext/make_viewer.py`.
-- `validate_lessons.py`: schema and content checks, plus a check that `out/viewer.html` bundles the current lessons. It is run by `scripts/check_all.sh` and CI.
+- `validate_lessons.py`: schema and content checks, plus a check that the built viewer (`out/viewer.html`, `out/wn/`, `out/viewer-offline.html`) is up to date. It is run by `scripts/check_all.sh` and CI.
 
 **Learn next** means a topic that isn't done yet and whose hard prerequisites are all mastered or known. "Known" comes from the learner marking a topic, or is assumed from the age band (`goals.json` → `bands`). For learners aged 10 and over, early-years skills such as handwriting are skipped (`skipFromBand10`). When a goal is set, only topics on the way to it are suggested, ranked by how many prerequisite links separate them from the goal.
 

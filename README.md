@@ -14,7 +14,8 @@ Status: draft (`whynext-0.6`). Topics, age bands and links were written and self
 | Path | What it is |
 |---|---|
 | `index.html`, [`site/`](site/README.md) | The website (GitHub Pages homepage). It is built from `site/src` and the merged data by `site/build/build_site.py` |
-| [`out/viewer.html`](out/viewer.html) | Single-file interactive viewer. It works offline, so just open it in a browser |
+| [`out/viewer.html`](out/viewer.html) | Interactive viewer (fast split build: the page plus `out/wn/*.js`, detail text loaded on demand) |
+| [`out/viewer-offline.html`](out/viewer-offline.html) | The same viewer in one file that works offline; just open it in a browser |
 | [`out/README.md`](out/README.md) | Full documentation: scope, method, standards policy, validation, example chains, known gaps |
 | [`out/REVIEW.md`](out/REVIEW.md) | Review log, with every finding and fix |
 | `out/topics.ext.json`, `out/dependencies.ext.json`, `out/clusters.ext.json`, `out/standards.ext.json` | The Why Next? additions: 826 topics, 2031 prerequisite links, 61 parent-facing cluster summaries, and 24 NGSS high-school codes (codes only) |
@@ -30,7 +31,7 @@ Status: draft (`whynext-0.6`). Topics, age bands and links were written and self
 - **Weekly tidy-up:** see [`JANITOR.md`](JANITOR.md). It only ever opens a PR and never merges.
 
 ## Open the viewer
-Download or clone the repo and open `out/viewer.html` in any modern browser. Choose a topic on the left to see its prerequisite chain with the reason for each link, the cluster summary for its subject and age, and the topics it unlocks.
+Download or clone the repo and open `out/viewer.html` (or the single file `out/viewer-offline.html`) in any modern browser. Choose a topic on the left to see its prerequisite chain with the reason for each link, the cluster summary for its subject and age, and the topics it unlocks.
 
 ## Validate
 Requires Node 18+ (no dependencies).

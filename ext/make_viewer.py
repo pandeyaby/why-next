@@ -1,5 +1,10 @@
-"""Generate out/viewer.html: single-file Why Next? viewer (new topics plus their upstream v1 ancestors)."""
+"""Generate the Why Next? viewer (new topics plus their upstream v1 ancestors).
+
+out/viewer.html + out/wn/*.js: fast split build for the web (map first, detail chunks on demand).
+out/viewer-offline.html: the same app in one file that works with no network.
+"""
 import glob
+import hashlib
 import html as _html
 import json
 import os
@@ -26,7 +31,6 @@ edges = [{"t": e["topicId"], "p": e["prerequisiteId"], "h": e["strength"] == "ha
          for e in D if e["topicId"] in keep and e["prerequisiteId"] in keep]
 C = json.load(open("out/merged/data/clusters.json"))["clusters"]
 clusters = {f"{c['subject']}|{c['domain']}|{c['ageRangeStart']}": c["summary"] for c in C}
-data = json.dumps({"nodes": nodes, "edges": edges, "clusters": clusters}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 credit = _html.escape(open("ext/CREDIT.txt", encoding="utf-8").read().strip())
 # Learn: lessons, goals and verified resources from learn/, bundled so the viewer stays a single offline file
 lessons = {}
@@ -39,8 +43,51 @@ assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
 learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-js = "".join(open(f"learn/{f}").read() for f in ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_chem.js", "learn_fx.js", "learn_panel.js"))
-html = (open("ext/viewer_template.html").read().replace("/*__DATA__*/null", data).replace("/*__CREDIT__*/", credit)
-        .replace("/*__LESSONS__*/null", learn).replace("/*__LEARN_JS__*/", js).replace("/*__LEARN_CSS__*/", "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css"))))
-open(os.environ.get("WHYNEXT_VIEWER_OUT", "out/viewer.html"), "w").write(html)
-print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons")
+LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_chem.js", "learn_fx.js", "learn_panel.js")
+learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
+css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css"))
+
+# Split build: the page shell plus small cacheable scripts; per-domain detail chunks load on demand.
+J = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+dom_keys = sorted({(n["s"], n["d"]) for n in nodes})
+K = {sd: i for i, sd in enumerate(dom_keys)}
+idx = {n["id"]: i for i, n in enumerate(nodes)}
+sb, dm, ty = sorted({n["s"] for n in nodes}), sorted({n["d"] for n in nodes}), sorted({n["ty"] for n in nodes})
+chunks = [{"n": [], "r": [], "c": {}} for _ in dom_keys]
+for i, n in enumerate(nodes):
+    chunks[K[(n["s"], n["d"])]]["n"].append([i, n["desc"], n["ev"], n["st"]])
+for j, e in enumerate(edges):
+    t = by[e["t"]]
+    chunks[K[(t["subject"], t["domain"])]]["r"].append([j, e["r"]])
+for key, summ in clusters.items():
+    s_, d_, _ = key.split("|")
+    if (s_, d_) in K:
+        chunks[K[(s_, d_)]]["c"][key] = summ
+chunk_js = [f"WN.chunk({k},{J(c)});\n" for k, c in enumerate(chunks)]
+H = lambda t: hashlib.sha1(t.encode()).hexdigest()[:10]
+core = {"sb": sb, "dm": dm, "ty": ty, "v": [H(c) for c in chunk_js],
+        "n": [[n["id"], n["n"], dm.index(n["d"]), sb.index(n["s"]), ty.index(n["ty"]), n["a"][0], n["a"][1], n["c"], int(n["new"]), K[(n["s"], n["d"])]] for n in nodes],
+        "e": [[idx[e["t"]], idx[e["p"]], int(e["h"])] for e in edges]}
+files = {"core.js": "window.WN_CORE=" + J(core) + ";\n" + open("ext/viewer_core.js").read(),
+         "learn.js": "const LEARN_DATA=" + learn + ";\n" + learn_js,
+         "app.js": open("ext/viewer_app.js").read()}
+nNew = sum(n["new"] for n in nodes)
+nB = sum(1 for e in edges if by[e["t"]]["id"] in newset and e["p"] not in newset)
+nNE = sum(1 for e in edges if e["t"] in newset)
+shell = (open("ext/viewer_template.html").read().replace("/*__CREDIT__*/", credit).replace("/*__LEARN_CSS__*/", css)
+         .replace('<span id="cnt"></span>', f'<span id="cnt">{nNew} topics.</span>')
+         .replace('<p class="muted" id="stats"></p>', f'<p class="muted" id="stats">{nNew} Why Next? topics · {nNE} Why Next? edges ({nB} bridge edges into upstream v1) · {len(nodes) - nNew} upstream v1 ancestor topics shown for context.</p>'))
+outdir = os.environ.get("WHYNEXT_VIEWER_DIR", "out")
+os.makedirs(f"{outdir}/wn", exist_ok=True)
+for f in glob.glob(f"{outdir}/wn/*.js"):
+    os.remove(f)
+for name, text in files.items():
+    open(f"{outdir}/wn/{name}", "w").write(text)
+for k, text in enumerate(chunk_js):
+    open(f"{outdir}/wn/d{k}.js", "w").write(text)
+tags = "".join(f'<script defer src="wn/{n}?v={H(files[n])}"></script>' for n in ("core.js", "learn.js", "app.js"))
+open(f"{outdir}/viewer.html", "w").write(shell.replace("/*__SCRIPTS__*/", tags))
+# Offline build: the same scripts inlined into one file that works with no network.
+inline = "".join(f"<script>{t}</script>" for t in [files["core.js"], "".join(chunk_js), files["learn.js"], files["app.js"]])
+open(f"{outdir}/viewer-offline.html", "w").write(shell.replace("/*__SCRIPTS__*/", inline))
+print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons,", len(chunks), "detail chunks")
