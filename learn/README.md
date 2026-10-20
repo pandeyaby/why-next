@@ -33,7 +33,7 @@ Every lesson has a required `visual`: `{ "type", "caption", "opts" }`. It render
 `figure.vis` with a "Try it" caption, controls and a live text description (`p.vis-desc`, `aria-live`)
 that is the text alternative and updates after every action.
 
-Types (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
+Types, 28 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
 
 | Area | Types |
 |---|---|
@@ -41,6 +41,9 @@ Types (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
 | Algebra | `balance` (equal / solve ax+b=c with inverse operations; tips when one side changes), `bidmas` (step highlighting), `longmul`, `longdiv` |
 | Calculus | `plot` (eval, line, secant with h → 0, limit, tangent with optional normal, `equal` scales), `rate`, `power` |
 | Chemistry | `particles` (canvas, temperature slider), `atom`, `ptable`, `balancer` (coefficients, atom tally, scale) |
+| Integration | `area` (Riemann rectangles/trapezia, signed definite integral with draggable limits, fundamental theorem with the area function, antiderivative family + C, velocity–time displacement) |
+| Science | `sorter` (drag or tap cards into boxes, then check), `phscale` (universal-indicator colours), `energy` (exo/endothermic profile with a thermometer) |
+| More number | `placevalue` (digits slide on × 10 / ÷ 10), `percent` (hundred square; `mode: change` for multipliers), `thermo` (negative temperatures, change across zero), `journey` (distance–time graph with a walker), `formula` (substitute with sliders, optional rectangle picture), `coords`, `wholes` (a ÷ b as sharing) |
 
 `learn/validate_visuals.py` whitelists options per type and checks the content: solvable balance equations,
 safe evaluable expressions and functions, sane long-division and multiplication operands, locked balancers that are balanced.
@@ -51,3 +54,12 @@ freezes the particle sim to settled frames, and turns off the celebration burst 
 
 Cues: a hint or a wrong first answer highlights the relevant part of the visual (`VIS.cue`). Topics with a lesson show
 a progress ring; next-step map nodes glow; mastery shows a small celebration. Tests: `tests/visual.e2e.cjs` (in `npm run test:learn`).
+
+## Loading (fast split build)
+
+`ext/make_viewer.py` writes `out/viewer.html` (page shell and CSS, about 15 KB), `out/wn/core.js` (compact map),
+`out/wn/learn.js` (lessons and visuals) and `out/wn/app.js`, all deferred, plus 46 per-domain detail chunks
+`out/wn/d*.js` (descriptions, evidence, standards, link reasons, cluster notes). The page renders the map and the
+first lesson after loading only the chunks that topic needs; other chunks load when a topic needs them, and all of
+them load on the first search. Chunks are plain scripts, so the viewer works on GitHub Pages and from `file://`.
+`out/viewer-offline.html` is the same app in one file. Measure with `node scripts/serve_static.cjs out` (gzip, like Pages) and Lighthouse.

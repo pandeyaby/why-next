@@ -1,0 +1,199 @@
+{
+ "topicId": "mt_gbnMvpN_Lj",
+ "title": "The constant of integration and initial conditions",
+ "audience": "learner",
+ "keyIdea": "+ C means a whole family of curves; one known point picks out the curve you want.",
+ "explain": {
+  "kid": [
+   "When you integrate, you get a family of curves. They all have the same shape, just moved up or down. That is the + C.",
+   "If you know one point on the curve, put its x and y into your answer. Then you can work out C and pick the right curve."
+  ],
+  "adult": [
+   "Given dy/dx = f(x) and a point (x₀, y₀), integrate to get y = F(x) + C, then substitute: C = y₀ − F(x₀).",
+   "In science this point is often an initial condition, such as a starting position at t = 0. With t = 0 many terms vanish, so C is simply the starting value."
+  ]
+ },
+ "familyTip": "Trace one curve, then slide the tracing paper straight up. Every copy has the same slopes. Which copy goes through a dot you drew?",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "dy/dx = 2x, and the curve passes through (0, {c}). Find C in y = x² + C.",
+   "answer": "c",
+   "hint": "Put x = 0 and y = {c} into y = x² + C.",
+   "explain": "{c} = 0 + C, so C = {c}.",
+   "params": {
+    "c": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "y = x² + C passes through (2, {y}). Find C.",
+   "answer": "y-4",
+   "hint": "Put x = 2 in: 2² = 4.",
+   "explain": "{y} = 4 + C, so C = {=y-4}.",
+   "params": {
+    "y": [
+     5,
+     15
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How are the curves y = x² + 1 and y = x² + 5 related?",
+   "choices": [
+    "Same shape; one is 4 units higher",
+    "They cross at x = 1",
+    "One is steeper"
+   ],
+   "answer": 0,
+   "hint": "Compare them at the same x.",
+   "explain": "At every x, the second is 4 more: the same curve moved up 4."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "dy/dx = 3x², and y = {c} when x = 1. Find C in y = x³ + C.",
+   "answer": "c-1",
+   "hint": "Put x = 1 in: 1³ = 1.",
+   "explain": "{c} = 1 + C, so C = {=c-1}.",
+   "params": {
+    "c": [
+     2,
+     12
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "y = x² + C passes through (3, {y}). Find C.",
+    "answer": "y-9",
+    "hint": "3² = 9.",
+    "explain": "{y} = 9 + C, so C = {=y-9}.",
+    "params": {
+     "y": [
+      10,
+      20
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "dy/dx = 4x³, and y = {y} when x = 1. Find y when x = 2.",
+    "answer": "y+15",
+    "hint": "Integrate to y = x⁴ + C, find C, then put x = 2.",
+    "explain": "C = {y} − 1 = {=y-1}, so y(2) = 16 + {=y-1} = {=y+15}.",
+    "params": {
+     "y": [
+      1,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why can't you find C from dy/dx alone?",
+    "choices": [
+     "Every vertical shift has the same gradient",
+     "C is always 0",
+     "dy/dx is never known"
+    ],
+    "answer": 0,
+    "hint": "Do the shifted curves have different slopes?",
+    "explain": "Moving a curve up or down doesn't change its gradient, so dy/dx can't tell them apart."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A position is s = 5t² + C metres, and s = {h} when t = 0. Find C.",
+    "answer": "h",
+    "hint": "Put t = 0 in.",
+    "explain": "{h} = 0 + C, so C = {h}.",
+    "params": {
+     "h": [
+      1,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "y = 2x + C passes through (1, 5). What is C?",
+    "choices": [
+     "3",
+     "5",
+     "7"
+    ],
+    "answer": 0,
+    "hint": "5 = 2 × 1 + C.",
+    "explain": "5 = 2 + C, so C = 3."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "y = x³ + C passes through (2, {y}). Find C.",
+    "answer": "y-8",
+    "hint": "2³ = 8.",
+    "explain": "{y} = 8 + C, so C = {=y-8}.",
+    "params": {
+     "y": [
+      9,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is enough to fix C?",
+    "choices": [
+     "Any one point on the curve",
+     "The gradient at one point",
+     "Nothing: C is always 1"
+    ],
+    "answer": 0,
+    "hint": "One equation, one unknown.",
+    "explain": "One known point gives one equation, which is enough to find C."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Slide C until the curve y = x² + C passes through the red point (1, 4).",
+  "opts": {
+   "mode": "family",
+   "F": "x*x",
+   "label": "x²",
+   "at": 1,
+   "point": [
+    1,
+    4
+   ],
+   "c": 0,
+   "xr": [
+    -3,
+    3
+   ],
+   "yr": [
+    -5,
+    9
+   ]
+  }
+ }
+}

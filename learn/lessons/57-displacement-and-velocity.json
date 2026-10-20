@@ -1,0 +1,217 @@
+{
+ "topicId": "mt_g7J4GJuLrf",
+ "title": "Displacement and velocity by integration",
+ "audience": "learner",
+ "keyIdea": "Displacement is the integral of velocity, and velocity is the integral of acceleration; starting values fix the constants.",
+ "explain": {
+  "kid": [
+   "On a speed–time graph, the area under the line is how far you went. Twice as fast for the same time gives twice the area.",
+   "If the velocity drops below zero, you are moving backwards. That area counts as minus for displacement, which is how far you are from the start. Total distance adds up every bit, forwards and backwards."
+  ],
+  "adult": [
+   "s = ∫ v dt and v = ∫ a dt. Each integration adds a constant, fixed by initial conditions such as s = 0 and v = u when t = 0.",
+   "Displacement from t₁ to t₂ is ∫ v dt. Distance travelled is ∫ |v| dt: split at the times where v = 0 and add the size of each part."
+  ]
+ },
+ "familyTip": "Walk 5 steps forward and 3 back. Ask: how far did you walk, and how far are you from the start? Those are distance and displacement.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A car moves at a steady {v} m/s for {t} s. How far does it go, in metres?",
+   "answer": "v*t",
+   "hint": "Area of a rectangle on the velocity–time graph.",
+   "explain": "{v} × {t} = {=v*t} m.",
+   "params": {
+    "v": [
+     2,
+     20
+    ],
+    "t": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "v = {=2*k}t m/s, starting at s = 0. Find s, in metres, at t = 3.",
+   "answer": "9*k",
+   "hint": "Integrate: s = {k}t² + C, and C = 0.",
+   "explain": "s = {k}t², so at t = 3, s = {k} × 9 = {=9*k} m.",
+   "params": {
+    "k": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The velocity–time graph dips below the axis. What is happening?",
+   "choices": [
+    "The object is moving backwards",
+    "It has stopped for good",
+    "It is speeding up forwards"
+   ],
+   "answer": 0,
+   "hint": "Negative velocity means…",
+   "explain": "Negative velocity means moving in the opposite direction."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Acceleration is {a} m/s², starting from rest. Find v, in m/s, at t = {t}.",
+   "answer": "a*t",
+   "hint": "Integrate a: v = {a}t + C, and C = 0 from rest.",
+   "explain": "v = {a} × {t} = {=a*t} m/s.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "t": [
+     2,
+     8
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "v = 3t² m/s, and s = {s} m at t = 0. Find s, in metres, at t = 2.",
+    "answer": "8+s",
+    "hint": "Integrate: s = t³ + C.",
+    "explain": "s = t³ + {s}, so s(2) = 8 + {s} = {=8+s} m.",
+    "params": {
+     "s": [
+      0,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Displacement is 0 m but distance is 10 m. What happened?",
+    "choices": [
+     "It went 5 m out and 5 m back",
+     "It never moved",
+     "It moved 10 m forwards"
+    ],
+    "answer": 0,
+    "hint": "Back where it started.",
+    "explain": "It ended at the start (displacement 0) after travelling 10 m in total."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Walk forwards at 2 m/s for {a} s, then backwards at 2 m/s for {b} s. What is the displacement, in metres?",
+    "answer": "2*a-2*b",
+    "hint": "Forwards area minus backwards area.",
+    "explain": "{=2*a} − {=2*b} = {=2*a-2*b} m.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      1,
+      5
+     ]
+    },
+    "where": "a>b"
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Walk forwards at 2 m/s for {a} s, then backwards at 2 m/s for {b} s. What is the total distance, in metres?",
+    "answer": "2*a+2*b",
+    "hint": "Add both parts.",
+    "explain": "{=2*a} + {=2*b} = {=2*a+2*b} m.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How do you get velocity from acceleration?",
+    "choices": [
+     "Integrate a with respect to t",
+     "Differentiate a",
+     "Multiply a by s"
+    ],
+    "answer": 0,
+    "hint": "Reverse of v → a.",
+    "explain": "a = dv/dt, so v = ∫ a dt."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "v = {u} + {=2*a}t m/s. Find the displacement, in metres, from t = 0 to t = 2.",
+    "answer": "2*u+4*a",
+    "hint": "s = {u}t + {a}t².",
+    "explain": "At t = 2: {=2*u} + {=4*a} = {=2*u+4*a} m.",
+    "params": {
+     "u": [
+      1,
+      9
+     ],
+     "a": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What fixes the + C when you integrate velocity?",
+    "choices": [
+     "Knowing the position at one time",
+     "Knowing the speed limit",
+     "Nothing; it is always zero"
+    ],
+    "answer": 0,
+    "hint": "An initial condition.",
+    "explain": "A known position, such as s at t = 0, fixes C."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Velocity v = 4 − t. Drag the end time: area above the axis is moving forwards, area below is moving back.",
+  "opts": {
+   "mode": "velocity",
+   "f": "4-x",
+   "a": 0,
+   "b": 6,
+   "xr": [
+    0,
+    6.5
+   ],
+   "yr": [
+    -3,
+    5
+   ],
+   "ux": "m",
+   "tu": "s"
+  }
+ }
+}

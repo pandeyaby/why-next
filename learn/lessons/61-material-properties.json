@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_Ge4Wtg6QMM",
+ "title": "Advanced material properties",
+ "audience": "learner",
+ "keyIdea": "Group materials by tested properties: conductivity, magnetism, hardness, solubility and transparency decide what each is used for.",
+ "explain": {
+  "kid": [
+   "Materials have properties. Some are hard and some are soft. Some let light through. Some dissolve in water.",
+   "Metals let electricity and heat pass through them easily, so we call them conductors. Plastic, wood and rubber do not, so we call them insulators. Iron and steel are pulled by magnets, but most other metals are not."
+  ],
+  "adult": [
+   "Group materials by tests, not guesses: a simple circuit with a bulb tests electrical conductivity, a magnet tests magnetism, and stirring in water tests solubility.",
+   "Properties decide uses. Copper is used for wires because it conducts electricity and bends easily. Pan handles are plastic or wood because they are thermal insulators."
+  ]
+ },
+ "familyTip": "Hunt the kitchen with a fridge magnet: which metal things does it stick to? (Steel cans yes, aluminium foil no.)",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which material conducts electricity?",
+   "choices": [
+    "Copper",
+    "Plastic",
+    "Wood"
+   ],
+   "answer": 0,
+   "hint": "Wires are made of it.",
+   "explain": "Copper is a metal and a good electrical conductor."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which object is attracted to a magnet?",
+   "choices": [
+    "An iron nail",
+    "An aluminium can",
+    "A copper coin"
+   ],
+   "answer": 0,
+   "hint": "Only some metals are magnetic.",
+   "explain": "Iron is magnetic; aluminium and copper are not."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "In a circuit test of {n} materials, {k} made the bulb light. How many are electrical insulators?",
+   "answer": "n-k",
+   "hint": "Insulators don't light the bulb.",
+   "explain": "{n} − {k} = {=n-k} insulators.",
+   "params": {
+    "n": [
+     6,
+     12
+    ],
+    "k": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{a} g of salt dissolves in some water, and the solution weighs {=a+b} g. What did the water weigh, in grams?",
+   "answer": "b",
+   "hint": "Dissolving keeps all the mass.",
+   "explain": "{=a+b} − {a} = {b} g of water.",
+   "params": {
+    "a": [
+     5,
+     30
+    ],
+    "b": [
+     50,
+     150
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why are pan handles often plastic?",
+    "choices": [
+     "Plastic is a thermal insulator",
+     "Plastic conducts heat well",
+     "Plastic is magnetic"
+    ],
+    "answer": 0,
+    "hint": "You hold the handle.",
+    "explain": "Plastic doesn't let heat through easily, so the handle stays cool."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which is transparent?",
+    "choices": [
+     "Clear glass",
+     "Wood",
+     "Steel"
+    ],
+    "answer": 0,
+    "hint": "Can you see clearly through it?",
+    "explain": "Clear glass lets light straight through."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which dissolves in water?",
+    "choices": [
+     "Sugar",
+     "Sand",
+     "Plastic"
+    ],
+    "answer": 0,
+    "hint": "Which one disappears when stirred?",
+    "explain": "Sugar is soluble; sand and plastic are not."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Copper is used for wires because it…",
+    "choices": [
+     "conducts electricity and bends easily",
+     "is magnetic",
+     "dissolves in water"
+    ],
+    "answer": 0,
+    "hint": "Two properties a wire needs.",
+    "explain": "Good conductor, and flexible enough to bend."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Of {n} spoons, {k} are steel and the rest are wooden. How many are electrical insulators?",
+    "answer": "n-k",
+    "hint": "Wood is an insulator.",
+    "explain": "{n} − {k} = {=n-k} wooden spoons.",
+    "params": {
+     "n": [
+      6,
+      15
+     ],
+     "k": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A magnet picks up {a} iron paper clips and {b} steel pins. How many magnetic objects is that?",
+    "answer": "a+b",
+    "hint": "Iron and steel are both magnetic.",
+    "explain": "{a} + {b} = {=a+b}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which test shows if a material conducts electricity?",
+    "choices": [
+     "Put it in a circuit with a bulb",
+     "Hold a magnet near it",
+     "Drop it in water"
+    ],
+    "answer": 0,
+    "hint": "Electricity needs a circuit.",
+    "explain": "If the bulb lights, the material conducts."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Imagine testing each one in a circuit with a bulb. Sort them: does the bulb light?",
+  "opts": {
+   "bins": [
+    "Conducts electricity",
+    "Does not conduct"
+   ],
+   "items": [
+    [
+     "Copper wire",
+     0
+    ],
+    [
+     "Steel spoon",
+     0
+    ],
+    [
+     "Aluminium foil",
+     0
+    ],
+    [
+     "Pencil lead (graphite)",
+     0
+    ],
+    [
+     "Plastic ruler",
+     1
+    ],
+    [
+     "Wooden spoon",
+     1
+    ],
+    [
+     "Glass marble",
+     1
+    ],
+    [
+     "Rubber band",
+     1
+    ]
+   ]
+  }
+ }
+}

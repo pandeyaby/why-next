@@ -150,3 +150,25 @@ number sentences), 18/20/23/29 (step highlighting stands in for formulae and wor
 as two particle kinds; real mixture behaviour is simplified), 46/47/49 (balancer used for conservation of mass
 rather than balancing). Integration as area has no lesson, so no visual. Lighthouse mobile performance is ~56,
 the same as the live build (57): the cost is the 1.6 MB single-file data bundle, not the visuals (+71 KB, TBT 10 ms).
+
+## Round 6: mobile speed and 25 more lessons (visual-draft)
+
+**Speed.** The viewer is now a split build (see learn/README.md). Lighthouse mobile, gzip server like GitHub Pages:
+before 60–82 locally (varies run to run; live site 62–65, FCP 3.2 s, TBT 320–360 ms, CLS 0.285), after 99 in three
+runs (FCP 0.7 s, LCP 1.8–2.0 s, TBT 70–80 ms, CLS 0). Layout shift fixed by pre-rendering the stats line and giving
+the mobile topic list a fixed height; layout cost cut with `content-visibility` on list groups and lower cards.
+
+**Lessons 51–75.** Integration: estimating areas with strips, antiderivatives, + C and initial conditions, the
+definite integral, the fundamental theorem, evaluating definite integrals, displacement and velocity, velocity–time
+graphs, net change as accumulated rate, physical meaning of gradient and area. Chemistry (the whole 10–12 path to
+balancing equations now has lessons): types of reaction, physical vs chemical change, irreversible changes, material
+properties, particle diagrams, properties vocabulary, subatomic particles, acids/alkalis/pH, exo/endothermic.
+Number and graphs: × 10 / ÷ 10, fractions as division, coordinates, percentage change, distance–time graphs,
+negative temperatures. 11 new visual types (28 in all).
+
+**Weak fits improved.** 18, 20, 23 and 29 now use the `formula` visual (substitute with sliders; 18 also draws the
+rectangle). Still weaker: 05 (ten-frame for reading +, −, =), 46/47/49 (balancer used for conservation of mass),
+and the sorter lessons (61, 63) are closer to an interactive quiz than a model.
+
+**Remaining gaps.** The integration goal path for 16–18 still has 13 topics without lessons (polynomial algebra,
+exponent laws, functions, kinematics prerequisites). Lessons are self-checked, not expert-reviewed.

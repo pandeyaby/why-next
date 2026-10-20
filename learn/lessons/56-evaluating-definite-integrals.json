@@ -1,0 +1,211 @@
+{
+ "topicId": "mt_KceIV8SGuG",
+ "title": "Evaluating definite integrals",
+ "audience": "learner",
+ "keyIdea": "Integrate, write [F(x)] with the limits, then work out F(top) − F(bottom); the result is signed area.",
+ "explain": {
+  "kid": [
+   "There are three steps. First, integrate each term. Second, put the answer in square brackets with the limits at the side. Third, put in the top number, then the bottom number, and take them away.",
+   "If part of the graph is below the x-axis, that part counts as minus. To find a total area, split the integral where the graph crosses the axis."
+  ],
+  "adult": [
+   "∫ from 1 to 3 of x² dx = [x³/3] from 1 to 3 = 9 − 1/3 = 26/3. Leave out + C; it would cancel.",
+   "A negative answer means more signed area lies below the axis than above. For the geometric area, find the roots, integrate each piece separately, and add the sizes."
+  ]
+ },
+ "familyTip": "Check an answer with a sketch: is the region mostly above the axis (positive) or below (negative)? Is the size sensible?",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "∫ from 0 to {b} of 2x dx = ?",
+   "answer": "b*b",
+   "hint": "[x²] from 0 to {b}.",
+   "explain": "{=b*b} − 0 = {=b*b}.",
+   "params": {
+    "b": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "∫ from 1 to {b} of 3x² dx = ?",
+   "answer": "b*b*b-1",
+   "hint": "[x³] from 1 to {b}.",
+   "explain": "{=b*b*b} − 1 = {=b*b*b-1}.",
+   "params": {
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "[x²] from 1 to 3 means…",
+   "choices": [
+    "3² − 1²",
+    "1² − 3²",
+    "3² + 1²"
+   ],
+   "answer": 0,
+   "hint": "Top limit first, then subtract.",
+   "explain": "F(3) − F(1) = 9 − 1 = 8."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "∫ from 0 to {b} of (2x + {c}) dx = ?",
+   "answer": "b*b+c*b",
+   "hint": "[x² + {c}x] from 0 to {b}.",
+   "explain": "{=b*b} + {=c*b} = {=b*b+c*b}.",
+   "params": {
+    "b": [
+     1,
+     6
+    ],
+    "c": [
+     1,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "∫ from 0 to {b} of 4x³ dx = ?",
+    "answer": "b*b*b*b",
+    "hint": "[x⁴] from 0 to {b}.",
+    "explain": "{b}⁴ = {=b*b*b*b}.",
+    "params": {
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "∫ from {a} to {b} of 6x dx = ?",
+    "answer": "3*(b*b-a*a)",
+    "hint": "[3x²] from {a} to {b}.",
+    "explain": "3 × {=b*b} − 3 × {=a*a} = {=3*(b*b-a*a)}.",
+    "params": {
+     "a": [
+      0,
+      3
+     ],
+     "b": [
+      4,
+      7
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "∫ from 0 to {b} of {k} dx = ?",
+    "answer": "k*b",
+    "hint": "[{k}x] from 0 to {b}.",
+    "explain": "{k} × {b} = {=k*b}.",
+    "params": {
+     "k": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "∫ from 0 to 2 of (x² − 2x) dx is negative. Why?",
+    "choices": [
+     "The curve is below the x-axis between 0 and 2",
+     "Integrals are always negative",
+     "The limits are backwards"
+    ],
+    "answer": 0,
+    "hint": "Try x = 1.",
+    "explain": "At x = 1 the curve is at −1: the whole piece from 0 to 2 lies below the axis."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Do you need + C in a definite integral?",
+    "choices": [
+     "No, it cancels",
+     "Yes, always",
+     "Only if the answer is negative"
+    ],
+    "answer": 0,
+    "hint": "(F(b) + C) − (F(a) + C).",
+    "explain": "It cancels, so leave it out."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "∫ from 1 to {b} of 2x dx = ?",
+    "answer": "b*b-1",
+    "hint": "[x²] from 1 to {b}.",
+    "explain": "{=b*b} − 1 = {=b*b-1}.",
+    "params": {
+     "b": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "∫ from 0 to 1 of ({=3*a}x² + {=2*b}x) dx = ?",
+    "answer": "a+b",
+    "hint": "[{a}x³ + {b}x²] from 0 to 1.",
+    "explain": "{a} + {b} = {=a+b}.",
+    "params": {
+     "a": [
+      1,
+      6
+     ],
+     "b": [
+      1,
+      6
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Drag the limits on y = x² − 2x. The integral is F(b) − F(a) with F = x³/3 − x², and area below counts as negative.",
+  "opts": {
+   "mode": "definite",
+   "f": "x*x-2*x",
+   "a": 0,
+   "b": 3,
+   "xr": [
+    -1,
+    4
+   ],
+   "yr": [
+    -2,
+    5
+   ]
+  }
+ }
+}

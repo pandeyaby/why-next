@@ -1,0 +1,191 @@
+{
+ "topicId": "mt_htAYR-iCFF",
+ "title": "Drawing particle diagrams",
+ "audience": "learner",
+ "keyIdea": "Draw particles as same-sized circles: neat and touching in solids, touching but jumbled in liquids, far apart and fast in gases.",
+ "explain": {
+  "kid": [
+   "Everything is made of tiny particles, far too small to see. We draw them as small circles.",
+   "In a solid, draw the circles touching, in neat rows. In a liquid, draw them touching but jumbled. In a gas, draw just a few, far apart, with arrows to show they move fast."
+  ],
+  "adult": [
+   "A good diagram shows arrangement, spacing and movement. Solid: regular and touching, vibrating in place. Liquid: touching but random, sliding past each other. Gas: far apart and random, moving quickly in all directions.",
+   "Keep the particles the same size in every state. Heating makes particles move faster; it does not make them bigger."
+  ]
+ },
+ "familyTip": "Use coins on a table: neat rows for a solid, a jumbled touching heap for a liquid, a few spread across the table for a gas.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which diagram shows a gas?",
+   "choices": [
+    "A few particles far apart, with arrows",
+    "Particles in neat touching rows",
+    "Particles touching but jumbled"
+   ],
+   "answer": 0,
+   "hint": "Gases have big gaps.",
+   "explain": "Gas particles are far apart and move fast."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "When ice melts, do the particles get bigger?",
+   "choices": [
+    "No: they move more but stay the same size",
+    "Yes",
+    "They disappear"
+   ],
+   "answer": 0,
+   "hint": "Heating changes movement, not size.",
+   "explain": "The particles are the same; they just move more freely."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A solid diagram has {r} rows of {c} particles. How many particles is that?",
+   "answer": "r*c",
+   "hint": "Rows × particles in each row.",
+   "explain": "{r} × {c} = {=r*c} particles.",
+   "params": {
+    "r": [
+     2,
+     6
+    ],
+    "c": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A sealed box of gas has {n} particles. The box is heated. How many particles are in it now?",
+   "answer": "n",
+   "hint": "Sealed: none get in or out.",
+   "explain": "Heating makes them faster, but there are still {n}.",
+   "params": {
+    "n": [
+     8,
+     30
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "In which state are particles in a regular pattern?",
+    "choices": [
+     "Solid",
+     "Liquid",
+     "Gas"
+    ],
+    "answer": 0,
+    "hint": "Think of a crystal.",
+    "explain": "Solids have a regular arrangement."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which state flows and takes the shape of its container but keeps its volume?",
+    "choices": [
+     "Liquid",
+     "Solid",
+     "Gas"
+    ],
+    "answer": 0,
+    "hint": "Pour it into a jug.",
+    "explain": "A liquid flows but its particles stay close together."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why can a gas be squashed?",
+    "choices": [
+     "There are big gaps between its particles",
+     "Its particles are soft",
+     "It has no particles"
+    ],
+    "answer": 0,
+    "hint": "Look at the spacing.",
+    "explain": "The gaps let the particles be pushed closer together."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A solid with {r} rows of {c} particles melts. How many particles are in the liquid?",
+    "answer": "r*c",
+    "hint": "Melting doesn't add or remove particles.",
+    "explain": "Still {r} × {c} = {=r*c} particles.",
+    "params": {
+     "r": [
+      2,
+      6
+     ],
+     "c": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A sealed balloon holds {n} particles. It warms up in the sun. How many particles are there now?",
+    "answer": "n",
+    "hint": "Nothing gets in or out.",
+    "explain": "Still {n} particles; they just move faster.",
+    "params": {
+     "n": [
+      10,
+      40
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What should arrows on a gas diagram show?",
+    "choices": [
+     "Fast movement in random directions",
+     "The particles growing",
+     "Particles standing still"
+    ],
+    "answer": 0,
+    "hint": "Gas particles never stop.",
+    "explain": "Arrows show fast, random motion."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What does heating do to particles?",
+    "choices": [
+     "Makes them move faster",
+     "Makes them bigger",
+     "Makes them heavier"
+    ],
+    "answer": 0,
+    "hint": "Energy goes into movement.",
+    "explain": "Hotter particles move faster."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "particles",
+  "caption": "Change the temperature. Watch how the particles' arrangement, spacing and speed change, then draw what you see.",
+  "opts": {
+   "name": "water",
+   "mp": 0,
+   "bp": 100,
+   "temp": -10
+  }
+ }
+}

@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_Rud-oI2XyR",
+ "title": "Net change as accumulated rate",
+ "audience": "learner",
+ "keyIdea": "The signed area under any rate graph is the net change in the quantity; area below the axis counts as a decrease.",
+ "explain": {
+  "kid": [
+   "A rate tells you how fast something changes, like litres per minute flowing into a tank.",
+   "The area under a rate graph is how much the amount changed. When the rate is below zero, the amount is going down, so that area counts as minus."
+  ],
+  "adult": [
+   "If r(t) is a rate of change, the net change from t = a to t = b is ∫ₐᵇ r(t) dt: the signed area. This works for water in a tank, money in an account or people in a room.",
+   "Net change is not total activity: 50 people in and 50 people out is a net change of 0. Add the sizes of the parts to find the total flow."
+  ]
+ },
+ "familyTip": "Track a piggy bank for a week: money in is positive, money spent is negative. Is the net change the same as all the money that moved?",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Water flows into a tank at {r} litres per minute for {t} minutes. How much does the amount change, in litres?",
+   "answer": "r*t",
+   "hint": "Rate × time is the area of a rectangle.",
+   "explain": "{r} × {t} = {=r*t} litres.",
+   "params": {
+    "r": [
+     2,
+     9
+    ],
+    "t": [
+     3,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In {a} L, then out {b} L. What is the net change in litres?",
+   "answer": "a-b",
+   "hint": "In counts as plus, out as minus.",
+   "explain": "{a} − {b} = {=a-b} litres.",
+   "params": {
+    "a": [
+     20,
+     60
+    ],
+    "b": [
+     5,
+     19
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The rate graph dips below the axis. What does that part mean?",
+   "choices": [
+    "The amount is decreasing",
+    "The amount is zero",
+    "The rate is speeding up"
+   ],
+   "answer": 0,
+   "hint": "Negative rate.",
+   "explain": "A negative rate means the amount is going down."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "50 people enter a hall and 50 leave. What is the net change?",
+   "choices": [
+    "0",
+    "100",
+    "50"
+   ],
+   "answer": 0,
+   "hint": "In minus out.",
+   "explain": "50 − 50 = 0, even though 100 people moved."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A rate of {r} °C per hour lasts {t} hours. What is the net change in temperature, in °C?",
+    "answer": "r*t",
+    "hint": "Rate × time.",
+    "explain": "{r} × {t} = {=r*t} °C.",
+    "params": {
+     "r": [
+      1,
+      5
+     ],
+     "t": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A bank account gains £{a} and loses £{b} over a month. What is the net change, in £?",
+    "answer": "a-b",
+    "hint": "Gains minus losses.",
+    "explain": "{a} − {b} = £{=a-b}.",
+    "params": {
+     "a": [
+      100,
+      300
+     ],
+     "b": [
+      10,
+      90
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Fill at {r} L/min for {t} min, then drain at {d} L/min for {s} min. What is the net change, in litres?",
+    "answer": "r*t-d*s",
+    "hint": "Area above minus area below.",
+    "explain": "{=r*t} − {=d*s} = {=r*t-d*s} litres.",
+    "params": {
+     "r": [
+      4,
+      9
+     ],
+     "t": [
+      5,
+      10
+     ],
+     "d": [
+      1,
+      3
+     ],
+     "s": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What does ∫ₐᵇ r(t) dt give when r is a rate of change?",
+    "choices": [
+     "The net change from a to b",
+     "The rate at time b",
+     "The largest value of r"
+    ],
+    "answer": 0,
+    "hint": "Signed area.",
+    "explain": "It adds up rate × time: the net change."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A rate graph is above the axis, then below by the same area. The net change is…",
+    "choices": [
+     "0",
+     "double the first area",
+     "negative"
+    ],
+    "answer": 0,
+    "hint": "They cancel.",
+    "explain": "Equal areas above and below cancel out."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Fill at {r} L/min for {t} min, then drain at {d} L/min for {s} min. How much water moved in total, in litres?",
+    "answer": "r*t+d*s",
+    "hint": "Add the sizes of both parts.",
+    "explain": "{=r*t} + {=d*s} = {=r*t+d*s} litres.",
+    "params": {
+     "r": [
+      4,
+      9
+     ],
+     "t": [
+      5,
+      10
+     ],
+     "d": [
+      1,
+      3
+     ],
+     "s": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is a rate?",
+    "choices": [
+     "Litres per minute",
+     "Litres",
+     "Minutes"
+    ],
+    "answer": 0,
+    "hint": "'Per' means for each.",
+    "explain": "A rate compares a change with time."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Water flows at r = 6 − 2t litres per minute. Drag the limits: area above adds water, area below drains it.",
+  "opts": {
+   "mode": "definite",
+   "f": "6-2*x",
+   "a": 0,
+   "b": 4,
+   "xr": [
+    -0.5,
+    5
+   ],
+   "yr": [
+    -4,
+    7
+   ]
+  }
+ }
+}

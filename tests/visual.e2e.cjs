@@ -28,8 +28,8 @@ const L = { counters: 'mt_WcfaSfVT33', tenframe: 'mt_dmNvjroCPT', array: 'mt_FX4
   await p.goto(URL);
   const ids = await p.evaluate(() => Object.fromEntries(Object.entries(LEARN.L).map(([id, l]) => [id, l.visual.type])));
   await test('the id map in this test points at lessons with the right visual type', async () => { for (const [t, id] of Object.entries(L)) assert.strictEqual(ids[id], t, id) });
-  await test('every one of the 50 lessons renders a visual with a text description', async () => {
-    assert.strictEqual(Object.keys(ids).length, 50);
+  await test('every lesson renders a visual with a text description', async () => {
+    assert.ok(Object.keys(ids).length >= 75, 'lesson count');
     for (const id of Object.keys(ids)) { await open(p, id); assert.ok(await p.$('#vbox figure.vis'), 'no visual for ' + id); assert.ok((await desc(p)).length > 20, 'empty description for ' + id) }
     assert.deepStrictEqual(errors, []);
   });

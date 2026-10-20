@@ -81,5 +81,5 @@ R('longdiv',c=>{const o=c.opts,a=o.a||432,b=o.b||15,ds=String(a).split('').map(N
    :`${a} ÷ ${b} = ${qt}`+(rem?` remainder ${rem}. As a fraction ${qt} ${rem}/${b}; as a decimal ${nf(a/b,3)}. In a word problem, decide whether to round up or down.`:'.');
   c.say(t);nb.disabled=st>steps.length;bb.disabled=!st}
  const nb=c.btn('Next step',()=>{st++;draw()}),bb=c.btn('Back',()=>{st--;draw()});c.btn('Start again',()=>{st=0;draw()},'ghost');draw()});
-VIS.parseExpr=tok;VIS.nextStep=next;
+VIS.parseExpr=tok;VIS.nextStep=next;VIS.showExpr=show;
 })();

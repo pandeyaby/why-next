@@ -1,0 +1,220 @@
+{
+ "topicId": "mt_boNo2FHDNR",
+ "title": "Velocity–time graphs",
+ "audience": "learner",
+ "keyIdea": "On a velocity–time graph, the gradient is the acceleration and the area underneath is the displacement.",
+ "explain": {
+  "kid": [
+   "A velocity–time graph shows how fast something moves at each moment. Time goes across and velocity goes up.",
+   "A flat line means a steady speed. A line going up means speeding up. The steepness tells you the acceleration. The area under the line tells you how far it went."
+  ],
+  "adult": [
+   "Gradient = change in velocity ÷ time taken = acceleration, in m/s². A negative gradient is a deceleration.",
+   "Area under the graph = displacement. Split it into rectangles and triangles: a car accelerating from rest to 10 m/s in 4 s travels ½ × 4 × 10 = 20 m."
+  ]
+ },
+ "familyTip": "On a car journey, note the speed every 10 seconds. Sketch the graph and find where the car sped up, slowed down and cruised.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A flat line on a velocity–time graph means…",
+   "choices": [
+    "moving at a steady speed",
+    "stopped",
+    "speeding up"
+   ],
+   "answer": 0,
+   "hint": "The velocity is not changing.",
+   "explain": "Constant velocity: steady speed, not necessarily stopped."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Velocity rises from 0 to {v} m/s in {t} s. What is the acceleration in m/s²?",
+   "answer": "v/t",
+   "hint": "Gradient = change in velocity ÷ time.",
+   "explain": "{v} ÷ {t} = {=v/t} m/s².",
+   "params": {
+    "v": [
+     4,
+     30
+    ],
+    "t": [
+     2,
+     5
+    ]
+   },
+   "where": "(v*100)%t==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A runner moves at a steady {v} m/s for {t} s. What area is under the graph, in metres?",
+   "answer": "v*t",
+   "hint": "A rectangle: velocity × time.",
+   "explain": "{v} × {t} = {=v*t} m.",
+   "params": {
+    "v": [
+     2,
+     9
+    ],
+    "t": [
+     5,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What does the area under a velocity–time graph give?",
+   "choices": [
+    "Displacement",
+    "Acceleration",
+    "Speed"
+   ],
+   "answer": 0,
+   "hint": "Velocity × time = ?",
+   "explain": "Velocity × time is distance moved, so the area gives displacement."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A car accelerates steadily from rest to {v} m/s in {t} s. How far does it go, in metres?",
+    "answer": "v*t/2",
+    "hint": "Area of a triangle: ½ × base × height.",
+    "explain": "½ × {t} × {v} = {=v*t/2} m.",
+    "params": {
+     "v": [
+      4,
+      20
+     ],
+     "t": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A line sloping down towards the time axis shows…",
+    "choices": [
+     "slowing down",
+     "speeding up",
+     "going backwards at a steady speed"
+    ],
+    "answer": 0,
+    "hint": "Velocity is falling.",
+    "explain": "Falling velocity is deceleration."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A bus slows from {u} m/s to 0 in {t} s. What is the size of the deceleration, in m/s²?",
+    "answer": "u/t",
+    "hint": "Change in velocity ÷ time.",
+    "explain": "{u} ÷ {t} = {=u/t} m/s².",
+    "params": {
+     "u": [
+      6,
+      30
+     ],
+     "t": [
+      2,
+      6
+     ]
+    },
+    "where": "(u*100)%t==0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which graph shows constant acceleration?",
+    "choices": [
+     "A straight sloping line",
+     "A flat line",
+     "A curve getting flatter"
+    ],
+    "answer": 0,
+    "hint": "The gradient stays the same.",
+    "explain": "A straight line has a constant gradient."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Speed {v} m/s for {a} s, then {v} m/s for {b} more seconds. What is the total distance, in metres?",
+    "answer": "v*(a+b)",
+    "hint": "One long rectangle.",
+    "explain": "{v} × {=a+b} = {=v*(a+b)} m.",
+    "params": {
+     "v": [
+      2,
+      9
+     ],
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What are the units of acceleration?",
+    "choices": [
+     "m/s²",
+     "m/s",
+     "m"
+    ],
+    "answer": 0,
+    "hint": "Velocity per second.",
+    "explain": "(m/s) per s = m/s²."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Two cars: A's line is steeper than B's. Which has the greater acceleration?",
+    "choices": [
+     "A",
+     "B",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Steeper means more acceleration.",
+    "explain": "A greater gradient means a greater acceleration."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Velocity v = 2t (speeding up from rest). Drag the end time: the shaded area is the distance travelled.",
+  "opts": {
+   "mode": "velocity",
+   "f": "2*x",
+   "a": 0,
+   "b": 3,
+   "xr": [
+    0,
+    5
+   ],
+   "yr": [
+    -1,
+    10
+   ],
+   "ux": "m",
+   "tu": "s"
+  }
+ }
+}

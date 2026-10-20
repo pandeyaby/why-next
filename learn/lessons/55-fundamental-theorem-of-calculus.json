@@ -1,0 +1,206 @@
+{
+ "topicId": "mt_ckLHNZCBUi",
+ "title": "The fundamental theorem of calculus",
+ "audience": "learner",
+ "keyIdea": "The rate the area grows is the height of the curve, so integrating and differentiating undo each other: ∫ₐᵇ f dx = F(b) − F(a).",
+ "explain": {
+  "kid": [
+   "Imagine painting the area under a curve, moving to the right. How fast does the painted area grow? As fast as the curve is tall.",
+   "So the area has gradient f. That means the area is an antiderivative of f. To find an area from a to b, find an antiderivative F and work out F(b) − F(a)."
+  ],
+  "adult": [
+   "If A(x) = ∫ from a to x of f(t) dt, then A′(x) = f(x): a thin extra strip has area about f(x) × h, so (A(x + h) − A(x))/h → f(x).",
+   "Any two antiderivatives differ by a constant, so F(b) − F(a) is the same whichever F you pick; the + C cancels. Differentiation and integration are inverse processes."
+  ]
+ },
+ "familyTip": "Fill a tall thin glass and a wide bowl from the same tap. Which water level rises faster? Link the width to how fast the 'area' grows.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A(x) is the area under f from 0 to x. What is A′(x)?",
+   "choices": [
+    "f(x)",
+    "A(x)²",
+    "0"
+   ],
+   "answer": 0,
+   "hint": "How fast does the area grow?",
+   "explain": "The area grows at the rate of the curve's height: A′(x) = f(x)."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "F(x) = x² has F′(x) = 2x. Find ∫ from {a} to {b} of 2x dx.",
+   "answer": "b*b-a*a",
+   "hint": "Work out F(b) − F(a).",
+   "explain": "F({b}) − F({a}) = {=b*b} − {=a*a} = {=b*b-a*a}.",
+   "params": {
+    "a": [
+     0,
+     4
+    ],
+    "b": [
+     5,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "The height of f at x = {x} is {h}. How fast is the area A(x) growing there?",
+   "answer": "h",
+   "hint": "A′(x) = f(x).",
+   "explain": "A′({x}) = f({x}) = {h}.",
+   "params": {
+    "x": [
+     1,
+     9
+    ],
+    "h": [
+     1,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why does + C not matter in F(b) − F(a)?",
+   "choices": [
+    "It cancels when you subtract",
+    "C is always zero",
+    "You add it twice"
+   ],
+   "answer": 0,
+   "hint": "Write (F(b) + C) − (F(a) + C).",
+   "explain": "The two Cs cancel, leaving F(b) − F(a)."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "∫ from 0 to {b} of 3x² dx = ?",
+    "answer": "b*b*b",
+    "hint": "An antiderivative of 3x² is x³.",
+    "explain": "[x³] from 0 to {b} = {=b*b*b}.",
+    "params": {
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "∫ from 1 to {b} of 2x dx = ?",
+    "answer": "b*b-1",
+    "hint": "An antiderivative of 2x is x².",
+    "explain": "{=b*b} − 1 = {=b*b-1}.",
+    "params": {
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which pair of processes undo each other?",
+    "choices": [
+     "Differentiating and integrating",
+     "Adding and integrating",
+     "Squaring and differentiating"
+    ],
+    "answer": 0,
+    "hint": "That is the theorem.",
+    "explain": "Differentiation and integration are inverse processes."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A(x) = ∫ from 0 to x of (t + {c}) dt. Find A′(4).",
+    "answer": "4+c",
+    "hint": "A′(x) is the curve's height at x.",
+    "explain": "A′(4) = 4 + {c} = {=4+c}.",
+    "params": {
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "If F′(x) = f(x), which equals ∫ from a to b of f(x) dx?",
+    "choices": [
+     "F(b) − F(a)",
+     "F(a) − F(b)",
+     "f(b) − f(a)"
+    ],
+    "answer": 0,
+    "hint": "Top limit first.",
+    "explain": "F(b) − F(a)."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "∫ from 0 to 2 of {=4*k}x³ dx = ?",
+    "answer": "16*k",
+    "hint": "An antiderivative is {k}x⁴.",
+    "explain": "{k} × 2⁴ − 0 = {=16*k}.",
+    "params": {
+     "k": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The area function A(x) grows fastest where…",
+    "choices": [
+     "f(x) is largest",
+     "f(x) is zero",
+     "x is zero"
+    ],
+    "answer": 0,
+    "hint": "A′(x) = f(x).",
+    "explain": "Its gradient is f(x), so it rises fastest where f is biggest."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Drag the right edge. The area graph (right) rises at a rate equal to the height of f (left).",
+  "opts": {
+   "mode": "ftc",
+   "f": "x/2+1",
+   "a": 0,
+   "start": 2,
+   "xr": [
+    0,
+    4
+   ],
+   "yr": [
+    0,
+    4
+   ],
+   "ar": [
+    0,
+    9
+   ],
+   "step": 0.25
+  }
+ }
+}

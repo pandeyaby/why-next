@@ -1,0 +1,214 @@
+{
+ "topicId": "mt_qCaCEPFbTc",
+ "title": "Physical meaning of gradient and area",
+ "audience": "learner",
+ "keyIdea": "The gradient of a graph is a rate (speed, acceleration, power); the area under a graph is an accumulated amount (distance, energy).",
+ "explain": {
+  "kid": [
+   "A graph's steepness shows a rate. On a distance–time graph, steep means fast.",
+   "The area under some graphs shows a total. On a speed–time graph, the area is the distance. Always check the units on the axes to see what the gradient and the area mean."
+  ],
+  "adult": [
+   "To read a gradient, divide the y units by the x units. On a distance–time graph, m ÷ s gives speed. On a velocity–time graph you get acceleration. On an energy–time graph, J ÷ s is power in watts.",
+   "To read an area, multiply the units. Velocity × time gives distance, and power × time gives energy. If the units multiply to nothing useful, the area has no real meaning."
+  ]
+ },
+ "familyTip": "Pick any graph in a news story. Ask: what would its gradient mean? Does its area mean anything?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "On a distance–time graph, the gradient is…",
+   "choices": [
+    "speed",
+    "acceleration",
+    "distance"
+   ],
+   "answer": 0,
+   "hint": "m ÷ s.",
+   "explain": "m ÷ s = m/s: speed."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A distance–time graph rises {d} m in {t} s. What is the speed in m/s?",
+   "answer": "d/t",
+   "hint": "Gradient = rise ÷ run.",
+   "explain": "{d} ÷ {t} = {=d/t} m/s.",
+   "params": {
+    "d": [
+     10,
+     90
+    ],
+    "t": [
+     2,
+     5
+    ]
+   },
+   "where": "(d*100)%t==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A power–time graph is flat at {p} W for {t} s. How much energy is that, in J?",
+   "answer": "p*t",
+   "hint": "Area = power × time.",
+   "explain": "{p} × {t} = {=p*t} J.",
+   "params": {
+    "p": [
+     10,
+     90
+    ],
+    "t": [
+     2,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "On a velocity–time graph, the area under the line is…",
+   "choices": [
+    "displacement",
+    "acceleration",
+    "speed"
+   ],
+   "answer": 0,
+   "hint": "(m/s) × s.",
+   "explain": "(m/s) × s = m: displacement."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "On a velocity–time graph, the gradient is…",
+    "choices": [
+     "acceleration",
+     "speed",
+     "distance"
+    ],
+    "answer": 0,
+    "hint": "(m/s) ÷ s.",
+    "explain": "(m/s) ÷ s = m/s²: acceleration."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "On an energy–time graph, the gradient is…",
+    "choices": [
+     "power",
+     "force",
+     "energy"
+    ],
+    "answer": 0,
+    "hint": "J ÷ s.",
+    "explain": "J ÷ s = W: power."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Velocity rises from {u} m/s to {v} m/s in {t} s. What is the gradient, in m/s²?",
+    "answer": "(v-u)/t",
+    "hint": "Change in velocity ÷ time.",
+    "explain": "({v} − {u}) ÷ {t} = {=(v-u)/t} m/s².",
+    "params": {
+     "u": [
+      0,
+      9
+     ],
+     "v": [
+      10,
+      30
+     ],
+     "t": [
+      2,
+      5
+     ]
+    },
+    "where": "((v-u)*100)%t==0"
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A constant {v} m/s for {t} s. What is the area under the velocity–time graph, in m?",
+    "answer": "v*t",
+    "hint": "Rectangle.",
+    "explain": "{v} × {t} = {=v*t} m.",
+    "params": {
+     "v": [
+      2,
+      15
+     ],
+     "t": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What are the units of the gradient of a distance–time graph?",
+    "choices": [
+     "m/s",
+     "m/s²",
+     "s/m"
+    ],
+    "answer": 0,
+    "hint": "y units ÷ x units.",
+    "explain": "m ÷ s = m/s."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Does the area under a distance–time graph mean anything useful?",
+    "choices": [
+     "Not usually: m × s is not a useful quantity",
+     "Yes: it is the speed",
+     "Yes: it is the acceleration"
+    ],
+    "answer": 0,
+    "hint": "Multiply the units.",
+    "explain": "m × s has no everyday physical meaning."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A curved distance–time graph gets steeper. The object is…",
+    "choices": [
+     "speeding up",
+     "slowing down",
+     "stopped"
+    ],
+    "answer": 0,
+    "hint": "Gradient = speed.",
+    "explain": "The gradient (speed) is increasing."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "rate",
+  "caption": "Distance s = t²/2. Drag the two points: the line's gradient is the average speed between them.",
+  "opts": {
+   "f": "x*x/2",
+   "a": 1,
+   "b": 3,
+   "xr": [
+    -0.5,
+    5
+   ],
+   "yr": [
+    -1,
+    12
+   ],
+   "ux": "s",
+   "uy": "m"
+  }
+ }
+}

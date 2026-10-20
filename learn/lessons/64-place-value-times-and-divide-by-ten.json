@@ -1,0 +1,184 @@
+{
+ "topicId": "mt_EDgw64OmfA",
+ "title": "Place value: × 10 and ÷ 10",
+ "audience": "learner",
+ "keyIdea": "Each place is worth ten times the place to its right, so × 10 moves every digit one place left and ÷ 10 moves it one place right.",
+ "explain": {
+  "kid": [
+   "Each place is worth ten times the place on its right. A ten is ten ones. A one is ten tenths.",
+   "When you multiply by 10, every digit moves one place to the left. When you divide by 10, every digit moves one place to the right. The decimal point stays still. A zero holds an empty place."
+  ],
+  "adult": [
+   "× 10 shifts each digit one column left: 4.7 × 10 = 47 and 4.7 × 100 = 470, with a zero as a placeholder. ÷ 10 shifts right: 47 ÷ 10 = 4.7 and 3 ÷ 100 = 0.03.",
+   "'Add a zero' fails for decimals: 4.7 × 10 is not 4.70. 'The digits move and the point stays' always works."
+  ]
+ },
+ "familyTip": "Write a number on paper strips, one digit per square, under a fixed decimal point. Slide the strip to multiply or divide by 10.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "{=a/10} × 10 = ?",
+   "answer": "a",
+   "hint": "Every digit moves one place to the left.",
+   "explain": "{=a/10} × 10 = {a}.",
+   "params": {
+    "a": [
+     11,
+     99
+    ]
+   },
+   "where": "a%10!=0"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{a} ÷ 10 = ?",
+   "answer": "a/10",
+   "hint": "Every digit moves one place to the right.",
+   "explain": "{a} ÷ 10 = {=a/10}.",
+   "params": {
+    "a": [
+     11,
+     999
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "In 352, what is the 5 worth?",
+   "choices": [
+    "50",
+    "5",
+    "500"
+   ],
+   "answer": 0,
+   "hint": "Which column is it in?",
+   "explain": "The 5 is in the tens column, so it is worth 50."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is 4.7 × 10?",
+   "choices": [
+    "47",
+    "4.70",
+    "470"
+   ],
+   "answer": 0,
+   "hint": "The digits move one place left.",
+   "explain": "4 ones become 4 tens; 7 tenths become 7 ones: 47."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "{a} × 100 = ?",
+    "answer": "a*100",
+    "hint": "Digits move two places left.",
+    "explain": "{a} × 100 = {=a*100}.",
+    "params": {
+     "a": [
+      2,
+      99
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "{a} ÷ 100 = ?",
+    "answer": "a/100",
+    "hint": "Digits move two places right.",
+    "explain": "{a} ÷ 100 = {=a/100}.",
+    "params": {
+     "a": [
+      3,
+      999
+     ]
+    },
+    "where": "a%10!=0"
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "In 0.35, what is the 3 worth?",
+    "choices": [
+     "3 tenths",
+     "3 ones",
+     "3 hundredths"
+    ],
+    "answer": 0,
+    "hint": "The first place after the point.",
+    "explain": "The first place after the point is tenths."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{=a/100} × 10 = ?",
+    "answer": "a/10",
+    "hint": "One place left.",
+    "explain": "{=a/100} × 10 = {=a/10}.",
+    "params": {
+     "a": [
+      11,
+      99
+     ]
+    },
+    "where": "a%10!=0"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A digit moves from the tens place to the hundreds place. What happened?",
+    "choices": [
+     "It was multiplied by 10",
+     "It was divided by 10",
+     "10 was added"
+    ],
+    "answer": 0,
+    "hint": "Moving left makes it bigger.",
+    "explain": "One place left means ten times as much."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is 6 ÷ 100?",
+    "choices": [
+     "0.06",
+     "0.6",
+     "600"
+    ],
+    "answer": 0,
+    "hint": "Two places right.",
+    "explain": "6 ones become 6 hundredths: 0.06."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A digit in the hundreds place is worth how many times the same digit in the tens place?",
+    "choices": [
+     "10 times",
+     "100 times",
+     "One tenth"
+    ],
+    "answer": 0,
+    "hint": "Next place to the left.",
+    "explain": "Each place is worth 10 times the one to its right."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "placevalue",
+  "caption": "Press × 10 or ÷ 10 and watch the digits slide. The decimal point stays put.",
+  "opts": {
+   "n": 4.7
+  }
+ }
+}

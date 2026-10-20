@@ -1,0 +1,204 @@
+{
+ "topicId": "mt_oDlduFnemk",
+ "title": "Coordinates on a grid",
+ "audience": "learner",
+ "keyIdea": "(x, y) means go x across along the x-axis, then y up, starting from the origin (0, 0).",
+ "explain": {
+  "kid": [
+   "A grid has two number lines. The x-axis goes across. The y-axis goes up. They meet at the origin, which is (0, 0).",
+   "A point is written (x, y). Go across first, then up. Think: along the corridor, then up the stairs. (3, 5) means 3 across and 5 up."
+  ],
+  "adult": [
+   "The ordered pair (x, y) gives the distance across, then the distance up, from the origin. Order matters: (2, 5) and (5, 2) are different points.",
+   "Points on the x-axis have y = 0; points on the y-axis have x = 0. Distances along a grid line are easy: from (1, 4) to (6, 4) is 6 − 1 = 5 units."
+  ]
+ },
+ "familyTip": "Play battleships on squared paper. Call out coordinates as (across, up).",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which point is 4 across and 2 up?",
+   "choices": [
+    "(4, 2)",
+    "(2, 4)",
+    "(4, 4)"
+   ],
+   "answer": 0,
+   "hint": "Across first.",
+   "explain": "Across first, then up: (4, 2)."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "How far is it from ({a}, 3) to ({b}, 3)?",
+   "answer": "b-a",
+   "hint": "Same height, so subtract the x-coordinates.",
+   "explain": "{b} − {a} = {=b-a} units.",
+   "params": {
+    "a": [
+     0,
+     4
+    ],
+    "b": [
+     5,
+     10
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A point is {a} across and {b} up. What is its x-coordinate?",
+   "answer": "a",
+   "hint": "x is the across number.",
+   "explain": "The x-coordinate is {a}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   },
+   "where": "a!=b"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Where is (0, 0)?",
+   "choices": [
+    "The origin, where the axes meet",
+    "The top right corner",
+    "Anywhere on the x-axis"
+   ],
+   "answer": 0,
+   "hint": "Zero across, zero up.",
+   "explain": "(0, 0) is the origin."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "(5, 0) lies…",
+    "choices": [
+     "on the x-axis",
+     "on the y-axis",
+     "at the origin"
+    ],
+    "answer": 0,
+    "hint": "y = 0 means no distance up.",
+    "explain": "It is 5 across and 0 up, so it is on the x-axis."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How far is it from (2, {a}) to (2, {b})?",
+    "answer": "b-a",
+    "hint": "Same x, so subtract the y-coordinates.",
+    "explain": "{b} − {a} = {=b-a} units.",
+    "params": {
+     "a": [
+      0,
+      4
+     ],
+     "b": [
+      5,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "In (3, 7), which number tells you how far up?",
+    "choices": [
+     "7",
+     "3",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "The second number.",
+    "explain": "y comes second: 7 up."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A square has corners (0, 0), ({s}, 0), ({s}, {s}) and (0, {s}). What is its perimeter?",
+    "answer": "4*s",
+    "hint": "Each side is {s} long.",
+    "explain": "4 × {s} = {=4*s} units.",
+    "params": {
+     "s": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Are (2, 6) and (6, 2) the same point?",
+    "choices": [
+     "No: the order matters",
+     "Yes",
+     "Only on a big grid"
+    ],
+    "answer": 0,
+    "hint": "Across first, then up.",
+    "explain": "(2, 6) is 2 across; (6, 2) is 6 across. They are different."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A rectangle has corners (1, 1), ({a}, 1), ({a}, {b}) and (1, {b}). What is its area?",
+    "answer": "(a-1)*(b-1)",
+    "hint": "Width = {a} − 1, height = {b} − 1.",
+    "explain": "{=a-1} × {=b-1} = {=(a-1)*(b-1)} square units.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "To plot (4, 1), you go…",
+    "choices": [
+     "4 across, then 1 up",
+     "4 up, then 1 across",
+     "1 across, then 4 up"
+    ],
+    "answer": 0,
+    "hint": "Along the corridor, then up the stairs.",
+    "explain": "4 across, then 1 up."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "coords",
+  "caption": "Move the point to (3, 5). Drag it, or use the arrow keys: across first, then up.",
+  "opts": {
+   "max": 8,
+   "x": 0,
+   "y": 0,
+   "target": [
+    3,
+    5
+   ]
+  }
+ }
+}

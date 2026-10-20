@@ -1,0 +1,225 @@
+{
+ "topicId": "mt_XW5d2G7v01",
+ "title": "Estimating areas with rectangles and trapezia",
+ "audience": "learner",
+ "keyIdea": "Cut the area into thin strips, add up the strip areas, and use more strips for a better estimate.",
+ "explain": {
+  "kid": [
+   "To find the area under a curve, cut it into thin strips. Each strip is close to a rectangle, and a rectangle's area is easy to find.",
+   "Add up all the strips to get an estimate. More strips that are thinner give a better estimate. A trapezium strip follows the curve more closely than a rectangle does."
+  ],
+  "adult": [
+   "With n strips of width h = (b − a)/n, a left-rectangle estimate is h × (f(x₀) + f(x₁) + … + f(xₙ₋₁)). The trapezium rule uses both ends of each strip: h/2 × (y₀ + 2y₁ + … + 2yₙ₋₁ + yₙ).",
+   "For a curve that bends upwards, like y = x², trapezia overestimate. The error shrinks about four times each time you double n."
+  ]
+ },
+ "familyTip": "Draw a curve on squared paper and count squares under it. Then try strips of two squares wide, then one. Which count is closest?",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Strips from x = 0 to x = {b}, with {n} equal strips. How wide is each strip?",
+   "answer": "b/n",
+   "hint": "Width = total length ÷ number of strips.",
+   "explain": "Width = {b} ÷ {n} = {=b/n}.",
+   "params": {
+    "b": [
+     2,
+     8
+    ],
+    "n": [
+     2,
+     5
+    ]
+   },
+   "where": "(b*100)%n==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Two rectangles under a curve each have width 1. Their heights are {a} and {b}. Estimate the area.",
+   "answer": "a+b",
+   "hint": "Area of each rectangle is width × height.",
+   "explain": "1 × {a} + 1 × {b} = {=a+b}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What usually happens to the estimate as you use more, thinner strips?",
+   "choices": [
+    "It gets closer to the true area",
+    "It gets further away",
+    "It stays exactly the same"
+   ],
+   "answer": 0,
+   "hint": "Thinner strips hug the curve.",
+   "explain": "Thinner strips leave less gap or overlap, so the estimate gets closer."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "One trapezium strip has width {h} and edge heights {a} and {b}. What is its area?",
+   "answer": "h*(a+b)/2",
+   "hint": "Area of a trapezium = width × (sum of the parallel sides) ÷ 2.",
+   "explain": "{h} × ({a} + {b}) ÷ 2 = {=h*(a+b)/2}.",
+   "params": {
+    "h": [
+     1,
+     4
+    ],
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Use 2 left rectangles of width 1 under y = x² + {c} from x = 0 to 2. Estimate the area.",
+    "answer": "2*c+1",
+    "hint": "The heights are f(0) and f(1).",
+    "explain": "Heights {c} and {=1+c}, so the area ≈ {c} + {=1+c} = {=2*c+1}.",
+    "params": {
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Trapezium rule, strip width 1, heights y₀ = {a}, y₁ = {b}, y₂ = {c}. Estimate the area.",
+    "answer": "(a+2*b+c)/2",
+    "hint": "½ × width × (first + 2 × middle + last).",
+    "explain": "½ × ({a} + 2 × {b} + {c}) = {=(a+2*b+c)/2}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{n} equal strips cover x = 0 to x = {b}. How wide is each one?",
+    "answer": "b/n",
+    "hint": "Divide the length by the number of strips.",
+    "explain": "{b} ÷ {n} = {=b/n}.",
+    "params": {
+     "n": [
+      2,
+      5
+     ],
+     "b": [
+      1,
+      10
+     ]
+    },
+    "where": "(b*100)%n==0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "For y = x² from 0 to 2, left rectangles give an estimate that is…",
+    "choices": [
+     "too small",
+     "too big",
+     "exact"
+    ],
+    "answer": 0,
+    "hint": "The curve rises, so where is each rectangle's height measured?",
+    "explain": "The curve rises, so the left edge is the lowest point of each strip: every rectangle sits under the curve."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "For the same number of strips, which estimate usually follows a smooth curve most closely?",
+    "choices": [
+     "Trapezia",
+     "Left rectangles",
+     "One big rectangle"
+    ],
+    "answer": 0,
+    "hint": "Which shape uses both ends of each strip?",
+    "explain": "Trapezia join the curve at both ends of each strip, so they hug it better."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What does doubling the number of strips do to each strip's width?",
+    "choices": [
+     "Halves it",
+     "Doubles it",
+     "Nothing"
+    ],
+    "answer": 0,
+    "hint": "The total length stays the same.",
+    "explain": "The same length shared by twice as many strips makes each one half as wide."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Right rectangles of width 1 under y = 2x from 0 to {n} have heights 2, 4, … up to {=2*n}. Add them up.",
+    "answer": "n*(n+1)",
+    "hint": "Add the even numbers from 2 to the last height.",
+    "explain": "2 + 4 + … + {=2*n} = {=n*(n+1)}.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Change the number of strips and the method. Watch the estimate close in on the exact area under y = x².",
+  "opts": {
+   "mode": "riemann",
+   "f": "x*x",
+   "a": 0,
+   "b": 2,
+   "n": 4,
+   "xr": [
+    -0.2,
+    2.4
+   ],
+   "yr": [
+    -0.5,
+    5
+   ]
+  }
+ }
+}

@@ -1,0 +1,200 @@
+{
+ "topicId": "mt_P8Da-_zGBG",
+ "title": "Charges and masses of subatomic particles",
+ "audience": "learner",
+ "keyIdea": "Protons (+1, mass 1) and neutrons (0, mass 1) sit in the tiny nucleus; electrons (−1, mass almost 0) are outside it.",
+ "explain": {
+  "kid": [
+   "An atom has a tiny nucleus in the middle. It holds protons and neutrons. Electrons move around the outside in shells.",
+   "A proton has a charge of +1. An electron has a charge of −1. A neutron has no charge. Protons and neutrons each have a mass of 1. An electron is so light that we say its mass is almost 0."
+  ],
+  "adult": [
+   "Relative charges: proton +1, neutron 0, electron −1. Relative masses: proton 1, neutron 1, electron about 1/1840.",
+   "Atoms are neutral because they have equal numbers of protons and electrons. Mass number = protons + neutrons. An ion forms when an atom gains or loses electrons: lose one and the charge is +1."
+  ]
+ },
+ "familyTip": "Make a table with three rows (proton, neutron, electron) and two columns (charge, mass). Cover it and test each other.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which particle has no charge?",
+   "choices": [
+    "Neutron",
+    "Proton",
+    "Electron"
+   ],
+   "answer": 0,
+   "hint": "'Neutral' sounds like…",
+   "explain": "The neutron is neutral."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An atom has {p} protons and {n} neutrons. What is its mass number?",
+   "answer": "p+n",
+   "hint": "Mass number = protons + neutrons.",
+   "explain": "{p} + {n} = {=p+n}.",
+   "params": {
+    "p": [
+     1,
+     20
+    ],
+    "n": [
+     0,
+     22
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A neutral atom has {p} protons. How many electrons does it have?",
+   "answer": "p",
+   "hint": "Neutral means the charges balance.",
+   "explain": "It has {p} electrons to balance {p} protons.",
+   "params": {
+    "p": [
+     1,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Where is almost all of an atom's mass?",
+   "choices": [
+    "In the nucleus",
+    "In the electron shells",
+    "Spread out evenly"
+   ],
+   "answer": 0,
+   "hint": "Electrons are almost massless.",
+   "explain": "Protons and neutrons are in the nucleus, and they carry the mass."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the relative mass of an electron?",
+    "choices": [
+     "Almost 0 (about 1/1840)",
+     "1",
+     "−1"
+    ],
+    "answer": 0,
+    "hint": "Much lighter than a proton.",
+    "explain": "About 1/1840, so almost 0."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "An atom has mass number {m} and {p} protons. How many neutrons does it have?",
+    "answer": "m-p",
+    "hint": "Neutrons = mass number − protons.",
+    "explain": "{m} − {p} = {=m-p} neutrons.",
+    "params": {
+     "p": [
+      1,
+      20
+     ],
+     "m": [
+      2,
+      45
+     ]
+    },
+    "where": "m>=p && m<=2*p+4"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "An ion has {p} protons and {=p-d} electrons. What is its charge?",
+    "answer": "d",
+    "hint": "Charge = protons − electrons.",
+    "explain": "{p} − {=p-d} = +{d}, so the charge is {d}+.",
+    "params": {
+     "p": [
+      3,
+      20
+     ],
+     "d": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "An atom has no overall charge because…",
+    "choices": [
+     "it has equal numbers of protons and electrons",
+     "it has no protons",
+     "neutrons cancel the charge"
+    ],
+    "answer": 0,
+    "hint": "+1s and −1s.",
+    "explain": "Equal numbers of +1 and −1 charges cancel out."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is the relative charge of a proton?",
+    "choices": [
+     "+1",
+     "0",
+     "−1"
+    ],
+    "answer": 0,
+    "hint": "Protons are positive.",
+    "explain": "+1."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which two particles are in the nucleus?",
+    "choices": [
+     "Protons and neutrons",
+     "Protons and electrons",
+     "Neutrons and electrons"
+    ],
+    "answer": 0,
+    "hint": "Electrons are in shells.",
+    "explain": "Protons and neutrons."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A nucleus has {p} protons and {n} neutrons. What is the nucleus's total relative charge?",
+    "answer": "p",
+    "hint": "Only the protons are charged.",
+    "explain": "{p} protons × +1 = +{p}, so the charge is {p}.",
+    "params": {
+     "p": [
+      1,
+      20
+     ],
+     "n": [
+      0,
+      22
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "atom",
+  "caption": "Add or remove protons, neutrons and electrons. Watch the element, the charge and the mass number change.",
+  "opts": {
+   "p": 3,
+   "n": 4,
+   "e": 3
+  }
+ }
+}

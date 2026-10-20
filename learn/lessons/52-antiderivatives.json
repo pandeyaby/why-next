@@ -1,0 +1,196 @@
+{
+ "topicId": "mt_cryXWeeFPc",
+ "title": "Antiderivatives",
+ "audience": "learner",
+ "keyIdea": "Integration reverses differentiation: add one to the power, divide by the new power, and add + C.",
+ "explain": {
+  "kid": [
+   "Differentiating takes a curve and gives its gradient. An antiderivative goes the other way: you know the gradient, and you find the curve.",
+   "For a power of x, add one to the power, then divide by the new power. So x² becomes x³ ÷ 3. Always add + C at the end, because a number on its own would vanish when you differentiate."
+  ],
+  "adult": [
+   "∫xⁿ dx = xⁿ⁺¹/(n + 1) + C for every n except −1. Work term by term and keep any number in front: ∫6x² dx = 2x³ + C.",
+   "Check an answer by differentiating it: you should get back what you started with. The + C stands for a whole family of curves, each one a vertical shift of the others."
+  ]
+ },
+ "familyTip": "Play 'reverse it': one person says a derivative like 6x², the other gives a curve that has it, then both check by differentiating.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "∫ x³ dx = ?",
+   "choices": [
+    "x⁴/4 + C",
+    "3x² + C",
+    "x⁴ + C"
+   ],
+   "answer": 0,
+   "hint": "Add one to the power, then divide by the new power.",
+   "explain": "x³ → x⁴, then ÷ 4: x⁴/4 + C."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "∫ {=3*m}x² dx = Ax³ + C. Find A.",
+   "answer": "m",
+   "hint": "Add one to the power (3), then divide by 3.",
+   "explain": "{=3*m} ÷ 3 = {m}, so A = {m}.",
+   "params": {
+    "m": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "∫ {=2*a}x dx = Ax² + C. Find A.",
+   "answer": "a",
+   "hint": "x becomes x², then divide by 2.",
+   "explain": "{=2*a} ÷ 2 = {a}, so A = {a}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why do we add + C?",
+   "choices": [
+    "A constant differentiates to 0, so it could have been there",
+    "C stands for 'curve'",
+    "To make the answer bigger"
+   ],
+   "answer": 0,
+   "hint": "What is the derivative of 5?",
+   "explain": "Any constant has derivative 0, so we cannot tell which constant was there: we write + C."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "∫ 5 dx = ?",
+    "choices": [
+     "5x + C",
+     "0",
+     "5 + C"
+    ],
+    "answer": 0,
+    "hint": "5 is 5x⁰.",
+    "explain": "5x⁰ → 5x¹ ÷ 1 = 5x, plus C."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "∫ x dx = ?",
+    "choices": [
+     "x²/2 + C",
+     "1 + C",
+     "x² + C"
+    ],
+    "answer": 0,
+    "hint": "x is x¹.",
+    "explain": "x¹ → x², then ÷ 2: x²/2 + C."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "∫ {=4*a}x³ dx = Ax⁴ + C. Find A.",
+    "answer": "a",
+    "hint": "Add one to the power (4), then divide by 4.",
+    "explain": "{=4*a} ÷ 4 = {a}, so A = {a}.",
+    "params": {
+     "a": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "F(x) = x³ + {c}x is an antiderivative of f(x). Find f(2).",
+    "answer": "12+c",
+    "hint": "f is the derivative of F.",
+    "explain": "f(x) = 3x² + {c}, so f(2) = 12 + {c} = {=12+c}.",
+    "params": {
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is an antiderivative of 2x?",
+    "choices": [
+     "x² + 7",
+     "2",
+     "2x²"
+    ],
+    "answer": 0,
+    "hint": "Differentiate each choice.",
+    "explain": "x² + 7 differentiates to 2x."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "∫ x⁻² dx = ?",
+    "choices": [
+     "−x⁻¹ + C",
+     "x⁻¹ + C",
+     "−2x⁻³ + C"
+    ],
+    "answer": 0,
+    "hint": "Add one to −2, then divide by the new power.",
+    "explain": "x⁻² → x⁻¹, then ÷ (−1): −x⁻¹ + C."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "What number goes in front of x² in ∫ ({=2*a}x + {b}) dx?",
+    "answer": "a",
+    "hint": "Integrate the x term only.",
+    "explain": "{=2*a}x integrates to {a}x², so the number is {a}.",
+    "params": {
+     "a": [
+      1,
+      7
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "area",
+  "caption": "Every curve y = x² + C has gradient 2x. Slide C: the curve moves, but its gradient at x = 1 never changes.",
+  "opts": {
+   "mode": "family",
+   "F": "x*x",
+   "label": "x²",
+   "at": 1,
+   "xr": [
+    -3,
+    3
+   ],
+   "yr": [
+    -5,
+    9
+   ]
+  }
+ }
+}

@@ -83,5 +83,5 @@ R('power',c=>{const o=c.opts;let n=o.n||3,x=1;const row=c.el('div',{class:'vis-t
   tab.innerHTML=[1,2,3,4,5].map(m=>`<span class="${m===n?'vis-hl':''}">${pw(m)} → ${m===1?'1':m+(m-1===1?'x':pw(m-1))}</span>`).join(' ');
   c.say(`y = ${pw(n)}. At x = ${nf(x)} the tangent's gradient is ${nf(k)}, which equals ${n} × ${nf(x)}${n-1>1?sup(n-1):n-1===0?'⁰':''} = ${nf(k)}. Power rule: bring the power ${n} down in front and take one off the power.`);sync()}
  const tab=c.el('p',{class:'vis-pattern'},c.stage);c.range('Power n',1,5,1,n,v=>{n=v;build();draw()});build();draw()});
-VIS.safeFn=fn;
+VIS.safeFn=fn;VIS.plotKit={plot,handle,der};
 })();

@@ -13,6 +13,11 @@ OPTS = {
     "particles": {"mp": N, "bp": N, "temp": N, "name": S, "mix": B, "density": B, "min": N, "max": N},
     "atom": {"p": I, "n": I, "e": I}, "ptable": {"highlight": S, "z": I},
     "balancer": {"left": L, "right": L, "lock": B, "names": dict, "masses": B},
+    "area": {"mode": S, "f": S, "F": S, "a": N, "b": N, "n": I, "method": S, "xr": L, "yr": L, "ar": L, "step": N, "start": N, "c": I, "at": N, "point": L, "label": S, "ux": S, "uy": S, "tu": S},
+    "sorter": {"bins": L, "items": L}, "phscale": {"ph": I}, "energy": {"dh": I, "ea": I, "reactants": S, "products": S},
+    "placevalue": {"n": N}, "percent": {"p": I, "of": N, "mode": S}, "coords": {"max": I, "x": I, "y": I, "target": L}, "wholes": {"a": I, "b": I}, "thermo": {"min": I, "max": I, "t": N, "step": N, "from": N},
+    "journey": {"pts": L, "tu": S, "du": S, "start": N, "step": N},
+    "formula": {"name": S, "expr": S, "vars": dict, "pic": S, "what": S, "unit": S},
 }
 SAFE_F = re.compile(r"^[x0-9+\-*/(). ]+$")
 SUB = str.maketrans("₀₁₂₃₄₅₆₇₈₉", "0123456789")
@@ -66,6 +71,41 @@ def check(v):
         if t == "fracbar" and not (1 <= o.get("d", 4) <= 12 and o.get("shade", 1) <= o.get("d", 4)): errs.append("fracbar: need 1 ≤ shade ≤ d ≤ 12")
         if t == "particles" and not o.get("mp", 0) < o.get("bp", 100): errs.append("particles: need mp < bp")
         if t == "atom" and not all(0 <= o.get(k, 0) <= 20 for k in "pne"): errs.append("atom: counts must be 0-20")
+        if t == "area":
+            m = o.get("mode", "riemann")
+            if m not in ("riemann", "definite", "velocity", "ftc", "family"): errs.append(f"area: unknown mode {m}")
+            for k in ("f", "F"):
+                if k in o:
+                    if not SAFE_F.match(o[k]): errs.append(f"area: {k} must be a simple expression in x")
+                    else:
+                        g = eval("lambda x: " + o[k], {"__builtins__": {}})
+                        for i in range(21): g(o.get("xr", [0, 4])[0] + i * (o.get("xr", [0, 4])[1] - o.get("xr", [0, 4])[0]) / 20 + 1e-3)
+            if ("F" if m == "family" else "f") not in o: errs.append(f"area {m}: needs {'F' if m == 'family' else 'f'}")
+            if m == "riemann" and not (o.get("a", 0) < o.get("b", 2) and 1 <= o.get("n", 4) <= 40 and o.get("method", "left") in ("left", "right", "mid", "trap")): errs.append("area riemann: need a < b, 1 ≤ n ≤ 40 and a known method")
+        if t == "sorter":
+            bins, items = o["bins"], o["items"]
+            if not (2 <= len(bins) <= 4 and all(isinstance(x, str) for x in bins)): errs.append("sorter: need 2-4 bin names")
+            if not (4 <= len(items) <= 10 and all(len(i) == 2 and isinstance(i[0], str) and isinstance(i[1], int) and 0 <= i[1] < len(bins) for i in items)): errs.append("sorter: need 4-10 [label, bin] items")
+            elif {i[1] for i in items} != set(range(len(bins))): errs.append("sorter: every bin needs at least one item")
+            elif len({i[0] for i in items}) != len(items): errs.append("sorter: duplicate cards")
+        if t == "phscale" and not 0 <= o.get("ph", 7) <= 14: errs.append("phscale: ph 0-14")
+        if t == "energy" and not (-80 <= o.get("dh", -40) <= 80 and o.get("dh", -40) % 10 == 0): errs.append("energy: dh is a multiple of 10 in -80..80")
+        if t == "placevalue" and not (abs(o["n"] * 1000 - round(o["n"] * 1000)) < 1e-9 and 0 < o["n"] < 1e5): errs.append("placevalue: n needs at most 3 decimal places and < 100000")
+        if t == "percent" and not 0 <= o.get("p", 25) <= 100: errs.append("percent: p 0-100")
+        if t == "thermo" and not o.get("min", -20) <= o.get("t", 20) <= o.get("max", 50): errs.append("thermo: need min ≤ t ≤ max")
+        if t == "journey":
+            pts = o["pts"]
+            if not (pts[0][0] == 0 and all(b[0] > a[0] for a, b in zip(pts, pts[1:])) and all(p[1] >= 0 for p in pts)): errs.append("journey: times must start at 0 and increase; distances ≥ 0")
+        if t == "formula":
+            e, V = o["expr"], o["vars"]
+            if not re.fullmatch(r"[a-z\d\s()+\-−×÷]+", e): errs.append("formula: expression has characters the stepper can't handle")
+            elif set(re.findall(r"[a-z]", e)) != set(V): errs.append("formula: letters and vars differ")
+            else:
+                for k, r in V.items():
+                    if not (len(r) == 3 and r[0] <= r[2] <= r[1]): errs.append(f"formula: var {k} needs [min, max, start]")
+                for pick in (0, 1, 2):
+                    env = {k: r[pick] for k, r in V.items()}
+                    eval(re.sub(r"[a-z]", lambda m: str(env[m.group()]), e).replace("−", "-").replace("×", "*").replace("÷", "/"), {"__builtins__": {}})
     except Exception as ex:  # noqa: BLE001
         errs.append(f"{t}: {ex}")
     return errs
