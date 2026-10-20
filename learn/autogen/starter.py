@@ -14,9 +14,12 @@ from arch_sci import SCI; from arch_sci2 import SCI2; from arch_other import OTH
 from items import mc
 import lesson_checks as LC
 from readability import fk_grade, TARGETS
-MIN_QUALITY = 60
+MIN_QUALITY = 65   # = 25th percentile of the hand-written lessons under the same scorer (quality.py)
+from tune import tune
+import quality as QS
 ARCH = {"Mathematics": MATH[:2] + MATH2[:1] + MATH[2:] + MATH2[1:] + MATH3 + MATH4 + MATH5, "Science": SCI + SCI2 + OTHER[:5]}
-OTHERS = OTHER[5:]
+from arch_eng import ENG
+OTHERS = ENG + [a for a in OTHER[5:] if a["name"] != "english"]   # the strand archetypes replace the old one-size English archetype
 
 def load():
     T = json.load(open("out/merged/data/topics.json"))["topics"]; by = {t["id"]: t for t in T}
@@ -82,16 +85,21 @@ def closure(u, edges, key):
             y = e[key]
             if y not in seen: seen.add(y); st.append(y)
     return seen
+def form(w):
+    """Rough word class from the ending, so cloze distractors fit the sentence grammatically."""
+    w = w.lower()
+    for suf, f in (("ing", "ing"), ("tion", "noun"), ("sion", "noun"), ("ment", "noun"), ("ness", "noun"), ("ity", "noun"), ("ly", "adv"), ("ed", "ed"), ("ous", "adj"), ("ive", "adj"), ("al", "adj"), ("able", "adj"), ("ies", "pl"), ("s", "pl")):
+        if w.endswith(suf): return f
+    return "noun"
 def topic_items(t, by, pre, post, sib, rng):
     """Questions built from this topic's own data. Each returns (practice?, item)."""
     out, nm = [], t["name"]
     anc = {by[x]["name"] for x in closure(t["id"], pre, "prerequisiteId")}; desc_ = {by[x]["name"] for x in closure(t["id"], post, "topicId")}
     others = [s for s in sib if s["id"] != t["id"] and clause(s["description"]) != clause(t["description"])]
     rng.shuffle(others)
-    if len(others) >= 2:
-        out.append(("p", mcu(f"Which sentence best describes the topic '{nm}'?", [clause(t["description"]), clause(others[0]["description"]), clause(others[1]["description"])],
-                         "Read the topic title carefully.", f"'{nm}' is about: {clause(t['description'])}.")))
-        out.append(("m", mcu(f"Which topic is about this: '{clause(t['description'], 14)}'?", [nm, others[0]["name"], others[1]["name"]], "Match the description to a title.", f"That describes '{nm}'.")))
+    sents = [x for x in re.split(r"(?<=\.)\s+", t["description"]) if len(x.split()) >= 6]
+    if len(others) >= 2 and len(sents) >= 2:   # uses a sentence the key idea does not show, so it cannot be matched by copying
+        out.append(("m", mcu(f"Which topic is this about: '{clause(sents[1], 16)}'?", [nm, others[0]["name"], others[1]["name"]], "Think about what this topic covers.", f"That is part of '{nm}'.")))
     hard = [e for e in pre.get(t["id"], []) if e["strength"] == "hard"] or pre.get(t["id"], [])
     later = [by[e["topicId"]]["name"] for e in post.get(t["id"], [])]
     far = [s["name"] for s in others if s["ageRangeStart"] > t["ageRangeStart"]] + later
@@ -111,50 +119,65 @@ def topic_items(t, by, pre, post, sib, rng):
     k = key_term(t["description"], nm)
     if k:
         terms = [key_term(s["description"], s["name"]) for s in others[:8]]
-        terms = [x for x in dict.fromkeys(terms) if x and x.lower() != k.lower()][:2]
+        terms = [x for x in dict.fromkeys(terms) if x and x.lower() != k.lower() and form(x) == form(k) and x[0].isupper() == k[0].isupper()][:2]
         gap = clause(re.sub(re.escape(k), "_____", t["description"], count=1), 22)
         if len(terms) == 2 and "_____" in gap:
             out.append(("m", mcu(f"Fill the gap: '{gap}'", [k, terms[0], terms[1]], "Which word fits the topic?", f"The missing word is '{k}'.")))
     return [(k, x) for k, x in out if x]
 
-def explain(a, t, aud):
-    adult = list(a["adult"]); obj = objective(t["description"])
-    cand = adult + [f"This topic asks you to {obj}." if re.match(r"^(explain|describe|use|identify|compare|solve|find|calculate|recognise|recognize|know|understand|apply|interpret|plot|draw|read|write|count|measure|predict|investigate|classify|sort|name|give|show|work|add|subtract|multiply|divide|estimate|round|order|convert|choose|build|create|evaluate)\b", obj) else f"This topic is about {obj}."]
-    tgt = TARGETS[(aud, "adult")]
-    if fk_grade(" ".join(cand)) <= tgt + 0.5: adult = cand
-    return {"kid": list(a["kid"]), "adult": adult}, len(adult) > len(a["adult"])
-
-def build(t, a, by, pre, post, sib, seed):
+VERBS = r"^(explain|describe|use|identify|compare|solve|find|calculate|recognise|recognize|know|understand|apply|interpret|plot|draw|read|write|count|measure|predict|investigate|classify|sort|name|give|show|work|add|subtract|multiply|divide|estimate|round|order|convert|choose|build|create|evaluate)\b"
+def explain(a, t, aud, tu, link, rng, minimal=False):
+    """Topic-first explanation: what this topic asks, one archetype idea (rotated so siblings differ), this topic's own example, and its link."""
+    obj = objective(t["description"]); tgt = TARGETS[(aud, "adult")]; kt = TARGETS[(aud, "kid")]
+    w0 = obj.split()[0] if obj.split() else ""
+    first = f"This topic is about {obj}." if re.match(r"^(the|a|an|how|why|what|when|where|which|who|that|this|these|each|every|all|some|many|different|key|basic|simple|common|types?|ways?)$|.*(ing|s|tion|ment|ness|ity|al)$", w0) and not re.match(VERBS, obj) else f"This topic asks you to {obj}."
+    base = list(a["adult"]); rng.shuffle(base)
+    if minimal: base = base[:1]
+    opts = [first] + base[:1] + ([tu["say"]] if tu.get("say") else []) + ([link] if link else []) + base[1:]
+    adult = []
+    for x in opts:
+        if len(adult) >= 4: break
+        if fk_grade(" ".join(adult + [x])) <= tgt + 0.5 or not adult and False: adult.append(x)
+    if len(adult) < 2: adult = list(a["adult"])
+    kid = list(a["kid"])
+    if tu.get("say") and fk_grade(" ".join(kid + [tu["say"]])) <= kt + 0.5: kid.append(tu["say"])
+    return {"kid": kid, "adult": adult}, first in adult
+def worked_for(a, t, tu, prereq, later):
+    if tu.get("worked"): w = tu["worked"]; return (w[0], list(w[1]))
+    ss = [x for x in re.split(r"(?<=\.)\s+", t["description"]) if len(x.split()) >= 5]
+    steps = ([f"Start from what you know: {prereq}."] if prereq else []) + [f"The new idea: {clause(t['description'], 18)}."] + ([f"In more detail: {clause(ss[1], 18)}."] if len(ss) > 1 else []) + list(a["worked"][1][:1]) + ([f"Next, this helps with: {later}."] if later else [])
+    return (f"{a['worked'][0]}, for '{t['name']}'", steps)
+def build(t, a, by, pre, post, sib, seed, minimal=False):
     rng = random.Random(seed); aud = "family" if t["ageRangeStart"] <= 7 else "learner"
-    ex, specific = explain(a, t, aud); ti = topic_items(t, by, pre, post, sib, rng)
-    prac = [dict(x) for x in a["p"]] + [x for k, x in ti if k == "p"]
-    pool = [dict(x) for x in a["m"]] + [x for k, x in ti if k == "m"]
-    if len(prac) < 3 and len(pool) > 7: prac.append(pool.pop())
+    tu = tune(a, t, random.Random(seed * 7 + 1))
+    strong = t["subject"] == "Mathematics" or bool(a["kw"] and re.search(a["kw"], t["name"], re.I))
+    if not strong or minimal: tu = {"vis": tu.get("vis", {})}   # numbers and applied questions only when the archetype clearly fits this topic
+    pr = [by[e["prerequisiteId"]]["name"] for e in pre.get(t["id"], [])][:1]; lt = [by[e["topicId"]]["name"] for e in post.get(t["id"], [])][:1]
+    link = (f"It builds on {pr[0]}" + (f" and leads to {lt[0]}." if lt else ".")) if pr else (f"It leads to {lt[0]}." if lt else "")
+    ex, specific = explain(a, t, aud, tu, link, rng, minimal); ti = topic_items(t, by, pre, post, sib, rng)
+    app = tu.get("applied", [])
+    prac = [dict(x) for x in a["p"]] + app[:1] + [x for k, x in ti if k == "p"]
+    pool = [dict(x) for x in a["m"]] + app[1:] + [x for k, x in ti if k == "m"]
+    while len(prac) < 3 and pool: prac.append(pool.pop(0))
     extra = [x for x in a["p"]] + [x for k, x in ti if k == "p"]
-    while len(pool) < 7 and extra:                       # top up the quick-check pool with fresh-number variants of the practice templates
+    while len(pool) < 7 and extra:
         v = dict(extra.pop(0)); v["prompt"] = "Quick check: " + v["prompt"]; pool.append(v)
     for x in prac[:6 - len(pool)] if len(pool) < 6 else []:
         v = dict(x); v["prompt"] = "Recap: " + v["prompt"]; pool.append(v)
     prac = prac[:5]
     for i, it in enumerate(prac): it["id"] = f"p{i+1}"
     for i, it in enumerate(pool): it["id"] = f"m{i+1}"
-    w = a["worked"]
+    w = worked_for(a, t, tu, pr[0] if pr else None, lt[0] if lt else None)
+    if minimal: w = (t["name"], [x for x in w[1] if a["worked"][1][0] != x] or w[1])
+    vis = json.loads(json.dumps(a["vis"])); vis["opts"].update(tu.get("vis", {}))
     les = {"topicId": t["id"], "title": t["name"], "audience": aud, "keyIdea": clause(t["description"], 24) + ".",
-           "explain": ex, "worked": {"title": w[0], "steps": list(w[1])},
+           "explain": ex, "worked": {"title": w[0], "steps": w[1]},
            "familyTip": ("Try the lab together, then ask: what changed, and why?" if aud == "family" else "Explain the key idea to someone else in two sentences, then try a challenge in the lab."),
-           "practice": prac, "mastery": {"passMark": min(3, max(2, len(pool) - 4)), "draw": min(4, max(3, len(pool) - 3)), "pool": pool}, "status": "auto-starter", "visual": json.loads(json.dumps(a["vis"]))}
+           "practice": prac, "mastery": {"passMark": min(3, max(2, len(pool) - 4)), "draw": min(4, max(3, len(pool) - 3)), "pool": pool}, "status": "auto-starter", "visual": vis}
     return les, dict(specific=specific, n_topic=len(ti))
 
-def rubric(les, a, meta, errs):
-    """0–100. Rejected if below MIN_QUALITY or if any content check fails."""
-    sc = 0
-    sc += 30 if a["kw"] else 18                                        # archetype matched on the topic's own words, not just its domain
-    sc += 15 if les["visual"]["type"] in LAB_TYPES else 8              # a lab with challenges, or a simpler interactive
-    sc += min(20, 5 * meta["n_topic"])                                 # questions written from this topic's own data
-    sc += 15 if sum("params" in i for i in les["practice"] + les["mastery"]["pool"]) >= 4 else 6 if a["numeric"] is False else 0
-    sc += 10 if meta["specific"] else 4                                # explanation mentions this topic's objective
-    sc += 10 if len(les["worked"]["steps"]) >= 3 else 5
-    return 0 if errs else sc
+def rubric(les, a, meta, errs, maxsim=0.0):
+    return 0 if errs else QS.score(les, les["title"], maxsim)[0]
 LAB_TYPES = {"problab", "statlab", "numzoom", "graphlab", "geolab", "matrixlab", "gaslab", "reactlab", "wavelab", "forcelab", "ecolab", "balance", "plot", "area", "particles", "coords", "fracbar", "longdiv", "longmul", "array", "tenframe", "counters", "matlab", "separate", "circuit", "atom", "energy", "tiles", "expo", "vectors", "thermo", "percent", "placevalue", "squares"}
 
 def check(les, a):
@@ -170,19 +193,26 @@ def main():
     todo = sorted((by[i] for i in keep if i not in hand), key=lambda t: priority(t, len(descendants(t["id"], post, memo))))[:lim]
     bydom = collections.defaultdict(list)
     for i in keep: bydom[(by[i]["subject"], by[i]["domain"])].append(by[i])
-    out, rep, rejected = collections.defaultdict(dict), [], 0
+    out, rep, rejected = collections.defaultdict(dict), [], 0; seen = collections.defaultdict(list); dups = 0; sims = []
     for t in todo:
         best = None
-        for k, a in enumerate(candidates(t)[:3]):
+        for k, a in enumerate([c for c in candidates(t)[:3] for _ in range(2)]):
             les, meta = build(t, a, by, pre, post, bydom[(t["subject"], t["domain"])], hash(t["id"]) % 9973 + k)
-            errs = check(les, a); q = rubric(les, a, meta, errs)
+            errs = check(les, a); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for o in seen[t["domain"]]] or [0])
+            if ms > QS.DUP: errs = errs + [f"near-duplicate of a sibling lesson (similarity {ms:.2f})"]; dups += 1
+            q = rubric(les, a, meta, errs, ms)
             if errs and not best: best = (q, les, a["name"], errs)
             if not errs and (not best or q > best[0]): best = (q, les, a["name"], [])
             if q >= MIN_QUALITY: break
             rejected += 1
+        if best[3] and all("near-duplicate" in e for e in best[3]):   # last resort: drop the shared archetype text, keep only this topic's own
+            a = candidates(t)[0]; les, meta = build(t, a, by, pre, post, bydom[(t["subject"], t["domain"])], hash(t["id"]) % 9973 + 99, True)
+            errs = check(les, a); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for o in seen[t["domain"]]] or [0])
+            if ms > QS.DUP: errs = errs + [f"near-duplicate of a sibling lesson (similarity {ms:.2f})"]
+            else: best = (rubric(les, a, meta, errs, ms), les, a["name"], errs)
         q, les, an, errs = best
         if errs: rep.append((t["id"], t["name"], an, q, errs[:2])); continue
-        les["quality"] = q
+        les["quality"] = q; seen[t["domain"]].append(QS.shingles(les)); sims.append(max([QS.sim(QS.shingles(les), o) for o in seen[t["domain"]][:-1]] or [0]))
         out[re.sub(r"[^a-z0-9]+", "-", (t["subject"] + "-" + t["domain"]).lower()).strip("-")][t["id"]] = les
         rep.append((t["id"], t["name"], an, q, []))
     os.makedirs("learn/auto", exist_ok=True)
@@ -193,6 +223,7 @@ def main():
     qs = [r[3] for r in ok]
     print(f"starter lessons: {len(ok)} written, {len(bad)} failed checks, {rejected} weak drafts rejected and regenerated; quality mean {sum(qs)/max(1,len(qs)):.0f}, "
           f"≥{MIN_QUALITY}: {sum(q >= MIN_QUALITY for q in qs)}, below: {sum(q < MIN_QUALITY for q in qs)}")
+    print(f"near-duplicate drafts rejected: {dups}; max sibling similarity of written lessons: {max(sims or [0]):.2f}, mean {sum(sims)/max(1,len(sims)):.2f}")
     print("archetypes:", collections.Counter(r[2] for r in ok).most_common())
     for r in bad[:15]: print("FAIL", r[0], r[1], r[2], r[4])
     if "--report" in sys.argv:

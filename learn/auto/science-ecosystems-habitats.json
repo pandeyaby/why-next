@@ -65,26 +65,13 @@
 {
 "answer": 0,
 "choices": [
-"Matter Cycling in Ecosystems",
-"Reading Food Web Diagrams",
-"Food Chains & Energy Transfer"
-],
-"explain": "That describes 'Matter Cycling in Ecosystems'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Develop a model to describe the movement of matter among plants, animals, decomposers'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Modelling movement of matter through ecosystems requires nutrient cycle and decomposer vocabulary",
-"Reading food web arrows requires the same diagram-reading conventions as circuit diagrams — both…",
-"Rainforest food webs enrich curriculum food chains topic (exploratory age 7 -> curriculum age…"
+"Must know carnivore/herbivore/omnivore to understand food chains",
+"Must know about habitats and interdependence before learning food chains"
 ],
 "explain": "Because: Modelling movement of matter through ecosystems requires nutrient cycle and decomposer vocabulary.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Matter Cycling in Ecosystems' build on 'Ecology Vocabulary'?",
 "type": "mc"
 },
@@ -93,11 +80,11 @@
 "choices": [
 "The Carbon Cycle",
 "Ecology Vocabulary",
-"Reading Food Web Diagrams"
+"Simple Food Chains"
 ],
 "explain": "'Matter Cycling in Ecosystems' leads on to 'The Carbon Cycle'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Matter Cycling in Ecosystems' help you learn next?",
 "type": "mc"
 },
@@ -105,14 +92,28 @@
 "answer": 0,
 "choices": [
 "decomposers",
-"identifying",
-"different"
+"differences",
+"relationships"
 ],
 "explain": "The missing word is 'decomposers'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m6",
 "prompt": "Fill the gap: 'Develop a model to describe the movement of matter among plants, animals, _____'",
 "type": "mc"
+},
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m7",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
 }
 ]
 },
@@ -156,31 +157,18 @@
 {
 "answer": 0,
 "choices": [
-"Develop a model to describe the movement of matter among plants, animals, decomposers",
-"Read and interpret food web diagrams — identify producers, primary and secondary consumers",
-"Construct and interpret food chains identifying producers, predators"
-],
-"explain": "'Matter Cycling in Ecosystems' is about: Develop a model to describe the movement of matter among plants, animals, decomposers.",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Matter Cycling in Ecosystems'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Ecology Vocabulary",
-"Chromosomes, Genes & DNA",
-"Food Webs & Interdependence"
+"Food Webs & Interdependence",
+"Chromosomes, Genes & DNA"
 ],
 "explain": "'Matter Cycling in Ecosystems' builds on 'Ecology Vocabulary'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Matter Cycling in Ecosystems'?",
 "type": "mc"
 }
 ],
-"quality": 94,
+"quality": 83,
 "status": "auto-starter",
 "title": "Matter Cycling in Ecosystems",
 "topicId": "mt_0ajzcoKAKw",
@@ -195,20 +183,22 @@
 },
 "worked": {
 "steps": [
+"Start from what you know: Ecology Vocabulary.",
+"The new idea: Develop a model to describe the movement of matter among plants, animals, decomposers.",
 "Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
+"Next, this helps with: The Carbon Cycle."
 ],
-"title": "What happens if the foxes disappear?"
+"title": "What happens if the foxes disappear?, for 'Matter Cycling in Ecosystems'"
 }
 },
 "mt_6aJUzBYGNs": {
 "audience": "learner",
 "explain": {
 "adult": [
+"This topic asks you to describe the relationship between chromosomes, genes.",
 "The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
-"This topic asks you to describe the relationship between chromosomes, genes."
+"It builds on Cells Under the Microscope and leads to Natural polymers: proteins, starch and DNA.",
+"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons."
 ],
 "kid": [
 "The Earth goes round the Sun.",
@@ -218,28 +208,14 @@
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Describe the relationship between chromosomes, genes.",
 "mastery": {
-"draw": 4,
-"passMark": 3,
+"draw": 3,
+"passMark": 2,
 "pool": [
-{
-"answer": "27*n",
-"explain": "27 × {n} = {=27*n} days.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
-"type": "numeric"
-},
 {
 "answer": "25*n",
 "explain": "25 × {n} = {=25*n} hours.",
 "hint": "Multiply.",
-"id": "m2",
+"id": "m1",
 "params": {
 "n": [
 2,
@@ -258,33 +234,20 @@
 ],
 "explain": "The Sun's gravity holds the planets in orbit.",
 "hint": "A pull towards the Sun.",
-"id": "m3",
+"id": "m2",
 "prompt": "What keeps the planets in orbit?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Chromosomes, Genes & DNA",
-"Simple Food Chains",
-"Human impact on environments"
-],
-"explain": "That describes 'Chromosomes, Genes & DNA'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Describe the relationship between chromosomes, genes'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "DNA is housed in the nucleus of cells — the cell as fundamental unit…",
-"Must know carnivore/herbivore/omnivore to understand food chains",
-"Must know about habitats and interdependence before learning food chains"
+"Must understand how habitats support organisms before understanding what happens when they change",
+"Food chain knowledge helps understand knock-on effects of environmental change"
 ],
 "explain": "Because: DNA is housed in the nucleus of cells — the cell as fundamental unit….",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m3",
 "prompt": "Why does 'Chromosomes, Genes & DNA' build on 'Cells Under the Microscope'?",
 "type": "mc"
 },
@@ -293,26 +256,51 @@
 "choices": [
 "Natural polymers: proteins, starch and DNA",
 "Cells Under the Microscope",
-"Simple Food Chains"
+"Changing Environments"
 ],
 "explain": "'Chromosomes, Genes & DNA' leads on to 'Natural polymers: proteins, starch and DNA'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m4",
 "prompt": "Which topic does 'Chromosomes, Genes & DNA' help you learn next?",
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"relationship",
-"different",
-"sustainability"
+"answer": "60*h/t",
+"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
+"hint": "How many in one hour first?",
+"id": "m5",
+"params": {
+"h": [
+2,
+6
 ],
-"explain": "The missing word is 'relationship'.",
-"hint": "Which word fits the topic?",
-"id": "m7",
-"prompt": "Fill the gap: 'Describe the _____ between chromosomes, genes'",
-"type": "mc"
+"t": [
+2,
+15
+]
+},
+"prompt": "Quick check: A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
+"type": "numeric",
+"where": "60%t==0"
+},
+{
+"answer": "v*t",
+"explain": "{v} × {t} = {=v*t} km.",
+"hint": "Multiply.",
+"id": "m6",
+"params": {
+"t": [
+10,
+60
+],
+"v": [
+5,
+12
+]
+},
+"prompt": "Quick check: A rocket travels {v} km each second. How far in {t} s?",
+"type": "numeric",
+"where": "t%10==0"
 }
 ]
 },
@@ -356,20 +344,21 @@
 "where": "t%10==0"
 },
 {
-"answer": 0,
-"choices": [
-"Describe the relationship between chromosomes, genes",
-"Describe how animals obtain their food from plants and other animals, using the idea of a…",
-"Use vocabulary for human impact on the environment — pollution, habitat destruction, deforestation, biodiversity, conservation, renewable…"
-],
-"explain": "'Chromosomes, Genes & DNA' is about: Describe the relationship between chromosomes, genes.",
-"hint": "Read the topic title carefully.",
+"answer": "27*n",
+"explain": "27 × {n} = {=27*n} days.",
+"hint": "Multiply.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Chromosomes, Genes & DNA'?",
-"type": "mc"
+"params": {
+"n": [
+2,
+9
+]
+},
+"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
+"type": "numeric"
 }
 ],
-"quality": 81,
+"quality": 71,
 "status": "auto-starter",
 "title": "Chromosomes, Genes & DNA",
 "topicId": "mt_6aJUzBYGNs",
@@ -419,11 +408,12 @@
 },
 "worked": {
 "steps": [
+"Start from what you know: Cells Under the Microscope.",
+"The new idea: Describe the relationship between chromosomes, genes.",
 "The Earth spins on its axis.",
-"The side facing the Sun has day.",
-"The side facing away has night; one spin takes 24 hours."
+"Next, this helps with: Natural polymers: proteins, starch and DNA."
 ],
-"title": "Why do we have day and night?"
+"title": "Why do we have day and night?, for 'Chromosomes, Genes & DNA'"
 }
 },
 "mt_Be1A88GUpu": {
@@ -431,8 +421,8 @@
 "explain": {
 "adult": [
 "The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
-"This topic asks you to describe the carbon cycle, tracing carbon through photosynthesis, respiration, feeding, decomposition."
+"It builds on Matter Cycling in Ecosystems and leads to Earth's Atmosphere & CO2.",
+"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons."
 ],
 "kid": [
 "The Earth goes round the Sun.",
@@ -489,26 +479,13 @@
 {
 "answer": 0,
 "choices": [
-"The Carbon Cycle",
-"Habitat Vocabulary",
-"Reading Food Web Diagrams"
-],
-"explain": "That describes 'The Carbon Cycle'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Describe the carbon cycle, tracing carbon through photosynthesis, respiration, feeding, decomposition'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "KS3 carbon cycle extends KS2 model of matter movement among plants, animals, decomposers and…",
-"Reading food web arrows requires the same diagram-reading conventions as circuit diagrams — both…",
-"Knowing plant names helps distinguish living from non-living"
+"Knowing plant names helps distinguish living from non-living",
+"Comparing living, dead"
 ],
 "explain": "Because: KS3 carbon cycle extends KS2 model of matter movement among plants, animals, decomposers and….",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'The Carbon Cycle' build on 'Matter Cycling in Ecosystems'?",
 "type": "mc"
 },
@@ -517,11 +494,11 @@
 "choices": [
 "Earth's Atmosphere & CO2",
 "Matter Cycling in Ecosystems",
-"Habitat Vocabulary"
+"Human impact on environments"
 ],
 "explain": "'The Carbon Cycle' leads on to 'Earth's Atmosphere & CO2'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'The Carbon Cycle' help you learn next?",
 "type": "mc"
 },
@@ -529,14 +506,33 @@
 "answer": 0,
 "choices": [
 "photosynthesis",
-"microhabitat",
+"differences",
 "decomposers"
 ],
 "explain": "The missing word is 'photosynthesis'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m6",
 "prompt": "Fill the gap: 'Describe the carbon cycle, tracing carbon through _____, respiration, feeding, decomposition'",
 "type": "mc"
+},
+{
+"answer": "60*h/t",
+"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
+"hint": "How many in one hour first?",
+"id": "m7",
+"params": {
+"h": [
+2,
+6
+],
+"t": [
+2,
+15
+]
+},
+"prompt": "Quick check: A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
+"type": "numeric",
+"where": "60%t==0"
 }
 ]
 },
@@ -582,31 +578,18 @@
 {
 "answer": 0,
 "choices": [
-"Describe the carbon cycle, tracing carbon through photosynthesis, respiration, feeding, decomposition",
-"Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland,…",
-"Read and interpret food web diagrams — identify producers, primary and secondary consumers"
-],
-"explain": "'The Carbon Cycle' is about: Describe the carbon cycle, tracing carbon through photosynthesis, respiration, feeding, decomposition.",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'The Carbon Cycle'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Matter Cycling in Ecosystems",
 "Earth's Atmosphere & CO2",
 "Biofuels and carbon neutrality"
 ],
 "explain": "'The Carbon Cycle' builds on 'Matter Cycling in Ecosystems'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'The Carbon Cycle'?",
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 83,
 "status": "auto-starter",
 "title": "The Carbon Cycle",
 "topicId": "mt_Be1A88GUpu",
@@ -656,11 +639,12 @@
 },
 "worked": {
 "steps": [
+"Start from what you know: Matter Cycling in Ecosystems.",
+"The new idea: Describe the carbon cycle, tracing carbon through photosynthesis, respiration, feeding, decomposition.",
 "The Earth spins on its axis.",
-"The side facing the Sun has day.",
-"The side facing away has night; one spin takes 24 hours."
+"Next, this helps with: Earth's Atmosphere & CO2."
 ],
-"title": "Why do we have day and night?"
+"title": "Why do we have day and night?, for 'The Carbon Cycle'"
 }
 },
 "mt_EygMHKs8Ed": {
@@ -668,8 +652,8 @@
 "explain": {
 "adult": [
 "In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
-"If one population changes, the others that depend on it change too.",
-"This topic asks you to describe how animals obtain their food from plants and other animals, using the idea of a simple food chain."
+"It builds on Herbivores, Carnivores & Omnivores and leads to Food Chains & Energy Transfer.",
+"If one population changes, the others that depend on it change too."
 ],
 "kid": [
 "Animals need food to live.",
@@ -730,26 +714,13 @@
 {
 "answer": 0,
 "choices": [
-"Simple Food Chains",
-"Living, Dead & Never Alive",
-"Habitat Vocabulary"
-],
-"explain": "That describes 'Simple Food Chains'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Describe how animals obtain their food from plants and other animals, using the idea…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Must know carnivore/herbivore/omnivore to understand food chains",
 "Knowing plant names helps distinguish living from non-living",
 "Comparing living, dead"
 ],
 "explain": "Because: Must know carnivore/herbivore/omnivore to understand food chains.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Simple Food Chains' build on 'Herbivores, Carnivores & Omnivores'?",
 "type": "mc"
 },
@@ -762,1258 +733,8 @@
 ],
 "explain": "'Simple Food Chains' leads on to 'Food Chains & Energy Transfer'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Simple Food Chains' help you learn next?",
-"type": "mc"
-},
-{
-"answer": "k*100",
-"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
-"hint": "Divide by 10.",
-"id": "m7",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
-"type": "numeric"
-}
-]
-},
-"practice": [
-{
-"answer": "k*100",
-"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
-"hint": "Divide by 10.",
-"id": "p1",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
-"type": "numeric"
-},
-{
-"answer": "b*c",
-"explain": "{c} × {b} = {=b*c} rabbits.",
-"hint": "Foxes × rabbits each.",
-"id": "p2",
-"params": {
-"a": [
-50,
-200
-],
-"b": [
-2,
-6
-],
-"c": [
-2,
-8
-]
-},
-"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Describe how animals obtain their food from plants and other animals, using the idea of a…",
-"Explore and compare the differences between things that are living, dead",
-"Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland,…"
-],
-"explain": "'Simple Food Chains' is about: Describe how animals obtain their food from plants and other animals, using the idea of a….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Simple Food Chains'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Herbivores, Carnivores & Omnivores",
-"Human impact on environments",
-"Reading Food Web Diagrams"
-],
-"explain": "'Simple Food Chains' builds on 'Herbivores, Carnivores & Omnivores'.",
-"hint": "What does this topic build on?",
-"id": "p4",
-"prompt": "Which topic should you learn before 'Simple Food Chains'?",
-"type": "mc"
-}
-],
-"quality": 100,
-"status": "auto-starter",
-"title": "Simple Food Chains",
-"topicId": "mt_EygMHKs8Ed",
-"visual": {
-"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
-"opts": {
-"food": "grass",
-"pred": "Foxes",
-"prey": "Rabbits"
-},
-"type": "ecolab"
-},
-"worked": {
-"steps": [
-"Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
-],
-"title": "What happens if the foxes disappear?"
-}
-},
-"mt_Fw0bbM1e_g": {
-"audience": "family",
-"explain": {
-"adult": [
-"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
-"If one population changes, the others that depend on it change too."
-],
-"kid": [
-"Animals need food to live.",
-"If there is less food, fewer animals survive."
-]
-},
-"familyTip": "Try the lab together, then ask: what changed, and why?",
-"keyIdea": "Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland, ocean, desert, rainforest, pond — and use terms….",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "a-b",
-"explain": "{a} − {b} = {=a-b} frogs.",
-"hint": "Subtract.",
-"id": "m1",
-"params": {
-"a": [
-30,
-90
-],
-"b": [
-5,
-25
-]
-},
-"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
-"type": "numeric"
-},
-{
-"answer": "k*10",
-"explain": "{=k*100} ÷ 10 = {=k*10} J.",
-"hint": "Divide by 10.",
-"id": "m2",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Grass",
-"Rabbit",
-"Fox"
-],
-"explain": "Grass uses sunlight to make food.",
-"hint": "It makes its own food.",
-"id": "m3",
-"prompt": "In 'grass → rabbit → fox', what is the producer?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Habitat Vocabulary",
-"Changing Environments",
-"Reading Food Web Diagrams"
-],
-"explain": "That describes 'Habitat Vocabulary'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Name and use vocabulary for where living things are found — habitat, environment, microhabitat,…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Habitats & Basic Needs",
-"Reading Food Web Diagrams",
-"Chromosomes, Genes & DNA"
-],
-"explain": "'Habitat Vocabulary' leads on to 'Habitats & Basic Needs'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'Habitat Vocabulary' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"microhabitat",
-"challenges",
-"decomposers"
-],
-"explain": "The missing word is 'microhabitat'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Name and use vocabulary for where living things are found — habitat, environment, _____, conditions, woodland, ocean, desert, rainforest, pond — and…'",
-"type": "mc"
-},
-{
-"answer": "k*100",
-"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
-"hint": "Divide by 10.",
-"id": "m7",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
-"type": "numeric"
-}
-]
-},
-"practice": [
-{
-"answer": "k*100",
-"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
-"hint": "Divide by 10.",
-"id": "p1",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
-"type": "numeric"
-},
-{
-"answer": "b*c",
-"explain": "{c} × {b} = {=b*c} rabbits.",
-"hint": "Foxes × rabbits each.",
-"id": "p2",
-"params": {
-"a": [
-50,
-200
-],
-"b": [
-2,
-6
-],
-"c": [
-2,
-8
-]
-},
-"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland,…",
-"Recognise that environments can change and that this can sometimes pose dangers and challenges to living…",
-"Read and interpret food web diagrams — identify producers, primary and secondary consumers"
-],
-"explain": "'Habitat Vocabulary' is about: Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland,….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Habitat Vocabulary'?",
-"type": "mc"
-}
-],
-"quality": 94,
-"status": "auto-starter",
-"title": "Habitat Vocabulary",
-"topicId": "mt_Fw0bbM1e_g",
-"visual": {
-"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
-"opts": {
-"food": "grass",
-"pred": "Foxes",
-"prey": "Rabbits"
-},
-"type": "ecolab"
-},
-"worked": {
-"steps": [
-"Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
-],
-"title": "What happens if the foxes disappear?"
-}
-},
-"mt_M7XhBBzYof": {
-"audience": "learner",
-"explain": {
-"adult": [
-"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
-"If one population changes, the others that depend on it change too."
-],
-"kid": [
-"Animals need food to live.",
-"If there is less food, fewer animals survive."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore, decomposer, food chain, food web, nutrient cycle —….",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "a-b",
-"explain": "{a} − {b} = {=a-b} frogs.",
-"hint": "Subtract.",
-"id": "m1",
-"params": {
-"a": [
-30,
-90
-],
-"b": [
-5,
-25
-]
-},
-"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
-"type": "numeric"
-},
-{
-"answer": "k*10",
-"explain": "{=k*100} ÷ 10 = {=k*10} J.",
-"hint": "Divide by 10.",
-"id": "m2",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Grass",
-"Rabbit",
-"Fox"
-],
-"explain": "Grass uses sunlight to make food.",
-"hint": "It makes its own food.",
-"id": "m3",
-"prompt": "In 'grass → rabbit → fox', what is the producer?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Ecology Vocabulary",
-"Changing Environments",
-"Living, Dead & Never Alive"
-],
-"explain": "That describes 'Ecology Vocabulary'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore,…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Matter Cycling in Ecosystems",
-"Changing Environments",
-"Living, Dead & Never Alive"
-],
-"explain": "'Ecology Vocabulary' leads on to 'Matter Cycling in Ecosystems'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'Ecology Vocabulary' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"relationships",
-"challenges",
-"differences"
-],
-"explain": "The missing word is 'relationships'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Use vocabulary for feeding _____ and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore, decomposer, food chain, food web, nutrient…'",
-"type": "mc"
-},
-{
-"answer": "k*100",
-"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
-"hint": "Divide by 10.",
-"id": "m7",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
-"type": "numeric"
-}
-]
-},
-"practice": [
-{
-"answer": "k*100",
-"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
-"hint": "Divide by 10.",
-"id": "p1",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
-"type": "numeric"
-},
-{
-"answer": "b*c",
-"explain": "{c} × {b} = {=b*c} rabbits.",
-"hint": "Foxes × rabbits each.",
-"id": "p2",
-"params": {
-"a": [
-50,
-200
-],
-"b": [
-2,
-6
-],
-"c": [
-2,
-8
-]
-},
-"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore,…",
-"Recognise that environments can change and that this can sometimes pose dangers and challenges to living…",
-"Explore and compare the differences between things that are living, dead"
-],
-"explain": "'Ecology Vocabulary' is about: Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore,….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Ecology Vocabulary'?",
-"type": "mc"
-}
-],
-"quality": 94,
-"status": "auto-starter",
-"title": "Ecology Vocabulary",
-"topicId": "mt_M7XhBBzYof",
-"visual": {
-"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
-"opts": {
-"food": "grass",
-"pred": "Foxes",
-"prey": "Rabbits"
-},
-"type": "ecolab"
-},
-"worked": {
-"steps": [
-"Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
-],
-"title": "What happens if the foxes disappear?"
-}
-},
-"mt_Sa48W7KXB5": {
-"audience": "family",
-"explain": {
-"adult": [
-"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
-"This topic is about explore and compare the differences between things that are living, dead."
-],
-"kid": [
-"The Earth goes round the Sun.",
-"The Moon goes round the Earth."
-]
-},
-"familyTip": "Try the lab together, then ask: what changed, and why?",
-"keyIdea": "Explore and compare the differences between things that are living, dead.",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "27*n",
-"explain": "27 × {n} = {=27*n} days.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
-"type": "numeric"
-},
-{
-"answer": "25*n",
-"explain": "25 × {n} = {=25*n} hours.",
-"hint": "Multiply.",
-"id": "m2",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "A day on Mars is about 25 hours. How many hours in {n} Mars days?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Gravity",
-"Wind",
-"Magnetism"
-],
-"explain": "The Sun's gravity holds the planets in orbit.",
-"hint": "A pull towards the Sun.",
-"id": "m3",
-"prompt": "What keeps the planets in orbit?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Living, Dead & Never Alive",
-"Chromosomes, Genes & DNA",
-"Ecology Vocabulary"
-],
-"explain": "That describes 'Living, Dead & Never Alive'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Explore and compare the differences between things that are living, dead'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Comparing living, dead",
-"DNA is housed in the nucleus of cells — the cell as fundamental unit…",
-"Modelling movement of matter through ecosystems requires nutrient cycle and decomposer vocabulary"
-],
-"explain": "Because: Comparing living, dead.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Living, Dead & Never Alive' build on 'Living Things Vocabulary'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Fossils as Evidence",
-"Common Plants & Trees",
-"Chromosomes, Genes & DNA"
-],
-"explain": "'Living, Dead & Never Alive' leads on to 'Fossils as Evidence'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Living, Dead & Never Alive' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"differences",
-"relationship",
-"relationships"
-],
-"explain": "The missing word is 'differences'.",
-"hint": "Which word fits the topic?",
-"id": "m7",
-"prompt": "Fill the gap: 'Explore and compare the _____ between things that are living, dead'",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "60*h/t",
-"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
-"hint": "How many in one hour first?",
-"id": "p1",
-"params": {
-"h": [
-2,
-6
-],
-"t": [
-2,
-15
-]
-},
-"prompt": "A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
-"type": "numeric",
-"where": "60%t==0"
-},
-{
-"answer": "v*t",
-"explain": "{v} × {t} = {=v*t} km.",
-"hint": "Multiply.",
-"id": "p2",
-"params": {
-"t": [
-10,
-60
-],
-"v": [
-5,
-12
-]
-},
-"prompt": "A rocket travels {v} km each second. How far in {t} s?",
-"type": "numeric",
-"where": "t%10==0"
-},
-{
-"answer": 0,
-"choices": [
-"Explore and compare the differences between things that are living, dead",
-"Describe the relationship between chromosomes, genes",
-"Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore,…"
-],
-"explain": "'Living, Dead & Never Alive' is about: Explore and compare the differences between things that are living, dead.",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Living, Dead & Never Alive'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Living Things Vocabulary",
-"Chromosomes, Genes & DNA",
-"Ecology Vocabulary"
-],
-"explain": "'Living, Dead & Never Alive' builds on 'Living Things Vocabulary'.",
-"hint": "What does this topic build on?",
-"id": "p4",
-"prompt": "Which topic should you learn before 'Living, Dead & Never Alive'?",
-"type": "mc"
-}
-],
-"quality": 81,
-"status": "auto-starter",
-"title": "Living, Dead & Never Alive",
-"topicId": "mt_Sa48W7KXB5",
-"visual": {
-"caption": "Sort the planets into rocky inner planets and giant outer planets.",
-"opts": {
-"bins": [
-"Rocky inner planet",
-"Giant outer planet"
-],
-"items": [
-[
-"Mercury",
-0
-],
-[
-"Venus",
-0
-],
-[
-"Earth",
-0
-],
-[
-"Mars",
-0
-],
-[
-"Jupiter",
-1
-],
-[
-"Saturn",
-1
-],
-[
-"Uranus",
-1
-],
-[
-"Neptune",
-1
-]
-]
-},
-"type": "sorter"
-},
-"worked": {
-"steps": [
-"The Earth spins on its axis.",
-"The side facing the Sun has day.",
-"The side facing away has night; one spin takes 24 hours."
-],
-"title": "Why do we have day and night?"
-}
-},
-"mt_URTJbS3hhs": {
-"audience": "learner",
-"explain": {
-"adult": [
-"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
-"If one population changes, the others that depend on it change too."
-],
-"kid": [
-"Animals need food to live.",
-"If there is less food, fewer animals survive."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Construct and interpret food webs showing the interdependence of organisms in an ecosystem, explaining how a change in one population affects others.",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "a-b",
-"explain": "{a} − {b} = {=a-b} frogs.",
-"hint": "Subtract.",
-"id": "m1",
-"params": {
-"a": [
-30,
-90
-],
-"b": [
-5,
-25
-]
-},
-"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
-"type": "numeric"
-},
-{
-"answer": "k*10",
-"explain": "{=k*100} ÷ 10 = {=k*10} J.",
-"hint": "Divide by 10.",
-"id": "m2",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Grass",
-"Rabbit",
-"Fox"
-],
-"explain": "Grass uses sunlight to make food.",
-"hint": "It makes its own food.",
-"id": "m3",
-"prompt": "In 'grass → rabbit → fox', what is the producer?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Food Webs & Interdependence",
-"Simple Food Chains",
-"Chromosomes, Genes & DNA"
-],
-"explain": "That describes 'Food Webs & Interdependence'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Construct and interpret food webs showing the interdependence of organisms in an ecosystem, explaining…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Constructing food webs and understanding interdependence requires food web, producer, decomposer vocabulary",
-"Must know carnivore/herbivore/omnivore to understand food chains",
-"Must know about habitats and interdependence before learning food chains"
-],
-"explain": "Because: Constructing food webs and understanding interdependence requires food web, producer, decomposer vocabulary.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Food Webs & Interdependence' build on 'Ecology Vocabulary'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The Carbon Cycle",
-"Ecology Vocabulary",
-"Simple Food Chains"
-],
-"explain": "'Food Webs & Interdependence' leads on to 'The Carbon Cycle'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Food Webs & Interdependence' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"explaining",
-"different",
-"relationship"
-],
-"explain": "The missing word is 'explaining'.",
-"hint": "Which word fits the topic?",
-"id": "m7",
-"prompt": "Fill the gap: 'Construct and interpret food webs showing the interdependence of organisms in an ecosystem, _____ how a change in one population affects others'",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "k*100",
-"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
-"hint": "Divide by 10.",
-"id": "p1",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
-"type": "numeric"
-},
-{
-"answer": "b*c",
-"explain": "{c} × {b} = {=b*c} rabbits.",
-"hint": "Foxes × rabbits each.",
-"id": "p2",
-"params": {
-"a": [
-50,
-200
-],
-"b": [
-2,
-6
-],
-"c": [
-2,
-8
-]
-},
-"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Construct and interpret food webs showing the interdependence of organisms in an ecosystem, explaining how a…",
-"Describe how animals obtain their food from plants and other animals, using the idea of a…",
-"Describe the relationship between chromosomes, genes"
-],
-"explain": "'Food Webs & Interdependence' is about: Construct and interpret food webs showing the interdependence of organisms in an ecosystem, explaining how a….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Food Webs & Interdependence'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Ecology Vocabulary",
-"Chromosomes, Genes & DNA",
-"The Carbon Cycle"
-],
-"explain": "'Food Webs & Interdependence' builds on 'Ecology Vocabulary'.",
-"hint": "What does this topic build on?",
-"id": "p4",
-"prompt": "Which topic should you learn before 'Food Webs & Interdependence'?",
-"type": "mc"
-}
-],
-"quality": 94,
-"status": "auto-starter",
-"title": "Food Webs & Interdependence",
-"topicId": "mt_URTJbS3hhs",
-"visual": {
-"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
-"opts": {
-"food": "grass",
-"pred": "Foxes",
-"prey": "Rabbits"
-},
-"type": "ecolab"
-},
-"worked": {
-"steps": [
-"Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
-],
-"title": "What happens if the foxes disappear?"
-}
-},
-"mt_Wyd-l-6H7G": {
-"audience": "learner",
-"explain": {
-"adult": [
-"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
-"This topic asks you to recognise that environments can change and that this can sometimes pose dangers and challenges to living things."
-],
-"kid": [
-"The Earth goes round the Sun.",
-"The Moon goes round the Earth."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Recognise that environments can change and that this can sometimes pose dangers and challenges to living things.",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "27*n",
-"explain": "27 × {n} = {=27*n} days.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
-"type": "numeric"
-},
-{
-"answer": "25*n",
-"explain": "25 × {n} = {=25*n} hours.",
-"hint": "Multiply.",
-"id": "m2",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "A day on Mars is about 25 hours. How many hours in {n} Mars days?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Gravity",
-"Wind",
-"Magnetism"
-],
-"explain": "The Sun's gravity holds the planets in orbit.",
-"hint": "A pull towards the Sun.",
-"id": "m3",
-"prompt": "What keeps the planets in orbit?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Changing Environments",
-"Ecology Vocabulary",
-"Habitat Vocabulary"
-],
-"explain": "That describes 'Changing Environments'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Recognise that environments can change and that this can sometimes pose dangers and challenges…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must understand how habitats support organisms before understanding what happens when they change",
-"DNA is housed in the nucleus of cells — the cell as fundamental unit…",
-"Rainforest food webs enrich curriculum food chains topic (exploratory age 7 -> curriculum age…"
-],
-"explain": "Because: Must understand how habitats support organisms before understanding what happens when they change.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Changing Environments' build on 'Habitats & Basic Needs'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Endangered & Extinct Species",
-"Habitats & Basic Needs",
-"Ecology Vocabulary"
-],
-"explain": "'Changing Environments' leads on to 'Endangered & Extinct Species'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Changing Environments' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"challenges",
-"relationships",
-"microhabitat"
-],
-"explain": "The missing word is 'challenges'.",
-"hint": "Which word fits the topic?",
-"id": "m7",
-"prompt": "Fill the gap: 'Recognise that environments can change and that this can sometimes pose dangers and _____ to living things'",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "60*h/t",
-"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
-"hint": "How many in one hour first?",
-"id": "p1",
-"params": {
-"h": [
-2,
-6
-],
-"t": [
-2,
-15
-]
-},
-"prompt": "A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
-"type": "numeric",
-"where": "60%t==0"
-},
-{
-"answer": "v*t",
-"explain": "{v} × {t} = {=v*t} km.",
-"hint": "Multiply.",
-"id": "p2",
-"params": {
-"t": [
-10,
-60
-],
-"v": [
-5,
-12
-]
-},
-"prompt": "A rocket travels {v} km each second. How far in {t} s?",
-"type": "numeric",
-"where": "t%10==0"
-},
-{
-"answer": 0,
-"choices": [
-"Recognise that environments can change and that this can sometimes pose dangers and challenges to living…",
-"Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore,…",
-"Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland,…"
-],
-"explain": "'Changing Environments' is about: Recognise that environments can change and that this can sometimes pose dangers and challenges to living….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Changing Environments'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Habitats & Basic Needs",
-"Chromosomes, Genes & DNA",
-"Matter Cycling in Ecosystems"
-],
-"explain": "'Changing Environments' builds on 'Habitats & Basic Needs'.",
-"hint": "What does this topic build on?",
-"id": "p4",
-"prompt": "Which topic should you learn before 'Changing Environments'?",
-"type": "mc"
-}
-],
-"quality": 81,
-"status": "auto-starter",
-"title": "Changing Environments",
-"topicId": "mt_Wyd-l-6H7G",
-"visual": {
-"caption": "Sort the planets into rocky inner planets and giant outer planets.",
-"opts": {
-"bins": [
-"Rocky inner planet",
-"Giant outer planet"
-],
-"items": [
-[
-"Mercury",
-0
-],
-[
-"Venus",
-0
-],
-[
-"Earth",
-0
-],
-[
-"Mars",
-0
-],
-[
-"Jupiter",
-1
-],
-[
-"Saturn",
-1
-],
-[
-"Uranus",
-1
-],
-[
-"Neptune",
-1
-]
-]
-},
-"type": "sorter"
-},
-"worked": {
-"steps": [
-"The Earth spins on its axis.",
-"The side facing the Sun has day.",
-"The side facing away has night; one spin takes 24 hours."
-],
-"title": "Why do we have day and night?"
-}
-},
-"mt_YB0qF5KX9C": {
-"audience": "learner",
-"explain": {
-"adult": [
-"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
-"If one population changes, the others that depend on it change too."
-],
-"kid": [
-"Animals need food to live.",
-"If there is less food, fewer animals survive."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Use vocabulary for human impact on the environment — pollution, habitat destruction, deforestation, biodiversity, conservation, renewable energy, non-renewable energy, fossil fuel, carbon footprint, sustainability,….",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "a-b",
-"explain": "{a} − {b} = {=a-b} frogs.",
-"hint": "Subtract.",
-"id": "m1",
-"params": {
-"a": [
-30,
-90
-],
-"b": [
-5,
-25
-]
-},
-"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
-"type": "numeric"
-},
-{
-"answer": "k*10",
-"explain": "{=k*100} ÷ 10 = {=k*10} J.",
-"hint": "Divide by 10.",
-"id": "m2",
-"params": {
-"k": [
-1,
-9
-]
-},
-"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Grass",
-"Rabbit",
-"Fox"
-],
-"explain": "Grass uses sunlight to make food.",
-"hint": "It makes its own food.",
-"id": "m3",
-"prompt": "In 'grass → rabbit → fox', what is the producer?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Human impact on environments",
-"Simple Food Chains",
-"Changing Environments"
-],
-"explain": "That describes 'Human impact on environments'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Use vocabulary for human impact on the environment — pollution, habitat destruction, deforestation, biodiversity,…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Natural resources",
-"Simple Food Chains",
-"Changing Environments"
-],
-"explain": "'Human impact on environments' leads on to 'Natural resources'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'Human impact on environments' help you learn next?",
 "type": "mc"
 },
 {
@@ -2094,18 +815,1258 @@
 {
 "answer": 0,
 "choices": [
-"Use vocabulary for human impact on the environment — pollution, habitat destruction, deforestation, biodiversity, conservation, renewable…",
-"Describe how animals obtain their food from plants and other animals, using the idea of a…",
-"Recognise that environments can change and that this can sometimes pose dangers and challenges to living…"
+"Herbivores, Carnivores & Omnivores",
+"Ecology Vocabulary",
+"The Carbon Cycle"
 ],
-"explain": "'Human impact on environments' is about: Use vocabulary for human impact on the environment — pollution, habitat destruction, deforestation, biodiversity, conservation, renewable….",
-"hint": "Read the topic title carefully.",
+"explain": "'Simple Food Chains' builds on 'Herbivores, Carnivores & Omnivores'.",
+"hint": "What does this topic build on?",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Human impact on environments'?",
+"prompt": "Which topic should you learn before 'Simple Food Chains'?",
+"type": "mc"
+}
+],
+"quality": 80,
+"status": "auto-starter",
+"title": "Simple Food Chains",
+"topicId": "mt_EygMHKs8Ed",
+"visual": {
+"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
+"opts": {
+"food": "grass",
+"pred": "Foxes",
+"prey": "Rabbits"
+},
+"type": "ecolab"
+},
+"worked": {
+"steps": [
+"Start from what you know: Herbivores, Carnivores & Omnivores.",
+"The new idea: Describe how animals obtain their food from plants and other animals, using the idea of a simple food….",
+"Fewer foxes means fewer rabbits are eaten.",
+"Next, this helps with: Food Chains & Energy Transfer."
+],
+"title": "What happens if the foxes disappear?, for 'Simple Food Chains'"
+}
+},
+"mt_Fw0bbM1e_g": {
+"audience": "family",
+"explain": {
+"adult": [
+"If one population changes, the others that depend on it change too.",
+"It leads to Habitats & Basic Needs.",
+"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together."
+],
+"kid": [
+"Animals need food to live.",
+"If there is less food, fewer animals survive."
+]
+},
+"familyTip": "Try the lab together, then ask: what changed, and why?",
+"keyIdea": "Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland, ocean, desert, rainforest, pond — and use terms….",
+"mastery": {
+"draw": 3,
+"passMark": 2,
+"pool": [
+{
+"answer": "k*10",
+"explain": "{=k*100} ÷ 10 = {=k*10} J.",
+"hint": "Divide by 10.",
+"id": "m1",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Grass",
+"Rabbit",
+"Fox"
+],
+"explain": "Grass uses sunlight to make food.",
+"hint": "It makes its own food.",
+"id": "m2",
+"prompt": "In 'grass → rabbit → fox', what is the producer?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"microhabitat",
+"sustainability",
+"relationship"
+],
+"explain": "The missing word is 'microhabitat'.",
+"hint": "Which word fits the topic?",
+"id": "m3",
+"prompt": "Fill the gap: 'Name and use vocabulary for where living things are found — habitat, environment, _____, conditions, woodland, ocean, desert, rainforest, pond — and…'",
+"type": "mc"
+},
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m4",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "m5",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Quick check: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+},
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m6",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Recap: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "p1",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "p2",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+},
+{
+"answer": "a-b",
+"explain": "{a} − {b} = {=a-b} frogs.",
+"hint": "Subtract.",
+"id": "p3",
+"params": {
+"a": [
+30,
+90
+],
+"b": [
+5,
+25
+]
+},
+"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
+"type": "numeric"
+}
+],
+"quality": 94,
+"status": "auto-starter",
+"title": "Habitat Vocabulary",
+"topicId": "mt_Fw0bbM1e_g",
+"visual": {
+"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
+"opts": {
+"food": "grass",
+"pred": "Foxes",
+"prey": "Rabbits"
+},
+"type": "ecolab"
+},
+"worked": {
+"steps": [
+"The new idea: Name and use vocabulary for where living things are found — habitat, environment, microhabitat, conditions, woodland, ocean, desert,….",
+"Fewer foxes means fewer rabbits are eaten.",
+"Next, this helps with: Habitats & Basic Needs."
+],
+"title": "What happens if the foxes disappear?, for 'Habitat Vocabulary'"
+}
+},
+"mt_M7XhBBzYof": {
+"audience": "learner",
+"explain": {
+"adult": [
+"It leads to Matter Cycling in Ecosystems.",
+"If one population changes, the others that depend on it change too."
+],
+"kid": [
+"Animals need food to live.",
+"If there is less food, fewer animals survive."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore, decomposer, food chain, food web, nutrient cycle —….",
+"mastery": {
+"draw": 3,
+"passMark": 2,
+"pool": [
+{
+"answer": "k*10",
+"explain": "{=k*100} ÷ 10 = {=k*10} J.",
+"hint": "Divide by 10.",
+"id": "m1",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Grass",
+"Rabbit",
+"Fox"
+],
+"explain": "Grass uses sunlight to make food.",
+"hint": "It makes its own food.",
+"id": "m2",
+"prompt": "In 'grass → rabbit → fox', what is the producer?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Matter Cycling in Ecosystems",
+"Habitat Vocabulary",
+"Reading Food Web Diagrams"
+],
+"explain": "'Ecology Vocabulary' leads on to 'Matter Cycling in Ecosystems'.",
+"hint": "What comes after this topic?",
+"id": "m3",
+"prompt": "Which topic does 'Ecology Vocabulary' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"relationships",
+"decomposers",
+"photosynthesis"
+],
+"explain": "The missing word is 'relationships'.",
+"hint": "Which word fits the topic?",
+"id": "m4",
+"prompt": "Fill the gap: 'Use vocabulary for feeding _____ and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore, decomposer, food chain, food web, nutrient…'",
+"type": "mc"
+},
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m5",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "m6",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Quick check: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "p1",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "p2",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+},
+{
+"answer": "a-b",
+"explain": "{a} − {b} = {=a-b} frogs.",
+"hint": "Subtract.",
+"id": "p3",
+"params": {
+"a": [
+30,
+90
+],
+"b": [
+5,
+25
+]
+},
+"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
+"type": "numeric"
+}
+],
+"quality": 87,
+"status": "auto-starter",
+"title": "Ecology Vocabulary",
+"topicId": "mt_M7XhBBzYof",
+"visual": {
+"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
+"opts": {
+"food": "grass",
+"pred": "Foxes",
+"prey": "Rabbits"
+},
+"type": "ecolab"
+},
+"worked": {
+"steps": [
+"The new idea: Use vocabulary for feeding relationships and ecological roles — producer, consumer, predator, prey, herbivore, carnivore, omnivore, decomposer, food….",
+"Fewer foxes means fewer rabbits are eaten.",
+"Next, this helps with: Matter Cycling in Ecosystems."
+],
+"title": "What happens if the foxes disappear?, for 'Ecology Vocabulary'"
+}
+},
+"mt_Sa48W7KXB5": {
+"audience": "family",
+"explain": {
+"adult": [
+"This topic asks you to explore and compare the differences between things that are living, dead.",
+"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
+"It builds on Common Plants & Trees and leads to Fossils as Evidence.",
+"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity."
+],
+"kid": [
+"The Earth goes round the Sun.",
+"The Moon goes round the Earth."
+]
+},
+"familyTip": "Try the lab together, then ask: what changed, and why?",
+"keyIdea": "Explore and compare the differences between things that are living, dead.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "27*n",
+"explain": "27 × {n} = {=27*n} days.",
+"hint": "Multiply.",
+"id": "m1",
+"params": {
+"n": [
+2,
+9
+]
+},
+"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
+"type": "numeric"
+},
+{
+"answer": "25*n",
+"explain": "25 × {n} = {=25*n} hours.",
+"hint": "Multiply.",
+"id": "m2",
+"params": {
+"n": [
+2,
+9
+]
+},
+"prompt": "A day on Mars is about 25 hours. How many hours in {n} Mars days?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Gravity",
+"Wind",
+"Magnetism"
+],
+"explain": "The Sun's gravity holds the planets in orbit.",
+"hint": "A pull towards the Sun.",
+"id": "m3",
+"prompt": "What keeps the planets in orbit?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Comparing living, dead",
+"Constructing food webs and understanding interdependence requires food web, producer, decomposer vocabulary",
+"KS3 food webs and ecosystem interdependence extends KS2 introduction to food chains with producers,…"
+],
+"explain": "Because: Comparing living, dead.",
+"hint": "Think about what you need first.",
+"id": "m4",
+"prompt": "Why does 'Living, Dead & Never Alive' build on 'Living Things Vocabulary'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Fossils as Evidence",
+"Common Plants & Trees",
+"Habitat Vocabulary"
+],
+"explain": "'Living, Dead & Never Alive' leads on to 'Fossils as Evidence'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Living, Dead & Never Alive' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"differences",
+"organisms",
+"relationships"
+],
+"explain": "The missing word is 'differences'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Explore and compare the _____ between things that are living, dead'",
+"type": "mc"
+},
+{
+"answer": "60*h/t",
+"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
+"hint": "How many in one hour first?",
+"id": "m7",
+"params": {
+"h": [
+2,
+6
+],
+"t": [
+2,
+15
+]
+},
+"prompt": "Quick check: A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
+"type": "numeric",
+"where": "60%t==0"
+}
+]
+},
+"practice": [
+{
+"answer": "60*h/t",
+"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
+"hint": "How many in one hour first?",
+"id": "p1",
+"params": {
+"h": [
+2,
+6
+],
+"t": [
+2,
+15
+]
+},
+"prompt": "A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
+"type": "numeric",
+"where": "60%t==0"
+},
+{
+"answer": "v*t",
+"explain": "{v} × {t} = {=v*t} km.",
+"hint": "Multiply.",
+"id": "p2",
+"params": {
+"t": [
+10,
+60
+],
+"v": [
+5,
+12
+]
+},
+"prompt": "A rocket travels {v} km each second. How far in {t} s?",
+"type": "numeric",
+"where": "t%10==0"
+},
+{
+"answer": 0,
+"choices": [
+"Living Things Vocabulary",
+"Food Webs & Interdependence",
+"Human impact on environments"
+],
+"explain": "'Living, Dead & Never Alive' builds on 'Living Things Vocabulary'.",
+"hint": "What does this topic build on?",
+"id": "p3",
+"prompt": "Which topic should you learn before 'Living, Dead & Never Alive'?",
 "type": "mc"
 }
 ],
 "quality": 89,
+"status": "auto-starter",
+"title": "Living, Dead & Never Alive",
+"topicId": "mt_Sa48W7KXB5",
+"visual": {
+"caption": "Sort the planets into rocky inner planets and giant outer planets.",
+"opts": {
+"bins": [
+"Rocky inner planet",
+"Giant outer planet"
+],
+"items": [
+[
+"Mercury",
+0
+],
+[
+"Venus",
+0
+],
+[
+"Earth",
+0
+],
+[
+"Mars",
+0
+],
+[
+"Jupiter",
+1
+],
+[
+"Saturn",
+1
+],
+[
+"Uranus",
+1
+],
+[
+"Neptune",
+1
+]
+]
+},
+"type": "sorter"
+},
+"worked": {
+"steps": [
+"Start from what you know: Common Plants & Trees.",
+"The new idea: Explore and compare the differences between things that are living, dead.",
+"The Earth spins on its axis.",
+"Next, this helps with: Fossils as Evidence."
+],
+"title": "Why do we have day and night?, for 'Living, Dead & Never Alive'"
+}
+},
+"mt_URTJbS3hhs": {
+"audience": "learner",
+"explain": {
+"adult": [
+"If one population changes, the others that depend on it change too.",
+"It builds on Ecology Vocabulary and leads to The Carbon Cycle.",
+"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together."
+],
+"kid": [
+"Animals need food to live.",
+"If there is less food, fewer animals survive."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Construct and interpret food webs showing the interdependence of organisms in an ecosystem, explaining how a change in one population affects others.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "a-b",
+"explain": "{a} − {b} = {=a-b} frogs.",
+"hint": "Subtract.",
+"id": "m1",
+"params": {
+"a": [
+30,
+90
+],
+"b": [
+5,
+25
+]
+},
+"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
+"type": "numeric"
+},
+{
+"answer": "k*10",
+"explain": "{=k*100} ÷ 10 = {=k*10} J.",
+"hint": "Divide by 10.",
+"id": "m2",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Grass",
+"Rabbit",
+"Fox"
+],
+"explain": "Grass uses sunlight to make food.",
+"hint": "It makes its own food.",
+"id": "m3",
+"prompt": "In 'grass → rabbit → fox', what is the producer?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Constructing food webs and understanding interdependence requires food web, producer, decomposer vocabulary",
+"KS3 carbon cycle extends KS2 model of matter movement among plants, animals, decomposers and…",
+"The carbon cycle's return of CO₂ to the atmosphere via living things is through…"
+],
+"explain": "Because: Constructing food webs and understanding interdependence requires food web, producer, decomposer vocabulary.",
+"hint": "Think about what you need first.",
+"id": "m4",
+"prompt": "Why does 'Food Webs & Interdependence' build on 'Ecology Vocabulary'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The Carbon Cycle",
+"Ecology Vocabulary",
+"Habitat Vocabulary"
+],
+"explain": "'Food Webs & Interdependence' leads on to 'The Carbon Cycle'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Food Webs & Interdependence' help you learn next?",
+"type": "mc"
+},
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m6",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "m7",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Quick check: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "p1",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "p2",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Ecology Vocabulary",
+"The Carbon Cycle",
+"Chromosomes, Genes & DNA"
+],
+"explain": "'Food Webs & Interdependence' builds on 'Ecology Vocabulary'.",
+"hint": "What does this topic build on?",
+"id": "p3",
+"prompt": "Which topic should you learn before 'Food Webs & Interdependence'?",
+"type": "mc"
+}
+],
+"quality": 81,
+"status": "auto-starter",
+"title": "Food Webs & Interdependence",
+"topicId": "mt_URTJbS3hhs",
+"visual": {
+"caption": "Change the birth and death rates. Can rabbits and foxes both survive?",
+"opts": {
+"food": "grass",
+"pred": "Foxes",
+"prey": "Rabbits"
+},
+"type": "ecolab"
+},
+"worked": {
+"steps": [
+"Start from what you know: Ecology Vocabulary.",
+"The new idea: Construct and interpret food webs showing the interdependence of organisms in an ecosystem, explaining how a change in….",
+"Fewer foxes means fewer rabbits are eaten.",
+"Next, this helps with: The Carbon Cycle."
+],
+"title": "What happens if the foxes disappear?, for 'Food Webs & Interdependence'"
+}
+},
+"mt_Wyd-l-6H7G": {
+"audience": "learner",
+"explain": {
+"adult": [
+"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
+"It builds on Habitats & Basic Needs and leads to Endangered & Extinct Species.",
+"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons."
+],
+"kid": [
+"The Earth goes round the Sun.",
+"The Moon goes round the Earth."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Recognise that environments can change and that this can sometimes pose dangers and challenges to living things.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "27*n",
+"explain": "27 × {n} = {=27*n} days.",
+"hint": "Multiply.",
+"id": "m1",
+"params": {
+"n": [
+2,
+9
+]
+},
+"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
+"type": "numeric"
+},
+{
+"answer": "25*n",
+"explain": "25 × {n} = {=25*n} hours.",
+"hint": "Multiply.",
+"id": "m2",
+"params": {
+"n": [
+2,
+9
+]
+},
+"prompt": "A day on Mars is about 25 hours. How many hours in {n} Mars days?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Gravity",
+"Wind",
+"Magnetism"
+],
+"explain": "The Sun's gravity holds the planets in orbit.",
+"hint": "A pull towards the Sun.",
+"id": "m3",
+"prompt": "What keeps the planets in orbit?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must understand how habitats support organisms before understanding what happens when they change",
+"KS3 carbon cycle extends KS2 model of matter movement among plants, animals, decomposers and…",
+"The carbon cycle's return of CO₂ to the atmosphere via living things is through…"
+],
+"explain": "Because: Must understand how habitats support organisms before understanding what happens when they change.",
+"hint": "Think about what you need first.",
+"id": "m4",
+"prompt": "Why does 'Changing Environments' build on 'Habitats & Basic Needs'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Endangered & Extinct Species",
+"Habitats & Basic Needs",
+"Simple Food Chains"
+],
+"explain": "'Changing Environments' leads on to 'Endangered & Extinct Species'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Changing Environments' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"challenges",
+"photosynthesis",
+"decomposers"
+],
+"explain": "The missing word is 'challenges'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Recognise that environments can change and that this can sometimes pose dangers and _____ to living things'",
+"type": "mc"
+},
+{
+"answer": "60*h/t",
+"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
+"hint": "How many in one hour first?",
+"id": "m7",
+"params": {
+"h": [
+2,
+6
+],
+"t": [
+2,
+15
+]
+},
+"prompt": "Quick check: A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
+"type": "numeric",
+"where": "60%t==0"
+}
+]
+},
+"practice": [
+{
+"answer": "60*h/t",
+"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
+"hint": "How many in one hour first?",
+"id": "p1",
+"params": {
+"h": [
+2,
+6
+],
+"t": [
+2,
+15
+]
+},
+"prompt": "A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
+"type": "numeric",
+"where": "60%t==0"
+},
+{
+"answer": "v*t",
+"explain": "{v} × {t} = {=v*t} km.",
+"hint": "Multiply.",
+"id": "p2",
+"params": {
+"t": [
+10,
+60
+],
+"v": [
+5,
+12
+]
+},
+"prompt": "A rocket travels {v} km each second. How far in {t} s?",
+"type": "numeric",
+"where": "t%10==0"
+},
+{
+"answer": 0,
+"choices": [
+"Habitats & Basic Needs",
+"The Carbon Cycle",
+"Food Webs & Interdependence"
+],
+"explain": "'Changing Environments' builds on 'Habitats & Basic Needs'.",
+"hint": "What does this topic build on?",
+"id": "p3",
+"prompt": "Which topic should you learn before 'Changing Environments'?",
+"type": "mc"
+}
+],
+"quality": 79,
+"status": "auto-starter",
+"title": "Changing Environments",
+"topicId": "mt_Wyd-l-6H7G",
+"visual": {
+"caption": "Sort the planets into rocky inner planets and giant outer planets.",
+"opts": {
+"bins": [
+"Rocky inner planet",
+"Giant outer planet"
+],
+"items": [
+[
+"Mercury",
+0
+],
+[
+"Venus",
+0
+],
+[
+"Earth",
+0
+],
+[
+"Mars",
+0
+],
+[
+"Jupiter",
+1
+],
+[
+"Saturn",
+1
+],
+[
+"Uranus",
+1
+],
+[
+"Neptune",
+1
+]
+]
+},
+"type": "sorter"
+},
+"worked": {
+"steps": [
+"Start from what you know: Habitats & Basic Needs.",
+"The new idea: Recognise that environments can change and that this can sometimes pose dangers and challenges to living things.",
+"The Earth spins on its axis.",
+"Next, this helps with: Endangered & Extinct Species."
+],
+"title": "Why do we have day and night?, for 'Changing Environments'"
+}
+},
+"mt_YB0qF5KX9C": {
+"audience": "learner",
+"explain": {
+"adult": [
+"If one population changes, the others that depend on it change too.",
+"It leads to Natural resources.",
+"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together."
+],
+"kid": [
+"Animals need food to live.",
+"If there is less food, fewer animals survive."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Use vocabulary for human impact on the environment — pollution, habitat destruction, deforestation, biodiversity, conservation, renewable energy, non-renewable energy, fossil fuel, carbon footprint, sustainability,….",
+"mastery": {
+"draw": 3,
+"passMark": 2,
+"pool": [
+{
+"answer": "k*10",
+"explain": "{=k*100} ÷ 10 = {=k*10} J.",
+"hint": "Divide by 10.",
+"id": "m1",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Plants store {=k*100} J. How much energy reaches the animals that eat them (1/10)?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Grass",
+"Rabbit",
+"Fox"
+],
+"explain": "Grass uses sunlight to make food.",
+"hint": "It makes its own food.",
+"id": "m2",
+"prompt": "In 'grass → rabbit → fox', what is the producer?",
+"type": "mc"
+},
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m3",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "m4",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Quick check: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+},
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m5",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Recap: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "m6",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Recap: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "p1",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "p2",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
+},
+{
+"answer": "a-b",
+"explain": "{a} − {b} = {=a-b} frogs.",
+"hint": "Subtract.",
+"id": "p3",
+"params": {
+"a": [
+30,
+90
+],
+"b": [
+5,
+25
+]
+},
+"prompt": "A pond has {a} frogs. {b} are eaten by herons. How many are left?",
+"type": "numeric"
+}
+],
+"quality": 82,
 "status": "auto-starter",
 "title": "Human impact on environments",
 "topicId": "mt_YB0qF5KX9C",
@@ -2120,20 +2081,20 @@
 },
 "worked": {
 "steps": [
+"The new idea: Use vocabulary for human impact on the environment — pollution, habitat destruction, deforestation, biodiversity, conservation, renewable energy, non-renewable….",
 "Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
+"Next, this helps with: Natural resources."
 ],
-"title": "What happens if the foxes disappear?"
+"title": "What happens if the foxes disappear?, for 'Human impact on environments'"
 }
 },
 "mt_cM8YS6NXqi": {
 "audience": "family",
 "explain": {
 "adult": [
-"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
 "If one population changes, the others that depend on it change too.",
-"This topic asks you to identify that most living things live in habitats to which they are suited and describe how habitats provide for basic needs and…."
+"It builds on Where Are the Poles? and leads to Simple Food Chains.",
+"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together."
 ],
 "kid": [
 "Animals need food to live.",
@@ -2194,26 +2155,13 @@
 {
 "answer": 0,
 "choices": [
-"Habitats & Basic Needs",
-"Matter Cycling in Ecosystems",
-"Chromosomes, Genes & DNA"
-],
-"explain": "That describes 'Habitats & Basic Needs'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Identify that most living things live in habitats to which they are suited and…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Describing how habitats provide for basic needs requires habitat, environment, conditions, shelter vocabulary",
-"Modelling movement of matter through ecosystems requires nutrient cycle and decomposer vocabulary",
-"Biodiversity/ecosystems enriched by curriculum matter movement in ecosystems"
+"Must know carnivore/herbivore/omnivore to understand food chains",
+"Must know about habitats and interdependence before learning food chains"
 ],
 "explain": "Because: Describing how habitats provide for basic needs requires habitat, environment, conditions, shelter vocabulary.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Habitats & Basic Needs' build on 'Habitat Vocabulary'?",
 "type": "mc"
 },
@@ -2222,11 +2170,11 @@
 "choices": [
 "Simple Food Chains",
 "Where Are the Poles?",
-"Chromosomes, Genes & DNA"
+"Reading Food Web Diagrams"
 ],
 "explain": "'Habitats & Basic Needs' leads on to 'Simple Food Chains'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Habitats & Basic Needs' help you learn next?",
 "type": "mc"
 },
@@ -2234,7 +2182,7 @@
 "answer": "k*100",
 "explain": "{=k*1000} ÷ 10 = {=k*100} J.",
 "hint": "Divide by 10.",
-"id": "m7",
+"id": "m6",
 "params": {
 "k": [
 1,
@@ -2242,6 +2190,28 @@
 ]
 },
 "prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "m7",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Quick check: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
 "type": "numeric"
 }
 ]
@@ -2286,31 +2256,18 @@
 {
 "answer": 0,
 "choices": [
-"Identify that most living things live in habitats to which they are suited and describe how…",
-"Develop a model to describe the movement of matter among plants, animals, decomposers",
-"Describe the relationship between chromosomes, genes"
-],
-"explain": "'Habitats & Basic Needs' is about: Identify that most living things live in habitats to which they are suited and describe how….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Habitats & Basic Needs'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Habitat Vocabulary",
-"Matter Cycling in Ecosystems",
-"Chromosomes, Genes & DNA"
+"Changing Environments",
+"Reading Food Web Diagrams"
 ],
 "explain": "'Habitats & Basic Needs' builds on 'Habitat Vocabulary'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Habitats & Basic Needs'?",
 "type": "mc"
 }
 ],
-"quality": 100,
+"quality": 84,
 "status": "auto-starter",
 "title": "Habitats & Basic Needs",
 "topicId": "mt_cM8YS6NXqi",
@@ -2325,20 +2282,21 @@
 },
 "worked": {
 "steps": [
+"Start from what you know: Where Are the Poles?.",
+"The new idea: Identify that most living things live in habitats to which they are suited and describe how habitats provide….",
 "Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
+"Next, this helps with: Simple Food Chains."
 ],
-"title": "What happens if the foxes disappear?"
+"title": "What happens if the foxes disappear?, for 'Habitats & Basic Needs'"
 }
 },
 "mt_oB-L8EVdIP": {
 "audience": "learner",
 "explain": {
 "adult": [
-"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
 "If one population changes, the others that depend on it change too.",
-"This topic is about construct and interpret food chains identifying producers, predators."
+"It builds on Rainforest Food Webs and leads to Matter Cycling in Ecosystems.",
+"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together."
 ],
 "kid": [
 "Animals need food to live.",
@@ -2399,26 +2357,13 @@
 {
 "answer": 0,
 "choices": [
-"Food Chains & Energy Transfer",
-"Changing Environments",
-"The Carbon Cycle"
-],
-"explain": "That describes 'Food Chains & Energy Transfer'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Construct and interpret food chains identifying producers, predators'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Must understand simple food chains before constructing complex ones with producer/predator/prey terminology",
-"Must understand how habitats support organisms before understanding what happens when they change",
-"Food chain knowledge helps understand knock-on effects of environmental change"
+"Reading food web arrows requires the same diagram-reading conventions as circuit diagrams — both…",
+"Knowing plant names helps distinguish living from non-living"
 ],
 "explain": "Because: Must understand simple food chains before constructing complex ones with producer/predator/prey terminology.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Food Chains & Energy Transfer' build on 'Simple Food Chains'?",
 "type": "mc"
 },
@@ -2427,26 +2372,49 @@
 "choices": [
 "Matter Cycling in Ecosystems",
 "Rainforest Food Webs",
-"Changing Environments"
+"Reading Food Web Diagrams"
 ],
 "explain": "'Food Chains & Energy Transfer' leads on to 'Matter Cycling in Ecosystems'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Food Chains & Energy Transfer' help you learn next?",
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"identifying",
-"challenges",
-"photosynthesis"
-],
-"explain": "The missing word is 'identifying'.",
-"hint": "Which word fits the topic?",
+"answer": "k*100",
+"explain": "{=k*1000} ÷ 10 = {=k*100} J.",
+"hint": "Divide by 10.",
+"id": "m6",
+"params": {
+"k": [
+1,
+9
+]
+},
+"prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
 "id": "m7",
-"prompt": "Fill the gap: 'Construct and interpret food chains _____ producers, predators'",
-"type": "mc"
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Quick check: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
+"type": "numeric"
 }
 ]
 },
@@ -2490,31 +2458,18 @@
 {
 "answer": 0,
 "choices": [
-"Construct and interpret food chains identifying producers, predators",
-"Recognise that environments can change and that this can sometimes pose dangers and challenges to living…",
-"Describe the carbon cycle, tracing carbon through photosynthesis, respiration, feeding, decomposition"
-],
-"explain": "'Food Chains & Energy Transfer' is about: Construct and interpret food chains identifying producers, predators.",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Food Chains & Energy Transfer'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Simple Food Chains",
-"The Carbon Cycle",
-"Chromosomes, Genes & DNA"
+"Food Webs & Interdependence",
+"The Carbon Cycle"
 ],
 "explain": "'Food Chains & Energy Transfer' builds on 'Simple Food Chains'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Food Chains & Energy Transfer'?",
 "type": "mc"
 }
 ],
-"quality": 100,
+"quality": 83,
 "status": "auto-starter",
 "title": "Food Chains & Energy Transfer",
 "topicId": "mt_oB-L8EVdIP",
@@ -2529,18 +2484,19 @@
 },
 "worked": {
 "steps": [
+"Start from what you know: Rainforest Food Webs.",
+"The new idea: Construct and interpret food chains identifying producers, predators.",
 "Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
+"Next, this helps with: Matter Cycling in Ecosystems."
 ],
-"title": "What happens if the foxes disappear?"
+"title": "What happens if the foxes disappear?, for 'Food Chains & Energy Transfer'"
 }
 },
 "mt_uVaS12lN1i": {
 "audience": "learner",
 "explain": {
 "adult": [
-"In a food chain energy passes from producers (plants) to consumers; predator and prey numbers rise and fall together.",
+"It builds on Reading and drawing circuit diagrams and leads to Food Webs & Interdependence.",
 "If one population changes, the others that depend on it change too."
 ],
 "kid": [
@@ -2602,26 +2558,13 @@
 {
 "answer": 0,
 "choices": [
-"Reading Food Web Diagrams",
-"Food Chains & Energy Transfer",
-"Chromosomes, Genes & DNA"
-],
-"explain": "That describes 'Reading Food Web Diagrams'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Read and interpret food web diagrams — identify producers, primary and secondary consumers'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Reading food web arrows requires the same diagram-reading conventions as circuit diagrams — both…",
-"Rainforest food webs enrich curriculum food chains topic (exploratory age 7 -> curriculum age…",
-"Nutrition knowledge supports understanding why animals occupy different trophic levels"
+"DNA is housed in the nucleus of cells — the cell as fundamental unit…",
+"Must understand how habitats support organisms before understanding what happens when they change"
 ],
 "explain": "Because: Reading food web arrows requires the same diagram-reading conventions as circuit diagrams — both….",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Reading Food Web Diagrams' build on 'Reading and drawing circuit diagrams'?",
 "type": "mc"
 },
@@ -2630,11 +2573,11 @@
 "choices": [
 "Food Webs & Interdependence",
 "Reading and drawing circuit diagrams",
-"Food Chains & Energy Transfer"
+"Chromosomes, Genes & DNA"
 ],
 "explain": "'Reading Food Web Diagrams' leads on to 'Food Webs & Interdependence'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Reading Food Web Diagrams' help you learn next?",
 "type": "mc"
 },
@@ -2642,7 +2585,7 @@
 "answer": "k*100",
 "explain": "{=k*1000} ÷ 10 = {=k*100} J.",
 "hint": "Divide by 10.",
-"id": "m7",
+"id": "m6",
 "params": {
 "k": [
 1,
@@ -2650,6 +2593,28 @@
 ]
 },
 "prompt": "Quick check: A food chain passes on about 1/10 of the energy at each step. Plants store {=k*1000} J. How much reaches the rabbits?",
+"type": "numeric"
+},
+{
+"answer": "b*c",
+"explain": "{c} × {b} = {=b*c} rabbits.",
+"hint": "Foxes × rabbits each.",
+"id": "m7",
+"params": {
+"a": [
+50,
+200
+],
+"b": [
+2,
+6
+],
+"c": [
+2,
+8
+]
+},
+"prompt": "Quick check: There are {a} rabbits and each fox eats {b} a month. How many rabbits do {c} foxes eat in a month?",
 "type": "numeric"
 }
 ]
@@ -2694,31 +2659,18 @@
 {
 "answer": 0,
 "choices": [
-"Read and interpret food web diagrams — identify producers, primary and secondary consumers",
-"Construct and interpret food chains identifying producers, predators",
-"Describe the relationship between chromosomes, genes"
-],
-"explain": "'Reading Food Web Diagrams' is about: Read and interpret food web diagrams — identify producers, primary and secondary consumers.",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Reading Food Web Diagrams'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Reading and drawing circuit diagrams",
 "Chromosomes, Genes & DNA",
 "Food Webs & Interdependence"
 ],
 "explain": "'Reading Food Web Diagrams' builds on 'Reading and drawing circuit diagrams'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Reading Food Web Diagrams'?",
 "type": "mc"
 }
 ],
-"quality": 94,
+"quality": 82,
 "status": "auto-starter",
 "title": "Reading Food Web Diagrams",
 "topicId": "mt_uVaS12lN1i",
@@ -2733,11 +2685,12 @@
 },
 "worked": {
 "steps": [
+"Start from what you know: Reading and drawing circuit diagrams.",
+"The new idea: Read and interpret food web diagrams — identify producers, primary and secondary consumers.",
 "Fewer foxes means fewer rabbits are eaten.",
-"Rabbit numbers grow until grass runs short.",
-"Then rabbits starve and their numbers fall again."
+"Next, this helps with: Food Webs & Interdependence."
 ],
-"title": "What happens if the foxes disappear?"
+"title": "What happens if the foxes disappear?, for 'Reading Food Web Diagrams'"
 }
 }
 }

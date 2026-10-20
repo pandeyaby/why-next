@@ -32,7 +32,7 @@ function panel(id){const les=LEARN.L[id];if(!les)return(typeof WN!=='undefined'&
  ${due?`<div class="review" id="rbox"><h3 class="lsub">🔁 Quick review</h3><p class="small">You mastered this a while ago. Two quick questions keep it fresh.</p>${list('r')}<p id="rres" role="status" aria-live="polite"></p></div>`:''}
  ${LEARN.isNext(id)?`<p class="why">${esc(LEARN.why(id))}</p>`:''}${st!=='mastered'&&LEARN.known(id)?`<p class="why">✓ ${LEARN.assumed(id)?'You probably know this already (from your age band)':'You marked this as known'}. Use it as a refresher, or <button type="button" class="linkish" data-act="known">mark it as not known</button>.</p>`:''}
  <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${gloss(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${gloss(p)}</p>`).join('')}${les.worked?`<div class="worked"><h3 class="lsub">Worked example: ${esc(les.worked.title)}</h3><ol>${les.worked.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div>`:''}
- ${les.visual?'<div id="vbox" class="vbox"></div>':''}
+ ${les.visual?'<div id="vbox" class="vbox"></div>':''}${les.lab?'<h3 class="lsub">🧪 Lab: explore and take the challenges</h3><div id="lbox" class="vbox"></div>':''}
  ${les.familyTip?`<p class="tip"><b>${fam?'Try it at home':'Try this'}:</b> ${esc(les.familyTip)}</p>`:''}
  <h3 class="lsub">2 · Practise <span class="muted small" id="pScore"></span></h3><div id="pbox">${list('p')}</div>
  <button type="button" class="lbtn ghost" data-act="newp">New practice questions</button>
@@ -47,7 +47,7 @@ function dragify(ol){let li=null;/* capture on the list: moving a captured <li> 
   if(p&&ev.clientY<p.getBoundingClientRect().top+p.offsetHeight/2)p.before(li);else if(n&&ev.clientY>n.getBoundingClientRect().top+n.offsetHeight/2)n.after(li)};
  ol.onpointerup=ol.onpointercancel=ev=>{if(!li)return;li.classList.remove('dragging');li=null;try{ol.releasePointerCapture(ev.pointerId)}catch(x){}}}
 function wire(root){root.querySelectorAll('.numin').forEach(inp=>inp.onkeydown=e=>{if(e.key==='Enter')inp.nextElementSibling.click()});root.querySelectorAll('.ord').forEach(dragify)}
-function mount(id){const root=document.getElementById('learn');const vb=document.getElementById('vbox'),les0=LEARN.L[id];VIS.show(vb,vb&&les0&&les0.visual||null);if(!root)return;const les=LEARN.L[id];wire(root);
+function mount(id){const root=document.getElementById('learn');const vb=document.getElementById('vbox'),les0=LEARN.L[id];VIS.show(vb,vb&&les0&&les0.visual||null);VIS.show2(document.getElementById('lbox'),les0&&les0.lab);if(!root)return;const les=LEARN.L[id];wire(root);
  root.onclick=e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.lv){LEARN.setLevel(b.dataset.lv);select(id);document.getElementById('learn').focus();return}
   if(b.dataset.act==='known'){LEARN.setProg(id,{status:LEARN.known(id)?'unknown':'known'});LEARN.update();select(id);return}

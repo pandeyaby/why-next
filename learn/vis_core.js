@@ -44,6 +44,7 @@ function mount(host,spec){const f=T[spec.type];if(!f){host.innerHTML='';return n
  return {fig,cue(){const t=ctx.cueEl||stage;const els=Array.isArray(t)?t:[t];els.forEach(x=>{x.classList.remove('vis-cue');void x.getBoundingClientRect();x.classList.add('vis-cue')});
    setTimeout(()=>els.forEach(x=>x.classList.remove('vis-cue')),2600);},
   destroy(){ctx.stops.forEach(s=>s())}}}
-let cur=null;
-function show(host,spec){if(cur)cur.destroy();cur=spec?mount(host,spec):null;return cur}
-return{reg:(n,f)=>{T[n]=f},types:()=>Object.keys(T),mount,show,cue:()=>cur&&cur.cue(),current:()=>cur,reduced,nf}})();
+let cur=null,cur2=null;
+function show(host,spec){if(cur)cur.destroy();if(cur2){cur2.destroy();cur2=null}cur=spec?mount(host,spec):null;return cur}
+function show2(host,spec){if(cur2)cur2.destroy();cur2=host&&spec?mount(host,spec):null;return cur2}
+return{reg:(n,f)=>{T[n]=f},types:()=>Object.keys(T),mount,show,show2,cue:()=>cur&&cur.cue(),current:()=>cur,reduced,nf}})();

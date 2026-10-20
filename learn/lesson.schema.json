@@ -212,6 +212,86 @@
    "type": "integer",
    "minimum": 0,
    "maximum": 100
+  },
+  "lab": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "type",
+    "caption",
+    "opts"
+   ],
+   "description": "Optional second interactive: a lab with sandbox and challenges, shown after the main visual.",
+   "properties": {
+    "type": {
+     "enum": [
+      "counters",
+      "tenframe",
+      "array",
+      "share",
+      "fracbar",
+      "numline",
+      "balance",
+      "bidmas",
+      "longmul",
+      "longdiv",
+      "plot",
+      "rate",
+      "power",
+      "particles",
+      "atom",
+      "ptable",
+      "balancer",
+      "area",
+      "sorter",
+      "phscale",
+      "energy",
+      "placevalue",
+      "percent",
+      "thermo",
+      "journey",
+      "formula",
+      "coords",
+      "wholes",
+      "expo",
+      "roots",
+      "grid",
+      "symbols",
+      "sealed",
+      "circuit",
+      "light",
+      "vlt",
+      "polyterms",
+      "tiles",
+      "vectors",
+      "states",
+      "separate",
+      "matlab",
+      "objects",
+      "squares",
+      "slopes",
+      "problab",
+      "statlab",
+      "numzoom",
+      "graphlab",
+      "geolab",
+      "matrixlab",
+      "gaslab",
+      "reactlab",
+      "wavelab",
+      "forcelab",
+      "ecolab"
+     ]
+    },
+    "caption": {
+     "type": "string",
+     "minLength": 10,
+     "maxLength": 160
+    },
+    "opts": {
+     "type": "object"
+    }
+   }
   }
  },
  "definitions": {

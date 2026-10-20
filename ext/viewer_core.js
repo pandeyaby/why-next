@@ -7,10 +7,10 @@ const WN=(()=>{const C=window.WN_CORE,done=new Set(),pend=new Map();
  const data={nodes,edges,clusters:{}};
  function chunk(k,x){for(const[i,de,ev,st]of x.n)Object.assign(nodes[i],{desc:de,ev,st});for(const[i,r]of x.r)edges[i].r=r;Object.assign(data.clusters,x.c);done.add(k)}
  function one(k){if(done.has(k))return Promise.resolve();if(!pend.has(k))pend.set(k,new Promise((ok,no)=>{const s=document.createElement('script');
-  s.src=`wn/d${k}.js?v=${C.v[k]}`;s.onload=ok;s.onerror=()=>{pend.delete(k);no(new Error('could not load wn/d'+k+'.js'))};document.head.appendChild(s)}));return pend.get(k)}
+  s.src=`${window.WN_BASE||""}wn/d${k}.js?v=${C.v[k]}`;s.onload=ok;s.onerror=()=>{pend.delete(k);no(new Error('could not load wn/d'+k+'.js'))};document.head.appendChild(s)}));return pend.get(k)}
  function les(k,x){Object.assign(store,x);if(typeof LEARN!=='undefined')Object.assign(LEARN.L,x);ldone.add(k)}
  function lone(k){if(ldone.has(k)||!C.lv[k])return Promise.resolve();if(!lpend.has(k))lpend.set(k,new Promise((ok,no)=>{const s=document.createElement('script');
-  s.src=`wn/l${k}.js?v=${C.lv[k]}`;s.onload=ok;s.onerror=()=>{lpend.delete(k);no(new Error('could not load wn/l'+k+'.js'))};document.head.appendChild(s)}));return lpend.get(k)}
+  s.src=`${window.WN_BASE||""}wn/l${k}.js?v=${C.lv[k]}`;s.onload=ok;s.onerror=()=>{lpend.delete(k);no(new Error('could not load wn/l'+k+'.js'))};document.head.appendChild(s)}));return lpend.get(k)}
  const api={data,chunk,les,store,lload:lone,flag:id=>(byId.get(id)||{}).ls||0,has:ks=>ks.every(k=>done.has(k)),load:ks=>Promise.all(ks.map(one)),all:false,
   loadAll(){return api.load(C.v.map((_,k)=>k)).then(()=>{api.all=true})}};return api})();
 const DATA=WN.data;

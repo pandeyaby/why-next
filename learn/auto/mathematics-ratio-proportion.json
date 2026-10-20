@@ -3,13 +3,15 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
 "When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to use scale factors to interpret and create scale diagrams and maps, calculating real-life distances from map measurements and vice versa."
+"For example, 24 shared in the ratio 1 : 3 gives 6 and 18.",
+"It builds on Scale and similar shapes and leads to Why slope is constant: similar triangles.",
+"A ratio a : b compares parts; the total number of parts is a + b."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 24 shared in the ratio 1 : 3 gives 6 and 18."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -75,26 +77,13 @@
 {
 "answer": 0,
 "choices": [
-"Scale and similar shapes (age 11+)",
-"Understanding fractions",
-"Scale and similar shapes"
-],
-"explain": "That describes 'Scale and similar shapes (age 11+)'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Use scale factors to interpret and create scale diagrams and maps, calculating real-life distances…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Scale diagrams and maps extend KS2 scale-factor work with similar shapes",
-"Understanding fraction of total requires simplification/common denominator skills",
-"Unequal sharing problems are the canonical use case for tape diagrams — the visual…"
+"Dividing in a given ratio requires 'ratio', 'part-to-part'",
+"Dividing a quantity in a given ratio is the natural next step from the…"
 ],
 "explain": "Because: Scale diagrams and maps extend KS2 scale-factor work with similar shapes.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Scale and similar shapes (age 11+)' build on 'Scale and similar shapes'?",
 "type": "mc"
 },
@@ -103,26 +92,57 @@
 "choices": [
 "Why slope is constant: similar triangles",
 "Scale and similar shapes",
-"Understanding fractions"
+"Dividing Quantities by Ratio"
 ],
 "explain": "'Scale and similar shapes (age 11+)' leads on to 'Why slope is constant: similar triangles'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Scale and similar shapes (age 11+)' help you learn next?",
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"measurements",
-"involving",
-"relationships"
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m6",
+"params": {
+"a": [
+1,
+5
 ],
-"explain": "The missing word is 'measurements'.",
-"hint": "Which word fits the topic?",
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
 "id": "m7",
-"prompt": "Fill the gap: 'Use scale factors to interpret and create scale diagrams and maps, calculating real-life distances from map _____ and vice versa'",
-"type": "mc"
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
 }
 ]
 },
@@ -174,22 +194,22 @@
 {
 "answer": 0,
 "choices": [
-"Use scale factors to interpret and create scale diagrams and maps, calculating real-life distances from map…",
-"Solve problems involving unequal sharing and grouping using knowledge of fractions and multiples",
-"Solve problems involving similar shapes where the scale factor is known or can be found"
+"6",
+"12",
+"8"
 ],
-"explain": "'Scale and similar shapes (age 11+)' is about: Use scale factors to interpret and create scale diagrams and maps, calculating real-life distances from map….",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 24 is split 1 : 3 = 6. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Scale and similar shapes (age 11+)'?",
+"prompt": "Sam worked out the smaller share when 24 is split 1 : 3 and got 12. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Scale and similar shapes",
-"Proportion",
-"Ratio Notation and Relationships"
+"Ratio Notation and Relationships",
+"Proportion"
 ],
 "explain": "'Scale and similar shapes (age 11+)' builds on 'Scale and similar shapes'.",
 "hint": "What does this topic build on?",
@@ -198,24 +218,24 @@
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 82,
 "status": "auto-starter",
 "title": "Scale and similar shapes (age 11+)",
 "topicId": "mt_1badik7iKJ",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 3.0,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+1,
+3
 ],
 [
-4,
-12
+2,
+6
 ]
 ],
 "xr": [
@@ -231,24 +251,26 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 1 + 3 = 4.",
+"One part: 24 ÷ 4 = 6.",
+"So the shares are 6 and 18."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 24 in the ratio 1 : 3"
 }
 },
 "mt_2OtRUM_0zW": {
 "audience": "learner",
 "explain": {
 "adult": [
+"This topic asks you to solve problems involving similar shapes where the scale factor is known or can be found.",
 "A ratio a : b compares parts; the total number of parts is a + b.",
-"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to solve problems involving similar shapes where the scale factor is known or can be found."
+"For example, 12 shared in the ratio 1 : 2 gives 4 and 8.",
+"It builds on Estimating answers (age 9+) and leads to Scale and similar shapes (age 11+)."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 12 shared in the ratio 1 : 2 gives 4 and 8."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -314,26 +336,13 @@
 {
 "answer": 0,
 "choices": [
-"Scale and similar shapes",
-"One Quantity as a Fraction",
-"Ratio Notation"
-],
-"explain": "That describes 'Scale and similar shapes'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Solve problems involving similar shapes where the scale factor is known or can be…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Similar shapes and scale requires 'scale', 'equivalent'",
-"Adding/subtracting fractions with unlike denominators is needed when comparing fractional parts",
-"Expressing one quantity as a fraction of another requires fluent fraction-decimal equivalence"
+"Multiplicative relationships require 'multiplicative relationship', 'direct proportion'",
+"Understanding multiplicative relationships as ratios or fractions is reinforced by the double number line…"
 ],
 "explain": "Because: Similar shapes and scale requires 'scale', 'equivalent'.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Scale and similar shapes' build on 'Percentages (age 9+)'?",
 "type": "mc"
 },
@@ -342,26 +351,57 @@
 "choices": [
 "Scale and similar shapes (age 11+)",
 "Estimating answers (age 9+)",
-"One Quantity as a Fraction"
+"Percentages (age 9+)"
 ],
 "explain": "'Scale and similar shapes' leads on to 'Scale and similar shapes (age 11+)'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Scale and similar shapes' help you learn next?",
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"involving",
-"interpret",
-"representations"
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m6",
+"params": {
+"a": [
+1,
+5
 ],
-"explain": "The missing word is 'involving'.",
-"hint": "Which word fits the topic?",
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
 "id": "m7",
-"prompt": "Fill the gap: 'Solve problems _____ similar shapes where the scale factor is known or can be found'",
-"type": "mc"
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
 }
 ]
 },
@@ -413,48 +453,35 @@
 {
 "answer": 0,
 "choices": [
-"Solve problems involving similar shapes where the scale factor is known or can be found",
-"Express one quantity as a fraction of another where the result may be less than 1…",
-"Use ratio notation to describe the relationship between two or more quantities, simplify ratios to their…"
-],
-"explain": "'Scale and similar shapes' is about: Solve problems involving similar shapes where the scale factor is known or can be found.",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Scale and similar shapes'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Percentages (age 9+)",
-"One Quantity as a Fraction",
-"Ratio Notation"
+"Ratio Notation and Relationships",
+"Compound Units"
 ],
 "explain": "'Scale and similar shapes' builds on 'Percentages (age 9+)'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Scale and similar shapes'?",
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 91,
 "status": "auto-starter",
 "title": "Scale and similar shapes",
 "topicId": "mt_2OtRUM_0zW",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 2.0,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+1,
+2
 ],
 [
-4,
-12
+2,
+4
 ]
 ],
 "xr": [
@@ -470,24 +497,26 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 1 + 2 = 3.",
+"One part: 12 ÷ 3 = 4.",
+"So the shares are 4 and 8."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 12 in the ratio 1 : 2"
 }
 },
 "mt_5mIcmKRCgA": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
 "When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to recognise and solve problems involving direct proportion (as one quantity increases, the other increases at a constant rate) and inverse proportion (as…."
+"For example, 28 shared in the ratio 3 : 4 gives 12 and 16.",
+"It builds on Proportional Reasoning Vocabulary and leads to Compound Units.",
+"A ratio a : b compares parts; the total number of parts is a + b."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 28 shared in the ratio 3 : 4 gives 12 and 16."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -553,26 +582,13 @@
 {
 "answer": 0,
 "choices": [
-"Proportion",
-"Bar Models for Ratios",
-"Percentages (age 12+)"
-],
-"explain": "That describes 'Proportion'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Recognise and solve problems involving direct proportion (as one quantity increases, the other increases…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Direct and inverse proportion require 'direct proportion' and 'inverse proportion' as precisely understood contrasting…",
-"Using decimal multipliers for percentage change requires fraction-decimal fluency",
-"Percentage increase/decrease problems use 'rate', 'proportion'"
+"Calculating percentages requires fraction-decimal-percentage equivalence",
+"Percentage-of-amount problems can be set up as bar models showing 100% divided into parts"
 ],
 "explain": "Because: Direct and inverse proportion require 'direct proportion' and 'inverse proportion' as precisely understood contrasting….",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Proportion' build on 'Proportional Reasoning Vocabulary'?",
 "type": "mc"
 },
@@ -581,11 +597,11 @@
 "choices": [
 "Compound Units",
 "Proportional Reasoning Vocabulary",
-"Bar Models for Ratios"
+"Percentages (age 9+)"
 ],
 "explain": "'Proportion' leads on to 'Compound Units'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Proportion' help you learn next?",
 "type": "mc"
 },
@@ -593,7 +609,7 @@
 "answer": "k*a",
 "explain": "One part is {=k}, so the first share is {=k*a}.",
 "hint": "Add the parts, then find one part.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -609,6 +625,28 @@
 ]
 },
 "prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "m7",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
 "type": "numeric"
 }
 ]
@@ -661,14 +699,14 @@
 {
 "answer": 0,
 "choices": [
-"Recognise and solve problems involving direct proportion (as one quantity increases, the other increases at a…",
-"Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts labelled with…",
-"Solve problems involving percentage increase, percentage decrease, finding the original value after a percentage change"
+"12",
+"14",
+"21"
 ],
-"explain": "'Proportion' is about: Recognise and solve problems involving direct proportion (as one quantity increases, the other increases at a….",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 28 is split 3 : 4 = 12. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Proportion'?",
+"prompt": "Sam worked out the smaller share when 28 is split 3 : 4 and got 14. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -685,24 +723,24 @@
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 89,
 "status": "auto-starter",
 "title": "Proportion",
 "topicId": "mt_5mIcmKRCgA",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 1.3333333333333333,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+3,
+4
 ],
 [
-4,
-12
+6,
+8
 ]
 ],
 "xr": [
@@ -718,30 +756,33 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 3 + 4 = 7.",
+"One part: 28 ÷ 7 = 4.",
+"So the shares are 12 and 16."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 28 in the ratio 3 : 4"
 }
 },
 "mt_ATYLKt0je-": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
-"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin."
+"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
+"For example, 15 shared in the ratio 2 : 3 gives 6 and 9.",
+"It leads to Scale and similar shapes (age 11+).",
+"A ratio a : b compares parts; the total number of parts is a + b."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 15 shared in the ratio 2 : 3 gives 6 and 9."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio, rate, unit rate, compound unit, scale factor — accurately in….",
 "mastery": {
-"draw": 4,
-"passMark": 3,
+"draw": 3,
+"passMark": 2,
 "pool": [
 {
 "answer": "a",
@@ -800,47 +841,21 @@
 {
 "answer": 0,
 "choices": [
-"Proportional Reasoning Vocabulary",
-"One Quantity as a Fraction",
-"Understanding fractions"
-],
-"explain": "That describes 'Proportional Reasoning Vocabulary'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio,…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Scale and similar shapes (age 11+)",
-"Understanding fractions",
-"Bar Models for Ratios"
+"Proportion Graphs",
+"Ratio Problems"
 ],
 "explain": "'Proportional Reasoning Vocabulary' leads on to 'Scale and similar shapes (age 11+)'.",
 "hint": "What comes after this topic?",
-"id": "m5",
+"id": "m4",
 "prompt": "Which topic does 'Proportional Reasoning Vocabulary' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"multiplicative",
-"interpret",
-"involving"
-],
-"explain": "The missing word is 'multiplicative'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Know and use advanced vocabulary of _____ reasoning — direct proportion, inverse proportion, ratio, rate, unit rate, compound unit, scale factor —…'",
 "type": "mc"
 },
 {
 "answer": "k*a",
 "explain": "One part is {=k}, so the first share is {=k*a}.",
 "hint": "Add the parts, then find one part.",
-"id": "m7",
+"id": "m5",
 "params": {
 "a": [
 1,
@@ -856,6 +871,28 @@
 ]
 },
 "prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "m6",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
 "type": "numeric"
 }
 ]
@@ -908,35 +945,35 @@
 {
 "answer": 0,
 "choices": [
-"Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio, rate, unit…",
-"Express one quantity as a fraction of another where the result may be less than 1…",
-"Solve problems involving unequal sharing and grouping using knowledge of fractions and multiples"
+"6",
+"7",
+"10"
 ],
-"explain": "'Proportional Reasoning Vocabulary' is about: Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio, rate, unit….",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 15 is split 2 : 3 = 6. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Proportional Reasoning Vocabulary'?",
+"prompt": "Sam worked out the smaller share when 15 is split 2 : 3 and got 7. What is the correct answer?",
 "type": "mc"
 }
 ],
-"quality": 82,
+"quality": 85,
 "status": "auto-starter",
 "title": "Proportional Reasoning Vocabulary",
 "topicId": "mt_ATYLKt0je-",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 1.5,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
 2,
-6
+3
 ],
 [
 4,
-12
+6
 ]
 ],
 "xr": [
@@ -953,10 +990,10 @@
 "worked": {
 "steps": [
 "Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"One part: 15 ÷ 5 = 3.",
+"So the shares are 6 and 9."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 15 in the ratio 2 : 3"
 }
 },
 "mt_ESgc4YBw-a": {
@@ -964,18 +1001,21 @@
 "explain": {
 "adult": [
 "A percentage is a fraction out of 100, so 20% = 20/100 = 0.2.",
+"For example, 75% of 120 is 90.",
+"It leads to Scale and similar shapes.",
 "To find a percentage of an amount, multiply the amount by the decimal."
 ],
 "kid": [
 "Per cent means out of 100.",
-"50% is half. 25% is a quarter."
+"50% is half. 25% is a quarter.",
+"For example, 75% of 120 is 90."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Know and use the vocabulary of ratio and proportion — ratio, proportion, percentage, scale, equivalent, unequal, relative size, part-to-part, part-to-whole.",
 "mastery": {
-"draw": 4,
-"passMark": 3,
+"draw": 3,
+"passMark": 2,
 "pool": [
 {
 "answer": "p*n/10",
@@ -1026,26 +1066,13 @@
 {
 "answer": 0,
 "choices": [
-"Percentages (age 9+)",
-"Ratio Notation",
-"Dividing Quantities by Ratio"
-],
-"explain": "That describes 'Percentages (age 9+)'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Know and use the vocabulary of ratio and proportion — ratio, proportion, percentage, scale,…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "vocabulary",
-"representations",
-"quantity"
+"quantity",
+"multiplication"
 ],
 "explain": "The missing word is 'vocabulary'.",
 "hint": "Which word fits the topic?",
-"id": "m5",
+"id": "m4",
 "prompt": "Fill the gap: 'Know and use the _____ of ratio and proportion — ratio, proportion, percentage, scale, equivalent, unequal, relative size, part-to-part, part-to-whole'",
 "type": "mc"
 },
@@ -1053,7 +1080,7 @@
 "answer": "p*n/5",
 "explain": "{p}% of {=n*20} = {=p*n/5}.",
 "hint": "1% of {=n*20} is {=n/5}.",
-"id": "m6",
+"id": "m5",
 "params": {
 "n": [
 1,
@@ -1072,7 +1099,7 @@
 "answer": "a/10",
 "explain": "{=a*10}% = {=a*10} ÷ 100 = {=a/10}.",
 "hint": "Divide by 100.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -1121,36 +1148,36 @@
 {
 "answer": 0,
 "choices": [
-"Know and use the vocabulary of ratio and proportion — ratio, proportion, percentage, scale, equivalent, unequal,…",
-"Use ratio notation to describe the relationship between two or more quantities, simplify ratios to their…",
-"Divide a given quantity into two parts in a given part:part or part:whole ratio"
+"90",
+"1.6",
+"900"
 ],
-"explain": "'Percentages (age 9+)' is about: Know and use the vocabulary of ratio and proportion — ratio, proportion, percentage, scale, equivalent, unequal,….",
-"hint": "Read the topic title carefully.",
+"explain": "75% of 120 = 90. Find 10% first, then scale.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Percentages (age 9+)'?",
+"prompt": "Sam worked out 75% of 120 and got 1.6. What is the correct answer?",
 "type": "mc"
 }
 ],
-"quality": 89,
+"quality": 85,
 "status": "auto-starter",
 "title": "Percentages (age 9+)",
 "topicId": "mt_ESgc4YBw-a",
 "visual": {
 "caption": "Shade the hundred square, then find the percentage of the amount.",
 "opts": {
-"of": 80,
-"p": 20
+"of": 120,
+"p": 75
 },
 "type": "percent"
 },
 "worked": {
 "steps": [
-"10% of 60 = 6.",
-"5% is half of 10%: 3.",
-"15% = 10% + 5% = 6 + 3 = 9."
+"10% of 120 = 12.",
+"75% = 7.5 × 10%.",
+"7.5 × 12 = 90."
 ],
-"title": "15% of 60"
+"title": "75% of 120"
 }
 },
 "mt_FnUJMXPUZX": {
@@ -1158,12 +1185,14 @@
 "explain": {
 "adult": [
 "A ratio a : b compares parts; the total number of parts is a + b.",
-"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to solve problems involving unequal sharing and grouping using knowledge of fractions and multiples."
+"For example, 28 shared in the ratio 1 : 3 gives 7 and 21.",
+"It builds on Simplifying Fractions and leads to Dividing Quantities by Ratio.",
+"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 28 shared in the ratio 1 : 3 gives 7 and 21."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -1229,26 +1258,13 @@
 {
 "answer": 0,
 "choices": [
-"Understanding fractions",
-"Proportion Graphs",
-"Proportional Reasoning Vocabulary"
-],
-"explain": "That describes 'Understanding fractions'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Solve problems involving unequal sharing and grouping using knowledge of fractions and multiples'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Understanding fraction of total requires simplification/common denominator skills",
-"Multiplicative relationships require 'multiplicative relationship', 'direct proportion'",
-"Understanding multiplicative relationships as ratios or fractions is reinforced by the double number line…"
+"Calculating percentages requires fraction-decimal-percentage equivalence",
+"Percentage-of-amount problems can be set up as bar models showing 100% divided into parts"
 ],
 "explain": "Because: Understanding fraction of total requires simplification/common denominator skills.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Understanding fractions' build on 'Simplifying Fractions'?",
 "type": "mc"
 },
@@ -1257,26 +1273,57 @@
 "choices": [
 "Dividing Quantities by Ratio",
 "Simplifying Fractions",
-"Proportion Graphs"
+"Calculating Percentages"
 ],
 "explain": "'Understanding fractions' leads on to 'Dividing Quantities by Ratio'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Understanding fractions' help you learn next?",
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"involving",
-"relationships",
-"multiplicative"
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m6",
+"params": {
+"a": [
+1,
+5
 ],
-"explain": "The missing word is 'involving'.",
-"hint": "Which word fits the topic?",
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
 "id": "m7",
-"prompt": "Fill the gap: 'Solve problems _____ unequal sharing and grouping using knowledge of fractions and multiples'",
-"type": "mc"
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
 }
 ]
 },
@@ -1328,21 +1375,21 @@
 {
 "answer": 0,
 "choices": [
-"Solve problems involving unequal sharing and grouping using knowledge of fractions and multiples",
-"Represent proportional relationships using double number lines (two parallel number lines aligned at 0) and ratio…",
-"Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio, rate, unit…"
+"7",
+"14",
+"9"
 ],
-"explain": "'Understanding fractions' is about: Solve problems involving unequal sharing and grouping using knowledge of fractions and multiples.",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 28 is split 1 : 3 = 7. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Understanding fractions'?",
+"prompt": "Sam worked out the smaller share when 28 is split 1 : 3 and got 14. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Simplifying Fractions",
-"Proportion Graphs",
+"Unit Conversions",
 "Proportional Reasoning Vocabulary"
 ],
 "explain": "'Understanding fractions' builds on 'Simplifying Fractions'.",
@@ -1352,24 +1399,24 @@
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 92,
 "status": "auto-starter",
 "title": "Understanding fractions",
 "topicId": "mt_FnUJMXPUZX",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 3.0,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+1,
+3
 ],
 [
-4,
-12
+2,
+6
 ]
 ],
 "xr": [
@@ -1385,60 +1432,39 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 1 + 3 = 4.",
+"One part: 28 ÷ 4 = 7.",
+"So the shares are 7 and 21."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 28 in the ratio 1 : 3"
 }
 },
 "mt_FspV_imUGK": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
 "When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic is about represent proportional relationships using double number lines (two parallel number lines aligned at 0) and ratio tables."
+"For example, 21 shared in the ratio 1 : 2 gives 7 and 14.",
+"It leads to Scale and similar shapes (age 11+).",
+"A ratio a : b compares parts; the total number of parts is a + b."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 21 shared in the ratio 1 : 2 gives 7 and 14."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Represent proportional relationships using double number lines (two parallel number lines aligned at 0) and ratio tables.",
 "mastery": {
-"draw": 4,
-"passMark": 3,
+"draw": 3,
+"passMark": 2,
 "pool": [
-{
-"answer": "a",
-"explain": "{=a*k} : {=b*k} = {=a} : {=b}.",
-"hint": "Divide both by {k}.",
-"id": "m1",
-"params": {
-"a": [
-1,
-7
-],
-"b": [
-1,
-7
-],
-"k": [
-2,
-6
-]
-},
-"prompt": "Simplify {=a*k} : {=b*k}. What is the first number?",
-"type": "numeric",
-"where": "a!=b && a%2+b%2>0 && (a%3>0||b%3>0) && (a%5>0||b%5>0) && (a%7>0||b%7>0)"
-},
 {
 "answer": "a*n",
 "explain": "y = {a} × {n} = {=a*n}.",
 "hint": "Multiply by {n}.",
-"id": "m2",
+"id": "m1",
 "params": {
 "a": [
 2,
@@ -1461,54 +1487,28 @@
 ],
 "explain": "10 is double 5.",
 "hint": "Is the second double the first?",
-"id": "m3",
+"id": "m2",
 "prompt": "Which pair is in the ratio 1 : 2?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Proportion Graphs",
-"Ratio Problems",
-"One Quantity as a Fraction"
-],
-"explain": "That describes 'Proportion Graphs'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Represent proportional relationships using double number lines (two parallel number lines aligned at 0)…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Scale and similar shapes (age 11+)",
-"Ratio Problems",
-"One Quantity as a Fraction"
+"Percentages (age 9+)",
+"Scale and similar shapes"
 ],
 "explain": "'Proportion Graphs' leads on to 'Scale and similar shapes (age 11+)'.",
 "hint": "What comes after this topic?",
-"id": "m5",
+"id": "m3",
 "prompt": "Which topic does 'Proportion Graphs' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"relationships",
-"multiplication",
-"interpret"
-],
-"explain": "The missing word is 'relationships'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Represent proportional _____ using double number lines (two parallel number lines aligned at 0) and ratio tables'",
 "type": "mc"
 },
 {
 "answer": "k*a",
 "explain": "One part is {=k}, so the first share is {=k*a}.",
 "hint": "Add the parts, then find one part.",
-"id": "m7",
+"id": "m4",
 "params": {
 "a": [
 1,
@@ -1524,6 +1524,50 @@
 ]
 },
 "prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "m5",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
+},
+{
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m6",
+"params": {
+"a": [
+1,
+5
+],
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Recap: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
 "type": "numeric"
 }
 ]
@@ -1574,37 +1618,47 @@
 "type": "numeric"
 },
 {
-"answer": 0,
-"choices": [
-"Represent proportional relationships using double number lines (two parallel number lines aligned at 0) and ratio…",
-"Solve problems involving the relative sizes of two quantities where missing values can be found by…",
-"Express one quantity as a fraction of another where the result may be less than 1…"
-],
-"explain": "'Proportion Graphs' is about: Represent proportional relationships using double number lines (two parallel number lines aligned at 0) and ratio….",
-"hint": "Read the topic title carefully.",
+"answer": "a",
+"explain": "{=a*k} : {=b*k} = {=a} : {=b}.",
+"hint": "Divide both by {k}.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Proportion Graphs'?",
-"type": "mc"
+"params": {
+"a": [
+1,
+7
+],
+"b": [
+1,
+7
+],
+"k": [
+2,
+6
+]
+},
+"prompt": "Simplify {=a*k} : {=b*k}. What is the first number?",
+"type": "numeric",
+"where": "a!=b && a%2+b%2>0 && (a%3>0||b%3>0) && (a%5>0||b%5>0) && (a%7>0||b%7>0)"
 }
 ],
-"quality": 88,
+"quality": 83,
 "status": "auto-starter",
 "title": "Proportion Graphs",
 "topicId": "mt_FspV_imUGK",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 2.0,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+1,
+2
 ],
 [
-4,
-12
+2,
+4
 ]
 ],
 "xr": [
@@ -1620,24 +1674,26 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 1 + 2 = 3.",
+"One part: 21 ÷ 3 = 7.",
+"So the shares are 7 and 14."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 21 in the ratio 1 : 2"
 }
 },
 "mt_PNSyfH56eQ": {
 "audience": "learner",
 "explain": {
 "adult": [
+"This topic asks you to solve problems involving the calculation of percentages of amounts (e.g. 15% of 360) and the use of percentages for comparison.",
 "A percentage is a fraction out of 100, so 20% = 20/100 = 0.2.",
-"To find a percentage of an amount, multiply the amount by the decimal.",
-"This topic asks you to solve problems involving the calculation of percentages of amounts (e.g. 15% of 360) and the use of percentages for comparison."
+"For example, 30% of 80 is 24.",
+"It builds on Decimals and fractions (age 10+) and leads to Line graphs (age 10+)."
 ],
 "kid": [
 "Per cent means out of 100.",
-"50% is half. 25% is a quarter."
+"50% is half. 25% is a quarter.",
+"For example, 30% of 80 is 24."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -1696,21 +1752,21 @@
 "answer": 0,
 "choices": [
 "Calculating Percentages",
-"Ratio Problems",
-"Ratio Notation and Relationships"
+"Percentages (age 12+)",
+"Ratio Problems"
 ],
-"explain": "That describes 'Calculating Percentages'.",
-"hint": "Match the description to a title.",
+"explain": "That is part of 'Calculating Percentages'.",
+"hint": "Think about what this topic covers.",
 "id": "m4",
-"prompt": "Which topic is about this: 'Solve problems involving the calculation of percentages of amounts (e.g. 15% of 360) and…'?",
+"prompt": "Which topic is this about: '15% of 360) and the use of percentages for comparison'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Calculating percentages requires fraction-decimal-percentage equivalence",
-"Ratio reasoning connects to fraction multiplication",
-"Solving relative-sizes problems is most reliably scaffolded by drawing a bar model to set…"
+"Using decimal multipliers for percentage change requires fraction-decimal fluency",
+"Percentage increase/decrease problems use 'rate', 'proportion'"
 ],
 "explain": "Because: Calculating percentages requires fraction-decimal-percentage equivalence.",
 "hint": "Think about what you need first.",
@@ -1736,7 +1792,7 @@
 "choices": [
 "calculation",
 "multiplication",
-"multiplicative"
+"quantity"
 ],
 "explain": "The missing word is 'calculation'.",
 "hint": "Which word fits the topic?",
@@ -1783,22 +1839,22 @@
 {
 "answer": 0,
 "choices": [
-"Solve problems involving the calculation of percentages of amounts (e.g. 15% of 360) and the use…",
-"Solve problems involving the relative sizes of two quantities where missing values can be found by…",
-"Understand that a multiplicative relationship between two quantities can be expressed as a ratio"
+"24",
+"2.66667",
+"240"
 ],
-"explain": "'Calculating Percentages' is about: Solve problems involving the calculation of percentages of amounts (e.g. 15% of 360) and the use….",
-"hint": "Read the topic title carefully.",
+"explain": "30% of 80 = 24. Find 10% first, then scale.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Calculating Percentages'?",
+"prompt": "Sam worked out 30% of 80 and got 2.66667. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Decimals and fractions (age 10+)",
-"Ratio Notation and Relationships",
-"Proportional Reasoning Vocabulary"
+"Percentages (age 12+)",
+"Dividing Quantities by Ratio"
 ],
 "explain": "'Calculating Percentages' builds on 'Decimals and fractions (age 10+)'.",
 "hint": "What does this topic build on?",
@@ -1807,7 +1863,7 @@
 "type": "mc"
 }
 ],
-"quality": 100,
+"quality": 86,
 "status": "auto-starter",
 "title": "Calculating Percentages",
 "topicId": "mt_PNSyfH56eQ",
@@ -1815,17 +1871,17 @@
 "caption": "Shade the hundred square, then find the percentage of the amount.",
 "opts": {
 "of": 80,
-"p": 20
+"p": 30
 },
 "type": "percent"
 },
 "worked": {
 "steps": [
-"10% of 60 = 6.",
-"5% is half of 10%: 3.",
-"15% = 10% + 5% = 6 + 3 = 9."
+"10% of 80 = 8.",
+"30% = 3 × 10%.",
+"3 × 8 = 24."
 ],
-"title": "15% of 60"
+"title": "30% of 80"
 }
 },
 "mt_XWSGuFW7It": {
@@ -1833,12 +1889,14 @@
 "explain": {
 "adult": [
 "A ratio a : b compares parts; the total number of parts is a + b.",
-"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to use ratio notation to describe the relationship between two or more quantities, simplify ratios to their simplest form."
+"For example, 12 shared in the ratio 1 : 2 gives 4 and 8.",
+"It builds on Proportional Reasoning Vocabulary and leads to Dividing Quantities by Ratio.",
+"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 12 shared in the ratio 1 : 2 gives 4 and 8."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -1904,26 +1962,13 @@
 {
 "answer": 0,
 "choices": [
-"Ratio Notation",
-"Proportion Graphs",
-"Calculating Percentages"
-],
-"explain": "That describes 'Ratio Notation'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Use ratio notation to describe the relationship between two or more quantities, simplify ratios…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Ratio notation (a:b) requires 'ratio', 'simplify'",
 "Calculating percentages requires fraction-decimal-percentage equivalence",
 "Percentage-of-amount problems can be set up as bar models showing 100% divided into parts"
 ],
 "explain": "Because: Ratio notation (a:b) requires 'ratio', 'simplify'.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Ratio Notation' build on 'Proportional Reasoning Vocabulary'?",
 "type": "mc"
 },
@@ -1932,11 +1977,11 @@
 "choices": [
 "Dividing Quantities by Ratio",
 "Proportional Reasoning Vocabulary",
-"Proportion Graphs"
+"Calculating Percentages"
 ],
 "explain": "'Ratio Notation' leads on to 'Dividing Quantities by Ratio'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Ratio Notation' help you learn next?",
 "type": "mc"
 },
@@ -1944,7 +1989,7 @@
 "answer": "k*a",
 "explain": "One part is {=k}, so the first share is {=k*a}.",
 "hint": "Add the parts, then find one part.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -1960,6 +2005,28 @@
 ]
 },
 "prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "m7",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
 "type": "numeric"
 }
 ]
@@ -2012,26 +2079,13 @@
 {
 "answer": 0,
 "choices": [
-"Use ratio notation to describe the relationship between two or more quantities, simplify ratios to their…",
-"Represent proportional relationships using double number lines (two parallel number lines aligned at 0) and ratio…",
-"Solve problems involving the calculation of percentages of amounts (e.g. 15% of 360) and the use…"
-],
-"explain": "'Ratio Notation' is about: Use ratio notation to describe the relationship between two or more quantities, simplify ratios to their….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Ratio Notation'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Proportional Reasoning Vocabulary",
 "Ratio Notation and Relationships",
 "Proportion"
 ],
 "explain": "'Ratio Notation' builds on 'Proportional Reasoning Vocabulary'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Ratio Notation'?",
 "type": "mc"
 }
@@ -2043,17 +2097,17 @@
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 2.0,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+1,
+2
 ],
 [
-4,
-12
+2,
+4
 ]
 ],
 "xr": [
@@ -2069,30 +2123,33 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 1 + 2 = 3.",
+"One part: 12 ÷ 3 = 4.",
+"So the shares are 4 and 8."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 12 in the ratio 1 : 2"
 }
 },
 "mt_ePXg_XyCKU": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A percentage is a fraction out of 100, so 20% = 20/100 = 0.2.",
-"To find a percentage of an amount, multiply the amount by the decimal."
+"To find a percentage of an amount, multiply the amount by the decimal.",
+"For example, 25% of 80 is 20.",
+"It leads to Scale and similar shapes.",
+"A percentage is a fraction out of 100, so 20% = 20/100 = 0.2."
 ],
 "kid": [
 "Per cent means out of 100.",
-"50% is half. 25% is a quarter."
+"50% is half. 25% is a quarter.",
+"For example, 25% of 80 is 20."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts labelled with quantities) and tape diagrams (segmented strips showing part-to-part….",
 "mastery": {
-"draw": 4,
-"passMark": 3,
+"draw": 3,
+"passMark": 2,
 "pool": [
 {
 "answer": "p*n/10",
@@ -2143,14 +2200,14 @@
 {
 "answer": 0,
 "choices": [
-"Bar Models for Ratios",
-"Proportion",
-"Proportional Reasoning Vocabulary"
+"Scale and similar shapes",
+"Percentages (age 9+)",
+"One Quantity as a Fraction"
 ],
-"explain": "That describes 'Bar Models for Ratios'.",
-"hint": "Match the description to a title.",
+"explain": "'Bar Models for Ratios' leads on to 'Scale and similar shapes'.",
+"hint": "What comes after this topic?",
 "id": "m4",
-"prompt": "Which topic is about this: 'Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts…'?",
+"prompt": "Which topic does 'Bar Models for Ratios' help you learn next?",
 "type": "mc"
 },
 {
@@ -2185,19 +2242,6 @@
 },
 "prompt": "Quick check: What is {=a*10}% as a decimal? Give it like 0.25.",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts labelled with…",
-"Recognise and solve problems involving direct proportion (as one quantity increases, the other increases at a…",
-"Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio, rate, unit…"
-],
-"explain": "'Bar Models for Ratios' is about: Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts labelled with….",
-"hint": "Read the topic title carefully.",
-"id": "m7",
-"prompt": "Quick check: Which sentence best describes the topic 'Bar Models for Ratios'?",
-"type": "mc"
 }
 ]
 },
@@ -2238,18 +2282,18 @@
 {
 "answer": 0,
 "choices": [
-"Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts labelled with…",
-"Recognise and solve problems involving direct proportion (as one quantity increases, the other increases at a…",
-"Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio, rate, unit…"
+"20",
+"3.2",
+"200"
 ],
-"explain": "'Bar Models for Ratios' is about: Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts labelled with….",
-"hint": "Read the topic title carefully.",
+"explain": "25% of 80 = 20. Find 10% first, then scale.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Bar Models for Ratios'?",
+"prompt": "Sam worked out 25% of 80 and got 3.2. What is the correct answer?",
 "type": "mc"
 }
 ],
-"quality": 84,
+"quality": 95,
 "status": "auto-starter",
 "title": "Bar Models for Ratios",
 "topicId": "mt_ePXg_XyCKU",
@@ -2257,30 +2301,32 @@
 "caption": "Shade the hundred square, then find the percentage of the amount.",
 "opts": {
 "of": 80,
-"p": 20
+"p": 25
 },
 "type": "percent"
 },
 "worked": {
 "steps": [
-"10% of 60 = 6.",
-"5% is half of 10%: 3.",
-"15% = 10% + 5% = 6 + 3 = 9."
+"10% of 80 = 8.",
+"25% = 2.5 × 10%.",
+"2.5 × 8 = 20."
 ],
-"title": "15% of 60"
+"title": "25% of 80"
 }
 },
 "mt_h0gJcSuwdL": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
 "When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to solve problems involving the relative sizes of two quantities where missing values can be found by using integer multiplication and division facts."
+"For example, 64 shared in the ratio 3 : 5 gives 24 and 40.",
+"It builds on Multiplying fractions (age 10+) and leads to Scale and similar shapes.",
+"A ratio a : b compares parts; the total number of parts is a + b."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 64 shared in the ratio 3 : 5 gives 24 and 40."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2346,26 +2392,13 @@
 {
 "answer": 0,
 "choices": [
-"Ratio Problems",
-"Proportion Graphs",
-"Proportional Reasoning Vocabulary"
-],
-"explain": "That describes 'Ratio Problems'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Solve problems involving the relative sizes of two quantities where missing values can be…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Solving relative-sizes problems is most reliably scaffolded by drawing a bar model to set…",
-"Multiplicative relationships require 'multiplicative relationship', 'direct proportion'",
-"Understanding multiplicative relationships as ratios or fractions is reinforced by the double number line…"
+"Understanding fraction of total requires simplification/common denominator skills",
+"Unequal sharing problems are the canonical use case for tape diagrams — the visual…"
 ],
 "explain": "Because: Solving relative-sizes problems is most reliably scaffolded by drawing a bar model to set….",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Ratio Problems' build on 'Bar Models for Ratios'?",
 "type": "mc"
 },
@@ -2374,11 +2407,11 @@
 "choices": [
 "Scale and similar shapes",
 "Multiplying fractions (age 10+)",
-"Proportion Graphs"
+"Proportional Reasoning Vocabulary"
 ],
 "explain": "'Ratio Problems' leads on to 'Scale and similar shapes'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Ratio Problems' help you learn next?",
 "type": "mc"
 },
@@ -2386,14 +2419,36 @@
 "answer": 0,
 "choices": [
 "multiplication",
-"relationships",
-"multiplicative"
+"vocabulary",
+"quantity"
 ],
 "explain": "The missing word is 'multiplication'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m6",
 "prompt": "Fill the gap: 'Solve problems involving the relative sizes of two quantities where missing values can be found by using integer _____ and division facts'",
 "type": "mc"
+},
+{
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m7",
+"params": {
+"a": [
+1,
+5
+],
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
 }
 ]
 },
@@ -2445,22 +2500,22 @@
 {
 "answer": 0,
 "choices": [
-"Solve problems involving the relative sizes of two quantities where missing values can be found by…",
-"Represent proportional relationships using double number lines (two parallel number lines aligned at 0) and ratio…",
-"Know and use advanced vocabulary of multiplicative reasoning — direct proportion, inverse proportion, ratio, rate, unit…"
+"24",
+"32",
+"38"
 ],
-"explain": "'Ratio Problems' is about: Solve problems involving the relative sizes of two quantities where missing values can be found by….",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 64 is split 3 : 5 = 24. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Ratio Problems'?",
+"prompt": "Sam worked out the smaller share when 64 is split 3 : 5 and got 32. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Bar Models for Ratios",
-"Proportion Graphs",
-"Proportional Reasoning Vocabulary"
+"Proportional Reasoning Vocabulary",
+"Scale and similar shapes (age 11+)"
 ],
 "explain": "'Ratio Problems' builds on 'Bar Models for Ratios'.",
 "hint": "What does this topic build on?",
@@ -2469,24 +2524,24 @@
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 92,
 "status": "auto-starter",
 "title": "Ratio Problems",
 "topicId": "mt_h0gJcSuwdL",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 1.6666666666666667,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+3,
+5
 ],
 [
-4,
-12
+6,
+10
 ]
 ],
 "xr": [
@@ -2502,24 +2557,26 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 3 + 5 = 8.",
+"One part: 64 ÷ 8 = 8.",
+"So the shares are 24 and 40."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 64 in the ratio 3 : 5"
 }
 },
 "mt_kLQOzZYrd5": {
 "audience": "learner",
 "explain": {
 "adult": [
+"This topic asks you to use compound units such as speed (distance ÷ time), unit pricing (cost ÷ quantity).",
 "A ratio a : b compares parts; the total number of parts is a + b.",
-"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to use compound units such as speed (distance ÷ time), unit pricing (cost ÷ quantity)."
+"For example, 32 shared in the ratio 3 : 5 gives 12 and 20.",
+"It builds on Simple formulae and leads to Reading Distance-Time Graphs."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 32 shared in the ratio 3 : 5 gives 12 and 20."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2585,26 +2642,13 @@
 {
 "answer": 0,
 "choices": [
-"Compound Units",
-"Bar Models for Ratios",
-"Scale and similar shapes (age 11+)"
-],
-"explain": "That describes 'Compound Units'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Use compound units such as speed (distance ÷ time), unit pricing (cost ÷ quantity)'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Speed, density",
-"Scale diagrams and maps extend KS2 scale-factor work with similar shapes",
-"Scale diagrams and maps require 'scale factor' as a precisely defined term"
+"Ratio notation (a:b) requires 'ratio', 'simplify'",
+"Simplifying ratios requires finding common factors — extends KS2 factor pairs and common factors"
 ],
 "explain": "Because: Speed, density.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Compound Units' build on 'Proportion'?",
 "type": "mc"
 },
@@ -2613,11 +2657,11 @@
 "choices": [
 "Reading Distance-Time Graphs",
 "Simple formulae",
-"Bar Models for Ratios"
+"Ratio Notation"
 ],
 "explain": "'Compound Units' leads on to 'Reading Distance-Time Graphs'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Compound Units' help you learn next?",
 "type": "mc"
 },
@@ -2625,7 +2669,7 @@
 "answer": "k*a",
 "explain": "One part is {=k}, so the first share is {=k*a}.",
 "hint": "Add the parts, then find one part.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -2641,6 +2685,28 @@
 ]
 },
 "prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "m7",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
 "type": "numeric"
 }
 ]
@@ -2693,14 +2759,14 @@
 {
 "answer": 0,
 "choices": [
-"Use compound units such as speed (distance ÷ time), unit pricing (cost ÷ quantity)",
-"Represent ratio and proportion problems using bar models (rectangular strips divided into equal parts labelled with…",
-"Use scale factors to interpret and create scale diagrams and maps, calculating real-life distances from map…"
+"12",
+"16",
+"19"
 ],
-"explain": "'Compound Units' is about: Use compound units such as speed (distance ÷ time), unit pricing (cost ÷ quantity).",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 32 is split 3 : 5 = 12. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Compound Units'?",
+"prompt": "Sam worked out the smaller share when 32 is split 3 : 5 and got 16. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -2717,24 +2783,24 @@
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 92,
 "status": "auto-starter",
 "title": "Compound Units",
 "topicId": "mt_kLQOzZYrd5",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 1.6666666666666667,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+3,
+5
 ],
 [
-4,
-12
+6,
+10
 ]
 ],
 "xr": [
@@ -2750,24 +2816,26 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 3 + 5 = 8.",
+"One part: 32 ÷ 8 = 4.",
+"So the shares are 12 and 20."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 32 in the ratio 3 : 5"
 }
 },
 "mt_nOCPx5qw0Z": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
+"This topic asks you to divide a given quantity into two parts in a given part:part or part:whole ratio.",
 "When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to divide a given quantity into two parts in a given part:part or part:whole ratio."
+"For example, 32 shared in the ratio 3 : 5 gives 12 and 20.",
+"It builds on Proportional Reasoning Vocabulary and leads to Proportion."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 32 shared in the ratio 3 : 5 gives 12 and 20."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2833,26 +2901,13 @@
 {
 "answer": 0,
 "choices": [
-"Dividing Quantities by Ratio",
-"Proportion",
-"One Quantity as a Fraction"
-],
-"explain": "That describes 'Dividing Quantities by Ratio'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Divide a given quantity into two parts in a given part:part or part:whole ratio'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Dividing in a given ratio requires 'ratio', 'part-to-part'",
-"Direct and inverse proportion require 'direct proportion' and 'inverse proportion' as precisely understood contrasting…",
-"Direct and inverse proportion with graphical representations requires reading and plotting proportion graphs (y…"
+"Rearranging compound unit formulae (speed = distance/time) uses formula rearrangement skills",
+"Speed, density"
 ],
 "explain": "Because: Dividing in a given ratio requires 'ratio', 'part-to-part'.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Dividing Quantities by Ratio' build on 'Proportional Reasoning Vocabulary'?",
 "type": "mc"
 },
@@ -2861,11 +2916,11 @@
 "choices": [
 "Proportion",
 "Proportional Reasoning Vocabulary",
-"One Quantity as a Fraction"
+"Percentages (age 9+)"
 ],
 "explain": "'Dividing Quantities by Ratio' leads on to 'Proportion'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Dividing Quantities by Ratio' help you learn next?",
 "type": "mc"
 },
@@ -2873,477 +2928,13 @@
 "answer": 0,
 "choices": [
 "quantity",
-"representations",
-"interpret"
+"vocabulary",
+"measurement"
 ],
 "explain": "The missing word is 'quantity'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m6",
 "prompt": "Fill the gap: 'Divide a given _____ into two parts in a given part:part or part:whole ratio'",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "k*a",
-"explain": "One part is {=k}, so the first share is {=k*a}.",
-"hint": "Add the parts, then find one part.",
-"id": "p1",
-"params": {
-"a": [
-1,
-5
-],
-"b": [
-1,
-5
-],
-"k": [
-2,
-9
-]
-},
-"prompt": "Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
-"type": "numeric"
-},
-{
-"answer": "a*k",
-"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
-"hint": "Scale up by the same number.",
-"id": "p2",
-"params": {
-"a": [
-2,
-5
-],
-"b": [
-2,
-4
-],
-"k": [
-2,
-5
-]
-},
-"prompt": "A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Divide a given quantity into two parts in a given part:part or part:whole ratio",
-"Recognise and solve problems involving direct proportion (as one quantity increases, the other increases at a…",
-"Express one quantity as a fraction of another where the result may be less than 1…"
-],
-"explain": "'Dividing Quantities by Ratio' is about: Divide a given quantity into two parts in a given part:part or part:whole ratio.",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Dividing Quantities by Ratio'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Proportional Reasoning Vocabulary",
-"Proportion",
-"Percentages (age 12+)"
-],
-"explain": "'Dividing Quantities by Ratio' builds on 'Proportional Reasoning Vocabulary'.",
-"hint": "What does this topic build on?",
-"id": "p4",
-"prompt": "Which topic should you learn before 'Dividing Quantities by Ratio'?",
-"type": "mc"
-}
-],
-"quality": 88,
-"status": "auto-starter",
-"title": "Dividing Quantities by Ratio",
-"topicId": "mt_nOCPx5qw0Z",
-"visual": {
-"caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
-"opts": {
-"a": 1,
-"equal": false,
-"f": "a*x",
-"targets": [
-[
-2,
-6
-],
-[
-4,
-12
-]
-],
-"xr": [
-0,
-6
-],
-"yr": [
-0,
-18
-]
-},
-"type": "graphlab"
-},
-"worked": {
-"steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
-],
-"title": "Share 20 sweets in the ratio 2 : 3"
-}
-},
-"mt_tpT9brpI6D": {
-"audience": "learner",
-"explain": {
-"adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
-"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin."
-],
-"kid": [
-"A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Convert freely between related standard units of measurement (time, length, area, volume/capacity, mass) using decimal notation to up to three decimal places where appropriate.",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "a",
-"explain": "{=a*k} : {=b*k} = {=a} : {=b}.",
-"hint": "Divide both by {k}.",
-"id": "m1",
-"params": {
-"a": [
-1,
-7
-],
-"b": [
-1,
-7
-],
-"k": [
-2,
-6
-]
-},
-"prompt": "Simplify {=a*k} : {=b*k}. What is the first number?",
-"type": "numeric",
-"where": "a!=b && a%2+b%2>0 && (a%3>0||b%3>0) && (a%5>0||b%5>0) && (a%7>0||b%7>0)"
-},
-{
-"answer": "a*n",
-"explain": "y = {a} × {n} = {=a*n}.",
-"hint": "Multiply by {n}.",
-"id": "m2",
-"params": {
-"a": [
-2,
-9
-],
-"n": [
-2,
-9
-]
-},
-"prompt": "y is proportional to x. When x = 1, y = {a}. What is y when x = {n}?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"5 and 10",
-"5 and 7",
-"2 and 1"
-],
-"explain": "10 is double 5.",
-"hint": "Is the second double the first?",
-"id": "m3",
-"prompt": "Which pair is in the ratio 1 : 2?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Unit Conversions",
-"Percentages (age 9+)",
-"One Quantity as a Fraction"
-],
-"explain": "That describes 'Unit Conversions'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Convert freely between related standard units of measurement (time, length, area, volume/capacity, mass) using…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"KS3 unit conversion extends KS2 (Y6) metric conversion with decimals to area/volume units",
-"Adding/subtracting fractions with unlike denominators is needed when comparing fractional parts",
-"Expressing one quantity as a fraction of another requires fluent fraction-decimal equivalence"
-],
-"explain": "Because: KS3 unit conversion extends KS2 (Y6) metric conversion with decimals to area/volume units.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Unit Conversions' build on 'Decimal place value'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Scale and similar shapes (age 11+)",
-"Decimal place value",
-"Percentages (age 9+)"
-],
-"explain": "'Unit Conversions' leads on to 'Scale and similar shapes (age 11+)'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Unit Conversions' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"measurement",
-"vocabulary",
-"interpret"
-],
-"explain": "The missing word is 'measurement'.",
-"hint": "Which word fits the topic?",
-"id": "m7",
-"prompt": "Fill the gap: 'Convert freely between related standard units of _____ (time, length, area, volume/capacity, mass) using decimal notation to up to three decimal places…'",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "k*a",
-"explain": "One part is {=k}, so the first share is {=k*a}.",
-"hint": "Add the parts, then find one part.",
-"id": "p1",
-"params": {
-"a": [
-1,
-5
-],
-"b": [
-1,
-5
-],
-"k": [
-2,
-9
-]
-},
-"prompt": "Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
-"type": "numeric"
-},
-{
-"answer": "a*k",
-"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
-"hint": "Scale up by the same number.",
-"id": "p2",
-"params": {
-"a": [
-2,
-5
-],
-"b": [
-2,
-4
-],
-"k": [
-2,
-5
-]
-},
-"prompt": "A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Convert freely between related standard units of measurement (time, length, area, volume/capacity, mass) using decimal notation…",
-"Know and use the vocabulary of ratio and proportion — ratio, proportion, percentage, scale, equivalent, unequal,…",
-"Express one quantity as a fraction of another where the result may be less than 1…"
-],
-"explain": "'Unit Conversions' is about: Convert freely between related standard units of measurement (time, length, area, volume/capacity, mass) using decimal notation….",
-"hint": "Read the topic title carefully.",
-"id": "p3",
-"prompt": "Which sentence best describes the topic 'Unit Conversions'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Decimal place value",
-"Ratio Notation and Relationships",
-"Percentages (age 12+)"
-],
-"explain": "'Unit Conversions' builds on 'Decimal place value'.",
-"hint": "What does this topic build on?",
-"id": "p4",
-"prompt": "Which topic should you learn before 'Unit Conversions'?",
-"type": "mc"
-}
-],
-"quality": 82,
-"status": "auto-starter",
-"title": "Unit Conversions",
-"topicId": "mt_tpT9brpI6D",
-"visual": {
-"caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
-"opts": {
-"a": 1,
-"equal": false,
-"f": "a*x",
-"targets": [
-[
-2,
-6
-],
-[
-4,
-12
-]
-],
-"xr": [
-0,
-6
-],
-"yr": [
-0,
-18
-]
-},
-"type": "graphlab"
-},
-"worked": {
-"steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
-],
-"title": "Share 20 sweets in the ratio 2 : 3"
-}
-},
-"mt_xAf2bu9wYK": {
-"audience": "learner",
-"explain": {
-"adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
-"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic is about express one quantity as a fraction of another where the result may be less than 1 or greater than 1."
-],
-"kid": [
-"A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Express one quantity as a fraction of another where the result may be less than 1 or greater than 1.",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "a",
-"explain": "{=a*k} : {=b*k} = {=a} : {=b}.",
-"hint": "Divide both by {k}.",
-"id": "m1",
-"params": {
-"a": [
-1,
-7
-],
-"b": [
-1,
-7
-],
-"k": [
-2,
-6
-]
-},
-"prompt": "Simplify {=a*k} : {=b*k}. What is the first number?",
-"type": "numeric",
-"where": "a!=b && a%2+b%2>0 && (a%3>0||b%3>0) && (a%5>0||b%5>0) && (a%7>0||b%7>0)"
-},
-{
-"answer": "a*n",
-"explain": "y = {a} × {n} = {=a*n}.",
-"hint": "Multiply by {n}.",
-"id": "m2",
-"params": {
-"a": [
-2,
-9
-],
-"n": [
-2,
-9
-]
-},
-"prompt": "y is proportional to x. When x = 1, y = {a}. What is y when x = {n}?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"5 and 10",
-"5 and 7",
-"2 and 1"
-],
-"explain": "10 is double 5.",
-"hint": "Is the second double the first?",
-"id": "m3",
-"prompt": "Which pair is in the ratio 1 : 2?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"One Quantity as a Fraction",
-"Calculating Percentages",
-"Compound Units"
-],
-"explain": "That describes 'One Quantity as a Fraction'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Express one quantity as a fraction of another where the result may be less…'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Adding/subtracting fractions with unlike denominators is needed when comparing fractional parts",
-"Calculating percentages requires fraction-decimal-percentage equivalence",
-"Percentage-of-amount problems can be set up as bar models showing 100% divided into parts"
-],
-"explain": "Because: Adding/subtracting fractions with unlike denominators is needed when comparing fractional parts.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'One Quantity as a Fraction' build on 'Adding Fractions (Unlike Denominators)'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The Probability Scale",
-"Adding Fractions (Unlike Denominators)",
-"Calculating Percentages"
-],
-"explain": "'One Quantity as a Fraction' leads on to 'The Probability Scale'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'One Quantity as a Fraction' help you learn next?",
 "type": "mc"
 },
 {
@@ -3418,48 +3009,48 @@
 {
 "answer": 0,
 "choices": [
-"Express one quantity as a fraction of another where the result may be less than 1…",
-"Solve problems involving the calculation of percentages of amounts (e.g. 15% of 360) and the use…",
-"Use compound units such as speed (distance ÷ time), unit pricing (cost ÷ quantity)"
+"12",
+"16",
+"19"
 ],
-"explain": "'One Quantity as a Fraction' is about: Express one quantity as a fraction of another where the result may be less than 1….",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 32 is split 3 : 5 = 12. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'One Quantity as a Fraction'?",
+"prompt": "Sam worked out the smaller share when 32 is split 3 : 5 and got 16. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Adding Fractions (Unlike Denominators)",
+"Proportional Reasoning Vocabulary",
 "Proportion",
 "Percentages (age 12+)"
 ],
-"explain": "'One Quantity as a Fraction' builds on 'Adding Fractions (Unlike Denominators)'.",
+"explain": "'Dividing Quantities by Ratio' builds on 'Proportional Reasoning Vocabulary'.",
 "hint": "What does this topic build on?",
 "id": "p4",
-"prompt": "Which topic should you learn before 'One Quantity as a Fraction'?",
+"prompt": "Which topic should you learn before 'Dividing Quantities by Ratio'?",
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 100,
 "status": "auto-starter",
-"title": "One Quantity as a Fraction",
-"topicId": "mt_xAf2bu9wYK",
+"title": "Dividing Quantities by Ratio",
+"topicId": "mt_nOCPx5qw0Z",
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 1.6666666666666667,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+3,
+5
 ],
 [
-4,
-12
+6,
+10
 ]
 ],
 "xr": [
@@ -3475,24 +3066,509 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 3 + 5 = 8.",
+"One part: 32 ÷ 8 = 4.",
+"So the shares are 12 and 20."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 32 in the ratio 3 : 5"
+}
+},
+"mt_tpT9brpI6D": {
+"audience": "learner",
+"explain": {
+"adult": [
+"A ratio a : b compares parts; the total number of parts is a + b.",
+"For example, 15 shared in the ratio 1 : 2 gives 5 and 10.",
+"It builds on Decimal place value and leads to Scale and similar shapes (age 11+).",
+"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin."
+],
+"kid": [
+"A ratio compares two amounts.",
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 15 shared in the ratio 1 : 2 gives 5 and 10."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Convert freely between related standard units of measurement (time, length, area, volume/capacity, mass) using decimal notation to up to three decimal places where appropriate.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "a",
+"explain": "{=a*k} : {=b*k} = {=a} : {=b}.",
+"hint": "Divide both by {k}.",
+"id": "m1",
+"params": {
+"a": [
+1,
+7
+],
+"b": [
+1,
+7
+],
+"k": [
+2,
+6
+]
+},
+"prompt": "Simplify {=a*k} : {=b*k}. What is the first number?",
+"type": "numeric",
+"where": "a!=b && a%2+b%2>0 && (a%3>0||b%3>0) && (a%5>0||b%5>0) && (a%7>0||b%7>0)"
+},
+{
+"answer": "a*n",
+"explain": "y = {a} × {n} = {=a*n}.",
+"hint": "Multiply by {n}.",
+"id": "m2",
+"params": {
+"a": [
+2,
+9
+],
+"n": [
+2,
+9
+]
+},
+"prompt": "y is proportional to x. When x = 1, y = {a}. What is y when x = {n}?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"5 and 10",
+"5 and 7",
+"2 and 1"
+],
+"explain": "10 is double 5.",
+"hint": "Is the second double the first?",
+"id": "m3",
+"prompt": "Which pair is in the ratio 1 : 2?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"KS3 unit conversion extends KS2 (Y6) metric conversion with decimals to area/volume units",
+"Understanding fraction of total requires simplification/common denominator skills",
+"Unequal sharing problems are the canonical use case for tape diagrams — the visual…"
+],
+"explain": "Because: KS3 unit conversion extends KS2 (Y6) metric conversion with decimals to area/volume units.",
+"hint": "Think about what you need first.",
+"id": "m4",
+"prompt": "Why does 'Unit Conversions' build on 'Decimal place value'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Scale and similar shapes (age 11+)",
+"Decimal place value",
+"Proportion Graphs"
+],
+"explain": "'Unit Conversions' leads on to 'Scale and similar shapes (age 11+)'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Unit Conversions' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"measurement",
+"calculation",
+"vocabulary"
+],
+"explain": "The missing word is 'measurement'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Convert freely between related standard units of _____ (time, length, area, volume/capacity, mass) using decimal notation to up to three decimal places…'",
+"type": "mc"
+},
+{
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m7",
+"params": {
+"a": [
+1,
+5
+],
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "p1",
+"params": {
+"a": [
+1,
+5
+],
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "p2",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Decimal place value",
+"Percentages (age 12+)",
+"Proportion"
+],
+"explain": "'Unit Conversions' builds on 'Decimal place value'.",
+"hint": "What does this topic build on?",
+"id": "p3",
+"prompt": "Which topic should you learn before 'Unit Conversions'?",
+"type": "mc"
+}
+],
+"quality": 82,
+"status": "auto-starter",
+"title": "Unit Conversions",
+"topicId": "mt_tpT9brpI6D",
+"visual": {
+"caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
+"opts": {
+"a": 2.0,
+"equal": false,
+"f": "a*x",
+"targets": [
+[
+1,
+2
+],
+[
+2,
+4
+]
+],
+"xr": [
+0,
+6
+],
+"yr": [
+0,
+18
+]
+},
+"type": "graphlab"
+},
+"worked": {
+"steps": [
+"Total parts: 1 + 2 = 3.",
+"One part: 15 ÷ 3 = 5.",
+"So the shares are 5 and 10."
+],
+"title": "Share 15 in the ratio 1 : 2"
+}
+},
+"mt_xAf2bu9wYK": {
+"audience": "learner",
+"explain": {
+"adult": [
+"When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
+"For example, 18 shared in the ratio 1 : 2 gives 6 and 12.",
+"It builds on Adding Fractions (Unlike Denominators) and leads to The Probability Scale.",
+"A ratio a : b compares parts; the total number of parts is a + b."
+],
+"kid": [
+"A ratio compares two amounts.",
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 18 shared in the ratio 1 : 2 gives 6 and 12."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Express one quantity as a fraction of another where the result may be less than 1 or greater than 1.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "a",
+"explain": "{=a*k} : {=b*k} = {=a} : {=b}.",
+"hint": "Divide both by {k}.",
+"id": "m1",
+"params": {
+"a": [
+1,
+7
+],
+"b": [
+1,
+7
+],
+"k": [
+2,
+6
+]
+},
+"prompt": "Simplify {=a*k} : {=b*k}. What is the first number?",
+"type": "numeric",
+"where": "a!=b && a%2+b%2>0 && (a%3>0||b%3>0) && (a%5>0||b%5>0) && (a%7>0||b%7>0)"
+},
+{
+"answer": "a*n",
+"explain": "y = {a} × {n} = {=a*n}.",
+"hint": "Multiply by {n}.",
+"id": "m2",
+"params": {
+"a": [
+2,
+9
+],
+"n": [
+2,
+9
+]
+},
+"prompt": "y is proportional to x. When x = 1, y = {a}. What is y when x = {n}?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"5 and 10",
+"5 and 7",
+"2 and 1"
+],
+"explain": "10 is double 5.",
+"hint": "Is the second double the first?",
+"id": "m3",
+"prompt": "Which pair is in the ratio 1 : 2?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Adding/subtracting fractions with unlike denominators is needed when comparing fractional parts",
+"Ratio notation (a:b) requires 'ratio', 'simplify'",
+"Simplifying ratios requires finding common factors — extends KS2 factor pairs and common factors"
+],
+"explain": "Because: Adding/subtracting fractions with unlike denominators is needed when comparing fractional parts.",
+"hint": "Think about what you need first.",
+"id": "m4",
+"prompt": "Why does 'One Quantity as a Fraction' build on 'Adding Fractions (Unlike Denominators)'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The Probability Scale",
+"Adding Fractions (Unlike Denominators)",
+"Percentages (age 9+)"
+],
+"explain": "'One Quantity as a Fraction' leads on to 'The Probability Scale'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'One Quantity as a Fraction' help you learn next?",
+"type": "mc"
+},
+{
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m6",
+"params": {
+"a": [
+1,
+5
+],
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "m7",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "p1",
+"params": {
+"a": [
+1,
+5
+],
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
+"id": "p2",
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Adding Fractions (Unlike Denominators)",
+"Percentages (age 12+)",
+"Proportion"
+],
+"explain": "'One Quantity as a Fraction' builds on 'Adding Fractions (Unlike Denominators)'.",
+"hint": "What does this topic build on?",
+"id": "p3",
+"prompt": "Which topic should you learn before 'One Quantity as a Fraction'?",
+"type": "mc"
+}
+],
+"quality": 90,
+"status": "auto-starter",
+"title": "One Quantity as a Fraction",
+"topicId": "mt_xAf2bu9wYK",
+"visual": {
+"caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
+"opts": {
+"a": 2.0,
+"equal": false,
+"f": "a*x",
+"targets": [
+[
+1,
+2
+],
+[
+2,
+4
+]
+],
+"xr": [
+0,
+6
+],
+"yr": [
+0,
+18
+]
+},
+"type": "graphlab"
+},
+"worked": {
+"steps": [
+"Total parts: 1 + 2 = 3.",
+"One part: 18 ÷ 3 = 6.",
+"So the shares are 6 and 12."
+],
+"title": "Share 18 in the ratio 1 : 2"
 }
 },
 "mt_yK51ZnKA8m": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A ratio a : b compares parts; the total number of parts is a + b.",
 "When two amounts are in proportion, doubling one doubles the other, and the graph is a straight line through the origin.",
-"This topic asks you to understand that a multiplicative relationship between two quantities can be expressed as a ratio."
+"For example, 32 shared in the ratio 1 : 3 gives 8 and 24.",
+"It builds on Proportional Reasoning Vocabulary and leads to Proportion.",
+"A ratio a : b compares parts; the total number of parts is a + b."
 ],
 "kid": [
 "A ratio compares two amounts.",
-"2 : 3 means 2 of one for every 3 of the other."
+"2 : 3 means 2 of one for every 3 of the other.",
+"For example, 32 shared in the ratio 1 : 3 gives 8 and 24."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -3558,26 +3634,13 @@
 {
 "answer": 0,
 "choices": [
-"Ratio Notation and Relationships",
-"Compound Units",
-"Percentages (age 12+)"
-],
-"explain": "That describes 'Ratio Notation and Relationships'.",
-"hint": "Match the description to a title.",
-"id": "m4",
-"prompt": "Which topic is about this: 'Understand that a multiplicative relationship between two quantities can be expressed as a ratio'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "Multiplicative relationships require 'multiplicative relationship', 'direct proportion'",
-"Rearranging compound unit formulae (speed = distance/time) uses formula rearrangement skills",
-"Speed, density"
+"Scale diagrams and maps extend KS2 scale-factor work with similar shapes",
+"Scale diagrams and maps require 'scale factor' as a precisely defined term"
 ],
 "explain": "Because: Multiplicative relationships require 'multiplicative relationship', 'direct proportion'.",
 "hint": "Think about what you need first.",
-"id": "m5",
+"id": "m4",
 "prompt": "Why does 'Ratio Notation and Relationships' build on 'Proportional Reasoning Vocabulary'?",
 "type": "mc"
 },
@@ -3586,26 +3649,57 @@
 "choices": [
 "Proportion",
 "Proportional Reasoning Vocabulary",
-"Percentages (age 12+)"
+"Scale and similar shapes (age 11+)"
 ],
 "explain": "'Ratio Notation and Relationships' leads on to 'Proportion'.",
 "hint": "What comes after this topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Which topic does 'Ratio Notation and Relationships' help you learn next?",
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"multiplicative",
-"involving",
-"calculating"
+"answer": "k*a",
+"explain": "One part is {=k}, so the first share is {=k*a}.",
+"hint": "Add the parts, then find one part.",
+"id": "m6",
+"params": {
+"a": [
+1,
+5
 ],
-"explain": "The missing word is 'multiplicative'.",
-"hint": "Which word fits the topic?",
+"b": [
+1,
+5
+],
+"k": [
+2,
+9
+]
+},
+"prompt": "Quick check: Share {=k*(a+b)} in the ratio {a} : {b}. How big is the first share?",
+"type": "numeric"
+},
+{
+"answer": "a*k",
+"explain": "{=b*k} is {k} times {b}, so {a} × {k} = {=a*k} eggs.",
+"hint": "Scale up by the same number.",
 "id": "m7",
-"prompt": "Fill the gap: 'Understand that a _____ relationship between two quantities can be expressed as a ratio'",
-"type": "mc"
+"params": {
+"a": [
+2,
+5
+],
+"b": [
+2,
+4
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "Quick check: A recipe uses {a} eggs for {b} people. How many eggs for {=b*k} people?",
+"type": "numeric"
 }
 ]
 },
@@ -3657,14 +3751,14 @@
 {
 "answer": 0,
 "choices": [
-"Understand that a multiplicative relationship between two quantities can be expressed as a ratio",
-"Use compound units such as speed (distance ÷ time), unit pricing (cost ÷ quantity)",
-"Solve problems involving percentage increase, percentage decrease, finding the original value after a percentage change"
+"8",
+"16",
+"10"
 ],
-"explain": "'Ratio Notation and Relationships' is about: Understand that a multiplicative relationship between two quantities can be expressed as a ratio.",
-"hint": "Read the topic title carefully.",
+"explain": "the smaller share when 32 is split 1 : 3 = 8. Find one part first.",
+"hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Which sentence best describes the topic 'Ratio Notation and Relationships'?",
+"prompt": "Sam worked out the smaller share when 32 is split 1 : 3 and got 16. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -3688,17 +3782,17 @@
 "visual": {
 "caption": "Change a in y = a × x. Proportional graphs are straight lines through (0, 0).",
 "opts": {
-"a": 1,
+"a": 3.0,
 "equal": false,
 "f": "a*x",
 "targets": [
 [
-2,
-6
+1,
+3
 ],
 [
-4,
-12
+2,
+6
 ]
 ],
 "xr": [
@@ -3714,11 +3808,11 @@
 },
 "worked": {
 "steps": [
-"Total parts: 2 + 3 = 5.",
-"One part: 20 ÷ 5 = 4.",
-"Shares: 2 × 4 = 8 and 3 × 4 = 12."
+"Total parts: 1 + 3 = 4.",
+"One part: 32 ÷ 4 = 8.",
+"So the shares are 8 and 24."
 ],
-"title": "Share 20 sweets in the ratio 2 : 3"
+"title": "Share 32 in the ratio 1 : 3"
 }
 }
 }

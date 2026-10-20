@@ -55,6 +55,8 @@ def check_lesson(f, d):
     if not d["mastery"]["passMark"] <= d["mastery"]["draw"] <= len(pool) - 3: err(f, "need passMark <= draw <= pool size - 3")
     if sum(1 for i in pool if "params" in i) < 2: err(f, "mastery pool needs at least 2 parameterised items")
     for problem in check_visual(d["visual"]): err(f, "visual " + problem)
+    if "lab" in d:
+        for problem in check_visual(d["lab"]): err(f, "lab " + problem)
     if sum(1 for i in d["practice"] if "params" in i) < 2: err(f, "practice needs at least 2 parameterised items so retries differ")
     for lv in ("kid", "adult"):
         g = fk_grade(" ".join(d["explain"][lv])); t = TARGETS[(d["audience"], lv)]
