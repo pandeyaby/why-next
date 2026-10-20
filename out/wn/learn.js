@@ -32,7 +32,8 @@ const blank=()=>({name:'',age:'',goal:'explore',knownUpTo:'auto',level:'auto',pr
 let P=blank(),mem=false,formOpen=null;
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object')P=Object.assign(blank(),s)}catch(e){mem=true}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){mem=true}}
-const has=id=>!!L[id],band=()=>BANDS.find(b=>b.id===P.age);
+if(typeof WN!=='undefined')Object.assign(L,WN.store);
+const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),band=()=>BANDS.find(b=>b.id===P.age);
 const prog=id=>P.progress[id]||{};
 function setProg(id,patch){P.progress[id]=Object.assign({},prog(id),patch,{at:LEARN_GEN.today()});save()}
 const assumeAge=()=>P.knownUpTo==='auto'?(band()?band().assumeKnownUpTo:0):+P.knownUpTo||0;
@@ -988,7 +989,7 @@ R('statlab',c=>{const o=c.opts,M=o.max||20,v=(o.vals||[3,5,6,8,8,11,15]).slice()
 
 /* number line with zoom: whole numbers → tenths → hundredths */
 R('numzoom',c=>{const o=c.opts,neg=!!o.neg;let z=0,lo=neg?-10:0,val=o.start??(neg?-2:3);const W=440,H=150,s=c.svg(W,H,'Zoomable number line'),g=c.el('g',{},s),ro=c.el('text',{x:12,y:22,class:'vis-big'},s);
- const span=()=>[10,1,.1][z],dp=()=>z,X=t=>30+(t-lo)/span()*(W-60);const h=c.el('circle',{r:12,cy:90,class:'vis-handle'},s);const tg=o.target;let tm=null;if(tg!=null)tm=c.el('line',{y1:62,y2:118,class:'lab-target'},s);
+ const span=()=>[neg?20:10,1,.1][z],dp=()=>z,X=t=>30+(t-lo)/span()*(W-60);const h=c.el('circle',{r:12,cy:90,class:'vis-handle'},s);const tg=o.target;let tm=null;if(tg!=null)tm=c.el('line',{y1:62,y2:118,class:'lab-target'},s);
  const draw=()=>{g.innerHTML='';c.el('line',{x1:30,x2:W-30,y1:90,y2:90,class:'vis-axis'},g);for(let i=0;i<=10;i++){const t=+(lo+i*span()/10).toFixed(3);c.el('line',{x1:X(t),x2:X(t),y1:82,y2:98,class:'vis-axis'},g);c.el('text',{x:X(t),y:118,'text-anchor':'middle',class:'vis-lab'},g,nf(t,dp()+1))}
   val=c.clamp(val,lo,lo+span());h.setAttribute('cx',X(val));if(tm){const on=tg>=lo&&tg<=lo+span();tm.style.display=on?'':'none';tm.setAttribute('x1',X(tg));tm.setAttribute('x2',X(tg))}
   ro.textContent=nf(val,dp()+1);c.say(`Zoom ×${10**z}: from ${nf(lo,3)} to ${nf(lo+span(),3)}, each small step is ${nf(span()/10,3)}. The point is at ${nf(val,dp()+1)}.${tg!=null?` Target ${nf(tg,3)}${Math.abs(val-tg)<1e-9?': hit!':'.'}`:''}`);L.check()};
@@ -1128,6 +1129,20 @@ R('forcelab',c=>{const o=c.opts;let F=o.f||20,m=o.m||5,mu=o.mu??.2,res=null,raf=
  c.range('Push (N)',0,100,5,F,v=>{F=v});c.range('Mass (kg)',1,10,1,m,v=>{m=v});c.range('Friction',0,.5,.05,mu,v=>{mu=v});c.btn('▶ Push!',go);c.btn('Reset',()=>{cancelAnimationFrame(raf);res=null;show(0);ro.textContent='';c.say('Set the push, mass and friction, then press Push.')},'ghost');
  c.stops.push(()=>cancelAnimationFrame(raf));c.cueEl=[cart];show(0);c.say('Set the push, mass and friction, then press Push. The push lasts 2 seconds.')});
 })();
+/* Why Next? labs (part 4): an ecosystem lab (prey and predator populations over time). */
+(()=>{const R=VIS.reg,nf=VIS.nf;
+R('ecolab',c=>{const o=c.opts,pr=o.prey||'Rabbits',pd=o.pred||'Foxes',food=o.food||'grass';let b=o.b??.8,k=o.k??.02,d=o.d??.5,e=o.e??.005,N0=o.n0??60,P0=o.p0??10;
+ const W=440,H=240,s=c.svg(W,H,`${pr} and ${pd} over time`),X=t=>40+t*(W-50)/60,Ym=400,Y=v=>H-30-Math.min(v,Ym)*(H-50)/Ym;
+ c.el('line',{x1:40,x2:W-10,y1:H-30,y2:H-30,class:'vis-axis'},s);c.el('line',{x1:40,x2:40,y1:15,y2:H-30,class:'vis-axis'},s);for(let t=0;t<=60;t+=10)c.el('text',{x:X(t),y:H-14,'text-anchor':'middle',class:'vis-lab'},s,String(t));
+ for(let v=0;v<=Ym;v+=100)c.el('text',{x:34,y:Y(v)+4,'text-anchor':'end',class:'vis-lab'},s,String(v));c.el('text',{x:W-10,y:H-2,'text-anchor':'end',class:'vis-lab'},s,'seasons');
+ const pa=c.el('path',{class:'vis-curve'},s),pb=c.el('path',{class:'vis-curve b'},s),lg=c.el('text',{x:48,y:22,class:'vis-lab b'},s,`blue: ${pr} · green: ${pd}`);
+ const sim=()=>{let n=N0,p=P0;const out=[[n,p]];for(let t=1;t<=60;t++){for(let q=0;q<10;q++){const nn=n+.1*(b*n*(1-n/500)-k*n*p),np=p+.1*(e*n*p-d*p);n=Math.max(0,nn);p=Math.max(0,np)}if(n<.5)n=0;if(p<.5)p=0;out.push([n,p])}return out};
+ let S=sim();const draw=()=>{S=sim();pa.setAttribute('d',S.map(([n],t)=>(t?'L':'M')+X(t)+' '+Y(n)).join(''));pb.setAttribute('d',S.map(([,p],t)=>(t?'L':'M')+X(t)+' '+Y(p)).join(''));
+  const [n,p]=S[60],mx=Math.max(...S.map(x=>x[0]));c.say(`${pr} eat ${food}; ${pd} eat ${pr}. After 60 seasons: ${Math.round(n)} ${pr.toLowerCase()} and ${Math.round(p)} ${pd.toLowerCase()} (most ${pr.toLowerCase()} at once: ${Math.round(mx)}). ${p===0?`The ${pd.toLowerCase()} died out, so the ${pr.toLowerCase()} grow until food runs short.`:n===0?`The ${pr.toLowerCase()} died out, so the ${pd.toLowerCase()} starve too.`:'When prey increase, predators follow a little later; then prey fall.'}`);L.check()};
+ const L=VIS.lab(c,[{goal:`Keep both ${pr.toLowerCase()} and ${pd.toLowerCase()} alive for all 60 seasons.`,test:()=>S[60][0]>0&&S[60][1]>0,win:'A balanced food web keeps both populations going.'},{goal:`Change one thing so the ${pd.toLowerCase()} die out.`,test:()=>S[60][1]===0,win:'Predators need enough prey to survive.'},{goal:`Get more than 300 ${pr.toLowerCase()} at some point.`,test:()=>Math.max(...S.map(x=>x[0]))>300}]);
+ c.range(`${pr} birth rate`,.1,1,.05,b,v=>{b=v;draw()});c.range(`How often ${pd.toLowerCase()} catch ${pr.toLowerCase()}`,.005,.05,.005,k,v=>{k=v;draw()});c.range(`${pd} death rate`,.1,1.5,.05,d,v=>{d=v;draw()});
+ c.btn(`+20 ${pd.toLowerCase()}`,()=>{P0+=20;draw()},'ghost');c.btn('Reset',()=>{b=o.b??.8;k=o.k??.02;d=o.d??.5;P0=o.p0??10;c.ctl.querySelectorAll('input[type=range]').forEach((r,i)=>r.value=[b,k,d][i]);draw()},'ghost');c.cueEl=[pa,pb];draw()});
+})();
 /* Why Next? visual cues for progress: per-topic progress rings and a subtle mastery celebration (skipped under reduced motion). */
 const LEARN_FX=(()=>{
 function progress(id){if(LEARN.mastered(id)||LEARN.known(id))return 1;const les=LEARN.L[id];if(!les)return 0;const pr=LEARN.prog(id);
@@ -1164,7 +1179,7 @@ function comingSoon(id){const n=N.get(id),r=LEARN.resource(id),k=LEARN.known(id)
  <ul><li>Read the description and prerequisite chain below; the reasons say what each step reuses.</li>${r?`<li>Free resource: <a href="${r.url}" target="_blank" rel="noopener">${esc(r.label)}</a> <span class="muted">(link checked ${LEARN_DATA.resourcesVerified})</span></li>`:''}</ul>
  ${LEARN.isNext(id)?`<p class="why">★ Recommended next. ${esc(LEARN.why(id))}</p>`:''}
  <button type="button" class="lbtn ghost" data-act="known">${k?'✓ Marked as known (undo)':'I already know this'}</button></section>`}
-function panel(id){const les=LEARN.L[id];if(!les)return comingSoon(id);
+function panel(id){const les=LEARN.L[id];if(!les)return(typeof WN!=='undefined'&&WN.flag(id))?'<section class="learn card" id="learn" aria-busy="true"><p class="muted">Loading the lesson and lab…</p></section>':comingSoon(id);
  const lv=LEARN.level(),pr=LEARN.prog(id),st=pr.status,due=LEARN.reviewDue(id),fam=les.audience!=='learner';
  CUR={p:les.practice.map(LEARN_GEN.make),m:LEARN_GEN.drawSet(les.mastery.pool,les.mastery.draw),r:due?LEARN_GEN.drawSet(les.mastery.pool,2):[]};
  return `<section class="card learn" id="learn" tabindex="-1" aria-labelledby="learnH">
@@ -1172,14 +1187,14 @@ function panel(id){const les=LEARN.L[id];if(!les)return comingSoon(id);
  <div class="lvl" role="group" aria-label="Reading level"><button type="button" class="lbtn sm${lv==='kid'?' on':''}" aria-pressed="${lv==='kid'}" data-lv="kid">${fam?'Kid':'Simpler'}</button><button type="button" class="lbtn sm${lv==='adult'?' on':''}" aria-pressed="${lv==='adult'}" data-lv="adult">${fam?'Grown-up':'Teen / adult'}</button></div></div>
  ${due?`<div class="review" id="rbox"><h3 class="lsub">🔁 Quick review</h3><p class="small">You mastered this a while ago. Two quick questions keep it fresh.</p>${list('r')}<p id="rres" role="status" aria-live="polite"></p></div>`:''}
  ${LEARN.isNext(id)?`<p class="why">${esc(LEARN.why(id))}</p>`:''}${st!=='mastered'&&LEARN.known(id)?`<p class="why">✓ ${LEARN.assumed(id)?'You probably know this already (from your age band)':'You marked this as known'}. Use it as a refresher, or <button type="button" class="linkish" data-act="known">mark it as not known</button>.</p>`:''}
- <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${gloss(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${gloss(p)}</p>`).join('')}
+ <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${gloss(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${gloss(p)}</p>`).join('')}${les.worked?`<div class="worked"><h3 class="lsub">Worked example: ${esc(les.worked.title)}</h3><ol>${les.worked.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div>`:''}
  ${les.visual?'<div id="vbox" class="vbox"></div>':''}
  ${les.familyTip?`<p class="tip"><b>${fam?'Try it at home':'Try this'}:</b> ${esc(les.familyTip)}</p>`:''}
  <h3 class="lsub">2 · Practise <span class="muted small" id="pScore"></span></h3><div id="pbox">${list('p')}</div>
  <button type="button" class="lbtn ghost" data-act="newp">New practice questions</button>
  <h3 class="lsub">3 · Mastery check</h3><p class="muted small">${les.mastery.draw} questions drawn from a pool of ${les.mastery.pool.length}, with fresh numbers each try. One try each; get ${les.mastery.passMark} right to master this topic.${pr.best!=null?` Your best: ${pr.best}/${les.mastery.draw}.`:''}</p>
  <div id="mbox">${list('m')}</div><p id="mres" class="mres" role="status" aria-live="polite"></p>
- <p class="muted small">Content status: ${esc(les.status)} (not yet reviewed by a teacher). <button type="button" class="linkish" data-act="reset">Reset this topic</button></p></section>`}
+ <p class="muted small">${les.status==='auto-starter'?`Starter lesson: built automatically from this topic’s description and links, then checked (quality ${les.quality}/100). Not yet reviewed by a teacher.`:`Content status: ${esc(les.status)} (not yet reviewed by a teacher).`} <button type="button" class="linkish" data-act="reset">Reset this topic</button></p></section>`}
 /* pointer-event drag for order items: works for mouse, pen and touch; the ↑ ↓ buttons remain the keyboard fallback */
 function dragify(ol){let li=null;/* capture on the list: moving a captured <li> in the DOM would drop its capture */
  ol.onpointerdown=e=>{const t=e.target.closest('li');if(!t||e.target.closest('button')||ol.closest('.qi').dataset.done)return;

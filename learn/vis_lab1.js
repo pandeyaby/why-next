@@ -47,7 +47,7 @@ R('statlab',c=>{const o=c.opts,M=o.max||20,v=(o.vals||[3,5,6,8,8,11,15]).slice()
 
 /* number line with zoom: whole numbers → tenths → hundredths */
 R('numzoom',c=>{const o=c.opts,neg=!!o.neg;let z=0,lo=neg?-10:0,val=o.start??(neg?-2:3);const W=440,H=150,s=c.svg(W,H,'Zoomable number line'),g=c.el('g',{},s),ro=c.el('text',{x:12,y:22,class:'vis-big'},s);
- const span=()=>[10,1,.1][z],dp=()=>z,X=t=>30+(t-lo)/span()*(W-60);const h=c.el('circle',{r:12,cy:90,class:'vis-handle'},s);const tg=o.target;let tm=null;if(tg!=null)tm=c.el('line',{y1:62,y2:118,class:'lab-target'},s);
+ const span=()=>[neg?20:10,1,.1][z],dp=()=>z,X=t=>30+(t-lo)/span()*(W-60);const h=c.el('circle',{r:12,cy:90,class:'vis-handle'},s);const tg=o.target;let tm=null;if(tg!=null)tm=c.el('line',{y1:62,y2:118,class:'lab-target'},s);
  const draw=()=>{g.innerHTML='';c.el('line',{x1:30,x2:W-30,y1:90,y2:90,class:'vis-axis'},g);for(let i=0;i<=10;i++){const t=+(lo+i*span()/10).toFixed(3);c.el('line',{x1:X(t),x2:X(t),y1:82,y2:98,class:'vis-axis'},g);c.el('text',{x:X(t),y:118,'text-anchor':'middle',class:'vis-lab'},g,nf(t,dp()+1))}
   val=c.clamp(val,lo,lo+span());h.setAttribute('cx',X(val));if(tm){const on=tg>=lo&&tg<=lo+span();tm.style.display=on?'':'none';tm.setAttribute('x1',X(tg));tm.setAttribute('x2',X(tg))}
   ro.textContent=nf(val,dp()+1);c.say(`Zoom ×${10**z}: from ${nf(lo,3)} to ${nf(lo+span(),3)}, each small step is ${nf(span()/10,3)}. The point is at ${nf(val,dp()+1)}.${tg!=null?` Target ${nf(tg,3)}${Math.abs(val-tg)<1e-9?': hit!':'.'}`:''}`);L.check()};

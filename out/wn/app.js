@@ -38,6 +38,7 @@ function select(id){sel=id;renderList();
  document.getElementById('detail').innerHTML=`<div class="card" id="dcard"></div>${LEARN_PANEL.panel(id)}<div id="dclu"></div><div class="card cv"><b>Hard-prerequisite graph</b><div id="dgraph"></div></div>
  <div class="card cv"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span><div id="dtree"></div></div>`;
  LEARN_PANEL.mount(id);document.getElementById('main').scrollTop=0;fill(id,true);
+ if(!LEARN.L[id]&&WN.flag(id))WN.lload(N.get(id).k).then(()=>{if(sel===id&&LEARN.L[id])select(id)});
  const need=needFor(id);if(!WN.has(need))WN.load(need).then(()=>{if(sel===id)fill(id)})}
 function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(needFor(id)),wait='<p class="muted">Loading details…</p>';
  const clu=(DATA.clusters||{})[n.s+'|'+n.d+'|'+n.a[0]];const prim=[...anc].filter(u=>!N.get(u).new&&N.get(u).a[0]<=10).length;const users=(POST.get(id)||[]).map(e=>N.get(e.t));

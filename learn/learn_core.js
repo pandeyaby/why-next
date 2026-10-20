@@ -6,7 +6,8 @@ const blank=()=>({name:'',age:'',goal:'explore',knownUpTo:'auto',level:'auto',pr
 let P=blank(),mem=false,formOpen=null;
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object')P=Object.assign(blank(),s)}catch(e){mem=true}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){mem=true}}
-const has=id=>!!L[id],band=()=>BANDS.find(b=>b.id===P.age);
+if(typeof WN!=='undefined')Object.assign(L,WN.store);
+const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),band=()=>BANDS.find(b=>b.id===P.age);
 const prog=id=>P.progress[id]||{};
 function setProg(id,patch){P.progress[id]=Object.assign({},prog(id),patch,{at:LEARN_GEN.today()});save()}
 const assumeAge=()=>P.knownUpTo==='auto'?(band()?band().assumeKnownUpTo:0):+P.knownUpTo||0;

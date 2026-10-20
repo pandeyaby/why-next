@@ -23,7 +23,7 @@ function comingSoon(id){const n=N.get(id),r=LEARN.resource(id),k=LEARN.known(id)
  <ul><li>Read the description and prerequisite chain below; the reasons say what each step reuses.</li>${r?`<li>Free resource: <a href="${r.url}" target="_blank" rel="noopener">${esc(r.label)}</a> <span class="muted">(link checked ${LEARN_DATA.resourcesVerified})</span></li>`:''}</ul>
  ${LEARN.isNext(id)?`<p class="why">★ Recommended next. ${esc(LEARN.why(id))}</p>`:''}
  <button type="button" class="lbtn ghost" data-act="known">${k?'✓ Marked as known (undo)':'I already know this'}</button></section>`}
-function panel(id){const les=LEARN.L[id];if(!les)return comingSoon(id);
+function panel(id){const les=LEARN.L[id];if(!les)return(typeof WN!=='undefined'&&WN.flag(id))?'<section class="learn card" id="learn" aria-busy="true"><p class="muted">Loading the lesson and lab…</p></section>':comingSoon(id);
  const lv=LEARN.level(),pr=LEARN.prog(id),st=pr.status,due=LEARN.reviewDue(id),fam=les.audience!=='learner';
  CUR={p:les.practice.map(LEARN_GEN.make),m:LEARN_GEN.drawSet(les.mastery.pool,les.mastery.draw),r:due?LEARN_GEN.drawSet(les.mastery.pool,2):[]};
  return `<section class="card learn" id="learn" tabindex="-1" aria-labelledby="learnH">
@@ -31,14 +31,14 @@ function panel(id){const les=LEARN.L[id];if(!les)return comingSoon(id);
  <div class="lvl" role="group" aria-label="Reading level"><button type="button" class="lbtn sm${lv==='kid'?' on':''}" aria-pressed="${lv==='kid'}" data-lv="kid">${fam?'Kid':'Simpler'}</button><button type="button" class="lbtn sm${lv==='adult'?' on':''}" aria-pressed="${lv==='adult'}" data-lv="adult">${fam?'Grown-up':'Teen / adult'}</button></div></div>
  ${due?`<div class="review" id="rbox"><h3 class="lsub">🔁 Quick review</h3><p class="small">You mastered this a while ago. Two quick questions keep it fresh.</p>${list('r')}<p id="rres" role="status" aria-live="polite"></p></div>`:''}
  ${LEARN.isNext(id)?`<p class="why">${esc(LEARN.why(id))}</p>`:''}${st!=='mastered'&&LEARN.known(id)?`<p class="why">✓ ${LEARN.assumed(id)?'You probably know this already (from your age band)':'You marked this as known'}. Use it as a refresher, or <button type="button" class="linkish" data-act="known">mark it as not known</button>.</p>`:''}
- <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${gloss(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${gloss(p)}</p>`).join('')}
+ <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${gloss(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${gloss(p)}</p>`).join('')}${les.worked?`<div class="worked"><h3 class="lsub">Worked example: ${esc(les.worked.title)}</h3><ol>${les.worked.steps.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div>`:''}
  ${les.visual?'<div id="vbox" class="vbox"></div>':''}
  ${les.familyTip?`<p class="tip"><b>${fam?'Try it at home':'Try this'}:</b> ${esc(les.familyTip)}</p>`:''}
  <h3 class="lsub">2 · Practise <span class="muted small" id="pScore"></span></h3><div id="pbox">${list('p')}</div>
  <button type="button" class="lbtn ghost" data-act="newp">New practice questions</button>
  <h3 class="lsub">3 · Mastery check</h3><p class="muted small">${les.mastery.draw} questions drawn from a pool of ${les.mastery.pool.length}, with fresh numbers each try. One try each; get ${les.mastery.passMark} right to master this topic.${pr.best!=null?` Your best: ${pr.best}/${les.mastery.draw}.`:''}</p>
  <div id="mbox">${list('m')}</div><p id="mres" class="mres" role="status" aria-live="polite"></p>
- <p class="muted small">Content status: ${esc(les.status)} (not yet reviewed by a teacher). <button type="button" class="linkish" data-act="reset">Reset this topic</button></p></section>`}
+ <p class="muted small">${les.status==='auto-starter'?`Starter lesson: built automatically from this topic’s description and links, then checked (quality ${les.quality}/100). Not yet reviewed by a teacher.`:`Content status: ${esc(les.status)} (not yet reviewed by a teacher).`} <button type="button" class="linkish" data-act="reset">Reset this topic</button></p></section>`}
 /* pointer-event drag for order items: works for mouse, pen and touch; the ↑ ↓ buttons remain the keyboard fallback */
 function dragify(ol){let li=null;/* capture on the list: moving a captured <li> in the DOM would drop its capture */
  ol.onpointerdown=e=>{const t=e.target.closest('li');if(!t||e.target.closest('button')||ol.closest('.qi').dataset.done)return;

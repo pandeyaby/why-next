@@ -38,12 +38,18 @@ for f in sorted(glob.glob("learn/lessons/*.json")):
     les = json.load(open(f, encoding="utf-8"))
     assert les["topicId"] in by, f
     lessons[les["topicId"]] = les
+# Starter lessons (learn/autogen/starter.py) for every topic without a hand-written lesson; loaded per domain on demand
+starters = {}
+for f in sorted(glob.glob("learn/auto/*.json")):
+    if os.path.basename(f).startswith("_"): continue
+    for tid, les in json.load(open(f, encoding="utf-8")).items():
+        if tid in keep and tid not in lessons: starters[tid] = les
 missing = sorted(set(lessons) - keep)
 assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
 learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "learn_fx.js", "learn_panel.js")
+LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "learn_fx.js", "learn_panel.js")
 learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
 css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css"))
 
@@ -64,9 +70,13 @@ for key, summ in clusters.items():
     if (s_, d_) in K:
         chunks[K[(s_, d_)]]["c"][key] = summ
 chunk_js = [f"WN.chunk({k},{J(c)});\n" for k, c in enumerate(chunks)]
+lchunks = [{} for _ in dom_keys]
+for tid, les in starters.items():
+    lchunks[K[(by[tid]["subject"], by[tid]["domain"])]][tid] = les
+les_js = [f"WN.les({k},{J(c)});\n" if c else "" for k, c in enumerate(lchunks)]
 H = lambda t: hashlib.sha1(t.encode()).hexdigest()[:10]
-core = {"sb": sb, "dm": dm, "ty": ty, "v": [H(c) for c in chunk_js],
-        "n": [[n["id"], n["n"], dm.index(n["d"]), sb.index(n["s"]), ty.index(n["ty"]), n["a"][0], n["a"][1], n["c"], int(n["new"]), K[(n["s"], n["d"])]] for n in nodes],
+core = {"sb": sb, "dm": dm, "ty": ty, "v": [H(c) for c in chunk_js], "lv": [H(c) if c else 0 for c in les_js],
+        "n": [[n["id"], n["n"], dm.index(n["d"]), sb.index(n["s"]), ty.index(n["ty"]), n["a"][0], n["a"][1], n["c"], int(n["new"]), K[(n["s"], n["d"])], 1 if n["id"] in lessons else 2 if n["id"] in starters else 0] for n in nodes],
         "e": [[idx[e["t"]], idx[e["p"]], int(e["h"])] for e in edges]}
 files = {"core.js": "window.WN_CORE=" + J(core) + ";\n" + open("ext/viewer_core.js").read(),
          "learn.js": "const LEARN_DATA=" + learn + ";\n" + learn_js,
@@ -85,9 +95,11 @@ for name, text in files.items():
     open(f"{outdir}/wn/{name}", "w").write(text)
 for k, text in enumerate(chunk_js):
     open(f"{outdir}/wn/d{k}.js", "w").write(text)
+for k, text in enumerate(les_js):
+    if text: open(f"{outdir}/wn/l{k}.js", "w").write(text)
 tags = "".join(f'<script defer src="wn/{n}?v={H(files[n])}"></script>' for n in ("core.js", "learn.js", "app.js"))
 open(f"{outdir}/viewer.html", "w").write(shell.replace("/*__SCRIPTS__*/", tags))
 # Offline build: the same scripts inlined into one file that works with no network.
-inline = "".join(f"<script>{t}</script>" for t in [files["core.js"], "".join(chunk_js), files["learn.js"], files["app.js"]])
+inline = "".join(f"<script>{t}</script>" for t in [files["core.js"], "".join(chunk_js), "".join(les_js), files["learn.js"], files["app.js"]])
 open(f"{outdir}/viewer-offline.html", "w").write(shell.replace("/*__SCRIPTS__*/", inline))
-print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons,", len(chunks), "detail chunks")
+print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons +", len(starters), "starter lessons,", len(chunks), "detail chunks")

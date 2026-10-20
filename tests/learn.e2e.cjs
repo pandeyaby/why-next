@@ -164,9 +164,11 @@ async function axe(p, label) {
     for (let i = 0; i < 8; i++) { await p.evaluate(() => select('mt_BXj4pfdhxO')); (await p.evaluate(() => LEARN_PANEL.cur().m)).filter(x => x.type === 'mc').forEach(x => pos.add(x.answer)) }
     assert.ok(pos.size >= 2, 'answer position never varies');
   });
-  await test('topics without a lesson show "Lessons coming" with a verified link', async () => {
+  await test('every topic has a lesson; a starter lesson lazy-loads with worked example and lab', async () => {
+    assert.strictEqual(await p.evaluate(() => DATA.nodes.filter(n => !LEARN.L[n.id] && !WN.flag(n.id)).length), 0);
     await p.evaluate(() => select(DATA.nodes.find(n => n.n === 'Solving quadratics by factorising').id));
-    assert.match(await p.textContent('#learn'), /Lessons coming/); assert.ok(await p.$('#learn a[href^="https://www.bbc.co.uk/bitesize/"]'));
+    await p.waitForSelector('#learn .worked', { timeout: 10000 }); await p.waitForSelector('#vbox svg, #vbox canvas', { timeout: 10000 });
+    const t = await p.textContent('#learn'); assert.doesNotMatch(t, /Lessons coming/); assert.match(t, /Starter lesson/);
   });
   await test('axe: desktop, lesson open', async () => { await p.evaluate(() => select('mt_jHgRQ4hR0g')); await axe(p, 'desktop') });
   if (process.env.SHOTS) {

@@ -1,0 +1,14 @@
+/* Why Next? labs (part 4): an ecosystem lab (prey and predator populations over time). */
+(()=>{const R=VIS.reg,nf=VIS.nf;
+R('ecolab',c=>{const o=c.opts,pr=o.prey||'Rabbits',pd=o.pred||'Foxes',food=o.food||'grass';let b=o.b??.8,k=o.k??.02,d=o.d??.5,e=o.e??.005,N0=o.n0??60,P0=o.p0??10;
+ const W=440,H=240,s=c.svg(W,H,`${pr} and ${pd} over time`),X=t=>40+t*(W-50)/60,Ym=400,Y=v=>H-30-Math.min(v,Ym)*(H-50)/Ym;
+ c.el('line',{x1:40,x2:W-10,y1:H-30,y2:H-30,class:'vis-axis'},s);c.el('line',{x1:40,x2:40,y1:15,y2:H-30,class:'vis-axis'},s);for(let t=0;t<=60;t+=10)c.el('text',{x:X(t),y:H-14,'text-anchor':'middle',class:'vis-lab'},s,String(t));
+ for(let v=0;v<=Ym;v+=100)c.el('text',{x:34,y:Y(v)+4,'text-anchor':'end',class:'vis-lab'},s,String(v));c.el('text',{x:W-10,y:H-2,'text-anchor':'end',class:'vis-lab'},s,'seasons');
+ const pa=c.el('path',{class:'vis-curve'},s),pb=c.el('path',{class:'vis-curve b'},s),lg=c.el('text',{x:48,y:22,class:'vis-lab b'},s,`blue: ${pr} · green: ${pd}`);
+ const sim=()=>{let n=N0,p=P0;const out=[[n,p]];for(let t=1;t<=60;t++){for(let q=0;q<10;q++){const nn=n+.1*(b*n*(1-n/500)-k*n*p),np=p+.1*(e*n*p-d*p);n=Math.max(0,nn);p=Math.max(0,np)}if(n<.5)n=0;if(p<.5)p=0;out.push([n,p])}return out};
+ let S=sim();const draw=()=>{S=sim();pa.setAttribute('d',S.map(([n],t)=>(t?'L':'M')+X(t)+' '+Y(n)).join(''));pb.setAttribute('d',S.map(([,p],t)=>(t?'L':'M')+X(t)+' '+Y(p)).join(''));
+  const [n,p]=S[60],mx=Math.max(...S.map(x=>x[0]));c.say(`${pr} eat ${food}; ${pd} eat ${pr}. After 60 seasons: ${Math.round(n)} ${pr.toLowerCase()} and ${Math.round(p)} ${pd.toLowerCase()} (most ${pr.toLowerCase()} at once: ${Math.round(mx)}). ${p===0?`The ${pd.toLowerCase()} died out, so the ${pr.toLowerCase()} grow until food runs short.`:n===0?`The ${pr.toLowerCase()} died out, so the ${pd.toLowerCase()} starve too.`:'When prey increase, predators follow a little later; then prey fall.'}`);L.check()};
+ const L=VIS.lab(c,[{goal:`Keep both ${pr.toLowerCase()} and ${pd.toLowerCase()} alive for all 60 seasons.`,test:()=>S[60][0]>0&&S[60][1]>0,win:'A balanced food web keeps both populations going.'},{goal:`Change one thing so the ${pd.toLowerCase()} die out.`,test:()=>S[60][1]===0,win:'Predators need enough prey to survive.'},{goal:`Get more than 300 ${pr.toLowerCase()} at some point.`,test:()=>Math.max(...S.map(x=>x[0]))>300}]);
+ c.range(`${pr} birth rate`,.1,1,.05,b,v=>{b=v;draw()});c.range(`How often ${pd.toLowerCase()} catch ${pr.toLowerCase()}`,.005,.05,.005,k,v=>{k=v;draw()});c.range(`${pd} death rate`,.1,1.5,.05,d,v=>{d=v;draw()});
+ c.btn(`+20 ${pd.toLowerCase()}`,()=>{P0+=20;draw()},'ghost');c.btn('Reset',()=>{b=o.b??.8;k=o.k??.02;d=o.d??.5;P0=o.p0??10;c.ctl.querySelectorAll('input[type=range]').forEach((r,i)=>r.value=[b,k,d][i]);draw()},'ghost');c.cueEl=[pa,pb];draw()});
+})();
