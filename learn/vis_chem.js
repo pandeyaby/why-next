@@ -31,7 +31,7 @@ R('particles',c=>{const o=c.opts,mp=o.mp??0,bp=o.bp??100,name=o.name||'water';le
  let last=0,raf=0;function loop(now){raf=0;if(!run||!vis||document.hidden)return;const dt=Math.min(.05,(now-(last||now))/1000);last=now;stepSim(dt);paint();raf=requestAnimationFrame(loop)}
  const kick=()=>{if(!raf&&run&&vis){last=0;raf=requestAnimationFrame(loop)}};
  const io=window.IntersectionObserver?new IntersectionObserver(es=>{vis=es[0].isIntersecting;kick()}):null;io&&io.observe(cv);
- c.stops.push(()=>{run=false;io&&io.disconnect();raf&&cancelAnimationFrame(raf)});
+ const th=()=>paint();document.addEventListener('wntheme',th);c.stops.push(()=>{document.removeEventListener('wntheme',th);run=false;io&&io.disconnect();raf&&cancelAnimationFrame(raf)});
  const set=v=>{T=v;rg.value=v;if(!run){settle();paint()}say();kick()};
  const rg=c.range('Temperature (°C)',o.min??mp-40,o.max??bp+60,1,T,set);
  c.btn('Cool below melting',()=>set(mp-20));c.btn('Heat above boiling',()=>set(bp+30));

@@ -1,5 +1,10 @@
 /* Why Next? Learn panel: explanation, practice with instant feedback and hints, mastery check, spaced review. */
 const LEARN_PANEL=(()=>{
+/* plain-words glossary for curriculum terms in topic descriptions (shown as a tooltip and on focus) */
+const GLOSS={'one-to-one correspondence':'matching each thing with exactly one number','correspondence':'matching one thing with another','numerator':'the top number of a fraction','denominator':'the bottom number of a fraction','equivalent':'worth the same','interpret':'work out what it means','coefficient':'the number in front of a letter','polynomial':'terms like 3x² + 2x − 1 added together','irrational':'a number whose decimals never end or repeat','integral':'the area under a graph, added up','derivative':'how fast something is changing','quantity':'an amount','cardinality':'how many there are','reversible':'can be undone','properties':'what something is like'};
+const GRX=new RegExp('\\b('+Object.keys(GLOSS).sort((a,b)=>b.length-a.length).join('|')+')\\b','gi');
+const gloss=(t,lv)=>{const seen=new Set();if(lv==='adult'&&!lv)return esc(t);return esc(t).replace(GRX,m=>{const k=m.toLowerCase();if(seen.has(k))return m;seen.add(k);return `<dfn class="gl" tabindex="0" title="${GLOSS[k]}">${m}<span class="sr"> (${GLOSS[k]})</span></dfn>`})};
+
 let CUR={p:[],m:[],r:[]};
 const parseNum=s=>{s=String(s).trim().replace(/\s+/g,'').replace('−','-').replace(',','.');const f=s.match(/^(-?\d+)\/(\d+)$/);
  if(f)return +f[2]?+f[1]/+f[2]:NaN;return s===''?NaN:Number(s)};
@@ -26,7 +31,7 @@ function panel(id){const les=LEARN.L[id];if(!les)return comingSoon(id);
  <div class="lvl" role="group" aria-label="Reading level"><button type="button" class="lbtn sm${lv==='kid'?' on':''}" aria-pressed="${lv==='kid'}" data-lv="kid">${fam?'Kid':'Simpler'}</button><button type="button" class="lbtn sm${lv==='adult'?' on':''}" aria-pressed="${lv==='adult'}" data-lv="adult">${fam?'Grown-up':'Teen / adult'}</button></div></div>
  ${due?`<div class="review" id="rbox"><h3 class="lsub">🔁 Quick review</h3><p class="small">You mastered this a while ago. Two quick questions keep it fresh.</p>${list('r')}<p id="rres" role="status" aria-live="polite"></p></div>`:''}
  ${LEARN.isNext(id)?`<p class="why">${esc(LEARN.why(id))}</p>`:''}${st!=='mastered'&&LEARN.known(id)?`<p class="why">✓ ${LEARN.assumed(id)?'You probably know this already (from your age band)':'You marked this as known'}. Use it as a refresher, or <button type="button" class="linkish" data-act="known">mark it as not known</button>.</p>`:''}
- <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${esc(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${esc(p)}</p>`).join('')}
+ <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${gloss(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${gloss(p)}</p>`).join('')}
  ${les.visual?'<div id="vbox" class="vbox"></div>':''}
  ${les.familyTip?`<p class="tip"><b>${fam?'Try it at home':'Try this'}:</b> ${esc(les.familyTip)}</p>`:''}
  <h3 class="lsub">2 · Practise <span class="muted small" id="pScore"></span></h3><div id="pbox">${list('p')}</div>
@@ -80,4 +85,4 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
  if(pass)LEARN_FX.celebrate(res);
  const g=document.getElementById('goNext');if(g)g.onclick=()=>{const nx=LEARN.nextList(1)[0];if(nx){select(nx.id);document.getElementById('learn').focus()}};
  const r=document.getElementById('retry');if(r)r.onclick=()=>{select(id);const m=document.getElementById('mbox');if(m)m.scrollIntoView()}}
-return{panel,mount,parseNum,scramble,cur:()=>CUR}})();
+return{panel,mount,parseNum,scramble,gloss,cur:()=>CUR}})();
