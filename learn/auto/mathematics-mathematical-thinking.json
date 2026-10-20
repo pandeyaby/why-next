@@ -4,14 +4,14 @@
 "explain": {
 "adult": [
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 2x + 10 = 28 gives x = 9.",
+"For example, 3x + 5 = 26 gives x = 7.",
 "It builds on Measuring angles (age 9+) and leads to Constructing mathematical arguments.",
 "Check by putting the answer back into the original equation."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 2x + 10 = 28 gives x = 9."
+"For example, 3x + 5 = 26 gives x = 7."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -77,8 +77,8 @@
 "answer": 0,
 "choices": [
 "Age 8-9 constructing arguments is prerequisite to age 9-10 level",
-"Skip counting exercises recognising repeating calculation patterns",
-"The +1 pattern in counting is the earliest repeated reasoning"
+"Deliberately applying commutativity to make addition easier exercises using structure",
+"Using place-value structure (tens and ones) to solve problems efficiently"
 ],
 "explain": "Because: Age 8-9 constructing arguments is prerequisite to age 9-10 level.",
 "hint": "Think about what you need first.",
@@ -91,7 +91,7 @@
 "choices": [
 "Constructing mathematical arguments",
 "Measuring angles (age 9+)",
-"Finding efficient methods"
+"Shape patterns"
 ],
 "explain": "'Understanding fractions (age 9+)' leads on to 'Constructing mathematical arguments'.",
 "hint": "What comes after this topic?",
@@ -100,23 +100,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"mathematical",
-"proportional",
-"alternative"
-],
-"explain": "The missing word is 'mathematical'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Construct and present logical _____ arguments involving multiple steps'",
-"type": "mc"
-},
-{
 "answer": "x",
 "explain": "{a}x = {=a*x}, so x = {=x}.",
 "hint": "Undo + {b}, then ÷ {a}.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 2,
@@ -132,6 +119,24 @@
 ]
 },
 "prompt": "Quick check: Solve {a}x + {b} = {=a*x+b}. What is x?",
+"type": "numeric"
+},
+{
+"answer": "b+c",
+"explain": "x = {c} + {b} = {=b+c}.",
+"hint": "Add {b} to both sides.",
+"id": "m7",
+"params": {
+"b": [
+2,
+15
+],
+"c": [
+1,
+20
+]
+},
+"prompt": "Quick check: Solve x − {b} = {c}.",
 "type": "numeric"
 }
 ]
@@ -180,22 +185,22 @@
 {
 "answer": 0,
 "choices": [
-"9",
-"19",
-"18"
+"7",
+"10.3333",
+"21"
 ],
-"explain": "x in 2x + 10 = 28 = 9. Undo the + first, then the ×.",
+"explain": "x in 3x + 5 = 26 = 7. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 2x + 10 = 28 and got 19. What is the correct answer?",
+"prompt": "Sam worked out x in 3x + 5 = 26 and got 10.3333. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Justifying mathematical reasoning (age 8+)",
-"Real-World Mathematical Modelling",
-"Constructing mathematical arguments"
+"Constructing mathematical arguments",
+"Real-World Mathematical Modelling"
 ],
 "explain": "'Understanding fractions (age 9+)' builds on 'Justifying mathematical reasoning (age 8+)'.",
 "hint": "What does this topic build on?",
@@ -204,27 +209,27 @@
 "type": "mc"
 }
 ],
-"quality": 82,
+"quality": 84,
 "status": "auto-starter",
 "title": "Understanding fractions (age 9+)",
 "topicId": "mt_2ESZh70NyS",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 2,
-"b": 10,
-"c": 28,
+"a": 3,
+"b": 5,
+"c": 26,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 10 from both sides: 2x = 18.",
-"Divide both sides by 2: x = 9.",
-"Check: 2 × 9 + 10 = 28."
+"Subtract 5 from both sides: 3x = 21.",
+"Divide both sides by 3: x = 7.",
+"Check: 3 × 7 + 5 = 26."
 ],
-"title": "2x + 10 = 28"
+"title": "3x + 5 = 26"
 }
 },
 "mt_2jbUekyTu4": {
@@ -233,13 +238,13 @@
 "adult": [
 "This topic asks you to recognise and use repeated reasoning to generalise.",
 "For 5, 8, 11 …, the difference is 3, so the nth term is 3n + 2.",
-"For example, 5, 7, 9, 11 goes up by 2.",
+"For example, 1, 6, 11, 16 goes up by 5.",
 "It builds on Generalising Patterns and leads to What makes a function."
 ],
 "kid": [
 "A sequence is a list that follows a rule.",
 "5, 8, 11 … adds 3 each time.",
-"For example, 5, 7, 9, 11 goes up by 2."
+"For example, 1, 6, 11, 16 goes up by 5."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -301,8 +306,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 repeated reasoning builds on age 6-7",
-"Checking whether a maths answer makes sense applies the universal self-checking habit to a…",
-"Problem sense-making at 5-6 requires cardinality understanding to make sense of 'how many' problems"
+"Generating/explaining equivalent fractions exercises justification skills",
+"Fraction comparison requires constructing arguments about relative size"
 ],
 "explain": "Because: Age 7-8 repeated reasoning builds on age 6-7.",
 "hint": "Think about what you need first.",
@@ -315,7 +320,7 @@
 "choices": [
 "What makes a function",
 "Generalising Patterns",
-"Making Sense of Problems"
+"Justifying mathematical reasoning (age 8+)"
 ],
 "explain": "'Extending Table Patterns' leads on to 'What makes a function'.",
 "hint": "What comes after this topic?",
@@ -401,22 +406,22 @@
 {
 "answer": 0,
 "choices": [
-"23",
-"25",
-"20"
+"46",
+"51",
+"50"
 ],
-"explain": "the 10th term of 5, 7, 9, 11, … = 23. Use the nth term with n = 10.",
+"explain": "the 10th term of 1, 6, 11, 16, … = 46. Use the nth term with n = 10.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the 10th term of 5, 7, 9, 11, … and got 25. What is the correct answer?",
+"prompt": "Sam worked out the 10th term of 1, 6, 11, 16, … and got 51. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Generalising Patterns",
-"Using Mathematical Structure",
-"Real-World Mathematical Modelling"
+"Justifying mathematical reasoning (age 8+)",
+"Real-World Maths Modelling"
 ],
 "explain": "'Extending Table Patterns' builds on 'Generalising Patterns'.",
 "hint": "What does this topic build on?",
@@ -439,11 +444,11 @@
 "targets": [
 [
 1,
-5
+1
 ],
 [
 3,
-9
+11
 ]
 ],
 "xr": [
@@ -459,12 +464,12 @@
 },
 "worked": {
 "steps": [
-"The terms go up by 2 each time.",
-"So the nth term starts with 2n.",
-"2 × 1 = 2, but the first term is 5: adjust by 3.",
-"nth term = 2n + 3."
+"The terms go up by 5 each time.",
+"So the nth term starts with 5n.",
+"5 × 1 = 5, but the first term is 1: adjust by -4.",
+"nth term = 5n − 4."
 ],
-"title": "5, 7, 9, 11, …"
+"title": "1, 6, 11, 16, …"
 }
 },
 "mt_8xVHooT4aI": {
@@ -472,14 +477,14 @@
 "explain": {
 "adult": [
 "To find a percentage of an amount, multiply the amount by the decimal.",
-"For example, 20% of 40 is 8.",
+"For example, 25% of 80 is 20.",
 "It builds on Estimating answers (age 9+) and leads to Real-World Mathematical Modelling.",
 "A percentage is a fraction out of 100, so 20% = 20/100 = 0.2."
 ],
 "kid": [
 "Per cent means out of 100.",
 "50% is half. 25% is a quarter.",
-"For example, 20% of 40 is 8."
+"For example, 25% of 80 is 20."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -538,8 +543,8 @@
 "answer": 0,
 "choices": [
 "Age 8-9 modelling is prerequisite to age 9-10 level",
-"Generating/explaining equivalent fractions exercises justification skills",
-"Fraction comparison requires constructing arguments about relative size"
+"Deliberately applying commutativity to make addition easier exercises using structure",
+"Using place-value structure (tens and ones) to solve problems efficiently"
 ],
 "explain": "Because: Age 8-9 modelling is prerequisite to age 9-10 level.",
 "hint": "Think about what you need first.",
@@ -552,7 +557,7 @@
 "choices": [
 "Real-World Mathematical Modelling",
 "Estimating answers (age 9+)",
-"Justifying mathematical reasoning (age 8+)"
+"Shape patterns"
 ],
 "explain": "'Real-World Maths Modelling' leads on to 'Real-World Mathematical Modelling'.",
 "hint": "What comes after this topic?",
@@ -632,22 +637,22 @@
 {
 "answer": 0,
 "choices": [
-"8",
-"2",
-"80"
+"20",
+"3.2",
+"200"
 ],
-"explain": "20% of 40 = 8. Find 10% first, then scale.",
+"explain": "25% of 80 = 20. Find 10% first, then scale.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 20% of 40 and got 2. What is the correct answer?",
+"prompt": "Sam worked out 25% of 80 and got 3.2. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Modelling with multiplication and fractions",
-"Real-World Mathematical Modelling",
-"Constructing mathematical arguments"
+"Constructing mathematical arguments",
+"Real-World Mathematical Modelling"
 ],
 "explain": "'Real-World Maths Modelling' builds on 'Modelling with multiplication and fractions'.",
 "hint": "What does this topic build on?",
@@ -663,18 +668,18 @@
 "visual": {
 "caption": "Shade the hundred square, then find the percentage of the amount.",
 "opts": {
-"of": 40,
-"p": 20
+"of": 80,
+"p": 25
 },
 "type": "percent"
 },
 "worked": {
 "steps": [
-"10% of 40 = 4.",
-"20% = 2 × 10%.",
-"2 × 4 = 8."
+"10% of 80 = 8.",
+"25% = 2.5 × 10%.",
+"2.5 × 8 = 20."
 ],
-"title": "20% of 40"
+"title": "25% of 80"
 }
 },
 "mt_DW2D1c0fKx": {
@@ -682,14 +687,14 @@
 "explain": {
 "adult": [
 "This topic asks you to look for and use mathematical structure.",
-"Check by putting the answer back into the original equation.",
-"For example, 3x + 7 = 19 gives x = 4.",
+"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
+"For example, 5x + 3 = 48 gives x = 9.",
 "It builds on Addition in any order and leads to Shape patterns (age 7+)."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 3x + 7 = 19 gives x = 4."
+"For example, 5x + 3 = 48 gives x = 9."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -755,8 +760,8 @@
 "answer": 0,
 "choices": [
 "Age 6-7 using structure deliberately builds on age 5-6 noticing simple patterns and structure",
-"Length word problems exercise real-world modelling",
-"Age 7-8 modelling builds on age 6-7"
+"Explaining part-part-whole decompositions exercises showing and telling",
+"Explaining how to find number bonds to 10 exercises showing thinking with objects"
 ],
 "explain": "Because: Age 6-7 using structure deliberately builds on age 5-6 noticing simple patterns and structure.",
 "hint": "Think about what you need first.",
@@ -769,7 +774,7 @@
 "choices": [
 "Shape patterns (age 7+)",
 "Addition in any order",
-"Working with money"
+"Showing Your Working"
 ],
 "explain": "'Shape patterns' leads on to 'Shape patterns (age 7+)'.",
 "hint": "What comes after this topic?",
@@ -863,22 +868,22 @@
 {
 "answer": 0,
 "choices": [
-"4",
-"8.66667",
-"12"
+"9",
+"10.2",
+"45"
 ],
-"explain": "x in 3x + 7 = 19 = 4. Undo the + first, then the ×.",
+"explain": "x in 5x + 3 = 48 = 9. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 3x + 7 = 19 and got 8.66667. What is the correct answer?",
+"prompt": "Sam worked out x in 5x + 3 = 48 and got 10.2. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Spotting mathematical patterns",
-"Working with money",
-"Justifying mathematical reasoning"
+"Multi-Step Problem Solving",
+"Real-World Mathematical Modelling"
 ],
 "explain": "'Shape patterns' builds on 'Spotting mathematical patterns'.",
 "hint": "What does this topic build on?",
@@ -887,27 +892,27 @@
 "type": "mc"
 }
 ],
-"quality": 89,
+"quality": 87,
 "status": "auto-starter",
 "title": "Shape patterns",
 "topicId": "mt_DW2D1c0fKx",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 3,
-"b": 7,
-"c": 19,
+"a": 5,
+"b": 3,
+"c": 48,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 7 from both sides: 3x = 12.",
-"Divide both sides by 3: x = 4.",
-"Check: 3 × 4 + 7 = 19."
+"Subtract 3 from both sides: 5x = 45.",
+"Divide both sides by 5: x = 9.",
+"Check: 5 × 9 + 3 = 48."
 ],
-"title": "3x + 7 = 19"
+"title": "5x + 3 = 48"
 }
 },
 "mt_FAXjFkgG6X": {
@@ -916,13 +921,13 @@
 "adult": [
 "This topic asks you to look for and use mathematical structure.",
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 5x + 4 = 39 gives x = 7.",
+"For example, 2x + 9 = 21 gives x = 6.",
 "It builds on The three digits of a three-digit number and leads to Using Mathematical Structure."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 5x + 4 = 39 gives x = 7."
+"For example, 2x + 9 = 21 gives x = 6."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -988,8 +993,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 using structure builds on age 6-7",
-"Generating/explaining equivalent fractions exercises justification skills",
-"Fraction comparison requires constructing arguments about relative size"
+"Unit conversion exercises modelling with appropriate representations",
+"Area of rectangles exercises modelling real-world with multiplication"
 ],
 "explain": "Because: Age 7-8 using structure builds on age 6-7.",
 "hint": "Think about what you need first.",
@@ -1002,7 +1007,7 @@
 "choices": [
 "Using Mathematical Structure",
 "The three digits of a three-digit number",
-"Justifying mathematical reasoning (age 8+)"
+"Modelling with multiplication and fractions"
 ],
 "explain": "'Shape patterns (age 7+)' leads on to 'Using Mathematical Structure'.",
 "hint": "What comes after this topic?",
@@ -1096,22 +1101,22 @@
 {
 "answer": 0,
 "choices": [
-"7",
-"8.6",
-"35"
+"6",
+"15",
+"12"
 ],
-"explain": "x in 5x + 4 = 39 = 7. Undo the + first, then the ×.",
+"explain": "x in 2x + 9 = 21 = 6. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 5x + 4 = 39 and got 8.6. What is the correct answer?",
+"prompt": "Sam worked out x in 2x + 9 = 21 and got 15. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Shape patterns",
-"Justifying mathematical reasoning (age 8+)",
-"Real-World Mathematical Modelling"
+"Modelling with multiplication and fractions",
+"Real-World Maths Modelling"
 ],
 "explain": "'Shape patterns (age 7+)' builds on 'Shape patterns'.",
 "hint": "What does this topic build on?",
@@ -1120,27 +1125,27 @@
 "type": "mc"
 }
 ],
-"quality": 87,
+"quality": 88,
 "status": "auto-starter",
 "title": "Shape patterns (age 7+)",
 "topicId": "mt_FAXjFkgG6X",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 5,
-"b": 4,
-"c": 39,
+"a": 2,
+"b": 9,
+"c": 21,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 4 from both sides: 5x = 35.",
-"Divide both sides by 5: x = 7.",
-"Check: 5 × 7 + 4 = 39."
+"Subtract 9 from both sides: 2x = 12.",
+"Divide both sides by 2: x = 6.",
+"Check: 2 × 6 + 9 = 21."
 ],
-"title": "5x + 4 = 39"
+"title": "2x + 9 = 21"
 }
 },
 "mt_K3R0yaHVcx": {
@@ -1148,14 +1153,14 @@
 "explain": {
 "adult": [
 "Check by putting the answer back into the original equation.",
-"For example, 2x + 3 = 21 gives x = 9.",
+"For example, 3x + 10 = 34 gives x = 8.",
 "It builds on Converting measurement units and leads to Real-World Maths Modelling.",
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 2x + 3 = 21 gives x = 9."
+"For example, 3x + 10 = 34 gives x = 8."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -1221,8 +1226,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 modelling is prerequisite to age 8-9 level",
-"Age 7-8 repeated reasoning builds on age 6-7",
-"Skip counting patterns exercise generalising from repetition"
+"Y6 formal reasoning extends Y5 multi-step argument construction",
+"Angle-based proofs draw on angle sum knowledge"
 ],
 "explain": "Because: Age 7-8 modelling is prerequisite to age 8-9 level.",
 "hint": "Think about what you need first.",
@@ -1235,7 +1240,7 @@
 "choices": [
 "Real-World Maths Modelling",
 "Converting measurement units",
-"Extending Table Patterns"
+"Constructing mathematical arguments"
 ],
 "explain": "'Modelling with multiplication and fractions' leads on to 'Real-World Maths Modelling'.",
 "hint": "What comes after this topic?",
@@ -1329,22 +1334,22 @@
 {
 "answer": 0,
 "choices": [
-"9",
-"12",
-"18"
+"8",
+"14.6667",
+"24"
 ],
-"explain": "x in 2x + 3 = 21 = 9. Undo the + first, then the ×.",
+"explain": "x in 3x + 10 = 34 = 8. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 2x + 3 = 21 and got 12. What is the correct answer?",
+"prompt": "Sam worked out x in 3x + 10 = 34 and got 14.6667. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Working with money",
-"Understanding fractions (age 9+)",
-"Real-World Mathematical Modelling"
+"Constructing mathematical arguments",
+"Fractions, Decimals & Percentages"
 ],
 "explain": "'Modelling with multiplication and fractions' builds on 'Working with money'.",
 "hint": "What does this topic build on?",
@@ -1353,42 +1358,40 @@
 "type": "mc"
 }
 ],
-"quality": 84,
+"quality": 85,
 "status": "auto-starter",
 "title": "Modelling with multiplication and fractions",
 "topicId": "mt_K3R0yaHVcx",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 2,
-"b": 3,
-"c": 21,
+"a": 3,
+"b": 10,
+"c": 34,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 3 from both sides: 2x = 18.",
-"Divide both sides by 2: x = 9.",
-"Check: 2 × 9 + 3 = 21."
+"Subtract 10 from both sides: 3x = 24.",
+"Divide both sides by 3: x = 8.",
+"Check: 3 × 8 + 10 = 34."
 ],
-"title": "2x + 3 = 21"
+"title": "3x + 10 = 34"
 }
 },
 "mt_O_UOTiMvT_": {
 "audience": "family",
 "explain": {
 "adult": [
-"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 3x + 9 = 30 gives x = 7.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Feeling of not understanding and leads to Choosing a Strategy.",
-"Check by putting the answer back into the original equation."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
-"An equation is like a balanced scale.",
-"Do the same to both sides to keep it level.",
-"For example, 3x + 9 = 30 gives x = 7."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -1398,64 +1401,64 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "x",
-"explain": "{=a*x} ÷ {a} = {=x}.",
-"hint": "Undo × {a}.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "m1",
 "params": {
 "a": [
-2,
-9
+0,
+8
 ],
-"x": [
-2,
-12
+"b": [
+0,
+8
+],
+"c": [
+1,
+6
 ]
 },
-"prompt": "I think of a number, multiply by {a}, and get {=a*x}. What is my number?",
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "x",
-"explain": "x + {b} = {=x+b}, so x = {=x}.",
-"hint": "Divide by {a} first.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m2",
 "params": {
 "a": [
 2,
-6
+10
 ],
-"b": [
-1,
-6
-],
-"x": [
-1,
-9
+"k": [
+2,
+4
 ]
 },
-"prompt": "Solve {a}(x + {b}) = {=a*(x+b)}.",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"Divide by 5",
-"Subtract 5",
-"Multiply by 5"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "35 ÷ 5 = 7, so x = 7.",
-"hint": "Undo × 5.",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
 "id": "m3",
-"prompt": "To solve 5x = 35, what do you do to both sides?",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Age 6-7 problem-solving builds directly on age 5-6 problem-sense-making",
-"Explaining part-part-whole decompositions exercises showing and telling",
-"Explaining how to find number bonds to 10 exercises showing thinking with objects"
+"Mentally finding 10 more/less uses generalised repeated reasoning about place value",
+"Deriving facts within 20 from known facts (near doubles, make ten) exercises generalising from…"
 ],
 "explain": "Because: Age 6-7 problem-solving builds directly on age 5-6 problem-sense-making.",
 "hint": "Think about what you need first.",
@@ -1468,7 +1471,7 @@
 "choices": [
 "Choosing a Strategy",
 "Feeling of not understanding",
-"Showing Your Working"
+"Generalising Patterns"
 ],
 "explain": "'Guided Multi-Step Problem Solving' leads on to 'Choosing a Strategy'.",
 "hint": "What comes after this topic?",
@@ -1477,136 +1480,134 @@
 "type": "mc"
 },
 {
-"answer": "x",
-"explain": "{a}x = {=a*x}, so x = {=x}.",
-"hint": "Undo + {b}, then ÷ {a}.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "m6",
 "params": {
 "a": [
-2,
+1,
 9
 ],
 "b": [
 1,
-12
-],
-"x": [
-1,
-10
+9
 ]
 },
-"prompt": "Quick check: Solve {a}x + {b} = {=a*x+b}. What is x?",
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "b+c",
-"explain": "x = {c} + {b} = {=b+c}.",
-"hint": "Add {b} to both sides.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "m7",
 "params": {
+"a": [
+1,
+6
+],
 "b": [
-2,
-15
+0,
+4
 ],
 "c": [
+0,
+4
+],
+"d": [
 1,
-20
+6
 ]
 },
-"prompt": "Quick check: Solve x − {b} = {c}.",
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "x",
-"explain": "{a}x = {=a*x}, so x = {=x}.",
-"hint": "Undo + {b}, then ÷ {a}.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
 "a": [
-2,
+1,
 9
 ],
 "b": [
 1,
-12
-],
-"x": [
-1,
-10
+9
 ]
 },
-"prompt": "Solve {a}x + {b} = {=a*x+b}. What is x?",
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "b+c",
-"explain": "x = {c} + {b} = {=b+c}.",
-"hint": "Add {b} to both sides.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "p2",
 "params": {
+"a": [
+1,
+6
+],
 "b": [
-2,
-15
+0,
+4
 ],
 "c": [
+0,
+4
+],
+"d": [
 1,
-20
+6
 ]
 },
-"prompt": "Solve x − {b} = {c}.",
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"7",
-"13",
-"21"
-],
-"explain": "x in 3x + 9 = 30 = 7. Undo the + first, then the ×.",
-"hint": "Redo it step by step and compare.",
-"id": "p3",
-"prompt": "Sam worked out x in 3x + 9 = 30 and got 13. What is the correct answer?",
-"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Making Sense of Problems",
-"Shape patterns (age 7+)",
-"Working with money"
+"Understanding fractions (age 9+)",
+"Fractions, Decimals & Percentages"
 ],
 "explain": "'Guided Multi-Step Problem Solving' builds on 'Making Sense of Problems'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Guided Multi-Step Problem Solving'?",
 "type": "mc"
 }
 ],
-"quality": 86,
+"quality": 99,
 "status": "auto-starter",
 "title": "Guided Multi-Step Problem Solving",
 "topicId": "mt_O_UOTiMvT_",
 "visual": {
-"caption": "Do the same to both sides to keep the scale level, until x is on its own.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"a": 3,
-"b": 9,
-"c": 30,
-"mode": "solve"
+"m": [
+1,
+0,
+0,
+1
+]
 },
-"type": "balance"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"Subtract 9 from both sides: 3x = 21.",
-"Divide both sides by 3: x = 7.",
-"Check: 3 × 7 + 9 = 30."
+"Start from what you know: Feeling of not understanding.",
+"The new idea: With teacher guidance, make sense of multi-step and more complex problems by planning a pathway to the solution,….",
+"Rotation by 90° sends (x, y) to (−y, x).",
+"Next, this helps with: Choosing a Strategy."
 ],
-"title": "3x + 9 = 30"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Guided Multi-Step Problem Solving'"
 }
 },
 "mt_RFeVlw0QvX": {
@@ -1614,14 +1615,14 @@
 "explain": {
 "adult": [
 "Check by putting the answer back into the original equation.",
-"For example, 4x + 2 = 38 gives x = 9.",
+"For example, 5x + 11 = 41 gives x = 6.",
 "It builds on Counting in 2s and leads to Generalising Patterns.",
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 4x + 2 = 38 gives x = 9."
+"For example, 5x + 11 = 41 gives x = 6."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -1687,8 +1688,8 @@
 "answer": 0,
 "choices": [
 "Skip counting exercises recognising repeating calculation patterns",
-"Unit conversion exercises modelling with appropriate representations",
-"Area of rectangles exercises modelling real-world with multiplication"
+"Area/perimeter formula problems exercise real-world modelling",
+"Age 8-9 modelling is prerequisite to age 9-10 level"
 ],
 "explain": "Because: Skip counting exercises recognising repeating calculation patterns.",
 "hint": "Think about what you need first.",
@@ -1701,7 +1702,7 @@
 "choices": [
 "Generalising Patterns",
 "Counting in 2s",
-"Modelling with multiplication and fractions"
+"Real-World Maths Modelling"
 ],
 "explain": "'Finding efficient methods' leads on to 'Generalising Patterns'.",
 "hint": "What comes after this topic?",
@@ -1795,22 +1796,22 @@
 {
 "answer": 0,
 "choices": [
-"9",
-"10",
-"36"
+"6",
+"10.4",
+"30"
 ],
-"explain": "x in 4x + 2 = 38 = 9. Undo the + first, then the ×.",
+"explain": "x in 5x + 11 = 41 = 6. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 4x + 2 = 38 and got 10. What is the correct answer?",
+"prompt": "Sam worked out x in 5x + 11 = 41 and got 10.4. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Counting in 2s",
-"Modelling with multiplication and fractions",
-"Extending Table Patterns"
+"Real-World Maths Modelling",
+"Shape patterns (age 7+)"
 ],
 "explain": "'Finding efficient methods' builds on 'Counting in 2s'.",
 "hint": "What does this topic build on?",
@@ -1826,20 +1827,20 @@
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 4,
-"b": 2,
-"c": 38,
+"a": 5,
+"b": 11,
+"c": 41,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 2 from both sides: 4x = 36.",
-"Divide both sides by 4: x = 9.",
-"Check: 4 × 9 + 2 = 38."
+"Subtract 11 from both sides: 5x = 30.",
+"Divide both sides by 5: x = 6.",
+"Check: 5 × 6 + 11 = 41."
 ],
-"title": "4x + 2 = 38"
+"title": "5x + 11 = 41"
 }
 },
 "mt_RKeheOL9uo": {
@@ -1847,14 +1848,14 @@
 "explain": {
 "adult": [
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 6x + 7 = 43 gives x = 6.",
+"For example, 5x + 2 = 32 gives x = 6.",
 "It builds on Trying a New Approach and leads to Choosing a Strategy.",
 "Check by putting the answer back into the original equation."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 6x + 7 = 43 gives x = 6."
+"For example, 5x + 2 = 32 gives x = 6."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -1920,8 +1921,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 problem-solving builds on age 6-7 problem-solving",
-"Cross-subject",
-"Constructing multi-step mathematical arguments and identifying errors in reasoning is the maths form of…"
+"Deliberately applying commutativity to make addition easier exercises using structure",
+"Using place-value structure (tens and ones) to solve problems efficiently"
 ],
 "explain": "Because: Age 7-8 problem-solving builds on age 6-7 problem-solving.",
 "hint": "Think about what you need first.",
@@ -1934,7 +1935,7 @@
 "choices": [
 "Choosing a Strategy",
 "Trying a New Approach",
-"Justifying mathematical reasoning"
+"Shape patterns"
 ],
 "explain": "'Multi-Step Problem Solving' leads on to 'Choosing a Strategy'.",
 "hint": "What comes after this topic?",
@@ -2029,21 +2030,21 @@
 "answer": 0,
 "choices": [
 "6",
-"8.33333",
-"36"
+"6.8",
+"30"
 ],
-"explain": "x in 6x + 7 = 43 = 6. Undo the + first, then the ×.",
+"explain": "x in 5x + 2 = 32 = 6. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 6x + 7 = 43 and got 8.33333. What is the correct answer?",
+"prompt": "Sam worked out x in 5x + 2 = 32 and got 6.8. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Guided Multi-Step Problem Solving",
-"Constructing mathematical arguments",
-"Fractions, Decimals & Percentages"
+"Using Mathematical Structure",
+"Real-World Maths Modelling"
 ],
 "explain": "'Multi-Step Problem Solving' builds on 'Guided Multi-Step Problem Solving'.",
 "hint": "What does this topic build on?",
@@ -2052,42 +2053,42 @@
 "type": "mc"
 }
 ],
-"quality": 85,
+"quality": 81,
 "status": "auto-starter",
 "title": "Multi-Step Problem Solving",
 "topicId": "mt_RKeheOL9uo",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 6,
-"b": 7,
-"c": 43,
+"a": 5,
+"b": 2,
+"c": 32,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 7 from both sides: 6x = 36.",
-"Divide both sides by 6: x = 6.",
-"Check: 6 × 6 + 7 = 43."
+"Subtract 2 from both sides: 5x = 30.",
+"Divide both sides by 5: x = 6.",
+"Check: 5 × 6 + 2 = 32."
 ],
-"title": "6x + 7 = 43"
+"title": "5x + 2 = 32"
 }
 },
 "mt_WkKkb7W9Qd": {
 "audience": "family",
 "explain": {
 "adult": [
-"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 2x + 10 = 16 gives x = 3.",
+"Check by putting the answer back into the original equation.",
+"For example, 6x + 11 = 35 gives x = 4.",
 "It builds on Checking Your Own Work and leads to Guided Multi-Step Problem Solving.",
-"Check by putting the answer back into the original equation."
+"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 2x + 10 = 16 gives x = 3."
+"For example, 6x + 11 = 35 gives x = 4."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -2153,8 +2154,8 @@
 "answer": 0,
 "choices": [
 "Checking whether a maths answer makes sense applies the universal self-checking habit to a…",
-"Skip counting exercises recognising repeating calculation patterns",
-"The +1 pattern in counting is the earliest repeated reasoning"
+"Age 6-7 explaining with diagrams/logic builds on age 5-6 showing and telling with objects",
+"Determining whether equations are true/false exercises evaluating and justifying"
 ],
 "explain": "Because: Checking whether a maths answer makes sense applies the universal self-checking habit to a….",
 "hint": "Think about what you need first.",
@@ -2167,7 +2168,7 @@
 "choices": [
 "Guided Multi-Step Problem Solving",
 "Checking Your Own Work",
-"Finding efficient methods"
+"Explaining Mathematical Reasoning"
 ],
 "explain": "'Making Sense of Problems' leads on to 'Guided Multi-Step Problem Solving'.",
 "hint": "What comes after this topic?",
@@ -2261,22 +2262,22 @@
 {
 "answer": 0,
 "choices": [
-"3",
-"13",
-"6"
+"4",
+"7.66667",
+"24"
 ],
-"explain": "x in 2x + 10 = 16 = 3. Undo the + first, then the ×.",
+"explain": "x in 6x + 11 = 35 = 4. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 2x + 10 = 16 and got 13. What is the correct answer?",
+"prompt": "Sam worked out x in 6x + 11 = 35 and got 7.66667. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Checking Your Own Work",
-"Guided Multi-Step Problem Solving",
-"Extending Table Patterns"
+"Explaining Mathematical Reasoning",
+"Shape patterns"
 ],
 "explain": "'Making Sense of Problems' builds on 'Checking Your Own Work'.",
 "hint": "What does this topic build on?",
@@ -2292,20 +2293,20 @@
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 2,
-"b": 10,
-"c": 16,
+"a": 6,
+"b": 11,
+"c": 35,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 10 from both sides: 2x = 6.",
-"Divide both sides by 2: x = 3.",
-"Check: 2 × 3 + 10 = 16."
+"Subtract 11 from both sides: 6x = 24.",
+"Divide both sides by 6: x = 4.",
+"Check: 6 × 4 + 11 = 35."
 ],
-"title": "2x + 10 = 16"
+"title": "6x + 11 = 35"
 }
 },
 "mt__Itf4aQZUj": {
@@ -2313,14 +2314,14 @@
 "explain": {
 "adult": [
 "This topic asks you to look for and use mathematical structure.",
-"Check by putting the answer back into the original equation.",
-"For example, 3x + 6 = 24 gives x = 6.",
+"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
+"For example, 6x + 2 = 14 gives x = 2.",
 "It builds on Shape patterns (age 7+) and leads to Fractions, Decimals & Percentages."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 3x + 6 = 24 gives x = 6."
+"For example, 6x + 2 = 14 gives x = 2."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2386,8 +2387,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 using structure is prerequisite to age 8-9 level",
-"Evaluating whether a maths solution is reasonable applies the universal comprehension-monitoring habit",
-"Choosing strategies for adding within 20 requires planning and evaluating approaches"
+"Cross-subject",
+"Constructing multi-step mathematical arguments and identifying errors in reasoning is the maths form of…"
 ],
 "explain": "Because: Age 7-8 using structure is prerequisite to age 8-9 level.",
 "hint": "Think about what you need first.",
@@ -2400,7 +2401,7 @@
 "choices": [
 "Fractions, Decimals & Percentages",
 "Shape patterns (age 7+)",
-"Guided Multi-Step Problem Solving"
+"Justifying mathematical reasoning"
 ],
 "explain": "'Using Mathematical Structure' leads on to 'Fractions, Decimals & Percentages'.",
 "hint": "What comes after this topic?",
@@ -2494,21 +2495,21 @@
 {
 "answer": 0,
 "choices": [
-"6",
-"10",
-"18"
+"2",
+"2.66667",
+"12"
 ],
-"explain": "x in 3x + 6 = 24 = 6. Undo the + first, then the ×.",
+"explain": "x in 6x + 2 = 14 = 2. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 3x + 6 = 24 and got 10. What is the correct answer?",
+"prompt": "Sam worked out x in 6x + 2 = 14 and got 2.66667. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Shape patterns (age 7+)",
-"Constructing mathematical arguments",
+"Real-World Maths Modelling",
 "Understanding fractions (age 9+)"
 ],
 "explain": "'Using Mathematical Structure' builds on 'Shape patterns (age 7+)'.",
@@ -2525,35 +2526,35 @@
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 3,
-"b": 6,
-"c": 24,
+"a": 6,
+"b": 2,
+"c": 14,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 6 from both sides: 3x = 18.",
-"Divide both sides by 3: x = 6.",
-"Check: 3 × 6 + 6 = 24."
+"Subtract 2 from both sides: 6x = 12.",
+"Divide both sides by 6: x = 2.",
+"Check: 6 × 2 + 2 = 14."
 ],
-"title": "3x + 6 = 24"
+"title": "6x + 2 = 14"
 }
 },
 "mt_a3dov8CZkq": {
 "audience": "learner",
 "explain": {
 "adult": [
-"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 5x + 2 = 27 gives x = 5.",
+"Check by putting the answer back into the original equation.",
+"For example, 4x + 3 = 19 gives x = 4.",
 "It builds on Equivalent fractions (age 8+) and leads to Understanding fractions (age 9+).",
-"Check by putting the answer back into the original equation."
+"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 5x + 2 = 27 gives x = 5."
+"For example, 4x + 3 = 19 gives x = 4."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2619,8 +2620,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 explaining/justifying is prerequisite to age 8-9 level",
-"Classifying and counting objects into categories is an early modelling activity",
-"Solving word problems with drawings exercises early modelling"
+"Unknown angle problems exercise constructing chains of reasoning",
+"Age 8-9 constructing arguments is prerequisite to age 9-10 level"
 ],
 "explain": "Because: Age 7-8 explaining/justifying is prerequisite to age 8-9 level.",
 "hint": "Think about what you need first.",
@@ -2633,7 +2634,7 @@
 "choices": [
 "Understanding fractions (age 9+)",
 "Equivalent fractions (age 8+)",
-"Using objects to model real problems"
+"Spotting mathematical patterns"
 ],
 "explain": "'Justifying mathematical reasoning (age 8+)' leads on to 'Understanding fractions (age 9+)'.",
 "hint": "What comes after this topic?",
@@ -2727,14 +2728,14 @@
 {
 "answer": 0,
 "choices": [
-"5",
-"5.8",
-"25"
+"4",
+"5.5",
+"16"
 ],
-"explain": "x in 5x + 2 = 27 = 5. Undo the + first, then the ×.",
+"explain": "x in 4x + 3 = 19 = 4. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 5x + 2 = 27 and got 5.8. What is the correct answer?",
+"prompt": "Sam worked out x in 4x + 3 = 19 and got 5.5. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -2758,20 +2759,20 @@
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 5,
-"b": 2,
-"c": 27,
+"a": 4,
+"b": 3,
+"c": 19,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 2 from both sides: 5x = 25.",
-"Divide both sides by 5: x = 5.",
-"Check: 5 × 5 + 2 = 27."
+"Subtract 3 from both sides: 4x = 16.",
+"Divide both sides by 4: x = 4.",
+"Check: 4 × 4 + 3 = 19."
 ],
-"title": "5x + 2 = 27"
+"title": "4x + 3 = 19"
 }
 },
 "mt_f67qGDhyfi": {
@@ -2779,14 +2780,14 @@
 "explain": {
 "adult": [
 "This topic asks you to represent real-world problems with number sentences, bar models.",
-"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 4x + 11 = 23 gives x = 3.",
+"Check by putting the answer back into the original equation.",
+"For example, 6x + 5 = 47 gives x = 7.",
 "It builds on Sorting into categories (age 6+) and leads to Working with money."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 4x + 11 = 23 gives x = 3."
+"For example, 6x + 5 = 47 gives x = 7."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -2852,8 +2853,8 @@
 "answer": 0,
 "choices": [
 "Age 6-7 modelling with bar models/diagrams builds on age 5-6 modelling with objects and…",
-"Length word problems exercise real-world modelling",
-"Age 7-8 modelling builds on age 6-7"
+"Evaluating whether a maths solution is reasonable applies the universal comprehension-monitoring habit",
+"Choosing strategies for adding within 20 requires planning and evaluating approaches"
 ],
 "explain": "Because: Age 6-7 modelling with bar models/diagrams builds on age 5-6 modelling with objects and….",
 "hint": "Think about what you need first.",
@@ -2866,7 +2867,7 @@
 "choices": [
 "Working with money",
 "Sorting into categories (age 6+)",
-"Explaining Mathematical Reasoning"
+"Guided Multi-Step Problem Solving"
 ],
 "explain": "'Connecting maths to real life' leads on to 'Working with money'.",
 "hint": "What comes after this topic?",
@@ -2960,22 +2961,22 @@
 {
 "answer": 0,
 "choices": [
-"3",
-"8.5",
-"12"
+"7",
+"8.66667",
+"42"
 ],
-"explain": "x in 4x + 11 = 23 = 3. Undo the + first, then the ×.",
+"explain": "x in 6x + 5 = 47 = 7. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 4x + 11 = 23 and got 8.5. What is the correct answer?",
+"prompt": "Sam worked out x in 6x + 5 = 47 and got 8.66667. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Using objects to model real problems",
-"Working with money",
-"Real-World Maths Modelling"
+"Using Mathematical Structure",
+"Constructing mathematical arguments"
 ],
 "explain": "'Connecting maths to real life' builds on 'Using objects to model real problems'.",
 "hint": "What does this topic build on?",
@@ -2984,27 +2985,27 @@
 "type": "mc"
 }
 ],
-"quality": 86,
+"quality": 89,
 "status": "auto-starter",
 "title": "Connecting maths to real life",
 "topicId": "mt_f67qGDhyfi",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 4,
-"b": 11,
-"c": 23,
+"a": 6,
+"b": 5,
+"c": 47,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 11 from both sides: 4x = 12.",
-"Divide both sides by 4: x = 3.",
-"Check: 4 × 3 + 11 = 23."
+"Subtract 5 from both sides: 6x = 42.",
+"Divide both sides by 6: x = 7.",
+"Check: 6 × 7 + 5 = 47."
 ],
-"title": "4x + 11 = 23"
+"title": "6x + 5 = 47"
 }
 },
 "mt_fLOkq-HfPB": {
@@ -3012,14 +3013,14 @@
 "explain": {
 "adult": [
 "This topic asks you to use objects, drawings.",
-"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 6x + 4 = 22 gives x = 3.",
+"Check by putting the answer back into the original equation.",
+"For example, 4x + 2 = 22 gives x = 5.",
 "It builds on Sorting into categories and leads to Connecting maths to real life."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 6x + 4 = 22 gives x = 3."
+"For example, 4x + 2 = 22 gives x = 5."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -3193,14 +3194,14 @@
 {
 "answer": 0,
 "choices": [
-"3",
-"4.33333",
-"18"
+"5",
+"6",
+"20"
 ],
-"explain": "x in 6x + 4 = 22 = 3. Undo the + first, then the ×.",
+"explain": "x in 4x + 2 = 22 = 5. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 6x + 4 = 22 and got 4.33333. What is the correct answer?",
+"prompt": "Sam worked out x in 4x + 2 = 22 and got 6. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -3208,7 +3209,7 @@
 "choices": [
 "Sorting into categories",
 "Explaining Mathematical Reasoning",
-"Shape patterns"
+"Extending Table Patterns"
 ],
 "explain": "'Using objects to model real problems' builds on 'Sorting into categories'.",
 "hint": "What does this topic build on?",
@@ -3217,15 +3218,15 @@
 "type": "mc"
 }
 ],
-"quality": 84,
+"quality": 86,
 "status": "auto-starter",
 "title": "Using objects to model real problems",
 "topicId": "mt_fLOkq-HfPB",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 6,
-"b": 4,
+"a": 4,
+"b": 2,
 "c": 22,
 "mode": "solve"
 },
@@ -3233,11 +3234,11 @@
 },
 "worked": {
 "steps": [
-"Subtract 4 from both sides: 6x = 18.",
-"Divide both sides by 6: x = 3.",
-"Check: 6 × 3 + 4 = 22."
+"Subtract 2 from both sides: 4x = 20.",
+"Divide both sides by 4: x = 5.",
+"Check: 4 × 5 + 2 = 22."
 ],
-"title": "6x + 4 = 22"
+"title": "4x + 2 = 22"
 }
 },
 "mt_fZTn0W_iZR": {
@@ -3246,13 +3247,13 @@
 "adult": [
 "This topic asks you to recognise and use repeated reasoning to generalise.",
 "For 5, 8, 11 …, the difference is 3, so the nth term is 3n + 2.",
-"For example, 6, 11, 16, 21 goes up by 5.",
+"For example, 9, 13, 17, 21 goes up by 4.",
 "It builds on 10 More or 10 Less and leads to Extending Table Patterns."
 ],
 "kid": [
 "A sequence is a list that follows a rule.",
 "5, 8, 11 … adds 3 each time.",
-"For example, 6, 11, 16, 21 goes up by 5."
+"For example, 9, 13, 17, 21 goes up by 4."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -3314,8 +3315,8 @@
 "answer": 0,
 "choices": [
 "Age 6-7 generalising from repeated reasoning builds on age 5-6 noticing repeated patterns",
-"Scale factor problems are key Y6 modelling contexts",
-"Y6 modelling extends Y5 real-world problem modelling"
+"Interpreting data exercises representing real-world situations",
+"Representing unknown-number problems with equations exercises modelling at age 6-7"
 ],
 "explain": "Because: Age 6-7 generalising from repeated reasoning builds on age 5-6 noticing repeated patterns.",
 "hint": "Think about what you need first.",
@@ -3328,7 +3329,7 @@
 "choices": [
 "Extending Table Patterns",
 "10 More or 10 Less",
-"Real-World Mathematical Modelling"
+"Connecting maths to real life"
 ],
 "explain": "'Generalising Patterns' leads on to 'Extending Table Patterns'.",
 "hint": "What comes after this topic?",
@@ -3414,22 +3415,22 @@
 {
 "answer": 0,
 "choices": [
-"51",
-"56",
-"50"
+"45",
+"49",
+"40"
 ],
-"explain": "the 10th term of 6, 11, 16, 21, … = 51. Use the nth term with n = 10.",
+"explain": "the 10th term of 9, 13, 17, 21, … = 45. Use the nth term with n = 10.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the 10th term of 6, 11, 16, 21, … and got 56. What is the correct answer?",
+"prompt": "Sam worked out the 10th term of 9, 13, 17, 21, … and got 49. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Finding efficient methods",
-"Real-World Mathematical Modelling",
-"Working with money"
+"Real-World Maths Modelling",
+"Fractions, Decimals & Percentages"
 ],
 "explain": "'Generalising Patterns' builds on 'Finding efficient methods'.",
 "hint": "What does this topic build on?",
@@ -3452,11 +3453,11 @@
 "targets": [
 [
 1,
-6
+9
 ],
 [
 3,
-16
+17
 ]
 ],
 "xr": [
@@ -3472,12 +3473,12 @@
 },
 "worked": {
 "steps": [
-"The terms go up by 5 each time.",
-"So the nth term starts with 5n.",
-"5 × 1 = 5, but the first term is 6: adjust by 1.",
-"nth term = 5n + 1."
+"The terms go up by 4 each time.",
+"So the nth term starts with 4n.",
+"4 × 1 = 4, but the first term is 9: adjust by 5.",
+"nth term = 4n + 5."
 ],
-"title": "6, 11, 16, 21, …"
+"title": "9, 13, 17, 21, …"
 }
 },
 "mt_hlGKg5M7qJ": {
@@ -3485,14 +3486,14 @@
 "explain": {
 "adult": [
 "This topic asks you to look for and use mathematical structure.",
-"To find a percentage of an amount, multiply the amount by the decimal.",
-"For example, 75% of 240 is 180.",
+"A percentage is a fraction out of 100, so 20% = 20/100 = 0.2.",
+"For example, 30% of 240 is 72.",
 "It builds on Factors, multiples, and primes and leads to Recurring decimals as geometric series."
 ],
 "kid": [
 "Per cent means out of 100.",
 "50% is half. 25% is a quarter.",
-"For example, 75% of 240 is 180."
+"For example, 30% of 240 is 72."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -3551,8 +3552,8 @@
 "answer": 0,
 "choices": [
 "Age 8-9 using structure is prerequisite to age 9-10 level",
-"Explaining part-part-whole decompositions exercises showing and telling",
-"Explaining how to find number bonds to 10 exercises showing thinking with objects"
+"Evaluating whether a maths solution is reasonable applies the universal comprehension-monitoring habit",
+"Choosing strategies for adding within 20 requires planning and evaluating approaches"
 ],
 "explain": "Because: Age 8-9 using structure is prerequisite to age 9-10 level.",
 "hint": "Think about what you need first.",
@@ -3565,7 +3566,7 @@
 "choices": [
 "Recurring decimals as geometric series",
 "Factors, multiples, and primes",
-"Showing Your Working"
+"Guided Multi-Step Problem Solving"
 ],
 "explain": "'Fractions, Decimals & Percentages' leads on to 'Recurring decimals as geometric series'.",
 "hint": "What comes after this topic?",
@@ -3645,22 +3646,22 @@
 {
 "answer": 0,
 "choices": [
-"180",
-"3.2",
-"1800"
+"72",
+"8",
+"720"
 ],
-"explain": "75% of 240 = 180. Find 10% first, then scale.",
+"explain": "30% of 240 = 72. Find 10% first, then scale.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 75% of 240 and got 3.2. What is the correct answer?",
+"prompt": "Sam worked out 30% of 240 and got 8. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Using Mathematical Structure",
-"Real-World Mathematical Modelling",
-"Constructing mathematical arguments"
+"Constructing mathematical arguments",
+"Real-World Mathematical Modelling"
 ],
 "explain": "'Fractions, Decimals & Percentages' builds on 'Using Mathematical Structure'.",
 "hint": "What does this topic build on?",
@@ -3677,17 +3678,17 @@
 "caption": "Shade the hundred square, then find the percentage of the amount.",
 "opts": {
 "of": 200,
-"p": 75
+"p": 30
 },
 "type": "percent"
 },
 "worked": {
 "steps": [
 "10% of 240 = 24.",
-"75% = 7.5 × 10%.",
-"7.5 × 24 = 180."
+"30% = 3 × 10%.",
+"3 × 24 = 72."
 ],
-"title": "75% of 240"
+"title": "30% of 240"
 }
 },
 "mt_iQYPw8bMfN": {
@@ -3696,13 +3697,13 @@
 "adult": [
 "This topic asks you to model real-world problems involving measurement, money.",
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 6x + 3 = 51 gives x = 8.",
+"For example, 3x + 12 = 39 gives x = 9.",
 "It builds on Addition and subtraction word problems and leads to Modelling with multiplication and fractions."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 6x + 3 = 51 gives x = 8."
+"For example, 3x + 12 = 39 gives x = 9."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -3768,8 +3769,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 modelling builds on age 6-7",
-"Three-digit place-value patterns exercise using structure",
-"Age 7-8 using structure builds on age 6-7"
+"Checking whether a maths answer makes sense applies the universal self-checking habit to a…",
+"Problem sense-making at 5-6 requires cardinality understanding to make sense of 'how many' problems"
 ],
 "explain": "Because: Age 7-8 modelling builds on age 6-7.",
 "hint": "Think about what you need first.",
@@ -3782,7 +3783,7 @@
 "choices": [
 "Modelling with multiplication and fractions",
 "Addition and subtraction word problems",
-"Shape patterns (age 7+)"
+"Making Sense of Problems"
 ],
 "explain": "'Working with money' leads on to 'Modelling with multiplication and fractions'.",
 "hint": "What comes after this topic?",
@@ -3876,22 +3877,22 @@
 {
 "answer": 0,
 "choices": [
-"8",
 "9",
-"48"
+"17",
+"27"
 ],
-"explain": "x in 6x + 3 = 51 = 8. Undo the + first, then the ×.",
+"explain": "x in 3x + 12 = 39 = 9. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 6x + 3 = 51 and got 9. What is the correct answer?",
+"prompt": "Sam worked out x in 3x + 12 = 39 and got 17. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Connecting maths to real life",
-"Justifying mathematical reasoning (age 8+)",
-"Real-World Maths Modelling"
+"Fractions, Decimals & Percentages",
+"Real-World Mathematical Modelling"
 ],
 "explain": "'Working with money' builds on 'Connecting maths to real life'.",
 "hint": "What does this topic build on?",
@@ -3900,42 +3901,42 @@
 "type": "mc"
 }
 ],
-"quality": 82,
+"quality": 83,
 "status": "auto-starter",
 "title": "Working with money",
 "topicId": "mt_iQYPw8bMfN",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 6,
-"b": 3,
-"c": 51,
+"a": 3,
+"b": 12,
+"c": 39,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 3 from both sides: 6x = 48.",
-"Divide both sides by 6: x = 8.",
-"Check: 6 × 8 + 3 = 51."
+"Subtract 12 from both sides: 3x = 27.",
+"Divide both sides by 3: x = 9.",
+"Check: 3 × 9 + 12 = 39."
 ],
-"title": "6x + 3 = 51"
+"title": "3x + 12 = 39"
 }
 },
 "mt_j5YqQnN6xe": {
 "audience": "learner",
 "explain": {
 "adult": [
-"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 5x + 11 = 56 gives x = 9.",
+"Check by putting the answer back into the original equation.",
+"For example, 5x + 3 = 23 gives x = 4.",
 "It builds on Understanding fractions (age 9+) and leads to Justifying steps in solving equations.",
-"Check by putting the answer back into the original equation."
+"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 5x + 11 = 56 gives x = 9."
+"For example, 5x + 3 = 23 gives x = 4."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -4001,8 +4002,8 @@
 "answer": 0,
 "choices": [
 "Y6 formal reasoning extends Y5 multi-step argument construction",
-"Generating/explaining equivalent fractions exercises justification skills",
-"Fraction comparison requires constructing arguments about relative size"
+"Checking whether a maths answer makes sense applies the universal self-checking habit to a…",
+"Problem sense-making at 5-6 requires cardinality understanding to make sense of 'how many' problems"
 ],
 "explain": "Because: Y6 formal reasoning extends Y5 multi-step argument construction.",
 "hint": "Think about what you need first.",
@@ -4015,7 +4016,7 @@
 "choices": [
 "Justifying steps in solving equations",
 "Understanding fractions (age 9+)",
-"Justifying mathematical reasoning (age 8+)"
+"Making Sense of Problems"
 ],
 "explain": "'Constructing mathematical arguments' leads on to 'Justifying steps in solving equations'.",
 "hint": "What comes after this topic?",
@@ -4109,14 +4110,14 @@
 {
 "answer": 0,
 "choices": [
-"9",
-"13.4",
-"45"
+"4",
+"5.2",
+"20"
 ],
-"explain": "x in 5x + 11 = 56 = 9. Undo the + first, then the ×.",
+"explain": "x in 5x + 3 = 23 = 4. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 5x + 11 = 56 and got 13.4. What is the correct answer?",
+"prompt": "Sam worked out x in 5x + 3 = 23 and got 5.2. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -4141,19 +4142,19 @@
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
 "a": 5,
-"b": 11,
-"c": 56,
+"b": 3,
+"c": 23,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 11 from both sides: 5x = 45.",
-"Divide both sides by 5: x = 9.",
-"Check: 5 × 9 + 11 = 56."
+"Subtract 3 from both sides: 5x = 20.",
+"Divide both sides by 5: x = 4.",
+"Check: 5 × 4 + 3 = 23."
 ],
-"title": "5x + 11 = 56"
+"title": "5x + 3 = 23"
 }
 },
 "mt_kJ5wYzO8qC": {
@@ -4161,14 +4162,14 @@
 "explain": {
 "adult": [
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 4x + 2 = 34 gives x = 8.",
+"For example, 3x + 1 = 7 gives x = 2.",
 "It builds on Showing Your Working and leads to Teaching It Back.",
 "Check by putting the answer back into the original equation."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 4x + 2 = 34 gives x = 8."
+"For example, 3x + 1 = 7 gives x = 2."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -4234,8 +4235,8 @@
 "answer": 0,
 "choices": [
 "Age 6-7 explaining with diagrams/logic builds on age 5-6 showing and telling with objects",
-"Generating/explaining equivalent fractions exercises justification skills",
-"Fraction comparison requires constructing arguments about relative size"
+"Scale factor problems are key Y6 modelling contexts",
+"Y6 modelling extends Y5 real-world problem modelling"
 ],
 "explain": "Because: Age 6-7 explaining with diagrams/logic builds on age 5-6 showing and telling with objects.",
 "hint": "Think about what you need first.",
@@ -4248,7 +4249,7 @@
 "choices": [
 "Teaching It Back",
 "Showing Your Working",
-"Shape patterns"
+"Real-World Mathematical Modelling"
 ],
 "explain": "'Explaining Mathematical Reasoning' leads on to 'Teaching It Back'.",
 "hint": "What comes after this topic?",
@@ -4342,22 +4343,22 @@
 {
 "answer": 0,
 "choices": [
-"8",
-"9",
-"32"
+"2",
+"2.66667",
+"6"
 ],
-"explain": "x in 4x + 2 = 34 = 8. Undo the + first, then the ×.",
+"explain": "x in 3x + 1 = 7 = 2. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 4x + 2 = 34 and got 9. What is the correct answer?",
+"prompt": "Sam worked out x in 3x + 1 = 7 and got 2.66667. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Showing Your Working",
-"Justifying mathematical reasoning (age 8+)",
-"Using Mathematical Structure"
+"Real-World Mathematical Modelling",
+"Justifying mathematical reasoning (age 8+)"
 ],
 "explain": "'Explaining Mathematical Reasoning' builds on 'Showing Your Working'.",
 "hint": "What does this topic build on?",
@@ -4366,27 +4367,27 @@
 "type": "mc"
 }
 ],
-"quality": 84,
+"quality": 87,
 "status": "auto-starter",
 "title": "Explaining Mathematical Reasoning",
 "topicId": "mt_kJ5wYzO8qC",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 4,
-"b": 2,
-"c": 34,
+"a": 3,
+"b": 1,
+"c": 7,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 2 from both sides: 4x = 32.",
-"Divide both sides by 4: x = 8.",
-"Check: 4 × 8 + 2 = 34."
+"Subtract 1 from both sides: 3x = 6.",
+"Divide both sides by 3: x = 2.",
+"Check: 3 × 2 + 1 = 7."
 ],
-"title": "4x + 2 = 34"
+"title": "3x + 1 = 7"
 }
 },
 "mt_nyK25mNOeR": {
@@ -4394,14 +4395,14 @@
 "explain": {
 "adult": [
 "This topic asks you to show and tell how a mathematical answer was found using objects, drawings.",
-"Check by putting the answer back into the original equation.",
-"For example, 5x + 11 = 31 gives x = 4.",
+"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
+"For example, 2x + 11 = 15 gives x = 2.",
 "It builds on Numbers up to 10 into pairs and leads to Explaining Mathematical Reasoning."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 5x + 11 = 31 gives x = 4."
+"For example, 2x + 11 = 15 gives x = 2."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -4467,8 +4468,8 @@
 "answer": 0,
 "choices": [
 "Explaining part-part-whole decompositions exercises showing and telling",
-"Y6 formal reasoning extends Y5 multi-step argument construction",
-"Angle-based proofs draw on angle sum knowledge"
+"Age 6-7 explaining with diagrams/logic builds on age 5-6 showing and telling with objects",
+"Determining whether equations are true/false exercises evaluating and justifying"
 ],
 "explain": "Because: Explaining part-part-whole decompositions exercises showing and telling.",
 "hint": "Think about what you need first.",
@@ -4481,7 +4482,7 @@
 "choices": [
 "Explaining Mathematical Reasoning",
 "Numbers up to 10 into pairs",
-"Shape patterns"
+"Connecting maths to real life"
 ],
 "explain": "'Showing Your Working' leads on to 'Explaining Mathematical Reasoning'.",
 "hint": "What comes after this topic?",
@@ -4575,22 +4576,22 @@
 {
 "answer": 0,
 "choices": [
-"4",
-"8.4",
-"20"
+"2",
+"13",
+"4"
 ],
-"explain": "x in 5x + 11 = 31 = 4. Undo the + first, then the ×.",
+"explain": "x in 2x + 11 = 15 = 2. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 5x + 11 = 31 and got 8.4. What is the correct answer?",
+"prompt": "Sam worked out x in 2x + 11 = 15 and got 13. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Numbers up to 10 into pairs",
-"Constructing mathematical arguments",
-"Shape patterns"
+"Explaining Mathematical Reasoning",
+"Connecting maths to real life"
 ],
 "explain": "'Showing Your Working' builds on 'Numbers up to 10 into pairs'.",
 "hint": "What does this topic build on?",
@@ -4599,27 +4600,27 @@
 "type": "mc"
 }
 ],
-"quality": 87,
+"quality": 84,
 "status": "auto-starter",
 "title": "Showing Your Working",
 "topicId": "mt_nyK25mNOeR",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 5,
+"a": 2,
 "b": 11,
-"c": 31,
+"c": 15,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 11 from both sides: 5x = 20.",
-"Divide both sides by 5: x = 4.",
-"Check: 5 × 4 + 11 = 31."
+"Subtract 11 from both sides: 2x = 4.",
+"Divide both sides by 2: x = 2.",
+"Check: 2 × 2 + 11 = 15."
 ],
-"title": "5x + 11 = 31"
+"title": "2x + 11 = 15"
 }
 },
 "mt_pyMD_SIiYO": {
@@ -4627,14 +4628,14 @@
 "explain": {
 "adult": [
 "Check by putting the answer back into the original equation.",
-"For example, 2x + 8 = 24 gives x = 8.",
+"For example, 6x + 11 = 29 gives x = 3.",
 "It builds on Describing Aloud and leads to Justifying mathematical reasoning (age 8+).",
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 2x + 8 = 24 gives x = 8."
+"For example, 6x + 11 = 29 gives x = 3."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -4700,8 +4701,8 @@
 "answer": 0,
 "choices": [
 "Age 7-8 arguing/justifying builds on age 6-7",
-"Age 7-8 using structure is prerequisite to age 8-9 level",
-"Dividing by 10/100 exercises place-value structural patterns"
+"Deliberately applying commutativity to make addition easier exercises using structure",
+"Using place-value structure (tens and ones) to solve problems efficiently"
 ],
 "explain": "Because: Age 7-8 arguing/justifying builds on age 6-7.",
 "hint": "Think about what you need first.",
@@ -4714,7 +4715,7 @@
 "choices": [
 "Justifying mathematical reasoning (age 8+)",
 "Describing Aloud",
-"Using Mathematical Structure"
+"Shape patterns"
 ],
 "explain": "'Justifying mathematical reasoning' leads on to 'Justifying mathematical reasoning (age 8+)'.",
 "hint": "What comes after this topic?",
@@ -4726,8 +4727,8 @@
 "answer": 0,
 "choices": [
 "arguments",
-"multiplications",
-"structures"
+"relationships",
+"representations"
 ],
 "explain": "The missing word is 'arguments'.",
 "hint": "Which word fits the topic?",
@@ -4803,38 +4804,51 @@
 {
 "answer": 0,
 "choices": [
+"3",
+"6.66667",
+"18"
+],
+"explain": "x in 6x + 11 = 29 = 3. Undo the + first, then the ×.",
+"hint": "Redo it step by step and compare.",
+"id": "p3",
+"prompt": "Sam worked out x in 6x + 11 = 29 and got 6.66667. What is the correct answer?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
 "Explaining Mathematical Reasoning",
-"Using Mathematical Structure",
-"Real-World Mathematical Modelling"
+"Real-World Maths Modelling",
+"Constructing mathematical arguments"
 ],
 "explain": "'Justifying mathematical reasoning' builds on 'Explaining Mathematical Reasoning'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p4",
 "prompt": "Which topic should you learn before 'Justifying mathematical reasoning'?",
 "type": "mc"
 }
 ],
-"quality": 76,
+"quality": 80,
 "status": "auto-starter",
 "title": "Justifying mathematical reasoning",
 "topicId": "mt_pyMD_SIiYO",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 2,
-"b": 8,
-"c": 24,
+"a": 6,
+"b": 11,
+"c": 29,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 8 from both sides: 2x = 16.",
-"Divide both sides by 2: x = 8.",
-"Check: 2 × 8 + 8 = 24."
+"Subtract 11 from both sides: 6x = 18.",
+"Divide both sides by 6: x = 3.",
+"Check: 6 × 3 + 11 = 29."
 ],
-"title": "2x + 8 = 24"
+"title": "6x + 11 = 29"
 }
 },
 "mt_uG2mjHFOlO": {
@@ -4843,13 +4857,13 @@
 "adult": [
 "This topic asks you to notice simple patterns and structures.",
 "An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides.",
-"For example, 3x + 12 = 36 gives x = 8.",
+"For example, 6x + 9 = 27 gives x = 3.",
 "It builds on Addition as combining or putting together two and leads to Shape patterns."
 ],
 "kid": [
 "An equation is like a balanced scale.",
 "Do the same to both sides to keep it level.",
-"For example, 3x + 12 = 36 gives x = 8."
+"For example, 6x + 9 = 27 gives x = 3."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -4915,8 +4929,8 @@
 "answer": 0,
 "choices": [
 "Noticing commutativity of addition exercises spotting structural patterns",
-"Checking whether a maths answer makes sense applies the universal self-checking habit to a…",
-"Problem sense-making at 5-6 requires cardinality understanding to make sense of 'how many' problems"
+"Skip counting exercises recognising repeating calculation patterns",
+"The +1 pattern in counting is the earliest repeated reasoning"
 ],
 "explain": "Because: Noticing commutativity of addition exercises spotting structural patterns.",
 "hint": "Think about what you need first.",
@@ -4929,7 +4943,7 @@
 "choices": [
 "Shape patterns",
 "Addition as combining or putting together two",
-"Making Sense of Problems"
+"Finding efficient methods"
 ],
 "explain": "'Spotting mathematical patterns' leads on to 'Shape patterns'.",
 "hint": "What comes after this topic?",
@@ -4938,10 +4952,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"structures",
+"relationships",
+"representations"
+],
+"explain": "The missing word is 'structures'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Notice simple patterns and _____'",
+"type": "mc"
+},
+{
 "answer": "x",
 "explain": "{a}x = {=a*x}, so x = {=x}.",
 "hint": "Undo + {b}, then ÷ {a}.",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 2,
@@ -4957,24 +4984,6 @@
 ]
 },
 "prompt": "Quick check: Solve {a}x + {b} = {=a*x+b}. What is x?",
-"type": "numeric"
-},
-{
-"answer": "b+c",
-"explain": "x = {c} + {b} = {=b+c}.",
-"hint": "Add {b} to both sides.",
-"id": "m7",
-"params": {
-"b": [
-2,
-15
-],
-"c": [
-1,
-20
-]
-},
-"prompt": "Quick check: Solve x − {b} = {c}.",
 "type": "numeric"
 }
 ]
@@ -5023,22 +5032,22 @@
 {
 "answer": 0,
 "choices": [
-"8",
-"16",
-"24"
+"3",
+"6",
+"18"
 ],
-"explain": "x in 3x + 12 = 36 = 8. Undo the + first, then the ×.",
+"explain": "x in 6x + 9 = 27 = 3. Undo the + first, then the ×.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 3x + 12 = 36 and got 16. What is the correct answer?",
+"prompt": "Sam worked out x in 6x + 9 = 27 and got 6. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Addition as combining or putting together two",
-"Real-World Maths Modelling",
-"Fractions, Decimals & Percentages"
+"Shape patterns",
+"Extending Table Patterns"
 ],
 "explain": "'Spotting mathematical patterns' builds on 'Addition as combining or putting together two'.",
 "hint": "What does this topic build on?",
@@ -5047,42 +5056,42 @@
 "type": "mc"
 }
 ],
-"quality": 82,
+"quality": 80,
 "status": "auto-starter",
 "title": "Spotting mathematical patterns",
 "topicId": "mt_uG2mjHFOlO",
 "visual": {
 "caption": "Do the same to both sides to keep the scale level, until x is on its own.",
 "opts": {
-"a": 3,
-"b": 12,
-"c": 36,
+"a": 6,
+"b": 9,
+"c": 27,
 "mode": "solve"
 },
 "type": "balance"
 },
 "worked": {
 "steps": [
-"Subtract 12 from both sides: 3x = 24.",
-"Divide both sides by 3: x = 8.",
-"Check: 3 × 8 + 12 = 36."
+"Subtract 9 from both sides: 6x = 18.",
+"Divide both sides by 6: x = 3.",
+"Check: 6 × 3 + 9 = 27."
 ],
-"title": "3x + 12 = 36"
+"title": "6x + 9 = 27"
 }
 },
 "mt_yqZiX6vS7D": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Check by putting the answer back into the original equation.",
-"For example, 2x + 1 = 9 gives x = 4.",
+"Volume of a cuboid = length × width × height, measured in cubic units such as cm³.",
+"For example, a 3 × 4 × 3 cuboid holds 36 unit cubes.",
 "It builds on Scale and similar shapes and leads to Building a linear model from a context.",
-"An equation says two expressions are equal. To solve it, undo the operations in reverse order, doing the same to both sides."
+"Surface area adds up the areas of all the faces."
 ],
 "kid": [
-"An equation is like a balanced scale.",
-"Do the same to both sides to keep it level.",
-"For example, 2x + 1 = 9 gives x = 4."
+"Volume is how much space a solid takes up.",
+"Count the cubes inside it.",
+"For example, a 3 × 4 × 3 cuboid holds 36 unit cubes."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -5092,27 +5101,23 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "x",
-"explain": "{=a*x} ÷ {a} = {=x}.",
-"hint": "Undo × {a}.",
+"answer": "6*a*a",
+"explain": "6 × {a}² = {=6*a*a} cm².",
+"hint": "6 square faces.",
 "id": "m1",
 "params": {
 "a": [
 2,
 9
-],
-"x": [
-2,
-12
 ]
 },
-"prompt": "I think of a number, multiply by {a}, and get {=a*x}. What is my number?",
+"prompt": "What is the surface area of a cube with edge {a} cm?",
 "type": "numeric"
 },
 {
-"answer": "x",
-"explain": "x + {b} = {=x+b}, so x = {=x}.",
-"hint": "Divide by {a} first.",
+"answer": "c",
+"explain": "{=a*b*c} ÷ {=a*b} = {=c} m.",
+"hint": "Volume ÷ base area.",
 "id": "m2",
 "params": {
 "a": [
@@ -5120,36 +5125,36 @@
 6
 ],
 "b": [
-1,
+2,
 6
 ],
-"x": [
-1,
-9
+"c": [
+2,
+5
 ]
 },
-"prompt": "Solve {a}(x + {b}) = {=a*(x+b)}.",
+"prompt": "A tank is {a} m by {b} m and holds {=a*b*c} m³. How deep is it?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"Divide by 5",
-"Subtract 5",
-"Multiply by 5"
+"cm³",
+"cm²",
+"cm"
 ],
-"explain": "35 ÷ 5 = 7, so x = 7.",
-"hint": "Undo × 5.",
+"explain": "Volume is in cubic units, cm³.",
+"hint": "Three dimensions.",
 "id": "m3",
-"prompt": "To solve 5x = 35, what do you do to both sides?",
+"prompt": "Which unit measures volume?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Y6 modelling extends Y5 real-world problem modelling",
-"Unit conversion exercises modelling with appropriate representations",
-"Area of rectangles exercises modelling real-world with multiplication"
+"Interpreting data exercises representing real-world situations",
+"Representing unknown-number problems with equations exercises modelling at age 6-7"
 ],
 "explain": "Because: Y6 modelling extends Y5 real-world problem modelling.",
 "hint": "Think about what you need first.",
@@ -5162,7 +5167,7 @@
 "choices": [
 "Building a linear model from a context",
 "Scale and similar shapes",
-"Modelling with multiplication and fractions"
+"Connecting maths to real life"
 ],
 "explain": "'Real-World Mathematical Modelling' leads on to 'Building a linear model from a context'.",
 "hint": "What comes after this topic?",
@@ -5171,99 +5176,91 @@
 "type": "mc"
 },
 {
-"answer": "x",
-"explain": "{a}x = {=a*x}, so x = {=x}.",
-"hint": "Undo + {b}, then ÷ {a}.",
+"answer": "a*b*c",
+"explain": "{a} × {b} × {c} = {=a*b*c} cm³.",
+"hint": "Length × width × height.",
 "id": "m6",
 "params": {
 "a": [
 2,
-9
+8
 ],
 "b": [
-1,
-12
+2,
+6
 ],
-"x": [
-1,
-10
+"c": [
+2,
+5
 ]
 },
-"prompt": "Quick check: Solve {a}x + {b} = {=a*x+b}. What is x?",
+"prompt": "Quick check: A cuboid is {a} by {b} by {c} cm. What is its volume in cm³?",
 "type": "numeric"
 },
 {
-"answer": "b+c",
-"explain": "x = {c} + {b} = {=b+c}.",
-"hint": "Add {b} to both sides.",
+"answer": "a*a*a",
+"explain": "{a}³ = {=a*a*a} cm³.",
+"hint": "Edge × edge × edge.",
 "id": "m7",
 "params": {
-"b": [
+"a": [
 2,
-15
-],
-"c": [
-1,
-20
+9
 ]
 },
-"prompt": "Quick check: Solve x − {b} = {c}.",
+"prompt": "Quick check: A cube has edges {a} cm. What is its volume?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "x",
-"explain": "{a}x = {=a*x}, so x = {=x}.",
-"hint": "Undo + {b}, then ÷ {a}.",
+"answer": "a*b*c",
+"explain": "{a} × {b} × {c} = {=a*b*c} cm³.",
+"hint": "Length × width × height.",
 "id": "p1",
 "params": {
 "a": [
 2,
-9
+8
 ],
 "b": [
-1,
-12
+2,
+6
 ],
-"x": [
-1,
-10
+"c": [
+2,
+5
 ]
 },
-"prompt": "Solve {a}x + {b} = {=a*x+b}. What is x?",
+"prompt": "A cuboid is {a} by {b} by {c} cm. What is its volume in cm³?",
 "type": "numeric"
 },
 {
-"answer": "b+c",
-"explain": "x = {c} + {b} = {=b+c}.",
-"hint": "Add {b} to both sides.",
+"answer": "a*a*a",
+"explain": "{a}³ = {=a*a*a} cm³.",
+"hint": "Edge × edge × edge.",
 "id": "p2",
 "params": {
-"b": [
+"a": [
 2,
-15
-],
-"c": [
-1,
-20
+9
 ]
 },
-"prompt": "Solve x − {b} = {c}.",
+"prompt": "A cube has edges {a} cm. What is its volume?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"4",
-"5",
-"8"
+"36",
+"10",
+"66"
 ],
-"explain": "x in 2x + 1 = 9 = 4. Undo the + first, then the ×.",
+"explain": "the volume of a 3 × 4 × 3 cuboid = 36. Multiply all three lengths.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out x in 2x + 1 = 9 and got 5. What is the correct answer?",
+"prompt": "Sam worked out the volume of a 3 × 4 × 3 cuboid and got 10. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -5280,27 +5277,24 @@
 "type": "mc"
 }
 ],
-"quality": 80,
+"quality": 90,
 "status": "auto-starter",
 "title": "Real-World Mathematical Modelling",
 "topicId": "mt_yqZiX6vS7D",
 "visual": {
-"caption": "Do the same to both sides to keep the scale level, until x is on its own.",
+"caption": "Change n and count the little cubes in the stack.",
 "opts": {
-"a": 2,
-"b": 1,
-"c": 9,
-"mode": "solve"
+"n": 3
 },
-"type": "balance"
+"type": "squares"
 },
 "worked": {
 "steps": [
-"Subtract 1 from both sides: 2x = 8.",
-"Divide both sides by 2: x = 4.",
-"Check: 2 × 4 + 1 = 9."
+"Volume = length × width × height.",
+"3 × 4 = 12 cubes in one layer.",
+"3 layers: 12 × 3 = 36 cubic units."
 ],
-"title": "2x + 1 = 9"
+"title": "Cuboid 3 × 4 × 3"
 }
 }
 }

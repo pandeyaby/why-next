@@ -16,23 +16,9 @@
 "familyTip": "Try the lab together, then ask: what changed, and why?",
 "keyIdea": "Trace the journey of food through the digestive system.",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
-{
-"answer": "4*b",
-"explain": "{b} × 4 = {=4*b} beats per minute.",
-"hint": "× 4.",
-"id": "m1",
-"params": {
-"b": [
-15,
-25
-]
-},
-"prompt": "Your pulse is {b} beats in 15 seconds. How many per minute?",
-"type": "numeric"
-},
 {
 "answer": 0,
 "choices": [
@@ -42,7 +28,7 @@
 ],
 "explain": "The digestive system breaks down food.",
 "hint": "Stomach and intestines.",
-"id": "m2",
+"id": "m1",
 "prompt": "Which system breaks down food?",
 "type": "mc"
 },
@@ -55,7 +41,7 @@
 ],
 "explain": "Because: Tracing the digestive journey builds on knowing the body needs food for energy.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "m2",
 "prompt": "Why does 'The Digestive Journey' build on 'Basic Body Needs'?",
 "type": "mc"
 },
@@ -64,49 +50,65 @@
 "choices": [
 "The Digestive System",
 "Basic Body Needs",
-"The Heart & Blood"
+"How Breathing Works"
 ],
 "explain": "'The Digestive Journey' leads on to 'The Digestive System'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "m3",
 "prompt": "Which topic does 'The Digestive Journey' help you learn next?",
 "type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
-"id": "m5",
-"params": {
-"b": [
-60,
-90
+"answer": 0,
+"choices": [
+"volcanoes and earthquakes around the Pacific",
+"deserts",
+"frozen lakes"
 ],
-"m": [
-2,
-5
-]
-},
-"prompt": "Quick check: A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+"explain": "Many plate boundaries circle the Pacific Ocean.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "The Ring of Fire is a ring of…",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
-"id": "m6",
-"params": {
-"b": [
-12,
-20
+"answer": 0,
+"choices": [
+"The remains or trace of a living thing in rock",
+"A kind of metal",
+"A new plant"
 ],
-"m": [
-2,
-10
-]
+"explain": "Fossils are preserved remains or traces, such as bones or footprints.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What is a fossil?",
+"type": "mc"
 },
-"prompt": "Quick check: You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Carbon dioxide",
+"Oxygen",
+"Nitrogen"
+],
+"explain": "Burning coal, oil and gas releases carbon dioxide.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which gas is the main greenhouse gas from burning fuels?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Wind",
+"Coal",
+"Petrol"
+],
+"explain": "Wind turbines generate electricity without burning fuel.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which energy source does not release carbon dioxide when used?",
+"type": "mc"
 }
 ]
 },
@@ -162,7 +164,7 @@
 "type": "numeric"
 }
 ],
-"quality": 79,
+"quality": 78,
 "status": "auto-starter",
 "title": "The Digestive Journey",
 "topicId": "mt_JpQUM1129q",
@@ -227,44 +229,56 @@
 "adult": [
 "This topic asks you to know that the body needs food for energy, water to stay hydrated, sleep to rest and grow.",
 "It builds on The Heart & Blood and leads to The Digestive Journey.",
-"Cells are the building blocks; groups of cells form tissues, which form organs."
+"The heart pumps blood through vessels, carrying oxygen from the lungs to every cell."
 ],
 "kid": [
 "Your body has parts that work together.",
-"Your heart pumps blood. Your lungs breathe air."
+"Your heart pumps blood."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
 "keyIdea": "Know that the body needs food for energy, water to stay hydrated, sleep to rest and grow.",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
 {
-"answer": "4*b",
-"explain": "{b} × 4 = {=4*b} beats per minute.",
-"hint": "× 4.",
+"answer": 0,
+"choices": [
+"Carbon dioxide",
+"Oxygen",
+"Helium"
+],
+"explain": "Respiration in cells makes carbon dioxide, which we breathe out.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"params": {
-"b": [
-15,
-25
-]
-},
-"prompt": "Your pulse is {b} beats in 15 seconds. How many per minute?",
-"type": "numeric"
+"prompt": "Which gas do we breathe out more of?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Digestive",
-"Respiratory",
-"Circulatory"
+"The nervous system",
+"The digestive system",
+"The skeletal system"
 ],
-"explain": "The digestive system breaks down food.",
-"hint": "Stomach and intestines.",
+"explain": "Nerves carry signals to and from the brain.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "Which system breaks down food?",
+"prompt": "Which system carries messages around the body?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Your muscles need more oxygen, so blood must be pumped faster",
+"Your heart is tired",
+"To warm your feet"
+],
+"explain": "Exercise raises the demand for oxygen.",
+"hint": "Apply the idea to this situation.",
+"id": "m3",
+"prompt": "After running, your heart beats faster. Why?",
 "type": "mc"
 },
 {
@@ -276,175 +290,111 @@
 ],
 "explain": "'Basic Body Needs' leads on to 'The Digestive Journey'.",
 "hint": "What comes after this topic?",
-"id": "m3",
+"id": "m4",
 "prompt": "Which topic does 'Basic Body Needs' help you learn next?",
 "type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
-"id": "m4",
-"params": {
-"b": [
-60,
-90
+"answer": 0,
+"choices": [
+"volcanoes and earthquakes around the Pacific",
+"deserts",
+"frozen lakes"
 ],
-"m": [
-2,
-5
-]
-},
-"prompt": "Quick check: A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
-},
-{
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
+"explain": "Many plate boundaries circle the Pacific Ocean.",
+"hint": "Think about the key idea.",
 "id": "m5",
-"params": {
-"b": [
-12,
-20
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "Quick check: You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+"prompt": "The Ring of Fire is a ring of…",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
-"id": "m6",
-"params": {
-"b": [
-60,
-90
+"answer": 0,
+"choices": [
+"The remains or trace of a living thing in rock",
+"A kind of metal",
+"A new plant"
 ],
-"m": [
-2,
-5
-]
+"explain": "Fossils are preserved remains or traces, such as bones or footprints.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What is a fossil?",
+"type": "mc"
 },
-"prompt": "Recap: A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Carbon dioxide",
+"Oxygen",
+"Nitrogen"
+],
+"explain": "Burning coal, oil and gas releases carbon dioxide.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which gas is the main greenhouse gas from burning fuels?",
+"type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"Pumps blood around the body",
+"Digests food",
+"Helps you see"
+],
+"explain": "The heart is a muscle that pumps blood through blood vessels.",
+"hint": "Think about the key idea.",
 "id": "p1",
-"params": {
-"b": [
-60,
-90
-],
-"m": [
-2,
-5
-]
-},
-"prompt": "A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+"prompt": "What does the heart do?",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"The lungs",
+"The stomach",
+"The skull"
+],
+"explain": "In the lungs oxygen passes into the blood.",
+"hint": "Think about the key idea.",
 "id": "p2",
-"params": {
-"b": [
-12,
-20
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+"prompt": "Which organ takes oxygen into the body?",
+"type": "mc"
 },
 {
-"answer": "32-c",
-"explain": "32 − {c} = {=32-c}.",
-"hint": "Subtract.",
+"answer": 0,
+"choices": [
+"The small intestine",
+"The mouth",
+"The lungs"
+],
+"explain": "Digested food passes into the blood in the small intestine.",
+"hint": "Think about the key idea.",
 "id": "p3",
-"params": {
-"c": [
-16,
-24
-]
-},
-"prompt": "An adult has 32 teeth. A child has {c}. How many more does the adult have?",
-"type": "numeric"
+"prompt": "Where are most nutrients absorbed?",
+"type": "mc"
 }
 ],
-"quality": 81,
+"quality": 67,
 "status": "auto-starter",
 "title": "Basic Body Needs",
 "topicId": "mt_cxJRc15osy",
 "visual": {
-"caption": "Sort each part into the body system it belongs to.",
+"caption": "Pick a body system, then find all of its organs.",
 "opts": {
-"bins": [
-"Moves blood",
-"Breathing",
-"Digestion"
-],
-"items": [
-[
-"Heart",
-0
-],
-[
-"Arteries",
-0
-],
-[
-"Veins",
-0
-],
-[
-"Lungs",
-1
-],
-[
-"Windpipe",
-1
-],
-[
-"Stomach",
-2
-],
-[
-"Intestines",
-2
-],
-[
-"Food pipe",
-2
-]
-]
+"system": "circulatory"
 },
-"type": "sorter"
+"type": "bodylab"
 },
 "worked": {
 "steps": [
 "Start from what you know: The Heart & Blood.",
 "The new idea: Know that the body needs food for energy, water to stay hydrated, sleep to rest and grow.",
-"Air goes down the windpipe into the lungs.",
+"Teeth chop it and saliva starts digesting it in the mouth.",
 "Next, this helps with: The Digestive Journey."
 ],
-"title": "Following a breath of air, for 'Basic Body Needs'"
+"title": "The journey of a sandwich, for 'Basic Body Needs'"
 }
 },
 "mt_lp1eTsQen7": {
@@ -463,23 +413,9 @@
 "familyTip": "Try the lab together, then ask: what changed, and why?",
 "keyIdea": "Understand that the heart is a muscle that pumps blood around the body through tubes called blood vessels.",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
-{
-"answer": "4*b",
-"explain": "{b} × 4 = {=4*b} beats per minute.",
-"hint": "× 4.",
-"id": "m1",
-"params": {
-"b": [
-15,
-25
-]
-},
-"prompt": "Your pulse is {b} beats in 15 seconds. How many per minute?",
-"type": "numeric"
-},
 {
 "answer": 0,
 "choices": [
@@ -489,81 +425,87 @@
 ],
 "explain": "The digestive system breaks down food.",
 "hint": "Stomach and intestines.",
-"id": "m2",
+"id": "m1",
 "prompt": "Which system breaks down food?",
 "type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"volcanoes and earthquakes around the Pacific",
+"deserts",
+"frozen lakes"
+],
+"explain": "Many plate boundaries circle the Pacific Ocean.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "The Ring of Fire is a ring of…",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The remains or trace of a living thing in rock",
+"A kind of metal",
+"A new plant"
+],
+"explain": "Fossils are preserved remains or traces, such as bones or footprints.",
+"hint": "Think about the key idea.",
 "id": "m3",
-"params": {
-"b": [
-60,
-90
-],
-"m": [
-2,
-5
-]
-},
-"prompt": "Quick check: A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+"prompt": "What is a fossil?",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"Carbon dioxide",
+"Oxygen",
+"Nitrogen"
+],
+"explain": "Burning coal, oil and gas releases carbon dioxide.",
+"hint": "Think about the key idea.",
 "id": "m4",
-"params": {
-"b": [
-12,
-20
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "Quick check: You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+"prompt": "Which gas is the main greenhouse gas from burning fuels?",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"Wind",
+"Coal",
+"Petrol"
+],
+"explain": "Wind turbines generate electricity without burning fuel.",
+"hint": "Think about the key idea.",
 "id": "m5",
-"params": {
-"b": [
-60,
-90
-],
-"m": [
-2,
-5
-]
-},
-"prompt": "Recap: A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+"prompt": "Which energy source does not release carbon dioxide when used?",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
-"id": "m6",
-"params": {
-"b": [
-12,
-20
+"answer": 0,
+"choices": [
+"They take in carbon dioxide",
+"They make more heat",
+"They stop the wind"
 ],
-"m": [
-2,
-10
-]
+"explain": "Plants use carbon dioxide in photosynthesis.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "How do trees help with climate change?",
+"type": "mc"
 },
-"prompt": "Recap: You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Controls what enters and leaves the cell",
+"Makes the cell green",
+"Stores the DNA"
+],
+"explain": "The membrane lets some substances in and out.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "What does the cell membrane do?",
+"type": "mc"
 }
 ]
 },
@@ -619,7 +561,7 @@
 "type": "numeric"
 }
 ],
-"quality": 81,
+"quality": 83,
 "status": "auto-starter",
 "title": "The Heart & Blood",
 "topicId": "mt_lp1eTsQen7",
@@ -682,230 +624,173 @@
 "explain": {
 "adult": [
 "This topic asks you to know that we breathe air into our lungs through the nose and mouth, that our lungs take in oxygen from the air….",
-"Cells are the building blocks; groups of cells form tissues, which form organs.",
+"The heart pumps blood through vessels, carrying oxygen from the lungs to every cell.",
 "It leads to Basic Body Needs.",
-"Organs work in systems: the circulatory system moves blood, the respiratory system exchanges gases, and the digestive system breaks down food."
+"Organs work together in systems: the digestive system breaks down food, the circulatory system carries blood, and the respiratory system exchanges gases."
 ],
 "kid": [
 "Your body has parts that work together.",
-"Your heart pumps blood. Your lungs breathe air."
+"Your heart pumps blood."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
 "keyIdea": "Know that we breathe air into our lungs through the nose and mouth, that our lungs take in oxygen from the air which our….",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
 {
-"answer": "4*b",
-"explain": "{b} × 4 = {=4*b} beats per minute.",
-"hint": "× 4.",
+"answer": 0,
+"choices": [
+"Carbon dioxide",
+"Oxygen",
+"Helium"
+],
+"explain": "Respiration in cells makes carbon dioxide, which we breathe out.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"params": {
-"b": [
-15,
-25
-]
-},
-"prompt": "Your pulse is {b} beats in 15 seconds. How many per minute?",
-"type": "numeric"
+"prompt": "Which gas do we breathe out more of?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Digestive",
-"Respiratory",
-"Circulatory"
+"The nervous system",
+"The digestive system",
+"The skeletal system"
 ],
-"explain": "The digestive system breaks down food.",
-"hint": "Stomach and intestines.",
+"explain": "Nerves carry signals to and from the brain.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "Which system breaks down food?",
+"prompt": "Which system carries messages around the body?",
 "type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"Your muscles need more oxygen, so blood must be pumped faster",
+"Your heart is tired",
+"To warm your feet"
+],
+"explain": "Exercise raises the demand for oxygen.",
+"hint": "Apply the idea to this situation.",
 "id": "m3",
-"params": {
-"b": [
-60,
-90
-],
-"m": [
-2,
-5
-]
-},
-"prompt": "Quick check: A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+"prompt": "After running, your heart beats faster. Why?",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"volcanoes and earthquakes around the Pacific",
+"deserts",
+"frozen lakes"
+],
+"explain": "Many plate boundaries circle the Pacific Ocean.",
+"hint": "Think about the key idea.",
 "id": "m4",
-"params": {
-"b": [
-12,
-20
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "Quick check: You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+"prompt": "The Ring of Fire is a ring of…",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"The remains or trace of a living thing in rock",
+"A kind of metal",
+"A new plant"
+],
+"explain": "Fossils are preserved remains or traces, such as bones or footprints.",
+"hint": "Think about the key idea.",
 "id": "m5",
-"params": {
-"b": [
-60,
-90
-],
-"m": [
-2,
-5
-]
-},
-"prompt": "Recap: A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+"prompt": "What is a fossil?",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
-"id": "m6",
-"params": {
-"b": [
-12,
-20
+"answer": 0,
+"choices": [
+"Carbon dioxide",
+"Oxygen",
+"Nitrogen"
 ],
-"m": [
-2,
-10
-]
+"explain": "Burning coal, oil and gas releases carbon dioxide.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which gas is the main greenhouse gas from burning fuels?",
+"type": "mc"
 },
-"prompt": "Recap: You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Wind",
+"Coal",
+"Petrol"
+],
+"explain": "Wind turbines generate electricity without burning fuel.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which energy source does not release carbon dioxide when used?",
+"type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} beats.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"Pumps blood around the body",
+"Digests food",
+"Helps you see"
+],
+"explain": "The heart is a muscle that pumps blood through blood vessels.",
+"hint": "Think about the key idea.",
 "id": "p1",
-"params": {
-"b": [
-60,
-90
-],
-"m": [
-2,
-5
-]
-},
-"prompt": "A heart beats {b} times a minute. How many beats in {m} minutes?",
-"type": "numeric"
+"prompt": "What does the heart do?",
+"type": "mc"
 },
 {
-"answer": "b*m",
-"explain": "{b} × {m} = {=b*m} breaths.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"The lungs",
+"The stomach",
+"The skull"
+],
+"explain": "In the lungs oxygen passes into the blood.",
+"hint": "Think about the key idea.",
 "id": "p2",
-"params": {
-"b": [
-12,
-20
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "You take {b} breaths a minute. How many in {m} minutes?",
-"type": "numeric"
+"prompt": "Which organ takes oxygen into the body?",
+"type": "mc"
 },
 {
-"answer": "32-c",
-"explain": "32 − {c} = {=32-c}.",
-"hint": "Subtract.",
+"answer": 0,
+"choices": [
+"The small intestine",
+"The mouth",
+"The lungs"
+],
+"explain": "Digested food passes into the blood in the small intestine.",
+"hint": "Think about the key idea.",
 "id": "p3",
-"params": {
-"c": [
-16,
-24
-]
-},
-"prompt": "An adult has 32 teeth. A child has {c}. How many more does the adult have?",
-"type": "numeric"
+"prompt": "Where are most nutrients absorbed?",
+"type": "mc"
 }
 ],
-"quality": 89,
+"quality": 74,
 "status": "auto-starter",
 "title": "How Breathing Works",
 "topicId": "mt_tiPyEkm4cU",
 "visual": {
-"caption": "Sort each part into the body system it belongs to.",
+"caption": "Pick a body system, then find all of its organs.",
 "opts": {
-"bins": [
-"Moves blood",
-"Breathing",
-"Digestion"
-],
-"items": [
-[
-"Heart",
-0
-],
-[
-"Arteries",
-0
-],
-[
-"Veins",
-0
-],
-[
-"Lungs",
-1
-],
-[
-"Windpipe",
-1
-],
-[
-"Stomach",
-2
-],
-[
-"Intestines",
-2
-],
-[
-"Food pipe",
-2
-]
-]
+"system": "respiratory"
 },
-"type": "sorter"
+"type": "bodylab"
 },
 "worked": {
 "steps": [
 "The new idea: Know that we breathe air into our lungs through the nose and mouth, that our lungs take in….",
-"Air goes down the windpipe into the lungs.",
+"Teeth chop it and saliva starts digesting it in the mouth.",
 "Next, this helps with: Basic Body Needs."
 ],
-"title": "Following a breath of air, for 'How Breathing Works'"
+"title": "The journey of a sandwich, for 'How Breathing Works'"
 }
 }
 }

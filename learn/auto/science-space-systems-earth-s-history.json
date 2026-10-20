@@ -16,46 +16,19 @@
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Describe the detailed structure of the solar system, including moons, asteroids.",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
-{
-"answer": "10*m",
-"explain": "{m} × 10 = {=10*m} N.",
-"hint": "Weight = mass × g.",
-"id": "m1",
-"params": {
-"m": [
-1,
-30
-]
-},
-"prompt": "A {m} kg bag on Earth (g = 10 N/kg). What is its weight in N?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Friction",
-"Gravity pulling it forward",
-"Nothing"
-],
-"explain": "Friction between the ball and grass slows it.",
-"hint": "A force against the motion.",
-"id": "m2",
-"prompt": "A ball rolls on grass and stops. What stopped it?",
-"type": "mc"
-},
 {
 "answer": 0,
 "choices": [
 "Detailed solar system structure (moons, asteroids, comets, orbital periods) extends KS2 overview of planets…",
-"Describing sun, Earth",
-"Must observe sun/moon patterns before learning about the solar system model"
+"Explaining orbital motion as gravity-driven centripetal force requires knowing what is in orbit (planets,…",
+"Universal gravity and orbital mechanics build directly on mass vs weight and the concept…"
 ],
 "explain": "Because: Detailed solar system structure (moons, asteroids, comets, orbital periods) extends KS2 overview of planets….",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "m1",
 "prompt": "Why does 'The solar system (age 11+)' build on 'The solar system'?",
 "type": "mc"
 },
@@ -68,45 +41,74 @@
 ],
 "explain": "'The solar system (age 11+)' leads on to 'Universal Gravitation'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "m2",
 "prompt": "Which topic does 'The solar system (age 11+)' help you learn next?",
 "type": "mc"
 },
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
-"id": "m5",
-"params": {
-"a": [
-1,
-8
+"answer": 0,
+"choices": [
+"Most likely an asteroid impact changed the climate",
+"They all moved to space",
+"They turned into rocks"
 ],
-"m": [
-2,
-10
-]
-},
-"prompt": "Quick check: A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
+"explain": "Evidence points to a huge asteroid 66 million years ago.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why did the dinosaurs become extinct?",
+"type": "mc"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "m6",
-"params": {
-"s": [
-5,
-30
+"answer": 0,
+"choices": [
+"The windowsill plant, because it gets light for photosynthesis",
+"The cupboard plant, because it is warmer",
+"Both the same"
 ],
-"t": [
-2,
-10
-]
+"explain": "Light is needed for photosynthesis.",
+"hint": "Apply the idea to this situation.",
+"id": "m4",
+"prompt": "Two plants get the same water. One is on a windowsill, one in a cupboard. After a week, which grows better, and why?",
+"type": "mc"
 },
-"prompt": "Quick check: A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"They lose their habitat and their numbers fall",
+"They grow bigger",
+"Nothing changes"
+],
+"explain": "Removing habitat removes shelter and food.",
+"hint": "Apply the idea to this situation.",
+"id": "m5",
+"prompt": "A farmer removes all the hedges around a field. What will most likely happen to birds that nested there?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"At the poles",
+"In the middle",
+"Far away"
+],
+"explain": "Field lines are closest together at the poles.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Where is the magnetic field around a bar magnet strongest?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "What causes day and night?",
+"type": "mc"
 }
 ]
 },
@@ -130,22 +132,17 @@
 "type": "numeric"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "p2",
-"params": {
-"s": [
-5,
-30
+"answer": 0,
+"choices": [
+"F/9",
+"F/3",
+"3F"
 ],
-"t": [
-2,
-10
-]
-},
-"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+"explain": "Force ∝ 1/r², so 1/3² = 1/9.",
+"hint": "Inverse square.",
+"id": "p2",
+"prompt": "Two moons are pulled together with force F. If the distance between them triples, what is the force?",
+"type": "mc"
 },
 {
 "answer": "m*a",
@@ -166,7 +163,7 @@
 "type": "numeric"
 }
 ],
-"quality": 79,
+"quality": 95,
 "status": "auto-starter",
 "title": "The solar system (age 11+)",
 "topicId": "mt_33RrpbceZE",
@@ -185,12 +182,11 @@
 },
 "worked": {
 "steps": [
-"Start from what you know: The solar system.",
-"The new idea: Describe the detailed structure of the solar system, including moons, asteroids.",
-"Use a = F ÷ m.",
-"Next, this helps with: Universal Gravitation."
+"Gravitational force F = Gm₁m₂/r².",
+"Double r: r² becomes 4 times bigger.",
+"So the force becomes a quarter as big."
 ],
-"title": "A 20 N push on a 5 kg cart, no friction, for 'The solar system (age 11+)'"
+"title": "Doubling the distance between two masses"
 }
 },
 "mt_5l7iGkf1Tp": {
@@ -198,9 +194,9 @@
 "explain": {
 "adult": [
 "This topic asks you to describe the sun, Earth.",
-"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma).",
+"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it.",
 "It builds on Naming the Planets and leads to The solar system (age 11+).",
-"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it."
+"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma)."
 ],
 "kid": [
 "A push or a pull is a force.",
@@ -232,93 +228,82 @@
 "type": "numeric"
 },
 {
-"answer": "10*m",
-"explain": "{m} × 10 = {=10*m} N.",
-"hint": "Weight = mass × g.",
-"id": "m2",
-"params": {
-"m": [
-1,
-30
-]
-},
-"prompt": "A {m} kg bag on Earth (g = 10 N/kg). What is its weight in N?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Friction",
-"Gravity pulling it forward",
-"Nothing"
-],
-"explain": "Friction between the ball and grass slows it.",
-"hint": "A force against the motion.",
-"id": "m3",
-"prompt": "A ball rolls on grass and stops. What stopped it?",
-"type": "mc"
-},
-{
 "answer": 0,
 "choices": [
 "Describing sun, Earth",
-"Detailed solar system structure (moons, asteroids, comets, orbital periods) extends KS2 overview of planets…",
-"Describing the detailed solar system structure including moons, asteroids"
+"Explaining orbital motion as gravity-driven centripetal force requires knowing what is in orbit (planets,…",
+"Universal gravity and orbital mechanics build directly on mass vs weight and the concept…"
 ],
 "explain": "Because: Describing sun, Earth.",
 "hint": "Think about what you need first.",
-"id": "m4",
+"id": "m2",
 "prompt": "Why does 'The solar system' build on 'Naming the Planets'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The solar system (age 11+)",
-"Naming the Planets",
-"Why seasons change"
+"Most likely an asteroid impact changed the climate",
+"They all moved to space",
+"They turned into rocks"
 ],
-"explain": "'The solar system' leads on to 'The solar system (age 11+)'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'The solar system' help you learn next?",
+"explain": "Evidence points to a huge asteroid 66 million years ago.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why did the dinosaurs become extinct?",
 "type": "mc"
 },
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
-"id": "m6",
-"params": {
-"a": [
-1,
-8
+"answer": 0,
+"choices": [
+"The windowsill plant, because it gets light for photosynthesis",
+"The cupboard plant, because it is warmer",
+"Both the same"
 ],
-"m": [
-2,
-10
-]
-},
-"prompt": "Quick check: A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
+"explain": "Light is needed for photosynthesis.",
+"hint": "Apply the idea to this situation.",
+"id": "m4",
+"prompt": "Two plants get the same water. One is on a windowsill, one in a cupboard. After a week, which grows better, and why?",
+"type": "mc"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "m7",
-"params": {
-"s": [
-5,
-30
+"answer": 0,
+"choices": [
+"They lose their habitat and their numbers fall",
+"They grow bigger",
+"Nothing changes"
 ],
-"t": [
-2,
-10
-]
+"explain": "Removing habitat removes shelter and food.",
+"hint": "Apply the idea to this situation.",
+"id": "m5",
+"prompt": "A farmer removes all the hedges around a field. What will most likely happen to birds that nested there?",
+"type": "mc"
 },
-"prompt": "Quick check: A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"At the poles",
+"In the middle",
+"Far away"
+],
+"explain": "Field lines are closest together at the poles.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Where is the magnetic field around a bar magnet strongest?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "What causes day and night?",
+"type": "mc"
 }
 ]
 },
@@ -342,29 +327,24 @@
 "type": "numeric"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "p2",
-"params": {
-"s": [
-5,
-30
+"answer": 0,
+"choices": [
+"F/9",
+"F/3",
+"3F"
 ],
-"t": [
-2,
-10
-]
-},
-"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+"explain": "Force ∝ 1/r², so 1/3² = 1/9.",
+"hint": "Inverse square.",
+"id": "p2",
+"prompt": "Two moons are pulled together with force F. If the distance between them triples, what is the force?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Naming the Planets",
-"The solar system (age 11+)",
-"Universal Gravitation"
+"Universal Gravitation",
+"The solar system (age 11+)"
 ],
 "explain": "'The solar system' builds on 'Naming the Planets'.",
 "hint": "What does this topic build on?",
@@ -373,15 +353,15 @@
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 94,
 "status": "auto-starter",
 "title": "The solar system",
 "topicId": "mt_5l7iGkf1Tp",
 "visual": {
 "caption": "Set the push, mass and friction. Make the cart stop in the green zone.",
 "opts": {
-"f": 30,
-"m": 10,
+"f": 20,
+"m": 5,
 "mu": 0.2,
 "zone": [
 15,
@@ -392,227 +372,231 @@
 },
 "worked": {
 "steps": [
-"Start from what you know: Naming the Planets.",
-"The new idea: Describe the sun, Earth.",
-"Use a = F ÷ m.",
-"Next, this helps with: The solar system (age 11+)."
+"Gravitational force F = Gm₁m₂/r².",
+"Double r: r² becomes 4 times bigger.",
+"So the force becomes a quarter as big."
 ],
-"title": "A 20 N push on a 5 kg cart, no friction, for 'The solar system'"
+"title": "Doubling the distance between two masses"
 }
 },
 "mt_EHuU1ZeUFA": {
 "audience": "family",
 "explain": {
 "adult": [
-"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma).",
+"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons.",
 "It leads to The solar system (age 11+).",
-"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it."
+"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth."
 ],
 "kid": [
-"A push or a pull is a force.",
-"A bigger push makes things speed up more."
+"Earth goes round the Sun.",
+"The Moon goes round Earth."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
 "keyIdea": "Name the planets in our solar system in order from the Sun and use vocabulary for space — planet, star, sun, moon, satellite, orbit,….",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
 {
-"answer": "10*m",
-"explain": "{m} × 10 = {=10*m} N.",
-"hint": "Weight = mass × g.",
+"answer": 0,
+"choices": [
+"The Sun",
+"The Moon",
+"Mars"
+],
+"explain": "The Sun is our nearest star.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"params": {
-"m": [
-1,
-30
-]
-},
-"prompt": "A {m} kg bag on Earth (g = 10 N/kg). What is its weight in N?",
-"type": "numeric"
+"prompt": "Which is a star?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Friction",
-"Gravity pulling it forward",
-"Nothing"
+"The Sun's gravity",
+"Wind",
+"Magnetism"
 ],
-"explain": "Friction between the ball and grass slows it.",
-"hint": "A force against the motion.",
+"explain": "Gravity pulls planets towards the Sun.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "A ball rolls on grass and stops. What stopped it?",
+"prompt": "What keeps the planets in orbit?",
 "type": "mc"
 },
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
+"answer": 0,
+"choices": [
+"It reflects sunlight",
+"It burns like a fire",
+"It is a star"
+],
+"explain": "The Moon gives out no light of its own.",
+"hint": "Think about the key idea.",
 "id": "m3",
-"params": {
-"a": [
-1,
-8
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "Quick check: A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
+"prompt": "Why does the Moon shine?",
+"type": "mc"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
+"answer": 0,
+"choices": [
+"Most likely an asteroid impact changed the climate",
+"They all moved to space",
+"They turned into rocks"
+],
+"explain": "Evidence points to a huge asteroid 66 million years ago.",
+"hint": "Think about the key idea.",
 "id": "m4",
-"params": {
-"s": [
-5,
-30
-],
-"t": [
-2,
-10
-]
-},
-"prompt": "Quick check: A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+"prompt": "Why did the dinosaurs become extinct?",
+"type": "mc"
 },
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
+"answer": 0,
+"choices": [
+"The windowsill plant, because it gets light for photosynthesis",
+"The cupboard plant, because it is warmer",
+"Both the same"
+],
+"explain": "Light is needed for photosynthesis.",
+"hint": "Apply the idea to this situation.",
 "id": "m5",
-"params": {
-"a": [
-1,
-8
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "Recap: A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
+"prompt": "Two plants get the same water. One is on a windowsill, one in a cupboard. After a week, which grows better, and why?",
+"type": "mc"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "m6",
-"params": {
-"s": [
-5,
-30
+"answer": 0,
+"choices": [
+"They lose their habitat and their numbers fall",
+"They grow bigger",
+"Nothing changes"
 ],
-"t": [
-2,
-10
-]
+"explain": "Removing habitat removes shelter and food.",
+"hint": "Apply the idea to this situation.",
+"id": "m6",
+"prompt": "A farmer removes all the hedges around a field. What will most likely happen to birds that nested there?",
+"type": "mc"
 },
-"prompt": "Recap: A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"At the poles",
+"In the middle",
+"Far away"
+],
+"explain": "Field lines are closest together at the poles.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Where is the magnetic field around a bar magnet strongest?",
+"type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
 "id": "p1",
-"params": {
-"a": [
-1,
-8
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
+"prompt": "What causes day and night?",
+"type": "mc"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
+"answer": 0,
+"choices": [
+"About one year",
+"One day",
+"One month"
+],
+"explain": "Earth orbits the Sun in about 365 days.",
+"hint": "Think about the key idea.",
 "id": "p2",
-"params": {
-"s": [
-5,
-30
-],
-"t": [
-2,
-10
-]
-},
-"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+"prompt": "How long does Earth take to orbit the Sun?",
+"type": "mc"
 },
 {
-"answer": "m*a",
-"explain": "{m} × {a} = {=m*a} N.",
-"hint": "F = m × a.",
-"id": "p3",
-"params": {
-"a": [
-1,
-5
+"answer": 0,
+"choices": [
+"The tilt of Earth's axis",
+"Earth's distance from the Moon",
+"The Sun turning off"
 ],
-"m": [
-2,
-20
-]
-},
-"prompt": "What force accelerates a {m} kg trolley at {a} m/s²?",
-"type": "numeric"
+"explain": "The tilt changes how directly sunlight hits.",
+"hint": "Think about the key idea.",
+"id": "p3",
+"prompt": "What causes the seasons?",
+"type": "mc"
 }
 ],
-"quality": 100,
+"quality": 68,
 "status": "auto-starter",
 "title": "Naming the Planets",
 "topicId": "mt_EHuU1ZeUFA",
 "visual": {
-"caption": "Set the push, mass and friction. Make the cart stop in the green zone.",
+"caption": "Sort each object: planet, moon or star?",
 "opts": {
-"f": 10,
-"m": 4,
-"mu": 0.2,
-"zone": [
-15,
-18
+"bins": [
+"Planet",
+"Moon",
+"Star"
+],
+"items": [
+[
+"Earth",
+0
+],
+[
+"Mars",
+0
+],
+[
+"Jupiter",
+0
+],
+[
+"The Moon",
+1
+],
+[
+"Titan",
+1
+],
+[
+"The Sun",
+2
+],
+[
+"Sirius",
+2
+]
 ]
 },
-"type": "forcelab"
+"type": "sorter"
 },
 "worked": {
 "steps": [
-"The new idea: Name the planets in our solar system in order from the Sun and use vocabulary for space —….",
-"Use a = F ÷ m.",
-"Next, this helps with: The solar system (age 11+)."
+"Mercury, Venus, Earth, Mars: small rocky planets.",
+"Jupiter, Saturn, Uranus, Neptune: giant planets.",
+"Further from the Sun means a longer year."
 ],
-"title": "A 20 N push on a 5 kg cart, no friction, for 'Naming the Planets'"
+"title": "Ordering the planets"
 }
 },
 "mt_K0mZxY2AM8": {
 "audience": "family",
 "explain": {
 "adult": [
-"Earth has a crust, a mantle and a core. The crust is broken into plates that move slowly. This causes earthquakes and volcanoes.",
+"Weather is what the air is like today. Climate is the usual weather of a place over many years.",
 "It builds on Naming the Planets and leads to Sun, Moon, and stars.",
-"Rocks form in three ways: from cooled magma (igneous), from layers of sediment (sedimentary), and by heat and pressure (metamorphic)."
+"In the water cycle, the Sun heats water and it evaporates. The vapour cools into clouds, then falls as rain."
 ],
 "kid": [
-"The Earth is made of rock. Some rock is very hot inside.",
-"Volcanoes let hot rock out."
+"The Sun warms the sea.",
+"Water goes up and comes back as rain."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -624,27 +608,108 @@
 {
 "answer": 0,
 "choices": [
-"The crust",
-"The mantle",
-"The core"
+"Most likely an asteroid impact changed the climate",
+"They all moved to space",
+"They turned into rocks"
 ],
-"explain": "The crust is the thin outer layer.",
-"hint": "We live on it.",
+"explain": "Evidence points to a huge asteroid 66 million years ago.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"prompt": "Which layer of the Earth is the thinnest?",
+"prompt": "Why did the dinosaurs become extinct?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"heat and pressure",
-"cooling lava",
-"layers of sand"
+"The windowsill plant, because it gets light for photosynthesis",
+"The cupboard plant, because it is warmer",
+"Both the same"
 ],
-"explain": "Heat and pressure change limestone into marble.",
-"hint": "Metamorphic.",
+"explain": "Light is needed for photosynthesis.",
+"hint": "Apply the idea to this situation.",
 "id": "m2",
-"prompt": "Marble forms from limestone by…",
+"prompt": "Two plants get the same water. One is on a windowsill, one in a cupboard. After a week, which grows better, and why?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"They lose their habitat and their numbers fall",
+"They grow bigger",
+"Nothing changes"
+],
+"explain": "Removing habitat removes shelter and food.",
+"hint": "Apply the idea to this situation.",
+"id": "m3",
+"prompt": "A farmer removes all the hedges around a field. What will most likely happen to birds that nested there?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"At the poles",
+"In the middle",
+"Far away"
+],
+"explain": "Field lines are closest together at the poles.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Where is the magnetic field around a bar magnet strongest?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What causes day and night?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"About one year",
+"One day",
+"One month"
+],
+"explain": "Earth orbits the Sun in about 365 days.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "How long does Earth take to orbit the Sun?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The tilt of Earth's axis",
+"Earth's distance from the Moon",
+"The Sun turning off"
+],
+"explain": "The tilt changes how directly sunlight hits.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "What causes the seasons?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Naming the Planets",
+"Sun, Moon, and stars",
+"Universal Gravitation"
+],
+"explain": "'Why seasons change' builds on 'Naming the Planets'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Why seasons change'?",
 "type": "mc"
 },
 {
@@ -656,175 +721,44 @@
 ],
 "explain": "Because: Relating daylight length to time of year draws on orbit and solar system vocabulary.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Why seasons change' build on 'Naming the Planets'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Lava, ash and gas",
-"Sea water",
-"Ice"
+"Most likely an asteroid impact changed the climate",
+"They all moved to space",
+"They turned into rocks"
 ],
-"explain": "Volcanoes erupt lava, ash and gas.",
-"hint": "Hot molten rock.",
-"id": "m4",
-"prompt": "Quick check: What comes out of a volcano?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"sedimentary rock",
-"igneous rock",
-"lava"
-],
-"explain": "Fossils form in layers of sediment.",
-"hint": "Layers.",
-"id": "m5",
-"prompt": "Quick check: Fossils are usually found in…",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Moving plates",
-"Strong winds",
-"The Moon"
-],
-"explain": "Plates grinding past each other cause earthquakes.",
-"hint": "The crust is in pieces.",
-"id": "m6",
-"prompt": "Quick check: What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Naming the Planets",
-"Sun, Moon, and stars",
-"Universal Gravitation"
-],
-"explain": "'Why seasons change' builds on 'Naming the Planets'.",
-"hint": "What does this topic build on?",
-"id": "m7",
-"prompt": "Quick check: Which topic should you learn before 'Why seasons change'?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
-"Lava, ash and gas",
-"Sea water",
-"Ice"
-],
-"explain": "Volcanoes erupt lava, ash and gas.",
-"hint": "Hot molten rock.",
-"id": "p1",
-"prompt": "What comes out of a volcano?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"sedimentary rock",
-"igneous rock",
-"lava"
-],
-"explain": "Fossils form in layers of sediment.",
-"hint": "Layers.",
-"id": "p2",
-"prompt": "Fossils are usually found in…",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Moving plates",
-"Strong winds",
-"The Moon"
-],
-"explain": "Plates grinding past each other cause earthquakes.",
-"hint": "The crust is in pieces.",
+"explain": "Evidence points to a huge asteroid 66 million years ago.",
+"hint": "Think about the key idea.",
 "id": "p3",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Naming the Planets",
-"Sun, Moon, and stars",
-"Universal Gravitation"
-],
-"explain": "'Why seasons change' builds on 'Naming the Planets'.",
-"hint": "What does this topic build on?",
-"id": "p4",
-"prompt": "Which topic should you learn before 'Why seasons change'?",
+"prompt": "Try this: Why did the dinosaurs become extinct?",
 "type": "mc"
 }
 ],
-"quality": 68,
+"quality": 83,
 "status": "auto-starter",
 "title": "Why seasons change",
 "topicId": "mt_K0mZxY2AM8",
 "visual": {
-"caption": "Sort each rock by how it formed.",
+"caption": "Change the Sun's heat and the cold high up. Run the days and make it rain.",
 "opts": {
-"bins": [
-"Igneous (from lava)",
-"Sedimentary (layers)",
-"Metamorphic (heat and pressure)"
-],
-"items": [
-[
-"Granite",
-0
-],
-[
-"Basalt",
-0
-],
-[
-"Pumice",
-0
-],
-[
-"Sandstone",
-1
-],
-[
-"Limestone",
-1
-],
-[
-"Chalk",
-1
-],
-[
-"Marble",
-2
-],
-[
-"Slate",
-2
-]
-]
+"cold": 5,
+"heat": 5
 },
-"type": "sorter"
+"type": "cyclelab"
 },
 "worked": {
 "steps": [
-"Start from what you know: Naming the Planets.",
-"The new idea: Make observations at different times of year to relate the amount of daylight to the time of year,….",
-"A creature dies and is buried in mud.",
-"Next, this helps with: Sun, Moon, and stars."
+"Earth's axis is tilted.",
+"In winter your hemisphere tilts away from the Sun.",
+"Sunlight is spread out and days are shorter.",
+"So the ground and air warm up less."
 ],
-"title": "How does a fossil form?, for 'Why seasons change'"
+"title": "Why it is colder in winter"
 }
 },
 "mt_fk33IEGP-T": {
@@ -832,13 +766,13 @@
 "explain": {
 "adult": [
 "This topic asks you to use observations of the sun, moon.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
+"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons.",
 "It builds on Naming the Planets and leads to The solar system.",
-"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity."
+"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth."
 ],
 "kid": [
-"The Earth goes round the Sun.",
-"The Moon goes round the Earth."
+"Earth goes round the Sun.",
+"The Moon goes round Earth."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -848,44 +782,55 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "27*n",
-"explain": "27 × {n} = {=27*n} days.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"The tilt of Earth's axis",
+"Earth's distance from the Moon",
+"The Sun turning off"
+],
+"explain": "The tilt changes how directly sunlight hits.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
-"type": "numeric"
-},
-{
-"answer": "25*n",
-"explain": "25 × {n} = {=25*n} hours.",
-"hint": "Multiply.",
-"id": "m2",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "A day on Mars is about 25 hours. How many hours in {n} Mars days?",
-"type": "numeric"
+"prompt": "What causes the seasons?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Gravity",
+"The Sun",
+"The Moon",
+"Mars"
+],
+"explain": "The Sun is our nearest star.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Which is a star?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The Sun's gravity",
 "Wind",
 "Magnetism"
 ],
-"explain": "The Sun's gravity holds the planets in orbit.",
-"hint": "A pull towards the Sun.",
+"explain": "Gravity pulls planets towards the Sun.",
+"hint": "Think about the key idea.",
 "id": "m3",
 "prompt": "What keeps the planets in orbit?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"It reflects sunlight",
+"It burns like a fire",
+"It is a star"
+],
+"explain": "The Moon gives out no light of its own.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Why does the Moon shine?",
 "type": "mc"
 },
 {
@@ -897,101 +842,64 @@
 ],
 "explain": "Because: Describing predictable patterns of sun, moon.",
 "hint": "Think about what you need first.",
-"id": "m4",
+"id": "m5",
 "prompt": "Why does 'Sun, Moon, and stars' build on 'Naming the Planets'?",
 "type": "mc"
 },
 {
-"answer": "60*h/t",
-"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
-"hint": "How many in one hour first?",
-"id": "m5",
-"params": {
-"h": [
-2,
-6
+"answer": 0,
+"choices": [
+"Most likely an asteroid impact changed the climate",
+"They all moved to space",
+"They turned into rocks"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Quick check: A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
-"type": "numeric",
-"where": "60%t==0"
-},
-{
-"answer": "v*t",
-"explain": "{v} × {t} = {=v*t} km.",
-"hint": "Multiply.",
+"explain": "Evidence points to a huge asteroid 66 million years ago.",
+"hint": "Think about the key idea.",
 "id": "m6",
-"params": {
-"t": [
-10,
-60
-],
-"v": [
-5,
-12
-]
-},
-"prompt": "Quick check: A rocket travels {v} km each second. How far in {t} s?",
-"type": "numeric",
-"where": "t%10==0"
+"prompt": "Why did the dinosaurs become extinct?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Naming the Planets",
-"The solar system (age 11+)",
-"Universal Gravitation"
+"The windowsill plant, because it gets light for photosynthesis",
+"The cupboard plant, because it is warmer",
+"Both the same"
 ],
-"explain": "'Sun, Moon, and stars' builds on 'Naming the Planets'.",
-"hint": "What does this topic build on?",
+"explain": "Light is needed for photosynthesis.",
+"hint": "Apply the idea to this situation.",
 "id": "m7",
-"prompt": "Quick check: Which topic should you learn before 'Sun, Moon, and stars'?",
+"prompt": "Two plants get the same water. One is on a windowsill, one in a cupboard. After a week, which grows better, and why?",
 "type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "60*h/t",
-"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
-"hint": "How many in one hour first?",
-"id": "p1",
-"params": {
-"h": [
-2,
-6
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
-"type": "numeric",
-"where": "60%t==0"
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
+"id": "p1",
+"prompt": "What causes day and night?",
+"type": "mc"
 },
 {
-"answer": "v*t",
-"explain": "{v} × {t} = {=v*t} km.",
-"hint": "Multiply.",
-"id": "p2",
-"params": {
-"t": [
-10,
-60
+"answer": 0,
+"choices": [
+"About one year",
+"One day",
+"One month"
 ],
-"v": [
-5,
-12
-]
-},
-"prompt": "A rocket travels {v} km each second. How far in {t} s?",
-"type": "numeric",
-"where": "t%10==0"
+"explain": "Earth orbits the Sun in about 365 days.",
+"hint": "Think about the key idea.",
+"id": "p2",
+"prompt": "How long does Earth take to orbit the Sun?",
+"type": "mc"
 },
 {
 "answer": 0,
@@ -1007,26 +915,19 @@
 "type": "mc"
 }
 ],
-"quality": 86,
+"quality": 72,
 "status": "auto-starter",
 "title": "Sun, Moon, and stars",
 "topicId": "mt_fk33IEGP-T",
 "visual": {
-"caption": "Sort the planets into rocky inner planets and giant outer planets.",
+"caption": "Sort each object: planet, moon or star?",
 "opts": {
 "bins": [
-"Rocky inner planet",
-"Giant outer planet"
+"Planet",
+"Moon",
+"Star"
 ],
 "items": [
-[
-"Mercury",
-0
-],
-[
-"Venus",
-0
-],
 [
 "Earth",
 0
@@ -1037,19 +938,23 @@
 ],
 [
 "Jupiter",
+0
+],
+[
+"The Moon",
 1
 ],
 [
-"Saturn",
+"Titan",
 1
 ],
 [
-"Uranus",
-1
+"The Sun",
+2
 ],
 [
-"Neptune",
-1
+"Sirius",
+2
 ]
 ]
 },
@@ -1057,21 +962,20 @@
 },
 "worked": {
 "steps": [
-"Start from what you know: Naming the Planets.",
-"The new idea: Use observations of the sun, moon.",
-"The Earth spins on its axis.",
-"Next, this helps with: The solar system."
+"The Sun is a star like the others.",
+"It is far closer: 150 million km.",
+"The next star is about 270 000 times further away."
 ],
-"title": "Why do we have day and night?, for 'Sun, Moon, and stars'"
+"title": "Why the Sun looks bigger than other stars"
 }
 },
 "mt_oLjz18CxDg": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it.",
+"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma).",
 "It builds on The solar system (age 11+) and leads to Orbital Mechanics.",
-"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma)."
+"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it."
 ],
 "kid": [
 "A push or a pull is a force.",
@@ -1085,51 +989,6 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "m*a",
-"explain": "{m} × {a} = {=m*a} N.",
-"hint": "F = m × a.",
-"id": "m1",
-"params": {
-"a": [
-1,
-5
-],
-"m": [
-2,
-20
-]
-},
-"prompt": "What force accelerates a {m} kg trolley at {a} m/s²?",
-"type": "numeric"
-},
-{
-"answer": "10*m",
-"explain": "{m} × 10 = {=10*m} N.",
-"hint": "Weight = mass × g.",
-"id": "m2",
-"params": {
-"m": [
-1,
-30
-]
-},
-"prompt": "A {m} kg bag on Earth (g = 10 N/kg). What is its weight in N?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Friction",
-"Gravity pulling it forward",
-"Nothing"
-],
-"explain": "Friction between the ball and grass slows it.",
-"hint": "A force against the motion.",
-"id": "m3",
-"prompt": "A ball rolls on grass and stops. What stopped it?",
-"type": "mc"
-},
-{
 "answer": 0,
 "choices": [
 "Explaining orbital motion as gravity-driven centripetal force requires knowing what is in orbit (planets,…",
@@ -1138,7 +997,7 @@
 ],
 "explain": "Because: Explaining orbital motion as gravity-driven centripetal force requires knowing what is in orbit (planets,….",
 "hint": "Think about what you need first.",
-"id": "m4",
+"id": "m1",
 "prompt": "Why does 'Universal Gravitation' build on 'The solar system (age 11+)'?",
 "type": "mc"
 },
@@ -1147,49 +1006,78 @@
 "choices": [
 "Orbital Mechanics",
 "The solar system (age 11+)",
-"Naming the Planets"
+"Sun, Moon, and stars"
 ],
 "explain": "'Universal Gravitation' leads on to 'Orbital Mechanics'.",
 "hint": "What comes after this topic?",
-"id": "m5",
+"id": "m2",
 "prompt": "Which topic does 'Universal Gravitation' help you learn next?",
 "type": "mc"
 },
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
-"id": "m6",
-"params": {
-"a": [
-1,
-8
+"answer": 0,
+"choices": [
+"Most likely an asteroid impact changed the climate",
+"They all moved to space",
+"They turned into rocks"
 ],
-"m": [
-2,
-10
-]
-},
-"prompt": "Quick check: A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
+"explain": "Evidence points to a huge asteroid 66 million years ago.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why did the dinosaurs become extinct?",
+"type": "mc"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "m7",
-"params": {
-"s": [
-5,
-30
+"answer": 0,
+"choices": [
+"The windowsill plant, because it gets light for photosynthesis",
+"The cupboard plant, because it is warmer",
+"Both the same"
 ],
-"t": [
-2,
-10
-]
+"explain": "Light is needed for photosynthesis.",
+"hint": "Apply the idea to this situation.",
+"id": "m4",
+"prompt": "Two plants get the same water. One is on a windowsill, one in a cupboard. After a week, which grows better, and why?",
+"type": "mc"
 },
-"prompt": "Quick check: A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"They lose their habitat and their numbers fall",
+"They grow bigger",
+"Nothing changes"
+],
+"explain": "Removing habitat removes shelter and food.",
+"hint": "Apply the idea to this situation.",
+"id": "m5",
+"prompt": "A farmer removes all the hedges around a field. What will most likely happen to birds that nested there?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"At the poles",
+"In the middle",
+"Far away"
+],
+"explain": "Field lines are closest together at the poles.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Where is the magnetic field around a bar magnet strongest?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "What causes day and night?",
+"type": "mc"
 }
 ]
 },
@@ -1213,24 +1101,6 @@
 "type": "numeric"
 },
 {
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "p2",
-"params": {
-"s": [
-5,
-30
-],
-"t": [
-2,
-10
-]
-},
-"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
-},
-{
 "answer": 0,
 "choices": [
 "The solar system (age 11+)",
@@ -1239,9 +1109,27 @@
 ],
 "explain": "'Universal Gravitation' builds on 'The solar system (age 11+)'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p2",
 "prompt": "Which topic should you learn before 'Universal Gravitation'?",
 "type": "mc"
+},
+{
+"answer": "m*a",
+"explain": "{m} × {a} = {=m*a} N.",
+"hint": "F = m × a.",
+"id": "p3",
+"params": {
+"a": [
+1,
+5
+],
+"m": [
+2,
+20
+]
+},
+"prompt": "What force accelerates a {m} kg trolley at {a} m/s²?",
+"type": "numeric"
 }
 ],
 "quality": 84,
@@ -1252,7 +1140,7 @@
 "caption": "Set the push, mass and friction. Make the cart stop in the green zone.",
 "opts": {
 "f": 20,
-"m": 2,
+"m": 5,
 "mu": 0.2,
 "zone": [
 15,
@@ -1263,12 +1151,11 @@
 },
 "worked": {
 "steps": [
-"Start from what you know: The solar system (age 11+).",
-"The new idea: Describe gravity as a universal attractive force between all masses, explain that orbital motion arises because gravity provides….",
-"Use a = F ÷ m.",
-"Next, this helps with: Orbital Mechanics."
+"Pull 50 N forward, friction 20 N back.",
+"Net force = 50 − 20 = 30 N forward.",
+"So the sledge speeds up."
 ],
-"title": "A 20 N push on a 5 kg cart, no friction, for 'Universal Gravitation'"
+"title": "Net force on a sledge"
 }
 }
 }

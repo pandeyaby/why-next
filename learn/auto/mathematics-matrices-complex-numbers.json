@@ -4,14 +4,14 @@
 "explain": {
 "adult": [
 "This topic asks you to find powers of i using the repeating cycle i, −1, −i, 1.",
-"Powers count repeated factors: aᵐ × aⁿ = aᵐ⁺ⁿ, and aᵐ ÷ aⁿ = aᵐ⁻ⁿ.",
-"For example, 2^2 × 2^3 = 2^5 = 32.",
+"Exponential growth multiplies by the same factor each step, so it speeds up much faster than adding.",
+"For example, 2^2 × 2^4 = 2^6 = 64.",
 "It builds on Adding, subtracting and multiplying complex numbers."
 ],
 "kid": [
 "A power is a short way to multiply.",
 "2³ means 2 × 2 × 2. That is 8.",
-"For example, 2^2 × 2^3 = 2^5 = 32."
+"For example, 2^2 × 2^4 = 2^6 = 64."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -69,8 +69,8 @@
 "answer": 0,
 "choices": [
 "Each power of i comes from multiplying the previous one by i, using i²…",
-"(AB)ᵀ = BᵀAᵀ is checked by multiplying matrices in both orders",
-"Rows and columns swap"
+"|z − a| = r is the set of points a fixed distance r…",
+"Loci such as the perpendicular bisector of two points were drawn in geometry"
 ],
 "explain": "Because: Each power of i comes from multiplying the previous one by i, using i²….",
 "hint": "Think about what you need first.",
@@ -114,8 +114,8 @@
 "answer": 0,
 "choices": [
 "Adding, subtracting and multiplying complex numbers",
-"Complex and repeated eigenvalues",
-"Inverse of a product"
+"Loci in the Argand diagram",
+"Complex and repeated eigenvalues"
 ],
 "explain": "'Powers of i' builds on 'Adding, subtracting and multiplying complex numbers'.",
 "hint": "What does this topic build on?",
@@ -161,22 +161,22 @@
 {
 "answer": 0,
 "choices": [
-"32",
 "64",
-"1024"
+"256",
+"32"
 ],
-"explain": "2^2 × 2^3 = 32. Add the powers.",
+"explain": "2^2 × 2^4 = 64. Add the powers.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 2^2 × 2^3 and got 64. What is the correct answer?",
+"prompt": "Sam worked out 2^2 × 2^4 and got 256. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Adding, subtracting and multiplying complex numbers",
-"Complex and repeated eigenvalues",
-"Inverse of a product"
+"Loci in the Argand diagram",
+"Complex and repeated eigenvalues"
 ],
 "explain": "'Powers of i' builds on 'Adding, subtracting and multiplying complex numbers'.",
 "hint": "What does this topic build on?",
@@ -185,7 +185,7 @@
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 83,
 "status": "auto-starter",
 "title": "Powers of i",
 "topicId": "mt_0ysLVQ_nHp",
@@ -194,18 +194,18 @@
 "opts": {
 "m": 2,
 "mode": "laws",
-"n": 3,
+"n": 4,
 "op": "mul"
 },
 "type": "expo"
 },
 "worked": {
 "steps": [
-"a^2 is 2 a's multiplied; a^3 is 3 more.",
-"Together: 2 + 3 = 5 a's.",
-"So a^2 × a^3 = a^5."
+"a^2 is 2 a's multiplied; a^4 is 4 more.",
+"Together: 2 + 4 = 6 a's.",
+"So a^2 × a^4 = a^6."
 ],
-"title": "a^2 × a^3"
+"title": "a^2 × a^4"
 }
 },
 "mt_1XiTI60s3k": {
@@ -213,9 +213,9 @@
 "explain": {
 "adult": [
 "This topic asks you to find the inverse of a non-singular 2×2 matrix, check that AA⁻¹ = I.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Determinant of a 2×2 matrix and leads to Inverse of a product.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -285,8 +285,8 @@
 "answer": 0,
 "choices": [
 "The inverse formula divides by the determinant",
-"The eigenvectors found give the directions of the invariant lines",
-"Each matrix is read as a transformation, such as a stretch or reflection, of…"
+"Building 2×2 matrices from the images of unit vectors is extended to three dimensions",
+"A 3×3 determinant gives the volume scale factor of a 3-D transformation"
 ],
 "explain": "Because: The inverse formula divides by the determinant.",
 "hint": "Think about what you need first.",
@@ -299,7 +299,7 @@
 "choices": [
 "Inverse of a product",
 "Determinant of a 2×2 matrix",
-"Interpreting eigenvalues geometrically"
+"Multiplying matrices"
 ],
 "explain": "'Inverse of a 2×2 matrix' leads on to 'Inverse of a product'.",
 "hint": "What comes after this topic?",
@@ -402,8 +402,8 @@
 "answer": 0,
 "choices": [
 "Determinant of a 2×2 matrix",
-"Interpreting eigenvalues geometrically",
-"Arrangements of three planes and consistency"
+"Transformations in three dimensions",
+"Diagonalising a matrix"
 ],
 "explain": "'Inverse of a 2×2 matrix' builds on 'Determinant of a 2×2 matrix'.",
 "hint": "What does this topic build on?",
@@ -512,8 +512,8 @@
 "answer": 0,
 "choices": [
 "Ax is a matrix acting on the vector of unknowns, giving the left-hand sides",
-"Av = λv compares the result of multiplying a matrix by a vector with…",
-"Invariant lines through the origin are exactly the directions of eigenvectors"
+"A², A³ and higher powers are found by multiplying the matrix by itself repeatedly",
+"Associativity means A³ can be found as A²A or AA², giving the same result"
 ],
 "explain": "Because: Ax is a matrix acting on the vector of unknowns, giving the left-hand sides.",
 "hint": "Think about what you need first.",
@@ -526,7 +526,7 @@
 "choices": [
 "Solving systems with inverse matrices",
 "Matrices acting on vectors",
-"Eigenvectors and eigenvalues"
+"Powers of a matrix"
 ],
 "explain": "'Writing a linear system as a matrix equation' leads on to 'Solving systems with inverse matrices'.",
 "hint": "What comes after this topic?",
@@ -535,23 +535,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"identifying",
-"corresponding",
-"interpreting"
-],
-"explain": "The missing word is 'identifying'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Represent a system of linear equations as a single matrix equation Ax = b, _____ the coefficient matrix and the vector of…'",
-"type": "mc"
-},
-{
 "answer": "m*a+c",
 "explain": "{m} × {a} + {c} = {=m*a+c}.",
 "hint": "Multiply, then add.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -567,6 +554,24 @@
 ]
 },
 "prompt": "Quick check: For y = {m}x + {c}, what is y when x = {a}?",
+"type": "numeric"
+},
+{
+"answer": "m",
+"explain": "({=c+m} − {c}) ÷ 1 = {=m}.",
+"hint": "Change in y ÷ change in x.",
+"id": "m7",
+"params": {
+"c": [
+0,
+6
+],
+"m": [
+1,
+7
+]
+},
+"prompt": "Quick check: A line goes through (0, {c}) and (1, {=c+m}). What is its gradient?",
 "type": "numeric"
 }
 ]
@@ -629,8 +634,8 @@
 "answer": 0,
 "choices": [
 "Matrices acting on vectors",
-"Eigenvectors and eigenvalues",
-"3×3 determinants and inverses with technology"
+"Powers of a matrix",
+"Diagonalising a matrix"
 ],
 "explain": "'Writing a linear system as a matrix equation' builds on 'Matrices acting on vectors'.",
 "hint": "What does this topic build on?",
@@ -684,9 +689,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Multiplying matrices and leads to Inverse of a 2×2 matrix.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -756,8 +761,8 @@
 "answer": 0,
 "choices": [
 "AI = IA = A is checked by multiplying",
-"Both polar points and complex numbers convert to Cartesian form with r cos θ…",
-"A complex number r(cos θ + i sin θ) sits at the polar point…"
+"Solving (A − λI)v = 0 for each eigenvalue is extended from 2×2 to…",
+"The characteristic equation det(A − λI) = 0 needs a 3×3 determinant"
 ],
 "explain": "Because: AI = IA = A is checked by multiplying.",
 "hint": "Think about what you need first.",
@@ -770,7 +775,7 @@
 "choices": [
 "Inverse of a 2×2 matrix",
 "Multiplying matrices",
-"Polar coordinates and modulus–argument form"
+"The Argand diagram"
 ],
 "explain": "'Zero and identity matrices' leads on to 'Inverse of a 2×2 matrix'.",
 "hint": "What comes after this topic?",
@@ -783,7 +788,7 @@
 "choices": [
 "multiplication",
 "characteristic",
-"transformation"
+"imaginary"
 ],
 "explain": "The missing word is 'multiplication'.",
 "hint": "Which word fits the topic?",
@@ -860,8 +865,8 @@
 "answer": 0,
 "choices": [
 "Multiplying matrices",
-"Polar coordinates and modulus–argument form",
-"The Cayley–Hamilton theorem"
+"Eigenvalues and eigenvectors of a 3×3 matrix",
+"De Moivre's theorem"
 ],
 "explain": "'Zero and identity matrices' builds on 'Multiplying matrices'.",
 "hint": "What does this topic build on?",
@@ -870,7 +875,7 @@
 "type": "mc"
 }
 ],
-"quality": 82,
+"quality": 80,
 "status": "auto-starter",
 "title": "Zero and identity matrices",
 "topicId": "mt_2c0HozyjvO",
@@ -901,9 +906,9 @@
 "explain": {
 "adult": [
 "This topic asks you to add, subtract and multiply complex numbers using i² = −1 and the usual laws of algebra.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on The complex number system and leads to Powers of i.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -973,8 +978,8 @@
 "answer": 0,
 "choices": [
 "Adding and multiplying work on the real and imaginary parts of numbers in the…",
-"Sums, differences and conjugates are drawn as points and arrows on the Argand diagram",
-"Complex numbers add and subtract like column vectors, drawn head to tail"
+"Complex numbers a + bi were first met as the solutions of quadratics with…",
+"The complex numbers extend the chain of number sets from naturals to reals"
 ],
 "explain": "Because: Adding and multiplying work on the real and imaginary parts of numbers in the….",
 "hint": "Think about what you need first.",
@@ -999,8 +1004,8 @@
 "answer": 0,
 "choices": [
 "algebra",
-"calculate",
-"multiplication"
+"imaginary",
+"determinant"
 ],
 "explain": "The missing word is 'algebra'.",
 "hint": "Which word fits the topic?",
@@ -1078,7 +1083,7 @@
 "choices": [
 "The complex number system",
 "Polar coordinates and modulus–argument form",
-"De Moivre's theorem"
+"Finding eigenvectors of a 2×2 matrix"
 ],
 "explain": "'Adding, subtracting and multiplying complex numbers' builds on 'The complex number system'.",
 "hint": "What does this topic build on?",
@@ -1087,7 +1092,7 @@
 "type": "mc"
 }
 ],
-"quality": 87,
+"quality": 88,
 "status": "auto-starter",
 "title": "Adding, subtracting and multiplying complex numbers",
 "topicId": "mt_5Sd2FQ7gwR",
@@ -1190,8 +1195,8 @@
 "answer": 0,
 "choices": [
 "(AB)ᵀ = BᵀAᵀ is checked by multiplying matrices in both orders",
-"Each transformation in the sequence is written as its own matrix first",
-"BA and AB usually differ because matrix multiplication is not commutative"
+"Solving (A − λI)v = 0 for each eigenvalue is extended from 2×2 to…",
+"The characteristic equation det(A − λI) = 0 needs a 3×3 determinant"
 ],
 "explain": "Because: (AB)ᵀ = BᵀAᵀ is checked by multiplying matrices in both orders.",
 "hint": "Think about what you need first.",
@@ -1204,7 +1209,7 @@
 "choices": [
 "Symmetric matrices and orthogonal eigenvectors",
 "Multiplying matrices",
-"Composite transformations as matrix products"
+"Eigenvalues and eigenvectors of a 3×3 matrix"
 ],
 "explain": "'The transpose of a matrix' leads on to 'Symmetric matrices and orthogonal eigenvectors'.",
 "hint": "What comes after this topic?",
@@ -1307,8 +1312,8 @@
 "answer": 0,
 "choices": [
 "Multiplying matrices",
-"Transition matrices and Markov chains",
-"Eigenvectors and eigenvalues"
+"Eigenvalues and eigenvectors of a 3×3 matrix",
+"Powers of a matrix"
 ],
 "explain": "'The transpose of a matrix' builds on 'Multiplying matrices'.",
 "hint": "What does this topic build on?",
@@ -1347,12 +1352,13 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Vectors have magnitude and direction; add them nose to tail, or add their components.",
-"The magnitude of (x, y) is √(x² + y²) by Pythagoras."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"It builds on Finding eigenvectors of a 2×2 matrix and leads to Symmetric matrices and orthogonal eigenvectors.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
-"A vector is an arrow. It has a size and a direction.",
-"Two moves can add to one move."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -1362,76 +1368,46 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "k*b",
-"explain": "{k} × {b} = {=k*b}.",
-"hint": "Multiply each part.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m1",
 "params": {
 "a": [
-1,
-9
-],
-"b": [
-1,
-9
+2,
+10
 ],
 "k": [
 2,
-5
-]
-},
-"prompt": "What is {k} × ({a}, {b})? Give the y-component.",
-"type": "numeric"
-},
-{
-"answer": "a-c",
-"explain": "{a} − {c} = {=a-c}.",
-"hint": "Subtract the x parts.",
-"id": "m2",
-"params": {
-"a": [
-5,
-12
-],
-"b": [
-1,
-9
-],
-"c": [
-1,
 4
-],
-"d": [
-1,
-9
 ]
 },
-"prompt": "({a}, {b}) − ({c}, {d}): what is the x-component?",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"5 m north",
-"5 m",
-"5 kg"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "5 m north has a direction.",
-"hint": "Size and direction.",
-"id": "m3",
-"prompt": "Which is a vector?",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
+"id": "m2",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Solving (A − λI)v = 0 for each eigenvalue is extended from 2×2 to…",
-"The distribution after n steps uses the nth power of the transition matrix",
-"Multiplying the state vector by the transition matrix gives the next distribution"
+"Squaring an adjacency matrix counts two-step routes through row-by-column products",
+"Each entry of the adjacency matrix records the routes from one node to another"
 ],
 "explain": "Because: Solving (A − λI)v = 0 for each eigenvalue is extended from 2×2 to….",
 "hint": "Think about what you need first.",
-"id": "m4",
+"id": "m3",
 "prompt": "Why does 'Eigenvalues and eigenvectors of a 3×3 matrix' build on 'Finding eigenvectors of a 2×2 matrix'?",
 "type": "mc"
 },
@@ -1440,11 +1416,11 @@
 "choices": [
 "Symmetric matrices and orthogonal eigenvectors",
 "Finding eigenvectors of a 2×2 matrix",
-"Transition matrices and Markov chains"
+"Matrices for data and networks"
 ],
 "explain": "'Eigenvalues and eigenvectors of a 3×3 matrix' leads on to 'Symmetric matrices and orthogonal eigenvectors'.",
 "hint": "What comes after this topic?",
-"id": "m5",
+"id": "m4",
 "prompt": "Which topic does 'Eigenvalues and eigenvectors of a 3×3 matrix' help you learn next?",
 "type": "mc"
 },
@@ -1452,20 +1428,20 @@
 "answer": 0,
 "choices": [
 "characteristic",
-"regular",
-"complex"
+"represent",
+"algebra"
 ],
 "explain": "The missing word is 'characteristic'.",
 "hint": "Which word fits the topic?",
-"id": "m6",
+"id": "m5",
 "prompt": "Fill the gap: 'Find the eigenvalues of a 3×3 matrix from a cubic _____ equation, using the factor theorem or technology'",
 "type": "mc"
 },
 {
-"answer": "a+c",
-"explain": "{a} + {c} = {=a+c}.",
-"hint": "Add the x parts.",
-"id": "m7",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -1474,26 +1450,44 @@
 "b": [
 1,
 9
+]
+},
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "m7",
+"params": {
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
 ],
 "c": [
-1,
-9
+0,
+4
 ],
 "d": [
 1,
-9
+6
 ]
 },
-"prompt": "Quick check: ({a}, {b}) + ({c}, {d}): what is the x-component?",
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "a+c",
-"explain": "{a} + {c} = {=a+c}.",
-"hint": "Add the x parts.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
 "a": [
@@ -1503,87 +1497,97 @@
 "b": [
 1,
 9
+]
+},
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "p2",
+"params": {
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
 ],
 "c": [
-1,
-9
+0,
+4
 ],
 "d": [
 1,
-9
+6
 ]
 },
-"prompt": "({a}, {b}) + ({c}, {d}): what is the x-component?",
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 },
 {
-"answer": "5*k",
-"explain": "√({=9*k*k} + {=16*k*k}) = {=5*k}.",
-"hint": "√(x² + y²).",
-"id": "p2",
-"params": {
-"k": [
-1,
-5
-]
-},
-"prompt": "What is the magnitude of ({=3*k}, {=4*k})?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"10",
-"14",
-"48"
-],
-"explain": "the size of the displacement after 6 east and 8 north = 10. Use Pythagoras on the vector.",
-"hint": "Redo it step by step and compare.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "p3",
-"prompt": "Sam worked out the size of the displacement after 6 east and 8 north and got 14. What is the correct answer?",
-"type": "mc"
-}
-],
-"quality": 88,
-"status": "auto-starter",
-"title": "Eigenvalues and eigenvectors of a 3×3 matrix",
-"topicId": "mt_6PqxYAsPag",
-"visual": {
-"caption": "Drag the arrow tips. The total displacement and distance update.",
-"opts": {
+"params": {
 "a": [
-6,
-0
+0,
+8
 ],
 "b": [
 0,
 8
+],
+"c": [
+1,
+6
 ]
 },
-"type": "vectors"
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
+"type": "numeric"
+}
+],
+"quality": 80,
+"status": "auto-starter",
+"title": "Eigenvalues and eigenvectors of a 3×3 matrix",
+"topicId": "mt_6PqxYAsPag",
+"visual": {
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
+"opts": {
+"m": [
+1,
+0,
+0,
+1
+]
+},
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"Displacement vector = (6, 8).",
-"Magnitude = √(6² + 8²) = √100 = 10.",
-"Distance walked = 6 + 8 = 14."
+"Start from what you know: Finding eigenvectors of a 2×2 matrix.",
+"The new idea: Find the eigenvalues of a 3×3 matrix from a cubic characteristic equation, using the factor theorem or technology.",
+"Rotation by 90° sends (x, y) to (−y, x).",
+"Next, this helps with: Symmetric matrices and orthogonal eigenvectors."
 ],
-"title": "Walk 6 east then 8 north"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Eigenvalues and eigenvectors of a 3×3 matrix'"
 }
 },
 "mt_6scgbd-7UN": {
 "audience": "learner",
 "explain": {
 "adult": [
-"In a linear sequence the terms go up by the same amount each time, so the nth term is an + b.",
-"For example, 1, 5, 9, 13 goes up by 4.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on 2×2 matrices as transformations.",
-"For 5, 8, 11 …, the difference is 3, so the nth term is 3n + 2."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
-"A sequence is a list that follows a rule.",
-"5, 8, 11 … adds 3 each time.",
-"For example, 1, 5, 9, 13 goes up by 4."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -1593,60 +1597,64 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "a+3*d",
-"explain": "The difference is {d}, so next is {=a+3*d}.",
-"hint": "Find the difference.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "m1",
 "params": {
 "a": [
-1,
-20
+0,
+8
 ],
-"d": [
-2,
-11
+"b": [
+0,
+8
+],
+"c": [
+1,
+6
 ]
 },
-"prompt": "What is the next term: {a}, {=a+d}, {=a+2*d}, …?",
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "5*d-a",
-"explain": "{d} × 5 − {a} = {=5*d-a}.",
-"hint": "Put n = 5.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m2",
 "params": {
 "a": [
-1,
-5
+2,
+10
 ],
-"d": [
-3,
-9
+"k": [
+2,
+4
 ]
 },
-"prompt": "The nth term is {d}n − {a}. What is the 5th term?",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"4, 7, 10, 13",
-"1, 2, 4, 8",
-"1, 4, 9, 16"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "4, 7, 10, 13 goes up by 3 each time.",
-"hint": "Same difference each time?",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
 "id": "m3",
-"prompt": "Which sequence is linear?",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Each transformation in the sequence is written as its own matrix first",
-"Invariant points and lines are properties of a transformation matrix",
-"Finding invariant points means solving Mx = x, a pair of simultaneous equations"
+"Transforming a shape means multiplying each position vector by the matrix",
+"Reflections, rotations and enlargements described geometrically are now written as matrices"
 ],
 "explain": "Because: Each transformation in the sequence is written as its own matrix first.",
 "hint": "Think about what you need first.",
@@ -1655,160 +1663,146 @@
 "type": "mc"
 },
 {
-"answer": "a+3*d",
-"explain": "{a} + 3 × {d} = {=a+3*d}.",
-"hint": "Add {d} three times.",
-"id": "m5",
-"params": {
-"a": [
-1,
-9
+"answer": 0,
+"choices": [
+"explaining",
+"recognising",
+"multiplying"
 ],
-"d": [
-2,
-9
-]
-},
-"prompt": "Quick check: A sequence starts at {a} and adds {d} each time. What is the 4th term?",
-"type": "numeric"
+"explain": "The missing word is 'explaining'.",
+"hint": "Which word fits the topic?",
+"id": "m5",
+"prompt": "Fill the gap: 'Represent a sequence of transformations by a matrix product, _____ why BA means 'A first, then B''",
+"type": "mc"
 },
 {
-"answer": "10*d+a",
-"explain": "{d} × 10 + {a} = {=10*d+a}.",
-"hint": "Put n = 10.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "m6",
 "params": {
 "a": [
 1,
 9
 ],
-"d": [
-2,
+"b": [
+1,
 9
 ]
 },
-"prompt": "Quick check: The nth term is {d}n + {a}. What is the 10th term?",
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": 0,
-"choices": [
-"2×2 matrices as transformations",
-"Invariant points and lines",
-"Matrix powers by diagonalisation"
-],
-"explain": "'Composite transformations as matrix products' builds on '2×2 matrices as transformations'.",
-"hint": "What does this topic build on?",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "m7",
-"prompt": "Quick check: Which topic should you learn before 'Composite transformations as matrix products'?",
-"type": "mc"
+"params": {
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
+]
+},
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
+"type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "a+3*d",
-"explain": "{a} + 3 × {d} = {=a+3*d}.",
-"hint": "Add {d} three times.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
 "a": [
 1,
 9
 ],
-"d": [
-2,
+"b": [
+1,
 9
 ]
 },
-"prompt": "A sequence starts at {a} and adds {d} each time. What is the 4th term?",
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "10*d+a",
-"explain": "{d} × 10 + {a} = {=10*d+a}.",
-"hint": "Put n = 10.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "p2",
 "params": {
 "a": [
 1,
-9
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
 ],
 "d": [
-2,
-9
+1,
+6
 ]
 },
-"prompt": "The nth term is {d}n + {a}. What is the 10th term?",
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"37",
-"41",
-"40"
-],
-"explain": "the 10th term of 1, 5, 9, 13, … = 37. Use the nth term with n = 10.",
-"hint": "Redo it step by step and compare.",
-"id": "p3",
-"prompt": "Sam worked out the 10th term of 1, 5, 9, 13, … and got 41. What is the correct answer?",
-"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "2×2 matrices as transformations",
-"Invariant points and lines",
-"Matrix powers by diagonalisation"
+"De Moivre's theorem",
+"Interpreting eigenvalues geometrically"
 ],
 "explain": "'Composite transformations as matrix products' builds on '2×2 matrices as transformations'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Composite transformations as matrix products'?",
 "type": "mc"
 }
 ],
-"quality": 99,
+"quality": 86,
 "status": "auto-starter",
 "title": "Composite transformations as matrix products",
 "topicId": "mt_6scgbd-7UN",
 "visual": {
-"caption": "A linear sequence plots as points on a straight line. Make y = a × x + b pass through the terms.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"a": 1,
-"b": 0,
-"equal": false,
-"f": "a*x+b",
-"targets": [
-[
+"m": [
 1,
+0,
+0,
 1
-],
-[
-3,
-9
-]
-],
-"xr": [
-0,
-6
-],
-"yr": [
-0,
-20
 ]
 },
-"type": "graphlab"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"The terms go up by 4 each time.",
-"So the nth term starts with 4n.",
-"4 × 1 = 4, but the first term is 1: adjust by -3.",
-"nth term = 4n − 3."
+"Start from what you know: 2×2 matrices as transformations.",
+"The new idea: Represent a sequence of transformations by a matrix product, explaining why BA means 'A first, then B'.",
+"Rotation by 90° sends (x, y) to (−y, x)."
 ],
-"title": "1, 5, 9, 13, …"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Composite transformations as matrix products'"
 }
 },
 "mt_8njX6oO7Mf": {
@@ -1865,8 +1859,8 @@
 "answer": 0,
 "choices": [
 "The matrix A is substituted for λ in its own characteristic equation",
-"Each eigenvalue from the characteristic equation is substituted into (A − λI)v = 0",
-"The two equations are dependent, giving infinitely many solutions along one direction"
+"The inverse formula divides by the determinant",
+"An inverse is defined by AA⁻¹ = I"
 ],
 "explain": "Because: The matrix A is substituted for λ in its own characteristic equation.",
 "hint": "Think about what you need first.",
@@ -1878,8 +1872,8 @@
 "answer": 0,
 "choices": [
 "characteristic",
-"perpendicular",
-"operation"
+"determinant",
+"regular"
 ],
 "explain": "The missing word is 'characteristic'.",
 "hint": "Which word fits the topic?",
@@ -2001,7 +1995,7 @@
 "type": "numeric"
 }
 ],
-"quality": 87,
+"quality": 86,
 "status": "auto-starter",
 "title": "The Cayley–Hamilton theorem",
 "topicId": "mt_8njX6oO7Mf",
@@ -2030,9 +2024,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Column vectors and vector arithmetic and leads to Adding matrices and scalar multiples.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -2102,8 +2096,8 @@
 "answer": 0,
 "choices": [
 "A column vector is a matrix with one column",
-"Testing AB against BA and (AB)C against A(BC) needs fluent matrix multiplication",
-"The laws are compared with those for numbers, where ab = ba always holds"
+"The eigenvectors found give the directions of the invariant lines",
+"Each matrix is read as a transformation, such as a stretch or reflection, of…"
 ],
 "explain": "Because: A column vector is a matrix with one column.",
 "hint": "Think about what you need first.",
@@ -2115,8 +2109,8 @@
 "answer": 0,
 "choices": [
 "rectangular",
-"inconsistent",
-"imaginary"
+"transformation",
+"represent"
 ],
 "explain": "The missing word is 'rectangular'.",
 "hint": "Which word fits the topic?",
@@ -2219,8 +2213,8 @@
 "answer": 0,
 "choices": [
 "Column vectors and vector arithmetic",
-"Arrangements of three planes and consistency",
-"Transformations in three dimensions"
+"Interpreting eigenvalues geometrically",
+"Symmetric matrices and orthogonal eigenvectors"
 ],
 "explain": "'Matrices: notation and order' builds on 'Column vectors and vector arithmetic'.",
 "hint": "What does this topic build on?",
@@ -2260,14 +2254,14 @@
 "explain": {
 "adult": [
 "Coordinates (x, y) give the position across (x) then up (y) from the origin (0, 0).",
-"For example, (5, -5) is 5 right and 5 down.",
+"For example, (3, 6) is 3 right and 6 up.",
 "It builds on The Argand diagram and leads to Modulus–argument form.",
 "Points with negative coordinates sit left of or below the origin."
 ],
 "kid": [
 "A point has two numbers. Go across first, then up.",
 "(3, 5) means 3 across and 5 up.",
-"For example, (5, -5) is 5 right and 5 down."
+"For example, (3, 6) is 3 right and 6 up."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2337,8 +2331,8 @@
 "answer": 0,
 "choices": [
 "The modulus is the length of the line from the origin",
-"Sums, differences and conjugates are drawn as points and arrows on the Argand diagram",
-"Complex numbers add and subtract like column vectors, drawn head to tail"
+"AI = IA = A is checked by multiplying",
+"The result is about inverting a product"
 ],
 "explain": "Because: The modulus is the length of the line from the origin.",
 "hint": "Think about what you need first.",
@@ -2351,7 +2345,7 @@
 "choices": [
 "Modulus–argument form",
 "The Argand diagram",
-"Complex arithmetic on the Argand diagram"
+"Zero and identity matrices"
 ],
 "explain": "'Modulus and argument' leads on to 'Modulus–argument form'.",
 "hint": "What comes after this topic?",
@@ -2360,10 +2354,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"choosing",
+"explaining",
+"multiplying"
+],
+"explain": "The missing word is 'choosing'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Find the modulus |z| and argument arg z of a complex number, _____ the argument in the correct quadrant (−π < θ…'",
+"type": "mc"
+},
+{
 "answer": "a+c",
 "explain": "{a} + {c} = {=a+c}.",
 "hint": "Right changes x.",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 0,
@@ -2380,25 +2387,6 @@
 },
 "prompt": "Quick check: Point A is at ({a}, {b}). It moves {c} squares right. What is its new x-coordinate?",
 "type": "numeric"
-},
-{
-"answer": "b",
-"explain": "In ({a}, {b}) the y-coordinate is {=b}.",
-"hint": "The second number.",
-"id": "m7",
-"params": {
-"a": [
-0,
-9
-],
-"b": [
-0,
-9
-]
-},
-"prompt": "Quick check: What is the y-coordinate of ({a}, {b})?",
-"type": "numeric",
-"where": "a!=b"
 }
 ]
 },
@@ -2447,14 +2435,14 @@
 {
 "answer": 0,
 "choices": [
-"(5, -5)",
-"(-5, 5)",
-"(-5, -5)"
+"(3, 6)",
+"(6, 3)",
+"(-3, 6)"
 ],
-"explain": "Across 5, then -5: (5, -5).",
+"explain": "Across 3, then 6: (3, 6).",
 "hint": "Across first, then up or down.",
 "id": "p3",
-"prompt": "Which point is 5 right and 5 down from the origin?",
+"prompt": "Which point is 3 right and 6 up from the origin?",
 "type": "mc"
 },
 {
@@ -2462,7 +2450,7 @@
 "choices": [
 "The Argand diagram",
 "Inverse of a product",
-"De Moivre's theorem"
+"Interpreting eigenvalues geometrically"
 ],
 "explain": "'Modulus and argument' builds on 'The Argand diagram'.",
 "hint": "What does this topic build on?",
@@ -2491,11 +2479,11 @@
 "worked": {
 "steps": [
 "Start at the origin (0, 0).",
-"Go right 5 along the x-axis.",
-"Then go down 5.",
-"Mark the point (5, -5)."
+"Go right 3 along the x-axis.",
+"Then go up 6.",
+"Mark the point (3, 6)."
 ],
-"title": "Plot (5, -5)"
+"title": "Plot (3, 6)"
 }
 },
 "mt_B8_RugzU3b": {
@@ -2574,8 +2562,8 @@
 "answer": 0,
 "choices": [
 "Complex numbers a + bi were first met as the solutions of quadratics with…",
-"Solving (A − λI)v = 0 for each eigenvalue is extended from 2×2 to…",
-"The characteristic equation det(A − λI) = 0 needs a 3×3 determinant"
+"Each root α gives a factor (x − α)",
+"The relations hold for all n complex roots, not just the real ones"
 ],
 "explain": "Because: Complex numbers a + bi were first met as the solutions of quadratics with….",
 "hint": "Think about what you need first.",
@@ -2586,221 +2574,14 @@
 {
 "answer": 0,
 "choices": [
-"Adding, subtracting and multiplying complex numbers",
-"Complex solutions of quadratics",
-"Eigenvalues and eigenvectors of a 3×3 matrix"
-],
-"explain": "'The complex number system' leads on to 'Adding, subtracting and multiplying complex numbers'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'The complex number system' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "imaginary",
-"characteristic",
-"determinant"
+"complex",
+"calculate"
 ],
 "explain": "The missing word is 'imaginary'.",
 "hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Describe a complex number as a + bi with real part a and _____ part b, place real and imaginary numbers within…'",
-"type": "mc"
-},
-{
-"answer": "0-a",
-"explain": "({a}, {b}) → ({=0-a}, {b}).",
-"hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "m7",
-"params": {
-"a": [
-1,
-9
-],
-"b": [
-1,
-9
-]
-},
-"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
-"type": "numeric"
-}
-]
-},
-"practice": [
-{
-"answer": "0-a",
-"explain": "({a}, {b}) → ({=0-a}, {b}).",
-"hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "p1",
-"params": {
-"a": [
-1,
-9
-],
-"b": [
-1,
-9
-]
-},
-"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
-"type": "numeric"
-},
-{
-"answer": "a*d-b*c",
-"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
-"hint": "ad − bc.",
-"id": "p2",
-"params": {
-"a": [
-1,
-6
-],
-"b": [
-0,
-4
-],
-"c": [
-0,
-4
-],
-"d": [
-1,
-6
-]
-},
-"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Complex solutions of quadratics",
-"Eigenvalues and eigenvectors of a 3×3 matrix",
-"Roots and coefficients of polynomials"
-],
-"explain": "'The complex number system' builds on 'Complex solutions of quadratics'.",
-"hint": "What does this topic build on?",
-"id": "p3",
-"prompt": "Which topic should you learn before 'The complex number system'?",
-"type": "mc"
-}
-],
-"quality": 83,
-"status": "auto-starter",
-"title": "The complex number system",
-"topicId": "mt_B8_RugzU3b",
-"visual": {
-"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
-"opts": {
-"m": [
-1,
-0,
-0,
-1
-]
-},
-"type": "matrixlab"
-},
-"worked": {
-"steps": [
-"Start from what you know: Complex solutions of quadratics.",
-"The new idea: Describe a complex number as a + bi with real part a and imaginary part b, place real….",
-"Rotation by 90° sends (x, y) to (−y, x).",
-"Next, this helps with: Adding, subtracting and multiplying complex numbers."
-],
-"title": "Rotate (2, 1) by 90° anticlockwise, for 'The complex number system'"
-}
-},
-"mt_D_kxLXiGop": {
-"audience": "learner",
-"explain": {
-"adult": [
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
-"It builds on Powers of a matrix and leads to Long-term behaviour from eigenvalues.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
-],
-"kid": [
-"You can slide, flip or turn a shape.",
-"It stays the same shape."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Model a system that moves between states with fixed probabilities using a transition matrix, find the state distribution after n steps.",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "a*k*k",
-"explain": "{a} × {k}² = {=a*k*k}.",
-"hint": "Area scales by k².",
-"id": "m1",
-"params": {
-"a": [
-2,
-10
-],
-"k": [
-2,
-4
-]
-},
-"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Enlargement",
-"Reflection",
-"Rotation"
-],
-"explain": "Only enlargement changes the size.",
-"hint": "Which one makes it bigger?",
-"id": "m2",
-"prompt": "Which transformation changes size?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The distribution after n steps uses the nth power of the transition matrix",
-"Invariant points and lines are properties of a transformation matrix",
-"Finding invariant points means solving Mx = x, a pair of simultaneous equations"
-],
-"explain": "Because: The distribution after n steps uses the nth power of the transition matrix.",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Transition matrices and Markov chains' build on 'Powers of a matrix'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Long-term behaviour from eigenvalues",
-"Powers of a matrix",
-"Invariant points and lines"
-],
-"explain": "'Transition matrices and Markov chains' leads on to 'Long-term behaviour from eigenvalues'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Transition matrices and Markov chains' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"probabilities",
-"reflections",
-"eigenvectors"
-],
-"explain": "The missing word is 'probabilities'.",
-"hint": "Which word fits the topic?",
 "id": "m5",
-"prompt": "Fill the gap: 'Model a system that moves between states with fixed _____ using a transition matrix, find the state distribution after n steps'",
+"prompt": "Fill the gap: 'Describe a complex number as a + bi with real part a and _____ part b, place real and imaginary numbers within…'",
 "type": "mc"
 },
 {
@@ -2895,32 +2676,23 @@
 "type": "numeric"
 },
 {
-"answer": "a+c",
-"explain": "{a} + {c} = {=a+c}.",
-"hint": "Add to x.",
+"answer": 0,
+"choices": [
+"Complex solutions of quadratics",
+"Roots and coefficients of polynomials",
+"De Moivre's theorem"
+],
+"explain": "'The complex number system' builds on 'Complex solutions of quadratics'.",
+"hint": "What does this topic build on?",
 "id": "p3",
-"params": {
-"a": [
-0,
-8
-],
-"b": [
-0,
-8
-],
-"c": [
-1,
-6
-]
-},
-"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
-"type": "numeric"
+"prompt": "Which topic should you learn before 'The complex number system'?",
+"type": "mc"
 }
 ],
-"quality": 86,
+"quality": 88,
 "status": "auto-starter",
-"title": "Transition matrices and Markov chains",
-"topicId": "mt_D_kxLXiGop",
+"title": "The complex number system",
+"topicId": "mt_B8_RugzU3b",
 "visual": {
 "caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
@@ -2935,12 +2707,213 @@
 },
 "worked": {
 "steps": [
-"Start from what you know: Powers of a matrix.",
-"The new idea: Model a system that moves between states with fixed probabilities using a transition matrix, find the state distribution….",
+"Start from what you know: Complex solutions of quadratics.",
+"The new idea: Describe a complex number as a + bi with real part a and imaginary part b, place real….",
 "Rotation by 90° sends (x, y) to (−y, x).",
-"Next, this helps with: Long-term behaviour from eigenvalues."
+"Next, this helps with: Adding, subtracting and multiplying complex numbers."
 ],
-"title": "Rotate (2, 1) by 90° anticlockwise, for 'Transition matrices and Markov chains'"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'The complex number system'"
+}
+},
+"mt_D_kxLXiGop": {
+"audience": "learner",
+"explain": {
+"adult": [
+"Multiplying by 10 moves every digit one place to the left.",
+"For example, 147 = 100 + 40 + 7.",
+"It builds on Powers of a matrix and leads to Long-term behaviour from eigenvalues.",
+"Each place is worth ten times the place to its right: ones, tens, hundreds, and tenths after the decimal point."
+],
+"kid": [
+"The place of a digit tells its value.",
+"In 34, the 3 means 3 tens.",
+"For example, 147 = 100 + 40 + 7."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Model a system that moves between states with fixed probabilities using a transition matrix, find the state distribution after n steps.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "a",
+"explain": "{=a*10} ÷ 10 = {=a}.",
+"hint": "Digits move one place right.",
+"id": "m1",
+"params": {
+"a": [
+3,
+99
+]
+},
+"prompt": "What is {=a*10} ÷ 10?",
+"type": "numeric"
+},
+{
+"answer": "a*10+(b>=5)*10",
+"explain": "{a}{b} rounds to {=a*10+(b>=5)*10}.",
+"hint": "Look at the ones digit.",
+"id": "m2",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+]
+},
+"prompt": "Round {a}{b} to the nearest ten.",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"0.7",
+"0.65",
+"0.09"
+],
+"explain": "0.7 has 7 tenths, the most.",
+"hint": "Compare tenths first.",
+"id": "m3",
+"prompt": "Which number is biggest?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The distribution after n steps uses the nth power of the transition matrix",
+"The boundaries of each region are polar equations of loci such as r =…",
+"The area of a sector of an annulus is a difference of two sector…"
+],
+"explain": "Because: The distribution after n steps uses the nth power of the transition matrix.",
+"hint": "Think about what you need first.",
+"id": "m4",
+"prompt": "Why does 'Transition matrices and Markov chains' build on 'Powers of a matrix'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Long-term behaviour from eigenvalues",
+"Powers of a matrix",
+"Regions in the Argand diagram in polar form"
+],
+"explain": "'Transition matrices and Markov chains' leads on to 'Long-term behaviour from eigenvalues'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Transition matrices and Markov chains' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"probabilities",
+"coordinates",
+"expressions"
+],
+"explain": "The missing word is 'probabilities'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Model a system that moves between states with fixed _____ using a transition matrix, find the state distribution after n steps'",
+"type": "mc"
+},
+{
+"answer": "b*10",
+"explain": "The {b} is in the tens place, so it is worth {=b*10}.",
+"hint": "Tens are worth 10 each.",
+"id": "m7",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+],
+"c": [
+0,
+9
+]
+},
+"prompt": "Quick check: What is the value of the tens digit in {a}{b}{c}? Give the value, like 40.",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "b*10",
+"explain": "The {b} is in the tens place, so it is worth {=b*10}.",
+"hint": "Tens are worth 10 each.",
+"id": "p1",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+],
+"c": [
+0,
+9
+]
+},
+"prompt": "What is the value of the tens digit in {a}{b}{c}? Give the value, like 40.",
+"type": "numeric"
+},
+{
+"answer": "a*10",
+"explain": "{a} × 10 = {=a*10}.",
+"hint": "Digits move one place left.",
+"id": "p2",
+"params": {
+"a": [
+3,
+99
+]
+},
+"prompt": "What is {a} × 10?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"100",
+"1",
+"10"
+],
+"explain": "the value of the first digit in 147 = 100. Its value depends on its place.",
+"hint": "Redo it step by step and compare.",
+"id": "p3",
+"prompt": "Sam worked out the value of the first digit in 147 and got 1. What is the correct answer?",
+"type": "mc"
+}
+],
+"quality": 84,
+"status": "auto-starter",
+"title": "Transition matrices and Markov chains",
+"topicId": "mt_D_kxLXiGop",
+"visual": {
+"caption": "Multiply or divide by 10: the digits slide one place.",
+"opts": {
+"n": 1.5
+},
+"type": "placevalue"
+},
+"worked": {
+"steps": [
+"1 in the hundreds place is worth 100.",
+"4 in the tens place is worth 40.",
+"7 in the ones place is worth 7.",
+"So 147 = 100 + 40 + 7."
+],
+"title": "Partition 147"
 }
 },
 "mt_EGiAjt33Hw": {
@@ -3019,8 +2992,8 @@
 "answer": 0,
 "choices": [
 "Rearranging Av = λv to (A − λI)v = 0 is the first step…",
-"The inverse formula divides by the determinant",
-"An inverse is defined by AA⁻¹ = I"
+"A symmetric matrix is a special case that can always be diagonalised",
+"A symmetric matrix satisfies Aᵀ = A"
 ],
 "explain": "Because: Rearranging Av = λv to (A − λI)v = 0 is the first step….",
 "hint": "Think about what you need first.",
@@ -3033,7 +3006,7 @@
 "choices": [
 "Finding eigenvectors of a 2×2 matrix",
 "Eigenvectors and eigenvalues",
-"Inverse of a 2×2 matrix"
+"Matrices: notation and order"
 ],
 "explain": "'The characteristic equation' leads on to 'Finding eigenvectors of a 2×2 matrix'.",
 "hint": "What comes after this topic?",
@@ -3176,9 +3149,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on Matrices acting on vectors and leads to Determinant as area scale factor.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -3248,8 +3221,8 @@
 "answer": 0,
 "choices": [
 "Transforming a shape means multiplying each position vector by the matrix",
-"A rotation leaves no line invariant, explaining why it has no real eigenvectors",
-"Complex roots of a real characteristic quadratic come in conjugate pairs"
+"(AB)ᵀ = BᵀAᵀ is checked by multiplying matrices in both orders",
+"Rows and columns swap"
 ],
 "explain": "Because: Transforming a shape means multiplying each position vector by the matrix.",
 "hint": "Think about what you need first.",
@@ -3262,7 +3235,7 @@
 "choices": [
 "Determinant as area scale factor",
 "Matrices acting on vectors",
-"Inverse of a 2×2 matrix"
+"The transpose of a matrix"
 ],
 "explain": "'2×2 matrices as transformations' leads on to 'Determinant as area scale factor'.",
 "hint": "What comes after this topic?",
@@ -3365,8 +3338,8 @@
 "answer": 0,
 "choices": [
 "Matrices acting on vectors",
-"Complex and repeated eigenvalues",
-"nth roots of complex numbers"
+"Inverse of a product",
+"Solving polynomial equations with complex roots"
 ],
 "explain": "'2×2 matrices as transformations' builds on 'Matrices acting on vectors'.",
 "hint": "What does this topic build on?",
@@ -3405,9 +3378,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on The characteristic equation and leads to Interpreting eigenvalues geometrically.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -3477,8 +3450,8 @@
 "answer": 0,
 "choices": [
 "Each eigenvalue from the characteristic equation is substituted into (A − λI)v = 0",
-"The area scale factor describes what a transformation matrix does to shapes",
-"|ad − bc| is the area scale factor"
+"Adding and multiplying work on the real and imaginary parts of numbers in the…",
+"Multiplying (a + bi)(c + di) is expanded like a pair of brackets, then…"
 ],
 "explain": "Because: Each eigenvalue from the characteristic equation is substituted into (A − λI)v = 0.",
 "hint": "Think about what you need first.",
@@ -3491,7 +3464,7 @@
 "choices": [
 "Interpreting eigenvalues geometrically",
 "The characteristic equation",
-"Determinant as area scale factor"
+"Adding, subtracting and multiplying complex numbers"
 ],
 "explain": "'Finding eigenvectors of a 2×2 matrix' leads on to 'Interpreting eigenvalues geometrically'.",
 "hint": "What comes after this topic?",
@@ -3604,7 +3577,7 @@
 "type": "mc"
 }
 ],
-"quality": 87,
+"quality": 86,
 "status": "auto-starter",
 "title": "Finding eigenvectors of a 2×2 matrix",
 "topicId": "mt_Fr-tfjE1oc",
@@ -3635,14 +3608,13 @@
 "explain": {
 "adult": [
 "This topic asks you to extend factorising to complex numbers, for example x² + 4 = (x + 2i)(x − 2i).",
-"Where the curve crosses the x-axis are the solutions (roots) of ax² + bx + c = 0.",
-"For example, x² − 3x + 2 = 0 has roots 2 and 1.",
-"It builds on Adding, subtracting and multiplying complex numbers and leads to The fundamental theorem of algebra."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"It builds on Adding, subtracting and multiplying complex numbers and leads to The fundamental theorem of algebra.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
-"Some graphs curve like a smile or a frown.",
-"The number in front of x² makes the curve wide or thin.",
-"For example, x² − 3x + 2 = 0 has roots 2 and 1."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -3652,60 +3624,64 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "a*b",
-"explain": "{a} × {b} = {=a*b}, so the number term is {=a*b}.",
-"hint": "Multiply the two numbers.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "m1",
 "params": {
 "a": [
-1,
-9
+0,
+8
 ],
 "b": [
+0,
+8
+],
+"c": [
 1,
-9
+6
 ]
 },
-"prompt": "Expand (x + {a})(x + {b}). What is the number term?",
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "a+b",
-"explain": "{a} + {b} = {=a+b}, so it is {=a+b}x.",
-"hint": "Add the two numbers.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m2",
 "params": {
 "a": [
-1,
-9
+2,
+10
 ],
-"b": [
-1,
-9
+"k": [
+2,
+4
 ]
 },
-"prompt": "Expand (x + {a})(x + {b}). What is the coefficient of x?",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"x = 3 and x = −3",
-"x = 9 only",
-"x = −9"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "x² = 9 gives x = 3 or −3.",
-"hint": "Solve x² = 9.",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
 "id": "m3",
-"prompt": "Where does y = x² − 9 cross the x-axis?",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Checking x² + 4 = (x + 2i)(x − 2i) means expanding with complex…",
-"The distribution after n steps uses the nth power of the transition matrix",
-"Multiplying the state vector by the transition matrix gives the next distribution"
+"A zero 3×3 determinant signals that the three planes do not meet at a…",
+"The 2×2 cases of no solution or infinitely many are generalised to arrangements of…"
 ],
 "explain": "Because: Checking x² + 4 = (x + 2i)(x − 2i) means expanding with complex….",
 "hint": "Think about what you need first.",
@@ -3718,7 +3694,7 @@
 "choices": [
 "The fundamental theorem of algebra",
 "Adding, subtracting and multiplying complex numbers",
-"Transition matrices and Markov chains"
+"Arrangements of three planes and consistency"
 ],
 "explain": "'Factorising polynomials over the complex numbers' leads on to 'The fundamental theorem of algebra'.",
 "hint": "What comes after this topic?",
@@ -3727,140 +3703,134 @@
 "type": "mc"
 },
 {
-"answer": "a*a+c",
-"explain": "{a}² + {c} = {=a*a+c}.",
-"hint": "Square first, then add.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "m6",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+]
+},
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "m7",
 "params": {
 "a": [
 1,
 6
 ],
+"b": [
+0,
+4
+],
 "c": [
+0,
+4
+],
+"d": [
 1,
-9
+6
 ]
 },
-"prompt": "Quick check: For y = x² + {c}, what is y when x = {a}?",
-"type": "numeric"
-},
-{
-"answer": "a",
-"explain": "{a} × {a} = {=a*a}, so x = {=a}.",
-"hint": "Which number times itself?",
-"id": "m7",
-"params": {
-"a": [
-2,
-12
-]
-},
-"prompt": "Quick check: x² = {=a*a}. What is the positive value of x?",
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "a*a+c",
-"explain": "{a}² + {c} = {=a*a+c}.",
-"hint": "Square first, then add.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+]
+},
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "p2",
 "params": {
 "a": [
 1,
 6
 ],
-"c": [
-1,
-9
-]
-},
-"prompt": "For y = x² + {c}, what is y when x = {a}?",
-"type": "numeric"
-},
-{
-"answer": "a",
-"explain": "{a} × {a} = {=a*a}, so x = {=a}.",
-"hint": "Which number times itself?",
-"id": "p2",
-"params": {
-"a": [
-2,
-12
-]
-},
-"prompt": "x² = {=a*a}. What is the positive value of x?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"2",
-"-2",
-"-1"
+"b": [
+0,
+4
 ],
-"explain": "the larger root of x² − 3x + 2 = 0 = 2. The roots have the opposite signs to the numbers in the brackets.",
-"hint": "Redo it step by step and compare.",
-"id": "p3",
-"prompt": "Sam worked out the larger root of x² − 3x + 2 = 0 and got -2. What is the correct answer?",
-"type": "mc"
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
+]
+},
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
+"type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
 "Adding, subtracting and multiplying complex numbers",
-"Transition matrices and Markov chains",
-"Exponential form of a complex number"
+"Arrangements of three planes and consistency",
+"Polar coordinates and modulus–argument form"
 ],
 "explain": "'Factorising polynomials over the complex numbers' builds on 'Adding, subtracting and multiplying complex numbers'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Factorising polynomials over the complex numbers'?",
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 76,
 "status": "auto-starter",
 "title": "Factorising polynomials over the complex numbers",
 "topicId": "mt_FyhCcN6JGt",
 "visual": {
-"caption": "Edit y = … or move a, b, c. Make the curve pass through the red targets.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"a": 1,
-"b": 0,
-"c": 0,
-"equal": false,
-"f": "a*x^2+b*x+c",
-"targets": [
-[
-2,
-0
-],
-[
+"m": [
 1,
-0
-]
-],
-"xr": [
--5,
-5
-],
-"yr": [
--6,
-10
+0,
+0,
+1
 ]
 },
-"type": "graphlab"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"Find two numbers that multiply to 2 and add to -3: -2 and -1.",
-"Factorise: (x − 2)(x − 1) = 0.",
-"So x = 2 or x = 1.",
-"The graph crosses the x-axis at 2 and 1."
+"Start from what you know: Adding, subtracting and multiplying complex numbers.",
+"The new idea: Extend factorising to complex numbers, for example x² + 4 = (x + 2i)(x − 2i).",
+"Rotation by 90° sends (x, y) to (−y, x).",
+"Next, this helps with: The fundamental theorem of algebra."
 ],
-"title": "x² − 3x + 2 = 0"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Factorising polynomials over the complex numbers'"
 }
 },
 "mt_HKSMejFFph": {
@@ -3868,9 +3838,9 @@
 "explain": {
 "adult": [
 "This topic asks you to go beyond the unique-solution case to classify how three planes can meet (a sheaf through a common line.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on 3×3 determinants and inverses with technology and leads to Intersections of planes and angles between planes.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -3918,8 +3888,8 @@
 "answer": 0,
 "choices": [
 "A zero 3×3 determinant signals that the three planes do not meet at a…",
-"Treating z as the polar point (r, θ) turns |z| into r and arg…",
-"Circles and half-lines in the Argand diagram are the loci being rewritten"
+"Products are found by multiplying moduli and adding arguments in modulus–argument form",
+"The rule is checked by multiplying the same numbers in a + bi form"
 ],
 "explain": "Because: A zero 3×3 determinant signals that the three planes do not meet at a….",
 "hint": "Think about what you need first.",
@@ -3932,7 +3902,7 @@
 "choices": [
 "Intersections of planes and angles between planes",
 "3×3 determinants and inverses with technology",
-"Polar equations of loci in the Argand diagram"
+"Multiplying and dividing in modulus–argument form"
 ],
 "explain": "'Arrangements of three planes and consistency' leads on to 'Intersections of planes and angles between planes'.",
 "hint": "What comes after this topic?",
@@ -4085,9 +4055,9 @@
 "explain": {
 "adult": [
 "This topic asks you to find invariant points and lines of a transformation by solving matrix equations.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on 2×2 matrices as transformations and leads to Eigenvectors and eigenvalues.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -4157,8 +4127,8 @@
 "answer": 0,
 "choices": [
 "Invariant points and lines are properties of a transformation matrix",
-"The eigenvectors found give the directions of the invariant lines",
-"Each matrix is read as a transformation, such as a stretch or reflection, of…"
+"The inverse formula divides by the determinant",
+"An inverse is defined by AA⁻¹ = I"
 ],
 "explain": "Because: Invariant points and lines are properties of a transformation matrix.",
 "hint": "Think about what you need first.",
@@ -4171,7 +4141,7 @@
 "choices": [
 "Eigenvectors and eigenvalues",
 "2×2 matrices as transformations",
-"Complex conjugates and division"
+"Inverse of a 2×2 matrix"
 ],
 "explain": "'Invariant points and lines' leads on to 'Eigenvectors and eigenvalues'.",
 "hint": "What comes after this topic?",
@@ -4183,8 +4153,8 @@
 "answer": 0,
 "choices": [
 "transformation",
-"independent",
-"inconsistent"
+"determinant",
+"rectangular"
 ],
 "explain": "The missing word is 'transformation'.",
 "hint": "Which word fits the topic?",
@@ -4302,9 +4272,9 @@
 "explain": {
 "adult": [
 "This topic asks you to find the distance between two complex numbers as the modulus of their difference.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Modulus and argument and leads to Loci in the Argand diagram.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -4374,8 +4344,8 @@
 "answer": 0,
 "choices": [
 "The distance between z and w is the modulus |z − w| of their…",
-"Each transformation in the sequence is written as its own matrix first",
-"BA and AB usually differ because matrix multiplication is not commutative"
+"Aⁿ = PDⁿP⁻¹ needs A already written as PDP⁻¹",
+"The formula replaces repeated multiplication and can be checked against it"
 ],
 "explain": "Because: The distance between z and w is the modulus |z − w| of their….",
 "hint": "Think about what you need first.",
@@ -4388,7 +4358,7 @@
 "choices": [
 "Loci in the Argand diagram",
 "Modulus and argument",
-"Composite transformations as matrix products"
+"Matrix powers by diagonalisation"
 ],
 "explain": "'Distance and midpoint in the complex plane' leads on to 'Loci in the Argand diagram'.",
 "hint": "What comes after this topic?",
@@ -4400,8 +4370,8 @@
 "answer": 0,
 "choices": [
 "difference",
-"determinant",
-"algebra"
+"symmetric",
+"represent"
 ],
 "explain": "The missing word is 'difference'.",
 "hint": "Which word fits the topic?",
@@ -4478,8 +4448,8 @@
 "answer": 0,
 "choices": [
 "Modulus and argument",
-"Exponential form of a complex number",
-"Complex and repeated eigenvalues"
+"Matrix powers by diagonalisation",
+"Multiplying and dividing in modulus–argument form"
 ],
 "explain": "'Distance and midpoint in the complex plane' builds on 'Modulus and argument'.",
 "hint": "What does this topic build on?",
@@ -4488,7 +4458,7 @@
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 82,
 "status": "auto-starter",
 "title": "Distance and midpoint in the complex plane",
 "topicId": "mt_KQTsRGYCT8",
@@ -4518,9 +4488,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Adding, subtracting and multiplying complex numbers.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -4590,8 +4560,8 @@
 "answer": 0,
 "choices": [
 "Expanding (a + bi)² = 3 + 4i needs complex multiplication before parts are…",
-"The characteristic equation is λ² − (trace)λ + det = 0, written out in…",
-"The sum and product of the roots of a quadratic give the trace and…"
+"Finding nth roots reverses de Moivre's theorem",
+"The n roots have arguments spaced 2π/n apart, forming a regular polygon"
 ],
 "explain": "Because: Expanding (a + bi)² = 3 + 4i needs complex multiplication before parts are….",
 "hint": "Think about what you need first.",
@@ -4600,10 +4570,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"involving",
+"identifying",
+"recognising"
+],
+"explain": "The missing word is 'involving'.",
+"hint": "Which word fits the topic?",
+"id": "m5",
+"prompt": "Fill the gap: 'Solve equations _____ complex numbers by equating real and imaginary parts, including finding square roots of complex numbers'",
+"type": "mc"
+},
+{
 "answer": "0-a",
 "explain": "({a}, {b}) → ({=0-a}, {b}).",
 "hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "m5",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -4621,7 +4604,7 @@
 "answer": "a*d-b*c",
 "explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
 "hint": "ad − bc.",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 1,
@@ -4642,19 +4625,6 @@
 },
 "prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Adding, subtracting and multiplying complex numbers",
-"Trace, determinant and eigenvalues",
-"Transformations in three dimensions"
-],
-"explain": "'Solving equations by equating parts' builds on 'Adding, subtracting and multiplying complex numbers'.",
-"hint": "What does this topic build on?",
-"id": "m7",
-"prompt": "Quick check: Which topic should you learn before 'Solving equations by equating parts'?",
-"type": "mc"
 }
 ]
 },
@@ -4707,8 +4677,8 @@
 "answer": 0,
 "choices": [
 "Adding, subtracting and multiplying complex numbers",
-"Trace, determinant and eigenvalues",
-"Transformations in three dimensions"
+"nth roots of complex numbers",
+"The Cayley–Hamilton theorem"
 ],
 "explain": "'Solving equations by equating parts' builds on 'Adding, subtracting and multiplying complex numbers'.",
 "hint": "What does this topic build on?",
@@ -4717,7 +4687,7 @@
 "type": "mc"
 }
 ],
-"quality": 75,
+"quality": 81,
 "status": "auto-starter",
 "title": "Solving equations by equating parts",
 "topicId": "mt_Lgl-maxfxv",
@@ -4746,9 +4716,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Transition matrices and Markov chains.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -4796,8 +4766,8 @@
 "answer": 0,
 "choices": [
 "A Markov chain's transition matrix is a main example of a long-run matrix model",
-"A², A³ and higher powers are found by multiplying the matrix by itself repeatedly",
-"Associativity means A³ can be found as A²A or AA², giving the same result"
+"Each root α gives a factor (x − α)",
+"The relations hold for all n complex roots, not just the real ones"
 ],
 "explain": "Because: A Markov chain's transition matrix is a main example of a long-run matrix model.",
 "hint": "Think about what you need first.",
@@ -5039,8 +5009,8 @@
 "answer": 0,
 "choices": [
 "r(cos θ + i sin θ) is written from the modulus r and argument…",
-"Checking x² + 4 = (x + 2i)(x − 2i) means expanding with complex…",
-"x² + 4 is factorised as x² − (2i)², a difference of two squares"
+"The distribution after n steps uses the nth power of the transition matrix",
+"Multiplying the state vector by the transition matrix gives the next distribution"
 ],
 "explain": "Because: r(cos θ + i sin θ) is written from the modulus r and argument….",
 "hint": "Think about what you need first.",
@@ -5053,7 +5023,7 @@
 "choices": [
 "Multiplying and dividing in modulus–argument form",
 "Modulus and argument",
-"Factorising polynomials over the complex numbers"
+"Transition matrices and Markov chains"
 ],
 "explain": "'Modulus–argument form' leads on to 'Multiplying and dividing in modulus–argument form'.",
 "hint": "What comes after this topic?",
@@ -5065,8 +5035,8 @@
 "answer": 0,
 "choices": [
 "complex",
-"factorisation",
-"represent"
+"characteristic",
+"algebra"
 ],
 "explain": "The missing word is 'complex'.",
 "hint": "Which word fits the topic?",
@@ -5143,8 +5113,8 @@
 "answer": 0,
 "choices": [
 "Modulus and argument",
-"Exponential form of a complex number",
-"Long-term behaviour from eigenvalues"
+"Transition matrices and Markov chains",
+"Eigenvalues and eigenvectors of a 3×3 matrix"
 ],
 "explain": "'Modulus–argument form' builds on 'Modulus and argument'.",
 "hint": "What does this topic build on?",
@@ -5184,9 +5154,9 @@
 "explain": {
 "adult": [
 "This topic asks you to find the n nth roots of a complex number, including roots of unity.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on De Moivre's theorem.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -5234,8 +5204,8 @@
 "answer": 0,
 "choices": [
 "Finding nth roots reverses de Moivre's theorem",
-"The eigenvectors found for each eigenvalue become the columns of the matrix P",
-"A = PDP⁻¹ needs the inverse of P, found with the 2×2 inverse formula"
+"A matrix times a column vector is a row-by-column product with a one-column result",
+"The matrix acts on column vectors, turning each one into a new column vector"
 ],
 "explain": "Because: Finding nth roots reverses de Moivre's theorem.",
 "hint": "Think about what you need first.",
@@ -5404,9 +5374,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Interpreting eigenvalues geometrically and leads to Diagonalising a matrix.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -5454,8 +5424,8 @@
 "answer": 0,
 "choices": [
 "A rotation leaves no line invariant, explaining why it has no real eigenvectors",
-"Products are found by multiplying moduli and adding arguments in modulus–argument form",
-"The rule is checked by multiplying the same numbers in a + bi form"
+"Each eigenvalue from the characteristic equation is substituted into (A − λI)v = 0",
+"The two equations are dependent, giving infinitely many solutions along one direction"
 ],
 "explain": "Because: A rotation leaves no line invariant, explaining why it has no real eigenvectors.",
 "hint": "Think about what you need first.",
@@ -5468,7 +5438,7 @@
 "choices": [
 "Diagonalising a matrix",
 "Interpreting eigenvalues geometrically",
-"Multiplying and dividing in modulus–argument form"
+"Finding eigenvectors of a 2×2 matrix"
 ],
 "explain": "'Complex and repeated eigenvalues' leads on to 'Diagonalising a matrix'.",
 "hint": "What comes after this topic?",
@@ -5620,9 +5590,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on Matrices: notation and order and leads to Properties of matrix multiplication.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -5692,8 +5662,8 @@
 "answer": 0,
 "choices": [
 "Whether a product exists depends on the orders",
-"Finding nth roots reverses de Moivre's theorem",
-"The n roots have arguments spaced 2π/n apart, forming a regular polygon"
+"Each root α gives a factor (x − α)",
+"The relations hold for all n complex roots, not just the real ones"
 ],
 "explain": "Because: Whether a product exists depends on the orders.",
 "hint": "Think about what you need first.",
@@ -5706,7 +5676,7 @@
 "choices": [
 "Properties of matrix multiplication",
 "Matrices: notation and order",
-"nth roots of complex numbers"
+"Roots and coefficients of polynomials"
 ],
 "explain": "'Multiplying matrices' leads on to 'Properties of matrix multiplication'.",
 "hint": "What comes after this topic?",
@@ -5718,8 +5688,8 @@
 "answer": 0,
 "choices": [
 "products",
-"enlargements",
-"eigenvectors"
+"eigenvalues",
+"enlargements"
 ],
 "explain": "The missing word is 'products'.",
 "hint": "Which word fits the topic?",
@@ -5796,8 +5766,8 @@
 "answer": 0,
 "choices": [
 "Matrices: notation and order",
-"nth roots of complex numbers",
-"Finding eigenvectors of a 2×2 matrix"
+"Roots and coefficients of polynomials",
+"Powers of a matrix"
 ],
 "explain": "'Multiplying matrices' builds on 'Matrices: notation and order'.",
 "hint": "What does this topic build on?",
@@ -5837,14 +5807,13 @@
 "explain": {
 "adult": [
 "This topic asks you to solve linear systems by x = A⁻¹b.",
-"Gradient = change in y ÷ change in x between any two points on the line.",
-"For example, y = 3x + 1 has gradient 3 and crosses the y-axis at 1.",
-"It builds on Writing a linear system as a matrix equation and leads to 3×3 determinants and inverses with technology."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"It builds on Writing a linear system as a matrix equation and leads to 3×3 determinants and inverses with technology.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
-"A straight-line graph follows a rule.",
-"y = 2x + 1 means double x, then add 1.",
-"For example, y = 3x + 1 has gradient 3 and crosses the y-axis at 1."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -5854,60 +5823,64 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "m",
-"explain": "{=2*m} ÷ 2 = {=m}.",
-"hint": "Change in y ÷ change in x.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "m1",
 "params": {
 "a": [
 0,
-5
+8
 ],
-"m": [
+"b": [
+0,
+8
+],
+"c": [
 1,
 6
 ]
 },
-"prompt": "What is the gradient of the line through (1, {a}) and (3, {=a+2*m})?",
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "c",
-"explain": "At x = 0, y = {=c}.",
-"hint": "Put x = 0.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m2",
 "params": {
-"c": [
-1,
-9
-],
-"m": [
+"a": [
 2,
-9
+10
+],
+"k": [
+2,
+4
 ]
 },
-"prompt": "Where does y = {m}x + {c} cross the y-axis? Give the y value.",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"y = 5x + 1",
-"y = 2x + 7",
-"y = x + 9"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "Gradient 5 is the biggest.",
-"hint": "Compare the numbers in front of x.",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
 "id": "m3",
-"prompt": "Which line is steepest?",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "The method starts by writing the system as Ax = b with a coefficient…",
-"A Markov chain's transition matrix is a main example of a long-run matrix model",
-"In PDⁿP⁻¹ the largest eigenvalue's term dominates as n grows"
+"(AB)ᵀ = BᵀAᵀ is checked by multiplying matrices in both orders",
+"Rows and columns swap"
 ],
 "explain": "Because: The method starts by writing the system as Ax = b with a coefficient….",
 "hint": "Think about what you need first.",
@@ -5920,7 +5893,7 @@
 "choices": [
 "3×3 determinants and inverses with technology",
 "Writing a linear system as a matrix equation",
-"Long-term behaviour from eigenvalues"
+"The transpose of a matrix"
 ],
 "explain": "'Solving systems with inverse matrices' leads on to '3×3 determinants and inverses with technology'.",
 "hint": "What comes after this topic?",
@@ -5929,169 +5902,147 @@
 "type": "mc"
 },
 {
-"answer": "m*a+c",
-"explain": "{m} × {a} + {c} = {=m*a+c}.",
-"hint": "Multiply, then add.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "m6",
 "params": {
 "a": [
 1,
-5
-],
-"c": [
-1,
 9
 ],
-"m": [
-2,
-6
+"b": [
+1,
+9
 ]
 },
-"prompt": "Quick check: For y = {m}x + {c}, what is y when x = {a}?",
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "m",
-"explain": "({=c+m} − {c}) ÷ 1 = {=m}.",
-"hint": "Change in y ÷ change in x.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "m7",
 "params": {
-"c": [
-0,
+"a": [
+1,
 6
 ],
-"m": [
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
 1,
-7
+6
 ]
 },
-"prompt": "Quick check: A line goes through (0, {c}) and (1, {=c+m}). What is its gradient?",
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "m*a+c",
-"explain": "{m} × {a} + {c} = {=m*a+c}.",
-"hint": "Multiply, then add.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
 "a": [
 1,
-5
-],
-"c": [
-1,
 9
 ],
-"m": [
-2,
-6
+"b": [
+1,
+9
 ]
 },
-"prompt": "For y = {m}x + {c}, what is y when x = {a}?",
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "m",
-"explain": "({=c+m} − {c}) ÷ 1 = {=m}.",
-"hint": "Change in y ÷ change in x.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "p2",
 "params": {
-"c": [
-0,
+"a": [
+1,
 6
 ],
-"m": [
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
 1,
-7
+6
 ]
 },
-"prompt": "A line goes through (0, {c}) and (1, {=c+m}). What is its gradient?",
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"10",
-"7",
-"12"
-],
-"explain": "y when x = 3 for y = 3x + 1 = 10. Multiply by the gradient first, then add the intercept.",
-"hint": "Redo it step by step and compare.",
-"id": "p3",
-"prompt": "Sam worked out y when x = 3 for y = 3x + 1 and got 7. What is the correct answer?",
-"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Writing a linear system as a matrix equation",
-"Long-term behaviour from eigenvalues",
-"nth roots of complex numbers"
+"Polar coordinates and modulus–argument form",
+"Exponential form of a complex number"
 ],
 "explain": "'Solving systems with inverse matrices' builds on 'Writing a linear system as a matrix equation'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Solving systems with inverse matrices'?",
 "type": "mc"
 }
 ],
-"quality": 85,
+"quality": 78,
 "status": "auto-starter",
 "title": "Solving systems with inverse matrices",
 "topicId": "mt_QaN1C6qG-u",
 "visual": {
-"caption": "Type a rule for y or move a and b. Make the line pass through both red targets.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"a": 1,
-"b": 0,
-"f": "a*x+b",
-"targets": [
-[
+"m": [
+1,
+0,
 0,
 1
-],
-[
-2,
-7
-]
-],
-"xr": [
--5,
-5
-],
-"yr": [
--5,
-9
 ]
 },
-"type": "graphlab"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"When x = 0: y = 1, so it crosses the y-axis at (0, 1).",
-"When x = 2: y = 3 × 2 + 1 = 7.",
-"The gradient is 3: each step right, y changes by 3.",
-"Join (0, 1) and (2, 7) with a straight line."
+"Start from what you know: Writing a linear system as a matrix equation.",
+"The new idea: Solve linear systems by x = A⁻¹b.",
+"Rotation by 90° sends (x, y) to (−y, x).",
+"Next, this helps with: 3×3 determinants and inverses with technology."
 ],
-"title": "y = 3x + 1"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Solving systems with inverse matrices'"
 }
 },
 "mt_QorqNR3K11": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Exponential growth multiplies by the same factor each step, so it speeds up much faster than adding.",
-"For example, 2^5 × 2^2 = 2^7 = 128.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on Multiplying matrices and leads to Transition matrices and Markov chains.",
-"Powers count repeated factors: aᵐ × aⁿ = aᵐ⁺ⁿ, and aᵐ ÷ aⁿ = aᵐ⁻ⁿ."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
-"A power is a short way to multiply.",
-"2³ means 2 × 2 × 2. That is 8.",
-"For example, 2^5 × 2^2 = 2^7 = 128."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -6101,56 +6052,64 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "a-b",
-"explain": "{a} − {b} = {=a-b}.",
-"hint": "Subtract the powers.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "m1",
 "params": {
 "a": [
-5,
-12
+0,
+8
 ],
 "b": [
+0,
+8
+],
+"c": [
 1,
-4
+6
 ]
 },
-"prompt": "What is 10^{a} ÷ 10^{b}? Give the power of 10.",
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "a*a",
-"explain": "{a} × {a} = {=a*a}.",
-"hint": "{a} × {a}.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m2",
 "params": {
 "a": [
 2,
-15
+10
+],
+"k": [
+2,
+4
 ]
 },
-"prompt": "What is {a}²?",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"1",
-"0",
-"5"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "5⁰ = 1.",
-"hint": "Any non-zero number to the power 0.",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
 "id": "m3",
-"prompt": "What is 5⁰?",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "A², A³ and higher powers are found by multiplying the matrix by itself repeatedly",
-"A column vector is a matrix with one column",
-"Rows and columns of a data table, such as sales by shop and day,…"
+"A Markov chain's transition matrix is a main example of a long-run matrix model",
+"In PDⁿP⁻¹ the largest eigenvalue's term dominates as n grows"
 ],
 "explain": "Because: A², A³ and higher powers are found by multiplying the matrix by itself repeatedly.",
 "hint": "Think about what you need first.",
@@ -6163,7 +6122,7 @@
 "choices": [
 "Transition matrices and Markov chains",
 "Multiplying matrices",
-"Matrices: notation and order"
+"Finding eigenvectors of a 2×2 matrix"
 ],
 "explain": "'Powers of a matrix' leads on to 'Transition matrices and Markov chains'.",
 "hint": "What comes after this topic?",
@@ -6175,8 +6134,8 @@
 "answer": 0,
 "choices": [
 "multiplication",
-"rectangular",
-"perpendicular"
+"difference",
+"determinant"
 ],
 "explain": "The missing word is 'multiplication'.",
 "hint": "Which word fits the topic?",
@@ -6185,9 +6144,9 @@
 "type": "mc"
 },
 {
-"answer": "a+b",
-"explain": "{a} + {b} = {=a+b}, so 2^{=a+b}.",
-"hint": "Add the powers.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "m7",
 "params": {
 "a": [
@@ -6199,16 +6158,16 @@
 9
 ]
 },
-"prompt": "Quick check: What is 2^{a} × 2^{b} as a power of 2? Give the power.",
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "a+b",
-"explain": "{a} + {b} = {=a+b}, so 2^{=a+b}.",
-"hint": "Add the powers.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
 "a": [
@@ -6220,35 +6179,34 @@
 9
 ]
 },
-"prompt": "What is 2^{a} × 2^{b} as a power of 2? Give the power.",
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "a*8",
-"explain": "{a} × 2 × 2 × 2 = {=a*8}.",
-"hint": "× 2 three times.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "p2",
 "params": {
 "a": [
 1,
-12
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
 ]
 },
-"prompt": "A number doubles each day from {a}. What is it after 3 days?",
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"128",
-"1024",
-"64"
-],
-"explain": "2^5 × 2^2 = 128. Add the powers.",
-"hint": "Redo it step by step and compare.",
-"id": "p3",
-"prompt": "Sam worked out 2^5 × 2^2 and got 1024. What is the correct answer?",
-"type": "mc"
 },
 {
 "answer": 0,
@@ -6259,32 +6217,35 @@
 ],
 "explain": "'Powers of a matrix' builds on 'Multiplying matrices'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Powers of a matrix'?",
 "type": "mc"
 }
 ],
-"quality": 89,
+"quality": 81,
 "status": "auto-starter",
 "title": "Powers of a matrix",
 "topicId": "mt_QorqNR3K11",
 "visual": {
-"caption": "Multiply powers of the same base: watch the factors join up.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"m": 5,
-"mode": "laws",
-"n": 2,
-"op": "mul"
+"m": [
+1,
+0,
+0,
+1
+]
 },
-"type": "expo"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"a^5 is 5 a's multiplied; a^2 is 2 more.",
-"Together: 5 + 2 = 7 a's.",
-"So a^5 × a^2 = a^7."
+"Start from what you know: Multiplying matrices.",
+"The new idea: Calculate powers of a square matrix by repeated multiplication, spot patterns.",
+"Rotation by 90° sends (x, y) to (−y, x).",
+"Next, this helps with: Transition matrices and Markov chains."
 ],
-"title": "a^5 × a^2"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Powers of a matrix'"
 }
 },
 "mt_S0zMNj66lx": {
@@ -6363,8 +6324,8 @@
 "answer": 0,
 "choices": [
 "A matrix times a column vector is a row-by-column product with a one-column result",
-"A rotation leaves no line invariant, explaining why it has no real eigenvectors",
-"Complex roots of a real characteristic quadratic come in conjugate pairs"
+"Each transformation in the sequence is written as its own matrix first",
+"BA and AB usually differ because matrix multiplication is not commutative"
 ],
 "explain": "Because: A matrix times a column vector is a row-by-column product with a one-column result.",
 "hint": "Think about what you need first.",
@@ -6373,10 +6334,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"2×2 matrices as transformations",
+"Multiplying matrices",
+"nth roots of complex numbers"
+],
+"explain": "'Matrices acting on vectors' leads on to '2×2 matrices as transformations'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Matrices acting on vectors' help you learn next?",
+"type": "mc"
+},
+{
 "answer": "0-a",
 "explain": "({a}, {b}) → ({=0-a}, {b}).",
 "hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "m5",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -6394,7 +6368,7 @@
 "answer": "a*d-b*c",
 "explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
 "hint": "ad − bc.",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 1,
@@ -6415,19 +6389,6 @@
 },
 "prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Multiplying matrices",
-"Complex and repeated eigenvalues",
-"Eigenvalues and eigenvectors of a 3×3 matrix"
-],
-"explain": "'Matrices acting on vectors' builds on 'Multiplying matrices'.",
-"hint": "What does this topic build on?",
-"id": "m7",
-"prompt": "Quick check: Which topic should you learn before 'Matrices acting on vectors'?",
-"type": "mc"
 }
 ]
 },
@@ -6480,8 +6441,8 @@
 "answer": 0,
 "choices": [
 "Multiplying matrices",
-"Complex and repeated eigenvalues",
-"Eigenvalues and eigenvectors of a 3×3 matrix"
+"nth roots of complex numbers",
+"Invariant points and lines"
 ],
 "explain": "'Matrices acting on vectors' builds on 'Multiplying matrices'.",
 "hint": "What does this topic build on?",
@@ -6490,7 +6451,7 @@
 "type": "mc"
 }
 ],
-"quality": 87,
+"quality": 88,
 "status": "auto-starter",
 "title": "Matrices acting on vectors",
 "topicId": "mt_S0zMNj66lx",
@@ -6520,15 +6481,15 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Each place is worth ten times the place to its right: ones, tens, hundreds, and tenths after the decimal point.",
-"For example, 257 = 200 + 50 + 7.",
+"Multiplying by 10 moves every digit one place to the left.",
+"For example, 111 = 100 + 10 + 1.",
 "It builds on Multiplying matrices and leads to Inverse of a product.",
-"Multiplying by 10 moves every digit one place to the left."
+"Each place is worth ten times the place to its right: ones, tens, hundreds, and tenths after the decimal point."
 ],
 "kid": [
 "The place of a digit tells its value.",
 "In 34, the 3 means 3 tens.",
-"For example, 257 = 200 + 50 + 7."
+"For example, 111 = 100 + 10 + 1."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -6586,8 +6547,8 @@
 "answer": 0,
 "choices": [
 "Testing AB against BA and (AB)C against A(BC) needs fluent matrix multiplication",
-"Complex numbers a + bi were first met as the solutions of quadratics with…",
-"The complex numbers extend the chain of number sets from naturals to reals"
+"The matrix A is substituted for λ in its own characteristic equation",
+"Higher powers such as A³ are expressed in terms of A and I instead…"
 ],
 "explain": "Because: Testing AB against BA and (AB)C against A(BC) needs fluent matrix multiplication.",
 "hint": "Think about what you need first.",
@@ -6600,7 +6561,7 @@
 "choices": [
 "Inverse of a product",
 "Multiplying matrices",
-"The complex number system"
+"Diagonalising a matrix"
 ],
 "explain": "'Properties of matrix multiplication' leads on to 'Inverse of a product'.",
 "hint": "What comes after this topic?",
@@ -6686,22 +6647,22 @@
 {
 "answer": 0,
 "choices": [
-"200",
-"2",
-"20"
+"100",
+"1",
+"10"
 ],
-"explain": "the value of the first digit in 257 = 200. Its value depends on its place.",
+"explain": "the value of the first digit in 111 = 100. Its value depends on its place.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the value of the first digit in 257 and got 2. What is the correct answer?",
+"prompt": "Sam worked out the value of the first digit in 111 and got 1. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiplying matrices",
-"De Moivre's theorem",
-"Invariant points and lines"
+"The Cayley–Hamilton theorem",
+"Diagonalising a matrix"
 ],
 "explain": "'Properties of matrix multiplication' builds on 'Multiplying matrices'.",
 "hint": "What does this topic build on?",
@@ -6717,18 +6678,18 @@
 "visual": {
 "caption": "Multiply or divide by 10: the digits slide one place.",
 "opts": {
-"n": 2.6
+"n": 1.1
 },
 "type": "placevalue"
 },
 "worked": {
 "steps": [
-"2 in the hundreds place is worth 200.",
-"5 in the tens place is worth 50.",
-"7 in the ones place is worth 7.",
-"So 257 = 200 + 50 + 7."
+"1 in the hundreds place is worth 100.",
+"1 in the tens place is worth 10.",
+"1 in the ones place is worth 1.",
+"So 111 = 100 + 10 + 1."
 ],
-"title": "Partition 257"
+"title": "Partition 111"
 }
 },
 "mt_TB8mLg6mnT": {
@@ -6786,8 +6747,8 @@
 "answer": 0,
 "choices": [
 "re^(iθ) is a shorter way of writing the modulus–argument form r(cos θ + i…",
-"The boundaries of each region are polar equations of loci such as r =…",
-"The area of a sector of an annulus is a difference of two sector…"
+"r(cos θ + i sin θ) is written from the modulus r and argument…",
+"Exact values such as cos(π/3) = ½ turn modulus–argument form into exact a +…"
 ],
 "explain": "Because: re^(iθ) is a shorter way of writing the modulus–argument form r(cos θ + i….",
 "hint": "Think about what you need first.",
@@ -6800,7 +6761,7 @@
 "choices": [
 "Comparing hyperbolic and circular functions",
 "Modulus–argument form",
-"Regions in the Argand diagram in polar form"
+"The Cayley–Hamilton theorem"
 ],
 "explain": "'Exponential form of a complex number' leads on to 'Comparing hyperbolic and circular functions'.",
 "hint": "What comes after this topic?",
@@ -7002,8 +6963,8 @@
 "answer": 0,
 "choices": [
 "Products are found by multiplying moduli and adding arguments in modulus–argument form",
-"Transforming a shape means multiplying each position vector by the matrix",
-"Reflections, rotations and enlargements described geometrically are now written as matrices"
+"The real and imaginary parts of a + bi become the coordinates (a, b)",
+"Plotting points on an Argand diagram uses ordinary coordinate axes, relabelled real and imaginary"
 ],
 "explain": "Because: Products are found by multiplying moduli and adding arguments in modulus–argument form.",
 "hint": "Think about what you need first.",
@@ -7016,7 +6977,7 @@
 "choices": [
 "De Moivre's theorem",
 "Modulus–argument form",
-"2×2 matrices as transformations"
+"The Argand diagram"
 ],
 "explain": "'Multiplying and dividing in modulus–argument form' leads on to 'De Moivre's theorem'.",
 "hint": "What comes after this topic?",
@@ -7168,15 +7129,15 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A quadratic y = ax² + bx + c makes a U-shaped curve called a parabola; a < 0 turns it upside down.",
-"For example, x² + 4x + 3 = 0 has roots -3 and -1.",
+"Where the curve crosses the x-axis are the solutions (roots) of ax² + bx + c = 0.",
+"For example, x² + 5x + 4 = 0 has roots -1 and -4.",
 "It builds on Factorising polynomials over the complex numbers and leads to Solving polynomial equations with complex roots.",
-"Where the curve crosses the x-axis are the solutions (roots) of ax² + bx + c = 0."
+"A quadratic y = ax² + bx + c makes a U-shaped curve called a parabola; a < 0 turns it upside down."
 ],
 "kid": [
 "Some graphs curve like a smile or a frown.",
 "The number in front of x² makes the curve wide or thin.",
-"For example, x² + 4x + 3 = 0 has roots -3 and -1."
+"For example, x² + 5x + 4 = 0 has roots -1 and -4."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -7238,8 +7199,8 @@
 "answer": 0,
 "choices": [
 "Factorising over the complex numbers shows that every quadratic has two roots",
-"Multiplying z by itself n times multiplies the modulus and adds the argument each…",
-"The theorem for positive integers n is proved by induction on the power n"
+"The distribution after n steps uses the nth power of the transition matrix",
+"Multiplying the state vector by the transition matrix gives the next distribution"
 ],
 "explain": "Because: Factorising over the complex numbers shows that every quadratic has two roots.",
 "hint": "Think about what you need first.",
@@ -7252,7 +7213,7 @@
 "choices": [
 "Solving polynomial equations with complex roots",
 "Factorising polynomials over the complex numbers",
-"De Moivre's theorem"
+"Transition matrices and Markov chains"
 ],
 "explain": "'The fundamental theorem of algebra' leads on to 'Solving polynomial equations with complex roots'.",
 "hint": "What comes after this topic?",
@@ -7264,8 +7225,8 @@
 "answer": 0,
 "choices": [
 "multiplicity",
-"calculate",
-"determinant"
+"singular",
+"multiplication"
 ],
 "explain": "The missing word is 'multiplicity'.",
 "hint": "Which word fits the topic?",
@@ -7331,20 +7292,20 @@
 "choices": [
 "-1",
 "1",
-"3"
+"4"
 ],
-"explain": "the larger root of x² + 4x + 3 = 0 = -1. The roots have the opposite signs to the numbers in the brackets.",
+"explain": "the larger root of x² + 5x + 4 = 0 = -1. The roots have the opposite signs to the numbers in the brackets.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the larger root of x² + 4x + 3 = 0 and got 1. What is the correct answer?",
+"prompt": "Sam worked out the larger root of x² + 5x + 4 = 0 and got 1. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Factorising polynomials over the complex numbers",
-"De Moivre's theorem",
-"Eigenvalues and eigenvectors of a 3×3 matrix"
+"Transition matrices and Markov chains",
+"Exponential form of a complex number"
 ],
 "explain": "'The fundamental theorem of algebra' builds on 'Factorising polynomials over the complex numbers'.",
 "hint": "What does this topic build on?",
@@ -7353,7 +7314,7 @@
 "type": "mc"
 }
 ],
-"quality": 83,
+"quality": 89,
 "status": "auto-starter",
 "title": "The fundamental theorem of algebra",
 "topicId": "mt_WmZeAOyNLf",
@@ -7367,11 +7328,11 @@
 "f": "a*x^2+b*x+c",
 "targets": [
 [
--3,
+-1,
 0
 ],
 [
--1,
+-4,
 0
 ]
 ],
@@ -7388,12 +7349,12 @@
 },
 "worked": {
 "steps": [
-"Find two numbers that multiply to 3 and add to 4: 3 and 1.",
-"Factorise: (x + 3)(x + 1) = 0.",
-"So x = -3 or x = -1.",
-"The graph crosses the x-axis at -3 and -1."
+"Find two numbers that multiply to 4 and add to 5: 1 and 4.",
+"Factorise: (x + 1)(x + 4) = 0.",
+"So x = -1 or x = -4.",
+"The graph crosses the x-axis at -1 and -4."
 ],
-"title": "x² + 4x + 3 = 0"
+"title": "x² + 5x + 4 = 0"
 }
 },
 "mt_Yw26izLoYk": {
@@ -7451,8 +7412,8 @@
 "answer": 0,
 "choices": [
 "Each root α gives a factor (x − α)",
-"Adding and scaling work entry by entry",
-"The method starts by writing the system as Ax = b with a coefficient…"
+"The eigenvectors found give the directions of the invariant lines",
+"Each matrix is read as a transformation, such as a stretch or reflection, of…"
 ],
 "explain": "Because: Each root α gives a factor (x − α).",
 "hint": "Think about what you need first.",
@@ -7465,7 +7426,7 @@
 "choices": [
 "Trace, determinant and eigenvalues",
 "Zeros of polynomials and their graphs",
-"Adding matrices and scalar multiples"
+"Interpreting eigenvalues geometrically"
 ],
 "explain": "'Roots and coefficients of polynomials' leads on to 'Trace, determinant and eigenvalues'.",
 "hint": "What comes after this topic?",
@@ -7587,7 +7548,7 @@
 "type": "numeric"
 }
 ],
-"quality": 88,
+"quality": 87,
 "status": "auto-starter",
 "title": "Roots and coefficients of polynomials",
 "topicId": "mt_Yw26izLoYk",
@@ -7617,22 +7578,22 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Coordinates (x, y) give the position across (x) then up (y) from the origin (0, 0).",
-"For example, (5, 4) is 5 right and 4 up.",
+"Points with negative coordinates sit left of or below the origin.",
+"For example, (5, 2) is 5 right and 2 up.",
 "It builds on 2×2 matrices as transformations.",
-"Points with negative coordinates sit left of or below the origin."
+"Coordinates (x, y) give the position across (x) then up (y) from the origin (0, 0)."
 ],
 "kid": [
 "A point has two numbers. Go across first, then up.",
 "(3, 5) means 3 across and 5 up.",
-"For example, (5, 4) is 5 right and 4 up."
+"For example, (5, 2) is 5 right and 2 up."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Use 3×3 matrices for reflections in coordinate planes and rotations about coordinate axes.",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
 {
 "answer": "c-b",
@@ -7695,8 +7656,8 @@
 "answer": 0,
 "choices": [
 "Building 2×2 matrices from the images of unit vectors is extended to three dimensions",
-"The inverse formula divides by the determinant",
-"An inverse is defined by AA⁻¹ = I"
+"The characteristic equation is λ² − (trace)λ + det = 0, written out in…",
+"The sum and product of the roots of a quadratic give the trace and…"
 ],
 "explain": "Because: Building 2×2 matrices from the images of unit vectors is extended to three dimensions.",
 "hint": "Think about what you need first.",
@@ -7705,10 +7666,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"reflections",
+"conventions",
+"products"
+],
+"explain": "The missing word is 'reflections'.",
+"hint": "Which word fits the topic?",
+"id": "m5",
+"prompt": "Fill the gap: 'Use 3×3 matrices for _____ in coordinate planes and rotations about coordinate axes'",
+"type": "mc"
+},
+{
 "answer": "a+c",
 "explain": "{a} + {c} = {=a+c}.",
 "hint": "Right changes x.",
-"id": "m5",
+"id": "m6",
 "params": {
 "a": [
 0,
@@ -7730,7 +7704,7 @@
 "answer": "b",
 "explain": "In ({a}, {b}) the y-coordinate is {=b}.",
 "hint": "The second number.",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 0,
@@ -7792,18 +7766,18 @@
 {
 "answer": 0,
 "choices": [
-"(5, 4)",
-"(4, 5)",
-"(-5, 4)"
+"(5, 2)",
+"(2, 5)",
+"(-5, 2)"
 ],
-"explain": "Across 5, then 4: (5, 4).",
+"explain": "Across 5, then 2: (5, 2).",
 "hint": "Across first, then up or down.",
 "id": "p3",
-"prompt": "Which point is 5 right and 4 up from the origin?",
+"prompt": "Which point is 5 right and 2 up from the origin?",
 "type": "mc"
 }
 ],
-"quality": 82,
+"quality": 86,
 "status": "auto-starter",
 "title": "Transformations in three dimensions",
 "topicId": "mt__SFHQ4yN6S",
@@ -7813,7 +7787,7 @@
 "max": 8,
 "target": [
 5,
-4
+2
 ],
 "x": 0,
 "y": 0
@@ -7824,10 +7798,10 @@
 "steps": [
 "Start at the origin (0, 0).",
 "Go right 5 along the x-axis.",
-"Then go up 4.",
-"Mark the point (5, 4)."
+"Then go up 2.",
+"Mark the point (5, 2)."
 ],
-"title": "Plot (5, 4)"
+"title": "Plot (5, 2)"
 }
 },
 "mt_aq6oy_h1iN": {
@@ -7835,9 +7809,9 @@
 "explain": {
 "adult": [
 "This topic asks you to use de Moivre's theorem (r(cos θ + i sin θ))ⁿ = rⁿ(cos nθ + i sin nθ) to calculate powers of complex….",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on Multiplying and dividing in modulus–argument form and leads to nth roots of complex numbers.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -7885,8 +7859,8 @@
 "answer": 0,
 "choices": [
 "Multiplying z by itself n times multiplies the modulus and adds the argument each…",
-"The x = A⁻¹b method is extended from 2×2 systems to three equations in…",
-"The three-variable systems solved by elimination are now solved with a 3×3 inverse"
+"Ax is a matrix acting on the vector of unknowns, giving the left-hand sides",
+"The systems written as Ax = b are the ones already solved by elimination"
 ],
 "explain": "Because: Multiplying z by itself n times multiplies the modulus and adds the argument each….",
 "hint": "Think about what you need first.",
@@ -7899,7 +7873,7 @@
 "choices": [
 "nth roots of complex numbers",
 "Multiplying and dividing in modulus–argument form",
-"3×3 determinants and inverses with technology"
+"Writing a linear system as a matrix equation"
 ],
 "explain": "'De Moivre's theorem' leads on to 'nth roots of complex numbers'.",
 "hint": "What comes after this topic?",
@@ -7911,8 +7885,8 @@
 "answer": 0,
 "choices": [
 "calculate",
-"determinant",
-"imaginary"
+"multiplicity",
+"inconsistent"
 ],
 "explain": "The missing word is 'calculate'.",
 "hint": "Which word fits the topic?",
@@ -8034,7 +8008,7 @@
 "type": "numeric"
 }
 ],
-"quality": 81,
+"quality": 82,
 "status": "auto-starter",
 "title": "De Moivre's theorem",
 "topicId": "mt_aq6oy_h1iN",
@@ -8066,13 +8040,13 @@
 "adult": [
 "This topic asks you to connect polar coordinates with modulus–argument form.",
 "Points with negative coordinates sit left of or below the origin.",
-"For example, (5, -3) is 5 right and 3 down.",
+"For example, (-2, 7) is 2 left and 7 up.",
 "It builds on Converting points between polar and Cartesian coordinates and leads to Polar equations of loci in the Argand diagram."
 ],
 "kid": [
 "A point has two numbers. Go across first, then up.",
 "(3, 5) means 3 across and 5 up.",
-"For example, (5, -3) is 5 right and 3 down."
+"For example, (-2, 7) is 2 left and 7 up."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -8142,8 +8116,8 @@
 "answer": 0,
 "choices": [
 "Both polar points and complex numbers convert to Cartesian form with r cos θ…",
-"AI = IA = A is checked by multiplying",
-"Expanding (a + bi)² = 3 + 4i needs complex multiplication before parts are…"
+"A zero 3×3 determinant signals that the three planes do not meet at a…",
+"The 2×2 cases of no solution or infinitely many are generalised to arrangements of…"
 ],
 "explain": "Because: Both polar points and complex numbers convert to Cartesian form with r cos θ….",
 "hint": "Think about what you need first.",
@@ -8156,7 +8130,7 @@
 "choices": [
 "Polar equations of loci in the Argand diagram",
 "Converting points between polar and Cartesian coordinates",
-"Zero and identity matrices"
+"Arrangements of three planes and consistency"
 ],
 "explain": "'Polar coordinates and modulus–argument form' leads on to 'Polar equations of loci in the Argand diagram'.",
 "hint": "What comes after this topic?",
@@ -8252,18 +8226,18 @@
 {
 "answer": 0,
 "choices": [
-"(5, -3)",
-"(-3, 5)",
-"(-5, -3)"
+"(-2, 7)",
+"(7, -2)",
+"(2, 7)"
 ],
-"explain": "Across 5, then -3: (5, -3).",
+"explain": "Across -2, then 7: (-2, 7).",
 "hint": "Across first, then up or down.",
 "id": "p3",
-"prompt": "Which point is 5 right and 3 down from the origin?",
+"prompt": "Which point is 2 left and 7 up from the origin?",
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 84,
 "status": "auto-starter",
 "title": "Polar coordinates and modulus–argument form",
 "topicId": "mt_auhxUvu45k",
@@ -8283,11 +8257,11 @@
 "worked": {
 "steps": [
 "Start at the origin (0, 0).",
-"Go right 5 along the x-axis.",
-"Then go down 3.",
-"Mark the point (5, -3)."
+"Go left 2 along the x-axis.",
+"Then go up 7.",
+"Mark the point (-2, 7)."
 ],
-"title": "Plot (5, -3)"
+"title": "Plot (-2, 7)"
 }
 },
 "mt_cXSWRdIIT7": {
@@ -8295,21 +8269,21 @@
 "explain": {
 "adult": [
 "This topic asks you to prove and use (AB)⁻¹ = B⁻¹A⁻¹, explaining the reversed order with the 'socks and shoes' idea.",
-"Each place is worth ten times the place to its right: ones, tens, hundreds, and tenths after the decimal point.",
-"For example, 306 = 300 + 6.",
+"Multiplying by 10 moves every digit one place to the left.",
+"For example, 534 = 500 + 30 + 4.",
 "It builds on Inverse of a 2×2 matrix."
 ],
 "kid": [
 "The place of a digit tells its value.",
 "In 34, the 3 means 3 tens.",
-"For example, 306 = 300 + 6."
+"For example, 534 = 500 + 30 + 4."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Prove and use (AB)⁻¹ = B⁻¹A⁻¹, explaining the reversed order with the 'socks and shoes' idea.",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
 {
 "answer": "a",
@@ -8360,8 +8334,8 @@
 "answer": 0,
 "choices": [
 "The result is about inverting a product",
-"The distance between z and w is the modulus |z − w| of their…",
-"z − w is drawn as the vector from w to z on the…"
+"Building 2×2 matrices from the images of unit vectors is extended to three dimensions",
+"A 3×3 determinant gives the volume scale factor of a 3-D transformation"
 ],
 "explain": "Because: The result is about inverting a product.",
 "hint": "Think about what you need first.",
@@ -8370,10 +8344,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"explaining",
+"interpreting",
+"choosing"
+],
+"explain": "The missing word is 'explaining'.",
+"hint": "Which word fits the topic?",
+"id": "m5",
+"prompt": "Fill the gap: 'Prove and use (AB)⁻¹ = B⁻¹A⁻¹, _____ the reversed order with the 'socks and shoes' idea'",
+"type": "mc"
+},
+{
 "answer": "b*10",
 "explain": "The {b} is in the tens place, so it is worth {=b*10}.",
 "hint": "Tens are worth 10 each.",
-"id": "m5",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -8395,7 +8382,7 @@
 "answer": "a*10",
 "explain": "{a} × 10 = {=a*10}.",
 "hint": "Digits move one place left.",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 3,
@@ -8447,44 +8434,45 @@
 {
 "answer": 0,
 "choices": [
-"300",
-"3",
-"30"
+"500",
+"5",
+"50"
 ],
-"explain": "the value of the first digit in 306 = 300. Its value depends on its place.",
+"explain": "the value of the first digit in 534 = 500. Its value depends on its place.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the value of the first digit in 306 and got 3. What is the correct answer?",
+"prompt": "Sam worked out the value of the first digit in 534 and got 5. What is the correct answer?",
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 90,
 "status": "auto-starter",
 "title": "Inverse of a product",
 "topicId": "mt_cXSWRdIIT7",
 "visual": {
 "caption": "Multiply or divide by 10: the digits slide one place.",
 "opts": {
-"n": 3.1
+"n": 5.3
 },
 "type": "placevalue"
 },
 "worked": {
 "steps": [
-"3 in the hundreds place is worth 300.",
-"6 in the ones place is worth 6.",
-"So 306 = 300 + 6."
+"5 in the hundreds place is worth 500.",
+"3 in the tens place is worth 30.",
+"4 in the ones place is worth 4.",
+"So 534 = 500 + 30 + 4."
 ],
-"title": "Partition 306"
+"title": "Partition 534"
 }
 },
 "mt_d5FydaB5Cc": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on The complex number system and leads to Complex arithmetic on the Argand diagram.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -8554,8 +8542,8 @@
 "answer": 0,
 "choices": [
 "The real and imaginary parts of a + bi become the coordinates (a, b)",
-"The eigenvectors found for each eigenvalue become the columns of the matrix P",
-"A = PDP⁻¹ needs the inverse of P, found with the 2×2 inverse formula"
+"Aⁿ = PDⁿP⁻¹ needs A already written as PDP⁻¹",
+"The formula replaces repeated multiplication and can be checked against it"
 ],
 "explain": "Because: The real and imaginary parts of a + bi become the coordinates (a, b).",
 "hint": "Think about what you need first.",
@@ -8564,36 +8552,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"Complex arithmetic on the Argand diagram",
-"The complex number system",
-"Adding, subtracting and multiplying complex numbers"
-],
-"explain": "'The Argand diagram' leads on to 'Complex arithmetic on the Argand diagram'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'The Argand diagram' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"imaginary",
-"algebra",
-"perpendicular"
-],
-"explain": "The missing word is 'imaginary'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Represent complex numbers as points or vectors on an Argand diagram with real and _____ axes'",
-"type": "mc"
-},
-{
 "answer": "0-a",
 "explain": "({a}, {b}) → ({=0-a}, {b}).",
 "hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "m7",
+"id": "m5",
 "params": {
 "a": [
 1,
@@ -8606,6 +8568,45 @@
 },
 "prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "m6",
+"params": {
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
+]
+},
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"The complex number system",
+"Matrix powers by diagonalisation",
+"Long-term behaviour from eigenvalues"
+],
+"explain": "'The Argand diagram' builds on 'The complex number system'.",
+"hint": "What does this topic build on?",
+"id": "m7",
+"prompt": "Quick check: Which topic should you learn before 'The Argand diagram'?",
+"type": "mc"
 }
 ]
 },
@@ -8658,8 +8659,8 @@
 "answer": 0,
 "choices": [
 "The complex number system",
-"Diagonalising a matrix",
-"Symmetric matrices and orthogonal eigenvectors"
+"Matrix powers by diagonalisation",
+"Long-term behaviour from eigenvalues"
 ],
 "explain": "'The Argand diagram' builds on 'The complex number system'.",
 "hint": "What does this topic build on?",
@@ -8668,7 +8669,7 @@
 "type": "mc"
 }
 ],
-"quality": 82,
+"quality": 87,
 "status": "auto-starter",
 "title": "The Argand diagram",
 "topicId": "mt_d5FydaB5Cc",
@@ -8698,15 +8699,13 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Adding a negative moves left; subtracting a negative moves right. Two negatives multiplied make a positive.",
-"For example, 7 − 11 = -4.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on 2×2 matrices as transformations.",
-"Negative numbers sit to the left of zero on the number line; −5 is less than −2."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
-"Numbers below zero are negative.",
-"−3 is colder than −1. It is further from zero.",
-"For example, 7 − 11 = -4."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -8716,60 +8715,64 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "a*b",
-"explain": "{=0-a} × {=0-b} = {=a*b}.",
-"hint": "Negative × negative is positive.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "m1",
 "params": {
 "a": [
-2,
-9
+0,
+8
 ],
 "b": [
-2,
-9
+0,
+8
+],
+"c": [
+1,
+6
 ]
 },
-"prompt": "What is {=0-a} × {=0-b}?",
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "0-a-b",
-"explain": "{=0-a} + {=0-b} = {=0-a-b}.",
-"hint": "Two steps to the left.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m2",
 "params": {
 "a": [
-1,
-9
+2,
+10
 ],
-"b": [
-1,
-9
+"k": [
+2,
+4
 ]
 },
-"prompt": "What is {=0-a} + {=0-b}?",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"−7",
-"−2",
-"0"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "−7 is furthest left.",
-"hint": "Furthest left on the number line.",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
 "id": "m3",
-"prompt": "Which is the smallest?",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "The area scale factor describes what a transformation matrix does to shapes",
-"Multiplying z by itself n times multiplies the modulus and adds the argument each…",
-"The theorem for positive integers n is proved by induction on the power n"
+"Squaring an adjacency matrix counts two-step routes through row-by-column products",
+"Each entry of the adjacency matrix records the routes from one node to another"
 ],
 "explain": "Because: The area scale factor describes what a transformation matrix does to shapes.",
 "hint": "Think about what you need first.",
@@ -8781,8 +8784,8 @@
 "answer": 0,
 "choices": [
 "transformation",
-"calculate",
-"perpendicular"
+"represent",
+"characteristic"
 ],
 "explain": "The missing word is 'transformation'.",
 "hint": "Which word fits the topic?",
@@ -8791,9 +8794,9 @@
 "type": "mc"
 },
 {
-"answer": "a-b",
-"explain": "{a} − {b} = {=a-b}.",
-"hint": "Start at {a} and count back {b}.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "m6",
 "params": {
 "a": [
@@ -8801,38 +8804,46 @@
 9
 ],
 "b": [
-10,
-18
+1,
+9
 ]
 },
-"prompt": "Quick check: What is {a} − {b}?",
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "b-a",
-"explain": "{=0-a} + {b} = {=b-a} °C.",
-"hint": "Move up from {=0-a}.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "m7",
 "params": {
 "a": [
-2,
-9
+1,
+6
 ],
 "b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
 1,
-15
+6
 ]
 },
-"prompt": "Quick check: The temperature is {=0-a} °C. It rises by {b} °C. What is it now?",
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "a-b",
-"explain": "{a} − {b} = {=a-b}.",
-"hint": "Start at {a} and count back {b}.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
 "a": [
@@ -8840,79 +8851,76 @@
 9
 ],
 "b": [
-10,
-18
+1,
+9
 ]
 },
-"prompt": "What is {a} − {b}?",
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "b-a",
-"explain": "{=0-a} + {b} = {=b-a} °C.",
-"hint": "Move up from {=0-a}.",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "p2",
 "params": {
 "a": [
-2,
-9
+1,
+6
 ],
 "b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
 1,
-15
+6
 ]
 },
-"prompt": "The temperature is {=0-a} °C. It rises by {b} °C. What is it now?",
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"-4",
-"4",
-"-18"
-],
-"explain": "7 − 11 = -4. Below zero the numbers grow more negative.",
-"hint": "Redo it step by step and compare.",
-"id": "p3",
-"prompt": "Sam worked out 7 − 11 and got 4. What is the correct answer?",
-"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "2×2 matrices as transformations",
-"De Moivre's theorem",
-"Symmetric matrices and orthogonal eigenvectors"
+"Eigenvalues and eigenvectors of a 3×3 matrix",
+"Multiplying and dividing in modulus–argument form"
 ],
 "explain": "'Determinant as area scale factor' builds on '2×2 matrices as transformations'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Determinant as area scale factor'?",
 "type": "mc"
 }
 ],
-"quality": 99,
+"quality": 86,
 "status": "auto-starter",
 "title": "Determinant as area scale factor",
 "topicId": "mt_eGwcD5jQlK",
 "visual": {
-"caption": "Drag the point. Zoom in to find numbers between the whole numbers.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"neg": true,
-"start": -4,
-"target": -7
+"m": [
+1,
+0,
+0,
+1
+]
 },
-"type": "numzoom"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"Start at 7 on the number line.",
-"Count back 7 to reach 0.",
-"Count back 4 more to reach -4.",
-"So 7 − 11 = -4."
+"Start from what you know: 2×2 matrices as transformations.",
+"The new idea: Interpret the absolute value of a determinant as the area scale factor of a transformation and a negative….",
+"Rotation by 90° sends (x, y) to (−y, x)."
 ],
-"title": "7 − 11"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Determinant as area scale factor'"
 }
 },
 "mt_eZNhGqZ63j": {
@@ -8920,73 +8928,62 @@
 "explain": {
 "adult": [
 "This topic asks you to write loci in the Argand diagram as polar equations, such as |z| = 3 as r = 3, arg z = π/4….",
-"The diameter is twice the radius. Circumference = π × diameter, and area = π × radius².",
-"For example, a circle of radius 5 has area about 78.5.",
-"It builds on Polar coordinates and modulus–argument form and leads to Regions in the Argand diagram in polar form."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"It builds on Polar coordinates and modulus–argument form and leads to Regions in the Argand diagram in polar form.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
-"A circle is round. Every point is the same distance from the middle.",
-"That distance is the radius.",
-"For example, a circle of radius 5 has area about 78.5."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
 "keyIdea": "Write loci in the Argand diagram as polar equations, such as |z| = 3 as r = 3, arg z = π/4 as θ….",
 "mastery": {
-"draw": 4,
-"passMark": 3,
+"draw": 3,
+"passMark": 2,
 "pool": [
 {
-"answer": "3*d",
-"explain": "3 × {d} = {=3*d}.",
-"hint": "π × diameter.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m1",
 "params": {
-"d": [
+"a": [
 2,
-20
+10
+],
+"k": [
+2,
+4
 ]
 },
-"prompt": "Using π = 3, what is the circumference of a circle with diameter {d}?",
-"type": "numeric"
-},
-{
-"answer": "r",
-"explain": "{=2*r} ÷ 2 = {=r} m.",
-"hint": "Halve it.",
-"id": "m2",
-"params": {
-"r": [
-2,
-15
-]
-},
-"prompt": "A circle has diameter {=2*r} m. What is its radius?",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"is 4 times bigger",
-"doubles",
-"stays the same"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "2² = 4, so the area is 4 times bigger.",
-"hint": "Area uses radius squared.",
-"id": "m3",
-"prompt": "If the radius doubles, the area…",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
+"id": "m2",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Treating z as the polar point (r, θ) turns |z| into r and arg…",
-"A Markov chain's transition matrix is a main example of a long-run matrix model",
-"In PDⁿP⁻¹ the largest eigenvalue's term dominates as n grows"
+"Av = λv compares the result of multiplying a matrix by a vector with…",
+"Invariant lines through the origin are exactly the directions of eigenvectors"
 ],
 "explain": "Because: Treating z as the polar point (r, θ) turns |z| into r and arg….",
 "hint": "Think about what you need first.",
-"id": "m4",
+"id": "m3",
 "prompt": "Why does 'Polar equations of loci in the Argand diagram' build on 'Polar coordinates and modulus–argument form'?",
 "type": "mc"
 },
@@ -8995,116 +8992,152 @@
 "choices": [
 "Regions in the Argand diagram in polar form",
 "Polar coordinates and modulus–argument form",
-"Long-term behaviour from eigenvalues"
+"Eigenvectors and eigenvalues"
 ],
 "explain": "'Polar equations of loci in the Argand diagram' leads on to 'Regions in the Argand diagram in polar form'.",
 "hint": "What comes after this topic?",
-"id": "m5",
+"id": "m4",
 "prompt": "Which topic does 'Polar equations of loci in the Argand diagram' help you learn next?",
 "type": "mc"
 },
 {
-"answer": "2*r",
-"explain": "2 × {r} = {=2*r} cm.",
-"hint": "Double the radius.",
-"id": "m6",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
+"id": "m5",
 "params": {
-"r": [
-2,
-20
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
 ]
 },
-"prompt": "Quick check: A circle has radius {r} cm. What is its diameter?",
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "3*r*r",
-"explain": "3 × {r}² = {=3*r*r}.",
-"hint": "π × r².",
-"id": "m7",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "m6",
 "params": {
-"r": [
-2,
-10
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
 ]
 },
-"prompt": "Quick check: Using π = 3, what is the area of a circle with radius {r}?",
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "2*r",
-"explain": "2 × {r} = {=2*r} cm.",
-"hint": "Double the radius.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
-"r": [
-2,
-20
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
 ]
 },
-"prompt": "A circle has radius {r} cm. What is its diameter?",
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "3*r*r",
-"explain": "3 × {r}² = {=3*r*r}.",
-"hint": "π × r².",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "p2",
 "params": {
-"r": [
-2,
-10
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
 ]
 },
-"prompt": "Using π = 3, what is the area of a circle with radius {r}?",
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
 "type": "numeric"
 },
 {
-"answer": 0,
-"choices": [
-"10",
-"2.5",
-"25"
-],
-"explain": "the diameter of a circle with radius 5 = 10. The diameter goes all the way across.",
-"hint": "Redo it step by step and compare.",
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
 "id": "p3",
-"prompt": "Sam worked out the diameter of a circle with radius 5 and got 2.5. What is the correct answer?",
-"type": "mc"
+"params": {
+"a": [
+0,
+8
+],
+"b": [
+0,
+8
+],
+"c": [
+1,
+6
+]
+},
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
+"type": "numeric"
 }
 ],
-"quality": 87,
+"quality": 82,
 "status": "auto-starter",
 "title": "Polar equations of loci in the Argand diagram",
 "topicId": "mt_eZNhGqZ63j",
 "visual": {
-"caption": "Move along the curve: the area of a circle grows with the radius squared.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"a": 5,
-"f": "3.14*x*x",
-"mode": "eval",
-"step": 0.5,
-"xr": [
+"m": [
+1,
 0,
-5
-],
-"yr": [
 0,
-80
+1
 ]
 },
-"type": "plot"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"Diameter = 2 × 5 = 10.",
-"Circumference = π × 10 ≈ 31.4.",
-"Area = π × 5² ≈ 3.14 × 25 ≈ 78.5."
+"Start from what you know: Polar coordinates and modulus–argument form.",
+"The new idea: Write loci in the Argand diagram as polar equations, such as |z| = 3 as r = 3,….",
+"Rotation by 90° sends (x, y) to (−y, x).",
+"Next, this helps with: Regions in the Argand diagram in polar form."
 ],
-"title": "Circle with radius 5"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Polar equations of loci in the Argand diagram'"
 }
 },
 "mt_jNTZ9npRp3": {
@@ -9184,8 +9217,8 @@
 "answer": 0,
 "choices": [
 "Multiplying z by its conjugate z* uses complex multiplication and gives a real number",
-"A column vector is a matrix with one column",
-"Rows and columns of a data table, such as sales by shop and day,…"
+"Factorising over the complex numbers shows that every quadratic has two roots",
+"Real roots appear as x-intercepts, while non-real roots do not appear on the graph"
 ],
 "explain": "Because: Multiplying z by its conjugate z* uses complex multiplication and gives a real number.",
 "hint": "Think about what you need first.",
@@ -9198,7 +9231,7 @@
 "choices": [
 "Solving equations by equating parts",
 "Adding, subtracting and multiplying complex numbers",
-"Matrices: notation and order"
+"The fundamental theorem of algebra"
 ],
 "explain": "'Complex conjugates and division' leads on to 'Solving equations by equating parts'.",
 "hint": "What comes after this topic?",
@@ -9301,8 +9334,8 @@
 "answer": 0,
 "choices": [
 "Adding, subtracting and multiplying complex numbers",
-"Polar equations of loci in the Argand diagram",
-"Finding eigenvectors of a 2×2 matrix"
+"Matrix powers by diagonalisation",
+"De Moivre's theorem"
 ],
 "explain": "'Complex conjugates and division' builds on 'Adding, subtracting and multiplying complex numbers'.",
 "hint": "What does this topic build on?",
@@ -9311,7 +9344,7 @@
 "type": "mc"
 }
 ],
-"quality": 76,
+"quality": 77,
 "status": "auto-starter",
 "title": "Complex conjugates and division",
 "topicId": "mt_jNTZ9npRp3",
@@ -9343,13 +9376,13 @@
 "adult": [
 "This topic asks you to use the facts that the eigenvalues sum to the trace and multiply to the determinant.",
 "Multiplying by 10 moves every digit one place to the left.",
-"For example, 521 = 500 + 20 + 1.",
+"For example, 455 = 400 + 50 + 5.",
 "It builds on The characteristic equation."
 ],
 "kid": [
 "The place of a digit tells its value.",
 "In 34, the 3 means 3 tens.",
-"For example, 521 = 500 + 20 + 1."
+"For example, 455 = 400 + 50 + 5."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -9407,8 +9440,8 @@
 "answer": 0,
 "choices": [
 "The characteristic equation is λ² − (trace)λ + det = 0, written out in…",
-"The distance between z and w is the modulus |z − w| of their…",
-"z − w is drawn as the vector from w to z on the…"
+"Testing AB against BA and (AB)C against A(BC) needs fluent matrix multiplication",
+"The laws are compared with those for numbers, where ab = ba always holds"
 ],
 "explain": "Because: The characteristic equation is λ² − (trace)λ + det = 0, written out in….",
 "hint": "Think about what you need first.",
@@ -9494,36 +9527,36 @@
 {
 "answer": 0,
 "choices": [
-"500",
-"5",
-"50"
+"400",
+"4",
+"40"
 ],
-"explain": "the value of the first digit in 521 = 500. Its value depends on its place.",
+"explain": "the value of the first digit in 455 = 400. Its value depends on its place.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the value of the first digit in 521 and got 5. What is the correct answer?",
+"prompt": "Sam worked out the value of the first digit in 455 and got 4. What is the correct answer?",
 "type": "mc"
 }
 ],
-"quality": 90,
+"quality": 88,
 "status": "auto-starter",
 "title": "Trace, determinant and eigenvalues",
 "topicId": "mt_mcXjYO_dIK",
 "visual": {
 "caption": "Multiply or divide by 10: the digits slide one place.",
 "opts": {
-"n": 5.2
+"n": 4.5
 },
 "type": "placevalue"
 },
 "worked": {
 "steps": [
-"5 in the hundreds place is worth 500.",
-"2 in the tens place is worth 20.",
-"1 in the ones place is worth 1.",
-"So 521 = 500 + 20 + 1."
+"4 in the hundreds place is worth 400.",
+"5 in the tens place is worth 50.",
+"5 in the ones place is worth 5.",
+"So 455 = 400 + 50 + 5."
 ],
-"title": "Partition 521"
+"title": "Partition 455"
 }
 },
 "mt_mgnknt394D": {
@@ -9602,8 +9635,8 @@
 "answer": 0,
 "choices": [
 "Sums, differences and conjugates are drawn as points and arrows on the Argand diagram",
-"Adding and multiplying work on the real and imaginary parts of numbers in the…",
-"Multiplying (a + bi)(c + di) is expanded like a pair of brackets, then…"
+"Expanding (a + bi)² = 3 + 4i needs complex multiplication before parts are…",
+"Equations involving z* are rewritten with z = x + iy before equating parts"
 ],
 "explain": "Because: Sums, differences and conjugates are drawn as points and arrows on the Argand diagram.",
 "hint": "Think about what you need first.",
@@ -9616,7 +9649,7 @@
 "choices": [
 "Distance and midpoint in the complex plane",
 "The Argand diagram",
-"Adding, subtracting and multiplying complex numbers"
+"Solving equations by equating parts"
 ],
 "explain": "'Complex arithmetic on the Argand diagram' leads on to 'Distance and midpoint in the complex plane'.",
 "hint": "What comes after this topic?",
@@ -9719,8 +9752,8 @@
 "answer": 0,
 "choices": [
 "The Argand diagram",
-"The Cayley–Hamilton theorem",
-"Transition matrices and Markov chains"
+"De Moivre's theorem",
+"Interpreting eigenvalues geometrically"
 ],
 "explain": "'Complex arithmetic on the Argand diagram' builds on 'The Argand diagram'.",
 "hint": "What does this topic build on?",
@@ -9729,7 +9762,7 @@
 "type": "mc"
 }
 ],
-"quality": 80,
+"quality": 81,
 "status": "auto-starter",
 "title": "Complex arithmetic on the Argand diagram",
 "topicId": "mt_mgnknt394D",
@@ -9759,9 +9792,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on Solving systems with inverse matrices and leads to Arrangements of three planes and consistency.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -9831,8 +9864,8 @@
 "answer": 0,
 "choices": [
 "The x = A⁻¹b method is extended from 2×2 systems to three equations in…",
-"Expanding (a + bi)² = 3 + 4i needs complex multiplication before parts are…",
-"Equations involving z* are rewritten with z = x + iy before equating parts"
+"The matrix A is substituted for λ in its own characteristic equation",
+"Higher powers such as A³ are expressed in terms of A and I instead…"
 ],
 "explain": "Because: The x = A⁻¹b method is extended from 2×2 systems to three equations in….",
 "hint": "Think about what you need first.",
@@ -9845,7 +9878,7 @@
 "choices": [
 "Arrangements of three planes and consistency",
 "Solving systems with inverse matrices",
-"Solving equations by equating parts"
+"The Cayley–Hamilton theorem"
 ],
 "explain": "'3×3 determinants and inverses with technology' leads on to 'Arrangements of three planes and consistency'.",
 "hint": "What comes after this topic?",
@@ -9958,7 +9991,7 @@
 "type": "mc"
 }
 ],
-"quality": 77,
+"quality": 78,
 "status": "auto-starter",
 "title": "3×3 determinants and inverses with technology",
 "topicId": "mt_o44R9zjjXS",
@@ -9988,15 +10021,15 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Multiplying by 10 moves every digit one place to the left.",
-"For example, 322 = 300 + 20 + 2.",
+"Each place is worth ten times the place to its right: ones, tens, hundreds, and tenths after the decimal point.",
+"For example, 130 = 100 + 30.",
 "It builds on Matrices: notation and order and leads to Inverse of a 2×2 matrix.",
-"Each place is worth ten times the place to its right: ones, tens, hundreds, and tenths after the decimal point."
+"Multiplying by 10 moves every digit one place to the left."
 ],
 "kid": [
 "The place of a digit tells its value.",
 "In 34, the 3 means 3 tens.",
-"For example, 322 = 300 + 20 + 2."
+"For example, 130 = 100 + 30."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -10054,8 +10087,8 @@
 "answer": 0,
 "choices": [
 "ad − bc is calculated from the entries a, b, c and d in…",
-"The matrix A is substituted for λ in its own characteristic equation",
-"Higher powers such as A³ are expressed in terms of A and I instead…"
+"A column vector is a matrix with one column",
+"Rows and columns of a data table, such as sales by shop and day,…"
 ],
 "explain": "Because: ad − bc is calculated from the entries a, b, c and d in….",
 "hint": "Think about what you need first.",
@@ -10068,7 +10101,7 @@
 "choices": [
 "Inverse of a 2×2 matrix",
 "Matrices: notation and order",
-"The transpose of a matrix"
+"Composite transformations as matrix products"
 ],
 "explain": "'Determinant of a 2×2 matrix' leads on to 'Inverse of a 2×2 matrix'.",
 "hint": "What comes after this topic?",
@@ -10080,8 +10113,8 @@
 "answer": 0,
 "choices": [
 "singular",
-"characteristic",
-"symmetric"
+"rectangular",
+"transformation"
 ],
 "explain": "The missing word is 'singular'.",
 "hint": "Which word fits the topic?",
@@ -10153,22 +10186,22 @@
 {
 "answer": 0,
 "choices": [
-"300",
-"3",
-"30"
+"100",
+"1",
+"10"
 ],
-"explain": "the value of the first digit in 322 = 300. Its value depends on its place.",
+"explain": "the value of the first digit in 130 = 100. Its value depends on its place.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the value of the first digit in 322 and got 3. What is the correct answer?",
+"prompt": "Sam worked out the value of the first digit in 130 and got 1. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Matrices: notation and order",
-"The Cayley–Hamilton theorem",
-"Invariant points and lines"
+"Transition matrices and Markov chains",
+"Polar equations of loci in the Argand diagram"
 ],
 "explain": "'Determinant of a 2×2 matrix' builds on 'Matrices: notation and order'.",
 "hint": "What does this topic build on?",
@@ -10184,27 +10217,26 @@
 "visual": {
 "caption": "Multiply or divide by 10: the digits slide one place.",
 "opts": {
-"n": 3.2
+"n": 1.3
 },
 "type": "placevalue"
 },
 "worked": {
 "steps": [
-"3 in the hundreds place is worth 300.",
-"2 in the tens place is worth 20.",
-"2 in the ones place is worth 2.",
-"So 322 = 300 + 20 + 2."
+"1 in the hundreds place is worth 100.",
+"3 in the tens place is worth 30.",
+"So 130 = 100 + 30."
 ],
-"title": "Partition 322"
+"title": "Partition 130"
 }
 },
 "mt_pcFuC55Ww5": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
 "It builds on Finding eigenvectors of a 2×2 matrix and leads to Complex and repeated eigenvalues.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -10252,8 +10284,8 @@
 "answer": 0,
 "choices": [
 "The eigenvectors found give the directions of the invariant lines",
-"The result is about inverting a product",
-"The proof regroups (AB)(B⁻¹A⁻¹) as A(BB⁻¹)A⁻¹ using associativity"
+"Each transformation in the sequence is written as its own matrix first",
+"BA and AB usually differ because matrix multiplication is not commutative"
 ],
 "explain": "Because: The eigenvectors found give the directions of the invariant lines.",
 "hint": "Think about what you need first.",
@@ -10266,7 +10298,7 @@
 "choices": [
 "Complex and repeated eigenvalues",
 "Finding eigenvectors of a 2×2 matrix",
-"Inverse of a product"
+"Composite transformations as matrix products"
 ],
 "explain": "'Interpreting eigenvalues geometrically' leads on to 'Complex and repeated eigenvalues'.",
 "hint": "What comes after this topic?",
@@ -10278,8 +10310,8 @@
 "answer": 0,
 "choices": [
 "transformation",
-"perpendicular",
-"characteristic"
+"multiplicity",
+"independent"
 ],
 "explain": "The missing word is 'transformation'.",
 "hint": "Which word fits the topic?",
@@ -10432,198 +10464,8 @@
 "explain": {
 "adult": [
 "This topic asks you to sketch loci such as |z − a| = r (a circle), |z − a| = |z − b| (a perpendicular bisector) and….",
-"π is about 3.14: every circle's circumference is a little over 3 times its diameter.",
-"For example, a circle of radius 6 has area about 113.0.",
-"It builds on Distance and midpoint in the complex plane and leads to Polar equations of loci in the Argand diagram."
-],
-"kid": [
-"A circle is round. Every point is the same distance from the middle.",
-"That distance is the radius.",
-"For example, a circle of radius 6 has area about 113.0."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Sketch loci such as |z − a| = r (a circle), |z − a| = |z − b| (a perpendicular bisector) and arg(z −….",
-"mastery": {
-"draw": 4,
-"passMark": 3,
-"pool": [
-{
-"answer": "3*d",
-"explain": "3 × {d} = {=3*d}.",
-"hint": "π × diameter.",
-"id": "m1",
-"params": {
-"d": [
-2,
-20
-]
-},
-"prompt": "Using π = 3, what is the circumference of a circle with diameter {d}?",
-"type": "numeric"
-},
-{
-"answer": "r",
-"explain": "{=2*r} ÷ 2 = {=r} m.",
-"hint": "Halve it.",
-"id": "m2",
-"params": {
-"r": [
-2,
-15
-]
-},
-"prompt": "A circle has diameter {=2*r} m. What is its radius?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"is 4 times bigger",
-"doubles",
-"stays the same"
-],
-"explain": "2² = 4, so the area is 4 times bigger.",
-"hint": "Area uses radius squared.",
-"id": "m3",
-"prompt": "If the radius doubles, the area…",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"|z − a| = r is the set of points a fixed distance r…",
-"Complex numbers a + bi were first met as the solutions of quadratics with…",
-"The complex numbers extend the chain of number sets from naturals to reals"
-],
-"explain": "Because: |z − a| = r is the set of points a fixed distance r….",
-"hint": "Think about what you need first.",
-"id": "m4",
-"prompt": "Why does 'Loci in the Argand diagram' build on 'Distance and midpoint in the complex plane'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Polar equations of loci in the Argand diagram",
-"Distance and midpoint in the complex plane",
-"The complex number system"
-],
-"explain": "'Loci in the Argand diagram' leads on to 'Polar equations of loci in the Argand diagram'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'Loci in the Argand diagram' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"perpendicular",
-"imaginary",
-"multiplication"
-],
-"explain": "The missing word is 'perpendicular'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Sketch loci such as |z − a| = r (a circle), |z − a| = |z − b| (a _____ bisector) and…'",
-"type": "mc"
-},
-{
-"answer": "2*r",
-"explain": "2 × {r} = {=2*r} cm.",
-"hint": "Double the radius.",
-"id": "m7",
-"params": {
-"r": [
-2,
-20
-]
-},
-"prompt": "Quick check: A circle has radius {r} cm. What is its diameter?",
-"type": "numeric"
-}
-]
-},
-"practice": [
-{
-"answer": "2*r",
-"explain": "2 × {r} = {=2*r} cm.",
-"hint": "Double the radius.",
-"id": "p1",
-"params": {
-"r": [
-2,
-20
-]
-},
-"prompt": "A circle has radius {r} cm. What is its diameter?",
-"type": "numeric"
-},
-{
-"answer": "3*r*r",
-"explain": "3 × {r}² = {=3*r*r}.",
-"hint": "π × r².",
-"id": "p2",
-"params": {
-"r": [
-2,
-10
-]
-},
-"prompt": "Using π = 3, what is the area of a circle with radius {r}?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"12",
-"3",
-"36"
-],
-"explain": "the diameter of a circle with radius 6 = 12. The diameter goes all the way across.",
-"hint": "Redo it step by step and compare.",
-"id": "p3",
-"prompt": "Sam worked out the diameter of a circle with radius 6 and got 3. What is the correct answer?",
-"type": "mc"
-}
-],
-"quality": 88,
-"status": "auto-starter",
-"title": "Loci in the Argand diagram",
-"topicId": "mt_q49LlfnOMT",
-"visual": {
-"caption": "Move along the curve: the area of a circle grows with the radius squared.",
-"opts": {
-"a": 5,
-"f": "3.14*x*x",
-"mode": "eval",
-"step": 0.5,
-"xr": [
-0,
-5
-],
-"yr": [
-0,
-80
-]
-},
-"type": "plot"
-},
-"worked": {
-"steps": [
-"Diameter = 2 × 6 = 12.",
-"Circumference = π × 12 ≈ 37.7.",
-"Area = π × 6² ≈ 3.14 × 36 ≈ 113.0."
-],
-"title": "Circle with radius 6"
-}
-},
-"mt_qvU4UVQBvE": {
-"audience": "learner",
-"explain": {
-"adult": [
 "A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
-"It builds on The fundamental theorem of algebra and leads to Complex and repeated eigenvalues.",
+"It builds on Distance and midpoint in the complex plane and leads to Polar equations of loci in the Argand diagram.",
 "A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
@@ -10632,10 +10474,10 @@
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Use the fact that non-real roots of real polynomials occur in conjugate pairs to solve cubics and quartics given one complex root.",
+"keyIdea": "Sketch loci such as |z − a| = r (a circle), |z − a| = |z − b| (a perpendicular bisector) and arg(z −….",
 "mastery": {
-"draw": 3,
-"passMark": 2,
+"draw": 4,
+"passMark": 3,
 "pool": [
 {
 "answer": "a*k*k",
@@ -10671,34 +10513,47 @@
 {
 "answer": 0,
 "choices": [
-"Knowing a cubic has three roots tells how many remain once a conjugate pair…",
-"The matrix A is substituted for λ in its own characteristic equation",
-"Higher powers such as A³ are expressed in terms of A and I instead…"
+"|z − a| = r is the set of points a fixed distance r…",
+"Products are found by multiplying moduli and adding arguments in modulus–argument form",
+"The rule is checked by multiplying the same numbers in a + bi form"
 ],
-"explain": "Because: Knowing a cubic has three roots tells how many remain once a conjugate pair….",
+"explain": "Because: |z − a| = r is the set of points a fixed distance r….",
 "hint": "Think about what you need first.",
 "id": "m3",
-"prompt": "Why does 'Solving polynomial equations with complex roots' build on 'The fundamental theorem of algebra'?",
+"prompt": "Why does 'Loci in the Argand diagram' build on 'Distance and midpoint in the complex plane'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Complex and repeated eigenvalues",
-"The fundamental theorem of algebra",
-"The Cayley–Hamilton theorem"
+"Polar equations of loci in the Argand diagram",
+"Distance and midpoint in the complex plane",
+"Multiplying and dividing in modulus–argument form"
 ],
-"explain": "'Solving polynomial equations with complex roots' leads on to 'Complex and repeated eigenvalues'.",
+"explain": "'Loci in the Argand diagram' leads on to 'Polar equations of loci in the Argand diagram'.",
 "hint": "What comes after this topic?",
 "id": "m4",
-"prompt": "Which topic does 'Solving polynomial equations with complex roots' help you learn next?",
+"prompt": "Which topic does 'Loci in the Argand diagram' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"perpendicular",
+"multiplication",
+"algebra"
+],
+"explain": "The missing word is 'perpendicular'.",
+"hint": "Which word fits the topic?",
+"id": "m5",
+"prompt": "Fill the gap: 'Sketch loci such as |z − a| = r (a circle), |z − a| = |z − b| (a _____ bisector) and…'",
 "type": "mc"
 },
 {
 "answer": "0-a",
 "explain": "({a}, {b}) → ({=0-a}, {b}).",
 "hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "m5",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -10716,7 +10571,7 @@
 "answer": "a*d-b*c",
 "explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
 "hint": "ad − bc.",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 1,
@@ -10808,7 +10663,236 @@
 "type": "numeric"
 }
 ],
-"quality": 88,
+"quality": 82,
+"status": "auto-starter",
+"title": "Loci in the Argand diagram",
+"topicId": "mt_q49LlfnOMT",
+"visual": {
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
+"opts": {
+"m": [
+1,
+0,
+0,
+1
+]
+},
+"type": "matrixlab"
+},
+"worked": {
+"steps": [
+"Start from what you know: Distance and midpoint in the complex plane.",
+"The new idea: Sketch loci such as |z − a| = r (a circle), |z − a| = |z − b|….",
+"Rotation by 90° sends (x, y) to (−y, x).",
+"Next, this helps with: Polar equations of loci in the Argand diagram."
+],
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Loci in the Argand diagram'"
+}
+},
+"mt_qvU4UVQBvE": {
+"audience": "learner",
+"explain": {
+"adult": [
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"It builds on The fundamental theorem of algebra and leads to Complex and repeated eigenvalues.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+],
+"kid": [
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Use the fact that non-real roots of real polynomials occur in conjugate pairs to solve cubics and quartics given one complex root.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
+"id": "m1",
+"params": {
+"a": [
+2,
+10
+],
+"k": [
+2,
+4
+]
+},
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Enlargement",
+"Reflection",
+"Rotation"
+],
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
+"id": "m2",
+"prompt": "Which transformation changes size?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Knowing a cubic has three roots tells how many remain once a conjugate pair…",
+"The eigenvectors found for each eigenvalue become the columns of the matrix P",
+"A = PDP⁻¹ needs the inverse of P, found with the 2×2 inverse formula"
+],
+"explain": "Because: Knowing a cubic has three roots tells how many remain once a conjugate pair….",
+"hint": "Think about what you need first.",
+"id": "m3",
+"prompt": "Why does 'Solving polynomial equations with complex roots' build on 'The fundamental theorem of algebra'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Complex and repeated eigenvalues",
+"The fundamental theorem of algebra",
+"Polar coordinates and modulus–argument form"
+],
+"explain": "'Solving polynomial equations with complex roots' leads on to 'Complex and repeated eigenvalues'.",
+"hint": "What comes after this topic?",
+"id": "m4",
+"prompt": "Which topic does 'Solving polynomial equations with complex roots' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"polynomials",
+"eigenvectors",
+"conventions"
+],
+"explain": "The missing word is 'polynomials'.",
+"hint": "Which word fits the topic?",
+"id": "m5",
+"prompt": "Fill the gap: 'Use the fact that non-real roots of real _____ occur in conjugate pairs to solve cubics and quartics given one complex root'",
+"type": "mc"
+},
+{
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
+"id": "m6",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+]
+},
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "m7",
+"params": {
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
+]
+},
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
+"id": "p1",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+]
+},
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "p2",
+"params": {
+"a": [
+1,
+6
+],
+"b": [
+0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
+]
+},
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
+"type": "numeric"
+},
+{
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
+"id": "p3",
+"params": {
+"a": [
+0,
+8
+],
+"b": [
+0,
+8
+],
+"c": [
+1,
+6
+]
+},
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
+"type": "numeric"
+}
+],
+"quality": 86,
 "status": "auto-starter",
 "title": "Solving polynomial equations with complex roots",
 "topicId": "mt_qvU4UVQBvE",
@@ -10839,14 +10923,13 @@
 "explain": {
 "adult": [
 "This topic asks you to describe and find the area of regions such as 1 ≤ |z| ≤ 2 with 0 ≤ arg z ≤ π/3 as….",
-"Points with negative coordinates sit left of or below the origin.",
-"For example, (2, 5) is 2 right and 5 up.",
-"It builds on Polar equations of loci in the Argand diagram."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"It builds on Polar equations of loci in the Argand diagram.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
 ],
 "kid": [
-"A point has two numbers. Go across first, then up.",
-"(3, 5) means 3 across and 5 up.",
-"For example, (2, 5) is 2 right and 5 up."
+"You can slide, flip or turn a shape.",
+"It stays the same shape."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -10856,128 +10939,167 @@
 "passMark": 2,
 "pool": [
 {
-"answer": "c-b",
-"explain": "{c} − {b} = {=c-b}.",
-"hint": "Same x, so count up.",
+"answer": "a*k*k",
+"explain": "{a} × {k}² = {=a*k*k}.",
+"hint": "Area scales by k².",
 "id": "m1",
 "params": {
 "a": [
-0,
-6
+2,
+10
 ],
-"b": [
-0,
-3
-],
-"c": [
-5,
-9
-]
-},
-"prompt": "A line joins ({a}, {b}) and ({a}, {c}). How long is it?",
-"type": "numeric"
-},
-{
-"answer": "b-c",
-"explain": "{b} − {c} = {=b-c}.",
-"hint": "Down changes y.",
-"id": "m2",
-"params": {
-"a": [
-0,
-6
-],
-"b": [
-5,
-9
-],
-"c": [
-1,
+"k": [
+2,
 4
 ]
 },
-"prompt": "Point P is at ({a}, {b}). It moves {c} down. What is its y-coordinate now?",
+"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
 "type": "numeric"
 },
 {
 "answer": 0,
 "choices": [
-"(4, 0)",
-"(0, 4)",
-"(4, 4)"
+"Enlargement",
+"Reflection",
+"Rotation"
 ],
-"explain": "(4, 0) has y = 0.",
-"hint": "On the x-axis, y = 0.",
-"id": "m3",
-"prompt": "Which point is on the x-axis?",
+"explain": "Only enlargement changes the size.",
+"hint": "Which one makes it bigger?",
+"id": "m2",
+"prompt": "Which transformation changes size?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "The boundaries of each region are polar equations of loci such as r =…",
-"Testing AB against BA and (AB)C against A(BC) needs fluent matrix multiplication",
-"The laws are compared with those for numbers, where ab = ba always holds"
+"Expanding (a + bi)² = 3 + 4i needs complex multiplication before parts are…",
+"Equations involving z* are rewritten with z = x + iy before equating parts"
 ],
 "explain": "Because: The boundaries of each region are polar equations of loci such as r =….",
 "hint": "Think about what you need first.",
-"id": "m4",
+"id": "m3",
 "prompt": "Why does 'Regions in the Argand diagram in polar form' build on 'Polar equations of loci in the Argand diagram'?",
 "type": "mc"
 },
 {
-"answer": "a+c",
-"explain": "{a} + {c} = {=a+c}.",
-"hint": "Right changes x.",
-"id": "m5",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
+"id": "m4",
 "params": {
 "a": [
-0,
-5
+1,
+9
 ],
 "b": [
-0,
-8
-],
-"c": [
 1,
-4
+9
 ]
 },
-"prompt": "Quick check: Point A is at ({a}, {b}). It moves {c} squares right. What is its new x-coordinate?",
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
 "type": "numeric"
 },
 {
-"answer": "b",
-"explain": "In ({a}, {b}) the y-coordinate is {=b}.",
-"hint": "The second number.",
-"id": "m6",
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "m5",
 "params": {
 "a": [
-0,
-9
+1,
+6
 ],
 "b": [
 0,
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
+]
+},
+"prompt": "Quick check: The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
+"type": "numeric"
+},
+{
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
+"id": "m6",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
 9
 ]
 },
-"prompt": "Quick check: What is the y-coordinate of ({a}, {b})?",
-"type": "numeric",
-"where": "a!=b"
+"prompt": "Recap: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
 }
 ]
 },
 "practice": [
 {
-"answer": "a+c",
-"explain": "{a} + {c} = {=a+c}.",
-"hint": "Right changes x.",
+"answer": "0-a",
+"explain": "({a}, {b}) → ({=0-a}, {b}).",
+"hint": "Reflecting in the y-axis changes the sign of x.",
 "id": "p1",
 "params": {
 "a": [
+1,
+9
+],
+"b": [
+1,
+9
+]
+},
+"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
+"id": "p2",
+"params": {
+"a": [
+1,
+6
+],
+"b": [
 0,
-5
+4
+],
+"c": [
+0,
+4
+],
+"d": [
+1,
+6
+]
+},
+"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
+"type": "numeric"
+},
+{
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add to x.",
+"id": "p3",
+"params": {
+"a": [
+0,
+8
 ],
 "b": [
 0,
@@ -10985,79 +11107,45 @@
 ],
 "c": [
 1,
-4
+6
 ]
 },
-"prompt": "Point A is at ({a}, {b}). It moves {c} squares right. What is its new x-coordinate?",
+"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
 "type": "numeric"
-},
-{
-"answer": "b",
-"explain": "In ({a}, {b}) the y-coordinate is {=b}.",
-"hint": "The second number.",
-"id": "p2",
-"params": {
-"a": [
-0,
-9
-],
-"b": [
-0,
-9
-]
-},
-"prompt": "What is the y-coordinate of ({a}, {b})?",
-"type": "numeric",
-"where": "a!=b"
-},
-{
-"answer": 0,
-"choices": [
-"(2, 5)",
-"(5, 2)",
-"(-2, 5)"
-],
-"explain": "Across 2, then 5: (2, 5).",
-"hint": "Across first, then up or down.",
-"id": "p3",
-"prompt": "Which point is 2 right and 5 up from the origin?",
-"type": "mc"
 }
 ],
-"quality": 88,
+"quality": 86,
 "status": "auto-starter",
 "title": "Regions in the Argand diagram in polar form",
 "topicId": "mt_sS80vCZchC",
 "visual": {
-"caption": "Move the point to the target. Across first, then up.",
+"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
-"max": 8,
-"target": [
-2,
-5
-],
-"x": 0,
-"y": 0
+"m": [
+1,
+0,
+0,
+1
+]
 },
-"type": "coords"
+"type": "matrixlab"
 },
 "worked": {
 "steps": [
-"Start at the origin (0, 0).",
-"Go right 2 along the x-axis.",
-"Then go up 5.",
-"Mark the point (2, 5)."
+"Start from what you know: Polar equations of loci in the Argand diagram.",
+"The new idea: Describe and find the area of regions such as 1 ≤ |z| ≤ 2 with 0 ≤ arg….",
+"Rotation by 90° sends (x, y) to (−y, x)."
 ],
-"title": "Plot (2, 5)"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Regions in the Argand diagram in polar form'"
 }
 },
 "mt_sak7kz83kY": {
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Matrices: notation and order and leads to Multiplying matrices.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -11127,8 +11215,8 @@
 "answer": 0,
 "choices": [
 "Adding and scaling work entry by entry",
-"Multiplying z by its conjugate z* uses complex multiplication and gives a real number",
-"(a + bi)(a − bi) has the difference-of-two-squares structure"
+"Knowing a cubic has three roots tells how many remain once a conjugate pair…",
+"If a + bi is a root of a real polynomial, its conjugate a…"
 ],
 "explain": "Because: Adding and scaling work entry by entry.",
 "hint": "Think about what you need first.",
@@ -11141,7 +11229,7 @@
 "choices": [
 "Multiplying matrices",
 "Matrices: notation and order",
-"Complex conjugates and division"
+"Solving polynomial equations with complex roots"
 ],
 "explain": "'Adding matrices and scalar multiples' leads on to 'Multiplying matrices'.",
 "hint": "What comes after this topic?",
@@ -11150,223 +11238,28 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"interpreting",
-"multiplying",
-"corresponding"
-],
-"explain": "The missing word is 'interpreting'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Add and subtract matrices of the same order and multiply a matrix by a scalar, _____ the results in context'",
-"type": "mc"
-},
-{
 "answer": "0-a",
 "explain": "({a}, {b}) → ({=0-a}, {b}).",
 "hint": "Reflecting in the y-axis changes the sign of x.",
+"id": "m6",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+]
+},
+"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
+"type": "numeric"
+},
+{
+"answer": "a*d-b*c",
+"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
+"hint": "ad − bc.",
 "id": "m7",
-"params": {
-"a": [
-1,
-9
-],
-"b": [
-1,
-9
-]
-},
-"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
-"type": "numeric"
-}
-]
-},
-"practice": [
-{
-"answer": "0-a",
-"explain": "({a}, {b}) → ({=0-a}, {b}).",
-"hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "p1",
-"params": {
-"a": [
-1,
-9
-],
-"b": [
-1,
-9
-]
-},
-"prompt": "The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
-"type": "numeric"
-},
-{
-"answer": "a*d-b*c",
-"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
-"hint": "ad − bc.",
-"id": "p2",
-"params": {
-"a": [
-1,
-6
-],
-"b": [
-0,
-4
-],
-"c": [
-0,
-4
-],
-"d": [
-1,
-6
-]
-},
-"prompt": "The matrix has rows [{a} {b}] and [{c} {d}]. What is its determinant?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Matrices: notation and order",
-"Eigenvectors and eigenvalues",
-"Solving polynomial equations with complex roots"
-],
-"explain": "'Adding matrices and scalar multiples' builds on 'Matrices: notation and order'.",
-"hint": "What does this topic build on?",
-"id": "p3",
-"prompt": "Which topic should you learn before 'Adding matrices and scalar multiples'?",
-"type": "mc"
-}
-],
-"quality": 87,
-"status": "auto-starter",
-"title": "Adding matrices and scalar multiples",
-"topicId": "mt_sak7kz83kY",
-"visual": {
-"caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
-"opts": {
-"m": [
-1,
-0,
-0,
-1
-]
-},
-"type": "matrixlab"
-},
-"worked": {
-"steps": [
-"Start from what you know: Matrices: notation and order.",
-"The new idea: Add and subtract matrices of the same order and multiply a matrix by a scalar, interpreting the results….",
-"Rotation by 90° sends (x, y) to (−y, x).",
-"Next, this helps with: Multiplying matrices."
-],
-"title": "Rotate (2, 1) by 90° anticlockwise, for 'Adding matrices and scalar multiples'"
-}
-},
-"mt_tjsCH8KWwe": {
-"audience": "learner",
-"explain": {
-"adult": [
-"This topic asks you to explain that an eigenvector of a square matrix A is a non-zero vector v with Av = λv.",
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
-"It builds on Matrices acting on vectors and leads to The characteristic equation.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
-],
-"kid": [
-"You can slide, flip or turn a shape.",
-"It stays the same shape."
-]
-},
-"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
-"keyIdea": "Explain that an eigenvector of a square matrix A is a non-zero vector v with Av = λv.",
-"mastery": {
-"draw": 3,
-"passMark": 2,
-"pool": [
-{
-"answer": "a*k*k",
-"explain": "{a} × {k}² = {=a*k*k}.",
-"hint": "Area scales by k².",
-"id": "m1",
-"params": {
-"a": [
-2,
-10
-],
-"k": [
-2,
-4
-]
-},
-"prompt": "A shape of area {a} is enlarged by scale factor {k}. What is the new area?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Enlargement",
-"Reflection",
-"Rotation"
-],
-"explain": "Only enlargement changes the size.",
-"hint": "Which one makes it bigger?",
-"id": "m2",
-"prompt": "Which transformation changes size?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Av = λv compares the result of multiplying a matrix by a vector with…",
-"The distance between z and w is the modulus |z − w| of their…",
-"z − w is drawn as the vector from w to z on the…"
-],
-"explain": "Because: Av = λv compares the result of multiplying a matrix by a vector with….",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Eigenvectors and eigenvalues' build on 'Matrices acting on vectors'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The characteristic equation",
-"Matrices acting on vectors",
-"Distance and midpoint in the complex plane"
-],
-"explain": "'Eigenvectors and eigenvalues' leads on to 'The characteristic equation'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Eigenvectors and eigenvalues' help you learn next?",
-"type": "mc"
-},
-{
-"answer": "0-a",
-"explain": "({a}, {b}) → ({=0-a}, {b}).",
-"hint": "Reflecting in the y-axis changes the sign of x.",
-"id": "m5",
-"params": {
-"a": [
-1,
-9
-],
-"b": [
-1,
-9
-]
-},
-"prompt": "Quick check: The point ({a}, {b}) is reflected in the y-axis. What is its new x-coordinate?",
-"type": "numeric"
-},
-{
-"answer": "a*d-b*c",
-"explain": "{a} × {d} − {b} × {c} = {=a*d-b*c}.",
-"hint": "ad − bc.",
-"id": "m6",
 "params": {
 "a": [
 1,
@@ -11436,32 +11329,23 @@
 "type": "numeric"
 },
 {
-"answer": "a+c",
-"explain": "{a} + {c} = {=a+c}.",
-"hint": "Add to x.",
+"answer": 0,
+"choices": [
+"Matrices: notation and order",
+"Solving polynomial equations with complex roots",
+"Trace, determinant and eigenvalues"
+],
+"explain": "'Adding matrices and scalar multiples' builds on 'Matrices: notation and order'.",
+"hint": "What does this topic build on?",
 "id": "p3",
-"params": {
-"a": [
-0,
-8
-],
-"b": [
-0,
-8
-],
-"c": [
-1,
-6
-]
-},
-"prompt": "The point ({a}, {b}) is translated {c} right. What is the new x-coordinate?",
-"type": "numeric"
+"prompt": "Which topic should you learn before 'Adding matrices and scalar multiples'?",
+"type": "mc"
 }
 ],
 "quality": 87,
 "status": "auto-starter",
-"title": "Eigenvectors and eigenvalues",
-"topicId": "mt_tjsCH8KWwe",
+"title": "Adding matrices and scalar multiples",
+"topicId": "mt_sak7kz83kY",
 "visual": {
 "caption": "Edit the matrix or try the buttons. Watch where the square and the arrows land.",
 "opts": {
@@ -11476,12 +11360,243 @@
 },
 "worked": {
 "steps": [
-"Start from what you know: Matrices acting on vectors.",
-"The new idea: Explain that an eigenvector of a square matrix A is a non-zero vector v with Av = λv.",
+"Start from what you know: Matrices: notation and order.",
+"The new idea: Add and subtract matrices of the same order and multiply a matrix by a scalar, interpreting the results….",
 "Rotation by 90° sends (x, y) to (−y, x).",
-"Next, this helps with: The characteristic equation."
+"Next, this helps with: Multiplying matrices."
 ],
-"title": "Rotate (2, 1) by 90° anticlockwise, for 'Eigenvectors and eigenvalues'"
+"title": "Rotate (2, 1) by 90° anticlockwise, for 'Adding matrices and scalar multiples'"
+}
+},
+"mt_tjsCH8KWwe": {
+"audience": "learner",
+"explain": {
+"adult": [
+"This topic asks you to explain that an eigenvector of a square matrix A is a non-zero vector v with Av = λv.",
+"The magnitude of (x, y) is √(x² + y²) by Pythagoras.",
+"It builds on Matrices acting on vectors and leads to The characteristic equation.",
+"Vectors have magnitude and direction; add them nose to tail, or add their components."
+],
+"kid": [
+"A vector is an arrow. It has a size and a direction.",
+"Two moves can add to one move."
+]
+},
+"familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
+"keyIdea": "Explain that an eigenvector of a square matrix A is a non-zero vector v with Av = λv.",
+"mastery": {
+"draw": 4,
+"passMark": 3,
+"pool": [
+{
+"answer": "k*b",
+"explain": "{k} × {b} = {=k*b}.",
+"hint": "Multiply each part.",
+"id": "m1",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+],
+"k": [
+2,
+5
+]
+},
+"prompt": "What is {k} × ({a}, {b})? Give the y-component.",
+"type": "numeric"
+},
+{
+"answer": "a-c",
+"explain": "{a} − {c} = {=a-c}.",
+"hint": "Subtract the x parts.",
+"id": "m2",
+"params": {
+"a": [
+5,
+12
+],
+"b": [
+1,
+9
+],
+"c": [
+1,
+4
+],
+"d": [
+1,
+9
+]
+},
+"prompt": "({a}, {b}) − ({c}, {d}): what is the x-component?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"5 m north",
+"5 m",
+"5 kg"
+],
+"explain": "5 m north has a direction.",
+"hint": "Size and direction.",
+"id": "m3",
+"prompt": "Which is a vector?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Av = λv compares the result of multiplying a matrix by a vector with…",
+"Whether a product exists depends on the orders",
+"Row-by-column products are learned after the simpler entry-by-entry operations"
+],
+"explain": "Because: Av = λv compares the result of multiplying a matrix by a vector with….",
+"hint": "Think about what you need first.",
+"id": "m4",
+"prompt": "Why does 'Eigenvectors and eigenvalues' build on 'Matrices acting on vectors'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The characteristic equation",
+"Matrices acting on vectors",
+"Multiplying matrices"
+],
+"explain": "'Eigenvectors and eigenvalues' leads on to 'The characteristic equation'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Eigenvectors and eigenvalues' help you learn next?",
+"type": "mc"
+},
+{
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add the x parts.",
+"id": "m6",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+],
+"c": [
+1,
+9
+],
+"d": [
+1,
+9
+]
+},
+"prompt": "Quick check: ({a}, {b}) + ({c}, {d}): what is the x-component?",
+"type": "numeric"
+},
+{
+"answer": "5*k",
+"explain": "√({=9*k*k} + {=16*k*k}) = {=5*k}.",
+"hint": "√(x² + y²).",
+"id": "m7",
+"params": {
+"k": [
+1,
+5
+]
+},
+"prompt": "Quick check: What is the magnitude of ({=3*k}, {=4*k})?",
+"type": "numeric"
+}
+]
+},
+"practice": [
+{
+"answer": "a+c",
+"explain": "{a} + {c} = {=a+c}.",
+"hint": "Add the x parts.",
+"id": "p1",
+"params": {
+"a": [
+1,
+9
+],
+"b": [
+1,
+9
+],
+"c": [
+1,
+9
+],
+"d": [
+1,
+9
+]
+},
+"prompt": "({a}, {b}) + ({c}, {d}): what is the x-component?",
+"type": "numeric"
+},
+{
+"answer": "5*k",
+"explain": "√({=9*k*k} + {=16*k*k}) = {=5*k}.",
+"hint": "√(x² + y²).",
+"id": "p2",
+"params": {
+"k": [
+1,
+5
+]
+},
+"prompt": "What is the magnitude of ({=3*k}, {=4*k})?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"13",
+"17",
+"60"
+],
+"explain": "the size of the displacement after 5 east and 12 north = 13. Use Pythagoras on the vector.",
+"hint": "Redo it step by step and compare.",
+"id": "p3",
+"prompt": "Sam worked out the size of the displacement after 5 east and 12 north and got 17. What is the correct answer?",
+"type": "mc"
+}
+],
+"quality": 90,
+"status": "auto-starter",
+"title": "Eigenvectors and eigenvalues",
+"topicId": "mt_tjsCH8KWwe",
+"visual": {
+"caption": "Drag the arrow tips. The total displacement and distance update.",
+"opts": {
+"a": [
+5,
+0
+],
+"b": [
+0,
+12
+]
+},
+"type": "vectors"
+},
+"worked": {
+"steps": [
+"Displacement vector = (5, 12).",
+"Magnitude = √(5² + 12²) = √169 = 13.",
+"Distance walked = 5 + 12 = 17."
+],
+"title": "Walk 5 east then 12 north"
 }
 },
 "mt_u1nKT9UI6s": {
@@ -11538,8 +11653,8 @@
 "answer": 0,
 "choices": [
 "A symmetric matrix is a special case that can always be diagonalised",
-"Each eigenvalue from the characteristic equation is substituted into (A − λI)v = 0",
-"The two equations are dependent, giving infinitely many solutions along one direction"
+"Products are found by multiplying moduli and adding arguments in modulus–argument form",
+"The rule is checked by multiplying the same numbers in a + bi form"
 ],
 "explain": "Because: A symmetric matrix is a special case that can always be diagonalised.",
 "hint": "Think about what you need first.",
@@ -11551,8 +11666,8 @@
 "answer": 0,
 "choices": [
 "perpendicular",
-"inconsistent",
-"represent"
+"multiplication",
+"inconsistent"
 ],
 "explain": "The missing word is 'perpendicular'.",
 "hint": "Which word fits the topic?",
@@ -11674,7 +11789,7 @@
 "type": "numeric"
 }
 ],
-"quality": 86,
+"quality": 87,
 "status": "auto-starter",
 "title": "Symmetric matrices and orthogonal eigenvectors",
 "topicId": "mt_u1nKT9UI6s",
@@ -11783,8 +11898,8 @@
 "answer": 0,
 "choices": [
 "The eigenvectors found for each eigenvalue become the columns of the matrix P",
-"Sums, differences and conjugates are drawn as points and arrows on the Argand diagram",
-"Complex numbers add and subtract like column vectors, drawn head to tail"
+"The result is about inverting a product",
+"The proof regroups (AB)(B⁻¹A⁻¹) as A(BB⁻¹)A⁻¹ using associativity"
 ],
 "explain": "Because: The eigenvectors found for each eigenvalue become the columns of the matrix P.",
 "hint": "Think about what you need first.",
@@ -11797,7 +11912,7 @@
 "choices": [
 "Matrix powers by diagonalisation",
 "Finding eigenvectors of a 2×2 matrix",
-"Complex arithmetic on the Argand diagram"
+"Inverse of a product"
 ],
 "explain": "'Diagonalising a matrix' leads on to 'Matrix powers by diagonalisation'.",
 "hint": "What comes after this topic?",
@@ -11891,14 +12006,14 @@
 {
 "answer": 0,
 "choices": [
-"5",
-"7",
-"12"
+"10",
+"14",
+"48"
 ],
-"explain": "the size of the displacement after 3 east and 4 north = 5. Use Pythagoras on the vector.",
+"explain": "the size of the displacement after 6 east and 8 north = 10. Use Pythagoras on the vector.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out the size of the displacement after 3 east and 4 north and got 7. What is the correct answer?",
+"prompt": "Sam worked out the size of the displacement after 6 east and 8 north and got 14. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -11915,7 +12030,7 @@
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 84,
 "status": "auto-starter",
 "title": "Diagonalising a matrix",
 "topicId": "mt_yDFLFHeVwp",
@@ -11923,23 +12038,23 @@
 "caption": "Drag the arrow tips. The total displacement and distance update.",
 "opts": {
 "a": [
-3,
+6,
 0
 ],
 "b": [
 0,
-4
+8
 ]
 },
 "type": "vectors"
 },
 "worked": {
 "steps": [
-"Displacement vector = (3, 4).",
-"Magnitude = √(3² + 4²) = √25 = 5.",
-"Distance walked = 3 + 4 = 7."
+"Displacement vector = (6, 8).",
+"Magnitude = √(6² + 8²) = √100 = 10.",
+"Distance walked = 6 + 8 = 14."
 ],
-"title": "Walk 3 east then 4 north"
+"title": "Walk 6 east then 8 north"
 }
 },
 "mt_yGhI4hAEEE": {
@@ -12019,8 +12134,8 @@
 "answer": 0,
 "choices": [
 "Squaring an adjacency matrix counts two-step routes through row-by-column products",
-"Solving (A − λI)v = 0 for each eigenvalue is extended from 2×2 to…",
-"The characteristic equation det(A − λI) = 0 needs a 3×3 determinant"
+"AI = IA = A is checked by multiplying",
+"A symmetric matrix is a special case that can always be diagonalised"
 ],
 "explain": "Because: Squaring an adjacency matrix counts two-step routes through row-by-column products.",
 "hint": "Think about what you need first.",
@@ -12033,7 +12148,7 @@
 "choices": [
 "Long-term behaviour from eigenvalues",
 "Multiplying matrices",
-"Eigenvalues and eigenvectors of a 3×3 matrix"
+"Zero and identity matrices"
 ],
 "explain": "'Matrices for data and networks' leads on to 'Long-term behaviour from eigenvalues'.",
 "hint": "What comes after this topic?",
@@ -12045,8 +12160,8 @@
 "answer": 0,
 "choices": [
 "represent",
-"characteristic",
-"factorisation"
+"multiplication",
+"perpendicular"
 ],
 "explain": "The missing word is 'represent'.",
 "hint": "Which word fits the topic?",
@@ -12123,8 +12238,8 @@
 "answer": 0,
 "choices": [
 "Multiplying matrices",
-"Eigenvalues and eigenvectors of a 3×3 matrix",
-"Multiplying and dividing in modulus–argument form"
+"Symmetric matrices and orthogonal eigenvectors",
+"The Cayley–Hamilton theorem"
 ],
 "explain": "'Matrices for data and networks' builds on 'Multiplying matrices'.",
 "hint": "What does this topic build on?",
@@ -12163,9 +12278,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor.",
+"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape.",
 "It builds on Diagonalising a matrix and leads to Long-term behaviour from eigenvalues.",
-"A transformation moves every point of a shape by the same rule. Reflections and rotations keep the size and shape."
+"A 2 × 2 matrix is such a rule. Its columns show where (1, 0) and (0, 1) go. Its determinant is the area scale factor."
 ],
 "kid": [
 "You can slide, flip or turn a shape.",
@@ -12213,8 +12328,8 @@
 "answer": 0,
 "choices": [
 "Aⁿ = PDⁿP⁻¹ needs A already written as PDP⁻¹",
-"Adding and scaling work entry by entry",
-"Each root α gives a factor (x − α)"
+"Each eigenvalue from the characteristic equation is substituted into (A − λI)v = 0",
+"The two equations are dependent, giving infinitely many solutions along one direction"
 ],
 "explain": "Because: Aⁿ = PDⁿP⁻¹ needs A already written as PDP⁻¹.",
 "hint": "Think about what you need first.",
@@ -12227,7 +12342,7 @@
 "choices": [
 "Long-term behaviour from eigenvalues",
 "Diagonalising a matrix",
-"Adding matrices and scalar multiples"
+"Finding eigenvectors of a 2×2 matrix"
 ],
 "explain": "'Matrix powers by diagonalisation' leads on to 'Long-term behaviour from eigenvalues'.",
 "hint": "What comes after this topic?",
@@ -12349,7 +12464,7 @@
 "type": "numeric"
 }
 ],
-"quality": 87,
+"quality": 86,
 "status": "auto-starter",
 "title": "Matrix powers by diagonalisation",
 "topicId": "mt_zuiqh9PsoV",

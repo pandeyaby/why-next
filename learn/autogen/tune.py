@@ -101,7 +101,7 @@ def t_vec(t, r, x):
 T = {"multiplication-written": t_mulw, "division-written": t_divw, "multiplication": t_mul, "add-subtract": t_addsub, "place-value": t_pv, "percent": t_pct, "fractions": t_frac, "ratio": t_ratio, "negatives": t_neg,
      "coordinates": t_coord, "linear-graphs": t_lin, "functions": t_fn, "quadratic": t_quad, "sequences": t_seq, "equations": t_eq, "expressions": t_expr, "pythagoras": t_pyth, "angles": t_ang, "area": t_area,
      "volume": t_vol, "circles": t_circ, "probability": t_prob, "probability-two": t_prob2, "statistics": t_stat, "inquiry": t_stat, "counting": t_count, "measurement": t_meas, "gas": t_gas, "matter": t_gas,
-     "states": t_states, "acids": t_acid, "forces": t_force, "energy": t_force, "waves": t_wave, "differentiation": t_diff, "calculus": t_diff, "integration": t_integ, "exponential": t_expo, "vectors": t_vec}
+     **SCI_T, "states": t_states, "acids": t_acid, "forces": t_force, "energy": t_force, "waves": t_wave, "differentiation": t_diff, "calculus": t_diff, "integration": t_integ, "exponential": t_expo, "vectors": t_vec}
 def tune(a, t, rng):
     f = T.get(a["name"]); x = t["name"] + " " + t["description"]
     if not f: return {}

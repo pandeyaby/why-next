@@ -22,7 +22,7 @@ def t_mulw(t, r, x):
         steps.append(f"{a} × {int(ch) * 10 ** i} = {v}" + (" (put a 0 in the ones place first)." if i == 1 else "."))
     if len(parts) > 1: steps.append("Add: " + " + ".join(map(str, parts)) + f" = {a * b}.")
     steps.append(f"So {a} × {b} = {a * b}.")
-    return dict(vis=dict(a=a, b=b), worked=(f"{a} × {b}", steps), say=f"For example, {a} × {b} = {a * b}.",
+    return dict(vis=dict(a=a, b=b) if b >= 10 else {}, worked=(f"{a} × {b}", steps), say=f"For example, {a} × {b} = {a * b}.",
                 applied=[spot(f"{a} × {b}", a * b, [a * b - a * (b % 10) + a, a * (b % 10) + a * (b // 10)], "Multiply by every digit, using its place value.")])
 def t_divw(t, r, x):
     d = digits(x); db = 1 if (d and min(d) == 1) or not d else min(d); dq = max(d) if d and max(d) > db else 2 + (db > 1)
