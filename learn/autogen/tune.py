@@ -6,7 +6,7 @@ from tune_num import *
 from tune_num import fmt, spot, digits, within, nd
 from tune_sci import *
 def t_coord(t, r, x):
-    four = re.search(r"four|all|negative|quadrant", x, re.I); px, py = r.randint(1, 7) * (r.choice([-1, 1]) if four else 1), r.randint(1, 7) * (r.choice([-1, 1]) if four else 1)
+    four = re.search(r"four|all|negative|quadrant", x, re.I) and not re.search(r"first quadrant", x, re.I); px, py = r.randint(1, 7) * (r.choice([-1, 1]) if four else 1), r.randint(1, 7) * (r.choice([-1, 1]) if four else 1)
     v = dict(target=[abs(px), abs(py)]) if not four else {}
     return dict(vis=v, worked=(f"Plot ({px}, {py})", [f"Start at the origin (0, 0).", f"Go {'right' if px > 0 else 'left'} {abs(px)} along the x-axis.", f"Then go {'up' if py > 0 else 'down'} {abs(py)}.", f"Mark the point ({px}, {py})."]),
                 say=f"For example, ({px}, {py}) is {abs(px)} {'right' if px > 0 else 'left'} and {abs(py)} {'up' if py > 0 else 'down'}.", applied=[mc(f"Which point is {abs(px)} {'right' if px > 0 else 'left'} and {abs(py)} {'up' if py > 0 else 'down'} from the origin?", [f"({px}, {py})", f"({py}, {px})", f"({-px}, {py})"], "Across first, then up or down.", f"Across {px}, then {py}: ({px}, {py}).") if px != py else None])

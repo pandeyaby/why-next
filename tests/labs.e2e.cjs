@@ -7,7 +7,7 @@ const AXE = require.resolve('axe-core/axe.min.js');
 const URL = 'file://' + path.resolve(__dirname, '../out/viewer.html') + '?seed=3';
 let failures = 0;
 async function test(name, fn) { try { await fn(); console.log('ok  ', name) } catch (e) { failures++; console.log('FAIL', name, '\n     ', e.message.split('\n').slice(0, 12).join('\n      ')) } }
-const LABS = ['problab', 'statlab', 'numzoom', 'graphlab', 'geolab', 'matrixlab', 'gaslab', 'reactlab', 'wavelab', 'forcelab', 'ecolab'];
+const LABS = ['problab', 'statlab', 'numzoom', 'graphlab', 'geolab', 'matrixlab', 'gaslab', 'reactlab', 'wavelab', 'forcelab', 'ecolab', 'platelab', 'celllab', 'cyclelab', 'chainlab', 'bodylab'];
 (async () => {
   const browser = await chromium.launch(), p = await browser.newPage({ viewport: { width: 1200, height: 900 } }); const errors = [];
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error') errors.push(m.text()) });

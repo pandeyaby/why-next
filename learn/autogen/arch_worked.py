@@ -47,7 +47,7 @@ def pick(name, t, seed, skip=0):
     if not bank: return None
     x = t["name"] + " " + t["description"]
     order = [b for b in bank if re.search(b[0], t["name"], re.I)] + [b for b in bank if re.search(b[0], x, re.I) and not re.search(b[0], t["name"], re.I)]
-    order += [b for b in bank[seed % len(bank):] + bank[:seed % len(bank)] if b not in order]
+    if not order or skip >= len(order): return None   # only examples whose pattern fits this topic; never an off-topic bank entry
     _, title, steps = order[min(skip, len(order) - 1)]; return (title, steps)
 W.update({
 "animals": [

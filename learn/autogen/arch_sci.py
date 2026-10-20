@@ -25,7 +25,7 @@ A("states", r"Matter|Weather", r"solid|liquid|melt|boil|freez|evapor|condens|sta
   [num("Chocolate melts at 34 °C. A room is at {t} °C. How many degrees warmer must it get to melt?", "34-t", "34 minus the room temperature.", "34 − {t} = {=34-t} degrees.", {"t": [15, 30]}),
    num("A puddle loses {a} ml of water each hour by evaporation. How much after {h} hours?", "a*h", "Multiply.", "{a} × {h} = {=a*h} ml.", {"a": [5, 30], "h": [2, 8]}),
    mc("Which change is condensing?", ["Steam turning into water on a cold window", "Ice melting", "Water boiling"], "Gas → liquid.", "Steam (gas) becomes liquid water: condensing.")]),
-A("acids", r"Matter", r"acid|alkali|\bph\b|neutralis|indicator|\bsalt|base\b|carbonate|metal.{0,20}react|reactiv|hydrogen gas",
+A("acids", r"Matter", r"(?<!amino )acid|alkali|\bph\b|neutralis|indicator|\bsalt|base\b|carbonate|metal.{0,20}react|reactiv|hydrogen gas",
   V("reactlab", "Add acid, alkali, magnesium or carbonate. Watch the colour, temperature and bubbles, then test the gas.", acid=1),
   ["Lemon juice is an acid. Soap is an alkali.", "Mixing them can cancel them out."],
   ["Acids have a pH below 7 and alkalis above 7. Universal indicator shows the pH as a colour.", "Acid + alkali → salt + water. Acid + metal → salt + hydrogen. Acid + carbonate → salt + water + carbon dioxide."],

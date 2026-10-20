@@ -19,22 +19,82 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"One",
+"All of them",
+"None"
 ],
-"t": [
-2,
-15
-]
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
+"id": "m1",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
 },
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
 },
 {
 "answer": 0,
@@ -45,101 +105,13 @@
 ],
 "explain": "Light is changed, so water must stay the same.",
 "hint": "Change only one thing.",
-"id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Understanding that scientific knowledge is provisional requires seeing concrete examples of how apparent patterns…",
-"Must draw conclusions and make predictions before using results to set up further tests",
-"Must plan enquiries independently before designing follow-up investigations from predictions"
-],
-"explain": "Because: Understanding that scientific knowledge is provisional requires seeing concrete examples of how apparent patterns….",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Science Can Be Revised' build on 'Correlation vs Causation'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Evidence Supporting Ideas",
-"Could there be another explanation?",
-"Fair testing (age 9+)"
-],
-"explain": "'Science Can Be Revised' leads on to 'Evidence Supporting Ideas'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Science Can Be Revised' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m5",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What is magma?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Earthquakes",
-"Volcanic eruptions",
-"Tsunamis from a volcano on the plate"
-],
-"explain": "Sliding boundaries cause earthquakes, rarely volcanoes.",
-"hint": "Apply the idea to this situation.",
 "id": "m7",
-"prompt": "A town is on a boundary where two plates slide past each other. Which hazard is it most likely to face?",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
 "type": "mc"
 }
 ]
 },
 "practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
 {
 "answer": 0,
 "choices": [
@@ -149,30 +121,38 @@
 ],
 "explain": "'Science Can Be Revised' builds on 'Correlation vs Causation'.",
 "hint": "What does this topic build on?",
-"id": "p2",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Science Can Be Revised'?",
 "type": "mc"
 },
 {
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
+"answer": 0,
+"choices": [
+"Understanding that scientific knowledge is provisional requires seeing concrete examples of how apparent patterns…",
+"Must do simple tests before setting up formal fair tests with controlled variables",
+"Must present data in basic formats before using complex graphs and scientific diagrams"
 ],
-"b": [
-21,
-40
-]
+"explain": "Because: Understanding that scientific knowledge is provisional requires seeing concrete examples of how apparent patterns….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Science Can Be Revised' build on 'Correlation vs Causation'?",
+"type": "mc"
 },
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Evidence Supporting Ideas",
+"Could there be another explanation?",
+"Fair testing"
+],
+"explain": "'Science Can Be Revised' leads on to 'Evidence Supporting Ideas'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Science Can Be Revised' help you learn next?",
+"type": "mc"
 }
 ],
-"quality": 84,
+"quality": 74,
 "status": "auto-starter",
 "title": "Science Can Be Revised",
 "topicId": "mt_1GVAmcwAiO",
@@ -180,14 +160,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 10,
+"target": 12,
 "vals": [
-4,
+6,
 9,
-10,
-12,
+14,
 15,
-8
+16,
+18
 ]
 },
 "type": "statlab"
@@ -196,7 +176,6 @@
 "steps": [
 "Start from what you know: Could there be another explanation?.",
 "The new idea: Scientific knowledge is provisional — it is the best current explanation based on available evidence.",
-"Change only the floor surface.",
 "Next, this helps with: Evidence Supporting Ideas."
 ],
 "title": "Science Can Be Revised"
@@ -206,9 +185,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
+"In a fair test you change one thing and measure another. Everything else stays the same.",
 "It builds on Drawing conclusions from evidence and leads to Drawing conclusions from evidence (age 9+).",
-"In a fair test you change one thing and measure another. Everything else stays the same."
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -224,97 +203,16 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must draw conclusions and make predictions before using results to set up further tests",
-"Correct use of SI units and significant figures in tables and axes is grounded…",
-"Science inquiry recording data in tables and graphs draws on the bar chart and…"
-],
-"explain": "Because: Must draw conclusions and make predictions before using results to set up further tests.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Fair testing (age 9+)' build on 'Drawing conclusions from evidence'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Drawing conclusions from evidence (age 9+)",
-"Drawing conclusions from evidence",
-"Tables, charts, and graphs"
-],
-"explain": "'Fair testing (age 9+)' leads on to 'Drawing conclusions from evidence (age 9+)'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Fair testing (age 9+)' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "predictions",
-"explanations",
+"constraints",
 "observations"
 ],
 "explain": "The missing word is 'predictions'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m1",
 "prompt": "Fill the gap: 'Use test results to make _____ and set up further comparative and fair tests to investigate new questions'",
 "type": "mc"
-}
-]
 },
-"practice": [
 {
 "answer": 0,
 "choices": [
@@ -324,7 +222,7 @@
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m2",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -337,25 +235,106 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m3",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Drawing conclusions from evidence",
-"Tables, charts, and graphs",
-"Repeated tests for reliability"
+"Repeated tests for reliability",
+"Tables, charts, and graphs"
 ],
 "explain": "'Fair testing (age 9+)' builds on 'Drawing conclusions from evidence'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Fair testing (age 9+)'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must draw conclusions and make predictions before using results to set up further tests",
+"Must analyse simple design comparisons before formally defining design problems with criteria/constraints",
+"Must draw conclusions before identifying patterns and using evidence to support findings"
+],
+"explain": "Because: Must draw conclusions and make predictions before using results to set up further tests.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Fair testing (age 9+)' build on 'Drawing conclusions from evidence'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Drawing conclusions from evidence (age 9+)",
+"Drawing conclusions from evidence",
+"Simple Design Problems"
+],
+"explain": "'Fair testing (age 9+)' leads on to 'Drawing conclusions from evidence (age 9+)'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Fair testing (age 9+)' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 69,
+"quality": 75,
 "status": "auto-starter",
 "title": "Fair testing (age 9+)",
 "topicId": "mt_5PgQB0QkWi",
@@ -391,9 +370,9 @@
 "explain": {
 "adult": [
 "This topic asks you to gather, record, classify.",
-"In a fair test you change one thing and measure another. Everything else stays the same.",
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
 "It builds on Pictograms and tally charts and leads to Drawing conclusions from evidence.",
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
+"In a fair test you change one thing and measure another. Everything else stays the same."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -409,107 +388,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must take accurate measurements before presenting complex data",
-"Evaluating whether a pattern is truly causal requires the universal generalisation habit — asking…",
-"Recognising that correlation is not causation requires the habit of generating alternative explanations —…"
-],
-"explain": "Because: Must take accurate measurements before presenting complex data.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Classifying living things' build on 'Measuring accurately'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Drawing conclusions from evidence",
-"Pictograms and tally charts",
-"Correlation vs Causation"
-],
-"explain": "'Classifying living things' leads on to 'Drawing conclusions from evidence'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Classifying living things' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -522,25 +407,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Measuring accurately",
-"Correlation vs Causation",
-"Evidence Supporting Ideas"
+"Controlling variables (age 11+)",
+"Controlling variables"
 ],
 "explain": "'Classifying living things' builds on 'Measuring accurately'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Classifying living things'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must take accurate measurements before presenting complex data",
+"Reporting scientific findings in your own words draws directly on the universal self-explanation habit",
+"Must present data before reporting conclusions and making predictions"
+],
+"explain": "Because: Must take accurate measurements before presenting complex data.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Classifying living things' build on 'Measuring accurately'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Drawing conclusions from evidence",
+"Pictograms and tally charts",
+"Recording Data"
+],
+"explain": "'Classifying living things' leads on to 'Drawing conclusions from evidence'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Classifying living things' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 79,
+"quality": 82,
 "status": "auto-starter",
 "title": "Classifying living things",
 "topicId": "mt_7IFpDVNsmt",
@@ -575,9 +554,9 @@
 "audience": "family",
 "explain": {
 "adult": [
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
+"A fair test changes one variable, measures another, and keeps everything else the same.",
 "It builds on Teaching It Back and leads to Fair testing (age 9+).",
-"A fair test changes one variable, measures another, and keeps everything else the same."
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -591,46 +570,122 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"explanations",
+"constraints",
+"observations"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+"explain": "The missing word is 'explanations'.",
+"hint": "Which word fits the topic?",
+"id": "m1",
+"prompt": "Fill the gap: 'Report on findings from enquiries using oral and written _____, draw simple conclusions, make predictions'",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Classifying living things",
+"Comparing Possible Solutions",
+"Evidence Supporting Ideas"
+],
+"explain": "'Drawing conclusions from evidence' builds on 'Classifying living things'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Drawing conclusions from evidence'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must present data before reporting conclusions and making predictions",
-"Must compare solutions before planning fair tests to improve prototypes",
-"Must ask questions before learning to observe closely"
+"Must define a design problem before generating and comparing multiple solutions",
+"Systematic scientific measurement builds on understanding measurable attributes from maths"
 ],
 "explain": "Because: Must present data before reporting conclusions and making predictions.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Drawing conclusions from evidence' build on 'Classifying living things'?",
 "type": "mc"
 },
@@ -639,112 +694,16 @@
 "choices": [
 "Fair testing (age 9+)",
 "Teaching It Back",
-"Fair testing (age 8+)"
+"Comparing Possible Solutions"
 ],
 "explain": "'Drawing conclusions from evidence' leads on to 'Fair testing (age 9+)'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Drawing conclusions from evidence' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"explanations",
-"observations",
-"constraints"
-],
-"explain": "The missing word is 'explanations'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Report on findings from enquiries using oral and written _____, draw simple conclusions, make predictions'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Classifying living things",
-"Fair testing (age 8+)",
-"Controlling variables"
-],
-"explain": "'Drawing conclusions from evidence' builds on 'Classifying living things'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Drawing conclusions from evidence'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 91,
+"quality": 74,
 "status": "auto-starter",
 "title": "Drawing conclusions from evidence",
 "topicId": "mt_7VrR1GzhrN",
@@ -752,14 +711,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 13,
+"target": 10,
 "vals": [
-6,
-13,
-13,
-16,
-17,
-18
+3,
+7,
+8,
+15,
+18,
+6
 ]
 },
 "type": "statlab"
@@ -768,7 +727,6 @@
 "steps": [
 "Start from what you know: Teaching It Back.",
 "The new idea: Report on findings from enquiries using oral and written explanations, draw simple conclusions, make predictions.",
-"Change only the floor surface.",
 "Next, this helps with: Fair testing (age 9+)."
 ],
 "title": "Drawing conclusions from evidence"
@@ -778,9 +736,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A fair test changes one variable, measures another, and keeps everything else the same.",
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
 "It builds on Controlling variables and leads to Designing a hand warmer or cold pack.",
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
+"A fair test changes one variable, measures another, and keeps everything else the same."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -794,127 +752,99 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
-],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
-],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
-"id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"KS3 hypothesis formation and full experimental design extends KS2 Upper ability to plan enquiries…",
-"Science data presentation (tables, bar charts) builds on maths pictogram/table skills",
-"Must take accurate measurements before presenting complex data"
-],
-"explain": "Because: KS3 hypothesis formation and full experimental design extends KS2 Upper ability to plan enquiries….",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Controlling variables (age 11+)' build on 'Controlling variables'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Designing a hand warmer or cold pack",
-"Controlling variables",
-"Classifying living things"
-],
-"explain": "'Controlling variables (age 11+)' leads on to 'Designing a hand warmer or cold pack'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Controlling variables (age 11+)' help you learn next?",
-"type": "mc"
-},
-{
 "answer": 0,
 "choices": [
 "investigation",
-"appropriate",
-"prediction"
+"prediction",
+"straightforward"
 ],
 "explain": "The missing word is 'investigation'.",
 "hint": "Which word fits the topic?",
-"id": "m5",
+"id": "m1",
 "prompt": "Fill the gap: 'Form a testable scientific hypothesis linking an independent variable to a predicted outcome, plan a full _____ identifying independent, dependent'",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
+"explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
+"id": "m2",
+"prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
 ],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
 "hint": "Think about the key idea.",
 "id": "m7",
-"prompt": "What is magma?",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
 "type": "mc"
 }
 ]
 },
 "practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
 {
 "answer": 0,
 "choices": [
@@ -924,30 +854,38 @@
 ],
 "explain": "'Controlling variables (age 11+)' builds on 'Controlling variables'.",
 "hint": "What does this topic build on?",
-"id": "p2",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Controlling variables (age 11+)'?",
 "type": "mc"
 },
 {
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
+"answer": 0,
+"choices": [
+"KS3 hypothesis formation and full experimental design extends KS2 Upper ability to plan enquiries…",
+"Systematic scientific measurement builds on understanding measurable attributes from maths",
+"Must observe closely before taking systematic measurements"
 ],
-"b": [
-21,
-40
-]
+"explain": "Because: KS3 hypothesis formation and full experimental design extends KS2 Upper ability to plan enquiries….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Controlling variables (age 11+)' build on 'Controlling variables'?",
+"type": "mc"
 },
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Designing a hand warmer or cold pack",
+"Controlling variables",
+"Measuring accurately"
+],
+"explain": "'Controlling variables (age 11+)' leads on to 'Designing a hand warmer or cold pack'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Controlling variables (age 11+)' help you learn next?",
+"type": "mc"
 }
 ],
-"quality": 79,
+"quality": 69,
 "status": "auto-starter",
 "title": "Controlling variables (age 11+)",
 "topicId": "mt_Ae56umVlTT",
@@ -957,12 +895,12 @@
 "max": 30,
 "target": 10,
 "vals": [
-3,
-4,
-8,
-16,
+5,
+6,
+9,
+13,
 18,
-4
+3
 ]
 },
 "type": "statlab"
@@ -971,7 +909,6 @@
 "steps": [
 "Start from what you know: Controlling variables.",
 "The new idea: Form a testable scientific hypothesis linking an independent variable to a predicted outcome, plan a full investigation identifying….",
-"Change only the floor surface.",
 "Next, this helps with: Designing a hand warmer or cold pack."
 ],
 "title": "Controlling variables (age 11+)"
@@ -997,22 +934,82 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"One",
+"All of them",
+"None"
 ],
-"t": [
-2,
-15
-]
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
+"id": "m1",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
 },
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
 },
 {
 "answer": 0,
@@ -1023,20 +1020,36 @@
 ],
 "explain": "Light is changed, so water must stay the same.",
 "hint": "Change only one thing.",
-"id": "m2",
+"id": "m7",
 "prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Fair testing (age 8+)",
+"Controlling variables (age 11+)",
+"Repeated tests for reliability"
+],
+"explain": "'Controlling variables' builds on 'Fair testing (age 8+)'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Controlling variables'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must plan enquiries with variable control before running fair tests on prototypes",
-"Science data presentation (tables, bar charts) builds on maths pictogram/table skills",
-"Must take accurate measurements before presenting complex data"
+"Must ask questions about problems before modelling design solutions",
+"Formulating scientific questions builds on the general skill of asking relevant questions to extend…"
 ],
 "explain": "Because: Must plan enquiries with variable control before running fair tests on prototypes.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Controlling variables' build on 'Fair testing (age 8+)'?",
 "type": "mc"
 },
@@ -1045,112 +1058,16 @@
 "choices": [
 "Fair testing (age 9+)",
 "Using evidence to answer questions",
-"Classifying living things"
+"Modelling with Sketches"
 ],
 "explain": "'Controlling variables' leads on to 'Fair testing (age 9+)'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Controlling variables' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m5",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What is magma?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Earthquakes",
-"Volcanic eruptions",
-"Tsunamis from a volcano on the plate"
-],
-"explain": "Sliding boundaries cause earthquakes, rarely volcanoes.",
-"hint": "Apply the idea to this situation.",
-"id": "m7",
-"prompt": "A town is on a boundary where two plates slide past each other. Which hazard is it most likely to face?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Fair testing (age 8+)",
-"Repeated tests for reliability",
-"Tables, charts, and graphs"
-],
-"explain": "'Controlling variables' builds on 'Fair testing (age 8+)'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Controlling variables'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 88,
+"quality": 72,
 "status": "auto-starter",
 "title": "Controlling variables",
 "topicId": "mt_ArVBEpMAPk",
@@ -1158,14 +1075,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 9,
+"target": 14,
 "vals": [
-3,
-8,
-9,
-11,
-12,
-10
+10,
+13,
+14,
+16,
+18,
+7
 ]
 },
 "type": "statlab"
@@ -1174,7 +1091,6 @@
 "steps": [
 "Start from what you know: Using evidence to answer questions.",
 "The new idea: Plan different types of scientific enquiries to answer questions, recognising and controlling variables where necessary.",
-"Change only the floor surface.",
 "Next, this helps with: Fair testing (age 9+)."
 ],
 "title": "Controlling variables"
@@ -1200,127 +1116,99 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
-],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
-],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
-"id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must present own findings before evaluating strength of others' evidence",
-"Must perform tests before learning to gather and record data",
-"Must define a design problem before generating and comparing multiple solutions"
-],
-"explain": "Because: Must present own findings before evaluating strength of others' evidence.",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Evidence Supporting Ideas' build on 'Drawing conclusions from evidence (age 9+)'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Evaluating claims about electromagnetic radiation",
-"Science Can Be Revised",
-"Recording Data"
-],
-"explain": "'Evidence Supporting Ideas' leads on to 'Evaluating claims about electromagnetic radiation'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Evidence Supporting Ideas' help you learn next?",
-"type": "mc"
-},
-{
 "answer": 0,
 "choices": [
 "scientific",
-"illustrate",
-"appropriate"
+"observation",
+"difference"
 ],
 "explain": "The missing word is 'scientific'.",
 "hint": "Which word fits the topic?",
-"id": "m5",
+"id": "m1",
 "prompt": "Fill the gap: 'Identify _____ evidence that has been used to support or refute ideas or arguments, evaluating the strength of evidence'",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
+"explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
+"id": "m2",
+"prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
 ],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
 "hint": "Think about the key idea.",
 "id": "m7",
-"prompt": "What is magma?",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
 "type": "mc"
 }
 ]
 },
 "practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
 {
 "answer": 0,
 "choices": [
@@ -1330,30 +1218,38 @@
 ],
 "explain": "'Evidence Supporting Ideas' builds on 'Drawing conclusions from evidence (age 9+)'.",
 "hint": "What does this topic build on?",
-"id": "p2",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Evidence Supporting Ideas'?",
 "type": "mc"
 },
 {
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
+"answer": 0,
+"choices": [
+"Must present own findings before evaluating strength of others' evidence",
+"Must draw conclusions and make predictions before using results to set up further tests",
+"Must plan enquiries independently before designing follow-up investigations from predictions"
 ],
-"b": [
-21,
-40
-]
+"explain": "Because: Must present own findings before evaluating strength of others' evidence.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Evidence Supporting Ideas' build on 'Drawing conclusions from evidence (age 9+)'?",
+"type": "mc"
 },
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Evaluating claims about electromagnetic radiation",
+"Science Can Be Revised",
+"Fair testing (age 9+)"
+],
+"explain": "'Evidence Supporting Ideas' leads on to 'Evaluating claims about electromagnetic radiation'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Evidence Supporting Ideas' help you learn next?",
+"type": "mc"
 }
 ],
-"quality": 79,
+"quality": 69,
 "status": "auto-starter",
 "title": "Evidence Supporting Ideas",
 "topicId": "mt_AstzvYDU2m",
@@ -1361,14 +1257,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 16,
+"target": 13,
 "vals": [
+9,
 12,
+13,
 14,
-16,
 18,
-18,
-12
+18
 ]
 },
 "type": "statlab"
@@ -1377,7 +1273,6 @@
 "steps": [
 "Start from what you know: Science Can Be Revised.",
 "The new idea: Identify scientific evidence that has been used to support or refute ideas or arguments, evaluating the strength of….",
-"Change only the floor surface.",
 "Next, this helps with: Evaluating claims about electromagnetic radiation."
 ],
 "title": "Evidence Supporting Ideas"
@@ -1387,9 +1282,9 @@
 "audience": "family",
 "explain": {
 "adult": [
-"A fair test changes one variable, measures another, and keeps everything else the same.",
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
 "It builds on Drawing conclusions from evidence and leads to Controlling variables.",
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
+"A fair test changes one variable, measures another, and keeps everything else the same."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -1403,22 +1298,82 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"One",
+"All of them",
+"None"
 ],
-"t": [
-2,
-15
-]
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
+"id": "m1",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
 },
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
 },
 {
 "answer": 0,
@@ -1429,20 +1384,36 @@
 ],
 "explain": "Light is changed, so water must stay the same.",
 "hint": "Change only one thing.",
-"id": "m2",
+"id": "m7",
 "prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Drawing conclusions from evidence",
+"Correlation vs Causation",
+"Simple Design Problems"
+],
+"explain": "'Using evidence to answer questions' builds on 'Drawing conclusions from evidence'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Using evidence to answer questions'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must draw conclusions before identifying patterns and using evidence to support findings",
-"Must analyse simple design comparisons before formally defining design problems with criteria/constraints",
-"KS3 hypothesis formation and full experimental design extends KS2 Upper ability to plan enquiries…"
+"Evaluating whether a pattern is truly causal requires the universal generalisation habit — asking…",
+"Recognising that correlation is not causation requires the habit of generating alternative explanations —…"
 ],
 "explain": "Because: Must draw conclusions before identifying patterns and using evidence to support findings.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Using evidence to answer questions' build on 'Drawing conclusions from evidence'?",
 "type": "mc"
 },
@@ -1451,112 +1422,16 @@
 "choices": [
 "Controlling variables",
 "Drawing conclusions from evidence",
-"Simple Design Problems"
+"Correlation vs Causation"
 ],
 "explain": "'Using evidence to answer questions' leads on to 'Controlling variables'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Using evidence to answer questions' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m5",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What is magma?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Earthquakes",
-"Volcanic eruptions",
-"Tsunamis from a volcano on the plate"
-],
-"explain": "Sliding boundaries cause earthquakes, rarely volcanoes.",
-"hint": "Apply the idea to this situation.",
-"id": "m7",
-"prompt": "A town is on a boundary where two plates slide past each other. Which hazard is it most likely to face?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Drawing conclusions from evidence",
-"Simple Design Problems",
-"Controlling variables (age 11+)"
-],
-"explain": "'Using evidence to answer questions' builds on 'Drawing conclusions from evidence'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Using evidence to answer questions'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 84,
+"quality": 74,
 "status": "auto-starter",
 "title": "Using evidence to answer questions",
 "topicId": "mt_CVywzrjT_c",
@@ -1564,14 +1439,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 10,
+"target": 12,
 "vals": [
-4,
-8,
-9,
-13,
+6,
+7,
 14,
-16
+16,
+16,
+11
 ]
 },
 "type": "statlab"
@@ -1580,7 +1455,6 @@
 "steps": [
 "Start from what you know: Drawing conclusions from evidence.",
 "The new idea: Identify differences, similarities.",
-"Change only the floor surface.",
 "Next, this helps with: Controlling variables."
 ],
 "title": "Using evidence to answer questions"
@@ -1590,9 +1464,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
+"A fair test changes one variable, measures another, and keeps everything else the same.",
 "It builds on Simple Design Problems and leads to Fair testing (age 8+).",
-"A fair test changes one variable, measures another, and keeps everything else the same."
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -1606,46 +1480,122 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"constraints",
+"measurements",
+"observations"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+"explain": "The missing word is 'constraints'.",
+"hint": "Which word fits the topic?",
+"id": "m1",
+"prompt": "Fill the gap: 'Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and _____'",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Simple Design Problems",
+"Accurate Measurement",
+"Science Can Be Revised"
+],
+"explain": "'Comparing Possible Solutions' builds on 'Simple Design Problems'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Comparing Possible Solutions'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must define a design problem before generating and comparing multiple solutions",
-"Must do simple tests before setting up formal fair tests with controlled variables",
-"Must observe closely before performing simple tests"
+"Formulating scientific questions builds on the general skill of asking relevant questions to extend…",
+"Asking good scientific questions requires noticing the distinction between observation and interpretation — a…"
 ],
 "explain": "Because: Must define a design problem before generating and comparing multiple solutions.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Comparing Possible Solutions' build on 'Simple Design Problems'?",
 "type": "mc"
 },
@@ -1654,112 +1604,16 @@
 "choices": [
 "Fair testing (age 8+)",
 "Simple Design Problems",
-"Fair testing"
+"Asking scientific questions"
 ],
 "explain": "'Comparing Possible Solutions' leads on to 'Fair testing (age 8+)'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Comparing Possible Solutions' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"constraints",
-"observations",
-"alternatives"
-],
-"explain": "The missing word is 'constraints'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and _____'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Simple Design Problems",
-"Repeated tests for reliability",
-"Science Can Be Revised"
-],
-"explain": "'Comparing Possible Solutions' builds on 'Simple Design Problems'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Comparing Possible Solutions'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 89,
+"quality": 73,
 "status": "auto-starter",
 "title": "Comparing Possible Solutions",
 "topicId": "mt_HveO1bOXpJ",
@@ -1767,14 +1621,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 10,
+"target": 12,
 "vals": [
 5,
-10,
-10,
-12,
-13,
-13
+5,
+14,
+16,
+18,
+16
 ]
 },
 "type": "statlab"
@@ -1783,7 +1637,6 @@
 "steps": [
 "Start from what you know: Simple Design Problems.",
 "The new idea: Generate and compare multiple possible solutions to a problem based on how well each is likely to meet….",
-"Change only the floor surface.",
 "Next, this helps with: Fair testing (age 8+)."
 ],
 "title": "Comparing Possible Solutions"
@@ -1794,9 +1647,9 @@
 "explain": {
 "adult": [
 "This topic asks you to notice the difference between what you observed and what you think it means — 'the ice melted' is an observation.",
-"In a fair test you change one thing and measure another. Everything else stays the same.",
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
 "It builds on Feeling of not understanding and leads to Changing Your Mind with Evidence.",
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
+"In a fair test you change one thing and measure another. Everything else stays the same."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -1812,107 +1665,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit…",
-"Must ask questions before learning to observe closely",
-"Must draw conclusions and make predictions before using results to set up further tests"
-],
-"explain": "Because: Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit….",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Observation vs Interpretation' build on 'Feeling of not understanding'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -1925,25 +1684,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Feeling of not understanding",
-"Fair testing (age 9+)",
-"Fair testing"
+"Tables, charts, and graphs",
+"Using evidence to answer questions"
 ],
 "explain": "'Observation vs Interpretation' builds on 'Feeling of not understanding'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Observation vs Interpretation'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit…",
+"Must ask questions before learning to observe closely",
+"Correct use of SI units and significant figures in tables and axes is grounded…"
+],
+"explain": "Because: Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Observation vs Interpretation' build on 'Feeling of not understanding'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"difference",
+"appropriate",
+"straightforward"
+],
+"explain": "The missing word is 'difference'.",
+"hint": "Which word fits the topic?",
+"id": "p3",
+"prompt": "Fill the gap: 'Notice the _____ between what you observed and what you think it means — 'the ice melted' is an observation'",
 "type": "mc"
 }
 ],
-"quality": 85,
+"quality": 89,
 "status": "auto-starter",
 "title": "Observation vs Interpretation",
 "topicId": "mt_Hw70LI5xza",
@@ -1994,46 +1847,122 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"measurements",
+"observations",
+"conclusions"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+"explain": "The missing word is 'measurements'.",
+"hint": "Which word fits the topic?",
+"id": "m1",
+"prompt": "Fill the gap: 'Take _____ with increasing accuracy and precision using a range of scientific equipment, taking repeat readings when appropriate'",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Measuring accurately",
+"Repeated tests for reliability",
+"Controlling variables (age 11+)"
+],
+"explain": "'Accurate Measurement' builds on 'Measuring accurately'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Accurate Measurement'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must take measurements before increasing accuracy/precision with repeat readings",
-"Must ask questions before learning to observe closely",
-"Making predictions supports presenting findings with explanations"
+"Systematic scientific measurement builds on understanding measurable attributes from maths",
+"Must observe closely before taking systematic measurements"
 ],
 "explain": "Because: Must take measurements before increasing accuracy/precision with repeat readings.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Accurate Measurement' build on 'Measuring accurately'?",
 "type": "mc"
 },
@@ -2042,112 +1971,16 @@
 "choices": [
 "Repeated tests for reliability",
 "Measuring accurately",
-"Observing with simple equipment"
+"Correlation vs Causation"
 ],
 "explain": "'Accurate Measurement' leads on to 'Repeated tests for reliability'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Accurate Measurement' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"measurements",
-"observations",
-"relationships"
-],
-"explain": "The missing word is 'measurements'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Take _____ with increasing accuracy and precision using a range of scientific equipment, taking repeat readings when appropriate'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Measuring accurately",
-"Controlling variables (age 11+)",
-"Tables, charts, and graphs"
-],
-"explain": "'Accurate Measurement' builds on 'Measuring accurately'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Accurate Measurement'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 85,
+"quality": 74,
 "status": "auto-starter",
 "title": "Accurate Measurement",
 "topicId": "mt_Psun-u_lPf",
@@ -2155,14 +1988,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 11,
+"target": 7,
 "vals": [
-4,
-8,
-11,
+2,
+2,
+3,
+13,
 15,
-17,
-3
+8
 ]
 },
 "type": "statlab"
@@ -2171,7 +2004,6 @@
 "steps": [
 "Start from what you know: Measuring accurately.",
 "The new idea: Take measurements with increasing accuracy and precision using a range of scientific equipment, taking repeat readings when appropriate.",
-"Change only the floor surface.",
 "Next, this helps with: Repeated tests for reliability."
 ],
 "title": "Accurate Measurement"
@@ -2200,107 +2032,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Actively seeking alternative explanations requires first having the habit of not defending your original…",
-"Evaluating evidence strength and arguing for or against scientific claims requires understanding that all…",
-"Must present own findings before evaluating strength of others' evidence"
-],
-"explain": "Because: Actively seeking alternative explanations requires first having the habit of not defending your original….",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Could there be another explanation?' build on 'Changing Your Mind with Evidence'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Science Can Be Revised",
-"Changing Your Mind with Evidence",
-"Repeated tests for reliability"
-],
-"explain": "'Could there be another explanation?' leads on to 'Science Can Be Revised'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Could there be another explanation?' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -2313,25 +2051,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Changing Your Mind with Evidence",
-"Evidence Supporting Ideas",
-"Repeated tests for reliability"
+"Correlation vs Causation",
+"Drawing conclusions from evidence (age 9+)"
 ],
 "explain": "'Could there be another explanation?' builds on 'Changing Your Mind with Evidence'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Could there be another explanation?'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Actively seeking alternative explanations requires first having the habit of not defending your original…",
+"Must perform tests before learning to gather and record data",
+"Evaluating whether a pattern is truly causal requires the universal generalisation habit — asking…"
+],
+"explain": "Because: Actively seeking alternative explanations requires first having the habit of not defending your original….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Could there be another explanation?' build on 'Changing Your Mind with Evidence'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Science Can Be Revised",
+"Changing Your Mind with Evidence",
+"Recording Data"
+],
+"explain": "'Could there be another explanation?' leads on to 'Science Can Be Revised'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Could there be another explanation?' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 71,
+"quality": 78,
 "status": "auto-starter",
 "title": "Could there be another explanation?",
 "topicId": "mt_QrVF5n7vci",
@@ -2367,9 +2199,9 @@
 "explain": {
 "adult": [
 "This topic asks you to perform simple tests and use observations and ideas to suggest answers to questions.",
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
+"In a fair test you change one thing and measure another. Everything else stays the same.",
 "It builds on Observing with simple equipment and leads to Fair testing.",
-"In a fair test you change one thing and measure another. Everything else stays the same."
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -2385,97 +2217,16 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
+"observations",
+"constraints",
+"conclusions"
 ],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
+"explain": "The missing word is 'observations'.",
+"hint": "Which word fits the topic?",
 "id": "m1",
-"prompt": "What is an observation?",
+"prompt": "Fill the gap: 'Perform simple tests and use _____ and ideas to suggest answers to questions'",
 "type": "mc"
 },
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must observe closely before performing simple tests",
-"Must present data in basic formats before using complex graphs and scientific diagrams",
-"Complex science graphs (scatter, line) build on maths discrete/continuous data graphing"
-],
-"explain": "Because: Must observe closely before performing simple tests.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Simple tests and experiments' build on 'Observing with simple equipment'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Fair testing",
-"Observing with simple equipment",
-"Measuring accurately"
-],
-"explain": "'Simple tests and experiments' leads on to 'Fair testing'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Simple tests and experiments' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
 {
 "answer": 0,
 "choices": [
@@ -2485,7 +2236,7 @@
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m2",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -2498,25 +2249,106 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m3",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Observing with simple equipment",
-"Classifying living things (age 9+)",
-"Measuring accurately"
+"Controlling variables",
+"Comparing Possible Solutions"
 ],
 "explain": "'Simple tests and experiments' builds on 'Observing with simple equipment'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Simple tests and experiments'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must observe closely before performing simple tests",
+"Pattern identification supports planning targeted enquiries",
+"Must plan enquiries with variable control before running fair tests on prototypes"
+],
+"explain": "Because: Must observe closely before performing simple tests.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Simple tests and experiments' build on 'Observing with simple equipment'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Fair testing",
+"Observing with simple equipment",
+"Observation vs Interpretation"
+],
+"explain": "'Simple tests and experiments' leads on to 'Fair testing'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Simple tests and experiments' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 71,
+"quality": 75,
 "status": "auto-starter",
 "title": "Simple tests and experiments",
 "topicId": "mt_Wa44s-f8Ws",
@@ -2567,46 +2399,122 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"conclusions",
+"observations",
+"predictions"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+"explain": "The missing word is 'conclusions'.",
+"hint": "Which word fits the topic?",
+"id": "m1",
+"prompt": "Fill the gap: 'Two things happening together doesn't mean one caused the other — recognise the difference between correlation and causation before drawing _____'",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Could there be another explanation?",
+"Fair testing (age 9+)",
+"Classifying living things (age 9+)"
+],
+"explain": "'Correlation vs Causation' builds on 'Could there be another explanation?'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Correlation vs Causation'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Recognising that correlation is not causation requires the habit of generating alternative explanations —…",
-"Must create models before comparing test results of two designs",
-"Must gather/record data before analysing data from design tests"
+"Must ask questions before learning to observe closely",
+"Must draw conclusions and make predictions before using results to set up further tests"
 ],
 "explain": "Because: Recognising that correlation is not causation requires the habit of generating alternative explanations —….",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Correlation vs Causation' build on 'Could there be another explanation?'?",
 "type": "mc"
 },
@@ -2615,112 +2523,16 @@
 "choices": [
 "Science Can Be Revised",
 "Describing Rules & Patterns",
-"Comparing Design Solutions"
+"Observing with simple equipment"
 ],
 "explain": "'Correlation vs Causation' leads on to 'Science Can Be Revised'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Correlation vs Causation' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"conclusions",
-"weaknesses",
-"constraints"
-],
-"explain": "The missing word is 'conclusions'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Two things happening together doesn't mean one caused the other — recognise the difference between correlation and causation before drawing _____'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Could there be another explanation?",
-"Controlling variables",
-"Evidence Supporting Ideas"
-],
-"explain": "'Correlation vs Causation' builds on 'Could there be another explanation?'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Correlation vs Causation'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 85,
+"quality": 75,
 "status": "auto-starter",
 "title": "Correlation vs Causation",
 "topicId": "mt_X0Tr8IYaEd",
@@ -2730,12 +2542,12 @@
 "max": 30,
 "target": 9,
 "vals": [
-4,
 6,
 8,
+10,
+11,
 12,
-14,
-14
+2
 ]
 },
 "type": "statlab"
@@ -2744,7 +2556,6 @@
 "steps": [
 "Start from what you know: Describing Rules & Patterns.",
 "The new idea: Two things happening together doesn't mean one caused the other — recognise the difference between correlation and causation….",
-"Change only the floor surface.",
 "Next, this helps with: Science Can Be Revised."
 ],
 "title": "Correlation vs Causation"
@@ -2754,9 +2565,9 @@
 "audience": "family",
 "explain": {
 "adult": [
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
+"In a fair test you change one thing and measure another. Everything else stays the same.",
 "It builds on Asking Questions and leads to Modelling with Sketches.",
-"In a fair test you change one thing and measure another. Everything else stays the same."
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -2772,107 +2583,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Formulating scientific questions builds on the general skill of asking relevant questions to extend…",
-"Must take measurements before increasing accuracy/precision with repeat readings",
-"Must do simple tests before setting up formal fair tests with controlled variables"
-],
-"explain": "Because: Formulating scientific questions builds on the general skill of asking relevant questions to extend….",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Asking scientific questions' build on 'Asking Questions'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"observation",
-"straightforward",
-"prediction"
-],
-"explain": "The missing word is 'observation'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Ask simple scientific questions and recognise that they can be answered in different ways including _____, testing'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -2885,25 +2602,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Asking Questions",
-"Accurate Measurement",
-"Fair testing"
+"Tables, charts, and graphs",
+"Fair testing (age 9+)"
 ],
 "explain": "'Asking scientific questions' builds on 'Asking Questions'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Asking scientific questions'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Formulating scientific questions builds on the general skill of asking relevant questions to extend…",
+"Correct use of SI units and significant figures in tables and axes is grounded…",
+"Science inquiry recording data in tables and graphs draws on the bar chart and…"
+],
+"explain": "Because: Formulating scientific questions builds on the general skill of asking relevant questions to extend….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Asking scientific questions' build on 'Asking Questions'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"observation",
+"appropriate",
+"consistency"
+],
+"explain": "The missing word is 'observation'.",
+"hint": "Which word fits the topic?",
+"id": "p3",
+"prompt": "Fill the gap: 'Ask simple scientific questions and recognise that they can be answered in different ways including _____, testing'",
 "type": "mc"
 }
 ],
-"quality": 78,
+"quality": 84,
 "status": "auto-starter",
 "title": "Asking scientific questions",
 "topicId": "mt_XirhnAB6Ye",
@@ -2938,9 +2749,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"A fair test changes one variable, measures another, and keeps everything else the same.",
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
 "It builds on Repeated tests for reliability and leads to Measuring rates from graphs.",
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
+"A fair test changes one variable, measures another, and keeps everything else the same."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -2954,127 +2765,99 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
-],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
-],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
-"id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"KS3 graphing (lines of best fit, gradients) extends KS2 ability to construct and interpret…",
-"Must analyse simple design comparisons before formally defining design problems with criteria/constraints",
-"Must draw conclusions before identifying patterns and using evidence to support findings"
-],
-"explain": "Because: KS3 graphing (lines of best fit, gradients) extends KS2 ability to construct and interpret….",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Tables, charts, and graphs' build on 'Classifying living things (age 9+)'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Measuring rates from graphs",
-"Repeated tests for reliability",
-"Simple Design Problems"
-],
-"explain": "'Tables, charts, and graphs' leads on to 'Measuring rates from graphs'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Tables, charts, and graphs' help you learn next?",
-"type": "mc"
-},
-{
 "answer": 0,
 "choices": [
 "appropriate",
-"straightforward",
-"illustrate"
+"consistency",
+"observation"
 ],
 "explain": "The missing word is 'appropriate'.",
 "hint": "Which word fits the topic?",
-"id": "m5",
+"id": "m1",
 "prompt": "Fill the gap: 'Construct data tables with correct headings and SI units, plot _____ graph types (bar chart, line graph, scatter graph), draw a line…'",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
+"explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
+"id": "m2",
+"prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
 ],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
 "hint": "Think about the key idea.",
 "id": "m7",
-"prompt": "What is magma?",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
 "type": "mc"
 }
 ]
 },
 "practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
 {
 "answer": 0,
 "choices": [
@@ -3084,30 +2867,38 @@
 ],
 "explain": "'Tables, charts, and graphs' builds on 'Classifying living things (age 9+)'.",
 "hint": "What does this topic build on?",
-"id": "p2",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Tables, charts, and graphs'?",
 "type": "mc"
 },
 {
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
+"answer": 0,
+"choices": [
+"KS3 graphing (lines of best fit, gradients) extends KS2 ability to construct and interpret…",
+"Must ask questions before learning to observe closely",
+"Must create models before comparing test results of two designs"
 ],
-"b": [
-21,
-40
-]
+"explain": "Because: KS3 graphing (lines of best fit, gradients) extends KS2 ability to construct and interpret….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Tables, charts, and graphs' build on 'Classifying living things (age 9+)'?",
+"type": "mc"
 },
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"Measuring rates from graphs",
+"Repeated tests for reliability",
+"Observing with simple equipment"
+],
+"explain": "'Tables, charts, and graphs' leads on to 'Measuring rates from graphs'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Tables, charts, and graphs' help you learn next?",
+"type": "mc"
 }
 ],
-"quality": 84,
+"quality": 74,
 "status": "auto-starter",
 "title": "Tables, charts, and graphs",
 "topicId": "mt_YHsUhi4Prc",
@@ -3115,14 +2906,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 10,
+"target": 15,
 "vals": [
-3,
-8,
-11,
-12,
-14,
-12
+9,
+16,
+16,
+18,
+18,
+7
 ]
 },
 "type": "statlab"
@@ -3131,7 +2922,6 @@
 "steps": [
 "Start from what you know: Repeated tests for reliability.",
 "The new idea: Construct data tables with correct headings and SI units, plot appropriate graph types (bar chart, line graph, scatter….",
-"Change only the floor surface.",
 "Next, this helps with: Measuring rates from graphs."
 ],
 "title": "Tables, charts, and graphs"
@@ -3157,34 +2947,110 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"constraints",
+"observations",
+"questions"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+"explain": "The missing word is 'constraints'.",
+"hint": "Which word fits the topic?",
+"id": "m1",
+"prompt": "Fill the gap: 'Define a simple design problem reflecting a need or want that includes specified criteria for success and _____ on materials, time'",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Comparing Design Solutions",
+"Evidence Supporting Ideas",
+"Repeated tests for reliability"
+],
+"explain": "'Simple Design Problems' builds on 'Comparing Design Solutions'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Simple Design Problems'?",
 "type": "mc"
 },
 {
@@ -3196,7 +3062,7 @@
 ],
 "explain": "Because: Must analyse simple design comparisons before formally defining design problems with criteria/constraints.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Simple Design Problems' build on 'Comparing Design Solutions'?",
 "type": "mc"
 },
@@ -3209,108 +3075,12 @@
 ],
 "explain": "'Simple Design Problems' leads on to 'Comparing Possible Solutions'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Simple Design Problems' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"constraints",
-"predictions",
-"measurements"
-],
-"explain": "The missing word is 'constraints'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Define a simple design problem reflecting a need or want that includes specified criteria for success and _____ on materials, time'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Comparing Design Solutions",
-"Controlling variables (age 11+)",
-"Science Can Be Revised"
-],
-"explain": "'Simple Design Problems' builds on 'Comparing Design Solutions'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Simple Design Problems'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 85,
+"quality": 74,
 "status": "auto-starter",
 "title": "Simple Design Problems",
 "topicId": "mt_Z5-fSCOBep",
@@ -3318,14 +3088,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 11,
+"target": 12,
 "vals": [
-2,
-9,
+7,
+10,
 11,
-17,
-17,
-11
+15,
+18,
+14
 ]
 },
 "type": "statlab"
@@ -3334,7 +3104,6 @@
 "steps": [
 "Start from what you know: Comparing Design Solutions.",
 "The new idea: Define a simple design problem reflecting a need or want that includes specified criteria for success and constraints….",
-"Change only the floor surface.",
 "Next, this helps with: Comparing Possible Solutions."
 ],
 "title": "Simple Design Problems"
@@ -3363,107 +3132,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must perform tests before learning to gather and record data",
-"Being willing to revise a hypothesis requires first distinguishing observation from interpretation — you…",
-"Changing your mind when evidence contradicts your prediction is the science form of the…"
-],
-"explain": "Because: Must perform tests before learning to gather and record data.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Recording Data' build on 'Simple tests and experiments'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Classifying living things",
-"Simple tests and experiments",
-"Changing Your Mind with Evidence"
-],
-"explain": "'Recording Data' leads on to 'Classifying living things'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Recording Data' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -3476,25 +3151,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Simple tests and experiments",
-"Changing Your Mind with Evidence",
-"Controlling variables"
+"Measuring accurately",
+"Changing Your Mind with Evidence"
 ],
 "explain": "'Recording Data' builds on 'Simple tests and experiments'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Recording Data'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must perform tests before learning to gather and record data",
+"Systematic scientific measurement builds on understanding measurable attributes from maths",
+"Must observe closely before taking systematic measurements"
+],
+"explain": "Because: Must perform tests before learning to gather and record data.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Recording Data' build on 'Simple tests and experiments'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Classifying living things",
+"Simple tests and experiments",
+"Measuring accurately"
+],
+"explain": "'Recording Data' leads on to 'Classifying living things'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Recording Data' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 79,
+"quality": 83,
 "status": "auto-starter",
 "title": "Recording Data",
 "topicId": "mt_ZFwPZaDJ0_",
@@ -3547,97 +3316,16 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Precision vs accuracy and significant figures build on KS2 experience of taking careful measurements…",
-"Formulating scientific questions builds on the general skill of asking relevant questions to extend…",
-"Asking good scientific questions requires noticing the distinction between observation and interpretation — a…"
-],
-"explain": "Because: Precision vs accuracy and significant figures build on KS2 experience of taking careful measurements….",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Repeated tests for reliability' build on 'Accurate Measurement'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tables, charts, and graphs",
-"Accurate Measurement",
-"Asking scientific questions"
-],
-"explain": "'Repeated tests for reliability' leads on to 'Tables, charts, and graphs'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Repeated tests for reliability' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "consistency",
-"observation",
+"classification",
 "straightforward"
 ],
 "explain": "The missing word is 'consistency'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m1",
 "prompt": "Fill the gap: 'Distinguish between precision (_____ of repeated readings) and accuracy (closeness to true value), use significant figures and standard form correctly'",
 "type": "mc"
-}
-]
 },
-"practice": [
 {
 "answer": 0,
 "choices": [
@@ -3647,7 +3335,7 @@
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m2",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -3660,10 +3348,65 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m3",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
 {
 "answer": 0,
 "choices": [
@@ -3673,12 +3416,38 @@
 ],
 "explain": "'Repeated tests for reliability' builds on 'Accurate Measurement'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Repeated tests for reliability'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Precision vs accuracy and significant figures build on KS2 experience of taking careful measurements…",
+"Pattern identification supports planning targeted enquiries",
+"Must plan enquiries with variable control before running fair tests on prototypes"
+],
+"explain": "Because: Precision vs accuracy and significant figures build on KS2 experience of taking careful measurements….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Repeated tests for reliability' build on 'Accurate Measurement'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Tables, charts, and graphs",
+"Accurate Measurement",
+"Controlling variables"
+],
+"explain": "'Repeated tests for reliability' leads on to 'Tables, charts, and graphs'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Repeated tests for reliability' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 83,
+"quality": 82,
 "status": "auto-starter",
 "title": "Repeated tests for reliability",
 "topicId": "mt_auJqTemMpI",
@@ -3713,9 +3482,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
+"In a fair test you change one thing and measure another. Everything else stays the same.",
 "It builds on Comparing Possible Solutions and leads to Controlling variables.",
-"In a fair test you change one thing and measure another. Everything else stays the same."
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -3731,107 +3500,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must compare solutions before planning fair tests to improve prototypes",
-"Must define a design problem before generating and comparing multiple solutions",
-"Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit…"
-],
-"explain": "Because: Must compare solutions before planning fair tests to improve prototypes.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Fair testing (age 8+)' build on 'Comparing Possible Solutions'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Controlling variables",
-"Comparing Possible Solutions",
-"Observation vs Interpretation"
-],
-"explain": "'Fair testing (age 8+)' leads on to 'Controlling variables'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Fair testing (age 8+)' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -3844,25 +3519,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Comparing Possible Solutions",
-"Science Can Be Revised",
-"Accurate Measurement"
+"Controlling variables (age 11+)",
+"Tables, charts, and graphs"
 ],
 "explain": "'Fair testing (age 8+)' builds on 'Comparing Possible Solutions'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Fair testing (age 8+)'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must compare solutions before planning fair tests to improve prototypes",
+"Must define a design problem before generating and comparing multiple solutions",
+"Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit…"
+],
+"explain": "Because: Must compare solutions before planning fair tests to improve prototypes.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Fair testing (age 8+)' build on 'Comparing Possible Solutions'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Controlling variables",
+"Comparing Possible Solutions",
+"Observation vs Interpretation"
+],
+"explain": "'Fair testing (age 8+)' leads on to 'Controlling variables'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Fair testing (age 8+)' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 72,
+"quality": 82,
 "status": "auto-starter",
 "title": "Fair testing (age 8+)",
 "topicId": "mt_eoPcc4nrBE",
@@ -3898,9 +3667,9 @@
 "explain": {
 "adult": [
 "This topic asks you to develop a simple sketch, drawing.",
-"In a fair test you change one thing and measure another. Everything else stays the same.",
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
 "It builds on Asking scientific questions and leads to Comparing Design Solutions.",
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
+"In a fair test you change one thing and measure another. Everything else stays the same."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -3916,107 +3685,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must ask questions about problems before modelling design solutions",
-"Must perform tests before learning to gather and record data",
-"Formulating scientific questions builds on the general skill of asking relevant questions to extend…"
-],
-"explain": "Because: Must ask questions about problems before modelling design solutions.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Modelling with Sketches' build on 'Asking scientific questions'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Comparing Design Solutions",
-"Asking scientific questions",
-"Recording Data"
-],
-"explain": "'Modelling with Sketches' leads on to 'Comparing Design Solutions'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Modelling with Sketches' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -4029,25 +3704,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Asking scientific questions",
-"Changing Your Mind with Evidence",
-"Fair testing"
+"Classifying living things",
+"Controlling variables"
 ],
 "explain": "'Modelling with Sketches' builds on 'Asking scientific questions'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Modelling with Sketches'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must ask questions about problems before modelling design solutions",
+"Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit…",
+"Science data presentation (tables, bar charts) builds on maths pictogram/table skills"
+],
+"explain": "Because: Must ask questions about problems before modelling design solutions.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Modelling with Sketches' build on 'Asking scientific questions'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Comparing Design Solutions",
+"Asking scientific questions",
+"Observation vs Interpretation"
+],
+"explain": "'Modelling with Sketches' leads on to 'Comparing Design Solutions'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Modelling with Sketches' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 78,
+"quality": 82,
 "status": "auto-starter",
 "title": "Modelling with Sketches",
 "topicId": "mt_hi8cVycbwn",
@@ -4082,9 +3851,9 @@
 "audience": "family",
 "explain": {
 "adult": [
-"A fair test changes one variable, measures another, and keeps everything else the same.",
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
 "It builds on Modelling with Sketches and leads to Simple Design Problems.",
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
+"A fair test changes one variable, measures another, and keeps everything else the same."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -4098,22 +3867,82 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"One",
+"All of them",
+"None"
 ],
-"t": [
-2,
-15
-]
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
+"id": "m1",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
 },
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
 },
 {
 "answer": 0,
@@ -4124,134 +3953,54 @@
 ],
 "explain": "Light is changed, so water must stay the same.",
 "hint": "Change only one thing.",
-"id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must create models before comparing test results of two designs",
-"Making predictions supports presenting findings with explanations",
-"Scientific reporting with conclusions builds on writing composition/opinion skills"
-],
-"explain": "Because: Must create models before comparing test results of two designs.",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Comparing Design Solutions' build on 'Modelling with Sketches'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Simple Design Problems",
-"Modelling with Sketches",
-"Tables, charts, and graphs"
-],
-"explain": "'Comparing Design Solutions' leads on to 'Simple Design Problems'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Comparing Design Solutions' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"weaknesses",
-"relationships",
-"questions"
-],
-"explain": "The missing word is 'weaknesses'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Analyse data from tests of two objects designed to solve the same problem to compare the strengths and _____ of each design'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
 "id": "m7",
-"prompt": "What is magma?",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
 "type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
 "answer": 0,
 "choices": [
 "Modelling with Sketches",
-"Drawing conclusions from evidence (age 9+)",
-"Tables, charts, and graphs"
+"Simple Design Problems",
+"Controlling variables"
 ],
 "explain": "'Comparing Design Solutions' builds on 'Modelling with Sketches'.",
 "hint": "What does this topic build on?",
-"id": "p2",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Comparing Design Solutions'?",
 "type": "mc"
 },
 {
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
+"answer": 0,
+"choices": [
+"Must create models before comparing test results of two designs",
+"Must analyse simple design comparisons before formally defining design problems with criteria/constraints",
+"Pattern identification supports planning targeted enquiries"
 ],
-"b": [
-21,
-40
-]
+"explain": "Because: Must create models before comparing test results of two designs.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Comparing Design Solutions' build on 'Modelling with Sketches'?",
+"type": "mc"
 },
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"weaknesses",
+"constraints",
+"relationships"
+],
+"explain": "The missing word is 'weaknesses'.",
+"hint": "Which word fits the topic?",
+"id": "p3",
+"prompt": "Fill the gap: 'Analyse data from tests of two objects designed to solve the same problem to compare the strengths and _____ of each design'",
+"type": "mc"
 }
 ],
-"quality": 85,
+"quality": 75,
 "status": "auto-starter",
 "title": "Comparing Design Solutions",
 "topicId": "mt_nNYo5A-7Bl",
@@ -4259,14 +4008,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 10,
+"target": 9,
 "vals": [
-6,
-7,
+2,
+4,
 10,
-14,
-15,
-15
+11,
+16,
+4
 ]
 },
 "type": "statlab"
@@ -4275,7 +4024,6 @@
 "steps": [
 "Start from what you know: Modelling with Sketches.",
 "The new idea: Analyse data from tests of two objects designed to solve the same problem to compare the strengths and….",
-"Change only the floor surface.",
 "Next, this helps with: Simple Design Problems."
 ],
 "title": "Comparing Design Solutions"
@@ -4285,9 +4033,9 @@
 "audience": "family",
 "explain": {
 "adult": [
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
+"A fair test changes one variable, measures another, and keeps everything else the same.",
 "It builds on Measurable Attributes of Objects and leads to Classifying living things.",
-"A fair test changes one variable, measures another, and keeps everything else the same."
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -4301,46 +4049,122 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"observations",
+"constraints",
+"explanations"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+"explain": "The missing word is 'observations'.",
+"hint": "Which word fits the topic?",
+"id": "m1",
+"prompt": "Fill the gap: 'Make systematic and careful _____, take accurate measurements using standard units and equipment including thermometers and data loggers'",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Observing with simple equipment",
+"Simple Design Problems",
+"Repeated tests for reliability"
+],
+"explain": "'Measuring accurately' builds on 'Observing with simple equipment'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Measuring accurately'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must observe closely before taking systematic measurements",
-"Must compare solutions before planning fair tests to improve prototypes",
-"Making predictions supports presenting findings with explanations"
+"Must analyse simple design comparisons before formally defining design problems with criteria/constraints",
+"Must draw conclusions before identifying patterns and using evidence to support findings"
 ],
 "explain": "Because: Must observe closely before taking systematic measurements.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Measuring accurately' build on 'Observing with simple equipment'?",
 "type": "mc"
 },
@@ -4349,112 +4173,16 @@
 "choices": [
 "Classifying living things",
 "Measurable Attributes of Objects",
-"Fair testing (age 8+)"
+"Simple Design Problems"
 ],
 "explain": "'Measuring accurately' leads on to 'Classifying living things'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Measuring accurately' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"observations",
-"relationships",
-"predictions"
-],
-"explain": "The missing word is 'observations'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Make systematic and careful _____, take accurate measurements using standard units and equipment including thermometers and data loggers'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Observing with simple equipment",
-"Fair testing (age 8+)",
-"Drawing conclusions from evidence (age 9+)"
-],
-"explain": "'Measuring accurately' builds on 'Observing with simple equipment'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Measuring accurately'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 85,
+"quality": 75,
 "status": "auto-starter",
 "title": "Measuring accurately",
 "topicId": "mt_nUnowllzaN",
@@ -4464,12 +4192,12 @@
 "max": 30,
 "target": 9,
 "vals": [
-5,
-5,
-9,
+2,
+4,
 11,
-16,
-18
+14,
+15,
+5
 ]
 },
 "type": "statlab"
@@ -4478,7 +4206,6 @@
 "steps": [
 "Start from what you know: Measurable Attributes of Objects.",
 "The new idea: Make systematic and careful observations, take accurate measurements using standard units and equipment including thermometers and data loggers.",
-"Change only the floor surface.",
 "Next, this helps with: Classifying living things."
 ],
 "title": "Measuring accurately"
@@ -4488,9 +4215,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated.",
+"A fair test changes one variable, measures another, and keeps everything else the same.",
 "It builds on Fair testing (age 9+) and leads to Evidence Supporting Ideas.",
-"A fair test changes one variable, measures another, and keeps everything else the same."
+"Repeat each measurement and take the mean. Odd results, called outliers, should be checked and repeated."
 ],
 "kid": [
 "Scientists test ideas with fair tests.",
@@ -4504,46 +4231,122 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"relationships",
+"questions",
+"explanations"
 ],
-"t": [
-2,
-15
-]
-},
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+"explain": "The missing word is 'relationships'.",
+"hint": "Which word fits the topic?",
+"id": "m1",
+"prompt": "Fill the gap: 'Report and present findings including conclusions, causal _____, explanations'",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The amount of water",
-"The amount of light",
-"Nothing"
+"One",
+"All of them",
+"None"
 ],
-"explain": "Light is changed, so water must stay the same.",
-"hint": "Change only one thing.",
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Classifying living things (age 9+)",
+"Repeated tests for reliability",
+"Controlling variables (age 11+)"
+],
+"explain": "'Drawing conclusions from evidence (age 9+)' builds on 'Classifying living things (age 9+)'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Drawing conclusions from evidence (age 9+)'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must record complex data before presenting findings with causal relationships and trust assessment",
-"Actively seeking alternative explanations requires first having the habit of not defending your original…",
-"Asking 'is there another explanation?' is the scientific form of the universal elaborative-interrogation habit"
+"Must perform tests before learning to gather and record data",
+"Formulating scientific questions builds on the general skill of asking relevant questions to extend…"
 ],
 "explain": "Because: Must record complex data before presenting findings with causal relationships and trust assessment.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p2",
 "prompt": "Why does 'Drawing conclusions from evidence (age 9+)' build on 'Classifying living things (age 9+)'?",
 "type": "mc"
 },
@@ -4552,112 +4355,16 @@
 "choices": [
 "Evidence Supporting Ideas",
 "Fair testing (age 9+)",
-"Could there be another explanation?"
+"Recording Data"
 ],
 "explain": "'Drawing conclusions from evidence (age 9+)' leads on to 'Evidence Supporting Ideas'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p3",
 "prompt": "Which topic does 'Drawing conclusions from evidence (age 9+)' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"relationships",
-"alternatives",
-"observations"
-],
-"explain": "The missing word is 'relationships'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Report and present findings including conclusions, causal _____, explanations'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
-"answer": 0,
-"choices": [
-"Classifying living things (age 9+)",
-"Controlling variables (age 11+)",
-"Tables, charts, and graphs"
-],
-"explain": "'Drawing conclusions from evidence (age 9+)' builds on 'Classifying living things (age 9+)'.",
-"hint": "What does this topic build on?",
-"id": "p2",
-"prompt": "Which topic should you learn before 'Drawing conclusions from evidence (age 9+)'?",
-"type": "mc"
-},
-{
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
-],
-"b": [
-21,
-40
-]
-},
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
 }
 ],
-"quality": 89,
+"quality": 72,
 "status": "auto-starter",
 "title": "Drawing conclusions from evidence (age 9+)",
 "topicId": "mt_nyPMkeHlVJ",
@@ -4665,14 +4372,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 12,
+"target": 8,
 "vals": [
-3,
+4,
+7,
+8,
+9,
 12,
-12,
-15,
-16,
-2
+17
 ]
 },
 "type": "statlab"
@@ -4681,7 +4388,6 @@
 "steps": [
 "Start from what you know: Fair testing (age 9+).",
 "The new idea: Report and present findings including conclusions, causal relationships, explanations.",
-"Change only the floor surface.",
 "Next, this helps with: Evidence Supporting Ideas."
 ],
 "title": "Drawing conclusions from evidence (age 9+)"
@@ -4709,97 +4415,16 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Being willing to revise a hypothesis requires first distinguishing observation from interpretation — you…",
-"Must compare solutions before planning fair tests to improve prototypes",
-"Must draw conclusions before identifying patterns and using evidence to support findings"
-],
-"explain": "Because: Being willing to revise a hypothesis requires first distinguishing observation from interpretation — you….",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Changing Your Mind with Evidence' build on 'Observation vs Interpretation'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Could there be another explanation?",
-"Observation vs Interpretation",
-"Fair testing (age 8+)"
-],
-"explain": "'Changing Your Mind with Evidence' leads on to 'Could there be another explanation?'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Changing Your Mind with Evidence' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "prediction",
-"straightforward",
-"illustrate"
+"illustrate",
+"straightforward"
 ],
 "explain": "The missing word is 'prediction'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m1",
 "prompt": "Fill the gap: 'Be willing to change your mind when evidence doesn't support your _____ — a result that surprises you is more valuable than…'",
 "type": "mc"
-}
-]
 },
-"practice": [
 {
 "answer": 0,
 "choices": [
@@ -4809,7 +4434,7 @@
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m2",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -4822,21 +4447,102 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m3",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Observation vs Interpretation",
-"Fair testing (age 8+)",
+"Accurate Measurement",
 "Using evidence to answer questions"
 ],
 "explain": "'Changing Your Mind with Evidence' builds on 'Observation vs Interpretation'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Changing Your Mind with Evidence'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Being willing to revise a hypothesis requires first distinguishing observation from interpretation — you…",
+"Must ask questions about problems before modelling design solutions",
+"Must take measurements before increasing accuracy/precision with repeat readings"
+],
+"explain": "Because: Being willing to revise a hypothesis requires first distinguishing observation from interpretation — you….",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Changing Your Mind with Evidence' build on 'Observation vs Interpretation'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Could there be another explanation?",
+"Observation vs Interpretation",
+"Modelling with Sketches"
+],
+"explain": "'Changing Your Mind with Evidence' leads on to 'Could there be another explanation?'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Changing Your Mind with Evidence' help you learn next?",
 "type": "mc"
 }
 ],
@@ -4894,107 +4600,13 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must do simple tests before setting up formal fair tests with controlled variables",
-"Evaluating evidence strength and arguing for or against scientific claims requires understanding that all…",
-"Must present own findings before evaluating strength of others' evidence"
-],
-"explain": "Because: Must do simple tests before setting up formal fair tests with controlled variables.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Fair testing' build on 'Simple tests and experiments'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What is magma?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": 0,
-"choices": [
 "One",
 "All of them",
 "None"
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m1",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -5007,25 +4619,119 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m2",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The amount of water",
+"The amount of light",
+"Nothing"
+],
+"explain": "Light is changed, so water must stay the same.",
+"hint": "Change only one thing.",
+"id": "m7",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Simple tests and experiments",
-"Evidence Supporting Ideas",
-"Drawing conclusions from evidence (age 9+)"
+"Classifying living things (age 9+)",
+"Correlation vs Causation"
 ],
 "explain": "'Fair testing' builds on 'Simple tests and experiments'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Fair testing'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must do simple tests before setting up formal fair tests with controlled variables",
+"Must present data in basic formats before using complex graphs and scientific diagrams",
+"Complex science graphs (scatter, line) build on maths discrete/continuous data graphing"
+],
+"explain": "Because: Must do simple tests before setting up formal fair tests with controlled variables.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Fair testing' build on 'Simple tests and experiments'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Drawing conclusions from evidence",
+"Simple tests and experiments",
+"Classifying living things (age 9+)"
+],
+"explain": "'Fair testing' leads on to 'Drawing conclusions from evidence'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Fair testing' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 71,
+"quality": 82,
 "status": "auto-starter",
 "title": "Fair testing",
 "topicId": "mt_qgb76wHN2X",
@@ -5060,9 +4766,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other.",
+"In a fair test you change one thing and measure another. Everything else stays the same.",
 "It builds on Classifying living things and leads to Drawing conclusions from evidence (age 9+).",
-"In a fair test you change one thing and measure another. Everything else stays the same."
+"Repeat each measurement to make results reliable. Two things changing together does not prove one causes the other."
 ],
 "kid": [
 "Scientists ask questions and test them.",
@@ -5078,97 +4784,16 @@
 {
 "answer": 0,
 "choices": [
-"Something you notice using your senses or instruments",
-"A guess about the future",
-"An opinion"
-],
-"explain": "Observations are what you actually see or measure; interpretation explains them.",
-"hint": "Think about the key idea.",
-"id": "m1",
-"prompt": "What is an observation?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A correlation, not proof that one causes the other",
-"Ice cream causes sunburn",
-"Sunburn causes ice cream"
-],
-"explain": "Both are caused by hot sunny weather.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"The evidence from the results",
-"What you hoped would happen",
-"A friend's opinion"
-],
-"explain": "Conclusions must be supported by data.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "What should a conclusion be based on?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A line graph",
-"A pie chart",
-"A list of names"
-],
-"explain": "Line graphs show change over time.",
-"hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Which is the best way to show how a plant grows over 10 days?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must present data in basic formats before using complex graphs and scientific diagrams",
-"Formulating scientific questions builds on the general skill of asking relevant questions to extend…",
-"Asking good scientific questions requires noticing the distinction between observation and interpretation — a…"
-],
-"explain": "Because: Must present data in basic formats before using complex graphs and scientific diagrams.",
-"hint": "Think about what you need first.",
-"id": "m5",
-"prompt": "Why does 'Classifying living things (age 9+)' build on 'Classifying living things'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Drawing conclusions from evidence (age 9+)",
-"Classifying living things",
-"Asking scientific questions"
-],
-"explain": "'Classifying living things (age 9+)' leads on to 'Drawing conclusions from evidence (age 9+)'.",
-"hint": "What comes after this topic?",
-"id": "m6",
-"prompt": "Which topic does 'Classifying living things (age 9+)' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
 "classification",
-"observation",
-"straightforward"
+"prediction",
+"scientific"
 ],
 "explain": "The missing word is 'classification'.",
 "hint": "Which word fits the topic?",
-"id": "m7",
+"id": "m1",
 "prompt": "Fill the gap: 'Record data and results of increasing complexity using scientific diagrams, _____ keys, tables, scatter graphs, bar and line graphs'",
 "type": "mc"
-}
-]
 },
-"practice": [
 {
 "answer": 0,
 "choices": [
@@ -5178,7 +4803,7 @@
 ],
 "explain": "Change one variable and keep the others the same.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m2",
 "prompt": "In a fair test, how many variables do you change?",
 "type": "mc"
 },
@@ -5191,10 +4816,65 @@
 ],
 "explain": "Repeats help you spot mistakes and outliers.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m3",
 "prompt": "Why repeat a measurement?",
 "type": "mc"
 },
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
+}
+]
+},
+"practice": [
 {
 "answer": 0,
 "choices": [
@@ -5204,8 +4884,34 @@
 ],
 "explain": "'Classifying living things (age 9+)' builds on 'Classifying living things'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Classifying living things (age 9+)'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must present data in basic formats before using complex graphs and scientific diagrams",
+"Being willing to revise a hypothesis requires first distinguishing observation from interpretation — you…",
+"Changing your mind when evidence contradicts your prediction is the science form of the…"
+],
+"explain": "Because: Must present data in basic formats before using complex graphs and scientific diagrams.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Classifying living things (age 9+)' build on 'Classifying living things'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Drawing conclusions from evidence (age 9+)",
+"Classifying living things",
+"Changing Your Mind with Evidence"
+],
+"explain": "'Classifying living things (age 9+)' leads on to 'Drawing conclusions from evidence (age 9+)'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Classifying living things (age 9+)' help you learn next?",
 "type": "mc"
 }
 ],
@@ -5261,22 +4967,82 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "t*n",
-"explain": "{t} × {n} = {=t*n} minutes.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-3,
-5
+"answer": 0,
+"choices": [
+"One",
+"All of them",
+"None"
 ],
-"t": [
-2,
-15
-]
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
+"id": "m1",
+"prompt": "In a fair test, how many variables do you change?",
+"type": "mc"
 },
-"prompt": "Each test takes {t} minutes and you repeat it {n} times. How long altogether?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"To make the results more reliable",
+"To make the test unfair",
+"To change the question"
+],
+"explain": "Repeats help you spot mistakes and outliers.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Why repeat a measurement?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Something you notice using your senses or instruments",
+"A guess about the future",
+"An opinion"
+],
+"explain": "Observations are what you actually see or measure; interpretation explains them.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What is an observation?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A correlation, not proof that one causes the other",
+"Ice cream causes sunburn",
+"Sunburn causes ice cream"
+],
+"explain": "Both are caused by hot sunny weather.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Ice cream sales and sunburn both rise in summer. What does this show?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The evidence from the results",
+"What you hoped would happen",
+"A friend's opinion"
+],
+"explain": "Conclusions must be supported by data.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "What should a conclusion be based on?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A line graph",
+"A pie chart",
+"A list of names"
+],
+"explain": "Line graphs show change over time.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "Which is the best way to show how a plant grows over 10 days?",
+"type": "mc"
 },
 {
 "answer": 0,
@@ -5287,134 +5053,54 @@
 ],
 "explain": "Light is changed, so water must stay the same.",
 "hint": "Change only one thing.",
-"id": "m2",
-"prompt": "In a fair test of plant growth and light, what must you keep the same?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Must ask questions before learning to observe closely",
-"Noticing the observation/interpretation distinction requires monitoring your own thinking — the universal comprehension-monitoring habit…",
-"Formulating scientific questions builds on the general skill of asking relevant questions to extend…"
-],
-"explain": "Because: Must ask questions before learning to observe closely.",
-"hint": "Think about what you need first.",
-"id": "m3",
-"prompt": "Why does 'Observing with simple equipment' build on 'Asking scientific questions'?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Measuring accurately",
-"Asking scientific questions",
-"Observation vs Interpretation"
-],
-"explain": "'Observing with simple equipment' leads on to 'Measuring accurately'.",
-"hint": "What comes after this topic?",
-"id": "m4",
-"prompt": "Which topic does 'Observing with simple equipment' help you learn next?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m5",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Melted rock under the ground",
-"Frozen water",
-"A type of cloud"
-],
-"explain": "Magma is molten rock below the crust; above ground it is lava.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What is magma?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Earthquakes",
-"Volcanic eruptions",
-"Tsunamis from a volcano on the plate"
-],
-"explain": "Sliding boundaries cause earthquakes, rarely volcanoes.",
-"hint": "Apply the idea to this situation.",
 "id": "m7",
-"prompt": "A town is on a boundary where two plates slide past each other. Which hazard is it most likely to face?",
+"prompt": "In a fair test of plant growth and light, what must you keep the same?",
 "type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "(a+b+c)/3",
-"explain": "({a} + {b} + {c}) ÷ 3 = {=(a+b+c)/3} cm.",
-"hint": "Add, then ÷ 3.",
-"id": "p1",
-"params": {
-"a": [
-10,
-20
-],
-"b": [
-10,
-20
-],
-"c": [
-10,
-20
-]
-},
-"prompt": "Three repeat readings are {a}, {b} and {c} cm. What is the mean?",
-"type": "numeric",
-"where": "(a+b+c)%3==0"
-},
-{
 "answer": 0,
 "choices": [
 "Asking scientific questions",
-"Changing Your Mind with Evidence",
+"Accurate Measurement",
 "Simple Design Problems"
 ],
 "explain": "'Observing with simple equipment' builds on 'Asking scientific questions'.",
 "hint": "What does this topic build on?",
-"id": "p2",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Observing with simple equipment'?",
 "type": "mc"
 },
 {
-"answer": "b-a",
-"explain": "{b} − {a} = {=b-a}.",
-"hint": "Biggest − smallest.",
-"id": "p3",
-"params": {
-"a": [
-5,
-20
+"answer": 0,
+"choices": [
+"Must ask questions before learning to observe closely",
+"Must observe closely before performing simple tests",
+"Must take measurements before increasing accuracy/precision with repeat readings"
 ],
-"b": [
-21,
-40
-]
+"explain": "Because: Must ask questions before learning to observe closely.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Observing with simple equipment' build on 'Asking scientific questions'?",
+"type": "mc"
 },
-"prompt": "The range of results is {a} to {b}. What is the spread (range)?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"One",
+"All of them",
+"None"
+],
+"explain": "Change one variable and keep the others the same.",
+"hint": "Think about the key idea.",
+"id": "p3",
+"prompt": "Try this: In a fair test, how many variables do you change?",
+"type": "mc"
 }
 ],
-"quality": 93,
+"quality": 82,
 "status": "auto-starter",
 "title": "Observing with simple equipment",
 "topicId": "mt_vJO5Bxk4z-",
@@ -5422,14 +5108,14 @@
 "caption": "These are repeat measurements. Drag one to make it an outlier: watch the mean and median.",
 "opts": {
 "max": 30,
-"target": 9,
+"target": 8,
 "vals": [
 3,
-6,
-9,
-13,
-16,
-17
+4,
+7,
+12,
+15,
+10
 ]
 },
 "type": "statlab"
@@ -5438,7 +5124,6 @@
 "steps": [
 "Start from what you know: Asking scientific questions.",
 "The new idea: Observe closely using simple equipment such as hand lenses.",
-"Change only the floor surface.",
 "Next, this helps with: Measuring accurately."
 ],
 "title": "Observing with simple equipment"

@@ -46,7 +46,7 @@ D("magnets", r"Force|Electric|Magnet", r"magnet|\bpoles?\b|electromagnet|solenoi
    Q("Which way does a compass needle point?", "Towards magnetic north", "Always towards the Sun", "Straight down", "Earth's magnetic field lines up the needle."),
    Q("What is an induced magnet?", "A material that becomes magnetic near a magnet", "A broken magnet", "A magnet made of wood", "Iron becomes a magnet while it is in a magnetic field."),
    Q("Where is the magnetic field around a bar magnet strongest?", "At the poles", "In the middle", "Far away", "Field lines are closest together at the poles.")]),
-D("light", r"Wave|Light|Sound|Energy|Space", r"\blight\b|shadow|reflect|mirror|refract|colour|\brays?\b|lens|spectrum|transparent|opaque|straight line",
+D("light", r"Wave|Light|Space", r"\blight\b|shadow|reflect|mirror|refract|colour|\brays?\b|lens|transparent|opaque|straight line",
   V("sorter", "Sort each material: does light pass through it?", bins=["Transparent", "Translucent", "Opaque"], items=[["Clear glass", 0], ["Water", 0], ["Tissue paper", 1], ["Frosted glass", 1], ["Wood", 2], ["Metal", 2], ["Cardboard", 2]]),
   ["Light travels in straight lines.", "A shadow forms when light is blocked."],
   ["Light travels in straight lines, so an opaque object blocks it and leaves a shadow behind it.", "Mirrors reflect light at the same angle it arrives, and light bends (refracts) when it passes into glass or water."],

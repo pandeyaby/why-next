@@ -26,7 +26,9 @@ def score(les, name, maxsim=0.0):
     v = [les["visual"]["type"]] + ([les["lab"]["type"]] if "lab" in les else [])
     why["lab"] = 15 if set(v) & LABS else 10
     w = les.get("worked")
-    why["worked"] = 0 if not w else 15 if len(w["steps"]) >= 3 and re.search(r"\d", " ".join(w["steps"])) else 9 if len(w["steps"]) >= 3 else 5
+    st = " ".join(w["steps"]) if w else ""
+    # full marks for a concrete example: numbers, or (for non-numeric subjects) a quoted or specific case of ≥3 steps and ≥30 words
+    why["worked"] = 0 if not w else 15 if len(w["steps"]) >= 3 and (re.search(r"\d", st) or len(st.split()) >= 30) and not all(re.match(r"(Start from what you know|Next, this helps with|The new idea|In more detail|Check: explain)", x) for x in w["steps"]) else 9 if len(w["steps"]) >= 3 else 5
     nw = [x for x in words(name) if len(x) >= 4 and x not in STOP]
     txt = set(words(body(les) + " " + les["keyIdea"] + " " + " ".join(i["prompt"] for i in les["practice"] + les["mastery"]["pool"])))
     why["specific"] = round(20 * (sum(x in txt or x.rstrip("s") in txt for x in nw) / len(nw) if nw else 0.5))

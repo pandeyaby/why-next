@@ -20,42 +20,109 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "25*n",
-"explain": "25 × {n} = {=25*n} hours.",
-"hint": "Multiply.",
-"id": "m1",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "A day on Mars is about 25 hours. How many hours in {n} Mars days?",
-"type": "numeric"
-},
-{
 "answer": 0,
 "choices": [
-"Gravity",
-"Wind",
-"Magnetism"
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
 ],
-"explain": "The Sun's gravity holds the planets in orbit.",
-"hint": "A pull towards the Sun.",
-"id": "m2",
-"prompt": "What keeps the planets in orbit?",
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
+"hint": "Think about the key idea.",
+"id": "m1",
+"prompt": "Why do shadows form?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
+],
+"explain": "Light changes direction at the boundary.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Why does a straw look bent in water?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"the colours of the spectrum",
+"darkness",
+"sound"
+],
+"explain": "Each colour refracts by a different amount.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "White light passing through a prism splits into…",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
+],
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
+"id": "m4",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A translucent one, like net fabric",
+"A transparent one, like clear plastic",
+"An opaque one, like thick wood"
+],
+"explain": "Translucent materials let light through but scatter it.",
+"hint": "Apply the idea to this situation.",
+"id": "m5",
+"prompt": "You need a curtain that lets some light in but stops people seeing in. Which material?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What causes day and night?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"About one year",
+"One day",
+"One month"
+],
+"explain": "Earth orbits the Sun in about 365 days.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "How long does Earth take to orbit the Sun?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
 "Applying Newton's laws to orbital motion depends on understanding gravity as a force",
-"Curriculum spherical bodies/orbits topic underpins exploratory gravity understanding",
-"Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them"
+"Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification",
+"Seasons concept benefits from knowing Earth orbits Sun"
 ],
 "explain": "Because: Applying Newton's laws to orbital motion depends on understanding gravity as a force.",
 "hint": "Think about what you need first.",
-"id": "m3",
+"id": "p1",
 "prompt": "Why does 'Orbital Mechanics' build on 'Gravity Pulls Things Down'?",
 "type": "mc"
 },
@@ -64,110 +131,29 @@
 "choices": [
 "Circular motion",
 "Universal Gravitation",
-"Gravity Pulls Things Down"
+"Sun, Moon & Stars"
 ],
 "explain": "'Orbital Mechanics' leads on to 'Circular motion'.",
 "hint": "What comes after this topic?",
-"id": "m4",
+"id": "p2",
 "prompt": "Which topic does 'Orbital Mechanics' help you learn next?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
 ],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
 "hint": "Think about the key idea.",
-"id": "m5",
-"prompt": "What comes out of an erupting volcano?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"volcanoes and earthquakes around the Pacific",
-"deserts",
-"frozen lakes"
-],
-"explain": "Many plate boundaries circle the Pacific Ocean.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "The Ring of Fire is a ring of…",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "60*h/t",
-"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
-"hint": "How many in one hour first?",
-"id": "p1",
-"params": {
-"h": [
-2,
-6
-],
-"t": [
-2,
-15
-]
-},
-"prompt": "A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
-"type": "numeric",
-"where": "60%t==0"
-},
-{
-"answer": "v*t",
-"explain": "{v} × {t} = {=v*t} km.",
-"hint": "Multiply.",
-"id": "p2",
-"params": {
-"t": [
-10,
-60
-],
-"v": [
-5,
-12
-]
-},
-"prompt": "A rocket travels {v} km each second. How far in {t} s?",
-"type": "numeric",
-"where": "t%10==0"
-},
-{
-"answer": "27*n",
-"explain": "27 × {n} = {=27*n} days.",
-"hint": "Multiply.",
 "id": "p3",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
-"type": "numeric"
+"prompt": "Try this: Why do shadows form?",
+"type": "mc"
 }
 ],
-"quality": 81,
+"quality": 69,
 "status": "auto-starter",
 "title": "Orbital Mechanics",
 "topicId": "mt_1nl396BaVa",
@@ -246,97 +232,68 @@
 {
 "answer": 0,
 "choices": [
-"The Sun",
-"The Moon",
-"Mars"
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
 ],
-"explain": "The Sun is our nearest star.",
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
 "hint": "Think about the key idea.",
 "id": "m1",
-"prompt": "Which is a star?",
+"prompt": "Why do shadows form?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The Sun's gravity",
-"Wind",
-"Magnetism"
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
 ],
-"explain": "Gravity pulls planets towards the Sun.",
+"explain": "Light changes direction at the boundary.",
 "hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "What keeps the planets in orbit?",
+"prompt": "Why does a straw look bent in water?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"It reflects sunlight",
-"It burns like a fire",
-"It is a star"
+"the colours of the spectrum",
+"darkness",
+"sound"
 ],
-"explain": "The Moon gives out no light of its own.",
+"explain": "Each colour refracts by a different amount.",
 "hint": "Think about the key idea.",
 "id": "m3",
-"prompt": "Why does the Moon shine?",
+"prompt": "White light passing through a prism splits into…",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle",
-"Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification",
-"Must know the Sun is a star before understanding why it appears brighter than…"
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
 ],
-"explain": "Because: Stellar nucleosynthesis depends on understanding the basics of a star's life cycle.",
-"hint": "Think about what you need first.",
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
 "id": "m4",
-"prompt": "Why does 'Where Elements Come From' build on 'Life Cycle of Stars'?",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Nuclear fusion in stars",
-"Life Cycle of Stars",
-"Sun, Moon & Stars"
+"A translucent one, like net fabric",
+"A transparent one, like clear plastic",
+"An opaque one, like thick wood"
 ],
-"explain": "'Where Elements Come From' leads on to 'Nuclear fusion in stars'.",
-"hint": "What comes after this topic?",
+"explain": "Translucent materials let light through but scatter it.",
+"hint": "Apply the idea to this situation.",
 "id": "m5",
-"prompt": "Which topic does 'Where Elements Come From' help you learn next?",
+"prompt": "You need a curtain that lets some light in but stops people seeing in. Which material?",
 "type": "mc"
 },
-{
-"answer": 0,
-"choices": [
-"nucleosynthesis",
-"differences",
-"rotates"
-],
-"explain": "The missing word is 'nucleosynthesis'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Explain stellar _____'",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
-],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What comes out of an erupting volcano?",
-"type": "mc"
-}
-]
-},
-"practice": [
 {
 "answer": 0,
 "choices": [
@@ -346,7 +303,7 @@
 ],
 "explain": "Earth turns once every 24 hours.",
 "hint": "Think about the key idea.",
-"id": "p1",
+"id": "m6",
 "prompt": "What causes day and night?",
 "type": "mc"
 },
@@ -359,25 +316,54 @@
 ],
 "explain": "Earth orbits the Sun in about 365 days.",
 "hint": "Think about the key idea.",
-"id": "p2",
+"id": "m7",
 "prompt": "How long does Earth take to orbit the Sun?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle",
+"Must know the Sun is a sky object before learning it is a star",
+"Must know about the solar system before learning the Sun is at its centre"
+],
+"explain": "Because: Stellar nucleosynthesis depends on understanding the basics of a star's life cycle.",
+"hint": "Think about what you need first.",
+"id": "p1",
+"prompt": "Why does 'Where Elements Come From' build on 'Life Cycle of Stars'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"The tilt of Earth's axis",
-"Earth's distance from the Moon",
-"The Sun turning off"
+"Nuclear fusion in stars",
+"Life Cycle of Stars",
+"The Sun is a star"
 ],
-"explain": "The tilt changes how directly sunlight hits.",
-"hint": "Think about the key idea.",
+"explain": "'Where Elements Come From' leads on to 'Nuclear fusion in stars'.",
+"hint": "What comes after this topic?",
+"id": "p2",
+"prompt": "Which topic does 'Where Elements Come From' help you learn next?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"nucleosynthesis",
+"regardless",
+"rotates"
+],
+"explain": "The missing word is 'nucleosynthesis'.",
+"hint": "Which word fits the topic?",
 "id": "p3",
-"prompt": "What causes the seasons?",
+"prompt": "Fill the gap: 'Explain stellar _____'",
 "type": "mc"
 }
 ],
-"quality": 59,
+"quality": 72,
 "status": "auto-starter",
 "title": "Where Elements Come From",
 "topicId": "mt_KYx0m4OyZv",
@@ -424,11 +410,11 @@
 },
 "worked": {
 "steps": [
-"Mercury, Venus, Earth, Mars: small rocky planets.",
-"Jupiter, Saturn, Uranus, Neptune: giant planets.",
-"Further from the Sun means a longer year."
+"Start from what you know: Life Cycle of Stars.",
+"The new idea: Explain stellar nucleosynthesis.",
+"Next, this helps with: Nuclear fusion in stars."
 ],
-"title": "Ordering the planets"
+"title": "Where Elements Come From"
 }
 },
 "mt_PiWZA8Z0ZJ": {
@@ -436,9 +422,9 @@
 "explain": {
 "adult": [
 "This topic asks you to identify the Sun, Moon.",
-"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth.",
+"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons.",
 "It builds on Why seasons change and leads to The Sun is a star.",
-"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons."
+"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth."
 ],
 "kid": [
 "Earth goes round the Sun.",
@@ -507,8 +493,8 @@
 "answer": 0,
 "choices": [
 "Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification",
-"Curriculum spherical bodies/orbits topic underpins exploratory gravity understanding",
-"Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them"
+"Must know the Sun and stars before learning about planets and the solar system",
+"Must know the Sun is a star before understanding why it appears brighter than…"
 ],
 "explain": "Because: Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification.",
 "hint": "Think about what you need first.",
@@ -519,27 +505,27 @@
 {
 "answer": 0,
 "choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
 ],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
 "hint": "Think about the key idea.",
 "id": "m6",
-"prompt": "What comes out of an erupting volcano?",
+"prompt": "Why do shadows form?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
+"explain": "Light changes direction at the boundary.",
 "hint": "Think about the key idea.",
 "id": "m7",
-"prompt": "What causes most earthquakes?",
+"prompt": "Why does a straw look bent in water?",
 "type": "mc"
 }
 ]
@@ -575,8 +561,8 @@
 "answer": 0,
 "choices": [
 "Why seasons change",
-"Gravity Pulls Things Down",
-"Where Elements Come From"
+"Why the Sun Looks Brightest",
+"Orbital Mechanics"
 ],
 "explain": "'Sun, Moon & Stars' builds on 'Why seasons change'.",
 "hint": "What does this topic build on?",
@@ -680,8 +666,8 @@
 "answer": 0,
 "choices": [
 "Must know the Sun and stars before learning about planets and the solar system",
-"Understanding star brightness and distance helps contextualise different stages of star life",
-"Must know the Sun is a star before learning about star life cycles"
+"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle",
+"Stellar nucleosynthesis depends on understanding atoms, elements"
 ],
 "explain": "Because: Must know the Sun and stars before learning about planets and the solar system.",
 "hint": "Think about what you need first.",
@@ -692,66 +678,66 @@
 {
 "answer": 0,
 "choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
 ],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
 "hint": "Think about the key idea.",
 "id": "m3",
-"prompt": "What comes out of an erupting volcano?",
+"prompt": "Why do shadows form?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
+"explain": "Light changes direction at the boundary.",
 "hint": "Think about the key idea.",
 "id": "m4",
-"prompt": "What causes most earthquakes?",
+"prompt": "Why does a straw look bent in water?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"volcanoes and earthquakes around the Pacific",
-"deserts",
-"frozen lakes"
+"the colours of the spectrum",
+"darkness",
+"sound"
 ],
-"explain": "Many plate boundaries circle the Pacific Ocean.",
+"explain": "Each colour refracts by a different amount.",
 "hint": "Think about the key idea.",
 "id": "m5",
-"prompt": "The Ring of Fire is a ring of…",
+"prompt": "White light passing through a prism splits into…",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"How much the ground shakes",
-"How hot the lava is",
-"How fast the wind blows"
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
 ],
-"explain": "It records seismic waves from earthquakes.",
-"hint": "Think about the key idea.",
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
 "id": "m6",
-"prompt": "What does a seismometer measure?",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"New crust forms at the ridge as plates pull apart",
-"The ocean is shrinking",
-"Rocks move towards the ridge"
+"A translucent one, like net fabric",
+"A transparent one, like clear plastic",
+"An opaque one, like thick wood"
 ],
-"explain": "Plates spread apart and magma makes new crust.",
+"explain": "Translucent materials let light through but scatter it.",
 "hint": "Apply the idea to this situation.",
 "id": "m7",
-"prompt": "Scientists find rock on the ocean floor gets older further from a mid-ocean ridge. What does this suggest?",
+"prompt": "You need a curtain that lets some light in but stops people seeing in. Which material?",
 "type": "mc"
 }
 ]
@@ -810,7 +796,7 @@
 "answer": 0,
 "choices": [
 "Sun, Moon & Stars",
-"Life Cycle of Stars",
+"Where Elements Come From",
 "Observing with Light Waves"
 ],
 "explain": "'Our Solar System' builds on 'Sun, Moon & Stars'.",
@@ -850,9 +836,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons.",
+"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth.",
 "It builds on The solar system and leads to Orbital Mechanics.",
-"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth."
+"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons."
 ],
 "kid": [
 "Earth goes round the Sun.",
@@ -921,8 +907,8 @@
 "answer": 0,
 "choices": [
 "Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them",
-"Must know the Sun and stars before learning about planets and the solar system",
-"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle"
+"Must know the Sun is a star before understanding why it appears brighter than…",
+"Seasons concept benefits from knowing Earth orbits Sun"
 ],
 "explain": "Because: Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them.",
 "hint": "Think about what you need first.",
@@ -935,7 +921,7 @@
 "choices": [
 "Orbital Mechanics",
 "The solar system",
-"Our Solar System"
+"Why the Sun Looks Brightest"
 ],
 "explain": "'Gravity Pulls Things Down' leads on to 'Orbital Mechanics'.",
 "hint": "What comes after this topic?",
@@ -947,8 +933,8 @@
 "answer": 0,
 "choices": [
 "regardless",
-"nucleosynthesis",
-"differences"
+"rotates",
+"nucleosynthesis"
 ],
 "explain": "The missing word is 'regardless'.",
 "hint": "Which word fits the topic?",
@@ -989,8 +975,8 @@
 "answer": 0,
 "choices": [
 "Earth's Spin & Orbit",
-"Where Elements Come From",
-"Orbital Mechanics"
+"Orbital Mechanics",
+"Observing with Light Waves"
 ],
 "explain": "'Gravity Pulls Things Down' builds on 'Earth's Spin & Orbit'.",
 "hint": "What does this topic build on?",
@@ -1058,9 +1044,9 @@
 "explain": {
 "adult": [
 "This topic asks you to explain why the Sun appears much brighter than other stars.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
+"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
 "It builds on The Sun is a star and leads to Life Cycle of Stars.",
-"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity."
+"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons."
 ],
 "kid": [
 "The Earth goes round the Sun.",
@@ -1074,56 +1060,122 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "27*n",
-"explain": "27 × {n} = {=27*n} days.",
-"hint": "Multiply.",
+"answer": 0,
+"choices": [
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
+],
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "The Moon takes about 27 days to orbit Earth. How many days for {n} orbits?",
-"type": "numeric"
-},
-{
-"answer": "25*n",
-"explain": "25 × {n} = {=25*n} hours.",
-"hint": "Multiply.",
-"id": "m2",
-"params": {
-"n": [
-2,
-9
-]
-},
-"prompt": "A day on Mars is about 25 hours. How many hours in {n} Mars days?",
-"type": "numeric"
+"prompt": "Why do shadows form?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Gravity",
-"Wind",
-"Magnetism"
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
 ],
-"explain": "The Sun's gravity holds the planets in orbit.",
-"hint": "A pull towards the Sun.",
+"explain": "Light changes direction at the boundary.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Why does a straw look bent in water?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"the colours of the spectrum",
+"darkness",
+"sound"
+],
+"explain": "Each colour refracts by a different amount.",
+"hint": "Think about the key idea.",
 "id": "m3",
-"prompt": "What keeps the planets in orbit?",
+"prompt": "White light passing through a prism splits into…",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
+],
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
+"id": "m4",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"A translucent one, like net fabric",
+"A transparent one, like clear plastic",
+"An opaque one, like thick wood"
+],
+"explain": "Translucent materials let light through but scatter it.",
+"hint": "Apply the idea to this situation.",
+"id": "m5",
+"prompt": "You need a curtain that lets some light in but stops people seeing in. Which material?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "What causes day and night?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"About one year",
+"One day",
+"One month"
+],
+"explain": "Earth orbits the Sun in about 365 days.",
+"hint": "Think about the key idea.",
+"id": "m7",
+"prompt": "How long does Earth take to orbit the Sun?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": 0,
+"choices": [
+"The Sun is a star",
+"Where Elements Come From",
+"Observing with Light Waves"
+],
+"explain": "'Why the Sun Looks Brightest' builds on 'The Sun is a star'.",
+"hint": "What does this topic build on?",
+"id": "p1",
+"prompt": "Which topic should you learn before 'Why the Sun Looks Brightest'?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must know the Sun is a star before understanding why it appears brighter than…",
-"Must know the Sun is a sky object before learning it is a star",
-"Must know about the solar system before learning the Sun is at its centre"
+"Must know the Sun and stars before learning about planets and the solar system",
+"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle"
 ],
 "explain": "Because: Must know the Sun is a star before understanding why it appears brighter than….",
 "hint": "Think about what you need first.",
-"id": "m4",
+"id": "p2",
 "prompt": "Why does 'Why the Sun Looks Brightest' build on 'The Sun is a star'?",
 "type": "mc"
 },
@@ -1132,96 +1184,16 @@
 "choices": [
 "Life Cycle of Stars",
 "The Sun is a star",
-"Gravity Pulls Things Down"
+"Our Solar System"
 ],
 "explain": "'Why the Sun Looks Brightest' leads on to 'Life Cycle of Stars'.",
 "hint": "What comes after this topic?",
-"id": "m5",
+"id": "p3",
 "prompt": "Which topic does 'Why the Sun Looks Brightest' help you learn next?",
 "type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
-],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What comes out of an erupting volcano?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
-],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "What causes most earthquakes?",
-"type": "mc"
-}
-]
-},
-"practice": [
-{
-"answer": "60*h/t",
-"explain": "60 ÷ {t} = {=60/t} each hour, so {=60*h/t} signals.",
-"hint": "How many in one hour first?",
-"id": "p1",
-"params": {
-"h": [
-2,
-6
-],
-"t": [
-2,
-15
-]
-},
-"prompt": "A space probe sends a signal every {t} minutes. How many signals in {h} hours?",
-"type": "numeric",
-"where": "60%t==0"
-},
-{
-"answer": "v*t",
-"explain": "{v} × {t} = {=v*t} km.",
-"hint": "Multiply.",
-"id": "p2",
-"params": {
-"t": [
-10,
-60
-],
-"v": [
-5,
-12
-]
-},
-"prompt": "A rocket travels {v} km each second. How far in {t} s?",
-"type": "numeric",
-"where": "t%10==0"
-},
-{
-"answer": 0,
-"choices": [
-"The Sun is a star",
-"Observing with Light Waves",
-"Where Elements Come From"
-],
-"explain": "'Why the Sun Looks Brightest' builds on 'The Sun is a star'.",
-"hint": "What does this topic build on?",
-"id": "p3",
-"prompt": "Which topic should you learn before 'Why the Sun Looks Brightest'?",
-"type": "mc"
 }
 ],
-"quality": 80,
+"quality": 69,
 "status": "auto-starter",
 "title": "Why the Sun Looks Brightest",
 "topicId": "mt_ae-cHHFR76",
@@ -1283,9 +1255,9 @@
 "explain": {
 "adult": [
 "This topic asks you to understand the basics of a star’s life cycle.",
-"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it.",
+"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma).",
 "It builds on Why the Sun Looks Brightest and leads to Where Elements Come From.",
-"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma)."
+"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it."
 ],
 "kid": [
 "A push or a pull is a force.",
@@ -1299,140 +1271,99 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "m*a",
-"explain": "{m} × {a} = {=m*a} N.",
-"hint": "F = m × a.",
+"answer": 0,
+"choices": [
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
+],
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"params": {
-"a": [
-1,
-5
-],
-"m": [
-2,
-20
-]
-},
-"prompt": "What force accelerates a {m} kg trolley at {a} m/s²?",
-"type": "numeric"
+"prompt": "Why do shadows form?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Must know the Sun is a star before learning about star life cycles",
-"Seasons concept benefits from knowing Earth orbits Sun",
-"Must know the Sun-centred system before understanding Earth's rotation and orbit within it"
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
 ],
-"explain": "Because: Must know the Sun is a star before learning about star life cycles.",
-"hint": "Think about what you need first.",
+"explain": "Light changes direction at the boundary.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "Why does 'Life Cycle of Stars' build on 'The Sun is a star'?",
+"prompt": "Why does a straw look bent in water?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Where Elements Come From",
-"Why the Sun Looks Brightest",
-"Earth's Spin & Orbit"
+"the colours of the spectrum",
+"darkness",
+"sound"
 ],
-"explain": "'Life Cycle of Stars' leads on to 'Where Elements Come From'.",
-"hint": "What comes after this topic?",
+"explain": "Each colour refracts by a different amount.",
+"hint": "Think about the key idea.",
 "id": "m3",
-"prompt": "Which topic does 'Life Cycle of Stars' help you learn next?",
+"prompt": "White light passing through a prism splits into…",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
 ],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
-"hint": "Think about the key idea.",
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
 "id": "m4",
-"prompt": "What comes out of an erupting volcano?",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"A translucent one, like net fabric",
+"A transparent one, like clear plastic",
+"An opaque one, like thick wood"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
+"explain": "Translucent materials let light through but scatter it.",
+"hint": "Apply the idea to this situation.",
 "id": "m5",
-"prompt": "What causes most earthquakes?",
+"prompt": "You need a curtain that lets some light in but stops people seeing in. Which material?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"volcanoes and earthquakes around the Pacific",
-"deserts",
-"frozen lakes"
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
 ],
-"explain": "Many plate boundaries circle the Pacific Ocean.",
+"explain": "Earth turns once every 24 hours.",
 "hint": "Think about the key idea.",
 "id": "m6",
-"prompt": "The Ring of Fire is a ring of…",
+"prompt": "What causes day and night?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"How much the ground shakes",
-"How hot the lava is",
-"How fast the wind blows"
+"About one year",
+"One day",
+"One month"
 ],
-"explain": "It records seismic waves from earthquakes.",
+"explain": "Earth orbits the Sun in about 365 days.",
 "hint": "Think about the key idea.",
 "id": "m7",
-"prompt": "What does a seismometer measure?",
+"prompt": "How long does Earth take to orbit the Sun?",
 "type": "mc"
 }
 ]
 },
 "practice": [
-{
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
-"id": "p1",
-"params": {
-"a": [
-1,
-8
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
-},
-{
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "p2",
-"params": {
-"s": [
-5,
-30
-],
-"t": [
-2,
-10
-]
-},
-"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
-},
 {
 "answer": 0,
 "choices": [
@@ -1442,20 +1373,46 @@
 ],
 "explain": "'Life Cycle of Stars' builds on 'The Sun is a star'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p1",
 "prompt": "Which topic should you learn before 'Life Cycle of Stars'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Must know the Sun is a star before learning about star life cycles",
+"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle",
+"Stellar nucleosynthesis depends on understanding atoms, elements"
+],
+"explain": "Because: Must know the Sun is a star before learning about star life cycles.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'Life Cycle of Stars' build on 'The Sun is a star'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Where Elements Come From",
+"Why the Sun Looks Brightest",
+"Sun, Moon & Stars"
+],
+"explain": "'Life Cycle of Stars' leads on to 'Where Elements Come From'.",
+"hint": "What comes after this topic?",
+"id": "p3",
+"prompt": "Which topic does 'Life Cycle of Stars' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 94,
+"quality": 75,
 "status": "auto-starter",
 "title": "Life Cycle of Stars",
 "topicId": "mt_iTjrKEdAOj",
 "visual": {
 "caption": "Set the push, mass and friction. Make the cart stop in the green zone.",
 "opts": {
-"f": 30,
-"m": 20,
+"f": 20,
+"m": 2,
 "mu": 0.2,
 "zone": [
 15,
@@ -1466,20 +1423,20 @@
 },
 "worked": {
 "steps": [
-"Pull 50 N forward, friction 20 N back.",
-"Net force = 50 − 20 = 30 N forward.",
-"So the sledge speeds up."
+"Start from what you know: Why the Sun Looks Brightest.",
+"The new idea: Understand the basics of a star’s life cycle.",
+"Next, this helps with: Where Elements Come From."
 ],
-"title": "Net force on a sledge"
+"title": "Life Cycle of Stars"
 }
 },
 "mt_rbY77m8_s1": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Mirrors reflect light at the same angle it arrives, and light bends (refracts) when it passes into glass or water.",
+"Light travels in straight lines, so an opaque object blocks it and leaves a shadow behind it.",
 "It builds on Why the Sun Looks Brightest and leads to The Electromagnetic Spectrum.",
-"Light travels in straight lines, so an opaque object blocks it and leaves a shadow behind it."
+"Mirrors reflect light at the same angle it arrives, and light bends (refracts) when it passes into glass or water."
 ],
 "kid": [
 "Light travels in straight lines.",
@@ -1548,8 +1505,8 @@
 "answer": 0,
 "choices": [
 "Observing with Light Waves",
-"Gravity Pulls Things Down",
-"The Sun is a star"
+"The Sun is a star",
+"Gravity Pulls Things Down"
 ],
 "explain": "That is part of 'Observing with Light Waves'.",
 "hint": "Think about what this topic covers.",
@@ -1561,8 +1518,8 @@
 "answer": 0,
 "choices": [
 "Using the EM spectrum as an astronomy tool depends on understanding stellar brightness and…",
-"Curriculum spherical bodies/orbits topic underpins exploratory gravity understanding",
-"Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them"
+"Must know the Sun is a sky object before learning it is a star",
+"Must know about the solar system before learning the Sun is at its centre"
 ],
 "explain": "Because: Using the EM spectrum as an astronomy tool depends on understanding stellar brightness and….",
 "hint": "Think about what you need first.",
@@ -1575,7 +1532,7 @@
 "choices": [
 "The Electromagnetic Spectrum",
 "Why the Sun Looks Brightest",
-"Gravity Pulls Things Down"
+"The Sun is a star"
 ],
 "explain": "'Observing with Light Waves' leads on to 'The Electromagnetic Spectrum'.",
 "hint": "What comes after this topic?",
@@ -1603,8 +1560,8 @@
 "answer": 0,
 "choices": [
 "Why the Sun Looks Brightest",
-"Where Elements Come From",
-"Orbital Mechanics"
+"Orbital Mechanics",
+"Where Elements Come From"
 ],
 "explain": "'Observing with Light Waves' builds on 'Why the Sun Looks Brightest'.",
 "hint": "What does this topic build on?",
@@ -1626,7 +1583,7 @@
 "type": "mc"
 }
 ],
-"quality": 72,
+"quality": 70,
 "status": "auto-starter",
 "title": "Observing with Light Waves",
 "topicId": "mt_rbY77m8_s1",
@@ -1676,7 +1633,6 @@
 "Start from what you know: Why the Sun Looks Brightest.",
 "The new idea: Explain how the electromagnetic spectrum is the primary tool of modern astronomy — different wavelengths (radio, infrared, visible,….",
 "In more detail: CMB in microwave, black hole jets in X-ray, cold gas clouds in radio).",
-"The Sun is low in the sky.",
 "Next, this helps with: The Electromagnetic Spectrum."
 ],
 "title": "Observing with Light Waves"
@@ -1703,155 +1659,140 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "m*a",
-"explain": "{m} × {a} = {=m*a} N.",
-"hint": "F = m × a.",
+"answer": 0,
+"choices": [
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
+],
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
+"hint": "Think about the key idea.",
 "id": "m1",
-"params": {
-"a": [
-1,
-5
-],
-"m": [
-2,
-20
-]
-},
-"prompt": "What force accelerates a {m} kg trolley at {a} m/s²?",
-"type": "numeric"
+"prompt": "Why do shadows form?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Must know the Sun is a sky object before learning it is a star",
-"Understanding star brightness and distance helps contextualise different stages of star life",
-"Must know the Sun is a star before learning about star life cycles"
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
 ],
-"explain": "Because: Must know the Sun is a sky object before learning it is a star.",
-"hint": "Think about what you need first.",
+"explain": "Light changes direction at the boundary.",
+"hint": "Think about the key idea.",
 "id": "m2",
-"prompt": "Why does 'The Sun is a star' build on 'Sun, Moon & Stars'?",
+"prompt": "Why does a straw look bent in water?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Why the Sun Looks Brightest",
-"Sun, Moon & Stars",
-"Our Solar System"
+"the colours of the spectrum",
+"darkness",
+"sound"
 ],
-"explain": "'The Sun is a star' leads on to 'Why the Sun Looks Brightest'.",
-"hint": "What comes after this topic?",
+"explain": "Each colour refracts by a different amount.",
+"hint": "Think about the key idea.",
 "id": "m3",
-"prompt": "Which topic does 'The Sun is a star' help you learn next?",
+"prompt": "White light passing through a prism splits into…",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
 ],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
-"hint": "Think about the key idea.",
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
 "id": "m4",
-"prompt": "What comes out of an erupting volcano?",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"A translucent one, like net fabric",
+"A transparent one, like clear plastic",
+"An opaque one, like thick wood"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
-"hint": "Think about the key idea.",
+"explain": "Translucent materials let light through but scatter it.",
+"hint": "Apply the idea to this situation.",
 "id": "m5",
-"prompt": "What causes most earthquakes?",
+"prompt": "You need a curtain that lets some light in but stops people seeing in. Which material?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"volcanoes and earthquakes around the Pacific",
-"deserts",
-"frozen lakes"
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
 ],
-"explain": "Many plate boundaries circle the Pacific Ocean.",
+"explain": "Earth turns once every 24 hours.",
 "hint": "Think about the key idea.",
 "id": "m6",
-"prompt": "The Ring of Fire is a ring of…",
+"prompt": "What causes day and night?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"How much the ground shakes",
-"How hot the lava is",
-"How fast the wind blows"
+"About one year",
+"One day",
+"One month"
 ],
-"explain": "It records seismic waves from earthquakes.",
+"explain": "Earth orbits the Sun in about 365 days.",
 "hint": "Think about the key idea.",
 "id": "m7",
-"prompt": "What does a seismometer measure?",
+"prompt": "How long does Earth take to orbit the Sun?",
 "type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
+"answer": 0,
+"choices": [
+"Sun, Moon & Stars",
+"Where Elements Come From",
+"Observing with Light Waves"
+],
+"explain": "'The Sun is a star' builds on 'Sun, Moon & Stars'.",
+"hint": "What does this topic build on?",
 "id": "p1",
-"params": {
-"a": [
-1,
-8
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
-},
-{
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "p2",
-"params": {
-"s": [
-5,
-30
-],
-"t": [
-2,
-10
-]
-},
-"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+"prompt": "Which topic should you learn before 'The Sun is a star'?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Sun, Moon & Stars",
-"Life Cycle of Stars",
-"Why the Sun Looks Brightest"
+"Must know the Sun is a sky object before learning it is a star",
+"Seasons concept benefits from knowing Earth orbits Sun",
+"Must know the Sun-centred system before understanding Earth's rotation and orbit within it"
 ],
-"explain": "'The Sun is a star' builds on 'Sun, Moon & Stars'.",
-"hint": "What does this topic build on?",
+"explain": "Because: Must know the Sun is a sky object before learning it is a star.",
+"hint": "Think about what you need first.",
+"id": "p2",
+"prompt": "Why does 'The Sun is a star' build on 'Sun, Moon & Stars'?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
+],
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
+"hint": "Think about the key idea.",
 "id": "p3",
-"prompt": "Which topic should you learn before 'The Sun is a star'?",
+"prompt": "Try this: Why do shadows form?",
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 75,
 "status": "auto-starter",
 "title": "The Sun is a star",
 "topicId": "mt_u3Y3Tb-G_n",
@@ -1870,11 +1811,11 @@
 },
 "worked": {
 "steps": [
-"At first, weight is bigger than air resistance: she speeds up.",
-"Faster means more air resistance.",
-"When they balance, the speed stays steady: terminal velocity."
+"Start from what you know: Sun, Moon & Stars.",
+"The new idea: Know that the Sun is a star — the closest star to Earth — and that it is….",
+"Next, this helps with: Why the Sun Looks Brightest."
 ],
-"title": "A skydiver reaching terminal velocity"
+"title": "The Sun is a star"
 }
 },
 "mt_w2xiMNkyyX": {
@@ -1919,8 +1860,8 @@
 "answer": 0,
 "choices": [
 "Must know the Sun-centred system before understanding Earth's rotation and orbit within it",
-"Curriculum spherical bodies/orbits topic underpins exploratory gravity understanding",
-"Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them"
+"Must know the Sun is a sky object before learning it is a star",
+"Must know about the solar system before learning the Sun is at its centre"
 ],
 "explain": "Because: Must know the Sun-centred system before understanding Earth's rotation and orbit within it.",
 "hint": "Think about what you need first.",
@@ -1933,7 +1874,7 @@
 "choices": [
 "Gravity Pulls Things Down",
 "Seasons & Weather Patterns",
-"Our Solar System"
+"The Sun is a star"
 ],
 "explain": "'Earth's Spin & Orbit' leads on to 'Gravity Pulls Things Down'.",
 "hint": "What comes after this topic?",
@@ -1944,53 +1885,53 @@
 {
 "answer": 0,
 "choices": [
-"Lava, ash and gas",
-"Sea water",
-"Snow"
+"An opaque object blocks the light",
+"Light bends round objects",
+"Shadows give out light"
 ],
-"explain": "Magma that reaches the surface is called lava; ash and gas erupt too.",
+"explain": "Light travels in straight lines and cannot pass through opaque things.",
 "hint": "Think about the key idea.",
 "id": "m4",
-"prompt": "What comes out of an erupting volcano?",
+"prompt": "Why do shadows form?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"Tectonic plates moving suddenly",
-"Strong winds",
-"Heavy rain"
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
 ],
-"explain": "Plates stick, then slip, sending out seismic waves.",
+"explain": "Light changes direction at the boundary.",
 "hint": "Think about the key idea.",
 "id": "m5",
-"prompt": "What causes most earthquakes?",
+"prompt": "Why does a straw look bent in water?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"volcanoes and earthquakes around the Pacific",
-"deserts",
-"frozen lakes"
+"the colours of the spectrum",
+"darkness",
+"sound"
 ],
-"explain": "Many plate boundaries circle the Pacific Ocean.",
+"explain": "Each colour refracts by a different amount.",
 "hint": "Think about the key idea.",
 "id": "m6",
-"prompt": "The Ring of Fire is a ring of…",
+"prompt": "White light passing through a prism splits into…",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"How much the ground shakes",
-"How hot the lava is",
-"How fast the wind blows"
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
 ],
-"explain": "It records seismic waves from earthquakes.",
-"hint": "Think about the key idea.",
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
 "id": "m7",
-"prompt": "What does a seismometer measure?",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
 "type": "mc"
 }
 ]
@@ -2049,7 +1990,7 @@
 "answer": 0,
 "choices": [
 "The Sun is a star",
-"Gravity Pulls Things Down",
+"Observing with Light Waves",
 "Life Cycle of Stars"
 ],
 "explain": "'Earth's Spin & Orbit' builds on 'The Sun is a star'.",

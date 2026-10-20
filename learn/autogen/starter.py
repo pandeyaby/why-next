@@ -89,30 +89,37 @@ def explain(a, t, aud, tu, link, rng, minimal=False):
     kid = list(a["kid"])
     if tu.get("say") and fk_grade(" ".join(kid + [tu["say"]])) <= kt + 0.5: kid.append(tu["say"])
     return {"kid": kid, "adult": adult}, first in adult
-def worked_for(a, t, tu, prereq, later, seed=0, skip=0):
+def worked_for(a, t, tu, prereq, later, seed=0, skip=0, strong=True):
     if tu.get("worked"): w = tu["worked"]; return (w[0], list(w[1]))
     b = WB(a["name"], t, seed, skip) if skip < 3 else None
     if b: return (b[0], list(b[1]))
     ss = [x for x in re.split(r"(?<=\.)\s+", t["description"]) if len(x.split()) >= 5]
-    steps = ([f"Start from what you know: {prereq}."] if prereq else []) + [f"The new idea: {clause(t['description'], 18)}."] + ([f"In more detail: {clause(ss[1], 18)}."] if len(ss) > 1 else []) + list(a["worked"][1][:1]) + ([f"Next, this helps with: {later}."] if later else [])
-    return (f"{a['worked'][0]}, for '{t['name']}'", steps)
+    steps = ([f"Start from what you know: {prereq}."] if prereq else []) + [f"The new idea: {clause(t['description'], 18)}."] + ([f"In more detail: {clause(ss[1], 18)}."] if len(ss) > 1 else []) + ([f"Next, this helps with: {later}."] if later else [])
+    return (t["name"], steps)   # no borrowed archetype example: tuned or bank examples only
 def build(t, a, by, pre, post, sib, seed, minimal=False):
     rng = random.Random(seed); aud = "family" if t["ageRangeStart"] <= 7 else "learner"
     tu = tune(a, t, random.Random(seed * 7 + 1))
-    strong = t["subject"] == "Mathematics" or bool(a["kw"] and re.search(a["kw"], t["name"], re.I)) or (a["name"] in ("waves", "forces", "energy") and bool(re.search(r"reflect|mirror|ray|pitch|loud|sound|hear|vibrat|weight|gravity|speed|distance|velocity|resultant|friction|momentum|spring|pressure|orbit|projectile|circular|slope|normal|specific heat|cooling|system|insulat", t["name"], re.I)))
+    first = re.split(r"(?<=\.)\s", t["description"])[0]
+    strong = bool(a["kw"] and re.search(a["kw"], t["name"], re.I)) or (t["subject"] == "Mathematics" and (t["ageRangeStart"] < 14 and (not a["kw"] or bool(re.search(a["kw"], first, re.I))) or a["name"].split("-")[0].rstrip("s") in t["name"].lower())) or (a["name"] in ("waves", "forces", "energy") and bool(re.search(r"reflect|mirror|ray|pitch|loud|sound|hear|vibrat|weight|gravity|speed|distance|velocity|resultant|friction|momentum|spring|pressure|orbit|projectile|circular|slope|normal|specific heat|cooling|system|insulat", t["name"], re.I)))
+    if strong and t["subject"] != "Mathematics" and t["ageRangeStart"] >= 15 and not (tu.get("worked") or WB(a["name"], t, seed)): strong = False   # basic science drills don't fit advanced topics
+    LOOSE = t["subject"] != "Mathematics" or not strong   # loose fit: on-topic items only, no borrowed drills
     if not strong or minimal >= 2: tu = {"vis": tu.get("vis", {})}   # numbers and applied questions only when the archetype clearly fits this topic
     pr = [by[e["prerequisiteId"]]["name"] for e in pre.get(t["id"], [])][:1]; lt = [by[e["topicId"]]["name"] for e in post.get(t["id"], [])][:1]
     link = (f"It builds on {pr[0]}" + (f" and leads to {lt[0]}." if lt else ".")) if pr else (f"It leads to {lt[0]}." if lt else "")
     ex, specific = explain(a, t, aud, tu, link, rng, minimal); ti = topic_items(t, by, pre, post, sib, rng)
     app = tu.get("applied", [])
-    if REL[0] and t["subject"] != "Mathematics":   # drop borrowed questions that don't use this topic's vocabulary
+    if REL[0] and LOOSE:   # drop borrowed questions that don't use this topic's vocabulary
         a = dict(a, p=[x for x in a["p"] if not REL[0].check({"worked": {"title": "", "steps": []}}, t, [x])], m=[x for x in a["m"] if not REL[0].check({"worked": {"title": "", "steps": []}}, t, [x])])
+    if not strong and t["subject"] != "Mathematics": a = dict(a, p=[], m=[])   # loose fit outside maths: no borrowed archetype items at all
+    elif not strong: a = dict(a, p=[x for x in a["p"] if "params" not in x], m=[x for x in a["m"] if "params" not in x])   # no borrowed number drills when the archetype is only a loose fit
     prac = [dict(x) for x in a["p"]] + app[:1] + [x for k, x in ti if k == "p"]
     pool = [dict(x) for x in a["m"]] + app[1:] + [x for k, x in ti if k == "m"]
     while len(prac) < 3 and pool: prac.append(pool.pop(0))
-    if REL[0] and t["subject"] != "Mathematics" and len(pool) < 7:   # top up with on-topic items (they pass the vocabulary check) from sibling archetypes
+    if REL[0] and LOOSE and len(pool) < 7:   # top up with on-topic items (they pass the vocabulary check) from sibling archetypes
         have = {x["prompt"] for x in prac + pool}
-        for b in ARCH.get(t["subject"], OTHERS) if t["subject"] in ARCH else OTHERS:
+        bs = ARCH.get(t["subject"], OTHERS) if t["subject"] in ARCH else OTHERS
+        for b in [b for b in bs if not b["dom"] or re.search(b["dom"], t["domain"], re.I)] + [b for b in bs if b["dom"] and not re.search(b["dom"], t["domain"], re.I)]:   # this topic's own domain first
+            if b["dom"] and not re.search(b["dom"], t["domain"], re.I) and len(pool) >= 5: break
             for x in b["p"] + b["m"]:
                 if len(pool) >= 7: break
                 if x["prompt"] not in have and "params" not in x and not REL[0].check({"worked": {"title": "", "steps": []}}, t, [x]) and REL[0].ok(x["prompt"], t)[1]:
@@ -131,8 +138,8 @@ def build(t, a, by, pre, post, sib, seed, minimal=False):
     prac = prac[:5]
     for i, it in enumerate(prac): it["id"] = f"p{i+1}"
     for i, it in enumerate(pool): it["id"] = f"m{i+1}"
-    w = worked_for(a, t, tu, pr[0] if pr else None, lt[0] if lt else None, seed, minimal if minimal == 3 else 1 if minimal else 0)
-    if REL[0] and t["subject"] != "Mathematics" and not tu.get("worked") and not WB(a["name"], t, seed):
+    w = worked_for(a, t, tu, pr[0] if pr else None, lt[0] if lt else None, seed, minimal if minimal == 3 else 1 if minimal else 0, strong)
+    if REL[0] and LOOSE and not tu.get("worked") and not WB(a["name"], t, seed):
         w = (w[0] if not REL[0].check({"worked": {"title": w[0], "steps": []}}, t, []) else t["name"], [x for x in w[1] if not REL[0].check({"worked": {"title": "", "steps": [x]}}, t, [])])
     if len(w[1]) < 2: w = (t["name"], ([f"Start from what you know: {pr[0]}."] if pr else []) + [f"The new idea: {clause(t['description'], 18)}."] + ([f"Next, this helps with: {lt[0]}."] if lt else [f"Check: explain {t['name'].lower()} in your own words."]))
     if minimal and not (tu.get("worked") or (minimal < 3 and WB(a["name"], t, seed))): w = (t["name"], [x for x in w[1] if a["worked"][1][0] != x] or w[1])
@@ -143,7 +150,7 @@ def build(t, a, by, pre, post, sib, seed, minimal=False):
            "practice": prac, "mastery": {"passMark": min(3, max(2, len(pool) - 4)), "draw": min(4, max(3, len(pool) - 3)), "pool": pool}, "status": "auto-starter", "visual": vis}
     ids = {id(x) for x in prac + pool}
     arch = [x for x in prac + pool if x["prompt"].split(": ", 1)[-1] in {y["prompt"] for y in a["p"] + a["m"]}]
-    return les, dict(specific=specific, n_topic=len(ti), arch_items=arch, tuned=bool(tu.get("worked")) or bool(WB(a["name"], t, seed)))
+    return les, dict(specific=specific, n_topic=len(ti), arch_items=arch, loose=LOOSE, tuned=bool(tu.get("worked")) or bool(WB(a["name"], t, seed)))
 
 def rubric(les, a, meta, errs, maxsim=0.0):
     return 0 if errs else QS.score(les, les["title"], maxsim)[0]
@@ -167,7 +174,7 @@ def main():
         best = None
         for k, a in enumerate([c for c in candidates(t)[:3] for _ in range(2)]):
             les, meta = build(t, a, by, pre, post, bydom[(t["subject"], t["domain"])], hash(t["id"]) % 9973 + k)
-            NONMATH[0] = t["subject"] != "Mathematics"; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if t["subject"] != "Mathematics" else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
+            NONMATH[0] = meta["loose"]; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if meta["loose"] else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
             if ms > QS.DUP: errs = errs + [f"near-duplicate of a sibling lesson (similarity {ms:.2f})"]; dups += 1
             q = rubric(les, a, meta, errs, ms)
             if errs and not best: best = (q, les, a["name"], errs)
@@ -176,20 +183,20 @@ def main():
             rejected += 1
         if best[3] and all("near-duplicate" in e for e in best[3]):   # last resort: drop the shared archetype text, keep only this topic's own
             a = candidates(t)[0]; les, meta = build(t, a, by, pre, post, bydom[(t["subject"], t["domain"])], hash(t["id"]) % 9973 + 99, True)
-            NONMATH[0] = t["subject"] != "Mathematics"; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if t["subject"] != "Mathematics" else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
+            NONMATH[0] = meta["loose"]; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if meta["loose"] else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
             if ms > QS.DUP: errs = errs + [f"near-duplicate of a sibling lesson (similarity {ms:.2f})"]
             else: best = (rubric(les, a, meta, errs, ms), les, a["name"], errs)
             a = candidates(t)[0]; les, meta = build(t, a, by, pre, post, bydom[(t["subject"], t["domain"])], hash(t["id"]) % 9973 + 99, 2)
-            NONMATH[0] = t["subject"] != "Mathematics"; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if t["subject"] != "Mathematics" else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
+            NONMATH[0] = meta["loose"]; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if meta["loose"] else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
             if ms > QS.DUP: errs = errs + [f"near-duplicate of a sibling lesson (similarity {ms:.2f})"]
             else: best = (rubric(les, a, meta, errs, ms), les, a["name"], errs)
         if best[3] and all("near-duplicate" in e for e in best[3]):   # last resort: drop the shared archetype text, keep only this topic's own
             a = candidates(t)[0]; les, meta = build(t, a, by, pre, post, bydom[(t["subject"], t["domain"])], hash(t["id"]) % 9973 + 99, True)
-            NONMATH[0] = t["subject"] != "Mathematics"; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if t["subject"] != "Mathematics" else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
+            NONMATH[0] = meta["loose"]; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if meta["loose"] else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
             if ms > QS.DUP: errs = errs + [f"near-duplicate of a sibling lesson (similarity {ms:.2f})"]
             else: best = (rubric(les, a, meta, errs, ms), les, a["name"], errs)
             a = candidates(t)[0]; les, meta = build(t, a, by, pre, post, bydom[(t["subject"], t["domain"])], hash(t["id"]) % 9973 + 99, 3)
-            NONMATH[0] = t["subject"] != "Mathematics"; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if t["subject"] != "Mathematics" else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
+            NONMATH[0] = meta["loose"]; errs = check(les, a) + (REL[0].check(les if not meta.get("tuned") else dict(les, worked={"title": "", "steps": []}), t, meta["arch_items"]) if meta["loose"] else []); sh = QS.shingles(les); ms = max([QS.sim(sh, o) for bn, o in seen[t["domain"]] if bn != BASE(t["name"])] or [0])
             if ms > QS.DUP: errs = errs + [f"near-duplicate of a sibling lesson (similarity {ms:.2f})"]
             else: best = (rubric(les, a, meta, errs, ms), les, a["name"], errs)
         q, les, an, errs = best
