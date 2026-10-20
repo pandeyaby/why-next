@@ -143,3 +143,10 @@ Lessons 31–40 (calculus) and 41–50 (chemistry) follow hard prerequisite link
 4. **The family slice for under-7s.** Is it realistic for a parent to deliver, and are the "Try it at home" activities sensible?
 5. **Mastery thresholds** (3 of 4, from a pool of 7) and the spaced-review intervals (3/7/14/30/60 days).
 6. **Notation.** Long-division layout, and how remainders are written (r, fraction, decimal).
+## Visual learning (visual-draft)
+
+All 50 lessons have an interactive visual (17 types). Weaker fits, stated plainly: 05 (ten-frame for reading
+number sentences), 18/20/23/29 (step highlighting stands in for formulae and word problems), 44 (mixture shown
+as two particle kinds; real mixture behaviour is simplified), 46/47/49 (balancer used for conservation of mass
+rather than balancing). Integration as area has no lesson, so no visual. Lighthouse mobile performance is ~56,
+the same as the live build (57): the cost is the 1.6 MB single-file data bundle, not the visuals (+71 KB, TBT 10 ms).

@@ -22,11 +22,12 @@ function panel(id){const les=LEARN.L[id];if(!les)return comingSoon(id);
  const lv=LEARN.level(),pr=LEARN.prog(id),st=pr.status,due=LEARN.reviewDue(id),fam=les.audience!=='learner';
  CUR={p:les.practice.map(LEARN_GEN.make),m:LEARN_GEN.drawSet(les.mastery.pool,les.mastery.draw),r:due?LEARN_GEN.drawSet(les.mastery.pool,2):[]};
  return `<section class="card learn" id="learn" tabindex="-1" aria-labelledby="learnH">
- <div class="lhead"><h2 id="learnH" class="lh">Learn: ${esc(les.title)}</h2>${st==='mastered'?'<span class="lb lb-m">✓ Mastered</span>':LEARN.isNext(id)?'<span class="lb lb-n">★ Learn next</span>':''}
+ <div class="lhead"><h2 id="learnH" class="lh">Learn: ${esc(les.title)}</h2>${LEARN_FX.ring(id,24)}${st==='mastered'?'<span class="lb lb-m">✓ Mastered</span>':LEARN.isNext(id)?'<span class="lb lb-n">★ Learn next</span>':''}
  <div class="lvl" role="group" aria-label="Reading level"><button type="button" class="lbtn sm${lv==='kid'?' on':''}" aria-pressed="${lv==='kid'}" data-lv="kid">${fam?'Kid':'Simpler'}</button><button type="button" class="lbtn sm${lv==='adult'?' on':''}" aria-pressed="${lv==='adult'}" data-lv="adult">${fam?'Grown-up':'Teen / adult'}</button></div></div>
  ${due?`<div class="review" id="rbox"><h3 class="lsub">🔁 Quick review</h3><p class="small">You mastered this a while ago. Two quick questions keep it fresh.</p>${list('r')}<p id="rres" role="status" aria-live="polite"></p></div>`:''}
  ${LEARN.isNext(id)?`<p class="why">${esc(LEARN.why(id))}</p>`:''}${st!=='mastered'&&LEARN.known(id)?`<p class="why">✓ ${LEARN.assumed(id)?'You probably know this already (from your age band)':'You marked this as known'}. Use it as a refresher, or <button type="button" class="linkish" data-act="known">mark it as not known</button>.</p>`:''}
  <h3 class="lsub">1 · Understand it</h3><p class="key">💡 ${esc(les.keyIdea)}</p>${les.explain[lv].map(p=>`<p>${esc(p)}</p>`).join('')}
+ ${les.visual?'<div id="vbox" class="vbox"></div>':''}
  ${les.familyTip?`<p class="tip"><b>${fam?'Try it at home':'Try this'}:</b> ${esc(les.familyTip)}</p>`:''}
  <h3 class="lsub">2 · Practise <span class="muted small" id="pScore"></span></h3><div id="pbox">${list('p')}</div>
  <button type="button" class="lbtn ghost" data-act="newp">New practice questions</button>
@@ -41,7 +42,7 @@ function dragify(ol){let li=null;/* capture on the list: moving a captured <li> 
   if(p&&ev.clientY<p.getBoundingClientRect().top+p.offsetHeight/2)p.before(li);else if(n&&ev.clientY>n.getBoundingClientRect().top+n.offsetHeight/2)n.after(li)};
  ol.onpointerup=ol.onpointercancel=ev=>{if(!li)return;li.classList.remove('dragging');li=null;try{ol.releasePointerCapture(ev.pointerId)}catch(x){}}}
 function wire(root){root.querySelectorAll('.numin').forEach(inp=>inp.onkeydown=e=>{if(e.key==='Enter')inp.nextElementSibling.click()});root.querySelectorAll('.ord').forEach(dragify)}
-function mount(id){const root=document.getElementById('learn');if(!root)return;const les=LEARN.L[id];wire(root);
+function mount(id){const root=document.getElementById('learn');const vb=document.getElementById('vbox'),les0=LEARN.L[id];VIS.show(vb,vb&&les0&&les0.visual||null);if(!root)return;const les=LEARN.L[id];wire(root);
  root.onclick=e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.lv){LEARN.setLevel(b.dataset.lv);select(id);document.getElementById('learn').focus();return}
   if(b.dataset.act==='known'){LEARN.setProg(id,{status:LEARN.known(id)?'unknown':'known'});LEARN.update();select(id);return}
@@ -49,7 +50,7 @@ function mount(id){const root=document.getElementById('learn');if(!root)return;c
   if(b.dataset.act==='newp'){CUR.p=LEARN_GEN.shuffle(les.practice).map(LEARN_GEN.make);const box=document.getElementById('pbox');box.innerHTML=list('p');wire(box);
    const f=box.querySelector('button,input');if(f)f.focus();return}
   const q=b.closest('.qi');if(!q)return;const it=CUR[q.dataset.pre][+q.dataset.i];
-  if(b.dataset.act==='hint'){fb(q,'💡 '+it.hint,'');return}
+  if(b.dataset.act==='hint'){fb(q,'💡 '+it.hint+(VIS.current()?' Look at the highlighted part of the picture above.':''),'');VIS.cue();return}
   if(b.dataset.mv){const li=b.closest('li'),d=+b.dataset.mv,sib=d<0?li.previousElementSibling:li.nextElementSibling;if(sib){d<0?sib.before(li):sib.after(li);b.focus()}return}
   if(q.dataset.done)return;
   let ans;if(it.type==='mc'){ans=+b.dataset.k;if(isNaN(ans))return;q.querySelectorAll('.choice').forEach(c=>c.classList.toggle('picked',c===b))}
@@ -64,9 +65,9 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
  const reveal=it.type==='mc'?` (Answer: ${it.choices[it.answer]})`:it.type==='numeric'?` (Answer: ${LEARN_GEN.fmt(it.answer)})`:` (Order: ${it.items.join(', ')})`;
  if(pre==='p'){if(ok){q.dataset.done=1;q.classList.add('ok');fb(q,'✓ Correct! '+it.explain,'good');
    const pr=LEARN.prog(id),pd=Object.assign({},pr.practice,{[it.id]:true});LEARN.setProg(id,{practice:pd,status:pr.status||'practising'});}
-  else if(tries<2)fb(q,'Not quite. 💡 Hint: '+it.hint+' Have another go.','bad');
+  else if(tries<2){fb(q,'Not quite. 💡 Hint: '+it.hint+' Have another go.','bad');VIS.cue()}
   else{fb(q,'Not quite. Here is how it works: '+it.explain+reveal,'bad');q.dataset.done=1}
-  const pd=LEARN.prog(id).practice||{};const s=document.getElementById('pScore');if(s)s.textContent=`(${Object.keys(pd).length}/${les.practice.length} correct)`;return}
+  LEARN_FX.sync(id);const pd=LEARN.prog(id).practice||{};const s=document.getElementById('pScore');if(s)s.textContent=`(${Object.keys(pd).length}/${les.practice.length} correct)`;return}
  lockQ(q,ok);fb(q,(ok?'✓ Correct. ':'✗ Not this time. ')+it.explain+(ok?'':reveal),ok?'good':'bad');
  if(pre==='r'){const all=[...document.querySelectorAll('#rbox .qi')];if(!all.every(x=>x.dataset.done))return;
   const good=all.every(x=>x.dataset.ok);LEARN.reviewDone(id,good);LEARN.update();
@@ -76,6 +77,7 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
  LEARN.setProg(id,{best:Math.max(score,pr.best||0),status:pass||was?'mastered':'practising'});if(pass)LEARN.scheduleAfterMastery(id);LEARN.update();
  res.innerHTML=pass?`🎉 <b>${score}/${all.length}: mastered!</b> It's ticked on the map, and it will come back for a quick review in a few days. <button type="button" class="lbtn" id="goNext">What's next?</button>`
   :`<b>${score}/${all.length}.</b> Nearly there. Look back at the practice questions, then <button type="button" class="lbtn" id="retry">try the check again</button>`;
+ if(pass)LEARN_FX.celebrate(res);
  const g=document.getElementById('goNext');if(g)g.onclick=()=>{const nx=LEARN.nextList(1)[0];if(nx){select(nx.id);document.getElementById('learn').focus()}};
  const r=document.getElementById('retry');if(r)r.onclick=()=>{select(id);const m=document.getElementById('mbox');if(m)m.scrollIntoView()}}
 return{panel,mount,parseNum,scramble,cur:()=>CUR}})();

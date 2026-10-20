@@ -39,8 +39,8 @@ assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
 learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-js = "".join(open(f"learn/{f}").read() for f in ("learn_gen.js", "learn_core.js", "learn_panel.js"))
+js = "".join(open(f"learn/{f}").read() for f in ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_chem.js", "learn_fx.js", "learn_panel.js"))
 html = (open("ext/viewer_template.html").read().replace("/*__DATA__*/null", data).replace("/*__CREDIT__*/", credit)
-        .replace("/*__LESSONS__*/null", learn).replace("/*__LEARN_JS__*/", js).replace("/*__LEARN_CSS__*/", open("learn/learn.css").read()))
+        .replace("/*__LESSONS__*/null", learn).replace("/*__LEARN_JS__*/", js).replace("/*__LEARN_CSS__*/", "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css"))))
 open(os.environ.get("WHYNEXT_VIEWER_OUT", "out/viewer.html"), "w").write(html)
 print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons")

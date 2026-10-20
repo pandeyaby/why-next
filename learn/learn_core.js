@@ -55,8 +55,8 @@ function why(id){const hs=hard(id).filter(e=>!skipped(e.p)),g=goal();let r;
  return r}
 function badge(id){if(mastered(id))return'<span class="lb lb-m" title="Mastered">✓<span class="sr"> mastered</span></span>';
  if(known(id))return'<span class="lb lb-k" title="Already known">✓<span class="sr"> known</span></span>';
- if(isNext(id))return'<span class="lb lb-n" title="Recommended next">★<span class="sr"> learn next</span></span>';
- return has(id)?'<span class="lb lb-l" title="Has a lesson">◆<span class="sr"> lesson</span></span>':''}
+ if(isNext(id))return(has(id)&&LEARN_FX.progress(id)>0?LEARN_FX.ring(id):'')+'<span class="lb lb-n" title="Recommended next">★<span class="sr"> learn next</span></span>';
+ return has(id)?(LEARN_FX.progress(id)>0?LEARN_FX.ring(id):'<span class="lb lb-l" title="Has a lesson">◆<span class="sr"> lesson</span></span>'):''}
 const cls=id=>mastered(id)||known(id)?'g-done':isNext(id)?'g-next':'';
 function resource(id){const n=N.get(id);if(!n)return null;return RES.find(r=>r.subject===n.s&&n.a[0]<=r.maxAge)}
 function home(){refreshNext();const el=document.getElementById('learnHome');if(!el)return;const g=goal(),nx=nextList(6),

@@ -6,6 +6,7 @@ import glob, itertools, json, math, os, re, subprocess, sys, tempfile
 import jsonschema
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from readability import fk_grade, TARGETS
+from validate_visuals import check as check_visual
 
 errors = []
 SAFE = re.compile(r"^[a-z0-9+\-*/%(). <>=!&|]+$")
@@ -68,6 +69,7 @@ for f in files:
         err(f, "practice ids must start with p and mastery ids with m")
     if not d["mastery"]["passMark"] <= d["mastery"]["draw"] <= len(pool) - 3: err(f, "need passMark <= draw <= pool size - 3")
     if sum(1 for i in pool if "params" in i) < 2: err(f, "mastery pool needs at least 2 parameterised items")
+    for problem in check_visual(d["visual"]): err(f, "visual " + problem)
     if sum(1 for i in d["practice"] if "params" in i) < 2: err(f, "practice needs at least 2 parameterised items so retries differ")
     for lv in ("kid", "adult"):
         g = fk_grade(" ".join(d["explain"][lv])); t = TARGETS[(d["audience"], lv)]

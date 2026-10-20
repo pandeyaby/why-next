@@ -26,3 +26,28 @@ Interactive lessons inside `out/viewer.html`. Clicking a topic opens a Learn pan
 **Tests:** `npm ci && npx playwright install --only-shell chromium && npm run test:learn` runs `tests/learn.e2e.cjs` (headless Chromium plus an axe-core scan). It also runs as the `learn-e2e` job in CI.
 
 Content status: the lessons were written and checked by the author, but no teacher has reviewed them yet.
+
+## Interactive visuals (`visual` field)
+
+Every lesson has a required `visual`: `{ "type", "caption", "opts" }`. It renders above the tip as a
+`figure.vis` with a "Try it" caption, controls and a live text description (`p.vis-desc`, `aria-live`)
+that is the text alternative and updates after every action.
+
+Types (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
+
+| Area | Types |
+|---|---|
+| Number | `counters` (count / combine / takeaway), `tenframe`, `array` (optional distributive split), `share`, `fracbar` (bar or pie, optional compare bar), `numline` |
+| Algebra | `balance` (equal / solve ax+b=c with inverse operations; tips when one side changes), `bidmas` (step highlighting), `longmul`, `longdiv` |
+| Calculus | `plot` (eval, line, secant with h → 0, limit, tangent with optional normal, `equal` scales), `rate`, `power` |
+| Chemistry | `particles` (canvas, temperature slider), `atom`, `ptable`, `balancer` (coefficients, atom tally, scale) |
+
+`learn/validate_visuals.py` whitelists options per type and checks the content: solvable balance equations,
+safe evaluable expressions and functions, sane long-division and multiplication operands, locked balancers that are balanced.
+
+Accessibility and motion: every draggable point is also a keyboard slider (`role=slider`, arrows/Home/End); every
+action has a button; pointer drags use pointer capture, so touch works. `prefers-reduced-motion` makes tweens instant,
+freezes the particle sim to settled frames, and turns off the celebration burst and glow. The particle canvas pauses off-screen.
+
+Cues: a hint or a wrong first answer highlights the relevant part of the visual (`VIS.cue`). Topics with a lesson show
+a progress ring; next-step map nodes glow; mastery shows a small celebration. Tests: `tests/visual.e2e.cjs` (in `npm run test:learn`).
