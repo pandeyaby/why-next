@@ -44,6 +44,19 @@ To rebuild everything from the sources (Python 3; `jsonschema` for the schema ch
 python3 ext/build.py && python3 ext/check_schema.py && python3 ext/make_viewer.py
 ```
 
+## Lessons and labs
+
+Every one of the 1,568 topics has a lesson. 103 are hand-written (`learn/lessons/`). The other 1,465 are **starter lessons** built by
+`python3 learn/autogen/starter.py --report` into `learn/auto/*.json`, and are labelled in the app as "Starter lesson … not yet reviewed by a teacher".
+
+- **Archetypes** (`learn/autogen/arch_*.py`) supply a lab, explanations and question templates for a kind of topic (written multiplication, quadratics, acids, handwriting, friendship …).
+- **Tuners** (`learn/autogen/tune*.py`) pick numbers, the worked example, lab settings and applied questions from the topic's own words, e.g. "2-digit by 1-digit" gives a 2-digit × 1-digit example.
+- **Topic-data questions** come from the topic's description and prerequisite links. Recall-by-copying items are not used, and fill-the-gap distractors must match the missing word's form.
+- **Checks**: each lesson passes the same schema, readability and item checks as the hand-written ones (`learn/lesson_checks.py`). A near-duplicate detector (`learn/autogen/quality.py`, word-trigram Jaccard ≤ 0.55 against siblings in the same domain) and a quality score (bar 65 = 25th percentile of the hand-written lessons; `python3 learn/autogen/quality.py`) reject weak drafts, which are regenerated.
+- **Labs** (`learn/vis_lab*.js`): problab, statlab, numzoom, graphlab, geolab, matrixlab, gaslab, reactlab, wavelab, forcelab, ecolab. Each has Sandbox and 🎯 Challenge modes, an animated win and a short vibration (sound is off). A lesson can add a lab under its main visual with the optional `lab` field.
+- Lessons load per domain (`out/wn/l<k>.js`) only when a topic is opened. `node tests/labs.e2e.cjs` checks challenge wins and axe in both themes.
+- Phone preview of the split build: `python3 ext/make_preview.py <commit>` writes `out/preview.html`, which loads scripts from jsDelivr at that commit.
+
 ## Licences
 Why Next? is a derived database and adapted content, released under the same licences as its upstream source:
 - **Database** (structure, ids, links, topic↔standard links): Open Database License 1.0. See [`LICENSE`](LICENSE).
