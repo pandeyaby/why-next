@@ -29,7 +29,8 @@
   "status": {
    "enum": [
     "self-checked",
-    "expert-reviewed"
+    "expert-reviewed",
+    "auto-starter"
    ]
   },
   "familyTip": {
@@ -135,10 +136,45 @@
       "particles",
       "atom",
       "ptable",
-      "balancer", "area", "sorter", "phscale", "energy", "placevalue", "percent", "thermo", "journey", "formula", "coords", "wholes",
+      "balancer",
+      "area",
+      "sorter",
+      "phscale",
+      "energy",
+      "placevalue",
+      "percent",
+      "thermo",
+      "journey",
+      "formula",
+      "coords",
+      "wholes",
       "expo",
       "roots",
-      "grid", "symbols", "sealed", "circuit", "light", "vlt", "polyterms", "tiles", "vectors", "states", "separate", "matlab", "objects", "squares", "slopes"
+      "grid",
+      "symbols",
+      "sealed",
+      "circuit",
+      "light",
+      "vlt",
+      "polyterms",
+      "tiles",
+      "vectors",
+      "states",
+      "separate",
+      "matlab",
+      "objects",
+      "squares",
+      "slopes",
+      "problab",
+      "statlab",
+      "numzoom",
+      "graphlab",
+      "geolab",
+      "matrixlab",
+      "gaslab",
+      "reactlab",
+      "wavelab",
+      "forcelab"
      ]
     },
     "caption": {
@@ -150,6 +186,31 @@
      "type": "object"
     }
    }
+  },
+  "worked": {
+   "type": "object",
+   "required": [
+    "title",
+    "steps"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "title": {
+     "type": "string"
+    },
+    "steps": {
+     "type": "array",
+     "minItems": 2,
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "quality": {
+   "type": "integer",
+   "minimum": 0,
+   "maximum": 100
   }
  },
  "definitions": {

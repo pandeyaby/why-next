@@ -22,6 +22,9 @@ OPTS = {
     "circuit": {"items": L}, "light": {"items": L}, "vlt": {"graphs": L, "x": N}, "polyterms": {"terms": L},
     "tiles": {"a": L, "b": L, "op": S}, "states": {"items": L}, "separate": {"mix": L}, "matlab": {"materials": L, "job": L},
     "objects": {"objects": L}, "squares": {"n": I}, "slopes": {"m": N, "start": N}, "vectors": {"a": L, "b": L},
+    "problab": {"kind": S, "labels": L, "p": L}, "statlab": {"vals": L, "max": I, "target": N}, "numzoom": {"neg": B, "start": N, "target": N},
+    "graphlab": {"f": S, "a": N, "b": N, "c": N, "xr": L, "yr": L, "equal": B, "targets": L}, "geolab": {"pts": L, "grid": I, "area": N}, "matrixlab": {"m": L},
+    "gaslab": {"n": I, "temp": N, "vol": N}, "reactlab": {"acid": I, "indicator": B}, "wavelab": {"a": N, "f": N, "v": N, "target": L}, "forcelab": {"f": N, "m": N, "mu": N, "zone": L},
     "formula": {"name": S, "expr": S, "vars": dict, "pic": S, "what": S, "unit": S},
 }
 SAFE_F = re.compile(r"^[x0-9+\-*/(). ]+$")

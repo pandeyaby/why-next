@@ -124,6 +124,13 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .vis-card[aria-pressed=true]{outline:3px solid #7c3aed}.vis-card.ok{background:#dcfce7;border-color:#15803d}.vis-card.bad{background:#fee2e2;border-color:#b91c1c}
 .vis-beaker{fill:none;stroke:#334155;stroke-width:3}.vis-liq{opacity:.85}.vis-thermo{fill:#fff;stroke:#475569}.vis-liqr,.vis-bulb{fill:#dc2626}
 .vis-pv{fill:#fff;stroke:#94a3b8}.vis-pv.dec{fill:#f5f3ff}.vis-digit{font:700 30px ui-monospace,Menlo,monospace;fill:#111827}.vis-digit.z{fill:#7c3aed}
+.lab-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 8px}.lab-goal{flex:1 1 220px;margin:0;font-size:14px;font-weight:600}.lab-goal.win{color:#166534}
+.lab-won{animation:labwon .9s ease}@keyframes labwon{30%{box-shadow:0 0 0 5px #86efac}}@media (prefers-reduced-motion:reduce){.lab-won{animation:none;outline:3px solid #16a34a}}
+.lab-bar-r{fill:#6366f1;transition:y .25s,height .25s}.lab-theory{stroke:#dc2626;stroke-width:2.5;stroke-dasharray:6 4}.lab-mean{stroke:#dc2626;stroke-width:2.5}.lab-med{fill:#059669}.lab-target{stroke:#dc2626;stroke-width:3;stroke-dasharray:4 3}
+.lab-out{font:14px system-ui;margin:6px 0 0;padding:6px 8px;border-radius:8px;background:#f1f5f9;color:#111827}.lab-in{font:inherit;min-height:44px;padding:4px 8px;border:1px solid #64748b;border-radius:8px;width:12em;max-width:100%}
+.lab-shape{fill:rgba(99,102,241,.25);stroke:#4f46e5;stroke-width:2.5}.lab-ghost{fill:none;stroke:#94a3b8;stroke-width:2;stroke-dasharray:4 3}.vis-target.lab-hit{fill:#16a34a;stroke:#14532d}
+.lab-mat{display:inline-grid;grid-template-columns:repeat(2,5em);gap:4px;padding:4px 8px;border-left:3px solid #64748b;border-right:3px solid #64748b;border-radius:6px}
+.lab-glass{fill:rgba(148,163,184,.12);stroke:#64748b;stroke-width:3}.lab-bub{fill:none;stroke:#0f172a;stroke-width:1.5;opacity:.7}.lab-zone{fill:#22c55e;opacity:.55}.lab-cart{fill:#f59e0b;stroke:#7c2d12;stroke-width:2}
 /* Why Next? feedback and progress cues (gentle; off under prefers-reduced-motion) */
 .pring{vertical-align:middle}.pring .pr-bg{fill:none;stroke:#e5e7eb;stroke-width:3}.pring .pr-fg{fill:none;stroke:#7c3aed;stroke-width:3;stroke-linecap:round}.pring .pr-fg.done{stroke:#15803d}
 .qi.ok{animation:fxok .45s ease}.fb.bad{animation:fxno .35s ease}
@@ -248,4 +255,4 @@ html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;borde
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=957a845510"></script><script defer src="wn/learn.js?v=be71343469"></script><script defer src="wn/app.js?v=70ca757749"></script></body></html>
+<script defer src="wn/core.js?v=957a845510"></script><script defer src="wn/learn.js?v=fbfef34bba"></script><script defer src="wn/app.js?v=70ca757749"></script></body></html>
