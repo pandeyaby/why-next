@@ -4,14 +4,14 @@
 "explain": {
 "adult": [
 "The partial products are then added, so 34 × 26 = 34 × 20 + 34 × 6.",
-"For example, 327 × 61 = 19947.",
+"For example, 427 × 74 = 31598.",
 "It builds on Written Multiplication & Division and leads to Multiply & Add Problems.",
 "Written multiplication breaks one number into place values and multiplies by each part."
 ],
 "kid": [
 "Big multiplications split into smaller ones.",
 "Multiply by the ones, then by the tens, then add.",
-"For example, 327 × 61 = 19947."
+"For example, 427 × 74 = 31598."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -77,8 +77,8 @@
 "answer": 0,
 "choices": [
 "Formal short multiplication extends Y3 written multiplication",
-"Choosing operations benefits from order-of-operations understanding",
-"Y6 multi-step four-op problems extend Y5 multi-step problems"
+"Using mult/div relationship as strategy supports fluency",
+"Fluency within 100 builds on knowing 2/5/10 tables"
 ],
 "explain": "Because: Formal short multiplication extends Y3 written multiplication.",
 "hint": "Think about what you need first.",
@@ -91,7 +91,7 @@
 "choices": [
 "Multiply & Add Problems",
 "Written Multiplication & Division",
-"Properties of Operations"
+"Fluent multiplication and division facts"
 ],
 "explain": "'Written Multiplication' leads on to 'Multiply & Add Problems'.",
 "hint": "What comes after this topic?",
@@ -177,13 +177,26 @@
 {
 "answer": 0,
 "choices": [
+"31 598",
+"30 317",
+"4697"
+],
+"explain": "427 × 74 = 31 598. Multiply by every digit, using its place value.",
+"hint": "Redo it step by step and compare.",
+"id": "p3",
+"prompt": "Sam worked out 427 × 74 and got 30 317. What is the correct answer?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
 "Written Multiplication & Division",
 "Multi-step problems: choosing operations",
-"Ratio (age 11+)"
+"Long multiplication (age 10+)"
 ],
 "explain": "'Written Multiplication' builds on 'Written Multiplication & Division'.",
 "hint": "What does this topic build on?",
-"id": "p3",
+"id": "p4",
 "prompt": "Which topic should you learn before 'Written Multiplication'?",
 "type": "mc"
 }
@@ -195,34 +208,33 @@
 "visual": {
 "caption": "Watch each partial product build the answer.",
 "opts": {
-"a": 327,
-"b": 61
+"a": 427,
+"b": 74
 },
 "type": "longmul"
 },
 "worked": {
 "steps": [
-"327 × 1 = 327.",
-"327 × 60 = 19620 (put a 0 in the ones place first).",
-"Add: 327 + 19620 = 19947.",
-"So 327 × 61 = 19947."
+"427 × 4 = 1708.",
+"427 × 70 = 29890 (put a 0 in the ones place first).",
+"Add: 1708 + 29890 = 31598.",
+"So 427 × 74 = 31598."
 ],
-"title": "327 × 61"
+"title": "427 × 74"
 }
 },
 "mt_6-j1NO2ZUH": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 7 × 9 = 63.",
-"It builds on Multiplicative Comparison and leads to Understanding fractions.",
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
+"For example, 6 × 6 = 36.",
+"Multiplication counts equal groups, and an array shows them as rows and columns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 7 × 9 = 63."
+"For example, 6 × 6 = 36."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -284,8 +296,8 @@
 "answer": 0,
 "choices": [
 "Must understand multiplicative comparison concept before solving word problems",
-"Extends array-based repeated addition to formal multiplication interpretation",
-"Interpreting products formalises repeated addition/equal groups from Y1"
+"3, 4, 8 times tables build on known 2, 5, 10 tables",
+"Counting in 4s and 8s supports learning those table facts"
 ],
 "explain": "Because: Must understand multiplicative comparison concept before solving word problems.",
 "hint": "Think about what you need first.",
@@ -297,7 +309,7 @@
 "answer": 0,
 "choices": [
 "Understanding fractions",
-"What Multiplication Means",
+"Times tables (age 7+)",
 "Times tables"
 ],
 "explain": "'Multiplicative Comparison' leads on to 'Understanding fractions'.",
@@ -307,23 +319,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"involving",
-"understanding",
-"interpreting"
-],
-"explain": "The missing word is 'involving'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Solve word problems _____ multiplicative comparison using drawings and equations with a symbol for the unknown number'",
-"type": "mc"
-},
-{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 2,
@@ -335,6 +334,24 @@
 ]
 },
 "prompt": "Quick check: What is {a} × {b}?",
+"type": "numeric"
+},
+{
+"answer": "b",
+"explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
+"hint": "Which number times {a} makes {=a*b}?",
+"id": "m7",
+"params": {
+"a": [
+2,
+12
+],
+"b": [
+2,
+12
+]
+},
+"prompt": "Quick check: What is {=a*b} ÷ {a}?",
 "type": "numeric"
 }
 ]
@@ -379,22 +396,22 @@
 {
 "answer": 0,
 "choices": [
-"63",
-"16",
-"70"
+"36",
+"12",
+"42"
 ],
-"explain": "7 × 9 = 63. 7 groups of 9 make 63.",
+"explain": "6 × 6 = 36. 6 groups of 6 make 36.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 7 × 9 and got 16. What is the correct answer?",
+"prompt": "Sam worked out 6 × 6 and got 12. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiplicative Comparison",
-"Sign Rules for Multiplication",
-"Division with remainders (age 10+)"
+"Brackets in Expressions",
+"Long multiplication (age 10+)"
 ],
 "explain": "'Multiplicative Comparison' builds on 'Multiplicative Comparison'.",
 "hint": "What does this topic build on?",
@@ -403,26 +420,26 @@
 "type": "mc"
 }
 ],
-"quality": 87,
+"quality": 84,
 "status": "auto-starter",
 "title": "Multiplicative Comparison",
 "topicId": "mt_6-j1NO2ZUH",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 9,
-"rows": 7,
+"cols": 6,
+"rows": 6,
 "split": 3
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"7 × 9 means 7 groups of 9.",
-"Count in 9s: 9, 18, 27, 36, 45, 54, 63.",
-"So 7 × 9 = 63."
+"6 × 6 means 6 groups of 6.",
+"Count in 6s: 6, 12, 18, 24, 30, 36.",
+"So 6 × 6 = 36."
 ],
-"title": "7 × 9"
+"title": "6 × 6"
 }
 },
 "mt_A-FyLLLLzy": {
@@ -431,13 +448,13 @@
 "adult": [
 "This topic asks you to generate a number or shape pattern that follows a given rule.",
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 9 × 5 = 45.",
+"For example, 8 × 7 = 56.",
 "It builds on Patterns in Times Tables and leads to Number Pattern Relationships."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 9 × 5 = 45."
+"For example, 8 × 7 = 56."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -499,8 +516,8 @@
 "answer": 0,
 "choices": [
 "Identifying arithmetic patterns feeds into generating and analysing patterns from rules",
-"Rectangular arrays with repeated addition extends array representation from Y2",
-"Expressing array totals as sums of equal addends requires understanding multiplication as repeated addition"
+"Long division by 2-digit extends Y5 short division by 1-digit",
+"Checking division with multiplication requires fluent multiplication"
 ],
 "explain": "Because: Identifying arithmetic patterns feeds into generating and analysing patterns from rules.",
 "hint": "Think about what you need first.",
@@ -513,7 +530,7 @@
 "choices": [
 "Number Pattern Relationships",
 "Patterns in Times Tables",
-"Arrays for multiplication (age 7+)"
+"Division with remainders (age 10+)"
 ],
 "explain": "'Shape patterns' leads on to 'Number Pattern Relationships'.",
 "hint": "What comes after this topic?",
@@ -599,22 +616,22 @@
 {
 "answer": 0,
 "choices": [
-"45",
-"14",
-"54"
+"56",
+"15",
+"64"
 ],
-"explain": "9 × 5 = 45. 9 groups of 5 make 45.",
+"explain": "8 × 7 = 56. 8 groups of 7 make 56.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 9 × 5 and got 14. What is the correct answer?",
+"prompt": "Sam worked out 8 × 7 and got 15. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Patterns in Times Tables",
-"Sign Rules for Multiplication",
-"Long multiplication (age 10+)"
+"Division with remainders (age 10+)",
+"Brackets in Expressions"
 ],
 "explain": "'Shape patterns' builds on 'Patterns in Times Tables'.",
 "hint": "What does this topic build on?",
@@ -623,41 +640,41 @@
 "type": "mc"
 }
 ],
-"quality": 90,
+"quality": 87,
 "status": "auto-starter",
 "title": "Shape patterns",
 "topicId": "mt_A-FyLLLLzy",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 5,
-"rows": 9,
+"cols": 7,
+"rows": 8,
 "split": 4
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"9 × 5 means 9 groups of 5.",
-"Count in 5s: 5, 10, 15, 20, 25, 30, 35, 40, 45.",
-"So 9 × 5 = 45."
+"8 × 7 means 8 groups of 7.",
+"Count in 7s: 7, 14, 21, 28, 35, 42, 49, 56.",
+"So 8 × 7 = 56."
 ],
-"title": "9 × 5"
+"title": "8 × 7"
 }
 },
 "mt_AR-K72OIIO": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Adding a negative moves left; subtracting a negative moves right. Two negatives multiplied make a positive.",
-"For example, 4 − 5 = -1.",
+"Negative numbers sit to the left of zero on the number line; −5 is less than −2.",
+"For example, 7 − 5 = 2.",
 "It builds on Written Multiplication and leads to Division with remainders.",
-"Negative numbers sit to the left of zero on the number line; −5 is less than −2."
+"Adding a negative moves left; subtracting a negative moves right. Two negatives multiplied make a positive."
 ],
 "kid": [
 "Numbers below zero are negative.",
 "−3 is colder than −1. It is further from zero.",
-"For example, 4 − 5 = -1."
+"For example, 7 − 5 = 2."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -719,8 +736,8 @@
 "answer": 0,
 "choices": [
 "Problems require formal written multiplication skills",
-"Using arrays for division requires understanding division as grouping",
-"Using arrays requires understanding what multiplication means"
+"×÷ by 10/100/1000 to 3dp extends Y5 ×÷ by 10/100/1000",
+"Understanding digit shifting requires knowing what each decimal place represents"
 ],
 "explain": "Because: Problems require formal written multiplication skills.",
 "hint": "Think about what you need first.",
@@ -733,7 +750,7 @@
 "choices": [
 "Division with remainders",
 "Written Multiplication",
-"Arrays for multiplication"
+"Multiplying and dividing (age 10+)"
 ],
 "explain": "'Multiply & Add Problems' leads on to 'Division with remainders'.",
 "hint": "What comes after this topic?",
@@ -819,22 +836,22 @@
 {
 "answer": 0,
 "choices": [
-"-1",
-"1",
-"-9"
+"2",
+"-2",
+"-12"
 ],
-"explain": "4 − 5 = -1. Below zero the numbers grow more negative.",
+"explain": "7 − 5 = 2. Below zero the numbers grow more negative.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 4 − 5 and got 1. What is the correct answer?",
+"prompt": "Sam worked out 7 − 5 and got -2. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Written Multiplication",
-"Arrays for multiplication (age 9+)",
-"Long multiplication"
+"Multiplying and dividing (age 10+)",
+"Arrays for multiplication (age 9+)"
 ],
 "explain": "'Multiply & Add Problems' builds on 'Written Multiplication'.",
 "hint": "What does this topic build on?",
@@ -851,34 +868,34 @@
 "caption": "Drag the point. Zoom in to find numbers between the whole numbers.",
 "opts": {
 "neg": true,
-"start": -1,
-"target": -4
+"start": 2,
+"target": -7
 },
 "type": "numzoom"
 },
 "worked": {
 "steps": [
-"Start at 4 on the number line.",
-"Count back 4 to reach 0.",
-"Count back 1 more to reach -1.",
-"So 4 − 5 = -1."
+"Start at 7 on the number line.",
+"Count back 7 to reach 0.",
+"Count back 5 to 2.",
+"So 7 − 5 = 2."
 ],
-"title": "4 − 5"
+"title": "7 − 5"
 }
 },
 "mt_B1zj1RwQ3a": {
 "audience": "family",
 "explain": {
 "adult": [
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 7 × 7 = 49.",
+"Multiplication counts equal groups, and an array shows them as rows and columns.",
+"For example, 7 × 6 = 42.",
 "It builds on Arrays for multiplication and leads to What Multiplication Means.",
-"Multiplication counts equal groups, and an array shows them as rows and columns."
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 7 × 7 = 49."
+"For example, 7 × 6 = 42."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -940,8 +957,8 @@
 "answer": 0,
 "choices": [
 "Rectangular arrays with repeated addition extends array representation from Y2",
-"×÷ by 10/100/1000 to 3dp extends Y5 ×÷ by 10/100/1000",
-"Understanding digit shifting requires knowing what each decimal place represents"
+"Understanding order of operations (BODMAS) is required before studying how operations undo each other…",
+"Fluency with all four operations in context is required before formalising inverse relationships between…"
 ],
 "explain": "Because: Rectangular arrays with repeated addition extends array representation from Y2.",
 "hint": "Think about what you need first.",
@@ -963,23 +980,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"rectangular",
-"correspondence",
-"factorisation"
-],
-"explain": "The missing word is 'rectangular'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Use addition to find the total number of objects arranged in _____ arrays with up to 5 rows and 5 columns'",
-"type": "mc"
-},
-{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 2,
@@ -991,6 +995,24 @@
 ]
 },
 "prompt": "Quick check: What is {a} × {b}?",
+"type": "numeric"
+},
+{
+"answer": "b",
+"explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
+"hint": "Which number times {a} makes {=a*b}?",
+"id": "m7",
+"params": {
+"a": [
+2,
+12
+],
+"b": [
+2,
+12
+]
+},
+"prompt": "Quick check: What is {=a*b} ÷ {a}?",
 "type": "numeric"
 }
 ]
@@ -1035,22 +1057,22 @@
 {
 "answer": 0,
 "choices": [
-"49",
-"14",
-"56"
+"42",
+"13",
+"49"
 ],
-"explain": "7 × 7 = 49. 7 groups of 7 make 49.",
+"explain": "7 × 6 = 42. 7 groups of 6 make 42.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 7 × 7 and got 14. What is the correct answer?",
+"prompt": "Sam worked out 7 × 6 and got 13. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Arrays for multiplication",
-"Multiplying and dividing (age 10+)",
-"Multiply & Add Problems"
+"Using inverse operations",
+"Multiplying and dividing (age 10+)"
 ],
 "explain": "'Arrays for multiplication (age 7+)' builds on 'Arrays for multiplication'.",
 "hint": "What does this topic build on?",
@@ -1059,14 +1081,14 @@
 "type": "mc"
 }
 ],
-"quality": 87,
+"quality": 88,
 "status": "auto-starter",
 "title": "Arrays for multiplication (age 7+)",
 "topicId": "mt_B1zj1RwQ3a",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 7,
+"cols": 6,
 "rows": 7,
 "split": 3
 },
@@ -1074,26 +1096,26 @@
 },
 "worked": {
 "steps": [
-"7 × 7 means 7 groups of 7.",
-"Count in 7s: 7, 14, 21, 28, 35, 42, 49.",
-"So 7 × 7 = 49."
+"7 × 6 means 7 groups of 6.",
+"Count in 6s: 6, 12, 18, 24, 30, 36, 42.",
+"So 7 × 6 = 42."
 ],
-"title": "7 × 7"
+"title": "7 × 6"
 }
 },
 "mt_C9ZfT-4cgn": {
 "audience": "family",
 "explain": {
 "adult": [
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 3 × 4 = 12.",
+"Multiplication counts equal groups, and an array shows them as rows and columns.",
+"For example, 5 × 7 = 35.",
 "It builds on Arrays for multiplication and leads to Properties of Operations.",
-"Multiplication counts equal groups, and an array shows them as rows and columns."
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 3 × 4 = 12."
+"For example, 5 × 7 = 35."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -1155,8 +1177,8 @@
 "answer": 0,
 "choices": [
 "Commutativity of multiplication requires understanding multiplication",
-"Extends array-based repeated addition to formal multiplication interpretation",
-"Interpreting products formalises repeated addition/equal groups from Y1"
+"Choosing operations benefits from order-of-operations understanding",
+"Y6 multi-step four-op problems extend Y5 multi-step problems"
 ],
 "explain": "Because: Commutativity of multiplication requires understanding multiplication.",
 "hint": "Think about what you need first.",
@@ -1169,7 +1191,7 @@
 "choices": [
 "Properties of Operations",
 "Arrays for multiplication",
-"What Multiplication Means"
+"Written Multiplication"
 ],
 "explain": "'Commutative Multiplication' leads on to 'Properties of Operations'.",
 "hint": "What comes after this topic?",
@@ -1255,22 +1277,22 @@
 {
 "answer": 0,
 "choices": [
+"35",
 "12",
-"7",
-"15"
+"40"
 ],
-"explain": "3 × 4 = 12. 3 groups of 4 make 12.",
+"explain": "5 × 7 = 35. 5 groups of 7 make 35.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 3 × 4 and got 7. What is the correct answer?",
+"prompt": "Sam worked out 5 × 7 and got 12. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiplication as repeated addition",
-"What Multiplication Means",
-"Multiplying and dividing (age 10+)"
+"Multi-step problems: choosing operations",
+"Written Multiplication"
 ],
 "explain": "'Commutative Multiplication' builds on 'Multiplication as repeated addition'.",
 "hint": "What does this topic build on?",
@@ -1279,26 +1301,26 @@
 "type": "mc"
 }
 ],
-"quality": 84,
+"quality": 86,
 "status": "auto-starter",
 "title": "Commutative Multiplication",
 "topicId": "mt_C9ZfT-4cgn",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 4,
-"rows": 3,
-"split": 1
+"cols": 7,
+"rows": 5,
+"split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 3 × what = 12?",
-"Count in 3s: 3, 6, 9, 12.",
-"That is 4 jumps, so 12 ÷ 3 = 4."
+"Think: 5 × what = 35?",
+"Count in 5s: 5, 10, 15, 20, 25, 30, 35.",
+"That is 7 jumps, so 35 ÷ 5 = 7."
 ],
-"title": "12 ÷ 3"
+"title": "35 ÷ 5"
 }
 },
 "mt_DyGBW3ZHh3": {
@@ -1306,14 +1328,14 @@
 "explain": {
 "adult": [
 "The partial products are then added, so 34 × 26 = 34 × 20 + 34 × 6.",
-"For example, 34 × 9 = 306.",
+"For example, 53 × 9 = 477.",
 "It builds on The three digits of a three-digit number and leads to Written Multiplication.",
 "Written multiplication breaks one number into place values and multiplies by each part."
 ],
 "kid": [
 "Big multiplications split into smaller ones.",
 "Multiply by the ones, then by the tens, then add.",
-"For example, 34 × 9 = 306."
+"For example, 53 × 9 = 477."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -1379,8 +1401,8 @@
 "answer": 0,
 "choices": [
 "Written multiplication/division requires known table facts",
-"Reading × and ÷ symbols parallels reading + and − symbols",
-"Writing ÷ sentences requires understanding division"
+"Understanding decimal place value and powers-of-10 scaling is essential for decimal multiplication",
+"Multiplying decimals by whole numbers builds on whole-number multiplication"
 ],
 "explain": "Because: Written multiplication/division requires known table facts.",
 "hint": "Think about what you need first.",
@@ -1389,23 +1411,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"Written Multiplication",
-"The three digits of a three-digit number",
-"Reading ×, ÷, and = Symbols"
-],
-"explain": "'Written Multiplication & Division' leads on to 'Written Multiplication'.",
-"hint": "What comes after this topic?",
-"id": "m5",
-"prompt": "Which topic does 'Written Multiplication & Division' help you learn next?",
-"type": "mc"
-},
-{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "Split {b} into tens and ones.",
-"id": "m6",
+"id": "m5",
 "params": {
 "a": [
 12,
@@ -1423,7 +1432,7 @@
 "answer": "a*b*10",
 "explain": "{a} × {b} = {=a*b}, so {a} × {b}0 = {=a*b*10}.",
 "hint": "Multiply by {b}, then by 10.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 12,
@@ -1436,6 +1445,19 @@
 },
 "prompt": "Quick check: What is {a} × {b}0?",
 "type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Times tables (age 7+)",
+"Decimal place value",
+"Order of operations"
+],
+"explain": "'Written Multiplication & Division' builds on 'Times tables (age 7+)'.",
+"hint": "What does this topic build on?",
+"id": "m7",
+"prompt": "Quick check: Which topic should you learn before 'Written Multiplication & Division'?",
+"type": "mc"
 }
 ]
 },
@@ -1480,8 +1502,8 @@
 "answer": 0,
 "choices": [
 "Times tables (age 7+)",
-"Sign Rules for Multiplication",
-"Division with remainders (age 10+)"
+"Decimal place value",
+"Order of operations"
 ],
 "explain": "'Written Multiplication & Division' builds on 'Times tables (age 7+)'.",
 "hint": "What does this topic build on?",
@@ -1504,10 +1526,10 @@
 },
 "worked": {
 "steps": [
-"34 × 9 = 306.",
-"So 34 × 9 = 306."
+"53 × 9 = 477.",
+"So 53 × 9 = 477."
 ],
-"title": "34 × 9"
+"title": "53 × 9"
 }
 },
 "mt_EmR5n58jZt": {
@@ -1515,14 +1537,14 @@
 "explain": {
 "adult": [
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 6 × 4 = 24.",
+"For example, 5 × 3 = 15.",
 "It builds on Written Multiplication & Division and leads to Multiply & Add Problems.",
 "Multiplication counts equal groups, and an array shows them as rows and columns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 6 × 4 = 24."
+"For example, 5 × 3 = 15."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -1584,8 +1606,8 @@
 "answer": 0,
 "choices": [
 "Solving mult/div problems requires computational skills",
-"Finding factor pairs requires fluent table knowledge",
-"Using commutativity in factor pairs draws on properties understanding"
+"Extends array-based repeated addition to formal multiplication interpretation",
+"Interpreting products formalises repeated addition/equal groups from Y1"
 ],
 "explain": "Because: Solving mult/div problems requires computational skills.",
 "hint": "Think about what you need first.",
@@ -1598,7 +1620,7 @@
 "choices": [
 "Multiply & Add Problems",
 "Written Multiplication & Division",
-"Factor Pairs & Commutativity"
+"What Multiplication Means"
 ],
 "explain": "'Multi-Step Multiply & Divide' leads on to 'Multiply & Add Problems'.",
 "hint": "What comes after this topic?",
@@ -1684,22 +1706,22 @@
 {
 "answer": 0,
 "choices": [
-"24",
-"10",
-"30"
+"15",
+"8",
+"20"
 ],
-"explain": "6 × 4 = 24. 6 groups of 4 make 24.",
+"explain": "5 × 3 = 15. 5 groups of 3 make 15.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 6 × 4 and got 10. What is the correct answer?",
+"prompt": "Sam worked out 5 × 3 and got 8. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Written Multiplication & Division",
-"Factor Pairs & Commutativity",
-"Multi-step problems: choosing operations"
+"What Multiplication Means",
+"Using inverse operations"
 ],
 "explain": "'Multi-Step Multiply & Divide' builds on 'Written Multiplication & Division'.",
 "hint": "What does this topic build on?",
@@ -1715,19 +1737,19 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 4,
-"rows": 6,
-"split": 3
+"cols": 3,
+"rows": 5,
+"split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 6 × what = 24?",
-"Count in 6s: 6, 12, 18, 24.",
-"That is 4 jumps, so 24 ÷ 6 = 4."
+"Think: 5 × what = 15?",
+"Count in 5s: 5, 10, 15.",
+"That is 3 jumps, so 15 ÷ 5 = 3."
 ],
-"title": "24 ÷ 6"
+"title": "15 ÷ 5"
 }
 },
 "mt_FHIAv6dfhU": {
@@ -1735,14 +1757,14 @@
 "explain": {
 "adult": [
 "This topic asks you to find all factor pairs for a whole number in the range 1–100.",
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 4 × 9 = 36.",
+"Multiplication counts equal groups, and an array shows them as rows and columns.",
+"For example, 9 × 9 = 81.",
 "It builds on All times tables to 12×12 and leads to Simplifying Fractions."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 4 × 9 = 36."
+"For example, 9 × 9 = 81."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -1804,8 +1826,8 @@
 "answer": 0,
 "choices": [
 "Tables to 12×12 fluency is prerequisite to finding factor pairs up to 100",
-"HCF/LCM/prime factorisation extends Y5-6 factor pairs and common factors/multiples",
-"Multiplying/dividing negatives requires adding/subtracting negatives first"
+"3, 4, 8 times tables build on known 2, 5, 10 tables",
+"Counting in 4s and 8s supports learning those table facts"
 ],
 "explain": "Because: Tables to 12×12 fluency is prerequisite to finding factor pairs up to 100.",
 "hint": "Think about what you need first.",
@@ -1818,7 +1840,7 @@
 "choices": [
 "Simplifying Fractions",
 "All times tables to 12×12",
-"Sign Rules for Multiplication"
+"Times tables (age 7+)"
 ],
 "explain": "'Factors, multiples, and primes' leads on to 'Simplifying Fractions'.",
 "hint": "What comes after this topic?",
@@ -1904,22 +1926,22 @@
 {
 "answer": 0,
 "choices": [
-"36",
-"13",
-"40"
+"81",
+"18",
+"90"
 ],
-"explain": "4 × 9 = 36. 4 groups of 9 make 36.",
+"explain": "9 × 9 = 81. 9 groups of 9 make 81.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 4 × 9 and got 13. What is the correct answer?",
+"prompt": "Sam worked out 9 × 9 and got 18. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "All times tables to 12×12",
-"Factors, multiples, and primes (age 11+)",
-"Sign Rules for Multiplication"
+"Writing Number Sentences",
+"Division with remainders (age 10+)"
 ],
 "explain": "'Factors, multiples, and primes' builds on 'All times tables to 12×12'.",
 "hint": "What does this topic build on?",
@@ -1936,18 +1958,18 @@
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
 "cols": 9,
-"rows": 4,
-"split": 2
+"rows": 9,
+"split": 4
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"4 × 9 means 4 groups of 9.",
-"Count in 9s: 9, 18, 27, 36.",
-"So 4 × 9 = 36."
+"9 × 9 means 9 groups of 9.",
+"Count in 9s: 9, 18, 27, 36, 45, 54, 63, 72, 81.",
+"So 9 × 9 = 81."
 ],
-"title": "4 × 9"
+"title": "9 × 9"
 }
 },
 "mt_GDG9_SZmsO": {
@@ -1956,13 +1978,13 @@
 "adult": [
 "This topic asks you to understand division as an unknown-factor problem (e.g. find 32 ÷ 8 by finding the number that makes 32 when multiplied by 8).",
 "Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 9 × 5 = 45.",
+"For example, 5 × 3 = 15.",
 "It builds on What Multiplication Means and leads to Arrays for multiplication (age 9+)."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 9 × 5 = 45."
+"For example, 5 × 3 = 15."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2024,8 +2046,8 @@
 "answer": 0,
 "choices": [
 "Division as Unknown Factor",
-"Multiplying and dividing",
-"What Multiplication Means"
+"Factor Pairs & Commutativity",
+"Multiplicative Comparison"
 ],
 "explain": "That is part of 'Division as Unknown Factor'.",
 "hint": "Think about what this topic covers.",
@@ -2037,8 +2059,8 @@
 "answer": 0,
 "choices": [
 "Connecting division to multiplication requires understanding products",
-"Dividing by 10/100 (Y4 fractions context) is prerequisite to ×÷ by 10/100/1000 with decimals",
-"×10 place-value relationship is prerequisite to ×÷ by powers of 10"
+"Finding factor pairs requires fluent table knowledge",
+"Using commutativity in factor pairs draws on properties understanding"
 ],
 "explain": "Because: Connecting division to multiplication requires understanding products.",
 "hint": "Think about what you need first.",
@@ -2051,7 +2073,7 @@
 "choices": [
 "Arrays for multiplication (age 9+)",
 "What Multiplication Means",
-"Multiplying and dividing"
+"Factor Pairs & Commutativity"
 ],
 "explain": "'Division as Unknown Factor' leads on to 'Arrays for multiplication (age 9+)'.",
 "hint": "What comes after this topic?",
@@ -2119,22 +2141,22 @@
 {
 "answer": 0,
 "choices": [
-"45",
-"14",
-"54"
+"15",
+"8",
+"20"
 ],
-"explain": "9 × 5 = 45. 9 groups of 5 make 45.",
+"explain": "5 × 3 = 15. 5 groups of 3 make 15.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 9 × 5 and got 14. What is the correct answer?",
+"prompt": "Sam worked out 5 × 3 and got 8. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "What Multiplication Means",
-"Multiplying and dividing",
-"Ratio (age 11+)"
+"Multiplicative Comparison",
+"Order of operations"
 ],
 "explain": "'Division as Unknown Factor' builds on 'What Multiplication Means'.",
 "hint": "What does this topic build on?",
@@ -2143,26 +2165,26 @@
 "type": "mc"
 }
 ],
-"quality": 78,
+"quality": 81,
 "status": "auto-starter",
 "title": "Division as Unknown Factor",
 "topicId": "mt_GDG9_SZmsO",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 5,
-"rows": 9,
-"split": 4
+"cols": 3,
+"rows": 5,
+"split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 9 × what = 45?",
-"Count in 9s: 9, 18, 27, 36, 45.",
-"That is 5 jumps, so 45 ÷ 9 = 5."
+"Think: 5 × what = 15?",
+"Count in 5s: 5, 10, 15.",
+"That is 3 jumps, so 15 ÷ 5 = 3."
 ],
-"title": "45 ÷ 9"
+"title": "15 ÷ 5"
 }
 },
 "mt_GRWwTDZ3wD": {
@@ -2170,14 +2192,14 @@
 "explain": {
 "adult": [
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 3 × 5 = 15.",
+"For example, 8 × 7 = 56.",
 "It builds on Division as equal sharing and leads to Arrays for multiplication (age 7+).",
 "Multiplication counts equal groups, and an array shows them as rows and columns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 3 × 5 = 15."
+"For example, 8 × 7 = 56."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -2239,8 +2261,8 @@
 "answer": 0,
 "choices": [
 "Using arrays for division requires understanding division as grouping",
-"Order of operations with powers/roots extends Y6 BODMAS understanding",
-"Problems require formal written multiplication skills"
+"Division as equal sharing/grouping requires understanding subtraction as taking away/separating",
+"Understanding order of operations (BODMAS) is required before studying how operations undo each other…"
 ],
 "explain": "Because: Using arrays for division requires understanding division as grouping.",
 "hint": "Think about what you need first.",
@@ -2288,8 +2310,8 @@
 "answer": 0,
 "choices": [
 "Division as equal sharing",
-"Ratio (age 11+)",
-"Multiply & Add Problems"
+"Using inverse operations",
+"Arrays for multiplication (age 7+)"
 ],
 "explain": "'Arrays for multiplication' builds on 'Division as equal sharing'.",
 "hint": "What does this topic build on?",
@@ -2339,22 +2361,22 @@
 {
 "answer": 0,
 "choices": [
+"56",
 "15",
-"8",
-"18"
+"64"
 ],
-"explain": "3 × 5 = 15. 3 groups of 5 make 15.",
+"explain": "8 × 7 = 56. 8 groups of 7 make 56.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 3 × 5 and got 8. What is the correct answer?",
+"prompt": "Sam worked out 8 × 7 and got 15. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Division as equal sharing",
-"Ratio (age 11+)",
-"Multiply & Add Problems"
+"Using inverse operations",
+"Arrays for multiplication (age 7+)"
 ],
 "explain": "'Arrays for multiplication' builds on 'Division as equal sharing'.",
 "hint": "What does this topic build on?",
@@ -2370,19 +2392,19 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 5,
-"rows": 3,
-"split": 1
+"cols": 7,
+"rows": 8,
+"split": 4
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 3 × what = 15?",
-"Count in 3s: 3, 6, 9, 12, 15.",
-"That is 5 jumps, so 15 ÷ 3 = 5."
+"Think: 8 × what = 56?",
+"Count in 8s: 8, 16, 24, 32, 40, 48, 56.",
+"That is 7 jumps, so 56 ÷ 8 = 7."
 ],
-"title": "15 ÷ 3"
+"title": "56 ÷ 8"
 }
 },
 "mt_HhuSDxwDNM": {
@@ -2391,13 +2413,13 @@
 "adult": [
 "This topic asks you to recall and use multiplication and division facts for the 2, 5.",
 "Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 3 × 3 = 9.",
+"For example, 3 × 5 = 15.",
 "It builds on Counting in 2s and leads to Multiplication as repeated addition (age 6+)."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 3 × 3 = 9."
+"For example, 3 × 5 = 15."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -2459,8 +2481,8 @@
 "answer": 0,
 "choices": [
 "Times tables for 2, 5, 10 build on skip counting in 2s, 5s, 10s",
-"Understanding division as unknown-factor supports short division strategy",
-"Fluent ×÷ within 100 is prerequisite to short division of larger numbers"
+"Understanding decimal place value and powers-of-10 scaling is essential for decimal multiplication",
+"Multiplying decimals by whole numbers builds on whole-number multiplication"
 ],
 "explain": "Because: Times tables for 2, 5, 10 build on skip counting in 2s, 5s, 10s.",
 "hint": "Think about what you need first.",
@@ -2469,23 +2491,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"multiplication",
-"property",
-"correspondence"
-],
-"explain": "The missing word is 'multiplication'.",
-"hint": "Which word fits the topic?",
-"id": "m5",
-"prompt": "Fill the gap: 'Recall and use _____ and division facts for the 2, 5'",
-"type": "mc"
-},
-{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m6",
+"id": "m5",
 "params": {
 "a": [
 2,
@@ -2503,7 +2512,7 @@
 "answer": "b",
 "explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
 "hint": "Which number times {a} makes {=a*b}?",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 2,
@@ -2516,6 +2525,19 @@
 },
 "prompt": "Quick check: What is {=a*b} ÷ {a}?",
 "type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"Counting in 2s",
+"Decimal place value",
+"All times tables to 12×12"
+],
+"explain": "'Times tables' builds on 'Counting in 2s'.",
+"hint": "What does this topic build on?",
+"id": "m7",
+"prompt": "Quick check: Which topic should you learn before 'Times tables'?",
+"type": "mc"
 }
 ]
 },
@@ -2559,22 +2581,22 @@
 {
 "answer": 0,
 "choices": [
-"9",
-"6",
-"12"
+"15",
+"8",
+"18"
 ],
-"explain": "3 × 3 = 9. 3 groups of 3 make 9.",
+"explain": "3 × 5 = 15. 3 groups of 5 make 15.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 3 × 3 and got 6. What is the correct answer?",
+"prompt": "Sam worked out 3 × 5 and got 8. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Counting in 2s",
-"Arrays for multiplication (age 9+)",
-"Factor Pairs & Commutativity"
+"Decimal place value",
+"All times tables to 12×12"
 ],
 "explain": "'Times tables' builds on 'Counting in 2s'.",
 "hint": "What does this topic build on?",
@@ -2590,7 +2612,7 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 3,
+"cols": 5,
 "rows": 3,
 "split": 1
 },
@@ -2598,26 +2620,26 @@
 },
 "worked": {
 "steps": [
-"Think: 3 × what = 9?",
-"Count in 3s: 3, 6, 9.",
-"That is 3 jumps, so 9 ÷ 3 = 3."
+"Think: 3 × what = 15?",
+"Count in 3s: 3, 6, 9, 12, 15.",
+"That is 5 jumps, so 15 ÷ 3 = 5."
 ],
-"title": "9 ÷ 3"
+"title": "15 ÷ 3"
 }
 },
 "mt_K5jM7vlVhA": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 12 × 9 = 108.",
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
+"For example, 12 × 4 = 48.",
 "It builds on Counting in 6s and leads to Written Multiplication.",
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
+"Multiplication counts equal groups, and an array shows them as rows and columns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 12 × 9 = 108."
+"For example, 12 × 4 = 48."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2679,8 +2701,8 @@
 "answer": 0,
 "choices": [
 "All tables to 12×12 extends knowledge of 3/4/8 tables",
-"Interpreting quotients formalises equal sharing/grouping from Y1",
-"Evaluating grouped expressions formalises multi-step calculation skills from Y5"
+"Dividing by 10/100 (Y4 fractions context) is prerequisite to ×÷ by 10/100/1000 with decimals",
+"×10 place-value relationship is prerequisite to ×÷ by powers of 10"
 ],
 "explain": "Because: All tables to 12×12 extends knowledge of 3/4/8 tables.",
 "hint": "Think about what you need first.",
@@ -2693,7 +2715,7 @@
 "choices": [
 "Written Multiplication",
 "Counting in 6s",
-"What Division Means"
+"Multiplying and dividing"
 ],
 "explain": "'All times tables to 12×12' leads on to 'Written Multiplication'.",
 "hint": "What comes after this topic?",
@@ -2702,27 +2724,22 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"multiplication",
+"measurement",
+"correspondence"
+],
+"explain": "The missing word is 'multiplication'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Recall _____ and division facts for multiplication tables up to 12 × 12'",
+"type": "mc"
+},
+{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m6",
-"params": {
-"a": [
-2,
-12
-],
-"b": [
-2,
-12
-]
-},
-"prompt": "Quick check: What is {a} × {b}?",
-"type": "numeric"
-},
-{
-"answer": "b",
-"explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
-"hint": "Which number times {a} makes {=a*b}?",
 "id": "m7",
 "params": {
 "a": [
@@ -2734,7 +2751,7 @@
 12
 ]
 },
-"prompt": "Quick check: What is {=a*b} ÷ {a}?",
+"prompt": "Quick check: What is {a} × {b}?",
 "type": "numeric"
 }
 ]
@@ -2779,22 +2796,22 @@
 {
 "answer": 0,
 "choices": [
-"108",
-"21",
-"120"
+"48",
+"16",
+"60"
 ],
-"explain": "12 × 9 = 108. 12 groups of 9 make 108.",
+"explain": "12 × 4 = 48. 12 groups of 4 make 48.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 12 × 9 and got 21. What is the correct answer?",
+"prompt": "Sam worked out 12 × 4 and got 16. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Times tables (age 7+)",
-"Brackets in Expressions",
-"Division with remainders (age 10+)"
+"Multiplying and dividing",
+"Multiplicative Comparison"
 ],
 "explain": "'All times tables to 12×12' builds on 'Times tables (age 7+)'.",
 "hint": "What does this topic build on?",
@@ -2803,14 +2820,14 @@
 "type": "mc"
 }
 ],
-"quality": 88,
+"quality": 87,
 "status": "auto-starter",
 "title": "All times tables to 12×12",
 "topicId": "mt_K5jM7vlVhA",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 9,
+"cols": 4,
 "rows": 12,
 "split": 6
 },
@@ -2818,26 +2835,26 @@
 },
 "worked": {
 "steps": [
-"Think: 12 × what = 108?",
-"Count in 12s: 12, 24, 36, 48, 60, 72, 84, 96, 108.",
-"That is 9 jumps, so 108 ÷ 12 = 9."
+"Think: 12 × what = 48?",
+"Count in 12s: 12, 24, 36, 48.",
+"That is 4 jumps, so 48 ÷ 12 = 4."
 ],
-"title": "108 ÷ 12"
+"title": "48 ÷ 12"
 }
 },
 "mt_Lb2ZnMdkYR": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 5 × 4 = 20.",
+"Multiplication counts equal groups, and an array shows them as rows and columns.",
+"For example, 4 × 5 = 20.",
 "It builds on Commutative Multiplication and leads to Multiply & Add Problems.",
-"Multiplication counts equal groups, and an array shows them as rows and columns."
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 5 × 4 = 20."
+"For example, 4 × 5 = 20."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -2900,7 +2917,7 @@
 "choices": [
 "Applying all three properties extends Y2 commutativity understanding",
 "Writing/interpreting expressions requires understanding grouping symbols",
-"Formal short multiplication extends Y3 written multiplication"
+"Must understand multiplicative comparison concept before solving word problems"
 ],
 "explain": "Because: Applying all three properties extends Y2 commutativity understanding.",
 "hint": "Think about what you need first.",
@@ -2913,7 +2930,7 @@
 "choices": [
 "Multiply & Add Problems",
 "Commutative Multiplication",
-"Written Multiplication"
+"Multiplicative Comparison"
 ],
 "explain": "'Properties of Operations' leads on to 'Multiply & Add Problems'.",
 "hint": "What comes after this topic?",
@@ -3001,12 +3018,12 @@
 "choices": [
 "20",
 "9",
-"25"
+"24"
 ],
-"explain": "5 × 4 = 20. 5 groups of 4 make 20.",
+"explain": "4 × 5 = 20. 4 groups of 5 make 20.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 5 × 4 and got 9. What is the correct answer?",
+"prompt": "Sam worked out 4 × 5 and got 9. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -3014,7 +3031,7 @@
 "choices": [
 "Commutative Multiplication",
 "Writing Number Sentences",
-"Sign Rules for Multiplication"
+"Multiplicative Comparison"
 ],
 "explain": "'Properties of Operations' builds on 'Commutative Multiplication'.",
 "hint": "What does this topic build on?",
@@ -3023,26 +3040,26 @@
 "type": "mc"
 }
 ],
-"quality": 84,
+"quality": 87,
 "status": "auto-starter",
 "title": "Properties of Operations",
 "topicId": "mt_Lb2ZnMdkYR",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 4,
-"rows": 5,
+"cols": 5,
+"rows": 4,
 "split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 5 × what = 20?",
-"Count in 5s: 5, 10, 15, 20.",
-"That is 4 jumps, so 20 ÷ 5 = 4."
+"Think: 4 × what = 20?",
+"Count in 4s: 4, 8, 12, 16, 20.",
+"That is 5 jumps, so 20 ÷ 4 = 5."
 ],
-"title": "20 ÷ 5"
+"title": "20 ÷ 4"
 }
 },
 "mt_LlMl2PbaZe": {
@@ -3050,14 +3067,14 @@
 "explain": {
 "adult": [
 "This topic asks you to multiply and divide whole numbers and those involving decimals by 10, 100.",
-"Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 6 × 7 = 42.",
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
+"For example, 3 × 8 = 24.",
 "It builds on Dividing by 10 and 100 and leads to Patterns with Powers of Ten."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 6 × 7 = 42."
+"For example, 3 × 8 = 24."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -3119,8 +3136,8 @@
 "answer": 0,
 "choices": [
 "Dividing by 10/100 (Y4 fractions context) is prerequisite to ×÷ by 10/100/1000 with decimals",
-"Arrays help demonstrate commutativity (rotate the array)",
-"Commutativity of multiplication requires understanding multiplication"
+"3, 4, 8 times tables build on known 2, 5, 10 tables",
+"Counting in 4s and 8s supports learning those table facts"
 ],
 "explain": "Because: Dividing by 10/100 (Y4 fractions context) is prerequisite to ×÷ by 10/100/1000 with decimals.",
 "hint": "Think about what you need first.",
@@ -3133,7 +3150,7 @@
 "choices": [
 "Patterns with Powers of Ten",
 "Dividing by 10 and 100",
-"Commutative Multiplication"
+"Times tables (age 7+)"
 ],
 "explain": "'Multiplying and dividing' leads on to 'Patterns with Powers of Ten'.",
 "hint": "What comes after this topic?",
@@ -3219,22 +3236,22 @@
 {
 "answer": 0,
 "choices": [
-"42",
-"13",
-"48"
+"24",
+"11",
+"27"
 ],
-"explain": "6 × 7 = 42. 6 groups of 7 make 42.",
+"explain": "3 × 8 = 24. 3 groups of 8 make 24.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 6 × 7 and got 13. What is the correct answer?",
+"prompt": "Sam worked out 3 × 8 and got 11. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Dividing by 10 and 100",
-"Factors, multiples, and primes (age 11+)",
-"Long multiplication (age 10+)"
+"Long multiplication (age 10+)",
+"Division with remainders (age 10+)"
 ],
 "explain": "'Multiplying and dividing' builds on 'Dividing by 10 and 100'.",
 "hint": "What does this topic build on?",
@@ -3243,41 +3260,41 @@
 "type": "mc"
 }
 ],
-"quality": 80,
+"quality": 81,
 "status": "auto-starter",
 "title": "Multiplying and dividing",
 "topicId": "mt_LlMl2PbaZe",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 7,
-"rows": 6,
-"split": 3
+"cols": 8,
+"rows": 3,
+"split": 1
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 6 × what = 42?",
-"Count in 6s: 6, 12, 18, 24, 30, 36, 42.",
-"That is 7 jumps, so 42 ÷ 6 = 7."
+"Think: 3 × what = 24?",
+"Count in 3s: 3, 6, 9, 12, 15, 18, 21, 24.",
+"That is 8 jumps, so 24 ÷ 3 = 8."
 ],
-"title": "42 ÷ 6"
+"title": "24 ÷ 3"
 }
 },
 "mt_MCu_SNg_OW": {
 "audience": "learner",
 "explain": {
 "adult": [
-"At each step: divide, multiply, subtract, then bring down the next digit. What is left at the end is the remainder.",
-"For example, 2012 ÷ 2 = 1006.",
+"Written division handles one place value at a time, from the left.",
+"For example, 33715 ÷ 9 = 3746 r 1.",
 "It builds on Division as Unknown Factor and leads to Division with remainders.",
-"Written division handles one place value at a time, from the left."
+"At each step: divide, multiply, subtract, then bring down the next digit. What is left at the end is the remainder."
 ],
 "kid": [
 "Division shares a number into equal groups.",
 "Work from the biggest place value first. Bring down the next digit.",
-"For example, 2012 ÷ 2 = 1006."
+"For example, 33715 ÷ 9 = 3746 r 1."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -3344,8 +3361,8 @@
 "answer": 0,
 "choices": [
 "Understanding division as unknown-factor supports short division strategy",
-"Division as equal sharing/grouping requires understanding subtraction as taking away/separating",
-"Finding factor pairs requires fluent table knowledge"
+"Long division by 2-digit extends Y5 short division by 1-digit",
+"Checking division with multiplication requires fluent multiplication"
 ],
 "explain": "Because: Understanding division as unknown-factor supports short division strategy.",
 "hint": "Think about what you need first.",
@@ -3358,7 +3375,7 @@
 "choices": [
 "Division with remainders",
 "Division as Unknown Factor",
-"Division as equal sharing"
+"Patterns in Times Tables"
 ],
 "explain": "'Arrays for multiplication (age 9+)' leads on to 'Division with remainders'.",
 "hint": "What comes after this topic?",
@@ -3454,22 +3471,22 @@
 {
 "answer": 0,
 "choices": [
-"1006",
-"1007",
-"100"
+"3746",
+"3747",
+"374"
 ],
-"explain": "2012 ÷ 2 = 1006. Check by multiplying back: 1006 × 2 = 2012.",
+"explain": "33715 ÷ 9 = 3746. Check by multiplying back: 3746 × 9 + 1 = 33715.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 2012 ÷ 2 and got 1007. What is the correct answer?",
+"prompt": "Sam worked out 33715 ÷ 9 and got 3747. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Division as Unknown Factor",
-"Multiplying and dividing (age 10+)",
-"Long multiplication (age 10+)"
+"Division with remainders (age 10+)",
+"Using inverse operations"
 ],
 "explain": "'Arrays for multiplication (age 9+)' builds on 'Division as Unknown Factor'.",
 "hint": "What does this topic build on?",
@@ -3485,20 +3502,20 @@
 "visual": {
 "caption": "Step through the division one digit at a time.",
 "opts": {
-"a": 2012,
-"b": 2
+"a": 33715,
+"b": 9
 },
 "type": "longdiv"
 },
 "worked": {
 "steps": [
-"2 ÷ 2 = 1.",
-"0 ÷ 2 = 0.",
-"1 ÷ 2 = 0, remainder 1.",
-"12 ÷ 2 = 6.",
-"So 2012 ÷ 2 = 1006."
+"33 ÷ 9 = 3, remainder 6.",
+"67 ÷ 9 = 7, remainder 4.",
+"41 ÷ 9 = 4, remainder 5.",
+"55 ÷ 9 = 6, remainder 1.",
+"So 33715 ÷ 9 = 3746 remainder 1."
 ],
-"title": "2012 ÷ 2"
+"title": "33715 ÷ 9"
 }
 },
 "mt_SoDP1fSQEB": {
@@ -3507,13 +3524,13 @@
 "adult": [
 "This topic asks you to multiply one-digit numbers with up to two decimal places by whole numbers (e.g. 3.47 × 6).",
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 8 × 7 = 56.",
+"For example, 3 × 5 = 15.",
 "It builds on Multiplying and dividing (age 10+) and leads to Calculating Percentages."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 8 × 7 = 56."
+"For example, 3 × 5 = 15."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -3575,8 +3592,8 @@
 "answer": 0,
 "choices": [
 "Understanding decimal place value and powers-of-10 scaling is essential for decimal multiplication",
-"×÷ by 10/100/1000 to 3dp extends Y5 ×÷ by 10/100/1000",
-"Understanding digit shifting requires knowing what each decimal place represents"
+"Fraction-of-quantity skills support scaling by simple fractions",
+"Multiplicative comparison supports scaling problems"
 ],
 "explain": "Because: Understanding decimal place value and powers-of-10 scaling is essential for decimal multiplication.",
 "hint": "Think about what you need first.",
@@ -3589,7 +3606,7 @@
 "choices": [
 "Calculating Percentages",
 "Multiplying and dividing (age 10+)",
-"Multiplication as repeated addition (age 6+)"
+"Understanding fractions"
 ],
 "explain": "'Decimal place value' leads on to 'Calculating Percentages'.",
 "hint": "What comes after this topic?",
@@ -3601,8 +3618,8 @@
 "answer": 0,
 "choices": [
 "numbers",
-"calculations",
-"quotients"
+"quotients",
+"calculations"
 ],
 "explain": "The missing word is 'numbers'.",
 "hint": "Which word fits the topic?",
@@ -3670,22 +3687,22 @@
 {
 "answer": 0,
 "choices": [
-"56",
 "15",
-"64"
+"8",
+"18"
 ],
-"explain": "8 × 7 = 56. 8 groups of 7 make 56.",
+"explain": "3 × 5 = 15. 3 groups of 5 make 15.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 8 × 7 and got 15. What is the correct answer?",
+"prompt": "Sam worked out 3 × 5 and got 8. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiplying and dividing (age 10+)",
-"Sign Rules for Multiplication",
-"Using inverse operations"
+"Using inverse operations",
+"Ratio (age 11+)"
 ],
 "explain": "'Decimal place value' builds on 'Multiplying and dividing (age 10+)'.",
 "hint": "What does this topic build on?",
@@ -3694,26 +3711,26 @@
 "type": "mc"
 }
 ],
-"quality": 83,
+"quality": 84,
 "status": "auto-starter",
 "title": "Decimal place value",
 "topicId": "mt_SoDP1fSQEB",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 7,
-"rows": 8,
-"split": 4
+"cols": 5,
+"rows": 3,
+"split": 1
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"8 × 7 means 8 groups of 7.",
-"Count in 7s: 7, 14, 21, 28, 35, 42, 49, 56.",
-"So 8 × 7 = 56."
+"3 × 5 means 3 groups of 5.",
+"Count in 5s: 5, 10, 15.",
+"So 3 × 5 = 15."
 ],
-"title": "8 × 7"
+"title": "3 × 5"
 }
 },
 "mt_U4cIBXVug4": {
@@ -3721,14 +3738,14 @@
 "explain": {
 "adult": [
 "This topic asks you to interpret a multiplication equation as a comparison (e.g. 35 = 5 × 7 means 35 is 5 times as many as 7).",
-"Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 7 × 7 = 49.",
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
+"For example, 5 × 7 = 35.",
 "It builds on What Multiplication Means and leads to Multiplicative Comparison."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 7 × 7 = 49."
+"For example, 5 × 7 = 35."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -3790,8 +3807,8 @@
 "answer": 0,
 "choices": [
 "Multiplicative Comparison",
-"Fluent multiplication and division facts",
-"What Division Means"
+"Factor Pairs & Commutativity",
+"Fluent multiplication and division facts"
 ],
 "explain": "That is part of 'Multiplicative Comparison'.",
 "hint": "Think about what this topic covers.",
@@ -3803,8 +3820,8 @@
 "answer": 0,
 "choices": [
 "Interpreting products is prerequisite to interpreting multiplication as comparison",
-"Using mult/div relationship as strategy supports fluency",
-"Fluency within 100 builds on knowing 2/5/10 tables"
+"Finding factor pairs requires fluent table knowledge",
+"Using commutativity in factor pairs draws on properties understanding"
 ],
 "explain": "Because: Interpreting products is prerequisite to interpreting multiplication as comparison.",
 "hint": "Think about what you need first.",
@@ -3817,7 +3834,7 @@
 "choices": [
 "Multiplicative Comparison",
 "What Multiplication Means",
-"Fluent multiplication and division facts"
+"Factor Pairs & Commutativity"
 ],
 "explain": "'Multiplicative Comparison' leads on to 'Multiplicative Comparison'.",
 "hint": "What comes after this topic?",
@@ -3826,22 +3843,17 @@
 "type": "mc"
 },
 {
-"answer": "a*b",
-"explain": "{a} × {b} = {=a*b}.",
-"hint": "{a} groups of {b}.",
-"id": "m7",
-"params": {
-"a": [
-2,
-12
+"answer": 0,
+"choices": [
+"multiplication",
+"relationship",
+"property"
 ],
-"b": [
-2,
-12
-]
-},
-"prompt": "Quick check: What is {a} × {b}?",
-"type": "numeric"
+"explain": "The missing word is 'multiplication'.",
+"hint": "Which word fits the topic?",
+"id": "m7",
+"prompt": "Fill the gap: 'Interpret a _____ equation as a comparison (e.g. 35 = 5 × 7 means 35 is 5 times as many as 7)'",
+"type": "mc"
 }
 ]
 },
@@ -3885,22 +3897,22 @@
 {
 "answer": 0,
 "choices": [
-"49",
-"14",
-"56"
+"35",
+"12",
+"40"
 ],
-"explain": "7 × 7 = 49. 7 groups of 7 make 49.",
+"explain": "5 × 7 = 35. 5 groups of 7 make 35.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 7 × 7 and got 14. What is the correct answer?",
+"prompt": "Sam worked out 5 × 7 and got 12. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "What Multiplication Means",
-"Long multiplication (age 10+)",
-"Multiplying and dividing (age 10+)"
+"Division with Decimals",
+"Division with remainders (age 10+)"
 ],
 "explain": "'Multiplicative Comparison' builds on 'What Multiplication Means'.",
 "hint": "What does this topic build on?",
@@ -3909,7 +3921,7 @@
 "type": "mc"
 }
 ],
-"quality": 85,
+"quality": 88,
 "status": "auto-starter",
 "title": "Multiplicative Comparison",
 "topicId": "mt_U4cIBXVug4",
@@ -3917,18 +3929,18 @@
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
 "cols": 7,
-"rows": 7,
-"split": 3
+"rows": 5,
+"split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"7 × 7 means 7 groups of 7.",
-"Count in 7s: 7, 14, 21, 28, 35, 42, 49.",
-"So 7 × 7 = 49."
+"5 × 7 means 5 groups of 7.",
+"Count in 7s: 7, 14, 21, 28, 35.",
+"So 5 × 7 = 35."
 ],
-"title": "7 × 7"
+"title": "5 × 7"
 }
 },
 "mt_WX30dzi4dt": {
@@ -3936,14 +3948,14 @@
 "explain": {
 "adult": [
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 3 × 7 = 21.",
+"For example, 3 × 9 = 27.",
 "It builds on Division as Unknown Factor and leads to Arrays for multiplication (age 9+).",
 "Multiplication counts equal groups, and an array shows them as rows and columns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 3 × 7 = 21."
+"For example, 3 × 9 = 27."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -4005,8 +4017,8 @@
 "answer": 0,
 "choices": [
 "Fluency within 100 builds on knowing 2/5/10 tables",
-"Understanding division as unknown-factor supports short division strategy",
-"Fluent ×÷ within 100 is prerequisite to short division of larger numbers"
+"HCF/LCM/prime factorisation extends Y5-6 factor pairs and common factors/multiples",
+"Long multiplication 4×2 extends Y5 multiplication up to 4×1 and 2×2"
 ],
 "explain": "Because: Fluency within 100 builds on knowing 2/5/10 tables.",
 "hint": "Think about what you need first.",
@@ -4019,7 +4031,7 @@
 "choices": [
 "Arrays for multiplication (age 9+)",
 "Division as Unknown Factor",
-"Commutative Multiplication"
+"Factors, multiples, and primes (age 11+)"
 ],
 "explain": "'Fluent multiplication and division facts' leads on to 'Arrays for multiplication (age 9+)'.",
 "hint": "What comes after this topic?",
@@ -4031,7 +4043,7 @@
 "answer": 0,
 "choices": [
 "relationship",
-"property",
+"factorisation",
 "multiplication"
 ],
 "explain": "The missing word is 'relationship'.",
@@ -4100,22 +4112,22 @@
 {
 "answer": 0,
 "choices": [
-"21",
-"10",
-"24"
+"27",
+"12",
+"30"
 ],
-"explain": "3 × 7 = 21. 3 groups of 7 make 21.",
+"explain": "3 × 9 = 27. 3 groups of 9 make 27.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 3 × 7 and got 10. What is the correct answer?",
+"prompt": "Sam worked out 3 × 9 and got 12. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Times tables",
-"Arrays for multiplication (age 9+)",
-"Order of operations"
+"Factors, multiples, and primes (age 11+)",
+"Long multiplication (age 10+)"
 ],
 "explain": "'Fluent multiplication and division facts' builds on 'Times tables'.",
 "hint": "What does this topic build on?",
@@ -4124,14 +4136,14 @@
 "type": "mc"
 }
 ],
-"quality": 78,
+"quality": 77,
 "status": "auto-starter",
 "title": "Fluent multiplication and division facts",
 "topicId": "mt_WX30dzi4dt",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 7,
+"cols": 9,
 "rows": 3,
 "split": 1
 },
@@ -4139,11 +4151,11 @@
 },
 "worked": {
 "steps": [
-"Think: 3 × what = 21?",
-"Count in 3s: 3, 6, 9, 12, 15, 18, 21.",
-"That is 7 jumps, so 21 ÷ 3 = 7."
+"Think: 3 × what = 27?",
+"Count in 3s: 3, 6, 9, 12, 15, 18, 21, 24, 27.",
+"That is 9 jumps, so 27 ÷ 3 = 9."
 ],
-"title": "21 ÷ 3"
+"title": "27 ÷ 3"
 }
 },
 "mt_X5cypSGoGU": {
@@ -4200,8 +4212,8 @@
 "answer": 0,
 "choices": [
 "Order of operations with powers/roots extends Y6 BODMAS understanding",
-"Reading × and ÷ symbols parallels reading + and − symbols",
-"Writing ÷ sentences requires understanding division"
+"×÷ by 10/100/1000 to 3dp extends Y5 ×÷ by 10/100/1000",
+"Understanding digit shifting requires knowing what each decimal place represents"
 ],
 "explain": "Because: Order of operations with powers/roots extends Y6 BODMAS understanding.",
 "hint": "Think about what you need first.",
@@ -4214,7 +4226,7 @@
 "choices": [
 "Square and cube numbers",
 "Order of operations",
-"Reading ×, ÷, and = Symbols"
+"Multiplying and dividing (age 10+)"
 ],
 "explain": "'Ratio (age 11+)' leads on to 'Square and cube numbers'.",
 "hint": "What comes after this topic?",
@@ -4366,14 +4378,14 @@
 "explain": {
 "adult": [
 "Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 6 × 3 = 18.",
+"For example, 5 × 8 = 40.",
 "It builds on Fractions of amounts (harder) and leads to Real-World Maths Modelling.",
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 6 × 3 = 18."
+"For example, 5 × 8 = 40."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -4435,8 +4447,8 @@
 "answer": 0,
 "choices": [
 "Multiplicative comparison supports scaling problems",
-"Must understand multiplicative comparison concept before solving word problems",
-"Solving M×D word problems within 100 is prerequisite to multiplicative comparison problems"
+"Rectangular arrays with repeated addition extends array representation from Y2",
+"Expressing array totals as sums of equal addends requires understanding multiplication as repeated addition"
 ],
 "explain": "Because: Multiplicative comparison supports scaling problems.",
 "hint": "Think about what you need first.",
@@ -4449,7 +4461,7 @@
 "choices": [
 "Real-World Maths Modelling",
 "Fractions of amounts (harder)",
-"Multiplicative Comparison"
+"Arrays for multiplication (age 7+)"
 ],
 "explain": "'Understanding fractions' leads on to 'Real-World Maths Modelling'.",
 "hint": "What comes after this topic?",
@@ -4458,23 +4470,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"involving",
-"interpreting",
-"understanding"
-],
-"explain": "The missing word is 'involving'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Solve problems _____ scaling by simple fractions and problems involving simple rates'",
-"type": "mc"
-},
-{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 2,
@@ -4486,6 +4485,24 @@
 ]
 },
 "prompt": "Quick check: What is {a} × {b}?",
+"type": "numeric"
+},
+{
+"answer": "b",
+"explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
+"hint": "Which number times {a} makes {=a*b}?",
+"id": "m7",
+"params": {
+"a": [
+2,
+12
+],
+"b": [
+2,
+12
+]
+},
+"prompt": "Quick check: What is {=a*b} ÷ {a}?",
 "type": "numeric"
 }
 ]
@@ -4530,22 +4547,22 @@
 {
 "answer": 0,
 "choices": [
-"18",
-"9",
-"24"
+"40",
+"13",
+"45"
 ],
-"explain": "6 × 3 = 18. 6 groups of 3 make 18.",
+"explain": "5 × 8 = 40. 5 groups of 8 make 40.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 6 × 3 and got 9. What is the correct answer?",
+"prompt": "Sam worked out 5 × 8 and got 13. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiplicative Comparison",
-"Brackets in Expressions",
-"Sign Rules for Multiplication"
+"Ratio (age 11+)",
+"Division with Decimals"
 ],
 "explain": "'Understanding fractions' builds on 'Multiplicative Comparison'.",
 "hint": "What does this topic build on?",
@@ -4554,26 +4571,26 @@
 "type": "mc"
 }
 ],
-"quality": 85,
+"quality": 87,
 "status": "auto-starter",
 "title": "Understanding fractions",
 "topicId": "mt_ZOJ6EbdPOb",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 3,
-"rows": 6,
-"split": 3
+"cols": 8,
+"rows": 5,
+"split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"6 × 3 means 6 groups of 3.",
-"Count in 3s: 3, 6, 9, 12, 15, 18.",
-"So 6 × 3 = 18."
+"5 × 8 means 5 groups of 8.",
+"Count in 8s: 8, 16, 24, 32, 40.",
+"So 5 × 8 = 40."
 ],
-"title": "6 × 3"
+"title": "5 × 8"
 }
 },
 "mt_Zdv-b-iW5K": {
@@ -4581,14 +4598,14 @@
 "explain": {
 "adult": [
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 8 × 4 = 32.",
+"For example, 5 × 9 = 45.",
 "It builds on What Multiplication Means and leads to Multiplicative Comparison.",
 "Multiplication counts equal groups, and an array shows them as rows and columns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 8 × 4 = 32."
+"For example, 5 × 9 = 45."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -4650,8 +4667,8 @@
 "answer": 0,
 "choices": [
 "Word problems require understanding what products mean",
-"Tables to 12×12 fluency is prerequisite to finding factor pairs up to 100",
-"Recognising factor pairs at Y4 is prerequisite to systematically finding all factor pairs"
+"Connecting division to multiplication requires understanding products",
+"Seeing division as unknown-factor requires understanding division first"
 ],
 "explain": "Because: Word problems require understanding what products mean.",
 "hint": "Think about what you need first.",
@@ -4664,7 +4681,7 @@
 "choices": [
 "Multiplicative Comparison",
 "What Multiplication Means",
-"Factors, multiples, and primes"
+"Division as Unknown Factor"
 ],
 "explain": "'Multiplication and Division Word Problems' leads on to 'Multiplicative Comparison'.",
 "hint": "What comes after this topic?",
@@ -4750,22 +4767,22 @@
 {
 "answer": 0,
 "choices": [
-"32",
-"12",
-"40"
+"45",
+"14",
+"50"
 ],
-"explain": "8 × 4 = 32. 8 groups of 4 make 32.",
+"explain": "5 × 9 = 45. 5 groups of 9 make 45.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 8 × 4 and got 12. What is the correct answer?",
+"prompt": "Sam worked out 5 × 9 and got 14. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "What Multiplication Means",
-"Factors, multiples, and primes",
-"Decimal place value"
+"Decimal place value",
+"Writing Number Sentences"
 ],
 "explain": "'Multiplication and Division Word Problems' builds on 'What Multiplication Means'.",
 "hint": "What does this topic build on?",
@@ -4774,26 +4791,26 @@
 "type": "mc"
 }
 ],
-"quality": 86,
+"quality": 85,
 "status": "auto-starter",
 "title": "Multiplication and Division Word Problems",
 "topicId": "mt_Zdv-b-iW5K",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 4,
-"rows": 8,
-"split": 4
+"cols": 9,
+"rows": 5,
+"split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 8 × what = 32?",
-"Count in 8s: 8, 16, 24, 32.",
-"That is 4 jumps, so 32 ÷ 8 = 4."
+"Think: 5 × what = 45?",
+"Count in 5s: 5, 10, 15, 20, 25, 30, 35, 40, 45.",
+"That is 9 jumps, so 45 ÷ 5 = 9."
 ],
-"title": "32 ÷ 8"
+"title": "45 ÷ 5"
 }
 },
 "mt_gtTl3R5buH": {
@@ -4801,14 +4818,14 @@
 "explain": {
 "adult": [
 "This topic asks you to interpret products of whole numbers (e.g. 5 × 7 as the total number of objects in 5 groups of 7).",
-"Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 6 × 3 = 18.",
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
+"For example, 3 × 7 = 21.",
 "It builds on Arrays for multiplication (age 7+) and leads to Division as Unknown Factor."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 6 × 3 = 18."
+"For example, 3 × 7 = 21."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -4870,8 +4887,8 @@
 "answer": 0,
 "choices": [
 "What Multiplication Means",
-"Using inverse operations",
-"Arrays for multiplication"
+"Division as Unknown Factor",
+"Ratio (age 11+)"
 ],
 "explain": "That is part of 'What Multiplication Means'.",
 "hint": "Think about what this topic covers.",
@@ -4883,8 +4900,8 @@
 "answer": 0,
 "choices": [
 "Extends array-based repeated addition to formal multiplication interpretation",
-"Understanding order of operations (BODMAS) is required before studying how operations undo each other…",
-"Fluency with all four operations in context is required before formalising inverse relationships between…"
+"Connecting division to multiplication requires understanding products",
+"Seeing division as unknown-factor requires understanding division first"
 ],
 "explain": "Because: Extends array-based repeated addition to formal multiplication interpretation.",
 "hint": "Think about what you need first.",
@@ -4897,7 +4914,7 @@
 "choices": [
 "Division as Unknown Factor",
 "Arrays for multiplication (age 7+)",
-"Arrays for multiplication"
+"Decimal place value"
 ],
 "explain": "'What Multiplication Means' leads on to 'Division as Unknown Factor'.",
 "hint": "What comes after this topic?",
@@ -4909,8 +4926,8 @@
 "answer": 0,
 "choices": [
 "products",
-"relationships",
-"situations"
+"numbers",
+"hundredths"
 ],
 "explain": "The missing word is 'products'.",
 "hint": "Which word fits the topic?",
@@ -4960,22 +4977,22 @@
 {
 "answer": 0,
 "choices": [
-"18",
-"9",
+"21",
+"10",
 "24"
 ],
-"explain": "6 × 3 = 18. 6 groups of 3 make 18.",
+"explain": "3 × 7 = 21. 3 groups of 7 make 21.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 6 × 3 and got 9. What is the correct answer?",
+"prompt": "Sam worked out 3 × 7 and got 10. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Arrays for multiplication (age 7+)",
-"Using inverse operations",
-"Ratio (age 11+)"
+"Ratio (age 11+)",
+"Decimal place value"
 ],
 "explain": "'What Multiplication Means' builds on 'Arrays for multiplication (age 7+)'.",
 "hint": "What does this topic build on?",
@@ -4991,19 +5008,19 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 3,
-"rows": 6,
-"split": 3
+"cols": 7,
+"rows": 3,
+"split": 1
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"6 × 3 means 6 groups of 3.",
-"Count in 3s: 3, 6, 9, 12, 15, 18.",
-"So 6 × 3 = 18."
+"3 × 7 means 3 groups of 7.",
+"Count in 7s: 7, 14, 21.",
+"So 3 × 7 = 21."
 ],
-"title": "6 × 3"
+"title": "3 × 7"
 }
 },
 "mt_iNdrM2-oJf": {
@@ -5012,13 +5029,13 @@
 "adult": [
 "This topic asks you to interpret whole-number quotients (e.g. 56 ÷ 8 as the number of objects in each share or the number of equal groups).",
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 7 × 8 = 56.",
+"For example, 3 × 9 = 27.",
 "It builds on Division as equal sharing and leads to Division as Unknown Factor."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 7 × 8 = 56."
+"For example, 3 × 9 = 27."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -5080,8 +5097,8 @@
 "answer": 0,
 "choices": [
 "Interpreting quotients formalises equal sharing/grouping from Y1",
-"3, 4, 8 times tables build on known 2, 5, 10 tables",
-"Counting in 4s and 8s supports learning those table facts"
+"Solving mult/div problems requires computational skills",
+"Scaling and correspondence problems extend Y2 problem-solving with mult/div"
 ],
 "explain": "Because: Interpreting quotients formalises equal sharing/grouping from Y1.",
 "hint": "Think about what you need first.",
@@ -5094,7 +5111,7 @@
 "choices": [
 "Division as Unknown Factor",
 "Division as equal sharing",
-"Times tables (age 7+)"
+"Multi-Step Multiply & Divide"
 ],
 "explain": "'What Division Means' leads on to 'Division as Unknown Factor'.",
 "hint": "What comes after this topic?",
@@ -5180,22 +5197,22 @@
 {
 "answer": 0,
 "choices": [
-"56",
-"15",
-"63"
+"27",
+"12",
+"30"
 ],
-"explain": "7 × 8 = 56. 7 groups of 8 make 56.",
+"explain": "3 × 9 = 27. 3 groups of 9 make 27.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 7 × 8 and got 15. What is the correct answer?",
+"prompt": "Sam worked out 3 × 9 and got 12. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Division as equal sharing",
-"Long multiplication",
-"Multiplicative Comparison"
+"Arrays for multiplication (age 9+)",
+"Long multiplication"
 ],
 "explain": "'What Division Means' builds on 'Division as equal sharing'.",
 "hint": "What does this topic build on?",
@@ -5211,19 +5228,19 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 8,
-"rows": 7,
-"split": 3
+"cols": 9,
+"rows": 3,
+"split": 1
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 7 × what = 56?",
-"Count in 7s: 7, 14, 21, 28, 35, 42, 49, 56.",
-"That is 8 jumps, so 56 ÷ 7 = 8."
+"Think: 3 × what = 27?",
+"Count in 3s: 3, 6, 9, 12, 15, 18, 21, 24, 27.",
+"That is 9 jumps, so 27 ÷ 3 = 9."
 ],
-"title": "56 ÷ 7"
+"title": "27 ÷ 3"
 }
 },
 "mt_lU-2aTRB9f": {
@@ -5231,14 +5248,14 @@
 "explain": {
 "adult": [
 "This topic asks you to use written division methods in cases where the answer has up to two decimal places.",
-"Written division handles one place value at a time, from the left.",
-"For example, 312 ÷ 4 = 78.",
+"At each step: divide, multiply, subtract, then bring down the next digit. What is left at the end is the remainder.",
+"For example, 528 ÷ 8 = 66.",
 "It builds on Multiplying and dividing (age 10+) and leads to Calculating the Mean."
 ],
 "kid": [
 "Division shares a number into equal groups.",
 "Work from the biggest place value first. Bring down the next digit.",
-"For example, 312 ÷ 4 = 78."
+"For example, 528 ÷ 8 = 66."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -5305,8 +5322,8 @@
 "answer": 0,
 "choices": [
 "Decimal quotients require understanding of decimal place value and powers of 10",
-"Interpreting products is prerequisite to interpreting multiplication as comparison",
-"Arrays are a key representation for solving multiplication/division problems"
+"Reading × and ÷ symbols parallels reading + and − symbols",
+"Writing ÷ sentences requires understanding division"
 ],
 "explain": "Because: Decimal quotients require understanding of decimal place value and powers of 10.",
 "hint": "Think about what you need first.",
@@ -5319,7 +5336,7 @@
 "choices": [
 "Calculating the Mean",
 "Multiplying and dividing (age 10+)",
-"Multiplicative Comparison"
+"Reading ×, ÷, and = Symbols"
 ],
 "explain": "'Division with Decimals' leads on to 'Calculating the Mean'.",
 "hint": "What comes after this topic?",
@@ -5415,22 +5432,22 @@
 {
 "answer": 0,
 "choices": [
-"78",
-"79",
-"780"
+"66",
+"67",
+"660"
 ],
-"explain": "312 ÷ 4 = 78. Check by multiplying back: 78 × 4 = 312.",
+"explain": "528 ÷ 8 = 66. Check by multiplying back: 66 × 8 = 528.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 312 ÷ 4 and got 79. What is the correct answer?",
+"prompt": "Sam worked out 528 ÷ 8 and got 67. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiplying and dividing (age 10+)",
-"Factors, multiples, and primes (age 11+)",
-"Sign Rules for Multiplication"
+"Sign Rules for Multiplication",
+"Using inverse operations"
 ],
 "explain": "'Division with Decimals' builds on 'Multiplying and dividing (age 10+)'.",
 "hint": "What does this topic build on?",
@@ -5439,25 +5456,25 @@
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 79,
 "status": "auto-starter",
 "title": "Division with Decimals",
 "topicId": "mt_lU-2aTRB9f",
 "visual": {
 "caption": "Step through the division one digit at a time.",
 "opts": {
-"a": 312,
-"b": 4
+"a": 528,
+"b": 8
 },
 "type": "longdiv"
 },
 "worked": {
 "steps": [
-"31 ÷ 4 = 7, remainder 3.",
-"32 ÷ 4 = 8.",
-"So 312 ÷ 4 = 78."
+"52 ÷ 8 = 6, remainder 4.",
+"48 ÷ 8 = 6.",
+"So 528 ÷ 8 = 66."
 ],
-"title": "312 ÷ 4"
+"title": "528 ÷ 8"
 }
 },
 "mt_nZkL5-XjRX": {
@@ -5465,14 +5482,14 @@
 "explain": {
 "adult": [
 "Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 5 × 4 = 20.",
+"For example, 3 × 7 = 21.",
 "It builds on All times tables to 12×12 and leads to Factors, multiples, and primes.",
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 5 × 4 = 20."
+"For example, 3 × 7 = 21."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -5534,8 +5551,8 @@
 "answer": 0,
 "choices": [
 "Finding factor pairs requires fluent table knowledge",
-"Understanding division as unknown-factor supports short division strategy",
-"Fluent ×÷ within 100 is prerequisite to short division of larger numbers"
+"Dividing by 10/100 (Y4 fractions context) is prerequisite to ×÷ by 10/100/1000 with decimals",
+"×10 place-value relationship is prerequisite to ×÷ by powers of 10"
 ],
 "explain": "Because: Finding factor pairs requires fluent table knowledge.",
 "hint": "Think about what you need first.",
@@ -5548,7 +5565,7 @@
 "choices": [
 "Factors, multiples, and primes",
 "All times tables to 12×12",
-"Arrays for multiplication (age 9+)"
+"Multiplying and dividing"
 ],
 "explain": "'Factor Pairs & Commutativity' leads on to 'Factors, multiples, and primes'.",
 "hint": "What comes after this topic?",
@@ -5557,23 +5574,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"calculations",
-"products",
-"hundredths"
-],
-"explain": "The missing word is 'calculations'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Recognise and use factor pairs and commutativity in mental _____'",
-"type": "mc"
-},
-{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 2,
@@ -5585,6 +5589,24 @@
 ]
 },
 "prompt": "Quick check: What is {a} × {b}?",
+"type": "numeric"
+},
+{
+"answer": "b",
+"explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
+"hint": "Which number times {a} makes {=a*b}?",
+"id": "m7",
+"params": {
+"a": [
+2,
+12
+],
+"b": [
+2,
+12
+]
+},
+"prompt": "Quick check: What is {=a*b} ÷ {a}?",
 "type": "numeric"
 }
 ]
@@ -5629,22 +5651,22 @@
 {
 "answer": 0,
 "choices": [
-"20",
-"9",
-"25"
+"21",
+"10",
+"24"
 ],
-"explain": "5 × 4 = 20. 5 groups of 4 make 20.",
+"explain": "3 × 7 = 21. 3 groups of 7 make 21.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 5 × 4 and got 9. What is the correct answer?",
+"prompt": "Sam worked out 3 × 7 and got 10. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "All times tables to 12×12",
-"Arrays for multiplication (age 9+)",
-"Long multiplication"
+"Multiplying and dividing",
+"Multiplicative Comparison"
 ],
 "explain": "'Factor Pairs & Commutativity' builds on 'All times tables to 12×12'.",
 "hint": "What does this topic build on?",
@@ -5660,34 +5682,34 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 4,
-"rows": 5,
-"split": 2
+"cols": 7,
+"rows": 3,
+"split": 1
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"5 × 4 means 5 groups of 4.",
-"Count in 4s: 4, 8, 12, 16, 20.",
-"So 5 × 4 = 20."
+"3 × 7 means 3 groups of 7.",
+"Count in 7s: 7, 14, 21.",
+"So 3 × 7 = 21."
 ],
-"title": "5 × 4"
+"title": "3 × 7"
 }
 },
 "mt_p-nbe0w_lf": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Written division handles one place value at a time, from the left.",
-"For example, 499 ÷ 7 = 71 r 2.",
+"At each step: divide, multiply, subtract, then bring down the next digit. What is left at the end is the remainder.",
+"For example, 146 ÷ 2 = 73.",
 "It builds on Multiply & Add Problems and leads to Brackets in Expressions.",
-"At each step: divide, multiply, subtract, then bring down the next digit. What is left at the end is the remainder."
+"Written division handles one place value at a time, from the left."
 ],
 "kid": [
 "Division shares a number into equal groups.",
 "Work from the biggest place value first. Bring down the next digit.",
-"For example, 499 ÷ 7 = 71 r 2."
+"For example, 146 ÷ 2 = 73."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -5754,8 +5776,8 @@
 "answer": 0,
 "choices": [
 "Y4 M×D problem-solving is prerequisite to multi-step four-operation problems",
-"Formal short multiplication extends Y3 written multiplication",
-"Written multiplication requires fluent table facts"
+"Two-digit × one-digit uses place-value partitioning (e.g. 23 × 4 = 20 × 4…",
+"Written multiplication/division requires known table facts"
 ],
 "explain": "Because: Y4 M×D problem-solving is prerequisite to multi-step four-operation problems.",
 "hint": "Think about what you need first.",
@@ -5768,7 +5790,7 @@
 "choices": [
 "Brackets in Expressions",
 "Multiply & Add Problems",
-"Written Multiplication"
+"Written Multiplication & Division"
 ],
 "explain": "'Division with remainders' leads on to 'Brackets in Expressions'.",
 "hint": "What comes after this topic?",
@@ -5777,10 +5799,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"interpreting",
+"grouping",
+"involving"
+],
+"explain": "The missing word is 'interpreting'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Solve multi-step word problems using the four operations with whole numbers, including _____ remainders in context'",
+"type": "mc"
+},
+{
 "answer": "a",
 "explain": "{=a*b} ÷ {b} = {=a}, because {=a} × {b} = {=a*b}.",
 "hint": "How many groups of {b} make {=a*b}?",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 11,
@@ -5793,29 +5828,6 @@
 },
 "prompt": "Quick check: What is {=a*b} ÷ {b}?",
 "type": "numeric"
-},
-{
-"answer": "r",
-"explain": "{=a*b+r} = {=a} × {b} + {=r}, so the remainder is {=r}.",
-"hint": "Find the biggest multiple of {b} that fits.",
-"id": "m7",
-"params": {
-"a": [
-4,
-15
-],
-"b": [
-3,
-9
-],
-"r": [
-1,
-8
-]
-},
-"prompt": "Quick check: What is the remainder when {=a*b+r} is divided by {b}?",
-"type": "numeric",
-"where": "r<b"
 }
 ]
 },
@@ -5864,22 +5876,22 @@
 {
 "answer": 0,
 "choices": [
-"71",
-"72",
-"710"
+"73",
+"74",
+"730"
 ],
-"explain": "499 ÷ 7 = 71. Check by multiplying back: 71 × 7 + 2 = 499.",
+"explain": "146 ÷ 2 = 73. Check by multiplying back: 73 × 2 = 146.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 499 ÷ 7 and got 72. What is the correct answer?",
+"prompt": "Sam worked out 146 ÷ 2 and got 74. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiply & Add Problems",
-"Factors, multiples, and primes (age 11+)",
-"Ratio (age 11+)"
+"Using inverse operations",
+"Brackets in Expressions"
 ],
 "explain": "'Division with remainders' builds on 'Multiply & Add Problems'.",
 "hint": "What does this topic build on?",
@@ -5895,18 +5907,18 @@
 "visual": {
 "caption": "Step through the division one digit at a time.",
 "opts": {
-"a": 499,
-"b": 7
+"a": 146,
+"b": 2
 },
 "type": "longdiv"
 },
 "worked": {
 "steps": [
-"49 ÷ 7 = 7.",
-"9 ÷ 7 = 1, remainder 2.",
-"So 499 ÷ 7 = 71 remainder 2."
+"14 ÷ 2 = 7.",
+"6 ÷ 2 = 3.",
+"So 146 ÷ 2 = 73."
 ],
-"title": "499 ÷ 7"
+"title": "146 ÷ 2"
 }
 },
 "mt_q9EaJc2FP8": {
@@ -5914,14 +5926,14 @@
 "explain": {
 "adult": [
 "This topic asks you to multiply a whole number of up to four digits by a one-digit number.",
-"Written multiplication breaks one number into place values and multiplies by each part.",
-"For example, 1988 × 6 = 11928.",
+"The partial products are then added, so 34 × 26 = 34 × 20 + 34 × 6.",
+"For example, 5855 × 8 = 46840.",
 "It builds on Written Multiplication and leads to Division with remainders."
 ],
 "kid": [
 "Big multiplications split into smaller ones.",
 "Multiply by the ones, then by the tens, then add.",
-"For example, 1988 × 6 = 11928."
+"For example, 5855 × 8 = 46840."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -5987,8 +5999,8 @@
 "answer": 0,
 "choices": [
 "2/3-digit × 1-digit written method is prerequisite to 4-digit × 1-digit and 2-digit ×…",
-"Finding factor pairs requires fluent table knowledge",
-"Using commutativity in factor pairs draws on properties understanding"
+"Tables to 12×12 fluency is prerequisite to finding factor pairs up to 100",
+"Recognising factor pairs at Y4 is prerequisite to systematically finding all factor pairs"
 ],
 "explain": "Because: 2/3-digit × 1-digit written method is prerequisite to 4-digit × 1-digit and 2-digit ×….",
 "hint": "Think about what you need first.",
@@ -6001,7 +6013,7 @@
 "choices": [
 "Division with remainders",
 "Written Multiplication",
-"Factor Pairs & Commutativity"
+"Factors, multiples, and primes"
 ],
 "explain": "'Long multiplication' leads on to 'Division with remainders'.",
 "hint": "What comes after this topic?",
@@ -6088,8 +6100,8 @@
 "answer": 0,
 "choices": [
 "Written Multiplication",
-"Division with remainders (age 10+)",
-"Sign Rules for Multiplication"
+"Order of operations",
+"Using inverse operations"
 ],
 "explain": "'Long multiplication' builds on 'Written Multiplication'.",
 "hint": "What does this topic build on?",
@@ -6098,7 +6110,7 @@
 "type": "mc"
 }
 ],
-"quality": 81,
+"quality": 80,
 "status": "auto-starter",
 "title": "Long multiplication",
 "topicId": "mt_q9EaJc2FP8",
@@ -6112,10 +6124,10 @@
 },
 "worked": {
 "steps": [
-"1988 × 6 = 11928.",
-"So 1988 × 6 = 11928."
+"5855 × 8 = 46840.",
+"So 5855 × 8 = 46840."
 ],
-"title": "1988 × 6"
+"title": "5855 × 8"
 }
 },
 "mt_rxInpOQ74w": {
@@ -6123,14 +6135,14 @@
 "explain": {
 "adult": [
 "Adding a negative moves left; subtracting a negative moves right. Two negatives multiplied make a positive.",
-"For example, 2 − 3 = -1.",
+"For example, 7 − 4 = 3.",
 "It builds on Positive and Negative Numbers and leads to Expanding brackets with negatives.",
 "Negative numbers sit to the left of zero on the number line; −5 is less than −2."
 ],
 "kid": [
 "Numbers below zero are negative.",
 "−3 is colder than −1. It is further from zero.",
-"For example, 2 − 3 = -1."
+"For example, 7 − 4 = 3."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -6192,8 +6204,8 @@
 "answer": 0,
 "choices": [
 "Multiplying/dividing negatives requires adding/subtracting negatives first",
-"3, 4, 8 times tables build on known 2, 5, 10 tables",
-"Counting in 4s and 8s supports learning those table facts"
+"HCF/LCM/prime factorisation extends Y5-6 factor pairs and common factors/multiples",
+"Arrays are a key representation for solving multiplication/division problems"
 ],
 "explain": "Because: Multiplying/dividing negatives requires adding/subtracting negatives first.",
 "hint": "Think about what you need first.",
@@ -6206,7 +6218,7 @@
 "choices": [
 "Expanding brackets with negatives",
 "Positive and Negative Numbers",
-"Times tables (age 7+)"
+"Factors, multiples, and primes (age 11+)"
 ],
 "explain": "'Sign Rules for Multiplication' leads on to 'Expanding brackets with negatives'.",
 "hint": "What comes after this topic?",
@@ -6215,23 +6227,10 @@
 "type": "mc"
 },
 {
-"answer": 0,
-"choices": [
-"understanding",
-"involving",
-"grouping"
-],
-"explain": "The missing word is 'understanding'.",
-"hint": "Which word fits the topic?",
-"id": "m6",
-"prompt": "Fill the gap: 'Multiply and divide with positive and negative integers and rational numbers, _____ the rules for the sign of the product or quotient'",
-"type": "mc"
-},
-{
 "answer": "a-b",
 "explain": "{a} − {b} = {=a-b}.",
 "hint": "Start at {a} and count back {b}.",
-"id": "m7",
+"id": "m6",
 "params": {
 "a": [
 1,
@@ -6243,6 +6242,24 @@
 ]
 },
 "prompt": "Quick check: What is {a} − {b}?",
+"type": "numeric"
+},
+{
+"answer": "b-a",
+"explain": "{=0-a} + {b} = {=b-a} °C.",
+"hint": "Move up from {=0-a}.",
+"id": "m7",
+"params": {
+"a": [
+2,
+9
+],
+"b": [
+1,
+15
+]
+},
+"prompt": "Quick check: The temperature is {=0-a} °C. It rises by {b} °C. What is it now?",
 "type": "numeric"
 }
 ]
@@ -6287,14 +6304,14 @@
 {
 "answer": 0,
 "choices": [
-"-1",
-"1",
-"-5"
+"3",
+"-3",
+"-11"
 ],
-"explain": "2 − 3 = -1. Below zero the numbers grow more negative.",
+"explain": "7 − 4 = 3. Below zero the numbers grow more negative.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 2 − 3 and got 1. What is the correct answer?",
+"prompt": "Sam worked out 7 − 4 and got -3. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -6319,34 +6336,34 @@
 "caption": "Drag the point. Zoom in to find numbers between the whole numbers.",
 "opts": {
 "neg": true,
-"start": -1,
-"target": -2
+"start": 3,
+"target": -7
 },
 "type": "numzoom"
 },
 "worked": {
 "steps": [
-"Start at 2 on the number line.",
-"Count back 2 to reach 0.",
-"Count back 1 more to reach -1.",
-"So 2 − 3 = -1."
+"Start at 7 on the number line.",
+"Count back 7 to reach 0.",
+"Count back 4 to 3.",
+"So 7 − 4 = 3."
 ],
-"title": "2 − 3"
+"title": "7 − 4"
 }
 },
 "mt_w6MxaaoMXZ": {
 "audience": "learner",
 "explain": {
 "adult": [
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 5 × 3 = 15.",
+"Multiplication counts equal groups, and an array shows them as rows and columns.",
+"For example, 4 × 5 = 20.",
 "It builds on Properties of Operations and leads to Shape patterns.",
-"Multiplication counts equal groups, and an array shows them as rows and columns."
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 5 × 3 = 15."
+"For example, 4 × 5 = 20."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -6408,8 +6425,8 @@
 "answer": 0,
 "choices": [
 "Explaining patterns uses properties of operations",
-"Y4 M×D problem-solving is prerequisite to multi-step four-operation problems",
-"Must have formal division method before solving multi-step problems"
+"Understanding division as unknown-factor supports short division strategy",
+"Fluent ×÷ within 100 is prerequisite to short division of larger numbers"
 ],
 "explain": "Because: Explaining patterns uses properties of operations.",
 "hint": "Think about what you need first.",
@@ -6422,7 +6439,7 @@
 "choices": [
 "Shape patterns",
 "Properties of Operations",
-"Division with remainders"
+"Arrays for multiplication (age 9+)"
 ],
 "explain": "'Patterns in Times Tables' leads on to 'Shape patterns'.",
 "hint": "What comes after this topic?",
@@ -6431,27 +6448,22 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"multiplication",
+"illustrate",
+"rectangular"
+],
+"explain": "The missing word is 'multiplication'.",
+"hint": "Which word fits the topic?",
+"id": "m6",
+"prompt": "Fill the gap: 'Identify arithmetic patterns (including patterns in the addition table or _____ table) and explain them using properties of operations'",
+"type": "mc"
+},
+{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m6",
-"params": {
-"a": [
-2,
-12
-],
-"b": [
-2,
-12
-]
-},
-"prompt": "Quick check: What is {a} × {b}?",
-"type": "numeric"
-},
-{
-"answer": "b",
-"explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
-"hint": "Which number times {a} makes {=a*b}?",
 "id": "m7",
 "params": {
 "a": [
@@ -6463,7 +6475,7 @@
 12
 ]
 },
-"prompt": "Quick check: What is {=a*b} ÷ {a}?",
+"prompt": "Quick check: What is {a} × {b}?",
 "type": "numeric"
 }
 ]
@@ -6508,22 +6520,22 @@
 {
 "answer": 0,
 "choices": [
-"15",
-"8",
-"20"
+"20",
+"9",
+"24"
 ],
-"explain": "5 × 3 = 15. 5 groups of 3 make 15.",
+"explain": "4 × 5 = 20. 4 groups of 5 make 20.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 5 × 3 and got 8. What is the correct answer?",
+"prompt": "Sam worked out 4 × 5 and got 9. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Properties of Operations",
-"Division with remainders",
-"Order of operations"
+"Arrays for multiplication (age 9+)",
+"Division with Decimals"
 ],
 "explain": "'Patterns in Times Tables' builds on 'Properties of Operations'.",
 "hint": "What does this topic build on?",
@@ -6539,19 +6551,19 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 3,
-"rows": 5,
+"cols": 5,
+"rows": 4,
 "split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"5 × 3 means 5 groups of 3.",
-"Count in 3s: 3, 6, 9, 12, 15.",
-"So 5 × 3 = 15."
+"4 × 5 means 4 groups of 5.",
+"Count in 5s: 5, 10, 15, 20.",
+"So 4 × 5 = 20."
 ],
-"title": "5 × 3"
+"title": "4 × 5"
 }
 },
 "mt_wPgpMJ0-PA": {
@@ -6559,14 +6571,14 @@
 "explain": {
 "adult": [
 "This topic asks you to multiply and divide numbers by 10, 100.",
-"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 10 × 3 = 30.",
+"Multiplication counts equal groups, and an array shows them as rows and columns.",
+"For example, 10 × 4 = 40.",
 "It builds on Multiplying and dividing and leads to Decimal place value."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 10 × 3 = 30."
+"For example, 10 × 4 = 40."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -6628,8 +6640,8 @@
 "answer": 0,
 "choices": [
 "×÷ by 10/100/1000 to 3dp extends Y5 ×÷ by 10/100/1000",
-"Using arrays for division requires understanding division as grouping",
-"Using arrays requires understanding what multiplication means"
+"Applying all three properties extends Y2 commutativity understanding",
+"Using properties requires understanding what multiplication means"
 ],
 "explain": "Because: ×÷ by 10/100/1000 to 3dp extends Y5 ×÷ by 10/100/1000.",
 "hint": "Think about what you need first.",
@@ -6642,7 +6654,7 @@
 "choices": [
 "Decimal place value",
 "Multiplying and dividing",
-"Arrays for multiplication"
+"Properties of Operations"
 ],
 "explain": "'Multiplying and dividing (age 10+)' leads on to 'Decimal place value'.",
 "hint": "What comes after this topic?",
@@ -6728,21 +6740,21 @@
 {
 "answer": 0,
 "choices": [
-"30",
-"13",
-"40"
+"40",
+"14",
+"50"
 ],
-"explain": "10 × 3 = 30. 10 groups of 3 make 30.",
+"explain": "10 × 4 = 40. 10 groups of 4 make 40.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 10 × 3 and got 13. What is the correct answer?",
+"prompt": "Sam worked out 10 × 4 and got 14. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Multiplying and dividing",
-"Sign Rules for Multiplication",
+"Using inverse operations",
 "Factors, multiples, and primes (age 11+)"
 ],
 "explain": "'Multiplying and dividing (age 10+)' builds on 'Multiplying and dividing'.",
@@ -6752,14 +6764,14 @@
 "type": "mc"
 }
 ],
-"quality": 91,
+"quality": 92,
 "status": "auto-starter",
 "title": "Multiplying and dividing (age 10+)",
 "topicId": "mt_wPgpMJ0-PA",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 3,
+"cols": 4,
 "rows": 10,
 "split": 5
 },
@@ -6767,11 +6779,11 @@
 },
 "worked": {
 "steps": [
-"Think: 10 × what = 30?",
-"Count in 10s: 10, 20, 30.",
-"That is 3 jumps, so 30 ÷ 10 = 3."
+"Think: 10 × what = 40?",
+"Count in 10s: 10, 20, 30, 40.",
+"That is 4 jumps, so 40 ÷ 10 = 4."
 ],
-"title": "30 ÷ 10"
+"title": "40 ÷ 10"
 }
 },
 "mt_wQ89AEXhz3": {
@@ -6780,13 +6792,13 @@
 "adult": [
 "This topic asks you to recall and use multiplication and division facts for the 3, 4.",
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 7 × 7 = 49.",
+"For example, 7 × 9 = 63.",
 "It builds on Times tables and leads to Extending Table Patterns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 7 × 7 = 49."
+"For example, 7 × 9 = 63."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -6848,8 +6860,8 @@
 "answer": 0,
 "choices": [
 "3, 4, 8 times tables build on known 2, 5, 10 tables",
-"Choosing operations benefits from order-of-operations understanding",
-"Y6 multi-step four-op problems extend Y5 multi-step problems"
+"Must understand multiplicative comparison concept before solving word problems",
+"Solving M×D word problems within 100 is prerequisite to multiplicative comparison problems"
 ],
 "explain": "Because: 3, 4, 8 times tables build on known 2, 5, 10 tables.",
 "hint": "Think about what you need first.",
@@ -6862,7 +6874,7 @@
 "choices": [
 "Extending Table Patterns",
 "Times tables",
-"Multiplying and dividing (age 10+)"
+"Multiplicative Comparison"
 ],
 "explain": "'Times tables (age 7+)' leads on to 'Extending Table Patterns'.",
 "hint": "What comes after this topic?",
@@ -6948,22 +6960,22 @@
 {
 "answer": 0,
 "choices": [
-"49",
-"14",
-"56"
+"63",
+"16",
+"70"
 ],
-"explain": "7 × 7 = 49. 7 groups of 7 make 49.",
+"explain": "7 × 9 = 63. 7 groups of 9 make 63.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 7 × 7 and got 14. What is the correct answer?",
+"prompt": "Sam worked out 7 × 9 and got 16. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Times tables",
-"Multi-step problems: choosing operations",
-"Multiplying and dividing (age 10+)"
+"Multiplicative Comparison",
+"Using inverse operations"
 ],
 "explain": "'Times tables (age 7+)' builds on 'Times tables'.",
 "hint": "What does this topic build on?",
@@ -6972,14 +6984,14 @@
 "type": "mc"
 }
 ],
-"quality": 90,
+"quality": 91,
 "status": "auto-starter",
 "title": "Times tables (age 7+)",
 "topicId": "mt_wQ89AEXhz3",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 7,
+"cols": 9,
 "rows": 7,
 "split": 3
 },
@@ -6987,11 +6999,11 @@
 },
 "worked": {
 "steps": [
-"Think: 7 × what = 49?",
-"Count in 7s: 7, 14, 21, 28, 35, 42, 49.",
-"That is 7 jumps, so 49 ÷ 7 = 7."
+"Think: 7 × what = 63?",
+"Count in 7s: 7, 14, 21, 28, 35, 42, 49, 56, 63.",
+"That is 9 jumps, so 63 ÷ 7 = 9."
 ],
-"title": "49 ÷ 7"
+"title": "63 ÷ 7"
 }
 },
 "mt_wh3UqnWsa7": {
@@ -6999,14 +7011,14 @@
 "explain": {
 "adult": [
 "Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 6 × 7 = 42.",
+"For example, 6 × 5 = 30.",
 "It builds on Arrays for multiplication and leads to Multi-Step Multiply & Divide.",
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 6 × 7 = 42."
+"For example, 6 × 5 = 30."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -7068,8 +7080,8 @@
 "answer": 0,
 "choices": [
 "Solving multiplication/division problems requires knowing the table facts",
-"Evaluating grouped expressions formalises multi-step calculation skills from Y5",
-"Evaluating expressions requires fluent multiplication"
+"Skip counting supports understanding equal groups (2s, 5s, 10s)",
+"Multiplication as repeated addition requires understanding addition as combining groups"
 ],
 "explain": "Because: Solving multiplication/division problems requires knowing the table facts.",
 "hint": "Think about what you need first.",
@@ -7078,10 +7090,23 @@
 "type": "mc"
 },
 {
+"answer": 0,
+"choices": [
+"Multi-Step Multiply & Divide",
+"Arrays for multiplication",
+"Multiplication as repeated addition"
+],
+"explain": "'Multiplication as repeated addition (age 6+)' leads on to 'Multi-Step Multiply & Divide'.",
+"hint": "What comes after this topic?",
+"id": "m5",
+"prompt": "Which topic does 'Multiplication as repeated addition (age 6+)' help you learn next?",
+"type": "mc"
+},
+{
 "answer": "a*b",
 "explain": "{a} × {b} = {=a*b}.",
 "hint": "{a} groups of {b}.",
-"id": "m5",
+"id": "m6",
 "params": {
 "a": [
 2,
@@ -7099,7 +7124,7 @@
 "answer": "b",
 "explain": "{a} × {=b} = {=a*b}, so the answer is {=b}.",
 "hint": "Which number times {a} makes {=a*b}?",
-"id": "m6",
+"id": "m7",
 "params": {
 "a": [
 2,
@@ -7112,19 +7137,6 @@
 },
 "prompt": "Quick check: What is {=a*b} ÷ {a}?",
 "type": "numeric"
-},
-{
-"answer": 0,
-"choices": [
-"Times tables",
-"Brackets in Expressions",
-"Writing Number Sentences"
-],
-"explain": "'Multiplication as repeated addition (age 6+)' builds on 'Times tables'.",
-"hint": "What does this topic build on?",
-"id": "m7",
-"prompt": "Quick check: Which topic should you learn before 'Multiplication as repeated addition (age 6+)'?",
-"type": "mc"
 }
 ]
 },
@@ -7168,22 +7180,22 @@
 {
 "answer": 0,
 "choices": [
-"42",
-"13",
-"48"
+"30",
+"11",
+"36"
 ],
-"explain": "6 × 7 = 42. 6 groups of 7 make 42.",
+"explain": "6 × 5 = 30. 6 groups of 5 make 30.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 6 × 7 and got 13. What is the correct answer?",
+"prompt": "Sam worked out 6 × 5 and got 11. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Times tables",
-"Brackets in Expressions",
-"Writing Number Sentences"
+"Patterns in Times Tables",
+"Multiply & Add Problems"
 ],
 "explain": "'Multiplication as repeated addition (age 6+)' builds on 'Times tables'.",
 "hint": "What does this topic build on?",
@@ -7199,7 +7211,7 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 7,
+"cols": 5,
 "rows": 6,
 "split": 3
 },
@@ -7207,11 +7219,11 @@
 },
 "worked": {
 "steps": [
-"Think: 6 × what = 42?",
-"Count in 6s: 6, 12, 18, 24, 30, 36, 42.",
-"That is 7 jumps, so 42 ÷ 6 = 7."
+"Think: 6 × what = 30?",
+"Count in 6s: 6, 12, 18, 24, 30.",
+"That is 5 jumps, so 30 ÷ 6 = 5."
 ],
-"title": "42 ÷ 6"
+"title": "30 ÷ 6"
 }
 },
 "mt_xhoOWnhtHq": {
@@ -7219,14 +7231,14 @@
 "explain": {
 "adult": [
 "Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
-"For example, 11 × 4 = 44.",
+"For example, 11 × 8 = 88.",
 "It builds on Factors, multiples, and primes and leads to Balancing chemical equations.",
 "Multiplication counts equal groups, and an array shows them as rows and columns."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 11 × 4 = 44."
+"For example, 11 × 8 = 88."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -7288,8 +7300,8 @@
 "answer": 0,
 "choices": [
 "HCF/LCM/prime factorisation extends Y5-6 factor pairs and common factors/multiples",
-"Explaining patterns uses properties of operations",
-"Spotting patterns in tables requires knowing the facts"
+"Y4 M×D problem-solving is prerequisite to multi-step four-operation problems",
+"Must have formal division method before solving multi-step problems"
 ],
 "explain": "Because: HCF/LCM/prime factorisation extends Y5-6 factor pairs and common factors/multiples.",
 "hint": "Think about what you need first.",
@@ -7302,7 +7314,7 @@
 "choices": [
 "Balancing chemical equations",
 "Factors, multiples, and primes",
-"Patterns in Times Tables"
+"Division with remainders"
 ],
 "explain": "'Factors, multiples, and primes (age 11+)' leads on to 'Balancing chemical equations'.",
 "hint": "What comes after this topic?",
@@ -7388,14 +7400,14 @@
 {
 "answer": 0,
 "choices": [
-"44",
-"15",
-"55"
+"88",
+"19",
+"99"
 ],
-"explain": "11 × 4 = 44. 11 groups of 4 make 44.",
+"explain": "11 × 8 = 88. 11 groups of 8 make 88.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 11 × 4 and got 15. What is the correct answer?",
+"prompt": "Sam worked out 11 × 8 and got 19. What is the correct answer?",
 "type": "mc"
 },
 {
@@ -7419,7 +7431,7 @@
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 4,
+"cols": 8,
 "rows": 11,
 "split": 5
 },
@@ -7427,11 +7439,11 @@
 },
 "worked": {
 "steps": [
-"11 × 4 means 11 groups of 4.",
-"Count in 4s: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44.",
-"So 11 × 4 = 44."
+"11 × 8 means 11 groups of 8.",
+"Count in 8s: 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88.",
+"So 11 × 8 = 88."
 ],
-"title": "11 × 4"
+"title": "11 × 8"
 }
 },
 "mt_zOWwLxa77y": {
@@ -7439,14 +7451,14 @@
 "explain": {
 "adult": [
 "This topic asks you to read, write.",
-"Multiplication counts equal groups, and an array shows them as rows and columns.",
-"For example, 9 × 5 = 45.",
+"Division undoes multiplication: 12 ÷ 3 asks how many are in each of 3 equal groups.",
+"For example, 4 × 6 = 24.",
 "It builds on Reading +, −, and = symbols and leads to Written Multiplication & Division."
 ],
 "kid": [
 "Times means equal groups.",
 "3 × 4 is 3 rows of 4.",
-"For example, 9 × 5 = 45."
+"For example, 4 × 6 = 24."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -7508,8 +7520,8 @@
 "answer": 0,
 "choices": [
 "Writing ÷ sentences requires understanding division",
-"Connecting division to multiplication requires understanding products",
-"Seeing division as unknown-factor requires understanding division first"
+"Formal short multiplication extends Y3 written multiplication",
+"Written multiplication requires fluent table facts"
 ],
 "explain": "Because: Writing ÷ sentences requires understanding division.",
 "hint": "Think about what you need first.",
@@ -7522,7 +7534,7 @@
 "choices": [
 "Written Multiplication & Division",
 "Reading +, −, and = symbols",
-"Division as Unknown Factor"
+"Arrays for multiplication (age 7+)"
 ],
 "explain": "'Reading ×, ÷, and = Symbols' leads on to 'Written Multiplication & Division'.",
 "hint": "What comes after this topic?",
@@ -7608,22 +7620,22 @@
 {
 "answer": 0,
 "choices": [
-"45",
-"14",
-"54"
+"24",
+"10",
+"28"
 ],
-"explain": "9 × 5 = 45. 9 groups of 5 make 45.",
+"explain": "4 × 6 = 24. 4 groups of 6 make 24.",
 "hint": "Redo it step by step and compare.",
 "id": "p3",
-"prompt": "Sam worked out 9 × 5 and got 14. What is the correct answer?",
+"prompt": "Sam worked out 4 × 6 and got 10. What is the correct answer?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Division as equal sharing",
-"Division as Unknown Factor",
-"Decimal place value"
+"Written Multiplication",
+"Arrays for multiplication (age 7+)"
 ],
 "explain": "'Reading ×, ÷, and = Symbols' builds on 'Division as equal sharing'.",
 "hint": "What does this topic build on?",
@@ -7632,26 +7644,26 @@
 "type": "mc"
 }
 ],
-"quality": 90,
+"quality": 89,
 "status": "auto-starter",
 "title": "Reading ×, ÷, and = Symbols",
 "topicId": "mt_zOWwLxa77y",
 "visual": {
 "caption": "Change the rows and columns. Split the array to see a fact in two parts.",
 "opts": {
-"cols": 5,
-"rows": 9,
-"split": 4
+"cols": 6,
+"rows": 4,
+"split": 2
 },
 "type": "array"
 },
 "worked": {
 "steps": [
-"Think: 9 × what = 45?",
-"Count in 9s: 9, 18, 27, 36, 45.",
-"That is 5 jumps, so 45 ÷ 9 = 5."
+"Think: 4 × what = 24?",
+"Count in 4s: 4, 8, 12, 16, 20, 24.",
+"That is 6 jumps, so 24 ÷ 4 = 6."
 ],
-"title": "45 ÷ 9"
+"title": "24 ÷ 4"
 }
 }
 }

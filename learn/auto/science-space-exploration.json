@@ -4,13 +4,13 @@
 "explain": {
 "adult": [
 "This topic asks you to apply Newton's laws to explain orbital motion.",
-"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
+"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it.",
 "It builds on Universal Gravitation and leads to Circular motion.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons."
+"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma)."
 ],
 "kid": [
-"The Earth goes round the Sun.",
-"The Moon goes round the Earth."
+"A push or a pull is a force.",
+"A bigger push makes things speed up more."
 ]
 },
 "familyTip": "Explain the key idea to someone else in two sentences, then try a challenge in the lab.",
@@ -20,109 +20,33 @@
 "passMark": 3,
 "pool": [
 {
-"answer": 0,
-"choices": [
-"An opaque object blocks the light",
-"Light bends round objects",
-"Shadows give out light"
-],
-"explain": "Light travels in straight lines and cannot pass through opaque things.",
-"hint": "Think about the key idea.",
+"answer": "m*a",
+"explain": "{m} × {a} = {=m*a} N.",
+"hint": "F = m × a.",
 "id": "m1",
-"prompt": "Why do shadows form?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Light refracts as it leaves the water",
-"The straw really bends",
-"Water is opaque"
+"params": {
+"a": [
+1,
+5
 ],
-"explain": "Light changes direction at the boundary.",
-"hint": "Think about the key idea.",
-"id": "m2",
-"prompt": "Why does a straw look bent in water?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"the colours of the spectrum",
-"darkness",
-"sound"
-],
-"explain": "Each colour refracts by a different amount.",
-"hint": "Think about the key idea.",
-"id": "m3",
-"prompt": "White light passing through a prism splits into…",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"No: they reflect the headlight beam back",
-"Yes: cats' eyes are light sources",
-"No: the light comes from the Moon"
-],
-"explain": "Only luminous objects like the Sun and lamps give out light.",
-"hint": "Apply the idea to this situation.",
-"id": "m4",
-"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"A translucent one, like net fabric",
-"A transparent one, like clear plastic",
-"An opaque one, like thick wood"
-],
-"explain": "Translucent materials let light through but scatter it.",
-"hint": "Apply the idea to this situation.",
-"id": "m5",
-"prompt": "You need a curtain that lets some light in but stops people seeing in. Which material?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Earth spinning on its axis",
-"The Sun moving round Earth",
-"Clouds"
-],
-"explain": "Earth turns once every 24 hours.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "What causes day and night?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"About one year",
-"One day",
-"One month"
-],
-"explain": "Earth orbits the Sun in about 365 days.",
-"hint": "Think about the key idea.",
-"id": "m7",
-"prompt": "How long does Earth take to orbit the Sun?",
-"type": "mc"
-}
+"m": [
+2,
+20
 ]
 },
-"practice": [
+"prompt": "What force accelerates a {m} kg trolley at {a} m/s²?",
+"type": "numeric"
+},
 {
 "answer": 0,
 "choices": [
 "Applying Newton's laws to orbital motion depends on understanding gravity as a force",
-"Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification",
-"Seasons concept benefits from knowing Earth orbits Sun"
+"Using the EM spectrum as an astronomy tool depends on understanding stellar brightness and…",
+"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle"
 ],
 "explain": "Because: Applying Newton's laws to orbital motion depends on understanding gravity as a force.",
 "hint": "Think about what you need first.",
-"id": "p1",
+"id": "m2",
 "prompt": "Why does 'Orbital Mechanics' build on 'Gravity Pulls Things Down'?",
 "type": "mc"
 },
@@ -131,11 +55,11 @@
 "choices": [
 "Circular motion",
 "Universal Gravitation",
-"Sun, Moon & Stars"
+"Observing with Light Waves"
 ],
 "explain": "'Orbital Mechanics' leads on to 'Circular motion'.",
 "hint": "What comes after this topic?",
-"id": "p2",
+"id": "m3",
 "prompt": "Which topic does 'Orbital Mechanics' help you learn next?",
 "type": "mc"
 },
@@ -148,66 +72,126 @@
 ],
 "explain": "Light travels in straight lines and cannot pass through opaque things.",
 "hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Why do shadows form?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"Light refracts as it leaves the water",
+"The straw really bends",
+"Water is opaque"
+],
+"explain": "Light changes direction at the boundary.",
+"hint": "Think about the key idea.",
+"id": "m5",
+"prompt": "Why does a straw look bent in water?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"the colours of the spectrum",
+"darkness",
+"sound"
+],
+"explain": "Each colour refracts by a different amount.",
+"hint": "Think about the key idea.",
+"id": "m6",
+"prompt": "White light passing through a prism splits into…",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"No: they reflect the headlight beam back",
+"Yes: cats' eyes are light sources",
+"No: the light comes from the Moon"
+],
+"explain": "Only luminous objects like the Sun and lamps give out light.",
+"hint": "Apply the idea to this situation.",
+"id": "m7",
+"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
+"type": "mc"
+}
+]
+},
+"practice": [
+{
+"answer": "a",
+"explain": "{=m*a} ÷ {m} = {=a} m/s².",
+"hint": "a = F ÷ m.",
+"id": "p1",
+"params": {
+"a": [
+1,
+8
+],
+"m": [
+2,
+10
+]
+},
+"prompt": "A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
+"type": "numeric"
+},
+{
+"answer": "s",
+"explain": "{=s*t} ÷ {t} = {=s} m/s.",
+"hint": "Distance ÷ time.",
+"id": "p2",
+"params": {
+"s": [
+5,
+30
+],
+"t": [
+2,
+10
+]
+},
+"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
+"type": "numeric"
+},
+{
+"answer": 0,
+"choices": [
+"F/9",
+"F/3",
+"3F"
+],
+"explain": "Force ∝ 1/r², so 1/3² = 1/9.",
+"hint": "Inverse square.",
 "id": "p3",
-"prompt": "Try this: Why do shadows form?",
+"prompt": "Two moons are pulled together with force F. If the distance between them triples, what is the force?",
 "type": "mc"
 }
 ],
-"quality": 69,
+"quality": 85,
 "status": "auto-starter",
 "title": "Orbital Mechanics",
 "topicId": "mt_1nl396BaVa",
 "visual": {
-"caption": "Sort the planets into rocky inner planets and giant outer planets.",
+"caption": "Set the push, mass and friction. Make the cart stop in the green zone.",
 "opts": {
-"bins": [
-"Rocky inner planet",
-"Giant outer planet"
-],
-"items": [
-[
-"Mercury",
-0
-],
-[
-"Venus",
-0
-],
-[
-"Earth",
-0
-],
-[
-"Mars",
-0
-],
-[
-"Jupiter",
-1
-],
-[
-"Saturn",
-1
-],
-[
-"Uranus",
-1
-],
-[
-"Neptune",
-1
-]
+"f": 20,
+"m": 5,
+"mu": 0.2,
+"zone": [
+15,
+18
 ]
 },
-"type": "sorter"
+"type": "forcelab"
 },
 "worked": {
 "steps": [
-"Mercury, Venus, Earth, Mars: small rocky planets.",
-"Jupiter, Saturn, Uranus, Neptune: giant planets.",
-"Further from the Sun means a longer year."
+"Gravitational force F = Gm₁m₂/r².",
+"Double r: r² becomes 4 times bigger.",
+"So the force becomes a quarter as big."
 ],
-"title": "Ordering the planets"
+"title": "Doubling the distance between two masses"
 }
 },
 "mt_KYx0m4OyZv": {
@@ -327,8 +311,8 @@
 "answer": 0,
 "choices": [
 "Stellar nucleosynthesis depends on understanding the basics of a star's life cycle",
-"Must know the Sun is a sky object before learning it is a star",
-"Must know about the solar system before learning the Sun is at its centre"
+"Seasons concept benefits from knowing Earth orbits Sun",
+"Must know the Sun-centred system before understanding Earth's rotation and orbit within it"
 ],
 "explain": "Because: Stellar nucleosynthesis depends on understanding the basics of a star's life cycle.",
 "hint": "Think about what you need first.",
@@ -341,7 +325,7 @@
 "choices": [
 "Nuclear fusion in stars",
 "Life Cycle of Stars",
-"The Sun is a star"
+"Earth's Spin & Orbit"
 ],
 "explain": "'Where Elements Come From' leads on to 'Nuclear fusion in stars'.",
 "hint": "What comes after this topic?",
@@ -353,8 +337,8 @@
 "answer": 0,
 "choices": [
 "nucleosynthesis",
-"regardless",
-"rotates"
+"rotates",
+"differences"
 ],
 "explain": "The missing word is 'nucleosynthesis'.",
 "hint": "Which word fits the topic?",
@@ -494,7 +478,7 @@
 "choices": [
 "Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification",
 "Must know the Sun and stars before learning about planets and the solar system",
-"Must know the Sun is a star before understanding why it appears brighter than…"
+"Must know the Sun is a sky object before learning it is a star"
 ],
 "explain": "Because: Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification.",
 "hint": "Think about what you need first.",
@@ -561,7 +545,7 @@
 "answer": 0,
 "choices": [
 "Why seasons change",
-"Why the Sun Looks Brightest",
+"The Sun is a star",
 "Orbital Mechanics"
 ],
 "explain": "'Sun, Moon & Stars' builds on 'Why seasons change'.",
@@ -629,9 +613,9 @@
 "audience": "family",
 "explain": {
 "adult": [
-"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it.",
+"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma).",
 "It builds on Sun, Moon & Stars and leads to The Sun is a star.",
-"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma)."
+"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it."
 ],
 "kid": [
 "A push or a pull is a force.",
@@ -666,8 +650,8 @@
 "answer": 0,
 "choices": [
 "Must know the Sun and stars before learning about planets and the solar system",
-"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle",
-"Stellar nucleosynthesis depends on understanding atoms, elements"
+"Must know the Sun is a sky object before learning it is a star",
+"Must know about the solar system before learning the Sun is at its centre"
 ],
 "explain": "Because: Must know the Sun and stars before learning about planets and the solar system.",
 "hint": "Think about what you need first.",
@@ -796,8 +780,8 @@
 "answer": 0,
 "choices": [
 "Sun, Moon & Stars",
-"Where Elements Come From",
-"Observing with Light Waves"
+"The Sun is a star",
+"Where Elements Come From"
 ],
 "explain": "'Our Solar System' builds on 'Sun, Moon & Stars'.",
 "hint": "What does this topic build on?",
@@ -836,9 +820,9 @@
 "audience": "learner",
 "explain": {
 "adult": [
-"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth.",
+"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons.",
 "It builds on The solar system and leads to Orbital Mechanics.",
-"Earth spins once a day, giving day and night, and orbits the Sun once a year; its tilt causes the seasons."
+"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth."
 ],
 "kid": [
 "Earth goes round the Sun.",
@@ -907,8 +891,8 @@
 "answer": 0,
 "choices": [
 "Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them",
-"Must know the Sun is a star before understanding why it appears brighter than…",
-"Seasons concept benefits from knowing Earth orbits Sun"
+"Must know the Sun and stars before learning about planets and the solar system",
+"Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification"
 ],
 "explain": "Because: Must understand Earth's orbit and rotation before understanding gravity as the force maintaining them.",
 "hint": "Think about what you need first.",
@@ -921,7 +905,7 @@
 "choices": [
 "Orbital Mechanics",
 "The solar system",
-"Why the Sun Looks Brightest"
+"Our Solar System"
 ],
 "explain": "'Gravity Pulls Things Down' leads on to 'Orbital Mechanics'.",
 "hint": "What comes after this topic?",
@@ -933,8 +917,8 @@
 "answer": 0,
 "choices": [
 "regardless",
-"rotates",
-"nucleosynthesis"
+"differences",
+"rotates"
 ],
 "explain": "The missing word is 'regardless'.",
 "hint": "Which word fits the topic?",
@@ -976,7 +960,7 @@
 "choices": [
 "Earth's Spin & Orbit",
 "Orbital Mechanics",
-"Observing with Light Waves"
+"Where Elements Come From"
 ],
 "explain": "'Gravity Pulls Things Down' builds on 'Earth's Spin & Orbit'.",
 "hint": "What does this topic build on?",
@@ -985,7 +969,7 @@
 "type": "mc"
 }
 ],
-"quality": 73,
+"quality": 72,
 "status": "auto-starter",
 "title": "Gravity Pulls Things Down",
 "topicId": "mt_Y2WcY2lOTK",
@@ -1044,9 +1028,9 @@
 "explain": {
 "adult": [
 "This topic asks you to explain why the Sun appears much brighter than other stars.",
-"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity.",
+"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons.",
 "It builds on The Sun is a star and leads to Life Cycle of Stars.",
-"Earth spins once a day (day and night) and orbits the Sun once a year; its tilt gives the seasons."
+"The Sun is a star at the centre of our solar system; eight planets orbit it, held by gravity."
 ],
 "kid": [
 "The Earth goes round the Sun.",
@@ -1157,7 +1141,7 @@
 "answer": 0,
 "choices": [
 "The Sun is a star",
-"Where Elements Come From",
+"Orbital Mechanics",
 "Observing with Light Waves"
 ],
 "explain": "'Why the Sun Looks Brightest' builds on 'The Sun is a star'.",
@@ -1170,8 +1154,8 @@
 "answer": 0,
 "choices": [
 "Must know the Sun is a star before understanding why it appears brighter than…",
-"Must know the Sun and stars before learning about planets and the solar system",
-"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle"
+"Must know the Sun is a sky object before learning it is a star",
+"Must know about the solar system before learning the Sun is at its centre"
 ],
 "explain": "Because: Must know the Sun is a star before understanding why it appears brighter than….",
 "hint": "Think about what you need first.",
@@ -1184,7 +1168,7 @@
 "choices": [
 "Life Cycle of Stars",
 "The Sun is a star",
-"Our Solar System"
+"Orbital Mechanics"
 ],
 "explain": "'Why the Sun Looks Brightest' leads on to 'Life Cycle of Stars'.",
 "hint": "What comes after this topic?",
@@ -1193,7 +1177,7 @@
 "type": "mc"
 }
 ],
-"quality": 69,
+"quality": 68,
 "status": "auto-starter",
 "title": "Why the Sun Looks Brightest",
 "topicId": "mt_ae-cHHFR76",
@@ -1255,9 +1239,9 @@
 "explain": {
 "adult": [
 "This topic asks you to understand the basics of a star’s life cycle.",
-"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma).",
+"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it.",
 "It builds on Why the Sun Looks Brightest and leads to Where Elements Come From.",
-"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it."
+"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma)."
 ],
 "kid": [
 "A push or a pull is a force.",
@@ -1368,8 +1352,8 @@
 "answer": 0,
 "choices": [
 "The Sun is a star",
-"Where Elements Come From",
-"Orbital Mechanics"
+"Orbital Mechanics",
+"Observing with Light Waves"
 ],
 "explain": "'Life Cycle of Stars' builds on 'The Sun is a star'.",
 "hint": "What does this topic build on?",
@@ -1381,8 +1365,8 @@
 "answer": 0,
 "choices": [
 "Must know the Sun is a star before learning about star life cycles",
-"Stellar nucleosynthesis depends on understanding the basics of a star's life cycle",
-"Stellar nucleosynthesis depends on understanding atoms, elements"
+"Must know the Sun is a star before understanding why it appears brighter than…",
+"Orbital mechanics depends on understanding gravity as a universal attractive force"
 ],
 "explain": "Because: Must know the Sun is a star before learning about star life cycles.",
 "hint": "Think about what you need first.",
@@ -1395,7 +1379,7 @@
 "choices": [
 "Where Elements Come From",
 "Why the Sun Looks Brightest",
-"Sun, Moon & Stars"
+"Orbital Mechanics"
 ],
 "explain": "'Life Cycle of Stars' leads on to 'Where Elements Come From'.",
 "hint": "What comes after this topic?",
@@ -1404,7 +1388,7 @@
 "type": "mc"
 }
 ],
-"quality": 75,
+"quality": 74,
 "status": "auto-starter",
 "title": "Life Cycle of Stars",
 "topicId": "mt_iTjrKEdAOj",
@@ -1412,7 +1396,7 @@
 "caption": "Set the push, mass and friction. Make the cart stop in the green zone.",
 "opts": {
 "f": 20,
-"m": 2,
+"m": 20,
 "mu": 0.2,
 "zone": [
 15,
@@ -1506,7 +1490,7 @@
 "choices": [
 "Observing with Light Waves",
 "The Sun is a star",
-"Gravity Pulls Things Down"
+"Why the Sun Looks Brightest"
 ],
 "explain": "That is part of 'Observing with Light Waves'.",
 "hint": "Think about what this topic covers.",
@@ -1756,8 +1740,8 @@
 "answer": 0,
 "choices": [
 "Sun, Moon & Stars",
-"Where Elements Come From",
-"Observing with Light Waves"
+"Orbital Mechanics",
+"Why the Sun Looks Brightest"
 ],
 "explain": "'The Sun is a star' builds on 'Sun, Moon & Stars'.",
 "hint": "What does this topic build on?",
@@ -1769,8 +1753,8 @@
 "answer": 0,
 "choices": [
 "Must know the Sun is a sky object before learning it is a star",
-"Seasons concept benefits from knowing Earth orbits Sun",
-"Must know the Sun-centred system before understanding Earth's rotation and orbit within it"
+"Orbital mechanics depends on understanding gravity as a universal attractive force",
+"Applying Newton's laws to orbital motion depends on understanding gravity as a force"
 ],
 "explain": "Because: Must know the Sun is a sky object before learning it is a star.",
 "hint": "Think about what you need first.",
@@ -1781,18 +1765,18 @@
 {
 "answer": 0,
 "choices": [
-"An opaque object blocks the light",
-"Light bends round objects",
-"Shadows give out light"
+"Why the Sun Looks Brightest",
+"Sun, Moon & Stars",
+"Our Solar System"
 ],
-"explain": "Light travels in straight lines and cannot pass through opaque things.",
-"hint": "Think about the key idea.",
+"explain": "'The Sun is a star' leads on to 'Why the Sun Looks Brightest'.",
+"hint": "What comes after this topic?",
 "id": "p3",
-"prompt": "Try this: Why do shadows form?",
+"prompt": "Which topic does 'The Sun is a star' help you learn next?",
 "type": "mc"
 }
 ],
-"quality": 75,
+"quality": 70,
 "status": "auto-starter",
 "title": "The Sun is a star",
 "topicId": "mt_u3Y3Tb-G_n",
@@ -1823,13 +1807,12 @@
 "explain": {
 "adult": [
 "This topic asks you to understand that Earth moves in two ways.",
-"An unbalanced force changes motion: acceleration = force ÷ mass (F = ma).",
-"It builds on Seasons & Weather Patterns and leads to Gravity Pulls Things Down.",
-"Friction acts against motion, so a moving object slows down and stops unless something keeps pushing it."
+"Gravity holds the planets in orbit around the Sun and the Moon in orbit around Earth.",
+"It builds on Seasons & Weather Patterns and leads to Gravity Pulls Things Down."
 ],
 "kid": [
-"A push or a pull is a force.",
-"A bigger push makes things speed up more."
+"Earth goes round the Sun.",
+"The Moon goes round Earth."
 ]
 },
 "familyTip": "Try the lab together, then ask: what changed, and why?",
@@ -1839,33 +1822,67 @@
 "passMark": 3,
 "pool": [
 {
-"answer": "m*a",
-"explain": "{m} × {a} = {=m*a} N.",
-"hint": "F = m × a.",
-"id": "m1",
-"params": {
-"a": [
-1,
-5
+"answer": 0,
+"choices": [
+"The tilt of Earth's axis",
+"Earth's distance from the Moon",
+"The Sun turning off"
 ],
-"m": [
-2,
-20
-]
+"explain": "The tilt changes how directly sunlight hits.",
+"hint": "Think about the key idea.",
+"id": "m1",
+"prompt": "What causes the seasons?",
+"type": "mc"
 },
-"prompt": "What force accelerates a {m} kg trolley at {a} m/s²?",
-"type": "numeric"
+{
+"answer": 0,
+"choices": [
+"The Sun",
+"The Moon",
+"Mars"
+],
+"explain": "The Sun is our nearest star.",
+"hint": "Think about the key idea.",
+"id": "m2",
+"prompt": "Which is a star?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"The Sun's gravity",
+"Wind",
+"Magnetism"
+],
+"explain": "Gravity pulls planets towards the Sun.",
+"hint": "Think about the key idea.",
+"id": "m3",
+"prompt": "What keeps the planets in orbit?",
+"type": "mc"
+},
+{
+"answer": 0,
+"choices": [
+"It reflects sunlight",
+"It burns like a fire",
+"It is a star"
+],
+"explain": "The Moon gives out no light of its own.",
+"hint": "Think about the key idea.",
+"id": "m4",
+"prompt": "Why does the Moon shine?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "Must know the Sun-centred system before understanding Earth's rotation and orbit within it",
-"Must know the Sun is a sky object before learning it is a star",
-"Must know about the solar system before learning the Sun is at its centre"
+"Curriculum daylight/seasons observation supports exploratory Sun/Moon/stars identification",
+"Curriculum spherical bodies/orbits topic underpins exploratory gravity understanding"
 ],
 "explain": "Because: Must know the Sun-centred system before understanding Earth's rotation and orbit within it.",
 "hint": "Think about what you need first.",
-"id": "m2",
+"id": "m5",
 "prompt": "Why does 'Earth's Spin & Orbit' build on 'The Sun is a star'?",
 "type": "mc"
 },
@@ -1874,11 +1891,11 @@
 "choices": [
 "Gravity Pulls Things Down",
 "Seasons & Weather Patterns",
-"The Sun is a star"
+"Sun, Moon & Stars"
 ],
 "explain": "'Earth's Spin & Orbit' leads on to 'Gravity Pulls Things Down'.",
 "hint": "What comes after this topic?",
-"id": "m3",
+"id": "m6",
 "prompt": "Which topic does 'Earth's Spin & Orbit' help you learn next?",
 "type": "mc"
 },
@@ -1891,139 +1908,105 @@
 ],
 "explain": "Light travels in straight lines and cannot pass through opaque things.",
 "hint": "Think about the key idea.",
-"id": "m4",
-"prompt": "Why do shadows form?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"Light refracts as it leaves the water",
-"The straw really bends",
-"Water is opaque"
-],
-"explain": "Light changes direction at the boundary.",
-"hint": "Think about the key idea.",
-"id": "m5",
-"prompt": "Why does a straw look bent in water?",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"the colours of the spectrum",
-"darkness",
-"sound"
-],
-"explain": "Each colour refracts by a different amount.",
-"hint": "Think about the key idea.",
-"id": "m6",
-"prompt": "White light passing through a prism splits into…",
-"type": "mc"
-},
-{
-"answer": 0,
-"choices": [
-"No: they reflect the headlight beam back",
-"Yes: cats' eyes are light sources",
-"No: the light comes from the Moon"
-],
-"explain": "Only luminous objects like the Sun and lamps give out light.",
-"hint": "Apply the idea to this situation.",
 "id": "m7",
-"prompt": "A cat's eyes seem to glow in a car's headlights. Do the eyes make light?",
+"prompt": "Why do shadows form?",
 "type": "mc"
 }
 ]
 },
 "practice": [
 {
-"answer": "a",
-"explain": "{=m*a} ÷ {m} = {=a} m/s².",
-"hint": "a = F ÷ m.",
+"answer": 0,
+"choices": [
+"Earth spinning on its axis",
+"The Sun moving round Earth",
+"Clouds"
+],
+"explain": "Earth turns once every 24 hours.",
+"hint": "Think about the key idea.",
 "id": "p1",
-"params": {
-"a": [
-1,
-8
-],
-"m": [
-2,
-10
-]
-},
-"prompt": "A force of {=m*a} N acts on a {m} kg mass. What is the acceleration in m/s²?",
-"type": "numeric"
-},
-{
-"answer": "s",
-"explain": "{=s*t} ÷ {t} = {=s} m/s.",
-"hint": "Distance ÷ time.",
-"id": "p2",
-"params": {
-"s": [
-5,
-30
-],
-"t": [
-2,
-10
-]
-},
-"prompt": "A car goes {=s*t} m in {t} s. What is its average speed in m/s?",
-"type": "numeric"
+"prompt": "What causes day and night?",
+"type": "mc"
 },
 {
 "answer": 0,
 "choices": [
-"F/9",
-"F/3",
-"3F"
+"About one year",
+"One day",
+"One month"
 ],
-"explain": "Force ∝ 1/r², so 1/3² = 1/9.",
-"hint": "Inverse square.",
-"id": "p3",
-"prompt": "Two moons are pulled together with force F. If the distance between them triples, what is the force?",
+"explain": "Earth orbits the Sun in about 365 days.",
+"hint": "Think about the key idea.",
+"id": "p2",
+"prompt": "How long does Earth take to orbit the Sun?",
 "type": "mc"
 },
 {
 "answer": 0,
 "choices": [
 "The Sun is a star",
-"Observing with Light Waves",
-"Life Cycle of Stars"
+"Gravity Pulls Things Down",
+"Observing with Light Waves"
 ],
 "explain": "'Earth's Spin & Orbit' builds on 'The Sun is a star'.",
 "hint": "What does this topic build on?",
-"id": "p4",
+"id": "p3",
 "prompt": "Which topic should you learn before 'Earth's Spin & Orbit'?",
 "type": "mc"
 }
 ],
-"quality": 85,
+"quality": 65,
 "status": "auto-starter",
 "title": "Earth's Spin & Orbit",
 "topicId": "mt_w2xiMNkyyX",
 "visual": {
-"caption": "Set the push, mass and friction. Make the cart stop in the green zone.",
+"caption": "Sort each object: planet, moon or star?",
 "opts": {
-"f": 20,
-"m": 5,
-"mu": 0.2,
-"zone": [
-15,
-18
+"bins": [
+"Planet",
+"Moon",
+"Star"
+],
+"items": [
+[
+"Earth",
+0
+],
+[
+"Mars",
+0
+],
+[
+"Jupiter",
+0
+],
+[
+"The Moon",
+1
+],
+[
+"Titan",
+1
+],
+[
+"The Sun",
+2
+],
+[
+"Sirius",
+2
+]
 ]
 },
-"type": "forcelab"
+"type": "sorter"
 },
 "worked": {
 "steps": [
-"Gravitational force F = Gm₁m₂/r².",
-"Double r: r² becomes 4 times bigger.",
-"So the force becomes a quarter as big."
+"Start from what you know: Seasons & Weather Patterns.",
+"The new idea: Understand that Earth moves in two ways.",
+"Next, this helps with: Gravity Pulls Things Down."
 ],
-"title": "Doubling the distance between two masses"
+"title": "Earth's Spin & Orbit"
 }
 }
 }

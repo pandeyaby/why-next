@@ -129,6 +129,9 @@ def build(t, a, by, pre, post, sib, seed, minimal=False):
         v = dict(extra.pop(0)); v["prompt"] = "Quick check: " + v["prompt"]; pool.append(v)
     for x in prac[:6 - len(pool)] if len(pool) < 6 else []:
         v = dict(x); v["prompt"] = "Recap: " + v["prompt"]; pool.append(v)
+    for k, x in ti:   # last resort: this topic's own link/vocabulary items, so the pool reaches the schema minimum
+        if len(pool) >= 6: break
+        if x["prompt"] not in {y["prompt"] for y in pool}: pool.append(dict(x))
     txt = " ".join([clause(t["description"], 24)] + ex["adult"] + ex["kid"]).lower()
     give = lambda it: it["type"] == "mc" and len(it["choices"][it["answer"]].split()) >= 5 and it["choices"][it["answer"]].lower().rstrip(".…") in txt
     keep_ = [x for x in pool if not give(x)]
