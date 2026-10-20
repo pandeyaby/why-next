@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
-<title>Why Next? A learning map: what to learn next, and why</title>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("whynext.theme")||"2052"}catch(e){document.documentElement.dataset.theme="2052"}</script>
+<meta name="color-scheme" content="dark light"><title>Why Next? A learning map: what to learn next, and why</title>
 <style>
 #side h1{color:#111827}:root{--new:#1d4ed8;--old:#4b5563;--bridge:#b45309;--bg:#f8fafc}
 *{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#111827;background:var(--bg);display:flex;height:100vh}
@@ -137,15 +138,105 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 @keyframes fxb{to{transform:rotate(var(--a)) translateY(-46px);opacity:0}}
 .lhead .pring{margin-left:4px}
 @media (prefers-reduced-motion:reduce){.qi.ok,.fb.bad,.gn circle.g-next,.item .lb-n{animation:none}}
+/* Why Next? "2052" theme: dark glass panels, neon accents, a glowing animated map. It is the default; the
+   "Classic look" button (html[data-theme=classic]) restores the original light design. All text meets WCAG AA on the
+   darkest panel colour, and every animation stops under prefers-reduced-motion. */
+html[data-theme="2052"]{--bg:#050814;--new:#7dd3fc;--old:#b4c0d6;--bridge:#fdba74;--tx:#e8f1ff;--mu:#a9b8d6;--panel:rgba(14,22,44,.74);
+ --line:rgba(125,211,252,.20);--cy:#67e8f9;--vi:#c4b5fd;--pk:#f9a8d4;--am:#fcd34d;--gr:#86efac;--rd:#fca5a5;--px:0;--py:0;color-scheme:dark}
+html[data-theme="2052"] body{color:var(--tx);background:#050814 radial-gradient(1200px 700px at 78% -10%,rgba(124,58,237,.30),transparent 60%),radial-gradient(900px 600px at -10% 110%,rgba(8,145,178,.28),transparent 60%);font-feature-settings:"ss01","cv11";letter-spacing:.005em}
+html[data-theme="2052"] body::before,html[data-theme="2052"] body::after{content:"";position:fixed;inset:-40px;pointer-events:none;z-index:0}
+html[data-theme="2052"] body::before{background-image:radial-gradient(1.2px 1.2px at 12% 18%,#e0f2fe 50%,transparent 51%),radial-gradient(1px 1px at 72% 34%,#c4b5fd 50%,transparent 51%),radial-gradient(1.4px 1.4px at 38% 76%,#a5f3fc 50%,transparent 51%),radial-gradient(1px 1px at 88% 82%,#f9a8d4 50%,transparent 51%),radial-gradient(1px 1px at 55% 8%,#e0f2fe 50%,transparent 51%);background-size:380px 380px;opacity:.55;transform:translate3d(calc(var(--px)*-14px),calc(var(--py)*-14px),0)}
+html[data-theme="2052"] body::after{background-image:linear-gradient(rgba(103,232,249,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,249,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 75%);transform:translate3d(calc(var(--px)*-6px),calc(var(--py)*-6px),0)}
+html[data-theme="2052"] #side,html[data-theme="2052"] #main{position:relative;z-index:1}
+html[data-theme="2052"] #side{background:rgba(8,12,28,.78);border-right:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+html[data-theme="2052"] #side header{border-bottom:1px solid var(--line)}
+html[data-theme="2052"] #side h1{color:#fff;font-size:17px;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(90deg,#a5f3fc,#c4b5fd 55%,#f9a8d4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 18px rgba(103,232,249,.25)}
+html[data-theme="2052"] #side small,html[data-theme="2052"] .muted,html[data-theme="2052"] .age,html[data-theme="2052"] .why{color:var(--mu)}
+html[data-theme="2052"] #q,html[data-theme="2052"] .pform input,html[data-theme="2052"] .pform select,html[data-theme="2052"] .numin{background:rgba(2,6,23,.7);color:var(--tx);border:1px solid #4b6386;border-radius:10px}
+html[data-theme="2052"] #q:focus,html[data-theme="2052"] .numin:focus{border-color:var(--cy);box-shadow:0 0 0 3px rgba(103,232,249,.18),0 0 18px rgba(103,232,249,.25)}
+html[data-theme="2052"] #filters label{background:rgba(148,163,184,.12);color:var(--tx);border:1px solid var(--line)}
+html[data-theme="2052"] .dom{background:rgba(8,12,28,.96);color:var(--cy);letter-spacing:.12em;font-size:11px}
+html[data-theme="2052"] .item{border-left:2px solid transparent;transition:background .2s,border-color .2s,transform .2s}
+html[data-theme="2052"] .item:hover{background:rgba(103,232,249,.08);transform:translateX(2px)}
+html[data-theme="2052"] .item.sel{background:linear-gradient(90deg,rgba(103,232,249,.18),rgba(196,181,253,.06));border-left-color:var(--cy)}
+html[data-theme="2052"] .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:wnin .45s ease both}
+html[data-theme="2052"] #dcard h2{font-size:26px;letter-spacing:.01em;color:#fff;text-shadow:0 0 22px rgba(103,232,249,.35)}
+@keyframes wnin{from{transform:translateY(8px)}}
+html[data-theme="2052"] .tag{background:rgba(148,163,184,.16);color:#dbe7ff}html[data-theme="2052"] .tag.new{background:rgba(103,232,249,.14);color:#a5f3fc}html[data-theme="2052"] .tag.old{background:rgba(148,163,184,.16);color:#dbe7ff}
+html[data-theme="2052"] .nm.new{color:var(--new)}html[data-theme="2052"] .nm.old{color:var(--old)}html[data-theme="2052"] .why.bridge{color:var(--bridge)}
+html[data-theme="2052"] .st.h{background:#e8f1ff;color:#0b1020}html[data-theme="2052"] .st.s{border-color:#7d8fb0;color:#cbd5e1}html[data-theme="2052"] .st.b{background:#c2410c;color:#fff}
+html[data-theme="2052"] ul.tree{border-left-color:rgba(125,211,252,.25)}html[data-theme="2052"] .tog{color:#7d8fb0}
+html[data-theme="2052"] .dia{color:var(--vi)}
+html[data-theme="2052"] svg{background:rgba(2,6,23,.45);border-color:var(--line);border-radius:14px}
+html[data-theme="2052"] .linkish{color:var(--cy)}html[data-theme="2052"] .linkish:hover{text-shadow:0 0 10px rgba(103,232,249,.6)}
+html[data-theme="2052"] .lbtn{background:linear-gradient(135deg,#6d28d9,#0e7490);border:1px solid rgba(196,181,253,.55);color:#fff;border-radius:12px;box-shadow:0 0 0 rgba(103,232,249,0);transition:box-shadow .25s,transform .15s,background-color .2s}
+html[data-theme="2052"] .lbtn:hover:not(:disabled){box-shadow:0 0 18px rgba(103,232,249,.45);transform:translateY(-1px)}html[data-theme="2052"] .lbtn:active:not(:disabled){transform:translateY(1px) scale(.98)}
+html[data-theme="2052"] .lbtn.ghost,html[data-theme="2052"] .lbtn.choice,html[data-theme="2052"] .lbtn.sm{background:rgba(2,6,23,.55);color:#ddd6fe;border-color:rgba(196,181,253,.5)}
+html[data-theme="2052"] .lbtn.on,html[data-theme="2052"] .lbtn[aria-pressed=true]{background:linear-gradient(135deg,#6d28d9,#0e7490);color:#fff;box-shadow:0 0 14px rgba(196,181,253,.45)}
+html[data-theme="2052"] .learn{border:1px solid rgba(196,181,253,.55);box-shadow:0 0 0 1px rgba(103,232,249,.12),0 0 42px rgba(124,58,237,.25),0 10px 40px rgba(0,0,0,.35)}
+html[data-theme="2052"] .learn .lsub{color:var(--vi);letter-spacing:.04em}
+html[data-theme="2052"] .key{background:rgba(196,181,253,.12);border:1px solid rgba(196,181,253,.3)}html[data-theme="2052"] .tip{background:rgba(134,239,172,.09);border:1px solid rgba(134,239,172,.25)}
+html[data-theme="2052"] .review{background:rgba(252,211,77,.08);border-color:rgba(252,211,77,.4)}
+html[data-theme="2052"] .pform label{color:var(--mu)}
+html[data-theme="2052"] .qi{border-color:var(--line);background:rgba(2,6,23,.35);transition:border-color .25s,background .25s}
+html[data-theme="2052"] .qi.ok{border-color:#22c55e;background:rgba(34,197,94,.12)}html[data-theme="2052"] .qi.no{border-color:#f87171;background:rgba(239,68,68,.12)}
+html[data-theme="2052"] .fb.good{color:var(--gr)}html[data-theme="2052"] .fb.bad{color:var(--rd)}
+html[data-theme="2052"] .ord li,html[data-theme="2052"] .mv{background:rgba(2,6,23,.55);border-color:#4b6386;color:var(--tx)}
+html[data-theme="2052"] .lb-l{color:var(--vi)}html[data-theme="2052"] .pring .pr-bg{stroke:rgba(148,163,184,.25)}html[data-theme="2052"] .pring .pr-fg{stroke:var(--cy);filter:drop-shadow(0 0 3px var(--cy))}
+html[data-theme="2052"] :focus-visible{outline-color:var(--am)}
+/* the learning map: depth glow, flowing prerequisite edges, pulsing next steps */
+.wn-map{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+html[data-theme="2052"] .wn-map{transform:perspective(1200px) rotateX(calc(var(--py)*2.2deg)) rotateY(calc(var(--px)*-2.2deg))}
+html[data-theme="2052"] .wn-map line.ge{stroke:rgba(125,211,252,.6);stroke-dasharray:6 8;animation:wnflow 1.6s linear infinite}
+html[data-theme="2052"] .wn-map line.ge.br{stroke:#fdba74;stroke-width:2}
+@keyframes wnflow{to{stroke-dashoffset:-28}}
+html[data-theme="2052"] .gn circle{fill:#a5b4fc;stroke:rgba(255,255,255,.35);stroke-width:1;filter:drop-shadow(0 0 3px rgba(165,180,252,.7))}html[data-theme="2052"] .gn.nw circle{fill:#22d3ee;filter:drop-shadow(0 0 4px rgba(34,211,238,.8))}
+html[data-theme="2052"] .gn.cur circle{fill:#f0abfc;filter:drop-shadow(0 0 8px #e879f9)}
+html[data-theme="2052"] .gn circle.g-done{fill:#4ade80}html[data-theme="2052"] .gn circle.g-next{stroke:var(--am);stroke-width:3}
+html[data-theme="2052"] .gn text{fill:#dbe7ff;font-size:11px;paint-order:stroke;stroke:#050814;stroke-width:3px}
+html[data-theme="2052"] .gn{transition:transform .2s}html[data-theme="2052"] .gn:hover text{fill:#fff}
+/* holographic visuals */
+html[data-theme="2052"] .vis{background:linear-gradient(160deg,rgba(103,232,249,.07),rgba(196,181,253,.06) 50%,rgba(249,168,212,.05));border:1px solid rgba(103,232,249,.35);border-radius:16px;box-shadow:inset 0 0 30px rgba(103,232,249,.06),0 0 24px rgba(8,145,178,.18);position:relative;overflow:hidden}
+html[data-theme="2052"] .vis::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px);border-radius:inherit}
+html[data-theme="2052"] .vis-desc{color:#dbe7ff}html[data-theme="2052"] .vis-svg{background:rgba(2,6,23,.6);border:1px solid rgba(103,232,249,.18)}
+html[data-theme="2052"] .vis-lab{fill:#cbd5e1}html[data-theme="2052"] .vis-big{fill:#f8fafc;stroke:#050814}
+html[data-theme="2052"] .vis-cell,html[data-theme="2052"] .vis-ring,html[data-theme="2052"] .vis-part,html[data-theme="2052"] .vis-hole,html[data-theme="2052"] .vis-pv,html[data-theme="2052"] .vis-thermo,html[data-theme="2052"] .vis-target{fill:rgba(15,23,42,.85);stroke:#7dd3fc}
+html[data-theme="2052"] .vis-target{stroke:#f87171}html[data-theme="2052"] .vis-pv.dec{fill:rgba(124,58,237,.22)}
+html[data-theme="2052"] .vis-part.on{fill:#8b5cf6}html[data-theme="2052"] .vis-part.on.b{fill:#10b981}html[data-theme="2052"] .vis-ring.vis-hl{fill:rgba(252,211,77,.22);stroke:var(--am)}
+html[data-theme="2052"] .vis-strip{fill:rgba(103,232,249,.2);stroke:#67e8f9}html[data-theme="2052"] .vis-strip.neg{fill:rgba(248,113,113,.22);stroke:#f87171}
+html[data-theme="2052"] .vis-axis{stroke:#94a3b8}html[data-theme="2052"] .vis-grid{stroke:rgba(148,163,184,.16)}html[data-theme="2052"] .vis-guide{stroke:#94a3b8}
+html[data-theme="2052"] .vis-curve{stroke:#67e8f9;filter:drop-shadow(0 0 3px rgba(103,232,249,.7))}html[data-theme="2052"] .vis-curve.b{stroke:#86efac}html[data-theme="2052"] .vis-curve.faint{stroke:#475569;filter:none}
+html[data-theme="2052"] .vis-sec{stroke:#f87171}html[data-theme="2052"] .vis-tan,html[data-theme="2052"] .vis-split{stroke:#c4b5fd}html[data-theme="2052"] .vis-nor,html[data-theme="2052"] .vis-rise{stroke:#86efac}html[data-theme="2052"] .vis-run{stroke:#fdba74}
+html[data-theme="2052"] .vis-x{stroke:#f8fafc}html[data-theme="2052"] .vis-sep{stroke:#475569}html[data-theme="2052"] .vis-beam{fill:#94a3b8}html[data-theme="2052"] .vis-pancup{fill:#1e293b;stroke:#94a3b8}html[data-theme="2052"] .vis-beaker,html[data-theme="2052"] .vis-shell{stroke:#94a3b8}
+html[data-theme="2052"] .vis-digit{fill:#f8fafc}html[data-theme="2052"] .vis-digit.z{fill:var(--vi)}html[data-theme="2052"] .vis-ctr circle{stroke:#e2e8f0}
+html[data-theme="2052"] .vis-line{color:#94a3b8}html[data-theme="2052"] .vis-line.cur{color:#f8fafc;text-shadow:0 0 12px rgba(103,232,249,.45)}
+html[data-theme="2052"] .vis-written,html[data-theme="2052"] .vis-sp,html[data-theme="2052"] .vis-tray{background:rgba(2,6,23,.6);border-color:#4b6386;color:var(--tx)}
+html[data-theme="2052"] .vis-wl.ul,html[data-theme="2052"] .vis-wl.tot{border-color:#cbd5e1}html[data-theme="2052"] .vis-wl.cur,html[data-theme="2052"] .vis-k{color:var(--vi)}html[data-theme="2052"] .vis-wl.q{color:var(--gr)}
+html[data-theme="2052"] .vis-mult,html[data-theme="2052"] .vis-f small{color:var(--mu)}
+html[data-theme="2052"] .vis-pattern span,html[data-theme="2052"] .vis-mol{background:rgba(148,163,184,.15)}html[data-theme="2052"] .vis-pattern .vis-hl{background:#fde68a;color:#111}
+html[data-theme="2052"] .vis-tally th,html[data-theme="2052"] .vis-tally td{border-color:#4b6386}html[data-theme="2052"] .vis-tally .vis-bad{background:rgba(239,68,68,.25)}
+html[data-theme="2052"] .vis-bin{background:rgba(99,102,241,.12);border-color:rgba(165,180,252,.45)}
+html[data-theme="2052"] .vis-card{background:rgba(30,41,59,.92);color:var(--tx);border-color:#64748b;transition:transform .15s,box-shadow .2s}
+html[data-theme="2052"] .vis-card:hover{box-shadow:0 0 12px rgba(103,232,249,.35);transform:translateY(-1px)}
+html[data-theme="2052"] .vis-card[aria-pressed=true]{outline-color:var(--vi);box-shadow:0 0 16px rgba(196,181,253,.55)}
+html[data-theme="2052"] .vis-card.ok{background:#14532d;border-color:#4ade80;color:#f0fdf4}html[data-theme="2052"] .vis-card.bad{background:#7f1d1d;border-color:#f87171;color:#fef2f2}
+html[data-theme="2052"] .vis-dot{fill:#f0abfc;filter:drop-shadow(0 0 5px #e879f9)}
+html[data-theme="2052"] .vis-handle{filter:drop-shadow(0 0 6px rgba(251,191,36,.8))}
+/* theme switch */
+.themebtn{font:inherit;font-size:12px;margin-top:8px;padding:4px 10px;min-height:30px;border-radius:999px;cursor:pointer;border:1px solid #6d28d9;background:#fff;color:#4c1d95}
+html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;border-color:rgba(103,232,249,.5)}
+@media (max-width:760px){html[data-theme="2052"] #side{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(8,12,28,.97)}html[data-theme="2052"] .card{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(14,22,44,.92)}html[data-theme="2052"] .wn-map{transform:none}}
+@media (prefers-reduced-motion:reduce){html[data-theme="2052"] .card,html[data-theme="2052"] .wn-map line.ge{animation:none}html[data-theme="2052"] .wn-map,html[data-theme="2052"] body::before,html[data-theme="2052"] body::after{transform:none}html[data-theme="2052"] .item,html[data-theme="2052"] .lbtn,html[data-theme="2052"] .vis-card{transition:none}}
 
 </style></head><body>
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
 <small>A family-friendly learning map for ages 11–18: what to learn next, and why. <span id="cnt">826 topics.</span></small>
+<button type="button" class="themebtn" id="themeBtn" aria-pressed="false">Classic look</button>
 <label class="sr" for="q">Search topics</label><input id="q" type="search" placeholder="Search topics…">
 <div id="filters"><label><input type="checkbox" id="showOld"> include upstream v1 ancestors</label><label><input type="checkbox" id="onlyLes"> only topics with lessons</label></div></header>
 <nav id="list" aria-label="Topic list"></nav></aside>
 <main id="main"><div class="card"><b>How to use:</b> pick a topic on the left. You'll see its full prerequisite chain, with the reason for each link.
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
-<p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=957a845510"></script><script defer src="wn/learn.js?v=6dfbf9d72d"></script><script defer src="wn/app.js?v=85c1bd82c4"></script></body></html>
+<p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
+<script defer src="wn/core.js?v=957a845510"></script><script defer src="wn/learn.js?v=6dfbf9d72d"></script><script defer src="wn/app.js?v=2e157eac57"></script></body></html>

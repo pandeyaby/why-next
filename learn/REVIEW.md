@@ -188,3 +188,17 @@ on y = x² / x³: two, one or no solutions) and `grid` (polynomial multiplicatio
 Fit: the exponent, roots and grid visuals model the idea directly. Weaker: functions, polynomial vocabulary,
 like terms and scalars/vectors use the card sorter (classification practice, not a model; a draggable vertical-line
 test would fit functions better). Lessons 05, 46, 47, 49, 61, 63 unchanged this round.
+
+## Round 8: "2052" look (visual-draft)
+
+Default theme is now a dark glass design (`learn/theme.css`, CSS only, about 14 KB raw): frosted panels, a neon
+cyan/violet/pink/amber palette, a faint star field and grid that drift with the pointer (parallax), cards that rise
+in, a map whose prerequisite edges flow towards the topic they unlock, with glowing nodes (cyan = Why Next? topic,
+pink = current, amber ring pulsing = learn next, green = done), and "holographic" visual widgets (scan-line glass
+stage, glowing curves and handles). A "Classic look" button in the header switches to the original light design;
+the choice is saved on the device and set before first paint (no flash, no layout shift). All animation stops under
+prefers-reduced-motion; pointer parallax only runs with a fine pointer; mobile drops the blur and tilt for speed.
+tests/theme.e2e.cjs checks: default theme, toggle + persistence, axe (WCAG 2 AA) in both themes and on mobile,
+reduced motion. Lighthouse mobile stays 99–100.
+Weaknesses: map labels are small on large graphs (the SVG scales down; same as before); the particle canvas keeps its
+light background inside the dark panel; no user testing yet with young children or older adults.

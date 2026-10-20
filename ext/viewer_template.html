@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
-<title>Why Next? A learning map: what to learn next, and why</title>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("whynext.theme")||"2052"}catch(e){document.documentElement.dataset.theme="2052"}</script>
+<meta name="color-scheme" content="dark light"><title>Why Next? A learning map: what to learn next, and why</title>
 <style>
 #side h1{color:#111827}:root{--new:#1d4ed8;--old:#4b5563;--bridge:#b45309;--bg:#f8fafc}
 *{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#111827;background:var(--bg);display:flex;height:100vh}
@@ -28,11 +29,12 @@ svg{width:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px}
 </style></head><body>
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
 <small>A family-friendly learning map for ages 11–18: what to learn next, and why. <span id="cnt"></span></small>
+<button type="button" class="themebtn" id="themeBtn" aria-pressed="false">Classic look</button>
 <label class="sr" for="q">Search topics</label><input id="q" type="search" placeholder="Search topics…">
 <div id="filters"><label><input type="checkbox" id="showOld"> include upstream v1 ancestors</label><label><input type="checkbox" id="onlyLes"> only topics with lessons</label></div></header>
 <nav id="list" aria-label="Topic list"></nav></aside>
 <main id="main"><div class="card"><b>How to use:</b> pick a topic on the left. You'll see its full prerequisite chain, with the reason for each link.
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
-<p class="muted" id="stats"></p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">/*__CREDIT__*/</p></div><div id="learnHome"></div><div id="detail"></div></main>
+<p class="muted" id="stats"></p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">/*__CREDIT__*/</p></div><div id="learnHome"></div><div id="detail"></div></main>
 /*__SCRIPTS__*/</body></html>
