@@ -202,3 +202,23 @@ tests/theme.e2e.cjs checks: default theme, toggle + persistence, axe (WCAG 2 AA)
 reduced motion. Lighthouse mobile stays 99–100.
 Weaknesses: map labels are small on large graphs (the SVG scales down; same as before); the particle canvas keeps its
 light background inside the dark panel; no user testing yet with young children or older adults.
+
+## Round 9: weak visual fits replaced with models (visual-draft)
+
+| Lesson | Old visual | New visual |
+|---|---|---|
+| 05 Reading +, − and = | ten-frame | `symbols`: choose + or −; counters join or are crossed out; an answer row shows = as "the same as"; the sentence is read in words |
+| 46 Counting atoms | locked equation balancer | `sealed`: Ca(OH)₂ → CaO + H₂O in a flask; atoms move into new molecules; atom tally before/after |
+| 47 Conservation of mass | balancer with masses | `sealed`: iron + sulfur on a scale; React keeps 176 g |
+| 49 Word equations | balancer with names | `sealed`: magnesium + oxygen with word equation; open the flask and oxygen comes in from the air (48 g → 80 g) |
+| 61 Material properties | sorter | `circuit`: put each material in the gap; bulb lights for conductors; results table builds |
+| 63 Properties vocabulary | sorter | `light`: torch, material and screen; light meter 100/40/0%; sharp star, blur or shadow |
+| 76 Polynomial vocabulary | sorter | `polyterms`: edit terms; terms/degree/leading coefficient/constant/standard form update |
+| 81 What makes a function | sorter | `vlt`: draggable vertical line on line, parabola, circle, sideways parabola, cubic |
+| 83 Adding/subtracting polynomials | sorter | `tiles`: algebra tiles; subtracting flips the second bracket; Combine cancels zero pairs |
+| 88 Scalars and vectors | sorter | `vectors`: drag two walk arrows; distance (scalar) adds, displacement (vector) is the purple arrow |
+
+Also: the particle canvas follows the theme (dark in 2052), and the map shows labels at full size (12 px) in a
+scrollable region centred on the current topic, with a "Fit to width" option. Remaining: the sealed model uses
+"1 atom = 1 g-per-mole" masses, said only implicitly; sorter is still used in 58–60 and 62's particle lesson is
+unchanged; the map label truncation at 24 characters stays.

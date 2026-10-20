@@ -18,7 +18,9 @@ OPTS = {
     "placevalue": {"n": N}, "percent": {"p": I, "of": N, "mode": S}, "coords": {"max": I, "x": I, "y": I, "target": L}, "wholes": {"a": I, "b": I}, "thermo": {"min": I, "max": I, "t": N, "step": N, "from": N},
     "journey": {"pts": L, "tu": S, "du": S, "start": N, "step": N},
     "expo": {"mode": S, "base": I, "n": I, "m": I, "k": I, "a": I, "op": S}, "roots": {"k": I, "p": I, "xr": L, "yr": L},
-    "grid": {"a": L, "b": L},
+    "grid": {"a": L, "b": L}, "symbols": {"a": I, "b": I, "op": S}, "sealed": {"left": L, "right": L, "gas": L, "names": dict},
+    "circuit": {"items": L}, "light": {"items": L}, "vlt": {"graphs": L, "x": N}, "polyterms": {"terms": L},
+    "tiles": {"a": L, "b": L, "op": S}, "vectors": {"a": L, "b": L},
     "formula": {"name": S, "expr": S, "vars": dict, "pic": S, "what": S, "unit": S},
 }
 SAFE_F = re.compile(r"^[x0-9+\-*/(). ]+$")
@@ -112,6 +114,17 @@ def check(v):
         if t == "expo" and o.get("op", "mul") not in ("mul", "div", "pow"): errs.append("expo: op is mul, div or pow")
         if t == "roots" and o.get("k", 2) not in (2, 3): errs.append("roots: k is 2 or 3")
         if t == "grid" and not all(isinstance(x, int) for x in o["a"] + o["b"]): errs.append("grid: coefficients are whole numbers")
+        if t == "sealed":
+            sides = [[(formula(f), k) for f, k in o[x]] for x in ("left", "right")]
+            tl = lambda sd: {e: sum(m.get(e, 0) * k for m, k in sd) for m0, _ in sd for e in m0}
+            if tl(sides[0]) != tl(sides[1]): errs.append("sealed: the equation must be balanced")
+            if sum(sum(m.values()) * k for m, k in sides[0]) > 24: errs.append("sealed: at most 24 atoms")
+            if not set(o.get("gas", [])) <= {f for f, _ in o["left"] + o["right"]}: errs.append("sealed: gas must be one of the formulas")
+        if t in ("circuit", "light") and not (4 <= len(o["items"]) <= 10 and all(len(i) == 2 and isinstance(i[0], str) and isinstance(i[1], int) and 0 <= i[1] <= (1 if t == "circuit" else 2) for i in o["items"])): errs.append(f"{t}: need 4-10 [name, class] items")
+        if t == "symbols" and not (0 <= o.get("b", 2) <= o.get("a", 7) <= 10 and o.get("op", "-") in "+-"): errs.append("symbols: need 0 ≤ b ≤ a ≤ 10 and op + or -")
+        if t == "vlt" and not set(o.get("graphs", [])) <= {"line", "parab", "circle", "side", "cubic"}: errs.append("vlt: unknown graph")
+        if t == "polyterms" and not (1 <= len(o.get("terms", [[1, 0]])) <= 5 and all(len(x) == 2 and 0 <= x[1] <= 5 and x[0] for x in o.get("terms", [[1, 0]]))): errs.append("polyterms: 1-5 [coef, power] terms")
+        if t == "tiles" and not all(len(o.get(k, [0, 0, 0])) == 3 and all(abs(v) <= 6 for v in o.get(k, [0, 0, 0])) for k in "ab"): errs.append("tiles: a and b are [x², x, 1] coefficients up to 6")
     except Exception as ex:  # noqa: BLE001
         errs.append(f"{t}: {ex}")
     return errs

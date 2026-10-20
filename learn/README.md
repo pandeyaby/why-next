@@ -33,7 +33,7 @@ Every lesson has a required `visual`: `{ "type", "caption", "opts" }`. It render
 `figure.vis` with a "Try it" caption, controls and a live text description (`p.vis-desc`, `aria-live`)
 that is the text alternative and updates after every action.
 
-Types, 31 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
+Types, 39 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
 
 | Area | Types |
 |---|---|
@@ -44,6 +44,7 @@ Types, 31 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`)
 | Integration | `area` (Riemann rectangles/trapezia, signed definite integral with draggable limits, fundamental theorem with the area function, antiderivative family + C, velocity–time displacement) |
 | Science | `sorter` (drag or tap cards into boxes, then check), `phscale` (universal-indicator colours), `energy` (exo/endothermic profile with a thermometer) |
 | Powers and polynomials | `expo` (exponent laws as factor tiles; `mode: ladder` to zero/negative powers; `mode: root` for fractional powers), `roots` (level line on y = x² or x³), `grid` (polynomial multiplication grid) |
+| Models | `symbols` (+, − and = acting on counters), `sealed` (flask on a scale: atoms rearrange, mass stays; open it to let a gas in or out), `circuit` (bulb tester), `light` (torch, material, screen and light meter), `vlt` (vertical-line test on five graphs), `polyterms` (build a polynomial; names, degree, standard form), `tiles` (algebra tiles: flip to subtract, combine, zero pairs), `vectors` (draggable displacement arrows vs added distances) |
 | More number | `placevalue` (digits slide on × 10 / ÷ 10), `percent` (hundred square; `mode: change` for multipliers), `thermo` (negative temperatures, change across zero), `journey` (distance–time graph with a walker), `formula` (substitute with sliders, optional rectangle picture), `coords`, `wholes` (a ÷ b as sharing) |
 
 `learn/validate_visuals.py` whitelists options per type and checks the content: solvable balance equations,

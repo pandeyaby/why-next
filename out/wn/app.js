@@ -22,12 +22,12 @@ function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class=
  const L=[];anc.forEach(u=>{const d=depth.get(u);(L[d]=L[d]||[]).push(u)});L.forEach(l=>l.sort((a,b)=>N.get(a).d.localeCompare(N.get(b).d)));
  const W=Math.max(700,Math.max(...L.map(l=>l.length))*150),RH=70,H=L.length*RH+30,pos=new Map();
  L.forEach((l,d)=>l.forEach((u,i)=>pos.set(u,[(i+.5)*W/l.length,H-20-d*RH-10])));
- let s=`<svg class="wn-map" viewBox="0 0 ${W} ${H}" style="height:${Math.min(H,900)}px">`;
+ let s=`<div class="mapbar" role="group" aria-label="Map size"><button type="button" class="lbtn sm" data-z="1" aria-pressed="true">Readable labels</button><button type="button" class="lbtn sm" data-z="0" aria-pressed="false">Fit to width</button></div><div class="mapwrap" tabindex="0" role="region" aria-label="Prerequisite map (scroll to pan)"><svg class="wn-map" viewBox="0 0 ${W} ${H}" data-w="${W}" data-h="${H}" style="width:${W}px;height:${H}px;max-width:none">`;
  anc.forEach(u=>{for(const e of PRE.get(u)||[]){if(!e.h||!anc.has(e.p))continue;const[a,b]=pos.get(u),[c,d]=pos.get(e.p);
   s+=`<line class="ge${isBridge(e)?' br':''}" x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="${isBridge(e)?'#d97706':'#cbd5e1'}" stroke-width="${isBridge(e)?2:1}"><title>${esc(e.r)}</title></line>`}});
  anc.forEach(u=>{const[x,y]=pos.get(u),n=N.get(u),lab=n.n.length>24?n.n.slice(0,23)+'…':n.n;
-  s+=`<g class="gn${n.new?' nw':''}${u===id?' cur':''}" data-id="${u}" style="cursor:pointer"><circle class="${LEARN.cls(u)}" cx="${x}" cy="${y}" r="${u===id?8:5}" fill="${n.new?'#2563eb':'#9ca3af'}"/><text x="${x}" y="${y-9}" font-size="10" text-anchor="middle" fill="#111">${esc(lab)}<title>${esc(n.n)} (${n.a[0]}–${n.a[1]})</title></text></g>`});
- return s+'</svg><p class="muted" style="font-size:12px">Hard prerequisites only; the earliest foundations are at the bottom. Orange lines are bridge edges. Hover a line to see its reason; click a node to open it.</p>'}
+  s+=`<g class="gn${n.new?' nw':''}${u===id?' cur':''}" data-id="${u}" style="cursor:pointer"><circle class="${LEARN.cls(u)}" cx="${x}" cy="${y}" r="${u===id?8:5}" fill="${n.new?'#2563eb':'#9ca3af'}"/><text x="${x}" y="${y-9}" font-size="12" text-anchor="middle" fill="#111">${esc(lab)}<title>${esc(n.n)} (${n.a[0]}–${n.a[1]})</title></text></g>`});
+ return s+'</svg></div><p class="muted" style="font-size:12px">Hard prerequisites only; the earliest foundations are at the bottom. Orange lines are bridge edges. Hover a line to see its reason; click a node to open it.</p>'}
 /* Detail text (descriptions, evidence, standards, link reasons, cluster notes) arrives in small per-domain
    chunks (wn/d*.js); the map and lessons render without it, and fill() completes the page once they load. */
 const needFor=id=>[...new Set([...ancestors(id,false)].map(u=>N.get(u).k))];
@@ -45,7 +45,7 @@ function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(need
  <span class="muted">${anc.size-1} ancestor topics (${prim} at primary ages ≤10).</span>
  ${users.length?`<br><b>Unlocks:</b> ${users.map(u=>`<span class="nm ${u.new?'new':'old'}" data-id="${u.id}">${esc(u.n)}</span>`).join(' · ')}`:''}`;
  document.getElementById('dclu').innerHTML=clu?`<div class="card"><b>Cluster: ${esc(n.s)} / ${esc(n.d)}, from age ${n.a[0]}</b><p style="margin:6px 0 0">${esc(clu)}</p></div>`:'';
- const below=()=>{if(sel!==id)return;document.getElementById('dgraph').innerHTML=graph(id);document.getElementById('dtree').innerHTML=ok?tree(id,new Set([id]),0)||'<p class="muted">No prerequisites in this view.</p>':wait};
+ const below=()=>{if(sel!==id)return;document.getElementById('dgraph').innerHTML=graph(id);mapZoom();document.getElementById('dtree').innerHTML=ok?tree(id,new Set([id]),0)||'<p class="muted">No prerequisites in this view.</p>':wait};
  quick?setTimeout(below,0):below()}
 document.getElementById('detail').onclick=e=>{if(e.target.closest('.learn'))return;const t=e.target.closest('.tog');if(t){const li=t.parentElement,box=li.querySelector(':scope>div[style]');if(box){const o=box.style.display!=='none';box.style.display=o?'none':'block';t.textContent=o?'▸':'▾'}return}
  const g=e.target.closest('[data-id]');if(g)select(g.dataset.id)};
@@ -57,3 +57,10 @@ LEARN.home();renderList();const first=LEARN.nextList(0).find(n=>LEARN.has(n.id))
  b.onclick=()=>{R.dataset.theme=R.dataset.theme==='classic'?'2052':'classic';try{localStorage.setItem('whynext.theme',R.dataset.theme)}catch(e){}sync()};sync();
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(pointer:fine)').matches)return;let raf=0,X=0,Y=0;
  addEventListener('pointermove',e=>{X=e.clientX/innerWidth*2-1;Y=e.clientY/innerHeight*2-1;if(!raf)raf=requestAnimationFrame(()=>{raf=0;R.style.setProperty('--px',X.toFixed(3));R.style.setProperty('--py',Y.toFixed(3))})},{passive:true})})();
+
+/* map zoom: "Readable labels" shows the map at full size (labels 12px) in a scrollable box, centred on the current topic; "Fit to width" shrinks it to fit */
+function mapZoom(){const g=document.getElementById('dgraph'),sv=g&&g.querySelector('.wn-map'),wr=g&&g.querySelector('.mapwrap');if(!sv)return;
+ const set=z=>{const W=+sv.dataset.w,H=+sv.dataset.h,f=z?1:Math.min(1,wr.clientWidth/W);sv.style.width=W*f+'px';sv.style.height=H*f+'px';
+  g.querySelectorAll('[data-z]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.z===z)));
+  if(z){const c=sv.querySelector('.gn.cur circle');if(c)wr.scrollLeft=Math.max(0,+c.getAttribute('cx')-wr.clientWidth/2);wr.scrollTop=0}};
+ g.querySelectorAll('[data-z]').forEach(b=>b.onclick=()=>set(+b.dataset.z));set(1)}

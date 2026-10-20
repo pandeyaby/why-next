@@ -20,9 +20,9 @@ R('particles',c=>{const o=c.opts,mp=o.mp??0,bp=o.bp??100,name=o.name||'water';le
    p.x+=p.vx*dt;p.y+=p.vy*dt;if(p.x<r){p.x=r;p.vx=Math.abs(p.vx)}if(p.x>W-r){p.x=W-r;p.vx=-Math.abs(p.vx)}if(p.y>H-r){p.y=H-r;p.vy=-Math.abs(p.vy)}if(p.y<top+r){p.y=top+r;p.vy=Math.abs(p.vy)}});
   if(s!=='gas')for(let i=0;i<N;i++)for(let j=i+1;j<N;j++){const a=ps[i],b=ps[j],dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);if(d>0&&d<2*r){const k=(2*r-d)/2/d;a.x-=dx*k;a.y-=dy*k;b.x+=dx*k;b.y+=dy*k}}}
  function settle(){const s=state();if(s==='solid')ps.forEach(p=>{p.x=p.hx;p.y=p.hy});else{for(let i=0;i<120;i++)stepSim(1/30)}}
- function paint(){g.clearRect(0,0,W,H);g.fillStyle='#f8fafc';g.fillRect(0,0,W,H);g.strokeStyle='#94a3b8';g.strokeRect(.5,.5,W-1,H-1);
-  ps.forEach(p=>{g.beginPath();g.arc(p.x,p.y,r-1,0,7);g.fillStyle=p.b?'#f59e0b':T<mp?'#2563eb':T<bp?'#0891b2':'#7c3aed';g.fill();g.strokeStyle='#1e293b';g.lineWidth=.8;g.stroke()});
-  g.fillStyle='#111';g.font='600 14px system-ui,sans-serif';g.fillText(`${nf(T)} °C: ${state()}`,10,20)}
+ function paint(){g.clearRect(0,0,W,H);const dk=document.documentElement.dataset.theme==='2052';g.fillStyle=dk?'#0b1224':'#f8fafc';g.fillRect(0,0,W,H);g.strokeStyle=dk?'#38bdf8':'#94a3b8';g.strokeRect(.5,.5,W-1,H-1);
+  ps.forEach(p=>{g.beginPath();g.arc(p.x,p.y,r-1,0,7);g.fillStyle=p.b?'#f59e0b':T<mp?'#2563eb':T<bp?'#0891b2':'#7c3aed';g.fill();g.strokeStyle=dk?'#e2e8f0':'#1e293b';g.lineWidth=.8;g.stroke()});
+  g.fillStyle=dk?'#f8fafc':'#111';g.font='600 14px system-ui,sans-serif';g.fillText(`${nf(T)} °C: ${state()}`,10,20)}
  function say(){const s=state(),d={solid:'particles are packed in a fixed pattern and only vibrate',liquid:'particles touch but slide past each other',gas:'particles are far apart and move fast in all directions'}[s];
   let t=`At ${nf(T)} °C, ${name} is a ${s}: ${d}. It melts at ${nf(mp)} °C and boils at ${nf(bp)} °C. Hotter particles move faster; they do not get bigger.`;
   if(o.mix)t+=' The orange particles are a second substance mixed in: this is a mixture, not a pure substance.';

@@ -21,7 +21,8 @@ async function axe(p, label) {
 const L = { riemann: 'mt_XW5d2G7v01', family: 'mt_gbnMvpN_Lj', definite: 'mt_P-VlHqNpca', ftc: 'mt_ckLHNZCBUi', velocity: 'mt_g7J4GJuLrf', sorter: 'mt_1hgck6ucII',
   phscale: 'mt_AN2kJE6I0s', energy: 'mt_UoqUPI_uNz', placevalue: 'mt_EDgw64OmfA', percent: 'mt_iEXqN48w3x', thermo: 'mt_RVK655t391', journey: 'mt_OUv-QXmW7_',
   formula: 'mt_mGBtwKr7Wl', coords: 'mt_oDlduFnemk', wholes: 'mt_4Km38F4L-6',
-  expo: 'mt_93GREOFJAe', ladder: 'mt_mq4eGlJDk9', root: 'mt_OcSj7J9q1t', roots: 'mt_iHEB0g_nCc', grid: 'mt_Vn2yQGKnvi' };
+  expo: 'mt_93GREOFJAe', ladder: 'mt_mq4eGlJDk9', root: 'mt_OcSj7J9q1t', roots: 'mt_iHEB0g_nCc', grid: 'mt_Vn2yQGKnvi',
+  symbols: 'mt_8RmpkDxT9L', sealed: 'mt_ehC1wsdmUz', sealedGas: 'mt_dzgK92gM32', sealedCount: 'mt_t20A6RuTJn', circuit: 'mt_Ge4Wtg6QMM', light: 'mt_MVovx37Xct', polyterms: 'mt_yYs2sYPwjl', vlt: 'mt_x68PoRveI0', tiles: 'mt_zt4q9lu5va', vectors: 'mt_hdlI0Sacpa' };
 
 (async () => {
   const browser = await chromium.launch();
@@ -59,6 +60,16 @@ const L = { riemann: 'mt_XW5d2G7v01', family: 'mt_gbnMvpN_Lj', definite: 'mt_P-V
   await test('fractional power: root then power', async () => { await open(p, L.root); await setRange(p, 'Power m', 2); await expectDesc(p, /power 2\/3 take 2 of those factors: 4/) });
   await test('x² = p: two, one or no solutions', async () => { await open(p, L.roots); await expectDesc(p, /−3 and 3\. Two answers/); await keys(p, '#vbox [role=slider]', ...Array(9).fill('ArrowDown')); await expectDesc(p, /Only x = 0/); await keys(p, '#vbox [role=slider]', 'ArrowDown'); await expectDesc(p, /no real answer/) });
   await test('polynomial grid: products collect into like terms', async () => { await open(p, L.grid); assert.match(await p.textContent('#vbox .vis-line.cur'), /= x³ − 1$/); await setRange(p, 'Number in first bracket', 2); assert.match(await p.textContent('#vbox .vis-line.cur'), /= x³ \+ 3x² \+ 3x \+ 2$/) });
+  await test('symbols: + and − act on the counters and = reads as the same', async () => { await open(p, L.symbols); await expectDesc(p, /7 − 2 = 5 reads “seven take away two is the same as five”/); await btn(p, '+ add'); await expectDesc(p, /7 \+ 2 = 9 reads “seven add two/) });
+  await test('sealed flask: reacting keeps the mass; atoms are tallied', async () => { await open(p, L.sealed); await expectDesc(p, /scale reads 176 g/); await btn(p, 'React'); await expectDesc(p, /After: 2 iron sulfide.*Before 176 g, after 176 g/);
+    await open(p, L.sealedCount); assert.match(await p.textContent('#vbox .vis-tally'), /H\s*2\s*2/) });
+  await test('open flask: oxygen comes in from the air, so the reading rises', async () => { await open(p, L.sealedGas); await btn(p, 'Open the flask'); await expectDesc(p, /reads 48 g before and 80 g after/); await btn(p, 'React'); await expectDesc(p, /scale reads 80 g/) });
+  await test('circuit tester: conductors light the bulb', async () => { await open(p, L.circuit); await p.click('#vbox .vis-card:text-is("Copper wire")'); await expectDesc(p, /bulb lights.*conductor/); await p.click('#vbox .vis-card:text-is("Rubber band")'); await expectDesc(p, /stays off.*insulator/) });
+  await test('light test: transparent, translucent, opaque', async () => { await open(p, L.light); await p.click('#vbox .vis-card:text-is("Frosted glass")'); await expectDesc(p, /40% .* translucent/); await p.click('#vbox .vis-card:text-is("Cardboard")'); await expectDesc(p, /0% .* opaque/) });
+  await test('vertical line test: a circle fails, a line passes', async () => { await open(p, L.vlt); await expectDesc(p, /once.*IS a function/); await btn(p, 'circle x² + y² = 9'); await expectDesc(p, /2 times.*NOT a function/); await keys(p, '#vbox [role=slider]', 'End'); await expectDesc(p, /nowhere/) });
+  await test('polynomial terms: standard form, degree and names update', async () => { await open(p, L.polyterms); await expectDesc(p, /3 terms, so it is a trinomial.*degree is 2/); await btn(p, 'Standard form'); await expectDesc(p, /^−3x² \+ 2x \+ 5 .*It is in standard form/); await btn(p, 'Remove term'); await expectDesc(p, /binomial/) });
+  await test('algebra tiles: subtract flips, combine cancels zero pairs', async () => { await open(p, L.tiles); await btn(p, 'Combine'); await expectDesc(p, /Result: 3x² \+ 4x − 5/); await btn(p, 'Add'); await btn(p, 'Combine'); await expectDesc(p, /Result: 7x² − 2x − 3/) });
+  await test('vectors: distance adds, displacement does not; walking back gives 0', async () => { await open(p, L.vectors); await expectDesc(p, /just add: 7 m.*5 m, bearing 037°/); await keys(p, '#vbox [aria-label^="Second walk"]', 'ArrowUp'); await expectDesc(p, /Walk 2 \(green\): 5 m/); await btn(p, 'Walk back to the start'); await expectDesc(p, /start to finish is 0 m/) });
   await test('axe: no violations in the newer visuals', async () => { for (const [t, id] of Object.entries(L)) { await open(p, id); await axe(p, t) } });
   await test('no console errors or visual failures', async () => assert.deepStrictEqual(errors, []));
   const m = await (await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true })).newPage(); await m.goto(URL);
