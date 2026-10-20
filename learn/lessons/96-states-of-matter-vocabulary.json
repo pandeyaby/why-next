@@ -1,0 +1,217 @@
+{
+ "topicId": "mt_1JFUNQDwAJ",
+ "title": "Solid, liquid and gas words",
+ "audience": "family",
+ "keyIdea": "A solid keeps its shape, a liquid flows and takes the shape of its container, and a gas spreads out to fill any space.",
+ "explain": {
+  "kid": [
+   "A block of ice is a solid. It keeps its shape.",
+   "Water is a liquid. It runs and fills the bottom of a cup. Air is a gas. It spreads out to fill the room."
+  ],
+  "adult": [
+   "Solids are hard and keep their shape. Liquids are runny: they flow, pour and take the shape of the container. Gases spread out to fill the space, and you often cannot see them.",
+   "Tricky cases help. Sand pours, but each grain is a solid. Honey is a slow liquid. Steam is water as a gas."
+  ]
+ },
+ "familyTip": "Find a solid, a liquid and a gas in the kitchen. Tip a cup of water: what does the top of the water do?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ice is a…",
+   "choices": [
+    "solid",
+    "liquid",
+    "gas"
+   ],
+   "answer": 0,
+   "hint": "It keeps its shape.",
+   "explain": "Ice keeps its shape: solid."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Milk is a…",
+   "choices": [
+    "liquid",
+    "solid",
+    "gas"
+   ],
+   "answer": 0,
+   "hint": "It pours.",
+   "explain": "Milk pours: liquid."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You pour {n} cups of juice and {m} cups of milk. How many cups of liquid?",
+   "answer": "n+m",
+   "hint": "Add.",
+   "explain": "{=n+m} cups.",
+   "params": {
+    "n": [
+     1,
+     5
+    ],
+    "m": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} balloons are full of air. {m} pop. How many are left?",
+   "answer": "n-m",
+   "hint": "Take away.",
+   "explain": "{n} − {m} = {=n-m}.",
+   "params": {
+    "n": [
+     5,
+     9
+    ],
+    "m": [
+     1,
+     4
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which fills the whole room?",
+    "choices": [
+     "a gas",
+     "a solid",
+     "a liquid"
+    ],
+    "answer": 0,
+    "hint": "Spreads out.",
+    "explain": "Gases spread out to fill the space."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which takes the shape of the bottom of its cup?",
+    "choices": [
+     "a liquid",
+     "a solid",
+     "nothing"
+    ],
+    "answer": 0,
+    "hint": "It flows.",
+    "explain": "Liquids flow to fill the bottom."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Steam is water as a…",
+    "choices": [
+     "gas",
+     "solid",
+     "liquid"
+    ],
+    "answer": 0,
+    "hint": "It floats up.",
+    "explain": "Steam is a gas."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{n} ice cubes melt. How many puddles of water? (one each)",
+    "answer": "n",
+    "hint": "Each cube makes one.",
+    "explain": "{n} puddles.",
+    "params": {
+     "n": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "There are {n} solids and {m} liquids on a table. How many things?",
+    "answer": "n+m",
+    "hint": "Add.",
+    "explain": "{=n+m}.",
+    "params": {
+     "n": [
+      1,
+      6
+     ],
+     "m": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A word for a liquid is…",
+    "choices": [
+     "runny",
+     "rigid",
+     "hard"
+    ],
+    "answer": 0,
+    "hint": "It flows.",
+    "explain": "Liquids are runny."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A word for a solid is…",
+    "choices": [
+     "keeps its shape",
+     "pours",
+     "fills the room"
+    ],
+    "answer": 0,
+    "hint": "Ice cube.",
+    "explain": "Solids keep their shape."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "states",
+  "caption": "Choose something, then tilt the jar. Does it keep its shape, flow, or fill the jar?",
+  "opts": {
+   "items": [
+    [
+     "Ice",
+     0
+    ],
+    [
+     "Water",
+     1
+    ],
+    [
+     "Air",
+     2
+    ],
+    [
+     "Wooden block",
+     0
+    ],
+    [
+     "Milk",
+     1
+    ],
+    [
+     "Steam",
+     2
+    ]
+   ]
+  }
+ }
+}

@@ -222,3 +222,6 @@ Also: the particle canvas follows the theme (dark in 2052), and the map shows la
 scrollable region centred on the current topic, with a "Fit to width" option. Remaining: the sealed model uses
 "1 atom = 1 g-per-mole" masses, said only implicitly; sorter is still used in 58–60 and 62's particle lesson is
 unchanged; the map label truncation at 24 characters stays.
+
+## Round 10
+See [REVIEW-round10.md](REVIEW-round10.md): persona walk-through, touch, early-years materials, coverage per goal.

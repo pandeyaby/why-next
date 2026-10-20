@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_5r47Pvstyn",
+ "title": "Objects and materials",
+ "audience": "family",
+ "keyIdea": "An object is a thing; a material is what the thing is made of.",
+ "explain": {
+  "kid": [
+   "A spoon is an object. It can be made of metal, wood or plastic. Those are materials.",
+   "It is still a spoon, whatever it is made of."
+  ],
+  "adult": [
+   "Children often mix up objects (spoon, chair, window) with materials (metal, wood, glass). Ask 'what is it?' for the object and 'what is it made of?' for the material.",
+   "The same object can be made of different materials, and the same material can make many objects. That idea leads to choosing materials for a job."
+  ]
+ },
+ "familyTip": "Pick three things in the kitchen. For each, say the object and the material: 'a cup, made of china'.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is a material?",
+   "choices": [
+    "wood",
+    "chair",
+    "table"
+   ],
+   "answer": 0,
+   "hint": "What things are made of.",
+   "explain": "Wood is a material; chairs and tables are objects."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which is an object?",
+   "choices": [
+    "spoon",
+    "metal",
+    "plastic"
+   ],
+   "answer": 0,
+   "hint": "A thing you can use.",
+   "explain": "A spoon is an object."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "{n} spoons are made of metal and {m} of wood. How many spoons?",
+   "answer": "n+m",
+   "hint": "Add them.",
+   "explain": "{n} + {m} = {=n+m} spoons.",
+   "params": {
+    "n": [
+     1,
+     5
+    ],
+    "m": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} cups are plastic and {m} are glass. How many glass cups?",
+   "answer": "m",
+   "hint": "Just the glass ones.",
+   "explain": "{m} are glass.",
+   "params": {
+    "n": [
+     1,
+     5
+    ],
+    "m": [
+     1,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A window is made of…",
+    "choices": [
+     "glass",
+     "a window",
+     "a door"
+    ],
+    "answer": 0,
+    "hint": "What is it made of?",
+    "explain": "Windows are made of glass."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Can a spoon be made of wood?",
+    "choices": [
+     "Yes",
+     "No"
+    ],
+    "answer": 0,
+    "hint": "Think of a cooking spoon.",
+    "explain": "Yes, wooden spoons are common."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which pair is (object, material)?",
+    "choices": [
+     "(chair, wood)",
+     "(wood, chair)",
+     "(metal, glass)"
+    ],
+    "answer": 0,
+    "hint": "Thing first.",
+    "explain": "A chair is the object; wood is the material."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "There are {n} wooden blocks and {m} plastic blocks. How many blocks?",
+    "answer": "n+m",
+    "hint": "Add.",
+    "explain": "{n} + {m} = {=n+m}.",
+    "params": {
+     "n": [
+      2,
+      6
+     ],
+     "m": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{n} toys are metal. {m} are not. How many toys?",
+    "answer": "n+m",
+    "hint": "Add both.",
+    "explain": "{=n+m} toys.",
+    "params": {
+     "n": [
+      1,
+      6
+     ],
+     "m": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Is plastic an object or a material?",
+    "choices": [
+     "A material",
+     "An object"
+    ],
+    "answer": 0,
+    "hint": "Can you make things from it?",
+    "explain": "Plastic is a material."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A metal spoon and a wooden spoon are both…",
+    "choices": [
+     "spoons",
+     "metal",
+     "wood"
+    ],
+    "answer": 0,
+    "hint": "Same object.",
+    "explain": "Both are spoons, made of different materials."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "objects",
+  "caption": "Pick an object, then change its material. Is it still the same object?",
+  "opts": {
+   "objects": [
+    [
+     "spoon",
+     [
+      [
+       "metal",
+       "#cbd5e1"
+      ],
+      [
+       "wood",
+       "#d6a35c"
+      ],
+      [
+       "plastic",
+       "#f472b6"
+      ]
+     ]
+    ],
+    [
+     "cup",
+     [
+      [
+       "glass",
+       "#bae6fd"
+      ],
+      [
+       "china",
+       "#f8fafc"
+      ],
+      [
+       "plastic",
+       "#86efac"
+      ]
+     ]
+    ],
+    [
+     "chair",
+     [
+      [
+       "wood",
+       "#d6a35c"
+      ],
+      [
+       "metal",
+       "#cbd5e1"
+      ],
+      [
+       "plastic",
+       "#fdba74"
+      ]
+     ]
+    ]
+   ]
+  }
+ }
+}

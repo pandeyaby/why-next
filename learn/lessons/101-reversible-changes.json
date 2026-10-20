@@ -1,0 +1,184 @@
+{
+ "topicId": "mt_UKmtuAsSLN",
+ "title": "Reversible changes",
+ "audience": "family",
+ "keyIdea": "A reversible change can be undone: melting, freezing, dissolving and mixing make no new material.",
+ "explain": {
+  "kid": [
+   "Melt ice and you get water. Freeze it and you get ice back. That change can go back, so it is reversible.",
+   "No new material is made. It is still water."
+  ],
+  "adult": [
+   "Changes of state (melting, freezing, boiling, condensing), dissolving and mixing are reversible: the same material comes back. Burning, rusting and cooking make new materials, so they are irreversible.",
+   "A good test: can you get the starting materials back by a simple method such as cooling, heating, filtering or evaporating? If yes, it is reversible."
+  ]
+ },
+ "familyTip": "Make ice lollies from juice, then melt one. Is it the same juice? Now toast bread: can you untoast it?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Melting chocolate is…",
+   "choices": [
+    "reversible",
+    "irreversible"
+   ],
+   "answer": 0,
+   "hint": "Cool it.",
+   "explain": "It sets again: reversible."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Burning paper is…",
+   "choices": [
+    "irreversible",
+    "reversible"
+   ],
+   "answer": 0,
+   "hint": "Can you get the paper back?",
+   "explain": "Ash cannot become paper: irreversible."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "{n} ice cubes melt, then all refreeze. How many ice cubes?",
+   "answer": "n",
+   "hint": "Same as before.",
+   "explain": "{n} again.",
+   "params": {
+    "n": [
+     3,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You dissolve {n} g of salt and evaporate the water. How many grams of salt do you get back?",
+   "answer": "n",
+   "hint": "Reversible.",
+   "explain": "{n} g.",
+   "params": {
+    "n": [
+     5,
+     30
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Dissolving sugar in tea is…",
+    "choices": [
+     "reversible",
+     "irreversible"
+    ],
+    "answer": 0,
+    "hint": "Evaporate the water.",
+    "explain": "Sugar is left behind: reversible."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Cooking an egg is…",
+    "choices": [
+     "irreversible",
+     "reversible"
+    ],
+    "answer": 0,
+    "hint": "Can you uncook it?",
+    "explain": "A new material forms."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A reversible change makes…",
+    "choices": [
+     "no new material",
+     "a new material",
+     "only gas"
+    ],
+    "answer": 0,
+    "hint": "Same stuff.",
+    "explain": "No new material."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ice is taken out of the freezer and warms up. What happens?",
+    "choices": [
+     "It melts back to water",
+     "It turns into a new material",
+     "It stays ice for ever"
+    ],
+    "answer": 0,
+    "hint": "Reversible.",
+    "explain": "It melts back into water: the same material."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{n} g of wax melts. What mass of wax sets again, in g?",
+    "answer": "n",
+    "hint": "Nothing lost.",
+    "explain": "{n} g.",
+    "params": {
+     "n": [
+      10,
+      60
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{n} changes: {m} are reversible. How many are irreversible?",
+    "answer": "n-m",
+    "hint": "Take away.",
+    "explain": "{=n-m}.",
+    "params": {
+     "n": [
+      5,
+      9
+     ],
+     "m": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Mixing sand and gravel is…",
+    "choices": [
+     "reversible (sieve them)",
+     "irreversible"
+    ],
+    "answer": 0,
+    "hint": "Can you sort them out?",
+    "explain": "A sieve separates them."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "particles",
+  "caption": "Water: cool it to freeze, warm it to melt. The particles are the same water every time.",
+  "opts": {
+   "mp": 0,
+   "bp": 100,
+   "temp": 5,
+   "name": "water",
+   "min": -20,
+   "max": 40
+  }
+ }
+}

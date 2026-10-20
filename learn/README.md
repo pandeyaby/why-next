@@ -33,7 +33,7 @@ Every lesson has a required `visual`: `{ "type", "caption", "opts" }`. It render
 `figure.vis` with a "Try it" caption, controls and a live text description (`p.vis-desc`, `aria-live`)
 that is the text alternative and updates after every action.
 
-Types, 39 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
+Types, 45 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`):
 
 | Area | Types |
 |---|---|
@@ -46,16 +46,25 @@ Types, 39 in all (code in `learn/vis_*.js`, core helpers in `learn/vis_core.js`)
 | Powers and polynomials | `expo` (exponent laws as factor tiles; `mode: ladder` to zero/negative powers; `mode: root` for fractional powers), `roots` (level line on y = x² or x³), `grid` (polynomial multiplication grid) |
 | Models | `symbols` (+, − and = acting on counters), `sealed` (flask on a scale: atoms rearrange, mass stays; open it to let a gas in or out), `circuit` (bulb tester), `light` (torch, material, screen and light meter), `vlt` (vertical-line test on five graphs), `polyterms` (build a polynomial; names, degree, standard form), `tiles` (algebra tiles: flip to subtract, combine, zero pairs), `vectors` (draggable displacement arrows vs added distances) |
 | More number | `placevalue` (digits slide on × 10 / ÷ 10), `percent` (hundred square; `mode: change` for multipliers), `thermo` (negative temperatures, change across zero), `journey` (distance–time graph with a walker), `formula` (substitute with sliders, optional rectangle picture), `coords`, `wholes` (a ÷ b as sharing) |
+| Everyday materials (`vis_world.js`) | `states` (tilt a jar: solids keep shape, liquids pour, gases spread), `separate` (sieve, filter paper, evaporate, magnet on a mixture), `matlab` (bend / water / torch / scratch / shine tests; optional job such as an umbrella), `objects` (same object, different material), `squares` (n² square and n³ cube), `slopes` (parallel and perpendicular lines) |
 
 `learn/validate_visuals.py` whitelists options per type and checks the content: solvable balance equations,
 safe evaluable expressions and functions, sane long-division and multiplication operands, locked balancers that are balanced.
 
 Accessibility and motion: every draggable point is also a keyboard slider (`role=slider`, arrows/Home/End); every
 action has a button; pointer drags use pointer capture, so touch works. `prefers-reduced-motion` makes tweens instant,
-freezes the particle sim to settled frames, and turns off the celebration burst and glow. The particle canvas pauses off-screen.
+freezes the particle sim to settled frames (it still repaints at once when the theme changes), and turns off the celebration burst and glow. The particle canvas pauses off-screen.
 
 Cues: a hint or a wrong first answer highlights the relevant part of the visual (`VIS.cue`). Topics with a lesson show
 a progress ring; next-step map nodes glow; mastery shows a small celebration. Tests: `tests/visual.e2e.cjs` (in `npm run test:learn`).
+
+Touch: `learn/touch.css` loads last and makes every lesson control at least 44 × 44 px (the periodic table scrolls sideways
+on touch screens so its cells can be 44 px). Pictures use `touch-action: pan-y pinch-zoom`, so a swipe over a picture
+scrolls the page and pinch-zoom works; only drag handles and sorter cards take the finger. A press within 26 px of a
+handle grabs it (`slop` in `vis_core.js`). `tests/touch.e2e.cjs` drags every draggable visual with real touch events on an
+iPhone profile; `tests/world.e2e.cjs` covers the round-10 visuals, the paused particle re-theme and wrapped map labels.
+`scripts/persona_audit.cjs` walks all lessons as a 10-year-old (iPhone), a 16-year-old (Pixel) and a grandparent (iPad)
+and reports small targets, jargon, captions without an action and weak feedback.
 
 ## Loading (fast split build)
 

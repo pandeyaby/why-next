@@ -17,16 +17,19 @@ function tree(id,seen,depth){const es=(PRE.get(id)||[]).slice().sort((a,b)=>b.h-
   const kids=rep?'':tree(e.p,seen,depth+1),open=depth<2;
   h+=`<li class="node"><span class="tog">${kids?(open?'▾':'▸'):(rep?'↺':'·')}</span><span class="st ${e.h?'h':'s'}">${e.h?'hard':'soft'}</span>${br?'<span class="st b">bridge</span>':''}<span class="nm ${p.new?'new':'old'}" data-id="${p.id}">${esc(p.n)}</span> <span class="age">${p.a[0]}–${p.a[1]} · ${esc(p.d)}</span>${rep?' <span class="muted">(shown above)</span>':''}<div class="why${br?' bridge':''}">↳ ${esc(e.r)}</div>${kids?`<div style="display:${open?'block':'none'}">${kids}</div>`:''}</li>`}
  return h+'</ul>'}
+/* split a topic name into lines of about 18 characters (whole words) for the map */
+const wrapLab=t=>{const out=[];let cur='';for(const w of t.split(' ')){if(cur&&(cur+' '+w).length>18){out.push(cur);cur=w}else cur=cur?cur+' '+w:w}out.push(cur);return out};
+const gloss=LEARN_PANEL.gloss;
 function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class="muted">Hard-prerequisite graph has ${anc.size} topics, too many to draw. Use the chain below.</p>`;
  const depth=new Map();const dfs=u=>{if(depth.has(u))return depth.get(u);let d=0;for(const e of PRE.get(u)||[])if(e.h&&anc.has(e.p))d=Math.max(d,dfs(e.p)+1);depth.set(u,d);return d};anc.forEach(dfs);
  const L=[];anc.forEach(u=>{const d=depth.get(u);(L[d]=L[d]||[]).push(u)});L.forEach(l=>l.sort((a,b)=>N.get(a).d.localeCompare(N.get(b).d)));
- const W=Math.max(700,Math.max(...L.map(l=>l.length))*150),RH=70,H=L.length*RH+30,pos=new Map();
+ const W=Math.max(700,Math.max(...L.map(l=>l.length))*150),RH=92,H=L.length*RH+30,pos=new Map();
  L.forEach((l,d)=>l.forEach((u,i)=>pos.set(u,[(i+.5)*W/l.length,H-20-d*RH-10])));
  let s=`<div class="mapbar" role="group" aria-label="Map size"><button type="button" class="lbtn sm" data-z="1" aria-pressed="true">Readable labels</button><button type="button" class="lbtn sm" data-z="0" aria-pressed="false">Fit to width</button></div><div class="mapwrap" tabindex="0" role="region" aria-label="Prerequisite map (scroll to pan)"><svg class="wn-map" viewBox="0 0 ${W} ${H}" data-w="${W}" data-h="${H}" style="width:${W}px;height:${H}px;max-width:none">`;
  anc.forEach(u=>{for(const e of PRE.get(u)||[]){if(!e.h||!anc.has(e.p))continue;const[a,b]=pos.get(u),[c,d]=pos.get(e.p);
   s+=`<line class="ge${isBridge(e)?' br':''}" x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="${isBridge(e)?'#d97706':'#cbd5e1'}" stroke-width="${isBridge(e)?2:1}"><title>${esc(e.r)}</title></line>`}});
- anc.forEach(u=>{const[x,y]=pos.get(u),n=N.get(u),lab=n.n.length>24?n.n.slice(0,23)+'…':n.n;
-  s+=`<g class="gn${n.new?' nw':''}${u===id?' cur':''}" data-id="${u}" style="cursor:pointer"><circle class="${LEARN.cls(u)}" cx="${x}" cy="${y}" r="${u===id?8:5}" fill="${n.new?'#2563eb':'#9ca3af'}"/><text x="${x}" y="${y-9}" font-size="12" text-anchor="middle" fill="#111">${esc(lab)}<title>${esc(n.n)} (${n.a[0]}–${n.a[1]})</title></text></g>`});
+ anc.forEach(u=>{const[x,y]=pos.get(u),n=N.get(u),ln=wrapLab(n.n),lab=ln.map((t,i)=>`<tspan x="${x}" dy="${i?13:0}">${esc(t)}</tspan>`).join('');
+  s+=`<g class="gn${n.new?' nw':''}${u===id?' cur':''}" data-id="${u}" style="cursor:pointer"><circle class="${LEARN.cls(u)}" cx="${x}" cy="${y}" r="${u===id?8:5}" fill="${n.new?'#2563eb':'#9ca3af'}"/><text x="${x}" font-size="12" text-anchor="middle" fill="#111" y="${y-9-(ln.length-1)*13}">${lab}<title>${esc(n.n)} (${n.a[0]}–${n.a[1]})</title></text></g>`});
  return s+'</svg></div><p class="muted" style="font-size:12px">Hard prerequisites only; the earliest foundations are at the bottom. Orange lines are bridge edges. Hover a line to see its reason; click a node to open it.</p>'}
 /* Detail text (descriptions, evidence, standards, link reasons, cluster notes) arrives in small per-domain
    chunks (wn/d*.js); the map and lessons render without it, and fill() completes the page once they load. */
@@ -39,10 +42,11 @@ function select(id){sel=id;renderList();
 function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(needFor(id)),wait='<p class="muted">Loading details…</p>';
  const clu=(DATA.clusters||{})[n.s+'|'+n.d+'|'+n.a[0]];const prim=[...anc].filter(u=>!N.get(u).new&&N.get(u).a[0]<=10).length;const users=(POST.get(id)||[]).map(e=>N.get(e.t));
  document.getElementById('dcard').innerHTML=`<h2 style="margin:0 0 4px">${esc(n.n)}</h2>
- <span class="tag ${n.new?'new':'old'}">${n.new?'Why Next?':'upstream v1'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">${n.ty}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span>${LEARN.badge(id)} <span class="tag" title="Centrality on the merged graph: (ancestors + descendants) / max">centrality ${n.c}</span>
- ${n.desc==null?wait:`<p>${esc(n.desc)}</p>`}${(n.ev||[]).length?'<b>Evidence</b><ul>'+n.ev.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':''}
- <b>Standards:</b> ${(n.st||[]).length?n.st.map(esc).join(', '):'<span class="muted">none</span>'}<br>
- <span class="muted">${anc.size-1} ancestor topics (${prim} at primary ages ≤10).</span>
+ <span class="tag ${n.new?'new':'old'}">${n.new?'Why Next? topic':'earlier topic'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span>${LEARN.badge(id)}
+ ${n.desc==null?wait:`<p>${gloss(n.desc)}</p>`}
+ <details class="teach"><summary>For teachers and parents: evidence, standards and map data</summary>${(n.ev||[]).length?'<b>Evidence</b><ul>'+n.ev.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':''}
+ <b>Standards:</b> ${(n.st||[]).length?n.st.map(esc).join(', '):'<span class="muted">none</span>'}<br><span class="muted">Type: ${n.ty.toLowerCase()} · source: ${n.new?'Why Next?':'Marble Skill Taxonomy v1 (upstream)'} · centrality ${n.c} (how connected it is in the map)</span><br>
+ <span class="muted">${anc.size-1} earlier topics lead here (${prim} of them for ages 10 and under).</span></details>
  ${users.length?`<br><b>Unlocks:</b> ${users.map(u=>`<span class="nm ${u.new?'new':'old'}" data-id="${u.id}">${esc(u.n)}</span>`).join(' · ')}`:''}`;
  document.getElementById('dclu').innerHTML=clu?`<div class="card"><b>Cluster: ${esc(n.s)} / ${esc(n.d)}, from age ${n.a[0]}</b><p style="margin:6px 0 0">${esc(clu)}</p></div>`:'';
  const below=()=>{if(sel!==id)return;document.getElementById('dgraph').innerHTML=graph(id);mapZoom();document.getElementById('dtree').innerHTML=ok?tree(id,new Set([id]),0)||'<p class="muted">No prerequisites in this view.</p>':wait};
@@ -54,7 +58,7 @@ LEARN.home();renderList();const first=LEARN.nextList(0).find(n=>LEARN.has(n.id))
 /* theme switch (2052 default, classic light) and gentle pointer parallax for the background and map */
 (()=>{const R=document.documentElement,b=document.getElementById('themeBtn');if(!b)return;
  const sync=()=>{const c=R.dataset.theme==='classic';b.setAttribute('aria-pressed',c);b.textContent=c?'2052 look':'Classic look';b.title=c?'Switch to the dark, glowing 2052 design':'Switch to the original light design'};
- b.onclick=()=>{R.dataset.theme=R.dataset.theme==='classic'?'2052':'classic';try{localStorage.setItem('whynext.theme',R.dataset.theme)}catch(e){}sync()};sync();
+ b.onclick=()=>{R.dataset.theme=R.dataset.theme==='classic'?'2052':'classic';try{localStorage.setItem('whynext.theme',R.dataset.theme)}catch(e){}sync();document.dispatchEvent(new Event('wntheme'))};sync();
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(pointer:fine)').matches)return;let raf=0,X=0,Y=0;
  addEventListener('pointermove',e=>{X=e.clientX/innerWidth*2-1;Y=e.clientY/innerHeight*2-1;if(!raf)raf=requestAnimationFrame(()=>{raf=0;R.style.setProperty('--px',X.toFixed(3));R.style.setProperty('--py',Y.toFixed(3))})},{passive:true})})();
 

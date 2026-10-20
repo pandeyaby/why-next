@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_auVZZEuXjs",
+ "title": "Describing material properties",
+ "audience": "family",
+ "keyIdea": "We describe materials with pairs of words: hard or soft, stiff or bendy, shiny or dull, waterproof or not.",
+ "explain": {
+  "kid": [
+   "Is it hard or soft? Is it shiny or dull? Does it bend? Does water soak in?",
+   "These words tell us what a material is like."
+  ],
+  "adult": [
+   "Property words come in opposite pairs: hard/soft, stiff/bendy (flexible), shiny/dull, rough/smooth, waterproof/absorbent, transparent/opaque. Testing is better than guessing.",
+   "Let children test: bend it, drip water on it, scratch it with a coin, shine a torch at it. Then name the property in a sentence: 'foil is shiny and bendy'."
+  ]
+ },
+ "familyTip": "Test a sock, a spoon and a plastic bag. Is each one bendy? Waterproof? Shiny?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Water soaks into a sponge. The sponge is…",
+   "choices": [
+    "absorbent",
+    "waterproof",
+    "shiny"
+   ],
+   "answer": 0,
+   "hint": "It soaks up water.",
+   "explain": "Soaks up water: absorbent."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "The opposite of stiff is…",
+   "choices": [
+    "bendy",
+    "hard",
+    "dull"
+   ],
+   "answer": 0,
+   "hint": "Can it bend?",
+   "explain": "Stiff and bendy are opposites."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You test {n} things. {m} are shiny. How many are dull?",
+   "answer": "n-m",
+   "hint": "Take away.",
+   "explain": "{n} − {m} = {=n-m}.",
+   "params": {
+    "n": [
+     5,
+     9
+    ],
+    "m": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} things are waterproof and {m} are not. How many things?",
+   "answer": "n+m",
+   "hint": "Add.",
+   "explain": "{=n+m}.",
+   "params": {
+    "n": [
+     1,
+     5
+    ],
+    "m": [
+     1,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A coat that keeps rain out is…",
+    "choices": [
+     "waterproof",
+     "absorbent",
+     "transparent"
+    ],
+    "answer": 0,
+    "hint": "Water stays out.",
+    "explain": "It keeps water out: waterproof."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A metal spoon is…",
+    "choices": [
+     "shiny and stiff",
+     "soft and bendy",
+     "dull and absorbent"
+    ],
+    "answer": 0,
+    "hint": "Test it in your mind.",
+    "explain": "Metal spoons are shiny and stiff."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A towel is…",
+    "choices": [
+     "soft and absorbent",
+     "hard and shiny",
+     "waterproof"
+    ],
+    "answer": 0,
+    "hint": "It dries you.",
+    "explain": "Towels soak up water and feel soft."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{n} of {=n+m} materials bend. How many do not bend?",
+    "answer": "m",
+    "hint": "Take away.",
+    "explain": "{=n+m} − {n} = {m}.",
+    "params": {
+     "n": [
+      1,
+      5
+     ],
+     "m": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You did {n} tests on each of {m} materials. How many tests?",
+    "answer": "n*m",
+    "hint": "Groups of tests.",
+    "explain": "{n} × {m} = {=n*m}.",
+    "params": {
+     "n": [
+      2,
+      3
+     ],
+     "m": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The opposite of rough is…",
+    "choices": [
+     "smooth",
+     "soft",
+     "shiny"
+    ],
+    "answer": 0,
+    "hint": "Run your hand on it.",
+    "explain": "Rough and smooth are opposites."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which test checks if a material is waterproof?",
+    "choices": [
+     "Drip water on it",
+     "Bend it",
+     "Scratch it"
+    ],
+    "answer": 0,
+    "hint": "Water test.",
+    "explain": "Drip water and see if it soaks in."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "matlab",
+  "caption": "Pick a material, then do a test. What word describes it?",
+  "opts": {
+   "materials": [
+    [
+     "metal",
+     {
+      "bend": true,
+      "water": true,
+      "light": false,
+      "scratch": true,
+      "shine": true
+     },
+     "#cbd5e1"
+    ],
+    [
+     "wood",
+     {
+      "bend": true,
+      "water": false,
+      "light": false,
+      "scratch": true,
+      "shine": false
+     },
+     "#d6a35c"
+    ],
+    [
+     "glass",
+     {
+      "bend": true,
+      "water": true,
+      "light": true,
+      "scratch": true,
+      "shine": true
+     },
+     "#bae6fd"
+    ],
+    [
+     "fabric",
+     {
+      "bend": false,
+      "water": false,
+      "light": false,
+      "scratch": false,
+      "shine": false
+     },
+     "#a5b4fc"
+    ],
+    [
+     "plastic bag",
+     {
+      "bend": false,
+      "water": true,
+      "light": true,
+      "scratch": false,
+      "shine": true
+     },
+     "#86efac"
+    ],
+    [
+     "paper",
+     {
+      "bend": false,
+      "water": false,
+      "light": false,
+      "scratch": false,
+      "shine": false
+     },
+     "#fde68a"
+    ]
+   ]
+  }
+ }
+}

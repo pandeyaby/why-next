@@ -1,0 +1,189 @@
+{
+ "topicId": "mt_Pl-nsjYGZ3",
+ "title": "Heating and cooling changes",
+ "audience": "family",
+ "keyIdea": "Heating can melt a solid and boil a liquid; cooling can freeze a liquid; we measure the temperature in °C.",
+ "explain": {
+  "kid": [
+   "Heat chocolate and it melts. Put water in the freezer and it turns to ice.",
+   "A thermometer tells us how hot or cold something is, in degrees (°C)."
+  ],
+  "adult": [
+   "Each material changes state at its own temperature. Water melts at 0 °C and boils at 100 °C. Chocolate melts at about 34 °C, which is why it melts in a warm hand.",
+   "Heating moves along solid → liquid → gas; cooling goes back. Reading a thermometer at the moment of change is a good first science measurement."
+  ]
+ },
+ "familyTip": "Put a square of chocolate in your hand and one on a cold plate. Which melts first? Why?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ice melts when it is…",
+   "choices": [
+    "heated",
+    "cooled",
+    "squashed"
+   ],
+   "answer": 0,
+   "hint": "Warm hands.",
+   "explain": "Heating melts ice."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Water freezes at…",
+   "choices": [
+    "0 °C",
+    "100 °C",
+    "50 °C"
+   ],
+   "answer": 0,
+   "hint": "Freezer.",
+   "explain": "Water freezes at 0 °C."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Water is at {t} °C. How many degrees warmer until it boils at 100 °C?",
+   "answer": "100-t",
+   "hint": "100 take away.",
+   "explain": "100 − {t} = {=100-t}.",
+   "params": {
+    "t": [
+     20,
+     90
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Room is {t} °C. Chocolate melts at 34 °C. How many degrees warmer?",
+   "answer": "34-t",
+   "hint": "Find the gap.",
+   "explain": "34 − {t} = {=34-t}.",
+   "params": {
+    "t": [
+     15,
+     30
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Water boils at…",
+    "choices": [
+     "100 °C",
+     "0 °C",
+     "37 °C"
+    ],
+    "answer": 0,
+    "hint": "Kettle.",
+    "explain": "Water boils at 100 °C."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Cooling a liquid can make it…",
+    "choices": [
+     "freeze (turn solid)",
+     "boil",
+     "vanish"
+    ],
+    "answer": 0,
+    "hint": "Freezer.",
+    "explain": "Cooling freezes it."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A drink is {t} °C. It cools by {d} °C. What is it now?",
+    "answer": "t-d",
+    "hint": "Take away.",
+    "explain": "{t} − {d} = {=t-d} °C.",
+    "params": {
+     "t": [
+      40,
+      80
+     ],
+     "d": [
+      5,
+      30
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Ice is at −{d} °C. How many degrees warmer until it melts at 0 °C?",
+    "answer": "d",
+    "hint": "Up to zero.",
+    "explain": "{d} degrees.",
+    "params": {
+     "d": [
+      2,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why does chocolate melt in your hand?",
+    "choices": [
+     "Your hand is warmer than its melting point",
+     "Hands are wet",
+     "It is a gas"
+    ],
+    "answer": 0,
+    "hint": "About 34 °C.",
+    "explain": "Your hand is above 34 °C."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "We measure temperature with a…",
+    "choices": [
+     "thermometer",
+     "ruler",
+     "scale"
+    ],
+    "answer": 0,
+    "hint": "°C.",
+    "explain": "A thermometer."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Heating water a lot makes…",
+    "choices": [
+     "steam (a gas)",
+     "ice",
+     "sand"
+    ],
+    "answer": 0,
+    "hint": "Kettle.",
+    "explain": "Boiling makes steam."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "particles",
+  "caption": "Chocolate: drag the temperature. Watch it melt near 34 °C.",
+  "opts": {
+   "mp": 34,
+   "bp": 200,
+   "temp": 20,
+   "name": "chocolate",
+   "min": 0,
+   "max": 60
+  }
+ }
+}

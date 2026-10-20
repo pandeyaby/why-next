@@ -20,7 +20,8 @@ OPTS = {
     "expo": {"mode": S, "base": I, "n": I, "m": I, "k": I, "a": I, "op": S}, "roots": {"k": I, "p": I, "xr": L, "yr": L},
     "grid": {"a": L, "b": L}, "symbols": {"a": I, "b": I, "op": S}, "sealed": {"left": L, "right": L, "gas": L, "names": dict},
     "circuit": {"items": L}, "light": {"items": L}, "vlt": {"graphs": L, "x": N}, "polyterms": {"terms": L},
-    "tiles": {"a": L, "b": L, "op": S}, "vectors": {"a": L, "b": L},
+    "tiles": {"a": L, "b": L, "op": S}, "states": {"items": L}, "separate": {"mix": L}, "matlab": {"materials": L, "job": L},
+    "objects": {"objects": L}, "squares": {"n": I}, "slopes": {"m": N, "start": N}, "vectors": {"a": L, "b": L},
     "formula": {"name": S, "expr": S, "vars": dict, "pic": S, "what": S, "unit": S},
 }
 SAFE_F = re.compile(r"^[x0-9+\-*/(). ]+$")
@@ -125,6 +126,10 @@ def check(v):
         if t == "vlt" and not set(o.get("graphs", [])) <= {"line", "parab", "circle", "side", "cubic"}: errs.append("vlt: unknown graph")
         if t == "polyterms" and not (1 <= len(o.get("terms", [[1, 0]])) <= 5 and all(len(x) == 2 and 0 <= x[1] <= 5 and x[0] for x in o.get("terms", [[1, 0]]))): errs.append("polyterms: 1-5 [coef, power] terms")
         if t == "tiles" and not all(len(o.get(k, [0, 0, 0])) == 3 and all(abs(v) <= 6 for v in o.get(k, [0, 0, 0])) for k in "ab"): errs.append("tiles: a and b are [x², x, 1] coefficients up to 6")
+        if t == "states" and not all(len(i) == 2 and i[1] in (0, 1, 2) for i in o["items"]): errs.append("states: items are [name, 0 solid | 1 liquid | 2 gas]")
+        if t == "separate" and not all(len(m) == 2 and m[1] in ("sieve", "filter", "evaporate", "magnet", "none") for m in o["mix"]): errs.append("separate: mix items are [name, method]")
+        if t == "matlab" and not all(len(m) >= 2 and isinstance(m[1], dict) and set(m[1]) <= {"bend", "water", "light", "scratch", "shine"} for m in o["materials"]): errs.append("matlab: materials are [name, {test: bool}, colour]")
+        if t == "slopes" and o.get("start", 1) not in (-3, -2, -1, -.5, -1/3, 0, 1/3, .5, 1, 2, 3): errs.append("slopes: start must be one of the slider slopes")
     except Exception as ex:  # noqa: BLE001
         errs.append(f"{t}: {ex}")
     return errs

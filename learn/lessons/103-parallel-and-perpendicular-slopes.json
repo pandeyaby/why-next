@@ -1,0 +1,189 @@
+{
+ "topicId": "mt_9m2jSzGnvC",
+ "title": "Slopes of parallel and perpendicular lines",
+ "audience": "learner",
+ "keyIdea": "Parallel lines have equal slopes; perpendicular lines have slopes that multiply to −1.",
+ "explain": {
+  "kid": [
+   "Two lines that never meet are parallel. They have the same steepness, the same slope.",
+   "Lines that meet at a right angle are perpendicular. If one has slope 2, the other has slope −1/2."
+  ],
+  "adult": [
+   "If y = m₁x + c₁ and y = m₂x + c₂, the lines are parallel when m₁ = m₂, and perpendicular when m₁ × m₂ = −1, so m₂ = −1/m₁: flip the fraction and change the sign.",
+   "To write a line through (a, b) parallel to y = 3x + 1, keep m = 3: y − b = 3(x − a). For a perpendicular line, use m = −1/3 instead. Vertical and horizontal lines are the special case with no defined product."
+  ]
+ },
+ "familyTip": "Draw y = 2x on squared paper, then a line through (0, 3) that crosses it at a right angle. Check its slope is −1/2.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A line has slope {m}. What slope does a parallel line have?",
+   "answer": "m",
+   "hint": "Same slope.",
+   "explain": "Parallel: {m}.",
+   "params": {
+    "m": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "A line has slope 2. Which slope is perpendicular?",
+   "choices": [
+    "−1/2",
+    "1/2",
+    "−2"
+   ],
+   "answer": 0,
+   "hint": "Flip and change sign.",
+   "explain": "−1/2, because 2 × (−1/2) = −1."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Line A has slope {m}. Line B is perpendicular. What is slope A × slope B?",
+   "answer": -1,
+   "hint": "Always the same.",
+   "explain": "Perpendicular slopes multiply to −1.",
+   "params": {
+    "m": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "y = 3x + 1 and y = 3x − 4 are…",
+   "choices": [
+    "parallel",
+    "perpendicular",
+    "the same line"
+   ],
+   "answer": 0,
+   "hint": "Compare slopes.",
+   "explain": "Both slopes are 3, intercepts differ: parallel."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Slope −1/3 is perpendicular to slope…",
+    "choices": [
+     "3",
+     "−3",
+     "1/3"
+    ],
+    "answer": 0,
+    "hint": "Flip and change sign.",
+    "explain": "−1/3 × 3 = −1."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Line through (0, {c}) parallel to y = {m}x + 1. What is its y-intercept?",
+    "answer": "c",
+    "hint": "y = mx + c.",
+    "explain": "c = {c}.",
+    "params": {
+     "m": [
+      2,
+      6
+     ],
+     "c": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "y = 2x + 5 and y = −0.5x are…",
+    "choices": [
+     "perpendicular",
+     "parallel",
+     "neither"
+    ],
+    "answer": 0,
+    "hint": "2 × (−0.5).",
+    "explain": "2 × −0.5 = −1: perpendicular."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A line with slope {m} passes through (1, {b}). A parallel line passes through (0, 0). What is its y-value at x = 2?",
+    "answer": "2*m",
+    "hint": "y = mx.",
+    "explain": "y = {m} × 2 = {=2*m}.",
+    "params": {
+     "m": [
+      2,
+      6
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "y = 4x and y = 4x are…",
+    "choices": [
+     "the same line",
+     "parallel and different",
+     "perpendicular"
+    ],
+    "answer": 0,
+    "hint": "Same slope and intercept.",
+    "explain": "Identical lines."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "y = x + 1 and y = −x + 1 are…",
+    "choices": [
+     "perpendicular",
+     "parallel",
+     "neither"
+    ],
+    "answer": 0,
+    "hint": "1 × (−1).",
+    "explain": "1 × −1 = −1."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "y = 2x and y = 3x are…",
+    "choices": [
+     "neither",
+     "parallel",
+     "perpendicular"
+    ],
+    "answer": 0,
+    "hint": "Slopes differ, product 6.",
+    "explain": "Different slopes, product not −1."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "slopes",
+  "caption": "Blue line has slope 2. Change the green slope: find the parallel one and the perpendicular one.",
+  "opts": {
+   "m": 2,
+   "start": 1
+  }
+ }
+}

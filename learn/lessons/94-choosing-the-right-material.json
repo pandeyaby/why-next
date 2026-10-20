@@ -1,0 +1,265 @@
+{
+ "topicId": "mt_rTn43s8RNX",
+ "title": "Choosing the right material",
+ "audience": "family",
+ "keyIdea": "We choose a material because its properties suit the job.",
+ "explain": {
+  "kid": [
+   "An umbrella must keep rain off, so we need a waterproof material. Paper would get soggy!",
+   "Think about what the job needs, then pick a material that does it."
+  ],
+  "adult": [
+   "Ask two questions: what does the job need (waterproof, see-through, stiff, soft)? Which material has that property? Then explain the choice with 'because'.",
+   "Some materials fail in funny ways: a chocolate teapot melts, a paper umbrella soaks through. These help children reason about properties."
+  ]
+ },
+ "familyTip": "Ask: why are windows glass and not wood? Why are towels fabric and not plastic?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "An umbrella should be…",
+   "choices": [
+    "waterproof",
+    "absorbent",
+    "see-through"
+   ],
+   "answer": 0,
+   "hint": "It keeps rain off.",
+   "explain": "It must keep water out: waterproof."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "A window needs a material that is…",
+   "choices": [
+    "see-through",
+    "soft",
+    "absorbent"
+   ],
+   "answer": 0,
+   "hint": "You look through it.",
+   "explain": "You need to see through it, so glass."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You try {n} materials for an umbrella. {m} let water through. How many work?",
+   "answer": "n-m",
+   "hint": "Take away.",
+   "explain": "{n} − {m} = {=n-m}.",
+   "params": {
+    "n": [
+     5,
+     8
+    ],
+    "m": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A bag holds {n} books. You need {=n*2}. How many bags?",
+   "answer": "2",
+   "hint": "Double.",
+   "explain": "{=n*2} ÷ {n} = 2 bags.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why is a towel made of fabric?",
+    "choices": [
+     "Fabric soaks up water",
+     "Fabric is see-through",
+     "Fabric is shiny"
+    ],
+    "answer": 0,
+    "hint": "A towel dries you.",
+    "explain": "Fabric is absorbent."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why is a saucepan made of metal?",
+    "choices": [
+     "Metal is strong and lets heat through",
+     "Metal is soft",
+     "Metal soaks up water"
+    ],
+    "answer": 0,
+    "hint": "It goes on the cooker.",
+    "explain": "Metal is strong and conducts heat."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A chocolate teapot is a bad idea because…",
+    "choices": [
+     "chocolate melts when hot",
+     "chocolate is see-through",
+     "chocolate is too hard"
+    ],
+    "answer": 0,
+    "hint": "Hot tea!",
+    "explain": "It would melt."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{n} kids want raincoats. {m} have one. How many still need one?",
+    "answer": "n-m",
+    "hint": "Take away.",
+    "explain": "{n} − {m} = {=n-m}.",
+    "params": {
+     "n": [
+      5,
+      9
+     ],
+     "m": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Each window has {n} panes of glass. How many panes in {m} windows?",
+    "answer": "n*m",
+    "hint": "Groups.",
+    "explain": "{n} × {m} = {=n*m}.",
+    "params": {
+     "n": [
+      2,
+      4
+     ],
+     "m": [
+      2,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is best for a wellington boot?",
+    "choices": [
+     "rubber",
+     "paper",
+     "fabric"
+    ],
+    "answer": 0,
+    "hint": "Puddles!",
+    "explain": "Rubber is waterproof and bendy."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A good material for a window is…",
+    "choices": [
+     "glass",
+     "wood",
+     "brick"
+    ],
+    "answer": 0,
+    "hint": "See through.",
+    "explain": "Glass is transparent."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "matlab",
+  "caption": "The job: an umbrella. Try each material. Which ones would keep you dry?",
+  "opts": {
+   "materials": [
+    [
+     "metal",
+     {
+      "bend": true,
+      "water": true,
+      "light": false,
+      "scratch": true,
+      "shine": true
+     },
+     "#cbd5e1"
+    ],
+    [
+     "wood",
+     {
+      "bend": true,
+      "water": false,
+      "light": false,
+      "scratch": true,
+      "shine": false
+     },
+     "#d6a35c"
+    ],
+    [
+     "glass",
+     {
+      "bend": true,
+      "water": true,
+      "light": true,
+      "scratch": true,
+      "shine": true
+     },
+     "#bae6fd"
+    ],
+    [
+     "fabric",
+     {
+      "bend": false,
+      "water": false,
+      "light": false,
+      "scratch": false,
+      "shine": false
+     },
+     "#a5b4fc"
+    ],
+    [
+     "plastic bag",
+     {
+      "bend": false,
+      "water": true,
+      "light": true,
+      "scratch": false,
+      "shine": true
+     },
+     "#86efac"
+    ],
+    [
+     "paper",
+     {
+      "bend": false,
+      "water": false,
+      "light": false,
+      "scratch": false,
+      "shine": false
+     },
+     "#fde68a"
+    ]
+   ],
+   "job": [
+    "An umbrella",
+    [
+     "water"
+    ]
+   ]
+  }
+ }
+}

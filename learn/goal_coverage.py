@@ -2,7 +2,10 @@
 have to learn (not assumed known, not skipped) must have a lesson. Mirrors goalDist/done() in learn_core.js.
 Usage: python3 learn/goal_coverage.py [--list]   (exit 1 if a REQUIRED goal/band pair has a gap)"""
 import json, glob, sys, collections
-REQUIRED = [("integration", "16-18")]
+REQUIRED = [("fractions", "u10"), ("algebra", "10-12"), ("algebra", "13-15"),
+            ("calculus", "16-18"), ("calculus", "adult"), ("calculus", "grand"),
+            ("integration", "16-18"), ("integration", "adult"), ("integration", "grand"),
+            ("chemistry", "u10"), ("chemistry", "10-12"), ("chemistry", "13-15"), ("chemistry", "16-18"), ("chemistry", "adult"), ("chemistry", "grand")]
 T = {t["id"]: t for t in json.load(open("out/merged/data/topics.json"))["topics"]}
 PRE = collections.defaultdict(list)
 for e in json.load(open("out/merged/data/dependencies.json"))["dependencies"]:
@@ -19,6 +22,13 @@ def path(goal, band):
         t = T[i]
         return (band != "u10" and (t["subject"] in sk["subjects"] or t["domain"] in sk.get("domains", []))) or t["ageRangeEnd"] <= b["assumeKnownUpTo"]
     return sorted((d, i) for i, d in dist.items() if not done(i))
+if "--all" in sys.argv:
+    for g in G["goals"]:
+        if not g.get("target"): continue
+        for b in G["bands"]:
+            P = path(g["id"], b["id"]); m = [i for d, i in P if i not in LES]
+            print(f"{g['id']:12} {b['id']:7} {len(P)-len(m):3}/{len(P):3} covered" + (f"  missing: {', '.join(T[i]['name'] for i in m[:6])}{' …' if len(m) > 6 else ''}" if m else ""))
+    sys.exit(0)
 bad = 0
 for goal, band in REQUIRED:
     P = path(goal, band); miss = [(d, i) for d, i in P if i not in LES]
