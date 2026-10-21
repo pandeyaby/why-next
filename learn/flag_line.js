@@ -1,0 +1,68 @@
+/* Flagship 6 – straight-line graphs y = mx + c, read from a taxi meter. Hook: a night street, a taxi charges £3 to get in and £2 per km;
+   the learner predicts the 5 km fare, then drags the taxi and watches each kilometre drop a dot on the graph.
+   The line has two handles: the y-intercept (c) and a gradient handle (m), with a live rise/run staircase.
+   Sandbox: drag both, tap to test points. Challenge: match a dashed target line by dragging; feedback separates c errors, m errors, sign and run/rise flips. */
+(()=>{const X0=0,X1=8,Y0=-2,Y1=20;
+VIS.reg('flagline',c=>{let A,chal;const st={m:0,c:0,km:0,dots:[],drag:null,other:null,pts:[],won:false,tx:0};
+ const f1=v=>Number.isInteger(v)?String(v):v.toFixed(1),eq=(m,c)=>`y = ${m===0?'':(m===1?'':m===-1?'−':f1(m).replace('-','−'))+'x'}${c?(m===0?f1(c).replace('-','−'):(c>0?' + ':' − ')+f1(Math.abs(c))):m===0?'0':''}`;
+ const geo=A=>{const{W,H}=A,l=A.narrow?40:50,r=16,t=A.step===0?H*.52:16,b=A.narrow?36:40;return{l,r,t,b,X:x=>l+(x-X0)/(X1-X0)*(W-l-r),Y:y=>H-b-(y-Y0)/(Y1-Y0)*(H-t-b),x:px=>X0+(px-l)/(W-l-r)*(X1-X0),y:py=>Y0+(H-b-py)/(H-t-b)*(Y1-Y0)}};
+ const upd=()=>{c.say(A.step===0?`${f1(st.km)} km costs £${f1(3+2*st.km)}`:eq(st.m,st.c));A.cv.setAttribute('aria-label',A.step===0?`Illustration: a taxi on a night street, meter showing ${f1(st.km)} km and £${f1(3+2*st.km)}.`:`Graph of the line ${eq(st.m,st.c)}: crosses the y-axis at ${f1(st.c)}, goes ${st.m>=0?'up':'down'} ${f1(Math.abs(st.m))} for every 1 across.`+(st.other?` Second line ${eq(st.other.m,st.other.c)}.`:''));A.kick()};
+ let chk=()=>{};
+ // ---------- drawing ----------
+ const taxi=(A,x,y,s)=>{const{ctx,paint:P}=A;P.shadow(16,8,.45);ctx.fillStyle=P.lin(0,y-s*.6,0,y+s*.2,[[0,'#fde047'],[1,'#ca8a04']]);P.rrect(x-s,y-s*.35,s*2,s*.5,s*.12);ctx.fill();ctx.beginPath();ctx.moveTo(x-s*.55,y-s*.35);ctx.lineTo(x-s*.35,y-s*.75);ctx.lineTo(x+s*.4,y-s*.75);ctx.lineTo(x+s*.65,y-s*.35);ctx.fill();P.noShadow();
+  ctx.fillStyle='rgba(186,230,253,.85)';ctx.beginPath();ctx.moveTo(x-s*.45,y-s*.38);ctx.lineTo(x-s*.3,y-s*.68);ctx.lineTo(x+s*.02,y-s*.68);ctx.lineTo(x+s*.02,y-s*.38);ctx.fill();ctx.beginPath();ctx.moveTo(x+s*.08,y-s*.38);ctx.lineTo(x+s*.08,y-s*.68);ctx.lineTo(x+s*.37,y-s*.68);ctx.lineTo(x+s*.55,y-s*.38);ctx.fill();
+  ctx.fillStyle='#111';ctx.fillRect(x-s*.9,y-s*.12,s*1.8,s*.06);ctx.fillStyle='#0f172a';P.rrect(x-s*.22,y-s*.92,s*.44,s*.17,3);ctx.fill();ctx.fillStyle='#fde047';ctx.font=`800 ${s*.13}px system-ui`;ctx.textAlign='center';ctx.fillText('TAXI',x,y-s*.79);
+  [-.55,.55].forEach(o=>{P.ball(x+o*s,y+s*.17,s*.2,'#111827');P.ball(x+o*s,y+s*.17,s*.09,'#9ca3af')});P.glow('#fef9c3',20);ctx.fillStyle='#fef9c3';ctx.beginPath();ctx.arc(x+s*.98,y-s*.15,s*.06,0,7);ctx.fill();P.noShadow()};
+ const scene=A=>{const{ctx,W,H,paint:P,col:C}=A,g=geo(A),ry=H*.4;ctx.fillStyle=P.lin(0,0,0,ry,[[0,'#0b1026'],[1,'#312e81']]);ctx.fillRect(0,0,W,ry);
+  for(let i=0;i<9;i++){const bx=i*W/8-10,bh=H*(.12+((i*53)%7)/30);ctx.fillStyle='#111827';ctx.fillRect(bx,ry-bh,W/9,bh);ctx.fillStyle='rgba(253,224,71,.6)';for(let k=0;k<6;k++)if((i*7+k)%3)ctx.fillRect(bx+6+(k%3)*12,ry-bh+8+Math.floor(k/3)*14,6,8)}
+  ctx.fillStyle='#1f2937';ctx.fillRect(0,ry,W,H*.12);ctx.strokeStyle='rgba(255,255,255,.6)';ctx.setLineDash([16,14]);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,ry+H*.06);ctx.lineTo(W,ry+H*.06);ctx.stroke();ctx.setLineDash([]);
+  const rx=k=>g.l+k/X1*(W-g.l-g.r);for(let k=0;k<=X1;k++){ctx.fillStyle='rgba(255,255,255,.5)';ctx.font='10px system-ui';ctx.textAlign='center';ctx.fillText(k+' km',rx(k),ry+H*.115)}
+  taxi(A,rx(st.km),ry+H*.04,Math.min(46,W*.08));
+  const mx=W-110,my=10;P.shadow(12,4,.4);ctx.fillStyle='#020617';P.rrect(mx,my,100,46,8);ctx.fill();P.noShadow();ctx.fillStyle='#22c55e';ctx.font='700 20px ui-monospace,monospace';ctx.textAlign='right';ctx.fillText('£'+(3+2*st.km).toFixed(2),mx+92,my+26);ctx.font='10px system-ui';ctx.fillStyle='#86efac';ctx.fillText(f1(st.km)+' km',mx+92,my+40);
+  graph(A,true);if(!A.isDone&&A.pred[0]!=null){const a=.55+.45*Math.sin(performance.now()/230);ctx.globalAlpha=a;P.label('👆 drag the taxi →',rx(st.km)+60,ry-H*.06,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}};
+ const graph=(A,mini)=>{const{ctx,W,H,paint:P,col:C}=A,g=geo(A);
+  if(!mini){ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.06)],[1,C.pn]]);ctx.fillRect(0,0,W,H)}
+  ctx.lineWidth=1;for(let x=X0;x<=X1;x++){ctx.strokeStyle=A.alpha(C.tx,x?.08:.5);ctx.beginPath();ctx.moveTo(g.X(x),g.Y(Y0));ctx.lineTo(g.X(x),g.Y(Y1));ctx.stroke()}
+  for(let y=Y0;y<=Y1;y++){ctx.strokeStyle=A.alpha(C.tx,y?(y%4?.05:.12):.5);ctx.beginPath();ctx.moveTo(g.X(X0),g.Y(y));ctx.lineTo(g.X(X1),g.Y(y));ctx.stroke()}
+  ctx.fillStyle=C.mu;ctx.font='11px system-ui';ctx.textAlign='center';for(let x=1;x<=X1;x++)ctx.fillText(x,g.X(x),g.Y(Y0)+14);ctx.textAlign='right';for(let y=0;y<=Y1;y+=4)ctx.fillText(y,g.X(0)-6,g.Y(y)+4);
+  if(A.step===0){ctx.fillStyle=C.mu;ctx.textAlign='left';ctx.fillText('£',g.X(0)+4,g.Y(Y1)+10);st.dots.forEach(d=>{P.glow(A.alpha(C.am,.8),10);P.ball(g.X(d[0]),g.Y(d[1]),5,C.am);P.noShadow()});return}
+  const line=(m,cc,col,w,dash)=>{ctx.save();ctx.beginPath();ctx.rect(g.X(X0),g.Y(Y1),g.X(X1)-g.X(X0),g.Y(Y0)-g.Y(Y1));ctx.clip();ctx.strokeStyle=col;ctx.lineWidth=w;if(dash)ctx.setLineDash(dash);P.glow(A.alpha(col,.6),dash?0:10);ctx.beginPath();ctx.moveTo(g.X(X0),g.Y(m*X0+cc));ctx.lineTo(g.X(X1),g.Y(m*X1+cc));ctx.stroke();P.noShadow();ctx.restore()};
+  if(st.target)line(st.target.m,st.target.c,A.alpha(C.tx,.55),2.5,[8,6]);
+  (st.tpts||[]).forEach(q=>{P.ball(g.X(q[0]),g.Y(q[1]),6,C.pk)});
+  if(st.other){line(st.other.m,st.other.c,C.vi,3);P.label(eq(st.other.m,st.other.c),g.X(6.4),g.Y(st.other.m*6.4+st.other.c)-14,{pill:1,bg:A.alpha(C.vi,.9),col:'#fff'})}
+  st.dots.forEach(d=>P.ball(g.X(d[0]),g.Y(d[1]),5,C.am));
+  line(st.m,st.c,C.cy,4);
+  // rise/run staircase at x=1..2
+  const x0=1,y0=st.m*x0+st.c,y1=y0+st.m;if(st.m){ctx.fillStyle=A.alpha(C.gr,.18);ctx.beginPath();ctx.moveTo(g.X(x0),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y1));ctx.fill();ctx.strokeStyle=C.gr;ctx.lineWidth=2;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(g.X(x0),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y1));ctx.stroke();ctx.setLineDash([]);
+   P.label('1 across',g.X(x0+.5),g.Y(y0)+(st.m>0?12:-12),{font:'600 10px system-ui'});P.label(`${st.m>0?'up':'down'} ${f1(Math.abs(st.m))}`,g.X(x0+1)+6,g.Y((y0+y1)/2),{align:'left',font:'600 11px system-ui',col:C.gr})}
+  // handles
+  const hc=[g.X(0),g.Y(st.c)],hm=[g.X(4),g.Y(4*st.m+st.c)];P.glow(A.alpha(C.cy,.9),14);P.ball(hc[0],hc[1],10,C.cy);P.noShadow();P.glow(A.alpha(C.or,.9),14);P.ball(hm[0],hm[1],10,C.or);P.noShadow();
+  P.label('c = '+f1(st.c),hc[0]+14,hc[1]-14,{align:'left',pill:1,bg:A.alpha(C.cy,.9),col:'#04121a'});
+  (st.probe||[]).forEach(q=>{const on=Math.abs(q[1]-(st.m*q[0]+st.c))<.26;P.ball(g.X(q[0]),g.Y(q[1]),6,on?C.gr:C.rd);P.label(`(${f1(q[0])}, ${f1(q[1])}) ${on?'on':'off'} the line`,g.X(q[0])+9,g.Y(q[1])-10,{align:'left',font:'600 10px system-ui'})});
+  P.label(eq(st.m,st.c),W-12,g.t+16,{align:'right',font:`800 ${A.narrow?18:22}px system-ui`,bg:A.alpha(C.pn,.85),col:C.tx});
+  if(!A.isDone&&st.hint&&!st.drag){const a=.55+.45*Math.sin(performance.now()/230);ctx.globalAlpha=a;const h=st.hint==='c'?hc:hm;P.label(st.hint==='c'?'👆 drag ↕':'👆 drag ↕',h[0]+(st.hint==='c'?20:0),h[1]+24,{align:st.hint==='c'?'left':'center',pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}};
+ const draw=(A,dt)=>{if(A.step===0)scene(A);else graph(A);return !A.isDone||A.step===0};
+ const setTaxi=k=>{k=Math.max(0,Math.min(X1,Math.round(k*2)/2));if(k===st.km)return;st.km=k;A.sound.tick();for(let i=0;i<=Math.floor(k);i++)if(!st.dots.some(d=>d[0]===i)){st.dots.push([i,3+2*i]);A.sound.pop()}upd();if(k>=5&&!A.isDone)A.done(`5 km costs £13: £3 to get in, plus 5 × £2.`+A.reveal(0))};
+ const steps=[
+  {h:'The night taxi',p:'A taxi charges £3 the moment you get in, then £2 for every kilometre.',predict:{q:'How much is a 5 km ride?',opts:['£10','£13','£15'],ans:1},task:'Drag the taxi to the 5 km mark',show:()=>setTaxi(5),go:()=>{st.km=0;st.dots=[[0,3]];st.other=null;st.target=null;st.probe=null}},
+  {h:'Where the line starts',p:'Each dot is a fare. Join them and you get a straight line. At 0 km you already pay £3.',task:'Drag the blue handle up the y-axis to 3',show:()=>{st.c=3;upd();chk()},go:()=>{st.m=0;st.c=0;st.hint='c';st.dots=[0,1,2,3,4,5].map(i=>[i,3+2*i]);chk=()=>{if(st.c===3)A.done('c = 3: the y-intercept, the price before you move.')}}},
+  {h:'How steep?',p:'Every km adds £2. That is the gradient: how far up for each 1 across.',task:'Drag the orange handle until the line runs through every dot',show:()=>{st.m=2;upd();chk()},go:()=>{st.m=0;st.c=3;st.hint='m';chk=()=>{if(st.m===2&&st.c===3)A.done('y = 2x + 3. Up 2 for every 1 across: m = 2.')}}},
+  {h:'A rival taxi',p:'The rival charges £5 to get in, but only £1 per km (purple line stays as the first taxi).',predict:{q:'Which line will be steeper?',opts:['The rival’s','The first taxi’s','Same steepness'],ans:1},task:'Make y = x + 5 with the two handles',show:()=>{st.m=1;st.c=5;upd();chk()},go:()=>{st.other={m:2,c:3};st.m=2;st.c=3;st.dots=[];st.hint='c';chk=()=>{if(st.m===1&&st.c===5)A.done('The lines cross at 2 km (£7). Shorter trips: the first taxi is cheaper; longer trips: the rival.'+A.reveal(3))}}},
+  {h:'Downhill',p:'A phone has 6 hours of battery and loses 1 hour every hour of video.',predict:{q:'What sign will the gradient have?',opts:['Positive','Negative','Zero'],ans:1},task:'Make the battery line y = −x + 6',show:()=>{st.m=-1;st.c=6;upd();chk()},go:()=>{st.other=null;st.m=1;st.c=0;st.dots=[];st.hint='c';chk=()=>{if(st.m===-1&&st.c===6)A.done('m = −1: down 1 for every 1 across. It hits 0 after 6 hours.'+A.reveal(4))}}},
+  {h:'Sandbox',p:'Drag both handles. Tap anywhere on the grid to drop a test point: is it on your line?',go:()=>{st.other=null;st.dots=[];st.probe=[];st.hint=null;chk=()=>{}}},
+  {h:'Challenge',p:'',go:()=>newChal()}];
+ const grab=(A,p)=>{const g=geo(A),hc=[g.X(0),g.Y(st.c)],hm=[g.X(4),g.Y(4*st.m+st.c)];if(Math.hypot(p.x-hm[0],p.y-hm[1])<28)return'm';if(Math.hypot(p.x-hc[0],p.y-hc[1])<28||p.x<g.X(.5))return'c';return null};
+ const mv=p=>{const g=geo(A);if(st.drag==='c'){const v=Math.max(-2,Math.min(18,Math.round(g.y(p.y))));if(v!==st.c){st.c=v;A.sound.tick();upd();chk()}}else if(st.drag==='m'){const v=Math.max(-4,Math.min(4,Math.round((g.y(p.y)-st.c)/4*2)/2));if(v!==st.m){st.m=v;A.sound.tick();upd();chk()}}else if(st.drag==='taxi'){setTaxi((p.x-g.l)/(A.W-g.l-g.r)*X1)}};
+ A=FK.shell(c,{steps,ratio:.62,tall:1.05,draw,onStep:A=>{chal.hidden=A.step!==6;upd()},
+  init:A=>{chal=c.el('div',{class:'fl-chal'},A.extra.parentNode);A.extra.parentNode.insertBefore(chal,A.extra.nextSibling);A.g6=()=>({g:geo(A),st});
+   A.gest({down:p=>{if(A.step===0){if(A.pred[0]==null)return false;st.drag='taxi';mv(p);return true}if(A.step===6&&st.won)return false;const h=grab(A,p);if(h){st.drag=h;A.sound.tick();return true}
+     if(A.step===5){const g=geo(A),q=[Math.round(g.x(p.x)*2)/2,Math.round(g.y(p.y)*2)/2];st.probe.push(q);if(st.probe.length>4)st.probe.shift();A.sound.pop();A.kick()}return false},
+    move:p=>mv(p),up:p=>{if(p)mv(p);const was=st.drag;st.drag=null;A.kick();if(A.step===6&&was)judge()}})}});
+ const Q=[[3,1],[-2,10],[.5,4],[2,-1],[-1,7],[1.5,2]];let qi=-1;
+ const newChal=()=>{qi=(qi+1+Math.floor(Math.random()*3))%Q.length;const[m,cc]=Q[qi];st.target={m,c:cc};st.tpts=[[2,2*m+cc],[6,6*m+cc]];st.m=0;st.c=0;st.won=false;st.other=null;st.dots=[];st.hint=null;chk=()=>{};
+  chal.innerHTML=`<p><b>Match the dashed line</b> through (2, ${f1(2*m+cc)}) and (6, ${f1(6*m+cc)}). Drag the handles; it checks each time you let go.</p><p class="fl-fb" role="status" aria-live="polite"></p><span class="fl-kb"><button type="button" class="lbtn sm ghost" data-k="c1">c +1</button> <button type="button" class="lbtn sm ghost" data-k="c-1">c −1</button> <button type="button" class="lbtn sm ghost" data-k="m.5">m +½</button> <button type="button" class="lbtn sm ghost" data-k="m-.5">m −½</button></span>`;
+  chal.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{if(st.won)return;const k=b.dataset.k;st[k[0]]+=+k.slice(1);upd();judge()});upd()};
+ const judge=()=>{const t=st.target,fb=chal.querySelector('.fl-fb');if(!t||st.won)return;
+  if(st.m===t.m&&st.c===t.c){st.won=true;fb.innerHTML=`✓ ${eq(t.m,t.c)}: from (2, ${f1(2*t.m+t.c)}) to (6, ${f1(6*t.m+t.c)}) is up ${f1(4*t.m)} over 4 across, so m = ${f1(t.m)}. <button type="button" class="linkish">Another →</button>`;A.win();fb.querySelector('button').onclick=newChal;return}
+  A.sound.miss();fb.textContent=st.m===t.m?`The steepness is right. Now c: where does the dashed line cross the y-axis (x = 0)?`:st.c===t.c&&st.m===-t.m?'Right crossing, but it slopes the wrong way: going down from left to right means a negative gradient.':st.c===t.c&&t.m&&Math.abs(st.m-1/t.m)<.01?'That is across ÷ up. Gradient is up ÷ across: how far it rises for each 1 across.':st.c===t.c?'c is right. Now the gradient: count how far up (or down) it goes for 1 across.':'Not yet. Find where it crosses the y-axis first (c), then the steepness (m).'};
+ A.start()})})();

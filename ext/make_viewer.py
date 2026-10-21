@@ -49,8 +49,15 @@ assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
 learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "learn_fx.js", "learn_panel.js")
+LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "flag_neg.js", "flag_eq.js", "flag_line.js", "learn_fx.js", "learn_panel.js")
 learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
+# reels: short vertical explainers (learn/reels/<topic>.mp4 + .vtt + .jpg) copied to out/reels, manifest inlined
+import shutil as _sh
+_rm = json.load(open("learn/reels/index.json")) if os.path.exists("learn/reels/index.json") else {}
+os.makedirs("out/reels", exist_ok=True)
+for _f in glob.glob("learn/reels/*"):
+    if not _f.endswith(".json"): _sh.copy2(_f, "out/reels/" + os.path.basename(_f))
+learn_js = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";\n" + learn_js
 css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css"))
 
 # Split build: the page shell plus small cacheable scripts; per-domain detail chunks load on demand.
