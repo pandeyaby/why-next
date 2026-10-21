@@ -143,3 +143,11 @@ I checked the narration from `whynext-reels/v2/specs_b1.json` (the render spec) 
 | b291 | Pass |
 
 The re-rendered b173 replaces the old one (same narration). 48 batch-6 reels are wired; b258 and b279 are held.
+
+### Re-check 2026-10-21: b258, b279, b280, b290, b232 re-rendered
+- **b258: passes, wired.** At 4 fps the iron→rust labels stay readable the whole way through (no blank boxes).
+- **b279: passes, wired.** The header changes to "endothermic: heat in" at the same moment the caption and the cooling flask do.
+- **b280: passes.** It now says the dissolving takes in heat, so it is endothermic. It no longer calls dissolving a reaction.
+- **b290: passes.** The word equation is now iron + oxygen + water → hydrated iron oxide, matching the narration.
+- **b232: passes.** Acceleration is now defined as how fast your velocity changes.
+- **Pulse sweep: 20 batch-6 reels re-rendered and swapped in** (b251, b253, b254, b257, b260, b266, b268, b269, b272, b273, b277, b278, b290–b295, b297, b300). The highlight pulse was blanking chip text; it is now an outline and the text stays readable. b291 now shows iron + oxygen + water → hydrated iron oxide. The narration is unchanged apart from b290 (above). I spot-checked frames for b278 and b291: pass.

@@ -6,11 +6,10 @@ const { chromium, devices } = require('playwright');
 const URL = 'file://' + path.resolve(__dirname, '../out/viewer.html') + '?seed=5';
 let failures = 0;
 async function test(name, fn) { try { await fn(); console.log('ok  ', name) } catch (e) { failures++; console.log('FAIL', name, '\n     ', e.message.split('\n').slice(0, 30).join('\n      ')) } }
-async function touchDrag(cdp, x, y, dx, dy, dy2 = 0) {
+async function touchDrag(cdp, x, y, dx, dy) {
   const pt = (X, Y) => [{ x: X, y: Y, id: 1, radiusX: 4, radiusY: 4, force: 1 }];
   await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: pt(x, y) });
   for (let i = 1; i <= 8; i++) await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: pt(x + dx * i / 8, y + dy * i / 8) });
-  for (let i = 1; i <= 8 && dy2; i++) await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: pt(x + dx, y + dy + dy2 * i / 8) });
   await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
 }
 (async () => {
@@ -33,20 +32,27 @@ async function touchDrag(cdp, x, y, dx, dy, dy2 = 0) {
       const before = await snap(), r = await el.boundingBox();
       if (h) { let after = before;
         for (const [dx, dy] of [[60, 0], [0, -50], [-90, 40], [0, 90]]) { const q = await h.boundingBox(); await touchDrag(cdp, q.x + q.width / 2, q.y + q.height / 2, dx, dy); after = await snap(); if (after !== before) break }
-        // the picture is pan-y, so a drag that starts straight down can turn into a page scroll; a real finger
-        // usually starts a little sideways, which keeps the gesture on the handle (sideways first, then down)
-        if (after === before) { const q = await h.boundingBox(); await touchDrag(cdp, q.x + q.width / 2, q.y + q.height / 2, 30, 0, 100); after = await snap() }
         if (after === before) bad.push(`${id} (${await p.$eval('#vbox .vis', e => e.dataset.vtype)})`); else dragged.push(id) }
       else { const binEl = await p.$('#vbox .vis-bin'); await card.evaluate(e => e.scrollIntoView({ block: 'start' })); await p.evaluate(() => scrollBy(0, -60)); await p.waitForTimeout(50); const bin = await binEl.boundingBox(); const r2 = await card.boundingBox(); if (r2) Object.assign(r, r2); await touchDrag(cdp, r.x + r.width / 2, r.y + r.height / 2, bin.x + bin.width / 2 - r.x - r.width / 2, bin.y + 30 - r.y - r.height / 2);
         const moved = await p.$eval('#vbox .vis-bin', b => b.querySelectorAll('.vis-card').length); if (!moved) bad.push(id + ' (sorter) ' + JSON.stringify([r, bin])); else dragged.push(id) }
     }
     console.log(`      touch-dragged ${dragged.length} visuals; ${none.length} have no drag (buttons/sliders only)`); assert.deepStrictEqual(bad, []);
   });
+  await test('a straight-down drag on a counter moves it into a group and does not scroll the page', async () => {
+    for (const id of ['mt_LpSuPgL31x', 'mt_cFltwUQi-d']) {
+      await p.evaluate(id => select(id), id); await p.waitForSelector('#vbox svg .vis-ctr'); const h = await p.$('#vbox svg .vis-ctr'); await h.scrollIntoViewIfNeeded(); await p.waitForTimeout(50);
+      const y0 = await p.evaluate(() => scrollY), q = await h.boundingBox(); await touchDrag(cdp, q.x + q.width / 2, q.y + q.height / 2, 0, 90); await p.waitForTimeout(80);
+      assert.match(await p.textContent('#vbox .vis-desc'), /^1 dealt/, id + ': counter not dropped'); assert.strictEqual(await p.evaluate(() => scrollY), y0, id + ': page scrolled');
+    }
+  });
   await test('swiping up over a picture scrolls the page', async () => {
     await p.evaluate(() => select('mt_iHEB0g_nCc')); await p.waitForSelector('#vbox .vis-svg'); const s = await p.$('#vbox .vis-svg'); await s.scrollIntoViewIfNeeded();
     const pos = () => p.evaluate(() => scrollY + [...document.querySelectorAll('*')].reduce((a, e) => a + e.scrollTop, 0));
     await p.evaluate(() => scrollTo(0, 0)); await s.scrollIntoViewIfNeeded(); const r = await s.boundingBox(), y0 = await pos();
-    await touchDrag(cdp, Math.round(r.x + 30), Math.round(r.y + r.height / 2), 0, -150); await p.waitForTimeout(300);
+    // start away from any drag handle (a touch on a handle drags it instead, by design)
+    const [sx, sy] = await p.evaluate(([x0, y0, w, hh]) => { const H = [...document.querySelectorAll('#vbox .vis-drag')].map(h => h.getBoundingClientRect());
+      for (let y = y0 + 10; y < y0 + hh - 10; y += 10) for (let x = x0 + 20; x < x0 + w - 20; x += 10) if (H.every(q => Math.hypot(x - q.left - q.width / 2, y - q.top - q.height / 2) > 50 + q.width / 2)) return [x, y] }, [r.x, r.y, r.width, r.height]);
+    await touchDrag(cdp, Math.round(sx), Math.round(sy), 0, -150); await p.waitForTimeout(300);
     assert.ok((await pos()) > y0 + 50, 'page did not scroll');
   });
   await test('pinch-zoom is allowed (no maximum-scale or user-scalable=no)', async () => { const m = await p.getAttribute('meta[name=viewport]', 'content'); assert.ok(!/user-scalable\s*=\s*no|maximum-scale/.test(m), m) });

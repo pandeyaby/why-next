@@ -18,10 +18,14 @@ function tween(ms,f,done){if(reduced()||ms<=0){f(1);done&&done();return}const t0
 function pt(svg,e){const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const m=svg.getScreenCTM();return m?p.matrixTransform(m.inverse()):{x:0,y:0}}
 /* make an svg node draggable; move(x,y) gets svg coordinates. Pointer capture stays on the node, which is never re-parented. */
 /* touch slop: a press on the picture within 26 px of a handle grabs that handle, so small handles are easy to hit */
-function slop(svg,node){if(!svg.__h){svg.__h=[];svg.dataset.slop='26';svg.addEventListener('pointerdown',e=>{if(e.target.closest&&e.target.closest('[role=slider],.vis-handle'))return;let best=null,bd=26;
+function nearH(svg,x,y,pad){let best=null,bd=pad;for(const h of svg.__h){if(!h.isConnected)continue;const r=h.getBoundingClientRect(),d=Math.hypot(x-(r.left+r.width/2),y-(r.top+r.height/2))-r.width/2;if(d<bd){bd=d;best=h}}return best}
+/* the picture is touch-action:pan-y so swipes scroll the page, and browsers ignore touch-action on svg children, so a touch
+   that starts on (or within the slop of) a drag handle cancels the page pan here; touches elsewhere still scroll */
+function holdPan(svg){svg.addEventListener('touchstart',e=>{const t=e.touches[0];if(e.touches.length===1&&(e.target.closest&&e.target.closest('.vis-drag')||nearH(svg,t.clientX,t.clientY,26)))e.preventDefault()},{passive:false})}
+function slop(svg,node){if(!svg.__h){svg.__h=[];svg.dataset.slop='26';holdPan(svg);svg.addEventListener('pointerdown',e=>{if(e.target.closest&&e.target.closest('[role=slider],.vis-handle'))return;let best=null,bd=26;
  for(const h of svg.__h){if(!h.isConnected)continue;const r=h.getBoundingClientRect(),d=Math.hypot(e.clientX-(r.left+r.width/2),e.clientY-(r.top+r.height/2))-r.width/2;if(d<bd){bd=d;best=h}}
  if(best)best.dispatchEvent(new PointerEvent('pointerdown',{pointerId:e.pointerId,clientX:e.clientX,clientY:e.clientY,bubbles:false,pointerType:e.pointerType,isPrimary:true}))})}svg.__h.push(node)}
-function drag(node,svg,move,end){slop(svg,node);node.style.touchAction='none';node.style.cursor='grab';
+function drag(node,svg,move,end){slop(svg,node);node.style.touchAction='none';node.classList.add('vis-drag');node.style.cursor='grab';
  node.addEventListener('pointerdown',e=>{e.preventDefault();node.setPointerCapture(e.pointerId);node.classList.add('vis-grab');const p=pt(svg,e);move(p.x,p.y,true)});
  node.addEventListener('pointermove',e=>{if(!node.hasPointerCapture(e.pointerId))return;const p=pt(svg,e);move(p.x,p.y,false)});
  const up=e=>{if(!node.hasPointerCapture(e.pointerId))return;node.releasePointerCapture(e.pointerId);node.classList.remove('vis-grab');end&&end()};
