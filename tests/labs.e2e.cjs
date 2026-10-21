@@ -13,15 +13,15 @@ const LABS = ['problab', 'statlab', 'numzoom', 'graphlab', 'geolab', 'matrixlab'
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error') errors.push(m.text()) });
   await p.addInitScript(() => { try { localStorage.setItem('wn_drafts', '1') } catch (e) {} window.__buzz = []; Object.defineProperty(navigator, 'vibrate', { value: ms => (window.__buzz.push(ms), true), configurable: true }) });
   await p.goto(URL);
-  const open = async (lab, sel) => { await p.evaluate(t => select(Object.keys(LEARN.L).find(id => LEARN.L[id].lab && LEARN.L[id].lab.type === t)), lab); await p.waitForSelector(sel, { timeout: 10000 }) };
+  const open = async (lab, sel) => { await p.evaluate(t => select(Object.keys(LEARN.L).find(id => (LEARN.L[id].lab && LEARN.L[id].lab.type === t || LEARN.L[id].visual && LEARN.L[id].visual.type === t))), lab); await p.waitForSelector(sel, { timeout: 10000 }) };
   const btn = (box, label) => p.click(`${box} button:text-is("${label}")`);
   const won = async box => { await p.waitForFunction(b => /✓/.test(document.querySelector(b + ' .lab-goal').textContent), box, { timeout: 5000 }).catch(async e => { throw new Error('goal: ' + await p.textContent(box + ' .lab-goal') + ' / ' + await p.textContent(box + ' .vis-desc')) }); assert.ok(await p.$eval(box + ' figure, ' + box + ' .vis', e => e.closest('.vis, figure').classList.contains('lab-won') || !!document.querySelector('.lab-won'))) };
   await test('hand lesson (acids): lab appears below the visual; neutralise and hydrogen challenges can be won', async () => {
-    await open('reactlab', '#lbox .lab-bar'); await btn('#lbox', '🎯 Challenge');
-    for (let i = 0; i < 3; i++) await btn('#lbox', 'Add alkali');
-    await won('#lbox'); assert.ok(await p.isVisible('#lbox button:text-is("Next challenge")'));
+    await p.evaluate(() => select('mt_AN2kJE6I0s')); await p.waitForSelector('#vbox .lab-bar', { timeout: 10000 }); await btn('#vbox', '🎯 Challenge');
+    for (let i = 0; i < 3; i++) await btn('#vbox', 'Add alkali');
+    await won('#vbox'); assert.ok(await p.isVisible('#vbox button:text-is("Next challenge")'));
     assert.ok((await p.evaluate(() => window.__buzz)).includes(18), 'no haptic tick on a win');
-    await btn('#lbox', 'Next challenge'); await btn('#lbox', 'Add acid'); await btn('#lbox', 'Add magnesium'); await btn('#lbox', 'Lit splint test'); await won('#lbox');
+    await btn('#vbox', 'Next challenge'); await btn('#vbox', 'Add acid'); await btn('#vbox', 'Add magnesium'); await btn('#vbox', 'Lit splint test'); await won('#vbox');
   });
   await test('graphlab: typing the right rule wins; sandbox hides the goal', async () => {
     await open('graphlab', '#lbox input[type=text]'); await btn('#lbox', '🎯 Challenge');
