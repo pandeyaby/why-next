@@ -12,25 +12,28 @@ VIS.reg('flagplace',c=>{let A,tiles=[],chal,ops,inp,hist=[],fuse=0,apples=[];con
  const shift=k=>{const nv=val()*Math.pow(10,k);if(nv>=9999.9995||(nv>0&&nv<.0005)){A.sound.miss();c.say('That would move a digit off the chart.');return false}
   const before=fmt(val());tiles=tiles.filter(t=>t.d);tiles.forEach(t=>{t.p+=k;A.tween(t,{x:t.p},650,'back')});
   const ps=tiles.map(t=>t.p),lo=Math.min(0,...ps),hi=Math.max(0,...ps);for(let p=lo;p<=hi;p++)if(!tiles.some(t=>t.p===p)){const z={d:0,p,x:p,a:0};tiles.push(z);A.tween(z,{a:1},500,'out')}
-  A.sound.pop();hist.push(`${before} ${k>0?'×':'÷'} ${Math.pow(10,Math.abs(k))} = ${fmt(val())}`);if(hist.length>4)hist.shift();upd();return true};
- const upd=()=>{if(ops)ops.querySelector('.fl-hist').innerHTML=hist.map(h=>`<li>${h}</li>`).join('');const v=fmt(val());c.say(`The number is ${v}.`);A.cv.setAttribute('aria-label',A.step===0?'Illustration: a fruit stall with apples at 35p each, a crate of 10 and a pallet of 100.':`Place-value chart showing ${v}: `+tiles.filter(t=>t.d||t.p>=0).sort((a,b)=>b.p-a.p).map(t=>`${t.d} ${NM[t.p]}`).join(', ')+'. The decimal point stays fixed between ones and tenths.');A.redraw()};
+  A.sound.pop();hist.push(`${before} ${k>0?'×':'÷'} ${Math.pow(10,Math.abs(k))} = ${fmt(val())}`);if(hist.length>4)hist.shift();upd();goal&&setTimeout(goal.check,50);return true};
+ const upd=()=>{if(ops)ops.hidden=A.step!==5;if(ops)ops.querySelector('.fl-hist').innerHTML=hist.map(h=>`<li>${h}</li>`).join('');const v=fmt(val());c.say(`The number is ${v}.`);A.cv.setAttribute('aria-label',A.step===0?'Illustration: a fruit stall with apples at 35p each, a crate of 10 and a pallet of 100.':`Place-value chart showing ${v}: `+tiles.filter(t=>t.d||t.p>=0).sort((a,b)=>b.p-a.p).map(t=>`${t.d} ${NM[t.p]}`).join(', ')+'. The decimal point stays fixed between ones and tenths.');A.redraw()};
+ const tgt=(v,msg)=>({check:()=>{if(Math.abs(val()-v)<1e-9)A.done(msg)}});let goal=null;
  const steps=[
-  {h:'The apple stall',p:'Apples cost £0.35 each. A crate holds 10 apples and a pallet holds 100. What does a crate cost? A pallet? Watch the digits, not the decimal point.',go:()=>{apples=[];st.k=0}},
-  {h:'1 · Every place is worth ten of the next',p:'Ten ones make one ten; ten tens make one hundred; ten tenths make one. Each column is worth ten times the column on its right.',go:()=>{setN(35);fuse=0;A.tween({},{},1);st.f={u:0};A.tween(st.f,{u:1},1800,'io')}},
-  {h:'2 · × 10: every digit moves one place left',p:'0.35 × 10. Watch: the 3 tenths become 3 ones and the 5 hundredths become 5 tenths. The decimal point stays exactly where it is. A crate costs £3.50.',go:()=>{setN(.35);hist=[];setTimeout(()=>shift(1),500)}},
-  {h:'3 · × 100: two places left',p:'0.35 × 100: each digit moves two places left, and a 0 holds the empty ones place. A pallet costs £35.',go:()=>{setN(.35);hist=[];setTimeout(()=>shift(2),500)}},
-  {h:'4 · ÷ 10: every digit moves one place right',p:'Back the other way: 35 ÷ 10 = 3.5 and ÷ 10 again = 0.35. A 0 fills the ones place so the point has a digit before it.',go:()=>{setN(35);hist=[];setTimeout(()=>shift(-1),400);setTimeout(()=>shift(-1),1400)}},
-  {h:'Sandbox',p:'Type any number up to 9999.999, then multiply and divide by 10 and 100. Can you get from 0.007 to 7000?',go:()=>{hist=[];setN(4.7)}},
-  {h:'Challenge',p:'',go:()=>newChal()}];
+  {h:'The apple stall',p:'Apples cost £0.35 each. What does a crate of 10 cost? A pallet of 100? Make a guess, then press Start.',go:()=>{apples=[];st.k=0;goal=null}},
+  {h:'Ten of a column make one of the next',p:'Watch ten ones bundle into one ten. Every column is worth ten times the one on its right.',go:()=>{goal=null;setN(35);st.f={u:0};A.tween(st.f,{u:1},1800,'io')}},
+  {h:'A crate: 0.35 × 10',p:'× 10 makes every digit worth ten times more, so each one moves to the next column on the left.',task:'Drag the digits left to make 0.35 × 10',show:()=>shift(1),go:()=>{setN(.35);hist=[];goal=tgt(3.5,'£3.50 a crate. The point stayed put; the digits moved.')}},
+  {h:'A pallet: 0.35 × 100',p:'One question: how far do the digits move this time?',task:'Drag the digits to make 0.35 × 100',show:()=>shift(2),go:()=>{setN(.35);hist=[];goal=tgt(35,'£35 a pallet: every digit moved two places left.')}},
+  {h:'Back again: 35 ÷ 100',p:'Dividing goes the other way.',task:'Drag the digits to make 35 ÷ 100',show:()=>shift(-2),go:()=>{setN(35);hist=[];goal=tgt(.35,'0.35: back to one apple. A 0 fills the ones place.')}},
+  {h:'Sandbox',p:'Drag the digits, or type a number. Can you get from 0.007 to 7000?',go:()=>{hist=[];goal=null;setN(4.7)}},
+  {h:'Challenge',p:'',go:()=>{goal=null;newChal()}}];
+ const grab={on:false,x0:0,off:0};
+ const dragOK=()=>A.step>=2&&A.step<=5;
  // ---------- drawing ----------
- const chart=A=>{const{ctx,W,H,paint:P,col:C}=A,dk=C.dark,n=PL.length,m=A.narrow?8:16,cw=(W-m*2)/n,th=Math.min(cw*1.6,H*.42),top=Math.max(40,(H-th-110)/2),cx=p=>m+(3-p)*cw+cw/2;
+ const chart=A=>{const{ctx,W,H,paint:P,col:C}=A,dk=C.dark,n=PL.length,m=A.narrow?8:16,cw=(W-m*2)/n,th=Math.min(cw*1.6,H*.42),top=Math.max(40,(H-th-110)/2),cx=p=>m+(3-p)*cw+cw/2;st.g={m,cw,top,th};A.g=st.g;
   ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.vi,.07)],[1,C.pn]]);P.rrect(0,0,W,H,12);ctx.fill();
   const band=[C.vi,C.pk,C.or,C.gr,C.cy,C.ac,C.vi];
   PL.forEach((p,i)=>{const x=m+i*cw;ctx.fillStyle=A.alpha(band[i],dk?.14:.12);P.rrect(x+2,top,cw-4,th+28,10);ctx.fill();ctx.fillStyle=A.alpha(band[i],.9);ctx.font=`700 ${A.narrow?12:14}px system-ui,sans-serif`;ctx.textAlign='center';ctx.fillText(A.narrow?SH[p]:NM[p][0].toUpperCase()+NM[p].slice(1),x+cw/2,top-12);ctx.fillStyle=C.mu;ctx.font='11px system-ui,sans-serif';ctx.fillText(p>=0?String(Math.pow(10,p)):'1/'+Math.pow(10,-p),x+cw/2,top+th+20)});
   // the decimal point – fixed, glowing
   const dx=m+4*cw,dy=top+th*.72;P.glow(C.or,16);ctx.fillStyle=C.or;ctx.beginPath();ctx.arc(dx,dy,Math.max(5,cw*.09),0,7);ctx.fill();P.noShadow();
   // tiles
-  const tw=cw*.84,tht=th*.86;for(const t of tiles){if(Math.abs(t.x-t.p)>.02){const xx=cx(t.x),dir=Math.sign(t.p-t.x);ctx.fillStyle=A.alpha(C.or,.35);for(let k=1;k<4;k++){ctx.globalAlpha=t.a*(.5-k*.12);P.rrect(xx-tw/2+dir*k*cw*.12,top+th*.07,tw,tht,12);ctx.fill()}ctx.globalAlpha=1}
+  const tw=cw*.84,tht=th*.86;for(const t0 of tiles){const t=grab.on?{...t0,x:t0.x+grab.off}:t0;if(Math.abs(t.x-t.p)>.02){const xx=cx(t.x),dir=Math.sign(t.p-t.x);ctx.fillStyle=A.alpha(C.or,.35);for(let k=1;k<4;k++){ctx.globalAlpha=t.a*(.5-k*.12);P.rrect(xx-tw/2+dir*k*cw*.12,top+th*.07,tw,tht,12);ctx.fill()}ctx.globalAlpha=1}
    const x=cx(t.x),y=top+th*.07,lift=Math.min(1,Math.abs(t.x-t.p)*2)*10;ctx.globalAlpha=t.a;
    P.shadow(14+lift,6+lift/2,dk?.55:.3);ctx.fillStyle=P.lin(0,y-lift,0,y+tht-lift,t.d?[[0,dk?'#f8fafc':'#ffffff'],[1,dk?'#cbd5e1':'#e2e8f0']]:[[0,A.alpha(C.mu,.25)],[1,A.alpha(C.mu,.15)]]);P.rrect(x-tw/2,y-lift,tw,tht,12);ctx.fill();P.noShadow();
    ctx.fillStyle=t.d?'#0f172a':C.mu;ctx.font=`700 ${Math.round(tht*.62)}px ui-rounded,system-ui,sans-serif`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(String(t.d),x,y+tht/2-lift+2);ctx.textBaseline='alphabetic';ctx.globalAlpha=1}
@@ -51,11 +54,14 @@ VIS.reg('flagplace',c=>{let A,tiles=[],chal,ops,inp,hist=[],fuse=0,apples=[];con
   const px=W*.62,pw=W*.32;for(let row=0;row<4;row++)for(let col=0;col<8;col++)ap(px+pw*.07+col*pw*.12,gy-H*.06-row*r*1.55,r*.85);
   P.shadow(10,4,.3);ctx.fillStyle=P.lin(0,0,0,H,[[0,'#a16207'],[1,'#713f12']]);ctx.fillRect(px,gy-H*.05,pw,H*.05);P.noShadow();P.label('pallet of 100 · £?',px+pw/2,gy-H*.36,{bg:'#0f172a'});
   return n<10};
- A=FK.shell(c,{steps,ratio:.5,tall:.78,draw:(A,dt)=>A.step===0?stall(A,dt):chart(A),onStep:A=>{ops.hidden=A.step<5||A.step===6;chal.hidden=A.step!==6;upd()},
+ A=FK.shell(c,{steps,ratio:.44,tall:.56,draw:(A,dt)=>{if(A.step===0)return stall(A,dt);const r=chart(A);if(!A.isDone&&A.step>=2&&A.step<=4&&st.g&&!grab.on){const g=st.g,u=A.reduced()?.5:(performance.now()%1600)/1600,dir=A.step===4?1:-1,x=A.W/2+dir*(u-.5)*g.cw*1.4,y=g.top+g.th+52;A.ctx.globalAlpha=Math.sin(u*Math.PI);A.paint.label(dir<0?'👆 drag ←':'👆 drag →',x,y,{pill:1,bg:A.alpha(A.col.am,.9),col:'#111'});A.ctx.globalAlpha=1;return true}return r},onStep:A=>{ops.hidden=A.step!==5;chal.hidden=A.step!==6;upd()},
   init:A=>{const E=c.el;ops=E('div',{class:'fl-ctl'},A.below);ops.innerHTML='<label>Number <input type="number" class="fl-num" step="any" min="0" max="9999.999" value="4.7" aria-label="starting number"></label>'+['×10','×100','÷10','÷100'].map(o=>`<button type="button" class="lbtn sm" data-op="${o}">${o}</button>`).join('')+'<ol class="fl-hist" aria-label="History"></ol>';
    ops.querySelector('.fl-num').onchange=e=>{const v=+e.target.value;if(v>=0&&v<9999.9995){hist=[];setN(v);upd()}};ops.querySelectorAll('[data-op]').forEach(b=>b.onclick=()=>{const o=b.dataset.op;shift((o[0]==='×'?1:-1)*(o.length-2))});
    chal=E('div',{class:'fl-chal'},A.extra.parentNode);A.extra.parentNode.insertBefore(chal,A.extra.nextSibling);
-   A.every(dt=>A.step===0&&st.k<2);A.every(()=>A.step===1&&st.f&&st.f.u<1)}});
+   A.every(dt=>A.step===0&&st.k<2);A.every(()=>!A.isDone&&A.step>=2&&A.step<=4);
+   A.gest({down:p=>{const g=st.g;if(!g||!dragOK()||p.y<g.top-20||p.y>g.top+g.th+40)return false;grab.on=true;grab.x0=p.x;grab.off=0;A.sound.tick();return true},
+    move:p=>{grab.off=-(p.x-grab.x0)/st.g.cw;const k=Math.round(grab.off);if(k!==grab.k){grab.k=k;if(k)A.sound.tick()}A.redraw()},
+    up:p=>{if(p&&grab.on)grab.off=-(p.x-grab.x0)/st.g.cw;const k=Math.round(grab.off);tiles.forEach(t=>t.x+=grab.off);grab.on=false;grab.off=0;grab.k=0;if(k&&Math.abs(k)<=3){if(!shift(k))tiles.forEach(t=>A.tween(t,{x:t.p},400,'back'))}else tiles.forEach(t=>A.tween(t,{x:t.p},400,'back'))}});A.every(()=>A.step===1&&st.f&&st.f.u<1)}});
  const Q=[[4.7,1],[0.35,2],[52,-1],[6,-2],[0.08,1],[300,-2],[2.05,1],[17.4,-1]];let qi=-1;
  const newChal=()=>{qi=(qi+1+Math.floor(Math.random()*3))%Q.length;const[n,k]=Q[qi],ans=+(n*Math.pow(10,k)).toFixed(4),op=(k>0?'×':'÷')+' '+Math.pow(10,Math.abs(k));setN(n);
   chal.innerHTML=`<p><b>${fmt(n)} ${op} = ?</b> Predict first, then check: the chart will show the digits moving.</p><label>Answer <input type="text" inputmode="decimal" class="fl-in" aria-label="answer"></label> <button type="button" class="lbtn sm">Check</button><p class="fl-fb" role="status" aria-live="polite"></p>`;

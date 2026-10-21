@@ -116,3 +116,11 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-extra:empty{display:none}
 .fl-cv{box-shadow:0 10px 30px -12px rgba(0,0,0,.45),0 0 0 1px var(--line)}
 @media (max-width:520px){.fl-stage{padding:.5rem}.fl-story{padding:.9rem}}
+
+.fl-task{margin:.6rem 0 0;padding:.55rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--am) 16%,transparent);border:1px solid color-mix(in srgb,var(--am) 45%,transparent);font-weight:650;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;animation:flIn .35s ease}
+.fl-task.ok{background:color-mix(in srgb,var(--gr) 16%,transparent);border-color:color-mix(in srgb,var(--gr) 50%,transparent)}
+.fl-nav button.pulse{animation:flPulse 1.6s ease-in-out 2}
+@keyframes flPulse{50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--new) 35%,transparent)}}
+@keyframes flIn{from{opacity:0;transform:translateY(4px)}}
+@media (prefers-reduced-motion:reduce){.fl-task,.fl-nav button.pulse{animation:none}}
+.fl-cv{cursor:grab}.fl-cv:active{cursor:grabbing}

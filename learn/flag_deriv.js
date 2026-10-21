@@ -1,16 +1,16 @@
 /* Flagship 1 – the derivative as the slope you see when you zoom in. A phone falls from a 44 m tower (s = 4.9t² m).
    Hook scene (illustrated), then average speed → shrink the gap → zoom → limit → sandbox → misconception-aware challenge. */
 (()=>{const g=9.8,S=t=>g/2*t*t,V=t=>g*t,T=3,SM=S(T),f2=v=>(Math.round(v*100)/100).toFixed(2),f3=v=>String(Math.round(v*1000)/1000);
-VIS.reg('flagderiv',c=>{const s={t0:2,h:1,z:1,ph:0,ct:0,won:false,seen:new Map()};let A,drag=null,read,tbl,ctl,i1,i2,bz,chal;
+VIS.reg('flagderiv',c=>{const s={t0:2,h:.4,z:1,ph:0,ct:0,won:false,seen:new Map()};let A,drag=null,read,tbl,ctl,i1,i2,bz,chal;
  const lim=()=>Math.min(T-s.t0,1),fix=()=>{s.h=Math.max(.001,Math.min(s.h,lim()))};
  const to=(tg,ms=1400)=>{if('h'in tg||'z'in tg){const L={};if('h'in tg)L.h=tg.h;if('z'in tg)L.z=tg.z;A.tween(s,L,ms,'log',sync)}if('t0'in tg)A.tween(s,{t0:tg.t0},ms,'io')};
  const steps=[
-  {h:'A phone slips from a 44 m tower',p:'It falls slowly at first, then faster and faster. A speed camera halfway down flashes at exactly t = 2 s. What speed does it record? Speed is distance ÷ time, but at a single instant no time passes at all…',go:()=>{s.ph=0;A.sound.whoosh()}},
-  {h:'1 · Average speed over one second',p:'From 2 s to 3 s the phone falls Δs metres in Δt = 1 s. The slope of the line through P and Q, Δs ÷ Δt, is the average speed. Drag Q (hollow) to change the gap.',go:()=>to({t0:2,h:1,z:1},700)},
-  {h:'2 · Shrink the gap',p:'Watch the table as Q slides towards P: the average speed settles. Which number is it closing in on?',go:()=>to({h:.02},2600)},
-  {h:'3 · Zoom in on P',p:'Magnify the curve around t = 2 s. The closer you look, the straighter it gets: up close, a smooth curve looks like a line. Its slope is the speed at that instant.',go:()=>to({h:.02,z:30},2200)},
-  {h:'4 · Let the gap go to zero',p:'At Δt = 0.001 s the average is 19.60 m/s. The line through P and Q has become the tangent. This limit is the derivative: ds/dt = 9.8t, so at 2 s the speed is 19.6 m/s.',go:()=>to({h:.001,z:1},1800)},
-  {h:'Sandbox',p:'Drag P and Q, zoom in and out, try other times. Does the speed ever stay the same?'},
+  {h:'A phone slips from a 44 m tower',p:'A speed camera halfway down flashes at exactly t = 2 s. Speed is distance ÷ time… but in one instant, no time passes. So what can the camera read?',go:()=>{s.ph=0;A.sound.whoosh()}},
+  {h:'Start with an average',p:'P is the phone at 2 s. The slope of the line P→Q is the average speed between them.',task:'Drag the hollow dot Q to t = 3 s',show:()=>to({h:1},700),go:()=>to({t0:2,h:.4,z:1},700)},
+  {h:'Close the gap',p:'Keep your eye on the table as Q gets closer to P.',task:'Drag Q right up to P (Δt under 0.05 s)',show:()=>to({h:.02},2200),go:()=>to({h:1,z:1},500)},
+  {h:'Look closer',p:'Why does the number settle? Look at the curve near P.',task:'Pinch (or scroll) on the graph to zoom ×10',show:()=>to({z:30},1600),go:()=>to({h:.02,z:1},500)},
+  {h:'What does the camera read?',p:'The averages close in on one number as Δt → 0. That limit is the instantaneous speed: the derivative.',task:'Pick the camera reading below',go:()=>{to({h:.001,z:1},1200);const b=c.el('div',{class:'fl-pick'},A.extra);[['9.8 m/s','That is 19.6 m ÷ 2 s: the average since the start, when it was going slowly.'],['19.6 m/s',''],['24.5 m/s','That is the average from 2 s to 3 s; the phone speeds up during that second.']].forEach(([t,w])=>{const x=c.el('button',{type:'button',class:'lbtn sm'},b,t);x.onclick=()=>{if(!w){x.classList.add('ok');A.done('19.6 m/s. The tangent’s slope: ds/dt = 9.8t = 9.8 × 2.');A.win()}else{A.sound.miss();x.classList.add('no');x.title=w;let f=A.extra.querySelector('.fl-why')||c.el('p',{class:'fl-why'},A.extra);f.textContent=w}}})}},
+  {h:'Sandbox',p:'Drag P and Q, pinch to zoom. Is the phone ever going at a steady speed?'},
   {h:'Challenge',p:'',go:()=>newChal()}];
  const sync=()=>{fix();if(!read)return;const avg=(S(s.t0+s.h)-S(s.t0))/s.h,k=f3(s.h);if(A.step>=1&&s.seen.size<60&&!s.seen.has(k))s.seen.set(k,avg);
   i1.value=s.t0;i2.value=Math.log10(s.h);i1.previousSibling.textContent=`P at t = ${f2(s.t0)} s `;i2.previousSibling.textContent=`gap Δt = ${f3(s.h)} s `;bz.textContent=s.z>2?'🔍 Zoom out':'🔍 Zoom in';bz.setAttribute('aria-pressed',String(s.z>2));
@@ -37,7 +37,7 @@ VIS.reg('flagderiv',c=>{const s={t0:2,h:1,z:1,ph:0,ct:0,won:false,seen:new Map()
  // ---------- graph ----------
  const pad=A0=>({l:A0.narrow?44:56,r:A0.narrow?14:24,t:18,b:42});
  const view=()=>{const z=s.z;if(z<=1.001)return{x0:0,x1:T*1.07,y0:0,y1:SM*1.08};const wx=T/z,wy=SM/z;return{x0:s.t0-wx/2,x1:s.t0+wx/2,y0:S(s.t0)-wy/2,y1:S(s.t0)+wy/2}};
- const graph=(A)=>{const{ctx,W,H,paint:P,col:C}=A,pd=pad(A),vw=view(),X=t=>pd.l+(t-vw.x0)/(vw.x1-vw.x0)*(W-pd.l-pd.r),Y=v=>H-pd.b-(v-vw.y0)/(vw.y1-vw.y0)*(H-pd.t-pd.b);
+ const graph=(A)=>{const{ctx,W,H,paint:P,col:C}=A,pd=pad(A),vw=view(),X=t=>pd.l+(t-vw.x0)/(vw.x1-vw.x0)*(W-pd.l-pd.r),Y=v=>H-pd.b-(v-vw.y0)/(vw.y1-vw.y0)*(H-pd.t-pd.b);A.X=X;A.Y=Y;A.s=s;
   ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.06)],[1,C.pn]]);P.rrect(0,0,W,H,12);ctx.fill();
   const tick=(a,b)=>{const r=(b-a)/(A.narrow?4:6),p=Math.pow(10,Math.floor(Math.log10(r))),m=r/p;return(m<1.5?1:m<3.5?2:m<7.5?5:10)*p},tx=tick(vw.x0,vw.x1),ty=tick(vw.y0,vw.y1);
   ctx.font='12px system-ui,sans-serif';ctx.lineWidth=1;
@@ -52,19 +52,21 @@ VIS.reg('flagderiv',c=>{const s={t0:2,h:1,z:1,ph:0,ct:0,won:false,seen:new Map()
   ctx.strokeStyle=C.or;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(X(vw.x0),Y(S(a)+m*(vw.x0-a)));ctx.lineTo(X(vw.x1),Y(S(a)+m*(vw.x1-a)));ctx.stroke();
   const used=[],xa=X(a),xb=X(b),ya=Y(S(a)),yb=Y(S(b)),wide=xb-xa;
   if(wide>26){ctx.fillStyle=A.alpha(A.mix(C.or,C.pn,.6),.45);ctx.beginPath();ctx.moveTo(xa,ya);ctx.lineTo(xb,ya);ctx.lineTo(xb,yb);ctx.closePath();ctx.fill();ctx.strokeStyle=C.or;ctx.lineWidth=1.6;ctx.setLineDash([5,4]);ctx.beginPath();ctx.moveTo(xa,ya);ctx.lineTo(xb,ya);ctx.lineTo(xb,yb);ctx.stroke();ctx.setLineDash([]);
-   if(wide>58)used.push(P.label('Δt '+f3(s.h)+' s',(xa+xb)/2,ya+16,{bg:C.or,col:'#111'}));if(ya-yb>30)used.push(P.label('Δs',xb+8,(ya+yb)/2,{align:'left',bg:C.or,col:'#111',avoid:used}))}
+   if(wide>58)used.push(P.label('Δt '+f3(s.h)+' s',(xa+xb)/2,ya+16,{bg:C.or,col:'#111'}));if(ya-yb>30)used.push(P.label('Δs',xb+40>W-pd.r?xb-8:xb+8,(ya+yb)/2,{align:xb+40>W-pd.r?'right':'left',bg:C.or,col:'#111',avoid:used}))}
   const dot=(x,y,fill)=>{P.shadow(8,2,.35);ctx.beginPath();ctx.arc(x,y,8,0,7);ctx.fillStyle=fill?C.or:C.pn;ctx.fill();P.noShadow();ctx.lineWidth=3;ctx.strokeStyle=C.or;ctx.stroke()};
-  const near=wide<20;if(!near){dot(xb,yb,false);used.push(P.label('Q',xb-14,yb-16,{avoid:used}))}dot(xa,ya,true);P.label(near?'P, Q':'P',xa-16,ya-18,{avoid:used});ctx.restore();
+  const near=wide<20;if(!near){dot(xb,yb,false);used.push(P.label('Q',xb-14,yb-16,{avoid:used}))}dot(xa,ya,true);P.label(near?'P, Q':'P',xa-16,ya-18,{avoid:used});ctx.restore();if(!A.isDone&&(A.step===1||A.step===2)&&!A.reduced()){const u=(performance.now()%1400)/1400;ctx.strokeStyle=A.alpha(C.am,1-u);ctx.lineWidth=3;ctx.beginPath();ctx.arc(xb,yb,10+u*22,0,7);ctx.stroke();ctx.fillStyle=A.alpha(C.am,.9);ctx.font='600 13px system-ui';ctx.textAlign='center';ctx.fillText(A.step===1?'drag →':'← drag',xb,yb+40)}
   if(s.z>1.05)P.label('×'+Math.round(s.z)+' zoom',W-pd.r-6,pd.t+12,{align:'right'})};
- A=FK.shell(c,{steps,ratio:.58,tall:1.05,draw:(A,dt)=>A.step===0?scene(A,dt):graph(A),onStep:A=>{const hook=A.step===0;ctl.hidden=read.hidden=hook;tbl.hidden=A.step<2;chal.hidden=A.step!==steps.length-1;s.seen.clear();sync()},
+ A=FK.shell(c,{steps,ratio:.58,tall:1.05,draw:(A,dt)=>A.step===0?scene(A,dt):graph(A),onStep:A=>{const hook=A.step===0;read.hidden=hook;ctl.hidden=A.step<5;tbl.hidden=A.step<2;chal.hidden=A.step!==steps.length-1;s.seen.clear();sync()},
   init:A=>{const E=c.el,B=A.below;read=E('div',{class:'fl-read'},B);ctl=E('div',{class:'fl-ctl'},B);tbl=E('table',{class:'fl-tbl'},B);chal=E('div',{class:'fl-chal'},A.extra.parentNode);A.extra.parentNode.insertBefore(chal,A.extra.nextSibling);
    const r1=E('label',{},ctl);E('span',{},r1,'');i1=E('input',{type:'range',min:.2,max:2.6,step:.01,value:2,'aria-label':'time of point P in seconds'},r1);
    const r2=E('label',{},ctl);E('span',{},r2,'');i2=E('input',{type:'range',min:-3,max:0,step:.01,value:0,'aria-label':'gap Δt, log scale'},r2);bz=E('button',{type:'button',class:'lbtn ghost sm','aria-pressed':'false'},ctl,'🔍 Zoom in');
    i1.oninput=()=>{s.t0=+i1.value;sync()};i2.oninput=()=>{s.h=Math.pow(10,+i2.value);A.sound.tick();sync()};bz.onclick=()=>to({z:s.z<2?30:1},1500);
-   A.every(()=>{if(s.h!==s._lh||s.t0!==s._lt||s.z!==s._lz){s._lh=s.h;s._lt=s.t0;s._lz=s.z;sync()}return false});
-   A.cv.addEventListener('pointerdown',e=>{if(A.step===0)return;const p=A.toT(e),pd=pad(A),vw=view(),t=vw.x0+(p.x-pd.l)/(A.W-pd.l-pd.r)*(vw.x1-vw.x0),tol=(vw.x1-vw.x0)*.07;drag=Math.abs(t-(s.t0+s.h))<tol?'Q':Math.abs(t-s.t0)<tol?'P':'Q';A.cv.setPointerCapture(e.pointerId);mv(e)});
-   const mv=e=>{if(!drag)return;const p=A.toT(e),pd=pad(A),vw=view(),t=vw.x0+(p.x-pd.l)/(A.W-pd.l-pd.r)*(vw.x1-vw.x0);if(drag==='P')s.t0=Math.max(.2,Math.min(2.6,t));else s.h=t-s.t0;sync()};
-   A.cv.addEventListener('pointermove',mv);A.cv.addEventListener('pointerup',()=>{drag=null})}});
+   A.every(()=>!A.isDone&&(A.step===1||A.step===2));A.every(()=>{if(s.h!==s._lh||s.t0!==s._lt||s.z!==s._lz){s._lh=s.h;s._lt=s.t0;s._lz=s.z;sync();chk()}return false});
+   const tAt=p=>{const vw=view();if(!A.X)return vw.x0;const a=A.X(vw.x0),b=A.X(vw.x1);return vw.x0+(p.x-a)/(b-a)*(vw.x1-vw.x0)};
+   A.gest({down:p=>{if(A.step===0||A.step===6&&s.won)return false;const t=tAt(p),vw=view(),tol=(vw.x1-vw.x0)*.08;drag=Math.abs(t-(s.t0+s.h))<tol?'Q':Math.abs(t-s.t0)<tol&&A.step>=5?'P':'Q';A.cv.classList.add('dragging');mv(p);return true},
+    move:p=>mv(p),up:p=>{if(p)mv(p);drag=null;A.cv.classList.remove('dragging');chk()},pinch:k=>{if(A.step<3)return;s.z=Math.max(1,Math.min(60,s.z*k));sync();chk()}});
+   const mv=p=>{if(!drag)return;const t=tAt(p);if(drag==='P')s.t0=Math.max(.2,Math.min(2.6,t));else{let h=t-s.t0;if(Math.abs(h)<.001)h=h<0?-.001:.001;s.h=h}sync();chk()}}});
+ const chk=()=>{const k=A.step;if(k===1&&Math.abs(s.t0+s.h-3)<.06)A.done('From 2 s to 3 s it falls 24.5 m: 24.5 m/s on average.');if(k===2&&Math.abs(s.h)<.05)A.done(`Δt = ${f3(Math.abs(s.h))} s: the average has settled near 19.6 m/s.`);if(k===3&&s.z>=10)A.done('Up close the curve is almost a straight line.')};
  const newChal=()=>{const o=[.5,1,1.5,2.5].filter(x=>x!==s.ct);s.ct=o[Math.floor(Math.random()*o.length)];s.won=false;to({t0:s.ct,h:.5,z:1},800);
   chal.innerHTML=`<p><b>Speed camera at t = ${s.ct} s.</b> Use the graph to find the phone’s speed at that instant (1 decimal place).</p><label>Speed <input type="number" step="0.1" inputmode="decimal" class="fl-in" aria-label="speed in metres per second"> m/s</label> <button type="button" class="lbtn sm">Check</button><p class="fl-fb" role="status" aria-live="polite"></p>`;
   const inp=chal.querySelector('input'),fb=chal.querySelector('.fl-fb');chal.querySelector('button').onclick=()=>{const v=parseFloat(inp.value),want=V(s.ct);if(!isFinite(v)){fb.textContent='Type a number first.';return}
