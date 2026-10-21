@@ -1,195 +1,202 @@
 {
- "topicId": "mt_Z_Wu_77ybI",
- "title": "Atoms, elements and compounds",
- "audience": "learner",
- "keyIdea": "An element has only one type of atom. A compound has two or more elements chemically joined.",
- "explain": {
-  "kid": [
-   "Atoms are the smallest bits of an element. There are about 118 elements. Oxygen, iron and carbon are three of them. Each element has its own kind of atom and a short symbol: O for oxygen, Fe for iron.",
-   "A compound forms when atoms of different elements join. Water, H₂O, is a compound. Each water particle has two hydrogen atoms joined to one oxygen atom."
+  "topicId": "mt_Z_Wu_77ybI",
+  "title": "Atoms, elements and compounds",
+  "audience": "learner",
+  "keyIdea": "An element has only one type of atom. A compound has two or more elements chemically joined.",
+  "explain": {
+    "kid": [
+      "Atoms are the smallest bits of an element. There are about 118 elements. Oxygen, iron and carbon are three of them. Each element has its own kind of atom and a short symbol: O for oxygen, Fe for iron.",
+      "A compound forms when atoms of different elements join. Water, H₂O, is a compound. Each water particle has two hydrogen atoms joined to one oxygen atom."
+    ],
+    "adult": [
+      "An atom has a tiny central nucleus, made of protons and neutrons. Electrons are arranged in shells around it. The number of protons decides which element the atom is.",
+      "Compounds can behave very differently from their elements. Sodium is a reactive metal and chlorine is a toxic gas. Together they make sodium chloride, which is table salt. A formula like CO₂ gives the ratio of atoms: one carbon to two oxygen."
+    ]
+  },
+  "familyTip": "Read the ingredients on a food or cleaning label. Which names are elements and which are compounds?",
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "Which of these is an element?",
+      "choices": [
+        "Oxygen, O₂",
+        "Water, H₂O",
+        "Carbon dioxide, CO₂"
+      ],
+      "answer": 0,
+      "hint": "Look for only one kind of atom.",
+      "explain": "O₂ has only oxygen atoms, so it's an element, even though the atoms are joined in pairs."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "How many atoms are in {n} molecules of water, H₂O?",
+      "answer": "3*n",
+      "hint": "Each H₂O has 2 + 1 atoms.",
+      "explain": "Each H₂O has 3 atoms, so {n} × 3 = {=3*n}.",
+      "params": {
+        "n": [
+          2,
+          12
+        ]
+      }
+    },
+    {
+      "type": "mc",
+      "id": "p3",
+      "prompt": "What decides which element an atom is?",
+      "choices": [
+        "The number of protons",
+        "The number of neutrons",
+        "Its size"
+      ],
+      "answer": 0,
+      "hint": "It's the atomic number.",
+      "explain": "The number of protons is the atomic number, and it decides the element."
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "How many hydrogen atoms are in {n} molecules of methane, CH₄?",
+      "answer": "4*n",
+      "hint": "Each CH₄ has 4 hydrogen atoms.",
+      "explain": "{n} × 4 = {=4*n}.",
+      "params": {
+        "n": [
+          2,
+          12
+        ]
+      }
+    },
+    {
+      "type": "mc",
+      "id": "p5",
+      "prompt": "Sodium is a reactive metal and chlorine is a toxic gas. What is sodium chloride like?",
+      "choices": [
+        "A safe white solid: table salt",
+        "A reactive, toxic metal",
+        "A mixture you can separate with a magnet"
+      ],
+      "answer": 0,
+      "hint": "Compounds are new substances.",
+      "explain": "Sodium chloride is table salt. Its properties are completely different from its elements."
+    }
   ],
-  "adult": [
-   "An atom has a tiny central nucleus, made of protons and neutrons. Electrons are arranged in shells around it. The number of protons decides which element the atom is.",
-   "Compounds can behave very differently from their elements. Sodium is a reactive metal and chlorine is a toxic gas. Together they make sodium chloride, which is table salt. A formula like CO₂ gives the ratio of atoms: one carbon to two oxygen."
-  ]
- },
- "familyTip": "Read the ingredients on a food or cleaning label. Which names are elements and which are compounds?",
- "practice": [
-  {
-   "type": "mc",
-   "id": "p1",
-   "prompt": "Which of these is an element?",
-   "choices": [
-    "Oxygen, O₂",
-    "Water, H₂O",
-    "Carbon dioxide, CO₂"
-   ],
-   "answer": 0,
-   "hint": "Look for only one kind of atom.",
-   "explain": "O₂ has only oxygen atoms, so it's an element, even though the atoms are joined in pairs."
-  },
-  {
-   "type": "numeric",
-   "id": "p2",
-   "prompt": "How many atoms are in {n} molecules of water, H₂O?",
-   "answer": "3*n",
-   "hint": "Each H₂O has 2 + 1 atoms.",
-   "explain": "Each H₂O has 3 atoms, so {n} × 3 = {=3*n}.",
-   "params": {
-    "n": [
-     2,
-     12
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "numeric",
+        "id": "m1",
+        "prompt": "How many atoms in total are in {n} molecules of carbon dioxide, CO₂?",
+        "answer": "3*n",
+        "hint": "Each CO₂ has 1 + 2 atoms.",
+        "explain": "3 atoms each, so {n} × 3 = {=3*n}.",
+        "params": {
+          "n": [
+            2,
+            12
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m2",
+        "prompt": "How many oxygen atoms are in {n} molecules of oxygen, O₂?",
+        "answer": "2*n",
+        "hint": "Each O₂ has 2 atoms.",
+        "explain": "{n} × 2 = {=2*n}.",
+        "params": {
+          "n": [
+            2,
+            15
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "Which is a compound?",
+        "choices": [
+          "CO₂",
+          "O₂",
+          "Fe"
+        ],
+        "answer": 0,
+        "hint": "More than one element, joined.",
+        "explain": "CO₂ has carbon and oxygen joined together."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "What is the symbol for iron?",
+        "choices": [
+          "Fe",
+          "I",
+          "Ir"
+        ],
+        "answer": 0,
+        "hint": "It comes from the Latin word ferrum.",
+        "explain": "Fe. (I is iodine and Ir is iridium.)"
+      },
+      {
+        "type": "mc",
+        "id": "m5",
+        "prompt": "Where are the protons and neutrons in an atom?",
+        "choices": [
+          "In the nucleus",
+          "In the shells",
+          "Spread evenly through the atom"
+        ],
+        "answer": 0,
+        "hint": "The tiny centre.",
+        "explain": "Protons and neutrons are in the nucleus; electrons are in shells."
+      },
+      {
+        "type": "mc",
+        "id": "m6",
+        "prompt": "Which statement about water, H₂O, is true?",
+        "choices": [
+          "Each molecule has 2 hydrogen atoms and 1 oxygen atom",
+          "Each molecule has 2 oxygen atoms",
+          "It is a mixture of hydrogen and oxygen"
+        ],
+        "answer": 0,
+        "hint": "The small 2 belongs to H.",
+        "explain": "H₂O: 2 hydrogen and 1 oxygen, chemically joined, so it's a compound."
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "What is the difference between a carbon atom and the element carbon?",
+        "choices": [
+          "An atom is one particle; the element is a substance made only of carbon atoms",
+          "There is no difference at all",
+          "The element contains other atoms too"
+        ],
+        "answer": 0,
+        "hint": "One particle, or a lot of them?",
+        "explain": "An element is made of many atoms, all of the same type."
+      }
     ]
-   }
   },
-  {
-   "type": "mc",
-   "id": "p3",
-   "prompt": "What decides which element an atom is?",
-   "choices": [
-    "The number of protons",
-    "The number of neutrons",
-    "Its size"
-   ],
-   "answer": 0,
-   "hint": "It's the atomic number.",
-   "explain": "The number of protons is the atomic number, and it decides the element."
-  },
-  {
-   "type": "numeric",
-   "id": "p4",
-   "prompt": "How many hydrogen atoms are in {n} molecules of methane, CH₄?",
-   "answer": "4*n",
-   "hint": "Each CH₄ has 4 hydrogen atoms.",
-   "explain": "{n} × 4 = {=4*n}.",
-   "params": {
-    "n": [
-     2,
-     12
-    ]
-   }
-  },
-  {
-   "type": "mc",
-   "id": "p5",
-   "prompt": "Sodium is a reactive metal and chlorine is a toxic gas. What is sodium chloride like?",
-   "choices": [
-    "A safe white solid: table salt",
-    "A reactive, toxic metal",
-    "A mixture you can separate with a magnet"
-   ],
-   "answer": 0,
-   "hint": "Compounds are new substances.",
-   "explain": "Sodium chloride is table salt. Its properties are completely different from its elements."
-  }
- ],
- "mastery": {
-  "passMark": 3,
-  "draw": 4,
-  "pool": [
-   {
-    "type": "numeric",
-    "id": "m1",
-    "prompt": "How many atoms in total are in {n} molecules of carbon dioxide, CO₂?",
-    "answer": "3*n",
-    "hint": "Each CO₂ has 1 + 2 atoms.",
-    "explain": "3 atoms each, so {n} × 3 = {=3*n}.",
-    "params": {
-     "n": [
-      2,
-      12
-     ]
+  "status": "self-checked",
+  "visual": {
+    "type": "atom",
+    "caption": "Build an atom. The number of protons decides the element.",
+    "opts": {
+      "p": 6,
+      "n": 6,
+      "e": 6
     }
-   },
-   {
-    "type": "numeric",
-    "id": "m2",
-    "prompt": "How many oxygen atoms are in {n} molecules of oxygen, O₂?",
-    "answer": "2*n",
-    "hint": "Each O₂ has 2 atoms.",
-    "explain": "{n} × 2 = {=2*n}.",
-    "params": {
-     "n": [
-      2,
-      15
-     ]
+  },
+  "lab": {
+    "type": "flagatom",
+    "caption": "Flagship lab: zoom into gold, sort particle pictures, then build molecules atom by atom.",
+    "opts": {
+      "step": 0
     }
-   },
-   {
-    "type": "mc",
-    "id": "m3",
-    "prompt": "Which is a compound?",
-    "choices": [
-     "CO₂",
-     "O₂",
-     "Fe"
-    ],
-    "answer": 0,
-    "hint": "More than one element, joined.",
-    "explain": "CO₂ has carbon and oxygen joined together."
-   },
-   {
-    "type": "mc",
-    "id": "m4",
-    "prompt": "What is the symbol for iron?",
-    "choices": [
-     "Fe",
-     "I",
-     "Ir"
-    ],
-    "answer": 0,
-    "hint": "It comes from the Latin word ferrum.",
-    "explain": "Fe. (I is iodine and Ir is iridium.)"
-   },
-   {
-    "type": "mc",
-    "id": "m5",
-    "prompt": "Where are the protons and neutrons in an atom?",
-    "choices": [
-     "In the nucleus",
-     "In the shells",
-     "Spread evenly through the atom"
-    ],
-    "answer": 0,
-    "hint": "The tiny centre.",
-    "explain": "Protons and neutrons are in the nucleus; electrons are in shells."
-   },
-   {
-    "type": "mc",
-    "id": "m6",
-    "prompt": "Which statement about water, H₂O, is true?",
-    "choices": [
-     "Each molecule has 2 hydrogen atoms and 1 oxygen atom",
-     "Each molecule has 2 oxygen atoms",
-     "It is a mixture of hydrogen and oxygen"
-    ],
-    "answer": 0,
-    "hint": "The small 2 belongs to H.",
-    "explain": "H₂O: 2 hydrogen and 1 oxygen, chemically joined, so it's a compound."
-   },
-   {
-    "type": "mc",
-    "id": "m7",
-    "prompt": "What is the difference between a carbon atom and the element carbon?",
-    "choices": [
-     "An atom is one particle; the element is a substance made only of carbon atoms",
-     "There is no difference at all",
-     "The element contains other atoms too"
-    ],
-    "answer": 0,
-    "hint": "One particle, or a lot of them?",
-    "explain": "An element is made of many atoms, all of the same type."
-   }
-  ]
- },
- "status": "self-checked",
- "visual": {
-  "type": "atom",
-  "caption": "Build an atom. The number of protons decides the element.",
-  "opts": {
-   "p": 6,
-   "n": 6,
-   "e": 6
   }
- }
 }

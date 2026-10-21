@@ -44,6 +44,29 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     await pour(need, k + 1); await p.click('.fl-chal [data-ok]'); assert.match(await p.textContent('.fl-chal .fl-fb'), /Too far/);
     await pour(wrong); await p.click('.fl-chal [data-ok]'); assert.match(await p.textContent('.fl-chal .fl-fb'), /✓/); await axeFlag();
   });
+  await test('flagship (atoms): zoom into gold, sort element/compound/mixture with O2 and air traps, build H2O and CO2, formula challenge feedback, axe', async () => {
+    await open('mt_Z_Wu_77ybI'); let [W, H] = await WH();
+    await pick(1); await touch(line(W / 2, H * .85, W / 2, H * .1, 16)); await touch(line(W / 2, H * .85, W / 2, H * .1, 16)); await nextOn(); assert.match(await p.textContent('.fl-task'), /spot on/); await next(); await p.waitForTimeout(300);
+    const card = i => p.evaluate(i => document.querySelector('.fl-cv').__A.am.cardXY(i), i), bin = i => p.evaluate(i => document.querySelector('.fl-cv').__A.am.binR(i), i), drop = async (i, b) => { const [x, y] = await card(i), r = await bin(b); await touch(line(x, y, r.x + r.w / 2, r.y + r.h / 2, 10)) };
+    await drop(1, 1); assert.match(await p.textContent('.fl-fb'), /only one type of atom, so it is an element/); await drop(5, 1); assert.match(await p.textContent('.fl-fb'), /mixture/);
+    for (const [i, b] of [[0, 0], [1, 0], [2, 1], [3, 1], [4, 2], [5, 2]]) await drop(i, b); await nextOn(); await next(); await p.waitForTimeout(300);
+    const tr = await A(() => { const A = document.querySelector('.fl-cv').__A; return { t: A.am.tray(), r: A.am.R() } }), T = e => tr.t.find(x => x[0] === e);
+    const place = async (e, x, y) => { const t = T(e); await touch(line(t[1], t[2], x, y, 10)) };
+    const cx = W / 2, cy = H * .6, r = tr.r;
+    await pick(1); await place('O', cx, cy); await place('H', cx - r * 1.8, cy + r); await place('H', cx + r * 1.8, cy + r); await nextOn(); assert.match(await p.textContent('.fl-task'), /H₂O/); await next(); await p.waitForTimeout(300);
+    await pick(0); await place('C', cx, cy); await place('O', cx - r * 2, cy); await place('O', cx + r * 2, cy); await nextOn(); await next(); await p.waitForTimeout(300);
+    await next(); await p.waitForTimeout(300);
+    const f = await A(() => document.querySelector('.fl-cv').__A.am.st.q.f), cnt = {}; f.replace(/([A-Z])(\d*)/g, (_, e, n) => { cnt[e] = (cnt[e] || 0) + (+n || 1) });
+    const els = Object.entries(cnt), hub = els.find(([e]) => e !== 'H') || els[0];
+    await place(hub[0], cx, cy); await place('H', cx, cy - r * 6 > H * .25 ? cy - r * 6 : H * .9); await p.click('.fl-chal [data-ok]'); assert.match(await p.textContent('.fl-chal .fl-fb'), /not all joined|You built/);
+    await p.click('.fl-chal [data-clr]');
+    // build: chain the non-H atoms in a row, then H atoms around
+    const heavy = [], hs = []; els.forEach(([e, k]) => { for (let i = 0; i < k; i++) (e === 'H' ? hs : heavy).push(e) }); if (!heavy.length) heavy.push(hs.pop());
+    const pos = heavy.map((e, i) => [cx + (i - (heavy.length - 1) / 2) * r * 2.1, cy]); for (let i = 0; i < heavy.length; i++) await place(heavy[i], ...pos[i]);
+    const spots = []; pos.forEach(([x, y]) => [[0, -1], [0, 1], [-1, 0], [1, 0]].forEach(([dx, dy]) => spots.push([x + dx * r * 1.8, y + dy * r * 1.8])));
+    const ok = []; for (const s of spots) { if (ok.length >= hs.length) break; const occupied = await p.evaluate(([x, y, r]) => document.querySelector('.fl-cv').__A.am.st.at.some(a => Math.hypot(a.x - x, a.y - y) < r), [s[0], s[1], r]); if (!occupied) { await place('H', ...s); ok.push(s) } }
+    await p.click('.fl-chal [data-ok]'); assert.match(await p.textContent('.fl-chal .fl-fb'), /✓/, f); await axeFlag();
+  });
   }
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }
