@@ -1895,10 +1895,13 @@ VIS.reg('flagfrac',c=>{let A,chal,ops;const f={n:1,d:2,k:1,kv:1,cut:1,mg:0},hk={
  const sim=A=>{const{ctx,W,H,paint:P,col:C}=A,N=f.n*f.k,D=f.d*f.k,bx=W*.08,bw=W*.84,by=H*.1,bh=H*.4;f.g={bx,bw,by,bh};A.g=f.g;A.f=f;
   ctx.fillStyle=P.rad(W/2,by,0,W*.7,[[0,A.alpha(C.am,C.dark?.10:.08)],[1,'rgba(0,0,0,0)']]);ctx.fillRect(0,0,W,H);
   const pop=f.pop||0,sc=1+pop*.03;ctx.save();ctx.translate(bx+bw/2,by+bh/2);ctx.scale(sc,sc);ctx.translate(-(bx+bw/2),-(by+bh/2));
+  {const m=9,pts=[];let k=0;const jag=(x,y)=>pts.push([x+(k%2?2:-2)*((k*7)%3-1),y+(k++%2?2.5:-2.5)]);for(let x=bx-m;x<=bx+bw+m;x+=11)jag(x,by-m);for(let y=by-m;y<=by+bh+m;y+=11)jag(bx+bw+m,y);for(let x=bx+bw+m;x>=bx-m;x-=11)jag(x,by+bh+m);for(let y=by+bh+m;y>=by-m;y-=11)jag(bx-m,y);
+   P.shadow(20,10,.35);ctx.fillStyle=P.lin(bx,by,bx+bw,by+bh,[[0,'#f1f5f9'],[.3,'#94a3b8'],[.55,'#e2e8f0'],[.8,'#7c8796'],[1,'#cbd5e1']]);ctx.beginPath();pts.forEach((q,i)=>i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]));ctx.closePath();ctx.fill();P.noShadow();
+   ctx.strokeStyle='rgba(255,255,255,.5)';ctx.lineWidth=1;for(let i=0;i<7;i++){const x=bx-m+((i*137)%bw);ctx.beginPath();ctx.moveTo(x,by-m+2);ctx.lineTo(x+6,by-2);ctx.moveTo(x+20,by+bh+m-2);ctx.lineTo(x+14,by+bh+2);ctx.stroke()}}
   P.shadow(24,12,.4);ctx.fillStyle=P.lin(0,by,0,by+bh,[[0,'#2a1206'],[1,'#1a0b03']]);P.rrect(bx,by,bw,bh,12);ctx.fill();P.noShadow();
   ctx.save();P.rrect(bx,by,bw,bh,12);ctx.clip();
   const cw=bw/f.d,rh=bh/f.k;for(let i=0;i<f.d;i++)for(let j=0;j<f.k;j++){const x=bx+i*cw,y=by+j*rh,sh=i<f.n;
-   const ix=x+3,iy=y+3,iw=cw-6,ih=rh-6,rr=Math.min(7,ih/4),c1=sh?'#a8622f':'#5a2e14',c2=sh?'#6e3712':'#3a1b0a';
+   const ix=x+3,iy=y+3,iw=cw-6,ih=rh-6,rr=Math.min(7,ih/4),c1=sh?'#8a5232':'#5e3520',c2=sh?'#5a2f17':'#3b1f10';
    ctx.fillStyle=P.lin(ix,iy,ix,iy+ih,[[0,c1],[1,c2]]);P.rrect(ix,iy,iw,ih,rr);ctx.fill();
    const b=Math.max(3,Math.min(8,ih*.14));ctx.fillStyle=P.lin(ix,iy,ix+iw,iy+ih,[[0,sh?'rgba(255,214,170,.55)':'rgba(255,200,160,.18)'],[.5,'rgba(0,0,0,0)'],[1,'rgba(0,0,0,.45)']]);P.rrect(ix,iy,iw,ih,rr);ctx.fill();
    ctx.fillStyle=P.lin(ix,iy+b,ix,iy+ih-b,[[0,c1],[1,A.mix(c1,c2,.6)]]);P.rrect(ix+b,iy+b,iw-2*b,ih-2*b,Math.max(2,rr-2));ctx.fill();
