@@ -82,3 +82,9 @@ I checked the narration from `whynext-reels/v2/specs_b1.json` (the render spec) 
 **Corrections for the Explainer bot:**
 - **b043:** keep the "pH N" label locked to the pointer while it sweeps, or hide the label until the pointer stops. At about 4–5 s it reads "pH 9" with the pointer at 3–4. Once re-rendered and re-checked, it can be wired to mt_AN2kJE6I0s.
 - Optional, b041: say "water vapour (steam)", because visible "steam" is really droplets. This is fine as it is for the age group.
+
+### Re-check 2026-10-21: b043 fixed, b041 reworded
+
+- **b043 (acids, alkalis & pH): now passes, wired.** The pointer label tracks the pointer ("pH 4" at 4, "pH 8" at 8, checked frame by frame at 1 fps). The facts are right: neutral is 7 (pure water), lemon juice is about pH 2 (2–2.6), soap is about pH 10 (most bar soaps 9–10), below 7 is acidic and above 7 is alkaline.
+- **b041 (solids, liquids & gases): passes.** The new wording says the particles are the same water particles and that heat makes them move faster until they break free. It ends with "escape as a gas: steam", which is fine at this level.
+- **b005, b006, b011, b013, b044, b045:** only visual glitch fixes; the script text is unchanged and they were re-encoded. b044 and b045 (pH) were re-checked and still pass.
