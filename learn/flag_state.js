@@ -19,9 +19,9 @@ VIS.reg('flagstate',c=>{let A,chal,sfb;const st={T:-10,th:0,jh:1,ps:[],blk:{x:0,
   if(S===0){const b=st.blk,bw=COLS*s,bh=Math.ceil(N/COLS)*s;b.vx+=gx*dt;b.vy+=gy*dt;b.vx*=.9;b.vy*=.9;b.x+=b.vx*dt;b.y+=b.vy*dt;
    if(b.x<-g.jw/2){b.x=-g.jw/2;b.vx=0}if(b.x+bw>g.jw/2){b.x=g.jw/2-bw;b.vx=0}if(b.y>0){b.y=0;b.vy=0}if(b.y-bh<-g.jh){b.y=-g.jh+bh;b.vy=0}
    const j=r*.12*(1+heat*2);st.ps.forEach((p,i)=>{const tx=b.x+(i%COLS+.5)*s,ty=b.y-(Math.floor(i/COLS)+.5)*s,k=Math.min(1,dt*8);p.x+=(tx-p.x)*k+(Math.random()-.5)*j;p.y+=(ty-p.y)*k+(Math.random()-.5)*j;p.vx=p.vy=0});return}
-  const sub=2,h=dt/sub;for(let it=0;it<sub;it++){const gas=S===2,G=gas?.04:1,v0=gas?160+heat*260:0;
-   st.ps.forEach(p=>{p.vx+=gx*G*h;p.vy+=gy*G*h;if(!gas){p.vx*=.985;p.vy*=.985;p.vx+=(Math.random()-.5)*heat*60;p.vy+=(Math.random()-.5)*heat*60}else{const sp=Math.hypot(p.vx,p.vy)||1;if(sp<v0*.7){p.vx+=(Math.random()-.5)*v0;p.vy+=(Math.random()-.5)*v0}else{p.vx*=v0/sp*.02+.98;p.vy*=v0/sp*.02+.98}}});
-   if(!gas)for(let i=0;i<N;i++)for(let k=i+1;k<N;k++){const a=st.ps[i],b=st.ps[k],dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);if(d<2*r&&d>.01){const o=(2*r-d)/2,ux=dx/d,uy=dy/d;a.x-=ux*o;a.y-=uy*o;b.x+=ux*o;b.y+=uy*o;const rv=(b.vx-a.vx)*ux+(b.vy-a.vy)*uy;if(rv<0){a.vx+=rv*ux*.5;a.vy+=rv*uy*.5;b.vx-=rv*ux*.5;b.vy-=rv*uy*.5}}}
+  const sub=S===2?2:4,h=dt/sub;for(let it=0;it<sub;it++){const gas=S===2,G=gas?.04:1,v0=gas?160+heat*260:0;
+   st.ps.forEach(p=>{p.vx+=gx*G*h;p.vy+=gy*G*h;if(!gas){p.vx*=.97;p.vy*=.97;p.vx+=(Math.random()-.5)*heat*30;p.vy+=(Math.random()-.5)*heat*30}else{const sp=Math.hypot(p.vx,p.vy)||1;if(sp<v0*.7){p.vx+=(Math.random()-.5)*v0;p.vy+=(Math.random()-.5)*v0}else{p.vx*=v0/sp*.02+.98;p.vy*=v0/sp*.02+.98}}});
+   if(!gas)for(let i=0;i<N;i++)for(let k=i+1;k<N;k++){const a=st.ps[i],b=st.ps[k],dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);if(d<2.35*r&&d>=2*r){const f=(d-2*r)*.08,ux=dx/d,uy=dy/d;a.x+=ux*f;a.y+=uy*f;b.x-=ux*f;b.y-=uy*f}else if(d<2*r&&d>.01){const o=(2*r-d)*.55,ux=dx/d,uy=dy/d;a.x-=ux*o;a.y-=uy*o;b.x+=ux*o;b.y+=uy*o;const rv=(b.vx-a.vx)*ux+(b.vy-a.vy)*uy;if(rv<0){a.vx+=rv*ux*.5;a.vy+=rv*uy*.5;b.vx-=rv*ux*.5;b.vy-=rv*uy*.5}}}
    st.ps.forEach(p=>{p.x+=p.vx*h;p.y+=p.vy*h;const e=gas?1:.3;if(p.x<L){p.x=L;p.vx=Math.abs(p.vx)*e}if(p.x>R){p.x=R;p.vx=-Math.abs(p.vx)*e}if(p.y>-r){p.y=-r;p.vy=-Math.abs(p.vy)*e}if(p.y<TOP){p.y=TOP;p.vy=Math.abs(p.vy)*e}})}};
  const toW=(g,x,y)=>{const th=st.th*Math.PI/180;return[g.cx+x*Math.cos(th)-y*Math.sin(th),g.cy+x*Math.sin(th)+y*Math.cos(th)]};
  // ---------- drawing ----------
