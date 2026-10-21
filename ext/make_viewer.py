@@ -63,17 +63,24 @@ learn_js_split = "".join(open(f"learn/{f}").read() for f in LEARN_JS if not f.st
 import shutil as _sh
 _rm = json.load(open("learn/reels/manifest.json")) if os.path.exists("learn/reels/manifest.json") else {}
 # manifest: {topicId: [{"f": file stem, "t": title, "d": seconds, "n": order, "review"?: 1}, ...]}; any number of reels per topic
+# "x": <k> = batch reel published by ext/reels_publish.py to orphan branch reels-part-<k> (parts.json pins its commit;
+# served from jsDelivr, not stored on this branch). Files are checked in the local part clone when it exists.
+_parts = json.load(open("learn/reels/parts.json")) if os.path.exists("learn/reels/parts.json") else {}
 for _tid, _list in _rm.items():
     assert isinstance(_list, list) and _list, f"reels manifest: {_tid} needs a non-empty list"
     for _r in _list:
-        _d = "reels" if _r.get("x") else "learn/reels"   # "x": stored once in /reels (served from there, not copied into out/)
+        if _r.get("x"):
+            _p = _parts.get(str(_r["x"])); assert _p and _r["f"] in _p["files"] and _p.get("sha"), f"reel {_r['f']}: not published in part {_r['x']}"
+            _d = f"/workspace/why-next-reels-parts/{_p['branch']}"
+            if not os.path.isdir(_d): continue
+        else: _d = "learn/reels"
         for _ext in (".mp4", ".vtt", ".jpg"):
             assert os.path.exists(f"{_d}/{_r['f']}{_ext}"), f"reels manifest: missing {_d}/{_r['f']}{_ext}"
         assert os.path.getsize(f"{_d}/{_r['f']}.mp4") < 2_000_000, f"reel {_r['f']}.mp4 must be under 2 MB"
 os.makedirs("out/reels", exist_ok=True)
 for _f in glob.glob("learn/reels/*"):
     if not _f.endswith(".json"): _sh.copy2(_f, "out/reels/" + os.path.basename(_f))
-_reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";\n"
+_reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";window.WN_RPARTS=" + json.dumps({k: f"https://cdn.jsdelivr.net/gh/pandeyaby/why-next@{v['sha']}/" for k, v in _parts.items()}, separators=(",", ":")) + ";\n"
 learn_js = _reels + learn_js
 css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css"))
 

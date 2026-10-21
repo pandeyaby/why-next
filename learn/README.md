@@ -90,6 +90,10 @@ Lesson bodies (`wn/b<k>.js`), the visuals bundle (`wn/vis.js`), each flagship la
 (`wn/reels.js`) load on demand; after the page has loaded, bodies and visuals are prefetched quietly (`window.WN_WARM` is set when done).
 The offline single file still inlines everything.
 
-### Batch reels (`/reels`)
-The animated batch reels (b001…) live once in the repo-root `reels/` folder (mp4 + vtt + jpg poster, each under 2 MB) and are not copied into `out/`.
-Manifest entries with `"x": 1` point there: `../reels/<f>` from `out/viewer.html`, or `<jsDelivr>/out/../reels/<f>` in the preview.
+### Batch reels (orphan branches `reels-part-<k>`)
+The animated batch reels (b001…) are not stored on this branch. jsDelivr refuses packages over 50 MB, so
+`python3 ext/reels_publish.py <dir>` (dir holds `b###.mp4/.jpg/.vtt`, each mp4 under 2 MB) pushes them to orphan branches
+`reels-part-1`, `reels-part-2`, … of this repo, each kept under 45 MB. New reels fill the newest part and start the next
+one when it is full. The script pins each part's commit in `learn/reels/parts.json` and sets `"x": <k>` on the manifest entry.
+The viewer loads them from `https://cdn.jsdelivr.net/gh/pandeyaby/why-next@<part sha>/<f>` (`window.WN_RPARTS`). The offline
+single file leaves them out. Local part clones live in `/workspace/why-next-reels-parts/`.

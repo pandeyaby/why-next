@@ -111,3 +111,35 @@ I checked the narration from `whynext-reels/v2/specs_b1.json` (the render spec) 
 | b186–b188 | Sorting by one property at a time; a jar can be in two groups | Pass |
 
 **Maths spot-check.** I checked a random sample of 30 non-review reels plus the frame sheets for b099, b179, b189 and b194: 23×14=322, the 13÷3 remainder, BIDMAS (8−2×3=2; 10−4+2=8), 3(x+2)=3x+6, the 3+4=□+5 balance, +10% then −10% gives 99, the limit of (x²−1)/(x−1) at 1 being 2, and f(3)=7. No errors found.
+
+## Batch 5 (b201–b250), checked 2026-10-21
+
+**Review-required reels:** all 15 pass. I checked the script text against standard KS3/GCSE sources and looked through the QA frame sheets.
+
+| Reel | Claim | Verdict |
+|---|---|---|
+| b201–b203 | Speed is how fast; velocity is how fast and which way; 5 m/s east and 5 m/s west are the same speed but opposite velocities | Pass |
+| b214–b216 | Smells and ink spread because moving particles collide and diffuse | Pass |
+| b229–b231 | Negative velocity means the opposite direction; speed is never negative; there and back gives zero average velocity but non-zero average speed | Pass |
+| b232–b234 | 0 to 20 m/s in 4 s is 5 m/s²; braking is acceleration; turning at a steady speed is acceleration | Pass. Optional wording for b232: "how fast your velocity changes" rather than "speed" (b234 makes the point) |
+| b244–b246 | The table is ordered by proton number; a row is a new electron shell; columns behave alike; metals lose electrons and non-metals gain them | Pass |
+
+**Maths spot-check** (12 of the 35 others): 2⁰=1, x³=8 has one real root, −(x−3)=−x+3, 2 L/min for 10 min is 20 L, +c, 9^½=3, 1/x is not a polynomial term, 2⁻²=¼. No errors.
+
+## Batch 6 (b251–b300) and the re-rendered b173, checked 2026-10-21
+
+**Science check (b251–b280, b290–b295, b299, b300):** all scripts are correct. I checked them against KS2/KS3 sources (BBC Bitesize, the national curriculum) on dissolving, conservation of mass, physical vs chemical change, reversible changes, conductors and insulators, separating mixtures, material properties, exo/endothermic reactions, word equations, pure substances, air, and counting atoms. Optional wording notes:
+- b290 says rust forms from iron, oxygen *and water*, but the word equation shows only iron + oxygen → iron oxide. KS3 usually writes iron + oxygen + water → hydrated iron(III) oxide.
+- b280: an instant ice pack works by dissolving, which is a physical change that is endothermic. Fine as it is, but don't call it a "reaction".
+
+**Frame-by-frame sheet review** (2 fps for the whole reel, 10 fps around anything suspicious):
+| Reel | Verdict |
+|---|---|
+| b252 | Pass |
+| b258 | **Held.** About 5.4–5.9 s, the iron→rust labels flash to blank yellow boxes, so the text disappears. |
+| b264 | Pass |
+| b274 | Pass (the filter caption, then evaporation leaving salt crystals) |
+| b279 | **Held.** The header still reads "exothermic: heat out" from about 3.5–5 s while the flask cools and the caption says "Endothermic takes it in". It switches to "endothermic: heat in" only around 5.5 s, the same label-lag problem b043 had. |
+| b291 | Pass |
+
+The re-rendered b173 replaces the old one (same narration). 48 batch-6 reels are wired; b258 and b279 are held.
