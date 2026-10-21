@@ -19,8 +19,8 @@ VIS.reg('flagarea',c=>{let A,chal,chips;const st={fn:'c10',a:0,b:0,n:0,xr:[0,8],
   const lo=Math.min(st.a,st.b),hi=Math.max(st.a,st.b);if(st.n){const h=(st.b-st.a)/st.n;for(let i=0;i<st.n;i++){const xa=st.a+i*h,v=F(xa);ctx.fillStyle=A.alpha(v>=0?C.cy:C.rd,.35);ctx.strokeStyle=A.alpha(v>=0?C.cy:C.rd,.9);ctx.lineWidth=1;ctx.beginPath();ctx.rect(g.X(xa),g.Y(Math.max(v,0)),g.X(xa+h)-g.X(xa),Math.abs(g.Y(v)-g.Y(0)));ctx.fill();if(st.n<=40)ctx.stroke()}}
   else if(hi>lo){[[1,C.cy],[-1,C.rd]].forEach(([sg,col])=>{ctx.fillStyle=A.alpha(col,.38);ctx.beginPath();ctx.moveTo(g.X(lo),g.Y(0));for(let i=0;i<=120;i++){const x=lo+(hi-lo)*i/120,v=F(x);ctx.lineTo(g.X(x),g.Y(sg>0?Math.max(0,v):Math.min(0,v)))}ctx.lineTo(g.X(hi),g.Y(0));ctx.closePath();ctx.fill()})}
   // curve
-  P.glow(A.alpha(C.or,.6),10);ctx.strokeStyle=C.or;ctx.lineWidth=3.5;ctx.beginPath();for(let i=0;i<=200;i++){const x=x0+(x1-x0)*i/200,y=Math.max(y0-1,Math.min(y1+1,F(x)));i?ctx.lineTo(g.X(x),g.Y(y)):ctx.moveTo(g.X(x),g.Y(y))}ctx.stroke();P.noShadow();
-  P.label(FN[st.fn][1],W-g.r-6,g.t+12,{align:'right',font:'700 13px system-ui',pill:1,bg:A.alpha(C.or,.95),col:'#111'});
+  P.glow(A.alpha(C.pk,.6),10);ctx.strokeStyle=C.pk;ctx.lineWidth=3.5;ctx.beginPath();for(let i=0;i<=200;i++){const x=x0+(x1-x0)*i/200,y=Math.max(y0-1,Math.min(y1+1,F(x)));i?ctx.lineTo(g.X(x),g.Y(y)):ctx.moveTo(g.X(x),g.Y(y))}ctx.stroke();P.noShadow();
+  P.label(FN[st.fn][1],W-g.r-6,g.t+12,{align:'right',font:'700 13px system-ui',pill:1,bg:A.alpha(C.pk,.95),col:'#111'});
   // handles
   const hb=g.X(st.b),ya=g.Y(Math.max(y0,0));ctx.strokeStyle=A.alpha(C.am,.8);ctx.setLineDash([5,4]);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(hb,g.t);ctx.lineTo(hb,ya);ctx.stroke();ctx.setLineDash([]);P.glow(A.alpha(C.am,.9),14);P.ball(hb,ya,11,C.am);P.noShadow();
   if(A.step===4){const ha=g.X(st.a);P.glow(A.alpha(C.vi,.9),14);P.ball(ha,ya,11,C.vi);P.noShadow();P.label('a',ha,ya+24,{font:'700 12px system-ui',col:C.vi})}P.label(A.step<2?`t = ${f1(st.b)}`:'b',hb,ya+24,{font:'700 12px system-ui',col:C.am});

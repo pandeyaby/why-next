@@ -2135,7 +2135,7 @@ VIS.reg('flagacid',c=>{let A,chal;const st={n:0,V:1,ind:'cab',drops:[],log:[],ca
    until single gold atoms appear. Then: sort particle pictures into element / compound / mixture (O2 and air are the traps),
    build water and carbon dioxide by dragging atoms together (bonds snap), a molecule sandbox, and a "build this formula" challenge with
    feedback for misread subscripts, extra loose atoms and "two of the same atom is still an element".
-   SCIENCE CONTENT: self-checked only, pending science review (see learn/REVIEW-reels.md). Bonds are drawn as single lines. */
+   SCIENCE CONTENT: self-checked only, pending science review (see learn/REVIEW-reels.md). Spare bonding capacity between two atoms becomes a double/triple bond. */
 (()=>{const EL={H:['#f8fafc',1,.72,'hydrogen'],O:['#ef4444',2,1,'oxygen'],C:['#334155',4,1.05,'carbon'],N:['#3b82f6',3,1,'nitrogen']},
  NAMES={H2:'hydrogen gas (element)',O2:'oxygen gas (element)',N2:'nitrogen gas (element)',H2O:'water',CO2:'carbon dioxide',CO:'carbon monoxide',CH4:'methane',NH3:'ammonia',H2O2:'hydrogen peroxide',C2H6:'ethane',HCN:'hydrogen cyanide'};
 VIS.reg('flagatom',c=>{let A,chal,sfb;const st={z:0,at:[],id:0,drag:null,cards:[],q:null,won:false};
@@ -2176,22 +2176,25 @@ VIS.reg('flagatom',c=>{let A,chal,sfb;const st={z:0,at:[],id:0,drag:null,cards:[
  // ---------- builder ----------
  const bench=A=>{const{ctx,W,H,paint:P,col:C}=A,r=R(A);ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.05)],[1,C.pn]]);ctx.fillRect(0,0,W,H);ctx.fillStyle=A.alpha(C.tx,.07);ctx.fillRect(0,H*.2,W,2);
   tray(A).forEach(([e,x,y])=>{atom(A,x,y,e,r);P.label(EL[e][3],x,y+r*1.5+6,{font:'600 10px system-ui',col:C.mu})});
-  ctx.strokeStyle=A.alpha(C.tx,.85);ctx.lineWidth=4;st.at.forEach(a=>a.b.forEach(j=>{if(j>a.id){const q=st.at.find(t=>t.id===j);ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}));
+  ctx.lineCap='round';st.at.forEach(a=>[...new Set(a.b)].forEach(j=>{if(j<=a.id)return;const q=st.at.find(t=>t.id===j),m=a.b.filter(x=>x===j).length,dx=q.x-a.x,dy=q.y-a.y,d=Math.hypot(dx,dy)||1,nx=-dy/d,ny=dx/d,gap=r*.32;
+   for(let k=0;k<m;k++){const o=(k-(m-1)/2)*gap;ctx.strokeStyle=A.alpha('#cbd5e1',.95);ctx.lineWidth=r*.2;ctx.beginPath();ctx.moveTo(a.x+nx*o,a.y+ny*o);ctx.lineTo(q.x+nx*o,q.y+ny*o);ctx.stroke()}}));
   st.at.forEach(a=>atom(A,a.x,a.y,a.e,r));
   groups().forEach(g=>{const xs=g.g.map(a=>a.x),ys=g.g.map(a=>a.y),x=(Math.min(...xs)+Math.max(...xs))/2,y=Math.max(...ys)+r*1.6;const nm=NAMES[g.f];if(g.g.length>1||A.step>=2)P.label(g.f.replace(/(\d)/g,m=>'₀₁₂₃₄₅₆₇₈₉'[m])+(nm?' · '+nm:''),x,y+6,{font:'700 12px system-ui',pill:1,bg:A.alpha(nm?C.gr:C.panel||C.pn,.92),col:nm?'#04140a':C.tx})});
   if(st.drag&&st.drag.k==='atom'&&st.drag.e){atom(A,st.drag.x,st.drag.y,st.drag.e,r)}
   if(!A.isDone&&!st.drag&&st.at.length<2&&A.step<4){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 drag atoms down and touch them together',W/2,H*.27,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}};
  const draw=(A,dt)=>{A.am={st,groups,R:()=>R(A),tray:()=>tray(A),cardXY:i=>cardXY(A,i),binR:i=>binR(A,i)};if(A.step===0)zoom(A);else if(A.step===1)sorter(A);else bench(A)};
- const drop=(A,a)=>{const r=R(A);if(a.y<A.H*.2){st.at=st.at.filter(t=>t!==a);return}let best=null,bd=r*2.6;st.at.forEach(q=>{if(q===a||free(q)<=0||free(a)<=0||a.b.includes(q.id))return;const d=Math.hypot(q.x-a.x,q.y-a.y);if(d<bd){bd=d;best=q}});
-  if(best){const d=Math.hypot(a.x-best.x,a.y-best.y)||1;let ux=(a.x-best.x)/d,uy=(a.y-best.y)/d;const L=r*(EL[a.e][2]+EL[best.e][2])*.95;a.x=best.x+ux*L;a.y=best.y+uy*L;a.b.push(best.id);best.b.push(a.id);A.sound.pop()}else A.sound.tick()};
- const make=(spec)=>{st.at=[];st.id=0;const g=geo0(A);spec.forEach(([e,x,y,bs])=>{st.at.push({id:st.id++,e,x:g.x+x*R(A)*1.9,y:g.y+y*R(A)*1.9,b:[]})});spec.forEach(([,,,bs],i)=>(bs||[]).forEach(j=>{st.at[i].b.push(j);st.at[j].b.push(i)}))};
+ const saturate=()=>{let ch=true;while(ch){ch=false;for(const a of st.at)for(const j of [...new Set(a.b)]){const q=st.at.find(t=>t.id===j);if(j>a.id&&free(a)>0&&free(q)>0&&a.b.filter(x=>x===j).length<3){a.b.push(j);q.b.push(a.id);ch=true}}}};
+ const downgrade=q=>{const j=q.b.find((x,i)=>q.b.indexOf(x)!==i);if(j==null)return false;const o=st.at.find(t=>t.id===j);q.b.splice(q.b.indexOf(j),1);o.b.splice(o.b.indexOf(q.id),1);return true};
+ const drop=(A,a)=>{const r=R(A);if(a.y<A.H*.2){st.at=st.at.filter(t=>t!==a);return}let best=null,bd=r*3;st.at.forEach(q=>{if(q===a||a.b.includes(q.id))return;const ok=free(q)>0||q.b.some((x,i)=>q.b.indexOf(x)!==i);if(!ok||free(a)<=0)return;const d=Math.hypot(q.x-a.x,q.y-a.y);if(d<bd){bd=d;best=q}});
+  if(best){if(free(best)<=0)downgrade(best);const d=Math.hypot(a.x-best.x,a.y-best.y)||1;let ux=(a.x-best.x)/d,uy=(a.y-best.y)/d;const L=r*(EL[a.e][2]+EL[best.e][2])*1.35;a.x=best.x+ux*L;a.y=best.y+uy*L;a.b.push(best.id);best.b.push(a.id);saturate();A.sound.pop()}else A.sound.tick()};
+ const make=(spec)=>{st.at=[];st.id=0;const g=geo0(A);spec.forEach(([e,x,y,bs])=>{st.at.push({id:st.id++,e,x:g.x+x*R(A)*2.5,y:g.y+y*R(A)*2.5,b:[]})});spec.forEach(([,,,bs],i)=>(bs||[]).forEach(j=>{st.at[i].b.push(j);st.at[j].b.push(i)}));saturate()};
  const geo0=A=>({x:A.W/2,y:A.H*.58});
  const has=f=>groups().some(g=>g.f===f);
  const steps=[
   {h:'Cut it again and again',p:'Take a gold coin. Cut it in half, then cut a half in half, and keep going. Could you go on for ever?',predict:{q:'If you keep cutting, you end up with…',opts:['smaller and smaller gold, for ever','a single gold atom, the smallest bit of gold','gold dust that is no longer gold'],ans:1},task:'Zoom all the way in',show:()=>{st.z=1;upd();chk()},go:()=>{st.z=0;chk=()=>{if(st.z>=.97)A.done('Atoms: the smallest pieces of gold that are still gold. Gold is an element, so every atom is the same kind.'+A.reveal(0))}}},
   {h:'Element, compound or mixture?',p:'Element: only one type of atom. Compound: different atoms joined together. Mixture: different particles, not joined.',task:'Drag every picture into the right box',show:()=>{st.cards.forEach((c_,i)=>c_.bin=CARDS[i][1]);upd();chk()},go:()=>{st.cards=CARDS.map(()=>({bin:null}));sfb.textContent='';chk=()=>{if(st.cards.every(c_=>c_.bin!=null))A.done('Oxygen gas is an element even though its atoms are in pairs. Air is a mixture even though it has molecules: they are not joined to each other.')}}},
   {h:'Build water',p:'Water is H₂O: two hydrogen atoms joined to one oxygen atom.',predict:{q:'Hydrogen and oxygen are gases. Water made from them is…',opts:['a mixture of the two gases','a new substance with new properties','still hydrogen and oxygen gas'],ans:1},task:'Drag atoms from the tray and touch them together to build H₂O',show:()=>{make([['O',0,0],['H',-.9,.6,[0]],['H',.9,.6,[0]]]);upd();chk()},go:()=>{st.at=[];chk=()=>{if(has('H2O'))A.done('H₂O. The atoms are joined, so it is a compound: a wet liquid, nothing like the two gases it is made of.'+A.reveal(2))}}},
-  {h:'Build carbon dioxide',p:'CO₂: the small 2 belongs to the O in front of it.',predict:{q:'How many atoms are in one CO₂ molecule?',opts:['2','3','4'],ans:1},task:'Build CO₂',show:()=>{make([['C',0,0],['O',-1.1,0,[0]],['O',1.1,0,[0]]]);upd();chk()},go:()=>{st.at=[];chk=()=>{if(has('CO2'))A.done('1 carbon + 2 oxygen = 3 atoms. (Each C–O link is really a double bond; it is drawn as one line here.)'+A.reveal(3))}}},
+  {h:'Build carbon dioxide',p:'CO₂: the small 2 belongs to the O in front of it.',predict:{q:'How many atoms are in one CO₂ molecule?',opts:['2','3','4'],ans:1},task:'Build CO₂',show:()=>{make([['C',0,0],['O',-1.1,0,[0]],['O',1.1,0,[0]]]);upd();chk()},go:()=>{st.at=[];chk=()=>{if(has('CO2'))A.done('1 carbon + 2 oxygen = 3 atoms. Each C=O link is a double bond: two shared pairs, drawn as two lines.'+A.reveal(3))}}},
   {h:'Sandbox',p:'Build anything. Try CH₄, NH₃ or H₂O₂. Drag an atom back to the tray to remove it; drag an atom away to break its bonds.',go:()=>{st.at=[];chk=()=>{}}},
   {h:'Challenge',p:'',go:()=>newChal()}];
  A=FK.shell(c,{steps,ratio:.62,tall:1.1,draw,onStep:A=>{chal.hidden=A.step!==5;sfb.hidden=A.step!==1;upd()},
@@ -2202,7 +2205,7 @@ VIS.reg('flagatom',c=>{let A,chal,sfb;const st={z:0,at:[],id:0,drag:null,cards:[
      if(s===1){for(let i=st.cards.length-1;i>=0;i--){if(st.cards[i].bin!=null)continue;const[x,y]=cardXY(A,i);if(Math.abs(p.x-x)<44&&Math.abs(p.y-y)<38){st.drag={k:'card',i,x:p.x,y:p.y};A.sound.pop();return true}}return false}
      if(s===5&&st.won)return false;
      for(const[e,x,y]of tray(A))if(Math.hypot(p.x-x,p.y-y)<r*1.3){st.drag={k:'atom',e,x:p.x,y:p.y};A.sound.pop();return true}
-     for(let i=st.at.length-1;i>=0;i--){const a=st.at[i];if(Math.hypot(p.x-a.x,p.y-a.y)<r*1.2){a.b.forEach(j=>{const q=st.at.find(t=>t.id===j);q.b=q.b.filter(x=>x!==a.id)});a.b=[];st.drag={k:'atom',a,x:a.x,y:a.y};return true}}return false},
+     for(let i=st.at.length-1;i>=0;i--){const a=st.at[i];if(Math.hypot(p.x-a.x,p.y-a.y)<r*1.2){[...new Set(a.b)].forEach(j=>{const q=st.at.find(t=>t.id===j);q.b=q.b.filter(x=>x!==a.id)});a.b=[];saturate();st.drag={k:'atom',a,x:a.x,y:a.y};return true}}return false},
     move:p=>mv(p),pinch:k=>{if(A.step===0&&A.pred[0]!=null){st.z=Math.max(0,Math.min(1,st.z+(k-1)*.6));upd();chk()}},
     up:p=>{if(p&&st.drag)mv(p);const d=st.drag;st.drag=null;if(!d){A.redraw();return}
      if(d.k==='card'){const i=d.i,bi=[0,1,2].find(b=>{const r=binR(A,b);return d.x>r.x&&d.x<r.x+r.w&&d.y>r.y-20});if(bi!=null){if(bi===CARDS[i][1]){st.cards[i].bin=bi;A.sound.pop();sfb.textContent=`✓ ${CARDS[i][0]}: ${BIN[bi].toLowerCase()}.`+(CARDS[i][3]?' '+CARDS[i][3]:'')}else{A.sound.miss();sfb.textContent=CARDS[i][3]||(bi===2?'These particles are joined into one kind of molecule, not mixed.':bi===0?'More than one type of atom here: count the colours.':'Nothing is joined to a different atom here.')}}upd();chk();return}
@@ -2245,8 +2248,8 @@ VIS.reg('flagarea',c=>{let A,chal,chips;const st={fn:'c10',a:0,b:0,n:0,xr:[0,8],
   const lo=Math.min(st.a,st.b),hi=Math.max(st.a,st.b);if(st.n){const h=(st.b-st.a)/st.n;for(let i=0;i<st.n;i++){const xa=st.a+i*h,v=F(xa);ctx.fillStyle=A.alpha(v>=0?C.cy:C.rd,.35);ctx.strokeStyle=A.alpha(v>=0?C.cy:C.rd,.9);ctx.lineWidth=1;ctx.beginPath();ctx.rect(g.X(xa),g.Y(Math.max(v,0)),g.X(xa+h)-g.X(xa),Math.abs(g.Y(v)-g.Y(0)));ctx.fill();if(st.n<=40)ctx.stroke()}}
   else if(hi>lo){[[1,C.cy],[-1,C.rd]].forEach(([sg,col])=>{ctx.fillStyle=A.alpha(col,.38);ctx.beginPath();ctx.moveTo(g.X(lo),g.Y(0));for(let i=0;i<=120;i++){const x=lo+(hi-lo)*i/120,v=F(x);ctx.lineTo(g.X(x),g.Y(sg>0?Math.max(0,v):Math.min(0,v)))}ctx.lineTo(g.X(hi),g.Y(0));ctx.closePath();ctx.fill()})}
   // curve
-  P.glow(A.alpha(C.or,.6),10);ctx.strokeStyle=C.or;ctx.lineWidth=3.5;ctx.beginPath();for(let i=0;i<=200;i++){const x=x0+(x1-x0)*i/200,y=Math.max(y0-1,Math.min(y1+1,F(x)));i?ctx.lineTo(g.X(x),g.Y(y)):ctx.moveTo(g.X(x),g.Y(y))}ctx.stroke();P.noShadow();
-  P.label(FN[st.fn][1],W-g.r-6,g.t+12,{align:'right',font:'700 13px system-ui',pill:1,bg:A.alpha(C.or,.95),col:'#111'});
+  P.glow(A.alpha(C.pk,.6),10);ctx.strokeStyle=C.pk;ctx.lineWidth=3.5;ctx.beginPath();for(let i=0;i<=200;i++){const x=x0+(x1-x0)*i/200,y=Math.max(y0-1,Math.min(y1+1,F(x)));i?ctx.lineTo(g.X(x),g.Y(y)):ctx.moveTo(g.X(x),g.Y(y))}ctx.stroke();P.noShadow();
+  P.label(FN[st.fn][1],W-g.r-6,g.t+12,{align:'right',font:'700 13px system-ui',pill:1,bg:A.alpha(C.pk,.95),col:'#111'});
   // handles
   const hb=g.X(st.b),ya=g.Y(Math.max(y0,0));ctx.strokeStyle=A.alpha(C.am,.8);ctx.setLineDash([5,4]);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(hb,g.t);ctx.lineTo(hb,ya);ctx.stroke();ctx.setLineDash([]);P.glow(A.alpha(C.am,.9),14);P.ball(hb,ya,11,C.am);P.noShadow();
   if(A.step===4){const ha=g.X(st.a);P.glow(A.alpha(C.vi,.9),14);P.ball(ha,ya,11,C.vi);P.noShadow();P.label('a',ha,ya+24,{font:'700 12px system-ui',col:C.vi})}P.label(A.step<2?`t = ${f1(st.b)}`:'b',hb,ya+24,{font:'700 12px system-ui',col:C.am});
