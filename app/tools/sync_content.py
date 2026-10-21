@@ -32,6 +32,8 @@ def fetch_tree(ref, dest, only=None):
             p = os.path.join(dest, rel); os.makedirs(os.path.dirname(p), exist_ok=True)
             with t.extractfile(m) as f, open(p, "wb") as o: shutil.copyfileobj(f, o)
 
+# Temporary patches T2 (poll for select/WN_WARM) and T3 (captions via blob URLs): see AGENTS.md in the web repo
+# (pandeyaby/why-next) for what to undo, when, and how to check.
 SHIM = r"""<script>/* Why Next? app shim: offline reels, open the topic the app asks for */
 (function(){var P={};Object.defineProperty(window,'WN_RPARTS',{configurable:true,get:function(){return P},set:function(v){P={};for(var k in v)P[k]='reels/'}});
 window.WN_APP=1;function go(){if(!window.WN_TOPIC)return;if(typeof select==='function'&&window.WN_WARM){try{select(window.WN_TOPIC)}catch(e){}var c=document.getElementById('learn');if(c)c.scrollIntoView();return}setTimeout(go,60)}

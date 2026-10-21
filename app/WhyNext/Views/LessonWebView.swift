@@ -57,7 +57,9 @@ final class LessonWebCoordinator: NSObject, WKNavigationDelegate {
 enum LessonWeb {
     static func make(topicId: String, webDir: URL, coordinator: LessonWebCoordinator) -> WKWebView {
         let cfg = WKWebViewConfiguration()
-        cfg.websiteDataStore = .nonPersistent()
+        // Persistent store: the lesson page keeps progress and seen-reel memory in localStorage.
+        // (.nonPersistent() wiped both every time a lesson was opened.)
+        cfg.websiteDataStore = .default()
         cfg.mediaTypesRequiringUserActionForPlayback = []
         #if os(iOS)
             cfg.allowsInlineMediaPlayback = true

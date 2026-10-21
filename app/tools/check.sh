@@ -67,6 +67,8 @@ if [ -n "${WEB_CHECK_NODE:-}" ] && [ -d WhyNext/Resources/Web/reels ]; then
   node tools/check_offline_web.cjs WhyNext/Resources/Web/index.html
 fi
 
+echo "== 3e. lesson web view keeps progress (persistent data store)"
+if grep -n "= .nonPersistent()" WhyNext/Views/LessonWebView.swift; then echo "LessonWebView must use the persistent store or progress is lost on every open"; exit 1; fi
 echo "== 4. Swift package builds and tests pass"
 cd WhyNextCore
 if [ "$(uname)" = "Linux" ]; then

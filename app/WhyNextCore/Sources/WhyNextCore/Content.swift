@@ -59,6 +59,14 @@ public enum ReelRotation {
         seen.insert(r.file)
         return (r, seen)
     }
+    /// Reads the stored seen-reel memory `{topicId: [file]}`. Junk is dropped entry by entry
+    /// (a bad shape for one topic must not wipe the others or crash); see docs/STATECHART.md.
+    public static func decodeSeen(_ json: String) -> [String: [String]] {
+        guard let o = try? JSONSerialization.jsonObject(with: Data(json.utf8)), let d = o as? [String: Any] else { return [:] }
+        var out: [String: [String]] = [:]
+        for (k, v) in d { if let a = v as? [Any] { out[k] = a.compactMap { $0 as? String } } }
+        return out
+    }
     public static func pick(from reels: [Reel], seen: Set<String>, avoiding current: String? = nil) -> (reel: Reel, seen: Set<String>)? {
         var g = SystemRandomNumberGenerator()
         return pick(from: reels, seen: seen, avoiding: current, using: &g)

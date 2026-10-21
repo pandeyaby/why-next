@@ -28,6 +28,20 @@ final class ContentTests: XCTestCase {
         XCTAssertEqual(ReelRotation.pick(from: one, seen: ["x"], avoiding: "x")?.reel.file, "x")
     }
 
+    func testSeenMemoryToleratesCorruptStorage() {
+        XCTAssertEqual(ReelRotation.decodeSeen("{oops"), [:])
+        XCTAssertEqual(ReelRotation.decodeSeen("null"), [:])
+        XCTAssertEqual(ReelRotation.decodeSeen("[1,2]"), [:])
+        XCTAssertEqual(ReelRotation.decodeSeen(#"{"a":["x",1,null],"b":"str","c":{"k":1}}"#), ["a": ["x"]])
+        // Every reel exactly once per cycle, starting from corrupt memory that names unknown files.
+        let reels = (1...4).map { Reel(file: "f\($0)", title: "t", seconds: 30) }
+        var seen = Set(ReelRotation.decodeSeen(#"{"t":["zz","f1","f1"]}"#)["t"] ?? [])
+        var shown: [String] = []
+        for _ in 0..<8 { let p = ReelRotation.pick(from: reels, seen: seen)!; shown.append(p.reel.file); seen = p.seen }
+        XCTAssertEqual(Set(shown[0..<3]).count, 3); XCTAssertFalse(shown[0..<3].contains("f1"))
+        XCTAssertEqual(Set(shown[3..<7]).count, 4)
+    }
+
     func testWebVTT() {
         let v = "WEBVTT\n\n00:00:00.000 --> 00:00:03.920\nTimes 10. Does the decimal point jump?\n\n00:00:03.920 --> 00:00:08.160\nLook closer.\nTwo lines.\n"
         let c = WebVTT.parse(v)

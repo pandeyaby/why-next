@@ -72,7 +72,7 @@ struct ReelCard: View {
 
     private func next() {
         stop()
-        var all = (try? JSONDecoder().decode([String: [String]].self, from: Data(seenJSON.utf8))) ?? [:]
+        var all = ReelRotation.decodeSeen(seenJSON)
         guard let p = ReelRotation.pick(from: reels, seen: Set(all[topicId] ?? []), avoiding: current?.file) else { return }
         all[topicId] = p.seen.sorted()
         if let d = try? JSONEncoder().encode(all), let s = String(data: d, encoding: .utf8) { seenJSON = s }
