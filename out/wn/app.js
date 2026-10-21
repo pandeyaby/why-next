@@ -70,4 +70,4 @@ function mapZoom(){const g=document.getElementById('dgraph'),sv=g&&g.querySelect
   if(z){const c=sv.querySelector('.gn.cur circle');if(c)wr.scrollLeft=Math.max(0,+c.getAttribute('cx')-wr.clientWidth/2);wr.scrollTop=0}};
  g.querySelectorAll('[data-z]').forEach(b=>b.onclick=()=>set(+b.dataset.z));set(1)}
 // After first paint, quietly fetch lesson bodies and the visuals bundle so opening a lesson is instant.
-{const w=()=>WN.warm().then(()=>{window.WN_WARM=1},()=>{});if(document.readyState==='complete')setTimeout(w,50);else addEventListener('load',()=>setTimeout(w,50))}
+{const w=()=>WN.warm().then(()=>{window.WN_WARM=1},()=>{});const iw=()=>setTimeout(()=>(window.requestIdleCallback||setTimeout)(w,{timeout:2000}),window.WN_OFFLINE?0:3500);if(document.readyState==='complete')iw();else addEventListener('load',iw)}
