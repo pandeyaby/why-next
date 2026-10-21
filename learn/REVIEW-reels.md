@@ -20,3 +20,5 @@ Every reel is lazy: only the poster loads, and nothing autoplays. Tap to play; c
 | r21_atoms | mt_Z_Wu_77ybI atoms, elements and compounds | **PENDING SCIENCE REVIEW** |
 
 The three science reels show a "science check pending" note in their caption until a subject expert signs them off. To clear one, remove `review` from `learn/reels/index.json`.
+
+Note (round 2026-10-20): the states-of-matter flagship lab (flag_state.js) copy and the mystery-substance melting/boiling points are self-checked only; include them in the same science review as the states reel.

@@ -45,6 +45,24 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     if (q.d !== q.ans) { await p.click('.fl-chal [data-clr]'); await tapN(q.ans); await p.click('.fl-chal [data-ok]'); assert.match(await p.textContent('.fl-fb'), /✓/) }
     await axeFlag();
   });
+  await test('flagship (states of matter): heat to melt, tilt a solid and a liquid, boil and lift the lid, sort with sand/honey traps, mystery-substance challenge feedback, axe', async () => {
+    await open('mt_1JFUNQDwAJ'); let [W, H] = await WH();
+    const sm = () => A(() => { const A = document.querySelector('.fl-cv').__A, g = A.sm.geo(); return { g, st: { T: A.sm.st.T, th: A.sm.st.th, jh: A.sm.st.jh, rng: A.sm.st.rng, sub: A.sm.st.sub, q: A.sm.st.q } } });
+    const ty = (o, T) => o.g.t1 - (T - o.st.rng[0]) / (o.st.rng[1] - o.st.rng[0]) * (o.g.t1 - o.g.t0);
+    const heat = async T => { const o = await sm(); await touch(line(o.g.tx, ty(o, o.st.T), o.g.tx, ty(o, T), 14)) };
+    const tilt = async dx => { const o = await sm(); await touch(line(o.g.cx, o.g.cy - o.g.jh / 2, o.g.cx + dx, o.g.cy - o.g.jh / 2, 12)) };
+    await pick(1); await heat(20); assert.ok((await sm()).st.T > 0); await nextOn(); assert.match(await p.textContent('.fl-task'), /spot on/); await next(); await p.waitForTimeout(300);
+    await pick(0); await tilt(W * .35); assert.ok((await sm()).st.th >= 30); await nextOn(); assert.match(await p.textContent('.fl-task'), /keeps its shape/); await next(); await p.waitForTimeout(300);
+    await pick(1); await tilt(-W * .35); await nextOn(); assert.match(await p.textContent('.fl-task'), /level/); await next(); await p.waitForTimeout(300);
+    await pick(1); await heat(120); let o = await sm(); assert.ok(o.st.T > 100); await touch(line(o.g.cx, o.g.cy - o.g.jh - 12, o.g.cx, o.g.cy - o.g.jh * 1.8, 12)); await nextOn(); assert.match(await p.textContent('.fl-task'), /fill the whole jar/); await next(); await p.waitForTimeout(300);
+    const card = i => p.evaluate(i => document.querySelector('.fl-cv').__A.sm.cardXY(i), i), bin = i => p.evaluate(i => document.querySelector('.fl-cv').__A.sm.binR(i), i), drop = async (i, b) => { const [x, y] = await card(i), r = await bin(b); await touch(line(x, y, r.x + r.w / 2, r.y + r.h / 2, 10)) };
+    await drop(5, 1); assert.match(await p.textContent('.fl-fb'), /each grain is a tiny solid/); await drop(4, 0); assert.match(await p.textContent('.fl-fb'), /flows, just slowly|it flows/);
+    for (const [i, b] of [[0, 0], [1, 1], [2, 2], [3, 0], [4, 1], [5, 0], [6, 2]]) await drop(i, b); await nextOn(); await next(); await p.waitForTimeout(300);
+    await next(); await p.waitForTimeout(300);
+    o = await sm(); const { m, b } = o.st.sub, want = o.st.q.want, mid = (m + b) / 2, wrong = want === 1 ? b + (o.st.rng[1] - b) / 2 : mid, right = [m - (m - o.st.rng[0]) / 2, mid, b + (o.st.rng[1] - b) / 2][want];
+    await heat(wrong); assert.match(await p.textContent('.fl-chal .fl-fb'), want === 1 ? /Past its boiling point/ : want === 0 ? /has melted/ : /Melted is not the same as boiled/);
+    await heat(right); assert.match(await p.textContent('.fl-chal .fl-fb'), /✓/); await axeFlag();
+  });
   }
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }
