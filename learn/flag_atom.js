@@ -22,7 +22,7 @@ VIS.reg('flagatom',c=>{let A,chal,sfb;const st={z:0,at:[],id:0,drag:null,cards:[
   if(a2>0){ctx.globalAlpha=a2;for(let i=0;i<40;i++){const x=((i*73)%100)/100*W,y=((i*41)%100)/100*H,s=30+((i*17)%40);ctx.fillStyle=A.mix('#ca8a04','#fde047',((i*29)%10)/10);ctx.beginPath();for(let k=0;k<6;k++){const a=k/6*Math.PI*2+i;ctx.lineTo(x+Math.cos(a)*s,y+Math.sin(a)*s*.8)}ctx.fill();ctx.strokeStyle='rgba(66,32,6,.6)';ctx.stroke()}}
   if(a3>0){ctx.globalAlpha=a3;const r=Math.min(W,H)*.06,dx=r*2.05,dy=r*1.78;for(let row=-1;row*dy<H+dy;row++)for(let col=-1;col*dx<W+dx;col++){const x=col*dx+(row%2?dx/2:0),y=row*dy;P.ball(x,y,r,'#eab308')}
    P.label('every one is a gold atom: Au',W/2,H*.5,{font:`800 ${A.narrow?14:16}px system-ui`,pill:1,bg:'rgba(15,23,42,.9)',col:'#fde047'})}
-  ctx.globalAlpha=1;const sc=z<.33?'width shown: about 2 cm':z<.66?'width shown: about 0.1 mm':'width shown: about 1 nanometre';P.label(sc,W/2,H*.93,{font:'600 12px system-ui',pill:1,bg:'rgba(15,23,42,.85)',col:'#e2e8f0'});
+  ctx.globalAlpha=1;const sc=z<.33?'width shown: about 2 cm':z<.66?'width shown: about 0.1 mm':'width shown: about 3 nanometres (one gold atom ≈ 0.3 nm)';P.label(sc,W/2,H*.93,{font:'600 12px system-ui',pill:1,bg:'rgba(15,23,42,.85)',col:'#e2e8f0'});
   const bx=W-30,t=H*.15,b=H*.8;ctx.fillStyle='rgba(255,255,255,.15)';P.rrect(bx-5,t,10,b-t,5);ctx.fill();P.glow(A.alpha(C.am,.9),12);P.ball(bx,b-(b-t)*z,12,C.am);P.noShadow();P.label('zoom',bx,t-14,{font:'600 11px system-ui',col:'#e2e8f0'});
   if(A.pred[0]!=null&&!A.isDone){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 drag up to zoom in (or pinch)',W/2,H*.08,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}};
  // ---------- sort ----------
@@ -50,7 +50,9 @@ VIS.reg('flagatom',c=>{let A,chal,sfb;const st={z:0,at:[],id:0,drag:null,cards:[
   if(st.drag&&st.drag.k==='atom'&&st.drag.e){atom(A,st.drag.x,st.drag.y,st.drag.e,r)}
   if(!A.isDone&&!st.drag&&st.at.length<2&&A.step<4){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 drag atoms down and touch them together',W/2,H*.27,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}};
  const draw=(A,dt)=>{A.am={st,groups,R:()=>R(A),tray:()=>tray(A),cardXY:i=>cardXY(A,i),binR:i=>binR(A,i)};if(A.step===0)zoom(A);else if(A.step===1)sorter(A);else bench(A)};
- const saturate=()=>{let ch=true;while(ch){ch=false;for(const a of st.at)for(const j of [...new Set(a.b)]){const q=st.at.find(t=>t.id===j);if(j>a.id&&free(a)>0&&free(q)>0&&a.b.filter(x=>x===j).length<3){a.b.push(j);q.b.push(a.id);ch=true}}}};
+ const saturate=()=>{let ch=true;while(ch){ch=false;for(const a of st.at)for(const j of [...new Set(a.b)]){const q=st.at.find(t=>t.id===j);if(j>a.id&&free(a)>0&&free(q)>0&&a.b.filter(x=>x===j).length<3){a.b.push(j);q.b.push(a.id);ch=true}}}
+  /* carbon monoxide is C≡O: a triple bond (oxygen shares an extra pair), which simple valence counting misses */
+  for(const a of st.at)if(a.e==='C'){const nb=[...new Set(a.b)];if(nb.length===1){const o=st.at.find(t=>t.id===nb[0]);if(o&&o.e==='O'&&new Set(o.b).size===1&&a.b.length===2){a.b.push(o.id);o.b.push(a.id)}}}};
  const downgrade=q=>{const j=q.b.find((x,i)=>q.b.indexOf(x)!==i);if(j==null)return false;const o=st.at.find(t=>t.id===j);q.b.splice(q.b.indexOf(j),1);o.b.splice(o.b.indexOf(q.id),1);return true};
  const drop=(A,a)=>{const r=R(A);if(a.y<A.H*.2){st.at=st.at.filter(t=>t!==a);return}let best=null,bd=r*3;st.at.forEach(q=>{if(q===a||a.b.includes(q.id))return;const ok=free(q)>0||q.b.some((x,i)=>q.b.indexOf(x)!==i);if(!ok||free(a)<=0)return;const d=Math.hypot(q.x-a.x,q.y-a.y);if(d<bd){bd=d;best=q}});
   if(best){if(free(best)<=0)downgrade(best);const d=Math.hypot(a.x-best.x,a.y-best.y)||1;let ux=(a.x-best.x)/d,uy=(a.y-best.y)/d;const L=r*(EL[a.e][2]+EL[best.e][2])*1.35;a.x=best.x+ux*L;a.y=best.y+uy*L;a.b.push(best.id);best.b.push(a.id);saturate();A.sound.pop()}else A.sound.tick()};

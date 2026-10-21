@@ -22,5 +22,7 @@ Every reel is lazy: only the poster loads, and nothing autoplays. Tap to play; c
 The three science reels show a "science check pending" note in their caption until a subject expert signs them off. To clear one, remove `review` from `learn/reels/manifest.json`.
 
 Note (round 2026-10-20): the states-of-matter flagship lab (flag_state.js) copy and the mystery-substance melting/boiling points are self-checked only; include them in the same science review as the states reel.
+
+**Science review done (Oct 20, 2026): see `learn/SCIENCE-REVIEW.md`. Lab errors fixed; reels need the presentation fixes listed there before sign-off.**
 - PENDING SCIENCE REVIEW: flagship 10 acids lab (flag_acid.js): red-cabbage colours, household pH values (lemon 2, vinegar 3, milk 6.5, toothpaste 9, soap 10, oven cleaner 13), strong acid/alkali drop model and dilution numbers. The old reactlab moved to lesson 70 (exothermic and endothermic reactions).
 - PENDING SCIENCE REVIEW: flagship 11 atoms lab (flag_atom.js): element/compound/mixture sort (O2 = element, air = mixture), valence-limited bonding (H1 O2 C4 N3, double bonds drawn as single lines), zoom scale captions (2 cm, 0.1 mm, ~1 nm), molecule names.
