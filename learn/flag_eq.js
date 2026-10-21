@@ -11,8 +11,9 @@ VIS.reg('flageq',c=>{let A,chal;const st={L:{x:2,u:3},R:{x:0,u:11},X:4,th:0,vth:
  let chk=()=>{};
  // ---------- geometry ----------
  const G=A=>{const{W,H}=A,px=W/2,py=H*.2,arm=Math.min(W*(A.narrow?.29:.33),260),ang=st.th,pans=[-1,1].map(d=>({x:px+d*arm*Math.cos(ang),y:py+d*arm*Math.sin(ang)+H*.28,w:Math.min(arm*(A.narrow?1.1:.95),190)}));return{px,py,arm,pans,bin:{x:W/2,y:H*.9,r:Math.min(34,W*.07)},tray:{x:W*.5,y:H*.08}}};
- const slots=(s,pan)=>{const out=[],sz=Math.min(28,pan.w/6.8);let i=0;for(let k=0;k<s.x;k++,i++)out.push({k:'x',i:k,x:pan.x-pan.w/2+sz*1.2+(i%5)*sz*1.35,y:pan.y-sz*.8-Math.floor(i/5)*sz*1.5,s:sz*1.25});
-  for(let k=0;k<s.u;k++,i++)out.push({k:'u',i:k,x:pan.x-pan.w/2+sz*1.1+(i%6)*sz*1.12,y:pan.y-sz*.62-Math.floor(i/6)*sz*1.1,s:sz*.95});return out};
+ const slots=(s,pan)=>{const out=[],sz=Math.min(28,pan.w/6.8),bs=Math.max(sz*1.25,Math.min(38,pan.w/3.8)),x0=pan.x-pan.w/2+4,x1=pan.x+pan.w/2-4;let x=x0,y=pan.y,rh=0;
+  const put=(k,i,w,h,sc)=>{if(x+w>x1&&x>x0){x=x0;y-=rh;rh=0}out.push({k,i,x:x+w/2,y:y-h/2-2,s:sc});x+=w;rh=Math.max(rh,h)};
+  for(let k=0;k<s.x;k++)put('x',k,bs*1.02,bs*1.05,bs);for(let k=0;k<s.u;k++)put('u',k,sz*1.1,sz*1.08,sz*.95);return out};
  // ---------- drawing ----------
  const cube=(P,ctx,x,y,s,C)=>{P.shadow(5,2,.35);ctx.fillStyle=P.lin(x-s/2,y-s/2,x+s/2,y+s/2,[[0,'#93c5fd'],[1,'#2563eb']]);P.rrect(x-s/2,y-s/2,s,s,s*.18);ctx.fill();P.noShadow();ctx.fillStyle='rgba(255,255,255,.4)';ctx.fillRect(x-s/2+3,y-s/2+3,s-6,2)};
  const bag=(P,ctx,x,y,s,A)=>{P.shadow(8,3,.4);ctx.fillStyle=P.rad(x-s*.15,y-s*.1,s*.1,s*.75,[[0,'#e7c58f'],[1,'#a16207']]);ctx.beginPath();ctx.moveTo(x-s*.45,y+s*.45);ctx.quadraticCurveTo(x-s*.6,y-s*.1,x-s*.2,y-s*.35);ctx.lineTo(x+s*.2,y-s*.35);ctx.quadraticCurveTo(x+s*.6,y-s*.1,x+s*.45,y+s*.45);ctx.closePath();ctx.fill();P.noShadow();

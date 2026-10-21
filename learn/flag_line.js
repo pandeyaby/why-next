@@ -5,7 +5,7 @@
 (()=>{const X0=0,X1=8,Y0=-2,Y1=20;
 VIS.reg('flagline',c=>{let A,chal;const st={m:0,c:0,km:0,dots:[],drag:null,other:null,pts:[],won:false,tx:0};
  const f1=v=>Number.isInteger(v)?String(v):v.toFixed(1),eq=(m,c)=>`y = ${m===0?'':(m===1?'':m===-1?'−':f1(m).replace('-','−'))+'x'}${c?(m===0?f1(c).replace('-','−'):(c>0?' + ':' − ')+f1(Math.abs(c))):m===0?'0':''}`;
- const geo=A=>{const{W,H}=A,l=A.narrow?40:50,r=16,t=A.step===0?H*.52:16,b=A.narrow?36:40;return{l,r,t,b,X:x=>l+(x-X0)/(X1-X0)*(W-l-r),Y:y=>H-b-(y-Y0)/(Y1-Y0)*(H-t-b),x:px=>X0+(px-l)/(W-l-r)*(X1-X0),y:py=>Y0+(H-b-py)/(H-t-b)*(Y1-Y0)}};
+ const geo=A=>{const{W,H}=A,l=A.narrow?40:50,r=16,t=A.step===0?H*.58:16,b=A.narrow?36:40;return{l,r,t,b,X:x=>l+(x-X0)/(X1-X0)*(W-l-r),Y:y=>H-b-(y-Y0)/(Y1-Y0)*(H-t-b),x:px=>X0+(px-l)/(W-l-r)*(X1-X0),y:py=>Y0+(H-b-py)/(H-t-b)*(Y1-Y0)}};
  const upd=()=>{c.say(A.step===0?`${f1(st.km)} km costs £${f1(3+2*st.km)}`:eq(st.m,st.c));A.cv.setAttribute('aria-label',A.step===0?`Illustration: a taxi on a night street, meter showing ${f1(st.km)} km and £${f1(3+2*st.km)}.`:`Graph of the line ${eq(st.m,st.c)}: crosses the y-axis at ${f1(st.c)}, goes ${st.m>=0?'up':'down'} ${f1(Math.abs(st.m))} for every 1 across.`+(st.other?` Second line ${eq(st.other.m,st.other.c)}.`:''));A.kick()};
  let chk=()=>{};
  // ---------- drawing ----------
@@ -16,7 +16,7 @@ VIS.reg('flagline',c=>{let A,chal;const st={m:0,c:0,km:0,dots:[],drag:null,other
  const scene=A=>{const{ctx,W,H,paint:P,col:C}=A,g=geo(A),ry=H*.4;ctx.fillStyle=P.lin(0,0,0,ry,[[0,'#0b1026'],[1,'#312e81']]);ctx.fillRect(0,0,W,ry);
   for(let i=0;i<9;i++){const bx=i*W/8-10,bh=H*(.12+((i*53)%7)/30);ctx.fillStyle='#111827';ctx.fillRect(bx,ry-bh,W/9,bh);ctx.fillStyle='rgba(253,224,71,.6)';for(let k=0;k<6;k++)if((i*7+k)%3)ctx.fillRect(bx+6+(k%3)*12,ry-bh+8+Math.floor(k/3)*14,6,8)}
   ctx.fillStyle='#1f2937';ctx.fillRect(0,ry,W,H*.12);ctx.strokeStyle='rgba(255,255,255,.6)';ctx.setLineDash([16,14]);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,ry+H*.06);ctx.lineTo(W,ry+H*.06);ctx.stroke();ctx.setLineDash([]);
-  const rx=k=>g.l+k/X1*(W-g.l-g.r);for(let k=0;k<=X1;k++){ctx.fillStyle='rgba(255,255,255,.5)';ctx.font='10px system-ui';ctx.textAlign='center';ctx.fillText(k+' km',rx(k),ry+H*.115)}
+  const rx=k=>g.l+k/X1*(W-g.l-g.r);for(let k=0;k<=X1;k++){ctx.fillStyle='rgba(255,255,255,.5)';ctx.font='10px system-ui';ctx.textAlign='center';if(!A.narrow||k%2===0)ctx.fillText(k+' km',rx(k),ry+H*.145)}
   taxi(A,rx(st.km),ry+H*.04,Math.min(46,W*.08));
   const mx=W-110,my=10;P.shadow(12,4,.4);ctx.fillStyle='#020617';P.rrect(mx,my,100,46,8);ctx.fill();P.noShadow();ctx.fillStyle='#22c55e';ctx.font='700 20px ui-monospace,monospace';ctx.textAlign='right';ctx.fillText('£'+(3+2*st.km).toFixed(2),mx+92,my+26);ctx.font='10px system-ui';ctx.fillStyle='#86efac';ctx.fillText(f1(st.km)+' km',mx+92,my+40);
   graph(A,true);if(!A.isDone&&A.pred[0]!=null){const a=.55+.45*Math.sin(performance.now()/230);ctx.globalAlpha=a;P.label('👆 drag the taxi →',rx(st.km)+60,ry-H*.06,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}};
@@ -33,8 +33,8 @@ VIS.reg('flagline',c=>{let A,chal;const st={m:0,c:0,km:0,dots:[],drag:null,other
   st.dots.forEach(d=>P.ball(g.X(d[0]),g.Y(d[1]),5,C.am));
   line(st.m,st.c,C.cy,4);
   // rise/run staircase at x=1..2
-  const x0=1,y0=st.m*x0+st.c,y1=y0+st.m;if(st.m){ctx.fillStyle=A.alpha(C.gr,.18);ctx.beginPath();ctx.moveTo(g.X(x0),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y1));ctx.fill();ctx.strokeStyle=C.gr;ctx.lineWidth=2;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(g.X(x0),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y1));ctx.stroke();ctx.setLineDash([]);
-   P.label('1 across',g.X(x0+.5),g.Y(y0)+(st.m>0?12:-12),{font:'600 10px system-ui'});P.label(`${st.m>0?'up':'down'} ${f1(Math.abs(st.m))}`,g.X(x0+1)+6,g.Y((y0+y1)/2),{align:'left',font:'600 11px system-ui',col:C.gr})}
+  const x0=st.m>0?1:2,y0=st.m*x0+st.c,y1=y0+st.m;if(st.m){ctx.fillStyle=A.alpha(C.gr,.18);ctx.beginPath();ctx.moveTo(g.X(x0),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y1));ctx.fill();ctx.strokeStyle=C.gr;ctx.lineWidth=2;ctx.setLineDash([4,3]);ctx.beginPath();ctx.moveTo(g.X(x0),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y0));ctx.lineTo(g.X(x0+1),g.Y(y1));ctx.stroke();ctx.setLineDash([]);
+   P.label('1 across',g.X(x0+.5),g.Y(y0)+(st.m>0?16:-16),{font:'600 10px system-ui',pill:1,bg:A.alpha(C.pn,.92),col:C.gr});P.label(`${st.m>0?'up':'down'} ${f1(Math.abs(st.m))}`,g.X(x0+1)+8,g.Y((y0+y1)/2),{align:'left',font:'600 11px system-ui',pill:1,bg:A.alpha(C.pn,.92),col:C.gr})}
   // handles
   const hc=[g.X(0),g.Y(st.c)],hm=[g.X(4),g.Y(4*st.m+st.c)];P.glow(A.alpha(C.cy,.9),14);P.ball(hc[0],hc[1],10,C.cy);P.noShadow();P.glow(A.alpha(C.or,.9),14);P.ball(hm[0],hm[1],10,C.or);P.noShadow();
   P.label('c = '+f1(st.c),hc[0]+14,hc[1]-14,{align:'left',pill:1,bg:A.alpha(C.cy,.9),col:'#04121a'});
