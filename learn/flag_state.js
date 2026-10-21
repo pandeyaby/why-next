@@ -41,7 +41,7 @@ VIS.reg('flagstate',c=>{let A,chal,sfb;const st={T:-10,th:0,jh:1,ps:[],blk:{x:0,
   // flame
   const f=Math.max(0,(st.T-st.rng[0])/(st.rng[1]-st.rng[0])),fx=g.cx,fy=g.cy+(A.H-g.cy)*.55;if(A.step!==6&&f>.05&&st.th===0){P.glow('#f97316',16);ctx.fillStyle='#fb923c';for(let i=-2;i<=2;i++){const h=(6+f*16)*(1-Math.abs(i)*.2)*(1+.15*Math.sin(performance.now()/90+i));ctx.beginPath();ctx.moveTo(fx+i*9-5,fy);ctx.quadraticCurveTo(fx+i*9,fy-h*2,fx+i*9+5,fy);ctx.fill()}P.noShadow()}};
  const BINS=['Solid','Liquid','Gas'],CARDS=[['🧊 ice',0],['🥛 milk',1],['💨 air',2],['🪵 wooden block',0],['🍯 honey',1,'Honey is slow, but it flows and takes the shape of its jar: a liquid.'],['⏳ sand',0,'Sand pours, but each grain is a tiny solid that keeps its own shape.'],['♨️ steam',2,'Steam is water as a gas. The white cloud you see is tiny droplets forming as it cools.']];
- const binR=(A,i)=>{const{W,H}=A,w=W/3;return{x:w*i+6,y:H*.62,w:w-12,h:H*.34}};
+ const binR=(A,i)=>{const{W,H}=A,w=W/3;return A.narrow?{x:w*i+4,y:H*.1+130,w:w-8,h:H*.9-136}:{x:w*i+6,y:H*.62,w:w-12,h:H*.34}};
  const cardXY=(A,i)=>{const c_=st.cards[i];if(c_.bin!=null){const b=binR(A,c_.bin),k=st.cards.slice(0,i).filter(x=>x.bin===c_.bin).length;return[b.x+b.w/2,b.y+40+k*28]}const cols=A.narrow?2:4,w=A.W/cols;return[w*(i%cols)+w/2,A.H*.1+Math.floor(i/cols)*36]};
  const sorter=A=>{const{ctx,W,H,paint:P,col:C}=A;ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.06)],[1,C.pn]]);ctx.fillRect(0,0,W,H);
   BINS.forEach((n,i)=>{const b=binR(A,i),col=[C.cy,C.vi,C.pk][i];ctx.fillStyle=A.alpha(col,.14);P.rrect(b.x,b.y,b.w,b.h,14);ctx.fill();ctx.strokeStyle=A.alpha(col,.7);ctx.lineWidth=2;ctx.stroke();P.label(n,b.x+b.w/2,b.y+16,{font:'800 14px system-ui',col})});
@@ -62,7 +62,7 @@ VIS.reg('flagstate',c=>{let A,chal,sfb;const st={T:-10,th:0,jh:1,ps:[],blk:{x:0,
   {h:'Sort it',p:'Is each one a solid, a liquid or a gas? Two of them are tricky.',task:'Drag every card into the right box',show:()=>{st.cards.forEach((c_,i)=>c_.bin=CARDS[i][1]);upd();chk()},go:()=>{st.cards=CARDS.map(()=>({bin:null}));sfb.textContent='';chk=()=>{if(st.cards.every(c_=>c_.bin!=null))A.done('Sorted! Sand is a solid (each grain keeps its shape) and honey is a liquid (it flows, just slowly).')}}},
   {h:'Sandbox',p:'Heat, cool, tilt and pull the lid. Can you make a liquid fill the tall jar? (You cannot: only a gas does that.)',go:()=>{water();st.T=20;st.th=0;st.jh=1;init();chk=()=>{}}},
   {h:'Challenge',p:'',go:()=>newChal()}];
- A=FK.shell(c,{steps,ratio:.62,tall:1.1,draw,onStep:A=>{chal.hidden=A.step!==6;sfb.hidden=A.step!==4;upd()},
+ A=FK.shell(c,{steps,ratio:.62,tall:1.1,draw,onStep:A=>{chal.hidden=A.step!==6;sfb.hidden=A.step!==4;if(A.step===4&&A.narrow&&A.cv.getBoundingClientRect().bottom>innerHeight)A.cv.scrollIntoView({block:'end',behavior:A.reduced()?'auto':'smooth'});upd()},
   init:A=>{chal=c.el('div',{class:'fl-chal'},A.extra.parentNode);A.extra.parentNode.insertBefore(chal,A.extra.nextSibling);sfb=c.el('p',{class:'fl-fb',role:'status','aria-live':'polite'},A.extra.parentNode);A.extra.parentNode.insertBefore(sfb,chal);
    A.every(()=>A.step!==4);
    A.gest({down:p=>{const s=A.step,g=geo(A);

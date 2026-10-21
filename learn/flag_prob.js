@@ -44,7 +44,7 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
    if(c_.v!=null){ctx.strokeStyle=A.alpha(ok?C.gr:C.tx,.6);ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(x,y+10);ctx.lineTo(g.X(c_.v),g.y);ctx.stroke()}
    P.label(CARDS[i][0],x,y,{font:`700 ${A.narrow?12:13}px system-ui`,pill:1,bg:c_.v==null?A.alpha(C.am,.95):ok?A.alpha(C.gr,.95):A.alpha(C.rd,.9),col:'#111'})})};
  const draw=(A,dt)=>{const{ctx,W,H,paint:P,col:C}=A;A.pb={st,geo:()=>geo(A),handle:()=>handle(A,geo(A)),bagG:()=>bagG(A),bagSpots,lineG:()=>{const g=lineG(A);return{l:g.l,r:g.r,y:g.y}},cardXY:i=>cardXY(A,i)};
-  if(st.w){const s=Math.sign(st.w);st.phi+=st.w*dt;st.w-=s*9*dt;if(Math.sign(st.w)!==s){st.w=0;land()}}
+  if(st.w){const s=Math.sign(st.w);st.phi+=st.w*dt;st.w-=s*22*dt;if(Math.sign(st.w)!==s){st.w=0;land()}}
   if(A.step===3){bag(A);return}if(A.step===4){scale(A);return}
   if(A.step===0){ctx.fillStyle=P.lin(0,0,0,H,[[0,'#3b0764'],[1,'#1e1b4b']]);ctx.fillRect(0,0,W,H);for(let i=0;i<16;i++){const x=(i+.5)*W/16;P.glow(i%2?'#fde047':'#f472b6',10);P.ball(x,10,4,i%2?'#fde047':'#f472b6');P.noShadow()}
    ctx.fillStyle='#b91c1c';for(let i=0;i<8;i++){ctx.beginPath();ctx.moveTo(i*W/8,18);ctx.lineTo((i+1)*W/8,18);ctx.lineTo((i+.5)*W/8,46);ctx.fill()}}
@@ -85,7 +85,7 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
     up:p=>{if(p&&st.drag)mv(p);const d=st.drag;st.drag=null;if(!d){A.redraw();return}
      if(d.k==='ctr'){const g=bagG(A);if(Math.hypot(p.x-g.bx,p.y-g.by)<g.br*1.1&&st.bag.length<9){st.bag.push(d.g);A.sound.pop();upd();chk()}else A.redraw()}
      else if(d.k==='card'){const g=lineG(A);if(Math.abs(p.y-g.y)<90){st.cards[d.i].v=Math.max(0,Math.min(1,g.v(p.x)));A.sound.tick();if(Math.abs(st.cards[d.i].v-CARDS[d.i][1])<=.06)A.sound.pop()}upd();chk()}
-     else if(d.k==='spin'){const moved=Math.hypot(p.x-d.x0,p.y-d.y0);if(d.tap&&moved<8){tapSector(p)}else if(A.step===0||A.step===5){if(Math.abs(d.sw)>.4)spin(Math.sign(d.sw)*Math.min(20,Math.max(10,Math.abs(d.sw)*6)));else A.redraw()}}
+     else if(d.k==='spin'){const moved=Math.hypot(p.x-d.x0,p.y-d.y0);if(d.tap&&moved<8){tapSector(p)}else if(A.step===0||A.step===5){if(Math.abs(d.sw)>.4)spin(Math.sign(d.sw)*Math.min(26,Math.max(16,Math.abs(d.sw)*8)));else A.redraw()}}
      else A.redraw()}})}});
  let quick;
  const mv=p=>{const d=st.drag;if(!d)return;if(d.k==='ctr'||d.k==='card'){d.x=p.x;d.y=p.y;A.redraw();return}if(d.k==='edge'){setEdge(p);return}

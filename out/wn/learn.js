@@ -1898,7 +1898,7 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
    if(c_.v!=null){ctx.strokeStyle=A.alpha(ok?C.gr:C.tx,.6);ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(x,y+10);ctx.lineTo(g.X(c_.v),g.y);ctx.stroke()}
    P.label(CARDS[i][0],x,y,{font:`700 ${A.narrow?12:13}px system-ui`,pill:1,bg:c_.v==null?A.alpha(C.am,.95):ok?A.alpha(C.gr,.95):A.alpha(C.rd,.9),col:'#111'})})};
  const draw=(A,dt)=>{const{ctx,W,H,paint:P,col:C}=A;A.pb={st,geo:()=>geo(A),handle:()=>handle(A,geo(A)),bagG:()=>bagG(A),bagSpots,lineG:()=>{const g=lineG(A);return{l:g.l,r:g.r,y:g.y}},cardXY:i=>cardXY(A,i)};
-  if(st.w){const s=Math.sign(st.w);st.phi+=st.w*dt;st.w-=s*9*dt;if(Math.sign(st.w)!==s){st.w=0;land()}}
+  if(st.w){const s=Math.sign(st.w);st.phi+=st.w*dt;st.w-=s*22*dt;if(Math.sign(st.w)!==s){st.w=0;land()}}
   if(A.step===3){bag(A);return}if(A.step===4){scale(A);return}
   if(A.step===0){ctx.fillStyle=P.lin(0,0,0,H,[[0,'#3b0764'],[1,'#1e1b4b']]);ctx.fillRect(0,0,W,H);for(let i=0;i<16;i++){const x=(i+.5)*W/16;P.glow(i%2?'#fde047':'#f472b6',10);P.ball(x,10,4,i%2?'#fde047':'#f472b6');P.noShadow()}
    ctx.fillStyle='#b91c1c';for(let i=0;i<8;i++){ctx.beginPath();ctx.moveTo(i*W/8,18);ctx.lineTo((i+1)*W/8,18);ctx.lineTo((i+.5)*W/8,46);ctx.fill()}}
@@ -1939,7 +1939,7 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
     up:p=>{if(p&&st.drag)mv(p);const d=st.drag;st.drag=null;if(!d){A.redraw();return}
      if(d.k==='ctr'){const g=bagG(A);if(Math.hypot(p.x-g.bx,p.y-g.by)<g.br*1.1&&st.bag.length<9){st.bag.push(d.g);A.sound.pop();upd();chk()}else A.redraw()}
      else if(d.k==='card'){const g=lineG(A);if(Math.abs(p.y-g.y)<90){st.cards[d.i].v=Math.max(0,Math.min(1,g.v(p.x)));A.sound.tick();if(Math.abs(st.cards[d.i].v-CARDS[d.i][1])<=.06)A.sound.pop()}upd();chk()}
-     else if(d.k==='spin'){const moved=Math.hypot(p.x-d.x0,p.y-d.y0);if(d.tap&&moved<8){tapSector(p)}else if(A.step===0||A.step===5){if(Math.abs(d.sw)>.4)spin(Math.sign(d.sw)*Math.min(20,Math.max(10,Math.abs(d.sw)*6)));else A.redraw()}}
+     else if(d.k==='spin'){const moved=Math.hypot(p.x-d.x0,p.y-d.y0);if(d.tap&&moved<8){tapSector(p)}else if(A.step===0||A.step===5){if(Math.abs(d.sw)>.4)spin(Math.sign(d.sw)*Math.min(26,Math.max(16,Math.abs(d.sw)*8)));else A.redraw()}}
      else A.redraw()}})}});
  let quick;
  const mv=p=>{const d=st.drag;if(!d)return;if(d.k==='ctr'||d.k==='card'){d.x=p.x;d.y=p.y;A.redraw();return}if(d.k==='edge'){setEdge(p);return}
@@ -1999,7 +1999,7 @@ VIS.reg('flagstate',c=>{let A,chal,sfb;const st={T:-10,th:0,jh:1,ps:[],blk:{x:0,
   // flame
   const f=Math.max(0,(st.T-st.rng[0])/(st.rng[1]-st.rng[0])),fx=g.cx,fy=g.cy+(A.H-g.cy)*.55;if(A.step!==6&&f>.05&&st.th===0){P.glow('#f97316',16);ctx.fillStyle='#fb923c';for(let i=-2;i<=2;i++){const h=(6+f*16)*(1-Math.abs(i)*.2)*(1+.15*Math.sin(performance.now()/90+i));ctx.beginPath();ctx.moveTo(fx+i*9-5,fy);ctx.quadraticCurveTo(fx+i*9,fy-h*2,fx+i*9+5,fy);ctx.fill()}P.noShadow()}};
  const BINS=['Solid','Liquid','Gas'],CARDS=[['🧊 ice',0],['🥛 milk',1],['💨 air',2],['🪵 wooden block',0],['🍯 honey',1,'Honey is slow, but it flows and takes the shape of its jar: a liquid.'],['⏳ sand',0,'Sand pours, but each grain is a tiny solid that keeps its own shape.'],['♨️ steam',2,'Steam is water as a gas. The white cloud you see is tiny droplets forming as it cools.']];
- const binR=(A,i)=>{const{W,H}=A,w=W/3;return{x:w*i+6,y:H*.62,w:w-12,h:H*.34}};
+ const binR=(A,i)=>{const{W,H}=A,w=W/3;return A.narrow?{x:w*i+4,y:H*.1+130,w:w-8,h:H*.9-136}:{x:w*i+6,y:H*.62,w:w-12,h:H*.34}};
  const cardXY=(A,i)=>{const c_=st.cards[i];if(c_.bin!=null){const b=binR(A,c_.bin),k=st.cards.slice(0,i).filter(x=>x.bin===c_.bin).length;return[b.x+b.w/2,b.y+40+k*28]}const cols=A.narrow?2:4,w=A.W/cols;return[w*(i%cols)+w/2,A.H*.1+Math.floor(i/cols)*36]};
  const sorter=A=>{const{ctx,W,H,paint:P,col:C}=A;ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.06)],[1,C.pn]]);ctx.fillRect(0,0,W,H);
   BINS.forEach((n,i)=>{const b=binR(A,i),col=[C.cy,C.vi,C.pk][i];ctx.fillStyle=A.alpha(col,.14);P.rrect(b.x,b.y,b.w,b.h,14);ctx.fill();ctx.strokeStyle=A.alpha(col,.7);ctx.lineWidth=2;ctx.stroke();P.label(n,b.x+b.w/2,b.y+16,{font:'800 14px system-ui',col})});
@@ -2020,7 +2020,7 @@ VIS.reg('flagstate',c=>{let A,chal,sfb;const st={T:-10,th:0,jh:1,ps:[],blk:{x:0,
   {h:'Sort it',p:'Is each one a solid, a liquid or a gas? Two of them are tricky.',task:'Drag every card into the right box',show:()=>{st.cards.forEach((c_,i)=>c_.bin=CARDS[i][1]);upd();chk()},go:()=>{st.cards=CARDS.map(()=>({bin:null}));sfb.textContent='';chk=()=>{if(st.cards.every(c_=>c_.bin!=null))A.done('Sorted! Sand is a solid (each grain keeps its shape) and honey is a liquid (it flows, just slowly).')}}},
   {h:'Sandbox',p:'Heat, cool, tilt and pull the lid. Can you make a liquid fill the tall jar? (You cannot: only a gas does that.)',go:()=>{water();st.T=20;st.th=0;st.jh=1;init();chk=()=>{}}},
   {h:'Challenge',p:'',go:()=>newChal()}];
- A=FK.shell(c,{steps,ratio:.62,tall:1.1,draw,onStep:A=>{chal.hidden=A.step!==6;sfb.hidden=A.step!==4;upd()},
+ A=FK.shell(c,{steps,ratio:.62,tall:1.1,draw,onStep:A=>{chal.hidden=A.step!==6;sfb.hidden=A.step!==4;if(A.step===4&&A.narrow&&A.cv.getBoundingClientRect().bottom>innerHeight)A.cv.scrollIntoView({block:'end',behavior:A.reduced()?'auto':'smooth'});upd()},
   init:A=>{chal=c.el('div',{class:'fl-chal'},A.extra.parentNode);A.extra.parentNode.insertBefore(chal,A.extra.nextSibling);sfb=c.el('p',{class:'fl-fb',role:'status','aria-live':'polite'},A.extra.parentNode);A.extra.parentNode.insertBefore(sfb,chal);
    A.every(()=>A.step!==4);
    A.gest({down:p=>{const s=A.step,g=geo(A);
