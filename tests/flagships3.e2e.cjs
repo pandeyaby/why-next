@@ -67,6 +67,20 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     const ok = []; for (const s of spots) { if (ok.length >= hs.length) break; const occupied = await p.evaluate(([x, y, r]) => document.querySelector('.fl-cv').__A.am.st.at.some(a => Math.hypot(a.x - x, a.y - y) < r), [s[0], s[1], r]); if (!occupied) { await place('H', ...s); ok.push(s) } }
     await p.click('.fl-chal [data-ok]'); assert.match(await p.textContent('.fl-chal .fl-fb'), /✓/, f); await axeFlag();
   });
+  await test('flagship (area under a curve): drag time for rectangle and triangle distances, strips slider converges, negative area cancels, sandbox chips, limit challenge feedback, axe', async () => {
+    await open('mt_P-VlHqNpca'); let [W, H] = await WH();
+    const ar = () => A(() => { const A = document.querySelector('.fl-cv').__A; return { g: A.ar.geo(), st: { b: A.ar.st.b, n: A.ar.st.n, q: A.ar.st.q }, I: A.ar.integ() } });
+    const toB = async b => { const o = await ar(); await touch(line(o.g.Xb, o.g.Y0, o.g.X0 + b * o.g.sx, o.g.Y0, 14)) };
+    await pick(1); await toB(6); await nextOn(); assert.match(await p.textContent('.fl-task'), /60 m/); await next(); await p.waitForTimeout(300);
+    await pick(1); await toB(6); assert.ok(Math.abs((await ar()).I - 36) < 1e-6); await nextOn(); assert.match(await p.textContent('.fl-task'), /36 m/); await next(); await p.waitForTimeout(300);
+    await pick(0); const g = await A(() => { const A = document.querySelector('.fl-cv').__A, g = A.ar.geo(); return [A.W, A.H] }); const l = W < 520 ? 40 : 52, tx = l + 10, tw = W - l - 18 - 20, ty = (await A(() => { const A = document.querySelector('.fl-cv').__A; return A.H * .1 + 40 + (A.narrow ? 20 : 0) }));
+    await touch(line(tx, ty, tx + tw * 8 / 49, ty, 8)); assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled), '9 strips is not within 5%'); await touch(line(tx + tw * 8 / 49, ty, tx + tw * 30 / 49, ty, 12)); await nextOn(); assert.match(await p.textContent('.fl-task'), /settle on/); await next(); await p.waitForTimeout(300);
+    await pick(0); await toB(4); await nextOn(); assert.match(await p.textContent('.fl-task'), /cancel/); await next(); await p.waitForTimeout(300);
+    await p.click('button:text-is("y = 3")'); await toB(2); assert.ok(Math.abs((await ar()).I - 6) < 1e-6, 'sandbox chip switches to y = 3'); await next(); await p.waitForTimeout(300);
+    const q = (await ar()).st.q, F = { x2: b => 2 * b, k3: b => 3, x1: b => b }[q.fn], hb = { x2: q.K / 2, k3: null, x1: q.K }[q.fn];
+    if (hb != null && hb <= 8 && hb !== q.ans) { await toB(hb); assert.match(await p.textContent('.fl-chal .fl-fb'), /Area, not height/) } else { await toB(Math.min(8, q.ans + 1)); assert.match(await p.textContent('.fl-chal .fl-fb'), /too big/) }
+    await toB(q.ans); assert.match(await p.textContent('.fl-chal .fl-fb'), /✓/); await axeFlag();
+  });
   }
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }

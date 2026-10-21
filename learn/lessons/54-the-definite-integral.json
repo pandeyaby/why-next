@@ -1,208 +1,215 @@
 {
- "topicId": "mt_P-VlHqNpca",
- "title": "The definite integral",
- "audience": "learner",
- "keyIdea": "∫ from a to b of f(x) dx is what the sum of strip areas settles on as the strips get thinner: the signed area.",
- "explain": {
-  "kid": [
-   "The long S sign ∫ means 'sum'. The numbers at the bottom and top tell you where to start and stop.",
-   "Picture thin strips from the start to the stop. Add up their areas. As the strips get thinner, the total settles on one number. That number is the definite integral. Area below the x-axis counts as minus."
+  "topicId": "mt_P-VlHqNpca",
+  "title": "The definite integral",
+  "audience": "learner",
+  "keyIdea": "∫ from a to b of f(x) dx is what the sum of strip areas settles on as the strips get thinner: the signed area.",
+  "explain": {
+    "kid": [
+      "The long S sign ∫ means 'sum'. The numbers at the bottom and top tell you where to start and stop.",
+      "Picture thin strips from the start to the stop. Add up their areas. As the strips get thinner, the total settles on one number. That number is the definite integral. Area below the x-axis counts as minus."
+    ],
+    "adult": [
+      "∫ₐᵇ f(x) dx = lim (n → ∞) of Σ f(xᵢ) Δx, where Δx = (b − a)/n. The dx is the strip width, shrinking to zero.",
+      "Areas below the axis count as negative, so ∫ from −1 to 1 of x dx = 0, even though the shaded region is not empty. Swapping the limits changes the sign."
+    ]
+  },
+  "familyTip": "Draw y = 3 from x = 0 to 4 and shade under it. Explain why ∫ from 0 to 4 of 3 dx must be 12 before doing any algebra.",
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "In ∫ from 1 to 4 of f(x) dx, what are 1 and 4?",
+      "choices": [
+        "The limits: where the area starts and stops",
+        "Two values of f",
+        "The number of strips"
+      ],
+      "answer": 0,
+      "hint": "Look at where they are written.",
+      "explain": "They are the limits of integration: the area runs from x = 1 to x = 4."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "∫ from 0 to {b} of {k} dx is the area of a rectangle. What is it?",
+      "answer": "b*k",
+      "hint": "Width × height.",
+      "explain": "Width {b}, height {k}: {b} × {k} = {=b*k}.",
+      "params": {
+        "b": [
+          1,
+          9
+        ],
+        "k": [
+          1,
+          9
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "∫ from 0 to {b} of x dx is the area of a triangle. What is it?",
+      "answer": "b*b/2",
+      "hint": "½ × base × height; the height is also {b}.",
+      "explain": "½ × {b} × {b} = {=b*b/2}.",
+      "params": {
+        "b": [
+          1,
+          10
+        ]
+      }
+    },
+    {
+      "type": "mc",
+      "id": "p4",
+      "prompt": "∫ from −2 to 2 of x dx = ?",
+      "choices": [
+        "0",
+        "4",
+        "−4"
+      ],
+      "answer": 0,
+      "hint": "Sketch y = x: what is below the axis?",
+      "explain": "The triangle below the axis cancels the one above, so the answer is 0."
+    }
   ],
-  "adult": [
-   "∫ₐᵇ f(x) dx = lim (n → ∞) of Σ f(xᵢ) Δx, where Δx = (b − a)/n. The dx is the strip width, shrinking to zero.",
-   "Areas below the axis count as negative, so ∫ from −1 to 1 of x dx = 0, even though the shaded region is not empty. Swapping the limits changes the sign."
-  ]
- },
- "familyTip": "Draw y = 3 from x = 0 to 4 and shade under it. Explain why ∫ from 0 to 4 of 3 dx must be 12 before doing any algebra.",
- "practice": [
-  {
-   "type": "mc",
-   "id": "p1",
-   "prompt": "In ∫ from 1 to 4 of f(x) dx, what are 1 and 4?",
-   "choices": [
-    "The limits: where the area starts and stops",
-    "Two values of f",
-    "The number of strips"
-   ],
-   "answer": 0,
-   "hint": "Look at where they are written.",
-   "explain": "They are the limits of integration: the area runs from x = 1 to x = 4."
-  },
-  {
-   "type": "numeric",
-   "id": "p2",
-   "prompt": "∫ from 0 to {b} of {k} dx is the area of a rectangle. What is it?",
-   "answer": "b*k",
-   "hint": "Width × height.",
-   "explain": "Width {b}, height {k}: {b} × {k} = {=b*k}.",
-   "params": {
-    "b": [
-     1,
-     9
-    ],
-    "k": [
-     1,
-     9
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "numeric",
+        "id": "m1",
+        "prompt": "∫ from {a} to {b} of 3 dx = ?",
+        "answer": "3*(b-a)",
+        "hint": "It is a rectangle of height 3.",
+        "explain": "Width {=b-a}, height 3: {=3*(b-a)}.",
+        "params": {
+          "a": [
+            0,
+            4
+          ],
+          "b": [
+            5,
+            9
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "If ∫ from 0 to 2 of f(x) dx = 5, what is ∫ from 2 to 0 of f(x) dx?",
+        "choices": [
+          "−5",
+          "5",
+          "0"
+        ],
+        "answer": 0,
+        "hint": "Swapping the limits…",
+        "explain": "Swapping the limits changes the sign: −5."
+      },
+      {
+        "type": "numeric",
+        "id": "m3",
+        "prompt": "∫ from 0 to {b} of 2x dx is a triangle. What is its area?",
+        "answer": "b*b",
+        "hint": "The height at x = {b} is {=2*b}.",
+        "explain": "½ × {b} × {=2*b} = {=b*b}.",
+        "params": {
+          "b": [
+            1,
+            9
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "y = −1 from x = 0 to 3. What is ∫ from 0 to 3 of (−1) dx?",
+        "choices": [
+          "−3",
+          "3",
+          "0"
+        ],
+        "answer": 0,
+        "hint": "The rectangle is below the axis.",
+        "explain": "Area 3, below the axis, so the integral is −3."
+      },
+      {
+        "type": "mc",
+        "id": "m5",
+        "prompt": "What does dx stand for in ∫ f(x) dx?",
+        "choices": [
+          "The width of a strip, shrinking to zero",
+          "A second unknown to solve for",
+          "The derivative"
+        ],
+        "answer": 0,
+        "hint": "Think of Σ f(x) Δx.",
+        "explain": "It is the strip width Δx in the limit."
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "∫ from 0 to {a} of f dx = {p} and ∫ from {a} to 10 of f dx = {q}. Find ∫ from 0 to 10 of f dx.",
+        "answer": "p+q",
+        "hint": "The two pieces join up.",
+        "explain": "{p} + {q} = {=p+q}.",
+        "params": {
+          "a": [
+            2,
+            8
+          ],
+          "p": [
+            1,
+            9
+          ],
+          "q": [
+            1,
+            9
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "As the number of strips grows, the sum of strip areas…",
+        "choices": [
+          "settles on the definite integral",
+          "grows without limit",
+          "becomes zero"
+        ],
+        "answer": 0,
+        "hint": "The strips get thinner as well as more numerous.",
+        "explain": "The sum approaches a limit: that limit is the definite integral."
+      }
     ]
-   }
   },
-  {
-   "type": "numeric",
-   "id": "p3",
-   "prompt": "∫ from 0 to {b} of x dx is the area of a triangle. What is it?",
-   "answer": "b*b/2",
-   "hint": "½ × base × height; the height is also {b}.",
-   "explain": "½ × {b} × {b} = {=b*b/2}.",
-   "params": {
-    "b": [
-     1,
-     10
-    ]
-   }
+  "status": "self-checked",
+  "visual": {
+    "type": "area",
+    "caption": "Drag the two limits on y = 2 − x. Area above the x-axis counts as positive, area below as negative.",
+    "opts": {
+      "mode": "definite",
+      "f": "2-x",
+      "a": 0,
+      "b": 3,
+      "xr": [
+        -1,
+        4
+      ],
+      "yr": [
+        -2.5,
+        3.5
+      ]
+    }
   },
-  {
-   "type": "mc",
-   "id": "p4",
-   "prompt": "∫ from −2 to 2 of x dx = ?",
-   "choices": [
-    "0",
-    "4",
-    "−4"
-   ],
-   "answer": 0,
-   "hint": "Sketch y = x: what is below the axis?",
-   "explain": "The triangle below the axis cancels the one above, so the answer is 0."
+  "lab": {
+    "type": "flagarea",
+    "caption": "Flagship lab: cruise control. Distance is the area under the speed graph; then strips, negative area and limits.",
+    "opts": {
+      "step": 0
+    }
   }
- ],
- "mastery": {
-  "passMark": 3,
-  "draw": 4,
-  "pool": [
-   {
-    "type": "numeric",
-    "id": "m1",
-    "prompt": "∫ from {a} to {b} of 3 dx = ?",
-    "answer": "3*(b-a)",
-    "hint": "It is a rectangle of height 3.",
-    "explain": "Width {=b-a}, height 3: {=3*(b-a)}.",
-    "params": {
-     "a": [
-      0,
-      4
-     ],
-     "b": [
-      5,
-      9
-     ]
-    }
-   },
-   {
-    "type": "mc",
-    "id": "m2",
-    "prompt": "If ∫ from 0 to 2 of f(x) dx = 5, what is ∫ from 2 to 0 of f(x) dx?",
-    "choices": [
-     "−5",
-     "5",
-     "0"
-    ],
-    "answer": 0,
-    "hint": "Swapping the limits…",
-    "explain": "Swapping the limits changes the sign: −5."
-   },
-   {
-    "type": "numeric",
-    "id": "m3",
-    "prompt": "∫ from 0 to {b} of 2x dx is a triangle. What is its area?",
-    "answer": "b*b",
-    "hint": "The height at x = {b} is {=2*b}.",
-    "explain": "½ × {b} × {=2*b} = {=b*b}.",
-    "params": {
-     "b": [
-      1,
-      9
-     ]
-    }
-   },
-   {
-    "type": "mc",
-    "id": "m4",
-    "prompt": "y = −1 from x = 0 to 3. What is ∫ from 0 to 3 of (−1) dx?",
-    "choices": [
-     "−3",
-     "3",
-     "0"
-    ],
-    "answer": 0,
-    "hint": "The rectangle is below the axis.",
-    "explain": "Area 3, below the axis, so the integral is −3."
-   },
-   {
-    "type": "mc",
-    "id": "m5",
-    "prompt": "What does dx stand for in ∫ f(x) dx?",
-    "choices": [
-     "The width of a strip, shrinking to zero",
-     "A second unknown to solve for",
-     "The derivative"
-    ],
-    "answer": 0,
-    "hint": "Think of Σ f(x) Δx.",
-    "explain": "It is the strip width Δx in the limit."
-   },
-   {
-    "type": "numeric",
-    "id": "m6",
-    "prompt": "∫ from 0 to {a} of f dx = {p} and ∫ from {a} to 10 of f dx = {q}. Find ∫ from 0 to 10 of f dx.",
-    "answer": "p+q",
-    "hint": "The two pieces join up.",
-    "explain": "{p} + {q} = {=p+q}.",
-    "params": {
-     "a": [
-      2,
-      8
-     ],
-     "p": [
-      1,
-      9
-     ],
-     "q": [
-      1,
-      9
-     ]
-    }
-   },
-   {
-    "type": "mc",
-    "id": "m7",
-    "prompt": "As the number of strips grows, the sum of strip areas…",
-    "choices": [
-     "settles on the definite integral",
-     "grows without limit",
-     "becomes zero"
-    ],
-    "answer": 0,
-    "hint": "The strips get thinner as well as more numerous.",
-    "explain": "The sum approaches a limit: that limit is the definite integral."
-   }
-  ]
- },
- "status": "self-checked",
- "visual": {
-  "type": "area",
-  "caption": "Drag the two limits on y = 2 − x. Area above the x-axis counts as positive, area below as negative.",
-  "opts": {
-   "mode": "definite",
-   "f": "2-x",
-   "a": 0,
-   "b": 3,
-   "xr": [
-    -1,
-    4
-   ],
-   "yr": [
-    -2.5,
-    3.5
-   ]
-  }
- }
 }
