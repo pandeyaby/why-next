@@ -82,10 +82,10 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     await toB(q.ans); assert.match(await p.textContent('.fl-chal .fl-fb'), /✓/); await axeFlag();
   });
   await test('reel catalogue: each visit rotates to an unseen reel (localStorage), "Another reel" swaps, all seen restarts', async () => {
-    await p.evaluate(() => localStorage.removeItem('wn_reels_seen')); const fs = [];
-    for (let i = 0; i < 2; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(200); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reel[data-f]'); fs.push(await p.$eval('.reel', e => e.dataset.f)) }
-    assert.notStrictEqual(fs[0], fs[1], 'second visit shows the other reel'); assert.match(await p.textContent('.reel figcaption'), /of 2/);
-    const seen = await p.evaluate(() => JSON.parse(localStorage.getItem('wn_reels_seen')).mt_EDgw64OmfA); assert.strictEqual(seen.length, 2);
+    await p.evaluate(() => localStorage.removeItem('wn_reels_seen')); const fs = [], N = await p.evaluate(() => WN_REELS.mt_EDgw64OmfA.length);
+    for (let i = 0; i < N; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(200); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reel[data-f]'); fs.push(await p.$eval('.reel', e => e.dataset.f)) }
+    assert.ok(N > 1); assert.strictEqual(new Set(fs).size, N, 'every visit shows an unseen reel: ' + fs); assert.match(await p.textContent('.reel figcaption'), new RegExp('of ' + N));
+    const seen = await p.evaluate(() => JSON.parse(localStorage.getItem('wn_reels_seen')).mt_EDgw64OmfA); assert.strictEqual(seen.length, N);
     const f0 = await p.$eval('.reel', e => e.dataset.f); await p.click('.reel-next'); assert.notStrictEqual(await p.$eval('.reel', e => e.dataset.f), f0);
   });
   }

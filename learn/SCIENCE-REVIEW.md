@@ -59,3 +59,26 @@ The verdicts are **correct**, **simplified-ok** (fine for ages 9–14) and **wro
 | r21_atoms | the size fact runs off both edges of the frame at about 15–21 s ("tom ≈ 10,000–100,000 × wider than its nucleus") | presentation error | – | keep the two-line layout inside the safe area (fit width ≤ 90%) |
 
 When these reel fixes land and the re-renders are checked, the three reels can drop `review` in `learn/reels/manifest.json`.
+
+## Re-rendered science reels (checked Oct 20, 2026, 11:55 PM)
+I checked the re-renders of r21_acids_reactions, r21_atoms and r21_states_of_matter from stills. All four presentation fixes landed: the "lemon juice" label fits, the example equation sits below the box, the caption reads "Nucleus: / protons + neutrons", and the size fact stays inside the frame. The states reel now says "All matter is made of moving particles". **Signed off:** `review` is removed in the manifest.
+
+## Batch 1 science reels b039–b047
+I checked the narration from `whynext-reels/v2/specs_b1.json` (the render spec) and the on-screen text from ffmpeg stills (six per reel, plus a 2 fps strip of b043 at 2–6 s).
+
+| Reel | Claim | Verdict | Source | Status |
+|---|---|---|---|---|
+| b039 | You can't pour a brick: solid particles are packed tight and jiggle in place; liquid particles touch but slide, so a liquid pours; gas particles fly apart and fill the space | correct | https://www.bbc.co.uk/bitesize/articles/z9r4jxs | included |
+| b040 | Sand pours, but each grain is a tiny solid piece of rock that keeps its shape, so sand is a solid | correct (grains are rock/mineral fragments) | BBC Bitesize KS2 states of matter | included |
+| b041 | Melting doesn't change the particles; heat makes them move faster until they break free of their places; more heat and they escape as a gas (steam) | correct / simplified-ok (strictly, steam is invisible water vapour) | BBC Bitesize changes of state | included |
+| b042 | Gas can be squashed because of big gaps between particles; liquid particles already touch, so water hardly compresses | correct | BBC Bitesize particle model; OpenStax Chemistry 2e §10.1 | included |
+| b043 | pH 0–14, 7 neutral (pure water), lemon ≈ 2, soap ≈ 10 | science correct / simplified-ok | BBC Bitesize z38bbqt | **held back** (on-screen error below) |
+| b043 | at about 4–5 s the moving pointer sits at pH 3–4 while the label under it reads "pH 9" (the label lags the pointer) | **wrong** (shows a false pH reading) | – | correction needed |
+| b044 | Each step down the pH scale is ten times more acidic: pH 3 is ten times more acidic than pH 4 | correct (each pH unit is a tenfold change in H⁺ concentration) | BBC Bitesize GCSE "strong and weak acids / pH"; OpenStax Chemistry 2e §14.2 | included |
+| b045 | Acid + alkali cancel out, giving a salt and water, much closer to neutral, around pH 7 | correct / simplified-ok ("around pH 7" is rightly hedged: it is exactly 7 only for matched strong acid and alkali) | BBC Bitesize neutralisation | included |
+| b046 | Everything is made of atoms; a tiny nucleus of protons and neutrons; electrons form a fuzzy cloud; mostly empty space; pea = nucleus, stadium = atom; 10,000–100,000× wider | correct / simplified-ok (hydrogen-1 has no neutron) | LibreTexts 3.5; OpenStax 2.3; BBC Bitesize OCR | included |
+| b047 | The planetary orbit is an old, simplified picture; today a fuzzy cloud; we can only say where electrons are likely to be | correct | LibreTexts (quantum model / orbitals); OpenStax Chemistry 2e §6.3 | included |
+
+**Corrections for the Explainer bot:**
+- **b043:** keep the "pH N" label locked to the pointer while it sweeps, or hide the label until the pointer stops. At about 4–5 s it reads "pH 9" with the pointer at 3–4. Once re-rendered and re-checked, it can be wired to mt_AN2kJE6I0s.
+- Optional, b041: say "water vapour (steam)", because visible "steam" is really droplets. This is fine as it is for the age group.

@@ -66,9 +66,10 @@ _rm = json.load(open("learn/reels/manifest.json")) if os.path.exists("learn/reel
 for _tid, _list in _rm.items():
     assert isinstance(_list, list) and _list, f"reels manifest: {_tid} needs a non-empty list"
     for _r in _list:
+        _d = "reels" if _r.get("x") else "learn/reels"   # "x": stored once in /reels (served from there, not copied into out/)
         for _ext in (".mp4", ".vtt", ".jpg"):
-            assert os.path.exists(f"learn/reels/{_r['f']}{_ext}"), f"reels manifest: missing learn/reels/{_r['f']}{_ext}"
-        assert os.path.getsize(f"learn/reels/{_r['f']}.mp4") < 2_000_000, f"reel {_r['f']}.mp4 must be under 2 MB"
+            assert os.path.exists(f"{_d}/{_r['f']}{_ext}"), f"reels manifest: missing {_d}/{_r['f']}{_ext}"
+        assert os.path.getsize(f"{_d}/{_r['f']}.mp4") < 2_000_000, f"reel {_r['f']}.mp4 must be under 2 MB"
 os.makedirs("out/reels", exist_ok=True)
 for _f in glob.glob("learn/reels/*"):
     if not _f.endswith(".json"): _sh.copy2(_f, "out/reels/" + os.path.basename(_f))

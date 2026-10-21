@@ -89,3 +89,7 @@ The web build (`out/viewer.html`) keeps the first load small: `learn.js` carries
 Lesson bodies (`wn/b<k>.js`), the visuals bundle (`wn/vis.js`), each flagship lab plus its kit (`wn/fl_*.js`) and the reel manifest
 (`wn/reels.js`) load on demand; after the page has loaded, bodies and visuals are prefetched quietly (`window.WN_WARM` is set when done).
 The offline single file still inlines everything.
+
+### Batch reels (`/reels`)
+The animated batch reels (b001…) live once in the repo-root `reels/` folder (mp4 + vtt + jpg poster, each under 2 MB) and are not copied into `out/`.
+Manifest entries with `"x": 1` point there: `../reels/<f>` from `out/viewer.html`, or `<jsDelivr>/out/../reels/<f>` in the preview.
