@@ -34,6 +34,25 @@ struct TopicDetailView: View {
                         .font(.body)
                         .fixedSize(horizontal: false, vertical: true)
                 }
+                let tid = n.topicId
+                let content = Offline.content
+                if content.hasLesson(tid), let tid {
+                    let flag = content.isFlagship(tid)
+                    Card(tint: Theme.sky) {
+                        Label(flag ? "Try the interactive lesson" : "Try the lesson", systemImage: flag ? "hand.draw" : "book")
+                            .font(.headline)
+                            .accessibilityAddTraits(.isHeader)
+                        Text(content.lessons[tid] ?? n.name).font(.callout).foregroundStyle(.secondary)
+                        NavigationLink(value: Route.lesson(tid, content.lessons[tid] ?? n.name)) {
+                            Label(flag ? "Open the flagship lesson" : "Open the lesson", systemImage: "arrow.right.circle.fill")
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
+                }
+                let reels = content.reels(for: tid)
+                if !reels.isEmpty, let tid {
+                    ReelCard(topicId: tid, reels: reels).id(tid)
+                }
                 if area == nil {
                     Text("This topic sits outside the six subjects in this version. It’s here because topics on the map build on it.")
                         .font(.footnote)

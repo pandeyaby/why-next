@@ -13,6 +13,7 @@ enum SidebarItem: Hashable {
 /// Things you can push onto a navigation stack.
 enum Route: Hashable {
     case topic(Int)
+    case lesson(String, String)
     case subject(String)
     case about
 }
@@ -236,6 +237,8 @@ struct RouteDestination: View {
         switch route {
         case .topic(let node):
             TopicDetailView(node: node)
+        case .lesson(let topicId, let title):
+            LessonView(topicId: topicId, title: title)
         case .subject(let id):
             if let area = model.data.area(id: id) {
                 SubjectView(area: area)

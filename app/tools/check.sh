@@ -34,6 +34,39 @@ if [ -n "$SITE_DEMO" ]; then
   node tools/check_site_parity.cjs "$SITE_DEMO"
 fi
 
+echo "== 3c. offline lessons + reels bundle (tools/sync_content.py)"
+python3 - <<'PY'
+import json, os, re
+W = 'WhyNext/Resources/Web'
+if not os.path.exists(f'{W}/content.json'):
+    print('skipped: no Resources/Web (run python3 tools/sync_content.py)'); raise SystemExit
+c = json.load(open(f'{W}/content.json', encoding='utf-8'))
+assert len(c['flagships']) == 12, c['flagships']
+assert set(c['flagships']) <= set(c['lessons']), 'every flagship has a lesson'
+html = open(f'{W}/index.html', encoding='utf-8').read()
+assert 'WN_TOPIC' in html and 'WN_RPARTS' in html, 'app shim missing from index.html'
+for src in re.findall(r'src="(wn/[^"?]+)', html): assert os.path.exists(f'{W}/{src}'), src
+lazy = open(f'{W}/wn/learn.js', encoding='utf-8').read()
+for f in set(re.findall(r'"((?:fl_|vis|reels|b\d|l\d|d\d)[\w]*\.js)\?v=', lazy)): assert os.path.exists(f'{W}/wn/{f}'), f
+ids = set(n.get('i') for n in json.load(open('WhyNextCore/Sources/WhyNextCore/Resources/whynext-data.json', encoding='utf-8'))['nodes'])
+assert set(c['flagships']) <= ids, 'flagship topics are on the map'
+reels = [r for L in c['reels'].values() for r in L]
+if os.path.isdir(f'{W}/reels'):
+    for r in reels:
+        for e in ('mp4', 'vtt', 'jpg'): assert os.path.exists(f"{W}/reels/{r['f']}.{e}"), r['f'] + '.' + e
+        assert os.path.getsize(f"{W}/reels/{r['f']}.mp4") < 2_000_000, r['f']
+        assert open(f"{W}/reels/{r['f']}.vtt", encoding='utf-8').read().startswith('WEBVTT'), r['f']
+    assert os.path.exists(f'{W}/reels/captions.js')
+    size = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(W) for f in fs)
+    print(f"{len(c['lessons'])} lessons, 12 flagships, {len(reels)} reels with captions and posters; Web/ is {size / 1e6:.0f} MB")
+else:
+    print(f"{len(c['lessons'])} lessons, 12 flagships; reels not downloaded yet (run tools/sync_content.py without --no-reels)")
+PY
+if [ -n "${WEB_CHECK_NODE:-}" ] && [ -d WhyNext/Resources/Web/reels ]; then
+  echo "== 3d. offline web bundle runs with the network off (Playwright, needs NODE_PATH with playwright)"
+  node tools/check_offline_web.cjs WhyNext/Resources/Web/index.html
+fi
+
 echo "== 4. Swift package builds and tests pass"
 cd WhyNextCore
 if [ "$(uname)" = "Linux" ]; then

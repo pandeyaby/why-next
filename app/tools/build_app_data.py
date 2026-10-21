@@ -80,7 +80,7 @@ def main():
     def node(i):
         if i not in nidx:
             nidx[i] = len(nodes); t = T[i]
-            nodes.append({'n': t['name'], 'a': [t['ageRangeStart'], t['ageRangeEnd']], 'd': dom_i(t['domain'])})
+            nodes.append({'n': t['name'], 'a': [t['ageRangeStart'], t['ageRangeEnd']], 'd': dom_i(t['domain']), 'i': i})  # 'i': topic id, links to bundled lessons and reels
         return nidx[i]
     def reason(s):
         if s not in ridx: ridx[s] = len(reasons); reasons.append(s)

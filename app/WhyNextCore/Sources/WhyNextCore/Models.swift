@@ -20,8 +20,10 @@ public struct Node: Decodable, Sendable, Hashable {
     public let ageStart: Int
     public let ageEnd: Int
     public let domain: Int
+    /// The dataset topic id (e.g. "mt_EDgw64OmfA"); links the node to bundled lessons and reels.
+    public let topicId: String?
 
-    enum CodingKeys: String, CodingKey { case n, a, d }
+    enum CodingKeys: String, CodingKey { case n, a, d, i }
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         name = try c.decode(String.self, forKey: .n)
@@ -29,9 +31,10 @@ public struct Node: Decodable, Sendable, Hashable {
         guard a.count == 2 else { throw DecodingError.dataCorruptedError(forKey: .a, in: c, debugDescription: "age range must have 2 numbers") }
         ageStart = a[0]; ageEnd = a[1]
         domain = try c.decode(Int.self, forKey: .d)
+        topicId = try c.decodeIfPresent(String.self, forKey: .i)
     }
-    public init(name: String, ageStart: Int, ageEnd: Int, domain: Int) {
-        self.name = name; self.ageStart = ageStart; self.ageEnd = ageEnd; self.domain = domain
+    public init(name: String, ageStart: Int, ageEnd: Int, domain: Int, topicId: String? = nil) {
+        self.name = name; self.ageStart = ageStart; self.ageEnd = ageEnd; self.domain = domain; self.topicId = topicId
     }
 }
 
