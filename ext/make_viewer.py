@@ -139,7 +139,9 @@ for k, text in enumerate(les_js):
     if text: open(f"{outdir}/wn/l{k}.js", "w").write(text)
 tags = "".join(f'<script defer src="wn/{n}?v={H(files[n])}"></script>' for n in ("core.js", "learn.js", "app.js"))
 open(f"{outdir}/viewer.html", "w").write(shell.replace("/*__SCRIPTS__*/", tags))
+# Offline build: batch reels ("x", served from the CDN) are left out so the file needs no network.
+_reels_off = "window.WN_REELS=" + json.dumps({t: L for t, L in ((t, [r for r in L if not r.get('x')]) for t, L in _rm.items()) if L}, separators=(",", ":")) + ";\n"
 # Offline build: the same scripts inlined into one file that works with no network.
-inline = "".join(f"<script>{t}</script>" for t in ["window.WN_OFFLINE=1;" + files["core.js"], "".join(chunk_js), "".join(les_js), "const LEARN_DATA=" + learn + ";\n" + learn_js, files["app.js"]])
+inline = "".join(f"<script>{t}</script>" for t in ["window.WN_OFFLINE=1;" + files["core.js"], "".join(chunk_js), "".join(les_js), "const LEARN_DATA=" + learn + ";\n" + _reels_off + learn_js[len(_reels):], files["app.js"]])
 open(f"{outdir}/viewer-offline.html", "w").write(shell.replace("/*__SCRIPTS__*/", inline))
 print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons +", len(starters), "starter lessons,", len(chunks), "detail chunks")

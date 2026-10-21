@@ -88,3 +88,26 @@ I checked the narration from `whynext-reels/v2/specs_b1.json` (the render spec) 
 - **b043 (acids, alkalis & pH): now passes, wired.** The pointer label tracks the pointer ("pH 4" at 4, "pH 8" at 8, checked frame by frame at 1 fps). The facts are right: neutral is 7 (pure water), lemon juice is about pH 2 (2–2.6), soap is about pH 10 (most bar soaps 9–10), below 7 is acidic and above 7 is alkaline.
 - **b041 (solids, liquids & gases): passes.** The new wording says the particles are the same water particles and that heat makes them move faster until they break free. It ends with "escape as a gas: steam", which is fine at this level.
 - **b005, b006, b011, b013, b044, b045:** only visual glitch fixes; the script text is unchanged and they were re-encoded. b044 and b045 (pH) were re-checked and still pass.
+
+## Batches 2–4 (b051–b200), checked 2026-10-21
+
+**Review-required science reels.** I checked the script text against standard KS1–KS4 sources (BBC Bitesize, AQA/OCR specs, the periodic table) and looked through the QA frame sheets for each reel. All 30 pass and are wired.
+
+| Reel | Claim | Verdict |
+|---|---|---|
+| b051 | 10 m/s for 4 s gives 40 m (area under the speed–time graph) | Pass |
+| b052 | Area under the axis counts as negative | Pass (maths) |
+| b053 | Particles in a solid always vibrate; warmer means harder vibration | Pass |
+| b054 | Burning is a reaction with oxygen; atoms rearrange; heat and light are released | Pass |
+| b055 | Red cabbage indicator: reddish in acid, purple when neutral, greenish in alkali | Pass (it goes yellow in strong alkali, which is fine to leave out at this level) |
+| b056 | The nucleus is a pea in a stadium; the atom is tens of thousands of times wider than its nucleus | Pass (about 10^4–10^5 times) |
+| b057 | Protons: He 2, O 8, Au 79; the proton number fixes the element | Pass |
+| b058 | Equal numbers of protons and electrons make the atom neutral; losing an electron makes an ion | Pass |
+| b151–b154 | Distance–time graph: flat line means stopped, steeper means faster, a falling line means heading back | Pass |
+| b159–b162 | Object vs material | Pass |
+| b163–b166 | Properties: glass is transparent and waterproof; rope is strong but bendy; glass is hard but brittle | Pass |
+| b171–b174 | Everyday materials; plastic is made by people, "mostly from oil" | Pass. Optional wording: "from oil and natural gas" |
+| b183–b185 | Particle diagrams: circles stay the same size; heating makes particles move faster and spread out, not get bigger | Pass |
+| b186–b188 | Sorting by one property at a time; a jar can be in two groups | Pass |
+
+**Maths spot-check.** I checked a random sample of 30 non-review reels plus the frame sheets for b099, b179, b189 and b194: 23×14=322, the 13÷3 remainder, BIDMAS (8−2×3=2; 10−4+2=8), 3(x+2)=3x+6, the 3+4=□+5 balance, +10% then −10% gives 99, the limit of (x²−1)/(x−1) at 1 being 2, and f(3)=7. No errors found.
