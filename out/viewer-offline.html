@@ -484,7 +484,10 @@ const LEARN=(()=>{
 const KEY='whynext.learn.v1',L=LEARN_DATA.lessons,G=LEARN_DATA.goals,GOALS=G.goals,BANDS=G.bands,SKIP=G.skipFromBand10,RES=LEARN_DATA.resources;
 const blank=()=>({name:'',age:'',goal:'explore',knownUpTo:'auto',level:'auto',progress:{}});
 let P=blank(),mem=false,formOpen=null;
-try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object')P=Object.assign(blank(),s)}catch(e){mem=true}
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object'&&!Array.isArray(s))P=Object.assign(blank(),s)}catch(e){mem=true}
+/* Bad storage must never crash or poison progress: keep only object entries, drop a non-numeric best. */
+if(!P.progress||typeof P.progress!=='object'||Array.isArray(P.progress))P.progress={};
+for(const k in P.progress){const e=P.progress[k];if(!e||typeof e!=='object'||Array.isArray(e)){delete P.progress[k];continue}if('best' in e&&!Number.isFinite(e.best))delete e.best;if(e.practice&&(typeof e.practice!=='object'||Array.isArray(e.practice)))delete e.practice}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){mem=true}}
 if(typeof WN!=='undefined')Object.assign(L,WN.store);
 const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),band=()=>BANDS.find(b=>b.id===P.age);
@@ -2787,9 +2790,10 @@ return{sync,progress,ring,celebrate}})();
 /* Reel slot: a short vertical explainer per flagship topic, lazy (poster only until tapped), captions on, never autoplays. */
 /* Reel catalogue: learn/reels/manifest.json maps topic id -> list of reels. Each visit shows one reel the learner has not seen yet
    (random among unseen, remembered in localStorage "wn_reels_seen"); once all are seen the rotation starts again. */
-const reelSeen=()=>{try{return JSON.parse(localStorage.getItem('wn_reels_seen')||'{}')}catch(e){return{}}},reelMark=(tid,f)=>{try{const s=reelSeen(),l=s[tid]||[];if(!l.includes(f))l.push(f);s[tid]=l;localStorage.setItem('wn_reels_seen',JSON.stringify(s))}catch(e){}};
+/* Seen-reel memory: {topicId:[file,...]}. Any other shape (null, array, string, junk entries) is treated as empty so the picker never throws; see docs/STATECHART.md and verify/. */
+const reelSeen=()=>{let s;try{s=JSON.parse(localStorage.getItem('wn_reels_seen')||'{}')}catch(e){s=null}if(!s||typeof s!=='object'||Array.isArray(s))return{};for(const k in s)if(!Array.isArray(s[k]))delete s[k];else s[k]=s[k].filter(x=>typeof x==='string');return s},reelMark=(tid,f)=>{try{const s=reelSeen(),l=s[tid]||[];if(!l.includes(f))l.push(f);s[tid]=l;localStorage.setItem('wn_reels_seen',JSON.stringify(s))}catch(e){}};
 const reelPick=(tid,R,skip)=>{const seen=reelSeen()[tid]||[];let pool=R.filter(r=>!seen.includes(r.f)&&r.f!==skip);if(!pool.length){try{const s=reelSeen();s[tid]=[];localStorage.setItem('wn_reels_seen',JSON.stringify(s))}catch(e){}pool=R.filter(r=>r.f!==skip);if(!pool.length)pool=R}return pool[Math.floor(Math.random()*pool.length)]};
-const reelFig=(tid,R,r)=>{const B=r.x?WN_RPARTS[r.x]:(window.WN_BASE||'')+'reels/',i=R.indexOf(r);return `<figure class="reel" data-tid="${tid}" data-f="${r.f}"><button type="button" class="reel-play" data-reel="${B}${r.f}" aria-label="Play video: ${r.t} (${r.d} seconds, with captions)"><img src="${B}${r.f}.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" width="180" height="320"><span class="reel-ico" aria-hidden="true">▶</span><span class="reel-d">${r.d}s</span></button><figcaption>${r.t}${r.review?' <span class="reel-rev">· science check pending</span>':''}${R.length>1?`<br><span class="reel-n">${i+1} of ${R.length}</span> <button type="button" class="linkish reel-next">Another reel ↻</button>`:''}</figcaption></figure>`};
+const reelFig=(tid,R,r)=>{const B=(r.x&&(window.WN_RPARTS||{})[r.x])||(window.WN_BASE||'')+'reels/',i=R.indexOf(r);return `<figure class="reel" data-tid="${tid}" data-f="${r.f}"><button type="button" class="reel-play" data-reel="${B}${r.f}" aria-label="Play video: ${r.t} (${r.d} seconds, with captions)"><img src="${B}${r.f}.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" width="180" height="320"><span class="reel-ico" aria-hidden="true">▶</span><span class="reel-d">${r.d}s</span></button><figcaption>${r.t}${r.review?' <span class="reel-rev">· science check pending</span>':''}${R.length>1?`<br><span class="reel-n">${i+1} of ${R.length}</span> <button type="button" class="linkish reel-next">Another reel ↻</button>`:''}</figcaption></figure>`};
 let reelLd=null;const reelLoad=()=>reelLd||(reelLd=new Promise((ok,no)=>{const s=document.createElement('script');s.src=(window.WN_BASE||'')+'wn/'+window.WN_REELS_LAZY.u;s.onload=ok;s.onerror=()=>{reelLd=null;no()};document.head.appendChild(s)}));
 const reelSlot=tid=>{if(!window.WN_REELS&&window.WN_REELS_LAZY){if(!window.WN_REELS_LAZY.ids.includes(tid))return '';reelLoad().then(()=>{const el=document.querySelector(`.reel-wait[data-tid="${tid}"]`);if(el)el.outerHTML=reelSlot(tid)},()=>{});return `<div class="reel-wait" data-tid="${tid}" aria-hidden="true"></div>`}
  const R=(window.WN_REELS||{})[tid];if(!R||!R.length)return '';const r=reelPick(tid,R);reelMark(tid,r.f);return `<h3 class="lsub">🎬 Watch a quick explainer</h3><div class="reels">${reelFig(tid,R,r)}</div>`};
@@ -2850,7 +2854,7 @@ function wire(root){root.querySelectorAll('.numin').forEach(inp=>inp.onkeydown=e
 function mount(id){const root=document.getElementById('learn');const vb=document.getElementById('vbox'),les0=LEARN.L[id];VIS.show(vb,vb&&les0&&les0.visual||null);VIS.show2(document.getElementById('lbox'),les0&&les0.lab);if(!root)return;const les=LEARN.L[id];wire(root);
  root.onclick=e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.lv){LEARN.setLevel(b.dataset.lv);select(id);document.getElementById('learn').focus();return}
-  if(b.dataset.act==='known'){LEARN.setProg(id,{status:LEARN.known(id)?'unknown':'known'});LEARN.update();select(id);return}
+  if(b.dataset.act==='known'){{const pr=LEARN.prog(id);LEARN.setProg(id,{status:LEARN.known(id)?(pr.practice&&Object.keys(pr.practice).length?'practising':'unknown'):'known'})};LEARN.update();select(id);return}
   if(b.dataset.act==='reset'){LEARN.clear(id);LEARN.update();select(id);return}
   if(b.dataset.act==='newp'){CUR.p=LEARN_GEN.shuffle(les.practice).map(LEARN_GEN.make);const box=document.getElementById('pbox');box.innerHTML=list('p');wire(box);
    const f=box.querySelector('button,input');if(f)f.focus();return}
@@ -2869,7 +2873,7 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
  const tries=(+q.dataset.tries||0)+1;q.dataset.tries=tries;
  const reveal=it.type==='mc'?` (Answer: ${it.choices[it.answer]})`:it.type==='numeric'?` (Answer: ${LEARN_GEN.fmt(it.answer)})`:` (Order: ${it.items.join(', ')})`;
  if(pre==='p'){if(ok){q.dataset.done=1;q.classList.add('ok');fb(q,'✓ Correct! '+it.explain,'good');
-   const pr=LEARN.prog(id),pd=Object.assign({},pr.practice,{[it.id]:true});LEARN.setProg(id,{practice:pd,status:pr.status||'practising'});}
+   const pr=LEARN.prog(id),pd=Object.assign({},pr.practice,{[it.id]:true});LEARN.setProg(id,{practice:pd,status:['known','practising','mastered'].includes(pr.status)?pr.status:'practising'});}
   else if(tries<2){fb(q,'Not quite. 💡 Hint: '+it.hint+' Have another go.','bad');VIS.cue()}
   else{fb(q,'Not quite. Here is how it works: '+it.explain+reveal,'bad');q.dataset.done=1}
   LEARN_FX.sync(id);const pd=LEARN.prog(id).practice||{};const s=document.getElementById('pScore');if(s)s.textContent=`(${Object.keys(pd).length}/${les.practice.length} correct)`;return}
@@ -2879,7 +2883,7 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
   document.getElementById('rres').innerHTML=good?'✅ <b>Still got it.</b> Next review in a while longer.':'<b>A little rusty.</b> Have a look at the practice below; this topic will come back for review tomorrow.';return}
  const all=[...document.querySelectorAll('#mbox .qi')];if(!all.every(x=>x.dataset.done))return;
  const score=all.filter(x=>x.dataset.ok).length,pass=score>=les.mastery.passMark,pr=LEARN.prog(id),res=document.getElementById('mres'),was=pr.status==='mastered';
- LEARN.setProg(id,{best:Math.max(score,pr.best||0),status:pass||was?'mastered':'practising'});if(pass)LEARN.scheduleAfterMastery(id);LEARN.update();
+ LEARN.setProg(id,{best:Math.max(score,Number.isFinite(pr.best)?pr.best:0),status:pass||was?'mastered':'practising'});if(pass)LEARN.scheduleAfterMastery(id);LEARN.update();
  res.innerHTML=pass?`🎉 <b>${score}/${all.length}: mastered!</b> It's ticked on the map, and it will come back for a quick review in a few days. <button type="button" class="lbtn" id="goNext">What's next?</button>`
   :`<b>${score}/${all.length}.</b> Nearly there. Look back at the practice questions, then <button type="button" class="lbtn" id="retry">try the check again</button>`;
  if(pass)LEARN_FX.celebrate(res);

@@ -4,7 +4,10 @@ const LEARN=(()=>{
 const KEY='whynext.learn.v1',L=LEARN_DATA.lessons,G=LEARN_DATA.goals,GOALS=G.goals,BANDS=G.bands,SKIP=G.skipFromBand10,RES=LEARN_DATA.resources;
 const blank=()=>({name:'',age:'',goal:'explore',knownUpTo:'auto',level:'auto',progress:{}});
 let P=blank(),mem=false,formOpen=null;
-try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object')P=Object.assign(blank(),s)}catch(e){mem=true}
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&typeof s==='object'&&!Array.isArray(s))P=Object.assign(blank(),s)}catch(e){mem=true}
+/* Bad storage must never crash or poison progress: keep only object entries, drop a non-numeric best. */
+if(!P.progress||typeof P.progress!=='object'||Array.isArray(P.progress))P.progress={};
+for(const k in P.progress){const e=P.progress[k];if(!e||typeof e!=='object'||Array.isArray(e)){delete P.progress[k];continue}if('best' in e&&!Number.isFinite(e.best))delete e.best;if(e.practice&&(typeof e.practice!=='object'||Array.isArray(e.practice)))delete e.practice}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){mem=true}}
 if(typeof WN!=='undefined')Object.assign(L,WN.store);
 const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),band=()=>BANDS.find(b=>b.id===P.age);

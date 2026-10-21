@@ -88,6 +88,25 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     const seen = await p.evaluate(() => JSON.parse(localStorage.getItem('wn_reels_seen')).mt_EDgw64OmfA); assert.strictEqual(seen.length, N);
     const f0 = await p.$eval('.reel', e => e.dataset.f); await p.click('.reel-next'); assert.notStrictEqual(await p.$eval('.reel', e => e.dataset.f), f0);
   });
+  await test('reel memory survives corrupt storage (null, array, string, junk entries): no crash, every reel still shown once per cycle (verify/WhyNextState.tla)', async () => {
+    const N = await p.evaluate(() => WN_REELS.mt_EDgw64OmfA.length);
+    for (const bad of ['null', '[]', '"x"', '{"mt_EDgw64OmfA":"abc"}', '{"mt_EDgw64OmfA":{"a":1}}', '{"mt_EDgw64OmfA":[1,null]}', '{oops']) {
+      await p.evaluate(b => localStorage.setItem('wn_reels_seen', b), bad); const fs = [];
+      for (let i = 0; i < N; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(120); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reel[data-f]'); fs.push(await p.$eval('.reel', e => e.dataset.f)) }
+      assert.strictEqual(new Set(fs).size, N, bad + ': ' + fs);
+      const seen = await p.evaluate(() => JSON.parse(localStorage.getItem('wn_reels_seen')).mt_EDgw64OmfA); assert.ok(Array.isArray(seen) && seen.length === N, bad);
+    }
+  });
+  await test('lesson progress loads safely from corrupt storage and a junk best never poisons the score', async () => {
+    for (const bad of ['{"progress":null}', '{"progress":[1]}', '{"progress":{"mt_EDgw64OmfA":"x","mt_AN2kJE6I0s":{"best":"NaN","status":"mastered"}}}', '[]', '{oops']) {
+      const q = await browser.newPage(), errs = []; q.on('pageerror', e => errs.push(e.message));
+      await q.addInitScript(b => { if (!sessionStorage.getItem('seeded')) { sessionStorage.setItem('seeded', '1'); localStorage.setItem('whynext.learn.v1', b) } }, bad);
+      await q.goto(URL); await q.waitForFunction('window.WN_WARM');
+      const r = await q.evaluate(() => { select('mt_EDgw64OmfA'); LEARN.setProg('mt_AN2kJE6I0s', {}); const b = LEARN.prog('mt_AN2kJE6I0s'); return { t: typeof LEARN.prog('mt_EDgw64OmfA'), best: b.best, st: b.status } });
+      assert.deepStrictEqual(errs, [], bad); assert.strictEqual(r.t, 'object', bad); assert.ok(r.best === undefined || Number.isFinite(r.best), bad + ' best=' + r.best);
+      await q.close();
+    }
+  });
   }
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }

@@ -16,6 +16,8 @@ Once a week, a person or a coding agent does a small, boring clean-up of this re
 3. **Duplicated helpers:** the same logic written twice. Known pair: the Key Stage softening in `site/assets/soften.js` and its Python mirror in `site/build/build_site.py`. Keep them in step, or note how they could share one source.
 4. **Oversized files:** anything on `.githooks/size-allowlist` that could be split cleanly (see the pre-commit hook's advice). Split at most one per week, and remove it from the allowlist.
 5. **Docs drift:** README commands, counts and paths that no longer match the repo.
+6. **Temporary patches:** for every row in the `AGENTS.md` "Temporary patches" table, run its "How to check". If the patch is no longer needed, do not undo it in the janitor PR, because undoing it changes behaviour. List it under "Patches ready to remove" in the PR for a human. Flag any workaround you find in code (`rg -i "workaround|hack|temporary|until "`) that has no row.
+7. **State model:** if `learn/learn_panel.js`, `learn/learn_core.js` or the app's `ReelRotation` changed this week, run `verify/run.sh` and confirm `docs/STATECHART.md` still matches.
 
 ## PR description template
 ```
@@ -24,6 +26,7 @@ Weekly janitor pass. No behaviour changes.
 - Dead code/files removed (with how I checked they were unused): …
 - Duplication: …
 - Split: …
+- Temporary patches checked (T1…): still needed / ready to remove: …
 Checks: sh scripts/check_all.sh passed locally.
 Not done / for a human: …
 ```
