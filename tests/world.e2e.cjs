@@ -8,7 +8,7 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
 (async () => {
   const browser = await chromium.launch(), p = await browser.newPage({ viewport: { width: 1200, height: 900 } }); const errors = [];
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error' || /visual failed/.test(m.text())) errors.push(m.text()) });
-  await p.emulateMedia({ reducedMotion: 'reduce' }); await p.goto(URL);
+  await p.emulateMedia({ reducedMotion: 'reduce' }); await p.goto(URL);await p.waitForFunction("window.WN_WARM");
   const byType = await p.evaluate(() => { const m = {}; for (const [id, l] of Object.entries(LEARN.L)) { const t = l.visual && l.visual.type; (m[t] = m[t] || []).push(id) } return m });
   for (const t of ['states', 'separate', 'matlab', 'objects', 'squares', 'slopes']) await test(`${t}: every control changes the explanation`, async () => {
     assert.ok(byType[t] && byType[t].length, 'no lesson uses ' + t);

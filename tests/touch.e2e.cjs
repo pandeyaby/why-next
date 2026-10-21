@@ -15,7 +15,7 @@ async function touchDrag(cdp, x, y, dx, dy) {
 (async () => {
   const browser = await chromium.launch(), ctx = await browser.newContext({ ...devices['iPhone 13'] }), p = await ctx.newPage(), cdp = await ctx.newCDPSession(p); const errors = [];
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error' || (m.type() === 'warning' && /visual failed/.test(m.text()))) errors.push(m.text()) });
-  await p.goto(URL); const ids = await p.evaluate(() => Object.keys(LEARN.L)); const dragged = [], none = [];
+  await p.goto(URL);await p.waitForFunction("window.WN_WARM"); const ids = await p.evaluate(() => Object.keys(LEARN.L)); const dragged = [], none = [];
   await test('every draggable visual responds to a touch drag', async () => {
     const bad = [];
     for (const id of ids) {

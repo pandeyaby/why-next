@@ -83,3 +83,9 @@ them load on the first search. Chunks are plain scripts, so the viewer works on 
 Each reel needs `<f>.mp4` (vertical, under 2 MB), `<f>.vtt` captions and `<f>.jpg` poster in `learn/reels/`; `ext/make_viewer.py` checks this.
 Add as many reels per topic as you like: each visit shows one the learner has not seen yet (random, remembered in localStorage
 `wn_reels_seen`), "Another reel ↻" swaps, and the rotation restarts once all are seen. `review: 1` shows "science check pending".
+
+## Split-build loading (performance)
+The web build (`out/viewer.html`) keeps the first load small: `learn.js` carries only lesson stubs (title, key idea, visual spec).
+Lesson bodies (`wn/b<k>.js`), the visuals bundle (`wn/vis.js`), each flagship lab plus its kit (`wn/fl_*.js`) and the reel manifest
+(`wn/reels.js`) load on demand; after the page has loaded, bodies and visuals are prefetched quietly (`window.WN_WARM` is set when done).
+The offline single file still inlines everything.

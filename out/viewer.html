@@ -76,6 +76,7 @@ circle.g-done{fill:#16a34a}circle.g-next{stroke:#d97706;stroke-width:3}
 
 .reel-rev{color:var(--am);font-size:.8em}
 .reel-n{color:var(--mu);font-size:.8em}.reel-next{min-height:44px;min-width:44px;padding:0 .4rem}
+.reel-wait{min-height:400px}
 /* Why Next? interactive visuals */
 .vis{margin:14px 0;padding:12px;border:1px solid #c7d2fe;border-radius:12px;background:#fafbff}
 .vis figcaption{font-weight:600;margin-bottom:6px}
@@ -209,6 +210,9 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}
 .fl-pick button.ok{background:color-mix(in srgb,var(--gr) 30%,transparent)}.fl-pick button.no{background:color-mix(in srgb,var(--rd) 22%,transparent)}
 @media (max-width:520px){.fl-dots{flex-wrap:nowrap}.fl-dot{margin-right:-5px}.fl-dot::before{inset:12px}}
+.vis-load{display:flex;align-items:center;justify-content:center;gap:10px;min-height:min(70vh,520px);border-radius:14px;background:rgba(127,140,170,.08);color:inherit;font-weight:600}
+.vis-spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(127,140,170,.35);border-top-color:currentColor;animation:vspin .8s linear infinite}
+@keyframes vspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.vis-spin{animation:none}}
 /* Why Next? feedback and progress cues (gentle; off under prefers-reduced-motion) */
 .pring{vertical-align:middle}.pring .pr-bg{fill:none;stroke:#e5e7eb;stroke-width:3}.pring .pr-fg{fill:none;stroke:#7c3aed;stroke-width:3;stroke-linecap:round}.pring .pr-fg.done{stroke:#15803d}
 .qi.ok{animation:fxok .45s ease}.fb.bad{animation:fxno .35s ease}
@@ -333,4 +337,4 @@ html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;borde
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=e16995db9b"></script><script defer src="wn/learn.js?v=4c773844ff"></script><script defer src="wn/app.js?v=ea49145e03"></script></body></html>
+<script defer src="wn/core.js?v=314810a751"></script><script defer src="wn/learn.js?v=4f9ea929f1"></script><script defer src="wn/app.js?v=e3fba0abfc"></script></body></html>

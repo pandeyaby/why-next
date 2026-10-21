@@ -28,7 +28,7 @@ const L = { riemann: 'mt_XW5d2G7v01', family: 'mt_gbnMvpN_Lj', definite: 'mt_P-V
   const browser = await chromium.launch();
   const p = await (await browser.newContext({ viewport: { width: 1280, height: 900 } })).newPage(); const errors = [];
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') errors.push(m.text()) });
-  await p.goto(URL);
+  await p.goto(URL);await p.waitForFunction("window.WN_WARM");
   L.formula = await p.evaluate(() => Object.keys(LEARN.L).find(id => LEARN.L[id].visual.type === 'formula' && LEARN.L[id].visual.opts.pic));
   await test('Riemann sums: more strips and trapezia close in on the exact area', async () => {
     await open(p, L.riemann); await expectDesc(p, /4 rectangles .* too small/); await setRange(p, 'Strips n', 40); await btn(p, 'Trapezia');
@@ -72,7 +72,7 @@ const L = { riemann: 'mt_XW5d2G7v01', family: 'mt_gbnMvpN_Lj', definite: 'mt_P-V
   await test('vectors: distance adds, displacement does not; walking back gives 0', async () => { await open(p, L.vectors); await expectDesc(p, /just add: 7 m.*5 m, bearing 037°/); await keys(p, '#vbox [aria-label^="Second walk"]', 'ArrowUp'); await expectDesc(p, /Walk 2 \(green\): 5 m/); await btn(p, 'Walk back to the start'); await expectDesc(p, /start to finish is 0 m/) });
   await test('axe: no violations in the newer visuals', async () => { for (const [t, id] of Object.entries(L)) { await open(p, id); await axe(p, t) } });
   await test('no console errors or visual failures', async () => assert.deepStrictEqual(errors, []));
-  const m = await (await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true })).newPage(); await m.goto(URL);
+  const m = await (await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true })).newPage(); await m.goto(URL);await m.waitForFunction("window.WN_WARM");
   await test('mobile: newer visuals fit the screen and pass axe', async () => {
     for (const [t, id] of Object.entries(L)) { await open(m, id); assert.ok(!(await m.evaluate(() => document.documentElement.scrollWidth > innerWidth)), 'overflow on ' + t) }
     await open(m, L.sorter); await axe(m, 'mobile sorter');

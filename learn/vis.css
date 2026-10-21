@@ -131,3 +131,6 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}
 .fl-pick button.ok{background:color-mix(in srgb,var(--gr) 30%,transparent)}.fl-pick button.no{background:color-mix(in srgb,var(--rd) 22%,transparent)}
 @media (max-width:520px){.fl-dots{flex-wrap:nowrap}.fl-dot{margin-right:-5px}.fl-dot::before{inset:12px}}
+.vis-load{display:flex;align-items:center;justify-content:center;gap:10px;min-height:min(70vh,520px);border-radius:14px;background:rgba(127,140,170,.08);color:inherit;font-weight:600}
+.vis-spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(127,140,170,.35);border-top-color:currentColor;animation:vspin .8s linear infinite}
+@keyframes vspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.vis-spin{animation:none}}

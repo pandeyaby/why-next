@@ -34,10 +34,10 @@ function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class=
 /* Detail text (descriptions, evidence, standards, link reasons, cluster notes) arrives in small per-domain
    chunks (wn/d*.js); the map and lessons render without it, and fill() completes the page once they load. */
 const needFor=id=>[...new Set([...ancestors(id,false)].map(u=>N.get(u).k))];
-function select(id){sel=id;renderList();
- document.getElementById('detail').innerHTML=`<div class="card" id="dcard"></div>${LEARN_PANEL.panel(id)}<div id="dclu"></div><div class="card cv"><b>Hard-prerequisite graph</b><div id="dgraph"></div></div>
+function select(id){sel=id;renderList();const lz=LEARN.L[id]&&LEARN.L[id]._lz;if(lz)WN.lbload(N.get(id).k).then(()=>{if(sel===id&&!LEARN.L[id]._lz)select(id)},()=>{const b=document.getElementById('lzwait');if(b)b.textContent='This lesson could not load. Check your connection and pick it again.'});
+ document.getElementById('detail').innerHTML=`<div class="card" id="dcard"></div>${lz?'<section class="learn card"><p class="muted" id="lzwait" role="status">Loading the lesson…</p></section>':LEARN_PANEL.panel(id)}<div id="dclu"></div><div class="card cv"><b>Hard-prerequisite graph</b><div id="dgraph"></div></div>
  <div class="card cv"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span><div id="dtree"></div></div>`;
- LEARN_PANEL.mount(id);document.getElementById('main').scrollTop=0;fill(id,true);
+ if(!lz)LEARN_PANEL.mount(id);document.getElementById('main').scrollTop=0;fill(id,true);
  if(!LEARN.L[id]&&WN.flag(id))WN.lload(N.get(id).k).then(()=>{if(sel===id&&LEARN.L[id])select(id)});
  const need=needFor(id);if(!WN.has(need))WN.load(need).then(()=>{if(sel===id)fill(id)})}
 function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(needFor(id)),wait='<p class="muted">Loading details…</p>';
@@ -69,3 +69,5 @@ function mapZoom(){const g=document.getElementById('dgraph'),sv=g&&g.querySelect
   g.querySelectorAll('[data-z]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.z===z)));
   if(z){const c=sv.querySelector('.gn.cur circle');if(c)wr.scrollLeft=Math.max(0,+c.getAttribute('cx')-wr.clientWidth/2);wr.scrollTop=0}};
  g.querySelectorAll('[data-z]').forEach(b=>b.onclick=()=>set(+b.dataset.z));set(1)}
+// After first paint, quietly fetch lesson bodies and the visuals bundle so opening a lesson is instant.
+{const w=()=>WN.warm().then(()=>{window.WN_WARM=1},()=>{});if(document.readyState==='complete')setTimeout(w,50);else addEventListener('load',()=>setTimeout(w,50))}

@@ -8,6 +8,7 @@ import hashlib
 import html as _html
 import json
 import os
+import re
 T = json.load(open("out/merged/data/topics.json"))["topics"]
 by = {t["id"]: t for t in T}
 new = [t["id"] for t in json.load(open("out/topics.ext.json"))["topics"]]
@@ -51,6 +52,13 @@ learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.jso
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "flag_neg.js", "flag_eq.js", "flag_line.js", "flag_pyth.js", "flag_prob.js", "flag_state.js", "flag_acid.js", "flag_atom.js", "flag_area.js", "learn_fx.js", "learn_panel.js")
 learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
+# Flagship labs are big; the split build lazy-loads each one (plus the shared kit) the first time its lesson opens.
+FLAGS = [f for f in LEARN_JS if f.startswith("flag_") and f != "flag_kit.js"]
+flag_src = {f: open(f"learn/{f}").read() for f in ["flag_kit.js"] + FLAGS}
+flag_type = {f: re.search(r"VIS\.reg\('([a-z0-9]+)'", flag_src[f]).group(1) for f in FLAGS}
+VISB = [f for f in LEARN_JS if f.startswith("vis_") and f != "vis_core.js"]
+vis_bundle = "".join(open(f"learn/{f}").read() for f in VISB)
+learn_js_split = "".join(open(f"learn/{f}").read() for f in LEARN_JS if not f.startswith("flag_") and f not in VISB)
 # reels: short vertical explainers (learn/reels/<topic>.mp4 + .vtt + .jpg) copied to out/reels, manifest inlined
 import shutil as _sh
 _rm = json.load(open("learn/reels/manifest.json")) if os.path.exists("learn/reels/manifest.json") else {}
@@ -64,7 +72,8 @@ for _tid, _list in _rm.items():
 os.makedirs("out/reels", exist_ok=True)
 for _f in glob.glob("learn/reels/*"):
     if not _f.endswith(".json"): _sh.copy2(_f, "out/reels/" + os.path.basename(_f))
-learn_js = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";\n" + learn_js
+_reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";\n"
+learn_js = _reels + learn_js
 css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css"))
 
 # Split build: the page shell plus small cacheable scripts; per-domain detail chunks load on demand.
@@ -92,8 +101,18 @@ H = lambda t: hashlib.sha1(t.encode()).hexdigest()[:10]
 core = {"sb": sb, "dm": dm, "ty": ty, "v": [H(c) for c in chunk_js], "lv": [H(c) if c else 0 for c in les_js],
         "n": [[n["id"], n["n"], dm.index(n["d"]), sb.index(n["s"]), ty.index(n["ty"]), n["a"][0], n["a"][1], n["c"], int(n["new"]), K[(n["s"], n["d"])], 1 if n["id"] in lessons else 2 if n["id"] in starters else 0] for n in nodes],
         "e": [[idx[e["t"]], idx[e["p"]], int(e["h"])] for e in edges]}
+BODY = ("mastery", "practice", "explain", "familyTip")
+stubs, bodies = {}, [{} for _ in dom_keys]
+for tid, les in lessons.items():
+    st_ = {k: v for k, v in les.items() if k not in BODY}
+    st_.update(_lz=1, np=len(les.get("practice", [])), md=(les.get("mastery") or {}).get("draw", 1))
+    stubs[tid] = st_
+    bodies[K[(by[tid]["subject"], by[tid]["domain"])]][tid] = {k: les[k] for k in BODY if k in les}
+lb_js = [f"WN.lb({k},{J(c)});\n" if c else "" for k, c in enumerate(bodies)]
+core["bv"] = [H(c) if c else 0 for c in lb_js]
+learn_split = json.dumps({"lessons": stubs, "goals": json.load(open("learn/goals.json")), "resources": res["resources"], "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 files = {"core.js": "window.WN_CORE=" + J(core) + ";\n" + open("ext/viewer_core.js").read(),
-         "learn.js": "const LEARN_DATA=" + learn + ";\n" + learn_js,
+         "learn.js": "const LEARN_DATA=" + learn_split + ";\nwindow.WN_REELS_LAZY=" + J({"u": "reels.js?v=" + H(_reels), "ids": sorted(_rm)}) + ";\n" + "window.WN_LAZY=" + J({"vis": "vis.js?v=" + H(vis_bundle), "kit": "fl_kit.js?v=" + H(flag_src["flag_kit.js"]), **{flag_type[f]: f"fl_{f[5:-3]}.js?v=" + H(flag_src[f]) for f in FLAGS}}) + ";\n" + learn_js_split,
          "app.js": open("ext/viewer_app.js").read()}
 nNew = sum(n["new"] for n in nodes)
 nB = sum(1 for e in edges if by[e["t"]]["id"] in newset and e["p"] not in newset)
@@ -107,13 +126,19 @@ for f in glob.glob(f"{outdir}/wn/*.js"):
     os.remove(f)
 for name, text in files.items():
     open(f"{outdir}/wn/{name}", "w").write(text)
+open(f"{outdir}/wn/vis.js", "w").write(vis_bundle)
+open(f"{outdir}/wn/reels.js", "w").write(_reels)
+for f, text in flag_src.items():
+    open(f"{outdir}/wn/fl_{f[5:-3]}.js", "w").write(text)
 for k, text in enumerate(chunk_js):
     open(f"{outdir}/wn/d{k}.js", "w").write(text)
+for k, text in enumerate(lb_js):
+    if text: open(f"{outdir}/wn/b{k}.js", "w").write(text)
 for k, text in enumerate(les_js):
     if text: open(f"{outdir}/wn/l{k}.js", "w").write(text)
 tags = "".join(f'<script defer src="wn/{n}?v={H(files[n])}"></script>' for n in ("core.js", "learn.js", "app.js"))
 open(f"{outdir}/viewer.html", "w").write(shell.replace("/*__SCRIPTS__*/", tags))
 # Offline build: the same scripts inlined into one file that works with no network.
-inline = "".join(f"<script>{t}</script>" for t in [files["core.js"], "".join(chunk_js), "".join(les_js), files["learn.js"], files["app.js"]])
+inline = "".join(f"<script>{t}</script>" for t in ["window.WN_OFFLINE=1;" + files["core.js"], "".join(chunk_js), "".join(les_js), "const LEARN_DATA=" + learn + ";\n" + learn_js, files["app.js"]])
 open(f"{outdir}/viewer-offline.html", "w").write(shell.replace("/*__SCRIPTS__*/", inline))
 print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons +", len(starters), "starter lessons,", len(chunks), "detail chunks")

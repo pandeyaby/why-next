@@ -9,7 +9,7 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
   const browser = await chromium.launch(), p = await browser.newPage({ viewport: { width: 1200, height: 900 } }); const errors = [];
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error') errors.push(m.text()) });
   await p.addInitScript(() => { try { localStorage.setItem('wn_drafts', '1') } catch (e) {} window.__buzz = []; Object.defineProperty(navigator, 'vibrate', { value: ms => (window.__buzz.push(ms), true), configurable: true }) });
-  await p.goto(URL);
+  await p.goto(URL);await p.waitForFunction("window.WN_WARM");
   {
   // touch helpers: synthetic touch PointerEvents in canvas units (cv.__A exposes the kit API)
   const touch = (pts, id = 1) => p.evaluate(([pts, id]) => { const cv = document.querySelector('.fl-cv'), A = cv.__A, r = cv.getBoundingClientRect(), k = r.width / A.W, ky = r.height / A.H;

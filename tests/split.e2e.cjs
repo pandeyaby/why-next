@@ -8,7 +8,7 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
 (async () => {
   const b = await chromium.launch(), p = await b.newPage(), reqs = [], errors = [];
   p.on('request', r => reqs.push(r.url())); p.on('pageerror', e => errors.push(e.message));
-  await p.goto(U('viewer.html'));
+  await p.goto(U('viewer.html'));await p.waitForFunction("window.WN_WARM");
   await test('split build: first topic renders with its details, loading only the chunks it needs', async () => {
     assert.ok(await p.$('#vbox figure.vis'), 'no lesson visual'); assert.doesNotMatch(await p.textContent('#dcard'), /Loading details/);
     const chunks = reqs.filter(u => /\/wn\/d\d+\.js/.test(u)).length, total = await p.evaluate(() => WN_CORE.v.length);
@@ -27,7 +27,7 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
   await test('no page errors', async () => assert.deepStrictEqual(errors, []));
   const o = await b.newPage(), oreq = [];
   o.on('request', r => oreq.push(r.url()));
-  await o.goto(U('viewer-offline.html'));
+  await o.goto(U('viewer-offline.html'));await o.waitForFunction("window.WN_WARM");
   await test('offline build: one file, no extra requests, lessons and details work', async () => {
     assert.deepStrictEqual(oreq.filter(u => !u.includes('viewer-offline.html')), []);
     assert.ok(await o.$('#vbox figure.vis')); assert.ok(await o.evaluate(() => WN.has(WN_CORE.v.map((_, k) => k))));

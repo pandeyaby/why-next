@@ -25,7 +25,7 @@ const L = { counters: 'mt_WcfaSfVT33', tenframe: 'mt_dmNvjroCPT', array: 'mt_FX4
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } }), p = await ctx.newPage(); const errors = [];
   p.on('pageerror', e => errors.push(e.message)); p.on('console', m => { if (m.type() === 'error') errors.push(m.text()) });
-  await p.goto(URL);
+  await p.goto(URL);await p.waitForFunction("window.WN_WARM");
   const ids = await p.evaluate(() => Object.fromEntries(Object.entries(LEARN.L).map(([id, l]) => [id, l.visual.type])));
   await test('the id map in this test points at lessons with the right visual type', async () => { for (const [t, id] of Object.entries(L)) assert.strictEqual(ids[id], t, id) });
   await test('every lesson renders a visual with a text description', async () => {
@@ -97,7 +97,7 @@ const L = { counters: 'mt_WcfaSfVT33', tenframe: 'mt_dmNvjroCPT', array: 'mt_FX4
   await test('axe: no violations in any visual type', async () => { for (const [t, id] of Object.entries(L)) { await open(p, id); await axe(p, t) } });
   await test('no console or page errors', async () => { assert.deepStrictEqual(errors, []) });
 
-  const rc = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce' }), r = await rc.newPage(); await r.goto(URL);
+  const rc = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce' }), r = await rc.newPage(); await r.goto(URL);await r.waitForFunction("window.WN_WARM");
   await test('reduced motion on mobile: particles hold still, no visual overflows, axe clean', async () => {
     await open(r, L.particles); const a = await r.$eval('#vbox canvas', c => c.toDataURL()); await r.waitForTimeout(300); assert.strictEqual(a, await r.$eval('#vbox canvas', c => c.toDataURL()));
     await r.click('#vbox button:text-is("Heat above boiling")'); assert.match(await desc(r), /gas/);

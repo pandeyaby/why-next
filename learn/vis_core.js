@@ -32,7 +32,12 @@ function kslider(node,label,get,set,min,max,step,text){Object.entries({role:'sli
  node.addEventListener('keydown',e=>{const k={ArrowRight:1,ArrowUp:1,ArrowLeft:-1,ArrowDown:-1,PageUp:5,PageDown:-5}[e.key];
   if(k){e.preventDefault();set(clamp(+(get()+k*step).toFixed(6),min,max))}else if(e.key==='Home'){e.preventDefault();set(min)}else if(e.key==='End'){e.preventDefault();set(max)}sync()});
  sync();return sync}
-function mount(host,spec){const f=T[spec.type];if(!f){host.innerHTML='';return null}const id='v'+(++uid);
+let lzDone=false;const lz={},lzLoad0=u=>lz[u]||(lz[u]=new Promise((ok,no)=>{const s=document.createElement('script');s.src=(window.WN_BASE||'')+'wn/'+u;s.onload=ok;s.onerror=()=>{delete lz[u];no(new Error('could not load '+u))};document.head.appendChild(s)}));
+const lzLoad=u=>lzLoad0(u).then(()=>{if(u===window.WN_LAZY.vis)lzDone=true});
+function lazy(host,spec){const L=window.WN_LAZY;let dead=false,real=null;host.innerHTML='<div class="vis-load" role="status" aria-live="polite"><span class="vis-spin"></span> Loading the lab…</div>';
+ const go=()=>{if(dead)return;real=T[spec.type]?mount(host,spec):(host.innerHTML='',null)};lzLoad(L.vis).then(()=>T[spec.type]||!L[spec.type]?0:lzLoad(L.kit).then(()=>lzLoad(L[spec.type]))).then(go,()=>{if(!dead)host.innerHTML='<p class="muted">This lab could not load. Check your connection and reopen the lesson.</p>'});
+ return{get fig(){return real&&real.fig},lazy:1,cue(){real&&real.cue()},destroy(){dead=true;real&&real.destroy()}}}
+function mount(host,spec){const f=T[spec.type];if(!f&&window.WN_LAZY&&(window.WN_LAZY[spec.type]||!lzDone))return lazy(host,spec);if(!f){host.innerHTML='';return null}const id='v'+(++uid);
  host.innerHTML=`<figure class="vis" data-vtype="${spec.type}" aria-labelledby="${id}-c"><figcaption id="${id}-c"><span class="vis-tag">Try it</span> ${esc(spec.caption||'')}</figcaption><div class="vis-stage"></div><div class="vis-ctl"></div><p class="vis-desc" id="${id}-d" aria-live="polite"></p></figure>`;
  const fig=host.firstChild,stage=fig.querySelector('.vis-stage'),ctl=fig.querySelector('.vis-ctl'),desc=fig.querySelector('.vis-desc');
  const ctx={id,fig,stage,ctl,opts:spec.opts||{},el,clamp,nf,tween,drag,kslider,reduced,cueEl:null,stops:[],
@@ -47,4 +52,4 @@ function mount(host,spec){const f=T[spec.type];if(!f){host.innerHTML='';return n
 let cur=null,cur2=null;
 function show(host,spec){if(cur)cur.destroy();if(cur2){cur2.destroy();cur2=null}cur=spec?mount(host,spec):null;return cur}
 function show2(host,spec){if(cur2)cur2.destroy();cur2=host&&spec?mount(host,spec):null;return cur2}
-return{reg:(n,f)=>{T[n]=f},types:()=>Object.keys(T),mount,show,show2,cue:()=>cur&&cur.cue(),current:()=>cur,reduced,nf}})();
+return{pre:()=>window.WN_LAZY?lzLoad(window.WN_LAZY.vis):Promise.resolve(),reg:(n,f)=>{T[n]=f},types:()=>Object.keys(T),mount,show,show2,cue:()=>cur&&cur.cue(),current:()=>cur,reduced,nf}})();

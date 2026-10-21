@@ -12,7 +12,7 @@ async function page(browser, vp, mobile, q = '?seed=42') {
   const ctx = await browser.newContext({ viewport: vp, isMobile: !!mobile, hasTouch: !!mobile, deviceScaleFactor: mobile ? 2 : 1 });
   const p = await ctx.newPage(); p.errors = [];
   p.on('pageerror', e => p.errors.push(e.message)); p.on('console', m => { if (m.type() === 'error') p.errors.push(m.text()) });
-  await p.goto(URL + q); return p;
+  await p.goto(URL + q);await p.waitForFunction("window.WN_WARM"); return p;
 }
 async function profile(p, age, goal) { await p.selectOption('#pAge', age); await p.selectOption('#pGoal', goal) }
 const nextNodes = p => p.evaluate(() => LEARN.nextList(6).map(n => ({ id: n.id, n: n.n, a: n.a, s: n.s, d: n.d })));
@@ -81,7 +81,7 @@ async function axe(p, label) {
     for (const [k, it] of cur.p.entries()) await answer(p, 'p', it, k === firstMc);
     for (const it of cur.m) await answer(p, 'm', it);
     assert.match(await p.textContent('#mres'), /mastered/);
-    await p.reload();
+    await p.reload();await p.waitForFunction("window.WN_WARM");
     assert.ok(await p.evaluate(id => LEARN.mastered(id), id));
     assert.match(await p.$eval(`.item[data-id="${id}"]`, e => e.textContent), /mastered/);
   });
@@ -119,7 +119,7 @@ async function axe(p, label) {
   await test('spaced review: a mastered topic comes back for a 2-question refresh after a few days', async () => {
     const id = 'mt_jHgRQ4hR0g';
     const due = await p.evaluate(id => LEARN.prog(id).review.due, id);
-    await p.goto(URL + '?seed=3&today=' + due);
+    await p.goto(URL + '?seed=3&today=' + due);await p.waitForFunction("window.WN_WARM");
     await profile(p, '13-15', 'algebra');
     assert.match(await p.textContent('#learnHome'), /Quick review/);
     await p.evaluate(id => select(id), id);
@@ -129,7 +129,7 @@ async function axe(p, label) {
     assert.match(await p.textContent('#rres'), /Still got it/);
     const rv = await p.evaluate(id => LEARN.prog(id).review, id);
     assert.ok(rv.step === 1 && rv.due > due, JSON.stringify(rv));
-    await p.goto(URL + '?seed=42');
+    await p.goto(URL + '?seed=42');await p.waitForFunction("window.WN_WARM");
   });
   async function walk(age, goal) {
     const q = await page(browser, { width: 1000, height: 800 }); await profile(q, age, goal);
