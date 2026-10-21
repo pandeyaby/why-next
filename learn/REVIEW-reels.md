@@ -13,7 +13,7 @@ Every reel is lazy: only the poster loads, and nothing autoplays. Tap to play; c
 | r21_linear_equations | mt_QhFEDyIwSO solving linear equations | ready |
 | r21_straight_line_graphs | mt_q0LJXMQe70 gradient and equation of a line | ready |
 | r21_pythagoras | `mt_1VmTUxBrNd` (Pythagoras flagship lesson 104) | wired |
-| r14_probability | mt_-c4Ca_nBzX probability as a fraction | ready; shows once the hand-written lesson exists (the starter is hidden) |
+| r14_probability | mt_-c4Ca_nBzX probability as a fraction | wired (flagship lesson 105) |
 | r28_area_under_curve | mt_P-VlHqNpca definite integral | ready |
 | r21_states_of_matter | mt_1JFUNQDwAJ states of matter | **PENDING SCIENCE REVIEW** |
 | r21_acids_reactions | mt_AN2kJE6I0s acids, alkalis and pH | **PENDING SCIENCE REVIEW** |
