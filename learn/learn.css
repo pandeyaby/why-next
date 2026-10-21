@@ -35,3 +35,14 @@ circle.g-done{fill:#16a34a}circle.g-next{stroke:#d97706;stroke-width:3}
 .soon-block h3{margin:0 0 .35rem;font-size:.95rem}
 .soon-block p{margin:0;line-height:1.55}
 .soon-pre{margin:.2rem 0 0;padding-left:1.2rem;line-height:1.9}
+
+.reels{display:flex;gap:.8rem;overflow-x:auto;padding:.2rem 0 .6rem;scroll-snap-type:x mandatory}
+.reel{margin:0;flex:0 0 auto;width:min(46vw,180px);scroll-snap-align:start}
+.reel-play,.reel-v{display:block;width:100%;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000;position:relative;padding:0;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.reel-play img{width:100%;height:100%;object-fit:cover;display:block}
+.reel-ico{position:absolute;inset:auto 50% 50% auto;transform:translate(50%,50%);width:54px;height:54px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:22px;display:grid;place-items:center;backdrop-filter:blur(4px)}
+.reel-d{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:2px 7px;border-radius:99px}
+.reel figcaption{font-size:.85rem;margin-top:.35rem;color:var(--mu)}
+.reel-play:focus-visible{outline:3px solid var(--new);outline-offset:2px}
+
+.reel-rev{color:var(--am);font-size:.8em}
