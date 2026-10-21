@@ -1808,7 +1808,7 @@ VIS.reg('flagpyth',c=>{let A,chal;const st={fit:[3,4],a:3,b:4,th:90,dog:0,fa:0,f
   ctx.fillStyle=A.alpha(C.tx,.1);ctx.strokeStyle=C.tx;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(ox,oy);ctx.lineTo(ox+q.a*s,oy);ctx.lineTo(ox,oy-q.b*s);ctx.closePath();ctx.fill();ctx.stroke();
   ctx.lineWidth=1.5;ctx.strokeRect(ox,oy-12,12,12);const lab=(t,x,y,col)=>P.label(t,x,y,{font:'800 15px system-ui',pill:1,bg:A.alpha(col,.95),col:'#111'});
   lab(q.find==='a'?'?':q.a+' m',ox+q.a*s/2,oy+16,q.find==='a'?C.am:C.or);lab(q.find==='b'?'?':q.b+' m',ox-26,oy-q.b*s/2,q.find==='b'?C.am:C.cy);lab(q.find==='c'?'?':q.c+' m',ox+q.a*s/2+26,oy-q.b*s/2-8,q.find==='c'?C.am:C.vi)};
- const draw=(A,dt)=>{const{ctx,W,H,paint:P,col:C}=A;A.py={st,sqs,tri,view:()=>{const v=view(A);return{u:v.u,o:[v.X(0),v.Y(0)]}}};if(st.anim!=null){const tg=(st.fa?9:0)+(st.fb?16:0);if(st.anim<tg){st.anim=Math.min(tg,st.anim+dt*14);if(Math.floor(st.anim)!==Math.floor(st.anim-dt*14))A.sound.tick()}}
+ const draw=(A,dt)=>{const{ctx,W,H,paint:P,col:C}=A;if(st.drag==="a"||st.drag==="b"){const k=Math.min(1,(dt||.016)*4);st.fit[0]+=(st.a-st.fit[0])*k;st.fit[1]+=(st.b-st.fit[1])*k}A.py={st,sqs,tri,view:()=>{const v=view(A);return{u:v.u,o:[v.X(0),v.Y(0)]}}};if(st.anim!=null){const tg=(st.fa?9:0)+(st.fb?16:0);if(st.anim<tg){st.anim=Math.min(tg,st.anim+dt*14);if(Math.floor(st.anim)!==Math.floor(st.anim-dt*14))A.sound.tick()}}
   if(A.step===0){park(A);return}if(A.step===4){ladder(A);return}
   ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.vi,.06)],[1,C.pn]]);ctx.fillRect(0,0,W,H);
   if(A.step===6){chalFig(A);tape(A);return}
