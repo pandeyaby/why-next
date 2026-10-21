@@ -54,12 +54,16 @@ const LABS = ['problab', 'statlab', 'numzoom', 'graphlab', 'geolab', 'matrixlab'
   const A = f => p.evaluate(f);
   const nextOn = async () => assert.ok(!(await p.$eval('.fl-nav button:last-child', b => b.disabled)), 'Next should unlock after the gesture');
   const next = () => p.click('.fl-nav button:last-child');
+  const pick = async i => { await p.click(`.fl-pred button:nth-child(${i + 1})`); await p.waitForTimeout(150) };
+  const WH = () => A(() => { const A = document.querySelector('.fl-cv').__A; return [A.W, A.H] });
   const axeFlag = async () => { if (!(await p.evaluate(() => !!window.axe))) await p.addScriptTag({ path: AXE });
     for (let k = 0; k < 2; k++) { const r = await p.evaluate(() => axe.run('.vis.flag', { runOnly: ['wcag2a', 'wcag2aa', 'wcag21aa'] }));
       assert.deepStrictEqual(r.violations.map(v => v.id + ': ' + v.nodes.map(n => n.target.join(' ')).slice(0, 3).join(', ')), []); await p.click('#themeBtn'); await p.waitForTimeout(200) } };
   const open = async id => { await p.evaluate(id => select(id), id); await p.waitForSelector('.vis.flag .fl-cv', { timeout: 10000 }); await p.waitForTimeout(300) };
   await test('flagship (derivative): touch-drag Q, pinch zoom, pick the limit, misconception feedback, axe', async () => {
-    await open('mt_Y5xC--f9Eh'); await next(); await p.waitForTimeout(900);
+    await open('mt_Y5xC--f9Eh'); assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled), 'hook needs a prediction first');
+    let [W0, H0] = await WH(); await touch([[W0 / 2, H0 / 2]]); assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled), 'tap ignored before predicting');
+    await pick(1); await touch([[W0 / 2, H0 / 2]]); await nextOn(); await next(); await p.waitForTimeout(900);
     assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled), 'step locked until learner acts');
     const q = () => A(() => { const A = document.querySelector('.fl-cv').__A; return [A.X(A.s.t0 + A.s.h), A.X(3), A.X(A.s.t0 + .02), A.H / 2] });
     let [xq, x3, , y] = await q(); await touch(line(xq, y, x3, y)); await nextOn(); await next(); await p.waitForTimeout(700);
@@ -69,31 +73,37 @@ const LABS = ['problab', 'statlab', 'numzoom', 'graphlab', 'geolab', 'matrixlab'
       ev('pointerdown', cx - 10, 1); ev('pointerdown', cx + 10, 2); for (let d = 12; d < 160; d += 6) { ev('pointermove', cx - d, 1); ev('pointermove', cx + d, 2) } ev('pointerup', cx, 1); ev('pointerup', cx, 2) });
     assert.ok(await A(() => document.querySelector('.fl-cv').__A.s.z >= 10), 'pinch zoomed'); await nextOn(); await next();
     await p.click('.fl-pick button:text-is("9.8 m/s")'); assert.match(await p.textContent('.fl-why'), /since the start/);
-    await p.click('.fl-pick button:text-is("19.6 m/s")'); await nextOn(); await next(); await next();
+    await p.click('.fl-pick button:text-is("19.6 m/s")'); assert.match(await p.textContent('.fl-task'), /spot on/); await nextOn(); await next(); await p.waitForTimeout(400);
+    [W0, H0] = await WH(); const gx = await A(() => document.querySelector('.fl-cv').__A.X(.8)); await touch(line(gx, H0 * .8, gx, H0 * .4)); assert.ok(await A(() => document.querySelector('.fl-cv').__A.s.gmoved === 1), 'curve drag changed gravity'); await next();
     const t = await p.evaluate(() => +document.querySelector('.fl-chal b').textContent.match(/[\d.]+/)[0]);
     await p.fill('.fl-in', String(Math.round(4.9 * t * t / t * 100) / 100)); await p.click('.fl-chal .lbtn'); assert.match(await p.textContent('.fl-fb'), /since the start/);
     await p.fill('.fl-in', String(Math.round(98 * t) / 10)); await p.click('.fl-chal .lbtn'); assert.match(await p.textContent('.fl-fb'), /✓/); await axeFlag();
   });
   await test('flagship (place value): touch-drag digits for ×10, ×100, ÷100; Show me fallback; "add a zero" misconception; axe', async () => {
-    await open('mt_EDgw64OmfA'); await next(); await next(); await p.waitForTimeout(400);
+    await open('mt_EDgw64OmfA'); let [W0, H0] = await WH(); await pick(1); await touch([[W0 * .44, H0 * .7]]); await p.waitForTimeout(2200); await nextOn(); await next(); await p.waitForTimeout(300);
+    await pick(1); await touch([[W0 / 2, H0 / 2]]); assert.match(await A(() => document.querySelector('.fl-cv').getAttribute('aria-label')), /3 tens, 9 ones/); await touch([[W0 / 2, H0 / 2]]); await p.waitForTimeout(2200);
+    assert.match(await A(() => document.querySelector('.fl-cv').getAttribute('aria-label')), /4 tens, 0 ones/); assert.match(await p.textContent('.fl-task'), /spot on/); await nextOn(); await next(); await p.waitForTimeout(400);
     const g = () => A(() => { const A = document.querySelector('.fl-cv').__A; return [A.W / 2, A.g.top + A.g.th / 2, A.g.cw] });
     const val = () => A(() => document.querySelector('.fl-cv').getAttribute('aria-label'));
     let [x, y, cw] = await g(); await touch(line(x, y, x - cw, y)); await p.waitForTimeout(800); assert.match(await val(), /3 ones, 5 tenths/); await nextOn(); await next(); await p.waitForTimeout(300);
     [x, y, cw] = await g(); await touch(line(x, y, x - cw, y)); await p.waitForTimeout(800); assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled), '×10 is not ×100');
     await touch(line(x, y, x - cw, y)); await p.waitForTimeout(800); await nextOn(); await next(); await p.waitForTimeout(300);
     await p.click('.fl-show'); await p.waitForTimeout(900); assert.match(await val(), /3 tenths, 5 hundredths/); await nextOn(); await next(); await next();
-    const [n, op] = await A(() => { const m = document.querySelector('.fl-chal b').textContent.match(/([\d.]+) ([×÷]) (\d+)/); return [m[1], m[2] + m[3]] });
-    if (op === '×10' && n.includes('.')) { await p.fill('.fl-in', n + '0'); await p.click('.fl-chal .lbtn'); assert.match(await p.textContent('.fl-fb'), /Adding a zero/) }
-    const ans = String(+(+n * (op[0] === '×' ? +op.slice(1) : 1 / +op.slice(1))).toFixed(4)); await p.fill('.fl-in', ans); await p.click('.fl-chal .lbtn'); assert.match(await p.textContent('.fl-fb'), /✓/); await axeFlag();
+    const ck = await A(() => document.querySelector('.fl-cv').__A.pst.c); [x, y, cw] = await g();
+    await touch(line(x, y, x + Math.sign(ck.k) * cw, y)); await p.waitForTimeout(1000); assert.match(await p.textContent('.fl-fb'), /smaller|bigger/);
+    await p.click('.fl-r'); if (String(ck.n).includes('.')) { await p.click('.fl-z'); assert.match(await p.textContent('.fl-fb'), /changes nothing/) }
+    await touch(line(x, y, x - ck.k * cw, y)); await p.waitForTimeout(1000); assert.match(await p.textContent('.fl-fb'), /✓/); await axeFlag();
   });
   await test('flagship (fractions): knife swipes cut and slice the bar, tap removes a cut, "add the same" misconception, axe', async () => {
     await open('mt_FbDKeLfBCo'); await next(); await p.waitForTimeout(400);
     const g = () => A(() => { const A = document.querySelector('.fl-cv').__A; return [A.g.bx, A.g.by, A.g.bw, A.g.bh, A.f.n, A.f.d, A.f.k] });
     let [bx, by, bw, bh] = await g(); await touch(line(bx + bw * .2, by, bx + bw * .2, by + bh)); assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled), 'off-centre cut rejected');
     await touch(line(bx + bw / 2, by - 5, bx + bw / 2, by + bh + 5)); assert.deepStrictEqual((await g()).slice(4), [1, 2, 1]); await nextOn(); await next(); await p.waitForTimeout(300);
-    await touch(line(bx - 5, by + bh / 2, bx + bw + 5, by + bh / 2)); assert.deepStrictEqual((await g()).slice(4), [1, 2, 2]); await nextOn(); await next(); await p.waitForTimeout(300);
+    assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled)); await pick(1); await touch(line(bx - 5, by + bh / 2, bx + bw + 5, by + bh / 2)); assert.deepStrictEqual((await g()).slice(4), [1, 2, 2]); assert.match(await p.textContent('.fl-task'), /spot on/); await nextOn(); await next(); await p.waitForTimeout(300);
     for (let i = 0; i < 2; i++) await touch(line(bx - 5, by + bh * .3, bx + bw + 5, by + bh * .3)); assert.deepStrictEqual((await g()).slice(4), [1, 2, 4]); await nextOn(); await next(); await p.waitForTimeout(300);
-    await touch([[bx + bw / 2, by + bh / 2]]); assert.deepStrictEqual((await g()).slice(4), [3, 4, 1]); await nextOn(); await next(); await next();
+    await pick(0); await touch([[bx + bw / 2, by + bh / 2]]); assert.deepStrictEqual((await g()).slice(4), [3, 4, 1]); await nextOn(); await next(); await p.waitForTimeout(300);
+    [bx, by, bw, bh] = await g(); const kx = bx + bw * 2 / 3; await touch(line(kx, by + bh + 16, bx + bw * .99, by + bh + 16)); assert.deepStrictEqual((await g()).slice(4), [3, 3, 1], 'knob drag shades all');
+    await touch(line(bx + bw * .1, by - 8, bx + bw * .1, by + bh + 8)); assert.deepStrictEqual((await g()).slice(4, 6), [3, 4], 'vertical swipe adds a column'); await next();
     const [n, d, D] = await A(() => document.querySelector('.fl-chal b').textContent.match(/(\d+)\/(\d+) = \?\/(\d+)/).slice(1).map(Number));
     await p.fill('.fl-in', String(n + D - d)); await p.click('.fl-chal .lbtn'); assert.match(await p.textContent('.fl-fb'), /added/);
     await p.fill('.fl-in', String(n * D / d)); await p.click('.fl-chal .lbtn'); assert.match(await p.textContent('.fl-fb'), /✓/); await axeFlag();

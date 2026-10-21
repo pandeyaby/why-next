@@ -124,3 +124,9 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 @keyframes flIn{from{opacity:0;transform:translateY(4px)}}
 @media (prefers-reduced-motion:reduce){.fl-task,.fl-nav button.pulse{animation:none}}
 .fl-cv{cursor:grab}.fl-cv:active{cursor:grabbing}
+
+.fl-pred{margin:.6rem 0 0;padding:.6rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--vi) 14%,transparent);border:1px solid color-mix(in srgb,var(--vi) 45%,transparent);animation:flIn .35s ease}
+.fl-pred .fl-pq{margin:0 0 .45rem}.fl-pick{display:flex;flex-wrap:wrap;gap:.45rem}
+.fl-pick button.mine{outline:3px solid var(--vi);outline-offset:1px;opacity:1}.fl-pick button:disabled:not(.mine){opacity:.55}
+.fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}
+.fl-pick button.ok{background:color-mix(in srgb,var(--gr) 30%,transparent)}.fl-pick button.no{background:color-mix(in srgb,var(--rd) 22%,transparent)}
