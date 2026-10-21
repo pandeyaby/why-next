@@ -116,7 +116,20 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     o = await G(); const t = o.t; await setC(t.c); await setM(-t.m || 1); assert.match(await p.textContent('.fl-fb'), /wrong way|gradient|steepness|c is right/);
     await setM(t.m); assert.match(await p.textContent('.fl-fb'), /✓/); await axeFlag();
   });
-  }
+    await test('flagship (Pythagoras): drag the dog across the park, drag the squares into the hypotenuse square, build 6-8-10, bend the angle, ladder, tape-measure feedback, axe', async () => {
+    await open('mt_1VmTUxBrNd'); let [W, H] = await WH(); await pick(1); await touch(line(W * .12, H * .86, W * .88, H * .2, 20)); await nextOn(); assert.match(await p.textContent('.fl-task'), /50 m/); await next(); await p.waitForTimeout(300);
+    const py = () => A(() => { const A = document.querySelector('.fl-cv').__A, v = A.py.view(), s = A.py.sqs(), t = A.py.tri(), px = q => [v.o[0] + q[0] * v.u, v.o[1] - q[1] * v.u], cen = q => px([q.reduce((a, b) => a + b[0], 0) / 4, q.reduce((a, b) => a + b[1], 0) / 4]); return { sa: cen(s.sa), sb: cen(s.sb), sc: cen(s.sc), P: px(t.P), Q: px(t.Q), O: px(t.O), u: v.u, st: A.py.st } });
+    let g = await py(); await touch(line(...g.sa, ...g.sc)); assert.ok(await p.$eval('.fl-nav button:last-child', b => b.disabled), 'one square is not enough'); await touch(line(...g.sb, ...g.sc)); await p.waitForTimeout(2600); await nextOn(); assert.match(await p.textContent('.fl-task'), /9 \+ 16 = 25/); await next(); await p.waitForTimeout(300);
+    await pick(0); g = await py(); await touch(line(...g.P, g.P[0] + 3 * g.u, g.P[1])); await p.waitForTimeout(700); g = await py(); assert.strictEqual(g.st.a, 6);
+    await touch(line(...g.Q, g.Q[0], g.Q[1] - 4 * g.u)); await p.waitForTimeout(700); g = await py(); assert.strictEqual(g.st.b, 8); await nextOn(); assert.match(await p.textContent('.fl-task'), /36 \+ 64 = 100/); await next(); await p.waitForTimeout(300);
+    await pick(0); g = await py(); const arc = Array.from({ length: 13 }, (_, i) => { const a = (90 + i * 2.5) * Math.PI / 180; return [g.O[0] + 4 * g.u * Math.cos(a), g.O[1] - 4 * g.u * Math.sin(a)] }); await touch(arc); await nextOn(); assert.match(await p.textContent('.fl-task'), /more than 25/); await next(); await p.waitForTimeout(300);
+    await pick(0); [W, H] = await WH(); const u = Math.min(W * .72 / 5, (H * .86 - H * .1) / 5.2), wx = W * .18; await touch(line(wx + 1.5 * u, H * .86, wx + 3 * u, H * .86)); await nextOn(); assert.match(await p.textContent('.fl-task'), /25 − 9 = 16/); assert.match(await p.textContent('.fl-task'), /2 m \(5 − 3\)/); await next(); await p.waitForTimeout(300);
+    await next(); await p.waitForTimeout(300);
+    const q = await A(() => document.querySelector('.fl-cv').__A.py.st.q), tx = v => 24 + v / 40 * (W - 48), ty = H - 34;
+    const wrong = q.find === 'c' ? q.a + q.b : q.c - (q.find === 'a' ? q.b : q.a); await touch(line(tx(0), ty, tx(wrong), ty, 16)); assert.match(await p.textContent('.fl-fb'), q.find === 'c' ? /added the lengths/ : /Subtracting lengths/);
+    await touch(line(tx(wrong), ty, tx(q.ans), ty, 16)); assert.match(await p.textContent('.fl-fb'), /✓/); await axeFlag();
+  });
+}
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }
 })();

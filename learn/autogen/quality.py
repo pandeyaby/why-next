@@ -1,7 +1,7 @@
 """Quality scorer (0–100) shared by starter and hand-written lessons, plus the near-duplicate detector.
 Calibrated against the hand-written lessons: see `python3 learn/autogen/quality.py` for their distribution."""
 import re, glob, json, sys
-LABS = {"problab", "statlab", "numzoom", "graphlab", "geolab", "matrixlab", "gaslab", "reactlab", "wavelab", "forcelab", "ecolab", "platelab", "celllab", "cyclelab", "chainlab", "bodylab", "flagderiv", "flagplace", "flagfrac", "flagneg", "flageq", "flagline"}
+LABS = {"problab", "statlab", "numzoom", "graphlab", "geolab", "matrixlab", "gaslab", "reactlab", "wavelab", "forcelab", "ecolab", "platelab", "celllab", "cyclelab", "chainlab", "bodylab", "flagderiv", "flagplace", "flagfrac", "flagneg", "flageq", "flagline", "flagstate", "flagprob", "flagpyth"}
 STOP = set("the and for with that this from into your what when how are you can use using about their them they its has have will make made more most than then each".split())
 def words(s): return re.findall(r"[a-z0-9]+", s.lower())
 def body(les):

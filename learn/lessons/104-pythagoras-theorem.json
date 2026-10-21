@@ -1,0 +1,190 @@
+{
+  "topicId": "mt_1VmTUxBrNd",
+  "title": "Pythagoras' theorem",
+  "audience": "learner",
+  "keyIdea": "In a right-angled triangle the squares on the two shorter sides add up to the square on the longest side: a² + b² = c².",
+  "explain": {
+    "kid": [
+      "The longest side of a right-angled triangle is the hypotenuse. It is opposite the right angle.",
+      "Build a square on each side. The two small squares together fill the big one exactly: a² + b² = c².",
+      "To find the long side, add the squares, then take the square root. To find a short side, subtract the squares, then take the square root."
+    ],
+    "adult": [
+      "Pythagoras' theorem holds only for right-angled triangles: a² + b² = c², where c is the hypotenuse. If the angle is wider than 90°, c² is bigger than a² + b²; if narrower, smaller.",
+      "The classic error is working with lengths instead of areas: 3 + 4 is not 5. Square, add or subtract, then square root. A quick check: the hypotenuse must be the longest side."
+    ]
+  },
+  "familyTip": "Measure a door or a TV: its width and height, then work out the diagonal and check it with a tape measure.",
+  "practice": [
+    {
+      "type": "numeric",
+      "id": "p1",
+      "prompt": "The two shorter sides of a right-angled triangle are {k}×3 cm and {k}×4 cm. How long is the hypotenuse, in cm?",
+      "answer": "5*k",
+      "hint": "Square both, add, then take the square root.",
+      "explain": "({=3*k})² + ({=4*k})² = {=25*k*k}, and √{=25*k*k} = {=5*k} cm.",
+      "params": {
+        "k": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "A ladder {=13*k} m long has its foot {=5*k} m from a wall. How high does it reach, in m?",
+      "answer": "12*k",
+      "hint": "Subtract the squares for a shorter side.",
+      "explain": "({=13*k})² − ({=5*k})² = {=144*k*k}, √{=144*k*k} = {=12*k} m.",
+      "params": {
+        "k": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "type": "mc",
+      "id": "p3",
+      "prompt": "Which side is the hypotenuse?",
+      "choices": [
+        "The side opposite the right angle",
+        "The bottom side",
+        "The shortest side"
+      ],
+      "answer": 0,
+      "hint": "It is always the longest side.",
+      "explain": "The hypotenuse is opposite the right angle, and it is the longest side."
+    },
+    {
+      "type": "mc",
+      "id": "p4",
+      "prompt": "A triangle has sides 6, 8 and 11. Is it right-angled?",
+      "choices": [
+        "No: 36 + 64 = 100, not 121",
+        "Yes: 6 + 8 > 11",
+        "Yes, every triangle is"
+      ],
+      "answer": 0,
+      "hint": "Check a² + b² against c².",
+      "explain": "36 + 64 = 100, but 11² = 121, so it is not right-angled (the angle is wider than 90°)."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "numeric",
+        "id": "m1",
+        "prompt": "A right-angled triangle has shorter sides {=5*k} and {=12*k}. How long is the hypotenuse?",
+        "answer": "13*k",
+        "hint": "a² + b², then square root.",
+        "explain": "{=25*k*k} + {=144*k*k} = {=169*k*k}, √ = {=13*k}.",
+        "params": {
+          "k": [
+            1,
+            4
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m2",
+        "prompt": "The hypotenuse is {=17*k} cm and one side is {=8*k} cm. How long is the other side, in cm?",
+        "answer": "15*k",
+        "hint": "c² − a².",
+        "explain": "{=289*k*k} − {=64*k*k} = {=225*k*k}, √ = {=15*k} cm.",
+        "params": {
+          "k": [
+            1,
+            4
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "A park is 40 m by 30 m. How much shorter is the diagonal than walking round two edges?",
+        "choices": [
+          "20 m",
+          "10 m",
+          "0 m"
+        ],
+        "answer": 0,
+        "hint": "The diagonal is √(40² + 30²).",
+        "explain": "Diagonal = 50 m, edges = 70 m, so 20 m shorter."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Sam says the hypotenuse of a 3-4 triangle is 7. What went wrong?",
+        "choices": [
+          "He added the lengths, not the squares",
+          "He forgot to double",
+          "Nothing, 7 is right"
+        ],
+        "answer": 0,
+        "hint": "Square first.",
+        "explain": "9 + 16 = 25 and √25 = 5. Adding the lengths gives 7, which is too long."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "A TV screen is {=16*k} inches wide and {=12*k} inches tall. How long is its diagonal, in inches?",
+        "answer": "20*k",
+        "hint": "Square, add, square root.",
+        "explain": "{=256*k*k} + {=144*k*k} = {=400*k*k}, √ = {=20*k}.",
+        "params": {
+          "k": [
+            1,
+            4
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m6",
+        "prompt": "If the angle between sides 3 and 4 is 120°, the third side is…",
+        "choices": [
+          "longer than 5",
+          "exactly 5",
+          "shorter than 5"
+        ],
+        "answer": 0,
+        "hint": "Opening the angle pushes the ends apart.",
+        "explain": "A wider angle makes c longer, so c² is bigger than a² + b²."
+      },
+      {
+        "type": "numeric",
+        "id": "m7",
+        "prompt": "A ramp rises {=7*k} m over a flat distance of {=24*k} m. How long is the ramp, in m?",
+        "answer": "25*k",
+        "hint": "The ramp is the hypotenuse.",
+        "explain": "{=49*k*k} + {=576*k*k} = {=625*k*k}, √ = {=25*k} m.",
+        "params": {
+          "k": [
+            1,
+            4
+          ]
+        }
+      }
+    ]
+  },
+  "status": "self-checked",
+  "visual": {
+    "type": "squares",
+    "caption": "Square numbers are areas: 3² = 9, 4² = 16, 5² = 25. Pythagoras adds areas like these.",
+    "opts": {
+      "n": 5
+    }
+  },
+  "lab": {
+    "type": "flagpyth",
+    "caption": "Flagship lab: the park shortcut. Drag the squares on the sides into the square on the hypotenuse.",
+    "opts": {
+      "step": 0
+    }
+  }
+}
