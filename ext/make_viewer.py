@@ -53,7 +53,14 @@ LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vi
 learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
 # reels: short vertical explainers (learn/reels/<topic>.mp4 + .vtt + .jpg) copied to out/reels, manifest inlined
 import shutil as _sh
-_rm = json.load(open("learn/reels/index.json")) if os.path.exists("learn/reels/index.json") else {}
+_rm = json.load(open("learn/reels/manifest.json")) if os.path.exists("learn/reels/manifest.json") else {}
+# manifest: {topicId: [{"f": file stem, "t": title, "d": seconds, "n": order, "review"?: 1}, ...]}; any number of reels per topic
+for _tid, _list in _rm.items():
+    assert isinstance(_list, list) and _list, f"reels manifest: {_tid} needs a non-empty list"
+    for _r in _list:
+        for _ext in (".mp4", ".vtt", ".jpg"):
+            assert os.path.exists(f"learn/reels/{_r['f']}{_ext}"), f"reels manifest: missing learn/reels/{_r['f']}{_ext}"
+        assert os.path.getsize(f"learn/reels/{_r['f']}.mp4") < 2_000_000, f"reel {_r['f']}.mp4 must be under 2 MB"
 os.makedirs("out/reels", exist_ok=True)
 for _f in glob.glob("learn/reels/*"):
     if not _f.endswith(".json"): _sh.copy2(_f, "out/reels/" + os.path.basename(_f))

@@ -76,3 +76,10 @@ them load on the first search. Chunks are plain scripts, so the viewer works on 
 `out/viewer-offline.html` is the same app in one file. Measure with `node scripts/serve_static.cjs out` (gzip, like Pages) and Lighthouse.
 
 `python3 learn/goal_coverage.py --list` lists every topic on a goal path for an age band and whether it has a lesson; `check_all.sh` fails if a required goal/band pair (now: integration, 16–18) has a gap.
+
+## Reel catalogue
+
+`learn/reels/manifest.json` maps a topic id to a list of reels: `{"mt_x": [{"f": "mt_x", "t": "Title", "d": 21, "n": 1, "review": 1}]}`.
+Each reel needs `<f>.mp4` (vertical, under 2 MB), `<f>.vtt` captions and `<f>.jpg` poster in `learn/reels/`; `ext/make_viewer.py` checks this.
+Add as many reels per topic as you like: each visit shows one the learner has not seen yet (random, remembered in localStorage
+`wn_reels_seen`), "Another reel ↻" swaps, and the rotation restarts once all are seen. `review: 1` shows "science check pending".

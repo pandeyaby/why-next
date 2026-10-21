@@ -81,6 +81,13 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     if (hb != null && hb <= 8 && hb !== q.ans) { await toB(hb); assert.match(await p.textContent('.fl-chal .fl-fb'), /Area, not height/) } else { await toB(Math.min(8, q.ans + 1)); assert.match(await p.textContent('.fl-chal .fl-fb'), /too big/) }
     await toB(q.ans); assert.match(await p.textContent('.fl-chal .fl-fb'), /✓/); await axeFlag();
   });
+  await test('reel catalogue: each visit rotates to an unseen reel (localStorage), "Another reel" swaps, all seen restarts', async () => {
+    await p.evaluate(() => localStorage.removeItem('wn_reels_seen')); const fs = [];
+    for (let i = 0; i < 2; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(200); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reel[data-f]'); fs.push(await p.$eval('.reel', e => e.dataset.f)) }
+    assert.notStrictEqual(fs[0], fs[1], 'second visit shows the other reel'); assert.match(await p.textContent('.reel figcaption'), /of 2/);
+    const seen = await p.evaluate(() => JSON.parse(localStorage.getItem('wn_reels_seen')).mt_EDgw64OmfA); assert.strictEqual(seen.length, 2);
+    const f0 = await p.$eval('.reel', e => e.dataset.f); await p.click('.reel-next'); assert.notStrictEqual(await p.$eval('.reel', e => e.dataset.f), f0);
+  });
   }
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }

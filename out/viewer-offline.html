@@ -75,6 +75,7 @@ circle.g-done{fill:#16a34a}circle.g-next{stroke:#d97706;stroke-width:3}
 .reel-play:focus-visible{outline:3px solid var(--new);outline-offset:2px}
 
 .reel-rev{color:var(--am);font-size:.8em}
+.reel-n{color:var(--mu);font-size:.8em}.reel-next{min-height:44px;min-width:44px;padding:0 .4rem}
 /* Why Next? interactive visuals */
 .vis{margin:14px 0;padding:12px;border:1px solid #c7d2fe;border-radius:12px;background:#fafbff}
 .vis figcaption{font-weight:600;margin-bottom:6px}
@@ -2743,8 +2744,13 @@ function celebrate(host){if(!host)return;host.classList.add('fx-win');if(VIS.red
  for(let i=0;i<12;i++){const d=document.createElement('i');d.style.setProperty('--a',i*30+'deg');b.appendChild(d)}host.prepend(b);setTimeout(()=>b.remove(),1400)}
 return{sync,progress,ring,celebrate}})();
 /* Reel slot: a short vertical explainer per flagship topic, lazy (poster only until tapped), captions on, never autoplays. */
-const reelSlot=tid=>{const R=(window.WN_REELS||{})[tid];if(!R||!R.length)return '';const B=(window.WN_BASE||'')+'reels/';
- return `<h3 class="lsub">🎬 Watch a quick explainer</h3><div class="reels">${R.map(r=>`<figure class="reel"><button type="button" class="reel-play" data-reel="${B}${r.f}" aria-label="Play video: ${r.t} (${r.d} seconds, with captions)"><img src="${B}${r.f}.jpg" alt="" loading="lazy" width="180" height="320"><span class="reel-ico" aria-hidden="true">▶</span><span class="reel-d">${r.d}s</span></button><figcaption>${r.t}${r.review?' <span class="reel-rev">· science check pending</span>':''}</figcaption></figure>`).join('')}</div>`};
+/* Reel catalogue: learn/reels/manifest.json maps topic id -> list of reels. Each visit shows one reel the learner has not seen yet
+   (random among unseen, remembered in localStorage "wn_reels_seen"); once all are seen the rotation starts again. */
+const reelSeen=()=>{try{return JSON.parse(localStorage.getItem('wn_reels_seen')||'{}')}catch(e){return{}}},reelMark=(tid,f)=>{try{const s=reelSeen(),l=s[tid]||[];if(!l.includes(f))l.push(f);s[tid]=l;localStorage.setItem('wn_reels_seen',JSON.stringify(s))}catch(e){}};
+const reelPick=(tid,R,skip)=>{const seen=reelSeen()[tid]||[];let pool=R.filter(r=>!seen.includes(r.f)&&r.f!==skip);if(!pool.length){try{const s=reelSeen();s[tid]=[];localStorage.setItem('wn_reels_seen',JSON.stringify(s))}catch(e){}pool=R.filter(r=>r.f!==skip);if(!pool.length)pool=R}return pool[Math.floor(Math.random()*pool.length)]};
+const reelFig=(tid,R,r)=>{const B=(window.WN_BASE||'')+'reels/',i=R.indexOf(r);return `<figure class="reel" data-tid="${tid}" data-f="${r.f}"><button type="button" class="reel-play" data-reel="${B}${r.f}" aria-label="Play video: ${r.t} (${r.d} seconds, with captions)"><img src="${B}${r.f}.jpg" alt="" loading="lazy" width="180" height="320"><span class="reel-ico" aria-hidden="true">▶</span><span class="reel-d">${r.d}s</span></button><figcaption>${r.t}${r.review?' <span class="reel-rev">· science check pending</span>':''}${R.length>1?`<br><span class="reel-n">${i+1} of ${R.length}</span> <button type="button" class="linkish reel-next">Another reel ↻</button>`:''}</figcaption></figure>`};
+const reelSlot=tid=>{const R=(window.WN_REELS||{})[tid];if(!R||!R.length)return '';const r=reelPick(tid,R);reelMark(tid,r.f);return `<h3 class="lsub">🎬 Watch a quick explainer</h3><div class="reels">${reelFig(tid,R,r)}</div>`};
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('.reel-next');if(!b)return;const fig=b.closest('.reel'),tid=fig.dataset.tid,R=(window.WN_REELS||{})[tid];if(!R)return;const r=reelPick(tid,R,fig.dataset.f);reelMark(tid,r.f);fig.outerHTML=reelFig(tid,R,r)});
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('.reel-play');if(!b)return;const u=b.dataset.reel,v=document.createElement('video');v.className='reel-v';v.controls=true;v.playsInline=true;v.preload='metadata';if(/^https?:/.test(u))v.crossOrigin='anonymous';v.poster=u+'.jpg';v.setAttribute('aria-label',b.getAttribute('aria-label').replace('Play video: ',''));
  v.innerHTML=`<source src="${u}.mp4" type="video/mp4"><track kind="captions" srclang="en" label="English" src="${u}.vtt" default>`;b.replaceWith(v);const p=v.play();if(p&&p.catch)p.catch(()=>{})});
 /* Why Next? Learn panel: explanation, practice with instant feedback and hints, mastery check, spaced review. */
