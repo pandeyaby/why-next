@@ -80,7 +80,7 @@ them load on the first search. Chunks are plain scripts, so the viewer works on 
 ## Reel catalogue
 
 `learn/reels/manifest.json` maps a topic id to a list of reels: `{"mt_x": [{"f": "mt_x", "t": "Title", "d": 21, "n": 1, "review": 1}]}`.
-Each reel needs `<f>.mp4` (vertical, under 2 MB), `<f>.vtt` captions and `<f>.jpg` poster in `learn/reels/`; `ext/make_viewer.py` checks this.
+Each reel needs `<f>.mp4` (vertical, under 2 MB), `<f>.vtt` captions and `<f>.jpg` poster. All reel files, including the first topic reels (mt_*), are published with `ext/reels_publish.py` (see below), so this branch holds only `manifest.json` and `parts.json` and stays under jsDelivr's 50 MB limit (about 46 MB).
 Add as many reels per topic as you like: each visit shows one the learner has not seen yet (random, remembered in localStorage
 `wn_reels_seen`), "Another reel ↻" swaps, and the rotation restarts once all are seen. `review: 1` shows "science check pending".
 
