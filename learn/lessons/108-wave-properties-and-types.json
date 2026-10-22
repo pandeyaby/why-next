@@ -1,0 +1,138 @@
+{
+  "topicId": "mt_LxK9OKZQZX",
+  "title": "Wave properties and types",
+  "audience": "learner",
+  "keyIdea": "A wave carries energy from place to place without carrying the material along. It has an amplitude, a wavelength, a frequency and a speed, linked by v = f × λ. Transverse waves wiggle across the direction of travel; longitudinal waves wiggle along it.",
+  "explain": {
+    "kid": [
+      "Flick one end of a rope and a bump runs along it. The rope stays where it is. Only the wave moves on, carrying energy.",
+      "Amplitude is how far a bit of rope moves from the middle. Wavelength is the length of one whole wave, crest to crest. Frequency is how many waves pass each second, in hertz (Hz).",
+      "Speed = frequency × wavelength. If 3 waves pass each second and each is 2 m long, the wave moves 6 m each second.",
+      "On a rope the bits move up and down, across the way the wave goes. That is a transverse wave. In sound, the air moves back and forth along the way the wave goes. That is a longitudinal wave."
+    ],
+    "adult": [
+      "Waves transfer energy, not matter: each particle oscillates about a fixed position. In transverse waves (light, water ripples, waves on a string) the oscillation is perpendicular to the direction of travel; in longitudinal waves (sound, a pushed slinky) it is parallel, giving compressions and rarefactions.",
+      "The speed is set by the medium, not by the source. Wiggle faster and the frequency rises, so each wave must be shorter: v = f × λ, with v in m/s, f in Hz and λ in metres. Amplitude is independent of all three.",
+      "Common slips: measuring the wavelength from a crest to the next trough (that is half a wavelength), and calling the peak-to-trough height the amplitude (that is twice it)."
+    ]
+  },
+  "familyTip": "Tie a rope or a skipping rope to a door handle. Take turns wiggling slowly, then fast. Count the waves you can see each time. Faster wiggles give more, shorter waves.",
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "A duck sits on a pond as ripples pass under it. What does the duck do?",
+      "choices": ["Bobs up and down but stays in about the same place", "Is carried along to the edge by the ripples", "Stays completely still"],
+      "answer": 0,
+      "hint": "Do waves carry the water along, or just the energy?",
+      "explain": "The water, and the duck, just bob up and down. The ripples carry energy across the pond, not the water."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "A wave has a frequency of {f} Hz and a wavelength of {l} m. What is its speed in m/s?",
+      "answer": "f*l",
+      "hint": "v = f × λ.",
+      "explain": "v = {f} × {l} = {=f*l} m/s.",
+      "params": {"f": [2, 9], "l": [2, 6]}
+    },
+    {
+      "type": "mc",
+      "id": "p3",
+      "prompt": "Which of these is a longitudinal wave?",
+      "choices": ["Sound travelling through air", "Light from a lamp", "A ripple on water"],
+      "answer": 0,
+      "hint": "In which one do the particles move back and forth along the direction of travel?",
+      "explain": "Sound: the air is squashed and stretched along the direction the sound travels. Light and ripples are transverse."
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "Waves on a rope travel at {=v*2} m/s. You wiggle the end {v} times a second. How long is each wave, in metres?",
+      "answer": "2",
+      "hint": "λ = v ÷ f.",
+      "explain": "λ = {=v*2} ÷ {v} = 2 m.",
+      "params": {"v": [2, 8]}
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "numeric",
+        "id": "m1",
+        "prompt": "A sound wave has frequency {=f*10} Hz and wavelength {l} m. What is its speed in m/s?",
+        "answer": "f*10*l",
+        "hint": "Multiply frequency by wavelength.",
+        "explain": "v = {=f*10} × {l} = {=f*10*l} m/s.",
+        "params": {"f": [10, 40], "l": [1, 3]}
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "You wiggle a rope twice as often, with the same tension. What happens to the wavelength?",
+        "choices": ["It halves", "It doubles", "It stays the same"],
+        "answer": 0,
+        "hint": "The rope sets the speed, and v = f × λ.",
+        "explain": "The speed is fixed by the rope. Double f means λ must halve so that f × λ stays the same."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "On a diagram, the distance from a crest to the next trough is 0.5 m. What is the wavelength?",
+        "choices": ["1 m", "0.5 m", "0.25 m"],
+        "answer": 0,
+        "hint": "Crest to trough is only part of a full wave.",
+        "explain": "Crest to trough is half a wave, so the wavelength is 2 × 0.5 = 1 m."
+      },
+      {
+        "type": "numeric",
+        "id": "m4",
+        "prompt": "A wave travels at {=l*f} m/s with a wavelength of {l} m. What is its frequency in Hz?",
+        "answer": "f",
+        "hint": "f = v ÷ λ.",
+        "explain": "f = {=l*f} ÷ {l} = {f} Hz.",
+        "params": {"l": [2, 5], "f": [2, 9]}
+      },
+      {
+        "type": "mc",
+        "id": "m5",
+        "prompt": "Which change makes a wave on a rope carry more energy without changing its wavelength?",
+        "choices": ["A bigger amplitude", "A higher frequency", "A longer rope"],
+        "answer": 0,
+        "hint": "Which property changes the height but not the length of the waves?",
+        "explain": "A bigger amplitude: the rope moves further from the middle, which takes more energy. Wavelength depends on frequency and speed only."
+      },
+      {
+        "type": "mc",
+        "id": "m6",
+        "prompt": "In a transverse wave, the particles move…",
+        "choices": ["at right angles to the direction the wave travels", "along the direction the wave travels", "along with the wave to the end"],
+        "answer": 0,
+        "hint": "Think of the red bead on the rope.",
+        "explain": "At right angles: the rope moves up and down while the wave moves along."
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "What do the 'compressions' in a sound wave mean?",
+        "choices": ["Places where the air particles are squashed close together", "The highest points of the wave", "Places with no air at all"],
+        "answer": 0,
+        "hint": "Look at the slinky: some coils bunch up.",
+        "explain": "Compressions are where the particles crowd together; rarefactions are where they spread apart."
+      }
+    ]
+  },
+  "status": "self-checked",
+  "visual": {
+    "type": "wavelab",
+    "caption": "Change the amplitude, frequency and speed until your wave matches the faint target wave.",
+    "opts": {"a": 1.5, "f": 1, "v": 4, "target": [1, 2]}
+  },
+  "lab": {
+    "type": "flagwave",
+    "caption": "Flagship lab: the wave rope. Wiggle it yourself, measure a wavelength, and turn it into a slinky.",
+    "opts": {"step": 0}
+  }
+}

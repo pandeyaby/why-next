@@ -97,3 +97,20 @@ The animated batch reels (b001…) are not stored on this branch. jsDelivr refus
 one when it is full. The script pins each part's commit in `learn/reels/parts.json` and sets `"x": <k>` on the manifest entry.
 The viewer loads them from `https://cdn.jsdelivr.net/gh/pandeyaby/why-next@<part sha>/<f>` (`window.WN_RPARTS`). The offline
 single file leaves them out. Local part clones live in `/workspace/why-next-reels-parts/`.
+
+## Flagships 13–15 (hand-built, `visual-draft`)
+- `flag_energy.js` (`flagenergy`, lesson 106 Energy stores and transfers): skate ramp; gravitational ↔ kinetic swap, friction → thermal, mass does not change speed; challenge: set the drop height for a target speed (h = v² ÷ 2g).
+- `flag_circ.js` (`flagcirc`, lesson 107 Current and voltage): series loop with flowing charge; current is not used up, cells add voltage, bulbs share it, meters in series / parallel; challenge: build a target V and I.
+- `flag_wave.js` (`flagwave`, lesson 108 Wave properties and types): wiggle a rope by hand (the bead stays put), λ vs f, measure λ with a ruler (v = f × λ), rope vs slinky; challenge: frequency for a target wavelength.
+Tests: `tests/flagships4.e2e.cjs`.
+
+## Guide (`guide.js`, `guide.css`)
+A corner "✦ Guide" button opens a companion built on first open (nothing loads before that). SVG face with states idle /
+listening / thinking / speaking / celebrating (CSS only; off under reduced motion; light card in classic). Type, or tap 🎤
+where the browser has SpeechRecognition; "Speak out loud" uses speechSynthesis at the chosen pace. Settings (name, look orb /
+cat / owl, colour, tone calm / playful / socratic / concise, pace, encouragement) are saved in `localStorage.wn_guide` and run
+through `GUIDE.validSettings` on load. The built-in brain is offline and answers from the open lesson (key idea, kid / adult
+explanations, the current question's hint, a quiz question, "what next"). `learn_panel.js` and `flag_kit.js` emit
+`wn:learn` events (open, hint, right, wrong, mastered, labwin) that the guide uses for hints and cheering.
+Plug in another brain with `GUIDE.useBrain({name, reply(ctx, text) => string | Promise<string>})`; `ctx` has lesson, topic,
+level, tone and settings. None is wired: an LLM brain needs a server-side proxy (no key in the page) and a cost decision.
