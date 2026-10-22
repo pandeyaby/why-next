@@ -102,6 +102,7 @@ single file leaves them out. Local part clones live in `/workspace/why-next-reel
 - `flag_energy.js` (`flagenergy`, lesson 106 Energy stores and transfers): skate ramp; gravitational ↔ kinetic swap, friction → thermal, mass does not change speed; challenge: set the drop height for a target speed (h = v² ÷ 2g).
 - `flag_circ.js` (`flagcirc`, lesson 107 Current and voltage): series loop with flowing charge; current is not used up, cells add voltage, bulbs share it, meters in series / parallel; challenge: build a target V and I.
 - `flag_wave.js` (`flagwave`, lesson 108 Wave properties and types): wiggle a rope by hand (the bead stays put), λ vs f, measure λ with a ruler (v = f × λ), rope vs slinky; challenge: frequency for a target wavelength.
+- `flag_nuc.js` (`flagnuc`, lesson 109 Atomic number and mass number): build atoms from protons, neutrons and electrons; isotopes (C-14), reading a nuclear symbol, ions (Na⁺); challenge: build a target atom or ion from its symbol, with feedback on common slips.
 Tests: `tests/flagships4.e2e.cjs`.
 
 ## Guide (`guide.js`, `guide.css`)

@@ -19,7 +19,7 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     for (let s = 0; s < n; s++) { await p.evaluate(s => document.querySelector('.fl-cv').__A.go(s), s); await p.waitForTimeout(150);
       const pr = await p.$('.fl-pred button'); if (pr) await pr.click();
       const sh = await p.$('.fl-show'); if (sh) { await sh.click(); await p.waitForFunction(() => /✓/.test((document.querySelector('.fl-task') || {}).textContent || ''), null, { timeout: 6000 }) } } };
-  for (const [id, name] of [['mt_Jvg_r4yWaY', 'energy skate ramp'], ['mt_2bnXrfS4Iq', 'circuit bench'], ['mt_LxK9OKZQZX', 'wave rope']])
+  for (const [id, name] of [['mt_Jvg_r4yWaY', 'energy skate ramp'], ['mt_2bnXrfS4Iq', 'circuit bench'], ['mt_LxK9OKZQZX', 'wave rope'], ['mt_jg2oNKpNw9', 'atom builder']])
     await test(`flagship (${name}): every task completes with Show me, challenge present, axe in both themes`, async () => {
       await open(id); await walk(); assert.ok(await p.$('.fl-chal:not([hidden]) p'), 'challenge is shown'); await axeOn('.vis.flag') });
   await test('wave challenge: f = λ and f = v × λ get their own feedback; f = v ÷ λ wins', async () => {
@@ -45,6 +45,12 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     await p.reload(); await p.waitForFunction('window.WN_WARM'); await p.waitForSelector('#guide:not([hidden])');
     assert.deepStrictEqual(await p.evaluate(() => [GUIDE.settings().tone, GUIDE.settings().look]), ['concise', 'cat']);
     await p.click('.gd-x'); assert.ok(await p.$eval('#guide', g => g.hidden)) });
+  await test('reels: mirror list falls back fastly → raw GitHub; home has a reel strip; coming-soon pages list nearby lessons', async () => {
+    const m = await p.evaluate(() => reelMirrors('https://cdn.jsdelivr.net/gh/o/r@abc123/reels/x.mp4'));
+    assert.deepStrictEqual(m, ['https://cdn.jsdelivr.net/gh/o/r@abc123/reels/x.mp4', 'https://fastly.jsdelivr.net/gh/o/r@abc123/reels/x.mp4', 'https://raw.githubusercontent.com/o/r/abc123/reels/x.mp4']);
+    assert.ok(await p.$('#homeReels'), 'home reel strip exists');
+    await p.evaluate(() => select('mt_3BZFJQ69OK')); await p.waitForSelector('.soon-reels');
+    assert.match(await p.textContent('#detail'), /Lessons you can do now, nearby|Meanwhile, lessons for a similar age/) });
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }
 })();
