@@ -80,7 +80,9 @@ for _tid, _list in _rm.items():
 os.makedirs("out/reels", exist_ok=True)
 for _f in glob.glob("learn/reels/*"):
     if not _f.endswith(".json"): _sh.copy2(_f, "out/reels/" + os.path.basename(_f))
-_reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";window.WN_RPARTS=" + json.dumps({k: f"https://cdn.jsdelivr.net/gh/pandeyaby/why-next@{v['sha']}/" for k, v in _parts.items()}, separators=(",", ":")) + ";\n"
+# Primary reel host: public Supabase Storage bucket "why-next-reels" (flat: <file>.mp4/.jpg/.vtt). jsDelivr parts stay as the fallback.
+REEL_HOST = "https://hocuezfsucgddgqzkwob.supabase.co/storage/v1/object/public/why-next-reels/"
+_reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";window.WN_RHOST=" + json.dumps(REEL_HOST) + ";window.WN_RPARTS=" + json.dumps({k: f"https://cdn.jsdelivr.net/gh/pandeyaby/why-next@{v['sha']}/" for k, v in _parts.items()}, separators=(",", ":")) + ";\n"
 learn_js = _reels + learn_js
 css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css", "guide.css"))
 

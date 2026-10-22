@@ -115,3 +115,18 @@ explanations, the current question's hint, a quiz question, "what next"). `learn
 `wn:learn` events (open, hint, right, wrong, mastered, labwin) that the guide uses for hints and cheering.
 Plug in another brain with `GUIDE.useBrain({name, reply(ctx, text) => string | Promise<string>})`; `ctx` has lesson, topic,
 level, tone and settings. None is wired: an LLM brain needs a server-side proxy (no key in the page) and a cost decision.
+
+## Continuous lesson pipeline
+`scripts/lesson_pipeline.py` is the gate for new flagship lessons (bar: `learn/pipeline/RUBRIC.md`; queue: `learn/pipeline/queue.json`).
+```
+python3 scripts/lesson_pipeline.py next            # rank missing topics by how many later topics they unblock
+python3 scripts/lesson_pipeline.py brief           # what to write for the top topic
+python3 scripts/lesson_pipeline.py run learn/lessons/NNN-slug.json --push   # gates → commit to visual-draft, or log as failed
+python3 scripts/lesson_pipeline.py status
+```
+It only commits on `visual-draft`, never skips hooks, and never writes content itself.
+
+## Reel hosting
+Primary: public Supabase Storage bucket `why-next-reels` (`REEL_HOST` in `ext/make_viewer.py`, flat `<file>.mp4/.jpg/.vtt`).
+Fallbacks: jsDelivr parts (`WN_RPARTS`), fastly.jsdelivr.net, raw GitHub (AGENTS.md T1, T5). New reels must be uploaded to the bucket
+as well as the orphan branches. Captions are burned into the video, so the VTT track is off by default (CC in the player turns it on).

@@ -45,9 +45,14 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     await p.reload(); await p.waitForFunction('window.WN_WARM'); await p.waitForSelector('#guide:not([hidden])');
     assert.deepStrictEqual(await p.evaluate(() => [GUIDE.settings().tone, GUIDE.settings().look]), ['concise', 'cat']);
     await p.click('.gd-x'); assert.ok(await p.$eval('#guide', g => g.hidden)) });
-  await test('reels: mirror list falls back fastly → raw GitHub; home has a reel strip; coming-soon pages list nearby lessons', async () => {
+  await test('reels: Supabase first, then jsDelivr → fastly → raw GitHub; captions track is off by default; home has a reel strip; coming-soon pages list nearby lessons', async () => {
     const m = await p.evaluate(() => reelMirrors('https://cdn.jsdelivr.net/gh/o/r@abc123/reels/x.mp4'));
     assert.deepStrictEqual(m, ['https://cdn.jsdelivr.net/gh/o/r@abc123/reels/x.mp4', 'https://fastly.jsdelivr.net/gh/o/r@abc123/reels/x.mp4', 'https://raw.githubusercontent.com/o/r/abc123/reels/x.mp4']);
+    assert.deepStrictEqual(await p.evaluate(() => reelMirrors('https://x.supabase.co/r/b001', 'https://cdn.jsdelivr.net/gh/o/r@abc123/b001').map(u => new URL(u).hostname)),
+      ['x.supabase.co', 'cdn.jsdelivr.net', 'fastly.jsdelivr.net', 'raw.githubusercontent.com'], 'self-hosted first, then jsDelivr, fastly, raw GitHub');
+    await p.evaluate(() => { location.hash = '' }); await p.waitForSelector('#homeReels .reel-play', { timeout: 10000 });
+    await p.click('#homeReels .reel-play'); assert.deepStrictEqual(await p.$eval('video.reel-v track', t => [t.default, t.kind]), [false, 'captions'], 'captions burned in, so the track is opt-in');
+    assert.ok(await p.evaluate(() => /supabase\.co\/storage\/v1\/object\/public\/why-next-reels\/$/.test(window.WN_RHOST || '')), 'Supabase is the primary reel host');
     assert.ok(await p.$('#homeReels'), 'home reel strip exists');
     await p.evaluate(() => select('mt_3BZFJQ69OK')); await p.waitForSelector('.soon-reels');
     assert.match(await p.textContent('#detail'), /Lessons you can do now, nearby|Meanwhile, lessons for a similar age/) });
