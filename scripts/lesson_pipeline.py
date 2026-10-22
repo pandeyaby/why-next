@@ -68,6 +68,9 @@ def jaccard(a, b):
 
 # ---------------- gates ----------------
 def gate_validators(lesson, path):
+    b = sh(["python3", "ext/make_viewer.py"])  # the validator also checks that the committed bundle is current
+    if b.returncode:
+        return ["build failed: " + b.stderr[-400:]]
     r = sh(["python3", "learn/validate_lessons.py"])
     return [] if r.returncode == 0 else ["validate_lessons failed: " + (r.stdout + r.stderr).strip()[-600:]]
 
@@ -264,12 +267,12 @@ def cmd_run(path, push=False):
     q["next"] = [t for t in q["next"] if t["topic"] != tid]
     if any(report.values()):
         prev = next((f for f in q["failed"] if f["topic"] == tid), None)
-        entry = {"topic": tid, "lesson": str(Path(path).relative_to(ROOT)), "date": now, "attempts": (prev or {}).get("attempts", 0) + 1,
+        entry = {"topic": tid, "lesson": str(Path(path).resolve().relative_to(ROOT)), "date": now, "attempts": (prev or {}).get("attempts", 0) + 1,
                  "reasons": [e for errs in report.values() for e in errs][:12]}
         q["failed"] = [f for f in q["failed"] if f["topic"] != tid] + [entry]
         save_queue(q); print(f"\nNOT committed. Logged {tid} under failed for retry."); sys.exit(1)
     q["failed"] = [f for f in q["failed"] if f["topic"] != tid]
-    q["done"] = [d for d in q["done"] if d["topic"] != tid] + [{"topic": tid, "title": lesson["title"], "lesson": str(Path(path).relative_to(ROOT)),
+    q["done"] = [d for d in q["done"] if d["topic"] != tid] + [{"topic": tid, "title": lesson["title"], "lesson": str(Path(path).resolve().relative_to(ROOT)),
                                                              "lab": lesson["lab"]["type"], "date": now}]
     save_queue(q)
     for cmd in (["python3", "ext/make_viewer.py"], ["python3", "site/build/build_site.py"]):
