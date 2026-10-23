@@ -1,0 +1,266 @@
+{
+ "topicId": "mt_wuDPIpLJwh",
+ "title": "Simplifying algebraic fractions",
+ "audience": "learner",
+ "keyIdea": "Factorise the top and the bottom, then cancel any factor they share. (x² + 5x + 6)/(x + 2) = (x + 2)(x + 3)/(x + 2) = x + 3. Only whole factors cancel, never single terms, and any x that made the original bottom zero is still not allowed.",
+ "explain": {
+  "kid": [
+   "A fraction like 6/8 simplifies because 6 and 8 share a factor of 2. Algebra fractions work the same way. You look for a factor that the top and the bottom share.",
+   "So factorise first. x² + 5x + 6 is (x + 2)(x + 3). Now the fraction has (x + 2) on the top and on the bottom. Those cancel, and x + 3 is left.",
+   "You can only cancel a whole factor. In (x + 2)/x, the x on top is added to 2. It is a term, not a factor. Crossing out the two x's is wrong. Try x = 4: the fraction is 6/4, not 2.",
+   "Watch for numbers that break the fraction. (x² + 5x + 6)/(x + 2) has no value when x = −2, because then the bottom is 0. So the full answer is x + 3, with x not equal to −2."
+  ],
+  "adult": [
+   "A rational expression simplifies when you divide the top and the bottom by a common factor, just as 6/8 becomes 3/4. Factorise both sides fully first. Take out a common number or letter, then look for a quadratic or a difference of two squares. For example, (2x + 6)/(x² − 9) = 2(x + 3)/((x + 3)(x − 3)) = 2/(x − 3).",
+   "The new form equals the old one wherever the old one exists. Any x that made the old bottom zero is still excluded. So (x² + 5x + 6)/(x + 2) = x + 3 holds only for x ≠ −2. Testing one or two values of x is a quick way to check that a step kept the value.",
+   "To multiply, put all the tops over all the bottoms, then cancel shared factors. To divide, multiply by the reciprocal. To add or subtract, use a common bottom: 1/x + 2/(x + 1) = (x + 1 + 2x)/(x(x + 1)) = (3x + 1)/(x(x + 1)).",
+   "The most common mistake is cancelling terms instead of factors, such as turning (x + 2)/x into 2, or (x + 6)/6 into x + 1. Other slips are dividing only one term of the top, cancelling the wrong bracket, and a sign error while factorising. Be careful: expand your factors and test a value before you cancel."
+  ]
+ },
+ "familyTip": "Write a fraction such as (x² − 16)/(x − 4) and ask for its simplest form. Then both pick a number for x, work out the original and the answer, and see if they match. Try x = 4 too, and talk about why the original breaks there.",
+ "worked": {
+  "title": "Simplify (x² + x − 6)/(x² − 4)",
+  "steps": [
+   "Factorise the top: two numbers that multiply to −6 and add to 1 are 3 and −2, so x² + x − 6 = (x + 3)(x − 2).",
+   "Factorise the bottom as a difference of two squares: x² − 4 = (x + 2)(x − 2).",
+   "(x − 2) is a factor of both, so it cancels: the fraction is (x + 3)/(x + 2).",
+   "Check with x = 3: the original is 6/5 and (x + 3)/(x + 2) is 6/5. The original is undefined at x = 2 and x = −2, so x ≠ ±2."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "(x² + {=a+b}x + {=a*b}) ÷ (x + {a}) simplifies to x + k. What is k?",
+   "answer": "b",
+   "hint": "Factorise the top: find two numbers that multiply to {=a*b} and add to {=a+b}. One of them is {a}.",
+   "explain": "x² + {=a+b}x + {=a*b} = (x + {a})(x + {b}). The (x + {a}) cancels, so k = {b}.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     2,
+     7
+    ]
+   },
+   "where": "a<b"
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Can the x's cancel in (x + 2)/x?",
+   "choices": [
+    "No, the x on top is a term, not a factor",
+    "Yes, it simplifies to 2",
+    "Yes, it simplifies to 3"
+   ],
+   "answer": 0,
+   "hint": "Is the x on top multiplied by something, or added to something? Try x = 4 in the fraction.",
+   "explain": "The x is added to 2, so it is a term and cannot cancel. At x = 4 the fraction is 6/4 = 1.5, not 2."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "(x² − {=a*a}) ÷ (x + {a}) simplifies to x − k. What is k?",
+   "answer": "a",
+   "hint": "x² − {=a*a} is a difference of two squares: (x + {a})(x − {a}).",
+   "explain": "x² − {=a*a} = (x + {a})(x − {a}). The (x + {a}) cancels and x − {a} is left, so k = {a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Simplify (3x + 12)/(x² + 4x).",
+   "choices": [
+    "3/x",
+    "3",
+    "x/3"
+   ],
+   "answer": 0,
+   "hint": "Take out a common factor on each side: 3 from the top, x from the bottom. Then look for a shared bracket.",
+   "explain": "3(x + 4)/(x(x + 4)): the (x + 4) cancels and 3/x is left. The x on the bottom has nothing to cancel with."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "(x + {a})/(x − {b}) has no value for one number x. What is it?",
+   "answer": "b",
+   "hint": "A fraction has no value when its bottom is 0. Solve x − {b} = 0.",
+   "explain": "The bottom is 0 when x = {b}, because {b} − {b} = 0. So x = {b} is not allowed.",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     1,
+     7
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "(x² − {=a*a}) ÷ (x − {a}) simplifies to x + k. What is k?",
+    "answer": "a",
+    "hint": "Write x² − {=a*a} as two brackets, then see which one matches the bottom.",
+    "explain": "x² − {=a*a} = (x − {a})(x + {a}). The (x − {a}) cancels and x + {a} is left, so k = {a}.",
+    "params": {
+     "a": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "({a}x + {=a*b}) ÷ {a} simplifies to x + k. What is k?",
+    "answer": "b",
+    "hint": "Take {a} out of both terms on top: {a}x + {=a*b} = {a}(x + ?).",
+    "explain": "{a}x + {=a*b} = {a}(x + {b}). The {a} cancels, so the answer is x + {b} and k = {b}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "(x² − {=a+b}x + {=a*b}) ÷ (x − {a}) simplifies to x − k. What is k?",
+    "answer": "b",
+    "hint": "Both numbers in the brackets are negative here: they multiply to {=a*b} and add to −{=a+b}.",
+    "explain": "x² − {=a+b}x + {=a*b} = (x − {a})(x − {b}). The (x − {a}) cancels, so k = {b}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      5,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mo writes (x + 6)/6 = x + 1. What went wrong?",
+    "choices": [
+     "He divided the 6 by 6 but not the x",
+     "Nothing, it is right",
+     "He should have got x"
+    ],
+    "answer": 0,
+    "hint": "Dividing the top by 6 means dividing every term on top. Try x = 6 in both.",
+    "explain": "(x + 6)/6 = x/6 + 1, not x + 1. At x = 6 the fraction is 12/6 = 2, but x + 1 is 7. It does not simplify."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which of these can be simplified?",
+    "choices": [
+     "(x² + 3x)/x",
+     "(x + 3)/x",
+     "(x + 3)/3"
+    ],
+    "answer": 0,
+    "hint": "Look for a fraction where you can factorise the top so it shares a factor with the bottom.",
+    "explain": "x² + 3x = x(x + 3), so (x² + 3x)/x = x + 3 with x ≠ 0. In the other two, the x or the 3 is only a term."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Work out 1/x + 2/(x + 1).",
+    "choices": [
+     "(3x + 1)/(x(x + 1))",
+     "3/(2x + 1)",
+     "3/(x(x + 1))"
+    ],
+    "answer": 0,
+    "hint": "Use the common bottom x(x + 1). Multiply the top of each fraction by whatever its bottom is missing.",
+    "explain": "1/x = (x + 1)/(x(x + 1)) and 2/(x + 1) = 2x/(x(x + 1)). Add the tops: (3x + 1)/(x(x + 1))."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Simplify (x + 2)/(x − 1) × (x − 1)/(x + 3).",
+    "choices": [
+     "(x + 2)/(x + 3)",
+     "2/3",
+     "(x + 2)/(x − 1)"
+    ],
+    "answer": 0,
+    "hint": "Put both tops over both bottoms. Which bracket is on a top and on a bottom?",
+    "explain": "(x − 1) is a factor on the top and on the bottom, so it cancels: (x + 2)/(x + 3). 2/3 comes from crossing out terms."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "(x² + 5x + 6)/(x + 2) = x + 3. For which x is this not true?",
+    "choices": [
+     "x = −2",
+     "x = −3",
+     "x = 0"
+    ],
+    "answer": 0,
+    "hint": "Find where the bottom of the original fraction is 0.",
+    "explain": "At x = −2 the original is 0/0, which has no value, while x + 3 gives 1. So write x + 3 with x ≠ −2."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Dividing by (x + 4)/x is the same as what?",
+    "choices": [
+     "Multiplying by x/(x + 4)",
+     "Multiplying by (x + 4)/x",
+     "Taking away (x + 4)/x"
+    ],
+    "answer": 0,
+    "hint": "To divide by a fraction, turn it upside down and multiply, just like 1 ÷ 3/4.",
+    "explain": "Dividing by a fraction means multiplying by its reciprocal, so dividing by (x + 4)/x is multiplying by x/(x + 4)."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "formula",
+  "caption": "Slide x. (x × x − 9) ÷ (x + 3) always works out to the same value as x − 3.",
+  "opts": {
+   "name": "value",
+   "expr": "(x × x − 9) ÷ (x + 3)",
+   "vars": {
+    "x": [
+     0,
+     10,
+     4
+    ]
+   }
+  }
+ },
+ "lab": {
+  "type": "flagafrac",
+  "caption": "Flagship lab: factorise the top and the bottom into factor cards, then drag a card onto its twin to cancel it. Test any x on the number line.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
