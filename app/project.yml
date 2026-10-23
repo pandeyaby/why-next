@@ -32,6 +32,8 @@ targets:
         buildPhase: resources
     dependencies:
       - package: WhyNextCore
+      # VideoPlayer (AVKit's SwiftUI overlay) needs AVKit.framework linked, or the first native reel play aborts
+      - sdk: AVKit.framework
     info:
       path: WhyNext/Info.plist
       properties:

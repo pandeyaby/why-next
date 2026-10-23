@@ -3,7 +3,7 @@ import SwiftUI
 import WhyNextCore
 
 /// A topic's short video reels, like the website: a random reel you haven't seen yet, "Another reel" swaps,
-/// and once you've seen them all the rotation restarts. Plays the bundled mp4 with its WebVTT captions drawn on top.
+/// and once you've seen them all the rotation restarts. Plays the bundled mp4 (captions are burned in; the WebVTT overlay is optional and off by default).
 struct ReelCard: View {
     let topicId: String
     let reels: [Reel]
@@ -13,6 +13,8 @@ struct ReelCard: View {
     @State private var cues: [Cue] = []
     @State private var caption: String?
     @State private var observer: Any?
+    /// The reels have burned-in captions, so the WebVTT overlay is off by default (the cue data is still loaded).
+    @AppStorage("wn_reel_caption_overlay") private var showCaptionOverlay = false
 
     var body: some View {
         Card(tint: Theme.coral) {
@@ -35,7 +37,7 @@ struct ReelCard: View {
                         .buttonStyle(.plain)
                         .accessibilityLabel("Play video: \(r.title) (\(r.seconds) seconds, with captions)")
                     }
-                    if let caption, player != nil {
+                    if showCaptionOverlay, let caption, player != nil {
                         Text(caption)
                             .font(.callout.weight(.semibold))
                             .multilineTextAlignment(.center)
