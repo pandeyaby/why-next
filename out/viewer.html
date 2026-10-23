@@ -209,10 +209,12 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-pick button.mine{outline:3px solid var(--vi);outline-offset:1px;opacity:1}.fl-pick button:disabled:not(.mine){opacity:.55}
 .fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}
 .fl-pick button.ok{background:color-mix(in srgb,var(--gr) 30%,transparent)}.fl-pick button.no{background:color-mix(in srgb,var(--rd) 22%,transparent)}
-@media (max-width:520px){.fl-dots{flex-wrap:nowrap}.fl-dot{margin-right:-5px}.fl-dot::before{inset:12px}}
+@media (max-width:520px){.fl-top{flex-wrap:wrap}.fl-dots{flex-wrap:wrap;min-width:0}.fl-dot{margin-right:-8px;flex:none}.fl-dot::before{inset:12px}.fl-story{min-width:0}}   /* dots stay 44px tall/wide; 7+ steps overlap their hit areas a little and the sound button drops to a second row rather than being clipped at 360px */
 .vis-load{display:flex;align-items:center;justify-content:center;gap:10px;min-height:min(70vh,520px);border-radius:14px;background:rgba(127,140,170,.08);color:inherit;font-weight:600}
 .vis-spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(127,140,170,.35);border-top-color:currentColor;animation:vspin .8s linear infinite}
 @keyframes vspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.vis-spin{animation:none}}
+/* Card sorter on a phone: 3+ boxes in one row make the "Put here" buttons wider than their box (clipped at 360px), so use two columns. */
+@media (max-width:520px){.vis-sort{grid-template-columns:repeat(2,minmax(0,1fr))!important}.vis-binh{overflow-wrap:anywhere}.vis-put{min-width:0;white-space:normal}}
 /* Why Next? feedback and progress cues (gentle; off under prefers-reduced-motion) */
 .pring{vertical-align:middle}.pring .pr-bg{fill:none;stroke:#e5e7eb;stroke-width:3}.pring .pr-fg{fill:none;stroke:#7c3aed;stroke-width:3;stroke-linecap:round}.pring .pr-fg.done{stroke:#15803d}
 .qi.ok{animation:fxok .45s ease}.fb.bad{animation:fxno .35s ease}
@@ -327,7 +329,8 @@ html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;borde
 @media (pointer:coarse){.vis-pt{grid-template-columns:repeat(18,44px);overflow-x:auto;padding-bottom:6px}.vis-pt .vis-el{min-width:44px}}
 /* Guide: corner button + panel. Glass in the 2052 theme, plain light card in classic; all motion off under reduced motion. */
 .gd-fab{position:fixed;right:14px;bottom:14px;z-index:60;--gd:#67e8f9;border:1px solid var(--gd);background:rgba(10,16,34,.86);color:#e8f1ff;border-radius:999px;padding:10px 16px;font:700 14px system-ui;box-shadow:0 0 18px color-mix(in srgb,var(--gd) 45%,transparent);cursor:pointer;min-height:44px}
-.gd-fab span{color:var(--gd)}.gd-fab.gd-ping{animation:gdPing .9s ease-out 2}
+.gd-fab{transition:bottom .22s ease,right .22s ease,left .22s ease}.gd-fab span{color:var(--gd)}
+.gd-fab.gd-tab{width:24px;min-width:24px;height:56px;min-height:56px;padding:0;font-size:0;border-radius:12px 0 0 12px;border-right:0;display:flex;align-items:center;justify-content:center;opacity:.92}.gd-fab.gd-tab span{font-size:15px}.gd-fab.gd-ping{animation:gdPing .9s ease-out 2}
 .gd{position:fixed;right:12px;bottom:12px;z-index:61;width:min(360px,calc(100vw - 24px));max-height:min(78vh,620px);overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:18px;--gd:#67e8f9;
  background:rgba(10,16,34,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid color-mix(in srgb,var(--gd) 40%,transparent);color:#e8f1ff;box-shadow:0 10px 40px rgba(0,0,0,.5),0 0 24px color-mix(in srgb,var(--gd) 25%,transparent);font:14px/1.45 system-ui}
 .gd[hidden]{display:none}
@@ -376,4 +379,4 @@ html[data-theme=classic] .gd-in input,html[data-theme=classic] .gd-mic,html[data
 <span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=f4f28206ec"></script><script defer src="wn/learn.js?v=30f311a78c"></script><script defer src="wn/app.js?v=50fb14af13"></script></body></html>
+<script defer src="wn/core.js?v=f4f28206ec"></script><script defer src="wn/learn.js?v=650c45c050"></script><script defer src="wn/app.js?v=50fb14af13"></script></body></html>

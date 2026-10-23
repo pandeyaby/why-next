@@ -50,7 +50,7 @@ assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
 learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "flag_neg.js", "flag_eq.js", "flag_line.js", "flag_pyth.js", "flag_prob.js", "flag_state.js", "flag_acid.js", "flag_atom.js", "flag_area.js", "flag_energy.js", "flag_circ.js", "flag_wave.js", "flag_nuc.js", "flag_shell.js", "flag_cov.js", "flag_unit.js", "flag_wread.js", "flag_sub.js", "learn_fx.js", "learn_panel.js", "guide.js")
+LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "flag_neg.js", "flag_eq.js", "flag_line.js", "flag_pyth.js", "flag_prob.js", "flag_state.js", "flag_acid.js", "flag_atom.js", "flag_area.js", "flag_energy.js", "flag_circ.js", "flag_wave.js", "flag_nuc.js", "flag_shell.js", "flag_cov.js", "flag_unit.js", "flag_wread.js", "flag_sub.js", "learn_fx.js", "learn_panel.js", "guide.js", "guide_dock.js")
 learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
 # Flagship labs are big; the split build lazy-loads each one (plus the shared kit) the first time its lesson opens.
 FLAGS = [f for f in LEARN_JS if f.startswith("flag_") and f != "flag_kit.js"]
@@ -132,12 +132,14 @@ shell = (open("ext/viewer_template.html").read().replace("/*__CREDIT__*/", credi
          .replace('<p class="muted" id="stats"></p>', f'<p class="muted" id="stats">{nNew} Why Next? topics · {nNE} Why Next? edges ({nB} bridge edges into upstream v1) · {len(nodes) - nNew} upstream v1 ancestor topics shown for context.</p>'))
 outdir = os.environ.get("WHYNEXT_VIEWER_DIR", "out")
 os.makedirs(f"{outdir}/wn", exist_ok=True)
-for f in glob.glob(f"{outdir}/wn/*.js"):
-    os.remove(f)
-for name, text in files.items():
+# Write every bundle first and delete only the bundles that are no longer produced. The old code deleted all of
+# out/wn/*.js before rewriting, so any interrupted or concurrent build left the committed files missing.
+_wn_files = dict(files, **{"vis.js": vis_bundle, "reels.js": _reels})
+for name, text in _wn_files.items():
     open(f"{outdir}/wn/{name}", "w").write(text)
-open(f"{outdir}/wn/vis.js", "w").write(vis_bundle)
-open(f"{outdir}/wn/reels.js", "w").write(_reels)
+for f in glob.glob(f"{outdir}/wn/*.js"):
+    if os.path.basename(f) not in _wn_files:
+        os.remove(f)
 for f, text in flag_src.items():
     open(f"{outdir}/wn/fl_{f[5:-3]}.js", "w").write(text)
 for k, text in enumerate(chunk_js):

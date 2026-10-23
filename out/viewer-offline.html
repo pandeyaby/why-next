@@ -209,10 +209,12 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-pick button.mine{outline:3px solid var(--vi);outline-offset:1px;opacity:1}.fl-pick button:disabled:not(.mine){opacity:.55}
 .fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}
 .fl-pick button.ok{background:color-mix(in srgb,var(--gr) 30%,transparent)}.fl-pick button.no{background:color-mix(in srgb,var(--rd) 22%,transparent)}
-@media (max-width:520px){.fl-dots{flex-wrap:nowrap}.fl-dot{margin-right:-5px}.fl-dot::before{inset:12px}}
+@media (max-width:520px){.fl-top{flex-wrap:wrap}.fl-dots{flex-wrap:wrap;min-width:0}.fl-dot{margin-right:-8px;flex:none}.fl-dot::before{inset:12px}.fl-story{min-width:0}}   /* dots stay 44px tall/wide; 7+ steps overlap their hit areas a little and the sound button drops to a second row rather than being clipped at 360px */
 .vis-load{display:flex;align-items:center;justify-content:center;gap:10px;min-height:min(70vh,520px);border-radius:14px;background:rgba(127,140,170,.08);color:inherit;font-weight:600}
 .vis-spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(127,140,170,.35);border-top-color:currentColor;animation:vspin .8s linear infinite}
 @keyframes vspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.vis-spin{animation:none}}
+/* Card sorter on a phone: 3+ boxes in one row make the "Put here" buttons wider than their box (clipped at 360px), so use two columns. */
+@media (max-width:520px){.vis-sort{grid-template-columns:repeat(2,minmax(0,1fr))!important}.vis-binh{overflow-wrap:anywhere}.vis-put{min-width:0;white-space:normal}}
 /* Why Next? feedback and progress cues (gentle; off under prefers-reduced-motion) */
 .pring{vertical-align:middle}.pring .pr-bg{fill:none;stroke:#e5e7eb;stroke-width:3}.pring .pr-fg{fill:none;stroke:#7c3aed;stroke-width:3;stroke-linecap:round}.pring .pr-fg.done{stroke:#15803d}
 .qi.ok{animation:fxok .45s ease}.fb.bad{animation:fxno .35s ease}
@@ -327,7 +329,8 @@ html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;borde
 @media (pointer:coarse){.vis-pt{grid-template-columns:repeat(18,44px);overflow-x:auto;padding-bottom:6px}.vis-pt .vis-el{min-width:44px}}
 /* Guide: corner button + panel. Glass in the 2052 theme, plain light card in classic; all motion off under reduced motion. */
 .gd-fab{position:fixed;right:14px;bottom:14px;z-index:60;--gd:#67e8f9;border:1px solid var(--gd);background:rgba(10,16,34,.86);color:#e8f1ff;border-radius:999px;padding:10px 16px;font:700 14px system-ui;box-shadow:0 0 18px color-mix(in srgb,var(--gd) 45%,transparent);cursor:pointer;min-height:44px}
-.gd-fab span{color:var(--gd)}.gd-fab.gd-ping{animation:gdPing .9s ease-out 2}
+.gd-fab{transition:bottom .22s ease,right .22s ease,left .22s ease}.gd-fab span{color:var(--gd)}
+.gd-fab.gd-tab{width:24px;min-width:24px;height:56px;min-height:56px;padding:0;font-size:0;border-radius:12px 0 0 12px;border-right:0;display:flex;align-items:center;justify-content:center;opacity:.92}.gd-fab.gd-tab span{font-size:15px}.gd-fab.gd-ping{animation:gdPing .9s ease-out 2}
 .gd{position:fixed;right:12px;bottom:12px;z-index:61;width:min(360px,calc(100vw - 24px));max-height:min(78vh,620px);overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:18px;--gd:#67e8f9;
  background:rgba(10,16,34,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid color-mix(in srgb,var(--gd) 40%,transparent);color:#e8f1ff;box-shadow:0 10px 40px rgba(0,0,0,.5),0 0 24px color-mix(in srgb,var(--gd) 25%,transparent);font:14px/1.45 system-ui}
 .gd[hidden]{display:none}
@@ -3273,9 +3276,9 @@ VIS.reg('flagshell',c=>{let A,btns=[],chal,zOut,cfgOut,onScreen=true;
 (()=>{const VAL={H:1,C:4,N:5,O:6,Cl:7,F:7},FULL=e=>e==='H'?2:8,COL={H:'#e2e8f0',C:'#64748b',N:'#60a5fa',O:'#f87171',Cl:'#4ade80',F:'#facc15'},
  NAME={H:'hydrogen',C:'carbon',N:'nitrogen',O:'oxygen',Cl:'chlorine',F:'fluorine'};
  /* Scenes: atoms with positions in 0..1 of the bench. */
- const SCENE={Cl2:[['Cl',.35,.5],['Cl',.65,.5]],H2O:[['O',.5,.45],['H',.28,.68],['H',.72,.68]],NH3:[['N',.5,.42],['H',.27,.66],['H',.5,.8],['H',.73,.66]],
-  O2:[['O',.36,.5],['O',.64,.5]],CH4:[['C',.5,.5],['H',.5,.2],['H',.25,.55],['H',.75,.55],['H',.5,.82]],HCl:[['H',.35,.5],['Cl',.65,.5]],
-  CO2:[['O',.22,.5],['C',.5,.5],['O',.78,.5]],N2:[['N',.36,.5],['N',.64,.5]],HF:[['F',.62,.5],['H',.34,.5]],CH3Cl:[['C',.5,.5],['Cl',.78,.5],['H',.5,.2],['H',.25,.6],['H',.5,.82]]};
+ const SCENE={Cl2:[['Cl',.35,.5],['Cl',.65,.5]],H2O:[['O',.5,.45],['H',.28,.68],['H',.72,.68]],NH3:[['N',.5,.3],['H',.22,.72],['H',.78,.72],['H',.5,.9]],
+  O2:[['O',.36,.5],['O',.64,.5]],CH4:[['C',.5,.5],['H',.2,.1],['H',.8,.1],['H',.2,.9],['H',.8,.9]],HCl:[['H',.35,.5],['Cl',.65,.5]],
+  CO2:[['O',.22,.5],['C',.5,.5],['O',.78,.5]],N2:[['N',.36,.5],['N',.64,.5]],HF:[['F',.62,.5],['H',.34,.5]],CH3Cl:[['C',.36,.5],['Cl',.86,.5],['H',.14,.1],['H',.58,.1],['H',.14,.9]]};
  const LABEL={Cl2:'Cl₂',H2O:'H₂O',NH3:'NH₃',O2:'O₂',CH4:'CH₄',HCl:'HCl',CO2:'CO₂',N2:'N₂',HF:'HF',CH3Cl:'CH₃Cl'};
 VIS.reg('flagcov',c=>{let A,chal,selA,selB,sand,onScreen=true;
  const st={atoms:[],bonds:{},pick:-1,name:'Cl2',t:0,chk:()=>{},q:null,won:false};
@@ -3288,7 +3291,12 @@ VIS.reg('flagcov',c=>{let A,chal,selA,selB,sand,onScreen=true;
  const connected=()=>{if(!st.atoms.length)return true;const seen=new Set([0]),stack=[0];while(stack.length){const i=stack.pop();st.atoms.forEach((_,j)=>{if(order(i,j)&&!seen.has(j)){seen.add(j);stack.push(j)}})}return seen.size===st.atoms.length};
  const solved=()=>connected()&&st.atoms.every((_,i)=>statusOf(i)==='full');
  const atomName=i=>{const a=st.atoms[i],same=st.atoms.filter(b=>b.e===a.e);return same.length>1?`${a.e}${same.indexOf(a)+1}`:a.e};
- const geo=A=>{const{W,H}=A,r=Math.min(W,H)*(A.narrow?.075:.07);return{r,pos:i=>({x:st.atoms[i].x*W,y:st.atoms[i].y*H*.86+H*.04})}};
+ /* Bench geometry. Atom rows are spread between the title strip and the hint strip, and the atom radius shrinks until the
+    rings (1.55 r, plus a gap) cannot touch, so a crowded molecule such as NH3 or CH4 never overlaps itself on a phone. */
+ const geo=A=>{const{W,H}=A,base=Math.min(W,H)*(A.narrow?.075:.07),top=34+base*1.55,bot=H-36-base*1.55-18,ys=st.atoms.map(a=>a.y),y0=Math.min(...ys),y1=Math.max(...ys);
+  const at=st.atoms.map(a=>({x:a.x*W,y:y1>y0?top+(a.y-y0)/(y1-y0)*Math.max(0,bot-top):(top+bot)/2}));
+  let gap=Infinity;at.forEach((p,i)=>at.forEach((q,j)=>{if(j>i)gap=Math.min(gap,Math.hypot(p.x-q.x,p.y-q.y))}));
+  return{r:Math.min(base,(gap-22)/3.1),pos:i=>at[i]}};
  const describe=()=>{const parts=st.atoms.map((a,i)=>`${atomName(i)} ${outer(i)} of ${FULL(a.e)}`);const bl=Object.entries(st.bonds).filter(([,o])=>o).map(([k,o])=>{const[i,j]=k.split('-').map(Number);return `${atomName(i)}${['','–','=','≡'][o]}${atomName(j)}`});
   return `${LABEL[st.name]||'Molecule'}: ${bl.length?'bonds '+bl.join(', '):'no bonds yet'}. Outer electrons: ${parts.join('; ')}.${solved()?' Every atom has a full outer shell.':''}`};
  const say=()=>{const d=describe();c.say(d);A&&A.cv.setAttribute('aria-label','Covalent bonding bench. '+d);syncSelects()};
@@ -3309,7 +3317,7 @@ VIS.reg('flagcov',c=>{let A,chal,selA,selB,sand,onScreen=true;
    const slots=[...Array(8)].map((_,q)=>q*Math.PI/4-Math.PI/2).filter(g=>away(g)>.7).sort((u,v)=>away(v)-away(u));
    for(let e=0;e<lone;e++){const ang=slots[Math.floor(e/2)%Math.max(1,slots.length)]??(e*Math.PI/4),side=e%2?.22:-.22,rr=G.r*1.55;drawElectron(ctx,p.x+Math.cos(ang+side)*rr,p.y+Math.sin(ang+side)*rr,COL[a.e],i%2===1,s)}
    P.label(`${outer(i)}/${FULL(a.e)}`,p.x,p.y+G.r*1.55+14,{font:'700 11px system-ui',bg:A.alpha(ring,.9),col:'#111'})});
-  if(st.pick>=0){const p=G.pos(st.pick);P.label('now tap a partner',p.x,p.y-G.r*1.55-14,{pill:1,bg:A.alpha(C.vi,.95)})}
+  if(st.pick>=0){const p=G.pos(st.pick);P.label('now tap a partner',p.x,Math.max(40,p.y-G.r*1.55-14),{pill:1,bg:A.alpha(C.vi,.95)})}
   else if(!Object.keys(st.bonds).length&&!A.isDone){ctx.globalAlpha=.6+.4*Math.sin(performance.now()/260);P.label('👆 tap one atom, then another, to share a pair',W/2,H-16,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}
   P.label(LABEL[st.name]||'',W/2,16,{font:'800 13px system-ui',bg:A.alpha(C.vi,.9)})}
  // ---------- bonding ----------
@@ -3552,7 +3560,7 @@ VIS.reg('flagwread',c=>{let A,chal,sand,read,gapOut,dirBtns,panelBtns,playBtn,on
  const unitOf=()=>st.mk.dir==='up'?'cm':UNIT[st.mk.panel];
  // ---------- layout ----------
  /* Two panels stacked: 26 px for each title, 32 px under each for the axis numbers and name. */
- function geo(A){const{W,H}=A,l=A.narrow?40:50,r=12,top=26,under=32,ph=(H-2*top-2*under)/2;
+ function geo(A){const{W,H}=A,l=A.narrow?40:50,r=12,top=26,under=32,hint=28,ph=(H-2*top-2*under-hint)/2;   // 'hint': a strip under the graphs for the drag hint, so it never sits on a graph title
   const mk=(y,kind)=>({kind,x:l,y,w:W-l-r,h:ph});return{dist:mk(top,'dist'),time:mk(top+ph+under+top,'time')}}
  const px=(P,u)=>P.x+P.w*u/SPAN, py=(P,v)=>P.y+P.h/2-v*P.h/(2*YMAX);
  // ---------- words ----------
@@ -3616,7 +3624,7 @@ VIS.reg('flagwread',c=>{let A,chal,sand,read,gapOut,dirBtns,panelBtns,playBtn,on
   Pt.label(`${r2(gap())} ${u}`,lx,ly,{font:'700 12px system-ui',bg:A.alpha(C.am,.97),col:ink,align:m.dir==='across'?undefined:'right'})}
  function draw(A){const{ctx,W,H,paint:P,col:C}=A,G=geo(A);ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.04)],[1,C.pn]]);ctx.fillRect(0,0,W,H);
   drawPanel(A,G.dist);drawPanel(A,G.time);
-  if(!st.touched)P.label('👆 drag a marker on the graph',W/2,G.time.y-17,{pill:1,bg:A.alpha(C.am,.95),col:'#111'})}
+  if(!st.touched)P.label('👆 drag a marker on the graph',W/2,H-13,{pill:1,bg:A.alpha(C.am,.95),col:'#111'})}
  // ---------- steps ----------
  const fresh=(o,tool)=>{st.play=false;st.t=0;st.hideVals=false;Object.assign(st,{amp:4,T:2,v:.8},o);setTool(...tool);if(playBtn)syncPlay()};
  const tell=t=>c.say(t);
@@ -4137,13 +4145,46 @@ function build(){root=document.createElement('aside');root.id='guide';root.class
  root.onkeydown=e=>{if(e.key==='Escape')toggle(false)};applyLook();setState('idle');
  const L=lesson();say(L?`Hi, I’m ${S.name}! Stuck on “${L.title}”? Ask me, or tap a button below.`:`Hi, I’m ${S.name}! Open a topic and I’ll help you learn it.`)}
 function toggle(on){if(on&&!root)build();if(!root)return;root.hidden=!on;S.open=on;save();const f=document.getElementById('gdFab');if(f){f.hidden=on;f.setAttribute('aria-expanded',on)}if(on)input.focus();else{if(rec)rec.stop();if(canSpeak())speechSynthesis.cancel();f&&f.focus()}}
-function init(){if(document.getElementById('gdFab'))return;const f=document.createElement('button');f.type='button';f.id='gdFab';f.className='gd-fab';f.setAttribute('aria-expanded','false');f.innerHTML='<span aria-hidden="true">✦</span> Guide';f.onclick=()=>toggle(true);document.body.append(f);applyLook();if(S.open)toggle(true)}
+function init(){if(document.getElementById('gdFab'))return;const f=document.createElement('button');f.type='button';f.id='gdFab';f.className='gd-fab';f.setAttribute('aria-expanded','false');f.setAttribute('aria-label','Open your guide, '+S.name);f.innerHTML='<span aria-hidden="true">✦</span> Guide';f.onclick=()=>toggle(true);document.body.append(f);applyLook();if(S.open)toggle(true)}
 document.addEventListener('wn:learn',e=>{const d=e.detail||{};if(d.kind==='open'){if(d.id!==ctx.id)ctx={id:d.id,lastHint:null,hintStep:0,explainStep:0,wrongRun:0};return}
  if(d.kind==='hint'){ctx.lastHint={hint:d.hint,prompt:d.prompt};return}
  if(d.kind==='wrong'){ctx.lastHint={hint:d.hint,prompt:d.prompt};if(++ctx.wrongRun>=2){ctx.wrongRun=0;celebrate('wrong')}return}
  ctx.wrongRun=0;celebrate(d.kind)});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 return{useBrain,ask,settings:()=>Object.assign({},S),validSettings,localBrain}})();
+// Guide launcher placement: the floating Guide button must never cover lesson content.
+// On phones (≤760px) it is a slim tab on the right screen edge; on wider screens it is the full pill when a free spot
+// exists, and the same tab otherwise. After scrolling stops, the page changes, or the window resizes, we measure what is on
+// screen (canvases, buttons, images, and every line of text) and slide the launcher to the nearest gap in the margin.
+(function(){
+const GAP=140,PHONE=matchMedia('(max-width:760px)');let timer=0,last=0,moved=0;
+const fab=()=>document.getElementById('gdFab'),area=()=>document.getElementById('detail');
+const VISIBLE=r=>r.width>0&&r.height>0&&r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth;
+function obstacles(root){const out=[];
+ root.querySelectorAll('canvas,button,input,select,textarea,a[href],summary,img,video,.reel').forEach(e=>{const r=e.getBoundingClientRect();if(VISIBLE(r))out.push(r)});
+ const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}),rg=document.createRange();
+ for(let n;(n=walk.nextNode());){const pr=n.parentElement.getBoundingClientRect();if(!VISIBLE(pr)||n.parentElement.closest('[hidden]'))continue;
+  rg.selectNodeContents(n);for(const r of rg.getClientRects())if(VISIBLE(r))out.push(r)}
+ return out}
+const hits=(box,obs,pad)=>obs.some(o=>o.left<box.r+pad&&o.right>box.l-pad&&o.top<box.b+pad&&o.bottom>box.t-pad);
+// candidate rows from just above the thumb zone upward, then downward, so the launcher moves as little as possible
+function rows(h){const vh=innerHeight,start=Math.max(8,Math.min(110,vh-h-12)),ys=[];for(let y=start;y<=vh-h-8;y+=12)ys.push(y);for(let y=start-12;y>=8;y-=12)ys.push(y);return ys}
+function place(){const f=fab(),root=area();if(!f||f.hidden)return;
+ const vw=innerWidth,vh=innerHeight,phone=PHONE.matches,obs=root&&root.offsetParent?obstacles(root):[];
+ const tryFull=!phone;f.classList.remove('gd-tab');const w=f.offsetWidth,h=f.offsetHeight;let spot=null;
+ if(tryFull)search:for(const side of['right','left'])for(const y of rows(h)){const l=side==='right'?vw-12-w:12,box={l,r:l+w,t:vh-y-h,b:vh-y};if(!hits(box,obs,8)){spot={side,y,edge:12};break search}}
+ if(!spot){f.classList.add('gd-tab');const tw=f.offsetWidth,th=f.offsetHeight;
+  for(const y of rows(th)){const box={l:vw-tw,r:vw,t:vh-y-th,b:vh-y};if(!hits(box,obs,1)){spot={side:'right',y,edge:0};break}}
+  if(!spot)spot={side:'right',y:Math.max(8,Math.min(110,vh-th-12)),edge:0}}
+ f.style.right=spot.side==='right'?spot.edge+'px':'auto';f.style.left=spot.side==='left'?spot.edge+'px':'auto';f.style.bottom=spot.y+'px';f.dataset.spot=spot.side+':'+spot.y;moved++}
+function later(){clearTimeout(timer);const wait=Math.max(GAP,400-(Date.now()-last));timer=setTimeout(()=>{last=Date.now();place()},wait)}
+function start(){if(!fab()){setTimeout(start,200);return}
+ addEventListener('scroll',later,{passive:true,capture:true});addEventListener('resize',later);addEventListener('orientationchange',later);
+ document.addEventListener('click',later);document.addEventListener('wn:learn',later);document.addEventListener('pointerup',later);
+ const a=area();if(a)new MutationObserver(later).observe(a,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['hidden','class']});
+ new MutationObserver(later).observe(fab(),{attributes:true,attributeFilter:['hidden']});later();window.WN_dock={place,count:()=>moved}}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
 </script><script>const N=new Map(DATA.nodes.map(n=>[n.id,n]));const PRE=new Map();const POST=new Map();
 for(const e of DATA.edges){(PRE.get(e.t)||PRE.set(e.t,[]).get(e.t)).push(e);(POST.get(e.p)||POST.set(e.p,[]).get(e.p)).push(e)}
 const isBridge=e=>N.get(e.t).new&&!N.get(e.p).new;

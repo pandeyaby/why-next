@@ -117,7 +117,7 @@ function build(){root=document.createElement('aside');root.id='guide';root.class
  root.onkeydown=e=>{if(e.key==='Escape')toggle(false)};applyLook();setState('idle');
  const L=lesson();say(L?`Hi, I’m ${S.name}! Stuck on “${L.title}”? Ask me, or tap a button below.`:`Hi, I’m ${S.name}! Open a topic and I’ll help you learn it.`)}
 function toggle(on){if(on&&!root)build();if(!root)return;root.hidden=!on;S.open=on;save();const f=document.getElementById('gdFab');if(f){f.hidden=on;f.setAttribute('aria-expanded',on)}if(on)input.focus();else{if(rec)rec.stop();if(canSpeak())speechSynthesis.cancel();f&&f.focus()}}
-function init(){if(document.getElementById('gdFab'))return;const f=document.createElement('button');f.type='button';f.id='gdFab';f.className='gd-fab';f.setAttribute('aria-expanded','false');f.innerHTML='<span aria-hidden="true">✦</span> Guide';f.onclick=()=>toggle(true);document.body.append(f);applyLook();if(S.open)toggle(true)}
+function init(){if(document.getElementById('gdFab'))return;const f=document.createElement('button');f.type='button';f.id='gdFab';f.className='gd-fab';f.setAttribute('aria-expanded','false');f.setAttribute('aria-label','Open your guide, '+S.name);f.innerHTML='<span aria-hidden="true">✦</span> Guide';f.onclick=()=>toggle(true);document.body.append(f);applyLook();if(S.open)toggle(true)}
 document.addEventListener('wn:learn',e=>{const d=e.detail||{};if(d.kind==='open'){if(d.id!==ctx.id)ctx={id:d.id,lastHint:null,hintStep:0,explainStep:0,wrongRun:0};return}
  if(d.kind==='hint'){ctx.lastHint={hint:d.hint,prompt:d.prompt};return}
  if(d.kind==='wrong'){ctx.lastHint={hint:d.hint,prompt:d.prompt};if(++ctx.wrongRun>=2){ctx.wrongRun=0;celebrate('wrong')}return}

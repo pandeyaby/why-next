@@ -8,9 +8,9 @@
 (()=>{const VAL={H:1,C:4,N:5,O:6,Cl:7,F:7},FULL=e=>e==='H'?2:8,COL={H:'#e2e8f0',C:'#64748b',N:'#60a5fa',O:'#f87171',Cl:'#4ade80',F:'#facc15'},
  NAME={H:'hydrogen',C:'carbon',N:'nitrogen',O:'oxygen',Cl:'chlorine',F:'fluorine'};
  /* Scenes: atoms with positions in 0..1 of the bench. */
- const SCENE={Cl2:[['Cl',.35,.5],['Cl',.65,.5]],H2O:[['O',.5,.45],['H',.28,.68],['H',.72,.68]],NH3:[['N',.5,.42],['H',.27,.66],['H',.5,.8],['H',.73,.66]],
-  O2:[['O',.36,.5],['O',.64,.5]],CH4:[['C',.5,.5],['H',.5,.2],['H',.25,.55],['H',.75,.55],['H',.5,.82]],HCl:[['H',.35,.5],['Cl',.65,.5]],
-  CO2:[['O',.22,.5],['C',.5,.5],['O',.78,.5]],N2:[['N',.36,.5],['N',.64,.5]],HF:[['F',.62,.5],['H',.34,.5]],CH3Cl:[['C',.5,.5],['Cl',.78,.5],['H',.5,.2],['H',.25,.6],['H',.5,.82]]};
+ const SCENE={Cl2:[['Cl',.35,.5],['Cl',.65,.5]],H2O:[['O',.5,.45],['H',.28,.68],['H',.72,.68]],NH3:[['N',.5,.3],['H',.22,.72],['H',.78,.72],['H',.5,.9]],
+  O2:[['O',.36,.5],['O',.64,.5]],CH4:[['C',.5,.5],['H',.2,.1],['H',.8,.1],['H',.2,.9],['H',.8,.9]],HCl:[['H',.35,.5],['Cl',.65,.5]],
+  CO2:[['O',.22,.5],['C',.5,.5],['O',.78,.5]],N2:[['N',.36,.5],['N',.64,.5]],HF:[['F',.62,.5],['H',.34,.5]],CH3Cl:[['C',.36,.5],['Cl',.86,.5],['H',.14,.1],['H',.58,.1],['H',.14,.9]]};
  const LABEL={Cl2:'Cl₂',H2O:'H₂O',NH3:'NH₃',O2:'O₂',CH4:'CH₄',HCl:'HCl',CO2:'CO₂',N2:'N₂',HF:'HF',CH3Cl:'CH₃Cl'};
 VIS.reg('flagcov',c=>{let A,chal,selA,selB,sand,onScreen=true;
  const st={atoms:[],bonds:{},pick:-1,name:'Cl2',t:0,chk:()=>{},q:null,won:false};
@@ -23,7 +23,12 @@ VIS.reg('flagcov',c=>{let A,chal,selA,selB,sand,onScreen=true;
  const connected=()=>{if(!st.atoms.length)return true;const seen=new Set([0]),stack=[0];while(stack.length){const i=stack.pop();st.atoms.forEach((_,j)=>{if(order(i,j)&&!seen.has(j)){seen.add(j);stack.push(j)}})}return seen.size===st.atoms.length};
  const solved=()=>connected()&&st.atoms.every((_,i)=>statusOf(i)==='full');
  const atomName=i=>{const a=st.atoms[i],same=st.atoms.filter(b=>b.e===a.e);return same.length>1?`${a.e}${same.indexOf(a)+1}`:a.e};
- const geo=A=>{const{W,H}=A,r=Math.min(W,H)*(A.narrow?.075:.07);return{r,pos:i=>({x:st.atoms[i].x*W,y:st.atoms[i].y*H*.86+H*.04})}};
+ /* Bench geometry. Atom rows are spread between the title strip and the hint strip, and the atom radius shrinks until the
+    rings (1.55 r, plus a gap) cannot touch, so a crowded molecule such as NH3 or CH4 never overlaps itself on a phone. */
+ const geo=A=>{const{W,H}=A,base=Math.min(W,H)*(A.narrow?.075:.07),top=34+base*1.55,bot=H-36-base*1.55-18,ys=st.atoms.map(a=>a.y),y0=Math.min(...ys),y1=Math.max(...ys);
+  const at=st.atoms.map(a=>({x:a.x*W,y:y1>y0?top+(a.y-y0)/(y1-y0)*Math.max(0,bot-top):(top+bot)/2}));
+  let gap=Infinity;at.forEach((p,i)=>at.forEach((q,j)=>{if(j>i)gap=Math.min(gap,Math.hypot(p.x-q.x,p.y-q.y))}));
+  return{r:Math.min(base,(gap-22)/3.1),pos:i=>at[i]}};
  const describe=()=>{const parts=st.atoms.map((a,i)=>`${atomName(i)} ${outer(i)} of ${FULL(a.e)}`);const bl=Object.entries(st.bonds).filter(([,o])=>o).map(([k,o])=>{const[i,j]=k.split('-').map(Number);return `${atomName(i)}${['','–','=','≡'][o]}${atomName(j)}`});
   return `${LABEL[st.name]||'Molecule'}: ${bl.length?'bonds '+bl.join(', '):'no bonds yet'}. Outer electrons: ${parts.join('; ')}.${solved()?' Every atom has a full outer shell.':''}`};
  const say=()=>{const d=describe();c.say(d);A&&A.cv.setAttribute('aria-label','Covalent bonding bench. '+d);syncSelects()};
@@ -44,7 +49,7 @@ VIS.reg('flagcov',c=>{let A,chal,selA,selB,sand,onScreen=true;
    const slots=[...Array(8)].map((_,q)=>q*Math.PI/4-Math.PI/2).filter(g=>away(g)>.7).sort((u,v)=>away(v)-away(u));
    for(let e=0;e<lone;e++){const ang=slots[Math.floor(e/2)%Math.max(1,slots.length)]??(e*Math.PI/4),side=e%2?.22:-.22,rr=G.r*1.55;drawElectron(ctx,p.x+Math.cos(ang+side)*rr,p.y+Math.sin(ang+side)*rr,COL[a.e],i%2===1,s)}
    P.label(`${outer(i)}/${FULL(a.e)}`,p.x,p.y+G.r*1.55+14,{font:'700 11px system-ui',bg:A.alpha(ring,.9),col:'#111'})});
-  if(st.pick>=0){const p=G.pos(st.pick);P.label('now tap a partner',p.x,p.y-G.r*1.55-14,{pill:1,bg:A.alpha(C.vi,.95)})}
+  if(st.pick>=0){const p=G.pos(st.pick);P.label('now tap a partner',p.x,Math.max(40,p.y-G.r*1.55-14),{pill:1,bg:A.alpha(C.vi,.95)})}
   else if(!Object.keys(st.bonds).length&&!A.isDone){ctx.globalAlpha=.6+.4*Math.sin(performance.now()/260);P.label('👆 tap one atom, then another, to share a pair',W/2,H-16,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}
   P.label(LABEL[st.name]||'',W/2,16,{font:'800 13px system-ui',bg:A.alpha(C.vi,.9)})}
  // ---------- bonding ----------

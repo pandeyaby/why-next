@@ -199,6 +199,27 @@ def gate_review(lesson, path):
         if len(str(s.get("evidence", ""))) < 40: errs.append(f"review: {c} needs concrete evidence, not a bare score")
     if not rv.get("sources"):
         errs.append("review: list at least one source the facts were checked against")
+    errs += review_not_copied(f, rv)
+    return errs
+
+
+def review_not_copied(this_file, rv):
+    """A review whose evidence repeats another lesson's review word for word was copied, not written for this lesson."""
+    def norm(t):
+        return re.sub(r"^checked for [^:]*:\s*", "", str(t).strip().lower())
+    mine = {c: norm(v.get("evidence", "")) for c, v in rv.get("scores", {}).items() if isinstance(v, dict)}
+    errs = []
+    for other in sorted(REVIEWS.glob("*.json")):
+        if other == this_file:
+            continue
+        try:
+            ov = json.loads(other.read_text()).get("scores", {})
+        except (ValueError, AttributeError):
+            continue
+        for c, ev in mine.items():
+            o = ov.get(c)
+            if isinstance(o, dict) and len(ev) > 40 and norm(o.get("evidence", "")) == ev:
+                errs.append(f"review: {c} evidence is copied from {other.name}; write it from this lesson's own checks")
     return errs
 
 
@@ -259,9 +280,21 @@ def cmd_check(path):
     return all(not e for e in report.values())
 
 
+def restore_missing_tracked_files():
+    """The builds read tracked inputs (out/merged/data, site/build). If something removed them from the working tree,
+    restore them from HEAD before running, so a lesson commit never carries (or fails on) unrelated deletions."""
+    gone = sh(["git", "ls-files", "-d"]).stdout.split("\n")
+    gone = [f for f in gone if f]
+    if gone:
+        print(f"restoring {len(gone)} tracked files missing from the working tree (e.g. {gone[0]})")
+        sh(["git", "checkout", "--", *gone])
+    return len(gone)
+
+
 def cmd_run(path, push=False):
     if sh(BRANCH).stdout.strip() != "visual-draft":
         sys.exit("refusing: the pipeline only commits on visual-draft")
+    restore_missing_tracked_files()
     lesson, report = run_gates(path); print_report(report)
     q, tid, now = load_queue(), lesson.get("topicId"), datetime.date.today().isoformat()
     q["next"] = [t for t in q["next"] if t["topic"] != tid]
@@ -278,6 +311,9 @@ def cmd_run(path, push=False):
     for cmd in (["python3", "ext/make_viewer.py"], ["python3", "site/build/build_site.py"]):
         if sh(cmd).returncode: sys.exit(f"build failed: {' '.join(cmd)}")
     sh(["git", "add", "-A", "learn", "ext", "out", "index.html", "site", "tests", "scripts"])
+    deleted = sh(["git", "diff", "--cached", "--diff-filter=D", "--name-only"]).stdout.split()
+    if deleted:   # a lesson commit only adds or edits files
+        sh(["git", "reset", "-q"]); sys.exit(f"refusing to commit: {len(deleted)} staged deletions, e.g. {deleted[0]}")
     c = sh(["git", *GIT_ID, "commit", "-m", f"Pipeline: flagship lesson {lesson['title']} ({tid}), lab {lesson['lab']['type']}"])
     if c.returncode:
         sys.exit("commit failed (hooks are never skipped):\n" + c.stdout + c.stderr)
