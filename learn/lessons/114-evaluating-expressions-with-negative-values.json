@@ -1,0 +1,236 @@
+{
+ "topicId": "mt_hVyRYu6omo",
+ "title": "Evaluating expressions with negative values",
+ "audience": "learner",
+ "keyIdea": "To evaluate an expression, put each value in place of its letter, in brackets, then follow the order of operations. A power acts only on what it touches: for x = −3, x² = (−3)² = 9, but −x² = −(x²) = −9.",
+ "explain": {
+  "kid": [
+   "To evaluate an expression, swap each letter for its number. If the number is negative, write it in brackets. So 5 − 2x with x = −3 becomes 5 − 2 × (−3).",
+   "Then work it out in order. Do powers first. Next, multiply. Last, add and subtract, from left to right. Taking away a negative is like adding: 5 − (−6) = 5 + 6 = 11.",
+   "A negative times a negative is positive. So (−3)² = (−3) × (−3) = 9. A square can never be negative.",
+   "Watch a minus sign in front. −x² means: find x², then make it negative. With x = −3, that gives −9, not 9."
+  ],
+  "adult": [
+   "Evaluating an expression means substituting a value for each variable and then simplifying with the usual order of operations: brackets, powers, multiplication and division, then addition and subtraction from left to right. Writing a substituted value in brackets, as in 2 × (−3), keeps its sign attached and shows each operation clearly.",
+   "A power binds tighter than a minus sign in front. So −x² means −(x²): with x = −3, x² = 9 and −x² = −9, while (−x)² = 9. Written numbers follow the same rule, so −3² = −9 but (−3)² = 9.",
+   "Even powers of a negative number are positive and odd powers are negative, because each pair of negative factors makes a positive: (−2)³ = −8 and (−2)⁴ = 16. Subtracting a negative adds its size, so 1 − (−4) = 5. Fractions work the same way: for x = −1/2, 4x² − 1 = 4 × 1/4 − 1 = 0.",
+   "Common mistakes: squaring a negative and keeping the minus sign, reading −x² as (−x)², losing the sign while substituting, turning a − (−b) into a − b, and treating 2x² as (2x)². On a calculator, type the brackets: without them, the calculator squares 3 first and shows −9 for −3²."
+  ]
+ },
+ "familyTip": "Pick a value together, such as x = −2, and each write down x², −x² and x³ before comparing answers. Then check on a calculator, once with brackets around −2 and once without, and talk about why the results differ.",
+ "worked": {
+  "title": "Evaluate x² − 3x + 2 when x = −4",
+  "steps": [
+   "Put −4 in brackets wherever x is: (−4)² − 3 × (−4) + 2.",
+   "Power first: (−4)² = (−4) × (−4) = 16.",
+   "Then multiply: 3 × (−4) = −12, so the line is 16 − (−12) + 2.",
+   "Taking away −12 adds 12: 16 + 12 + 2 = 30."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Work out x² when x = {a}.",
+   "answer": "a*a",
+   "hint": "Put the value in brackets and multiply it by itself. Count the minus signs.",
+   "explain": "({a})² = ({a}) × ({a}) = {=a*a}. A negative times a negative is positive.",
+   "params": {
+    "a": [
+     -9,
+     -1
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "What is −x² when x = −4?",
+   "choices": [
+    "−16",
+    "16",
+    "8"
+   ],
+   "answer": 0,
+   "hint": "The power comes before the minus in front. Find x² first, then make it negative.",
+   "explain": "x² = (−4)² = 16, and the minus in front makes it −16. Only (−x)² would give 16."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Work out 5 − 2x when x = {a}.",
+   "answer": "5-2*a",
+   "hint": "Write 5 − 2 × ({a}). Multiply first, then take the result away from 5.",
+   "explain": "5 − 2 × ({a}) = 5 − ({=2*a}) = {=5-2*a}. Taking away a negative adds.",
+   "params": {
+    "a": [
+     -6,
+     -1
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Work out 2x² − 5x when x = −2.",
+   "answer": 18,
+   "hint": "The power is only on x. Work out (−2)² first, then each multiplication, then subtract.",
+   "explain": "2 × (−2)² − 5 × (−2) = 2 × 4 − (−10) = 8 + 10 = 18."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Work out x³ when x = {a}.",
+   "answer": "a*a*a",
+   "hint": "A cube multiplies three copies of the number. Count how many minus signs there are.",
+   "explain": "({a})³ = ({a}) × ({a}) × ({a}) = {=a*a*a}. Three negatives multiplied give a negative.",
+   "params": {
+    "a": [
+     -4,
+     -1
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Work out x² − 4x when x = −1.",
+    "answer": 5,
+    "hint": "Substitute in brackets: (−1)² − 4 × (−1). Then power, multiply, subtract.",
+    "explain": "(−1)² − 4 × (−1) = 1 − (−4) = 1 + 4 = 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Work out −x² when x = {a}.",
+    "answer": "-(a*a)",
+    "hint": "Square the value first, then put the minus sign in front of the answer.",
+    "explain": "({a})² = {=a*a}, then the minus in front gives {=-(a*a)}.",
+    "params": {
+     "a": [
+      -8,
+      -2
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Work out {b}x + 7 when x = {a}.",
+    "answer": "b*a+7",
+    "hint": "{b}x means {b} × x. Multiply by the value in brackets, then add 7.",
+    "explain": "{b} × ({a}) + 7 = {=b*a} + 7 = {=b*a+7}.",
+    "params": {
+     "a": [
+      -5,
+      -1
+     ],
+     "b": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A calculator shows −9 when you type − 3 x². Why?",
+    "choices": [
+     "It squares 3 first, then applies the minus: −3² = −(3²)",
+     "The calculator is wrong, because −3 squared is 9",
+     "Squaring a negative always gives a negative"
+    ],
+    "answer": 0,
+    "hint": "Think about which comes first: the power or the minus sign in front.",
+    "explain": "The power comes before a minus in front, so −3² = −(3 × 3) = −9. To square negative three, type the brackets: (−3)² = 9."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which keys make a calculator square negative three and show 9?",
+    "choices": [
+     "( − 3 ) x²",
+     "− 3 x²",
+     "3 x² −"
+    ],
+    "answer": 0,
+    "hint": "The minus sign has to be inside the part that gets squared.",
+    "explain": "Brackets keep the minus with the 3, so (−3)² = (−3) × (−3) = 9. Without brackets the calculator works out −(3²) = −9."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Work out 3 − x² when x = −5.",
+    "answer": -22,
+    "hint": "Square −5 first. The square is positive, and then it is taken away from 3.",
+    "explain": "3 − (−5)² = 3 − 25 = −22. The square is 25, and taking 25 from 3 gives −22."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Work out 4x² − 1 when x = −1/2.",
+    "answer": 0,
+    "hint": "Square −1/2 first: multiply the tops and the bottoms. Then multiply by 4 and take away 1.",
+    "explain": "(−1/2)² = 1/4, so 4 × 1/4 − 1 = 1 − 1 = 0."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam works out 2x² for x = −3 as (2 × −3)² = 36. What is right?",
+    "choices": [
+     "2x² = 2 × (−3)² = 18, because the power is only on x",
+     "36 is right",
+     "2x² = −18, because x is negative"
+    ],
+    "answer": 0,
+    "hint": "Look at what the little 2 is attached to. Is it x, or 2x?",
+    "explain": "The power touches x only: (−3)² = 9, then 2 × 9 = 18. Sam squared 2x, which is a different expression, (2x)²."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "Work out (x + 1)² when x = {a}.",
+    "answer": "(a+1)*(a+1)",
+    "hint": "Brackets first: work out x + 1, then square that answer.",
+    "explain": "{a} + 1 = {=a+1}, and then ({=a+1})² = {=(a+1)*(a+1)}.",
+    "params": {
+     "a": [
+      -6,
+      -2
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "Drag x along the graph of x² − 4x into the negatives. Each output is positive there: x² is positive, and −4x is too.",
+  "opts": {
+   "mode": "eval",
+   "f": "x*x-4*x",
+   "a": -1,
+   "xr": [
+    -3,
+    5
+   ],
+   "yr": [
+    -5,
+    22
+   ],
+   "step": 0.5
+  }
+ },
+ "lab": {
+  "type": "flagsub",
+  "caption": "Flagship lab: drag a value into an expression, then work it out one step at a time. Tap a step too early and the lab says what must come first.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
