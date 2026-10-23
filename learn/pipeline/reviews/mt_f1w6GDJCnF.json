@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definition matches the AQA 8462 wording 'compounds that contain hydrogen and carbon atoms only'; every lab molecule was built atom by atom and its tally matches its formula (CH4, C2H5OH, C6H12O6 open-chain glucose with 6 O, C8H18, C3H6 with one C=C, C6H6 Kekulé ring, CO2, CH3Cl, H2, C2H4, C6H12, C4H10, CH3OH, CH3COOH, CCl4); crude oil described as mostly hydrocarbons, as in the spec."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented sorting errors for this topic: treating any formula with C and H as a hydrocarbon (ethanol, glucose, methanol, ethanoic acid), assuming every carbon compound counts (CO2, CCl4), counting hydrogen gas because it is 'hydro', and ruling out alkenes or rings because of the double bond or shape (propene, ethene, benzene, cyclohexane)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "An atom scanner: grey unknown atoms are revealed by tap and feed a live element tally, then the molecule goes into one of two canvas bins; the rule tested is set membership of elements, not bond counting. Shingle similarity to the nearest lab (flag_carbon.js) is 2.4%; no other lab hides element identities and tallies them."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners scan methane and see the tally stop at carbon and hydrogen, then find the single red O in ethanol and the six in glucose before sorting, see propene and benzene accepted despite the double bonds and ring, and meet CO2, CH3Cl and H2 failing for three different reasons; the step text only confirms what the tally and bins showed."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked-in predictions, each with a tempting wrong option the lab then disproves: 'Yes: it has C and H' for ethanol (tally shows oxygen), 'Glucose: it has lots of C and H' (6 O appear), 'No: hydrocarbons have single bonds only' for propene (accepted bin), 'Yes: it contains carbon' for CO2 (no hydrogen in the tally)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Probed in the browser on iPhone 13: CH3COOH sorted as hydrocarbon gets 'it also has oxygen... carbon and hydrogen only'; C6H12 sorted as not gets 'Bonds and shape do not matter... has a ring but only C and H'; H2 sorted as hydrocarbon gets 'hydrogen but no carbon at all'; CCl4 as hydrocarbon gets 'Containing carbon is not enough'; correct answers explain why and count a streak."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch-Kincaid grade 3.8 for the kid text and 7.8 for the adult text (limits 6.5 and 9.5); kid paragraphs use one idea per sentence ('That one oxygen atom means it is not a hydrocarbon. The key word is only.') and every formula is paired with its name."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes and the explanation overlap with every other lesson is 0% (12% limit); each adult paragraph does one job: the test, size and shape do not matter, carbon compounds that fail, and the named mistakes; lab messages are generated from the molecule's own elements, not repeated template text."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Phone sweep on iPhone 13 and 360x640 Android in both themes reports 0 findings; screenshots of glucose (24 atoms), octane (26 atoms), benzene and the challenge show the unit capped so every atom label is readable, both bins full-width at 54 px tall, and buttons wrap onto two rows without clipping."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core (WCAG 2.1 AA) reports no violations in light and dark on desktop and phone; the canvas aria-label is rebuilt after every scan and sort with the molecule, atoms scanned, the element tally and the sort result; Scan next atom, Scan all, Hydrocarbon and Not a hydrocarbon buttons do everything a canvas tap does."
+  }
+ },
+ "sources": [
+  "https://www.aqa.org.uk/subjects/chemistry/gcse/chemistry-8462/specification (4.7.1.1 crude oil, hydrocarbons and alkanes)",
+  "https://www.bbc.co.uk/bitesize/guides/z36tyrd/revision/1",
+  "https://openstax.org/books/chemistry-2e/pages/20-1-hydrocarbons"
+ ]
+}
