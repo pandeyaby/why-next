@@ -69,7 +69,7 @@ struct ChildFields: View {
             VStack(alignment: .leading, spacing: 6) {
                 Text("First name").font(.subheadline.weight(.semibold))
                 TextField("First name", text: $name, prompt: Text("Type a name"))
-                    .labelsHidden() // the "First name" header above is the visible label; macOS Forms otherwise draw it twice
+                    .labelsHidden()  // the "First name" header above is the visible label; macOS Forms otherwise draw it twice
                     .textFieldStyle(.roundedBorder)
                     .autocorrectionDisabled()
                     #if os(iOS)
