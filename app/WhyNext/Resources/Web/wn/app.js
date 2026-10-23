@@ -34,7 +34,9 @@ function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class=
 /* Detail text (descriptions, evidence, standards, link reasons, cluster notes) arrives in small per-domain
    chunks (wn/d*.js); the map and lessons render without it, and fill() completes the page once they load. */
 const needFor=id=>[...new Set([...ancestors(id,false)].map(u=>N.get(u).k))];
-function select(id){sel=id;renderList();const lz=LEARN.L[id]&&LEARN.L[id]._lz;if(lz)WN.lbload(N.get(id).k).then(()=>{if(sel===id&&!LEARN.L[id]._lz)select(id)},()=>{const b=document.getElementById('lzwait');if(b)b.textContent='This lesson could not load. Check your connection and pick it again.'});
+/* #t=<topic id> deep-links a topic; on phones a picked topic scrolls into view (the list sits above it). */
+function select(id){const moved=sel!=null&&sel!==id;sel=id;renderList();try{history.replaceState(null,'','#t='+encodeURIComponent(id))}catch(e){}
+ if(moved&&window.matchMedia&&matchMedia('(max-width: 800px)').matches)setTimeout(()=>{const d=document.getElementById('detail');if(d)d.scrollIntoView({block:'start'})},0);const lz=LEARN.L[id]&&LEARN.L[id]._lz;if(lz)WN.lbload(N.get(id).k).then(()=>{if(sel===id&&!LEARN.L[id]._lz)select(id)},()=>{const b=document.getElementById('lzwait');if(b)b.textContent='This lesson could not load. Check your connection and pick it again.'});
  document.getElementById('detail').innerHTML=`<div class="card" id="dcard"></div>${lz?'<section class="learn card"><p class="muted" id="lzwait" role="status">Loading the lesson…</p></section>':LEARN_PANEL.panel(id)}<div id="dclu"></div><div class="card cv"><b>Hard-prerequisite graph</b><div id="dgraph"></div></div>
  <div class="card cv"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span><div id="dtree"></div></div>`;
  if(!lz)LEARN_PANEL.mount(id);document.getElementById('main').scrollTop=0;fill(id,true);
@@ -54,7 +56,9 @@ function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(need
  quick?setTimeout(below,0):below()}
 document.getElementById('detail').onclick=e=>{if(e.target.closest('.learn'))return;const t=e.target.closest('.tog');if(t){const li=t.parentElement,box=li.querySelector(':scope>div[style]');if(box){const o=box.style.display!=='none';box.style.display=o?'none':'block';t.textContent=o?'▸':'▾'}return}
  const g=e.target.closest('[data-id]');if(g)select(g.dataset.id)};
-LEARN.home();renderList();const first=LEARN.nextList(0).find(n=>LEARN.has(n.id))||DATA.nodes.find(n=>n.new&&n.n==='Solving quadratics by factorising')||DATA.nodes.find(n=>n.new);WN.load(needFor(first.id)).then(()=>select(first.id),()=>select(first.id));
+LEARN.home();renderList();const wantReels=location.hash==='#reels',deep=(/[#&]t=([^&]+)/.exec(location.hash)||[])[1],first=(deep&&N.get(decodeURIComponent(deep)))||LEARN.nextList(0).find(n=>LEARN.has(n.id))||DATA.nodes.find(n=>n.new&&n.n==='Solving quadratics by factorising')||DATA.nodes.find(n=>n.new);WN.load(needFor(first.id)).then(()=>select(first.id),()=>select(first.id));
+/* #reels (linked from the homepage): bring the home reel strip into view once it has filled. */
+if(wantReels){const t0=Date.now(),seek=()=>{const h=document.getElementById('homeReels');if(h&&!h.hidden&&h.children.length){(h.previousElementSibling||h).scrollIntoView({block:'start'});return}if(Date.now()-t0<8000)setTimeout(seek,200)};seek()}
 
 /* theme switch (2052 default, classic light) and gentle pointer parallax for the background and map */
 (()=>{const R=document.documentElement,b=document.getElementById('themeBtn');if(!b)return;
