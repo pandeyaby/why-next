@@ -3,8 +3,12 @@ jsDelivr refuses packages over 50 MB; a commit on an orphan branch holds only th
 under LIMIT bytes. New reels go into the newest part while it has room; when it is full, reels-part-<k+1> is started.
 Usage: python3 ext/reels_publish.py <dir with b###.mp4/.jpg/.vtt>   (needs GITHUB_TOKEN; never printed)
 Writes learn/reels/parts.json ({"<k>": {"branch", "sha", "files"}}) and sets "x": <k> on each manifest entry.
-Local clones live in /workspace/why-next-reels-parts/<repo> (make_viewer.py checks files there when present)."""
-import base64, json, os, subprocess, sys
+Local clones live in /workspace/why-next-reels-parts/<repo> (make_viewer.py checks files there when present).
+Primary host: every reel is also uploaded (upsert) to the dedicated Supabase project "why-next", public bucket
+why-next-reels (REEL_HOST in make_viewer.py). Uploads need WN_REELS_SUPABASE_KEY, a Supabase secret/service key for
+that project (never printed). Without it the jsDelivr parts are still published and the Supabase step is skipped
+with a warning, so players fall back to jsDelivr for the new reels until it is re-run with the key."""
+import base64, json, os, subprocess, sys, urllib.error, urllib.request
 OWNER, BR, LIMIT = "pandeyaby", "reels-part-", 45_000_000
 ROOT = "/workspace/why-next-reels-parts"; PJ = "learn/reels/parts.json"; MJ = "learn/reels/manifest.json"
 src = sys.argv[1]; tok = os.environ["GITHUB_TOKEN"]
@@ -14,6 +18,16 @@ def git(d, *a):
     r = subprocess.run(["git", "-C", d, *ID, "-c", f"http.https://github.com/.extraheader={H}", *a], text=True, capture_output=True)
     if r.returncode: sys.exit(f"git {a[0]} failed in {d}: " + r.stderr.replace(tok, "***").strip())   # never echo the auth header
     return r.stdout.strip()
+SB_UPLOAD = "https://etzqrmcwnxpbysnltdxt.supabase.co/storage/v1/object/why-next-reels/"
+CONTENT_TYPES = {".mp4": "video/mp4", ".jpg": "image/jpeg", ".vtt": "text/vtt"}
+def upload_to_reel_host(path, key):
+    """Upsert one reel file into the Supabase bucket; returns the HTTP status (200 on success)."""
+    ext = path[-4:]; assert ext in CONTENT_TYPES, path
+    req = urllib.request.Request(SB_UPLOAD + os.path.basename(path), data=open(path, "rb").read(), method="POST",
+        headers={"apikey": key, "Authorization": "Bearer " + key, "Content-Type": CONTENT_TYPES[ext],
+                 "x-upsert": "true", "cache-control": "max-age=31536000"})
+    try: return urllib.request.urlopen(req).status
+    except urllib.error.HTTPError as e: return e.code
 def size(d): return sum(os.path.getsize(os.path.join(d, f)) for f in os.listdir(d) if not f.startswith("."))
 def part_dir(k):
     br = BR + str(k); d = f"{ROOT}/{br}"
@@ -50,5 +64,10 @@ for t in sorted(touched):
 for L in m.values():
     for e in L:
         if e["f"] in where: e["x"] = where[e["f"]]
+sb_key = os.environ.get("WN_REELS_SUPABASE_KEY")
+if not sb_key: print("warning: WN_REELS_SUPABASE_KEY not set; new reels are on jsDelivr only (Supabase upload skipped)")
+else:
+    bad = [f"{s}{e}" for s in slots for e in CONTENT_TYPES if upload_to_reel_host(f"{src}/{s}{e}", sb_key) != 200]
+    if bad: sys.exit(f"Supabase upload failed for {len(bad)} files, e.g. {bad[:3]}")
 json.dump(parts, open(PJ, "w"), indent=1); json.dump(m, open(MJ, "w"), indent=1, ensure_ascii=False)
 print({t: (parts[t]["sha"][:7], len(parts[t]["files"]), size(f"{ROOT}/{BR}{t}")) for t in parts})

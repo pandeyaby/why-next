@@ -127,6 +127,6 @@ python3 scripts/lesson_pipeline.py status
 It only commits on `visual-draft`, never skips hooks, and never writes content itself.
 
 ## Reel hosting
-Primary: public Supabase Storage bucket `why-next-reels` (`REEL_HOST` in `ext/make_viewer.py`, flat `<file>.mp4/.jpg/.vtt`).
+Primary: public Supabase Storage bucket `why-next-reels` in the dedicated Supabase project `why-next` (ref etzqrmcwnxpbysnltdxt; new reels are uploaded by `ext/reels_publish.py` when `WN_REELS_SUPABASE_KEY` is set) (`REEL_HOST` in `ext/make_viewer.py`, flat `<file>.mp4/.jpg/.vtt`).
 Fallbacks: jsDelivr parts (`WN_RPARTS`), fastly.jsdelivr.net, raw GitHub (AGENTS.md T1, T5). New reels must be uploaded to the bucket
 as well as the orphan branches. Captions are burned into the video, so the VTT track is off by default (CC in the player turns it on).
