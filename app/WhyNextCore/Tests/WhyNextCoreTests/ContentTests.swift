@@ -58,7 +58,7 @@ final class ContentTests: XCTestCase {
         let url = web.appendingPathComponent("content.json")
         guard FileManager.default.fileExists(atPath: url.path) else { throw XCTSkip("no synced content") }
         let c = try BundledContent.load(from: url)
-        XCTAssertEqual(c.flagships.count, 12)
+        XCTAssertGreaterThanOrEqual(c.flagships.count, 12)  // visual-draft has 21 (main has 12)
         let d = try WhyNextData.bundled(); let ids = Set(d.nodes.compactMap(\.topicId))
         for t in c.flagships.keys { XCTAssertTrue(ids.contains(t), "flagship \(t) is a node on the map") }
         let reelDir = web.appendingPathComponent("reels")

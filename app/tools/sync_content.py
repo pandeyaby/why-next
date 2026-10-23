@@ -9,7 +9,7 @@
 Writes app/WhyNext/Resources/Web/ (added to the app as a folder reference, see project.yml):
   index.html   the web viewer (out/viewer.html) with a small app shim: reels play from the bundled reels/ folder
                and window.WN_TOPIC (set by the app) opens that topic once the page is ready
-  wn/          the split web build (map, lessons, the 12 flagships, visuals; same files the live site serves)
+  wn/          the split web build (map, lessons, the flagships (21 on visual-draft, 12 on main), visuals; same files the live site serves)
   content.json what the native app needs: which topics have a lesson / a flagship, and the reel manifest
   reels/       every reel's mp4 + vtt captions + jpg poster, downloaded from the reels-part-<k> branches at the
                commits pinned in learn/reels/parts.json (about 100 MB, so it is git-ignored, never committed)
@@ -19,6 +19,9 @@ APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(APP, "WhyNext", "Resources", "Web")
 REPO = "pandeyaby/why-next"
 FLAGS = {"flagderiv", "flagplace", "flagfrac", "flagneg", "flageq", "flagline", "flagarea", "flagatom", "flagacid", "flagstate", "flagprob", "flagpyth"}
+# flagships added on visual-draft (21 in total there); main has only the first 12
+FLAGS |= {"flagenergy", "flagcirc", "flagwave", "flagnuc", "flagshell", "flagcov", "flagunit", "flagwread", "flagsub"}
+FLAGS12 = FLAGS - {"flagenergy", "flagcirc", "flagwave", "flagnuc", "flagshell", "flagcov", "flagunit", "flagwread", "flagsub"}
 
 def fetch_tree(ref, dest, only=None):
     """Download github.com/REPO at ref as a tarball and extract it (optionally only paths starting with `only`)."""
@@ -32,10 +35,11 @@ def fetch_tree(ref, dest, only=None):
             p = os.path.join(dest, rel); os.makedirs(os.path.dirname(p), exist_ok=True)
             with t.extractfile(m) as f, open(p, "wb") as o: shutil.copyfileobj(f, o)
 
-# Temporary patches T2 (poll for select/WN_WARM) and T3 (captions via blob URLs): see AGENTS.md in the web repo
+# Temporary patches T2 (poll for select/WN_WARM), T3 (captions via blob URLs) and, since visual-draft, the WN_RHOST swallow
+# (reels.js sets WN_RHOST to a Supabase URL that learn.js prefers over WN_RPARTS): see AGENTS.md in the web repo
 # (pandeyaby/why-next) for what to undo, when, and how to check.
 SHIM = r"""<script>/* Why Next? app shim: offline reels, open the topic the app asks for */
-(function(){var P={};Object.defineProperty(window,'WN_RPARTS',{configurable:true,get:function(){return P},set:function(v){P={};for(var k in v)P[k]='reels/'}});
+(function(){/* WN_RHOST (reels.js, Supabase Storage) is the web build's primary reel host: ignore it so reels use the bundled reels/ files (no network) */Object.defineProperty(window,'WN_RHOST',{configurable:true,get:function(){return undefined},set:function(){}});var P={};Object.defineProperty(window,'WN_RPARTS',{configurable:true,get:function(){return P},set:function(v){P={};for(var k in v)P[k]='reels/'}});
 window.WN_APP=1;function go(){if(!window.WN_TOPIC)return;if(typeof select==='function'&&window.WN_WARM){try{select(window.WN_TOPIC)}catch(e){}var c=document.getElementById('learn');if(c)c.scrollIntoView();return}setTimeout(go,60)}
 window.addEventListener('load',go);
 /* file: pages can't load <track> files directly, so captions come from reels/captions.js as same-origin blob URLs */
@@ -63,7 +67,7 @@ def main():
     parts = json.load(open(os.path.join(src, "learn/reels/parts.json"), encoding="utf-8"))
     reels = {t: [{"f": r["f"], "t": r["t"], "d": r["d"]} for r in L] for t, L in sorted(man.items())}
     json.dump({"lessons": lessons, "flagships": flags, "reels": reels}, open(os.path.join(OUT, "content.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0, sort_keys=True)
-    assert len(flags) == 12, f"expected 12 flagships, found {len(flags)}: {sorted(flags.values())}"
+    assert FLAGS12 <= set(flags.values()), f"expected at least the 12 original flagships, found {len(flags)}: {sorted(flags.values())}"
     need = {r["f"] for L in man.values() for r in L}
     print(f"web: {len(os.listdir(os.path.join(OUT, 'wn')))} files in wn/, {len(lessons)} lessons, {len(flags)} flagships, {len(need)} reels in {len(man)} topics")
     if a.no_reels: print("reels skipped (--no-reels)"); return

@@ -113,7 +113,7 @@ app/
 The app works fully offline, and the Mac build stays in the App Sandbox without the network entitlement.
 `tools/sync_content.py` copies the website's split build into `WhyNext/Resources/Web`, which goes into the app as a folder reference:
 
-- `index.html` + `wn/`: the web viewer with every lesson, the **12 flagship** interactive lessons, the visuals and labs. These are the same files the live site serves, plus a small shim at the top of `index.html`. The shim points reels at the bundled `reels/` folder and opens the topic the app asks for (`window.WN_TOPIC`).
+- `index.html` + `wn/`: the web viewer with every lesson, the **flagship** interactive lessons (21 on visual-draft, 12 on main), the visuals and labs. These are the same files the live site serves, plus a small shim at the top of `index.html`. The shim points reels at the bundled `reels/` folder and opens the topic the app asks for (`window.WN_TOPIC`).
 - `content.json`: which topics have a lesson or a flagship, and the reel manifest (313 reels in 98 topics).
 - `reels/`: every reel's `.mp4` (each under 2 MB), `.vtt` captions and `.jpg` poster, plus `captions.js` (the captions as script, because `file:` pages can't load `<track>` files). These are about 91 MB, so they are **git-ignored**. The script downloads them from the `reels-part-<k>` branches at the commits pinned in the web build's `learn/reels/parts.json`. Run it again to pick up new reels or lessons; it only re-downloads parts whose commit changed.
 

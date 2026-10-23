@@ -41,7 +41,7 @@ W = 'WhyNext/Resources/Web'
 if not os.path.exists(f'{W}/content.json'):
     print('skipped: no Resources/Web (run python3 tools/sync_content.py)'); raise SystemExit
 c = json.load(open(f'{W}/content.json', encoding='utf-8'))
-assert len(c['flagships']) == 12, c['flagships']
+assert len(c['flagships']) >= 12, c['flagships']
 assert set(c['flagships']) <= set(c['lessons']), 'every flagship has a lesson'
 html = open(f'{W}/index.html', encoding='utf-8').read()
 assert 'WN_TOPIC' in html and 'WN_RPARTS' in html, 'app shim missing from index.html'
@@ -58,9 +58,9 @@ if os.path.isdir(f'{W}/reels'):
         assert open(f"{W}/reels/{r['f']}.vtt", encoding='utf-8').read().startswith('WEBVTT'), r['f']
     assert os.path.exists(f'{W}/reels/captions.js')
     size = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(W) for f in fs)
-    print(f"{len(c['lessons'])} lessons, 12 flagships, {len(reels)} reels with captions and posters; Web/ is {size / 1e6:.0f} MB")
+    print(f"{len(c['lessons'])} lessons, {len(c['flagships'])} flagships, {len(reels)} reels with captions and posters; Web/ is {size / 1e6:.0f} MB")
 else:
-    print(f"{len(c['lessons'])} lessons, 12 flagships; reels not downloaded yet (run tools/sync_content.py without --no-reels)")
+    print(f"{len(c['lessons'])} lessons, {len(c['flagships'])} flagships; reels not downloaded yet (run tools/sync_content.py without --no-reels)")
 PY
 if [ -n "${WEB_CHECK_NODE:-}" ] && [ -d WhyNext/Resources/Web/reels ]; then
   echo "== 3d. offline web bundle runs with the network off (Playwright, needs NODE_PATH with playwright)"
