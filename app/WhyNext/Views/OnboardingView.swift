@@ -68,7 +68,7 @@ struct ChildFields: View {
         VStack(alignment: .leading, spacing: 14) {
             VStack(alignment: .leading, spacing: 6) {
                 Text("First name").font(.subheadline.weight(.semibold))
-                TextField("First name", text: $name)
+                TextField("First name", text: $name, prompt: Text("Type a name"))
                     .textFieldStyle(.roundedBorder)
                     .autocorrectionDisabled()
                     #if os(iOS)
