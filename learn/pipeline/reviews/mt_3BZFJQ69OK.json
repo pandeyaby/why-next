@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Scripted checks over x = −9..9: 3(x+2)=3x+6, 4x+2−x+1=3(x+1), 5(x+2)−3=5x+7; 2x+4 and x+6 meet only at x=2, 2x+3 and 5x only at x=1, x+9 and 3x+1 only at x=4; the 'two different linear expressions agree at one x at most' claim is the standard intersection fact."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips for 6.EE.4: concluding equivalence from one matching value, collecting unlike terms (2x + 3 = 5x), multiplying only the first bracket term (2(x+3) vs 2x+3), believing a few tests prove equivalence, and offering the agreement point as a counter-example."
+  },
+  "lab_distinct": {
+   "score": 10,
+   "evidence": "Two expression cards evaluated at a shared draggable x on a number line, with a green/red record strip of tested values and tap-to-simplify card chains; shingle similarity to the nearest flagship lab (flag_exp.js) is 3.1%, and the test-versus-prove split is specific to equivalence."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner sees 2x + 4 and x + 6 agree at 2 then split at 5, and 2x + 3 meet 5x only at 1, before the text says one match proves nothing; the prove step then makes both cards land on 3x + 3, showing why algebra, not testing, settles equivalence."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predicts, each with a tempting wrong option the lab disproves: 'Yes, for big values of x' (3(x+2) vs 3x+6), 'same numbers' (2(x+3)), 'Yes, they matched' (2x+4 vs x+6), '2 + 3 = 5' (2x+3 vs 5x) and 'Test x = 1 and x = 2' as proof."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Probed in the browser: 'Equivalent' for 3x+5 vs 8x names unlike terms; for x+9 vs 3x+1 it names the match at x = 4 and gives x = 5 values; x = 4 as a counter-example is flagged as the agreement point; 'Not equivalent' for 4(x+1) shows both give 16 and the simplified forms; a blank counter-example gets a prompt."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 2.8 for the kid text and 8.1 for the adult text (limits 6.5 and 9.5); kid sentences each carry one test or one example with worked numbers such as 3 × 6 = 18."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes and explanation overlap with every other lesson is 0%; each paragraph adds a definition, the counter-example rule, the one-way power of testing, or the list of slips."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 screenshots of every step: both cards, the −5..5 number line and the record strip fit at 390 px with no clipping; a mouse-pointer drag of the marker to −3 and taps on 4 and 0 completed step 1, and card taps completed the prove step."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core WCAG 2.1 AA clean in both themes on desktop and phone (walk.cjs); every canvas action has a button (x − 1, x + 1, Test x = n, Simplify A/B), and the canvas aria-label lists both cards, the marker and every tested value."
+  }
+ },
+ "sources": [
+  "https://www.thecorestandards.org/Math/Content/6/EE/",
+  "https://openstax.org/books/prealgebra-2e/pages/2-2-evaluate-simplify-and-translate-expressions",
+  "https://www.ncetm.org.uk/classroom-resources/secondary-mastery-professional-development/"
+ ]
+}
