@@ -1,0 +1,244 @@
+{
+ "topicId": "mt_y2BWYSKFFm",
+ "title": "Expanding brackets with negatives",
+ "audience": "learner",
+ "keyIdea": "The number in front of a bracket multiplies every term inside it, and its sign goes with it. So −3(x − 4) = −3x + 12, because −3 × −4 = +12. In 5 − 2(x + 1) the multiplier is −2: 5 − 2x − 2 = 3 − 2x.",
+ "explain": {
+  "kid": [
+   "To expand a bracket, multiply each term inside by the number outside. Do not stop after the first term. −3(x − 4) means −3 × x and −3 × (−4).",
+   "Use the sign rules. A negative times a negative is positive. A negative times a positive is negative. So −3 × (−4) = +12, and −3(x − 4) = −3x + 12.",
+   "A minus sign on its own means −1. So −(x + 5) = −x − 5. Every sign inside the bracket flips.",
+   "Keep the sign with the number in front. In 5 − 2(x + 1), you multiply by −2, not 2. Expand first: 5 − 2x − 2. Then add the numbers: 3 − 2x."
+  ],
+  "adult": [
+   "Expanding uses the distributive law, a(b + c) = ab + ac, and it holds for negative a, b and c. The multiplier includes its sign. In 10 − 2(x − 3), the bracket is multiplied by −2. That gives −2 × x = −2x and −2 × (−3) = +6, so 10 − 2x + 6 = 16 − 2x.",
+   "A minus in front of a bracket is a multiplier of −1, so −(2x − 7) = −2x + 7. This is also why subtracting a whole bracket changes every sign inside it, which you need later for subtracting polynomials.",
+   "Order of operations still applies. Multiplication comes before subtraction, so 5 − 2(x + 1) is not 3(x + 1). Expand the bracket first, then collect like terms. The x term and the number term stay separate, so 3 − 2x does not simplify to x.",
+   "Common mistakes: multiplying only the first term, as in −3(x − 4) = −3x − 4; getting the second sign wrong, as in −3x − 12; dropping the minus from the multiplier; and subtracting before expanding. To check, substitute a value: with x = 1, 10 − 2(1 − 3) = 14 and 16 − 2 × 1 = 14."
+  ]
+ },
+ "familyTip": "Each write down what you think −2(x − 5) expands to, without talking. Then test both answers by putting in x = 3: the original gives −2 × (−2) = 4, so the right expansion must give 4 too. Pick a new bracket and swap who writes first.",
+ "worked": {
+  "title": "Expand and simplify 10 − 2(x − 3)",
+  "steps": [
+   "The multiplier is −2, sign included: 10 + (−2)(x − 3).",
+   "−2 × x = −2x.",
+   "−2 × (−3) = +6, because a negative times a negative is positive.",
+   "10 − 2x + 6. Collect the numbers: 16 − 2x."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Expand −{a}(x − {b}). What is the number term?",
+   "answer": "a*b",
+   "hint": "Multiply −{a} by −{b}. Two negatives make a positive.",
+   "explain": "−{a} × (−{b}) = +{=a*b}, so −{a}(x − {b}) = −{a}x + {=a*b}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Expand −(x + 5).",
+   "choices": [
+    "−x − 5",
+    "−x + 5",
+    "x − 5"
+   ],
+   "answer": 0,
+   "hint": "A minus in front means −1 times every term in the bracket.",
+   "explain": "−1 × x = −x and −1 × 5 = −5, so −(x + 5) = −x − 5. Both signs flip, not just the first."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Expand and simplify {a} − 2(x + {b}). What is the number term?",
+   "answer": "a-2*b",
+   "hint": "Multiply by −2 first: −2 × {b}. Then add that to {a}.",
+   "explain": "{a} − 2x − {=2*b} = {=a-2*b} − 2x, so the number term is {=a-2*b}.",
+   "params": {
+    "a": [
+     5,
+     12
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Expand −4(3 − 2x).",
+   "choices": [
+    "−12 + 8x",
+    "−12 − 8x",
+    "12 − 8x"
+   ],
+   "answer": 0,
+   "hint": "Multiply −4 by 3, then −4 by −2x. Count the minus signs in each.",
+   "explain": "−4 × 3 = −12 and −4 × (−2x) = +8x, so the answer is −12 + 8x."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Simplify 10 − 2(x − 3).",
+   "choices": [
+    "16 − 2x",
+    "4 − 2x",
+    "8x − 24"
+   ],
+   "answer": 0,
+   "hint": "The multiplier is −2. Expand first, then collect the numbers.",
+   "explain": "10 − 2x + 6 = 16 − 2x. 4 − 2x forgets that −2 × (−3) is +6, and 8x − 24 does 10 − 2 first."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Expand −{a}(x + {b}). What is the number term?",
+    "answer": "-(a*b)",
+    "hint": "Multiply −{a} by +{b}. A negative times a positive is negative.",
+    "explain": "−{a} × {b} = {=-(a*b)}, so −{a}(x + {b}) = −{a}x − {=a*b}.",
+    "params": {
+     "a": [
+      2,
+      7
+     ],
+     "b": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Expand −{a}(2 − x). What number goes in front of x?",
+    "answer": "a",
+    "hint": "Multiply −{a} by −x. Two negatives make a positive.",
+    "explain": "−{a} × (−x) = +{a}x, so the number in front of x is {a}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Jo writes −3(x − 4) = −3x − 4. What went wrong?",
+    "choices": [
+     "Jo did not multiply the −4 by −3",
+     "Jo should have added 3",
+     "Nothing, it is right"
+    ],
+    "answer": 0,
+    "hint": "Check that the number outside multiplied every term inside the bracket.",
+    "explain": "Both terms are multiplied: −3 × (−4) = +12, so −3(x − 4) = −3x + 12."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Simplify 5 − 2(x + 1).",
+    "choices": [
+     "3 − 2x",
+     "3x + 3",
+     "7 − 2x"
+    ],
+    "answer": 0,
+    "hint": "Multiply first. The multiplier is −2, so the +1 becomes −2.",
+    "explain": "5 − 2x − 2 = 3 − 2x. 3x + 3 subtracts before multiplying, and 7 − 2x gets the sign of −2 × 1 wrong."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Expand −(2x − 7).",
+    "choices": [
+     "−2x + 7",
+     "−2x − 7",
+     "2x + 7"
+    ],
+    "answer": 0,
+    "hint": "Multiply both terms by −1.",
+    "explain": "−1 × 2x = −2x and −1 × (−7) = +7, so −(2x − 7) = −2x + 7."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Simplify 7 − (x − 1). What is the number term?",
+    "answer": 8,
+    "hint": "The minus in front means −1 × (x − 1). What is −1 × (−1)?",
+    "explain": "7 − x + 1 = 8 − x, so the number term is 8."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Expand −2(3x + 4).",
+    "choices": [
+     "−6x − 8",
+     "−6x + 8",
+     "−5x − 8"
+    ],
+    "answer": 0,
+    "hint": "Multiply −2 by 3x, then −2 by 4. Multiply, do not add.",
+    "explain": "−2 × 3x = −6x and −2 × 4 = −8. −5x adds −2 and 3x instead of multiplying."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "How can you check that 10 − 2(x − 3) = 16 − 2x?",
+    "choices": [
+     "Put in a value: x = 1 gives 14 both ways",
+     "Check that both sides have an x",
+     "Check that both sides have a 2"
+    ],
+    "answer": 0,
+    "hint": "Equal expressions give the same value for every x you try.",
+    "explain": "10 − 2(1 − 3) = 10 + 4 = 14 and 16 − 2 = 14. One value can catch a mistake; two values make a check stronger."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "Drag x along the graph of 10 − 2(x − 3). Read any point: the output always equals 16 − 2x, so the two forms are the same expression.",
+  "opts": {
+   "mode": "eval",
+   "f": "10-2*(x-3)",
+   "a": 1,
+   "xr": [
+    -2,
+    9
+   ],
+   "yr": [
+    -4,
+    22
+   ],
+   "step": 0.5
+  }
+ },
+ "lab": {
+  "type": "flagexp",
+  "caption": "Flagship lab: drag the multiplier, sign and all, onto each term in the bracket. The product and its sign rule appear below; then collect the numbers.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
