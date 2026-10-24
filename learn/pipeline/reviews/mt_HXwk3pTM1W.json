@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Recomputed every figure: 2π × 6 = 37.7 and π × 6² = 113.1; 72/360 × 37.7 = 7.5 cm; 90° on r = 6 gives 9.4 cm and 28.3 cm²; 60° gives 113.1 ÷ 6 = 18.8 cm²; r 3 → 6 at 90° takes the arc 4.7 → 9.4 and the area 7.1 → 28.3; 15.7 ÷ 37.7 × 360 = 149.9 ≈ 150°; random challenge answers (8.4 cm, 3.1 cm², 61.9 cm, 135°) checked by hand."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Built around the known sector slips: θ/100 instead of θ/360, πr² used for an arc and 2πr used for an area, πr taken as the full circumference, r left unsquared, the whole circle given instead of the sector, one or no radius in a perimeter, and arc ÷ r (radians) reported as degrees."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "A circle whose sector angle and radius are both dragged, with an unrolled strip that fills to θ/360 of 2πr or πr², ghost copies that tile the full turn at 60°, and a dashed old sector kept when r doubles; nearest flagship lab shingle similarity is 5.8% (flag_reveal.js), then 5.2% (flag_chord.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The fraction θ/360 is seen first as a share of the circle (72° fills one fifth of the strip), then applied to the edge and to the area in turn; six tiled 60° copies show why the share works, and dragging r from 3 to 6 shows the arc strip double while the area strip grows fourfold before the r² reason is stated."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predicts, each with a tempting wrong option the lab then tests: 72/100 for the share of a 72° sector, ¼ of π × 6² (the area formula) for a 90° arc, ⅙ of 2π × 6 for a 60° area, 'twice as big' when r doubles (the area strip reaches 4×) and 42° when working back from 0.42 of the edge."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Every wrong option probed in the browser for arc, area, perimeter and angle questions: the area-formula choice is told an arc is a length, the 2πr-for-area choice is told area needs πr², 30.2 cm names the /100 slip, 41.9 cm names the missing radii, 2.4° names radians, and each message ends with the full correct working."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 0.7 for the kid text and 4.9 for the adult text (limits 6.5 and 9.5); each kid sentence carries one idea with a number in it, the adult text gives both formulas on one line and the lab task lines are single short instructions."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and explanation overlap with all other lessons is 0%; the four adult paragraphs each add one point (shared fraction, scaling with θ and r, working backwards plus perimeter, named slips) and the challenge messages restate the working rather than praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 screenshots of all seven steps show the circle, labels, strip and r handle inside the 326 px canvas; real touch-style pointer drags round the arc to 72° and along the radius from 3 to 6 cm both completed their tasks; the r step predict wording was tightened after a screenshot showed an awkward reveal line."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core WCAG 2.1 AA clean in light and dark themes on phone and desktop (walk.cjs); θ ± 10°, θ ± 2° and r ± 1 buttons replace every drag, and the canvas aria-label reads out the angle, fraction, arc of whole edge and area of whole circle as they change."
+  }
+ },
+ "sources": [
+  "https://www.bbc.co.uk/bitesize/guides/z9pssbk/revision/1",
+  "https://openstax.org/books/precalculus-2e/pages/5-1-angles",
+  "https://www.thecorestandards.org/Math/Content/HSG/C/",
+  "https://www.ncetm.org.uk/classroom-resources/secondary-mastery-professional-development/"
+ ]
+}

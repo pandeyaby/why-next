@@ -1,0 +1,268 @@
+{
+ "topicId": "mt_HXwk3pTM1W",
+ "title": "Arc length and sector area",
+ "audience": "learner",
+ "keyIdea": "A sector with angle θ is the fraction θ/360 of the whole circle. Its arc is that fraction of the circumference 2πr, and its area is that fraction of the area πr². To find the angle from an arc, turn it round: θ = arc ÷ 2πr × 360.",
+ "explain": {
+  "kid": [
+   "A sector is a slice of a circle, like a slice of pizza. Its angle θ is at the centre. A full turn is 360°.",
+   "First find the fraction. A 90° slice is 90/360, so a quarter. A 72° slice is 72/360, so one fifth.",
+   "The arc is the curved crust. It is that fraction of the whole edge, 2πr. With r = 6 cm a quarter arc is 37.7 ÷ 4 = 9.4 cm.",
+   "The area is that fraction of the whole circle, πr². With r = 6 cm a quarter slice is 113.1 ÷ 4 = 28.3 cm²."
+  ],
+  "adult": [
+   "Arc length = θ/360 × 2πr and sector area = θ/360 × πr². Both are the same fraction of a whole-circle formula; only the whole changes, from a length to an area.",
+   "Scaling shows the difference. Doubling θ doubles both. Doubling r doubles the arc but multiplies the area by 4, because r is squared.",
+   "Working backwards uses the same fraction. An arc of 15.7 cm on r = 6 cm is 15.7 ÷ 37.7 ≈ 0.417 of the edge, so θ ≈ 0.417 × 360 = 150°. The perimeter of a sector is the arc plus two radii.",
+   "Common mistakes: dividing θ by 100 instead of 360; using πr² for an arc or 2πr for an area; using πr as the circumference; forgetting to square r; leaving out the two radii in a perimeter; and rounding the fraction early, which drifts the final answer."
+  ]
+ },
+ "familyTip": "Cut a paper plate into equal slices: 4, then 6, then 8. Measure the whole rim with string first. Ask how long the crust of one slice must be, then check with the string. What happens to the crust if the plate is twice as wide?",
+ "worked": {
+  "title": "Find the arc length and area of a 72° sector of radius 10 cm.",
+  "steps": [
+   "Fraction of the circle: 72/360 = 1/5.",
+   "Arc length: 1/5 × 2π × 10 = 4π ≈ 12.6 cm.",
+   "Area: 1/5 × π × 10² = 20π ≈ 62.8 cm².",
+   "Check: 5 such sectors make the circle. 5 × 12.6 = 62.8 cm ≈ 2π × 10, and 5 × 62.8 = 314 cm² ≈ π × 10²."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A sector has angle {=30*k}° and radius {r} cm. Its arc length is how many π cm? (Type the number in front of π.)",
+   "answer": "k*r/6",
+   "hint": "Fraction of the circle: {=30*k}/360. Multiply it by 2r = {=2*r}.",
+   "explain": "{=30*k}/360 × 2π × {r} = {=k*r/6}π cm. The fraction of the circle times the whole edge 2πr.",
+   "params": {
+    "k": [
+     1,
+     11
+    ],
+    "r": [
+     3,
+     12
+    ]
+   },
+   "where": "(k*r)%3==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A sector has angle {=30*k}° and radius {r} cm. Its area is how many π cm²? (Type the number in front of π.)",
+   "answer": "k*r*r/12",
+   "hint": "Fraction of the circle: {=30*k}/360. Multiply it by r² = {=r*r}.",
+   "explain": "{=30*k}/360 × π × {r}² = {=k*r*r/12}π cm². The fraction of the circle times the whole area πr².",
+   "params": {
+    "k": [
+     1,
+     11
+    ],
+    "r": [
+     2,
+     10
+    ]
+   },
+   "where": "(k*r*r)%3==0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What fraction of the whole circle is a 72° sector?",
+   "choices": [
+    "1/5",
+    "72/100",
+    "1/72"
+   ],
+   "answer": 0,
+   "hint": "A full turn is 360°. Simplify 72/360.",
+   "explain": "72/360 = 1/5, because 5 × 72 = 360. Dividing by 100 treats the angle like a percentage."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Find the perimeter of a 90° sector of radius 10 cm, to 1 decimal place.",
+   "answer": 35.7,
+   "tolerance": 0.05,
+   "hint": "Perimeter = arc + two radii. The arc is 1/4 of 2π × 10.",
+   "explain": "Arc = 1/4 × 2π × 10 = 15.7 cm. Add the two straight edges: 15.7 + 10 + 10 = 35.7 cm."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A sector of radius {r} cm has an arc of {m}π cm. What is its angle in degrees?",
+   "answer": "180*m/r",
+   "hint": "Fraction = arc ÷ 2πr = {m}π ÷ {=2*r}π. Then multiply by 360.",
+   "explain": "{m}π ÷ (2π × {r}) × 360 = {m} ÷ {=2*r} × 360 = {=180*m/r}°.",
+   "params": {
+    "m": [
+     1,
+     9
+    ],
+    "r": [
+     2,
+     12
+    ]
+   },
+   "where": "(180*m)%r==0 && 180*m/r<360"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which expression gives the arc length of a sector with angle θ and radius r?",
+    "choices": [
+     "θ/360 × 2πr",
+     "θ/360 × πr²",
+     "θ/100 × 2πr"
+    ],
+    "answer": 0,
+    "hint": "An arc is part of the edge, so start from the circumference.",
+    "explain": "The arc is the fraction θ/360 of the circumference 2πr. πr² gives an area, and a full turn is 360°, not 100."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Find the area of a 72° sector of radius 10 cm, to 1 decimal place.",
+    "answer": 62.8,
+    "tolerance": 0.05,
+    "hint": "72/360 = 1/5. Find 1/5 of π × 10².",
+    "explain": "1/5 × π × 100 = 20π ≈ 62.8 cm²."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "The radius of a sector doubles and the angle stays the same. What happens to its area?",
+    "choices": [
+     "It becomes 4 times as big",
+     "It doubles",
+     "It stays the same"
+    ],
+    "answer": 0,
+    "hint": "Area uses r². What is (2r)²?",
+    "explain": "(2r)² = 4r², so the area is 4 times as big. The arc only doubles, because it uses r, not r²."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Write the arc of a {=30*k}° sector of radius {r} cm as a multiple of π. Type the number in front of π.",
+    "answer": "k*r/6",
+    "hint": "Work out {=30*k}/360 of 2π × {r}.",
+    "explain": "{=30*k}/360 × 2 × {r} = {=k*r/6}, so the arc is {=k*r/6}π cm.",
+    "params": {
+     "k": [
+      1,
+      11
+     ],
+     "r": [
+      2,
+      12
+     ]
+    },
+    "where": "(k*r)%6==0"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ali finds the arc of a 60° sector with r = 6 cm as 60/360 × π × 6² = 18.8 cm. What went wrong?",
+    "choices": [
+     "He used the area formula; the arc is 60/360 × 2π × 6 ≈ 6.3 cm",
+     "He should divide by 100",
+     "Nothing, it is right"
+    ],
+    "answer": 0,
+    "hint": "Is an arc a length or an area?",
+    "explain": "An arc is a length, so it is a fraction of 2πr: 1/6 × 37.7 ≈ 6.3 cm. 18.8 cm² is the sector's area."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A sector of radius 6 cm has an arc of 5π cm. What is its angle in degrees?",
+    "answer": 150,
+    "hint": "Divide the arc by the whole edge, 12π, then multiply by 360.",
+    "explain": "5π ÷ 12π = 5/12, and 5/12 × 360 = 150°."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is the perimeter of a sector?",
+    "choices": [
+     "The arc length plus two radii",
+     "The arc length only",
+     "The arc length plus one radius"
+    ],
+    "answer": 0,
+    "hint": "Trace round the edge of a pizza slice. How many straight edges are there?",
+    "explain": "A sector has one curved edge, the arc, and two straight edges, both radii. Add all three."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Write the area of a {=30*k}° sector of radius {r} cm as a multiple of π. Type the number in front of π.",
+    "answer": "k*r*r/12",
+    "hint": "Work out {=30*k}/360 of π × {r}².",
+    "explain": "{=30*k}/360 × {=r*r} = {=k*r*r/12}, so the area is {=k*r*r/12}π cm².",
+    "params": {
+     "k": [
+      1,
+      11
+     ],
+     "r": [
+      2,
+      8
+     ]
+    },
+    "where": "(k*r*r)%12==0"
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each expression a length or an area? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "A length (cm)",
+    "An area (cm²)"
+   ],
+   "items": [
+    [
+     "θ/360 × 2πr",
+     0
+    ],
+    [
+     "2πr",
+     0
+    ],
+    [
+     "arc + 2r",
+     0
+    ],
+    [
+     "θ/360 × πr²",
+     1
+    ],
+    [
+     "πr²",
+     1
+    ],
+    [
+     "¼ × π × 6²",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagarc",
+  "caption": "Flagship lab: drag the angle and radius of a sector and watch its arc and area as a lit part of the whole circle laid flat; tile copies to see the fraction.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
