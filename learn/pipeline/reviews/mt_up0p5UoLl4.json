@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the sources: bromine water is orange and a positive result is orange to colourless (the GCSE wording, not 'clear'); alkenes add bromine across the C=C at room temperature, giving 1,2-dibromoethane with pure bromine and mainly 2-bromoethanol in bromine water (the lesson states both instead of the usual simplification); alkanes and cyclohexane (C₆H₁₂, saturated ring) leave it orange in the dark, and alkanes react only slowly by substitution in UV light. One Br₂ per C=C, so hexa-1,5-diene takes twice the bromine of hex-1-ene. Oil drop counts 5:3:1 are scaled from typical iodine values (sunflower about 130, olive about 80, butter about 30), as stated in the comments."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips for this practical: 'orange to clear' (p3, 'clear' feedback), results swapped (step 0 predict colourless to orange, 'swap'), CₙH₂ₙ taken as proof of an alkene (step 2 cyclohexane, p4, m2, 'formula' and 'fail'), assuming the test names the alkene ('which', m1), more drops read as less unsaturated ('reverse', m7), colour loss blamed on dilution ('dilute', m5), and 'alkanes react the same' including the slow light-driven substitution (step 1 predict, 'alkane', m8)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_brw.js is a bench practical, not a molecule builder: a dropper bottle dragged onto test tubes adds one drop at a time as an unmixed orange layer, tubes are shaken by dragging side to side, and each sample has a C=C capacity, so the learner finds an end point by counting drops. flag_alkene.js (which drops Br₂ onto a drawn molecule) and every other flag lab are under the 30% similarity limit."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner runs the test and then the reasoning around it: hexene decolourises; the hexane control stays orange, so the C=C is the cause; cyclohexane shows the test is for a bond, not a formula; drop counting shows the diene takes 8 drops against hexene's 4 (one Br₂ per C=C); three oils are ranked by drops used. The sandbox offers eight samples, including cyclohexene against cyclohexane. The drop-counting steps follow the RSC 'Unsaturation in fats and oils' class experiment (add bromine water until the colour stays)."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked predictions, each with a tempting wrong option that the tube then disproves: colourless to orange (direction), hexane 'turns colourless too', cyclohexane 'like hexene' because of the shared formula, the diene using '4, the same' drops, and butter as the most unsaturated. The reveal repeats the learner's choice next to the result."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with nine distinct feedback messages tied to the slip behind each wrong option: swap, clear, formula, fail, which, hc (hexane is a hydrocarbon), reverse, dilute and alkane. Each says why the option is wrong and gives the correct reasoning (e.g. 'More drops used up means more C=C bonds to react with'). Checked by clicking every option over three rounds."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py fk_grade: kid text 4.6 (limit 6.5) and adult text 8.2 (limit 9.5), after shortening the adult product and mistakes paragraphs. The kid text describes what you see in the tube; the adult text adds the mechanism, the control and the quantitative idea."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passes with no filler phrases and under 12% overlap with the Alkenes lesson, which mentions the test only in passing. Every paragraph adds one idea (what you see, why, the control, comparing unsaturation, mistakes). The family tip is a safe label-reading task that links straight to the oils step, not a home chemistry experiment."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android and iPhone 13 screenshots of every step after Show me, plus desktop. Moved the dropper and its label clear of the first tube's status pill, and split the three-tube labels onto separate lines so 'sunflower oil / butter (melted)' and the drop counts no longer overlap. A real mouse drag (dropper onto the tube twice, then a side-to-side shake) completed step 0."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs: axe clean on desktop and phone in both themes, every task completes with Show me, no console errors. Every drag has buttons (Drop into A/B/C, Shake A/B/C), the sandbox uses labelled selects, the canvas aria-label lists each tube's drops and colour state, and the readout is a polite live region. Colour is never the only cue: each tube carries a 'stays orange' or 'colourless' text pill."
+  }
+ },
+ "sources": [
+  "https://www.bbc.co.uk/bitesize/guides/z3v4xfr/revision/2",
+  "https://www.chemguide.co.uk/organicprops/alkenes/halogenation.html",
+  "https://edu.rsc.org/experiments/unsaturation-in-fats-and-oils/394.article",
+  "https://www.aqa.org.uk/subjects/chemistry/gcse/chemistry-8462/specification/subject-content/organic-chemistry"
+ ]
+}
