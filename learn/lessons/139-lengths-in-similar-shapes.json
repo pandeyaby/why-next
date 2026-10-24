@@ -1,0 +1,277 @@
+{
+ "topicId": "mt_0UJ58IxUYT",
+ "title": "Lengths in similar shapes",
+ "audience": "learner",
+ "keyIdea": "Similar shapes are the same shape at different sizes, so every length is multiplied by one scale factor k = new length ÷ matching old length. Match sides by the equal angles they sit opposite, pull overlapping triangles apart first, then multiply by k or solve a proportion.",
+ "explain": {
+  "kid": [
+   "Two shapes are similar when one is a scaled copy of the other. The angles stay the same. Every side is multiplied by the same number, the scale factor k.",
+   "Find k from one pair of matching sides. If 4 cm becomes 10 cm, k = 10 ÷ 4 = 2.5. Then a 6 cm side becomes 6 × 2.5 = 15 cm.",
+   "Do not add. Going from 4 to 10 adds 6, but adding 6 to every side would change the shape. Copies always multiply.",
+   "A copy can be turned or flipped. Match sides by the angles. Each side sits opposite an angle, and matching sides sit opposite equal angles."
+  ],
+  "adult": [
+   "Similar figures have equal matching angles, and matching lengths share one ratio: the scale factor k = image length ÷ object length. A missing length is a known length × k. It is also the answer to a proportion such as x/6 = 10/4.",
+   "Pair the sides by angles, not by where they are drawn. In a triangle, the shortest side is opposite the smallest angle. Mark the equal angles and read the side opposite each one. This still works after a flip or a turn.",
+   "Overlapping triangles are the usual exam setting. If DE is parallel to BC, triangle ADE is similar to ABC. They share angle A, and the parallel lines make equal corresponding angles. Redraw them apart: AD pairs with the whole of AB = AD + DB, and DE pairs with BC.",
+   "Common mistakes: adding the same amount to every side instead of multiplying; pairing AD with DB rather than AB; matching sides by where they are drawn; dividing by k when going from small to large; and writing a proportion with one fraction upside down. A k below 1 still multiplies; it shrinks the shape."
+  ]
+ },
+ "familyTip": "Take a photo and print or show it at two sizes. Measure the width and height of each. Divide new by old for both. Are the two answers the same? Now try squashing the image in an editor: the two answers no longer match, and the picture looks wrong.",
+ "worked": {
+  "title": "DE is parallel to BC. AD = 3 cm, DB = 5 cm and DE = 4.5 cm. Find BC.",
+  "steps": [
+   "Pull the triangles apart: ADE is similar to ABC, sharing the angle at A.",
+   "AD matches the whole of AB = 3 + 5 = 8 cm, not DB.",
+   "Scale factor from ADE to ABC: k = 8 ÷ 3.",
+   "BC = 4.5 × 8 ÷ 3 = 12 cm. Check: 3/8 = 4.5/12 = 0.375."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Two triangles are similar. A {a} cm side matches a {=a*k} cm side. How long is the side that matches the {b} cm side?",
+   "answer": "b*k",
+   "hint": "Find the scale factor first: {=a*k} ÷ {a}. Then multiply {b} by it.",
+   "explain": "k = {=a*k} ÷ {a} = {k}, so the matching side is {b} × {k} = {=b*k} cm.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     3,
+     9
+    ],
+    "k": [
+     2,
+     4
+    ]
+   },
+   "where": "a!=b"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "DE is parallel to BC. AD = {p} cm, DB = {q} cm and DE = {d} cm. How long is BC?",
+   "answer": "d*(p+q)/p",
+   "hint": "AD matches the whole side AB = {p} + {q}, not DB.",
+   "explain": "AB = {=p+q} cm, so k = {=p+q} ÷ {p} and BC = {d} × {=p+q} ÷ {p} = {=d*(p+q)/p} cm.",
+   "params": {
+    "p": [
+     2,
+     5
+    ],
+    "q": [
+     2,
+     8
+    ],
+    "d": [
+     2,
+     6
+    ]
+   },
+   "where": "(d*(p+q))%p==0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A 6 cm side matches a 9 cm side on a similar shape. How long is the side that matches 8 cm?",
+   "choices": [
+    "12 cm",
+    "11 cm",
+    "5.3 cm"
+   ],
+   "answer": 0,
+   "hint": "Find k = 9 ÷ 6, then multiply 8 by it.",
+   "explain": "k = 1.5, so 8 × 1.5 = 12 cm. 11 cm adds 3 instead of multiplying, and 5.3 cm divides by k."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A photo 20 cm wide and 12 cm tall is shrunk to 5 cm wide without squashing it. How tall is it now, in cm?",
+   "answer": 3,
+   "hint": "The scale factor is new ÷ old = 5 ÷ 20. It is less than 1.",
+   "explain": "k = 5 ÷ 20 = 0.25, so the height is 12 × 0.25 = 3 cm."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Triangle ADE sits inside triangle ABC, with DE parallel to BC. Which side of ABC matches AD?",
+   "choices": [
+    "AB",
+    "DB",
+    "BC"
+   ],
+   "answer": 0,
+   "hint": "Pull ADE out. Which side of the big triangle starts at A and runs the same way as AD?",
+   "explain": "AD is part of AB, and both start at the shared angle A. DB is only the leftover piece, so it does not match."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A 4 cm side becomes 6 cm on a similar copy. What is the scale factor from the first shape to the copy?",
+    "choices": [
+     "1.5",
+     "2",
+     "0.67"
+    ],
+    "answer": 0,
+    "hint": "Scale factor = new length ÷ old length.",
+    "explain": "6 ÷ 4 = 1.5. The difference 6 − 4 = 2 is not a scale factor, and 4 ÷ 6 goes the other way."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "DE is parallel to BC. AD = 3 cm, DB = 6 cm and DE = 4 cm. Find BC in cm.",
+    "answer": 12,
+    "hint": "AB = AD + DB. Compare AB with AD to get k.",
+    "explain": "AB = 9 cm, so k = 9 ÷ 3 = 3 and BC = 4 × 3 = 12 cm."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ali says: '4 cm became 10 cm, so add 6. The 7 cm side becomes 13 cm.' What went wrong?",
+    "choices": [
+     "He added; similar shapes multiply, so it is 7 × 2.5 = 17.5 cm",
+     "He should have taken 6 away",
+     "Nothing, it is right"
+    ],
+    "answer": 0,
+    "hint": "Is the copy made by adding to each side or by multiplying each side?",
+    "explain": "k = 10 ÷ 4 = 2.5, so 7 × 2.5 = 17.5 cm. Adding 6 to every side changes the shape."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "DE is parallel to BC. AB = {s} cm, BC = {c} cm and DE = {d} cm. Find AD in cm.",
+    "answer": "s*d/c",
+    "hint": "Set up AD/AB = DE/BC, so AD/{s} = {d}/{c}.",
+    "explain": "AD = {s} × {d} ÷ {c} = {=s*d/c} cm. Keep small over big on both sides of the proportion.",
+    "params": {
+     "s": [
+      6,
+      15
+     ],
+     "c": [
+      4,
+      12
+     ],
+     "d": [
+      2,
+      10
+     ]
+    },
+    "where": "(s*d)%c==0 && d<c"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "One triangle has sides 4, 6 and 8 cm. Another has sides 6, 8 and 10 cm. Are they similar?",
+    "choices": [
+     "No: 6 ÷ 4 = 1.5 but 10 ÷ 8 = 1.25",
+     "Yes: each side is 2 cm longer",
+     "Yes: they are both triangles"
+    ],
+    "answer": 0,
+    "hint": "Divide each side of the second by the matching side of the first. Are the answers equal?",
+    "explain": "The ratios 1.5, 1.33 and 1.25 differ, so there is no single scale factor and the shapes are not similar."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A model car is similar to a real car that is 4 m long and 1.5 m tall. The model is 20 cm long. How tall is the model, in cm?",
+    "answer": 7.5,
+    "tolerance": 0.05,
+    "hint": "Use the same units: 4 m = 400 cm. Then k = 20 ÷ 400.",
+    "explain": "k = 20 ÷ 400 = 0.05, and 1.5 m = 150 cm, so the model is 150 × 0.05 = 7.5 cm tall."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A similar copy of a triangle has been flipped and turned. How do you find the side that matches the 5 cm side?",
+    "choices": [
+     "Find the side opposite the same angle",
+     "Pick the side in the same place on the page",
+     "Pick the longest side"
+    ],
+    "answer": 0,
+    "hint": "Turning or flipping moves sides around but keeps every angle the same.",
+    "explain": "Matching sides sit opposite equal angles. Position on the page changes when a shape is turned, so it cannot be trusted."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "On the bigger of two similar shapes, a {=a*k} cm side matches a {a} cm side. Another side of the bigger shape is {=b*k} cm. How long is the matching side on the smaller shape?",
+    "answer": "b",
+    "hint": "Going from big to small, divide by k = {=a*k} ÷ {a}.",
+    "explain": "k = {k}, so the smaller side is {=b*k} ÷ {k} = {b} cm.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      3,
+      8
+     ],
+     "k": [
+      2,
+      5
+     ]
+    },
+    "where": "a!=b"
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which triangles are similar to one with sides 4, 6 and 8 cm? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Similar to 4, 6, 8",
+    "Not similar"
+   ],
+   "items": [
+    [
+     "2, 3, 4",
+     0
+    ],
+    [
+     "8, 12, 16",
+     0
+    ],
+    [
+     "6, 9, 12",
+     0
+    ],
+    [
+     "6, 8, 10",
+     1
+    ],
+    [
+     "5, 7, 9",
+     1
+    ],
+    [
+     "4, 6, 9",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsim",
+  "caption": "Flagship lab: stretch a triangle by a scale factor, match sides by their angles, pull overlapping triangles apart, slide a parallel cut and shrink a photo.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
