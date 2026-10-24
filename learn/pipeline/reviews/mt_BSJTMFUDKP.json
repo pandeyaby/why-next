@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against Chemguide's naming page and the IUPAC 2013 rules: stems meth/eth/prop/but/pent/hex = 1–6; 'an' after the stem kept in ethanol and ethanoic acid; lowest-locant numbering (butan-3-ol → butan-2-ol, 4 places give only butan-1-ol and butan-2-ol); alkene locant is the first C of C=C (CH₂=CHCH₂CH₃ but-1-ene, CH₃CH=CHCH₃ but-2-ene, CH₃CH=CHCH₂CH₃ pent-2-ene); propene and ethanol need no number; the –COOH carbon is C1 and counted (CH₃CH₂COOH propanoic, CH₃CH₂CH₂COOH butanoic). The lab's name and condensed-formula generator was played for every chain 1–6 and every group position."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented naming slips (Chemguide 'which end do you number from', GCSE examiner reports on organic names): highest locant (butan-3-ol, pent-3-ene, but-3-ene), not counting the –COOH carbon (CH₃CH₂COOH called ethanoic acid), dropping the 'an' (ethol, but-2-ol, ethoic acid), using the wrong ending for the group, putting –COOH mid-chain, and reading the locant as a count (but-2-ene = two double bonds)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "A name machine built for this topic: a chain of condensed-formula tiles numbered twice (from the left above, from the right below, the lower locant circled green and the higher red), a group placed by tap or drag, and the name assembled live in colour (stem / an / locant / ending). Nearest flagship 6-shingle Jaccard is 4.3% (flag_alkene.js), then 3.8% (flag_homo.js); gate_lab_distinct passes."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Played with real pointer events on an iPhone 13 viewport: tapping the + tile from methane to pentane reads out each stem; dragging –OH across butane shows four positions but only two names because the two rulers swap; sliding C=C through three gaps shows the end gaps are the same but-1-ene; tapping –COOH on carbon 2 is refused with the bond count (C=O 2 + O–H 1, one left), then + C builds propanoic acid; step 6 has the learner build propan-2-ol, but-2-ene and butanoic acid from their names."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions, each with a tempting wrong option the lab then disproves: 'tetrane' for 4 carbons, 'ethol' for ethane + OH, butan-3-ol for –OH on carbon 3 from the left, '3, one for each gap' butenes, and 'ethanoic acid: the chain is CH₃CH₂' for CH₃CH₂COOH; the done message echoes the pick ('You predicted Butan-3-ol; now you know why it's Butan-2-ol')."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 10 challenge questions (name a structure, pick a formula from a name, read a locant) on iPhone 13: butan-3-ol got 'you counted from the far end… butan-2-ol', but-2-ene for a 5-carbon chain got 'count the carbons again… pent-2-ene', propanol for CH₃CH₂COOH got 'the ending must show the group… oic acid', CH₃CH(OH)CH₂CH₃ for butan-1-ol got 'wrong carbon… CH₃CH₂CH₂CH₂OH', and '2 carbons' for but-2-ene got 'the stem but- already gives the carbons'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 1.6 for the kid text and 5.4 for the adult text by learn/readability.py (limits 6.5 and 9.5); kid text reads the name as a three-part code with one idea per sentence; task lines are single instructions such as 'Slide the C=C into all three gaps'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and the explanation shares 0% of 6-word shingles with every other lesson (gate_content); the four adult paragraphs cover stem and ending, lowest-locant numbering for –OH and C=C, when no number is needed plus name-to-structure, and a named-mistakes list; no sentence is carried over from the functional-groups lesson."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "phone_sweep.cjs on iPhone 13 and 360 px Android found 0 overflow or clipping findings; screenshots of all 8 steps checked at 360 px light and 1200 px dark. After review the condensed formula and the legend were split onto two lines (the legend was clipped at 360 px), the name bar was moved up under the chain, and 'COOH' tiles use a smaller font on phones."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs axe-core WCAG 2.1 AA clean in light and dark on desktop and iPhone 13 with no console errors (gate_browser); − C / + C, four group buttons with aria-pressed and ◀ move / move ▶ in a labelled group replace every tap and drag; the canvas aria-label states the chain length, condensed formula, group position from both ends and the name; challenge feedback is in a polite live region."
+  }
+ },
+ "sources": [
+  "https://www.chemguide.co.uk/basicorg/conventions/names.html",
+  "https://iupac.qmul.ac.uk/BlueBook/P3.html",
+  "https://iupac.qmul.ac.uk/BlueBook/P6.html"
+ ]
+}
