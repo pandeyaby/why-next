@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every number recomputed: 80 × 1.25 = 100, 80 × 0.85 = 68, 0.8 × 0.9 = 0.72 so 80 → £57.60 (28% off, second cut £6.40), 1.1 × 0.9 = 0.99, 40 → 32 → 28.80 with 28% of 40 = 11.20, 6n + 9 = 3(2n + 3) for n = 1..6 (dot counts 15..45), 6(n + 9) = 6n + 54, 0.7 × 50 = 35; parameterised answers checked at every allowed value by lesson_checks."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented percentage-multiplier slips: a + 5 for a 5% rise, × 0.15 for a 15% cut (part removed rather than part left), 1.5 for 5% (decimal place), adding successive percentages (20% + 10% = 30%, up 10% then down 10% = no change), multiplier above 1 for a decrease, and taking out a partial factor (2(2n + 4)) or leaving the unrewritten form."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Price bar model whose length is dragged to set a percentage change, with the extra or removed sliver labelled as 0.25a or 0.15a, a chained two-discount bar stack matched by a single-change bar, and a 6n + 9 dot array that animates from 2×3 blocks into 3 rows of 2n + 3; nearest flagship lab shingle similarity is 5.1% (flag_chord.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner stretches the bar and sees a + 0.25a and 1.25a name the same length before any rule is stated; dragging the single-change bar onto the two-step price lands on 28%, not 30%, so the multiplying rule is found, then confirmed; the dots physically regroup into 3 equal rows, so 'always a multiple of 3' is seen for every n on the slider."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predicts, each with a tempting wrong option the lab then disproves: 'a + 0.25' (bar ends at £100, not £80.25), '0.15' (the dashed part is £12, what is left is £68), '30% off' (the 30% bar falls short of £57.60) and 'only when n is odd' (n = 2, 4, 6 also give 3 equal rows)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Probed in the browser for every question: 0.12a gets 'only the change, not the new amount', a + 12 and a − 25 get 'fixed pounds, not a percentage', 1.2a and 1.5 get the decimal slip (12% is 0.12, not 0.2), × 1.3 for a fall gets the direction rule, 'back to the start' names the bigger-price base, 2(2n + 4) names the partial factor, 12n + 3 names the one-off fee, l + w + 2 names adding instead of doubling."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade below 1 for the kid text and 4.1 for the adult text (limits 6.5 and 9.5); kid sentences each carry one step with a worked example (a + 0.05a, 1a + 0.05a = 1.05a, 6n + 9 = 3(2n + 3)); lab captions and task lines are one short instruction each."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes and explanation overlap with every other lesson is 0%; each adult paragraph adds a distinct point (what each form shows, why the multiplier form chains, choosing the form for the question, the list of slips), and every challenge message restates the correct rewrite."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 screenshots of all six steps: bars, % axis and labels fit in the 326 px canvas; the part label was moved below the bar after the first screenshot showed the handle covering it, and the dot array wraps blocks onto three lines and shrinks so n = 6 (45 dots) fits; real pointer drags completed steps 1, 3 and 4."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core WCAG 2.1 AA clean in both themes on desktop and phone (walk.cjs); every drag has buttons (± 5%, ± 1%, n ± 1, the three form buttons), and the canvas aria-label states the bars, prices, single-change match and dot grouping as they change."
+  }
+ },
+ "sources": [
+  "https://www.thecorestandards.org/Math/Content/7/EE/",
+  "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent",
+  "https://www.bbc.co.uk/bitesize/guides/zcn9dmn/revision/1",
+  "https://www.ncetm.org.uk/classroom-resources/secondary-mastery-professional-development/"
+ ]
+}

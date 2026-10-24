@@ -1,0 +1,257 @@
+{
+ "topicId": "mt_tY7a5_hq6j",
+ "title": "Rewriting expressions to reveal meaning",
+ "audience": "learner",
+ "keyIdea": "Equivalent forms of an expression give the same value but show different things. a + 0.05a shows the 5% added; 1.05a shows one multiplier that does the whole change. Pick the form that answers the question you were asked.",
+ "explain": {
+  "kid": [
+   "A game costs a pounds and the price goes up 5%. You can write the new price as a + 0.05a. That shows the old price plus the extra bit.",
+   "Collect the a terms: 1a + 0.05a = 1.05a. Now one number, 1.05, does the whole job. To go up 5%, multiply by 1.05.",
+   "Going down works the same way. Take 15% off and a − 0.15a = 0.85a. The 0.85 tells you that 85% of the price is left.",
+   "Factors can show a pattern too. 6n + 9 = 3(2n + 3). The second form is 3 lots of a whole number, so it is always in the 3 times table."
+  ],
+  "adult": [
+   "Rewriting changes the form of an expression, not its value. Each form makes a different fact easy to read: a + 0.2a shows the increase as a part of a, 1.2a shows the multiplier, and 3(2n + 3) shows a factor of 3.",
+   "The multiplier form is the one that scales. Two changes in a row multiply: 20% off then 10% off is 0.8 × 0.9 = 0.72, so 28% off, not 30%. Repeated growth becomes powers, as in 1.05ⁿ for compound interest.",
+   "Choosing the form is part of the answer. To compare two offers, write each as a single multiplier. To show a total is always even or a multiple of 3, factor it.",
+   "Common mistakes: writing a + 5 for a 5% rise; multiplying by 0.15 for a 15% decrease, which gives the part removed, not what is left; writing 1.5 for 5%; adding percentages for changes in a row; and taking out only part of a common factor."
+  ]
+ },
+ "familyTip": "Look at a shop receipt or a sale sign together. If something is 20% off, what single number do you multiply the price by? Check with a calculator. Then ask: is 20% off and then another 10% off the same as 30% off?",
+ "worked": {
+  "title": "A £40 jacket is 20% off, then the sale price drops a further 10%. What single change is that?",
+  "steps": [
+   "20% off leaves 80%, so the first price is 0.8a. For a = £40 that is £32.",
+   "10% off the new price leaves 90% of it: 0.9 × 0.8a = 0.72a. For a = £40 that is £28.80.",
+   "0.72a = a − 0.28a, so the two discounts together are 28% off.",
+   "Check: 28% of £40 is £11.20, and £40 − £11.20 = £28.80. It is not 30% off, which would be £28."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A £{a} bike goes up by 10%. Use a × 1.1 to find the new price in pounds.",
+   "answer": "a*11/10",
+   "hint": "a + 0.1a = 1.1a. Multiply {a} by 1.1.",
+   "explain": "{a} × 1.1 = {=a*11/10}. That is the same as {a} + {=a/10}, the price plus 10% of it.",
+   "params": {
+    "a": [
+     20,
+     90
+    ]
+   },
+   "where": "a%10==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A price is cut by {p}%. What single multiplier, as a decimal, gives the new price?",
+   "answer": "(100-p)/100",
+   "hint": "a − {p}% of a leaves (100 − {p})% of a. Write that as a decimal.",
+   "explain": "a − {=p/100}a = {=(100-p)/100}a, so you multiply by {=(100-p)/100}. Multiplying by {=p/100} would give only the part taken off.",
+   "params": {
+    "p": [
+     10,
+     40
+    ]
+   },
+   "where": "p%5==0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which form shows that 6n + 9 is a multiple of 3 for every whole number n?",
+   "choices": [
+    "3(2n + 3)",
+    "9 + 6n",
+    "6(n + 9)"
+   ],
+   "answer": 0,
+   "hint": "Find the largest number that divides both 6n and 9, and take it out.",
+   "explain": "3 divides 6n and 9, so 6n + 9 = 3(2n + 3): 3 lots of a whole number. 9 + 6n only swaps the order, and 6(n + 9) = 6n + 54."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A price has 20% off, then 10% off the new price. What is the overall change?",
+   "choices": [
+    "28% off",
+    "30% off",
+    "10% off"
+   ],
+   "answer": 0,
+   "hint": "Write each change as a multiplier, then multiply them.",
+   "explain": "0.8 × 0.9 = 0.72, and 0.72a = a − 0.28a. The second 10% comes off a smaller price, so the total is 28%, not 30%."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Savings of £{a} earn 5% interest for one year. Use 1.05a to find the new total in pounds.",
+   "answer": "a*21/20",
+   "hint": "a + 0.05a = 1.05a. Multiply {a} by 1.05.",
+   "explain": "{a} × 1.05 = {=a*21/20}: the £{a} you had plus {=a/20} of interest.",
+   "params": {
+    "a": [
+     20,
+     100
+    ]
+   },
+   "where": "a%20==0"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which expression is the same as 'increase a by 8%'?",
+    "choices": [
+     "1.08a",
+     "a + 8",
+     "1.8a"
+    ],
+    "answer": 0,
+    "hint": "8% of a is 0.08a. Add it to the whole a.",
+    "explain": "a + 0.08a = 1.08a. a + 8 adds £8, not 8%, and 1.8a is an 80% increase."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What does the 0.65 in 0.65a tell you about a price change?",
+    "choices": [
+     "65% of the price is left: 35% was taken off",
+     "65% was taken off",
+     "The price went up 65%"
+    ],
+    "answer": 0,
+    "hint": "0.65a = a − 0.35a. Which part is left?",
+    "explain": "A multiplier below 1 is a decrease. 0.65a means 65% is left, so the price fell by 35%."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A £{a} ticket rises by 20%. What is the new price in pounds?",
+    "answer": "a*6/5",
+    "hint": "a + 0.2a = 1.2a. Multiply {a} by 1.2.",
+    "explain": "{a} × 1.2 = {=a*6/5}, the same as {a} + {=a/5}.",
+    "params": {
+     "a": [
+      10,
+      60
+     ]
+    },
+    "where": "a%5==0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which form shows that 4n + 8 is always a multiple of 4?",
+    "choices": [
+     "4(n + 2)",
+     "2(2n + 4)",
+     "8 + 4n"
+    ],
+    "answer": 0,
+    "hint": "Take out the whole common factor of 4n and 8.",
+    "explain": "4n + 8 = 4(n + 2), 4 lots of a whole number. 2(2n + 4) takes out only a 2, and 8 + 4n just swaps the order."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A price goes up 10%, then the new price goes down 10%. What is the final price?",
+    "choices": [
+     "0.99a, a little lower than at the start",
+     "a, the same as at the start",
+     "1.01a, a little higher"
+    ],
+    "answer": 0,
+    "hint": "Multiply the two multipliers, 1.1 and 0.9.",
+    "explain": "1.1 × 0.9 = 0.99. The 10% off is taken from the bigger price, so more comes off than was added."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Shop A sells a £50 coat at 30% off. What is the sale price in pounds?",
+    "answer": 35,
+    "hint": "30% off leaves 70%, so multiply 50 by 0.7.",
+    "explain": "a − 0.3a = 0.7a, and 0.7 × 50 = 35. Multiplying by 0.3 would give the £15 discount, not the price."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Each ticket costs £12 plus a £3 fee per ticket. Which form shows the cost of one ticket most clearly?",
+    "choices": [
+     "15n",
+     "12n + 3n",
+     "12n + 3"
+    ],
+    "answer": 0,
+    "hint": "Collect the n terms: 12n + 3n.",
+    "explain": "12n + 3n = 15n, so each ticket costs £15. 12n + 3 would charge the £3 fee only once."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A price rises by {p}%. What single multiplier, as a decimal, gives the new price?",
+    "answer": "(100+p)/100",
+    "hint": "Keep the whole price, 1, and add {p}% of it as a decimal.",
+    "explain": "a + {=p/100}a = {=(100+p)/100}a, so the multiplier is {=(100+p)/100}.",
+    "params": {
+     "p": [
+      5,
+      45
+     ]
+    },
+    "where": "p%5==0"
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Each form tells you something different. Sort each expression by what it shows. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "One multiplier",
+    "A common factor",
+    "The part added or taken"
+   ],
+   "items": [
+    [
+     "1.05a",
+     0
+    ],
+    [
+     "0.85a",
+     0
+    ],
+    [
+     "3(2n + 3)",
+     1
+    ],
+    [
+     "4(n + 2)",
+     1
+    ],
+    [
+     "a + 0.05a",
+     2
+    ],
+    [
+     "a − 0.15a",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagreveal",
+  "caption": "Flagship lab: stretch and shrink a price bar to turn a + 0.25a into 1.25a, match two discounts with one, and regroup 6n + 9 dots into 3 equal rows.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
