@@ -1,0 +1,277 @@
+{
+ "topicId": "mt_I1uIFFoUsb",
+ "title": "Why trigonometric ratios work",
+ "audience": "learner",
+ "keyIdea": "Every right triangle with the same acute angle θ has the same three angles, θ, 90° and 90° − θ, so they are all similar. Similar triangles keep their side ratios, so opposite ÷ hypotenuse, adjacent ÷ hypotenuse and opposite ÷ adjacent depend only on θ. Those fixed numbers are sin θ, cos θ and tan θ.",
+ "explain": {
+  "kid": [
+   "Draw two right triangles with a 35° angle, one small and one big. Both have a third angle of 55°, because the angles add up to 180°.",
+   "Same angles means same shape. The big one is a scaled copy of the small one. Every side is multiplied by the same number.",
+   "So the fraction opposite ÷ hypotenuse is the same in both. If the big one is twice as big, the top and the bottom both double. 2.87 ÷ 5 and 5.74 ÷ 10 both give 0.574.",
+   "That number belongs to the angle, not to the triangle. We call it sin 35°. A calculator knows it for every angle."
+  ],
+  "adult": [
+   "Two right triangles that share an acute angle θ have all three angles equal: θ, 90° and 90° − θ. So they are similar (AA). Matching sides share one scale factor k, and a ratio of two sides in one triangle does not change when both are multiplied by k.",
+   "That is why sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse and tan θ = opposite/adjacent are well defined. Each one depends on θ alone. A calculator's sin 35° ≈ 0.574 is that shared ratio, for a triangle of any size.",
+   "The names come from where θ is. The hypotenuse is opposite the right angle. The opposite side does not touch θ. The adjacent side touches θ and is not the hypotenuse. Turn the triangle and the names move with θ.",
+   "Common mistakes: thinking a bigger triangle has a bigger sine; treating sin θ as proportional to θ (sin 60° ≈ 0.866, not 2 × sin 30° = 1); calling the bottom side adjacent whichever way the triangle faces; writing a ratio upside down, which would make sin or cos bigger than 1; and reading 0.574 as a length instead of a ratio."
+  ]
+ },
+ "familyTip": "With a protractor, draw two right triangles that both have a 35° angle, one small and one as big as the page. Measure the side opposite the 35° angle and the longest side of each, then divide. Do both give about 0.57? Check sin 35 on a calculator.",
+ "worked": {
+  "title": "Show that sin 35° is the same in right triangles with hypotenuse 5 cm and 12 cm.",
+  "steps": [
+   "Both triangles have angles 35°, 90° and 55°, so they are similar.",
+   "Scale factor from the small to the big triangle: k = 12 ÷ 5 = 2.4.",
+   "The small opposite side is about 2.868 cm, so the big one is 2.868 × 2.4 ≈ 6.883 cm.",
+   "Ratios: 2.868 ÷ 5 ≈ 0.574 and 6.883 ÷ 12 ≈ 0.574. Both equal sin 35°."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Two right triangles share an angle θ. The small one has opposite {o} cm and hypotenuse {h} cm. The big one has hypotenuse {=h*k} cm. How long is its opposite side?",
+   "answer": "o*k",
+   "hint": "The triangles are similar. The scale factor is {=h*k} ÷ {h}.",
+   "explain": "k = {k}, so the opposite side is {o} × {k} = {=o*k} cm. The ratio opposite ÷ hypotenuse stays {o}/{h}.",
+   "params": {
+    "o": [
+     2,
+     6
+    ],
+    "h": [
+     7,
+     12
+    ],
+    "k": [
+     2,
+     4
+    ]
+   },
+   "where": "o<h"
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "A right triangle has a 40° angle. What is its third angle?",
+   "choices": [
+    "50°",
+    "40°",
+    "140°"
+   ],
+   "answer": 0,
+   "hint": "The three angles add up to 180°, and one of them is 90°.",
+   "explain": "180 − 90 − 40 = 50°. Every right triangle with a 40° angle has angles 40°, 50° and 90°, so they are all similar."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "In a right triangle, opposite = {o} and hypotenuse = {h}. A similar triangle is {k} times as big. What is opposite ÷ hypotenuse in the big triangle? Give a decimal.",
+   "answer": "o/h",
+   "hint": "Both sides are multiplied by {k}. What happens to the fraction?",
+   "explain": "({o} × {k}) ÷ ({h} × {k}) = {o} ÷ {h} = {=o/h}. The {k} cancels, so the ratio is unchanged.",
+   "params": {
+    "o": [
+     1,
+     4
+    ],
+    "h": [
+     5,
+     10
+    ],
+    "k": [
+     2,
+     5
+    ]
+   },
+   "where": "(100*o)%h==0"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "In triangle PQR the right angle is at Q and θ is at P. Which side is opposite θ?",
+   "choices": [
+    "QR",
+    "PQ",
+    "PR"
+   ],
+   "answer": 0,
+   "hint": "The opposite side is the one that does not touch the corner P.",
+   "explain": "QR does not touch P, so it is opposite θ. PR is opposite the right angle, so it is the hypotenuse, and PQ is adjacent."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "sin 30° = 0.5. What is sin 60°?",
+   "choices": [
+    "About 0.87",
+    "1",
+    "0.25"
+   ],
+   "answer": 0,
+   "hint": "Is sin θ proportional to θ? Try it on a calculator.",
+   "explain": "sin 60° ≈ 0.866. Doubling the angle does not double the ratio, and sin θ can never be more than 1."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why is opposite ÷ hypotenuse the same in every right triangle with a 35° angle?",
+    "choices": [
+     "They all have angles 35°, 90° and 55°, so they are similar",
+     "They all have the same hypotenuse",
+     "The opposite side is always 0.574 cm"
+    ],
+    "answer": 0,
+    "hint": "What do the angles of these triangles have in common?",
+    "explain": "Equal angles make the triangles similar. Similar triangles multiply every side by the same factor, so ratios of sides do not change."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "sin 35° ≈ 0.574. A right triangle with a 35° angle has hypotenuse 20 cm. How long is the side opposite the 35° angle, to 1 decimal place?",
+    "answer": 11.5,
+    "tolerance": 0.05,
+    "hint": "opposite ÷ hypotenuse = 0.574, so opposite = 20 × 0.574.",
+    "explain": "20 × 0.574 = 11.48, which is 11.5 cm to 1 decimal place."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Triangle A has opposite 3 and hypotenuse 5. Triangle B has the same angle θ and hypotenuse 15. Which is true?",
+    "choices": [
+     "B has opposite 9, and both have sin θ = 0.6",
+     "B has a bigger sin θ because it is bigger",
+     "B has opposite 13"
+    ],
+    "answer": 0,
+    "hint": "Find the scale factor 15 ÷ 5, then multiply.",
+    "explain": "k = 3, so B's opposite side is 9. Then 9 ÷ 15 = 3 ÷ 5 = 0.6. Size does not change sin θ."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "In triangle PQR the right angle is at R and θ is at Q. What is cos θ?",
+    "choices": [
+     "QR/PQ",
+     "PR/PQ",
+     "QR/PR"
+    ],
+    "answer": 0,
+    "hint": "Hypotenuse: opposite the right angle. Adjacent: touches Q and is not the hypotenuse.",
+    "explain": "PQ is the hypotenuse and QR is adjacent to θ, so cos θ = QR/PQ. PR/PQ is sin θ."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A right triangle has opposite {=3*k}, adjacent {=4*k} and hypotenuse {=5*k}. What is sin θ as a decimal?",
+    "answer": "3*k/(5*k)",
+    "hint": "sin θ = opposite ÷ hypotenuse = {=3*k} ÷ {=5*k}.",
+    "explain": "{=3*k} ÷ {=5*k} = 0.6, the same as 3 ÷ 5. The {k} cancels, whatever size the triangle is.",
+    "params": {
+     "k": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Kai says: 'sin 20° ≈ 0.342, so sin 40° ≈ 0.684.' Is he right?",
+    "choices": [
+     "No: sin 40° ≈ 0.643, because sine is not proportional to the angle",
+     "Yes: double the angle, double the sine",
+     "No: sin 40° is 0.342 as well"
+    ],
+    "answer": 0,
+    "hint": "Draw both triangles with hypotenuse 10. Does the opposite side double?",
+    "explain": "sin 40° ≈ 0.643. The ratio grows with the angle, but more and more slowly, so doubling θ does not double sin θ."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which of these can never be bigger than 1?",
+    "choices": [
+     "sin θ, since the hypotenuse is the longest side",
+     "tan θ, since it uses the two shorter sides",
+     "Neither of them can be bigger than 1"
+    ],
+    "answer": 0,
+    "hint": "Which ratio has the longest side on the bottom?",
+    "explain": "sin θ = opposite ÷ hypotenuse, and the hypotenuse is longest, so sin θ < 1. tan 60° ≈ 1.73, so tan can be bigger than 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Two right triangles share an angle θ. The small one has adjacent {a} cm and hypotenuse {h} cm. The big one has adjacent {=a*k} cm. How long is its hypotenuse?",
+    "answer": "h*k",
+    "hint": "Scale factor = {=a*k} ÷ {a}. Multiply the hypotenuse by it.",
+    "explain": "k = {k}, so the hypotenuse is {h} × {k} = {=h*k} cm, and cos θ stays {a}/{h}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "h": [
+      7,
+      12
+     ],
+     "k": [
+      2,
+      5
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which changes make sin θ change? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Changes sin θ",
+    "Leaves sin θ the same"
+   ],
+   "items": [
+    [
+     "Make θ bigger",
+     0
+    ],
+    [
+     "Make θ smaller",
+     0
+    ],
+    [
+     "Move θ to the other sharp corner",
+     0
+    ],
+    [
+     "Double every side",
+     1
+    ],
+    [
+     "Halve every side",
+     1
+    ],
+    [
+     "Flip the triangle over",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtrig",
+  "caption": "Flagship lab: resize a 35° right triangle, cut similar copies from it, name the sides of a turned triangle and swing the angle to see what sin θ depends on.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
