@@ -1,0 +1,281 @@
+{
+ "topicId": "mt_mSGzqulVLx",
+ "title": "Simplifying surds",
+ "audience": "learner",
+ "keyIdea": "√(a × b) = √a × √b, so a square factor can come out of the root: √72 = √36 × √2 = 6√2. Take out the biggest square factor. Like surds add like like terms, and 1/√2 = √2/2 after multiplying top and bottom by √2.",
+ "explain": {
+  "kid": [
+   "√12 means the side of a square with area 12. It is not a whole number.",
+   "Cut that square into 4 equal squares. Each has area 3, so each side is √3. Two of them make the big side, so √12 = 2√3.",
+   "Look for square numbers inside: 4, 9, 16, 25, 36. 50 = 25 × 2, and √25 = 5, so √50 = 5√2.",
+   "Surds with the same root add like apples: 2√3 + 5√3 = 7√3."
+  ],
+  "adult": [
+   "Because √(ab) = √a × √b for a, b ≥ 0, write the number as a square times the rest and root the square: √72 = √(36 × 2) = 6√2. A surd is in simplest form when the number under the root has no square factor above 1.",
+   "Use the largest square factor, or keep going until none is left: √72 = √(9 × 8) = 3√8 = 3 × 2√2 = 6√2. The rule also runs backwards: √2 × √8 = √16 = 4, and 3√5 = √(9 × 5) = √45.",
+   "Only like surds combine when adding: √12 + √27 = 2√3 + 3√3 = 5√3. To rationalise a denominator, multiply top and bottom by the surd: 6/√3 = 6√3/3 = 2√3, and 1/√2 = √2/2.",
+   "Common mistakes: taking the square out without rooting it (√50 = 25√2); stopping at a factor that still holds a square (3√8); writing √a + √b = √(a + b); adding the numbers under like roots (5√6 for 5√3); and not dividing by the bottom when rationalising."
+  ]
+ },
+ "familyTip": "Draw a square on squared paper with area 8 by tilting it (corners 2 across and 2 up). Then build a 2 × 2 grid of those tilted squares. Its area is 32 and its side is 2√8 = 4√2. Measure both sides with a ruler.",
+ "worked": {
+  "title": "Simplify √72, then √72 + √8 and 6/√2.",
+  "steps": [
+   "Square factors of 72: 4, 9, 36. The biggest is 36, and 72 = 36 × 2.",
+   "√72 = √36 × √2 = 6√2.",
+   "√8 = √(4 × 2) = 2√2, so √72 + √8 = 6√2 + 2√2 = 8√2.",
+   "6/√2 × √2/√2 = 6√2/2 = 3√2. Check: 3√2 ≈ 4.24 and 6 ÷ 1.414 ≈ 4.24."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "√{=k*k*m} = a√{m}. Find a.",
+   "answer": "k",
+   "hint": "Divide {=k*k*m} by {m}. The result is a square number: take its root.",
+   "explain": "{=k*k*m} = {=k*k} × {m} and √{=k*k} = {k}, so √{=k*k*m} = {k}√{m} and a = {k}.",
+   "params": {
+    "k": [
+     2,
+     9
+    ],
+    "m": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Work out √{a} × √{=a*k*k}.",
+   "answer": "a*k",
+   "hint": "√x × √y = √(x × y). Multiply first, then take the root.",
+   "explain": "√{a} × √{=a*k*k} = √{=a*a*k*k} = {=a*k}, because {=a*k}² = {=a*a*k*k}.",
+   "params": {
+    "a": [
+     2,
+     7
+    ],
+    "k": [
+     2,
+     5
+    ]
+   },
+   "where": "a!=4"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is √72 in simplest form?",
+   "choices": [
+    "3√8",
+    "36√2",
+    "6√2"
+   ],
+   "answer": 2,
+   "hint": "Find the biggest square number that divides 72.",
+   "explain": "72 = 36 × 2, so √72 = 6√2. 3√8 is not finished because 8 = 4 × 2, and 36√2 forgot to root the 36."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "√{=a*a*m} + √{=b*b*m} = c√{m}. Find c.",
+   "answer": "a+b",
+   "hint": "Simplify each surd first. Both should end in √{m}.",
+   "explain": "√{=a*a*m} = {a}√{m} and √{=b*b*m} = {b}√{m}, so the sum is {=a+b}√{m} and c = {=a+b}.",
+   "params": {
+    "a": [
+     2,
+     4
+    ],
+    "b": [
+     3,
+     5
+    ],
+    "m": [
+     2,
+     3
+    ]
+   },
+   "where": "a<b"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Rationalise 1/√2.",
+   "choices": [
+    "1/2",
+    "√2/2",
+    "√2"
+   ],
+   "answer": 1,
+   "hint": "Multiply the top and the bottom by √2.",
+   "explain": "1/√2 × √2/√2 = √2/2 ≈ 0.71. Both are the same number; √2/2 just has a whole-number bottom."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which surd is already in simplest form?",
+    "choices": [
+     "√18",
+     "√30",
+     "√20"
+    ],
+    "answer": 1,
+    "hint": "Does 4, 9, 16 or 25 divide the number?",
+    "explain": "30 = 2 × 3 × 5 has no square factor. 18 = 9 × 2 and 20 = 4 × 5 both do, so they simplify to 3√2 and 2√5."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Simplify √{=k*k*m}. It equals a√{m}; type a.",
+    "answer": "k",
+    "hint": "Try dividing by {m}, then look for a square number.",
+    "explain": "{=k*k*m} ÷ {m} = {=k*k} = {k}², so √{=k*k*m} = {k}√{m}.",
+    "params": {
+     "k": [
+      2,
+      7
+     ],
+     "m": [
+      5,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ella writes √12 + √3 = √15. What is correct?",
+    "choices": [
+     "4√3",
+     "√15 is right",
+     "2√3 + √3 = 3√3"
+    ],
+    "answer": 2,
+    "hint": "Simplify √12 first. Roots do not add inside.",
+    "explain": "√12 = 2√3, so √12 + √3 = 2√3 + √3 = 3√3 ≈ 5.20. √15 ≈ 3.87, a different number."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Rationalise {=t*m}/√{m}. It equals c√{m}; type c.",
+    "answer": "t",
+    "hint": "Multiply top and bottom by √{m}. The bottom becomes {m}.",
+    "explain": "{=t*m}/√{m} × √{m}/√{m} = {=t*m}√{m} ÷ {m} = {t}√{m}, so c = {t}.",
+    "params": {
+     "t": [
+      2,
+      6
+     ],
+     "m": [
+      2,
+      3
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Work out √3 × √12.",
+    "answer": 6,
+    "hint": "Multiply under one root first: √(3 × 12).",
+    "explain": "√3 × √12 = √(3 × 12) = √36 = 6, a whole number, because 36 is a square."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Write 3√5 as a single surd.",
+    "choices": [
+     "√15",
+     "√35",
+     "√45"
+    ],
+    "answer": 2,
+    "hint": "The 3 goes back under the root as 3².",
+    "explain": "3 = √9, so 3√5 = √9 × √5 = √45. √15 comes from putting the 3 in without squaring it."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is 1/√3 written with a rational denominator?",
+    "choices": [
+     "√3/3",
+     "1/3",
+     "3√3"
+    ],
+    "answer": 0,
+    "hint": "Multiply top and bottom by √3.",
+    "explain": "1/√3 × √3/√3 = √3/3 ≈ 0.58. 1/3 drops the root, and 3√3 is about 5.2."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is 3√8 not the simplest form of √72?",
+    "choices": [
+     "3 is not a square number",
+     "8 still has the square factor 4",
+     "A surd can never have a number in front"
+    ],
+    "answer": 1,
+    "hint": "Look at the number left under the root.",
+    "explain": "8 = 4 × 2, so 3√8 = 3 × 2√2 = 6√2. Using the biggest square, 36, gets there in one step."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each surd in simplest form? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Simplest form",
+    "Can be simplified"
+   ],
+   "items": [
+    [
+     "3√2",
+     0
+    ],
+    [
+     "5√7",
+     0
+    ],
+    [
+     "√30",
+     0
+    ],
+    [
+     "√18",
+     1
+    ],
+    [
+     "2√12",
+     1
+    ],
+    [
+     "3√8",
+     1
+    ],
+    [
+     "√50",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsurd",
+  "caption": "Flagship lab: slice the square with side √n into a grid of equal squares to see √n = k√m, then build a surd back up and rationalise 1/√2.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

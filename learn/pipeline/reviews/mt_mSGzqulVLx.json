@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked every identity: 12 = 4 × 3 so √12 = 2√3; 50 = 25 × 2 → 5√2; 72 = 36 × 2 → 6√2 and 3√8 = 6√2; 3√5 = √45; 1/√2 = √2/2 ≈ 0.7071 and √2 × 0.7071 = 1; √2 × √8 = 4, √3 × √12 = 6; √12 + √27 = 5√3; 6/√3 = 2√3; m3 3√3 ≈ 5.196 vs √15 ≈ 3.873; challenge answers (√18 + √50 = 8√2, √2 × √32 = 8, 15/√5 = 3√5, √40 = 2√10) recomputed."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Built on documented surd errors: square factor taken out unrooted (25√2), stopping at a non-largest square (3√8), splitting a non-square factor (√12 = 6√2), outside and inside numbers swapped, √a + √b = √(a + b), adding the radicands of like surds (5√6), leaving a product under the root, halving instead of rooting, forgetting to divide when rationalising, and dropping the root."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The square of area n is sliced into a k × k grid; only grids whose cells have whole areas work, the cell area m becomes the surd and the side is k cells of √m. Extra modes build a square back up from cells and cut a √2 square to area 1. Nearest flagship shingle similarity 3.9% (flag_rad.js), then 3.4% (flag_arc.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners try grids before the rule is stated: dashed red grids show 12 ÷ 9 is not whole, 2 × 2 cells of 3 give 2√3; on 72 the 3 × 3 grid is flagged amber because 8 still splits, pushing on to 6 × 6; building 3√5 shows the 3 returns as 9 cells; the strip of area 1 is visibly half the √2 square, so 1/√2 = √2/2."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predicts, each with a tempting wrong option the lab disproves: 6√2 or 3√4 for √12, 25√2 or 10√5 for √50, 3√8 or 36√2 for √72, √15 or √35 for 3√5, and 1/2 or √2 for 1/√2; the correct option sits in different positions."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 24 answers in the browser across simplify, add, multiply and rationalise: 25√2 and 4√10 name the unrooted square, √68/√58 name √a + √b ≠ √(a + b) with the √9 + √16 counterexample, 64 names the product left under the root, 15√5 names the missing division by 5; each message ends with the full working."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 0.5 for the kid text and 7.0 for the adult text (limits 6.5 and 9.5); kid text uses one idea per sentence with a picture (side of a square, four smaller squares, apples) and task lines are single instructions."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and explanation overlap with all other lessons is 0%; the adult paragraphs cover the product rule and simplest form, largest square plus the reverse direction, like surds and rationalising, then the named slips, with no repeated template text."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 and 360 px Android screenshots of all seven steps show the grid, cell labels, side label, track and strip labels inside the canvas; real pointer drags on the phone viewport along the grid track to 6 × 6 and up the strip to area 1 both completed their tasks; a clearer h = 1/√2 = √2/2 label was added after a screenshot review."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs axe-core WCAG 2.1 AA clean in light and dark on phone and desktop with no console errors; grid ± 1, cell ± 1, strip ± 1/± 5 and n ± 1 buttons with aria-labels replace every drag, and the canvas aria-label states the grid, cell area, and the resulting surd or why the grid fails."
+  }
+ },
+ "sources": [
+  "https://openstax.org/books/elementary-algebra-2e/pages/9-5-divide-square-roots",
+  "https://www.thecorestandards.org/Math/Content/HSN/RN/",
+  "https://openstax.org/books/elementary-algebra-2e/pages/9-2-simplify-square-roots",
+  "https://www.mathcentre.ac.uk/resources/uploaded/mc-ty-surds-2009-1.pdf"
+ ]
+}
