@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against AQA GCSE Chemistry 8462 section 4.2.1.2 (ionic bonding: metal atoms lose electrons to become positively charged ions, non-metal atoms gain electrons to become negative ions; the charge on ions of elements in groups 1, 2, 6 and 7 relates to the group number; ions drawn as dot-and-cross diagrams in square brackets with the charge). Charge = protons minus electrons checked for Na+ (11p, 10e), Cl- (17p, 18e), Mg2+ (12p, 10e), O2- (8p, 10e). Formulae MgCl2, CaCl2, MgO, Na2O and Al2O3 checked by charge balance. Parameter items enumerated: metals Li, Na, Mg, Al, K, Ca (boron, beryllium and gallium excluded by the where clause) and non-metals N, O, F, P, S, Cl, all of which form the stated simple ions."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented ion slips: 'sodium lost something so it is negative' (prediction 1 and the sign feedback), oxygen losing 6 to become 6+ (prediction 2 and the 'long way' feedback), using the number of outer electrons as the charge, one chlorine taking both of magnesium's electrons (the lab refuses the second electron because that Cl is already 2,8,8), formulae whose charges do not cancel (MgO2, NaO), counting electrons in Mg2+ as 14 or 12, and believing Na+ has become neon."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Built around a protons-versus-electrons charge ledger that tips as electrons are dragged off or onto the atom, gained electrons drawn as crosses, a group strip that fills in each ion's charge only when the learner forms it, a magnesium-to-chlorine transfer bench that forces a second chlorine, and an ion drawing step with tap-to-bracket and a charge label. It is not the noble-gas mover, the shell builder or the covalent bench; the shingle gate against all other flagship labs passes."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the sign rule from the ledger (11 red blocks against 10 blue blocks reads 1+), discovers the group rule from the strip they fill in (groups 1, 2 → 1+, 2+; groups 6, 7 → 2−, 1−), discovers the 1:2 ratio in MgCl2 when the first chlorine refuses a second electron, and sees the brackets-and-charge convention on their own drawing. The text then names each rule after the learner has produced it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions, each with a tempting wrong option the next action tests: '1−, because it lost something' for sodium, 'loses 6 and becomes 6+' for oxygen, 'Ca2−' for the group strip, '1 chlorine' for magnesium chloride, and 'neon now' for Na+. Each completion message quotes the learner's choice and states the result they produced (checked in a Playwright run: 'You predicted 1−, because it lost something; now you know why it's 1+')."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Nine rotating questions (charge from group for groups 2, 7, 3 and 6; MgO and Na2O formulae; the oxide ion diagram; electrons in Mg2+; why Na+ is not neon). Every wrong option maps to its own message: sign the wrong way, long route, charges that do not cancel (separate text for MgO and Na2O), forgetting there are two Na+, 6 outer electrons drawn for the ion, counting the neutral atom's 12 electrons, the 'it is neon' slip and the 'more electrons than neon' slip. Verified by clicking wrong answers in the browser."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation reads at Flesch-Kincaid grade 3.3 (limit 6.5) and adult at 7.0 (limit 9.5), measured with learn/readability.py. Lab step text uses one idea per sentence; the ledger shows the arithmetic as coloured blocks so the charge can be read without the words."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every kid and adult paragraph carries a fact or a rule (definition, sign rule, group rule, transfer and ratio, drawing convention, named mistakes). The filler regex gate passes, and the explanation shares under 12 percent of 6-word shingles with every other lesson, including the noble gases and electron shells lessons that also mention Na+ and Cl-."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots on iPhone 13 (390 px) in dark and light themes for all 7 steps: the atom, the 5-column ledger and the spare-electron tray fit without overlap, the 10-tile group strip labels ('grp 1', 'Na') are legible, the transfer bench stacks magnesium above the chlorine atoms, and the bracket and charge label stay inside the canvas. Drag-off, drag-in, metal-to-chlorine drag and tap-to-bracket were all exercised with a pointer at phone size."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has a button twin (Remove e−, Add e−, Give to Cl 1/2, Another Cl, Brackets on/off, Label 1+/1−/7+, element buttons). The canvas aria-label is rewritten on every change with protons, electrons, arrangement, charge, brackets and the strip results. The pipeline walk found no axe WCAG 2.1 AA violations in either theme on desktop or phone and no console errors."
+  }
+ },
+ "sources": [
+  "AQA GCSE Chemistry 8462 specification, 4.2.1.2 Ionic bonding and 4.1.1.7 Electronic structure",
+  "BBC Bitesize GCSE Chemistry (AQA): Ions, and Ionic bonding",
+  "Royal Society of Chemistry, Chemical misconceptions (Taber): ionic bonding and the octet framework"
+ ]
+}
