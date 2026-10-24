@@ -38,3 +38,29 @@ html[data-theme=classic] .gd-in input,html[data-theme=classic] .gd-mic,html[data
 @keyframes gdHop{50%{transform:translateY(-8px)}}@keyframes gdPing{0%{box-shadow:0 0 0 0 var(--gd)}100%{box-shadow:0 0 0 16px transparent}}
 @media (prefers-reduced-motion:reduce){.gd *,.gd-fab{animation:none!important;transition:none!important}}
 @media (max-width:520px){.gd{right:6px;left:6px;bottom:6px;width:auto;max-height:70vh}}
+/* Learner model (guide_mood.js): live state line, mood check-in, "About me" and "What I've learned" panels, and faces per state.
+   Expressions change only shapes and colour, so they read the same with motion off. */
+.gd-brows path,.gd-lids{fill:none;stroke:var(--gd);stroke-width:3;stroke-linecap:round;opacity:0;transition:opacity .3s}
+.gd[data-mood=struggling] .gd-brows path:first-child{opacity:1;d:path("M39 46 Q47 40 55 42")}.gd[data-mood=struggling] .gd-brows path:last-child{opacity:1;d:path("M65 42 Q73 40 81 46")}
+.gd[data-mood=struggling] .gd-mouth{d:path("M50 83 Q60 80 70 83")}
+.gd[data-mood=frustrated] .gd-brows path{opacity:1}.gd[data-mood=frustrated] .gd-mouth{d:path("M50 82 H70")}.gd[data-mood=frustrated] .gd-aura{opacity:.22}.gd[data-mood=frustrated] .gd-body{animation-duration:6s}
+.gd[data-mood=tired] .gd-lids{opacity:1;stroke-width:6}.gd[data-mood=tired] .gd-eyes{transform:scaleY(.5)}.gd[data-mood=tired] .gd-mouth{d:path("M52 82 Q60 85 68 82")}
+.gd[data-mood=bored] .gd-eyes{transform:translateX(5px)}.gd[data-mood=bored] .gd-mouth{d:path("M48 82 Q60 80 72 84")}
+.gd[data-mood=confident] .gd-mouth{d:path("M44 78 Q60 94 76 78")}.gd[data-mood=confident] .gd-brows path{opacity:1;d:path("M39 42 Q47 36 55 42")}.gd[data-mood=confident] .gd-brows path:last-child{d:path("M65 42 Q73 36 81 42")}
+.gd[data-mood=away] .gd-eyes{transform:scaleY(.15)}
+.gm-now{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;font-size:12px;color:#a9b8d6;margin-top:-4px}.gm-now b{color:inherit;font-weight:700}
+.gm-dot{width:8px;height:8px;border-radius:50%;background:var(--gd);align-self:center}
+.gd[data-mood=struggling] .gm-dot,.gd[data-mood=frustrated] .gm-dot{background:#fdba74}.gd[data-mood=tired] .gm-dot,.gd[data-mood=away] .gm-dot{background:#a9b8d6}.gd[data-mood=confident] .gm-dot{background:#86efac}
+.gm-check{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font-size:12px}.gm-check>span{width:100%;color:#a9b8d6}.gm-check[hidden]{display:none}
+.gm-mood{border:1px solid #334266;background:transparent;color:inherit;border-radius:999px;padding:4px 8px;min-height:32px;font:600 12px system-ui;cursor:pointer}
+.gm-offer{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start}
+.gm-list ul{margin:6px 0;padding-left:18px}.gm-list li{margin:2px 0}.gm-priv{font-size:12px;color:#a9b8d6;margin:6px 0}
+.gd-grid input[name=goal]{min-height:36px;border-radius:8px;border:1px solid #334266;background:#0b1222;color:inherit;padding:0 6px;font:inherit;flex:1;min-width:0}
+.gd-fab[data-mood=struggling] span,.gd-fab[data-mood=frustrated] span{color:#fdba74}
+html[data-theme=classic] .gm-now,html[data-theme=classic] .gm-check>span,html[data-theme=classic] .gm-priv{color:#4a5670}
+html[data-theme=classic] .gm-mood{border-color:#9aa8c0}html[data-theme=classic] .gd-grid input[name=goal]{background:#fff;border-color:#9aa8c0;color:#1b2333}
+html[data-theme=classic] .gd-brows path,html[data-theme=classic] .gd-lids{stroke:#2457c5}
+html[data-theme=classic] .gd[data-mood=struggling] .gm-dot,html[data-theme=classic] .gd[data-mood=frustrated] .gm-dot{background:#b45309}
+/* Learner-chosen accessibility: reduced motion everywhere, and larger lesson and Guide text. */
+html.wn-rm *,html.wn-rm *::before,html.wn-rm *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html.wn-lt #detail :is(p,li,label,summary,.small,.why,.fb,h3),html.wn-lt .gd{font-size:max(18px,1.15em)}html.wn-lt .gd .gm-now,html.wn-lt .gd .gm-check{font-size:15px}

@@ -4,7 +4,7 @@
    and respects prefers-reduced-motion. Lesson JSON chooses a visual with "visual": {"type": ..., "caption": ..., "opts": {...}}. */
 const VIS=(()=>{
 const T={},NS='http://www.w3.org/2000/svg';
-const reduced=()=>!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+const reduced=()=>document.documentElement.classList.contains('wn-rm')||!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
 let uid=0;
 function el(tag,attrs,parent,text){const svg=/^(svg|g|rect|circle|line|path|text|polygon|polyline|ellipse|title|tspan|clipPath)$/.test(tag);
  const e=svg?document.createElementNS(NS,tag):document.createElement(tag);

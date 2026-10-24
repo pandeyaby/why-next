@@ -125,7 +125,7 @@ return{scheduleAfterMastery,reviewDone,reviewDue,dueList,clear,setLevel,L,has,pr
    and respects prefers-reduced-motion. Lesson JSON chooses a visual with "visual": {"type": ..., "caption": ..., "opts": {...}}. */
 const VIS=(()=>{
 const T={},NS='http://www.w3.org/2000/svg';
-const reduced=()=>!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+const reduced=()=>document.documentElement.classList.contains('wn-rm')||!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
 let uid=0;
 function el(tag,attrs,parent,text){const svg=/^(svg|g|rect|circle|line|path|text|polygon|polyline|ellipse|title|tspan|clipPath)$/.test(tag);
  const e=svg?document.createElementNS(NS,tag):document.createElement(tag);
@@ -327,7 +327,9 @@ function validSettings(raw){const o=Object.assign({},DEF),r=raw&&typeof raw==='o
  o.voice=r.voice===true;o.open=r.open===true;return o}
 let S=validSettings((()=>{try{return JSON.parse(localStorage.getItem(KEY))}catch(x){return null}})());
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(x){}};
-const reduced=()=>!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+const reduced=()=>document.documentElement.classList.contains('wn-rm')||!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+/* The on-device learner model (guide_mood.js), when loaded; every use is optional so the guide works without it. */
+const MOOD=()=>typeof GUIDE_MOOD!=='undefined'?GUIDE_MOOD:null;
 let root,log,face,stateEl,input,micBtn,ctx={id:null,lastHint:null,hintStep:0,explainStep:0,wrongRun:0},rec=null,busy=false;
 // ---------- the face ----------
 /* One SVG, three looks: ears for the cat and tufts for the owl are switched on by the data-look attribute. */
@@ -336,6 +338,7 @@ const FACE=`<svg viewBox="0 0 120 120" class="gd-svg" aria-hidden="true" focusab
  <path class="gd-cat" d="M26 42 L34 12 L52 32 Z M94 42 L86 12 L68 32 Z"/><path class="gd-owl" d="M30 36 L22 14 L48 28 Z M90 36 L98 14 L72 28 Z"/>
  <circle class="gd-head" cx="60" cy="64" r="40"/><ellipse class="gd-glass" cx="60" cy="58" rx="30" ry="22"/>
  <g class="gd-eyes"><circle class="gd-eye" cx="47" cy="58" r="6"/><circle class="gd-eye" cx="73" cy="58" r="6"/><circle class="gd-owleye" cx="47" cy="58" r="11"/><circle class="gd-owleye" cx="73" cy="58" r="11"/></g>
+ <g class="gd-brows"><path d="M39 44 Q47 40 55 44"/><path d="M65 44 Q73 40 81 44"/></g><path class="gd-lids" d="M39 54 H55 M65 54 H81"/>
  <path class="gd-mouth" d="M48 80 Q60 88 72 80"/><ellipse class="gd-talk" cx="60" cy="82" rx="7" ry="4"/>
  <g class="gd-dots"><circle cx="48" cy="104" r="3"/><circle cx="60" cy="104" r="3"/><circle cx="72" cy="104" r="3"/></g>
  <g class="gd-spark"><path d="M14 30 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/><path d="M104 22 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/></g></g></svg>`;
@@ -346,7 +349,7 @@ function applyLook(){if(!root)return;root.dataset.look=S.look;root.style.setProp
 // ---------- the local brain ----------
 const lesson=()=>ctx.id&&typeof LEARN!=='undefined'&&LEARN.L&&LEARN.L[ctx.id]||null;
 const node=()=>ctx.id&&typeof N!=='undefined'&&N.get&&N.get(ctx.id)||null;
-const level=()=>typeof LEARN!=='undefined'&&LEARN.level?LEARN.level():'adult';
+const level=()=>{const m=MOOD()&&MOOD().level();return m||(typeof LEARN!=='undefined'&&LEARN.level?LEARN.level():'adult')};
 const sentences=t=>String(t).split(/(?<=[.!?])\s+/).filter(Boolean);
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 const STOP=new Set('the a an is are of to and in on it this that what why how do does i you me my for with be can about'.split(' '));
@@ -362,7 +365,9 @@ function bestSentence(L,q){const qs=words(q).filter(w=>!STOP.has(w)&&w.length>2)
 function currentItem(){if(ctx.lastHint)return ctx.lastHint;const q=document.querySelector('#pbox .qi:not([data-done])');const cur=typeof LEARN_PANEL!=='undefined'&&LEARN_PANEL.cur();
  if(q&&cur){const it=cur[q.dataset.pre][+q.dataset.i];return it&&{hint:it.hint,prompt:it.prompt}}return null}
 /* Shape a plain answer to the chosen personality. */
-function voice(text,kind){const s=sentences(text);switch(S.tone){
+/* Then let the learner model reshape it for the learner's stated style and current state (brief, step by step, gentler). */
+function voice(text,kind){const out=voiceTone(text,kind),m=MOOD();return m?m.shape(out,kind,text):out}
+function voiceTone(text,kind){const s=sentences(text);switch(S.tone){
  case'concise':return s.slice(0,kind==='explain'?2:1).join(' ');
  case'playful':return (kind==='hint'?pick(['Ooh, a clue! ','Psst… ','Detective time! ']):kind==='explain'?pick(['Here’s the fun bit: ','Okay, picture this: ']):'')+text+(kind==='hint'?' 🕵️':' ✨');
  case'socratic':return kind==='hint'?`Let me ask you instead: ${s[0].replace(/\.$/,'')}${/\?$/.test(s[0])?'':'. What does that tell you?'}`:kind==='explain'?`${text} So, in your own words: why do you think that is?`:text;
@@ -375,6 +380,8 @@ const localBrain={name:'Offline guide (built in)',reply(c,text){const t=text.toL
  if(/thank/.test(t))return pick(['Any time!','Happy to help.','You’re welcome!']);
  if(/what.*next|next topic|learn next/.test(t)&&typeof LEARN!=='undefined'&&LEARN.nextList){const nx=LEARN.nextList(3);return nx.length?'Good next steps: '+nx.map(x=>x.n).join(', ')+'.':'Pick a goal on the map and I can suggest a next step.'}
  if(!L){return n?`“${n.n}” doesn’t have a full lesson yet. ${n.desc?sentences(n.desc)[0]:''} The list under “Learn these first” is a good place to start.`:'Open a topic on the map and I’ll help you with it.'}
+ if(/worked example|show me (one|how)|(give|show) me an example/.test(t))return workedExample(L);
+ if(/challenge|harder|something hard/.test(t))return challenge(L);
  if(/hint|stuck|help|clue|don.?t get|confus/.test(t)){const it=currentItem();if(it&&it.hint)return voice(it.hint,'hint');return voice((L.explain.kid||[L.keyIdea])[ctx.hintStep++%L.explain.kid.length],'hint')}
  if(/simpl|easier|like i.?m|kid/.test(t))return voice(L.explain.kid[ctx.explainStep++%L.explain.kid.length],'explain');
  if(/quiz|test me|question|ask me/.test(t)){const p=pick(L.practice.filter(x=>!x.params));return p?`Try this: ${p.prompt}${p.choices?' Is it '+p.choices.map(x=>'“'+x+'”').join(', or ')+'?':''}`:'Scroll to “Practise”: the questions there have fresh numbers every time.'}
@@ -382,18 +389,25 @@ const localBrain={name:'Offline guide (built in)',reply(c,text){const t=text.toL
  if(/explain|what is|what are|why|how|mean|tell me/.test(t)){const b=definition(L,t)||bestSentence(L,t);if(b&&!/^(explain|tell me)/.test(t))return voice(b,'explain');const ex=L.explain[level()];return voice(ex[ctx.explainStep++%ex.length],'explain')}
  const b=bestSentence(L,t);return b?voice(b,'explain'):`I’m a simple offline guide, so I only know this lesson. Try “explain”, “hint”, “simpler”, “quiz me” or “what next?”.`}};
 let brain=localBrain;
+/* A finished example from the lesson's own practice (fixed-number questions only, so the numbers in the explanation match). */
+function answerText(p){if(p.type==='mc')return p.choices[p.answer];if(p.type==='numeric')return String(p.answer)+(p.unit?' '+p.unit:'');return (p.items||[]).join(' → ')}
+function workedExample(L){const ps=(L.practice||[]).filter(p=>!p.params&&p.explain);if(!ps.length){const ex=L.explain[level()]||[L.keyIdea];return 'Here’s the idea in steps: '+ex.slice(0,3).map((x,i)=>`${i+1}. ${x}`).join(' ')}
+ ctx.exStep=(ctx.exStep||0)+1;const p=ps[(ctx.exStep-1)%ps.length];return `Worked example. Question: ${p.prompt} ${p.hint?'Step 1: '+p.hint+' ':''}Step ${p.hint?2:1}: ${p.explain} Answer: ${answerText(p)}.`}
+/* A stretch question: the last fixed-number practice item, which is usually the hardest. */
+function challenge(L){const ps=(L.practice||[]).filter(p=>!p.params);const p=ps[ps.length-1];return p?`Challenge: ${p.prompt}${p.choices?' Is it '+p.choices.map(x=>'“'+x+'”').join(', or ')+'?':''} Take your time, then check it in “Practise”.`:'Try the lab’s challenge above, or the last question in “Practise”.'}
 const TONE_HELLO={calm:'Okay. I’ll keep things calm and go one step at a time.',playful:'Woohoo! Let’s make this fun! ✨',socratic:'From now on I’ll mostly answer with questions. Ready to think?',concise:'Got it. Short answers.'};
 /* Plug in another brain. It gets {lesson, topic, level, tone, settings} and the learner's words and returns text (or a Promise). */
 function useBrain(b){brain=b&&typeof b.reply==='function'?b:localBrain}
 // ---------- talking ----------
 const canSpeak=()=>'speechSynthesis' in window;
 function say(text,who='bot'){if(!root)return;const p=document.createElement('p');p.className='gd-msg '+who;p.textContent=text;log.append(p);log.scrollTop=log.scrollHeight;
- if(who!=='bot')return;if(S.voice&&canSpeak()){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text.replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu,''));u.rate=S.pace;u.pitch=S.tone==='playful'?1.25:1;
+ if(who!=='bot')return;if(S.voice&&canSpeak()){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text.replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu,''));u.rate=S.pace*(MOOD()?MOOD().paceFactor():1);u.pitch=S.tone==='playful'?1.25:1;
   u.onstart=()=>setState('speaking');u.onend=u.onerror=()=>root.dataset.state==='speaking'&&setState('idle');speechSynthesis.speak(u);return}catch(x){}}
  // no voice: show the speaking face for about as long as reading the line takes, scaled by pace
  setState('speaking');clearTimeout(say.t);say.t=setTimeout(()=>root.dataset.state==='speaking'&&setState('idle'),Math.min(4000,600+text.length*28/S.pace))}
-async function ask(text){text=String(text||'').trim();if(!text||busy)return;say(text,'me');busy=true;setState('thinking');
- const c={lesson:lesson(),topic:node(),level:level(),tone:S.tone,settings:Object.assign({},S)};
+async function ask(text){text=String(text||'').trim();if(!text||busy)return;say(text,'me');
+ const m=MOOD(),handled=m&&m.onText(text);if(handled){say(handled);return}busy=true;setState('thinking');
+ const c={lesson:lesson(),topic:node(),level:level(),tone:S.tone,settings:Object.assign({},S),learner:m?m.snapshot():null};
  let out;try{await new Promise(r=>setTimeout(r,(reduced()?150:450)/S.pace));out=await brain.reply(c,text)}catch(x){out=localBrain.reply(c,text)}
  busy=false;say(String(out||'…'))}
 function celebrate(kind){const lines=CHEER[kind]&&CHEER[kind][S.cheer];if(!lines||!lines.length)return;if(!root||!S.open){pulseFab();return}
@@ -426,15 +440,202 @@ function build(){root=document.createElement('aside');root.id='guide';root.class
  const set=root.querySelector('.gd-set');set.onchange=e=>{const f=e.target;if(!f.name)return;S=validSettings(Object.assign({},S,{[f.name]:f.type==='checkbox'?f.checked:f.type==='range'?+f.value:f.value}));save();applyLook();if(f.name==='tone')say(TONE_HELLO[S.tone])};
  set.onclick=e=>{const b=e.target.closest('[data-col]');if(!b)return;S=validSettings(Object.assign({},S,{colour:b.dataset.col}));save();applyLook();set.querySelectorAll('[data-col]').forEach(x=>x.setAttribute('aria-pressed',x===b))};
  root.onkeydown=e=>{if(e.key==='Escape')toggle(false)};applyLook();setState('idle');
+ try{document.dispatchEvent(new CustomEvent('wn:guide',{detail:{kind:'built',root}}))}catch(x){}
  const L=lesson();say(L?`Hi, I’m ${S.name}! Stuck on “${L.title}”? Ask me, or tap a button below.`:`Hi, I’m ${S.name}! Open a topic and I’ll help you learn it.`)}
 function toggle(on){if(on&&!root)build();if(!root)return;root.hidden=!on;S.open=on;save();const f=document.getElementById('gdFab');if(f){f.hidden=on;f.setAttribute('aria-expanded',on)}if(on)input.focus();else{if(rec)rec.stop();if(canSpeak())speechSynthesis.cancel();f&&f.focus()}}
 function init(){if(document.getElementById('gdFab'))return;const f=document.createElement('button');f.type='button';f.id='gdFab';f.className='gd-fab';f.setAttribute('aria-expanded','false');f.setAttribute('aria-label','Open your guide, '+S.name);f.innerHTML='<span aria-hidden="true">✦</span> Guide';f.onclick=()=>toggle(true);document.body.append(f);applyLook();if(S.open)toggle(true)}
 document.addEventListener('wn:learn',e=>{const d=e.detail||{};if(d.kind==='open'){if(d.id!==ctx.id)ctx={id:d.id,lastHint:null,hintStep:0,explainStep:0,wrongRun:0};return}
  if(d.kind==='hint'){ctx.lastHint={hint:d.hint,prompt:d.prompt};return}
- if(d.kind==='wrong'){ctx.lastHint={hint:d.hint,prompt:d.prompt};if(++ctx.wrongRun>=2){ctx.wrongRun=0;celebrate('wrong')}return}
+ if(d.kind==='wrong'){ctx.lastHint={hint:d.hint,prompt:d.prompt};if(++ctx.wrongRun>=2){ctx.wrongRun=0;/* the learner model offers its own help for this */if(!(MOOD()&&MOOD().profile().adapt))celebrate('wrong')}return}
  ctx.wrongRun=0;celebrate(d.kind)});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
-return{useBrain,ask,settings:()=>Object.assign({},S),validSettings,localBrain}})();
+return{useBrain,ask,say,setState,open:()=>toggle(true),isOpen:()=>!!(root&&!root.hidden),el:()=>root,pulse:pulseFab,settings:()=>Object.assign({},S),validSettings,localBrain}})();
+/* Why Next? Guide: every learner-facing line the learner model (guide_mood.js) uses, kept in one place so it can be
+   reviewed for tone and translated. Rules for this copy: kind and specific; offers, never pressure; no streak-loss
+   threats, guilt or fake urgency; and never a diagnosis ("you seem anxious"). Only describe what happened. */
+const GUIDE_COPY=(()=>{
+const EXAMS=['','GCSE (AQA)','GCSE (Edexcel)','GCSE (OCR)','IGCSE (Cambridge)','IB MYP','IB Diploma','A level','AP','SAT','CBSE','ICSE','Common Core','Scottish Nationals','Other'];
+const REACT={
+ struggling:{say:['This one’s tricky. Want to try it a different way?','Let’s slow down. Which would help most?'],offer:['Hint','Simpler','Worked example']},
+ frustrated:{say:['That looks frustrating, and that’s normal when something is new. We can take a different route.','Let’s pause the guessing for a moment. A worked example often unlocks it.'],offer:['Worked example','Simpler','Take a break']},
+ bored:{say:['Want something with more bite?','This might be too easy for you. Fancy a challenge, or skip ahead?'],offer:['Challenge me','Skip ahead','Quiz me']},
+ confident:{say:['You’re on a roll. Want a harder one?','Nicely done. Ready for a challenge, or the next topic?'],offer:['Challenge me','Skip ahead']},
+ tired:{say:['It’s getting late. A short recap and some rest is a great way to remember this.','Brains learn a lot while resting. Want a quick summary to finish on?'],offer:['Key idea','Take a break']},
+ away:{say:[],offer:[]},focused:{say:[],offer:[]}};
+const FACE_WORD={focused:'Focused',struggling:'Working it out',frustrated:'Taking it slower',bored:'Ready for more',confident:'On a roll',tired:'Winding down',away:'Paused'};
+const MOOD_BTN={great:'😀 Great',ok:'🙂 OK',stuck:'🤔 Stuck',frustrated:'😣 Frustrated',bored:'😐 Bored',tired:'😴 Tired'};
+const CHECKIN_REPLY={great:'Love that. I’ll keep the pace up and offer harder ones.',ok:'Thanks. Carry on, I’m here if you need me.',stuck:'Thanks for saying. Let’s untangle it together.',frustrated:'Thanks for telling me. Let’s slow down and try another way.',bored:'Fair. Let’s make it more interesting.',tired:'Thanks. We’ll keep it short and gentle.'};
+return{EXAMS,REACT,FACE_WORD,MOOD_BTN,CHECKIN_REPLY}})();
+/* Why Next? Guide, part 2: an on-device learner model that lets the Guide adapt in real time.
+   It watches a few behaviour signals (time on a step, idle time, wrong-answer runs, fast correct streaks, hints, skipped
+   lessons, rapid repeated clicks, late-night sessions) and optional mood check-ins, and turns them into one simple state
+   with a plain-English reason. The rules are in STATE_RULES below, in priority order, so anyone can read why the Guide
+   reacted. The Guide then changes its face, tone and pace, and offers a hint, a simpler explanation, a worked example,
+   a break, or a challenge. It offers; it never forces, nags, guilt-trips or counts down.
+   The learner can also state requirements (goal, course or exam, time available, style, explanation level, reduced
+   motion, larger text), which the whole page follows.
+   Privacy: everything stays in this browser (localStorage 'wn_learner'); nothing is sent anywhere. Turning
+   "Adapt to how I'm doing" off stops all signal tracking and clears the signals; "Reset" forgets everything. */
+const GUIDE_MOOD=(()=>{const KEY='wn_learner',VERSION=1;
+const {REACT,FACE_WORD,MOOD_BTN,EXAMS}=GUIDE_COPY;
+const STYLES=['balanced','visual','steps','brief'],LEVELS=['auto','kid','adult'],TIMES=[0,5,10,20,45];
+const MOODS=['great','ok','stuck','frustrated','bored','tired'];
+const STATES=['focused','struggling','frustrated','bored','confident','tired','away'];
+const DEF_PROFILE={goal:'',exam:'',time:0,style:'balanced',level:'auto',reducedMotion:false,largerText:false,adapt:true,checkins:true};
+const MIN=60e3;
+// ---------- stored data (validated on every read: never trust localStorage) ----------
+function validProfile(raw){const o=Object.assign({},DEF_PROFILE),r=raw&&typeof raw==='object'&&!Array.isArray(raw)?raw:{};
+ if(typeof r.goal==='string')o.goal=r.goal.trim().slice(0,80);if(EXAMS.includes(r.exam))o.exam=r.exam;if(TIMES.includes(r.time))o.time=r.time;
+ if(STYLES.includes(r.style))o.style=r.style;if(LEVELS.includes(r.level))o.level=r.level;
+ ['reducedMotion','largerText'].forEach(k=>o[k]=r[k]===true);['adapt','checkins'].forEach(k=>o[k]=r[k]!==false);return o}
+const count=v=>Number.isFinite(v)&&v>=0?Math.min(1e6,Math.floor(v)):0;
+/* Lifetime tallies shown in the "what I've learned" panel. Each field is checked on its own so one bad value can't wipe the rest. */
+function validStats(raw){const r=raw&&typeof raw==='object'&&!Array.isArray(raw)?raw:{},o={};
+ ['right','wrong','hints','skips','sessions','lateSessions','fastStreaks','breaks','examples','challenges'].forEach(k=>o[k]=count(r[k]));
+ o.moods=Array.isArray(r.moods)?r.moods.filter(m=>m&&MOODS.includes(m.m)&&Number.isFinite(m.t)).slice(-12).map(m=>({m:m.m,t:m.t})):[];
+ o.stepMs=Array.isArray(r.stepMs)?r.stepMs.filter(x=>Number.isFinite(x)&&x>0&&x<36e5).slice(-30):[];
+ o.states={};if(r.states&&typeof r.states==='object')STATES.forEach(s=>{if(Number.isFinite(r.states[s]))o.states[s]=count(r.states[s])});return o}
+function load(){let raw=null;try{raw=JSON.parse(localStorage.getItem(KEY))}catch(x){}const r=raw&&typeof raw==='object'?raw:{};return{v:VERSION,profile:validProfile(r.profile),stats:validStats(r.stats)}}
+let D=load();
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(D))}catch(x){}};
+// ---------- live session signals (memory only) ----------
+const now=()=>Date.now();
+let sig=freshSignals(),state={id:'focused',why:'Getting started.'},lastNudge={},clock=0,el=null;
+function freshSignals(){const t=now();return{start:t,lastAct:t,stepStart:t,lesson:null,lessonOpenAt:t,touched:false,
+ wrongRun:0,rightRun:0,rightTimes:[],wrongTimes:[],hintTimes:[],skipTimes:[],clicks:[],rage:0,selfMood:null,selfAt:0,timeUpSaid:false,breakUntil:0}}
+const within=(list,ms)=>list.filter(t=>now()-t<ms).length;
+const lateNight=()=>{const h=new Date().getHours();return h>=23||h<5};
+const SELF_STATE={great:'confident',ok:'focused',stuck:'struggling',frustrated:'frustrated',bored:'bored',tired:'tired'};
+/* The rules, in priority order. The first match wins; each one says in plain words why it fired. */
+const STATE_RULES=[
+ {id:'frustrated',test:()=>sig.selfMood==='frustrated'&&now()-sig.selfAt<15*MIN,why:()=>'You told me this is frustrating.'},
+ {id:'frustrated',test:()=>now()-sig.rage<2*MIN,why:()=>'Lots of quick repeated taps on the same spot.'},
+ {id:'frustrated',test:()=>within(sig.wrongTimes,3*MIN)>=4,why:()=>'Several wrong answers in the last few minutes.'},
+ {id:'tired',test:()=>sig.selfMood==='tired'&&now()-sig.selfAt<30*MIN,why:()=>'You said you’re tired.'},
+ {id:'tired',test:()=>lateNight()&&now()-sig.start>25*MIN,why:()=>'It’s late and you’ve been at it a while.'},
+ {id:'struggling',test:()=>sig.selfMood==='stuck'&&now()-sig.selfAt<10*MIN,why:()=>'You said you’re stuck.'},
+ {id:'struggling',test:()=>sig.wrongRun>=2,why:()=>`${sig.wrongRun} wrong answers in a row.`},
+ {id:'struggling',test:()=>within(sig.hintTimes,4*MIN)>=2,why:()=>'You asked for a couple of hints.'},
+ {id:'struggling',test:()=>sig.lesson&&sig.touched&&now()-sig.stepStart>6*MIN&&now()-sig.lastAct<MIN,why:()=>'You’ve been on this step for over 6 minutes.'},
+ {id:'away',test:()=>now()-sig.lastAct>3*MIN,why:()=>'No activity for a few minutes.'},
+ {id:'bored',test:()=>sig.selfMood==='bored'&&now()-sig.selfAt<10*MIN,why:()=>'You said this is boring.'},
+ {id:'bored',test:()=>within(sig.skipTimes,5*MIN)>=2,why:()=>'You skipped through a few lessons quickly.'},
+ {id:'confident',test:()=>sig.selfMood==='great'&&now()-sig.selfAt<10*MIN,why:()=>'You said it’s going well.'},
+ {id:'confident',test:()=>sig.rightRun>=3&&fastStreak(),why:()=>`${sig.rightRun} right in a row, quickly, without hints.`},
+ {id:'focused',test:()=>true,why:()=>sig.lesson?'Working steadily.':'Exploring the map.'}];
+/* A fast streak: the last three right answers came within 45 s of each other, with no hint in between. */
+function fastStreak(){const r=sig.rightTimes.slice(-3);return r.length===3&&r[2]-r[0]<90e3&&!sig.hintTimes.some(t=>t>r[0])}
+function infer(){const rule=STATE_RULES.find(r=>r.test());return{id:rule.id,why:rule.why()}}
+// ---------- how the Guide changes with the state ----------
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const G=()=>typeof GUIDE!=='undefined'?GUIDE:null;
+/* Re-infer the state; on a change, update the face and (at most once every 2 minutes per state) offer help. */
+function update(){if(!D.profile.adapt){setState({id:'focused',why:'Adapting is off.'});return}
+ const next=infer();const changed=next.id!==state.id;setState(next);timeCheck();
+ if(changed){D.stats.states[next.id]=(D.stats.states[next.id]||0)+1;save();react(next.id)}}
+function setState(s){state=s;const g=G(),root=g&&g.el(),fab=document.getElementById('gdFab');
+ [root,fab].forEach(x=>{if(x)x.dataset.mood=s.id});if(el){el.querySelector('.gm-state').textContent=FACE_WORD[s.id];el.querySelector('.gm-why').textContent=s.why}}
+function react(id){const r=REACT[id];if(!r||!r.say.length)return;if(now()-(lastNudge[id]||0)<2*MIN)return;lastNudge[id]=now();
+ const g=G();if(!g)return;if(!g.isOpen()){g.pulse();return}g.say(pick(r.say));offer(r.offer)}
+/* Quick-reply buttons under a Guide message. */
+function offer(labels){const g=G(),root=g&&g.el();if(!root||!labels.length)return;const log=root.querySelector('.gd-log'),row=document.createElement('div');row.className='gm-offer';
+ labels.forEach(l=>{const b=document.createElement('button');b.type='button';b.className='gd-chip';b.textContent=l;b.onclick=()=>{row.remove();g.ask(l)};row.append(b)});log.append(row);log.scrollTop=log.scrollHeight}
+/* The learner's own time budget: one gentle note when it's used up, never a countdown. */
+function timeCheck(){const t=D.profile.time;if(!t||sig.timeUpSaid||now()-sig.start<t*MIN)return;sig.timeUpSaid=true;const g=G();
+ if(g&&g.isOpen()){g.say(`That’s the ${t} minutes you planned. A good place to stop, or carry on if you’re enjoying it.`);offer(['Key idea'])}else g&&g.pulse()}
+// ---------- reshaping the Guide's words ----------
+const sentences=t=>String(t).split(/(?<=[.!?])\s+/).filter(Boolean);
+function shape(out,kind,raw){const p=D.profile,st=D.profile.adapt?state.id:'focused';if(kind!=='hint'&&kind!=='explain')return out;
+ if(p.style==='brief')return sentences(out).slice(0,kind==='explain'?2:1).join(' ');
+ if(p.style==='steps'&&kind==='explain'){const s=sentences(out);if(s.length>1)return s.map((x,i)=>`${i+1}. ${x}`).join(' ')}
+ if(p.style==='visual'&&kind==='explain'&&document.querySelector('#detail .vis'))out+=' Try it in the interactive picture in the lesson: seeing it move helps.';
+ if(st==='frustrated'||st==='struggling')return sentences(out).slice(0,2).join(' ');return out}
+const paceFactor=()=>!D.profile.adapt?1:state.id==='frustrated'||state.id==='struggling'||state.id==='tired'?.9:state.id==='confident'||state.id==='bored'?1.1:1;
+const level=()=>D.profile.level==='auto'?null:D.profile.level;
+// ---------- typed or spoken mood check-ins and the "break / skip" requests ----------
+const MOOD_WORDS=[['frustrated',/frustrat|annoy|angry|hate this|ugh+|argh/],['tired',/tired|sleepy|exhausted|knackered/],['bored',/bor(ed|ing)|too easy|dull/],['stuck',/i.?m (stuck|lost|confused)|no idea/],['great',/(feel|feeling|going) (good|great)|i.?m (good|great)|easy peasy/],['ok',/^(i.?m )?(ok|okay|fine|alright)[.!]?$/]];
+function onText(text){const t=text.toLowerCase();
+ if(/^take a break$|^break$|need a break/.test(t))return takeBreak();
+ if(/skip ahead|next topic please|skip this/.test(t))return skipAhead();
+ if(/^key idea$/.test(t))return null;
+ for(const[m,re]of MOOD_WORDS)if(re.test(t)&&t.length<60)return checkIn(m,true);return null}
+function checkIn(m,typed){if(!MOODS.includes(m))return null;D.stats.moods.push({m,t:now()});D.stats.moods=D.stats.moods.slice(-12);save();
+ if(D.profile.adapt){sig.selfMood=m;sig.selfAt=now();lastNudge={};update()}
+ const reply=GUIDE_COPY.CHECKIN_REPLY[m];
+ setTimeout(()=>offer((REACT[SELF_STATE[m]]||{}).offer||[]),0);return reply}
+function takeBreak(){D.stats.breaks++;save();sig.breakUntil=now()+5*MIN;sig.wrongRun=0;sig.wrongTimes=[];sig.rage=0;
+ return 'Good call. Stand up, stretch, get some water. Your progress is saved, so come back whenever you like.'}
+function skipAhead(){const nx=typeof LEARN!=='undefined'&&LEARN.nextList?LEARN.nextList(3).filter(x=>x.id!==sig.lesson):[];if(!nx.length)return 'Pick a goal on the map and I’ll suggest where to jump to.';
+ setTimeout(()=>{const g=G(),root=g&&g.el();if(!root)return;const log=root.querySelector('.gd-log'),row=document.createElement('div');row.className='gm-offer';
+  const b=document.createElement('button');b.type='button';b.className='gd-chip';b.textContent='Open “'+nx[0].n+'”';b.onclick=()=>{row.remove();if(typeof select==='function')select(nx[0].id)};row.append(b);log.append(row);log.scrollTop=log.scrollHeight},0);
+ return `Ready to move on? A good next step is “${nx[0].n}”.`}
+// ---------- the panel inside the Guide ----------
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function panelHtml(){const p=D.profile,o=(a,v,lab)=>a.map(x=>`<option value="${esc(x)}"${x===v?' selected':''}>${esc(lab?lab(x):x)}</option>`).join('');
+ return `<div class="gm-now" aria-live="polite"><span class="gm-dot" aria-hidden="true"></span><b class="gm-state"></b> <span class="gm-why"></span></div>
+ <div class="gm-check" role="group" aria-label="How’s this feeling?"${p.checkins?'':' hidden'}><span>How’s this feeling?</span>${MOODS.map(m=>`<button type="button" class="gm-mood" data-mood="${m}">${MOOD_BTN[m]}</button>`).join('')}</div>
+ <details class="gd-set gm-you"><summary>🎯 About me</summary><div class="gd-grid">
+ <label>My goal <input name="goal" maxlength="80" placeholder="e.g. pass my maths mock" value="${esc(p.goal)}"></label>
+ <label>Course or exam <select name="exam">${o(EXAMS,p.exam,x=>x||'Not set')}</select></label>
+ <label>Time today <select name="time">${o(TIMES.map(String),String(p.time),x=>x==='0'?'No limit':x+' min')}</select></label>
+ <label>I like <select name="style">${o(STYLES,p.style,x=>({balanced:'A mix',visual:'Pictures and visuals',steps:'Step by step',brief:'Short and to the point'}[x]))}</select></label>
+ <label>Explanations <select name="level">${o(LEVELS,p.level,x=>({auto:'Match my age',kid:'Simpler',adult:'Fuller'}[x]))}</select></label>
+ <label class="gd-chk"><input type="checkbox" name="reducedMotion"${p.reducedMotion?' checked':''}> Reduce motion</label>
+ <label class="gd-chk"><input type="checkbox" name="largerText"${p.largerText?' checked':''}> Larger text</label>
+ <label class="gd-chk"><input type="checkbox" name="adapt"${p.adapt?' checked':''}> Adapt to how I’m doing</label>
+ <label class="gd-chk"><input type="checkbox" name="checkins"${p.checkins?' checked':''}> Show mood check-ins</label></div></details>
+ <details class="gd-set gm-learned"><summary>🔍 What I’ve learned about you</summary><div class="gm-list"></div>
+ <p class="gm-priv">This stays on this device. Nothing is sent anywhere.</p><button type="button" class="gd-chip gm-reset">Forget everything</button></details>`}
+const TIMEFMT=ms=>ms<MIN?Math.round(ms/1e3)+' s':Math.round(ms/MIN)+' min';
+/* Plain-English list of everything stored or inferred, so nothing about the learner is hidden from them. */
+function learnedItems(){const p=D.profile,s=D.stats,out=[];
+ out.push(`Right now: ${FACE_WORD[state.id].toLowerCase()}, because: ${state.why}`);
+ if(p.goal)out.push(`Your goal: “${p.goal}”.`);if(p.exam)out.push(`Course or exam: ${p.exam}.`);
+ if(p.time)out.push(`You planned ${p.time} minutes a session.`);if(p.style!=='balanced')out.push(`You prefer: ${({visual:'pictures and visuals',steps:'step-by-step',brief:'short answers'})[p.style]}.`);
+ if(p.level!=='auto')out.push(`Explanations: ${p.level==='kid'?'simpler':'fuller'}.`);if(p.reducedMotion)out.push('Reduced motion is on.');if(p.largerText)out.push('Larger text is on.');
+ if(s.right+s.wrong)out.push(`Answers checked: ${s.right} right, ${s.wrong} not yet.`);if(s.hints)out.push(`Hints asked for: ${s.hints}.`);
+ if(s.stepMs.length)out.push(`Typical time per question: about ${TIMEFMT(s.stepMs.slice().sort((a,b)=>a-b)[s.stepMs.length>>1])}.`);
+ if(s.skips)out.push(`Lessons skipped quickly: ${s.skips}.`);if(s.fastStreaks)out.push(`Fast streaks: ${s.fastStreaks}.`);
+ if(s.lateSessions)out.push(`Late-night sessions: ${s.lateSessions}.`);if(s.moods.length)out.push(`Recent check-ins: ${s.moods.slice(-5).map(m=>MOOD_BTN[m.m]).join(', ')}.`);
+ if(!p.adapt)out.push('Adapting is off, so I’m not tracking how you’re doing.');return out}
+function renderLearned(){if(!el)return;el.querySelector('.gm-list').innerHTML='<ul>'+learnedItems().map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>'}
+/* Apply the learner's page-wide needs: reduced motion and larger text. */
+function applyProfile(){const h=document.documentElement;h.classList.toggle('wn-rm',D.profile.reducedMotion);h.classList.toggle('wn-lt',D.profile.largerText);
+ if(el)el.querySelector('.gm-check').hidden=!D.profile.checkins}
+function onField(f){const v=f.type==='checkbox'?f.checked:f.name==='time'?+f.value:f.value;D.profile=validProfile(Object.assign({},D.profile,{[f.name]:v}));
+ if(f.name==='adapt'&&!v){sig=freshSignals();D.stats=validStats({sessions:D.stats.sessions})}save();applyProfile();update();renderLearned()}
+function mount(root){if(!root||root.querySelector('.gm'))return;const box=document.createElement('div');box.className='gm';box.innerHTML=panelHtml();
+ const top=root.querySelector('.gd-top');top.after(box.querySelector('.gm-now'));root.querySelector('.gd-chips').after(box.querySelector('.gm-check'));
+ const set=root.querySelector('.gd-set');const you0=box.querySelector('.gm-you');set.after(you0);you0.after(box.querySelector('.gm-learned'));/* after Customise, so the Guide's own settings stay first */el=root;
+ root.querySelectorAll('.gm-mood').forEach(b=>b.onclick=()=>{const g=G();g.say(b.textContent,'me');g.say(checkIn(b.dataset.mood,false))});
+ const you=root.querySelector('.gm-you');you.onchange=e=>e.target.name&&onField(e.target);you.oninput=e=>e.target.name==='goal'&&onField(e.target);
+ const learned=root.querySelector('.gm-learned');learned.ontoggle=renderLearned;
+ root.querySelector('.gm-reset').onclick=()=>{reset();const g=G();g.say('Done. I’ve forgotten everything about you on this device.');rebuild(root)};
+ setState(state);renderLearned()}
+function rebuild(root){root.querySelectorAll('.gm-now,.gm-check,.gm-you,.gm-learned').forEach(x=>x.remove());root.querySelector('.gm')&&root.querySelector('.gm').remove();el=null;mount(root)}
+function reset(){try{localStorage.removeItem(KEY)}catch(x){}D=load();sig=freshSignals();state={id:'focused',why:'Getting started.'};lastNudge={};applyProfile()}
+// ---------- listening to the page ----------
+/* Behaviour events from the lesson panel: open, hint, right, wrong, mastered. */
+function onLearn(d){if(!D.profile.adapt)return;const t=now();sig.lastAct=t;
+ if(d.kind==='open'){if(sig.lesson&&d.id!==sig.lesson&&!sig.touched&&t-sig.lessonOpenAt<25e3){sig.skipTimes.push(t);D.stats.skips++}
+  if(d.id!==sig.lesson){sig.lesson=d.id;sig.lessonOpenAt=t;sig.stepStart=t;sig.touched=false;sig.wrongRun=0;sig.rightRun=0}}
+ else if(d.kind==='hint'){sig.hintTimes.push(t);sig.touched=true;D.stats.hints++}
+ else if(d.kind==='wrong'){sig.wrongRun++;sig.rightRun=0;sig.wrongTimes.push(t);sig.touched=true;D.stats.wrong++}
+ else if(d.kind==='right'){D.stats.stepMs.push(t-sig.stepStart);D.stats.stepMs=D.stats.stepMs.slice(-30);sig.stepStart=t;sig.wrongRun=0;sig.rightRun++;sig.rightTimes.push(t);sig.touched=true;D.stats.right++;if(sig.rightRun===3&&fastStreak())D.stats.fastStreaks++}
+ else sig.touched=true;
+ ['hintTimes','wrongTimes','rightTimes','skipTimes'].forEach(k=>sig[k]=sig[k].slice(-20));save();update()}
+/* Rapid clicking: 6+ clicks within 2.5 s on the same non-draggable control looks like frustration. Labs, sliders and canvases are skipped. */
+function onClick(e){if(!D.profile.adapt)return;sig.lastAct=now();const tgt=e.target;if(!(tgt instanceof Element)||tgt.closest('canvas,svg,input,.vis,.fl,#guide,.gd-fab'))return;
+ const key=tgt.closest('button,a,li,label')||tgt;sig.clicks=sig.clicks.filter(c=>now()-c.t<2500&&c.k===key);sig.clicks.push({t:now(),k:key});
+ if(sig.clicks.length>=6){sig.rage=now();sig.clicks=[];update()}}
+const active=()=>{if(!D.profile.adapt)return;const wasAway=state.id==='away';sig.lastAct=now();if(wasAway)update()};
+function start(){D.stats.sessions++;if(lateNight())D.stats.lateSessions++;save();applyProfile();
+ document.addEventListener('wn:learn',e=>onLearn(e.detail||{}));document.addEventListener('wn:guide',e=>{const d=e.detail||{};if(d.kind==='built')mount(d.root)});
+ document.addEventListener('click',onClick,true);['keydown','pointerdown','scroll','wheel','touchstart'].forEach(ev=>addEventListener(ev,active,{passive:true,capture:true}));
+ clock=setInterval(()=>{if(!document.hidden)update()},15e3);const g=G();if(g&&g.el())mount(g.el());update()}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+return{onText,shape,paceFactor,level,checkIn,snapshot:()=>({state:state.id,why:state.why,profile:Object.assign({},D.profile)}),state:()=>Object.assign({},state),
+ profile:()=>Object.assign({},D.profile),learned:learnedItems,update,reset,validProfile,validStats,rules:STATE_RULES.map(r=>r.id),_sig:()=>sig}})();
 // Guide launcher placement: the floating Guide button must never cover lesson content.
 // On phones (≤760px) it is a slim tab on the right screen edge; on wider screens it is the full pill when a free spot
 // exists, and the same tab otherwise. After scrolling stops, the page changes, or the window resizes, we measure what is on

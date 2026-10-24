@@ -113,6 +113,18 @@ cat / owl, colour, tone calm / playful / socratic / concise, pace, encouragement
 through `GUIDE.validSettings` on load. The built-in brain is offline and answers from the open lesson (key idea, kid / adult
 explanations, the current question's hint, a quiz question, "what next"). `learn_panel.js` and `flag_kit.js` emit
 `wn:learn` events (open, hint, right, wrong, mastered, labwin) that the guide uses for hints and cheering.
+### Guide learner model (`guide_mood.js`)
+The Guide adapts in real time to how the learner is doing, entirely on the device. Signals: time on a step, idle time,
+wrong-answer runs, fast correct streaks, hints, lessons skipped within 25 s, 6+ rapid clicks on one control, late-night
+sessions, and optional typed, spoken or tapped mood check-ins. `STATE_RULES` maps them, in priority order, to one state
+(focused, struggling, frustrated, bored, confident, tired, away) with a plain-English reason shown under the Guide's name.
+The Guide changes its face, tone and voice pace, and offers a hint, a simpler explanation, a worked example, a break, a
+challenge or a skip ahead (offers only; never more than once per state every 2 minutes). "About me" stores a goal, course
+or exam, time per session, preferred style (visual, step by step, brief), explanation level, reduced motion and larger
+text, and the page follows them. Everything lives in localStorage `wn_learner` (validated field by field on load);
+"What I've learned about you" lists it all with "Forget everything", and "Adapt to how I'm doing" off stops tracking.
+A plugged-in brain receives `ctx.learner = {state, why, profile}`. Tests: `node tests/guide_mood.e2e.cjs`.
+
 Plug in another brain with `GUIDE.useBrain({name, reply(ctx, text) => string | Promise<string>})`; `ctx` has lesson, topic,
 level, tone and settings. None is wired: an LLM brain needs a server-side proxy (no key in the page) and a cost decision.
 

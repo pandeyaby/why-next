@@ -16,7 +16,9 @@ function validSettings(raw){const o=Object.assign({},DEF),r=raw&&typeof raw==='o
  o.voice=r.voice===true;o.open=r.open===true;return o}
 let S=validSettings((()=>{try{return JSON.parse(localStorage.getItem(KEY))}catch(x){return null}})());
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(x){}};
-const reduced=()=>!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+const reduced=()=>document.documentElement.classList.contains('wn-rm')||!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+/* The on-device learner model (guide_mood.js), when loaded; every use is optional so the guide works without it. */
+const MOOD=()=>typeof GUIDE_MOOD!=='undefined'?GUIDE_MOOD:null;
 let root,log,face,stateEl,input,micBtn,ctx={id:null,lastHint:null,hintStep:0,explainStep:0,wrongRun:0},rec=null,busy=false;
 // ---------- the face ----------
 /* One SVG, three looks: ears for the cat and tufts for the owl are switched on by the data-look attribute. */
@@ -25,6 +27,7 @@ const FACE=`<svg viewBox="0 0 120 120" class="gd-svg" aria-hidden="true" focusab
  <path class="gd-cat" d="M26 42 L34 12 L52 32 Z M94 42 L86 12 L68 32 Z"/><path class="gd-owl" d="M30 36 L22 14 L48 28 Z M90 36 L98 14 L72 28 Z"/>
  <circle class="gd-head" cx="60" cy="64" r="40"/><ellipse class="gd-glass" cx="60" cy="58" rx="30" ry="22"/>
  <g class="gd-eyes"><circle class="gd-eye" cx="47" cy="58" r="6"/><circle class="gd-eye" cx="73" cy="58" r="6"/><circle class="gd-owleye" cx="47" cy="58" r="11"/><circle class="gd-owleye" cx="73" cy="58" r="11"/></g>
+ <g class="gd-brows"><path d="M39 44 Q47 40 55 44"/><path d="M65 44 Q73 40 81 44"/></g><path class="gd-lids" d="M39 54 H55 M65 54 H81"/>
  <path class="gd-mouth" d="M48 80 Q60 88 72 80"/><ellipse class="gd-talk" cx="60" cy="82" rx="7" ry="4"/>
  <g class="gd-dots"><circle cx="48" cy="104" r="3"/><circle cx="60" cy="104" r="3"/><circle cx="72" cy="104" r="3"/></g>
  <g class="gd-spark"><path d="M14 30 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/><path d="M104 22 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/></g></g></svg>`;
@@ -35,7 +38,7 @@ function applyLook(){if(!root)return;root.dataset.look=S.look;root.style.setProp
 // ---------- the local brain ----------
 const lesson=()=>ctx.id&&typeof LEARN!=='undefined'&&LEARN.L&&LEARN.L[ctx.id]||null;
 const node=()=>ctx.id&&typeof N!=='undefined'&&N.get&&N.get(ctx.id)||null;
-const level=()=>typeof LEARN!=='undefined'&&LEARN.level?LEARN.level():'adult';
+const level=()=>{const m=MOOD()&&MOOD().level();return m||(typeof LEARN!=='undefined'&&LEARN.level?LEARN.level():'adult')};
 const sentences=t=>String(t).split(/(?<=[.!?])\s+/).filter(Boolean);
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 const STOP=new Set('the a an is are of to and in on it this that what why how do does i you me my for with be can about'.split(' '));
@@ -51,7 +54,9 @@ function bestSentence(L,q){const qs=words(q).filter(w=>!STOP.has(w)&&w.length>2)
 function currentItem(){if(ctx.lastHint)return ctx.lastHint;const q=document.querySelector('#pbox .qi:not([data-done])');const cur=typeof LEARN_PANEL!=='undefined'&&LEARN_PANEL.cur();
  if(q&&cur){const it=cur[q.dataset.pre][+q.dataset.i];return it&&{hint:it.hint,prompt:it.prompt}}return null}
 /* Shape a plain answer to the chosen personality. */
-function voice(text,kind){const s=sentences(text);switch(S.tone){
+/* Then let the learner model reshape it for the learner's stated style and current state (brief, step by step, gentler). */
+function voice(text,kind){const out=voiceTone(text,kind),m=MOOD();return m?m.shape(out,kind,text):out}
+function voiceTone(text,kind){const s=sentences(text);switch(S.tone){
  case'concise':return s.slice(0,kind==='explain'?2:1).join(' ');
  case'playful':return (kind==='hint'?pick(['Ooh, a clue! ','Psst… ','Detective time! ']):kind==='explain'?pick(['Here’s the fun bit: ','Okay, picture this: ']):'')+text+(kind==='hint'?' 🕵️':' ✨');
  case'socratic':return kind==='hint'?`Let me ask you instead: ${s[0].replace(/\.$/,'')}${/\?$/.test(s[0])?'':'. What does that tell you?'}`:kind==='explain'?`${text} So, in your own words: why do you think that is?`:text;
@@ -64,6 +69,8 @@ const localBrain={name:'Offline guide (built in)',reply(c,text){const t=text.toL
  if(/thank/.test(t))return pick(['Any time!','Happy to help.','You’re welcome!']);
  if(/what.*next|next topic|learn next/.test(t)&&typeof LEARN!=='undefined'&&LEARN.nextList){const nx=LEARN.nextList(3);return nx.length?'Good next steps: '+nx.map(x=>x.n).join(', ')+'.':'Pick a goal on the map and I can suggest a next step.'}
  if(!L){return n?`“${n.n}” doesn’t have a full lesson yet. ${n.desc?sentences(n.desc)[0]:''} The list under “Learn these first” is a good place to start.`:'Open a topic on the map and I’ll help you with it.'}
+ if(/worked example|show me (one|how)|(give|show) me an example/.test(t))return workedExample(L);
+ if(/challenge|harder|something hard/.test(t))return challenge(L);
  if(/hint|stuck|help|clue|don.?t get|confus/.test(t)){const it=currentItem();if(it&&it.hint)return voice(it.hint,'hint');return voice((L.explain.kid||[L.keyIdea])[ctx.hintStep++%L.explain.kid.length],'hint')}
  if(/simpl|easier|like i.?m|kid/.test(t))return voice(L.explain.kid[ctx.explainStep++%L.explain.kid.length],'explain');
  if(/quiz|test me|question|ask me/.test(t)){const p=pick(L.practice.filter(x=>!x.params));return p?`Try this: ${p.prompt}${p.choices?' Is it '+p.choices.map(x=>'“'+x+'”').join(', or ')+'?':''}`:'Scroll to “Practise”: the questions there have fresh numbers every time.'}
@@ -71,18 +78,25 @@ const localBrain={name:'Offline guide (built in)',reply(c,text){const t=text.toL
  if(/explain|what is|what are|why|how|mean|tell me/.test(t)){const b=definition(L,t)||bestSentence(L,t);if(b&&!/^(explain|tell me)/.test(t))return voice(b,'explain');const ex=L.explain[level()];return voice(ex[ctx.explainStep++%ex.length],'explain')}
  const b=bestSentence(L,t);return b?voice(b,'explain'):`I’m a simple offline guide, so I only know this lesson. Try “explain”, “hint”, “simpler”, “quiz me” or “what next?”.`}};
 let brain=localBrain;
+/* A finished example from the lesson's own practice (fixed-number questions only, so the numbers in the explanation match). */
+function answerText(p){if(p.type==='mc')return p.choices[p.answer];if(p.type==='numeric')return String(p.answer)+(p.unit?' '+p.unit:'');return (p.items||[]).join(' → ')}
+function workedExample(L){const ps=(L.practice||[]).filter(p=>!p.params&&p.explain);if(!ps.length){const ex=L.explain[level()]||[L.keyIdea];return 'Here’s the idea in steps: '+ex.slice(0,3).map((x,i)=>`${i+1}. ${x}`).join(' ')}
+ ctx.exStep=(ctx.exStep||0)+1;const p=ps[(ctx.exStep-1)%ps.length];return `Worked example. Question: ${p.prompt} ${p.hint?'Step 1: '+p.hint+' ':''}Step ${p.hint?2:1}: ${p.explain} Answer: ${answerText(p)}.`}
+/* A stretch question: the last fixed-number practice item, which is usually the hardest. */
+function challenge(L){const ps=(L.practice||[]).filter(p=>!p.params);const p=ps[ps.length-1];return p?`Challenge: ${p.prompt}${p.choices?' Is it '+p.choices.map(x=>'“'+x+'”').join(', or ')+'?':''} Take your time, then check it in “Practise”.`:'Try the lab’s challenge above, or the last question in “Practise”.'}
 const TONE_HELLO={calm:'Okay. I’ll keep things calm and go one step at a time.',playful:'Woohoo! Let’s make this fun! ✨',socratic:'From now on I’ll mostly answer with questions. Ready to think?',concise:'Got it. Short answers.'};
 /* Plug in another brain. It gets {lesson, topic, level, tone, settings} and the learner's words and returns text (or a Promise). */
 function useBrain(b){brain=b&&typeof b.reply==='function'?b:localBrain}
 // ---------- talking ----------
 const canSpeak=()=>'speechSynthesis' in window;
 function say(text,who='bot'){if(!root)return;const p=document.createElement('p');p.className='gd-msg '+who;p.textContent=text;log.append(p);log.scrollTop=log.scrollHeight;
- if(who!=='bot')return;if(S.voice&&canSpeak()){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text.replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu,''));u.rate=S.pace;u.pitch=S.tone==='playful'?1.25:1;
+ if(who!=='bot')return;if(S.voice&&canSpeak()){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text.replace(/[\u{1F300}-\u{1FAFF}\u2600-\u27BF]/gu,''));u.rate=S.pace*(MOOD()?MOOD().paceFactor():1);u.pitch=S.tone==='playful'?1.25:1;
   u.onstart=()=>setState('speaking');u.onend=u.onerror=()=>root.dataset.state==='speaking'&&setState('idle');speechSynthesis.speak(u);return}catch(x){}}
  // no voice: show the speaking face for about as long as reading the line takes, scaled by pace
  setState('speaking');clearTimeout(say.t);say.t=setTimeout(()=>root.dataset.state==='speaking'&&setState('idle'),Math.min(4000,600+text.length*28/S.pace))}
-async function ask(text){text=String(text||'').trim();if(!text||busy)return;say(text,'me');busy=true;setState('thinking');
- const c={lesson:lesson(),topic:node(),level:level(),tone:S.tone,settings:Object.assign({},S)};
+async function ask(text){text=String(text||'').trim();if(!text||busy)return;say(text,'me');
+ const m=MOOD(),handled=m&&m.onText(text);if(handled){say(handled);return}busy=true;setState('thinking');
+ const c={lesson:lesson(),topic:node(),level:level(),tone:S.tone,settings:Object.assign({},S),learner:m?m.snapshot():null};
  let out;try{await new Promise(r=>setTimeout(r,(reduced()?150:450)/S.pace));out=await brain.reply(c,text)}catch(x){out=localBrain.reply(c,text)}
  busy=false;say(String(out||'…'))}
 function celebrate(kind){const lines=CHEER[kind]&&CHEER[kind][S.cheer];if(!lines||!lines.length)return;if(!root||!S.open){pulseFab();return}
@@ -115,12 +129,13 @@ function build(){root=document.createElement('aside');root.id='guide';root.class
  const set=root.querySelector('.gd-set');set.onchange=e=>{const f=e.target;if(!f.name)return;S=validSettings(Object.assign({},S,{[f.name]:f.type==='checkbox'?f.checked:f.type==='range'?+f.value:f.value}));save();applyLook();if(f.name==='tone')say(TONE_HELLO[S.tone])};
  set.onclick=e=>{const b=e.target.closest('[data-col]');if(!b)return;S=validSettings(Object.assign({},S,{colour:b.dataset.col}));save();applyLook();set.querySelectorAll('[data-col]').forEach(x=>x.setAttribute('aria-pressed',x===b))};
  root.onkeydown=e=>{if(e.key==='Escape')toggle(false)};applyLook();setState('idle');
+ try{document.dispatchEvent(new CustomEvent('wn:guide',{detail:{kind:'built',root}}))}catch(x){}
  const L=lesson();say(L?`Hi, I’m ${S.name}! Stuck on “${L.title}”? Ask me, or tap a button below.`:`Hi, I’m ${S.name}! Open a topic and I’ll help you learn it.`)}
 function toggle(on){if(on&&!root)build();if(!root)return;root.hidden=!on;S.open=on;save();const f=document.getElementById('gdFab');if(f){f.hidden=on;f.setAttribute('aria-expanded',on)}if(on)input.focus();else{if(rec)rec.stop();if(canSpeak())speechSynthesis.cancel();f&&f.focus()}}
 function init(){if(document.getElementById('gdFab'))return;const f=document.createElement('button');f.type='button';f.id='gdFab';f.className='gd-fab';f.setAttribute('aria-expanded','false');f.setAttribute('aria-label','Open your guide, '+S.name);f.innerHTML='<span aria-hidden="true">✦</span> Guide';f.onclick=()=>toggle(true);document.body.append(f);applyLook();if(S.open)toggle(true)}
 document.addEventListener('wn:learn',e=>{const d=e.detail||{};if(d.kind==='open'){if(d.id!==ctx.id)ctx={id:d.id,lastHint:null,hintStep:0,explainStep:0,wrongRun:0};return}
  if(d.kind==='hint'){ctx.lastHint={hint:d.hint,prompt:d.prompt};return}
- if(d.kind==='wrong'){ctx.lastHint={hint:d.hint,prompt:d.prompt};if(++ctx.wrongRun>=2){ctx.wrongRun=0;celebrate('wrong')}return}
+ if(d.kind==='wrong'){ctx.lastHint={hint:d.hint,prompt:d.prompt};if(++ctx.wrongRun>=2){ctx.wrongRun=0;/* the learner model offers its own help for this */if(!(MOOD()&&MOOD().profile().adapt))celebrate('wrong')}return}
  ctx.wrongRun=0;celebrate(d.kind)});
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
-return{useBrain,ask,settings:()=>Object.assign({},S),validSettings,localBrain}})();
+return{useBrain,ask,say,setState,open:()=>toggle(true),isOpen:()=>!!(root&&!root.hidden),el:()=>root,pulse:pulseFab,settings:()=>Object.assign({},S),validSettings,localBrain}})();
