@@ -64,3 +64,7 @@ html[data-theme=classic] .gd[data-mood=struggling] .gm-dot,html[data-theme=class
 /* Learner-chosen accessibility: reduced motion everywhere, and larger lesson and Guide text. */
 html.wn-rm *,html.wn-rm *::before,html.wn-rm *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 html.wn-lt #detail :is(p,li,label,summary,.small,.why,.fb,h3),html.wn-lt .gd{font-size:max(18px,1.15em)}html.wn-lt .gd .gm-now,html.wn-lt .gd .gm-check{font-size:15px}
+/* Live AI Guide toggle (guide_live.js) */
+.gl-row{display:flex;flex-direction:column;gap:4px;border-top:1px solid #334266;padding-top:8px}.gl-note{margin:0;font-size:12px;color:#a9b8d6}
+.gl-badge{align-self:flex-start;font:700 11px system-ui;padding:1px 6px;border-radius:999px;border:1px solid var(--gd);color:var(--gd)}.gl-badge[hidden]{display:none}
+html[data-theme=classic] .gl-note{color:#4a5670}html[data-theme=classic] .gl-badge{color:#1d4ed8;border-color:#1d4ed8}html[data-theme=classic] .gl-row{border-color:#9aa8c0}

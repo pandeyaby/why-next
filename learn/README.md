@@ -142,3 +142,7 @@ It only commits on `visual-draft`, never skips hooks, and never writes content i
 Primary: public Supabase Storage bucket `why-next-reels` in the dedicated Supabase project `why-next` (ref etzqrmcwnxpbysnltdxt; new reels are uploaded by `ext/reels_publish.py` when `WN_REELS_SUPABASE_KEY` is set) (`REEL_HOST` in `ext/make_viewer.py`, flat `<file>.mp4/.jpg/.vtt`).
 Fallbacks: jsDelivr parts (`WN_RPARTS`), fastly.jsdelivr.net, raw GitHub (AGENTS.md T1, T5). New reels must be uploaded to the bucket
 as well as the orphan branches. Captions are burned into the video, so the VTT track is off by default (CC in the player turns it on).
+
+## Live AI Guide (opt-in, web only)
+`guide_live.js` adds a "Live AI Guide" toggle (off by default) that sends the question plus coarse lesson/learner context to `/api/guide` (Vercel function, Gemini Flash-Lite). Any error, timeout, rate limit or no network falls back to the offline Guide. It is never available on file:// or in the Mac app. Limits: 6/min and 60/day per IP, 800/day global, 8 s timeout, 400-char question, 260 output tokens. The function returns 404 in Production unless `WN_GUIDE_PROD=1`.
+Temporary patch: rate limits are in memory per function instance; move them to a shared store before a public launch.
