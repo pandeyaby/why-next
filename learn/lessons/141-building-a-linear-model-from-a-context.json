@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_xHF1RUrETs",
+ "title": "Building a linear model from a context",
+ "audience": "learner",
+ "keyIdea": "When something changes by the same amount for every equal step, a straight line models it: output = start value + rate × input. Get the rate from two readings as change in output ÷ change in input, work back to input 0 for the start value, then say which inputs the model makes sense for.",
+ "explain": {
+  "kid": [
+   "A candle burns down at a steady speed. After 2 hours it is 18 cm tall. After 5 hours it is 12 cm tall.",
+   "From 2 hours to 5 hours is 3 hours. In that time it got 6 cm shorter. So it loses 6 ÷ 3 = 2 cm each hour.",
+   "Now go back to when it was lit. That is 2 hours before the first reading, so add 2 × 2 = 4 cm. It started at 22 cm.",
+   "So the height is 22 take away 2 for every hour: h = 22 − 2t. At 11 hours the candle is gone, so the rule only works up to 11 hours."
+  ],
+  "adult": [
+   "A context is linear when equal steps in the input give equal changes in the output: a steady burn, a fixed hourly charge, a spring stretching the same amount per kilogram. The model is y = a + bx, where b is the rate and a is the start value (the output when x = 0).",
+   "With two readings (x₁, y₁) and (x₂, y₂), the rate is b = (y₂ − y₁) ÷ (x₂ − x₁), in output units per input unit. Then work back from either reading: a = y₁ − b × x₁. Check the model against the other reading before you trust it.",
+   "Read the numbers in context. In C = 35 + 20m for a gym, 35 is the joining fee in pounds and 20 is the cost per month. A falling quantity has a negative rate. A model also has a sensible range: h = 22 − 2t gives negative heights after 11 hours, so it only holds for 0 ≤ t ≤ 11.",
+   "Common mistakes: using the first reading given as the start value; dividing one reading by its input (for example 18 ÷ 2), which wrongly assumes the output was 0 at the start; forgetting to divide the change by the number of steps; getting the sign of the rate wrong; and using the model far outside the range of the data."
+  ]
+ },
+ "familyTip": "Fill a jug from a tap that runs steadily and note the water level at two times, such as 10 s and 25 s. Work out the rise per second, then work back to see if the jug really started empty. Does your rule predict the level at 20 s?",
+ "worked": {
+  "title": "A tank drains steadily. After 3 min it holds 340 L; after 8 min it holds 240 L. Build a model and say when it is empty.",
+  "steps": [
+   "Change in volume: 240 − 340 = −100 L. Change in time: 8 − 3 = 5 min.",
+   "Rate = −100 ÷ 5 = −20 L per minute. It is negative because the tank is emptying.",
+   "Start value: work back 3 minutes from the first reading: 340 + 3 × 20 = 400 L. So V = 400 − 20t.",
+   "Check: at t = 8, V = 400 − 160 = 240 L. ✓ Empty when 400 − 20t = 0, so t = 20. The model holds for 0 ≤ t ≤ 20."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A candle burns steadily. After {x} h it is {=s-r*x} cm tall. After {=x+d} h it is {=s-r*(x+d)} cm tall. How many cm does it lose each hour?",
+   "answer": "r",
+   "hint": "Change in height ÷ change in time. The time changed by {d} hours.",
+   "explain": "It lost {=r*d} cm in {d} hours, so the rate is {=r*d} ÷ {d} = {r} cm per hour (a rate of −{r} in the model).",
+   "params": {
+    "s": [
+     30,
+     40
+    ],
+    "r": [
+     1,
+     3
+    ],
+    "x": [
+     1,
+     3
+    ],
+    "d": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A plumber charges a call-out fee plus a fixed amount per hour. A 2-hour job costs £{=c+2*r}. A 4-hour job costs £{=c+4*r}. What is the call-out fee in pounds?",
+   "answer": "c",
+   "hint": "First find the cost per hour: (£{=c+4*r} − £{=c+2*r}) ÷ 2. Then work back from the 2-hour job.",
+   "explain": "Rate = £{=2*r} ÷ 2 = £{r} per hour. Call-out fee = £{=c+2*r} − 2 × £{r} = £{c}.",
+   "params": {
+    "c": [
+     20,
+     60
+    ],
+    "r": [
+     25,
+     45
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A gym costs £95 for 3 months and £175 for 7 months, including a joining fee. Which model fits?",
+   "choices": [
+    "C = 35 + 20m",
+    "C = 95 + 20m",
+    "C = 25m"
+   ],
+   "answer": 0,
+   "hint": "Rate = (175 − 95) ÷ (7 − 3). Then work back 3 months from £95.",
+   "explain": "Rate = 80 ÷ 4 = £20 per month. Start = 95 − 3 × 20 = £35. Check: 35 + 7 × 20 = 175. ✓"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A spring's length is L = 13 + 3m cm, where m is the mass hung on it in kg. What does the 13 mean?",
+   "choices": [
+    "The length with no mass on it",
+    "How much it stretches per kg",
+    "The length with 1 kg on it"
+   ],
+   "answer": 0,
+   "hint": "Put m = 0 into the model.",
+   "explain": "When m = 0, L = 13. So 13 cm is the natural length. The 3 is the stretch per kg."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A candle's height is h = 30 − 3t cm after t hours. For which times does the model make sense?",
+   "choices": [
+    "0 ≤ t ≤ 10",
+    "Any time t",
+    "0 ≤ t ≤ 30"
+   ],
+   "answer": 0,
+   "hint": "When does the height reach 0?",
+   "explain": "30 − 3t = 0 when t = 10. After that the model gives negative heights, which cannot happen."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "After 2 h a candle is 18 cm. After 5 h it is 12 cm. Zoe says it loses 9 cm per hour, because 18 ÷ 2 = 9. What went wrong?",
+    "choices": [
+     "She divided one reading by its time; use change ÷ change: 6 ÷ 3 = 2 cm per hour",
+     "Nothing, 9 cm per hour is right",
+     "She should have done 12 ÷ 5"
+    ],
+    "answer": 0,
+    "hint": "How much height was lost between the two readings, and over how long?",
+    "explain": "18 ÷ 2 assumes the candle started at 0 cm. Between the readings it lost 6 cm in 3 h, so the rate is 2 cm per hour."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A spring is 19 cm long with 2 kg hanging on it, and 28 cm long with 5 kg. It stretches steadily. How long is it with nothing hanging on it, in cm?",
+    "answer": 13,
+    "hint": "Stretch per kg = (28 − 19) ÷ (5 − 2). Then take 2 kg worth off 19 cm.",
+    "explain": "Rate = 9 ÷ 3 = 3 cm per kg. Start = 19 − 2 × 3 = 13 cm. So L = 13 + 3m."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "On one day the air is 9 °C at 1 km up and −4 °C at 3 km up, falling steadily. What is the rate of change?",
+    "choices": [
+     "−6.5 °C per km",
+     "6.5 °C per km",
+     "−13 °C per km"
+    ],
+    "answer": 0,
+    "hint": "Change in temperature ÷ change in height. Is the temperature going up or down?",
+    "explain": "(−4 − 9) ÷ (3 − 1) = −13 ÷ 2 = −6.5 °C per km. It is negative because it gets colder higher up."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A tank drains so that V = {=r*n} − {r}t litres after t minutes. After how many minutes is it empty?",
+    "answer": "n",
+    "hint": "Empty means V = 0. Solve {=r*n} − {r}t = 0.",
+    "explain": "{r}t = {=r*n}, so t = {=r*n} ÷ {r} = {n} minutes. After that the model would give negative volumes.",
+    "params": {
+     "r": [
+      10,
+      30
+     ],
+     "n": [
+      10,
+      25
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ana saves the same amount each week. After 3 weeks she has £47. After 8 weeks she has £87. Which model fits?",
+    "choices": [
+     "S = 23 + 8w",
+     "S = 47 + 8w",
+     "S = 40w"
+    ],
+    "answer": 0,
+    "hint": "Rate = (87 − 47) ÷ 5. Then go back 3 weeks from £47.",
+    "explain": "Rate = 40 ÷ 5 = £8 per week. Start = 47 − 3 × 8 = £23, money she had before she began. 23 + 64 = 87. ✓"
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A phone plays video. After {a} h it has {=b-k*a}% battery. After {=a+3} h it has {=b-k*(a+3)}%. How many percentage points does it lose per hour?",
+    "answer": "k",
+    "hint": "The battery fell by {=3*k} points in 3 hours.",
+    "explain": "{=3*k} ÷ 3 = {k} points per hour, so the rate is −{k} in the model.",
+    "params": {
+     "a": [
+      1,
+      3
+     ],
+     "b": [
+      90,
+      100
+     ],
+     "k": [
+      4,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A model for phone battery is B = 92 − 8t. It predicts B = −4 at t = 12. What does that tell you?",
+    "choices": [
+     "The model no longer makes sense; the phone is flat at t = 11.5",
+     "The phone owes 4% of battery",
+     "The rate must be wrong"
+    ],
+    "answer": 0,
+    "hint": "Can battery go below 0%? When does B reach 0?",
+    "explain": "92 − 8t = 0 at t = 11.5. Past that, the model gives impossible values, so it only holds for 0 ≤ t ≤ 11.5."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which of these can be modelled well by a straight line?",
+    "choices": [
+     "A pool filling from a hose at 15 L per minute",
+     "Savings that earn 5% interest each year",
+     "The height of a ball that is thrown up"
+    ],
+    "answer": 0,
+    "hint": "Look for the same change for every equal step.",
+    "explain": "The hose adds 15 L every minute, the same each step. Interest grows by more each year, and a ball slows, stops and falls, so neither is linear."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "formula",
+  "caption": "Slide t. The candle model h = 22 − 2t: start at 22 cm, lose 2 cm each hour. Past t = 11 the answer turns negative and the model stops making sense.",
+  "opts": {
+   "name": "h",
+   "expr": "22 − 2 × t",
+   "vars": {
+    "t": [
+     0,
+     12,
+     2
+    ]
+   },
+   "what": "candle height",
+   "unit": "cm"
+  }
+ },
+ "lab": {
+  "type": "flaglmod",
+  "caption": "Flagship lab: get the rate from two candle readings, work back to the start, build the model, find where it stops, then model a gym.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Rechecked every model against both of its readings: candle 22 − 2t gives 18 at 2 h and 12 at 5 h, zero at 11 h; gym 35 + 20m gives 95 and 175; tank 400 − 20t gives 340 and 240, empty at 20 min; plumber 40 + 35h gives 110 and 215; spring 13 + 3m gives 19 and 28; air 15.5 − 6.5h gives 9 and −4 (6.5 °C per km matches the standard lapse rate); battery 92 − 8t gives 76 and 52, flat at 11.5 h; savings 23 + 8w gives 47 and 87. Parameterised items checked at range corners by the items gate."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips when modelling from two readings: using the first given reading as the intercept (step 1 predict 18 cm, gym £95, 'first' feedback), the proportional assumption y ÷ x (9 cm per hour in step 0 and m1, £31.67 in the gym, 'ratio' feedback), not dividing the change by the input change (6 cm and £80 picker options, 'nodiv'), sign of a falling rate ('sign', m3) and extrapolating past the sensible range (step 3, p5, m7)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_lmod.js is built around a candle with only two readings: a clock scrubber that grows a change-in-time and change-in-height bracket, a dashed back-extension to t = 0, three pickers that draw a red line when a part is wrong, a valid-range band at 0 ≤ t ≤ 11, a second context with pound units, and a challenge that plots each new context's readings and the chosen model. Unlike flag_line (handles on a given rate) the rate is never given. Gate: under 30% overlap with every flag lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner finds each part of the model by doing: the bracket shows −6 cm over 3 h so the rate is −2; dragging back 2 h shows the candle was 22 cm, not 18; a wrong start, sign or rate draws a line that visibly misses a pink reading; dragging forward shows a negative height after 11 h; the gym repeats the method with new units; the sandbox shows rate and start updating as the readings move."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions, each with a tempting wrong option that the next action disproves: 6 cm or 9 cm per hour (total change, or 18 ÷ 2) before the bracket shows 2 cm; 18 cm start before dragging back to 22 cm; 'it never runs out' or 22 h before the clock reaches 11 h; £95 or £31.67 joining fee before the gym picker shows £35. The reveal names the learner's choice against the result."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six contexts (tank, plumber, spring, air temperature, phone battery, savings). Options are built from five named slips and each gets its own message: first reading used as start, value ÷ input, change not divided by the input change, wrong sign, and change in x ÷ change in y. Every message ends with the full working (e.g. 'Rate = −13 ÷ 2 = −6.5 per km; start = 9 + 6.5 × 1 = 15.5'), and the chosen line is drawn on the graph in red or green. Verified by clicking every option in three rounds."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py fk_grade: kid text 1.0 (limit 6.5) and adult text 7.6 (limit 9.5). The kid text walks one candle through rate, start and range in short sentences; the adult text gives the general y = a + bx form and names the mistakes in a list."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passes with no filler phrases and under 12% overlap with the gradient and straight-line lessons. Each paragraph is one step (rate, start, meaning in context, range), the worked example builds and checks the tank model, and the family tip is a real two-reading jug experiment."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked iPhone 13 (light) and 360 px Android (dark) screenshots of all 7 steps plus the challenge. Fixed the clock knob covering the 2 h tick, the clock label hiding the (5, 12) reading label, and the start/change labels colliding in the sandbox (reading labels moved below the points). Picker buttons and nudge buttons wrap and stay reachable; the candle inset does not cover the line."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs: axe clean on desktop and phone in both themes, every task completes with Show me, no console errors. The canvas aria-label states the readings, clock time, model value and any drawn line; the readout is a polite live region; every drag has buttons (clock ±½ h, A/B arrows) and the model is built with labelled pressed-state button groups. Correctness is shown by text and line colour together."
+  }
+ },
+ "sources": [
+  "https://www.bbc.co.uk/bitesize/guides/zt4p2nb/revision/1",
+  "https://www.thecorestandards.org/Math/Content/HSF/LE/",
+  "https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions",
+  "https://www.engineeringtoolbox.com/standard-atmosphere-d_604.html"
+ ]
+}
