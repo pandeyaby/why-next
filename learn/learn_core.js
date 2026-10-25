@@ -86,7 +86,7 @@ function home(){refreshNext();const el=document.getElementById('learnHome');if(!
  on('pGoal',e=>{P.goal=e.target.value;save();update()});on('pLevel',e=>{P.level=e.target.value;save();if(sel)select(sel)});
  on('pKnown',e=>{P.knownUpTo=e.target.value==='auto'?'auto':+e.target.value;save();update()});
  document.getElementById('pReset').onclick=()=>{if(confirm('Clear your name and all progress on this device?')){P=blank();save();update()}};
- el.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{select(b.dataset.go);const l=document.getElementById('learn');if(l)l.focus()})}
+ el.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{select(b.dataset.go,true);const l=document.getElementById('learn');if(l)l.focus()})}
 function update(){home();renderList();document.querySelectorAll('.gn').forEach(g=>{g.querySelector('circle').setAttribute('class',cls(g.dataset.id))})}
 function clear(id){delete P.progress[id];save()}
 function setLevel(v){P.level=v;save()}
