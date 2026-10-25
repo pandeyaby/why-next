@@ -54,7 +54,11 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
     await p.click('#homeReels .reel-play'); assert.deepStrictEqual(await p.$eval('video.reel-v track', t => [t.default, t.kind]), [false, 'captions'], 'captions burned in, so the track is opt-in');
     assert.ok(await p.evaluate(() => /supabase\.co\/storage\/v1\/object\/public\/why-next-reels\/$/.test(window.WN_RHOST || '')), 'Supabase is the primary reel host');
     assert.ok(await p.$('#homeReels'), 'home reel strip exists');
-    await p.evaluate(() => select('mt_3BZFJQ69OK')); await p.waitForSelector('.soon-reels');
+    // pick a topic that is still coming-soon and has a prerequisite with reels (fixed ids go stale as lessons ship)
+    const soonId = await p.evaluate(() => { const R = window.WN_REELS || {}; const n = DATA.nodes.find(n => !LEARN.has(n.id) && !(typeof WN !== 'undefined' && WN.flag(n.id)) && (PRE.get(n.id) || []).some(e => R[e.p] && R[e.p].length)); return n && n.id });
+    assert.ok(soonId, 'a coming-soon topic with related reels exists');
+    await p.evaluate(id => select(id), soonId); await p.waitForSelector('.soon-reels');
+    assert.ok(await p.$$eval('.soon-reels .reel-play, .soon-reels figure', x => x.length) > 0, 'nearby reel strip has reels');
     assert.match(await p.textContent('#detail'), /Lessons you can do now, nearby|Meanwhile, lessons for a similar age/) });
   await test('no console or page errors', async () => assert.deepStrictEqual(errors, []));
   await browser.close(); if (failures) { console.log(failures, 'failed'); process.exit(1) }
