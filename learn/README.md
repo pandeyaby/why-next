@@ -146,3 +146,12 @@ as well as the orphan branches. Captions are burned into the video, so the VTT t
 ## Live AI Guide (opt-in, web only)
 `guide_live.js` adds a "Live AI Guide" toggle (off by default) that sends the question plus coarse lesson/learner context to `/api/guide` (Vercel function, Gemini Flash-Lite). Any error, timeout, rate limit or no network falls back to the offline Guide. It is never available on file:// or in the Mac app. Limits: 6/min and 60/day per IP, 800/day global, 8 s timeout, 400-char question, 260 output tokens. The function returns 404 in Production unless `WN_GUIDE_PROD=1`.
 Temporary patch: rate limits are in memory per function instance; move them to a shared store before a public launch.
+
+## UX pass (`ux.js`, `ux.css`)
+- **Welcome:** two questions (age band, goal) on first visit. They fill "Make it yours" and the Guide's "About me" goal. Skippable.
+- **Continue where you left off** and a **progress map** (mastered / in progress per subject, with a "Next" lesson button) sit first in the main column.
+- **Predict then reveal:** lessons without a lab ask their first multiple-choice practice question before showing the explanation. Skippable, and asked once per lesson.
+- **Jump to the lab** button in the lesson header when the lesson has a lab.
+- **Search** matches every word in any order (ignores case, accents, punctuation, plural "s") across all topics. It announces a result count and offers "Clear search" when nothing matches. `/` focuses search; Escape clears it.
+- Touch: 44px search, filters and buttons. On phones a picked topic scrolls to its lesson, and the topic list gets a taller pane.
+- Stored keys `wn_last`, `wn_onboard`, `wn_pred` are validated on read. Tests: `tests/ux.e2e.cjs`.

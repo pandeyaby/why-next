@@ -397,16 +397,43 @@ html.wn-lt #detail :is(p,li,label,summary,.small,.why,.fb,h3),html.wn-lt .gd{fon
 .gl-row{display:flex;flex-direction:column;gap:4px;border-top:1px solid #334266;padding-top:8px}.gl-note{margin:0;font-size:12px;color:#a9b8d6}
 .gl-badge{align-self:flex-start;font:700 11px system-ui;padding:1px 6px;border-radius:999px;border:1px solid var(--gd);color:var(--gd)}.gl-badge[hidden]{display:none}
 html[data-theme=classic] .gl-note{color:#4a5670}html[data-theme=classic] .gl-badge{color:#1d4ed8;border-color:#1d4ed8}html[data-theme=classic] .gl-row{border-color:#9aa8c0}
+/* ux.js: welcome, continue, progress map, predict-then-reveal; plus larger touch targets for search and filters */
+.ux-welcome fieldset,.ux-q{border:0;padding:0;margin:10px 0}.ux-q legend{font-weight:600;margin-bottom:6px}
+.ux-chips{display:flex;flex-wrap:wrap;gap:8px}.ux-chips .lbtn.sm{min-height:44px;padding:6px 14px}
+.ux-chips .lbtn[aria-pressed="true"]{outline:3px solid #0e7490;outline-offset:1px;font-weight:700}
+.ux-resume{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid #e5e7eb}
+.ux-rt{font-size:17px;font-weight:700;margin:2px 0}.ux-resume .lbtn{min-height:44px}
+.ux-subs{list-style:none;padding:0;margin:6px 0;display:grid;gap:6px}
+.ux-subs li{display:grid;grid-template-columns:minmax(90px,1.2fr) 3fr auto auto;align-items:center;gap:8px}
+.ux-sn{font-weight:600}.ux-n{font-variant-numeric:tabular-nums;font-size:12px}.ux-subs .lbtn.sm{min-height:44px;min-width:44px}
+.ux-bar{display:flex;height:10px;border-radius:6px;background:#e5e7eb;overflow:hidden}.ux-bar i,.ux-key{display:block;height:100%}
+.ux-bar .m,.ux-key.m{background:#15803d}.ux-bar .p,.ux-key.p{background:#d97706}
+.ux-key{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:middle}.ux-done{font-size:12px;color:#15803d}
+.ux-pred{border:2px dashed #7c3aed;border-radius:12px;padding:10px 14px;margin:10px 0}.ux-pt{margin:0 0 4px}
+.ux-pred .ux-right{background:#15803d;border-color:#15803d;color:#fff}.ux-pred .ux-wrong{background:#b91c1c;border-color:#b91c1c;color:#fff}
+.ux-pred .lbtn:disabled{opacity:1;cursor:default}.ux-pf{font-weight:600;min-height:1em}.ux-skip{min-height:44px}
+.lhead .ux-lab{margin-left:auto;min-height:44px}
+#q{min-height:44px;font-size:16px}#filters label{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 10px}
+#filters input{width:20px;height:20px;margin:0}.empty .lbtn{margin:4px 6px 0 0;min-height:44px}
+details.howmap summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+@media (pointer:coarse){.item{min-height:44px;align-items:center}.nextl .linkish{min-height:44px;display:inline-flex;align-items:center}}
+html[data-theme="2052"] .ux-resume{border-bottom-color:var(--line)}html[data-theme="2052"] .ux-bar{background:rgba(148,163,184,.25)}
+html[data-theme="2052"] .ux-bar .m,html[data-theme="2052"] .ux-key.m{background:#4ade80}html[data-theme="2052"] .ux-bar .p,html[data-theme="2052"] .ux-key.p{background:var(--am)}
+html[data-theme="2052"] .ux-done{color:#4ade80}html[data-theme="2052"] .ux-pred{border-color:var(--vi)}
+html[data-theme="2052"] .ux-chips .lbtn[aria-pressed="true"]{outline-color:var(--cy)}
+html[data-theme="2052"] .ux-pred .ux-right{background:#166534}html[data-theme="2052"] .ux-pred .ux-wrong{background:#991b1b}
+@media (max-width:760px){#side{height:auto}#list{max-height:30vh;min-height:200px}#side header small{display:block}}
+.ux-ph{font-size:15px;margin:8px 0 4px}
 
 </style></head><body>
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
 <small>A family-friendly learning map for ages 11–18: what to learn next, and why. <span id="cnt">826 topics.</span></small>
 <button type="button" class="themebtn" id="themeBtn" aria-pressed="false">Classic look</button>
-<label class="sr" for="q">Search topics</label><input id="q" type="search" placeholder="Search topics…">
+<label class="sr" for="q">Search topics</label><input id="q" type="search" placeholder="Search topics, e.g. fractions…" aria-describedby="qcount" autocomplete="off"><span id="qcount" class="sr" role="status" aria-live="polite"></span>
 <div id="filters"><label><input type="checkbox" id="showOld"> also show earlier topics</label><label><input type="checkbox" id="onlyLes"> only topics with lessons</label></div></header>
 <nav id="list" aria-label="Topic list"></nav></aside>
-<main id="main"><div class="card"><b>How to use:</b> pick a topic on the left. You'll see its full prerequisite chain, with the reason for each link.
-<span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
+<main id="main"><div class="card"><b>How to use:</b> pick a topic on the left (or search for one) to open its lesson, then see what to learn first and why.
+<details class="howmap"><summary>How to read the map</summary><span class="legend"><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
-<p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=a0d4ef9d06"></script><script defer src="wn/learn.js?v=79df51d733"></script><script defer src="wn/app.js?v=50fb14af13"></script></body></html>
+<p class="muted" id="stats">826 Why Next? topics · 2031 Why Next? edges (442 bridge edges into upstream v1) · 742 upstream v1 ancestor topics shown for context.</p></details><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
+<script defer src="wn/core.js?v=a0d4ef9d06"></script><script defer src="wn/learn.js?v=967289d963"></script><script defer src="wn/app.js?v=717795b38f"></script></body></html>

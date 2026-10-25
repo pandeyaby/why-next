@@ -167,4 +167,4 @@ function start(){D.stats.sessions++;if(lateNight())D.stats.lateSessions++;save()
  clock=setInterval(()=>{if(!document.hidden)update()},15e3);const g=G();if(g&&g.el())mount(g.el());update()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 return{onText,shape,paceFactor,level,checkIn,snapshot:()=>({state:state.id,why:state.why,profile:Object.assign({},D.profile)}),state:()=>Object.assign({},state),
- profile:()=>Object.assign({},D.profile),learned:learnedItems,update,reset,validProfile,validStats,rules:STATE_RULES.map(r=>r.id),_sig:()=>sig}})();
+ profile:()=>Object.assign({},D.profile),setProfile:patch=>{D.profile=validProfile(Object.assign({},D.profile,patch));save();applyProfile()},learned:learnedItems,update,reset,validProfile,validStats,rules:STATE_RULES.map(r=>r.id),_sig:()=>sig}})();
