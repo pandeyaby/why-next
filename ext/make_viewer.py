@@ -111,7 +111,7 @@ H = lambda t: hashlib.sha1(t.encode()).hexdigest()[:10]
 core = {"sb": sb, "dm": dm, "ty": ty, "v": [H(c) for c in chunk_js], "lv": [H(c) if c else 0 for c in les_js],
         "n": [[n["id"], n["n"], dm.index(n["d"]), sb.index(n["s"]), ty.index(n["ty"]), n["a"][0], n["a"][1], n["c"], int(n["new"]), K[(n["s"], n["d"])], 1 if n["id"] in lessons else 2 if n["id"] in starters else 0] for n in nodes],
         "e": [[idx[e["t"]], idx[e["p"]], int(e["h"])] for e in edges]}
-BODY = ("mastery", "practice", "explain", "familyTip")
+BODY = ("mastery", "practice", "explain", "familyTip", "keyIdea", "worked", "visual", "lab")  # loaded with the lesson body, not at startup
 stubs, bodies = {}, [{} for _ in dom_keys]
 for tid, les in lessons.items():
     st_ = {k: v for k, v in les.items() if k not in BODY}
