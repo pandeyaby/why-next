@@ -16,7 +16,7 @@
 #main{flex:1;overflow:auto;padding:16px 20px}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;margin-bottom:14px}
 .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;margin-right:4px;background:#f3f4f6}
-.tag.new{background:#dbeafe;color:#1e40af}.tag.old{background:#e5e7eb;color:#374151}
+.tag.new{background:#dbeafe;color:#1e40af}.tag.vid{background:#fef3c7;color:#92400e}.tag.old{background:#e5e7eb;color:#374151}
 ul.tree{list-style:none;padding-left:18px;margin:2px 0;border-left:1px dashed #d1d5db}ul.tree.root{border:0;padding-left:0}
 .node{padding:2px 0}.nm{cursor:pointer;font-weight:500}.nm.new{color:var(--new)}.nm.old{color:var(--old)}
 .why{color:#4b5563;font-size:12.5px}.why.bridge{color:var(--bridge)}.st{font-size:11px;padding:0 5px;border-radius:4px;margin-right:4px}
@@ -255,7 +255,7 @@ html[data-theme="2052"] .item.sel{background:linear-gradient(90deg,rgba(103,232,
 html[data-theme="2052"] .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:wnin .45s ease both}
 html[data-theme="2052"] #dcard h2{font-size:26px;letter-spacing:.01em;color:#fff;text-shadow:0 0 22px rgba(103,232,249,.35)}
 @keyframes wnin{from{transform:translateY(8px)}}
-html[data-theme="2052"] .tag{background:rgba(148,163,184,.16);color:#dbe7ff}html[data-theme="2052"] .tag.new{background:rgba(103,232,249,.14);color:#a5f3fc}html[data-theme="2052"] .tag.old{background:rgba(148,163,184,.16);color:#dbe7ff}
+html[data-theme="2052"] .tag{background:rgba(148,163,184,.16);color:#dbe7ff}html[data-theme="2052"] .tag.new{background:rgba(103,232,249,.14);color:#a5f3fc}html[data-theme="2052"] .tag.vid{background:rgba(251,191,36,.14);color:#fde68a}html[data-theme="2052"] .tag.old{background:rgba(148,163,184,.16);color:#dbe7ff}
 html[data-theme="2052"] .nm.new{color:var(--new)}html[data-theme="2052"] .nm.old{color:var(--old)}html[data-theme="2052"] .why.bridge{color:var(--bridge)}
 html[data-theme="2052"] .st.h{background:#e8f1ff;color:#0b1020}html[data-theme="2052"] .st.s{border-color:#7d8fb0;color:#cbd5e1}html[data-theme="2052"] .st.b{background:#c2410c;color:#fff}
 html[data-theme="2052"] ul.tree{border-left-color:rgba(125,211,252,.25)}html[data-theme="2052"] .tog{color:#7d8fb0}
@@ -590,7 +590,7 @@ if(!P.progress||typeof P.progress!=='object'||Array.isArray(P.progress))P.progre
 for(const k in P.progress){const e=P.progress[k];if(!e||typeof e!=='object'||Array.isArray(e)){delete P.progress[k];continue}if('best' in e&&!Number.isFinite(e.best))delete e.best;if(e.practice&&(typeof e.practice!=='object'||Array.isArray(e.practice)))delete e.practice}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){mem=true}}
 if(typeof WN!=='undefined')Object.assign(L,WN.store);
-const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),band=()=>BANDS.find(b=>b.id===P.age);
+const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),hasReel=id=>{const R=window.WN_REELS;if(R)return !!(R[id]&&R[id].length);const Z=window.WN_REELS_LAZY;return !!(Z&&Z.ids.includes(id))},nextTag=id=>has(id)?'<span class="tag new">lesson</span>':hasReel(id)?'<span class="tag vid">video</span>':'<span class="tag">coming soon</span>',band=()=>BANDS.find(b=>b.id===P.age);
 const prog=id=>P.progress[id]||{};
 function setProg(id,patch){P.progress[id]=Object.assign({},prog(id),patch,{at:LEARN_GEN.today()});save()}
 const assumeAge=()=>P.knownUpTo==='auto'?(band()?band().assumeKnownUpTo:0):+P.knownUpTo||0;
@@ -655,7 +655,7 @@ function home(){refreshNext();const el=document.getElementById('learnHome');if(!
  <button type="button" id="pReset" class="lbtn ghost">Clear my data</button></form>${mem?'<p class="muted">Storage is blocked in this browser, so progress lasts only until you close the page.</p>':''}</details>
  ${(()=>{const du=dueList();return du.length?`<h2 class="lh">Quick review <span class="muted">· ${du.length} due</span></h2><ul class="nextl">${du.map(id=>`<li><button type="button" class="linkish" data-go="${id}">${esc(N.get(id).n)}</button> <span class="muted small">2-question refresh of a topic you mastered</span></li>`).join('')}</ul>`:''})()}
  <h2 class="lh" id="lnH">Learn next${g.target?` <span class="muted">towards ${esc(N.get(g.target).n)}</span>`:''}</h2>
- ${nx.every(n=>offPath.has(n.id))?`<p class="muted">${g.target&&done(g.target)?'You’ve reached this goal':(nx.length?'Nothing left on this goal path, so here are nearby topics':'Nothing to suggest on this path yet')}. ${assumeAge()?`From your age band we assume you know topics up to age ${assumeAge()}: choose a harder goal, or set “Assume I know” lower to review.`:'Try another goal.'}</p>`:''}${nx.length?`<ol class="nextl">${nx.map(n=>`<li><button type="button" class="linkish" data-go="${n.id}">${esc(n.n)}</button> ${has(n.id)?'<span class="tag new">lesson</span>':'<span class="tag">lessons coming</span>'}${offPath.has(n.id)?' <span class="tag">nearby</span>':''} <span class="age">ages ${n.a[0]}–${n.a[1]}</span><div class="why">${esc(why(n.id))}</div></li>`).join('')}</ol>`:''}
+ ${nx.every(n=>offPath.has(n.id))?`<p class="muted">${g.target&&done(g.target)?'You’ve reached this goal':(nx.length?'Nothing left on this goal path, so here are nearby topics':'Nothing to suggest on this path yet')}. ${assumeAge()?`From your age band we assume you know topics up to age ${assumeAge()}: choose a harder goal, or set “Assume I know” lower to review.`:'Try another goal.'}</p>`:''}${nx.length?`<ol class="nextl">${nx.map(n=>`<li><button type="button" class="linkish" data-go="${n.id}">${esc(n.n)}</button> ${nextTag(n.id)}${offPath.has(n.id)?' <span class="tag">nearby</span>':''} <span class="age">ages ${n.a[0]}–${n.a[1]}</span><div class="why">${esc(why(n.id))}</div></li>`).join('')}</ol>`:''}
  <h3 class="reel-h lsub" hidden>🎬 Quick reels for what’s next</h3><div class="reels home-reels" id="homeReels" hidden></div>
  ${P.age?'':'<p class="muted small">Tip: choose an age band so we can skip topics you almost certainly know.</p>'}
  <p class="muted lkey"><span class="lb lb-m">✓</span> mastered <span class="lb lb-k">✓</span> already known <span class="lb lb-n">★</span> learn next <span class="lb lb-l">◆</span> has a lesson</p></section>`;
