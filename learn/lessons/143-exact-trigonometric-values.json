@@ -1,0 +1,274 @@
+{
+ "topicId": "mt_zepH6Dsn_G",
+ "title": "Exact trigonometric values",
+ "audience": "learner",
+ "keyIdea": "Two special triangles give exact values with no calculator. Halve an equilateral triangle of side 2 to get sides 1, √3 and 2 with angles 30°, 60° and 90°. Cut a unit square along its diagonal to get sides 1, 1 and √2 with two 45° angles. Read sin, cos and tan off the sides: sin 30° = 1/2, sin 45° = √2/2, sin 60° = √3/2, tan 45° = 1, tan 60° = √3.",
+ "explain": {
+  "kid": [
+   "Draw a triangle with all three sides 2. Fold it in half from the top. Each half has angles of 30°, 60° and 90°.",
+   "The bottom of each half is 1. The long side is still 2. To find the height, square and take away: 2 × 2 − 1 × 1 = 3. So the height is √3.",
+   "Now read the sides. Sin of an angle is the side across from it over the long side. Across from 30° is 1, so sin 30° is 1/2. Across from 60° is √3, so sin 60° is √3/2.",
+   "Cut a square of side 1 from corner to corner. Both small angles are 45°, and the cut is √2 long. Tan 45° is 1 ÷ 1, which is 1."
+  ],
+  "adult": [
+   "Halve an equilateral triangle of side 2. The half has hypotenuse 2 and short side 1. By Pythagoras its height is √(4 − 1) = √3. The 30° angle faces the side 1, so sin 30° = 1/2, cos 30° = √3/2 and tan 30° = 1/√3 = √3/3.",
+   "The 60° angle swaps opposite and adjacent, so sin 60° = √3/2, cos 60° = 1/2 and tan 60° = √3. Cutting a unit square on its diagonal gives legs 1 and 1 and hypotenuse √2. So sin 45° = cos 45° = 1/√2 = √2/2, and tan 45° = 1.",
+   "At the ends, a hypotenuse of 1 lies flat at 0° and stands up at 90°. So sin 0° = 0, cos 0° = 1, tan 0° = 0, sin 90° = 1 and cos 90° = 0. tan 90° is undefined, because it would mean dividing by 0. Exact values keep answers exact: a 6 m ladder at 60° reaches 6 × √3/2 = 3√3 m, not a rounded 5.196 m. A memory aid: the sines of 0°, 30°, 45°, 60° and 90° are √0/2, √1/2, √2/2, √3/2 and √4/2. The cosines are the same list in reverse.",
+   "Common mistakes: thinking sin 60° is double sin 30°; swapping sin and cos for 30° and 60°; writing tan 30° as √3, which is tan 60°; dropping the ÷ 2 so that sin 60° becomes √3; finding the height as 2 − 1 instead of √(2² − 1²); and giving tan 90° a value."
+  ]
+ },
+ "familyTip": "Cut a paper square in half along its diagonal and fold a paper equilateral triangle in half. Label the sides 1, 1, √2 and 1, √3, 2. Then quiz each other: which side is across from 30°? What is sin 30°?",
+ "worked": {
+  "title": "A ramp is 8 m long and rises at 30° to the ground. Find its exact height and the exact distance it covers along the ground.",
+  "steps": [
+   "The ramp is the hypotenuse, 8 m. The height is opposite 30°, so height = 8 × sin 30°.",
+   "sin 30° = 1/2 from the half equilateral triangle, so height = 8 × 1/2 = 4 m.",
+   "The ground distance is adjacent to 30°, so it is 8 × cos 30° = 8 × √3/2 = 4√3 m.",
+   "Check with Pythagoras: 4² + (4√3)² = 16 + 48 = 64 = 8². 4√3 ≈ 6.93 m."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A ladder {d} m long leans at 30° to the ground. How high up the wall does it reach, in metres?",
+   "answer": "d/2",
+   "hint": "The height is opposite the 30° angle, so height = {d} × sin 30°, and sin 30° = 1/2.",
+   "explain": "Height = {d} × sin 30° = {d} × 1/2 = {=d/2} m.",
+   "params": {
+    "d": [
+     2,
+     15
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "What is the exact value of cos 30°?",
+   "choices": [
+    "√3/2",
+    "1/2",
+    "√3"
+   ],
+   "answer": 0,
+   "hint": "In the half triangle with sides 1, √3, 2, which side touches the 30° corner but is not the hypotenuse?",
+   "explain": "The √3 side is adjacent to 30°, and the hypotenuse is 2, so cos 30° = √3/2. 1/2 is sin 30°, and √3 drops the ÷ 2."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A right triangle has a 45° angle. The side opposite it is {k} cm. How long is the side adjacent to it, in cm?",
+   "answer": "k",
+   "hint": "tan 45° = opposite ÷ adjacent = 1, so the two shorter sides are equal.",
+   "explain": "tan 45° = 1, so adjacent = opposite = {k} cm. It is half of a square.",
+   "params": {
+    "k": [
+     2,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which is the exact value of tan 30°?",
+   "choices": [
+    "√3",
+    "√3/3",
+    "1/2"
+   ],
+   "answer": 1,
+   "hint": "tan = opposite ÷ adjacent. Opposite 30° is 1 and adjacent is √3.",
+   "explain": "tan 30° = 1/√3. Multiply top and bottom by √3 to get √3/3 ≈ 0.577. √3 is tan 60°, and 1/2 is sin 30°."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A right triangle has hypotenuse 10 cm and an angle of 60°. What is the exact length of the side opposite 60°?",
+   "choices": [
+    "5√3 cm",
+    "5 cm",
+    "10√3 cm"
+   ],
+   "answer": 0,
+   "hint": "Opposite = hypotenuse × sin 60°, and sin 60° = √3/2.",
+   "explain": "10 × √3/2 = 5√3 ≈ 8.66 cm. 5 cm is the side next to 60° (10 × cos 60°), and 10√3 is longer than the hypotenuse."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is sin 45° in exact form?",
+    "choices": [
+     "√2/2",
+     "1/2",
+     "√2"
+    ],
+    "answer": 0,
+    "hint": "Half a unit square has legs 1 and 1 and hypotenuse √2.",
+    "explain": "sin 45° = 1/√2 = √2/2 ≈ 0.707. 1/2 treats 45° as half of 90° in value, and √2 is hypotenuse ÷ leg."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is tan 90°?",
+    "choices": [
+     "1",
+     "0",
+     "Undefined: cos 90° = 0, so it would divide by 0"
+    ],
+    "answer": 2,
+    "hint": "tan = sin ÷ cos. What is cos 90°?",
+    "explain": "At 90° the adjacent side shrinks to 0, so tan 90° = 1 ÷ 0, which has no value. tan 45° is the one equal to 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A right triangle has hypotenuse {d} cm and an angle of 60°. How long is the side next to the 60° angle (not the hypotenuse), in cm?",
+    "answer": "d/2",
+    "hint": "The side next to 60° is adjacent, so use cos 60° = 1/2.",
+    "explain": "Adjacent = {d} × cos 60° = {d} × 1/2 = {=d/2} cm.",
+    "params": {
+     "d": [
+      2,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which triangle shows that sin 60° = √3/2?",
+    "choices": [
+     "Half of an equilateral triangle with side 2",
+     "Half of a square with side 1",
+     "A 3, 4, 5 triangle"
+    ],
+    "answer": 0,
+    "hint": "You need angles of 30°, 60° and 90°.",
+    "explain": "Halving an equilateral triangle of side 2 gives sides 1, √3, 2 and angles 30°, 60°, 90°. Half a square gives 45°, and a 3, 4, 5 triangle has no 60° angle."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ana says sin 60° = 2 × sin 30° = 1. What went wrong?",
+    "choices": [
+     "Sine is not proportional to the angle: sin 60° = √3/2 ≈ 0.87",
+     "She should have used 3 × sin 30°",
+     "Nothing, sin 60° is 1"
+    ],
+    "answer": 0,
+    "hint": "Doubling the angle does not double the side opposite it.",
+    "explain": "sin 60° = √3/2 ≈ 0.866, not 1. Only sin 90° = 1. The sine curve bends, so it is not a straight line through the origin."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Without a calculator, work out sin 30° + cos 60°.",
+    "answer": 1,
+    "tolerance": 0.001,
+    "hint": "Both come from the half equilateral triangle. Which side is opposite 30° and which is adjacent to 60°?",
+    "explain": "sin 30° = 1/2 and cos 60° = 1/2, the same side 1 over the hypotenuse 2. So the sum is 1."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Half an equilateral triangle has hypotenuse 2 and base 1. What is its exact height?",
+    "choices": [
+     "√3",
+     "1",
+     "√5"
+    ],
+    "answer": 0,
+    "hint": "Pythagoras: height² = 2² − 1².",
+    "explain": "height² = 4 − 1 = 3, so the height is √3 ≈ 1.73. 1 comes from 2 − 1 without squaring, and √5 adds the squares instead of subtracting."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Work out (sin 60°)² without a calculator. Give your answer as a decimal.",
+    "answer": 0.75,
+    "tolerance": 0.001,
+    "hint": "sin 60° = √3/2. Square the top and the bottom.",
+    "explain": "(√3/2)² = 3/4 = 0.75. Check: cos 60° = 1/2, and 3/4 + 1/4 = 1, as sin² + cos² = 1."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "What is cos 0°?",
+    "choices": [
+     "0",
+     "1",
+     "Undefined"
+    ],
+    "answer": 1,
+    "hint": "Picture a hypotenuse of 1 lying flat on the ground. How long is the base?",
+    "explain": "At 0° the hypotenuse lies along the ground, so the base is the whole length 1 and the height is 0: cos 0° = 1 and sin 0° = 0."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "A straight ramp rises at 30° to the ground and its top is {k} m high. How long is the ramp, in metres?",
+    "answer": "2*k",
+    "hint": "The height is opposite 30°, so height = ramp × sin 30° = ramp × 1/2. Work backwards.",
+    "explain": "{k} = ramp × 1/2, so the ramp is 2 × {k} = {=2*k} m. Halving the height instead would make the ramp shorter than its own height.",
+    "params": {
+     "k": [
+      1,
+      12
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which exact value is each one? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "1/2",
+    "√2/2",
+    "√3/2"
+   ],
+   "items": [
+    [
+     "sin 30°",
+     0
+    ],
+    [
+     "cos 60°",
+     0
+    ],
+    [
+     "sin 45°",
+     1
+    ],
+    [
+     "cos 45°",
+     1
+    ],
+    [
+     "sin 60°",
+     2
+    ],
+    [
+     "cos 30°",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagexact",
+  "caption": "Flagship lab: fold an equilateral triangle and cut a square to find exact sin, cos and tan, then use them for surd lengths.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
