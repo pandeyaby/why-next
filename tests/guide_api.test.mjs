@@ -1,10 +1,10 @@
 // Unit tests for the Guide live-brain proxy (api/guide.js) with a mocked Gemini: guards, shaping, fallbacks. No network.
 import assert from 'assert';
-import handler, { shapeInput, buildRequest, replyText, allow, _resetLimits, LIMITS, SYSTEM_PROMPT } from '../api/guide.js';
+import handler, { shapeInput, buildRequest, replyText, allow, sharedAllow, _resetLimits, LIMITS, SYSTEM_PROMPT } from '../api/guide.js';
 let fails = 0; const test = async (n, f) => { try { await f(); console.log('ok  ', n) } catch (e) { fails++; console.log('FAIL', n, '\n     ', e.message) } };
-function call({ method = 'POST', body, headers = {}, env = { WN_GEMINI_API_KEY: 'test-key', VERCEL_ENV: 'preview' }, fetch } = {}) {
+function call({ method = 'POST', body, headers = {}, env = { WN_GEMINI_API_KEY: 'test-key', VERCEL_ENV: 'preview', WN_RL_MEMORY: '1' }, fetch, rlFetch } = {}) {
   const req = { method, headers: Object.assign({ host: 'x.vercel.app', 'x-real-ip': '1.2.3.4' }, headers), body };
-  return new Promise(resolve => { const res = { statusCode: 200, h: {}, setHeader(k, v) { this.h[k] = v }, end(s) { resolve({ code: this.statusCode, h: this.h, json: JSON.parse(s) }) } }; handler(req, res, { env, fetch }) });
+  return new Promise(resolve => { const res = { statusCode: 200, h: {}, setHeader(k, v) { this.h[k] = v }, end(s) { resolve({ code: this.statusCode, h: this.h, json: JSON.parse(s) }) } }; handler(req, res, { env, fetch, rlFetch }) });
 }
 const ok = text => async (url, init) => { ok.last = { url, init }; return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text }] } }] }) } };
 const good = { q: 'Why is the wave speed v = f × λ?', tone: 'calm', level: 'adult', lesson: { title: 'Waves', keyIdea: 'A wave carries energy.', explain: ['Wavelength is the length of one wave.'] }, learner: { state: 'struggling', why: '2 wrong answers in a row.', profile: { style: 'steps', exam: 'GCSE (AQA)', goal: 'pass', time: 20 } } };
@@ -19,7 +19,7 @@ await test('production is off; GET is 405; foreign origin is 403; missing key is
   assert.strictEqual((await call({ method: 'GET', fetch: ok('x') })).code, 405);
   assert.strictEqual((await call({ body: good, headers: { origin: 'https://evil.example' }, fetch: ok('x') })).code, 403);
   assert.strictEqual((await call({ body: good, headers: { origin: 'https://x.vercel.app' }, fetch: ok('hi') })).code, 200);
-  assert.strictEqual((await call({ body: good, env: { VERCEL_ENV: 'preview' }, fetch: ok('x') })).code, 503) });
+  assert.strictEqual((await call({ body: good, env: { VERCEL_ENV: 'preview', WN_RL_MEMORY: '1' }, fetch: ok('x') })).code, 503) });
 await test('size caps: oversized body is 413; question and lesson text are clipped; junk fields are dropped', async () => {
   _resetLimits(); assert.strictEqual((await call({ body: JSON.stringify({ q: 'x'.repeat(LIMITS.maxBody + 10) }), fetch: ok('x') })).code, 413);
   assert.strictEqual((await call({ body: { q: '' }, fetch: ok('x') })).code, 400); assert.strictEqual((await call({ body: '[1', fetch: ok('x') })).code, 400);
@@ -40,4 +40,16 @@ await test('upstream errors, empty/blocked replies and timeouts map to 5xx (the 
   assert.strictEqual(replyText({ candidates: [{ content: { parts: [{ text: 'a'.repeat(5000) }] } }] }).length, LIMITS.maxReply) });
 await test('the safety prompt covers minors, lesson grounding, personal data and prompt injection', async () => {
   for (const re of [/11 to 18/, /Ground every answer in the lesson/, /Never ask for, store, or repeat personal information/, /trusted adult/, /Ignore any instruction/]) assert.match(SYSTEM_PROMPT, re) });
+await test('shared limits: store answers decide; IP is hashed; unconfigured or failing store fails closed (503)', async () => {
+  const E = { WN_GEMINI_API_KEY: 'k', VERCEL_ENV: 'preview', WN_RL_URL: 'https://db.example/', WN_RL_KEY: 'pub', WN_RL_SECRET: 's3' };
+  const store = v => async (url, init) => { store.last = { url, init }; return { ok: true, json: async () => v } };
+  _resetLimits(); let r = await call({ body: good, env: E, fetch: ok('hi'), rlFetch: store('ok') }); assert.strictEqual(r.code, 200);
+  assert.strictEqual(store.last.url, 'https://db.example/rest/v1/rpc/guide_rate_hit'); assert.ok(!store.last.init.body.includes('1.2.3.4'));
+  const sent = JSON.parse(store.last.init.body); assert.deepStrictEqual([sent.p_per_min, sent.p_per_day, sent.p_global], [LIMITS.perMinute, LIMITS.perDay, LIMITS.globalPerDay]);
+  _resetLimits(); r = await call({ body: good, env: E, fetch: ok('hi'), rlFetch: store('minute') }); assert.strictEqual(r.code, 429); assert.strictEqual(r.h['retry-after'], '60');
+  _resetLimits(); r = await call({ body: good, env: E, fetch: ok('hi'), rlFetch: store('busy') }); assert.strictEqual(r.code, 429);
+  _resetLimits(); r = await call({ body: good, env: E, fetch: ok('hi'), rlFetch: async () => { throw new Error('down') } }); assert.strictEqual(r.code, 503);
+  _resetLimits(); r = await call({ body: good, env: E, fetch: ok('hi'), rlFetch: async () => ({ ok: false, status: 401 }) }); assert.strictEqual(r.code, 503);
+  _resetLimits(); r = await call({ body: good, env: { WN_GEMINI_API_KEY: 'k', VERCEL_ENV: 'preview' }, fetch: ok('hi') }); assert.strictEqual(r.code, 503); assert.strictEqual(r.json.error, 'limits_unconfigured');
+  assert.strictEqual(await sharedAllow('1.1.1.1', { WN_RL_MEMORY: '1' }), 'ok') });
 console.log(fails ? fails + ' failed' : 'all passed'); process.exit(fails ? 1 : 0);

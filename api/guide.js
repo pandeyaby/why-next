@@ -3,7 +3,12 @@
    Guards: preview-only (off in production), same-origin requests, a per-IP rate limit, size caps on input and output,
    an 8 s upstream timeout, and a safety system prompt for learners who may be children. The request carries only the
    open lesson's text, the question, and the learner's coarse state, reason and stated profile; never raw signals.
-   Env: WN_GEMINI_API_KEY (Preview only). Optional WN_GUIDE_MODEL. */
+   Env: WN_GEMINI_API_KEY (Preview only). Optional WN_GUIDE_MODEL.
+   Rate limits are shared by every instance through Why Next's Supabase project (rpc guide_rate_hit, see
+   docs/guide-rate-limits.md): WN_RL_URL, WN_RL_KEY (publishable key), WN_RL_SECRET. Fail closed: if the store is not
+   configured or does not answer, the proxy returns 503 and the browser uses the offline Guide. WN_RL_MEMORY=1 (local
+   dev and unit tests only) allows the in-memory limiter alone. */
+import { createHash } from 'node:crypto';
 export const MODEL_DEFAULT = 'gemini-3.1-flash-lite';
 export const LIMITS = { perMinute: 6, perDay: 60, globalPerDay: 800, maxBody: 8000, maxQuestion: 400, maxContext: 3000, maxOutputTokens: 260, maxReply: 900, timeoutMs: 8000 };
 const STATES = ['focused', 'struggling', 'frustrated', 'bored', 'confident', 'tired', 'away'];
@@ -59,6 +64,19 @@ export function allow(ip, t = Date.now()) {
   if (h.length >= LIMITS.perDay) return 'day'; if (h.filter(x => t - x < 6e4).length >= LIMITS.perMinute) return 'minute';
   h.push(t); hits.set(ip, h); dayCount++; if (hits.size > 5000) hits.delete(hits.keys().next().value); return 'ok';
 }
+/* Shared limits across instances: one atomic Postgres function call. The IP is sent only as a salted hash. */
+export async function sharedAllow(ip, env, fetchFn = fetch) {
+  const url = env.WN_RL_URL, key = env.WN_RL_KEY, secret = env.WN_RL_SECRET;
+  if (!url || !key || !secret) return env.WN_RL_MEMORY === '1' ? 'ok' : 'unconfigured';
+  const k = createHash('sha256').update(secret + '|' + ip).digest('hex').slice(0, 32);
+  const ac = new AbortController(), timer = setTimeout(() => ac.abort(), 2500);
+  try {
+    const r = await fetchFn(url.replace(/\/+$/, '') + '/rest/v1/rpc/guide_rate_hit', { method: 'POST', signal: ac.signal, headers: { 'content-type': 'application/json', apikey: key },
+      body: JSON.stringify({ p_key: k, p_secret: secret, p_per_min: LIMITS.perMinute, p_per_day: LIMITS.perDay, p_global: LIMITS.globalPerDay }) });
+    if (!r.ok) return 'store';
+    const v = await r.json(); return ['ok', 'minute', 'day', 'busy'].includes(v) ? v : 'store';
+  } catch (e) { return 'store' } finally { clearTimeout(timer) }
+}
 export function _resetLimits() { hits.clear(); day = ''; dayCount = 0 }
 const send = (res, code, obj) => { res.statusCode = code; res.setHeader('content-type', 'application/json'); res.setHeader('cache-control', 'no-store'); res.end(JSON.stringify(obj)) };
 async function readBody(req) {
@@ -75,7 +93,9 @@ export default async function handler(req, res, deps = {}) {
   if (origin && origin.replace(/^https?:\/\//, '') !== host) return send(res, 403, { error: 'origin' });
   const key = env.WN_GEMINI_API_KEY; if (!key) return send(res, 503, { error: 'unconfigured' });
   const ip = String(req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || 'unknown').split(',')[0].trim();
-  const gate = allow(ip); if (gate !== 'ok') { res.setHeader('retry-after', gate === 'minute' ? '60' : '3600'); return send(res, 429, { error: 'rate', scope: gate }) }
+  let gate = allow(ip); if (gate === 'ok') gate = await sharedAllow(ip, env, deps.rlFetch || fetch);
+  if (gate === 'unconfigured' || gate === 'store') return send(res, 503, { error: 'limits_' + gate });
+  if (gate !== 'ok') { res.setHeader('retry-after', gate === 'minute' ? '60' : '3600'); return send(res, 429, { error: 'rate', scope: gate }) }
   const body = await readBody(req); if (body === null) return send(res, 413, { error: 'too_big' });
   const x = shapeInput(body); if (!x) return send(res, 400, { error: 'bad_input' });
   const model = /^[a-z0-9.-]+$/.test(env.WN_GUIDE_MODEL || '') ? env.WN_GUIDE_MODEL : MODEL_DEFAULT;
