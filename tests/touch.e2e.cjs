@@ -24,9 +24,9 @@ async function touchDrag(cdp, x, y, dx, dy) {
     const bad = [];
     for (const id of ids) {
       await p.evaluate(id => select(id), id); await p.waitForSelector('#vbox .vis');
-      // visuals load lazily since 8e3ddf2 and may re-render once: wait for the idle loader, then for the description to hold for 250 ms (some visuals animate, so not the whole markup)
+      // visuals load lazily since 8e3ddf2 and may re-render once: wait for the idle loader, then for the description to hold for 150 ms (some visuals animate, so not the whole markup)
       await p.evaluate(() => window.wnIdle && window.wnIdle());
-      await p.waitForFunction(() => { const v = document.querySelector('#vbox .vis'), d = v && v.querySelector('.vis-desc'), h = v && (v.dataset.vtype + '|' + (d ? d.textContent : '')), w = window.__visStable; if (!w || w.h !== h) { window.__visStable = { h, t: Date.now() }; return false } return Date.now() - w.t > 250 }, null, { polling: 50, timeout: 5000 }).catch(() => {});
+      await p.waitForFunction(() => { const v = document.querySelector('#vbox .vis'), d = v && v.querySelector('.vis-desc'), h = v && (v.dataset.vtype + '|' + (d ? d.textContent : '')), w = window.__visStable; if (!w || w.h !== h) { window.__visStable = { h, t: Date.now() }; return false } return Date.now() - w.t > 150 }, null, { polling: 50, timeout: 3000 }).catch(() => {});
       const snap = () => p.$eval('#vbox .vis', v => v.querySelector('.vis-desc').textContent + v.querySelector('svg, .vis-sort')?.innerHTML);
       let h = null; for (const c of await p.$$('#vbox svg [style*="touch-action: none"]')) if (await c.isVisible()) { h = c; break } const card = await p.$('#vbox .vis-sort .vis-card');
       if (!h && !card) { none.push(id); continue }
