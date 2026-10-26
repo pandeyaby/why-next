@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions checked against the AQA GCSE Mathematics 8300 specification G9 (identify and apply circle definitions and properties, including centre, radius, chord, diameter, circumference, tangent, arc, sector and segment) and against BBC Bitesize and Maths is Fun 'Parts of a circle'. Chord lengths in the lab use 2r sin(theta/2) with r = 5 cm (100 degrees gives 7.7 cm, 180 gives 10 cm). The tangent-radius right angle (GCSE circle theorem) is used in item m4: 180 − 90 − a checked for a = 20 to 70. Minor and major arcs add to 360 degrees in p3 and m5; m3 halves even and odd diameters to exact 1 dp values."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the known circle-vocabulary slips: sector and segment swapped (prediction 3, two challenge messages, m2 and m6), a diameter not counting as a chord (prediction 1, m1), choosing the major arc by position rather than size (prediction 2 puts the minor arc at the top), calling an arc a chord or a segment, a radius confused with a chord or diameter, and a line that cuts the circle called a tangent (the tangent bench shows 2, 1 and 0 shared points)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The lab is a live circle with a draggable chord end that measures 2r sin(theta/2) and snaps to the diameter, arc pickers labelled with their degrees, a tap-to-identify sector and segment pair drawn side by side with a chord-side test, and a slide-in line that counts shared points and shows the 90 degree mark at the tangent point. It is not the unit-circle lab or the tangent-to-a-graph lab; the shingle gate against every other flagship lab passes."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner finds the longest chord by dragging and watching the length climb to 10 cm as the chord reaches O; the arc labels show 100 and 260 degrees so 'major' is seen as size; tapping the shaded regions forces the two-radii versus one-chord distinction; and sliding the line in from outside shows 0, then 1, then 2 shared points, with the radius and right-angle mark appearing only at one point."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions, each with a tempting wrong option tested in the same step: 'they are all the same length' before the chord drag, 'the arc at the top' with the minor arc placed at the top, 'segment' for a pizza slice, and '45 degrees' or 'it depends where T is' for the tangent-radius angle. Completion messages quote the learner's choice (checked in a Playwright run on phone and desktop)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Nine rotating challenges highlight a segment, chord, major arc, tangent, sector, diameter, minor arc and radius, plus the tangent-radius angle. Each wrong name gets a specific message: sector needs two radii, segment is a region not a line, a diameter must pass through O, a radius stops at O, minor or major judged by the stated degrees, a chord meets the circle twice, an arc is curved. All nine were answered wrongly or rightly in a browser run and each showed the matching message."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation measures Flesch-Kincaid grade 1.6 (limit 6.5) and adult 6.1 (limit 9.5) with learn/readability.py. The kid text builds every term from a pizza (crust, slice, one straight cut, a ruler resting on the edge), and the lab text keeps one instruction per step."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each paragraph defines one or two parts or names mistakes; the worked example applies all of them to one diagram. The filler regex gate passes and the explanation shares under 12 percent of 6-word shingles with every other lesson, including the unit circle lesson."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots on iPhone 13 (390 px) in dark and light themes for all 6 steps: the circle fills the square canvas, the A, B, C, D and O labels and the arc and chord pills are readable and unclipped, and the 2 to 5 control buttons wrap onto two rows. Dragging B, tapping arcs and regions and dragging the line were all exercised with a pointer at phone size and on desktop."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button twin (B anticlockwise and clockwise, Short arc and Long arc, Two radii + arc, Chord + arc, The rest, Line in, Line out, Turn line). The canvas aria-label states the chord length, both arc angles, the line distance and how many points it shares, and in the challenge describes the highlighted part in words without naming it. The pipeline walk found no axe WCAG 2.1 AA violations in either theme on desktop or phone and no console errors."
+  }
+ },
+ "sources": [
+  "AQA GCSE Mathematics 8300 specification, G9 circle definitions and properties, and G10 circle theorems (tangent perpendicular to radius)",
+  "BBC Bitesize KS3/GCSE Maths: Parts of a circle",
+  "Maths is Fun: Circle Sector and Segment; Tangent of a circle"
+ ]
+}

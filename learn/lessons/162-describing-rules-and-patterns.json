@@ -1,0 +1,248 @@
+{
+ "topicId": "mt_hbe_kdE_7C",
+ "title": "Describing Rules and Testing Them",
+ "audience": "family",
+ "keyIdea": "When you notice something happening again and again, say it as a rule that works every time: what you start with, what you do, and what happens. Then test the rule on new cases you have not seen, and hunt for a breaker. One breaker shows the rule is not always true, so fix it. Lots of examples help you notice a rule, but only a reason shows it must always work.",
+ "explain": {
+  "kid": [
+   "3 + 0 = 3. 7 + 0 = 7. 12 + 0 = 12. You can say a rule: any number add 0 stays the same. A rule says what you do and what happens. It says it for every number, not just one.",
+   "Next, test your rule on new cases. Try one you have not seen yet. Try a big one, like 1000 + 0. If it still works, you can trust the rule a bit more.",
+   "Now hunt for a breaker. That is a case where the rule goes wrong. Say your rule is: times makes a number bigger. But 6 × 1 = 6. That breaks it. One breaker is enough.",
+   "Then fix the rule. Times a number by more than 1, and it gets bigger. To be sure it always works, find a reason. Odd numbers are pairs plus one dot. Two odd numbers have two spare dots. They make a pair, so odd + odd is even."
+  ],
+  "adult": [
+   "This is the move from noticing to generalising. Children often state a single example (5 + 0 = 5) or a vague feeling (adding zero is easy) and call it a rule. Help them say it in three parts: which numbers or words it covers, what you do, and what happens.",
+   "Testing comes next. Ask for a case they have not seen, especially an extreme one: a very big number, zero, or a word that looks different. A rule that only fits the examples it came from is not yet trustworthy.",
+   "The key idea is the counterexample. Twenty cases that fit cannot show a rule is always true, but one case that fails shows it is not. The usual response is not to throw the rule away but to add a condition, as with multiplying a positive number by more than one.",
+   "A common mistake is to treat many examples as proof. Ask why it must work. For odd plus odd, every odd number is pairs plus one, and the two spare ones make a new pair. That reason covers every odd number, which no list of examples can do."
+  ]
+ },
+ "familyTip": "Play 'rule or breaker' at dinner. One person says a rule, like 'all fruits are sweet' or 'every number ending in 0 can be halved'. Everyone else hunts for a breaker. If you find one, work together to fix the rule.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "4 + 0 = 4, 9 + 0 = 9, 20 + 0 = 20. Which is the best rule?",
+   "choices": [
+    "Any number add 0 stays the same",
+    "4 + 0 = 4",
+    "Adding is easy"
+   ],
+   "answer": 0,
+   "hint": "A rule should cover every number, not just one example.",
+   "explain": "It says which numbers (any), what you do (add 0) and what happens (stays the same)."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Rule: even + even = even. Which new case tests the rule? {a} + {b}, or 2 + 4 again?",
+   "choices": [
+    "{a} + {b}",
+    "2 + 4 again",
+    "Neither, it is already proved"
+   ],
+   "answer": 0,
+   "hint": "A good test uses a case you have not tried yet.",
+   "explain": "{a} + {b} = {=a+b}, which is even, so the rule holds on a new case. Testing 2 + 4 again tells you nothing new.",
+   "params": {
+    "a": [
+     4,
+     20
+    ],
+    "b": [
+     100,
+     120
+    ]
+   },
+   "where": "a%2==0 && b%2==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Claim: multiplying always makes a number bigger. What is {n} × 1?",
+   "answer": "n",
+   "hint": "What happens when you have {n} one time?",
+   "explain": "{n} × 1 = {=n}. It did not get bigger, so this case breaks the claim.",
+   "params": {
+    "n": [
+     3,
+     30
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A rule worked for 10 examples, then broke once. What now?",
+   "choices": [
+    "Fix the rule so it fits the breaker too",
+    "Ignore the breaker, 10 is more",
+    "Say the rule is proved"
+   ],
+   "answer": 0,
+   "hint": "Does one case that fails matter?",
+   "explain": "One breaker shows the rule is not always true. Add a condition so the rule fits every case."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is a rule, not just one example?",
+    "choices": [
+     "Any number times 1 stays the same",
+     "6 × 1 = 6",
+     "Times is fun"
+    ],
+    "answer": 0,
+    "hint": "Look for one that talks about every number.",
+    "explain": "It covers any number, says what you do (times 1) and what happens (stays the same)."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Claim: all birds can fly. Which is a breaker?",
+    "choices": [
+     "A penguin",
+     "A robin",
+     "A pigeon"
+    ],
+    "answer": 0,
+    "hint": "A breaker is a case where the claim goes wrong.",
+    "explain": "A penguin is a bird that cannot fly, so it breaks the claim. Robins and pigeons fit it."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Rule: odd + odd = even. Test a new case. What is {a} + {b}?",
+    "answer": "a+b",
+    "hint": "Add them, then look at the last digit.",
+    "explain": "{a} + {b} = {=a+b}. It ends in an even digit, so the rule held for this new case.",
+    "params": {
+     "a": [
+      11,
+      41
+     ],
+     "b": [
+      13,
+      59
+     ]
+    },
+    "where": "a%2==1 && b%2==1"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Rule: adding makes a number bigger. Which case breaks it?",
+    "choices": [
+     "7 + 0",
+     "7 + 2",
+     "7 + 10"
+    ],
+    "answer": 0,
+    "hint": "Which sum gives back the same number?",
+    "explain": "7 + 0 = 7, which is not bigger. A better rule: adding a number more than 0 makes it bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ben tested odd + odd 50 times. All were even. Has he proved it for every number?",
+    "choices": [
+     "No, he needs a reason why it must work",
+     "Yes, 50 is plenty",
+     "Yes, if a friend agrees"
+    ],
+    "answer": 0,
+    "hint": "Can he test every odd number there is?",
+    "explain": "50 examples help him notice. The reason (two spare dots make a pair) shows it works for all odd numbers."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Rule: any number ending in 0 can be split into two equal whole halves. Test a new case: what is half of {n}0?",
+    "answer": "n*5",
+    "hint": "Halve the tens, then check the two halves are equal whole numbers.",
+    "explain": "Half of {n}0 is {=n*5}, a whole number, so the rule held for this new case.",
+    "params": {
+     "n": [
+      3,
+      99
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why is odd + odd always even?",
+    "choices": [
+     "The two spare dots make a pair",
+     "Because 3 + 5 = 8",
+     "Odd numbers are big"
+    ],
+    "answer": 0,
+    "hint": "Draw an odd number as pairs of dots. What is left over?",
+    "explain": "Each odd number is pairs plus one. The two spare ones join to make a new pair, so nothing is left over."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is the better fixed rule for times?",
+    "choices": [
+     "Times a number above 0 by more than 1 and it gets bigger",
+     "Times always makes it bigger",
+     "Times never makes it bigger"
+    ],
+    "answer": 0,
+    "hint": "Check 6 × 1, 6 × 0 and 0 × 5.",
+    "explain": "6 × 1, 6 × 0 and 0 × 5 broke the old claim. The fixed rule leaves them out, and 6 × 3 still gets bigger."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it a rule or just one example? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "A rule",
+    "One example"
+   ],
+   "items": [
+    [
+     "Any number add 0 stays the same",
+     0
+    ],
+    [
+     "8 + 0 = 8",
+     1
+    ],
+    [
+     "Even + even is even",
+     0
+    ],
+    [
+     "2 + 4 = 6",
+     1
+    ],
+    [
+     "Any number times 1 stays the same",
+     0
+    ],
+    [
+     "5 × 1 = 5",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrule",
+  "caption": "Flagship lab: build a rule from examples, test new cases, hunt for a breaker, fix the rule and prove odd + odd is even.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

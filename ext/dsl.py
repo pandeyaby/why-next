@@ -20,6 +20,25 @@ SUBJECT_BY_DOMAIN = {
     "Calculus": "Mathematics",
     # wave 3
     "Matrices & Complex Numbers": "Mathematics",
+    # wave 6: early years (ages 2-4) and secondary English, Learning to Learn, Personal & Social
+    "Scientific Inquiry": "Science",
+    "Organisms & Life Processes": "Science",
+    "Weather & Climate": "Science",
+    "Counting & Cardinality": "Mathematics",
+    "Measurement": "Mathematics",
+    "Mathematical Thinking": "Mathematics",
+    "Learning to Learn": "Learning to Learn",
+    "Emotional Literacy": "Personal & Social Development",
+    "Self-Regulation & Resilience": "Personal & Social Development",
+    "Friendship & Cooperation": "Personal & Social Development",
+    "Empathy & Social Awareness": "Personal & Social Development",
+    "Self-Awareness": "Personal & Social Development",
+    "Responsible Decision-Making": "Personal & Social Development",
+    "Reading Comprehension": "English",
+    "Writing Composition": "English",
+    "Speaking & Listening": "English",
+    "Vocabulary": "English",
+    "English Thinking": "English",
 }
 
 def std(code):
@@ -42,5 +61,13 @@ def T(key, type_, domain, name, ages, description, evidence, prompt, standards=(
     TOPICS.append(dict(key=key, type=type_, domain=domain, name=name, a0=a0, a1=a1,
                        description=description, evidence=list(evidence), prompt=prompt,
                        standards=[std(s) for s in standards], prereqs=list(prereqs)))
+
+UNLOCKS = []
+
+def U(key, existing_id, strength, reason):
+    """Foundation edge (wave 6): an existing v1 topic gains a prerequisite on new early-years topic `key`.
+    Only allowed for topics that start below every v1 topic's age, so the new topic sits under the v1 graph."""
+    assert existing_id.startswith("mt_") and strength in ("h", "s") and reason, (key, existing_id)
+    UNLOCKS.append((key, existing_id, strength, reason))
 
 C, P, R, L, M = "CONCEPTUAL", "PROCEDURAL", "REPRESENTATIONAL", "LANGUAGE", "META"

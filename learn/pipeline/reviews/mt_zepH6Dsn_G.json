@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the OpenStax 'Special Angles Using Side Lengths' table: sin/cos/tan of 30°, 45°, 60° (1/2, √3/2, √3/3; √2/2, √2/2, 1; √3/2, 1/2, √3) and 0°/90° (tan 90° undefined). Recomputed by hand: fold foot at 0.4 gives left-piece angles 60°, 109.1°, 10.9°; √(4 − 1) = 1.732; 3√3 = 5.196; 5√3 = 8.660; 4√3 = 6.928 and 16 + 48 = 64 in the worked check; (√3/2)² = 0.75; challenge lengths 8 × √3/2 = 4√3, 6 × √2/2 = 3√2, 10 × cos 30° = 5√3 confirmed in 24 played rounds."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented exact-value slips: sin 60° = 2 × sin 30° (sine taken as proportional to the angle), height 2 − 1 instead of √(2² − 1²), cos 30° confused with sin 30° (opposite/adjacent swapped), tan 30° written as √3 (the reciprocal, tan 60°), the ÷ 2 dropped (sin 60° = √3), diagonal of a unit square taken as 2, tan 90° given the value 1 or 0, and hypotenuse ÷ ratio instead of × ratio for a surd length."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The lab is built from the two special triangles themselves: a draggable fold foot on an equilateral triangle that only matches at the midpoint, a top corner raised to a hypotenuse-2 arc, corner-then-side tapping on the 1, √3, 2 half, a unit square cut whose end slides to the far corner, and a swinging hypotenuse whose read-out only shows exact forms at 0/30/45/60/90. Nearest flagship shingle similarity is 3.1% (flag_rad.js), then 2.3% (flag_surd.js) and 2.2% (flag_arc.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner makes each value before it is named: folding finds the 30°, 60°, 90° half and base 1; raising the corner until 1 + h² reads 4 finds √3; tapping the 60° corner then the √3 side produces sin 60° = √3/2; the same √3 side then comes back as adjacent to 30°; the square cut finds √2 and 45°; swinging to 90° shows the base vanish so tan 90° has no value; the 6 m ladder at 60° reads 3√3."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Eight predicts, each with a tempting wrong option the lab then disproves: 60°, 60°, 60° halves; height 1 from 2 − 1; sin 60° = 1 (double sin 30°) or 2/3 (60 ÷ 90); cos 30° = 1/2; tan 30° = √3; diagonal 2 (one plus one); tan 90° = 1 or 0; ladder height 3 m (the base) or 6√3 m. The correct option is never first."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 24 challenge rounds on an iPhone 13 viewport across exact values (sin, cos and tan of 30/45/60 now all cycle), edge angles and surd lengths: √3 for cos 30° names the dropped ÷ 2, √2/2 for tan 45° names 'that is sin 45°, tan has no hypotenuse', 1 for tan 90° pictures the upright hypotenuse with base 0, 2√3/3 names hypotenuse ÷ leg, 16√3/3 names dividing by the ratio, 4 cm at 45° names sine not being proportional; every message ends with the correct working."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 0.1 for the kid text and 4.3 for the adult text (limits 6.5 and 9.5); kid paragraphs use fold, square-and-take-away and 'side across from it' instead of jargon, and every lab task is a single instruction such as 'Tap the 60° corner, then the side opposite it'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and explanation overlap with every other lesson is 0%; the adult paragraphs each add one thing (the 30-60-90 half, the swap to 60° plus the 45° square, the 0°/90° ends with the √n/2 memory aid and a 3√3 surd length, the named slips), and challenge feedback restates working instead of praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 (light) and desktop (dark) screenshots of all ten steps show the triangles, side and angle tags, read-out panel and handles inside the canvas; real pointer drags on the phone viewport completed the fold, the height, the square cut, the 90° swing and the 60° ladder, and real taps on corners and sides completed steps 3–5. Fixed after screenshots: the square's 17°/73° labels were on the wrong corners and the tap steps showed a stale read-out."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs axe-core WCAG 2.1 AA clean in light and dark on phone and desktop with no console errors; every drag has text buttons (Fold left/right, Height ± 0.1, Cut left/right, ±5°, ±15°) and every tap target has a named button (30° corner, 60° corner, right angle, side 1, side √3, side 2); the canvas aria-label gives the shape plus the live read-out, and the challenge question."
+  }
+ },
+ "sources": [
+  "https://openstax.org/books/precalculus-2e/pages/5-4-right-triangle-trigonometry",
+  "https://openstax.org/books/precalculus-2e/pages/5-2-unit-circle-sine-and-cosine-functions",
+  "https://www.thecorestandards.org/Math/Content/HSF/TF/",
+  "https://www.mathsisfun.com/geometry/unit-circle.html"
+ ]
+}

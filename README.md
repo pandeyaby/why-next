@@ -57,6 +57,10 @@ Every one of the 1,568 topics has a lesson. 103 are hand-written (`learn/lessons
 - Lessons load per domain (`out/wn/l<k>.js`) only when a topic is opened. `node tests/labs.e2e.cjs` checks challenge wins and axe in both themes.
 - Phone preview of the split build: `python3 ext/make_preview.py <commit>` writes `out/preview.html`, which loads scripts from jsDelivr at that commit.
 
+## Feedback
+
+Send feedback, bug reports or lesson ideas to [abhinavpandey@mail.grokbot.com](mailto:abhinavpandey@mail.grokbot.com?subject=Why%20Next%3F%20feedback). The site footer has a "Send feedback" link too.
+
 ## Licences
 Why Next? is a derived database and adapted content, released under the same licences as its upstream source:
 - **Database** (structure, ids, links, topic↔standard links): Open Database License 1.0. See [`LICENSE`](LICENSE).

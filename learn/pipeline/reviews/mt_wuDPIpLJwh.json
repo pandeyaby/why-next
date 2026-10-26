@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "A node script expanded every factor list in the lab (12 expressions incl. sandbox and challenge) against its term list at x = −3, 0, 1, 2, 5, 7: no mismatch. Worked example (x² + x − 6)/(x² − 4) = (x + 3)/(x + 2), x ≠ ±2 and 1/x + 2/(x + 1) = (3x + 1)/(x(x + 1)) checked by hand; rules match OpenStax 7.1 (factor completely, remove common factors, never a term from a sum, exclude zero denominators)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: cancelling terms ((x + 2)/x → 2, (x + 6)/6 → x + 1, OpenStax's 'like cancelling the 2s in (2+5)/2'), dividing one term only, keeping the wrong bracket, sign slip in factorising (x − 3)(x + 2), dropping a leftover factor, inverting, and forgetting the excluded value."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Fraction bar with loose term chips that turn into colour-matched factor cards; cancelling is a drag of a card onto its twin across the bar, a term drag is refused with the reason, and a number line tests original vs remaining value and flags x where the original bottom is 0. Max shingle overlap 3.4% (flag_fact.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner factorises, sees twin colours, cancels, and the number line shows the value is unchanged (x = 3: 30 ÷ 5 = 6 and x + 3 = 6); trying the x of x + 2 is refused with 6 ÷ 4 = 1.5 ≠ 2; step 5 shows x = −2 gives 0 ÷ 0 while x + 3 gives 1, so x ≠ −2 is discovered, then the text confirms."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions each with a tempting wrong option: x² + 5x + 3 (divide only the 6), '(x + 2)/x = 2' (cancel the x's), (x − 3)/2 or −6/9 for (2x + 6)/(x² − 9), and 1/5 for the product (cross out x's); the lab's cancel and value test disprove each and A.reveal names the prediction."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Probed all six challenge items on iPhone 13: each wrong pick gets a slip-specific message (terms crossed out, wrong bracket kept, one term divided, sign slip shown by expanding, leftover factor dropped, upside down) plus a witness value, e.g. x = 3: original 6 but your answer gives 7; Show me animates the factorise-and-cancel."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 2.2 for the kid text and 6.3 for the adult text (limits 6.5 and 9.5); adult paragraphs were rewritten from 9.9 to shorter sentences; every paragraph carries one rule with one example."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes and the explanation overlaps no other lesson by more than 0.2%; each paragraph is a rule, an example with numbers (6/8, (2x + 6)/(x² − 9), 1/x + 2/(x + 1)) or a named mistake."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Real CDP touch drag of the (x + 2) card onto its twin on iPhone 13 completed the first step; screenshots of all 7 steps at 390 px in dark and light show cards, factorise pills, the stacked result and number line labels unclipped; controls wrap to 44 px buttons."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core clean in both themes on desktop and iPhone 13 (walk.cjs); every gesture has a button (Factorise top/bottom, Cancel a common factor, x −1/+1, Reset) and the canvas aria-label states top, bottom, cancelled factors, result and test value after every action."
+  }
+ },
+ "sources": [
+  "https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions",
+  "https://www.thecorestandards.org/Math/Content/HSA/APR/",
+  "https://www.aqa.org.uk/subjects/mathematics/gcse/mathematics-8300/specification"
+ ]
+}

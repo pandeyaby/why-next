@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "General formula CnH2n+2, the first four members (methane CH4, ethane C2H6, propane C3H8, butane C4H10) and 'saturated' match AQA 8462 4.7.1.1 and BBC Bitesize; the lab's hydrogen count is computed per carbon (4 for methane, 3 at each end, 2 in the middle, one fewer on each C=C carbon) and was checked against the formula for n = 1 to 8 and for propene C3H6; challenge arithmetic 4n − 2(n − 1) = 2n + 2 is exact."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented formula slips for alkanes: CnH2n (forgetting the two end hydrogens, which is actually the alkene formula), giving every carbon four hydrogens (C2H8 for ethane), 2n + 1 (capping one end only), halving before subtracting 2 when working back from H to C, and calling any hydrocarbon with a C=C an alkane."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "A chain builder: the learner drags a ghost carbon to lengthen the chain, hydrogens fill the free bonds, carbons can be tapped to count their four bonds and C–C bonds tapped to become double. The rule tested is the bond arithmetic behind CnH2n+2, which the atom scanner (flag_hydro) and the formula reader (flag_formula) do not touch; shingle similarity to the nearest lab is 2.6% (flag_hydro.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Growing methane to ethane shows each carbon losing one H to the C–C bond; the per-carbon labels 3H 2H 2H 3H on butane make the 'two per carbon plus two' pattern visible before the step text states it; building the 14-hydrogen alkane makes the learner use the pattern; Add a hydrogen bounces off a full chain (saturated); making a C=C drops two H and flips the CnH2n+2 badge to not an alkane."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked-in predictions with tempting wrong options the lab disproves: '8: four per carbon' for ethane (the chain shows 6), '16' for butane, '4: one for each bond' for each extra carbon (the H labels show 2), 'Yes, on the middle carbon' for adding H to propane (the bond check shows 4/4), and 'Yes: it is still only C and H' for propene (badge turns red)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Probed in the browser on desktop and iPhone 13: 10 for 5 carbons gets 'That is 2 × 5, which forgets the end hydrogens... (C5H10 would be an alkene)'; C3H12 for propane gets 'Four bonds per carbon gives 12, but the 2 C–C bonds use up 4...'; C4H9 gets '2 × 4 + 1 caps only one end'; 10 carbons for 18 H gets 'subtract 2, do not add it'; 9 gets 'first take away the 2 end hydrogens, then halve'; the chain is revealed after each answer."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch-Kincaid grade 3.0 for the kid text and 7.3 for the adult text (limits 6.5 and 9.5); kid paragraphs explain the count with one idea per sentence ('A carbon at an end has one neighbour, so it holds three H.') and the worked example adds the hydrogens carbon by carbon."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes and explanation overlap with every other lesson is 0% (12% limit); each adult paragraph does one job: the family and names, where CnH2n+2 comes from, saturated versus a C=C, and the named mistakes; lab messages are built from the current chain (its name, formula, bond counts), not repeated template text."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Phone sweep on iPhone 13 and 360x640 Android in both themes reports 0 findings; screenshots of butane, propane with the 4 bonds label, the challenge and an 8-carbon chain show the unit capped so atom letters and the 3H/2H labels stay readable at 390 px, the ghost carbon sits clear of the end hydrogen, and the − Carbon, + Carbon and check buttons wrap without clipping."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core (WCAG 2.1 AA) reports no violations in light and dark on desktop and phone; the canvas aria-label is rebuilt after every change with the name, formula, hydrogen count, bond type and the CnH2n+2 check; − Carbon, + Carbon, Check next carbon, Add a hydrogen and Make a C=C buttons do everything the drag and taps do."
+  }
+ },
+ "sources": [
+  "https://www.aqa.org.uk/subjects/chemistry/gcse/chemistry-8462/specification/subject-content/organic-chemistry (4.7.1.1 crude oil, hydrocarbons and alkanes)",
+  "https://www.bbc.co.uk/bitesize/guides/zshvw6f/revision/2",
+  "https://openstax.org/books/chemistry-2e/pages/20-1-hydrocarbons"
+ ]
+}

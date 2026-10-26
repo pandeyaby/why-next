@@ -23,7 +23,10 @@ async function touchDrag(cdp, x, y, dx, dy) {
   await test('every draggable visual responds to a touch drag', async () => {
     const bad = [];
     for (const id of ids) {
-      await p.evaluate(id => select(id), id); await p.waitForSelector('#vbox .vis'); await p.waitForTimeout(80);
+      await p.evaluate(id => select(id), id); await p.waitForSelector('#vbox .vis');
+      // visuals load lazily since 8e3ddf2 and may re-render once: wait for the idle loader, then for the description to hold for 150 ms (some visuals animate, so not the whole markup)
+      await p.evaluate(() => window.wnIdle && window.wnIdle());
+      await p.waitForFunction(() => { const v = document.querySelector('#vbox .vis'), d = v && v.querySelector('.vis-desc'), h = v && (v.dataset.vtype + '|' + (d ? d.textContent : '')), w = window.__visStable; if (!w || w.h !== h) { window.__visStable = { h, t: Date.now() }; return false } return Date.now() - w.t > 150 }, null, { polling: 50, timeout: 3000 }).catch(() => {});
       const snap = () => p.$eval('#vbox .vis', v => v.querySelector('.vis-desc').textContent + v.querySelector('svg, .vis-sort')?.innerHTML);
       let h = null; for (const c of await p.$$('#vbox svg [style*="touch-action: none"]')) if (await c.isVisible()) { h = c; break } const card = await p.$('#vbox .vis-sort .vis-card');
       if (!h && !card) { none.push(id); continue }
@@ -40,7 +43,7 @@ async function touchDrag(cdp, x, y, dx, dy) {
   });
   await test('a straight-down drag on a counter moves it into a group and does not scroll the page', async () => {
     for (const id of ['mt_LpSuPgL31x', 'mt_cFltwUQi-d']) {
-      await p.evaluate(id => select(id), id); await p.waitForSelector('#vbox svg .vis-ctr'); const h = await p.$('#vbox svg .vis-ctr'); await h.scrollIntoViewIfNeeded(); await p.waitForTimeout(50);
+      await p.evaluate(id => select(id), id); await p.waitForSelector('#vbox svg .vis-ctr'); await p.waitForTimeout(300); const h = await p.$('#vbox svg .vis-ctr'); await h.scrollIntoViewIfNeeded(); await p.waitForTimeout(50);
       const y0 = await p.evaluate(() => scrollY), q = await h.boundingBox(); await touchDrag(cdp, q.x + q.width / 2, q.y + q.height / 2, 0, 90); await p.waitForTimeout(80);
       assert.match(await p.textContent('#vbox .vis-desc'), /^1 dealt/, id + ': counter not dropped'); assert.strictEqual(await p.evaluate(() => scrollY), y0, id + ': page scrolled');
     }

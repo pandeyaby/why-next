@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_Uzlw605oVe",
+ "title": "Instantaneous speed from curved graphs",
+ "audience": "learner",
+ "keyIdea": "On a distance–time graph the gradient is the speed. When the graph curves, the speed at one instant is the gradient of the tangent at that point: a straight line that just touches the curve there. Find it as rise ÷ run from a triangle on the tangent. Distance ÷ time from the start gives the average speed instead.",
+ "explain": {
+  "kid": [
+   "A distance–time graph shows how far something has gone. How steep it is shows how fast it is going. A steep part means fast. A flat part means stopped.",
+   "If the graph curves, the speed keeps changing. To find the speed at one moment, lay a ruler on the curve at that point. Turn it until it just touches the curve and does not cut through it. That line is called a tangent.",
+   "Now draw a big right-angled triangle on the tangent. Read the rise in metres and the run in seconds. Speed = rise ÷ run. If the rise is 12 m and the run is 2 s, the speed is 6 m/s.",
+   "Do not just divide the distance by the time. A runner who has gone 9 m in 3 s has an average of 3 m/s. If she is speeding up, she is going faster than that at 3 s."
+  ],
+  "adult": [
+   "The gradient of a distance–time graph is speed, because it is distance gained per unit of time. On a straight section the gradient is constant. On a curve the gradient changes, and the instantaneous speed at time t is the gradient of the tangent to the curve at t.",
+   "To draw a tangent by hand, place a ruler at the point and turn it until it touches the curve without crossing it there. Near the point the curve should be on the same side of the ruler on both sides. Then draw a large right-angled triangle on the tangent and work out rise ÷ run from the axis scales, with units. A larger triangle gives the same gradient, but it is easier to read accurately.",
+   "Average speed over an interval is total distance ÷ total time, the gradient of the chord between two points. It is a different quantity. For an object speeding up, the instantaneous speed at the end of the interval is greater than the average over it. For an object slowing down, it is smaller. A flat tangent means a speed of zero.",
+   "Common mistakes are dividing the distance at the point by the time, giving the average since the start; reading the height of the graph as the speed; using a chord across a second instead of a tangent; and forgetting to divide the rise by the run. Be careful too that hand-drawn tangents give an estimate, so answers within a small range are accepted."
+  ]
+ },
+ "familyTip": "Sketch a curved distance–time graph for a car pulling away from traffic lights. Each pick a moment, lay a pencil on the curve as a tangent, and estimate the speed with a rise ÷ run triangle. Compare your answers: how close did two hand-drawn tangents get?",
+ "worked": {
+  "title": "A runner's graph passes through (3 s, 9 m). A tangent drawn there passes through (1 s, −3 m) and (5 s, 21 m). How fast is she going at 3 s?",
+  "steps": [
+   "Use two points far apart on the tangent, not on the curve: (1, −3) and (5, 21).",
+   "Rise = 21 − (−3) = 24 m. Run = 5 − 1 = 4 s.",
+   "Speed = rise ÷ run = 24 ÷ 4 = 6 m/s.",
+   "Compare: her average speed since the start is 9 ÷ 3 = 3 m/s. She is speeding up, so 6 m/s at 3 s makes sense."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A tangent to a distance–time curve rises {=a*b} m over a run of {b} s. What is the speed at that point, in m/s?",
+   "answer": "a",
+   "hint": "Speed is the gradient of the tangent: rise ÷ run. Divide {=a*b} by {b}.",
+   "explain": "{=a*b} m ÷ {b} s = {a} m/s, so the speed at that point is {a} m/s.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "At t = 4 s a curved distance–time graph is at 16 m and is getting steeper. What can you say about the speed at 4 s?",
+   "choices": [
+    "It is more than 4 m/s",
+    "It is exactly 4 m/s",
+    "It is 16 m/s"
+   ],
+   "answer": 0,
+   "hint": "16 ÷ 4 is the average since the start. If the graph is getting steeper, is the object faster or slower now than on average?",
+   "explain": "16 ÷ 4 = 4 m/s is the average since the start. The object is speeding up, so at 4 s it is going faster than 4 m/s. 16 is a distance, not a speed."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A tangent goes through (1 s, {a} m) and (4 s, {=a+3*b} m). What is the gradient of the tangent, in m/s?",
+   "answer": "b",
+   "hint": "Rise = {=a+3*b} − {a}. Run = 4 − 1 = 3 s. Then divide.",
+   "explain": "Rise = {=3*b} m, run = 3 s, so the gradient is {=3*b} ÷ 3 = {b} m/s.",
+   "params": {
+    "a": [
+     1,
+     8
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which line is a tangent to a curve at a point P?",
+   "choices": [
+    "A straight line that touches the curve at P without cutting through it there",
+    "A line from the origin to P",
+    "A line joining P to the next point on the curve"
+   ],
+   "answer": 0,
+   "hint": "A tangent has the same direction as the curve at P. Near P, the curve stays on one side of it.",
+   "explain": "A tangent just touches the curve at P. A line from the origin gives the average speed since the start, and a line to another point is a chord."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Part of a distance–time curve becomes flat. What is the speed there?",
+   "choices": [
+    "Zero: the object has stopped",
+    "Its highest value",
+    "The same as the distance"
+   ],
+   "answer": 0,
+   "hint": "A flat tangent has a rise of 0. What is 0 ÷ run?",
+   "explain": "A flat tangent has gradient 0, so the speed is 0 m/s. The distance stays the same because the object has stopped."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A triangle drawn on a tangent has a rise of {=a*b} m and a run of {a} s. What is the speed, in m/s?",
+    "answer": "b",
+    "hint": "Gradient = rise ÷ run. Use the triangle on the tangent, not the curve.",
+    "explain": "{=a*b} ÷ {a} = {b}, so the instantaneous speed is {b} m/s.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      3,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "After {a} s a sprinter has run {=a*b} m. What is her average speed since the start, in m/s?",
+    "answer": "b",
+    "hint": "Average speed = total distance ÷ total time. You do not need a tangent for this one.",
+    "explain": "{=a*b} m ÷ {a} s = {b} m/s. That is the average; her speed at that moment can be different.",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "b": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A tangent passes through (0 s, {a} m) and ({b} s, {=a+b*4} m). What is the speed at the point it touches, in m/s?",
+    "answer": "4",
+    "hint": "Rise = {=a+b*4} − {a}. Run = {b} − 0. Then work out rise ÷ run.",
+    "explain": "Rise = {=b*4} m and run = {b} s, so the speed is {=b*4} ÷ {b} = 4 m/s.",
+    "params": {
+     "a": [
+      0,
+      10
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Zoe finds the speed at 3 s on a curved graph by working out (distance at 3 s) ÷ 3. What has she found?",
+    "choices": [
+     "The average speed from 0 to 3 s",
+     "The speed at exactly 3 s",
+     "The acceleration at 3 s"
+    ],
+    "answer": 0,
+    "hint": "Distance ÷ time from the start is the gradient of which line: the tangent, or a line from the origin?",
+    "explain": "Distance ÷ time from the start is the gradient of the line from the origin, so it is the average speed from 0 to 3 s. The tangent gives the speed at 3 s."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Two students draw different-sized triangles on the same tangent. What do they find?",
+    "choices": [
+     "The same gradient",
+     "The bigger triangle gives a bigger speed",
+     "The smaller triangle is more accurate"
+    ],
+    "answer": 0,
+    "hint": "A straight line has the same steepness everywhere. Does the size of the triangle change rise ÷ run?",
+    "explain": "Rise and run grow together, so rise ÷ run stays the same: the same gradient. A big triangle is easier to read accurately."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A car brakes, so its distance–time curve gets flatter. Its speed at 2 s compared with its average speed from 0 to 2 s is…",
+    "choices": [
+     "Smaller",
+     "Bigger",
+     "The same"
+    ],
+    "answer": 0,
+    "hint": "The car was going faster earlier. Is it faster or slower now than its average so far?",
+    "explain": "It was faster at the start and has been slowing, so its speed at 2 s is smaller than its average over the first 2 s."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Max lays a ruler at P and it cuts through the curve, with the curve above it on one side and below it on the other. What should he do?",
+    "choices": [
+     "Turn the ruler until it only touches the curve at P",
+     "Use it: any line through P will do",
+     "Join P to the origin instead"
+    ],
+    "answer": 0,
+    "hint": "Near P a tangent has the curve on the same side of it on both sides.",
+    "explain": "A line that cuts through the curve at P has the wrong gradient. He should turn the ruler until it only touches the curve at P; that tangent gives the speed."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A runner's curve is at 25 m at t = 5 s. Her tangent there rises 20 m over a run of 2 s. What is her speed at 5 s?",
+    "choices": [
+     "10 m/s",
+     "5 m/s",
+     "20 m/s"
+    ],
+    "answer": 0,
+    "hint": "Use only the tangent: rise ÷ run. The 25 m and 5 s give something else.",
+    "explain": "20 m ÷ 2 s = 10 m/s at 5 s. 25 ÷ 5 = 5 m/s is the average since the start, and 20 is the rise without dividing by the run."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "Drag the point along a curved distance–time graph. The tangent line shows the gradient there: the speed at that instant.",
+  "opts": {
+   "mode": "tangent",
+   "f": "x*x",
+   "a": 3,
+   "xr": [
+    0,
+    6
+   ],
+   "yr": [
+    0,
+    36
+   ],
+   "step": 0.5
+  }
+ },
+ "lab": {
+  "type": "flagtan",
+  "caption": "Flagship lab: turn a ruler on a curved distance–time graph until it is a tangent, then read the speed as rise ÷ run.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

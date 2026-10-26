@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Worked checks: −3(x−4)=−3x+12, −(x+5)=−x−5, 5−2(x+1)=3−2x, 10−2(x−3)=16−2x, −4(3−2x)=8x−12; the typed-answer parser accepted −2x+16 and unicode-minus forms only when equal."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Covers multiplying only the first term, dropping the minus that belongs to the multiplier, negative times negative, and doing 10−2 before multiplying (giving 8x−24)."
+  },
+  "lab_distinct": {
+   "score": 10,
+   "evidence": "A signed multiplier chip is dragged onto each bracket term with arcs drawn, dashed boxes for terms not yet multiplied, then a separate collect step; shingle similarity tops out at 4.4%."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The chip carries its sign, so each product line shows (−2) × (−3) = +6 with the sign rule, and the leftover dashed box makes the forgotten second term visible before collecting."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predicts: −3(x−4) offers −3x−12 and −3x−4; −(x+5) offers −x+5; 5−2(x+1) offers 3x+3 and 7−2x; 10−2(x−3) offers 4−2x and 8x−24; −4(3−2x) offers −12−8x; the product line settles each."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Fresh probe for 10−2(x−3): 4−2x flagged the sign of −2 × (−3) = +6; 8x−24 flagged subtracting first; 4+2x flagged the multiplier is −2; 16+2x flagged the x sign; text input got a format hint."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 3.1 for kid text and 6.8 for adult text, inside the limits; short sentences each carrying a single sign rule."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes; text overlap with the existing single-brackets lesson is only 1.7%, and every paragraph adds a rule, a mistake or the 10−2(x−3) worked example."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Touch drag of the chip onto each term and a tap to collect completed step 2 on iPhone 13; phone sweep found 0 issues; Android light screenshot shows chip, terms and buttons in view."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core clean in both themes on desktop and phone; every drag has a button such as '−3 × (−4)' with an aria-label, plus a Collect button and text input for the challenge."
+  }
+ },
+ "sources": [
+  "https://www.thecorestandards.org/Math/Content/7/EE/",
+  "https://openstax.org/books/elementary-algebra-2e/pages/1-10-properties-of-real-numbers",
+  "https://www.aqa.org.uk/subjects/mathematics/gcse/mathematics-8300/specification"
+ ]
+}

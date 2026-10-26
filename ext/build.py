@@ -20,6 +20,8 @@ import src_waves, src_electricity, src_geometry, src_stats, src_calculus  # noqa
 import src_organic, src_hypothesis, src_matrices, src_series  # noqa: F401,E402  (wave 3)
 import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  # noqa: F401,E402  (wave 4)
 import src_hyperbolic, src_conics, src_carbonyl, src_amino  # noqa: F401,E402  (wave 5)
+import src_early_sci, src_early_psd, src_early_l2l, src_early_maths, src_early_found  # noqa: F401,E402  (wave 6: ages 2-4)
+import src_teen_eng, src_teen_l2l, src_teen_psd  # noqa: F401,E402  (wave 6: secondary English, Learning to Learn, PSD)
 
 EXT_VERSION = "whynext-0.6"
 PROJECT_NAME = "Why Next?"
@@ -119,6 +121,15 @@ for t in dsl.TOPICS:
         seen.add(pid)
         new_edges.append({"topicId": tid, "prerequisiteId": pid, "strength": "hard" if s == "h" else "soft", "reason": reason})
 
+# foundation edges (wave 6): v1 topics that build on the new ages 2-4 topics (see dsl.U)
+FOUNDATION_MAX_START = 4
+foundation_pairs = set()
+for key, ref, s, reason in dsl.UNLOCKS:
+    pid, tid = key2id[key], resolve(ref)
+    assert tid in old_by_id, f"{key}: foundation edges must point at a v1 topic, got {ref}"
+    new_edges.append({"topicId": tid, "prerequisiteId": pid, "strength": "hard" if s == "h" else "soft", "reason": reason})
+    foundation_pairs.add((tid, pid))
+
 all_topics = topics_v1["topics"] + new_topics
 all_edges = deps_v1["dependencies"] + new_edges
 by_id = {t["id"]: t for t in all_topics}
@@ -160,7 +171,9 @@ problems, report = [], {}
 # 1 referential integrity + no old->new
 for e in new_edges:
     if e["topicId"] not in by_id or e["prerequisiteId"] not in by_id: problems.append(f"dangling edge {e}")
-    if e["topicId"] not in new_ids: problems.append(f"old topic depends on new: {e}")
+    if e["topicId"] not in new_ids and not ((e["topicId"], e["prerequisiteId"]) in foundation_pairs
+            and by_id[e["prerequisiteId"]]["ageRangeStart"] <= FOUNDATION_MAX_START):
+        problems.append(f"old topic depends on new: {e}")
     if e["topicId"] == e["prerequisiteId"]: problems.append(f"self edge {e}")
 pairs = [(e["topicId"], e["prerequisiteId"]) for e in all_edges]
 if len(pairs) != len(set(pairs)): problems.append("duplicate edges in merged graph")
@@ -201,13 +214,19 @@ def reaches_v1(i, par):
             if p not in new_ids: return True
             if p not in seen: seen.add(p); st.append(p)
     return False
-unreached = [by_id[i]["name"] for i in new_ids if not reaches_v1(i, parents)]
-unreached_hard = [by_id[i]["name"] for i in new_ids if not reaches_v1(i, hard_parents)]
+kids = defaultdict(list); hard_kids = defaultdict(list)
+for e in all_edges:
+    kids[e["prerequisiteId"]].append(e["topicId"])
+    if e["strength"] == "hard": hard_kids[e["prerequisiteId"]].append(e["topicId"])
+# a new topic is connected if it builds on v1 (ancestors) or, for the early-years foundation, if v1 builds on it
+unreached = [by_id[i]["name"] for i in new_ids if not (reaches_v1(i, parents) or reaches_v1(i, kids))]
+unreached_hard = [by_id[i]["name"] for i in new_ids if not (reaches_v1(i, hard_parents) or reaches_v1(i, hard_kids))]
 report["unreachedPrimary"] = unreached; report["unreachedPrimaryHardOnly"] = unreached_hard
 if unreached: problems.append(f"new topics not reaching v1 graph: {unreached}")
 # 6 every new topic has evidence/prompt/placeholder; every new topic has >= 1 prereq
 for t in new_topics:
-    if not parents[t["id"]]: problems.append(f"no prerequisites: {t['name']}")
+    if not parents[t["id"]] and not (t["ageRangeStart"] <= FOUNDATION_MAX_START and kids[t["id"]]):
+        problems.append(f"no prerequisites: {t['name']}")
     if "{{name}}" not in t["assessmentPrompt"]: problems.append(f"prompt placeholder missing: {t['name']}")
     if t["ageRangeStart"] > t["ageRangeEnd"]: problems.append(f"bad age range: {t['name']}")
 

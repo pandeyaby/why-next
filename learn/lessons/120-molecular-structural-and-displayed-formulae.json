@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_UJ2KVmA1tf",
+ "title": "Molecular, structural and displayed formulae",
+ "audience": "learner",
+ "keyIdea": "One molecule can be written three ways. A displayed formula draws every atom and every bond. A structural formula lists the groups along the chain, such as CH₃CH₂CH₃. A molecular formula only counts the atoms, such as C₃H₈, so it loses the shape.",
+ "explain": {
+  "kid": [
+   "A displayed formula is a drawing. It shows every atom as a letter and every bond as a line. Each carbon has four lines.",
+   "A structural formula goes along the chain one carbon at a time. You write each carbon with the H atoms joined to it. Propane is CH₃CH₂CH₃.",
+   "A molecular formula just counts. Add up each kind of atom and write C first, then H. Propane is C₃H₈.",
+   "Two molecules can share a molecular formula but have different shapes. Butane and methylpropane are both C₄H₁₀. Their drawings and structural formulae are not the same."
+  ],
+  "adult": [
+   "A displayed formula shows every atom and every bond. Each bond is a line, so you can check that each carbon has four. It shows which atoms are joined, not the real 3D angles.",
+   "A structural formula writes each carbon with its own H atoms, in chain order. Ethane is CH₃CH₃, propane is CH₃CH₂CH₃ and ethanol is CH₃CH₂OH. A branch goes in brackets after the carbon it hangs from: methylpropane is CH₃CH(CH₃)CH₃.",
+   "A molecular formula gives the total of each atom. Carbon comes first, then hydrogen, then the rest in A to Z order: C₂H₆, C₃H₈, C₂H₆O. It says nothing about shape, so butane and methylpropane share C₄H₁₀.",
+   "Common mistakes: drawing a carbon with three or five bonds; writing one group, such as CH₃, as the formula for ethane; missing the H in an OH group when you count; and thinking that one molecular formula means one molecule."
+  ]
+ },
+ "familyTip": "Write CH₃, CH₂ and OH on small cards. Lay them in a row to build CH₃CH₂CH₃ or CH₃CH₂OH, then count the atoms together to get the molecular formula. Finally, draw it out with a line for every bond and check that each C has four lines.",
+ "worked": {
+  "title": "Propane: from structural to displayed and molecular",
+  "steps": [
+   "The structural formula is CH₃CH₂CH₃: three carbons in a row.",
+   "Draw the three Cs joined by lines. Add 3 H to each end carbon and 2 H to the middle one.",
+   "Check every carbon has four lines: the end ones have 3 H + 1 C, the middle one has 2 H + 2 C.",
+   "Count the atoms: 3 C and 3 + 2 + 3 = 8 H. The molecular formula is C₃H₈."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the molecular formula of CH₃CH₂CH₃?",
+   "choices": [
+    "C₃H₈",
+    "C₃H₇",
+    "CH₈"
+   ],
+   "answer": 0,
+   "hint": "Count the carbons, then add up the H in every group.",
+   "explain": "3 carbons, and 3 + 2 + 3 = 8 hydrogens, so C₃H₈."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A straight chain is written CH₃(CH₂){k}CH₃, which means {k} CH₂ groups in the middle. How many H atoms are in its molecular formula?",
+   "answer": "2*k+6",
+   "hint": "Each end group CH₃ has 3 H. Each CH₂ in the middle has 2 H.",
+   "explain": "3 + 3 = 6 H on the ends, plus 2 × {k} = {=2*k} H in the middle: {=2*k+6} H in all, so C{=k+2}H{=2*k+6}.",
+   "params": {
+    "k": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A displayed formula shows a straight chain of {n} carbons with H on every free bond. How many lines (bonds) are in the drawing altogether?",
+   "answer": "3*n+1",
+   "hint": "Count the C–C lines and the C–H lines separately. The chain holds 2n + 2 H.",
+   "explain": "There are {=n-1} C–C lines and {=2*n+2} C–H lines: {=n-1} + {=2*n+2} = {=3*n+1} lines.",
+   "params": {
+    "n": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What does a displayed formula show that a molecular formula does not?",
+   "choices": [
+    "How the atoms are joined, with every bond",
+    "How many carbon atoms there are",
+    "Which elements are present"
+   ],
+   "answer": 0,
+   "hint": "Both tell you how many atoms of each kind. Only one tells you which atom is joined to which.",
+   "explain": "A molecular formula only counts atoms. The displayed formula shows every bond, so you can see the shape of the chain."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What is the molecular formula of ethanol, CH₃CH₂OH?",
+   "choices": [
+    "C₂H₆O",
+    "C₂H₅O",
+    "C₂H₆"
+   ],
+   "answer": 0,
+   "hint": "Count every H, including the one on the oxygen.",
+   "explain": "3 + 2 + 1 = 6 H, plus 2 C and 1 O, gives C₂H₆O. C₂H₅O misses the H in OH."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is the structural formula of butane?",
+    "choices": [
+     "CH₃CH₂CH₂CH₃",
+     "C₄H₁₀",
+     "CH₃CH₃CH₃CH₃"
+    ],
+    "answer": 0,
+    "hint": "The end carbons have one carbon neighbour; the middle ones have two.",
+    "explain": "End carbons are CH₃ and middle carbons are CH₂. C₄H₁₀ is the molecular formula, and CH₃ in the middle would give those carbons five bonds."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Butane and methylpropane are both C₄H₁₀. Which statement is true?",
+    "choices": [
+     "They have different structural formulae",
+     "They are the same molecule",
+     "They have different numbers of atoms"
+    ],
+    "answer": 0,
+    "hint": "The molecular formula counts atoms; it does not show how they are joined.",
+    "explain": "Butane is CH₃CH₂CH₂CH₃ and methylpropane is CH₃CH(CH₃)CH₃: same atoms, joined differently."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mia says the molecular formula of ethane is CH₃. What is wrong?",
+    "choices": [
+     "CH₃ is only one group; ethane has two carbons, C₂H₆",
+     "Nothing, CH₃ is right",
+     "Ethane has three carbons"
+    ],
+    "answer": 0,
+    "hint": "Ethane's structural formula is CH₃CH₃. Add up both groups.",
+    "explain": "Ethane is CH₃CH₃: two CH₃ groups. Together that is 2 C and 6 H, so C₂H₆."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "The structural formula of a straight chain of {n} carbons is written CH₃CH₂…CH₃. How many CH₂ groups does it contain?",
+    "answer": "n-2",
+    "hint": "The two end carbons have one carbon neighbour each, so they are CH₃. Every other carbon is CH₂.",
+    "explain": "2 of the {n} carbons are CH₃ ends, so {n} − 2 = {=n-2} are CH₂ groups in the middle.",
+    "params": {
+     "n": [
+      3,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "How many H atoms are in the molecular formula of CH₃(CH₂){k}OH?",
+    "answer": "2*k+4",
+    "hint": "Add the H in CH₃, in each CH₂, and the one in OH.",
+    "explain": "3 + 2 × {k} + 1 = {=2*k+4} H. The molecular formula is C{=k+1}H{=2*k+4}O.",
+    "params": {
+     "k": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is the molecular formula of chloroethane, CH₃CH₂Cl?",
+    "choices": [
+     "C₂H₅Cl",
+     "C₂H₆Cl",
+     "CH₅Cl"
+    ],
+    "answer": 0,
+    "hint": "Cl takes the place of one H. Count the H in CH₃ and CH₂ only.",
+    "explain": "3 + 2 = 5 H, 2 C and 1 Cl: C₂H₅Cl."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which structural formula matches a chain of three carbons with a CH₃ branch on the middle carbon?",
+    "choices": [
+     "CH₃CH(CH₃)CH₃",
+     "CH₃CH₂CH₂CH₃",
+     "CH₃CH₂(CH₃)CH₃"
+    ],
+    "answer": 0,
+    "hint": "The middle carbon bonds to three carbons, so it keeps only one H. The branch goes in brackets after it.",
+    "explain": "The middle carbon has 3 carbon neighbours and 1 H, so it is CH, followed by the branch (CH₃): CH₃CH(CH₃)CH₃."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In a correct displayed formula, how many lines meet at each carbon atom?",
+    "choices": [
+     "4",
+     "3",
+     "It depends on the H count only"
+    ],
+    "answer": 0,
+    "hint": "Carbon makes four covalent bonds, and each bond is one line.",
+    "explain": "Every carbon has four bonds, so four lines. A double bond counts as two of them."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Molecular or structural? A molecular formula gives each element once; a structural formula lists the groups. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Molecular formula",
+    "Structural formula"
+   ],
+   "items": [
+    [
+     "C₃H₈",
+     0
+    ],
+    [
+     "C₂H₆O",
+     0
+    ],
+    [
+     "C₄H₁₀",
+     0
+    ],
+    [
+     "C₂H₅Cl",
+     0
+    ],
+    [
+     "CH₃CH₂CH₃",
+     1
+    ],
+    [
+     "CH₃CH₂OH",
+     1
+    ],
+    [
+     "CH₃CH(CH₃)CH₃",
+     1
+    ],
+    [
+     "CH₃CH₂Cl",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagformula",
+  "caption": "Flagship lab: tap each carbon to write its group and watch the structural and molecular formulae fill in; then build a drawing from CH₃CH₂CH₃.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

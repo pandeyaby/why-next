@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Carbon is 2,4 with four outer electrons and forms four covalent bonds; the lab's formulas follow CnH(2n+2) for chains (CH4, C3H8, C4H10) and CnH2n for one ring (C6H12 cyclohexane); isomer counts 2, 3, 75 and 366,319 for C4, C5, C10, C20 match OEIS A000602; neon has a full shell and forms no ordinary compounds."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the slips GCSE teachers report for organic chemistry: thinking every carbon carries four hydrogens (4n), forgetting that closing a ring removes two H (using 2n+2 for a ring), treating a branched chain as a new formula rather than an isomer, and assuming any element with outer electrons can chain like carbon."
+  },
+  "lab_distinct": {
+   "score": 10,
+   "evidence": "A square-grid skeleton builder where each carbon shows four dashed bond slots, carbons snap onto free slots, a ring mode joins chain ends and Fill with H caps every free slot; shingle similarity to the nearest flagship lab (flag_exp.js) is 3.7%, and no other lab builds molecules bond by bond."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners fill methane, grow a three-carbon chain and watch the free-bond count give C3H8, branch the middle carbon to see C4H10 stay the same formula as a new isomer, then join a six-carbon chain into a ring and see 14 free bonds drop to 12 before the text states the 2n+2 and 2n rules."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Predicts before each reveal: H count for three carbons (8 vs the tempting 12), whether the branched C4 changes the formula, the ring formula (C6H14 no change vs C6H12 vs C6H6), and which of Ne, O, N, C can bond to four neighbours; each wrong option is disproved by the counter on screen."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Probed in the browser: 16 H for a four-carbon chain gets the 'four H on every carbon' message naming shared bonds, 8 gets the 2 H per carbon slip, 12 on the ring task gets the 'ring loses two hydrogens' message, 9 gets a generic recount hint, and the correct counts win with the worked bond tally."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 3.3 for the kid text and 6.6 for the adult text (limits 6.5 and 9.5); kid sentences carry one idea each, such as 'Each carbon has four hands to hold', with formulas built from counts the learner just made."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes and explanation overlap with every existing lesson is below the 12% gate; each paragraph adds one thing: the four-bond rule, chains and branches, rings, the silicon and neon contrast, or the named counting mistake."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Walkthrough passes on iPhone 13 and desktop; phone screenshots of the open ring, filled cyclohexane, propane, the neon comparison and the challenge show cell size capped at 48 px, no clipped stubs, and the three control buttons on one row with 44 px+ targets."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core reports no violations in light and dark themes; the canvas aria-label is rebuilt on every change to list each carbon's bonds and the current formula, carbons are added by a tap on a ghost spot (no drag needed), and Join, Fill with H and Start again are labelled buttons."
+  }
+ },
+ "sources": [
+  "https://www.aqa.org.uk/subjects/chemistry/gcse/chemistry-8462/specification",
+  "https://openstax.org/books/chemistry-2e/pages/20-1-hydrocarbons",
+  "https://oeis.org/A000602"
+ ]
+}

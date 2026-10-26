@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Structural and molecular formulae are computed from the group list, not typed by hand: CH3CH3/C2H6, CH3CH2CH3/C3H8, CH3CH2CH2CH3 and CH3CH(CH3)CH3 both C4H10, CH3CH2OH/C2H6O, CH2=CHCH3/C3H6, CH3CH2Cl/C2H5Cl, CH3CH2CH2OH/C3H8O, CH3CH(CH3)CH2CH3/C5H12; molecular formulae use Hill order (C, H, then A to Z), and the build step enforces four bonds per carbon including the double bond in propene."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the slips teachers report for this representation topic: writing one group (CH3) as ethane's formula, giving propane's middle carbon 3 H, assuming one molecular formula means one structure (butane vs methylpropane), dropping the H of OH when counting (C2H5O), and drawing carbons with too few or too many bonds."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Three synchronised representations of one molecule: tapping a carbon haloes it with its own H atoms and writes that group into the structural strip in chain order, the molecular strip fills only when all groups are read, and a reverse build mode counts bonds per carbon; shingle similarity to the nearest lab (flag_carbon.js) is 2.6%."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner reads ethane and propane group by group and sees CH3CH3 and C2H6 appear side by side, watches butane and methylpropane give the same C4H10 but different strips with the branch in brackets, sees the OH group add a sixth H in ethanol, and in the build step adds H until each carbon's label turns green at 4 bonds before the text names the rule."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions with tempting wrong options the lab disproves: CH3 for ethane's molecular formula, 3 H on propane's middle carbon, 'same atoms, same formula' for the C4H10 pair, C2H5O for ethanol, and '2, one for each H' for the middle carbon's bond count in the drawing (the label shows 4 bonds)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Probed in the browser: C3H8 for a structural question gets 'That is the molecular formula'; CH3CH2CH2CH3 for a molecular question gets 'written group by group... each element once'; H10C4 gets 'Right atoms, wrong order'; C2H5O gets 'You missed the H on the oxygen'; CH3CHCH3CH3 gets 'Put the branch in brackets'; C4H12 for methylbutane gets 'Count the carbons again, including any carbon on a branch'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch-Kincaid grade 4.9 for the kid text and 6.9 for the adult text (limits 6.5 and 9.5) after the adult text was rewritten from 11.0; each of the three formula types gets its own short paragraph with a worked example the learner has just seen in the lab."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler regex passes and the explanation overlaps the nearest lesson (Why carbon forms so many compounds) by 0.3% against the 12% limit; the lab's challenge feedback is built from the molecule's own groups, for example listing 'CH3, CH2, CH2, OH' for propan-1-ol, rather than reusing fixed text."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Phone sweep on iPhone 13 and 360x640 Android in both themes reports 0 findings; screenshots of methylpropane (branch carbon on a long bond so its H atoms never overlap the neighbours'), the build step with bond labels below the lower H row, the sandbox and the challenge input show readable labels and reachable, unclipped buttons."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core (WCAG 2.1 AA) reports no violations in light and dark on desktop and phone; the canvas aria-label lists every group with its H count and branch, groups read, and both formulae once complete (or each carbon's H and bond count in build mode); Read next group and +H on C1/C2/C3 buttons replace every tap, and the challenge input has its own label."
+  }
+ },
+ "sources": [
+  "https://www.aqa.org.uk/subjects/chemistry/gcse/chemistry-8462/specification (4.7.1 and representing organic molecules)",
+  "https://www.chemguide.co.uk/basicorg/conventions/draw.html",
+  "https://openstax.org/books/chemistry-2e/pages/20-1-hydrocarbons"
+ ]
+}

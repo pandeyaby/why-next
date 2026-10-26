@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Recomputed every number: 1.04⁰ = 1 so 500 × 1.04⁰ = 500; +10% → 1.1 and 200 × 1.1² = 242 (adding 20 twice gives 240); −15% → 0.85; 200 × 1.1⁷ = 389.74 and 200 × 1.1⁸ = 428.72, so the first year over 400 is t = 8, and ln 2 / ln 1.1 = 7.27 matches the adult text's 'about 7.3 years'; 800 × 0.75 = 600, × 0.75 again = 450; 12000 × 0.8² = 7680; challenge pairs 100 × 1.2² = 144, 400 × 0.5³ = 50, 1000 × 0.9² = 810, 50 × 2³ = 400."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented a·bᵗ slips (CCSS A-SSE.1b reading, percent-change errors): r/100 used as the factor (0.15 for a 15% fall), 6% read as 0.6, a factor below/above 1 for the wrong direction, the t = 1 value taken as the start, b⁰ = 0, (a × b)ᵗ instead of a × bᵗ, b × t instead of bᵗ, linear 'add the first change each year', and 95% read as the size of the fall."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The mechanism is specific to a·bᵗ: a bar chart where every bar is the previous bar × b, a draggable first bar for a, a factor slider spanning 0.5–1.5 with 1 marked as no change, and a 100% strip that grows a green +r% piece or crosses out a −r% piece. A dotted linear 'add the same amount' series is overlaid for the compounding step. Nearest flagship shingle similarity 6.0% (flag_surd.js), then 3.1% (flag_rad.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner finds each idea before it is stated: moving the first bar shows a is the t = 0 value; sliding b until the strip reads 110% gives 1.1 and the t = 2 readout 242; sliding down to 85% shows the leftover, not the loss; stepping t past the dashed double line shows t = 8 while the dots (adding 20) are still below 400; building 800 × 0.75ᵗ from a story combines both controls."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predicts, each with a tempting wrong option the lab then disproves: 'value after 1 year' for the 500, 0.1 for a 10% rise, 0.15 for a 15% fall, '10 years' for doubling at 10% (the linear answer), and 775 (subtracting 25) for the phone after a year; the right option is in a different position each time."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 12 challenge questions on an iPhone 13 viewport across all five types: 1.6 got '6% is 6 hundredths, 0.06, not 0.6', 1.12 for a fall got 'above 1, so it would make the population grow', 140 got 'added the first step’s change every time', 0.9 as a start got 'the factor, not the start', and each message ends with the full working (e.g. 100% − 12% = 88%, so b = 0.88)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade −1.2 for the kid text and 3.2 for the adult text by learn/readability.py (limits 6.5 and 9.5); kid text uses a bank story, 'keep all of it and get 5% more', and one idea per sentence; task lines are single instructions."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and the explanation shares 0% of 6-word shingles with every other lesson; the four adult paragraphs cover meaning of a and b, the percent ↔ factor rule both ways, why compounding speeds up or slows down, and the named mistakes, with no repeated template sentences."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 and 360 px Android sweeps (phone_sweep.cjs) found 0 overflow or clipping findings; screenshots of all seven steps show axis labels, bar values, the slider and the strip label inside the canvas. Real pointer drags on the phone viewport (first bar to 500, slider to 1.10, along the bars to t = 8) each completed their task. Overlapping ×b labels and a mis-placed 'double' label were fixed after screenshot review."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs axe-core WCAG 2.1 AA clean in light and dark on desktop and iPhone 13 with no console errors; a ± 10/100, b ± 0.01/0.05 and t ± 1 buttons with aria-labels replace every drag, the canvas aria-label states the expression, the percentage-to-factor reading and the current value, and challenge feedback is in a polite live region."
+  }
+ },
+ "sources": [
+  "https://www.thecorestandards.org/Math/Content/HSA/SSE/",
+  "https://openstax.org/books/college-algebra-2e/pages/6-1-exponential-functions",
+  "https://www.mathsisfun.com/money/compound-interest.html"
+ ]
+}

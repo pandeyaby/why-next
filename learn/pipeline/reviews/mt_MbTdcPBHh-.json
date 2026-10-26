@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Identities (a ± b)² = a² ± 2ab + b², a² − b² = (a + b)(a − b), and 'a sum of squares has no real factors' checked against OpenStax Elementary Algebra 2e sections 6.4 and 7.4. Recomputed by hand: 21² = 400 + 40 + 1 = 441, 23 × 17 = 391, 52 × 48 = 2496, 101² − 99² = 200 × 2 = 400, 13 × 7 = 91 = 100 − 9, 25x² − 36 = (5x + 6)(5x − 6) by expansion; the lab's coefficient challenge skips n sharing a factor with k so 9x² − 81 (not fully factorised) never appears; 28 challenge rounds checked."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented special-product slips: (x + b)² = x² + b² (freshman's dream), one strip only (x² + bx + b²), b² written as 2b, x² − b² confused with (x − b)², (−b)² taken as −b², the number left unrooted ((x + 9)(x − 9) for x² − 9), the coefficient left unrooted ((4x + 5)(4x − 5)), (x + 2b)² from not halving the middle term, and trying to factorise x² + b²."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The lab is the geometric proof itself: a growable (x + b) square with two x·b strips and a b² corner, a b by b corner cut from x², and a loose strip that rotates 90° along a path to turn the L into an (x + b) by (x − b) rectangle, plus an amber handle that sets the side to kx. Highest 6-shingle similarity to any flagship lab is 2.9% (flag_exact.js), and it shares no mechanic with flag_fact.js's p × q tile corner."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each identity is built before it is named: growing b to 3 shows the two 3x strips that make 6x; matching x² + 10x + 25 forces halving 10; squaring 21 shows the 20 + 20 + 1 strips; cutting 9 shows the cut side is the root 3; swinging the strip makes the (x + 3) by (x − 3) rectangle with unchanged area; 23 × 17 reuses that rectangle with numbers; 4x² − 25 needs the side set to 2x before the cut fits."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Seven predicts, each with a tempting wrong option the lab disproves: x² + 9 for (x + 3)²; (x + 10)² for x² + 10x + 25; 401 for 21²; (x − 3)² and (x − 9)(x + 9) for x² − 9; 'x and 3' or 'x − 3 and x − 3' for the rearranged L; 400 or 409 for 23 × 17; (4x + 5)(4x − 5) for 4x² − 25. The correct option is never listed first."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 28 challenge rounds on an iPhone 13 viewport across seven question types: x² + 4x + 16 is told there are two strips of 4x; x² − 6x − 9 is told (−3) × (−3) = +9; (x + 36)(x − 36) is told to root 36; (16x + 3)(16x − 3) is told to root the coefficient; 2525 for 55 × 45 is told the corner is removed; (x + 8)² for x² + 8x + 16 is told to halve the middle term; every message ends with the full working."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade −0.9 for the kid text and 3.5 for the adult text (limits 6.5 and 9.5); kid paragraphs talk about growing a square, thin strips, cutting a corner and turning a piece, and each lab task is one instruction such as 'Cut away 9, a 3 by 3 corner'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and explanation overlap with every other lesson is under the 12% gate; each adult paragraph adds one thing (why 2ab is doubled, how to spot a perfect square and a non-example, the cut-and-swing proof with two mental-arithmetic uses, the named slips), and challenge feedback states the slip and working rather than praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 (light and dark) and desktop (light and dark) screenshots of all nine steps show the expression lines, edge labels, pink, amber and blue handles inside the canvas. Real pointer drags on the phone viewport completed steps 0, 3, 4, 5 and 6. Fixed after screenshots: stale x labels and the dashed cut stayed on the finished rectangle, the b label collided with 2x, and white piece text was unreadable on the dark theme's light fills."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs axe-core WCAG 2.1 AA clean in both themes on phone and desktop with no console errors; every drag has buttons (b − 1, b + 1, Side − x, Side + x, Swing strip ◀ ▶), each step completes with Show me, and the canvas aria-label describes the shape, the cut, whether the strip has moved, and the live identity; the challenge question replaces it on the challenge step."
+  }
+ },
+ "sources": [
+  "https://openstax.org/books/elementary-algebra-2e/pages/6-4-special-products",
+  "https://openstax.org/books/elementary-algebra-2e/pages/7-4-factor-special-products",
+  "https://www.thecorestandards.org/Math/Content/HSA/SSE/",
+  "https://www.mathsisfun.com/algebra/special-binomial-products.html"
+ ]
+}

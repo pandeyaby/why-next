@@ -33,9 +33,9 @@ jobs:
           WHYNEXT_SINGLE_FILE: ${{ runner.temp }}/why-next-site.html
         run: sh scripts/check_deterministic.sh
   learn-e2e:
-    # Headless Chromium test of the Learn panel (about 15 s plus browser download), including an axe accessibility scan.
+    # Headless Chromium tests of the Learn panel across every lesson (about 9-11 min and growing with lessons), including an axe accessibility scan.
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

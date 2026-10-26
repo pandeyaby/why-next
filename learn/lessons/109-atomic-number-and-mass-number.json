@@ -1,0 +1,139 @@
+{
+  "topicId": "mt_jg2oNKpNw9",
+  "title": "Atomic number and mass number",
+  "audience": "learner",
+  "keyIdea": "The atomic number is the number of protons, and it decides the element. The mass number is protons plus neutrons. In a neutral atom the electrons equal the protons; an ion has gained or lost electrons.",
+  "explain": {
+    "kid": [
+      "An atom has a tiny centre called the nucleus. It holds protons and neutrons. Electrons move around the outside.",
+      "The number of protons is the atomic number. It tells you the element. Every carbon atom has 6 protons. If it had 7, it would be nitrogen.",
+      "The mass number is protons plus neutrons. Electrons are so light that we do not count them.",
+      "So neutrons = mass number − atomic number. Carbon-14 has 14 − 6 = 8 neutrons."
+    ],
+    "adult": [
+      "A nuclear symbol such as ²³₁₁Na shows the mass number A (protons + neutrons) on top and the atomic number Z (protons) below. Neutrons = A − Z, so sodium-23 has 12 neutrons.",
+      "Z defines the element and its place in the periodic table. Atoms of the same element with different numbers of neutrons are isotopes: same chemistry, different mass. Carbon-12 and carbon-14 are both carbon.",
+      "A proton carries +1, an electron −1, and a neutron no charge. A neutral atom has as many electrons as protons. Losing electrons gives a positive ion (Na⁺ has 10), gaining them gives a negative ion (Cl⁻ has 18).",
+      "Common slips: taking the mass number as the number of neutrons, swapping the two numbers, and thinking that a charge changes the element. Only the proton count does that."
+    ]
+  },
+  "familyTip": "Pick an element from a periodic table poster or a food label (sodium, calcium, iron). Read off its atomic number and ask: how many protons? How many electrons in a neutral atom?",
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "An atom has 8 protons, 8 neutrons and 8 electrons. Which number tells you which element it is?",
+      "choices": ["The 8 protons", "The 8 neutrons", "The 8 electrons"],
+      "answer": 0,
+      "hint": "Which particle can never change without the element changing too?",
+      "explain": "The protons. 8 protons is always oxygen; the atomic number of oxygen is 8."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "An atom has atomic number {z} and mass number {=z*2+n}. How many neutrons does it have?",
+      "answer": "z+n",
+      "hint": "Neutrons = mass number − atomic number.",
+      "explain": "{=z*2+n} − {z} = {=z+n} neutrons.",
+      "params": {"z": [3, 20], "n": [0, 4]}
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "An atom has {p} protons and {n} neutrons. What is its mass number?",
+      "answer": "p+n",
+      "hint": "Add the particles in the nucleus.",
+      "explain": "Mass number = protons + neutrons = {p} + {n} = {=p+n}.",
+      "params": {"p": [3, 20], "n": [3, 22]}
+    },
+    {
+      "type": "mc",
+      "id": "p4",
+      "prompt": "A sodium atom (11 protons) loses one electron. What is it now?",
+      "choices": ["A sodium ion with charge +1", "A neon atom", "A sodium ion with charge −1"],
+      "answer": 0,
+      "hint": "Count the charges: 11 positive protons, and how many negative electrons now?",
+      "explain": "It still has 11 protons, so it is still sodium. 11 − 10 = +1, so it is the ion Na⁺."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "numeric",
+        "id": "m1",
+        "prompt": "A neutral atom has atomic number {z}. How many electrons does it have?",
+        "answer": "z",
+        "hint": "In a neutral atom the charges balance.",
+        "explain": "{z} protons need {z} electrons to balance, so {z}.",
+        "params": {"z": [2, 20]}
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Carbon-12 and carbon-14 are both carbon. What is different about them?",
+        "choices": ["The number of neutrons", "The number of protons", "The number of electrons in a neutral atom"],
+        "answer": 0,
+        "hint": "The element stays the same, so the protons stay the same.",
+        "explain": "They are isotopes: both have 6 protons, but carbon-14 has 8 neutrons instead of 6."
+      },
+      {
+        "type": "numeric",
+        "id": "m3",
+        "prompt": "The symbol for an atom shows {=z*2+n} on top and {z} at the bottom. How many neutrons?",
+        "answer": "z+n",
+        "hint": "Top number minus bottom number.",
+        "explain": "{=z*2+n} − {z} = {=z+n} neutrons.",
+        "params": {"z": [3, 20], "n": [0, 4]}
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Chlorine has atomic number 17. How many electrons are in a chloride ion, Cl⁻?",
+        "choices": ["18", "16", "17"],
+        "answer": 0,
+        "hint": "A negative charge means the atom has gained electrons.",
+        "explain": "17 protons; a −1 charge means one extra electron, so 18."
+      },
+      {
+        "type": "mc",
+        "id": "m5",
+        "prompt": "Why do we ignore electrons when working out the mass number?",
+        "choices": ["Their mass is tiny compared with protons and neutrons", "They have no mass at all", "They are not part of the atom"],
+        "answer": 0,
+        "hint": "Compare the masses of the three particles.",
+        "explain": "An electron is about 1/1840 of the mass of a proton, so it barely changes the total. It does have some mass."
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "An ion has {p} protons and a charge of +2. How many electrons does it have?",
+        "answer": "p-2",
+        "hint": "+2 means two more protons than electrons.",
+        "explain": "{p} − 2 = {=p-2} electrons.",
+        "params": {"p": [4, 20]}
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "An atom gains a proton. What happens?",
+        "choices": ["It becomes a different element", "It becomes an isotope of the same element", "It becomes a negative ion"],
+        "answer": 0,
+        "hint": "Which number decides the element?",
+        "explain": "The atomic number goes up by one, so it is the next element in the periodic table."
+      }
+    ]
+  },
+  "status": "self-checked",
+  "visual": {
+    "type": "ptable",
+    "caption": "The atomic number orders the periodic table. Find carbon at number 6, then choose other elements.",
+    "opts": {"highlight": "", "z": 6}
+  },
+  "lab": {
+    "type": "flagnuc",
+    "caption": "Flagship lab: build an atom. Add protons, neutrons and electrons and watch the name, the symbol and the charge.",
+    "opts": {"step": 0}
+  }
+}

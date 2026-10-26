@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_BSJTMFUDKP",
+ "title": "Naming organic compounds",
+ "audience": "learner",
+ "keyIdea": "An organic name is read in three parts. The stem counts the carbons in the longest chain: meth-, eth-, prop-, but-. The ending names the functional group: -ane, -ene, -ol or -oic acid. A number, counted from the end nearer the group, says which carbon it is on, as in propan-2-ol and but-1-ene.",
+ "explain": {
+  "kid": [
+   "A chemical name is a code. You can read it in three parts. The start tells you how many carbons are in the chain. The number tells you where something is. The end tells you which group the molecule has.",
+   "The starts are meth for 1 carbon, eth for 2, prop for 3 and but for 4. Then they count like Greek numbers: pent is 5 and hex is 6. So methane has one carbon and butane has four.",
+   "The end shows the group. Ane means only single bonds. Ene means there is a C=C. Ol means there is an OH. Oic acid means there is a COOH. So ethanol has two carbons and an OH.",
+   "The number says where the group sits. Count from the end that is nearer to the group. Propan-2-ol has its OH on the middle carbon. If you count from the far end, the number comes out too big."
+  ],
+  "adult": [
+   "A systematic name has a stem, sometimes a position number, and an ending. The stem gives the number of carbons in the longest chain: meth-, eth-, prop-, but-, pent- and hex- for 1 to 6. The ending gives the functional group: -ane for an alkane, -ene for C=C, -ol for –OH and -oic acid for –COOH. Alcohols and acids keep the \"an\" of the alkane, so we say ethanol and ethanoic acid.",
+   "The number tells you where the group is. Number the chain from the end that gives the group the lowest number. Butane with –OH on an end carbon is butan-1-ol. With –OH on an inner carbon it is butan-2-ol, whichever end you start from. For an alkene the number is the first carbon of the C=C: CH₂=CHCH₂CH₃ is but-1-ene and CH₃CH=CHCH₃ is but-2-ene.",
+   "Some names need no number because only one place is possible, as in ethanol and propene. The –COOH carbon has only one bond left for the chain. So it is always carbon 1, at the end, and acids such as propanoic acid never carry a number. To draw from a name, read it part by part. In propan-2-ol, prop means three carbons, 2 means carbon 2 and ol means –OH. So the structure is CH₃CH(OH)CH₃.",
+   "Common mistakes: counting from the wrong end and writing butan-3-ol. Leaving out the carbon in –COOH, so CH₃CH₂COOH gets called ethanoic acid when it is propanoic acid. Dropping the \"an\", as in \"ethol\". Reading the number as a count, so but-2-ene is taken to have two double bonds."
+  ]
+ },
+ "familyTip": "Write stems on one set of cards (meth, eth, prop, but) and endings on another (ane, ene, anol, anoic acid). Pick one of each, say the name, then draw the chain with that many carbons and that group. Swap roles: one person draws, the other names it.",
+ "worked": {
+  "title": "Name CH₃CH₂CH(OH)CH₃.",
+  "steps": [
+   "Count the carbons in the chain: CH₃, CH₂, CH and CH₃ make 4. The stem is but-.",
+   "The group is –OH, so the ending is -ol, with the \"an\" kept: butan…ol.",
+   "Number from the left and the –OH is on carbon 3. Number from the right and it is on carbon 2. Use the lower number.",
+   "The name is butan-2-ol."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What does the stem prop- tell you about a compound?",
+   "choices": [
+    "Its longest carbon chain has 3 carbons",
+    "It is an alcohol",
+    "It has 3 hydrogen atoms"
+   ],
+   "answer": 0,
+   "hint": "The stem comes first in the name. Which thing does the first part count?",
+   "explain": "Meth, eth, prop and but stand for 1, 2, 3 and 4 carbons. The group is shown by the ending, not the stem."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A straight chain of {n} carbons has an –OH on carbon {k}, counting from the left. What number goes in its name?",
+   "answer": "k*(k<=n+1-k)+(n+1-k)*(k>n+1-k)",
+   "hint": "Count the same carbon from the right as well, then pick the lower number.",
+   "explain": "From the left it is carbon {k}; from the right it is carbon {=n+1-k}. The name uses the lower one, {=k*(k<=n+1-k)+(n+1-k)*(k>n+1-k)}.",
+   "params": {
+    "n": [
+     6,
+     8
+    ],
+    "k": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A carboxylic acid is CH₃, then {k} CH₂ groups, then COOH, in a line. How many carbons does its stem count?",
+   "answer": "k+2",
+   "hint": "Count CH₃, every CH₂, and the carbon inside COOH.",
+   "explain": "CH₃ gives 1, the CH₂ groups give {k} and COOH gives 1 more, so the stem counts {=k+2} carbons.",
+   "params": {
+    "k": [
+     0,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is the name of CH₃CH₂CH₂OH?",
+   "choices": [
+    "Propan-1-ol",
+    "Propan-3-ol",
+    "Butan-1-ol"
+   ],
+   "answer": 0,
+   "hint": "Count the carbons, then number from the end that has the –OH.",
+   "explain": "There are 3 carbons, so prop-. The –OH is on an end carbon, so counting from that end it is carbon 1: propan-1-ol."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which formula is but-1-ene?",
+   "choices": [
+    "CH₂=CHCH₂CH₃",
+    "CH₃CH=CHCH₃",
+    "CH₃CH₂CH₂CH₃"
+   ],
+   "answer": 0,
+   "hint": "The 1 says where the C=C starts. Ene says there must be a C=C.",
+   "explain": "But- means 4 carbons and -1-ene puts the C=C between carbons 1 and 2. CH₃CH=CHCH₃ is but-2-ene, and the last one is butane with no C=C."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is CH₃CH(OH)CH₃ called?",
+    "choices": [
+     "Propan-2-ol",
+     "Propan-1-ol",
+     "Butan-2-ol"
+    ],
+    "answer": 0,
+    "hint": "How many carbons are there, and is the –OH on an end or in the middle?",
+    "explain": "Three carbons give prop-. The –OH is on the middle carbon, which is carbon 2 from either end: propan-2-ol."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which of these names is wrong?",
+    "choices": [
+     "Butan-3-ol",
+     "Butan-2-ol",
+     "But-1-ene"
+    ],
+    "answer": 0,
+    "hint": "Count the same carbon from the other end of a 4-carbon chain.",
+    "explain": "Carbon 3 from one end is carbon 2 from the other. Names use the lower number, so it should be butan-2-ol."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is CH₃CH₂CH₂COOH called?",
+    "choices": [
+     "Butanoic acid",
+     "Propanoic acid",
+     "Butan-4-oic acid"
+    ],
+    "answer": 0,
+    "hint": "Does the carbon inside COOH count? Do acids need a number?",
+    "explain": "Three carbons in the chain plus the COOH carbon make 4, so but-. The COOH carbon is always carbon 1, so no number: butanoic acid."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What does the ending -ene in but-2-ene tell you?",
+    "choices": [
+     "The molecule has a C=C double bond",
+     "The molecule has an –OH group",
+     "The chain has 2 carbons"
+    ],
+    "answer": 0,
+    "hint": "Endings name the group. Stems and numbers do other jobs.",
+    "explain": "-ene means an alkene with a C=C. The but- says 4 carbons and the 2 says the C=C starts at carbon 2."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which formula is pent-2-ene?",
+    "choices": [
+     "CH₃CH=CHCH₂CH₃",
+     "CH₂=CHCH₂CH₂CH₃",
+     "CH₃CH=CHCH₃"
+    ],
+    "answer": 0,
+    "hint": "Pent- means 5 carbons. The C=C starts at carbon 2.",
+    "explain": "Five carbons with the C=C between carbons 2 and 3 give CH₃CH=CHCH₂CH₃. The second is pent-1-ene and the third has only 4 carbons."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Sam names CH₃CH₂COOH as ethanoic acid. What slip did he make?",
+    "choices": [
+     "He did not count the carbon in –COOH",
+     "He counted from the wrong end",
+     "He used the alcohol ending"
+    ],
+    "answer": 0,
+    "hint": "Count every C in the formula, including the one in COOH.",
+    "explain": "CH₃, CH₂ and the COOH carbon make 3 carbons, so it is propanoic acid. Leaving out the COOH carbon gives the wrong stem."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why is ethanoic acid never written with a number?",
+    "choices": [
+     "The –COOH carbon can only be at the end, so it is always carbon 1",
+     "Acids have no functional group",
+     "Numbers are only used for alkanes"
+    ],
+    "answer": 0,
+    "hint": "How many bonds does the COOH carbon have left for the chain?",
+    "explain": "The COOH carbon uses 3 bonds on oxygen and has 1 left, so it must end the chain. It is always carbon 1, so the number adds nothing."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "In a straight chain of {n} carbons, the C=C joins carbon {k} and carbon {=k+1}, counting from the left. What number goes in the name?",
+    "answer": "k*(k<=n-k)+(n-k)*(k>n-k)",
+    "hint": "From the right, the C=C starts at a different carbon. Work that out and take the lower one.",
+    "explain": "From the left the C=C starts at carbon {k}. From the right it starts at carbon {=n-k}. The name uses {=k*(k<=n-k)+(n-k)*(k>n-k)}.",
+    "params": {
+     "n": [
+      6,
+      8
+     ],
+     "k": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "An –OH is on carbon {k} counting from the left of a chain of {n} carbons. Which carbon is it, counting from the right?",
+    "answer": "n+1-k",
+    "hint": "Try a short chain first: on 4 carbons, carbon 1 from the left is carbon 4 from the right.",
+    "explain": "The two counts always add up to one more than the number of carbons, so it is {n} + 1 − {k} = {=n+1-k}.",
+    "params": {
+     "n": [
+      6,
+      8
+     ],
+     "k": [
+      1,
+      5
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the name need a number? Drag each compound to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Number needed",
+    "No number needed"
+   ],
+   "items": [
+    [
+     "Propan-2-ol, CH₃CH(OH)CH₃",
+     0
+    ],
+    [
+     "But-2-ene, CH₃CH=CHCH₃",
+     0
+    ],
+    [
+     "Butan-1-ol, CH₃CH₂CH₂CH₂OH",
+     0
+    ],
+    [
+     "Ethanol, CH₃CH₂OH",
+     1
+    ],
+    [
+     "Propene, CH₂=CHCH₃",
+     1
+    ],
+    [
+     "Propanoic acid, CH₃CH₂COOH",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagname",
+  "caption": "Flagship lab: grow a carbon chain, place a group by tapping or dragging, and watch the name build itself from stem, number and ending.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

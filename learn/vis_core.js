@@ -4,7 +4,7 @@
    and respects prefers-reduced-motion. Lesson JSON chooses a visual with "visual": {"type": ..., "caption": ..., "opts": {...}}. */
 const VIS=(()=>{
 const T={},NS='http://www.w3.org/2000/svg';
-const reduced=()=>!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+const reduced=()=>document.documentElement.classList.contains('wn-rm')||!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
 let uid=0;
 function el(tag,attrs,parent,text){const svg=/^(svg|g|rect|circle|line|path|text|polygon|polyline|ellipse|title|tspan|clipPath)$/.test(tag);
  const e=svg?document.createElementNS(NS,tag):document.createElement(tag);
@@ -36,10 +36,12 @@ function kslider(node,label,get,set,min,max,step,text){Object.entries({role:'sli
  node.addEventListener('keydown',e=>{const k={ArrowRight:1,ArrowUp:1,ArrowLeft:-1,ArrowDown:-1,PageUp:5,PageDown:-5}[e.key];
   if(k){e.preventDefault();set(clamp(+(get()+k*step).toFixed(6),min,max))}else if(e.key==='Home'){e.preventDefault();set(min)}else if(e.key==='End'){e.preventDefault();set(max)}sync()});
  sync();return sync}
+/* Labs and reels wait for the page load event and an idle moment so the map and lesson text paint first. */
+window.wnIdle=window.wnIdle||(()=>window.WN_IDLE||(window.WN_IDLE=new Promise(ok=>{const go=()=>(window.requestIdleCallback||setTimeout)(()=>ok(),{timeout:1200});document.readyState==='complete'?go():addEventListener('load',go,{once:true})})));
 let lzDone=false;const lz={},lzLoad0=u=>lz[u]||(lz[u]=new Promise((ok,no)=>{const s=document.createElement('script');s.src=(window.WN_BASE||'')+'wn/'+u;s.onload=ok;s.onerror=()=>{delete lz[u];no(new Error('could not load '+u))};document.head.appendChild(s)}));
 const lzLoad=u=>lzLoad0(u).then(()=>{if(u===window.WN_LAZY.vis)lzDone=true});
 function lazy(host,spec){const L=window.WN_LAZY;let dead=false,real=null;host.innerHTML='<div class="vis-load" role="status" aria-live="polite"><span class="vis-spin"></span> Loading the lab…</div>';
- const go=()=>{if(dead)return;real=T[spec.type]?mount(host,spec):(host.innerHTML='',null)};lzLoad(L.vis).then(()=>T[spec.type]||!L[spec.type]?0:lzLoad(L.kit).then(()=>lzLoad(L[spec.type]))).then(go,()=>{if(!dead)host.innerHTML='<p class="muted">This lab could not load. Check your connection and reopen the lesson.</p>'});
+ const go=()=>{if(dead)return;real=T[spec.type]?mount(host,spec):(host.innerHTML='',null)};window.wnIdle().then(()=>lzLoad(L.vis)).then(()=>T[spec.type]||!L[spec.type]?0:lzLoad(L.kit).then(()=>lzLoad(L[spec.type]))).then(go,()=>{if(!dead)host.innerHTML='<p class="muted">This lab could not load. Check your connection and reopen the lesson.</p>'});
  return{get fig(){return real&&real.fig},lazy:1,cue(){real&&real.cue()},destroy(){dead=true;real&&real.destroy()}}}
 function mount(host,spec){const f=T[spec.type];if(!f&&window.WN_LAZY&&(window.WN_LAZY[spec.type]||!lzDone))return lazy(host,spec);if(!f){host.innerHTML='';return null}const id='v'+(++uid);
  host.innerHTML=`<figure class="vis" data-vtype="${spec.type}" aria-labelledby="${id}-c"><figcaption id="${id}-c"><span class="vis-tag">Try it</span> ${esc(spec.caption||'')}</figcaption><div class="vis-stage"></div><div class="vis-ctl"></div><p class="vis-desc" id="${id}-d" aria-live="polite"></p></figure>`;

@@ -130,7 +130,9 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-pick button.mine{outline:3px solid var(--vi);outline-offset:1px;opacity:1}.fl-pick button:disabled:not(.mine){opacity:.55}
 .fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}
 .fl-pick button.ok{background:color-mix(in srgb,var(--gr) 30%,transparent)}.fl-pick button.no{background:color-mix(in srgb,var(--rd) 22%,transparent)}
-@media (max-width:520px){.fl-dots{flex-wrap:nowrap}.fl-dot{margin-right:-5px}.fl-dot::before{inset:12px}}
+@media (max-width:520px){.fl-top{flex-wrap:wrap}.fl-dots{flex-wrap:wrap;min-width:0}.fl-dot{margin-right:-8px;flex:none}.fl-dot::before{inset:12px}.fl-story{min-width:0}}   /* dots stay 44px tall/wide; 7+ steps overlap their hit areas a little and the sound button drops to a second row rather than being clipped at 360px */
 .vis-load{display:flex;align-items:center;justify-content:center;gap:10px;min-height:min(70vh,520px);border-radius:14px;background:rgba(127,140,170,.08);color:inherit;font-weight:600}
 .vis-spin{width:20px;height:20px;border-radius:50%;border:3px solid rgba(127,140,170,.35);border-top-color:currentColor;animation:vspin .8s linear infinite}
 @keyframes vspin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion:reduce){.vis-spin{animation:none}}
+/* Card sorter on a phone: 3+ boxes in one row make the "Put here" buttons wider than their box (clipped at 360px), so use two columns. */
+@media (max-width:520px){.vis-sort{grid-template-columns:repeat(2,minmax(0,1fr))!important}.vis-binh{overflow-wrap:anywhere}.vis-put{min-width:0;white-space:normal}}

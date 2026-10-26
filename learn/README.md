@@ -97,3 +97,61 @@ The animated batch reels (b001…) are not stored on this branch. jsDelivr refus
 one when it is full. The script pins each part's commit in `learn/reels/parts.json` and sets `"x": <k>` on the manifest entry.
 The viewer loads them from `https://cdn.jsdelivr.net/gh/pandeyaby/why-next@<part sha>/<f>` (`window.WN_RPARTS`). The offline
 single file leaves them out. Local part clones live in `/workspace/why-next-reels-parts/`.
+
+## Flagships 13–15 (hand-built, `visual-draft`)
+- `flag_energy.js` (`flagenergy`, lesson 106 Energy stores and transfers): skate ramp; gravitational ↔ kinetic swap, friction → thermal, mass does not change speed; challenge: set the drop height for a target speed (h = v² ÷ 2g).
+- `flag_circ.js` (`flagcirc`, lesson 107 Current and voltage): series loop with flowing charge; current is not used up, cells add voltage, bulbs share it, meters in series / parallel; challenge: build a target V and I.
+- `flag_wave.js` (`flagwave`, lesson 108 Wave properties and types): wiggle a rope by hand (the bead stays put), λ vs f, measure λ with a ruler (v = f × λ), rope vs slinky; challenge: frequency for a target wavelength.
+- `flag_nuc.js` (`flagnuc`, lesson 109 Atomic number and mass number): build atoms from protons, neutrons and electrons; isotopes (C-14), reading a nuclear symbol, ions (Na⁺); challenge: build a target atom or ion from its symbol, with feedback on common slips.
+Tests: `tests/flagships4.e2e.cjs`.
+
+## Guide (`guide.js`, `guide.css`)
+A corner "✦ Guide" button opens a companion built on first open (nothing loads before that). SVG face with states idle /
+listening / thinking / speaking / celebrating (CSS only; off under reduced motion; light card in classic). Type, or tap 🎤
+where the browser has SpeechRecognition; "Speak out loud" uses speechSynthesis at the chosen pace. Settings (name, look orb /
+cat / owl, colour, tone calm / playful / socratic / concise, pace, encouragement) are saved in `localStorage.wn_guide` and run
+through `GUIDE.validSettings` on load. The built-in brain is offline and answers from the open lesson (key idea, kid / adult
+explanations, the current question's hint, a quiz question, "what next"). `learn_panel.js` and `flag_kit.js` emit
+`wn:learn` events (open, hint, right, wrong, mastered, labwin) that the guide uses for hints and cheering.
+### Guide learner model (`guide_mood.js`)
+The Guide adapts in real time to how the learner is doing, entirely on the device. Signals: time on a step, idle time,
+wrong-answer runs, fast correct streaks, hints, lessons skipped within 25 s, 6+ rapid clicks on one control, late-night
+sessions, and optional typed, spoken or tapped mood check-ins. `STATE_RULES` maps them, in priority order, to one state
+(focused, struggling, frustrated, bored, confident, tired, away) with a plain-English reason shown under the Guide's name.
+The Guide changes its face, tone and voice pace, and offers a hint, a simpler explanation, a worked example, a break, a
+challenge or a skip ahead (offers only; never more than once per state every 2 minutes). "About me" stores a goal, course
+or exam, time per session, preferred style (visual, step by step, brief), explanation level, reduced motion and larger
+text, and the page follows them. Everything lives in localStorage `wn_learner` (validated field by field on load);
+"What I've learned about you" lists it all with "Forget everything", and "Adapt to how I'm doing" off stops tracking.
+A plugged-in brain receives `ctx.learner = {state, why, profile}`. Tests: `node tests/guide_mood.e2e.cjs`.
+
+Plug in another brain with `GUIDE.useBrain({name, reply(ctx, text) => string | Promise<string>})`; `ctx` has lesson, topic,
+level, tone and settings. None is wired: an LLM brain needs a server-side proxy (no key in the page) and a cost decision.
+
+## Continuous lesson pipeline
+`scripts/lesson_pipeline.py` is the gate for new flagship lessons (bar: `learn/pipeline/RUBRIC.md`; queue: `learn/pipeline/queue.json`).
+```
+python3 scripts/lesson_pipeline.py next            # rank missing topics by how many later topics they unblock
+python3 scripts/lesson_pipeline.py brief           # what to write for the top topic
+python3 scripts/lesson_pipeline.py run learn/lessons/NNN-slug.json --push   # gates → commit to visual-draft, or log as failed
+python3 scripts/lesson_pipeline.py status
+```
+It only commits on `visual-draft`, never skips hooks, and never writes content itself.
+
+## Reel hosting
+Primary: public Supabase Storage bucket `why-next-reels` in the dedicated Supabase project `why-next` (ref etzqrmcwnxpbysnltdxt; new reels are uploaded by `ext/reels_publish.py` when `WN_REELS_SUPABASE_KEY` is set) (`REEL_HOST` in `ext/make_viewer.py`, flat `<file>.mp4/.jpg/.vtt`).
+Fallbacks: jsDelivr parts (`WN_RPARTS`), fastly.jsdelivr.net, raw GitHub (AGENTS.md T1, T5). New reels must be uploaded to the bucket
+as well as the orphan branches. Captions are burned into the video, so the VTT track is off by default (CC in the player turns it on).
+
+## Live AI Guide (opt-in, web only)
+`guide_live.js` adds a "Live AI Guide" toggle (off by default) that sends the question plus coarse lesson/learner context to `/api/guide` (Vercel function, Gemini Flash-Lite). Any error, timeout, rate limit or no network falls back to the offline Guide. It is never available on file:// or in the Mac app. Limits: 6/min and 60/day per IP, 800/day global, 8 s timeout, 400-char question, 260 output tokens. The function returns 404 in Production unless `WN_GUIDE_PROD=1`.
+Temporary patch: rate limits are in memory per function instance; move them to a shared store before a public launch.
+
+## UX pass (`ux.js`, `ux.css`)
+- **Welcome:** two questions (age band, goal) on first visit. They fill "Make it yours" and the Guide's "About me" goal. Skippable.
+- **Continue where you left off** and a **progress map** (mastered / in progress per subject, with a "Next" lesson button) sit first in the main column.
+- **Predict then reveal:** lessons without a lab ask their first multiple-choice practice question before showing the explanation. Skippable, and asked once per lesson.
+- **Jump to the lab** button in the lesson header when the lesson has a lab.
+- **Search** matches every word in any order (ignores case, accents, punctuation, plural "s") across all topics. It announces a result count and offers "Clear search" when nothing matches. `/` focuses search; Escape clears it.
+- Touch: 44px search, filters and buttons. On phones a picked topic scrolls to its lesson, and the topic list gets a taller pane.
+- Stored keys `wn_last`, `wn_onboard`, `wn_pred` are validated on read. Tests: `tests/ux.e2e.cjs`.

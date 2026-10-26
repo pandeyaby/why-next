@@ -1,0 +1,298 @@
+{
+ "topicId": "mt_fTGqpD1Y9y",
+ "title": "Acids, alkalis and hydrogen ions",
+ "audience": "learner",
+ "keyIdea": "In water, an acid releases hydrogen ions, H⁺, and an alkali releases hydroxide ions, OH⁻. Neutralisation is H⁺ + OH⁻ → H₂O; the other ions are spectators. Each step down the pH scale means ten times more H⁺, so pH 2 has 100 times the H⁺ of pH 4. A strong acid splits completely into ions; a weak acid only partly. Strong is not the same as concentrated.",
+ "explain": {
+  "kid": [
+   "When an acid dissolves in water, it lets go of tiny charged bits called hydrogen ions. We write them as H⁺. They make lemon juice sour and turn blue litmus paper red.",
+   "An alkali does the opposite job. It lets go of hydroxide ions, OH⁻. Oven cleaner has lots of them.",
+   "Mix the two and each H⁺ grabs one OH⁻. Together they make a water molecule, H₂O. If every H⁺ finds a partner, the mix is neutral. Any extra H⁺ keeps it acidic.",
+   "The pH scale counts in jumps of ten. pH 3 has ten times the H⁺ of pH 4. pH 2 has a hundred times as much. A small change in the number is a big change in the acid."
+  ],
+  "adult": [
+   "In aqueous solution an acid is a source of H⁺ ions and an alkali is a source of OH⁻ ions. Hydrochloric acid gives H⁺ and Cl⁻; sodium hydroxide gives Na⁺ and OH⁻. Strictly the H⁺ joins a water molecule as H₃O⁺, but GCSE equations write H⁺.",
+   "When an acid neutralises an alkali, the only change is H⁺ + OH⁻ → H₂O. The metal ion and the acid's negative ion stay dissolved as spectators; they become the salt left when the water evaporates. A common mistake is to write Na⁺ + Cl⁻ → NaCl as the reaction.",
+   "pH is a logarithmic scale: pH = −log₁₀[H⁺]. Going down one unit multiplies the H⁺ concentration by 10, so pH 1 has 1000 times the H⁺ of pH 4. Diluting a strong acid tenfold raises its pH by one, but water alone can never take it past 7.",
+   "Strong and weak describe how much an acid ionises, not how much of it there is. Hydrochloric acid ionises completely. Ethanoic acid only partly ionises: at 0.1 mol/dm³ about 1 molecule in 100 is split, so its pH is about 2.9, while hydrochloric acid of the same concentration is pH 1. Be careful with words: concentrated and dilute describe how much acid is in each dm³."
+  ]
+ },
+ "familyTip": "Use dried beans for H⁺ and coins for OH⁻. Put 7 beans and 4 coins on a plate. Pair each coin with a bean and push the pair aside as water. Ask: what is left over, and is the plate acidic, neutral or alkaline?",
+ "worked": {
+  "title": "Lemon juice is pH 2 and black coffee is pH 5. How many times more H⁺ ions does lemon juice have?",
+  "steps": [
+   "Find the gap on the pH scale: 5 − 2 = 3 steps.",
+   "Each step down multiplies the H⁺ by 10, so three steps is 10 × 10 × 10.",
+   "That is 1000. Lemon juice has 1000 times the H⁺ concentration of coffee, not 3 times and not 30 times."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A beaker has {h} H⁺ ions and {o} OH⁻ ions. After they react, how many H⁺ ions are left?",
+   "answer": "h-o",
+   "hint": "Each OH⁻ removes exactly one H⁺ by making one water molecule.",
+   "explain": "{o} OH⁻ remove {o} H⁺, leaving {h} − {o} = {=h-o} H⁺. The solution is still acidic.",
+   "params": {
+    "h": [
+     6,
+     12
+    ],
+    "o": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which is the ionic equation for the reaction of any acid with any alkali?",
+   "choices": [
+    "Na⁺ + Cl⁻ → NaCl",
+    "H⁺ + OH⁻ → H₂O",
+    "HCl + NaOH → NaCl + H₂O"
+   ],
+   "answer": 1,
+   "hint": "Leave out the ions that are still dissolved and unchanged at the end.",
+   "explain": "Only H⁺ and OH⁻ change. The third equation is the full equation for one pair; the ionic one works for all acids and alkalis."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A strong acid of pH {p} is diluted with water until its volume is {=10**k} times bigger. What is its new pH?",
+   "answer": "p+k",
+   "hint": "Each tenfold dilution raises the pH by one. Count the tens in {=10**k}.",
+   "explain": "{=10**k} is 10 multiplied {k} times, so the pH rises by {k}, from {p} to {=p+k}. It is still an acid: water alone never passes pH 7.",
+   "params": {
+    "p": [
+     1,
+     3
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Hydrochloric acid and ethanoic acid are both 0.1 mol/dm³. Which is true?",
+   "choices": [
+    "They have the same pH because the concentration is the same",
+    "Hydrochloric acid has the lower pH because all of its molecules ionise",
+    "Ethanoic acid has the lower pH because its molecules are bigger"
+   ],
+   "answer": 1,
+   "hint": "pH depends on the H⁺ actually free in the water, not on how much acid was added.",
+   "explain": "Every HCl molecule splits, giving pH 1. Only about 1 in 100 ethanoic acid molecules split, giving pH about 2.9."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A solution is pH {a}. Another has {=10**d} times more H⁺ ions. What is its pH?",
+   "answer": "a-d",
+   "hint": "More H⁺ means a lower pH. Each factor of 10 is one step.",
+   "explain": "{=10**d} times more H⁺ is {d} steps down the scale: pH {a} − {d} = {=a-d}.",
+   "params": {
+    "a": [
+     3,
+     7
+    ],
+    "d": [
+     1,
+     2
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Lemon juice is pH 2 and vinegar is pH 3. How many times more H⁺ ions does the lemon juice have?",
+    "choices": [
+     "1 time more",
+     "2 times",
+     "10 times"
+    ],
+    "answer": 2,
+    "hint": "One step on the pH scale is a factor of ten.",
+    "explain": "pH 2 is one step below pH 3, so the H⁺ concentration is 10 times higher."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which ion makes potassium hydroxide solution alkaline?",
+    "choices": [
+     "K⁺",
+     "OH⁻",
+     "H⁺"
+    ],
+    "answer": 1,
+    "hint": "Alkalis are sources of one particular ion in water.",
+    "explain": "KOH dissolves into K⁺ and OH⁻. The OH⁻ ions make it alkaline; K⁺ is a spectator when it neutralises an acid."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Hydrochloric acid neutralises sodium hydroxide. Which ions are spectators?",
+    "choices": [
+     "H⁺ and OH⁻",
+     "H⁺ and Cl⁻",
+     "Na⁺ and Cl⁻"
+    ],
+    "answer": 2,
+    "hint": "Spectators are dissolved at the start and still dissolved, unchanged, at the end.",
+    "explain": "H⁺ and OH⁻ join to make water. Na⁺ and Cl⁻ stay in solution as sodium chloride."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "You keep adding water to a pH 3 acid. Which pH can it never reach?",
+    "choices": [
+     "pH 4",
+     "pH 6",
+     "pH 8"
+    ],
+    "answer": 2,
+    "hint": "Water spreads the H⁺ out. Does it add any OH⁻ beyond its own?",
+    "explain": "Dilution moves the pH towards 7 but never past it. To reach pH 8 you need an alkali to remove H⁺ and add OH⁻."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What does it mean to call an acid strong?",
+    "choices": [
+     "There is a lot of it in each dm³",
+     "It ionises completely in water",
+     "Its pH is always 1"
+    ],
+    "answer": 1,
+    "hint": "Strong and weak are about splitting into ions; concentrated and dilute are about amount.",
+    "explain": "A strong acid gives up all its H⁺ in water. A dilute strong acid can still have a pH of 4 or 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Each sulfuric acid unit, H₂SO₄, can release 2 H⁺ ions. How many OH⁻ ions are needed to neutralise {n} units completely?",
+    "answer": "2*n",
+    "hint": "Count the H⁺ first. Each one needs one OH⁻.",
+    "explain": "{n} units give 2 × {n} = {=2*n} H⁺, so {=2*n} OH⁻ are needed to make {=2*n} water molecules.",
+    "params": {
+     "n": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "At 0.1 mol/dm³, why is ethanoic acid about pH 2.9 but hydrochloric acid pH 1?",
+    "choices": [
+     "Ethanoic acid only partly ionises, so fewer H⁺ are free",
+     "Ethanoic acid is more dilute",
+     "Ethanoic acid contains no hydrogen"
+    ],
+    "answer": 0,
+    "hint": "The two have the same concentration. What differs is how many molecules split.",
+    "explain": "Ethanoic acid is weak: only about 1 molecule in 100 releases its H⁺. Hydrochloric acid is strong and releases all of it."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "How many times more H⁺ does a pH 1 solution have than a pH 4 solution?",
+    "choices": [
+     "3",
+     "30",
+     "1000"
+    ],
+    "answer": 2,
+    "hint": "Three steps down the scale. Multiply by 10 for each step.",
+    "explain": "10 × 10 × 10 = 1000. Subtracting the pH numbers gives the number of steps, not the ratio."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "7 H⁺ ions meet 9 OH⁻ ions. After they react, the solution is…",
+    "choices": [
+     "acidic",
+     "neutral",
+     "alkaline"
+    ],
+    "answer": 2,
+    "hint": "Pair them one to one. Which ion has spares?",
+    "explain": "7 pairs make 7 water molecules and 2 OH⁻ are left over, so the solution is alkaline."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "{h} H⁺ ions are mixed with {o} OH⁻ ions. How many water molecules form?",
+    "answer": "o",
+    "hint": "Each water molecule needs one H⁺ and one OH⁻. Which ion runs out first?",
+    "explain": "The {o} OH⁻ ions run out first, so {o} water molecules form and {=h-o} H⁺ are left over.",
+    "params": {
+     "h": [
+      8,
+      12
+     ],
+     "o": [
+      2,
+      7
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What does each substance release in water? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "H⁺: an acid",
+    "OH⁻: an alkali",
+    "Neither"
+   ],
+   "items": [
+    [
+     "hydrochloric acid",
+     0
+    ],
+    [
+     "nitric acid",
+     0
+    ],
+    [
+     "sodium hydroxide",
+     1
+    ],
+    [
+     "potassium hydroxide",
+     1
+    ],
+    [
+     "sodium chloride",
+     2
+    ],
+    [
+     "sugar",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghion",
+  "caption": "Flagship lab: dissolve acids and alkalis into ions, pair H⁺ with OH⁻ to make water, and watch H⁺ grow tenfold per pH step.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "topicId": "mt_TB2zg6ZjHq",
+ "title": "Why carbon forms so many compounds",
+ "audience": "learner",
+ "keyIdea": "Carbon has four outer electrons, so every carbon atom makes four covalent bonds. Carbon atoms also bond strongly to each other, in chains, branches and rings, so the same few atoms can be joined in millions of different ways.",
+ "explain": {
+  "kid": [
+   "A carbon atom has 6 electrons: 2 in the first shell and 4 in the outer shell. It shares those 4 to reach 8. Each shared pair is one bond, so carbon makes four bonds.",
+   "Carbon can bond to other carbon atoms. A carbon in a chain uses one bond on each neighbour. The rest of its four bonds can hold hydrogen. Propane, C₃H₈, has 3 carbons and 8 hydrogens.",
+   "The chain can branch, too. Butane and methylpropane are both C₄H₁₀, but the atoms are joined in a different order. They are different compounds with the same formula.",
+   "The ends of a chain can join to make a ring. Mix chains, branches and rings, and the number of compounds grows very fast. Neon has a full outer shell, so it makes no bonds at all."
+  ],
+  "adult": [
+   "Carbon's configuration is 2,4. Sharing four electron pairs gives it a full outer shell, so in its compounds carbon nearly always forms four bonds. Nitrogen forms three, oxygen two, and neon, with a full shell already, forms no ordinary compounds.",
+   "Two things make carbon special. It has four bonds to spend, so one atom can link to several others at once. And the C–C bond is strong, so long chains are stable. Silicon also forms four bonds, but Si–Si bonds are much weaker, so long silicon chains are rare.",
+   "The same formula can describe more than one structure. These are isomers. C₄H₁₀ has 2, C₅H₁₂ has 3, C₁₀H₂₂ has 75 and C₂₀H₄₂ has 366,319. Add rings, double bonds and atoms such as oxygen and nitrogen, and the total runs into many millions.",
+   "Common mistakes: saying carbon makes 8 bonds (8 is the electron count, not the bond count); giving each carbon in a chain 4 hydrogens; drawing a carbon with 3 or 5 bonds; and thinking a molecule with the same formula must be the same compound."
+  ]
+ },
+ "familyTip": "Use dried pasta pieces as bonds and blobs of modelling clay as atoms. Every carbon blob must hold exactly four pieces. See how many different shapes you can make from 4 carbons and 10 hydrogens. Then try 5 carbons and 12 hydrogens.",
+ "worked": {
+  "title": "How many hydrogens does a chain of 4 carbons hold?",
+  "steps": [
+   "4 carbons have 4 × 4 = 16 bonds between them.",
+   "A straight chain of 4 has 3 C–C bonds. Each one uses a bond on two carbons: 3 × 2 = 6.",
+   "16 − 6 = 10 bonds are left for hydrogen.",
+   "The formula is C₄H₁₀, butane. The branched shape, methylpropane, gives C₄H₁₀ too."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A straight chain of {n} carbons is filled with hydrogen. How many hydrogen atoms does it hold?",
+   "answer": "2*n+2",
+   "hint": "Each end carbon has 3 H. Each carbon in the middle has 2 H.",
+   "explain": "2 end carbons × 3 = 6, plus {=n-2} middle carbons × 2 = {=2*n-4}. That makes {=2*n+2}, so the formula is C{n}H{=2*n+2}.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "How many covalent bonds does a carbon atom form in its compounds?",
+   "choices": [
+    "4",
+    "8",
+    "2"
+   ],
+   "answer": 0,
+   "hint": "Count carbon's outer electrons. Each one is shared in one bond.",
+   "explain": "Carbon is 2,4. It shares its 4 outer electrons in 4 bonds, reaching 8. The 8 counts electrons, not bonds."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "{n} carbons are joined in a ring and filled with hydrogen. How many hydrogen atoms fit?",
+   "answer": "2*n",
+   "hint": "In a ring every carbon has two carbon neighbours, so each has 2 bonds left.",
+   "explain": "{n} carbons × 2 H = {=2*n}. A ring has 2 fewer H than the open chain of {n}, which has {=2*n+2}.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why does neon form no ordinary compounds?",
+   "choices": [
+    "Its outer shell is already full with 8",
+    "It has too few electrons",
+    "It is a metal"
+   ],
+   "answer": 0,
+   "hint": "Bonds form when an atom still needs electrons to fill its outer shell.",
+   "explain": "Neon is 2,8. Its outer shell is full, so it has nothing to share and makes no bonds."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Butane and methylpropane are both C₄H₁₀. What is different about them?",
+   "choices": [
+    "The order the carbon atoms are joined in",
+    "The number of hydrogen atoms",
+    "The number of carbon atoms"
+   ],
+   "answer": 0,
+   "hint": "Same formula means the same number of each atom. Look at the shape.",
+   "explain": "Butane is a straight chain; methylpropane has a branch. Same atoms, different structure: they are isomers."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why does carbon form four covalent bonds?",
+    "choices": [
+     "It has 4 outer electrons and needs 4 more",
+     "It has 4 shells",
+     "It has 4 protons"
+    ],
+    "answer": 0,
+    "hint": "Look at carbon's electron configuration, 2,4.",
+    "explain": "Carbon has 4 outer electrons. Sharing 4 pairs gives it 8 in the outer shell, so it makes 4 bonds."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How many C–C bonds are in a straight chain of {n} carbon atoms?",
+    "answer": "n-1",
+    "hint": "Draw a short chain and count the links between neighbours.",
+    "explain": "Each link joins two neighbours, so {n} carbons in a line have {=n-1} C–C bonds.",
+    "params": {
+     "n": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Six carbons are joined in a ring. Which formula is right?",
+    "choices": [
+     "C₆H₁₂",
+     "C₆H₁₄",
+     "C₆H₂₄"
+    ],
+    "answer": 0,
+    "hint": "Each carbon in the ring already has two carbon neighbours.",
+    "explain": "6 carbons × 2 H = 12. C₆H₁₄ is the open chain, and C₆H₂₄ gives each carbon 4 H."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ali draws a carbon atom with five bonds. What is wrong?",
+    "choices": [
+     "Carbon can only form four bonds",
+     "Carbon must form eight bonds",
+     "Nothing, carbon can form any number"
+    ],
+    "answer": 0,
+    "hint": "Count carbon's outer electrons and the bonds they can make.",
+    "explain": "Carbon has 4 outer electrons to share, so it forms exactly 4 bonds. A fifth would overfill its outer shell."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Silicon also has 4 outer electrons. Why are long silicon chains rare?",
+    "choices": [
+     "Si–Si bonds are much weaker than C–C bonds",
+     "Silicon has 8 outer electrons",
+     "Silicon cannot share electrons"
+    ],
+    "answer": 0,
+    "hint": "Carbon chains last because the bond between two carbons is strong.",
+    "explain": "Silicon can make 4 bonds, but the Si–Si bond is weak, so silicon chains break apart. Strong C–C bonds let carbon chains grow long."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A branched molecule has {n} carbons, single bonds only and no rings. How many hydrogen atoms does it hold?",
+    "answer": "2*n+2",
+    "hint": "A branch moves a carbon but adds no extra C–C bond. Compare with the straight chain.",
+    "explain": "Any chain of {n} carbons, branched or not, has {=n-1} C–C bonds, so it holds 4 × {n} − 2 × {=n-1} = {=2*n+2} H.",
+    "params": {
+     "n": [
+      4,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which reason best explains why there are millions of carbon compounds?",
+    "choices": [
+     "Carbon makes four bonds and joins to itself in chains, branches and rings",
+     "Carbon is the most common element on Earth",
+     "Carbon atoms are very large"
+    ],
+    "answer": 0,
+    "hint": "Think about what the four bonds and C–C bonds let carbon build.",
+    "explain": "Four bonds per atom and strong C–C bonds allow chains, branches and rings of any length. Carbon is not the most common element."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "How many different compounds have the formula C₅H₁₂?",
+    "choices": [
+     "3",
+     "1",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Try a straight chain, one branch, and a carbon with four carbon neighbours.",
+    "explain": "Pentane, methylbutane and dimethylpropane are the three isomers of C₅H₁₂."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "atom",
+  "caption": "A carbon atom: 6 electrons, 2 in the first shell and 4 in the outer shell. Sharing those 4 gives carbon four covalent bonds.",
+  "opts": {
+   "p": 6,
+   "n": 6,
+   "e": 6
+  }
+ },
+ "lab": {
+  "type": "flagcarbon",
+  "caption": "Flagship lab: bond carbons into chains, branches and rings, then fill the free bonds with hydrogen and watch the formula and the isomer count change.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

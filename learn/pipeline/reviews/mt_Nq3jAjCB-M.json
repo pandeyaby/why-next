@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions of structural, chain, position and functional group isomerism checked against the OCR A Level Chemistry A specification (4.1.1) and OpenStax Chemistry 2e section 20.1. Isomer counts verified by brute force: a script walked every reachable peg-board arrangement from each start molecule and the lab's IUPAC namer gave exactly 2 names for C₄H₁₀, 3 for C₅H₁₂, 5 for C₆H₁₄, 3 for C₃H₈O, 2 for C₂H₆O and 7 for C₄H₁₀O (4 alcohols, 3 ethers), with 26 hand-written cases also named correctly. Boiling points (butane −1, 2-methylpropane −12, pentane 36, 2-methylbutane 28, 2,2-dimethylpropane 10, propan-1-ol 97, propan-2-ol 82, ethanol 78, methoxymethane −24, methoxyethane 7 °C) match PubChem to the nearest degree."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: a bent or flipped chain counted as a new isomer, '1-methylpropane' (really butane), '3-methylbutane' from numbering the wrong end, 'propan-3-ol' as a new isomer, molecules with different formulas (butane and pentane) called isomers, assuming same formula means same boiling point, and mixing up chain, position and functional group isomers."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "A peg board where atoms bond only to a direct grid neighbour and only end atoms (leaves) may move, so every legal move keeps the molecular formula and the name, formula and boiling point recompute live; the learner hunts all isomers of a formula with a found counter. Highest 6-shingle similarity to any other flagship lab is 3.1% (flag_sqr.js), and it shares no mechanic with flag_name.js's fixed chain where a group slides along numbered tiles."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea is built before it is named: moving butane's end carbon to the middle makes 2-methylpropane with the formula still C₄H₁₀; bending butane into an L keeps the name; the learner must find all three C₅H₁₂ skeletons; flipping the OH to the other end of propan-1-ol keeps the name while moving it to the middle gives propan-2-ol and a 15 °C lower boiling point; hopping a carbon onto the oxygen turns ethanol into methoxymethane, 102 °C lower."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Six predicts, each with a tempting wrong option the lab disproves: C₄H₈ or C₃H₁₀ after moving a carbon; 'yes, the shape changed' and '1-methylpropane' for bent butane; 5 or 2 isomers of C₅H₁₂; 'propan-3-ol, a new isomer'; '82 °C, same formula so same boiling point'; 'ethanol drawn another way' for C–O–C; 2 or 4 isomers of C₃H₈O. The correct option is never listed first."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 14 challenge rounds on an iPhone 13 viewport comparing two drawn molecules: calling bent 2-methylbutane a new isomer is told bending or flipping makes no new compound; calling pentane and butane isomers is told they differ by CH₂; calling pentane and 2,2-dimethylpropane the same compound is told the atoms join in a different order; the 'which kind' rounds explain chain, position or functional group change; every message ends by naming A and B with formulas."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 3.8 for the kid text and 8.1 for the adult text (limits 6.5 and 9.5); kid paragraphs use words made from the same letters, a chain that twists like string and molecules that touch less, and each lab task is a single instruction such as 'Move the left-hand carbon so it bonds to the oxygen instead'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and explanation overlap with every other lesson is under the 12% gate; each adult paragraph adds one thing (check the formula first, the three kinds with named examples, why branching and O–H change boiling points with data, the named slips), and challenge feedback states the slip and both names rather than generic praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 light and dark and desktop dark screenshots of all nine steps show the board, ringed target points, atom labels and readout inside the card. Real pointer drags and tap-then-tap moves on the phone viewport completed steps 0 and 1, and an illegal drop was rejected. Fixed after screenshots: carbon atoms were hard to see on the dark theme (now lighter with an outline) and the sandbox readout stayed visible on the challenge step."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs axe-core WCAG 2.1 AA checks in both themes on phone and desktop with no console errors; every drag has buttons (◀ End atom, End atom ▶, ◀ Point, Point ▶, Move here), each step completes with Show me, the canvas aria-label lists the atoms, name, formula and boiling point, and on the challenge step it describes molecules A and B and is announced."
+  }
+ },
+ "sources": [
+  "https://en.wikipedia.org/wiki/Structural_isomer",
+  "https://openstax.org/books/chemistry-2e/pages/20-1-hydrocarbons",
+  "https://www.ocr.org.uk/Images/171720-specification-accredited-a-level-gce-chemistry-a-h432.pdf",
+  "https://pubchem.ncbi.nlm.nih.gov/compound/2-Methylpropane"
+ ]
+}

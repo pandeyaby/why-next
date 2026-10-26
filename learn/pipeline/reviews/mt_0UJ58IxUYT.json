@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Recomputed every number: 4-5-6 cm × 2.5 = 10, 12.5, 15 (so 6 → 15, not the additive 12); the flipped copy is exactly 2× so side y = 10 and k = 10 ÷ 5 = 2; AD = 4, DB = 6, DE = 5 gives AB = 10, k = 2.5, BC = 12.5 (DB slip gives 7.5); AD/10 = 10/12.5 gives AD = 8 (subtract slip 7.5); 15 × 10 photo at k = 6/15 = 0.4 is 4 cm tall; worked example 4.5 × 8/3 = 12; model car 150 × 20/400 = 7.5 cm; 4-6-8 vs 6-8-10 ratios 1.5, 1.33, 1.25 so not similar. Lab triangle ABC built with AB = 10.0 and AC = 9.0 from A(7.01, 7.13)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented similarity slips (additive reasoning in proportion tasks, Hart's CSMS ratio studies; pairing by position; the overlapping-triangle DB error common in GCSE examiner reports): add-the-difference (12 cm, 11 cm, 1 cm photo), match by page position after a flip, AD paired with DB instead of AB, dividing by k going small → big, old ÷ new scale factor, k read as a difference, and upside-down proportions (AB·BC/DE)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Built for this topic's mechanism: a scale-factor handle that stretches a 4-5-6 triangle, a flipped/turned copy with angle-arc marks where sides are tapped, a draggable ADE that slides out of ABC, a D handle sliding along AB with DE kept parallel, and a shrinking photo. Nothing here works for another topic by relabelling. gate_lab_distinct passes (every other flagship under 30% 6-shingle overlap)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea is found by doing before it is stated: dragging k to 2.5 shows all three sides multiply together (6 → 15); tapping a wrong side reports which angle it faces; pulling ADE out displays AB = 4 + 6 = 10 as the partner of AD; sliding D shows AD/AB and DE/BC staying equal in the top readout until DE = 10 at AD = 8; shrinking the photo shows 4 cm, not 1 cm, keeps the picture unsquashed."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predicts, each with a tempting wrong option the lab disproves: 12 cm (add 6) for the 6 cm side, 7.5 cm (used DB) for BC, AD = 7.5 cm (took 2.5 away) for DE = 10, and 1 cm (took 9 off) for the photo. Correct answers sit in different positions (2nd, 3rd, 1st, 2nd), and the done line names the learner's pick ('You predicted 7.5 cm; now you know why it's 12.5 cm')."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played challenge rounds on an iPhone 13 viewport across all four types (missing side, scale factor, overlapping BC, proportion for AD): the additive option gets 'adding or taking away the same amount changes the shape', 16.8 vs 10.8 for BC gets 'DB is only part of the big side', 0.67 gets 'old ÷ new, upside down', 20 cm for AD gets 'one fraction is upside down: AD/AB = DE/BC', and each ends with the full working. Found and fixed a bug where the DB length was overwritten by the question text."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade 2.7 for the kid text and 6.1 for the adult text by learn/readability.py fk_grade (limits 6.5 and 9.5) after splitting long adult sentences; kid text uses one worked pair (4 → 10, so 6 → 15) and short sentences; each task is a single instruction such as 'Move D until DE = 10 cm'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and gate_content finds the explanation under 12% shared 6-word shingles with every other lesson; the four adult paragraphs cover the scale-factor definition, pairing by angles, the parallel-line overlapping case with AA similarity, and a named-mistakes list. No sentence restates another."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots of every step before and after Show me on iPhone 13 (dark) and desktop (light) checked; fixed the narrow layout so the copied ADE no longer sits under the BC label, the AB label no longer hides D, the photo copy no longer covers the 15 cm label, and vertex letters clear the handle. Real pointer drags on the iPhone 13 viewport completed tasks: k handle to 2, D along AB, photo corner to 6 cm (task ✓), ADE dragged out (task ✓) and a tap on side y (task ✓). phone_sweep.cjs on iPhone 13 and 360 px Android: 0 overflow or clipping findings."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs: axe-core WCAG 2.1 AA clean in light and dark on desktop and iPhone 13, all 5 tasks complete with Show me, no console errors (gate_browser). Every drag has a labelled button (k ± 0.25, Side x/y/z, Pull apart/Put back, AD ± 0.5, k ± 0.1) in a 'Change the shapes' group; the canvas aria-label states the current lengths and k, and challenge feedback is in a polite live region."
+  }
+ },
+ "sources": [
+  "https://www.bbc.co.uk/bitesize/guides/zq22pv4/revision/1",
+  "https://www.mathsisfun.com/geometry/triangles-similar.html",
+  "https://www.thecorestandards.org/Math/Content/HSG/SRT/",
+  "https://openstax.org/books/prealgebra-2e/pages/9-4-use-properties-of-angles-triangles-and-the-pythagorean-theorem"
+ ]
+}

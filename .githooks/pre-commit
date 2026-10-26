@@ -12,6 +12,20 @@ ROOT=$(git rev-parse --show-toplevel)
 ALLOW="$ROOT/.githooks/size-allowlist"
 fail=0
 
+# Keep generated files current so the CI "Deterministic build check" stays green for every committer:
+# rebuild the viewer and the home page (about 1 s) and stage their output. Skipped when build inputs have
+# unstaged edits (the output would not match what is committed) or with WHYNEXT_NO_AUTOBUILD=1.
+if [ "${WHYNEXT_NO_AUTOBUILD:-0}" != 1 ] && command -v python3 >/dev/null 2>&1; then
+  ( cd "$ROOT"
+    if ! git diff --quiet -- learn ext site/src site/build site/assets data schema; then
+      echo "pre-commit: build inputs have unstaged edits; not auto-rebuilding (run the builds yourself if counts changed)." >&2
+    elif python3 ext/make_viewer.py >/dev/null && WHYNEXT_SINGLE_FILE="${TMPDIR:-/tmp}/wn-precommit-site.html" python3 site/build/build_site.py >/dev/null; then
+      git add -- out/viewer.html out/viewer-offline.html out/wn index.html site/index.html site/data/demo.json site/data/stats.json
+    else
+      echo "pre-commit: auto-rebuild failed; run python3 ext/make_viewer.py && python3 site/build/build_site.py" >&2
+    fi )
+fi
+
 is_exempt() {
   case "$1" in
     *.json|*.woff2|*.png|*.jpg|*.gif|*.mp4|*.pdf) return 0 ;;   # data and binaries

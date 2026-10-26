@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Recomputed every value with Python: sin/cos/tan 35° = 0.574/0.819/0.700, sin 60° = 0.866, sin 40° = 0.643 (so Kai's 0.684 is wrong), tan 60° = 1.732; 5 sin 35° = 2.868 and 12 sin 35° = 6.883 (k = 2.4, both ratios 0.574); 10 sin 35° = 5.74; 8 sin 35° = 4.59 and 8 cos 35° = 6.55 in lab step 4; 20 × 0.574 = 11.48 → 11.5; PQR naming checked (right angle at R, θ at Q gives cos θ = QR/PQ). Lab Pythagorean triples 3-4-5, 5-12-13, 8-15-17, 7-24-25, 20-21-29 all exact."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented trig slips: believing a bigger triangle has a bigger sine (predict step 0, 'grow' challenge feedback, m3), treating sine as proportional to the angle (step 3 predict, 'linear' feedback, p5, m6), labelling by position instead of by θ (flipped triangle in step 2, PQR items p4/m4), upside-down ratios (step 4 option 0.574 vs length, 'flip' feedback, m7) and additive scaling (the 'add' distractor, 7+75 = 82 cm in the scale challenge)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_trig.js is a new lab: a resizable 35° right triangle with live sin/cos/tan chips, a sliding upright that cuts nested similar triangles and logs each ratio, a flipped-and-turned triangle where the learner taps sides by name, an angle swing at fixed hypotenuse, plus stacked not-to-scale challenge scenes. The gate reports Jaccard below 30% against every other flag lab including flag_sim.js."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step isolates one part of the argument: size changes but ratio does not (step 0), every cut-off triangle has angles 35/90/55 so is similar (step 1), side names depend on θ not orientation (step 2), only the angle changes the ratio (step 3), and the fixed ratio lets you compute a side (step 4: 8 × 0.574 = 4.59). The final sandbox and four challenge kinds make the learner apply it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four genuine predictions before acting: what happens to opposite ÷ hypotenuse when the triangle doubles, whether small cut-off triangles have smaller ratios, which side of a flipped triangle is adjacent, and sin 60° given sin 30° = 0.5, plus a numeric prediction of the opposite side at hypotenuse 8. Each locks in and the reveal names the learner's choice against the outcome."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Every wrong option in the four challenge kinds maps to a named misconception with its own message: add (adding the same amount changes the angle), swap (that scaled the adjacent side), name, flip (fraction upside down), linear, fixed, grow and shrink. Each message ends with the correct working, e.g. 'Scale factor 100 ÷ 25 = 4, so opposite = 7 × 4 = 28 cm'. Verified in phone screenshots."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch-Kincaid grade from learn/readability.py: kid text 2.6 (limit 6.5) and adult text 5.7 (limit 9.5). Sentences are short, symbols are always introduced in words first (opposite ÷ hypotenuse before sin θ), and the adult section names the common mistakes explicitly."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The content gate passes with no filler words and under 12% overlap with other lessons. Every paragraph carries one step of the similarity argument or a concrete number check; the family tip is a real protractor activity that reproduces sin 35° ≈ 0.57 at home."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked iPhone 13 screenshots for all steps and four challenge kinds. Fixed label collisions (frame bottom moved to 60% of height, challenge triangles stacked vertically on narrow screens, θ label pushed out on thin triangles). Real pointer drags resized the triangle, slid the upright and swung θ; a tap grid confirmed side taps on the flipped triangle. phone_sweep iphone+android: 0 findings."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs reports axe clean on desktop and phone in both themes with no console errors. The canvas has an aria-label that updates with each challenge question, the readout is a polite live region, every drag has button equivalents (Smaller/Bigger, upright arrows, θ ± 1°/5°, Side p/q/r), and colour is never the only cue because each side is also labelled by name."
+  }
+ },
+ "sources": [
+  "https://www.bbc.co.uk/bitesize/guides/zsqh6sg/revision/1",
+  "https://www.mathsisfun.com/sine-cosine-tangent.html",
+  "https://www.thecorestandards.org/Math/Content/HSG/SRT/",
+  "https://openstax.org/books/precalculus-2e/pages/5-4-right-triangle-trigonometry"
+ ]
+}

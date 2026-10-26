@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_wvcFlwOrDl",
+ "title": "Spotting Patterns",
+ "audience": "family",
+ "keyIdea": "A pattern is something that repeats or grows by a rule. Find the part that repeats, or the rule, and you can say what comes next. Test a rule on every step, not just the first one, and look for more examples before you are sure. Some patterns break, like run and ran, so check that your guess makes sense.",
+ "explain": {
+  "kid": [
+   "A pattern is a thing that happens again and again. Red, blue, blue, red, blue, blue. The part that repeats is red, blue, blue.",
+   "Some patterns grow. 2, 4, 8, 16. Each number is double the one before. That is the rule.",
+   "Test the rule on every jump, not just the first one. Add 2 works for 2 to 4. But 4 add 2 is 6, not 8. So add 2 is wrong. If two rules fit, look at one more. Then you can be sure.",
+   "Words have patterns too. Jump, jumped. Play, played. But we say ran, not runned. So check that it sounds right."
+  ],
+  "adult": [
+   "Spotting patterns means noticing structure that repeats or changes by a rule, and then using it to predict. Children meet it in repeating shape and colour sequences, counting in steps, times tables, word families and spelling rules, and in daily events such as the order of the week. The UK national curriculum asks for sequences and counting in steps from Year 1, and the habit underpins later algebra.",
+   "A strong pattern-spotter does three things: finds the unit of repeat or the rule, checks it against every term, and explains why it works. Research on early pattern work suggests that naming the unit of repeat, rather than just saying the next item, is what builds later reasoning.",
+   "Common mistakes: copying the last item instead of finding the unit of repeat; choosing a rule from the first two terms only, so 2, 4, 8 becomes 10; being certain too early, when a short run such as 1, 2, 4 fits more than one rule; and overgeneralising a language pattern, as in goed or runned. That last slip is a good sign: it shows the child has found the rule and is using it.",
+   "At home, make patterns with cutlery, claps or Lego and ask your child what the part that repeats is. Ask how they know what comes next, and ask them to test the rule on every step. Now and then, make a pattern with a twist and see if they spot it."
+  ]
+ },
+ "familyTip": "Clap a pattern such as clap, clap, tap, and ask your child to carry it on and say the part that repeats. Then let them make one for you.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Ben counts on in {d}s: {d}, {=2*d}, {=3*d}. What number comes next?",
+   "answer": "4*d",
+   "hint": "Find the jump between each pair of numbers, then make the same jump again.",
+   "explain": "Each jump is {d}, so the next number is {=3*d} + {d} = {=4*d}.",
+   "params": {
+    "d": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Star, moon, moon, star, moon, moon, star. What comes next?",
+   "choices": [
+    "moon",
+    "star",
+    "sun"
+   ],
+   "answer": 0,
+   "hint": "Find the part that repeats first. Then carry it on.",
+   "explain": "The part that repeats is star, moon, moon. After star comes moon."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A pattern doubles each time: {n}, {=2*n}, {=4*n}. What comes next?",
+   "answer": "8*n",
+   "hint": "Doubling means you add the number to itself.",
+   "explain": "Double {=4*n} is {=8*n}. Check: {n} doubled is {=2*n}, and {=2*n} doubled is {=4*n}.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Sam sees 5, 10 and says the next must be 15. Is he sure?",
+   "choices": [
+    "not yet: 5, 10 could add 5 or double",
+    "yes, it adds 5",
+    "yes, it doubles"
+   ],
+   "answer": 0,
+   "hint": "Can you think of two rules that both turn 5 into 10?",
+   "explain": "Add 5 gives 15 and double gives 20. Two numbers fit both rules, so he needs one more to be sure."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Red, red, green, red, red, green. How many shapes are in the part that repeats?",
+    "choices": [
+     "3",
+     "6",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Point to where the row starts again. The part that repeats ends just before it.",
+    "explain": "Red, red, green is the part that repeats, so it has 3 shapes."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Ella says 2, 4, 8 comes next with 10. What did she do?",
+    "choices": [
+     "she used add 2 from the first jump only",
+     "she found the right rule",
+     "she doubled 8"
+    ],
+    "answer": 0,
+    "hint": "Does add 2 work for 4 to 8?",
+    "explain": "Add 2 fits 2 to 4 but not 4 to 8. The rule that fits every jump is double, so 16 is next."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A tower has {a} blocks, then {=a+3}, then {=a+6}. How many blocks come next?",
+    "answer": "a+9",
+    "hint": "How many blocks are added each time?",
+    "explain": "Three blocks are added each time, so the next tower has {=a+9} blocks.",
+    "params": {
+     "a": [
+      1,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Leo says, \"I runned home.\" What is going on?",
+    "choices": [
+     "he used the -ed pattern on a word that breaks it",
+     "runned is right",
+     "he forgot the pattern"
+    ],
+    "answer": 0,
+    "hint": "Think of jump, jumped. Does run follow that pattern?",
+    "explain": "Leo found the -ed pattern and used it. But run breaks it: we say ran."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Monday, Tuesday, Wednesday … Sunday, Monday. What kind of pattern is the week?",
+    "choices": [
+     "it repeats every 7 days",
+     "it grows",
+     "it has no pattern"
+    ],
+    "answer": 0,
+    "hint": "What day comes after Sunday?",
+    "explain": "After Sunday the week starts again with Monday, so it repeats every 7 days."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "1, 2, 4, 7, 11. What is the rule?",
+    "choices": [
+     "add 1 more each time",
+     "double each time",
+     "add 2 each time"
+    ],
+    "answer": 0,
+    "hint": "Write the jumps: 1 to 2, 2 to 4, 4 to 7 …",
+    "explain": "The jumps are +1, +2, +3, +4, so you add 1 more each time. Double would give 8 after 4."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why is it good to say why a pattern works?",
+    "choices": [
+     "so you can check it and use it on new things",
+     "so it takes longer",
+     "you do not need a reason"
+    ],
+    "answer": 0,
+    "hint": "If you know the rule, can you go on past the numbers you can see?",
+    "explain": "A reason lets you test the pattern and use it to predict things you have not seen yet."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Clap, clap, stamp is the part that repeats. You do it {n} times. How many moves is that?",
+    "answer": "3*n",
+    "hint": "Each time through the part that repeats is 3 moves: clap, clap, stamp.",
+    "explain": "3 moves each time, {n} times, makes {=3*n} moves.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it repeat, or does it grow? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Repeats",
+    "Grows"
+   ],
+   "items": [
+    [
+     "red, blue, red, blue",
+     0
+    ],
+    [
+     "2, 4, 6, 8",
+     1
+    ],
+    [
+     "tick, tock, tick, tock",
+     0
+    ],
+    [
+     "1, 2, 4, 8",
+     1
+    ],
+    [
+     "Mon, Tue, Wed … Sun, Mon",
+     0
+    ],
+    [
+     "towers of 1, 2, 3 blocks",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpat",
+  "caption": "Flagship lab: find the part that repeats, test number rules on every jump, try a word pattern, and build your own.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

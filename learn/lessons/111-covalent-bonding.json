@@ -1,0 +1,197 @@
+{
+  "topicId": "mt_dx_t8RtPt5",
+  "title": "Covalent bonding",
+  "audience": "learner",
+  "keyIdea": "A covalent bond is a shared pair of electrons between two non-metal atoms. Each atom shares enough pairs to fill its outer shell, so the number of bonds is usually 8 minus its outer electrons (hydrogen makes 1).",
+  "explain": {
+    "kid": [
+      "Non-metal atoms want a full outer shell. Two chlorine atoms each have 7 outer electrons and want 8.",
+      "Neither one can take an electron from the other. So they share. Each puts in one electron, and the pair counts for both.",
+      "That shared pair is a covalent bond. Now both chlorine atoms count 8.",
+      "Some atoms share more than one pair. Two oxygen atoms share two pairs. That is a double bond."
+    ],
+    "adult": [
+      "Covalent bonds form between non-metal atoms. Both atoms attract the shared pair of electrons, and that attraction holds them together. Each atom counts the shared electrons in its own outer shell.",
+      "An atom usually forms 8 minus its number of outer electrons bonds: carbon 4, nitrogen 3, oxygen 2, chlorine 1. Hydrogen fills its first shell with 2, so it makes one bond. Unshared outer pairs are called lone pairs.",
+      "Two shared pairs make a double bond (O=O, O=C=O) and three a triple bond (N≡N). In dot-and-cross diagrams one atom's electrons are drawn as dots and the other's as crosses, so you can see who gave what.",
+      "Common slips: describing a covalent bond as one atom giving an electron to the other (that is ionic bonding, usually metal with non-metal), giving hydrogen 8 outer electrons, and drawing a single bond in O₂ or N₂."
+    ]
+  },
+  "familyTip": "Use two hands as atoms and a pair of coins as the shared electrons, held between them. Ask: how many coins does each hand count? Then try water: one hand in the middle sharing with two others.",
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "What is a covalent bond?",
+      "choices": [
+        "A shared pair of electrons between two atoms",
+        "An electron given from one atom to another",
+        "The attraction between two ions of opposite charge"
+      ],
+      "answer": 0,
+      "hint": "Think about chlorine: neither atom can take an electron from the other.",
+      "explain": "Each atom puts one electron into a shared pair. Transferring electrons makes ions, which is ionic bonding."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "An atom of a non-metal has {v} outer electrons. How many covalent bonds does it usually form?",
+      "answer": "8-v",
+      "hint": "Each bond adds one shared electron to its count. How many does it need to reach 8?",
+      "explain": "8 − {v} = {=8-v} bonds fill its outer shell.",
+      "params": {
+        "v": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "A molecule has {s} single bonds and {d} double bonds. How many electrons are shared in total?",
+      "answer": "2*s+4*d",
+      "hint": "A single bond is one shared pair; a double bond is two shared pairs.",
+      "explain": "{s} × 2 + {d} × 4 = {=2*s+4*d} shared electrons.",
+      "params": {
+        "s": [
+          1,
+          4
+        ],
+        "d": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "type": "mc",
+      "id": "p4",
+      "prompt": "Why does an oxygen molecule, O₂, have a double bond?",
+      "choices": [
+        "One shared pair leaves each oxygen with only 7, so they share two",
+        "Oxygen always gives away 2 electrons",
+        "A single bond would give each oxygen 9"
+      ],
+      "answer": 0,
+      "hint": "Oxygen has 6 outer electrons. Count with one shared pair, then with two.",
+      "explain": "6 + 1 = 7 with one pair; 6 + 2 = 8 with two pairs. So O=O."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "How many covalent bonds does a hydrogen atom form?",
+        "choices": [
+          "1",
+          "2",
+          "7"
+        ],
+        "answer": 0,
+        "hint": "Hydrogen's only shell is full with 2 electrons.",
+        "explain": "It has 1 electron and needs 2, so one shared pair is enough."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Which pair of elements is most likely to bond covalently?",
+        "choices": [
+          "Carbon and hydrogen",
+          "Sodium and chlorine",
+          "Magnesium and oxygen"
+        ],
+        "answer": 0,
+        "hint": "Covalent bonds usually form between two non-metals.",
+        "explain": "Carbon and hydrogen are both non-metals, so they share. The other pairs are a metal with a non-metal, which form ions."
+      },
+      {
+        "type": "numeric",
+        "id": "m3",
+        "prompt": "{n} carbon atoms are joined in a chain by single bonds. Every other bond goes to a hydrogen atom. How many hydrogen atoms are there?",
+        "answer": "2*n+2",
+        "hint": "Each carbon makes 4 bonds. The two end carbons use 1 bond on the chain, the middle ones use 2.",
+        "explain": "Total carbon bonds 4 × {n}, minus 2 for each of the {=n-1} C–C bonds, leaves {=2*n+2} bonds to hydrogen (methane CH₄, ethane C₂H₆…).",
+        "params": {
+          "n": [
+            1,
+            6
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Ammonia, NH₃: how many lone pairs does the nitrogen atom have?",
+        "choices": [
+          "1",
+          "0",
+          "3"
+        ],
+        "answer": 0,
+        "hint": "Nitrogen has 5 outer electrons and uses 3 in bonds.",
+        "explain": "5 − 3 = 2 unshared electrons, which is one lone pair."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "A chain of {n} carbon atoms joined by single bonds (C–C–C…) has how many C–C bonds?",
+        "answer": "n-1",
+        "hint": "Draw 3 carbons in a row and count the links.",
+        "explain": "Each bond joins two neighbours, so {n} atoms in a row have {=n-1} bonds between them.",
+        "params": {
+          "n": [
+            2,
+            8
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m6",
+        "prompt": "Carbon dioxide is O=C=O. How many outer electrons does each oxygen count?",
+        "choices": [
+          "8",
+          "6",
+          "10"
+        ],
+        "answer": 0,
+        "hint": "Each oxygen shares two pairs with carbon.",
+        "explain": "6 of its own plus 2 shared from carbon makes 8."
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "Nitrogen gas is N₂. Which bond holds the two atoms together?",
+        "choices": [
+          "A triple bond",
+          "A single bond",
+          "An ionic bond"
+        ],
+        "answer": 0,
+        "hint": "Each nitrogen has 5 outer electrons and needs 8.",
+        "explain": "Each nitrogen needs 3 more, so they share three pairs: N≡N."
+      }
+    ]
+  },
+  "status": "self-checked",
+  "visual": {
+    "type": "atom",
+    "caption": "A chlorine atom: 17 electrons, 7 in the outer shell. One more would make 8, so chlorine forms one covalent bond.",
+    "opts": {
+      "p": 17,
+      "n": 18,
+      "e": 17
+    }
+  },
+  "lab": {
+    "type": "flagcov",
+    "caption": "Flagship lab: share electrons. Tap two atoms to share a pair; rings turn green when an outer shell is full.",
+    "opts": {
+      "step": 0
+    }
+  }
+}

@@ -64,6 +64,7 @@ tok.update({
   'kitchenCard': kitchen_card(demo['kitchen'][k0]),
   'newStandards': fmt(new_std),
   'credit': e(S['credit']),
+  'reelCount': sum(len(v) for v in json.load(open(os.path.join(SITE, '..', 'learn/reels/manifest.json'))).values()),
 })
 tpl = open(os.path.join(SITE, 'src/index.html'), encoding='utf-8').read()
 tpl = tpl.replace('id="kt-card" aria-live="polite">', f'id="kt-card" aria-live="polite" data-start="{k0}">')

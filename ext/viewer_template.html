@@ -16,7 +16,7 @@
 #main{flex:1;overflow:auto;padding:16px 20px}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;margin-bottom:14px}
 .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;margin-right:4px;background:#f3f4f6}
-.tag.new{background:#dbeafe;color:#1e40af}.tag.old{background:#e5e7eb;color:#374151}
+.tag.new{background:#dbeafe;color:#1e40af}.tag.vid{background:#fef3c7;color:#92400e}.tag.old{background:#e5e7eb;color:#374151}
 ul.tree{list-style:none;padding-left:18px;margin:2px 0;border-left:1px dashed #d1d5db}ul.tree.root{border:0;padding-left:0}
 .node{padding:2px 0}.nm{cursor:pointer;font-weight:500}.nm.new{color:var(--new)}.nm.old{color:var(--old)}
 .why{color:#4b5563;font-size:12.5px}.why.bridge{color:var(--bridge)}.st{font-size:11px;padding:0 5px;border-radius:4px;margin-right:4px}
@@ -32,11 +32,11 @@ dfn.gl{font-style:normal;border-bottom:2px dotted currentColor;cursor:help}detai
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
 <small>A family-friendly learning map for ages 11–18: what to learn next, and why. <span id="cnt"></span></small>
 <button type="button" class="themebtn" id="themeBtn" aria-pressed="false">Classic look</button>
-<label class="sr" for="q">Search topics</label><input id="q" type="search" placeholder="Search topics…">
+<label class="sr" for="q">Search topics</label><input id="q" type="search" placeholder="Search topics, e.g. fractions…" aria-describedby="qcount" autocomplete="off"><span id="qcount" class="sr" role="status" aria-live="polite"></span>
 <div id="filters"><label><input type="checkbox" id="showOld"> also show earlier topics</label><label><input type="checkbox" id="onlyLes"> only topics with lessons</label></div></header>
 <nav id="list" aria-label="Topic list"></nav></aside>
-<main id="main"><div class="card"><b>How to use:</b> pick a topic on the left. You'll see its full prerequisite chain, with the reason for each link.
-<span class="legend"><br><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
+<main id="main"><div class="card"><b>How to use:</b> pick a topic on the left (or search for one) to open its lesson, then see what to learn first and why.
+<details class="howmap"><summary>How to read the map</summary><span class="legend"><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
-<p class="muted" id="stats"></p><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">/*__CREDIT__*/</p></div><div id="learnHome"></div><div id="detail"></div></main>
+<p class="muted" id="stats"></p></details><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">/*__CREDIT__*/</p></div><div id="learnHome"></div><div id="detail"></div></main>
 /*__SCRIPTS__*/</body></html>

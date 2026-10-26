@@ -1,0 +1,274 @@
+{
+ "topicId": "mt_MbTdcPBHh-",
+ "title": "Perfect squares and difference of squares",
+ "audience": "learner",
+ "keyIdea": "(a + b)² = a² + 2ab + b². A square of side a + b holds a², two ab strips and a b² corner, so the middle term is doubled. a² − b² = (a + b)(a − b). Cut a b by b corner from a², and the L that is left rearranges into an (a + b) by (a − b) rectangle. Root both parts first: 4x² − 25 = (2x + 5)(2x − 5).",
+ "explain": {
+  "kid": [
+   "Take a square that is x long on each side. Make each side 3 longer. The new square is (x + 3) by (x + 3).",
+   "Look at the pieces. There is the old x by x square. There are two thin strips, each x by 3. And there is a small 3 by 3 square in the corner. So (x + 3)² = x² + 3x + 3x + 9, which is x² + 6x + 9.",
+   "Now go the other way. Start with x² and cut a 3 by 3 square off one corner. What is left is x² − 9. It looks like an L.",
+   "Cut the thin part off the L and turn it. It fits on the end. Now you have a box shape that is x + 3 long and x − 3 wide. So x² − 9 = (x + 3)(x − 3)."
+  ],
+  "adult": [
+   "Squaring a bracket gives a perfect square: (a + b)² = a² + 2ab + b² and (a − b)² = a² − 2ab + b². The picture shows why the middle term is doubled. A square of side a + b holds one a by a square, two a by b strips and one b by b corner.",
+   "To spot one, check that the first and last terms are squares. Then check that the middle term is twice the product of their roots. x² + 10x + 25 = (x + 5)², since 25 = 5² and 10 = 2 × 5. x² + 10x + 20 is not one, because 20 is not a square.",
+   "The difference of two squares is a² − b² = (a + b)(a − b). Cut a b by b corner from an a by a square. The L that is left turns into an (a + b) by (a − b) rectangle. Expanding gives a² − ab + ab − b², and the middle terms cancel. It speeds up sums too: 23 × 17 = 20² − 3² = 391, and 21² = 400 + 40 + 1 = 441.",
+   "Common mistakes: writing (x + 3)² as x² + 9; keeping only one strip, so x² + 3x + 9; writing (x − 3)² for x² − 9; leaving the number unrooted, as in (x + 9)(x − 9); not rooting the 4 in 4x² − 25, which gives (4x + 5)(4x − 5) instead of (2x + 5)(2x − 5); and trying to factorise a sum such as x² + 9, which has no real factors."
+  ]
+ },
+ "familyTip": "Cut a 10 by 10 square from squared paper. Cut a 3 by 3 square from one corner, then snip off the thin strip and move it to the end. Count the new rectangle: 13 by 7 = 91, which is 100 − 9.",
+ "worked": {
+  "title": "Factorise 25x² − 36, then check by expanding.",
+  "steps": [
+   "Both terms are squares: 25x² = (5x)² and 36 = 6². They are subtracted, so this is a difference of two squares.",
+   "Use a² − b² = (a + b)(a − b) with a = 5x and b = 6: 25x² − 36 = (5x + 6)(5x − 6).",
+   "Check: (5x + 6)(5x − 6) = 25x² − 30x + 30x − 36 = 25x² − 36. The middle terms cancel.",
+   "Careful: (25x + 36)(25x − 36) forgets the roots, and (5x − 6)² would expand to 25x² − 60x + 36."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Expand (x + {n})². What is the coefficient of x?",
+   "answer": "2*n",
+   "hint": "There are two strips, each {n} by x. Add them.",
+   "explain": "(x + {n})² = x² + {n}x + {n}x + {=n*n} = x² + {=2*n}x + {=n*n}, so the coefficient is {=2*n}.",
+   "params": {
+    "n": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Without a calculator, work out ({a} + 3) × ({a} − 3).",
+   "answer": "a*a-9",
+   "hint": "This is a difference of two squares: ({a} + 3)({a} − 3) = {a}² − 3².",
+   "explain": "{a}² − 3² = {=a*a} − 9 = {=a*a-9}. The 3 by 3 corner is taken away.",
+   "params": {
+    "a": [
+     20,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Factorise x² − 49.",
+   "choices": [
+    "(x − 7)²",
+    "(x + 7)(x − 7)",
+    "(x + 49)(x − 49)"
+   ],
+   "answer": 1,
+   "hint": "49 = 7². Use a² − b² = (a + b)(a − b).",
+   "explain": "x² − 49 = (x + 7)(x − 7). (x − 7)² gives x² − 14x + 49, and 49 must be rooted to 7."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which of these is a perfect square?",
+   "choices": [
+    "x² + 8x + 8",
+    "x² + 16",
+    "x² + 8x + 16"
+   ],
+   "answer": 2,
+   "hint": "The last term must be a square, and the middle term must be twice its root times x.",
+   "explain": "x² + 8x + 16 = (x + 4)²: 16 = 4² and 8 = 2 × 4. x² + 16 has no middle term, and 8 is not a square."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Factorise 9x² − 4.",
+   "choices": [
+    "(9x + 2)(9x − 2)",
+    "(3x + 2)(3x − 2)",
+    "(3x − 2)²"
+   ],
+   "answer": 1,
+   "hint": "9x² is the square of 3x, and 4 is the square of 2.",
+   "explain": "9x² − 4 = (3x)² − 2² = (3x + 2)(3x − 2). (9x + 2)(9x − 2) forgets to root the 9."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Expand (x − 5)².",
+    "choices": [
+     "x² − 25",
+     "x² − 10x + 25",
+     "x² − 10x − 25"
+    ],
+    "answer": 1,
+    "hint": "Write it as (x − 5)(x − 5) and multiply every part.",
+    "explain": "x² − 5x − 5x + 25 = x² − 10x + 25. The corner is (−5) × (−5) = +25, and x² − 25 drops the middle term."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "(x + {n})² = x² + bx + c. What is c?",
+    "answer": "n*n",
+    "hint": "c is the corner square, {n} by {n}.",
+    "explain": "c = {n} × {n} = {=n*n}. Not {=2*n}: that is the middle coefficient b.",
+    "params": {
+     "n": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Factorise x² + 25.",
+    "choices": [
+     "(x + 5)(x − 5)",
+     "It cannot be factorised with real numbers",
+     "(x + 5)²"
+    ],
+    "answer": 1,
+    "hint": "Expand each option and compare with x² + 25.",
+    "explain": "(x + 5)(x − 5) = x² − 25 and (x + 5)² = x² + 10x + 25. A sum of two squares has no real factors."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Work out 52 × 48 without a calculator.",
+    "answer": 2496,
+    "tolerance": 0.001,
+    "hint": "52 = 50 + 2 and 48 = 50 − 2.",
+    "explain": "52 × 48 = 50² − 2² = 2500 − 4 = 2496."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Sam writes (x + 4)² = x² + 16. What went wrong?",
+    "choices": [
+     "Nothing, it is correct",
+     "He should have written x² + 4²",
+     "He dropped the two strips: the middle term 8x is missing"
+    ],
+    "answer": 2,
+    "hint": "Draw the square of side x + 4. How many pieces does it have?",
+    "explain": "(x + 4)² = x² + 4x + 4x + 16 = x² + 8x + 16. Squaring each part alone leaves out the two x by 4 strips."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "x² − k = (x + {n})(x − {n}). What is k?",
+    "answer": "n*n",
+    "hint": "Expand the brackets. The x terms cancel.",
+    "explain": "(x + {n})(x − {n}) = x² − {n}x + {n}x − {=n*n} = x² − {=n*n}, so k = {=n*n}.",
+    "params": {
+     "n": [
+      2,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is equal to (x + 6)(x − 6)?",
+    "choices": [
+     "x² − 12x − 36",
+     "x² − 36",
+     "x² + 36"
+    ],
+    "answer": 1,
+    "hint": "Multiply out. What happens to +6x and −6x?",
+    "explain": "x² − 6x + 6x − 36 = x² − 36. The middle terms cancel, and +6 × −6 is −36."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Factorise x² − 14x + 49.",
+    "choices": [
+     "(x − 7)²",
+     "(x + 7)(x − 7)",
+     "(x − 14)²"
+    ],
+    "answer": 0,
+    "hint": "49 = 7², and the middle term is negative.",
+    "explain": "x² − 14x + 49 = (x − 7)², since (−7)² = 49 and 2 × (−7) = −14. (x + 7)(x − 7) has no middle term."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "Use the difference of two squares to work out 101² − 99².",
+    "answer": 400,
+    "tolerance": 0.001,
+    "hint": "a² − b² = (a + b)(a − b).",
+    "explain": "101² − 99² = (101 + 99)(101 − 99) = 200 × 2 = 400."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "Factorise 16x² − 1.",
+    "choices": [
+     "(16x + 1)(16x − 1)",
+     "(8x + 1)(8x − 1)",
+     "(4x + 1)(4x − 1)"
+    ],
+    "answer": 2,
+    "hint": "Which term squares to 16x²? And 1 = 1².",
+    "explain": "16x² − 1 = (4x)² − 1² = (4x + 1)(4x − 1). 8x squared is 64x², and 16x squared is 256x²."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which kind is each one? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Perfect square",
+    "Difference of squares",
+    "Neither"
+   ],
+   "items": [
+    [
+     "x² + 6x + 9",
+     0
+    ],
+    [
+     "x² − 10x + 25",
+     0
+    ],
+    [
+     "x² − 16",
+     1
+    ],
+    [
+     "4x² − 9",
+     1
+    ],
+    [
+     "x² + 9",
+     2
+    ],
+    [
+     "x² + 6x + 6",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsqr",
+  "caption": "Flagship lab: grow a square to see (x + b)², then cut a corner off and swing the strip to turn x² − b² into (x + b)(x − b).",
+  "opts": {
+   "step": 0
+  }
+ }
+}

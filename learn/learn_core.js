@@ -10,7 +10,7 @@ if(!P.progress||typeof P.progress!=='object'||Array.isArray(P.progress))P.progre
 for(const k in P.progress){const e=P.progress[k];if(!e||typeof e!=='object'||Array.isArray(e)){delete P.progress[k];continue}if('best' in e&&!Number.isFinite(e.best))delete e.best;if(e.practice&&(typeof e.practice!=='object'||Array.isArray(e.practice)))delete e.practice}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){mem=true}}
 if(typeof WN!=='undefined')Object.assign(L,WN.store);
-const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),band=()=>BANDS.find(b=>b.id===P.age);
+const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),hasReel=id=>{const R=window.WN_REELS;if(R)return !!(R[id]&&R[id].length);const Z=window.WN_REELS_LAZY;return !!(Z&&Z.ids.includes(id))},nextTag=id=>has(id)?'<span class="tag new">lesson</span>':hasReel(id)?'<span class="tag vid">video</span>':'<span class="tag">coming soon</span>',band=()=>BANDS.find(b=>b.id===P.age);
 const prog=id=>P.progress[id]||{};
 function setProg(id,patch){P.progress[id]=Object.assign({},prog(id),patch,{at:LEARN_GEN.today()});save()}
 const assumeAge=()=>P.knownUpTo==='auto'?(band()?band().assumeKnownUpTo:0):+P.knownUpTo||0;
@@ -75,16 +75,18 @@ function home(){refreshNext();const el=document.getElementById('learnHome');if(!
  <button type="button" id="pReset" class="lbtn ghost">Clear my data</button></form>${mem?'<p class="muted">Storage is blocked in this browser, so progress lasts only until you close the page.</p>':''}</details>
  ${(()=>{const du=dueList();return du.length?`<h2 class="lh">Quick review <span class="muted">· ${du.length} due</span></h2><ul class="nextl">${du.map(id=>`<li><button type="button" class="linkish" data-go="${id}">${esc(N.get(id).n)}</button> <span class="muted small">2-question refresh of a topic you mastered</span></li>`).join('')}</ul>`:''})()}
  <h2 class="lh" id="lnH">Learn next${g.target?` <span class="muted">towards ${esc(N.get(g.target).n)}</span>`:''}</h2>
- ${nx.every(n=>offPath.has(n.id))?`<p class="muted">${g.target&&done(g.target)?'You’ve reached this goal':(nx.length?'Nothing left on this goal path, so here are nearby topics':'Nothing to suggest on this path yet')}. ${assumeAge()?`From your age band we assume you know topics up to age ${assumeAge()}: choose a harder goal, or set “Assume I know” lower to review.`:'Try another goal.'}</p>`:''}${nx.length?`<ol class="nextl">${nx.map(n=>`<li><button type="button" class="linkish" data-go="${n.id}">${esc(n.n)}</button> ${has(n.id)?'<span class="tag new">lesson</span>':'<span class="tag">lessons coming</span>'}${offPath.has(n.id)?' <span class="tag">nearby</span>':''} <span class="age">ages ${n.a[0]}–${n.a[1]}</span><div class="why">${esc(why(n.id))}</div></li>`).join('')}</ol>`:''}
+ ${nx.every(n=>offPath.has(n.id))?`<p class="muted">${g.target&&done(g.target)?'You’ve reached this goal':(nx.length?'Nothing left on this goal path, so here are nearby topics':'Nothing to suggest on this path yet')}. ${assumeAge()?`From your age band we assume you know topics up to age ${assumeAge()}: choose a harder goal, or set “Assume I know” lower to review.`:'Try another goal.'}</p>`:''}${nx.length?`<ol class="nextl">${nx.map(n=>`<li><button type="button" class="linkish" data-go="${n.id}">${esc(n.n)}</button> ${nextTag(n.id)}${offPath.has(n.id)?' <span class="tag">nearby</span>':''} <span class="age">ages ${n.a[0]}–${n.a[1]}</span><div class="why">${esc(why(n.id))}</div></li>`).join('')}</ol>`:''}
+ <h3 class="reel-h lsub" hidden>🎬 Quick reels for what’s next</h3><div class="reels home-reels" id="homeReels" hidden></div>
  ${P.age?'':'<p class="muted small">Tip: choose an age band so we can skip topics you almost certainly know.</p>'}
  <p class="muted lkey"><span class="lb lb-m">✓</span> mastered <span class="lb lb-k">✓</span> already known <span class="lb lb-n">★</span> learn next <span class="lb lb-l">◆</span> has a lesson</p></section>`;
  document.getElementById('pDet').ontoggle=e=>{formOpen=e.target.open};
+ if(typeof LEARN_PANEL!=='undefined'){const R=window.WN_REELS||{},lz=(window.WN_REELS_LAZY||{}).ids||Object.keys(R),ids=[...nx.map(n=>n.id),...lz.filter(t=>N.get(t)&&N.get(t).new)];LEARN_PANEL.reelsFor([...new Set(ids)],3,document.getElementById('homeReels'))}
  const on=(i,f)=>{document.getElementById(i).onchange=f};
  on('pName',e=>{P.name=e.target.value.trim();save();home()});on('pAge',e=>{P.age=e.target.value;save();update();if(sel)select(sel)});
  on('pGoal',e=>{P.goal=e.target.value;save();update()});on('pLevel',e=>{P.level=e.target.value;save();if(sel)select(sel)});
  on('pKnown',e=>{P.knownUpTo=e.target.value==='auto'?'auto':+e.target.value;save();update()});
  document.getElementById('pReset').onclick=()=>{if(confirm('Clear your name and all progress on this device?')){P=blank();save();update()}};
- el.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{select(b.dataset.go);const l=document.getElementById('learn');if(l)l.focus()})}
+ el.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{select(b.dataset.go,true);const l=document.getElementById('learn');if(l)l.focus()})}
 function update(){home();renderList();document.querySelectorAll('.gn').forEach(g=>{g.querySelector('circle').setAttribute('class',cls(g.dataset.id))})}
 function clear(id){delete P.progress[id];save()}
 function setLevel(v){P.level=v;save()}

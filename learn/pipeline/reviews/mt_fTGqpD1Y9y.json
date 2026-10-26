@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions (acids are sources of H⁺ and alkalis of OH⁻ in aqueous solution, neutralisation H⁺ + OH⁻ → H₂O, a one-unit pH fall is a tenfold rise in H⁺, strong = fully ionised, weak = partly ionised) checked against AQA GCSE Chemistry 8462 sections 4.4.2.4 to 4.4.2.6 and OpenStax Chemistry 2e 14.2. Ethanoic acid figures computed from Ka = 1.74 × 10⁻⁵: at 0.1 mol/dm³ [H⁺] = 1.3 × 10⁻³, pH 2.88, 1.3% ionised, stated as 'about 1 in 100' and 'pH about 2.9'. H₃O⁺ is named in the adult text so the H⁺ shorthand is not left wrong; tenfold dilution raising pH by one is limited to strong acids; sulfuric acid 'can release' 2 H⁺."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented slips: thinking Cl⁻ or the HCl molecule makes the solution acidic, or Na⁺ makes it alkaline; writing Na⁺ + Cl⁻ → NaCl as the reaction; believing any mix of acid and alkali is neutral regardless of amounts; treating pH as linear (pH 2 vs 4 is '2 times' or '20 times'); believing water can neutralise an acid; confusing strong with concentrated and weak with dilute; assuming equal concentrations give equal pH."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Particle-level model unique to this topic: tapping HCl and NaOH visibly splits them into labelled ions, dragging H⁺ onto OH⁻ turns the pair into H₂O while Na⁺/Cl⁻ drops are refused as spectators, a tenfold dot grid tied to a draggable pH marker, a jug-drag dilution that divides H⁺ per drop by 10, and ethanoic acid molecules that snap back after splitting. It shares no mechanic with flag_acid.js (indicator colours and drop-by-drop titration of a beaker); highest 6-shingle similarity to any flagship lab is under the 30% gate."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea is found before it is named: the learner dissolves HCl and sees only H⁺ is new and shared with every acid; pairs ions and discovers only H⁺ and OH⁻ react, giving the ionic equation; finds 3 OH⁻ leave 3 H⁺ spare and must add exactly 3 NaOH (overshoot turns the label alkaline); slides pH 6 → 3 and watches 1 → 10 → 100 → 1000 dots; pours water three times to go pH 1 → 4 and is told more water only approaches 7; tries to split ethanoic acid and watches most molecules re-form."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Seven predictions, each with a tempting wrong option the lab disproves: 'Cl⁻ ions' or 'HCl molecules' make it acidic; 'Na⁺ ions' make it alkaline; 'all four kinds' react; 'neutral' after pairing 3 of 6 H⁺; '2 times' or '20 times' for pH 4 vs 6; 'pH 7, neutral' or 'pH 0.1' after tenfold dilution; 'both the same' pH for equal concentrations of a strong and weak acid. The right answer is never first in the list."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 16 challenge rounds on an iPhone 13 viewport covering all four question kinds. Wrong answers get feedback naming the slip: subtracting pH values ('pH is not a count of ions… multiply by 10 twice'), adding tens instead of multiplying ('10 × 10 × 10, not 10 + 10 + 10'), calling an unequal mix neutral (states how many H⁺ or OH⁻ are left), choosing the spectator equation or the full equation, and mixing up weak with dilute or strong with concentrated."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons.py readability passes (kid ≤ 6.5, adult ≤ 9.5). Kid paragraphs use short sentences and everyday anchors (lemon juice, oven cleaner, 'each H⁺ grabs one OH⁻', 'jumps of ten'); each lab task is one instruction such as 'Turn every H⁺ into water' or 'Dilute the acid until it is pH 4'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler gate passes and explanation overlap with every other lesson, including 69-acids-alkalis-and-ph, is under 12%. Each adult paragraph adds one idea (ion sources with the H₃O⁺ caveat, ionic equation and spectators with the named mistake, the log scale and dilution limit, strong versus concentrated with data); step messages state the result with numbers rather than praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots of all nine steps on iPhone 13 dark, 360 px Android light and desktop dark show ion labels legible (11–12 px bold on 13–19 px balls), the pH scale, 1000-dot grid and jug inside the card. Real pointer tests on the iPhone viewport: tapping HCl, dragging H⁺ onto Na⁺ (refused with the spectator message), dragging H⁺ onto OH⁻ and OH⁻ onto H⁺, tap-then-tap pairing, dragging the pH marker from 6 to 3 and dragging the jug onto the beaker three times all completed their steps. Fixed after screenshots: the header said 'Neutral' before anything dissolved and during unfinished pairing."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs: axe-core WCAG 2.1 AA clean in both themes on phone and desktop, all 7 tasks complete with Show me, no console or page errors. Every drag has a button (Dissolve a molecule, Pair H⁺ with OH⁻, + NaOH, + HCl, ◀ pH −1, pH +1 ▶, Pour in water, Try to split ethanoic acid); the canvas aria-label lists the ion counts and whether the mix is acidic, neutral or alkaline, and in the challenge describes the question and each beaker."
+  }
+ },
+ "sources": [
+  "https://www.aqa.org.uk/subjects/chemistry/gcse/chemistry-8462/specification",
+  "https://openstax.org/books/chemistry-2e/pages/14-2-ph-and-poh",
+  "https://openstax.org/books/chemistry-2e/pages/14-3-relative-strengths-of-acids-and-bases",
+  "https://pubchem.ncbi.nlm.nih.gov/compound/Acetic-Acid"
+ ]
+}

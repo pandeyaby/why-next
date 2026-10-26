@@ -1,0 +1,48 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Each rule taught matches the five key concepts about print listed for ages 3-4 in DfE Development Matters (2021, updated 2023): print has meaning, English is read left to right and top to bottom, the parts of a book (front cover, title), and page sequencing; and Reading Rockets' print-awareness summary (words are made of letters, spaces separate words). Counts are exact: 'My dog can run' is 4 words and 11 letters; every challenge sentence's word, letter and gap counts are computed from the data. The adult note that Arabic and Hebrew run right to left keeps the direction rule from being over-generalised."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented early-print slips: starting at the picture or the bottom right (step 1 prediction, challenge tags end/mid, p1), reading right to left (drag guard 'Start on the left, under The', tag rtl, m1), going straight down at the end of a line instead of a return sweep (step 2 prediction and the 'mat.' tap, tags down/back, p4, m8), counting letters as words or counting gaps (step 3 prediction '11: one for each letter', tags letters/gaps, m5), confusing letters and words (sort step and tags lw0/lw1, m2) and taking the barcode side for the front (step 5 prediction, tags barcode/none)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Every interaction is about print itself: a reading finger dragged under real words that light up only in left-to-right order, a tap-the-next-word return sweep on a two-line page, one-dot-per-word counting where tapping a gap explains that gaps are not words, a letter/word card sort, and a book that must be flipped from barcode side to title side and turned the right way up. None of it maps onto another topic by relabelling; shingle similarity with all 60+ flag labs is under the 30% gate."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The child does each idea before the text names it: words refuse to light out of order, so the finger has to travel left to right; the line ends and the only word that continues the story is 'on' at the left; the dot count reaches 4 while the letters are plainly more; single letters and words go to different boxes with the reason given on a wrong drop; the title only reads properly when the book is front side up and upright. The sandbox then lets the child build a sentence and watch the finger read it back word by word."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions, each with a tempting wrong option that the lab then disproves: 'At the picture' or 'bottom, right' for where reading starts; 'Straight down, to mat.' for the next line; '11: one for each letter' for the word count, disproved by the 4 dots; 'It has the barcode' for the front cover, disproved when the barcode side shows no title. The kit recap names the child's pick and the right answer after each task."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating question kinds (start, count, letter or word, direction, next line, front cover) over six different sentences and six cards. Each wrong answer gets a message for that slip: 'That counts the letters. A word is a group of letters with a gap on each side', 'That counts the gaps. There is always one more word than gaps', 'cat has 3 letters side by side, so it is a word', 'Straight down skips words. Jump back to the left of the next line', and the barcode explanation."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Family kid text scores FK grade 0.1 and adult text 7.1 with learn/readability.py (limits 5.5 and 10.5). Lab prompts use one or two short sentences of everyday words ('Tap the word you read next'); the canvas carries most of the meaning through a picture, big highlighted words and a moving finger, so a 4-year-old needs a grown-up only for the short prompts."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No throat-clearing: every kid sentence states a rule a child can act on, every adult paragraph gives a concept, a technique (point under each word, one tap per spoken word) or named mistakes. Practice explanations give the reason (one more word than gaps, sweep back to the left) rather than repeating the answer, and the family tip is a concrete story-time routine."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on iPhone 13 (390 px) and desktop screenshots for all seven steps: words render at 30-40 px, the canvas uses a taller narrow layout, sorted cards stack inside each box without overlap, and the lab adds a young class so every lab and prediction button is at least 56 px tall with 1.15 rem text. Finger drag, card drag, book swipe and word taps were driven with real pointer events at both sizes; the canvas has touch-action none, so drags never pan the page."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button twin (Read the top line, word buttons with aria-labels such as 'Read on next' and 'Dot under My', Letter / Word, Flip it over, Turn it round, word cards, Read it, Clear). The canvas aria-label and the polite live region describe the state after each action ('Read so far: The cat sat', 'The back of the book, upside down'). Highlighted words are dark on yellow; axe (WCAG 2.1 AA) is clean in both themes on desktop and phone."
+  }
+ },
+ "sources": [
+  "https://www.gov.uk/government/publications/development-matters--2",
+  "https://www.readingrockets.org/topics/print-awareness"
+ ]
+}

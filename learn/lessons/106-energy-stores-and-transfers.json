@@ -1,0 +1,149 @@
+{
+  "topicId": "mt_Jvg_r4yWaY",
+  "title": "Energy stores and transfers",
+  "audience": "learner",
+  "keyIdea": "Energy is never made or destroyed. It sits in stores (kinetic, gravitational, elastic, thermal, chemical, nuclear, magnetic) and moves between them by four pathways: mechanically, electrically, by heating and by radiation.",
+  "explain": {
+    "kid": [
+      "Think of energy like money in different bank accounts. The accounts are stores: moving things have a kinetic store, high things a gravitational store, hot things a thermal store, food and fuel a chemical store.",
+      "Energy moves from one store to another. A force can push it (mechanically), a current can carry it (electrically), a hot thing can warm a cold one (heating), and light or sound can carry it away (radiation).",
+      "The total never changes. When a skater slows down on a rough ramp, the energy is not gone. It has gone into warm wheels, a warm ramp and warm air."
+    ],
+    "adult": [
+      "The store model is bookkeeping: pick a start and an end, list which stores went up and which went down, and the changes must add to zero. Energy is conserved; it just becomes less useful as it spreads into thermal stores.",
+      "The stores to know are kinetic (½mv²), gravitational potential (mgh), elastic, thermal, chemical, nuclear, magnetic and electrostatic. The pathways are mechanical work, electrical work, heating and radiation.",
+      "A common slip is saying energy is 'used up' or 'lost'. Better: it is transferred to the surroundings, usually by heating, where we can't easily use it again."
+    ]
+  },
+  "familyTip": "Drop a ball from knee height and count how many bounces it makes. Each bounce is lower. Ask: where did the energy go? Feel the ball after many fast bounces on a hard floor.",
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "A stretched catapult is about to fire. Which store holds most of its energy?",
+      "choices": ["Elastic potential", "Kinetic", "Chemical"],
+      "answer": 0,
+      "hint": "Nothing is moving yet. What has been stretched?",
+      "explain": "Stretched or squashed things store energy in an elastic potential store. When it fires, that energy moves to the kinetic store of the stone."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "A skater on a smooth ramp has {=t*10} J in total. Right now her kinetic store is {=k*10} J. How many joules are in her gravitational store?",
+      "answer": "t*10-k*10",
+      "hint": "No friction, so the total stays the same. Total − kinetic = ?",
+      "explain": "{=t*10} − {=k*10} = {=t*10-k*10} J in the gravitational store.",
+      "params": {"t": [20, 60], "k": [5, 50]},
+      "where": "k<t"
+    },
+    {
+      "type": "mc",
+      "id": "p3",
+      "prompt": "A bike skids to a stop. Its kinetic store is now empty. Where did that energy go?",
+      "choices": ["Into thermal stores of the tyre, road and air, by heating", "It was destroyed by the brakes", "Back into the rider's chemical store"],
+      "answer": 0,
+      "hint": "Feel a tyre just after a long skid.",
+      "explain": "Friction transfers the energy by heating. The tyre, road and air warm up a little. The total is the same; it is just spread out."
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "A {m} kg box is lifted {h} m onto a shelf. Using g = 10 N/kg, how much energy goes into its gravitational store (mgh)?",
+      "answer": "m*10*h",
+      "hint": "Multiply mass × 10 × height.",
+      "explain": "{m} × 10 × {h} = {=m*10*h} J.",
+      "params": {"m": [1, 9], "h": [2, 6]}
+    },
+    {
+      "type": "order",
+      "id": "p5",
+      "prompt": "Put the energy journey in a torch in order.",
+      "items": ["Chemical store of the battery", "Transferred electrically by the current", "Bulb heats up and radiates light", "Thermal store of the surroundings"],
+      "hint": "Start where the energy is stored before you switch on.",
+      "explain": "Chemical store → electrically → the bulb heats and gives out light → the light is absorbed, warming the surroundings."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "numeric",
+        "id": "m1",
+        "prompt": "On a smooth ramp a skater starts still with {=g*10} J in her gravitational store. How many joules are in her kinetic store at the very bottom?",
+        "answer": "g*10",
+        "hint": "No friction: all of it swaps over.",
+        "explain": "All {=g*10} J moves from the gravitational store to the kinetic store.",
+        "params": {"g": [10, 90]}
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "You charge a phone. Which description is right?",
+        "choices": ["Energy is transferred electrically into the battery's chemical store", "Electricity is stored as electricity in the phone", "Energy is made inside the charger"],
+        "answer": 0,
+        "hint": "Batteries store energy in chemicals.",
+        "explain": "The current carries energy (electrically) and it is stored in the battery's chemical store."
+      },
+      {
+        "type": "numeric",
+        "id": "m3",
+        "prompt": "A sledge starts with 500 J. At the bottom of a rough hill it has {=k*10} J in its kinetic store and nothing in its gravitational store. How many joules went to thermal stores?",
+        "answer": "500-k*10",
+        "hint": "The total is still 500 J.",
+        "explain": "500 − {=k*10} = {=500-k*10} J went to thermal stores by heating.",
+        "params": {"k": [10, 45]}
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Two skaters, 40 kg and 80 kg, roll from the same height on a smooth ramp. At the bottom…",
+        "choices": ["they have the same speed", "the heavier one is twice as fast", "the lighter one is twice as fast"],
+        "answer": 0,
+        "hint": "Twice the mass gives twice the energy, but also twice as much to speed up.",
+        "explain": "mgh = ½mv², so the mass cancels: v = √(2gh). Same height, same speed."
+      },
+      {
+        "type": "mc",
+        "id": "m5",
+        "prompt": "A hot cup of tea cools down on the table. Which store empties, and by which pathway?",
+        "choices": ["Its thermal store, by heating the air and table (and some radiation)", "Its chemical store, electrically", "Its kinetic store, mechanically"],
+        "answer": 0,
+        "hint": "What is the tea losing? How does a hot thing warm what is around it?",
+        "explain": "The tea's thermal store empties by heating the cooler air and table, and a little by infrared radiation."
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "A {m} kg trolley moves at {v} m/s. How many joules are in its kinetic store (½mv²)?",
+        "answer": "m*v*v/2",
+        "hint": "Square the speed first, then multiply by the mass and halve.",
+        "explain": "½ × {m} × {v}² = {=m*v*v/2} J.",
+        "params": {"m": [2, 6], "v": [2, 6]}
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "How does energy from the Sun reach Earth through empty space?",
+        "choices": ["By radiation (light and infrared)", "By heating the air on the way", "Electrically"],
+        "answer": 0,
+        "hint": "Space has almost no air to heat.",
+        "explain": "Only radiation can cross empty space. The light and infrared then warm the ground's thermal store."
+      }
+    ]
+  },
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Where is the energy mostly stored? Drag each card into a store, or tap a card and then tap a box.",
+    "opts": {
+      "bins": ["Kinetic", "Gravitational", "Chemical", "Elastic"],
+      "items": [["A rolling bowling ball", 0], ["A cyclist at top speed", 0], ["A book on a high shelf", 1], ["Water behind a dam", 1], ["A slice of toast", 2], ["A charged battery", 2], ["A stretched rubber band", 3], ["A squashed spring", 3]]
+    }
+  },
+  "lab": {
+    "type": "flagenergy",
+    "caption": "Flagship lab: the skate ramp. Let the skater go and watch energy move between stores, but the total never change.",
+    "opts": {"step": 0}
+  }
+}

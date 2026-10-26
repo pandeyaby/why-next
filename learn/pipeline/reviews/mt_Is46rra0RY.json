@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Recomputed every number: 3 × 2⁰ = 3 so (0, 3) is the intercept; 3 × 0.5 = 1.5 at x = 1; 2 × 2³ = 16 (not 10 or 12, the linear guesses from 8); 3 × 2⁻⁶ = 3/64 = 0.046875 ≈ 0.047; 2 × 3⁻⁵ = 2/243 ≈ 0.008; 0.25ˣ = 4⁻ˣ is the y-axis mirror of 4ˣ; (0, 6) and (1, 3) give b = 0.5; challenge pairs (0, 4),(1, 6) → 4 × 1.5ˣ and (0, 2),(1, 6) → 2 × 3ˣ; 8 × 0.5² = 2."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented exponential-graph slips (CCSS F-IF.7e, OpenStax 6.2): y-intercept read as b or a × b, the curve touching or crossing y = 0, 'b smaller than a means decay' instead of comparing b with 1, 2⁻¹ read as −2, (a × b)ˣ instead of a × bˣ, the y = 1 value at x = 1 taken as b, reflection in the x-axis (−4ˣ) confused with the y-axis (0.25ˣ), and a decay curve treated as a line that hits zero."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "A coordinate-plane lab unlike the bar chart in flag_grow.js: a purple handle fixed on x = 0 sets a, a pink handle on x = 1 sets the product a × b, a cyan probe walks integer x and shows the ×b staircase, a zoom inset magnifies x −6 to −2 near the dashed asymptote, and a ghost y = 4ˣ is mirrored. Nearest flagship 6-shingle Jaccard 7.9% (flag_grow.js), then 4.9% (flag_surd.js); gate_lab_distinct passes."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea is found by moving the curve before it is stated: dragging the x = 0 handle to 3 shows a is the intercept whatever b is; pulling the x = 1 handle down to 1.5 turns growth into decay; walking the probe to x = 3 draws ×2, ×2, ×2 steps so 16 beats the linear 10 or 12; walking to x = −6 with the zoom shows halving that never reaches 0; matching the mirror of 4ˣ needs a = 1 and b = 0.25."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predicts, each with a tempting wrong option the lab then disproves: (0, 2) i.e. b as the intercept, 'falls below 0' for a decay curve, 10 or 12 for the next value after 8 (adding instead of multiplying), 'Yes, near x = −5' for reaching zero, and y = −4ˣ for the y-axis mirror; the follow-up line names the learner's pick ('You predicted 10; now you know why it's 16')."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Played 12 challenge questions on an iPhone 13 viewport across all five types (intercept, kind, value, asymptote, match): (0, 6) got '6 is y at x = 1, not x = 0', 16 for 8 × 0.5² got 'the power belongs to 0.5 only', 'reaches 0 at x = 6' got 'always positive, never reaches y = 0', 2 × 6ˣ got 'b is how many times bigger', and each ends with the full working."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Flesch–Kincaid grade −0.2 for the kid text and 7.9 for the adult text by learn/readability.py (limits 6.5 and 9.5); kid text works one curve, y = 3 × 2ˣ, point by point with one idea per sentence; each task line is a single instruction such as 'Walk the probe to x = −6'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler check passes and the explanation shares 0% of 6-word shingles with other lessons (gate_content); the four adult paragraphs cover the intercept a, growth vs decay by comparing b with 1, the asymptote and negative x, the y-axis reflection b ↔ 1/b, and a named-mistakes list, with no template sentences reused from the previous lesson."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 and 360 px sweeps (phone_sweep.cjs) found 0 overflow or clipping findings; screenshots of every step checked. Real pointer drags on the phone viewport (a handle to 3, b handle to 1.5, probe to x = −6, then a to 1 and b to 0.25 for the mirror) each completed their task. After review the asymptote label was moved into the zoom inset, the inset caption moved below it, and the probe is drawn above the handles."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs axe-core WCAG 2.1 AA clean in light and dark on desktop and iPhone 13 with no console errors (gate_browser); a ± 0.5, b ± 0.25 and x ± 1 buttons in a labelled group ('Change a, b or the probe') replace every drag, the canvas aria-label states the equation, intercept, growth/decay and probe value, and challenge feedback is in a polite live region."
+  }
+ },
+ "sources": [
+  "https://www.thecorestandards.org/Math/Content/HSF/IF/",
+  "https://openstax.org/books/college-algebra-2e/pages/6-2-graphs-of-exponential-functions",
+  "https://www.mathsisfun.com/sets/function-exponential.html"
+ ]
+}

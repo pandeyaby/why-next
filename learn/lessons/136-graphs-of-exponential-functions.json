@@ -1,0 +1,249 @@
+{
+ "topicId": "mt_Is46rra0RY",
+ "title": "Graphs of exponential functions",
+ "audience": "learner",
+ "keyIdea": "The graph of y = a × bˣ (a > 0) crosses the y-axis at (0, a). If b > 1 it rises ever more steeply (growth); if 0 < b < 1 it falls towards 0 (decay). It gets closer and closer to y = 0 but never touches it: y = 0 is a horizontal asymptote.",
+ "explain": {
+  "kid": [
+   "Draw y = 3 × 2ˣ. At x = 0 you get 3 × 1 = 3, so the curve meets the y-axis at 3.",
+   "Each step to the right doubles y: 3, 6, 12, 24. The gaps get bigger, so the curve bends up and gets steep.",
+   "Each step to the left halves y: 1.5, then 0.75, then 0.375. It gets tiny, but half of a tiny number is still more than 0. So the curve never hits the x-axis.",
+   "Now try y = 3 × 0.5ˣ. It is the same curve flipped left to right. It starts at 3 and falls towards 0 as you go right."
+  ],
+  "adult": [
+   "For y = a × bˣ with a > 0 and b > 0, the y-intercept is (0, a) because b⁰ = 1. The point (1, a × b) fixes the factor, so two points such as (0, 4) and (1, 6) give a = 4 and b = 1.5.",
+   "If b > 1 the graph shows growth: each unit step right multiplies y by b, so the rises get larger and the curve steepens. If 0 < b < 1 it shows decay towards 0. y = (1/b)ˣ is the reflection of y = bˣ in the y-axis, since (1/b)ˣ = b⁻ˣ.",
+   "Because every value is a positive number times a positive power, y is always above 0. Moving left on a growth curve (or right on a decay curve) divides by b again and again, so y approaches 0 without reaching it: the x-axis, y = 0, is a horizontal asymptote.",
+   "Common mistakes: reading the y-intercept as b or as a × b; joining plotted points with straight lines or letting the curve cross the x-axis; thinking b < a means decay (compare b with 1); treating 2⁻¹ as −2 rather than 1/2; and mistaking a decay curve for a straight line that hits zero."
+  ]
+ },
+ "familyTip": "Fill a glass with water and pour away half, then half of what is left, again and again. Mark the level each time on a piece of tape. The marks get closer together but the glass is never empty in theory: that is the curve 1 × 0.5ˣ and its asymptote.",
+ "worked": {
+  "title": "Sketch y = 3 × 2ˣ and y = 3 × 0.5ˣ from x = −2 to x = 2, and compare them.",
+  "steps": [
+   "y = 3 × 2ˣ: x = −2, −1, 0, 1, 2 gives y = 0.75, 1.5, 3, 6, 12.",
+   "y = 3 × 0.5ˣ: the same x values give y = 12, 6, 3, 1.5, 0.75.",
+   "Both pass through (0, 3) because a = 3. The first rises (b = 2 > 1); the second falls (b = 0.5 < 1).",
+   "Each is the other reflected in the y-axis, and both get close to y = 0 on one side without touching it. Draw smooth curves, not straight segments."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Where does y = {a} × {b}ˣ cross the y-axis? Type the y-value.",
+   "answer": "a",
+   "hint": "On the y-axis x = 0. Work out {b} to the power 0 first.",
+   "explain": "At x = 0, {b} to the power 0 is 1, so y = {a} × 1 = {a}. The curve crosses at (0, {a}).",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "y = {a} × 2ˣ. Find y when x = −1.",
+   "answer": "a/2",
+   "hint": "2 to the power −1 is 1 over 2, not −2. Going one step left halves y.",
+   "explain": "2⁻¹ = 1/2, so y = {a} × 1/2 = {=a/2}. The value is still positive: the curve stays above the x-axis.",
+   "params": {
+    "a": [
+     3,
+     19
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What does the graph of y = 5 × 0.6ˣ do as x increases?",
+   "choices": [
+    "It rises more and more steeply",
+    "It falls towards 0 but never reaches it",
+    "It falls and crosses the x-axis"
+   ],
+   "answer": 1,
+   "hint": "Compare b = 0.6 with 1. Can 5 × 0.6ˣ ever be 0 or negative?",
+   "explain": "0.6 is between 0 and 1, so each step right multiplies y by 0.6: decay. A positive number times 0.6 stays positive, so it never reaches 0."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which line does y = 2 × 3ˣ get closer and closer to as x gets very negative?",
+   "choices": [
+    "y = 0",
+    "y = 2",
+    "x = 0"
+   ],
+   "answer": 0,
+   "hint": "Work out y at x = −1, −2, −3 and look at the pattern.",
+   "explain": "y = 2/3, 2/9, 2/27, … each a third of the last. The values approach 0 without reaching it, so y = 0 is the asymptote. The curve crosses y = 2 at x = 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "The curve y = a × bˣ passes through (0, {a}) and (1, {=a*b}). Find b.",
+   "answer": "b",
+   "hint": "(0, {a}) tells you a. At x = 1, y = a × b.",
+   "explain": "a = {a} from the y-intercept. At x = 1, y = {a} × b = {=a*b}, so b = {=a*b} ÷ {a} = {b}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "y = {a} × 3ˣ. Find y when x = {n}.",
+    "answer": "a*3**n",
+    "hint": "Work out 3 to the power {n} first, then multiply by {a}.",
+    "explain": "3 to the power {n} is {=3**n}, so y = {a} × {=3**n} = {=a*3**n}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "n": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "y = {a} × 0.5ˣ. Find y when x = −{n}.",
+    "answer": "a*2**n",
+    "hint": "Each step left on this curve divides by 0.5, which doubles y.",
+    "explain": "0.5 to the power −{n} is 2 to the power {n} = {=2**n}, so y = {a} × {=2**n} = {=a*2**n}. A decay curve gets bigger to the left.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "n": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which curve crosses the y-axis at (0, 4)?",
+    "choices": [
+     "y = 2 × 4ˣ",
+     "y = 4 × 2ˣ",
+     "y = 4ˣ"
+    ],
+    "answer": 1,
+    "hint": "Put x = 0 into each one. Any number to the power 0 is 1.",
+    "explain": "At x = 0, 4 × 2⁰ = 4 × 1 = 4. The others give 2 and 1: the y-intercept is a, not b."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Amir says y = 2 × 3ˣ reaches 0 if you go far enough left. Is he right?",
+    "choices": [
+     "Yes, at about x = −5",
+     "No: y is always positive, so it only gets close to 0",
+     "Yes, it crosses below 0"
+    ],
+    "answer": 1,
+    "hint": "What is 2 × 3⁻⁵? Is it positive?",
+    "explain": "2 × 3⁻⁵ = 2/243 ≈ 0.008, still positive. Each step left divides by 3, so y approaches 0 but never gets there."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How are the graphs of y = 3 × 2ˣ and y = 3 × 0.5ˣ related?",
+    "choices": [
+     "Reflections of each other in the x-axis",
+     "Reflections of each other in the y-axis",
+     "The same graph"
+    ],
+    "answer": 1,
+    "hint": "0.5ˣ = (1/2)ˣ = 2⁻ˣ. What does swapping x for −x do to a graph?",
+    "explain": "3 × 0.5ˣ = 3 × 2⁻ˣ, so each point (x, y) on one is (−x, y) on the other: a reflection in the y-axis. Both stay above the x-axis."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A decay curve passes through (0, 6) and (1, 3). Which equation fits?",
+    "choices": [
+     "y = 6 × 0.5ˣ",
+     "y = 3 × 0.5ˣ",
+     "y = 6 − 3x"
+    ],
+    "answer": 0,
+    "hint": "a is the y-value at x = 0. b is y at x = 1 divided by a.",
+    "explain": "a = 6 and b = 3 ÷ 6 = 0.5, so y = 6 × 0.5ˣ. y = 6 − 3x also fits two points but is a straight line that hits 0 at x = 2."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "For y = 4 × bˣ, which value of b makes the graph go down from left to right?",
+    "choices": [
+     "b = 3",
+     "b = 0.7",
+     "b = 1"
+    ],
+    "answer": 1,
+    "hint": "Compare each b with 1, not with 4.",
+    "explain": "0.7 is between 0 and 1, so y is multiplied by 0.7 at each step right: decay. b = 3 grows, and b = 1 gives the flat line y = 4."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "y = 5 × 2ˣ. Find y when x = 3.",
+    "answer": 40,
+    "hint": "2³ = 2 × 2 × 2. Do the power before multiplying by 5.",
+    "explain": "2³ = 8, so y = 5 × 8 = 40. Working out (5 × 2)³ = 1000 puts the power on the 5 as well."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "Drag x along y = 3 × 2ˣ. Each step of 1 to the right doubles y. To the left, y halves each step but stays above 0.",
+  "opts": {
+   "mode": "eval",
+   "f": "3*2**x",
+   "a": 0,
+   "xr": [
+    -4,
+    3
+   ],
+   "yr": [
+    -2,
+    26
+   ],
+   "step": 0.5
+  }
+ },
+ "lab": {
+  "type": "flagexpg",
+  "caption": "Flagship lab: drag the y-intercept and the point above x = 1 to set a and b, walk a probe along the curve, zoom in near y = 0, and mirror a curve in the y-axis.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

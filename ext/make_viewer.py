@@ -50,7 +50,7 @@ assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
 learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "flag_neg.js", "flag_eq.js", "flag_line.js", "flag_pyth.js", "flag_prob.js", "flag_state.js", "flag_acid.js", "flag_atom.js", "flag_area.js", "learn_fx.js", "learn_panel.js")
+LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "flag_neg.js", "flag_eq.js", "flag_line.js", "flag_pyth.js", "flag_prob.js", "flag_state.js", "flag_acid.js", "flag_atom.js", "flag_area.js", "flag_energy.js", "flag_circ.js", "flag_wave.js", "flag_nuc.js", "flag_shell.js", "flag_cov.js", "flag_unit.js", "flag_wread.js", "flag_sub.js", "flag_fact.js", "flag_exp.js", "flag_equiv.js", "flag_carbon.js", "flag_hydro.js", "flag_formula.js", "flag_alkane.js", "flag_homo.js", "flag_ptab.js", "flag_alkene.js", "flag_afrac.js", "flag_tangent.js", "flag_fgroup.js", "flag_noble.js", "flag_ion.js", "flag_chord.js", "flag_reveal.js", "flag_arc.js", "flag_rad.js", "flag_surd.js", "flag_grow.js", "flag_expg.js", "flag_name.js", "flag_alc.js", "flag_sim.js", "flag_trig.js", "flag_lmod.js", "flag_brw.js", "flag_exact.js", "flag_sqr.js", "flag_iso.js", "flag_hion.js", "flag_hal.js", "flag_cooh.js", "flag_gp1.js", "flag_print.js", "flag_feel.js", "flag_digit.js", "flag_help.js", "flag_grip.js", "flag_craft.js", "flag_pat.js", "flag_try.js", "flag_qw.js", "flag_mood.js", "flag_rule.js", "flag_trend.js", "flag_listen.js", "flag_check.js", "flag_wonder.js", "flag_skel.js", "flag_infer.js", "flag_ask.js", "flag_aloud.js", "flag_big.js", "flag_teach.js", "flag_sense.js", "flag_focus.js", "flag_mem.js", "flag_fam.js", "flag_baby.js", "flag_evid.js", "learn_fx.js", "reels_ui.js", "learn_panel.js", "ux.js", "guide.js", "guide_copy.js", "guide_mood.js", "guide_live.js", "guide_dock.js")
 learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
 # Flagship labs are big; the split build lazy-loads each one (plus the shared kit) the first time its lesson opens.
 FLAGS = [f for f in LEARN_JS if f.startswith("flag_") and f != "flag_kit.js"]
@@ -80,9 +80,11 @@ for _tid, _list in _rm.items():
 os.makedirs("out/reels", exist_ok=True)
 for _f in glob.glob("learn/reels/*"):
     if not _f.endswith(".json"): _sh.copy2(_f, "out/reels/" + os.path.basename(_f))
-_reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";window.WN_RPARTS=" + json.dumps({k: f"https://cdn.jsdelivr.net/gh/pandeyaby/why-next@{v['sha']}/" for k, v in _parts.items()}, separators=(",", ":")) + ";\n"
+# Primary reel host: public Supabase Storage bucket "why-next-reels" (flat: <file>.mp4/.jpg/.vtt). jsDelivr parts stay as the fallback.
+REEL_HOST = "https://etzqrmcwnxpbysnltdxt.supabase.co/storage/v1/object/public/why-next-reels/"
+_reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";window.WN_RHOST=" + json.dumps(REEL_HOST) + ";window.WN_RPARTS=" + json.dumps({k: f"https://cdn.jsdelivr.net/gh/pandeyaby/why-next@{v['sha']}/" for k, v in _parts.items()}, separators=(",", ":")) + ";\n"
 learn_js = _reels + learn_js
-css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css"))
+css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css", "guide.css", "ux.css"))
 
 # Split build: the page shell plus small cacheable scripts; per-domain detail chunks load on demand.
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
@@ -109,7 +111,7 @@ H = lambda t: hashlib.sha1(t.encode()).hexdigest()[:10]
 core = {"sb": sb, "dm": dm, "ty": ty, "v": [H(c) for c in chunk_js], "lv": [H(c) if c else 0 for c in les_js],
         "n": [[n["id"], n["n"], dm.index(n["d"]), sb.index(n["s"]), ty.index(n["ty"]), n["a"][0], n["a"][1], n["c"], int(n["new"]), K[(n["s"], n["d"])], 1 if n["id"] in lessons else 2 if n["id"] in starters else 0] for n in nodes],
         "e": [[idx[e["t"]], idx[e["p"]], int(e["h"])] for e in edges]}
-BODY = ("mastery", "practice", "explain", "familyTip")
+BODY = ("mastery", "practice", "explain", "familyTip", "keyIdea", "worked", "visual", "lab")  # loaded with the lesson body, not at startup
 stubs, bodies = {}, [{} for _ in dom_keys]
 for tid, les in lessons.items():
     st_ = {k: v for k, v in les.items() if k not in BODY}
@@ -130,12 +132,14 @@ shell = (open("ext/viewer_template.html").read().replace("/*__CREDIT__*/", credi
          .replace('<p class="muted" id="stats"></p>', f'<p class="muted" id="stats">{nNew} Why Next? topics · {nNE} Why Next? edges ({nB} bridge edges into upstream v1) · {len(nodes) - nNew} upstream v1 ancestor topics shown for context.</p>'))
 outdir = os.environ.get("WHYNEXT_VIEWER_DIR", "out")
 os.makedirs(f"{outdir}/wn", exist_ok=True)
-for f in glob.glob(f"{outdir}/wn/*.js"):
-    os.remove(f)
-for name, text in files.items():
+# Write every bundle first and delete only the bundles that are no longer produced. The old code deleted all of
+# out/wn/*.js before rewriting, so any interrupted or concurrent build left the committed files missing.
+_wn_files = dict(files, **{"vis.js": vis_bundle, "reels.js": _reels})
+for name, text in _wn_files.items():
     open(f"{outdir}/wn/{name}", "w").write(text)
-open(f"{outdir}/wn/vis.js", "w").write(vis_bundle)
-open(f"{outdir}/wn/reels.js", "w").write(_reels)
+for f in glob.glob(f"{outdir}/wn/*.js"):
+    if os.path.basename(f) not in _wn_files:
+        os.remove(f)
 for f, text in flag_src.items():
     open(f"{outdir}/wn/fl_{f[5:-3]}.js", "w").write(text)
 for k, text in enumerate(chunk_js):

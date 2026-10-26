@@ -1,0 +1,193 @@
+{
+  "topicId": "mt_pp9vsZ4wu2",
+  "title": "Electron shells and configurations",
+  "audience": "learner",
+  "keyIdea": "Electrons fill shells from the inside out: 2 in the first shell, then 8, then 8 for the first 20 elements. The configuration, such as 2,8,1 for sodium, tells you the period (how many shells) and the group (how many outer electrons).",
+  "explain": {
+    "kid": [
+      "Electrons live in shells around the nucleus. Each shell can only hold so many.",
+      "The first shell holds 2. The next holds 8. For the first 20 elements, the third holds 8 too.",
+      "Electrons fill the inside shell first. Sodium has 11 electrons: 2 in shell one, 8 in shell two, and 1 left over in shell three. We write it 2,8,1.",
+      "The last number is the outer shell. Sodium has 1 outer electron, so it sits in group 1. It uses 3 shells, so it is in row 3."
+    ],
+    "adult": [
+      "In the shell model used up to GCSE, shells fill in order with capacities 2, 8, 8 for the first 20 elements, and the 19th and 20th electrons start a fourth shell. Write the configuration as the counts per shell: chlorine (17) is 2,8,7 and calcium (20) is 2,8,8,2.",
+      "The number of occupied shells gives the period. The number of electrons in the outer shell gives the group, except for helium and the noble gases, which have full outer shells and form group 0.",
+      "Elements in the same group have the same number of outer electrons, which is why lithium, sodium and potassium react in similar ways: each has one electron to lose.",
+      "Common slips: putting the third electron in the first shell, filling the third shell to 18 before starting the fourth, and reading the group from the number of shells. The third shell can hold 18 in fuller models, but for potassium and calcium the fourth shell starts first."
+    ]
+  },
+  "familyTip": "Pick a number from 1 to 20 and take turns: one person says the element, the other writes its configuration by filling 2, then 8, then 8. Check together which group it lands in.",
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "What is the electron configuration of magnesium (12 electrons)?",
+      "choices": [
+        "2,8,2",
+        "2,10",
+        "8,4",
+        "2,2,8"
+      ],
+      "answer": 0,
+      "hint": "Fill the first shell with 2, the second with up to 8, then carry on.",
+      "explain": "2 + 8 = 10, leaving 2 for the third shell: 2,8,2."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "An atom has the configuration 2,8,{k}. How many electrons does it have?",
+      "answer": "10+k",
+      "hint": "Add up the electrons in every shell.",
+      "explain": "Add the shells: 2 + 8 + {k} = {=10+k} electrons, and a neutral atom has the same number of protons.",
+      "params": {
+        "k": [
+          1,
+          8
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "An element has the configuration 2,8,{k}. Which group is it in? (Type 0 for group 0.)",
+      "answer": "k % 8",
+      "hint": "Count the electrons in the outer shell. A full outer shell of 8 means group 0.",
+      "explain": "The outer shell holds {k}, so the group is {=k % 8}.",
+      "params": {
+        "k": [
+          1,
+          8
+        ]
+      }
+    },
+    {
+      "type": "mc",
+      "id": "p4",
+      "prompt": "Potassium has 19 electrons. Where does the 19th electron go?",
+      "choices": [
+        "Into a new fourth shell",
+        "Into the third shell, which can take up to 18",
+        "Into the first shell"
+      ],
+      "answer": 0,
+      "hint": "Argon, with 18, is 2,8,8.",
+      "explain": "For the first 20 elements the third shell holds 8 before the fourth starts, so potassium is 2,8,8,1."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "numeric",
+        "id": "m1",
+        "prompt": "An element is in period 2 and group {g}. How many electrons does its atom have?",
+        "answer": "2+g",
+        "hint": "Period 2 means two shells, and the first one is full.",
+        "explain": "The configuration is 2,{g}, so 2 + {g} = {=2+g} electrons.",
+        "params": {
+          "g": [
+            1,
+            7
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Which configuration is wrong for a neutral atom?",
+        "choices": [
+          "2,7,1",
+          "2,8,1",
+          "2,8,8,2"
+        ],
+        "answer": 0,
+        "hint": "Is any inner shell left with room while an outer one is used?",
+        "explain": "2,7,1 leaves room in the second shell while the third is in use. Ten electrons fill as 2,8."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "Why do lithium (2,1) and sodium (2,8,1) react in similar ways?",
+        "choices": [
+          "Both have one electron in their outer shell",
+          "Both have two shells",
+          "Both have the same mass"
+        ],
+        "answer": 0,
+        "hint": "Look at the last number in each configuration.",
+        "explain": "Reactions involve the outer electrons. Both have one to lose, so both are in group 1."
+      },
+      {
+        "type": "numeric",
+        "id": "m4",
+        "prompt": "An element is in period 3 and group {g}. How many electrons does its atom have?",
+        "answer": "10+g",
+        "hint": "Period 3 means three shells; the first two are full.",
+        "explain": "The configuration is 2,8,{g}, so 2 + 8 + {g} = {=10+g}.",
+        "params": {
+          "g": [
+            1,
+            7
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m5",
+        "prompt": "Oxygen is 2,6. Which statement is true?",
+        "choices": [
+          "It is in group 6 and period 2",
+          "It is in group 2 and period 6",
+          "It is in group 8 and period 2"
+        ],
+        "answer": 0,
+        "hint": "Group: outer electrons. Period: number of shells.",
+        "explain": "6 outer electrons gives group 6; 2 shells gives period 2."
+      },
+      {
+        "type": "mc",
+        "id": "m6",
+        "prompt": "Helium has 2 outer electrons. Why is it in group 0, not group 2?",
+        "choices": [
+          "Its only shell is full, like the other noble gases",
+          "It has no protons",
+          "Its outer shell holds 8"
+        ],
+        "answer": 0,
+        "hint": "How many electrons can the first shell hold?",
+        "explain": "The first shell holds only 2, so helium's shell is full. Full outer shells make the unreactive group 0."
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "What is the configuration of calcium (20 electrons)?",
+        "choices": [
+          "2,8,8,2",
+          "2,8,10",
+          "2,18"
+        ],
+        "answer": 0,
+        "hint": "The third shell takes 8 here before the fourth starts.",
+        "explain": "2 + 8 + 8 = 18, leaving 2 for the fourth shell."
+      }
+    ]
+  },
+  "status": "self-checked",
+  "visual": {
+    "type": "ptable",
+    "caption": "The rows are periods (number of shells). The columns are groups (outer electrons). Find sodium, 2,8,1, at period 3, group 1.",
+    "opts": {
+      "highlight": "",
+      "z": 11
+    }
+  },
+  "lab": {
+    "type": "flagshell",
+    "caption": "Flagship lab: fill the shells. Tap a ring to add an electron; a warning shows if an inner shell still has room.",
+    "opts": {
+      "step": 0
+    }
+  }
+}

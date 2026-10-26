@@ -1,0 +1,234 @@
+{
+ "topicId": "mt_0gHvBBJxh3",
+ "title": "Skeletal formulae",
+ "audience": "learner",
+ "keyIdea": "A skeletal formula draws only the carbon chain as a zig-zag of lines. Every corner and every line end is a carbon. Hydrogens on carbon are not drawn: each carbon has four bonds, so it carries 4 minus the lines drawn to it. Other atoms, such as O in OH, are written in, and a double line is a C=C bond.",
+ "explain": {
+  "kid": [
+   "Chemists draw big molecules fast with a skeletal formula. No C is written. Each line is a C–C bond, and each corner or line end is a carbon. Pentane is a zig-zag with 4 lines and 5 points.",
+   "The H atoms on carbon are left out, but they are still there. Carbon always makes 4 bonds. Count the lines at a carbon and take that from 4. An end carbon has 1 line, so it has 3 H.",
+   "A middle carbon in a chain has 2 lines, so 2 H. A carbon where a branch joins has 3 lines, so just 1 H. Add up every carbon to get the formula.",
+   "Atoms that are not C or H are drawn in, such as OH at the end of a line. A double line means C=C. Turning or flipping a zig-zag does not change the molecule. Only the bonds matter."
+  ],
+  "adult": [
+   "A skeletal formula shows the carbon framework as lines. Each vertex and each line end is a carbon. Hydrogens bonded to carbon are implied. Heteroatoms, and any H bonded to them, are drawn. A double line is a double bond. Displayed formulae show every atom and bond, so converting means adding or removing the C and H labels.",
+   "The lab works through it in order. Learners find all five carbons in pentane, then give each carbon of 2-methylbutane its hydrogens using 4 minus bonds. They draw a five-carbon zig-zag on a dot lattice and add OH and C=C to butane. Then they match structural formulae to skeletons.",
+   "Common mistakes: counting lines instead of points, so pentane looks like four carbons; forgetting the two line-end carbons; thinking unlabelled carbons have no hydrogens, or always 4; drawing a straight run that hides a carbon; counting the O of OH as a carbon; and believing a flipped zig-zag is a different molecule or an isomer.",
+   "Check any skeletal formula by writing the molecular formula two ways. Count C and H from the skeleton, then from a general formula such as CₙH₂ₙ₊₂ for alkanes."
+  ]
+ },
+ "familyTip": "Draw a zig-zag on paper with 3 to 7 points and ask: how many carbons, how many hydrogens, and what is the formula? Then add an OH at one end and ask what changes.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "An unbranched zig-zag skeleton has {n} carbons and only single bonds. How many hydrogen atoms does the molecule have?",
+   "answer": "2*n+2",
+   "hint": "The two ends carry 3 H each and every middle carbon carries 2 H.",
+   "explain": "2 ends × 3 H + ({n} − 2) middles × 2 H = {=2*n+2}. That matches CₙH₂ₙ₊₂ for alkanes.",
+   "params": {
+    "n": [
+     3,
+     10
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A skeletal formula is a zig-zag with {n} lines and no branches. How many carbon atoms are there?",
+   "answer": "n+1",
+   "hint": "Carbons are the points, and a chain always has one more point than lines.",
+   "explain": "{n} lines join {=n+1} points, so there are {=n+1} carbons. Counting lines gives one too few.",
+   "params": {
+    "n": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "In a skeletal formula, a carbon has three lines drawn to it. How many hydrogens does it carry?",
+   "choices": [
+    "1",
+    "3",
+    "0"
+   ],
+   "answer": 0,
+   "hint": "Carbon makes 4 bonds. Subtract the lines you can see.",
+   "explain": "4 − 3 = 1 hydrogen. This is a branch point, like the second carbon of 2-methylbutane."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A three-carbon zig-zag has OH on the middle carbon. What is the molecular formula?",
+   "choices": [
+    "C₃H₈O",
+    "C₃H₇O",
+    "C₄H₁₀O"
+   ],
+   "answer": 0,
+   "hint": "The middle carbon now has 1 H. Remember the H in OH, and O is not a carbon.",
+   "explain": "Carbons carry 3 + 1 + 3 = 7 H, plus 1 H on the O, so C₃H₈O. This is propan-2-ol."
+  }
+ ],
+ "mastery": {
+  "passMark": 5,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Where are the carbon atoms in a skeletal formula?",
+    "choices": [
+     "At every corner and every line end",
+     "Only where a C is written",
+     "In the middle of each line"
+    ],
+    "answer": 0,
+    "hint": "Look back at the five carbons you tapped in pentane.",
+    "explain": "Each vertex and each line end is a carbon. The lines between them are C–C bonds."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "An unbranched skeleton has {n} carbons and one C=C double bond, no other groups. How many H atoms?",
+    "answer": "2*n",
+    "hint": "Start from the alkane, CₙH₂ₙ₊₂. Each carbon of the C=C loses one H.",
+    "explain": "2 × {n} + 2 − 2 = {=2*n}. Alkenes fit CₙH₂ₙ.",
+    "params": {
+     "n": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Two skeletons each show a 4-carbon zig-zag, but one is drawn upside down. What are they?",
+    "choices": [
+     "The same molecule, butane",
+     "Two isomers",
+     "Two different alkenes"
+    ],
+    "answer": 0,
+    "hint": "Do the bonds change when you flip the drawing?",
+    "explain": "Flipping a drawing does not change which atoms bond, so both are butane. Isomers have different bonding."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which skeleton is pentane?",
+    "choices": [
+     "A zig-zag with 4 lines",
+     "A zig-zag with 5 lines",
+     "A zig-zag with 3 lines"
+    ],
+    "answer": 0,
+    "hint": "Pentane has 5 carbons. How many lines join 5 points?",
+    "explain": "Five points in a chain need four lines. A 5-line zig-zag would be hexane."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A zig-zag of 4 carbons has OH on an end carbon. Which molecule is it?",
+    "choices": [
+     "Butan-1-ol, C₄H₁₀O",
+     "Butan-2-ol, C₄H₁₀O",
+     "Pentan-1-ol, C₅H₁₂O"
+    ],
+    "answer": 0,
+    "hint": "Count only the corners and ends, not the O. Where is the OH?",
+    "explain": "Four carbons with OH on carbon 1 is butan-1-ol. The O is not a carbon, so it is not pentanol."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A skeleton has a main zig-zag of {n} carbons plus one CH₃ branch on carbon 2. How many H atoms?",
+    "answer": "2*(n+1)+2",
+    "hint": "A branched alkane still fits CₙH₂ₙ₊₂, with n the total number of carbons.",
+    "explain": "There are {=n+1} carbons in total, so 2 × {=n+1} + 2 = {=2*(n+1)+2} H. Branching does not change the formula.",
+    "params": {
+     "n": [
+      4,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why are the hydrogens on carbon left out of a skeletal formula?",
+    "choices": [
+     "They are implied: each carbon makes 4 bonds",
+     "Those carbons have no hydrogens",
+     "Hydrogen does not bond to carbon"
+    ],
+    "answer": 0,
+    "hint": "Can you always work out how many H a carbon has?",
+    "explain": "Since carbon makes 4 bonds, the H count is always 4 minus the lines drawn, so drawing them is not needed."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The structural formula is CH₃CH(CH₃)CH₃. What does its skeleton look like?",
+    "choices": [
+     "Three lines meeting at one central point",
+     "A straight zig-zag with 3 lines",
+     "A zig-zag with 2 lines"
+    ],
+    "answer": 0,
+    "hint": "The middle carbon bonds to three CH₃ groups.",
+    "explain": "The central carbon has three lines to three end carbons: 2-methylpropane, a Y shape."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "How many hydrogens does each carbon carry in a skeletal formula? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "3 H",
+    "2 H",
+    "1 H"
+   ],
+   "items": [
+    [
+     "A line-end carbon",
+     0
+    ],
+    [
+     "A middle carbon in a chain",
+     1
+    ],
+    [
+     "A branch point with 3 lines",
+     2
+    ],
+    [
+     "A CH₃ branch end",
+     0
+    ],
+    [
+     "A carbon in C=C at a chain end",
+     1
+    ],
+    [
+     "An OH carbon in the chain middle",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagskel",
+  "caption": "Flagship lab: find the carbons at corners and ends, fill in hidden hydrogens, draw pentane on dots, add OH and C=C, and match formulae to skeletons.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

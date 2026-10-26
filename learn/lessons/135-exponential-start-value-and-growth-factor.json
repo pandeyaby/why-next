@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_sj3itZ2sso",
+ "title": "Exponential expressions: start value and growth factor",
+ "audience": "learner",
+ "keyIdea": "In a × bᵗ, a is the start value (the value at t = 0) and b is the factor you multiply by each step. A rise of r% gives b = 1 + r/100, a fall of r% gives b = 1 − r/100: +4% is × 1.04 and −15% is × 0.85.",
+ "explain": {
+  "kid": [
+   "You put 200 in a bank. Each year the bank adds 5% of what is there. The amount is 200 × 1.05ᵗ after t years.",
+   "The 200 is where you start. At t = 0 no years have passed, so you still have 200.",
+   "The 1.05 is what you times by each year. You keep all of it, 100%, and get 5% more. That is 105%, or 1.05. You times the new amount each time, so 200 grows by 10, then by 10.50, then by a bit more.",
+   "If a thing loses 15% a year, 85% is left. So you times by 0.85 each year, not by 0.15."
+  ],
+  "adult": [
+   "An expression a × bᵗ describes a quantity that is multiplied by the same factor b in every time step. At t = 0, b⁰ = 1, so the value is a: the start value. In 500 × 1.04ᵗ the account opens with 500.",
+   "The factor compares each step with the one before. A rise of r% keeps the whole amount and adds r%, so b = 1 + r/100 (6% gives 1.06). A fall of r% leaves 100% − r%, so b = 1 − r/100 (15% off gives 0.85). Read backwards, b = 0.92 means a fall of 8% and b = 1.3 a rise of 30%.",
+   "Because each percentage is taken of the new amount, the change itself grows or shrinks. 200 × 1.1ᵗ gives 220, 242, 266.2: it doubles after about 7.3 years, while adding a flat 20 a year takes 10. With 0 < b < 1 the losses get smaller each step and the value never reaches 0.",
+   "Common mistakes: using r/100 as the factor (0.15 for a 15% fall, which keeps only the lost part); writing 1.6 for 6%; reading the value at t = 1 as the start; working out (a × b)ᵗ instead of a × bᵗ; and adding the first year's change every year, as if the growth were linear."
+  ]
+ },
+ "familyTip": "Fold a sheet of paper in half again and again and count the layers: 1, 2, 4, 8, 16. That is 1 × 2ᵗ. Then guess how many layers 7 folds would make (128) before you try it.",
+ "worked": {
+  "title": "A car is worth 12000 and loses 20% of its value each year. Write its value after t years and find it after 2 years.",
+  "steps": [
+   "Start value: a = 12000, the value now, at t = 0.",
+   "Losing 20% leaves 100% − 20% = 80%, so b = 0.8.",
+   "Value after t years: 12000 × 0.8ᵗ.",
+   "After 2 years: 0.8² = 0.64 and 12000 × 0.64 = 7680. Check: 12000 × 0.8 = 9600, then 9600 × 0.8 = 7680."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Money in a savings account grows by {r}% each year. What is the growth factor b?",
+   "answer": "1+r/100",
+   "hint": "Keep 100% of the money and add {r}%. Turn that total percentage into a decimal.",
+   "explain": "100% + {r}% = {=100+r}%, and {=100+r}% as a decimal is {=1+r/100}. So b = {=1+r/100}.",
+   "params": {
+    "r": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A town’s population falls by {r}% each year. What is the decay factor b?",
+   "answer": "1-r/100",
+   "hint": "Work out the percentage that is left after the fall, then write it as a decimal.",
+   "explain": "100% − {r}% = {=100-r}% is left each year, so b = {=1-r/100}. Using {=r/100} would keep only the part that was lost.",
+   "params": {
+    "r": [
+     10,
+     40
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A colony starts with {a} cells and doubles every hour, so it has {a} × 2ᵗ cells after t hours. How many cells are there after {t} hours?",
+   "answer": "a*2**t",
+   "hint": "Work out 2 to the power {t} first: multiply 2 by itself {t} times. Then multiply by {a}.",
+   "explain": "2 to the power {t} is {=2**t}, so {a} × {=2**t} = {=a*2**t} cells. Doubling {t} times multiplies the start by {=2**t}.",
+   "params": {
+    "a": [
+     3,
+     12
+    ],
+    "t": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A savings balance is 500 × 1.04ᵗ after t years. What does the 1.04 tell you?",
+   "choices": [
+    "The balance grows by 4% each year",
+    "The balance grows by 1.04 each year",
+    "The balance starts at 1.04"
+   ],
+   "answer": 0,
+   "hint": "1.04 = 104% of the year before. Compare that with 100%.",
+   "explain": "1.04 = 100% + 4%, so each year the balance is multiplied by 1.04: it grows by 4%. The start value is 500."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A pond has 80 fish, and the number falls by 15% each year. Which expression gives the fish after t years?",
+   "choices": [
+    "80 × 0.15ᵗ",
+    "80 × 0.85ᵗ",
+    "80 × 1.15ᵗ"
+   ],
+   "answer": 1,
+   "hint": "What percentage of the fish is left after one year?",
+   "explain": "85% of the fish are left each year, so b = 0.85 and the expression is 80 × 0.85ᵗ. 0.15 keeps only the lost part, and 1.15 is a rise."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A plant is {a} mm tall and grows by 5% each week: {a} × 1.05ᵗ. How tall is it at t = 0?",
+    "answer": "a",
+    "hint": "Any number to the power 0 is 1.",
+    "explain": "1.05⁰ = 1, so at t = 0 the height is {a} × 1 = {a} mm. That is the start value.",
+    "params": {
+     "a": [
+      20,
+      90
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Each year a value is multiplied by {=1-r/100}. By what percentage does it fall each year?",
+    "answer": "r",
+    "hint": "Turn {=1-r/100} into a percentage, then compare it with 100%.",
+    "explain": "{=1-r/100} is {=100-r}% of the year before. 100% − {=100-r}% = {r}%, so it falls by {r}% a year.",
+    "params": {
+     "r": [
+      5,
+      40
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Work out 200 × 1.1².",
+    "answer": 242,
+    "hint": "1.1² = 1.1 × 1.1. Do the power before you multiply by 200.",
+    "explain": "1.1² = 1.21 and 200 × 1.21 = 242. Adding 10% of 200 twice gives 240, which misses the 10% of the first year’s 20."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ben says a 15% decrease each year means multiplying by 0.15. What is right?",
+    "choices": [
+     "Ben is right",
+     "Multiply by 0.85, the part that is left",
+     "Multiply by 1.15"
+    ],
+    "answer": 1,
+    "hint": "After losing 15%, how much of the amount is still there?",
+    "explain": "Losing 15% leaves 85%, so the factor is 0.85. Multiplying by 0.15 would keep only the 15% that was lost."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A phone costs 800 and loses 25% of its value each year. What is it worth after 2 years?",
+    "answer": 450,
+    "hint": "The factor is 0.75. Multiply 800 by 0.75 twice.",
+    "explain": "800 × 0.75 = 600, then 600 × 0.75 = 450. So 800 × 0.75² = 450. Taking off 200 twice would give 400, which is wrong."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which story fits 60 × 1.5ᵗ?",
+    "choices": [
+     "60 rabbits, and the number goes up by half each year",
+     "60 rabbits, and 1.5 more rabbits each year",
+     "1.5 rabbits, and the number goes up by 60% each year"
+    ],
+    "answer": 0,
+    "hint": "60 is the start. 1.5 = 150% of the year before.",
+    "explain": "a = 60 is the start and b = 1.5 means 150% of last year: a rise of 50%, or half, each year."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In 1200 × 0.9ᵗ, which statement is true?",
+    "choices": [
+     "It starts at 1080",
+     "It starts at 1200 and falls by 10% each step",
+     "It starts at 1200 and falls by 90% each step"
+    ],
+    "answer": 1,
+    "hint": "At t = 0, 0.9⁰ = 1. Then compare 0.9 with 1.",
+    "explain": "The start value is 1200 and 0.9 = 90% of the step before, so it falls by 10% each step. 1080 is the value at t = 1."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which factor means the amount stays the same every year?",
+    "choices": [
+     "b = 0",
+     "b = 1",
+     "b = 100"
+    ],
+    "answer": 1,
+    "hint": "What do you multiply a number by to leave it unchanged?",
+    "explain": "Multiplying by 1 changes nothing, so a × 1ᵗ = a for every t. A factor above 1 grows and a factor between 0 and 1 shrinks."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each change make the amount grow or shrink? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Grows",
+    "Shrinks"
+   ],
+   "items": [
+    [
+     "× 1.04 each year",
+     0
+    ],
+    [
+     "× 2 each hour",
+     0
+    ],
+    [
+     "+15% each year",
+     0
+    ],
+    [
+     "× 0.85 each year",
+     1
+    ],
+    [
+     "× 0.5 each day",
+     1
+    ],
+    [
+     "−3% each month",
+     1
+    ],
+    [
+     "× 0.99 each step",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggrow",
+  "caption": "Flagship lab: every bar is the one before times b. Set the start value and the factor, turn percentages into factors, and see why multiplying beats adding.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

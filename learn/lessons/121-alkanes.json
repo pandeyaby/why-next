@@ -1,0 +1,278 @@
+{
+ "topicId": "mt_djL0kvgJ07",
+ "title": "Alkanes",
+ "audience": "learner",
+ "keyIdea": "Alkanes are hydrocarbons with only single bonds. Every carbon makes four bonds and holds as many hydrogens as it can, so alkanes are saturated and all fit one general formula, CₙH₂ₙ₊₂.",
+ "explain": {
+  "kid": [
+   "Alkanes are a family of molecules made of carbon and hydrogen. The carbons join up in a chain. Every bond is a single bond.",
+   "Each carbon makes four bonds. A carbon in the middle of the chain uses two of them to hold its neighbours. That leaves room for two H. A carbon at an end has one neighbour, so it holds three H.",
+   "So the count goes like this. Two H for every carbon, then two more for the ends. Butane has 4 carbons, so it has 2 × 4 + 2 = 10 hydrogens. Its formula is C₄H₁₀.",
+   "No carbon in an alkane has a spare bond. You cannot fit in one more H. We say alkanes are saturated: they are full of hydrogen."
+  ],
+  "adult": [
+   "Alkanes are a family of hydrocarbons in which every bond between carbon atoms is a single covalent bond. The first four are methane, CH₄; ethane, C₂H₆; propane, C₃H₈; and butane, C₄H₁₀. The name ending -ane marks an alkane, and the stem meth-, eth-, prop- or but- gives the number of carbons.",
+   "Each carbon forms four bonds. In a straight chain of n carbons, n − 1 bonds link carbon to carbon. The end carbons carry three hydrogens each and the middle ones carry two. That gives the general formula CₙH₂ₙ₊₂: two hydrogens per carbon plus one extra at each end.",
+   "Alkanes are saturated. Every carbon already has its four bonds, so no more hydrogen can be added. A hydrocarbon with a C=C double bond has two fewer hydrogens, CₙH₂ₙ, and is unsaturated. Propene, C₃H₆, is an alkene, not an alkane.",
+   "Common mistakes: writing CₙH₂ₙ and forgetting the two end hydrogens; giving each carbon four hydrogens, which ignores the C–C bonds; and calling any hydrocarbon an alkane, even one with a double bond. Smaller alkanes such as propane and butane are gases used as fuels."
+  ]
+ },
+ "familyTip": "Look at a camping gas canister or a lighter refill: many say propane or butane. Work out each formula together from the number of carbons (prop- is 3, but- is 4) using two hydrogens per carbon plus two, then check: C₃H₈ and C₄H₁₀.",
+ "worked": {
+  "title": "What is the formula of pentane, the alkane with 5 carbon atoms?",
+  "steps": [
+   "Alkanes follow CₙH₂ₙ₊₂, where n is the number of carbon atoms. Here n = 5.",
+   "Hydrogens: 2 × 5 + 2 = 12. That is 2 H on each carbon and 1 extra H on each end carbon.",
+   "Check with the chain: the two end carbons hold 3 H each, the three middle carbons hold 2 H each, and 3 + 2 + 2 + 2 + 3 = 12.",
+   "So pentane is C₅H₁₂."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "An alkane has {n} carbon atoms. How many hydrogen atoms does each molecule have?",
+   "answer": "2*n+2",
+   "hint": "Use CₙH₂ₙ₊₂: double the number of carbons, then add 2 for the two ends.",
+   "explain": "2 × {n} + 2 = {=2*n+2}. Each carbon holds 2 H, and the two end carbons hold 1 extra H each.",
+   "params": {
+    "n": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which of these formulae is an alkane?",
+   "choices": [
+    "C₃H₈",
+    "C₃H₆",
+    "C₃H₇OH"
+   ],
+   "answer": 0,
+   "hint": "An alkane has only C and H, and fits CₙH₂ₙ₊₂. Try n = 3.",
+   "explain": "With 3 carbons an alkane has 2 × 3 + 2 = 8 hydrogens, so C₃H₈, propane. C₃H₆ is 2 short, and C₃H₇OH contains oxygen."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "An alkane molecule has {=2*n+2} hydrogen atoms. How many carbon atoms does it have?",
+   "answer": "n",
+   "hint": "Undo CₙH₂ₙ₊₂ step by step: take away the 2 end hydrogens, then halve.",
+   "explain": "({=2*n+2} − 2) ÷ 2 = {n}. The alkane is C{n}H{=2*n+2} with {n} carbons.",
+   "params": {
+    "n": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why is propane, C₃H₈, called saturated?",
+   "choices": [
+    "Every carbon already has four bonds, so no more hydrogen can be added",
+    "It is dissolved in water",
+    "It has a double bond between two carbons"
+   ],
+   "answer": 0,
+   "hint": "Think about whether any carbon in the chain has a free bond left over.",
+   "explain": "All its bonds are single and every carbon has four bonds, so it holds as much hydrogen as it can. A double bond would make it unsaturated."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "In a straight-chain alkane with {n} carbons, how many hydrogen atoms sit on the middle carbons (all the carbons except the two ends)?",
+   "answer": "2*(n-2)",
+   "hint": "There are {n} − 2 middle carbons. Each one uses 2 bonds for its neighbours, leaving 2 for hydrogen.",
+   "explain": "{n} − 2 = {=n-2} middle carbons, each with 2 H, gives {=2*(n-2)} hydrogens. The two ends add 3 + 3 = 6 more.",
+   "params": {
+    "n": [
+     3,
+     10
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the general formula of the alkanes?",
+    "choices": [
+     "CₙH₂ₙ₊₂",
+     "CₙH₂ₙ",
+     "CₙH₄ₙ"
+    ],
+    "answer": 0,
+    "hint": "Methane is CH₄ and ethane is C₂H₆. Which formula gives both?",
+    "explain": "CₙH₂ₙ₊₂: n = 1 gives CH₄ and n = 2 gives C₂H₆. CₙH₂ₙ is the alkene formula, and CₙH₄ₙ ignores the C–C bonds."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the formula of butane?",
+    "choices": [
+     "C₄H₁₀",
+     "C₄H₈",
+     "C₄H₁₆"
+    ],
+    "answer": 0,
+    "hint": "But- means 4 carbons. Use 2 × 4 + 2.",
+    "explain": "Butane has 4 carbons and 2 × 4 + 2 = 10 hydrogens: C₄H₁₀. C₄H₈ forgets the ends, and C₄H₁₆ gives every carbon four H."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ali says each carbon in ethane has four hydrogens, so ethane is C₂H₈. What is the slip?",
+    "choices": [
+     "One bond on each carbon joins the two carbons, so each has only 3 H",
+     "Nothing, Ali is right",
+     "Ethane has 3 carbons"
+    ],
+    "answer": 0,
+    "hint": "Count the bonds on one carbon in ethane, including the bond to the other carbon.",
+    "explain": "Each carbon makes four bonds, but one is the C–C bond. That leaves 3 H on each carbon, so ethane is C₂H₆."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Propene, C₃H₆, is a hydrocarbon. Why is it not an alkane?",
+    "choices": [
+     "It has a C=C double bond, so it is unsaturated and does not fit CₙH₂ₙ₊₂",
+     "It contains oxygen",
+     "It has too many carbon atoms"
+    ],
+    "answer": 0,
+    "hint": "Compare its hydrogen count with 2 × 3 + 2.",
+    "explain": "An alkane with 3 carbons has 8 H. Propene has 6, because its C=C double bond uses two bonds that could hold H. It is an alkene."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "How many hydrogen atoms are in one molecule of the alkane with {n} carbon atoms?",
+    "answer": "2*n+2",
+    "hint": "Two hydrogens for each carbon, plus two for the ends of the chain.",
+    "explain": "2 × {n} + 2 = {=2*n+2} hydrogen atoms, so the formula is C{n}H{=2*n+2}.",
+    "params": {
+     "n": [
+      3,
+      15
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "How many atoms in total are in one molecule of the alkane with {n} carbon atoms?",
+    "answer": "3*n+2",
+    "hint": "Find the hydrogens with 2n + 2, then add the carbons as well.",
+    "explain": "{n} carbons + {=2*n+2} hydrogens = {=3*n+2} atoms in each molecule.",
+    "params": {
+     "n": [
+      1,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What kind of bonds are found between the carbon atoms in an alkane?",
+    "choices": [
+     "Single covalent bonds only",
+     "At least one double bond",
+     "Ionic bonds"
+    ],
+    "answer": 0,
+    "hint": "Alkanes are saturated. What would a double bond do to the hydrogen count?",
+    "explain": "Every C–C bond in an alkane is a single covalent bond. A C=C double bond would make it an alkene instead."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which alkane has 3 carbon atoms?",
+    "choices": [
+     "Propane",
+     "Butane",
+     "Ethane"
+    ],
+    "answer": 0,
+    "hint": "The stems go meth- (1), eth- (2), prop- (3), but- (4).",
+    "explain": "Prop- means 3 carbons, so propane, C₃H₈. Ethane has 2 carbons and butane has 4."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "An alkane has {=2*n+2} hydrogen atoms in each molecule. How many carbon atoms does it have?",
+    "answer": "n",
+    "hint": "Subtract the 2 end hydrogens first, then halve what is left.",
+    "explain": "({=2*n+2} − 2) ÷ 2 = {n} carbon atoms.",
+    "params": {
+     "n": [
+      3,
+      12
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Alkane or not? An alkane has only C and H, single bonds only, and fits CₙH₂ₙ₊₂. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Alkane",
+    "Not an alkane"
+   ],
+   "items": [
+    [
+     "CH₄, methane",
+     0
+    ],
+    [
+     "C₂H₆, ethane",
+     0
+    ],
+    [
+     "C₄H₁₀, butane",
+     0
+    ],
+    [
+     "C₆H₁₄, hexane",
+     0
+    ],
+    [
+     "C₂H₄, ethene",
+     1
+    ],
+    [
+     "C₃H₆, propene",
+     1
+    ],
+    [
+     "C₂H₅OH, ethanol",
+     1
+    ],
+    [
+     "C₄H₈, butene",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagalk",
+  "caption": "Flagship lab: grow the carbon chain, watch hydrogens fill every free bond, test CₙH₂ₙ₊₂, then try a double bond.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

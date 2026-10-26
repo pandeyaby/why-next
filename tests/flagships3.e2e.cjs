@@ -83,16 +83,16 @@ async function test(name, fn) { try { await fn(); console.log('ok  ', name) } ca
   });
   await test('reel catalogue: each visit rotates to an unseen reel (localStorage), "Another reel" swaps, all seen restarts', async () => {
     await p.evaluate(() => localStorage.removeItem('wn_reels_seen')); const fs = [], N = await p.evaluate(() => WN_REELS.mt_EDgw64OmfA.length);
-    for (let i = 0; i < N; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(200); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reel[data-f]'); fs.push(await p.$eval('.reel', e => e.dataset.f)) }
-    assert.ok(N > 1); assert.strictEqual(new Set(fs).size, N, 'every visit shows an unseen reel: ' + fs); assert.match(await p.textContent('.reel figcaption'), new RegExp('of ' + N));
+    for (let i = 0; i < N; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(200); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reels:not(.home-reels) .reel[data-f]'); fs.push(await p.$eval('.reels:not(.home-reels) .reel', e => e.dataset.f)) }
+    assert.ok(N > 1); assert.strictEqual(new Set(fs).size, N, 'every visit shows an unseen reel: ' + fs); assert.match(await p.textContent('.reels:not(.home-reels) .reel figcaption'), new RegExp('of ' + N));
     const seen = await p.evaluate(() => JSON.parse(localStorage.getItem('wn_reels_seen')).mt_EDgw64OmfA); assert.strictEqual(seen.length, N);
-    const f0 = await p.$eval('.reel', e => e.dataset.f); await p.click('.reel-next'); assert.notStrictEqual(await p.$eval('.reel', e => e.dataset.f), f0);
+    const f0 = await p.$eval('.reels:not(.home-reels) .reel', e => e.dataset.f); await p.click('.reel-next'); assert.notStrictEqual(await p.$eval('.reels:not(.home-reels) .reel', e => e.dataset.f), f0);
   });
   await test('reel memory survives corrupt storage (null, array, string, junk entries): no crash, every reel still shown once per cycle (verify/WhyNextState.tla)', async () => {
     const N = await p.evaluate(() => WN_REELS.mt_EDgw64OmfA.length);
     for (const bad of ['null', '[]', '"x"', '{"mt_EDgw64OmfA":"abc"}', '{"mt_EDgw64OmfA":{"a":1}}', '{"mt_EDgw64OmfA":[1,null]}', '{oops']) {
       await p.evaluate(b => localStorage.setItem('wn_reels_seen', b), bad); const fs = [];
-      for (let i = 0; i < N; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(120); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reel[data-f]'); fs.push(await p.$eval('.reel', e => e.dataset.f)) }
+      for (let i = 0; i < N; i++) { await p.evaluate(() => select('mt_Y5xC--f9Eh')); await p.waitForTimeout(120); await p.evaluate(() => select('mt_EDgw64OmfA')); await p.waitForSelector('.reels:not(.home-reels) .reel[data-f]'); fs.push(await p.$eval('.reels:not(.home-reels) .reel', e => e.dataset.f)) }
       assert.strictEqual(new Set(fs).size, N, bad + ': ' + fs);
       const seen = await p.evaluate(() => JSON.parse(localStorage.getItem('wn_reels_seen')).mt_EDgw64OmfA); assert.ok(Array.isArray(seen) && seen.length === N, bad);
     }

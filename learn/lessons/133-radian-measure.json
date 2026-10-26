@@ -1,0 +1,265 @@
+{
+ "topicId": "mt_qm2CQajR6R",
+ "title": "Radian measure",
+ "audience": "learner",
+ "keyIdea": "One radian is the angle at the centre when the arc is as long as the radius, so an angle in radians is arc ÷ radius: θ = s/r. About 6.28 radius-lengths fit round a circle, so a full turn is 2π rad and 180° = π rad. In radians the arc length is simply s = rθ.",
+ "explain": {
+  "kid": [
+   "Take a piece of string as long as the radius of a circle. Lay it round the edge. The angle it makes at the centre is one radian.",
+   "One radian is about 57°. It is a big angle, not a tiny one like 1°.",
+   "The whole edge is 2πr long, so about 6.28 strings fit round. A full turn is 2π radians. Half a turn is π radians.",
+   "With radians, arc length is easy. An angle of 3 radians on a 4 cm circle has an arc of 3 × 4 = 12 cm."
+  ],
+  "adult": [
+   "An angle in radians is the arc length divided by the radius, θ = s/r. It is a ratio of two lengths, so it has no unit and does not depend on the size of the circle.",
+   "The circumference is 2πr, so a full turn is 2πr ÷ r = 2π rad. That gives π rad = 180°. To change degrees to radians multiply by π/180; to change back multiply by 180/π. So 135° = 135/180 × π = 3π/4.",
+   "Rearranged, s = rθ. This is the degree formula θ/360 × 2πr with the 360 and the 2π already cancelled, which is why calculus and physics use radians.",
+   "Common mistakes: dropping the π (writing 135° as 3/4 rad); using the conversion factor upside down; putting degrees into s = rθ; thinking 1 rad is about 1°; and working out r ÷ s instead of s ÷ r."
+  ]
+ },
+ "familyTip": "Cut a string as long as the radius of a plate. Walk it round the rim, marking each length. How many fit? Then ask: would a bigger plate fit more strings, or the same number?",
+ "worked": {
+  "title": "A circle has radius 8 cm. Find the arc for 135°, then the angle that gives an arc of 20 cm.",
+  "steps": [
+   "135° = 135/180 × π = 3π/4 rad.",
+   "s = rθ = 8 × 3π/4 = 6π ≈ 18.8 cm.",
+   "For an arc of 20 cm: θ = s ÷ r = 20 ÷ 8 = 2.5 rad.",
+   "In degrees: 2.5 × 180/π ≈ 143.2°. Check: 143.2/360 × 2π × 8 ≈ 20 cm."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "How many degrees is {k}π/12 radians?",
+   "answer": "15*k",
+   "hint": "π rad = 180°, so π/12 rad = 180 ÷ 12 = 15°. Multiply by {k}.",
+   "explain": "{k}π/12 × 180/π = {k} × 15 = {=15*k}°.",
+   "params": {
+    "k": [
+     5,
+     23
+    ]
+   },
+   "where": "k%2==1 && k%3!=0"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Find the arc length when r = {r} cm and θ = {=k/2} rad.",
+   "answer": "r*k/2",
+   "hint": "θ is already in radians, so use s = rθ with no 360.",
+   "explain": "s = rθ = {r} × {=k/2} = {=r*k/2} cm.",
+   "params": {
+    "r": [
+     2,
+     12
+    ],
+    "k": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is one radian?",
+   "choices": [
+    "The angle where the arc is as long as the radius",
+    "1/360 of a full turn",
+    "The angle where the arc is 1 cm long"
+   ],
+   "answer": 0,
+   "hint": "A radian compares the arc with the radius of the same circle.",
+   "explain": "One radian is the angle at the centre when the arc equals the radius. 1/360 of a turn is one degree, and 1 cm depends on the circle's size."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "An arc of {s} cm lies on a circle of radius {r} cm. Find θ in radians.",
+   "answer": "s/r",
+   "hint": "θ = s ÷ r: how many radius-lengths fit along the arc?",
+   "explain": "θ = s ÷ r = {s} ÷ {r} = {=s/r} rad.",
+   "params": {
+    "s": [
+     3,
+     20
+    ],
+    "r": [
+     2,
+     10
+    ]
+   },
+   "where": "(s*100)%r==0"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Convert 135° to radians.",
+   "choices": [
+    "3π/4",
+    "3/4",
+    "135π"
+   ],
+   "answer": 0,
+   "hint": "Divide by 180°, then multiply by π.",
+   "explain": "135 ÷ 180 = 3/4, and each 180° is π rad, so 135° = 3π/4 ≈ 2.36 rad. Writing 3/4 drops the π."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many radians make a full turn?",
+    "choices": [
+     "2π, about 6.28",
+     "360",
+     "π, about 3.14"
+    ],
+    "answer": 0,
+    "hint": "The edge is 2πr. How many radii is that?",
+    "explain": "The circumference 2πr divided by r is 2π, so a full turn is 2π ≈ 6.28 rad. π rad is only half a turn."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Convert {k}π/4 radians to degrees.",
+    "answer": "45*k",
+    "hint": "π/4 rad = 180 ÷ 4 = 45°. Multiply by {k}.",
+    "explain": "{k}π/4 × 180/π = {k} × 45 = {=45*k}°.",
+    "params": {
+     "k": [
+      3,
+      15
+     ]
+    },
+    "where": "k%2==1"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "An arc of {s} cm makes an angle of {=k/2} rad at the centre. Find the radius in cm.",
+    "answer": "2*s/k",
+    "hint": "Rearrange s = rθ: divide the arc by the angle in radians to get r.",
+    "explain": "r = s ÷ θ = {s} ÷ {=k/2} = {=2*s/k} cm.",
+    "params": {
+     "s": [
+      3,
+      15
+     ],
+     "k": [
+      1,
+      6
+     ]
+    },
+    "where": "(200*s)%k==0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Sam uses s = rθ for a 60° arc with r = 5 cm and gets 5 × 60 = 300 cm. What went wrong?",
+    "choices": [
+     "θ must be in radians: 60° = π/3, so s = 5π/3 ≈ 5.24 cm",
+     "He should divide by 60",
+     "Nothing, it is right"
+    ],
+    "answer": 0,
+    "hint": "s = rθ only works when θ is in radians.",
+    "explain": "60° = π/3 rad, so s = 5 × π/3 ≈ 5.24 cm. Putting degrees into s = rθ gives an arc far longer than the whole circle (31.4 cm)."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Convert 1 radian to degrees, to 1 decimal place.",
+    "answer": 57.3,
+    "tolerance": 0.05,
+    "hint": "π rad = 180°, so 1 rad = 180 ÷ π.",
+    "explain": "1 rad = 180 ÷ π = 57.2957…, so about 57.3°."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Write 240° in radians.",
+    "choices": [
+     "4/3",
+     "4π/3",
+     "2π/3"
+    ],
+    "answer": 1,
+    "hint": "240 ÷ 180 = 4/3. Do not lose the π.",
+    "explain": "240/180 = 4/3, so 240° = 4π/3 rad. 4/3 drops the π, and 2π/3 is only 120°."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Convert 2.5 radians to degrees, to the nearest degree.",
+    "answer": 143,
+    "tolerance": 0.5,
+    "hint": "Multiply by 180/π, about 57.3.",
+    "explain": "2.5 × 180/π = 143.24…, so about 143°."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Circles of radius 3 cm and 6 cm each have an arc that makes 1.2 rad at the centre. Which is true?",
+    "choices": [
+     "Both arcs are 1.2 cm long",
+     "The arcs are 3.6 cm and 7.2 cm, and the angle is the same",
+     "The bigger circle's angle is 2.4 rad"
+    ],
+    "answer": 1,
+    "hint": "Use s = rθ for each circle. Does the angle change?",
+    "explain": "s = 3 × 1.2 = 3.6 cm and s = 6 × 1.2 = 7.2 cm. The arc doubles with the radius, but s ÷ r is 1.2 rad for both."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which turn is each angle? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Half a turn",
+    "A quarter turn",
+    "A sixth of a turn"
+   ],
+   "items": [
+    [
+     "π rad",
+     0
+    ],
+    [
+     "180°",
+     0
+    ],
+    [
+     "π/2 rad",
+     1
+    ],
+    [
+     "90°",
+     1
+    ],
+    [
+     "π/3 rad",
+     2
+    ],
+    [
+     "60°",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrad",
+  "caption": "Flagship lab: lay radius-length strings round a circle, see one radian, a full turn of 2π, convert degrees to radians and find arcs with s = rθ.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

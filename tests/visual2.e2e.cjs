@@ -42,8 +42,12 @@ const L = { riemann: 'mt_XW5d2G7v01', family: 'mt_gbnMvpN_Lj', definite: 'mt_P-V
   await test('velocity: displacement and distance differ once the graph dips below zero', async () => { await open(p, L.velocity); await expectDesc(p, /Displacement = 8 − 2 = 6 m; total distance travelled = 10 m/) });
   await test('sorter: tap-and-place, drag-and-drop, then check', async () => {
     await open(p, L.sorter); await p.click('#vbox .vis-card:text-is("Ice melting")'); await p.click('#vbox [aria-label="Put the chosen card in Physical change"]');
+    await expectDesc(p, /1 of 8 cards sorted/); // let the re-render settle before measuring drag targets
+    await p.$eval('#vbox .vis-sort', e => e.scrollIntoView({ block: 'start' })); await p.waitForTimeout(100);
     const card = await p.locator('#vbox .vis-card:text-is("Wood burning")').boundingBox(), bin = await p.locator('#vbox .vis-bin >> nth=1').boundingBox();
-    await p.mouse.move(card.x + 10, card.y + 10); await p.mouse.down(); await p.mouse.move(bin.x + bin.width / 2, bin.y + 30, { steps: 8 }); await p.mouse.up();
+    const vh = await p.evaluate(() => innerHeight), tx = bin.x + bin.width / 2, ty = Math.min(bin.y + bin.height / 2, vh - 10);
+    assert.ok(await p.evaluate(([x, y]) => { const t = document.elementFromPoint(x, y); return !!(t && t.closest('.vis-bin') === document.querySelectorAll('#vbox .vis-bin')[1]) }, [tx, ty]), 'drop point is over the second box');
+    await p.mouse.move(card.x + card.width / 2, card.y + card.height / 2); await p.mouse.down(); await p.mouse.move(tx, ty, { steps: 8 }); await p.mouse.up();
     await expectDesc(p, /2 of 8 cards sorted/); await btn(p, 'Check'); await expectDesc(p, /2 of 8 in the right box/);
   });
   await test('pH scale: adding alkali and arrow keys move the pH', async () => { await open(p, L.phscale); await btn(p, 'Add alkali'); await expectDesc(p, /pH 4: acidic/); await keys(p, '#vbox [role=slider]', 'ArrowRight', 'ArrowRight', 'ArrowRight'); await expectDesc(p, /pH 7: neutral.*green/) });

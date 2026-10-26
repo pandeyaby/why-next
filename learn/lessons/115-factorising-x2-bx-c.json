@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_d3V050rm1F",
+ "title": "Factorising x² + bx + c",
+ "audience": "learner",
+ "keyIdea": "To factorise x² + bx + c, find two numbers that multiply to c and add to b. They go in the brackets: x² + 7x + 12 = (x + 3)(x + 4), because 3 × 4 = 12 and 3 + 4 = 7. Expand the brackets to check.",
+ "explain": {
+  "kid": [
+   "Factorising puts brackets back. It is expanding run in reverse. (x + 3)(x + 4) expands to x² + 7x + 12, so x² + 7x + 12 factorises to (x + 3)(x + 4).",
+   "Look at the last number first. The two numbers must multiply to it. For 12, the pairs are 1 and 12, 2 and 6, and 3 and 4.",
+   "Now look at the middle number. Pick the pair that adds to it. Only 3 and 4 add to 7, so the answer is (x + 3)(x + 4).",
+   "Signs matter. If the last number is negative, one number is negative and one is positive. If it is positive but the middle is negative, both are negative. So x² − 2x − 15 = (x − 5)(x + 3)."
+  ],
+  "adult": [
+   "Expanding (x + p)(x + q) gives x² + (p + q)x + pq. So factorising x² + bx + c means finding integers p and q with p + q = b and pq = c. The order of the brackets does not matter: (x + 3)(x + 4) and (x + 4)(x + 3) are the same.",
+   "A reliable method is to list the factor pairs of c, including negative pairs, and test each sum. The signs narrow the search. If c is positive, p and q share the sign of b. If c is negative, they have opposite signs, and the larger size takes the sign of b.",
+   "Algebra tiles show why the method works. The x² tile and the c unit tiles fit into one rectangle only when the x strips split into p along one side and q along the other. Negative strips cancel positive ones in zero pairs, which is how x² + x − 6 can hold 3 positive and 2 negative strips.",
+   "Common mistakes: writing (x + b)(x + c), as in (x + 5)(x + 6) for x² + 5x + 6; choosing a pair with the right product but the wrong sum; flipping both signs; and thinking x² − 9 cannot be factorised because b = 0. It is (x + 3)(x − 3). Some expressions, such as x² + x + 1, do not factorise over the integers at all. Always expand your answer to check it."
+  ]
+ },
+ "familyTip": "Take turns choosing two whole numbers in secret, say 4 and −3, and tell the other person only their product and their sum (−12 and 1). They write the quadratic x² + x − 12 and factorise it. Then swap, and check by expanding.",
+ "worked": {
+  "title": "Factorise x² − 2x − 15",
+  "steps": [
+   "Pairs that multiply to −15: 1 and −15, −1 and 15, 3 and −5, −3 and 5.",
+   "c is negative, so the signs are different. b is −2, so the larger number is negative.",
+   "3 + (−5) = −2. That is the pair.",
+   "x² − 2x − 15 = (x + 3)(x − 5). Check: x² − 5x + 3x − 15 = x² − 2x − 15."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "x² + {=a+b}x + {=a*b} = (x + {a})(x + ?). What is the missing number?",
+   "answer": "b",
+   "hint": "The two numbers must multiply to {=a*b} and add to {=a+b}. Divide {=a*b} by {a}.",
+   "explain": "{a} × {b} = {=a*b} and {a} + {b} = {=a+b}, so the missing number is {b}.",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "b": [
+     2,
+     7
+    ]
+   },
+   "where": "a<b"
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Factorise x² + 7x + 12.",
+   "choices": [
+    "(x + 3)(x + 4)",
+    "(x + 2)(x + 6)",
+    "(x + 7)(x + 12)"
+   ],
+   "answer": 0,
+   "hint": "List the pairs that multiply to 12, then find the one that adds to 7.",
+   "explain": "3 × 4 = 12 and 3 + 4 = 7. The pair 2 and 6 also makes 12, but it adds to 8."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "x² + {=a-b}x − {=a*b} = (x + {a})(x − ?). What is the missing number?",
+   "answer": "b",
+   "hint": "The constant is negative, so the signs are different. You need {a} × (−?) = −{=a*b}.",
+   "explain": "{a} × (−{b}) = −{=a*b} and {a} + (−{b}) = {=a-b}, so the missing number is {b}.",
+   "params": {
+    "a": [
+     3,
+     8
+    ],
+    "b": [
+     1,
+     6
+    ]
+   },
+   "where": "a-b>1"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Factorise x² − 2x − 15.",
+   "choices": [
+    "(x − 5)(x + 3)",
+    "(x + 5)(x − 3)",
+    "(x − 5)(x − 3)"
+   ],
+   "answer": 0,
+   "hint": "The two numbers multiply to −15 and add to −2. Which one has to be negative?",
+   "explain": "−5 × 3 = −15 and −5 + 3 = −2. The pair 5 and −3 has the right product but adds to +2."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Factorise x² − 7x + 10.",
+   "choices": [
+    "(x − 2)(x − 5)",
+    "(x + 2)(x + 5)",
+    "(x + 2)(x − 5)"
+   ],
+   "answer": 0,
+   "hint": "The constant is positive but the middle is negative. What does that say about both signs?",
+   "explain": "Both numbers are negative: −2 × −5 = 10 and −2 + −5 = −7. (x + 2)(x + 5) gives +7x."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Two numbers multiply to {=a*b} and add to {=a+b}. The smaller one is {a}. What is the larger one?",
+    "answer": "b",
+    "hint": "Find the number that goes with {a} to make {=a*b}. Then check the sum is {=a+b}.",
+    "explain": "{a} × {b} = {=a*b} and {a} + {b} = {=a+b}, so the larger number is {b}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      5,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Expand (x − {a})(x − {b}). What is the constant term?",
+    "answer": "a*b",
+    "hint": "The constant term is the last number times the last number. Two negatives multiply to a positive.",
+    "explain": "(−{a}) × (−{b}) = {=a*b}, so the constant term is +{=a*b}.",
+    "params": {
+     "a": [
+      1,
+      6
+     ],
+     "b": [
+      2,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Factorise x² − 9.",
+    "choices": [
+     "(x + 3)(x − 3)",
+     "(x − 3)(x − 3)",
+     "It cannot be factorised"
+    ],
+    "answer": 0,
+    "hint": "Here b = 0. You need two numbers that multiply to −9 and add to 0.",
+    "explain": "3 × (−3) = −9 and 3 + (−3) = 0, so x² − 9 = (x + 3)(x − 3). The x terms cancel."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ali says x² + 5x + 6 = (x + 5)(x + 6). What went wrong?",
+    "choices": [
+     "He copied b and c into the brackets",
+     "Nothing, it is right",
+     "He should have used (x − 5)(x − 6)"
+    ],
+    "answer": 0,
+    "hint": "Expand (x + 5)(x + 6) and compare it with x² + 5x + 6.",
+    "explain": "(x + 5)(x + 6) = x² + 11x + 30. The numbers must multiply to 6 and add to 5, so the answer is (x + 2)(x + 3)."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Factorise x² + 2x − 8.",
+    "choices": [
+     "(x + 4)(x − 2)",
+     "(x − 4)(x + 2)",
+     "(x + 8)(x − 1)"
+    ],
+    "answer": 0,
+    "hint": "Find a pair that multiplies to −8 and adds to +2. The larger number takes the sign of b.",
+    "explain": "4 × (−2) = −8 and 4 + (−2) = 2. The pair −4 and 2 makes −8 too, but it adds to −2."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which pair should you look for to factorise x² − x − 12?",
+    "choices": [
+     "Multiply to −12, add to −1",
+     "Multiply to −1, add to −12",
+     "Multiply to 12, add to 1"
+    ],
+    "answer": 0,
+    "hint": "In x² + bx + c the pair multiplies to c and adds to b. Read b and c with their signs.",
+    "explain": "Here b = −1 and c = −12. The pair is −4 and 3, so x² − x − 12 = (x − 4)(x + 3)."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "x² + 8x + 15 = (x + 3)(x + k). What is k?",
+    "answer": 5,
+    "hint": "3 times k must make 15, and 3 plus k must make 8.",
+    "explain": "3 × 5 = 15 and 3 + 5 = 8, so k = 5. Expanding (x + 3)(x + 5) gives x² + 8x + 15."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam factorises x² − x − 6 as (x + 3)(x − 2). How can Sam check it?",
+    "choices": [
+     "Expand it: x² + x − 6, so it is wrong",
+     "Put x = 0 in both: they agree, so it is right",
+     "It looks right, so no check is needed"
+    ],
+    "answer": 0,
+    "hint": "Multiply the brackets out and compare every term, not just one value.",
+    "explain": "(x + 3)(x − 2) = x² + x − 6, so the middle sign is wrong. The answer is (x − 3)(x + 2). x = 0 only checks the constant."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "Drag x along the graph of x² + x − 6 = (x − 2)(x + 3). It is zero at x = 2 and at x = −3, where one bracket is zero.",
+  "opts": {
+   "mode": "eval",
+   "f": "x*x+x-6",
+   "a": 0,
+   "xr": [
+    -5,
+    4
+   ],
+   "yr": [
+    -8,
+    16
+   ],
+   "step": 0.5
+  }
+ },
+ "lab": {
+  "type": "flagfact",
+  "caption": "Flagship lab: drag the corner of an algebra-tile rectangle until it matches the quadratic. The corner block must make c, and the strips must add to b.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

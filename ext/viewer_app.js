@@ -3,13 +3,19 @@ for(const e of DATA.edges){(PRE.get(e.t)||PRE.set(e.t,[]).get(e.t)).push(e);(POS
 const isBridge=e=>N.get(e.t).new&&!N.get(e.p).new;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let sel=null;
-function renderList(){const q=document.getElementById('q').value.toLowerCase(),old=document.getElementById('showOld').checked,only=document.getElementById('onlyLes').checked;LEARN.refreshNext();
- let h='',dom='';for(const n of DATA.nodes){if(only&&!LEARN.has(n.id))continue;if(!n.new&&!old&&!LEARN.has(n.id)&&!LEARN.isNext(n.id))continue;if(q&&!(n.n+' '+(n.desc||'')).toLowerCase().includes(q))continue;
+/* Search matches every word in any order, ignoring case, accents, punctuation and a plural "s"; it looks across all topics. */
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ');
+const hayOf=new Map();const hay=n=>{let h=hayOf.get(n.id);if(h==null||(n.desc&&!h.d)){h={t:' '+norm(n.n+' '+(n.desc||'')+' '+n.s+' '+n.d)+' ',d:!!n.desc};hayOf.set(n.id,h)}return h.t};
+const matches=(n,ws)=>{const h=hay(n);return ws.every(w=>h.includes(w)||(w.length>3&&w.endsWith('s')&&h.includes(w.slice(0,-1))))};
+function renderList(){const qRaw=document.getElementById('q').value.trim(),ws=norm(qRaw).split(' ').filter(Boolean),q=ws.length>0,old=document.getElementById('showOld').checked,only=document.getElementById('onlyLes').checked;LEARN.refreshNext();
+ let h='',dom='',cnt=0;for(const n of DATA.nodes){if(only&&!LEARN.has(n.id))continue;if(!q&&!n.new&&!old&&!LEARN.has(n.id)&&!LEARN.isNext(n.id))continue;if(q&&!matches(n,ws))continue;cnt++;
  const d=n.s+' / '+n.d;if(d!==dom){h+=`${dom?'</div>':''}<div class="grp"><div class="dom">${esc(d)}</div>`;dom=d}
  h+=`<div class="item${sel===n.id?' sel':''}" role="button" tabindex="0" data-id="${n.id}"${sel===n.id?' aria-current="true"':''}><span class="nm ${n.new?'new':'old'}">${esc(n.n)}</span><span class="lbs"><span class="age">${n.a[0]}–${n.a[1]}</span>${LEARN.badge(n.id)}</span></div>`}
- document.getElementById('list').innerHTML=h?h+'</div>':'<p class="muted" style="padding:12px">No matches</p>'}
-document.getElementById('list').onclick=e=>{const it=e.target.closest('.item');if(it)select(it.dataset.id)};
-document.getElementById('list').onkeydown=e=>{const it=e.target.closest('.item');if(it&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(it.dataset.id);const l=document.getElementById('learn');if(l)l.focus()}};
+ document.getElementById('list').innerHTML=h?h+'</div>':`<div class="empty" style="padding:12px"><p><b>No topics match “${esc(qRaw)}”.</b></p><p class="muted">Try one shorter word${only?', or include topics without lessons':''}.</p><button type="button" class="lbtn sm" data-clear="1">Clear search</button>${only?'<button type="button" class="lbtn sm" data-alltopics="1">Show all topics</button>':''}</div>`;
+ const qc=document.getElementById('qcount');if(qc)qc.textContent=q?(cnt?`${cnt} topic${cnt>1?'s':''} found`:'No topics found'):''}
+document.getElementById('list').onclick=e=>{const it=e.target.closest('.item');if(it){select(it.dataset.id,true);return}
+ const qi=document.getElementById('q');if(e.target.closest('[data-clear]')){qi.value='';renderList();qi.focus()}else if(e.target.closest('[data-alltopics]')){document.getElementById('onlyLes').checked=false;renderList();qi.focus()}};
+document.getElementById('list').onkeydown=e=>{const it=e.target.closest('.item');if(it&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(it.dataset.id,true);const l=document.getElementById('learn');if(l)l.focus()}};
 document.getElementById('q').oninput=()=>{renderList();if(!WN.all)WN.loadAll().then(renderList)};document.getElementById('showOld').onchange=renderList;document.getElementById('onlyLes').onchange=renderList;
 function ancestors(id,hardOnly){const s=new Set([id]),st=[id];while(st.length){const u=st.pop();for(const e of PRE.get(u)||[]){if(hardOnly&&!e.h)continue;if(!s.has(e.p)){s.add(e.p);st.push(e.p)}}}return s}
 function tree(id,seen,depth){const es=(PRE.get(id)||[]).slice().sort((a,b)=>b.h-a.h);if(!es.length)return'';let h='<ul class="tree">';
@@ -34,7 +40,9 @@ function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class=
 /* Detail text (descriptions, evidence, standards, link reasons, cluster notes) arrives in small per-domain
    chunks (wn/d*.js); the map and lessons render without it, and fill() completes the page once they load. */
 const needFor=id=>[...new Set([...ancestors(id,false)].map(u=>N.get(u).k))];
-function select(id){sel=id;renderList();const lz=LEARN.L[id]&&LEARN.L[id]._lz;if(lz)WN.lbload(N.get(id).k).then(()=>{if(sel===id&&!LEARN.L[id]._lz)select(id)},()=>{const b=document.getElementById('lzwait');if(b)b.textContent='This lesson could not load. Check your connection and pick it again.'});
+/* #t=<topic id> deep-links a topic; on phones a picked topic scrolls into view (the list sits above it). */
+function select(id,user){const moved=sel!==id&&(sel!=null||user===true);sel=id;renderList();try{history.replaceState(null,'','#t='+encodeURIComponent(id))}catch(e){}
+ if(moved&&window.matchMedia&&matchMedia('(max-width: 800px)').matches)setTimeout(()=>{const d=document.getElementById('detail');if(d)d.scrollIntoView({block:'start'})},0);const lz=LEARN.L[id]&&LEARN.L[id]._lz;if(lz)WN.lbload(N.get(id).k).then(()=>{if(sel===id&&!LEARN.L[id]._lz)select(id)},()=>{const b=document.getElementById('lzwait');if(b)b.textContent='This lesson could not load. Check your connection and pick it again.'});
  document.getElementById('detail').innerHTML=`<div class="card" id="dcard"></div>${lz?'<section class="learn card"><p class="muted" id="lzwait" role="status">Loading the lesson…</p></section>':LEARN_PANEL.panel(id)}<div id="dclu"></div><div class="card cv"><b>Hard-prerequisite graph</b><div id="dgraph"></div></div>
  <div class="card cv"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span><div id="dtree"></div></div>`;
  if(!lz)LEARN_PANEL.mount(id);document.getElementById('main').scrollTop=0;fill(id,true);
@@ -54,7 +62,9 @@ function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(need
  quick?setTimeout(below,0):below()}
 document.getElementById('detail').onclick=e=>{if(e.target.closest('.learn'))return;const t=e.target.closest('.tog');if(t){const li=t.parentElement,box=li.querySelector(':scope>div[style]');if(box){const o=box.style.display!=='none';box.style.display=o?'none':'block';t.textContent=o?'▸':'▾'}return}
  const g=e.target.closest('[data-id]');if(g)select(g.dataset.id)};
-LEARN.home();renderList();const first=LEARN.nextList(0).find(n=>LEARN.has(n.id))||DATA.nodes.find(n=>n.new&&n.n==='Solving quadratics by factorising')||DATA.nodes.find(n=>n.new);WN.load(needFor(first.id)).then(()=>select(first.id),()=>select(first.id));
+LEARN.home();renderList();const wantReels=location.hash==='#reels',deep=(/[#&]t=([^&]+)/.exec(location.hash)||[])[1],first=(deep&&N.get(decodeURIComponent(deep)))||LEARN.nextList(0).find(n=>LEARN.has(n.id))||DATA.nodes.find(n=>n.new&&n.n==='Solving quadratics by factorising')||DATA.nodes.find(n=>n.new);WN.load(needFor(first.id)).then(()=>select(first.id),()=>select(first.id));
+/* #reels (linked from the homepage): bring the home reel strip into view once it has filled. */
+if(wantReels){const t0=Date.now(),seek=()=>{const h=document.getElementById('homeReels');if(h&&!h.hidden&&h.children.length){(h.previousElementSibling||h).scrollIntoView({block:'start'});return}if(Date.now()-t0<8000)setTimeout(seek,200)};seek()}
 
 /* theme switch (2052 default, classic light) and gentle pointer parallax for the background and map */
 (()=>{const R=document.documentElement,b=document.getElementById('themeBtn');if(!b)return;
