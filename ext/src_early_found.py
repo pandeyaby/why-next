@@ -1,0 +1,83 @@
+"""Ages 2-4 (wave 6): foundation edges, v1 topics (ages 4-7) that build on the early-years topics.
+Every v1 topic starts at age 4 or later, so these are the only links into the older graph; they are soft."""
+
+from dsl import T, C, P, R, L, M
+
+SI, OL, MM, FM, WL, WC = "Scientific Inquiry", "Organisms & Life Processes", "Matter & Materials", "Forces & Motion", "Waves, Light & Sound", "Weather & Climate"
+EM, SRR, FC, ESA, SA, RDM = "Emotional Literacy", "Self-Regulation & Resilience", "Friendship & Cooperation", "Empathy & Social Awareness", "Self-Awareness", "Responsible Decision-Making"
+LL = "Learning to Learn"
+CC, GE, ME, MT = "Counting & Cardinality", "Geometry", "Measurement", "Mathematical Thinking"
+
+# ---------------------------------------------------------------- foundation edges: v1 topics (ages 4-7) that build on these
+from dsl import U
+for _k, _id, _s, _r in [
+    ("ey_senses", "mt_nwSWPTENmv", "h", "Naming the five senses starts with exploring through each of them"),
+    ("ey_senses", "mt_83gRQ9OPkc", "s", "Linking body parts to senses builds on sensory play"),
+    ("ey_noticing_changes", "mt_vJO5Bxk4z-", "h", "Observing with equipment extends looking closely and noticing changes"),
+    ("ey_wondering_why", "mt_XirhnAB6Ye", "h", "Scientific questions grow out of everyday 'why?' questions"),
+    ("ey_will_it_happen", "mt_Wa44s-f8Ws", "h", "Simple tests formalise guessing and then trying to find out"),
+    ("ey_living_things", "mt_zexbopQjG0", "h", "Living-things vocabulary builds on sorting living from not living"),
+    ("ey_living_things", "mt_L1469gt34A", "s", "Knowing what is alive comes before asking what living things need"),
+    ("ey_baby_animals", "mt_-vsLvsxp0L", "h", "How animals have babies builds on matching animals with their young"),
+    ("ey_my_body", "mt_83gRQ9OPkc", "h", "Body parts and senses needs the names of body parts"),
+    ("ey_growing_body", "mt_cxJRc15osy", "h", "Basic body needs extends knowing that food, water and sleep help us grow"),
+    ("ey_plants_need", "mt_L1469gt34A", "h", "What living things need generalises from plants needing water and light"),
+    ("ey_seeds_grow", "mt_xT6jPzyj92", "s", "Watching roots and shoots grow prepares for naming the parts of a plant"),
+    ("ey_animal_homes", "mt_oLHXfLujmh", "h", "Animal homes builds on matching animals to where they live"),
+    ("ey_float_sink", "mt_auVZZEuXjs", "s", "Floating and sinking is an early material property to describe"),
+    ("ey_materials_feel", "mt_auVZZEuXjs", "h", "Describing material properties uses texture words such as hard and smooth"),
+    ("ey_melting", "mt_1JFUNQDwAJ", "s", "Seeing ice melt gives meaning to words like solid and liquid"),
+    ("ey_push_pull", "mt_B3W5EfimJw", "h", "Pushes and pulls are named after children feel them in play"),
+    ("ey_ramps", "mt_RlILL2sccX", "s", "Testing designs builds on rolling things down ramps"),
+    ("ey_light_shadow", "mt_2agkUcdah9", "s", "Building shade relies on knowing shadows form when light is blocked"),
+    ("ey_weather", "mt_jc9k_HJQGd", "h", "Types of weather extends naming everyday weather"),
+    ("ey_weather", "mt_Dj2xr8CoI0", "h", "Dressing for the weather builds on choosing clothes for today's weather"),
+    ("ey_day_night", "mt_PiWZA8Z0ZJ", "s", "Sun, moon and stars builds on noticing day and night"),
+    ("ey_day_night", "mt_fI-8iqf_Id", "s", "Seasonal weather patterns build on knowing the seasons differ"),
+    ("ey_feeling_words", "mt_LhkP_KKIRS", "h", "Naming basic emotions builds on the first four feeling words"),
+    ("ey_feelings_body", "mt_9Y5-GjF2B0", "s", "Triggers of feelings build on noticing what made a feeling happen"),
+    ("ey_calm_down", "mt_Iwg2diBSyW", "h", "Simple calming strategies start with big breaths and a grown-up's help"),
+    ("ey_waiting", "mt_nNDX_jZ-cb", "h", "Patience and delayed gratification build on waiting a short time"),
+    ("ey_try_again", "mt_UGf6jICEhs", "s", "Learning from mistakes builds on having another go"),
+    ("ey_play_together", "mt_HBcvu0UxYe", "s", "Knowing what makes a good friend grows from playing together"),
+    ("ey_sharing_turns", "mt_FwI7q7DSIx", "h", "Taking turns and sharing (age 5) extends early turn-taking"),
+    ("ey_joining_in", "mt_YbX3LD0Eca", "s", "Joining a group's play teaches listening to others' ideas"),
+    ("ey_sorry", "mt_UHQfb-n-w3", "s", "Saying sorry is an early experience of actions having consequences"),
+    ("ey_noticing_upset", "mt_wzUzVEBqJb", "h", "Other people's feelings builds on noticing when someone is upset"),
+    ("ey_gentle_hands", "mt_lAvS72LOUO", "h", "Everyday kindness and care builds on being gentle with others"),
+    ("ey_all_about_me", "mt_H4YZ1rSKP3", "s", "Vocabulary about self builds on talking about me and my family"),
+    ("ey_i_can", "mt_OJVkWvIaM_", "s", "Similarities and differences builds on noticing friends like different things"),
+    ("ey_safety_rules", "mt_q3vRl4dddK", "h", "Everyday safety awareness builds on simple safety rules"),
+    ("ey_safety_rules", "mt_rkrG2w7WXI", "s", "Knowing rules exist starts with simple rules that keep us safe"),
+    ("ey_helping", "mt_lAvS72LOUO", "s", "Helping out is an early form of everyday care"),
+    ("ey_tell_grownup", "mt_PdYlsA33jB", "s", "Asking for help builds on knowing which grown-ups to tell"),
+    ("ey_paying_attention", "mt_LE7nFEwS12", "s", "Thinking before starting needs the ability to focus on one thing"),
+    ("ey_asking_questions", "mt_mvXufozy2s", "h", "Asking for help with learning builds on asking questions to find out"),
+    ("ey_tricky", "mt_mvXufozy2s", "s", "Noticing a task is tricky is the cue to ask for help"),
+    ("ey_finishing", "mt_S4G6GLKr1-", "s", "Persisting when it's hard builds on sticking with a task"),
+    ("ey_practice", "mt_S4G6GLKr1-", "h", "Knowing practice helps gives a reason to persist"),
+    ("ey_having_a_go", "mt_UGf6jICEhs", "s", "Learning from mistakes needs a willingness to have a go"),
+    ("ey_different_way", "mt_95zxYqpP7m", "s", "Trying a new approach (age 7) formalises trying a different way"),
+    ("ey_plan_play", "mt_QR3vxbN1o4", "s", "Planning a task builds on making a simple plan for play"),
+    ("ey_talk_about_learning", "mt_8dstvf-KKb", "s", "Checking your own work builds on talking about what you did"),
+    ("ey_two_steps", "mt_WkKkb7W9Qd", "s", "Making sense of a problem needs holding several steps in mind"),
+    ("ey_wait_listen", "mt_YbX3LD0Eca", "h", "Listening to others builds on stopping and listening to learn"),
+    ("ey_routines", "mt_-vvVxpOHG2", "s", "Ordering events in time builds on remembering daily routines"),
+    ("ey_number_names", "mt_WcfaSfVT33", "h", "One-to-one counting needs the number names in order"),
+    ("ey_number_names", "mt_M5PPDJStGm", "s", "Rote counting to 100 extends saying number names in order"),
+    ("ey_subitising", "mt_dmNvjroCPT", "s", "Seeing small amounts at a glance supports finding how many in total"),
+    ("ey_count_five", "mt_dmNvjroCPT", "h", "How many in total extends counting small groups"),
+    ("ey_finger_numbers", "mt_pAcaehday5", "s", "Showing numbers on fingers is an early way of representing numbers"),
+    ("ey_numerals", "mt__YRJ23GuIK", "h", "Comparing written numerals builds on matching numerals to groups"),
+    ("ey_more_less", "mt__h7hvT4tEb", "h", "Comparing groups formally builds on asking which has more"),
+    ("ey_shape_sorter", "mt_KJeEeTutJI", "s", "Handling shapes in a sorter comes before studying 2-D shapes"),
+    ("ey_shape_names", "mt_KJeEeTutJI", "h", "2-D shapes builds on naming circles, squares and triangles"),
+    ("ey_building", "mt_Qcp2d_kuta", "s", "Building with blocks gives experience of 3-D shapes"),
+    ("ey_big_small", "mt_uhuxX8sg9f", "h", "Comparing lengths and heights builds on size words"),
+    ("ey_heavy_light", "mt_-P1kdZhHbL", "h", "Measuring mass builds on comparing heavy and light"),
+    ("ey_heavy_light", "mt_zkFbMLpu3U", "h", "Comparing capacity builds on full and empty"),
+    ("ey_matching", "mt_xppl18avyY", "s", "Sorting into categories builds on matching things that are the same"),
+    ("ey_sorting", "mt_xppl18avyY", "h", "Sorting into categories extends sorting by colour, size and shape"),
+    ("ey_patterns", "mt_uG2mjHFOlO", "h", "Spotting mathematical patterns builds on copying and making patterns"),
+]:
+    U(_k, _id, "s", _r)  # foundation edges are soft: they must not lengthen existing goal paths

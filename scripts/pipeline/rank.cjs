@@ -16,19 +16,21 @@ const VIEWER = 'file://' + path.resolve(__dirname, '../../out/viewer.html');
     const band = n => { const a = (n.a || [18])[0]; return a < 5 ? '2-4' : a < 7 ? '5-7' : a < 11 ? '7-11' : a < 14 ? '11-14' : a < 16 ? '14-16' : '16-18' };
     const cell = n => band(n) + '|' + (n.s || '');
     const reelIds = new Set((window.WN_REELS_LAZY || {}).ids || Object.keys(window.WN_REELS || {}));
-    const have = {};
-    DATA.nodes.forEach(n => { if (LEARN.has(n.id)) have[cell(n)] = (have[cell(n)] || 0) + 1 });
+    const have = {}, size = {};
+    DATA.nodes.forEach(n => { size[cell(n)] = (size[cell(n)] || 0) + 1; if (LEARN.has(n.id)) have[cell(n)] = (have[cell(n)] || 0) + 1 });
+    // favour the cell with the smallest share of its topics covered, so big and small cells fill at the same rate
+    const share = k => (have[k] || 0) / (size[k] || 1);
     // maths/science candidates are the empty ("new") topics; the other subjects have no flagship lessons yet at all
     const pool = DATA.nodes.filter(n => !LEARN.has(n.id) && (n.new || !/math|science/i.test(n.s || ''))).map(n => {
       const unmet = (PRE.get(n.id) || []).filter(e => e.h && !LEARN.has(e.p)).length;
       return { n, unmet, down: downstreamCount(n.id) } });
     const out = [];
     while (out.length < limit && pool.length) {
-      pool.sort((x, y) => (have[cell(x.n)] || 0) - (have[cell(y.n)] || 0) || x.unmet - y.unmet
+      pool.sort((x, y) => share(cell(x.n)) - share(cell(y.n)) || x.unmet - y.unmet
         || (x.n.a || [18])[0] - (y.n.a || [18])[0] || y.down - x.down);
       const { n, unmet, down } = pool.shift(), k = cell(n);
       out.push({ id: n.id, name: n.n, subject: n.s, ages: (n.a || []).join('-'), downstream: down, reels: reelIds.has(n.id),
-        score: -(have[k] || 0), cell: k, unmet });
+        score: -Math.round(share(k) * 1000) / 1000, cell: k, unmet });
       have[k] = (have[k] || 0) + 1 }
     return out }, limit);
   console.log(JSON.stringify(ranked, null, 1)); await browser.close() })();

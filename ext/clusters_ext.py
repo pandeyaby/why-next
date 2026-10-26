@@ -78,3 +78,6 @@ CLUSTERS = {
 ("Waves, Light & Sound", 15): "Your child is learning about wave effects and technologies — interference, diffraction, resonance, optical fibres, the eye and cameras, ultrasound imaging, radiation risks, and storing and sending information digitally.",
 ("Waves, Light & Sound", 16): "Your child is studying advanced wave physics — standing waves, Snell's law and the lens equation, polarisation, photons and the wave–particle nature of light, the Doppler effect, and red-shift in an expanding universe.",
 }
+
+from clusters_ext6 import CLUSTERS6  # noqa: E402
+CLUSTERS.update(CLUSTERS6)
