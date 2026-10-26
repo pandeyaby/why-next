@@ -1,0 +1,283 @@
+{
+ "topicId": "mt_8uFvTbk7EA",
+ "title": "Using help wisely, including AI tools",
+ "audience": "learner",
+ "keyIdea": "Good help leaves the thinking to you: hints, quizzes and explanations you then act on. AI tools can be fluent and wrong, so check their answers against something outside the AI, such as the question itself or a trusted source. In coursework, any AI use must be acknowledged, and copying or rewording AI text as your own is malpractice.",
+ "explain": {
+  "kid": [
+   "Some help makes you learn, and some help just does the work. A hint, a quiz or an explanation that you then use yourself builds learning. Copying an answer or handing in work an AI wrote skips the thinking, so very little sticks.",
+   "A 2025 trial with about 1,000 high school maths students tested this. Students with an AI that gave answers did 48% better in practice. But in a later exam without AI, they did 17% worse than students who never had it. A tutor AI that gave hints, not answers, did not cause that drop.",
+   "AI tools can sound sure and still be wrong. They can even make up sources. So check the answer with something outside the AI. Put the answer back into the question, compare it with a textbook or mark scheme, or ask a teacher. Asking the AI if it is sure is not a check.",
+   "In exam coursework, you must say when you used AI. Give the tool's name, the date, a saved copy of your prompts and its replies, and how you used it. Your teacher may limit AI use. Copying or rewording AI text and calling it yours is malpractice, and marks only go to your own work."
+  ],
+  "adult": [
+   "This topic helps older students use help, including AI chatbots, in a way that builds learning rather than replacing it. A large field trial (Bastani and colleagues, PNAS 2025) found that an answer-giving AI raised practice scores but lowered later exam scores without AI by 17%, while a hint-giving tutor version avoided that harm.",
+   "The lab works through five skills. Learners sort requests into help that builds learning and help that does the work. They find the faulty line in a confident AI solution and prove it wrong by substitution. They pick real checks over fake ones, read the trial's results, and build a coursework acknowledgement that meets the exam rules.",
+   "The most common mistake is treating fluent, well-set-out AI answers as correct, or asking the same AI whether it is sure. Another is believing that rewording AI text makes it your own work, or that research help does not need acknowledging. Under the UK exam boards' rules, both count as malpractice in coursework.",
+   "At home, when your teen uses an AI tool, ask what they asked it, how they checked the answer, and what they can now do without it. A good test is whether they can solve a similar problem on their own the next day."
+  ]
+ },
+ "familyTip": "When your teen uses an AI tool, ask three questions: what did you ask it, how did you check its answer, and could you now do a similar problem on your own?",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which request to an AI builds your learning most?",
+   "choices": [
+    "Give me a hint for this question, not the answer",
+    "Write my answer for me",
+    "Rewrite my paragraph so I can submit it"
+   ],
+   "answer": 0,
+   "hint": "Which one still leaves the thinking to you?",
+   "explain": "A hint keeps you doing the thinking. The other two hand the work to the AI, so little is learned."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An AI says the solution of {a}(x + {b}) = {=a*(c+b)} is x = {=c+1}. Check it by substitution. What is the correct value of x?",
+   "answer": "c",
+   "hint": "Divide both sides by {a} first, then subtract {b}.",
+   "explain": "Dividing by {a} gives x + {b} = {=c+b}, so x = {c}. The AI's {=c+1} gives {a} × {=c+1+b} = {=a*(c+1+b)}, which is not {=a*(c+b)}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     6
+    ],
+    "c": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You ask an AI whether its answer is right and it says yes. What have you learned?",
+   "choices": [
+    "Very little: it can just agree with itself",
+    "That the answer is definitely right",
+    "That you can skip checking"
+   ],
+   "answer": 0,
+   "hint": "Has anything outside the AI been used?",
+   "explain": "An AI can repeat its own mistake. A real check uses the question, a trusted source or a person."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "An AI says {=5*p}% of {=20*n} is {=p*n+2}. What is the correct answer?",
+   "answer": "p*n",
+   "hint": "Find 10% or 5% first, then build up.",
+   "explain": "{=5*p}% of {=20*n} is {=5*p} × {=20*n} ÷ 100 = {=p*n}, so the AI was wrong.",
+   "params": {
+    "p": [
+     1,
+     6
+    ],
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "For history coursework, you used an AI to suggest sources. What must you do?",
+   "choices": [
+    "Acknowledge it: tool, date, saved prompts and replies, how you used it",
+    "Nothing: research help does not count",
+    "Just write AI in the bibliography"
+   ],
+   "answer": 0,
+   "hint": "Does research help count as AI use?",
+   "explain": "Any AI use must be acknowledged with the tool name, date, a saved copy and how it was used. Just writing AI is not enough."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "In the 2025 maths trial, how did students with an answer-giving AI do in the later exam without AI?",
+    "choices": [
+     "About 17% worse than students with no AI",
+     "About 48% better",
+     "Exactly the same"
+    ],
+    "answer": 0,
+    "hint": "Practice and exam results were different.",
+    "explain": "They scored 48% higher in practice but 17% lower in the exam without AI. The 48% was practice, not the exam."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why did the hint-giving tutor AI not cause the same drop?",
+    "choices": [
+     "Students still did the thinking themselves",
+     "It gave the answers faster",
+     "It was only used once"
+    ],
+    "answer": 0,
+    "hint": "What did hints leave to the student?",
+    "explain": "Hints kept students working out each step, so they learned. Answers let them skip the thinking."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "An AI cites a study you cannot find anywhere. What should you do?",
+    "choices": [
+     "Do not use it until you find and check the real source",
+     "Use it: the AI must have read it",
+     "Cite the AI as the study"
+    ],
+    "answer": 0,
+    "hint": "Can AI tools make up sources?",
+    "explain": "AI tools can invent references. Only cite sources you have found and checked yourself."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is a real check of an AI's maths answer?",
+    "choices": [
+     "Put the answer back into the question",
+     "Ask the AI to say it again",
+     "Check it sounds confident"
+    ],
+    "answer": 0,
+    "hint": "Which one uses something outside the AI?",
+    "explain": "Substituting the answer back uses the question itself. Repeating or sounding sure proves nothing."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You reword a paragraph an AI wrote and hand it in as your own. What is that?",
+    "choices": [
+     "Malpractice, even though you changed the words",
+     "Fine, because the words are now yours",
+     "Fine, if the facts are right"
+    ],
+    "answer": 0,
+    "hint": "Does rewording change who did the work?",
+    "explain": "Copying or paraphrasing AI content as your own work is malpractice under the exam rules."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "An AI says {a}x + {b} = {=a*c+b} gives x = {=c+2}. What is the correct value of x?",
+    "answer": "c",
+    "hint": "Subtract {b}, then divide by {a}.",
+    "explain": "{=a*c+b} − {b} = {=a*c}, and {=a*c} ÷ {a} = {c}. The AI's answer gives {=a*(c+2)+b}, not {=a*c+b}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is the best way to use an AI when revising for a test?",
+    "choices": [
+     "Ask it to quiz me, then check my answers",
+     "Ask for a summary and reread it",
+     "Ask for past paper answers to read"
+    ],
+    "answer": 0,
+    "hint": "Which one makes you recall?",
+    "explain": "Being quizzed makes you pull ideas from memory, which builds learning. Rereading answers feels easy but sticks less."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "An AI says {=10*p}% of {=10*n} is {=p*n+n}. Check it. What is the correct answer?",
+    "answer": "p*n",
+    "hint": "Find 10% first by dividing by 10.",
+    "explain": "10% of {=10*n} is {n}, so {=10*p}% is {p} × {n} = {=p*n}, not {=p*n+n}.",
+    "params": {
+     "p": [
+      1,
+      8
+     ],
+     "n": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Your teacher says no AI for this coursework task. What should you do?",
+    "choices": [
+     "Follow the rule: your teacher may limit AI use",
+     "Use it anyway if you acknowledge it",
+     "Use it only for the conclusion"
+    ],
+    "answer": 0,
+    "hint": "Who decides how AI may be used on the task?",
+    "explain": "Schools may restrict AI use for a task. Acknowledging use does not make banned use acceptable."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Coursework rules: drag each use of AI, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "OK if allowed and acknowledged",
+    "Malpractice"
+   ],
+   "items": [
+    [
+     "Using AI to find sources, then checking them",
+     0
+    ],
+    [
+     "Asking AI to explain a hard idea, then writing my own notes",
+     0
+    ],
+    [
+     "Using AI to quiz yourself",
+     0
+    ],
+    [
+     "Copying a paragraph from AI",
+     1
+    ],
+    [
+     "Rewording AI text as my own",
+     1
+    ],
+    [
+     "Using AI without saying so",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagai",
+  "caption": "Flagship lab: sort helpful from harmful requests, catch a confident AI's algebra slip, pick real checks, read a 2025 trial and build an honest acknowledgement.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
