@@ -1,0 +1,269 @@
+{
+ "topicId": "mt_qaf61_4L_L",
+ "title": "The identity sin²θ + cos²θ = 1",
+ "audience": "learner",
+ "keyIdea": "For every angle θ, sin²θ + cos²θ = 1. It is Pythagoras on the unit circle: the point (cos θ, sin θ) is 1 from the origin. Rearranged as cos²θ = 1 − sin²θ, it turns one ratio into the other, with the quadrant fixing the sign, and it simplifies expressions.",
+ "explain": {
+  "kid": [
+   "Take a circle with radius 1. Turn a radius by an angle θ. Its end point is at (cos θ, sin θ). Drop a line straight down from that point. Now you have a right triangle. Its long side is 1. Its short sides are cos θ across and sin θ up.",
+   "Pythagoras says the two short sides, squared, add up to the long side squared. So cos²θ + sin²θ = 1² = 1. Here sin²θ means sin θ times sin θ. It is not sin of θ squared.",
+   "Turn the radius past 90°. Now cos θ or sin θ can be less than zero. But a square is never less than zero, and the point is still 1 from the centre. So the rule holds for every angle you pick.",
+   "The rule helps you find one ratio from the other. Say sin θ = 0.6. Then cos²θ = 1 − 0.36 = 0.64, so cos θ is 0.8 or −0.8. The quadrant tells you which one. In quadrant II, cos θ is −0.8. The rule also tidies up messy sums. Where you see 1 − cos²θ, write sin²θ. Where you see sin²θ + cos²θ, write 1."
+  ],
+  "adult": [
+   "This topic, for ages 16 to 18, proves and uses the Pythagorean identity sin²θ + cos²θ = 1. The proof is short. On the unit circle the point at angle θ is (cos θ, sin θ). It lies on x² + y² = 1, so cos²θ + sin²θ = 1. For an acute angle this is Pythagoras in the triangle with hypotenuse 1. For other angles the signs change but the squares do not, so it holds for all θ.",
+   "Rearranged, it gives sin²θ = 1 − cos²θ and cos²θ = 1 − sin²θ. Taking a square root gives two values, so the quadrant must pick the sign. If sin θ = 5/13 and θ is obtuse, then cos θ = −12/13. Dividing the identity by cos²θ gives tan²θ + 1 = 1/cos²θ, a useful second form.",
+   "In simplifying, spot the pattern and swap. (1 − cos²θ)/sin θ becomes sin²θ/sin θ = sin θ. (sin θ + cos θ)² expands to 1 + 2 sin θ cos θ. In equations, the identity turns a mix of sines and cosines into one function, such as a quadratic in cos θ.",
+   "Common mistakes: reading sin²θ as sin(θ²); taking cos θ = 1 − sin θ instead of using the squares; dropping the negative root, so the quadrant is ignored; and writing (sin θ + cos θ)² as sin²θ + cos²θ = 1. A quick check is to substitute an angle such as 40° into both sides."
+  ]
+ },
+ "familyTip": "Pick any angle and type sin(θ)² + cos(θ)² into a calculator. Try 17°, 140° and 300°. Then ask why the answer never changes, and what that has to do with a circle of radius 1.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Why is sin²θ + cos²θ = 1 for every angle θ?",
+   "choices": [
+    "The point (cos θ, sin θ) on the unit circle is 1 from the origin",
+    "sin θ and cos θ are always equal to 0.5",
+    "It is only true when θ is acute"
+   ],
+   "answer": 0,
+   "hint": "Where is the point (cos θ, sin θ), and how far is it from the centre?",
+   "explain": "The point lies on x² + y² = 1, so its coordinates satisfy cos²θ + sin²θ = 1. That is true in every quadrant."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "sin θ = {s}/10. Find cos²θ as a decimal.",
+   "answer": "(100-s*s)/100",
+   "params": {
+    "s": [
+     1,
+     9
+    ]
+   },
+   "hint": "Use cos²θ = 1 − sin²θ. Square sin θ first.",
+   "explain": "cos²θ = 1 − ({s}/10)² = 1 − {=s*s/100} = {=(100-s*s)/100}."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "sin θ = 3/5 and θ is in quadrant II. What is cos θ?",
+   "choices": [
+    "−4/5",
+    "4/5",
+    "2/5"
+   ],
+   "answer": 0,
+   "hint": "Find cos²θ, then use the quadrant to choose the sign.",
+   "explain": "cos²θ = 1 − 9/25 = 16/25, so cos θ = ±4/5. In quadrant II, x is negative, so cos θ = −4/5."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Without a calculator, find {k} sin²({a}°) + {k} cos²({a}°).",
+   "answer": "k",
+   "params": {
+    "k": [
+     2,
+     9
+    ],
+    "a": [
+     1,
+     359
+    ]
+   },
+   "hint": "Take out the common factor first.",
+   "explain": "{k}(sin²({a}°) + cos²({a}°)) = {k} × 1 = {=k}, whatever the angle."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Simplify (1 − cos²θ) / sin θ.",
+   "choices": [
+    "sin θ",
+    "1",
+    "cos θ"
+   ],
+   "answer": 0,
+   "hint": "Rewrite 1 − cos²θ using the identity.",
+   "explain": "1 − cos²θ = sin²θ, and sin²θ / sin θ = sin θ."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does sin²θ mean?",
+    "choices": [
+     "(sin θ)²",
+     "sin(θ²)",
+     "2 sin θ"
+    ],
+    "answer": 0,
+    "hint": "The small 2 belongs to the whole ratio.",
+    "explain": "sin²θ is shorthand for (sin θ)², the sine of θ multiplied by itself."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "cos θ = 0.6. Which is true?",
+    "choices": [
+     "sin θ = 0.8 or −0.8, depending on the quadrant",
+     "sin θ = 0.4",
+     "sin θ = 0.8 in every quadrant"
+    ],
+    "answer": 0,
+    "hint": "sin²θ = 1 − 0.36. How many square roots does 0.64 have?",
+    "explain": "sin²θ = 0.64, so sin θ = ±0.8. Above the x-axis it is 0.8; below it is −0.8."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Simplify (sin θ + cos θ)².",
+    "choices": [
+     "1 + 2 sin θ cos θ",
+     "1",
+     "sin θ + cos θ"
+    ],
+    "answer": 0,
+    "hint": "Expand the bracket before using the identity.",
+    "explain": "(sin θ + cos θ)² = sin²θ + 2 sin θ cos θ + cos²θ = 1 + 2 sin θ cos θ."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "cos θ = 1/{k}. Find tan²θ + 1.",
+    "answer": "k*k",
+    "params": {
+     "k": [
+      2,
+      9
+     ]
+    },
+    "hint": "Divide sin²θ + cos²θ = 1 by cos²θ.",
+    "explain": "tan²θ + 1 = 1/cos²θ = 1 ÷ (1/{k})² = {=k*k}."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "sin θ = −8/17 and θ is in quadrant IV. What is cos θ?",
+    "choices": [
+     "15/17",
+     "−15/17",
+     "9/17"
+    ],
+    "answer": 0,
+    "hint": "cos²θ = 1 − 64/289. In quadrant IV, is x positive or negative?",
+    "explain": "cos²θ = 225/289, so cos θ = ±15/17. In quadrant IV, x is positive, so cos θ = 15/17."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Find {k} − {k} sin²({a}°) − {k} cos²({a}°).",
+    "answer": "0*k",
+    "params": {
+     "k": [
+      2,
+      9
+     ],
+     "a": [
+      1,
+      359
+     ]
+    },
+    "hint": "Group the two squared terms and take out {k}.",
+    "explain": "{k} − {k}(sin²({a}°) + cos²({a}°)) = {k} − {k} × 1 = {=0*k}."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A student writes: sin θ = 0.6, so cos θ = 1 − 0.6 = 0.4. What went wrong?",
+    "choices": [
+     "The identity is about squares: cos²θ = 1 − sin²θ",
+     "Nothing; the working is right",
+     "They should have added: cos θ = 1.6"
+    ],
+    "answer": 0,
+    "hint": "Is the identity sin θ + cos θ = 1?",
+    "explain": "sin θ + cos θ is not 1. Use squares: cos²θ = 1 − 0.36 = 0.64, so cos θ = ±0.8."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "cos θ = {c}/10 with θ in quadrant I. Find sin²θ as a decimal.",
+    "answer": "(100-c*c)/100",
+    "params": {
+     "c": [
+      1,
+      9
+     ]
+    },
+    "hint": "sin²θ = 1 − cos²θ. Square {c}/10 first.",
+    "explain": "sin²θ = 1 − ({c}/10)² = 1 − {=c*c/100} = {=(100-c*c)/100}."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Rewrite 2 sin²x + 3 cos x = 3 using only cos x.",
+    "choices": [
+     "2 − 2cos²x + 3 cos x = 3",
+     "2 + 3 cos x = 3",
+     "2 sin x + 3 cos x = 3"
+    ],
+    "answer": 0,
+    "hint": "Replace sin²x with 1 − cos²x.",
+    "explain": "sin²x = 1 − cos²x, so 2 sin²x = 2 − 2cos²x, giving 2 − 2cos²x + 3 cos x = 3, a quadratic in cos x."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Sort each expression by what it simplifies to, using sin²θ + cos²θ = 1.",
+  "opts": {
+   "bins": [
+    "cos²θ",
+    "sin²θ",
+    "1"
+   ],
+   "items": [
+    [
+     "1 − sin²θ",
+     0
+    ],
+    [
+     "(1 − sin θ)(1 + sin θ)",
+     0
+    ],
+    [
+     "1 − cos²θ",
+     1
+    ],
+    [
+     "(1 − cos θ)(1 + cos θ)",
+     1
+    ],
+    [
+     "sin²θ + cos²θ",
+     2
+    ],
+    [
+     "cos²50° + sin²50°",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpyid",
+  "caption": "Flagship lab: turn the unit-circle point and watch the squares on its legs always fill 1, then pick signs by quadrant and simplify.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
