@@ -257,7 +257,7 @@ def cmd_next(n=12):
     r = sh(["node", "scripts/pipeline/rank.cjs", "80"], timeout=300)
     ranked = json.loads(r.stdout)
     q = load_queue()
-    skip = {d["topic"] for d in q["done"]}
+    skip = {d["topic"] for d in q["done"]} | {d["topic"] for d in q.get("skipped", [])}
     first = [t for p in PRIORITY for t in ranked if t["id"] == p]
     rest = [t for t in ranked if t["id"] not in PRIORITY]
     q["next"] = [{"topic": t["id"], "name": t["name"], "subject": t["subject"], "ages": t["ages"], "downstream": t["downstream"], "reels": t["reels"]}
