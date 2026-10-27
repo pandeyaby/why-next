@@ -1,0 +1,288 @@
+{
+ "topicId": "mt_4t_C2LgbMj",
+ "title": "Partial fractions",
+ "audience": "learner",
+ "keyIdea": "Partial fractions splits one fraction into a sum of simpler ones, which is adding fractions in reverse. Each linear factor (x − a) in the denominator gets its own A/(x − a). A repeated factor (x − a)² needs both A/(x − a) and B/(x − a)². Find the constants by substituting the x that makes a factor zero (cover-up) or by comparing coefficients. If the top degree is not lower than the bottom, divide first.",
+ "explain": {
+  "kid": [
+   "Adding 2/(x + 1) and 3/(x − 2) gives one fraction: (5x − 1)/((x + 1)(x − 2)). Partial fractions goes the other way. You start with the single fraction and split it back into simple parts.",
+   "Each factor on the bottom gets its own fraction. To split (x + 5)/((x − 1)(x + 2)), write A/(x − 1) + B/(x + 2). Put both over the same bottom. The tops must then be equal: A(x + 2) + B(x − 1) = x + 5.",
+   "Now choose x values that make terms vanish. Put x = 1 and the B part is zero, so 3A = 6 and A = 2. Put x = −2 and the A part is zero, so −3B = 3 and B = −1. This shortcut is called cover-up. Watch the sign: for (x + 2) you use x = −2.",
+   "Two special cases. A squared factor like (x − 1)² needs two fractions, A/(x − 1) and B/(x − 1)². And if the top's degree is the same as the bottom's or higher, divide first. Then split what is left over."
+  ],
+  "adult": [
+   "This A-level topic (ages 16 to 18) is about splitting one fraction in x into a sum of simpler ones. The bottom is made of linear factors, some of them repeated, and each new top is a constant. Learners need it to integrate fractions and to expand them as series, so it opens up a lot of later calculus.",
+   "The method rests on one fact. Once both sides share a bottom, the tops must agree for every x. That gives two tools. Put in the root of each factor (cover-up) to get its constant at once. Or compare the x², x and number terms to get the rest. You need this second tool for the lower power of a repeated factor. To check, add the parts back or test one x.",
+   "Common mistakes: adding fractions by adding tops and bottoms; using x = a for a factor (x + a); giving a repeated factor (x − a)² only one fraction; writing A/(x − a) + B/(x − a), which is really one term; and splitting an improper fraction without dividing first. Be careful with cover-up on a repeated factor: it only gives the top over the highest power.",
+   "In the lab learners add two fractions to see where the split comes from, drag A and B until A/(x − 1) + B/(x + 2) sits on the target curve, and find constants by covering one factor at a time. They also choose the right form for (x − 1)² and solve for A, B and C, and see on a graph why an improper fraction must be divided first."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is the right form for (3x + 4)/((x + 1)(x − 3))?",
+   "choices": [
+    "A/(x + 1) + B/(x − 3)",
+    "A/(x + 1)(x − 3)",
+    "(Ax + B)/(x + 1)"
+   ],
+   "answer": 0,
+   "hint": "Each linear factor on the bottom gets its own fraction with a constant on top.",
+   "explain": "Two different linear factors give two fractions: A/(x + 1) + B/(x − 3)."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "({=a+b}x + {=2*a-b})/((x − 1)(x + 2)) = A/(x − 1) + B/(x + 2). Find A.",
+   "answer": "a",
+   "hint": "Cover (x − 1) and put x = 1 into everything that is left.",
+   "explain": "Put x = 1: ({=a+b} + {=2*a-b}) ÷ (1 + 2) = {=3*a} ÷ 3 = {a}, so A = {a}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "({=a+b}x + {=2*a-b})/((x − 1)(x + 2)) = A/(x − 1) + B/(x + 2). Find B.",
+   "answer": "b",
+   "hint": "For (x + 2), put x = −2, not x = 2.",
+   "explain": "Put x = −2: (−{=2*a+2*b} + {=2*a-b}) ÷ (−2 − 1) = −{=3*b} ÷ −3 = {b}, so B = {b}.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What form does 5/((x − 2)²(x + 1)) need?",
+   "choices": [
+    "A/(x − 2) + B/(x − 2)² + C/(x + 1)",
+    "A/(x − 2)² + B/(x + 1)",
+    "A/(x − 2) + B/(x − 2) + C/(x + 1)"
+   ],
+   "answer": 0,
+   "hint": "A squared factor needs one fraction for each power.",
+   "explain": "The repeated factor (x − 2)² needs A/(x − 2) and B/(x − 2)², plus C/(x + 1) for the other factor."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "{=k*m}/(x(x + {k})) = A/x + B/(x + {k}). Find A.",
+   "answer": "m",
+   "hint": "Cover x and put x = 0 into what is left.",
+   "explain": "Put x = 0: {=k*m} ÷ (0 + {k}) = {m}. So A = {m} (and B = −{m}).",
+   "params": {
+    "k": [
+     2,
+     5
+    ],
+    "m": [
+     1,
+     4
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is 1/(x − 1) + 2/(x + 1) as one fraction?",
+    "choices": [
+     "(3x − 1)/((x − 1)(x + 1))",
+     "3/(2x)",
+     "(3x + 1)/((x − 1)(x + 1))"
+    ],
+    "answer": 0,
+    "hint": "Use the common denominator (x − 1)(x + 1).",
+    "explain": "The top is (x + 1) + 2(x − 1) = 3x − 1, over (x − 1)(x + 1)."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "({=a+b}x + {=a-b})/((x − 1)(x + 1)) = A/(x − 1) + B/(x + 1). Find A.",
+    "answer": "a",
+    "hint": "Put x = 1 to make the (x − 1) factor zero.",
+    "explain": "A(x + 1) + B(x − 1) = {=a+b}x + {=a-b}. Put x = 1: 2A = {=a+b} + {=a-b} = {=2*a}, so A = {a}.",
+    "params": {
+     "a": [
+      5,
+      8
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "({=a+b}x + {=a-b})/((x − 1)(x + 1)) = A/(x − 1) + B/(x + 1). Find B.",
+    "answer": "b",
+    "hint": "Put x = −1 so the A term vanishes.",
+    "explain": "Put x = −1: the right side is −2B and the top is −{=a+b} + {=a-b} = −{=2*b}. So −2B = −{=2*b} and B = {b}.",
+    "params": {
+     "a": [
+      5,
+      8
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Before splitting (x² + 3)/((x − 1)(x + 2)) into partial fractions you should…",
+    "choices": [
+     "Divide, because the top degree equals the bottom degree",
+     "Use cover-up straight away",
+     "Factorise x² + 3 first"
+    ],
+    "answer": 0,
+    "hint": "Compare the degree of the top with the degree of the bottom.",
+    "explain": "Top and bottom both have degree 2, so the fraction is improper. Divide first to get 1 plus a proper fraction."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "To find B in (2x + 7)/((x − 1)(x + 3)) = A/(x − 1) + B/(x + 3), which value do you substitute?",
+    "choices": [
+     "x = −3",
+     "x = 3",
+     "x = 0"
+    ],
+    "answer": 0,
+    "hint": "Which x makes (x + 3) equal zero?",
+    "explain": "x = −3 makes (x + 3) zero, which removes the A term. Then 2(−3) + 7 = −4B, so B = −1/4."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is A/(x − 2) + B/(x − 2) the wrong form for a repeated factor (x − 2)²?",
+    "choices": [
+     "It is really one term, (A + B)/(x − 2)",
+     "It has too many constants",
+     "It should be A/(x + 2)"
+    ],
+    "answer": 0,
+    "hint": "Add the two fractions. What do you get?",
+    "explain": "A/(x − 2) + B/(x − 2) = (A + B)/(x − 2), a single term. You need A/(x − 2) + B/(x − 2)²."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In 4/((x − 1)²(x + 1)) = A/(x − 1) + B/(x − 1)² + C/(x + 1), B = 2 and C = 1. What is A?",
+    "choices": [
+     "−1",
+     "1",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Compare x² terms: A(x − 1)(x + 1) gives Ax², C(x − 1)² gives Cx².",
+    "explain": "There is no x² on the left, so A + C = 0 and A = −1."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "3/(x(x + 3)) = A/x + B/(x + 3). Find B.",
+    "answer": -1,
+    "hint": "Cover (x + 3), then put x = −3 into what is left, 3/x.",
+    "explain": "Cover (x + 3) and put x = −3: 3 ÷ (−3) = −1, so B = −1."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Kai writes 6/((x − 1)(x + 2)) = 2/(x − 1) − 2/(x + 2). How can he check it quickly?",
+    "choices": [
+     "Put x = 0 into both sides",
+     "Count the fractions",
+     "Differentiate both sides"
+    ],
+    "answer": 0,
+    "hint": "Any x that is not a root of the bottom will do.",
+    "explain": "At x = 0: left 6 ÷ (−2) = −3, right −2 − 1 = −3. They agree, so the split is right."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "{=3*c}/((x − 2)(x + 1)) = A/(x − 2) + B/(x + 1). Find A.",
+    "answer": "c",
+    "hint": "Cover (x − 2) and put x = 2.",
+    "explain": "Put x = 2: {=3*c} ÷ (2 + 1) = {c}, so A = {c} and B = −{c}.",
+    "params": {
+     "c": [
+      1,
+      4
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which denominators need more than one fraction per factor? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "One term per factor",
+    "Has a repeated factor"
+   ],
+   "items": [
+    [
+     "(x − 1)(x + 2)",
+     0
+    ],
+    [
+     "x(x + 3)",
+     0
+    ],
+    [
+     "(x − 2)(x + 2)(x + 1)",
+     0
+    ],
+    [
+     "(x − 1)²",
+     1
+    ],
+    [
+     "(x + 2)²(x − 3)",
+     1
+    ],
+    [
+     "x²(x + 1)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpfrac",
+  "caption": "Flagship lab: add two fractions, drag A and B to match a curve, use cover-up, handle a repeated factor, and divide an improper fraction first.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
