@@ -20,8 +20,8 @@
    "id": "p1",
    "prompt": "Increase {a} by 10%.",
    "answer": "a*11/10",
-   "hint": "Multiply by 1.1.",
-   "explain": "{a} × 1.1 = {=a*11/10}.",
+   "hint": "A 10% increase means multiply by 1.1.",
+   "explain": "100% + 10% = 110%, so {a} × 1.1 = {=a*11/10}.",
    "params": {
     "a": [
      20,
@@ -34,8 +34,8 @@
    "id": "p2",
    "prompt": "Decrease {a} by 25%.",
    "answer": "a*3/4",
-   "hint": "Multiply by 0.75.",
-   "explain": "{a} × 0.75 = {=a*3/4}.",
+   "hint": "A 25% decrease leaves 75%, so multiply by 0.75.",
+   "explain": "100% − 25% = 75%, so {a} × 0.75 = {=a*3/4}.",
    "params": {
     "a": [
      4,
@@ -54,8 +54,8 @@
     "£40"
    ],
    "answer": 0,
-   "hint": "Divide by 1.2.",
-   "explain": "60 ÷ 1.2 = 50."
+   "hint": "Undo the rise: divide by the multiplier 1.2.",
+   "explain": "£60 is 120% of the old price, so 60 ÷ 1.2 = £50."
   },
   {
    "type": "numeric",
@@ -128,8 +128,8 @@
      "0.15"
     ],
     "answer": 0,
-    "hint": "100% − 15%.",
-    "explain": "85% = 0.85."
+    "hint": "Work out what is left: 100% − 15%.",
+    "explain": "85% is left, and 85% as a decimal is 0.85."
    },
    {
     "type": "numeric",
@@ -160,8 +160,8 @@
      "90% of the start"
     ],
     "answer": 0,
-    "hint": "1.1 × 0.9.",
-    "explain": "1.1 × 0.9 = 0.99, so 99%."
+    "hint": "Multiply the two multipliers: 1.1 × 0.9.",
+    "explain": "1.1 × 0.9 = 0.99, so the price ends at 99% of the start."
    },
    {
     "type": "numeric",
@@ -196,7 +196,7 @@
     ],
     "answer": 0,
     "hint": "£28 is 70% of the original.",
-    "explain": "28 ÷ 0.7 = 40."
+    "explain": "£28 is 70% of the original, so 28 ÷ 0.7 = £40."
    }
   ]
  },

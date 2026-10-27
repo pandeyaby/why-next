@@ -24,7 +24,7 @@
     "irreversible"
    ],
    "answer": 0,
-   "hint": "Cool it.",
+   "hint": "Think what happens when you cool it.",
    "explain": "It sets again: reversible."
   },
   {
@@ -45,7 +45,7 @@
    "prompt": "{n} ice cubes melt, then all refreeze. How many ice cubes?",
    "answer": "n",
    "hint": "Same as before.",
-   "explain": "{n} again.",
+   "explain": "Melting is reversible, so all {n} ice cubes come back.",
    "params": {
     "n": [
      3,
@@ -58,8 +58,8 @@
    "id": "p4",
    "prompt": "You dissolve {n} g of salt and evaporate the water. How many grams of salt do you get back?",
    "answer": "n",
-   "hint": "Reversible.",
-   "explain": "{n} g.",
+   "hint": "Dissolving is reversible, so nothing is lost.",
+   "explain": "All the salt is left behind: {n} g comes back.",
    "params": {
     "n": [
      5,
@@ -106,7 +106,7 @@
      "only gas"
     ],
     "answer": 0,
-    "hint": "Same stuff.",
+    "hint": "It is still the same stuff afterwards.",
     "explain": "No new material."
    },
    {
@@ -119,7 +119,7 @@
      "It stays ice for ever"
     ],
     "answer": 0,
-    "hint": "Reversible.",
+    "hint": "Melting is a change you can undo.",
     "explain": "It melts back into water: the same material."
    },
    {
@@ -127,8 +127,8 @@
     "id": "m5",
     "prompt": "{n} g of wax melts. What mass of wax sets again, in g?",
     "answer": "n",
-    "hint": "Nothing lost.",
-    "explain": "{n} g.",
+    "hint": "No wax is lost when it melts.",
+    "explain": "Melting is reversible, so all {n} g of wax sets again.",
     "params": {
      "n": [
       10,
@@ -141,8 +141,8 @@
     "id": "m6",
     "prompt": "{n} changes: {m} are reversible. How many are irreversible?",
     "answer": "n-m",
-    "hint": "Take away.",
-    "explain": "{=n-m}.",
+    "hint": "Take the reversible ones away from the total.",
+    "explain": "{n} − {m} = {=n-m} changes are irreversible.",
     "params": {
      "n": [
       5,
