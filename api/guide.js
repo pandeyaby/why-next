@@ -2,7 +2,7 @@
    Opt-in only (the learner turns on "Live AI Guide"); the browser falls back to the offline Guide on any error.
    Guards: preview-only (off in production), same-origin requests, a per-IP rate limit, size caps on input and output,
    an 8 s upstream timeout, and a safety system prompt for learners who may be children. The request carries only the
-   open lesson's text, the question, and the learner's coarse state, reason and stated profile; never raw signals.
+   open lesson's text, up to two related lesson titles and key ideas, the question, and the learner's coarse state, reason and stated profile; never raw signals.
    Env: WN_GEMINI_API_KEY (Preview only). Optional WN_GUIDE_MODEL.
    Rate limits are shared by every instance through Why Next's Supabase project (rpc guide_rate_hit, see
    docs/guide-rate-limits.md): WN_RL_URL, WN_RL_KEY (publishable key), WN_RL_SECRET. Fail closed: if the store is not
@@ -10,14 +10,14 @@
    dev and unit tests only) allows the in-memory limiter alone. */
 import { createHash } from 'node:crypto';
 export const MODEL_DEFAULT = 'gemini-3.1-flash-lite';
-export const LIMITS = { perMinute: 6, perDay: 60, globalPerDay: 800, maxBody: 8000, maxQuestion: 400, maxContext: 3000, maxOutputTokens: 260, maxReply: 900, timeoutMs: 8000 };
+export const LIMITS = { maxRelated: 2, perMinute: 6, perDay: 60, globalPerDay: 800, maxBody: 8000, maxQuestion: 400, maxContext: 3000, maxOutputTokens: 260, maxReply: 900, timeoutMs: 8000 };
 const STATES = ['focused', 'struggling', 'frustrated', 'bored', 'confident', 'tired', 'away'];
 const STYLES = ['balanced', 'visual', 'steps', 'brief'], TONES = ['calm', 'playful', 'socratic', 'concise'], LEVELS = ['kid', 'adult'];
 
-export const SYSTEM_PROMPT = `You are Nova, the friendly study guide inside "Why Next?", a learning app used by learners aged about 11 to 18 and by adults, worldwide.
+export const SYSTEM_PROMPT = `You are Nova, the friendly study guide inside "Why Next?", a learning app used by learners aged about 2 to 18 (younger children with a parent), and by adults, worldwide.
 Rules you always follow:
-- Stay on the open lesson and closely related school maths and science. If asked about something else, say kindly that you can only help with learning here and suggest a question about the lesson.
-- Ground every answer in the lesson text you are given. If the lesson text does not cover it, give a short, standard, age-appropriate explanation and say so plainly. Never invent facts, sources or numbers.
+- Stay on the open lesson and closely related school learning (maths, science, English, and learning and personal skills). If asked about something else, say kindly that you can only help with learning here and suggest a question about the lesson.
+- Ground every answer in the lesson text you are given, or in the other Why Next lessons listed with it. If the question is covered by one of those other lessons, it is on topic: answer it briefly from that lesson and name the lesson so the learner can open it. If none of them covers it, give a short, standard, age-appropriate explanation and say so plainly. Never invent facts, sources or numbers.
 - Be kind, calm and encouraging. Never shame, pressure, threaten, flatter excessively, or use guilt or urgency. Do not diagnose feelings; at most acknowledge what the learner said.
 - Never ask for, store, or repeat personal information (name, age, school, location, contact details, photos, accounts). If the learner shares any, do not repeat it and gently say they don't need to share it.
 - No romantic, sexual, violent, hateful, medical, legal, or dangerous content. If a learner seems unsafe or in distress, say you're a study helper and encourage them to talk to a trusted adult or local emergency services.
@@ -36,12 +36,14 @@ export function shapeInput(body) {
   const ctxText = [lesson.keyIdea, ...lesson.explain].join(' ').slice(0, LIMITS.maxContext);
   const r = body.learner && typeof body.learner === 'object' ? body.learner : {}, p = r.profile && typeof r.profile === 'object' ? r.profile : {};
   const learner = { state: one(r.state, STATES, 'focused'), why: clip(r.why, 120), style: one(p.style, STYLES, 'balanced'), exam: clip(p.exam, 40), goal: clip(p.goal, 80), time: Number.isFinite(p.time) ? Math.min(120, Math.max(0, p.time)) : 0 };
-  return { q, lesson: Object.assign(lesson, { ctxText }), learner, tone: one(body.tone, TONES, 'calm'), level: one(body.level, LEVELS, 'adult') };
+  const related = Array.isArray(body.related) ? body.related.filter(r => r && typeof r === 'object' && r.title).slice(0, LIMITS.maxRelated).map(r => ({ title: clip(r.title, 120), keyIdea: clip(r.keyIdea, 300) })) : [];
+  return { q, lesson: Object.assign(lesson, { ctxText }), related, learner, tone: one(body.tone, TONES, 'calm'), level: one(body.level, LEVELS, 'adult') };
 }
 /* The Gemini request body: the safety prompt as system instruction, then the lesson and learner context, then the question. */
 export function buildRequest(x) {
   const l = x.learner, ls = x.lesson;
   const context = [`Lesson: ${ls.title || '(none open)'}`, ls.ctxText && `Lesson text: ${ls.ctxText}`, ls.prompt && `Question they are on: ${ls.prompt}`, ls.hint && `Its hint: ${ls.hint}`,
+    (x.related || []).length && `Other Why Next lessons that may fit: ${x.related.map(r => `"${r.title}"${r.keyIdea ? ' (key idea: ' + r.keyIdea + ')' : ''}`).join('; ')}`,
     `Reading level: ${x.level === 'kid' ? 'younger learner, very simple words' : 'teen or adult'}`, `Personality: ${x.tone}`, `Preferred style: ${l.style}`,
     `Learner right now: ${l.state}${l.why ? ' (' + l.why + ')' : ''}`, l.exam && `Course or exam: ${l.exam}`, l.goal && `Their goal: ${l.goal}`].filter(Boolean).join('\n');
   return { systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },

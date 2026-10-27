@@ -12,7 +12,9 @@ let lastFallback=0,lastSource='offline';
 function payload(c,text){const L=c.lesson||{},lv=c.level==='kid'?'kid':'adult',ex=L.explain&&(L.explain[lv]||L.explain.adult||L.explain.kid)||[];
  const m=c.learner||{},p=m.profile||{},item=document.querySelector('#pbox .qi:not([data-done]) .qp');
  return{q:String(text).slice(0,400),tone:c.tone,level:lv,lesson:{title:L.title||'',keyIdea:L.keyIdea||'',explain:ex.slice(0,6),prompt:item?item.textContent.slice(0,300):''},
-  learner:{state:m.state,why:m.why,profile:{style:p.style,exam:p.exam,goal:p.goal,time:p.time}}}}
+  learner:{state:m.state,why:m.why,profile:{style:p.style,exam:p.exam,goal:p.goal,time:p.time}},related:relatedLessons(text,L)}}
+/* Up to two other Why Next lessons that fit the question (guide_kb.js), so the answer can come from the site and name a lesson. */
+function relatedLessons(text,L){try{return typeof GUIDE_KB==='undefined'||typeof LEARN==='undefined'?[]:GUIDE_KB.related(text,LEARN.L,L.topicId,2).map(r=>({title:r.title,keyIdea:r.keyIdea}))}catch(x){return[]}}
 /* Ask the server; any failure falls back to the offline brain so the learner always gets an answer. */
 const liveBrain={name:'Live AI Guide (Gemini, via Why Next server)',async reply(c,text){const local=()=>GUIDE.localBrain.reply(c,text);
  if(!navigator.onLine)return fallback(local(),'You’re offline, so I’m using the built-in guide.');
@@ -27,7 +29,7 @@ function set(v){on=!!v&&available();try{localStorage.setItem(KEY,on?'1':'0')}cat
  const g=GUIDE.el();if(g){g.dataset.live=on?'1':'0';const b=g.querySelector('.gl-badge');if(b)b.hidden=!on}}
 function mount(root){if(!available()||root.querySelector('.gl-row'))return;const grid=root.querySelector('.gd-set .gd-grid');if(!grid)return;
  const row=document.createElement('div');row.className='gl-row';
- row.innerHTML=`<label class="gd-chk"><input type="checkbox" name="live"${on?' checked':''}> Live AI Guide</label><p class="gl-note" id="glNote">When on, your questions and this lesson’s text go to Google’s Gemini through our server to write smarter answers. Don’t type personal details. Off means everything stays on this device.</p>`;
+ row.innerHTML=`<label class="gd-chk"><input type="checkbox" name="live"${on?' checked':''}> Live AI Guide</label><p class="gl-note" id="glNote">When on, your questions and this lesson’s text go to Google’s Gemini through our server to write smarter answers. The titles of up to 2 related lessons are sent along with each question. Don’t type personal details. Off means everything stays on this device.</p>`;
  row.querySelector('input').setAttribute('aria-describedby','glNote');row.querySelector('input').onchange=e=>{e.stopPropagation();set(e.target.checked);GUIDE.say(on?'Live AI is on. Ask me anything about this lesson.':'Live AI is off. I’m using the built-in guide, so nothing leaves this device.')};
  grid.append(row);const nm=root.querySelector('.gd-name');if(nm&&!root.querySelector('.gl-badge')){const b=document.createElement('span');b.className='gl-badge';b.textContent='Live AI';b.hidden=!on;nm.after(b)}set(on)}
 document.addEventListener('wn:guide',e=>{const d=e.detail||{};if(d.kind==='built')mount(d.root)});

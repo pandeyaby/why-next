@@ -74,7 +74,7 @@ def fill(m):
     return str(tok[k])
 out = re.sub(r'\{\{\{(\w+)\}\}\}|\{\{(\w+)\}\}', fill, tpl)
 assert '{{' not in out.replace('{{name}}', ''), 'unfilled token'
-css = open(os.path.join(SITE, 'assets/styles.css'), encoding='utf-8').read()
+css = open(os.path.join(SITE, 'assets/styles.css'), encoding='utf-8').read() + '\n' + open(os.path.join(SITE, 'assets/polish.css'), encoding='utf-8').read()
 js_inf = open(os.path.join(SITE, 'assets/infer.js'), encoding='utf-8').read()
 js_soft = open(os.path.join(SITE, 'assets/soften.js'), encoding='utf-8').read()
 import base64
@@ -84,7 +84,7 @@ js_app = open(os.path.join(SITE, 'assets/app.js'), encoding='utf-8').read()
 def multi(base, viewer):
     attr = ' data-viewer="%s"' % viewer + (' data-base="%s"' % base if base else '')
     return (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--HTMLATTR-->', attr).replace('%%VIEWER%%', viewer)
-            .replace('<!--CSS-->', '<link rel="preload" href="%sassets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="%sassets/styles.css">' % (base, base))
+            .replace('<!--CSS-->', '<link rel="preload" href="%sassets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="%sassets/styles.css">\n<link rel="stylesheet" href="%sassets/polish.css">' % (base, base, base))
             .replace('<!--DATA-->', '')
             .replace('<!--JS-->', ''.join('<script src="%sassets/%s.js" defer></script>\n' % (base, n) for n in ('soften', 'infer', 'app')).rstrip()))
 open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8').write(multi('', '../out/viewer.html'))

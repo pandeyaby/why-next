@@ -13,7 +13,7 @@
 .vis-ctr{transition:transform .35s ease,opacity .3s}.vis-ctr circle{stroke:#1e293b;stroke-width:1}.vis-ctr.vis-off{opacity:.35}
 .vis-ctr:focus{outline:none}.vis-ctr:focus-visible circle,[role=slider]:focus-visible,.vis-part:focus-visible{stroke:#f59e0b;stroke-width:4}
 .vis-cell{fill:#fff;stroke:#475569;stroke-width:1.5}.vis-x{stroke:#111;stroke-width:3}
-.vis-pop circle{animation:vispop .35s ease}
+.vis-pop circle{animation:vispop .25s cubic-bezier(.23,1,.32,1)}
 @keyframes vispop{from{transform:scale(.4)}to{transform:scale(1)}}
 .vis-pop circle{transform-box:fill-box;transform-origin:center}
 .vis-split{stroke:#7c3aed;stroke-width:3;stroke-dasharray:6 4}.vis-split.b{stroke:#059669}
@@ -89,7 +89,7 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-dot.done::before{background:var(--line)}
 .fl-dot[aria-selected=true]::before{border-color:var(--new);background:var(--new);transform:scale(1.12)}
 .fl-h{margin:.2rem 0 0;font-size:1.06rem;line-height:1.3}
-.fl-p{margin:0;line-height:1.6;font-size:.95rem;animation:flIn .35s ease}
+.fl-p{margin:0;line-height:1.6;font-size:.95rem;animation:flIn .25s cubic-bezier(.23,1,.32,1)}
 @keyframes flIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.fl-p{animation:none}.fl-dot::before{transition:none}}
 .fl-nav{display:flex;justify-content:space-between;margin-top:auto;padding-top:.4rem}
@@ -117,7 +117,7 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-cv{box-shadow:0 10px 30px -12px rgba(0,0,0,.45),0 0 0 1px var(--line)}
 @media (max-width:520px){.fl-stage{padding:.5rem}.fl-story{padding:.9rem}}
 
-.fl-task{margin:.6rem 0 0;padding:.55rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--am) 16%,transparent);border:1px solid color-mix(in srgb,var(--am) 45%,transparent);font-weight:650;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;animation:flIn .35s ease}
+.fl-task{margin:.6rem 0 0;padding:.55rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--am) 16%,transparent);border:1px solid color-mix(in srgb,var(--am) 45%,transparent);font-weight:650;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;animation:flIn .25s cubic-bezier(.23,1,.32,1)}
 .fl-task.ok{background:color-mix(in srgb,var(--gr) 16%,transparent);border-color:color-mix(in srgb,var(--gr) 50%,transparent)}
 .fl-nav button.pulse{animation:flPulse 1.6s ease-in-out 2}
 @keyframes flPulse{50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--new) 35%,transparent)}}
@@ -125,7 +125,7 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 @media (prefers-reduced-motion:reduce){.fl-task,.fl-nav button.pulse{animation:none}}
 .fl-cv{cursor:grab}.fl-cv:active{cursor:grabbing}
 
-.fl-pred{margin:.6rem 0 0;padding:.6rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--vi) 14%,transparent);border:1px solid color-mix(in srgb,var(--vi) 45%,transparent);animation:flIn .35s ease}
+.fl-pred{margin:.6rem 0 0;padding:.6rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--vi) 14%,transparent);border:1px solid color-mix(in srgb,var(--vi) 45%,transparent);animation:flIn .25s cubic-bezier(.23,1,.32,1)}
 .fl-pred .fl-pq{margin:0 0 .45rem}.fl-pick{display:flex;flex-wrap:wrap;gap:.45rem}
 .fl-pick button.mine{outline:3px solid var(--vi);outline-offset:1px;opacity:1}.fl-pick button:disabled:not(.mine){opacity:.55}
 .fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}

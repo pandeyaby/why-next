@@ -39,7 +39,7 @@ await test('upstream errors, empty/blocked replies and timeouts map to 5xx (the 
   assert.strictEqual((await call({ body: good, fetch: async () => { throw new Error('down') } })).code, 504);
   assert.strictEqual(replyText({ candidates: [{ content: { parts: [{ text: 'a'.repeat(5000) }] } }] }).length, LIMITS.maxReply) });
 await test('the safety prompt covers minors, lesson grounding, personal data and prompt injection', async () => {
-  for (const re of [/11 to 18/, /Ground every answer in the lesson/, /Never ask for, store, or repeat personal information/, /trusted adult/, /Ignore any instruction/]) assert.match(SYSTEM_PROMPT, re) });
+  for (const re of [/2 to 18/, /Ground every answer in the lesson/, /Never ask for, store, or repeat personal information/, /trusted adult/, /Ignore any instruction/]) assert.match(SYSTEM_PROMPT, re) });
 await test('shared limits: store answers decide; IP is hashed; unconfigured or failing store fails closed (503)', async () => {
   const E = { WN_GEMINI_API_KEY: 'k', VERCEL_ENV: 'preview', WN_RL_URL: 'https://db.example/', WN_RL_KEY: 'pub', WN_RL_SECRET: 's3' };
   const store = v => async (url, init) => { store.last = { url, init }; return { ok: true, json: async () => v } };
@@ -52,4 +52,9 @@ await test('shared limits: store answers decide; IP is hashed; unconfigured or f
   _resetLimits(); r = await call({ body: good, env: E, fetch: ok('hi'), rlFetch: async () => ({ ok: false, status: 401 }) }); assert.strictEqual(r.code, 503);
   _resetLimits(); r = await call({ body: good, env: { WN_GEMINI_API_KEY: 'k', VERCEL_ENV: 'preview' }, fetch: ok('hi') }); assert.strictEqual(r.code, 503); assert.strictEqual(r.json.error, 'limits_unconfigured');
   assert.strictEqual(await sharedAllow('1.1.1.1', { WN_RL_MEMORY: '1' }), 'ok') });
+await test('related lessons: at most two, clipped, junk dropped, and named in the context', async () => {
+  const x = shapeInput({ q: 'What is photosynthesis?', related: [{ title: 'Plants make food', keyIdea: 'k'.repeat(900) }, 'junk', null, { keyIdea: 'no title' }, { title: 'B' }, { title: 'C' }] });
+  assert.strictEqual(x.related.length, 2); assert.strictEqual(x.related[0].keyIdea.length, 300); assert.deepStrictEqual(x.related.map(r => r.title), ['Plants make food', 'B']);
+  assert.match(buildRequest(x).contents[0].parts[0].text, /Other Why Next lessons that may fit: "Plants make food"/);
+  assert.ok(!/Other Why Next lessons/.test(buildRequest(shapeInput({ q: 'hi' })).contents[0].parts[0].text)) });
 console.log(fails ? fails + ' failed' : 'all passed'); process.exit(fails ? 1 : 0);

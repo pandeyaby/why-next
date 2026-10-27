@@ -9,3 +9,4 @@ echo "== demo 162-combo test"; node site/build/test_infer.cjs
 echo "== lessons validator"; python3 learn/validate_lessons.py
 echo "== goal-path coverage"; python3 learn/goal_coverage.py
 echo "== deterministic build"; sh scripts/check_deterministic.sh
+echo "== guide eval (offline)"; node scripts/eval/guide_eval.mjs --offline
