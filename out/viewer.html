@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#020617"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc"><link rel="icon" href="data:,">
 <script>try{document.documentElement.dataset.theme=localStorage.getItem("whynext.theme")||"2052"}catch(e){document.documentElement.dataset.theme="2052"}</script>
 <meta name="color-scheme" content="dark light"><title>Why Next? A learning map: what to learn next, and why</title>
 <style>
 #side h1{color:#111827}:root{--new:#1d4ed8;--old:#4b5563;--bridge:#b45309;--bg:#f8fafc}
-*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#111827;background:var(--bg);display:flex;height:100vh}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#111827;background:var(--bg);display:flex;height:100vh;height:100dvh}
 #side{width:340px;border-right:1px solid #e5e7eb;display:flex;flex-direction:column;background:#fff}
 #side header{padding:12px;border-bottom:1px solid #e5e7eb}#side h1{font-size:15px;margin:0 0 4px}
 #side small{color:#6b7280}#q{width:100%;padding:7px 9px;margin-top:8px;border:1px solid #d1d5db;border-radius:6px}
 #filters{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}#filters label{font-size:12px;background:#f3f4f6;padding:2px 6px;border-radius:10px;cursor:pointer}
 #list{overflow:auto;flex:1}.dom{font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#374151;padding:10px 12px 4px;position:sticky;top:0;background:#fff}
-.item{padding:5px 12px;cursor:pointer;display:flex;justify-content:space-between;gap:6px}.item:hover{background:#eff6ff}.item.sel{background:#dbeafe}
+.item{padding:5px 12px;cursor:pointer;display:flex;justify-content:space-between;gap:6px}@media (hover:hover) and (pointer:fine){.item:hover{background:#eff6ff}}.item.sel{background:#dbeafe}
 .age{color:#4b5563;font-size:12px;white-space:nowrap}
 #main{flex:1;overflow:auto;padding:16px 20px}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:14px 16px;margin-bottom:14px}
@@ -52,7 +52,7 @@ circle.g-done{fill:#16a34a}circle.g-next{stroke:#d97706;stroke-width:3}
 .ord{list-style:none;padding:0;margin:4px 0 8px}.ord li{display:flex;align-items:center;gap:6px;border:1px solid #d1d5db;background:#fff;border-radius:8px;padding:4px 6px;margin:4px 0;cursor:grab}
 .ord .ov{flex:1;font-size:15px}.grip{color:#9ca3af}.mv{font:inherit;min-width:40px;min-height:36px;border:1px solid #d1d5db;background:#f9fafb;border-radius:6px;cursor:pointer}
 .mres{font-size:15px}.lkey{font-size:12px;margin-bottom:0}
-@media (max-width:760px){body{flex-direction:column;height:auto;min-height:100vh}#side{width:100%;border-right:0;border-bottom:1px solid #e5e7eb;height:46vh}
+@media (max-width:760px){body{flex-direction:column;height:auto;min-height:100vh;min-height:100dvh}#side{width:100%;border-right:0;border-bottom:1px solid #e5e7eb;height:46vh}
  #main{padding:10px;overflow:visible}.card{padding:12px}.lvl{margin-left:0}.item{padding:9px 12px}svg{max-height:60vh}}
 .review{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:4px 12px 8px;margin:8px 0}
 .ord li{touch-action:none;user-select:none}.ord li.dragging{box-shadow:0 4px 12px rgba(0,0,0,.18);border-color:#6d28d9;background:#f5f3ff}
@@ -92,7 +92,7 @@ circle.g-done{fill:#16a34a}circle.g-next{stroke:#d97706;stroke-width:3}
 .vis-ctr{transition:transform .35s ease,opacity .3s}.vis-ctr circle{stroke:#1e293b;stroke-width:1}.vis-ctr.vis-off{opacity:.35}
 .vis-ctr:focus{outline:none}.vis-ctr:focus-visible circle,[role=slider]:focus-visible,.vis-part:focus-visible{stroke:#f59e0b;stroke-width:4}
 .vis-cell{fill:#fff;stroke:#475569;stroke-width:1.5}.vis-x{stroke:#111;stroke-width:3}
-.vis-pop circle{animation:vispop .35s ease}
+.vis-pop circle{animation:vispop .25s cubic-bezier(.23,1,.32,1)}
 @keyframes vispop{from{transform:scale(.4)}to{transform:scale(1)}}
 .vis-pop circle{transform-box:fill-box;transform-origin:center}
 .vis-split{stroke:#7c3aed;stroke-width:3;stroke-dasharray:6 4}.vis-split.b{stroke:#059669}
@@ -168,7 +168,7 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-dot.done::before{background:var(--line)}
 .fl-dot[aria-selected=true]::before{border-color:var(--new);background:var(--new);transform:scale(1.12)}
 .fl-h{margin:.2rem 0 0;font-size:1.06rem;line-height:1.3}
-.fl-p{margin:0;line-height:1.6;font-size:.95rem;animation:flIn .35s ease}
+.fl-p{margin:0;line-height:1.6;font-size:.95rem;animation:flIn .25s cubic-bezier(.23,1,.32,1)}
 @keyframes flIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.fl-p{animation:none}.fl-dot::before{transition:none}}
 .fl-nav{display:flex;justify-content:space-between;margin-top:auto;padding-top:.4rem}
@@ -196,7 +196,7 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 .fl-cv{box-shadow:0 10px 30px -12px rgba(0,0,0,.45),0 0 0 1px var(--line)}
 @media (max-width:520px){.fl-stage{padding:.5rem}.fl-story{padding:.9rem}}
 
-.fl-task{margin:.6rem 0 0;padding:.55rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--am) 16%,transparent);border:1px solid color-mix(in srgb,var(--am) 45%,transparent);font-weight:650;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;animation:flIn .35s ease}
+.fl-task{margin:.6rem 0 0;padding:.55rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--am) 16%,transparent);border:1px solid color-mix(in srgb,var(--am) 45%,transparent);font-weight:650;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;animation:flIn .25s cubic-bezier(.23,1,.32,1)}
 .fl-task.ok{background:color-mix(in srgb,var(--gr) 16%,transparent);border-color:color-mix(in srgb,var(--gr) 50%,transparent)}
 .fl-nav button.pulse{animation:flPulse 1.6s ease-in-out 2}
 @keyframes flPulse{50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--new) 35%,transparent)}}
@@ -204,7 +204,7 @@ tr.vis-cue,.vis-el.vis-cue,mark.vis-cue,.vis-wl.vis-cue,canvas.vis-cue{outline:3
 @media (prefers-reduced-motion:reduce){.fl-task,.fl-nav button.pulse{animation:none}}
 .fl-cv{cursor:grab}.fl-cv:active{cursor:grabbing}
 
-.fl-pred{margin:.6rem 0 0;padding:.6rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--vi) 14%,transparent);border:1px solid color-mix(in srgb,var(--vi) 45%,transparent);animation:flIn .35s ease}
+.fl-pred{margin:.6rem 0 0;padding:.6rem .8rem;border-radius:12px;background:color-mix(in srgb,var(--vi) 14%,transparent);border:1px solid color-mix(in srgb,var(--vi) 45%,transparent);animation:flIn .25s cubic-bezier(.23,1,.32,1)}
 .fl-pred .fl-pq{margin:0 0 .45rem}.fl-pick{display:flex;flex-wrap:wrap;gap:.45rem}
 .fl-pick button.mine{outline:3px solid var(--vi);outline-offset:1px;opacity:1}.fl-pick button:disabled:not(.mine){opacity:.55}
 .fl-lock{display:inline-block;margin-left:.3rem;font-size:.85em;color:var(--mu)}
@@ -250,9 +250,9 @@ html[data-theme="2052"] #q:focus,html[data-theme="2052"] .numin:focus{border-col
 html[data-theme="2052"] #filters label{background:rgba(148,163,184,.12);color:var(--tx);border:1px solid var(--line)}
 html[data-theme="2052"] .dom{background:rgba(8,12,28,.96);color:var(--cy);letter-spacing:.12em;font-size:11px}
 html[data-theme="2052"] .item{border-left:2px solid transparent;transition:background .2s,border-color .2s,transform .2s}
-html[data-theme="2052"] .item:hover{background:rgba(103,232,249,.08);transform:translateX(2px)}
+@media (hover:hover) and (pointer:fine){html[data-theme="2052"] .item:hover{background:rgba(103,232,249,.08);transform:translateX(2px)}}
 html[data-theme="2052"] .item.sel{background:linear-gradient(90deg,rgba(103,232,249,.18),rgba(196,181,253,.06));border-left-color:var(--cy)}
-html[data-theme="2052"] .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:wnin .45s ease both}
+html[data-theme="2052"] .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:wnin .3s cubic-bezier(.23,1,.32,1) both}
 html[data-theme="2052"] #dcard h2{font-size:26px;letter-spacing:.01em;color:#fff;text-shadow:0 0 22px rgba(103,232,249,.35)}
 @keyframes wnin{from{transform:translateY(8px)}}
 html[data-theme="2052"] .tag{background:rgba(148,163,184,.16);color:#dbe7ff}html[data-theme="2052"] .tag.new{background:rgba(103,232,249,.14);color:#a5f3fc}html[data-theme="2052"] .tag.vid{background:rgba(251,191,36,.14);color:#fde68a}html[data-theme="2052"] .tag.old{background:rgba(148,163,184,.16);color:#dbe7ff}
@@ -261,9 +261,9 @@ html[data-theme="2052"] .st.h{background:#e8f1ff;color:#0b1020}html[data-theme="
 html[data-theme="2052"] ul.tree{border-left-color:rgba(125,211,252,.25)}html[data-theme="2052"] .tog{color:#7d8fb0}
 html[data-theme="2052"] .dia{color:var(--vi)}
 html[data-theme="2052"] svg{background:rgba(2,6,23,.45);border-color:var(--line);border-radius:14px}
-html[data-theme="2052"] .linkish{color:var(--cy)}html[data-theme="2052"] .linkish:hover{text-shadow:0 0 10px rgba(103,232,249,.6)}
+html[data-theme="2052"] .linkish{color:var(--cy)}@media (hover:hover) and (pointer:fine){html[data-theme="2052"] .linkish:hover{text-shadow:0 0 10px rgba(103,232,249,.6)}}
 html[data-theme="2052"] .lbtn{background:linear-gradient(135deg,#6d28d9,#0e7490);border:1px solid rgba(196,181,253,.55);color:#fff;border-radius:12px;box-shadow:0 0 0 rgba(103,232,249,0);transition:box-shadow .25s,transform .15s,background-color .2s}
-html[data-theme="2052"] .lbtn:hover:not(:disabled){box-shadow:0 0 18px rgba(103,232,249,.45);transform:translateY(-1px)}html[data-theme="2052"] .lbtn:active:not(:disabled){transform:translateY(1px) scale(.98)}
+@media (hover:hover) and (pointer:fine){html[data-theme="2052"] .lbtn:hover:not(:disabled){box-shadow:0 0 18px rgba(103,232,249,.45);transform:translateY(-1px)}}html[data-theme="2052"] .lbtn:active:not(:disabled){transform:translateY(1px) scale(.98)}
 html[data-theme="2052"] .lbtn.ghost,html[data-theme="2052"] .lbtn.choice,html[data-theme="2052"] .lbtn.sm{background:rgba(2,6,23,.55);color:#ddd6fe;border-color:rgba(196,181,253,.5)}
 html[data-theme="2052"] .lbtn.on,html[data-theme="2052"] .lbtn[aria-pressed=true]{background:linear-gradient(135deg,#6d28d9,#0e7490);color:#fff;box-shadow:0 0 14px rgba(196,181,253,.45)}
 html[data-theme="2052"] .learn{border:1px solid rgba(196,181,253,.55);box-shadow:0 0 0 1px rgba(103,232,249,.12),0 0 42px rgba(124,58,237,.25),0 10px 40px rgba(0,0,0,.35)}
@@ -287,7 +287,7 @@ html[data-theme="2052"] .gn circle{fill:#a5b4fc;stroke:rgba(255,255,255,.35);str
 html[data-theme="2052"] .gn.cur circle{fill:#f0abfc;filter:drop-shadow(0 0 8px #e879f9)}
 html[data-theme="2052"] .gn circle.g-done{fill:#4ade80}html[data-theme="2052"] .gn circle.g-next{stroke:var(--am);stroke-width:3}
 html[data-theme="2052"] .gn text{fill:#dbe7ff;font-size:11px;paint-order:stroke;stroke:#050814;stroke-width:3px}
-html[data-theme="2052"] .gn{transition:transform .2s}html[data-theme="2052"] .gn:hover text{fill:#fff}
+html[data-theme="2052"] .gn{transition:transform .2s}@media (hover:hover) and (pointer:fine){html[data-theme="2052"] .gn:hover text{fill:#fff}}
 /* holographic visuals */
 html[data-theme="2052"] .vis{background:linear-gradient(160deg,rgba(103,232,249,.07),rgba(196,181,253,.06) 50%,rgba(249,168,212,.05));border:1px solid rgba(103,232,249,.35);border-radius:16px;box-shadow:inset 0 0 30px rgba(103,232,249,.06),0 0 24px rgba(8,145,178,.18);position:relative;overflow:hidden}
 html[data-theme="2052"] .vis::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 3px);border-radius:inherit}
@@ -310,7 +310,7 @@ html[data-theme="2052"] .vis-pattern span,html[data-theme="2052"] .vis-mol{backg
 html[data-theme="2052"] .vis-tally th,html[data-theme="2052"] .vis-tally td{border-color:#4b6386}html[data-theme="2052"] .vis-tally .vis-bad{background:rgba(239,68,68,.25)}
 html[data-theme="2052"] .vis-bin{background:rgba(99,102,241,.12);border-color:rgba(165,180,252,.45)}
 html[data-theme="2052"] .vis-card{background:rgba(30,41,59,.92);color:var(--tx);border-color:#64748b;transition:transform .15s,box-shadow .2s}
-html[data-theme="2052"] .vis-card:hover{box-shadow:0 0 12px rgba(103,232,249,.35);transform:translateY(-1px)}
+@media (hover:hover) and (pointer:fine){html[data-theme="2052"] .vis-card:hover{box-shadow:0 0 12px rgba(103,232,249,.35);transform:translateY(-1px)}}
 html[data-theme="2052"] .vis-card[aria-pressed=true]{outline-color:var(--vi);box-shadow:0 0 16px rgba(196,181,253,.55)}
 html[data-theme="2052"] .vis-card.ok{background:#14532d;border-color:#4ade80;color:#f0fdf4}html[data-theme="2052"] .vis-card.bad{background:#7f1d1d;border-color:#f87171;color:#fef2f2}
 html[data-theme="2052"] .vis-dot{fill:#f0abfc;filter:drop-shadow(0 0 5px #e879f9)}
@@ -328,9 +328,30 @@ html[data-theme="2052"] .themebtn{background:rgba(2,6,23,.6);color:#a5f3fc;borde
 @media (pointer:coarse){circle.vis-handle,circle[role=slider]{r:18px}#filters label{display:inline-flex;align-items:center}}
 @media (pointer:coarse){.vis-pt{grid-template-columns:repeat(18,44px);overflow-x:auto;padding-bottom:6px}.vis-pt .vis-el{min-width:44px}}
 .flag.young .lbtn{min-height:56px;min-width:56px;font-size:1.15rem;padding:8px 18px;border-radius:14px}.flag.young .fl-p,.flag.young .fl-pq,.flag.young .fl-tk{font-size:1.1rem;line-height:1.5}
+
+/* Phone polish (mobile-native audit, 2026-10-26). Each rule says why. */
+/* No grey/blue flash on tap: buttons give their own :active feedback below. */
+html{-webkit-tap-highlight-color:transparent}
+/* Taps fire at once (no double-tap-zoom wait) on controls; pinch zoom still works. */
+button,a,summary,label,select,input,.lbtn,.item,.vis-card,.mv{touch-action:manipulation}
+/* Press feedback on finger-down (the classic look had none; the 2052 look has its own). */
+html:not([data-theme="2052"]) .lbtn:active:not(:disabled){transform:scale(.97)}.lbtn{transition-property:transform,box-shadow,background-color,border-color;transition-duration:.12s;transition-timing-function:cubic-bezier(.23,1,.32,1)}
+/* Long-press on a button selects the button, not its label text. */
+.lbtn,.themebtn,.mv{-webkit-user-select:none;user-select:none}
+/* iOS zooms the page into any input under 16px and never zooms back out. */
+@media (pointer:coarse){.pform input,.pform select,.gd-in input,.numin,input[type=search],input[type=text],input:not([type]),select,textarea{font-size:16px}}
+/* The page now draws under the notch (viewport-fit=cover), so keep content and floating UI out of the unsafe zones. */
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.gd{bottom:calc(12px + env(safe-area-inset-bottom));max-height:min(78dvh,620px)}
+/* A long unbroken search word wraps in the "No topics match" note instead of running off screen. */
+#list .empty,#list .empty b{overflow-wrap:anywhere}
+/* Safety net: anything without its own reduced-motion rule still stops moving. */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* break-ui: a 40-letter name with no spaces widened the whole page; a long goal name pushed its select off a 320px screen. */
+.lhome summary b{overflow-wrap:anywhere}.pform label{min-width:0;max-width:100%}.pform select,.pform input{max-width:100%}
 /* Guide: corner button + panel. Glass in the 2052 theme, plain light card in classic; all motion off under reduced motion. */
 .gd-fab{position:fixed;right:14px;bottom:14px;z-index:60;--gd:#67e8f9;border:1px solid var(--gd);background:rgba(10,16,34,.86);color:#e8f1ff;border-radius:999px;padding:10px 16px;font:700 14px system-ui;box-shadow:0 0 18px color-mix(in srgb,var(--gd) 45%,transparent);cursor:pointer;min-height:44px}
-.gd-fab{transition:bottom .22s ease,right .22s ease,left .22s ease}.gd-fab span{color:var(--gd)}
+.gd-fab{transition:bottom .22s cubic-bezier(.23,1,.32,1),right .22s cubic-bezier(.23,1,.32,1),left .22s cubic-bezier(.23,1,.32,1)}.gd-fab span{color:var(--gd)}
 .gd-fab.gd-tab{width:24px;min-width:24px;height:56px;min-height:56px;padding:0;font-size:0;border-radius:12px 0 0 12px;border-right:0;display:flex;align-items:center;justify-content:center;opacity:.92}.gd-fab.gd-tab span{font-size:15px}.gd-fab.gd-ping{animation:gdPing .9s ease-out 2}
 .gd{position:fixed;right:12px;bottom:12px;z-index:61;width:min(360px,calc(100vw - 24px));max-height:min(78vh,620px);overflow:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:18px;--gd:#67e8f9;
  background:rgba(10,16,34,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid color-mix(in srgb,var(--gd) 40%,transparent);color:#e8f1ff;box-shadow:0 10px 40px rgba(0,0,0,.5),0 0 24px color-mix(in srgb,var(--gd) 25%,transparent);font:14px/1.45 system-ui}
@@ -437,4 +458,4 @@ html[data-theme="2052"] .ux-pred .ux-right{background:#166534}html[data-theme="2
 <details class="howmap"><summary>How to read the map</summary><span class="legend"><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats">947 Why Next? topics · 2209 Why Next? edges (509 bridge edges into upstream v1) · 937 upstream v1 ancestor topics shown for context.</p></details><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=324817d21c"></script><script defer src="wn/learn.js?v=1230dc6fa2"></script><script defer src="wn/app.js?v=717795b38f"></script></body></html>
+<script defer src="wn/core.js?v=324817d21c"></script><script defer src="wn/learn.js?v=e3cba26cd2"></script><script defer src="wn/app.js?v=717795b38f"></script></body></html>
