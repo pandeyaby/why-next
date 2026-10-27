@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_oVa6O3-Vck",
+ "title": "Knowing what you don't know",
+ "audience": "learner",
+ "keyIdea": "How sure you feel is a claim you can test. You are calibrated when your \"70% sure\" answers are right about 70% of the time. Most people are overconfident on hard questions, and the most dangerous errors are the ones you feel sure of, because you never check them. Use doubt as a signal: check, ask, look it up or flag it, rather than guessing or freezing.",
+ "explain": {
+  "kid": [
+   "Feeling sure and being right are two different things. You can feel 90% sure and still be wrong a lot. The only way to know is to check your sure answers against the real ones.",
+   "Being calibrated means your sureness matches your results. If you say \"70% sure\" on ten answers, about seven should be right. Weather forecasters do this well, because they get feedback every day.",
+   "Sort your answers into four boxes: sure and right, sure and wrong, unsure and right, unsure and wrong. Sure and wrong is the risky box. You don't check what you feel sure of, so those slips get through.",
+   "Doubt is useful. When you feel unsure, check it, ask, or look it up. In a test with no penalty for wrong answers, write your best answer and flag it. When you feel certain about a fast answer, check it another way."
+  ],
+  "adult": [
+   "This topic, for ages 14 to 16, is about judging how sure to be and then acting on that judgement. A learner is well calibrated when the share of answers they get right at each level of confidence matches that level. In studies with general-knowledge questions, people tend to be overconfident on hard items. On easy items they can be underconfident. This is called the hard-easy effect.",
+   "Calibration gets better with frequent, clear feedback. Weather forecasters are a classic example of good calibration, and learners improve the same way: rate your confidence before you see the answer, then compare. Errors made with high confidence need special care. Students who only re-check the answers that felt shaky will miss them. Yet once they are corrected, these errors are often remembered well. This is the hypercorrection effect.",
+   "Common mistakes: treating a feeling of certainty as proof, and reading one lucky or unlucky result as a verdict instead of looking at the rate over many answers. Learners also mix up over- and underconfidence, and leave answers blank in tests that do not take marks off for wrong answers. Some freeze on a doubtful question instead of flagging it and moving on.",
+   "In the lab, learners reveal a classmate's \"90% sure\" answers and mark his true hit rate. They set rainy days to make a forecaster calibrated and plot their own calibration chart. Then they sort answers into the four confidence boxes, checking each one, and choose the best action for doubt in four situations."
+  ]
+ },
+ "familyTip": "Before checking homework answers, ask your teenager to write a confidence next to each one (50, 70, 90 or 100%). After marking, count how many of the 90% answers were right. Talk about any sure-and-wrong ones first.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Kai said \"90% sure\" on 20 answers and got {n} right. Which describes Kai?",
+   "choices": [
+    "Overconfident",
+    "Underconfident",
+    "Well calibrated"
+   ],
+   "answer": 0,
+   "hint": "Work out right ÷ 20 as a percentage and compare it with 90%.",
+   "explain": "{n} out of 20 is {=n*5}%, which is below the 90% Kai claimed, so Kai was overconfident.",
+   "params": {
+    "n": [
+     10,
+     15
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A calibrated forecaster says \"{p}0% chance of rain\" on 30 different days. On about how many of those days should it rain?",
+   "answer": "p*3",
+   "hint": "Calibrated means the rate of rain matches the forecast: {p}0% of 30.",
+   "explain": "{p}0% of 30 days is {=p*3} days, so a calibrated forecaster sees rain on about {=p*3} of them.",
+   "params": {
+    "p": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which kind of error is hardest to catch on your own?",
+   "choices": [
+    "Sure and wrong",
+    "Unsure and wrong",
+    "Unsure and right"
+   ],
+   "answer": 0,
+   "hint": "Which answers do you usually not bother to check?",
+   "explain": "Sure-and-wrong errors are hardest to catch, because people re-check what feels shaky and skip what feels certain."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Mo marked {n} answers \"just guessing (50%)\" and all of them were right. Which is the best conclusion?",
+   "choices": [
+    "Mo may be underconfident on this topic",
+    "Guessing always works",
+    "Mo is overconfident"
+   ],
+   "answer": 0,
+   "hint": "Was Mo right more or less often than his confidence said?",
+   "explain": "Mo said 50% but was right on all {n}, more often than he claimed, which points to underconfidence. A short run can be luck, so he should check over more answers.",
+   "params": {
+    "n": [
+     4,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "In a test with no penalty for wrong answers, you are 40% sure of an answer. What is the best move?",
+   "choices": [
+    "Write your best answer, flag it and come back if there is time",
+    "Leave it blank",
+    "Spend 15 minutes on it now"
+   ],
+   "answer": 0,
+   "hint": "A blank always scores zero. What keeps a chance of marks and protects your time?",
+   "explain": "Write your best answer and flag it. A blank cannot score, and getting stuck costs time you need for other questions."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does it mean to be well calibrated?",
+    "choices": [
+     "Your answers rated 70% sure are right about 70% of the time",
+     "You are always 100% sure",
+     "You never make mistakes"
+    ],
+    "answer": 0,
+    "hint": "Calibration compares how sure you say you are with how often you are right.",
+    "explain": "Calibration means your confidence matches your hit rate at each level, so 70% sure answers are right about 70% of the time."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Zara said \"80% sure\" on 20 answers and got {n} right. What percentage did she get right?",
+    "answer": "n*5",
+    "hint": "Each answer out of 20 is worth 5%.",
+    "explain": "{n} out of 20 is {n} × 5 = {=n*5}%. Compare that with the 80% she claimed.",
+    "params": {
+     "n": [
+      8,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You feel 100% sure that 0.3 × 0.2 = 0.6. What should you do?",
+    "choices": [
+     "Check another way: 3 × 2 = 6 with two decimal places gives 0.06",
+     "Move on, because certain means right",
+     "Rub it out and leave it blank"
+    ],
+    "answer": 0,
+    "hint": "Can a fast answer feel certain and still be wrong?",
+    "explain": "Check it another way. 3 × 2 = 6, and there are two decimal places, so the answer is 0.06, not 0.6. Certainty is not proof."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which habit improves calibration over time?",
+    "choices": [
+     "Rating confidence before checking, then comparing with the results",
+     "Only checking answers you feel unsure about",
+     "Never thinking about how sure you are"
+    ],
+    "answer": 0,
+    "hint": "Forecasters get better because they get feedback on their forecasts.",
+    "explain": "Rating confidence first and then comparing with the real results gives the feedback that makes calibration better."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ella's chart shows: said 90%, right 6 of 10; said 50%, right 5 of 10. Where is she overconfident?",
+    "choices": [
+     "At 90%",
+     "At 50%",
+     "Nowhere"
+    ],
+    "answer": 0,
+    "hint": "Compare each claim with the rate: 6 of 10 is 60%, 5 of 10 is 50%.",
+    "explain": "At 90% she was right only 60% of the time, so she is overconfident there. At 50% her rate matched her claim."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "During homework you are about 50% sure of a date in History. Your textbook is on the desk. What is the best move?",
+    "choices": [
+     "Look it up in the textbook",
+     "Write the guess and move on",
+     "Skip the question"
+    ],
+    "answer": 0,
+    "hint": "Doubt plus a source to hand. What turns a guess into knowledge?",
+    "explain": "Look it up. Checking takes a minute and the doubt you noticed tells you exactly where to check."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A friend says, \"I got one 'certain' answer wrong, so my confidence is useless.\" What is the best reply?",
+    "choices": [
+     "Look at the rate over many answers, not one result",
+     "Yes, stop rating confidence",
+     "Confidence is always right in the end"
+    ],
+    "answer": 0,
+    "hint": "Even a perfectly calibrated 90% means about 1 in 10 is wrong.",
+    "explain": "One wrong answer is not a verdict. Calibration is about the rate over many answers, and even 90% sure means about 1 in 10 will be wrong."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Over {n} weeks, Sam's \"certain\" answers are right 99% of the time. What does this suggest?",
+    "choices": [
+     "His certainty is well calibrated on this material",
+     "He is overconfident",
+     "He should stop checking anything"
+    ],
+    "answer": 0,
+    "hint": "Compare the claim (certain, about 100%) with the result.",
+    "explain": "Right 99% of the time on certain answers over {n} weeks matches his claim, so he is well calibrated here. Quick checks on fast answers still help.",
+    "params": {
+     "n": [
+      3,
+      8
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Over, under or calibrated? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Overconfident",
+    "Calibrated",
+    "Underconfident"
+   ],
+   "items": [
+    [
+     "said 90%, right 6 of 10",
+     0
+    ],
+    [
+     "said 100%, right 7 of 10",
+     0
+    ],
+    [
+     "said 70%, right 7 of 10",
+     1
+    ],
+    [
+     "said 50%, right 5 of 10",
+     1
+    ],
+    [
+     "said 50%, right 9 of 10",
+     2
+    ],
+    [
+     "said 60%, right 10 of 10",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcalib",
+  "caption": "Flagship lab: check a 90%-sure classmate, calibrate a forecaster, chart your own confidence and decide what to do with doubt.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
