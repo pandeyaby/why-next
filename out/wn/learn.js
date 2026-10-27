@@ -797,7 +797,7 @@ function set(v){on=!!v&&available();try{localStorage.setItem(KEY,on?'1':'0')}cat
  const g=GUIDE.el();if(g){g.dataset.live=on?'1':'0';const b=g.querySelector('.gl-badge');if(b)b.hidden=!on}}
 function mount(root){if(!available()||root.querySelector('.gl-row'))return;const grid=root.querySelector('.gd-set .gd-grid');if(!grid)return;
  const row=document.createElement('div');row.className='gl-row';
- row.innerHTML=`<label class="gd-chk"><input type="checkbox" name="live"${on?' checked':''}> Live AI Guide</label><p class="gl-note" id="glNote">When on, your questions and this lesson’s text go to Google’s Gemini through our server to write smarter answers. Don’t type personal details. Off means everything stays on this device.</p>`;
+ row.innerHTML=`<label class="gd-chk"><input type="checkbox" name="live"${on?' checked':''}> Live AI Guide</label><p class="gl-note" id="glNote">When on, your questions and this lesson’s text go to Google’s Gemini through our server to write smarter answers. The titles of up to 2 related lessons are sent along with each question. Don’t type personal details. Off means everything stays on this device.</p>`;
  row.querySelector('input').setAttribute('aria-describedby','glNote');row.querySelector('input').onchange=e=>{e.stopPropagation();set(e.target.checked);GUIDE.say(on?'Live AI is on. Ask me anything about this lesson.':'Live AI is off. I’m using the built-in guide, so nothing leaves this device.')};
  grid.append(row);const nm=root.querySelector('.gd-name');if(nm&&!root.querySelector('.gl-badge')){const b=document.createElement('span');b.className='gl-badge';b.textContent='Live AI';b.hidden=!on;nm.after(b)}set(on)}
 document.addEventListener('wn:guide',e=>{const d=e.detail||{};if(d.kind==='built')mount(d.root)});
