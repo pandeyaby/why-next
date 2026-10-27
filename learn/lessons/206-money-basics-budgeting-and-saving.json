@@ -1,0 +1,272 @@
+{
+ "topicId": "mt_sRM9-k3NOq",
+ "title": "Money basics: budgeting and saving",
+ "audience": "learner",
+ "keyIdea": "A budget gives every pound a job before the month starts: needs first, then saving, then wants. Small regular costs add up to big yearly ones. Saving works best when it comes out first, on payday, and an emergency fund of about three months of essential costs stops one bad surprise turning into debt. Interest pays you for leaving money in, and it builds over time.",
+ "explain": {
+  "kid": [
+   "A budget is a plan for your money before you spend it. Start with needs: things that keep you housed, fed, safe and able to work. Then plan saving. Wants come out of what is left.",
+   "Small costs add up. A £4.50 drink every day is £135 a month and over £1,600 a year. To see a small cost clearly, times it by how often you pay it.",
+   "Pay yourself first. Money left in your account tends to get spent, so move your saving on payday, before you spend. A standing order makes it happen without you thinking.",
+   "Build an emergency fund. Aim for about three months of your essential costs. Then a broken phone or a big bill does not push you into debt. Savings accounts pay interest, so the money grows the longer you leave it."
+  ],
+  "adult": [
+   "This topic, for ages 14 to 16, covers the core of a personal budget: income, needs, wants and saving, all planned before the money is spent. A balanced budget gives every pound a job, so income minus spending minus saving is zero. Learners use take-home pay, not salary, because tax and National Insurance come out first.",
+   "Behavioural research explains why pay yourself first works. People treat money in a current account as money to spend, and saving what is left often leaves very little. Moving savings on payday by standing order removes the choice. Automatic schemes like workplace pension enrolment raise saving for the same reason.",
+   "Common mistakes: treating every cost as a need, ignoring small repeated costs, and thinking interest is simply the rate times all the money paid in. With £50 a month for two years at 4% AER, the interest is about £46, not £96, because each payment only earns from the day it arrives. MoneyHelper suggests an emergency fund of about three months of essential outgoings.",
+   "In the lab, learners sort costs into needs and wants and balance a £1,200 monthly budget for a 19-year-old apprentice. They tap a month of £4.50 drinks and run six months of saving what is left against paying yourself first. Then they grow £50 a month at 4% AER, switching to 0% to compare."
+  ]
+ },
+ "familyTip": "Show your teenager one real monthly bill and one bank statement (or a made-up one). Together, mark each line as a need, a want or saving, then add up the small repeated costs for a month.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is a need for someone who works full time?",
+   "choices": [
+    "Rent for their room",
+    "A second streaming service",
+    "New trainers when the old pair is fine"
+   ],
+   "answer": 0,
+   "hint": "A need keeps you housed, fed, safe or able to work.",
+   "explain": "Rent is a need because it keeps a roof over your head. The others are wants."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A drink costs £{p} and you buy one every day for a 30-day month. How much do you spend in pounds?",
+   "answer": "p*30",
+   "hint": "Multiply the daily cost by the number of days.",
+   "explain": "£{p} × 30 = £{=p*30} for the month.",
+   "params": {
+    "p": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Take-home pay is £1,000. Rent is £450, food is £{f}0 and travel is £100. How much is left for fun and saving, in pounds?",
+   "answer": "1000-450-f*10-100",
+   "hint": "Take each cost away from the take-home pay.",
+   "explain": "£1,000 − £450 − £{f}0 − £100 = £{=1000-450-f*10-100}.",
+   "params": {
+    "f": [
+     12,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Leo wants to save £{n}0 a month. He saves whatever is left at the end of each month and usually saves almost nothing. What is the best change?",
+   "choices": [
+    "Move £{n}0 to savings on payday by standing order",
+    "Wait for a month when he spends less",
+    "Borrow on a card when he runs short"
+   ],
+   "answer": 0,
+   "hint": "Which option happens before the money can be spent?",
+   "explain": "Paying yourself first moves £{n}0 out on payday, so it cannot drift into spending. Borrowing makes next month harder.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "£200 sits in a savings account at 5% AER for one year. How much interest does it earn?",
+   "choices": [
+    "£10",
+    "£100",
+    "£205"
+   ],
+   "answer": 0,
+   "hint": "5% means 5 pence for every pound.",
+   "explain": "5% of £200 is £10. The total after one year is £210."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is a balanced budget?",
+    "choices": [
+     "Income minus spending minus saving equals zero, so every pound has a job",
+     "Spending is lower than last month",
+     "You never buy any wants"
+    ],
+    "answer": 0,
+    "hint": "Think about every pound having a planned use.",
+    "explain": "A balanced budget plans every pound: spending plus saving equals income, so nothing is left without a job."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A £{p} snack every school day for 190 days. How much is that over the year, in pounds?",
+    "answer": "p*190",
+    "hint": "Multiply the cost by the number of days.",
+    "explain": "£{p} × 190 = £{=p*190} a year.",
+    "params": {
+     "p": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why does paying yourself first work better than saving what is left?",
+    "choices": [
+     "Money left in your account tends to get spent",
+     "Banks charge you less",
+     "It earns double interest"
+    ],
+    "answer": 0,
+    "hint": "What happens to money that sits in your current account?",
+    "explain": "Money in a current account tends to get spent. Moving savings on payday takes the choice away."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Essential costs are £{e}00 a month. About how much should an emergency fund of three months hold, in pounds?",
+    "answer": "e*300",
+    "hint": "Multiply one month of essentials by three.",
+    "explain": "An emergency fund covers about three months of essential costs. 3 × £{e}00 = £{=e*300}, so a broken boiler or a lost shift does not push you into debt.",
+    "params": {
+     "e": [
+      6,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is a want rather than a need?",
+    "choices": [
+     "Takeaway on Friday nights",
+     "Food shopping",
+     "Bus fare to work"
+    ],
+    "answer": 0,
+    "hint": "Could you live and get to work without it?",
+    "explain": "A takeaway is a want; food shopping and bus fare to work are needs."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Jade saves £50 a month for 2 years at 4% AER. Why is her interest about £46, not £96?",
+    "choices": [
+     "Each £50 only earns from the day it goes in",
+     "The bank keeps half",
+     "Interest is only paid in the first year"
+    ],
+    "answer": 0,
+    "hint": "Does the last payment earn for two years?",
+    "explain": "Early payments earn for nearly two years, later ones for only a few months, so the interest is about £46."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Your phone screen breaks and the repair is £120. Which plan protects you best?",
+    "choices": [
+     "An emergency fund you set up in advance",
+     "Pay on a credit card and worry later",
+     "Skip rent this month"
+    ],
+    "answer": 0,
+    "hint": "Which choice avoids borrowing and missing a need?",
+    "explain": "An emergency fund covers the surprise without debt or missing a need."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A budget shows £60 with no job and savings of £0. What is the best fix?",
+    "choices": [
+     "Give the £60 a job, such as saving",
+     "Leave it for the weekend",
+     "Spend it now before it disappears"
+    ],
+    "answer": 0,
+    "hint": "Every pound should have a planned use.",
+    "explain": "Give it a job. Planning the £60 as saving makes the budget balance and builds a buffer."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Mia moves £{n}0 to savings on payday every month. After a year she has saved…",
+    "choices": [
+     "£{=n*120}, before any interest",
+     "£{n}0",
+     "Nothing, because she spent it"
+    ],
+    "answer": 0,
+    "hint": "Twelve months of the same payment.",
+    "explain": "£{n}0 × 12 = £{=n*120}, plus any interest.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Fixed cost, flexible cost or saving? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fixed cost",
+    "Flexible cost",
+    "Saving"
+   ],
+   "items": [
+    [
+     "Rent",
+     0
+    ],
+    [
+     "Phone contract",
+     0
+    ],
+    [
+     "Food shopping",
+     1
+    ],
+    [
+     "Takeaways",
+     1
+    ],
+    [
+     "Emergency fund",
+     2
+    ],
+    [
+     "Payday standing order to savings",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbudget",
+  "caption": "Flagship lab: sort needs and wants, balance a £1,200 budget, see small costs add up, pay yourself first and watch interest grow.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
