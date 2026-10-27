@@ -12,13 +12,14 @@
    Results go to scripts/eval/results/guide-<date>.json (git-ignored). */
 import fs from 'node:fs'; import path from 'node:path'; import { fileURLToPath } from 'node:url';
 import { shapeInput, buildRequest, replyText, MODEL_DEFAULT } from '../../api/guide.js';
+import { hybridRelated, loadVectors, decode, rankByVector, fuse } from '../../api/_kb.js';
 const HERE = path.dirname(fileURLToPath(import.meta.url)), ROOT = path.resolve(HERE, '../..');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true] }));
 const GUIDE_KB = new Function(fs.readFileSync(path.join(ROOT, 'learn/guide_kb.js'), 'utf8').replace(/if\(typeof module[^\n]*/, '') + ';return GUIDE_KB')();
 const lessons = {}, byFile = {};
 for (const f of fs.readdirSync(path.join(ROOT, 'learn/lessons'))) if (f.endsWith('.json')) { const l = JSON.parse(fs.readFileSync(path.join(ROOT, 'learn/lessons', f), 'utf8')); lessons[l.topicId] = l; byFile[f.replace(/\.json$/, '')] = l }
 const { cases } = JSON.parse(fs.readFileSync(path.join(HERE, 'guide_cases.json'), 'utf8'));
-const rx = s => new RegExp(s, 'i');
+const rx = s => new RegExp(s, 'i'); let kbFallbacks = 0;
 
 /* Offline: case-file sanity, plus how often the lesson finder returns the expected lesson in its top 2. */
 function offline() {
@@ -35,16 +36,26 @@ function offline() {
   /* A wider check with no hand labels: each lesson's first practice question (params filled with 3) should find its own lesson. */
   let own = 0, tot = 0; for (const l of Object.values(lessons)) { const p = (l.practice || [])[0]; if (!p || !p.prompt) continue; tot++;
     const q = p.prompt.replace(/\{=?[^}]*\}/g, '3'); if (GUIDE_KB.search(q, lessons, { k: 2 }).some(g => g.id === l.topicId)) own++ }
-  console.log(`lesson finder hit@2 on every lesson's first practice question: ${own}/${tot} (${(100 * own / tot).toFixed(0)}%; CI floor 50%)`);
-  if (own / tot < 0.5) bad.push('lesson finder below 50% on practice questions');
+  console.log(`keyword finder (browser) hit@2 on every lesson's first practice question: ${own}/${tot} (${(100 * own / tot).toFixed(1)}%; CI floor 70%)`);
+  if (own / tot < 0.7) bad.push('keyword lesson finder below 70% on practice questions');
+  /* Hybrid (server): the same questions with their precomputed query embeddings (scripts/build_kb_vectors.mjs), no API call. */
+  const V = loadVectors(), Q = (() => { try { return JSON.parse(fs.readFileSync(path.join(HERE, 'fixtures/p1_query_vectors.json'), 'utf8')) } catch (e) { return null } })();
+  if (!V || !Q) bad.push('missing api/_kb_vectors.json or fixtures/p1_query_vectors.json; run node scripts/build_kb_vectors.mjs');
+  else { const have = new Set(V.items.map(i => i.id)), qv = new Map(Q.items.map(i => [i.id, i.v])); let hh = 0, ht = 0; const stale = [];
+    for (const l of Object.values(lessons)) { const p = (l.practice || [])[0]; if (!p || !p.prompt) continue; if (!have.has(l.topicId) || !qv.has(l.topicId)) { stale.push(l.title); continue } ht++;
+      const kw = GUIDE_KB.search(p.prompt.replace(/\{=?[^}]*\}/g, '3'), lessons, { k: 8 }).map(r => r.id); if (fuse(rankByVector(Array.from(decode(qv.get(l.topicId))), V), kw).slice(0, 2).includes(l.topicId)) hh++ }
+    console.log(`hybrid finder (server: keywords + embeddings) hit@2: ${hh}/${ht} (${(100 * hh / ht).toFixed(1)}%; CI floor 85%)${stale.length ? ` · ${stale.length} lessons without vectors yet (keyword only): run node scripts/build_kb_vectors.mjs` : ''}`);
+    if (hh / ht < 0.85) bad.push('hybrid lesson finder below 85%'); if (stale.length > 30) bad.push(stale.length + ' lessons have no vectors') }
   if (bad.length) { bad.forEach(b => console.log('BAD', b)); process.exit(1) }
   if (hit < cross.length) process.exit(1); console.log('offline eval passed');
 }
 
 /* The request the browser would make for this case (guide_live.js payload), shaped by the real server code. */
-function requestFor(c, useKb) {
+/* kbMode: 'hybrid' (server path: keyword ids + one query embedding, as in production), 'keyword' (browser only) or 'off'. */
+async function requestFor(c, kbMode, key) {
   const L = c.lesson ? byFile[c.lesson] : null, lv = c.level === 'kid' ? 'kid' : 'adult', ex = L ? (L.explain[lv] || L.explain.adult || []) : [];
-  const related = useKb ? GUIDE_KB.related(c.q, lessons, L && L.topicId, 2).map(r => ({ title: r.title, keyIdea: r.keyIdea })) : [];
+  let related = kbMode !== 'off' ? GUIDE_KB.related(c.q, lessons, L && L.topicId, 2).map(r => ({ title: r.title, keyIdea: r.keyIdea })) : [];
+  if (kbMode === 'hybrid') { const hy = await hybridRelated(c.q, { open: L ? L.topicId : '', kw: GUIDE_KB.search(c.q, lessons, { k: 8 }).map(r => r.id) }, key); if (hy) related = hy; else kbFallbacks++ }
   return buildRequest(shapeInput({ q: c.q, tone: 'calm', level: lv, lesson: L ? { title: L.title, keyIdea: L.keyIdea, explain: ex.slice(0, 6) } : {}, learner: { state: 'focused', profile: { style: 'balanced' } }, related }));
 }
 async function gemini(body, key, model) {
@@ -78,11 +89,11 @@ const boot = xs => { if (!xs.length) return [0, 0]; const m = []; for (let b = 0
 
 async function live() {
   const key = process.env.WN_GEMINI_API_KEY; if (!key) { console.log('WN_GEMINI_API_KEY is not set; run with --offline instead.'); process.exit(2) }
-  const model = args.model || process.env.WN_GUIDE_MODEL || MODEL_DEFAULT, runs = +(args.runs || 1), useKb = !args['no-kb'];
+  const model = args.model || process.env.WN_GUIDE_MODEL || MODEL_DEFAULT, runs = +(args.runs || 1), kbMode = args['no-kb'] ? 'off' : (args.kb || 'hybrid'), useKb = kbMode !== 'off';
   const only = args.only ? new Set(String(args.only).split(',')) : null, rows = [];
   for (const c of cases) { if (only && !only.has(c.id)) continue;
     const tries = [];
-    for (let k = 0; k < runs; k++) { const r = await gemini(requestFor(c, useKb), key, model); const t = r.text || '';
+    for (let k = 0; k < runs; k++) { const r = await gemini(await requestFor(c, kbMode, key), key, model); const t = r.text || '';
       const fails = r.error && !r.blocked ? ['error: ' + r.error] : r.blocked ? (c.kind === 'unsafe' || c.kind === 'injection' ? [] : ['blocked: no answer']) : grade(c, t);
       const j = args.judge && t ? await judge(c, t, key, model) : null; if (j) for (const k2 of ['correct', 'age_appropriate', 'safe', 'on_topic']) if (j[k2] === false) fails.push('judge ' + k2 + ': ' + (j.why || ''));
       tries.push({ reply: t, fails, codePass: !grade(c, t).length || !!r.blocked, judge: j }) }
@@ -90,10 +101,10 @@ async function live() {
     console.log(`${pass ? 'pass' : 'FAIL'} ${c.id} [${c.age} ${c.kind}] ${c.q}\n     → ${tries[0].reply.slice(0, 260)}${tries.flatMap(x => x.fails).map(f => '\n     ✗ ' + f).join('')}`) }
   const xs = rows.map(r => r.pass ? 1 : 0), rate = xs.reduce((a, b) => a + b, 0) / xs.length, [lo, hi] = boot(xs);
   const fam = {}; rows.forEach(r => r.tries.forEach(t => t.fails.forEach(f => { const k = f.split(':')[0]; fam[k] = (fam[k] || 0) + 1 })));
-  console.log(`\nmodel ${model} · related lessons ${useKb ? 'on' : 'off'} · runs ${runs}${runs > 1 ? ' (pass^' + runs + ')' : ''}\npass rate ${(rate * 100).toFixed(0)}% (${xs.filter(Boolean).length}/${xs.length}) · 95% CI [${(lo * 100).toFixed(0)}%, ${(hi * 100).toFixed(0)}%]\nfailures by type: ${JSON.stringify(fam)}`);
+  console.log(`\nmodel ${model} · lesson finder ${kbMode}${kbMode === 'hybrid' ? ' (' + kbFallbacks + ' keyword fallbacks)' : ''} · runs ${runs}${runs > 1 ? ' (pass^' + runs + ')' : ''}\npass rate ${(rate * 100).toFixed(0)}% (${xs.filter(Boolean).length}/${xs.length}) · 95% CI [${(lo * 100).toFixed(0)}%, ${(hi * 100).toFixed(0)}%]\nfailures by type: ${JSON.stringify(fam)}`);
   if (args.judge) { const both = rows.flatMap(r => r.tries).filter(t => t.judge); const jp = t => ['correct', 'age_appropriate', 'safe', 'on_topic'].every(k => t.judge[k] !== false);
     console.log(`judge vs code rules: agree on ${both.filter(t => jp(t) === t.codePass).length}/${both.length} replies (check the disagreements by hand before trusting either)`) }
-  const out = path.join(HERE, 'results'); fs.mkdirSync(out, { recursive: true }); const file = path.join(out, `guide-${new Date().toISOString().slice(0, 16).replace(/:/g, '')}${useKb ? '' : '-nokb'}.json`);
+  const out = path.join(HERE, 'results'); fs.mkdirSync(out, { recursive: true }); const file = path.join(out, `guide-${new Date().toISOString().slice(0, 16).replace(/:/g, '')}${kbMode === 'hybrid' ? '' : '-' + kbMode}.json`);
   fs.writeFileSync(file, JSON.stringify({ model, useKb, runs, rate, ci: [lo, hi], rows }, null, 1)); console.log('saved', path.relative(ROOT, file));
 }
 (args.offline ? offline : live)();
