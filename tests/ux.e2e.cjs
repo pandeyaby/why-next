@@ -50,4 +50,22 @@ const server = http.createServer((q, s) => { const f = path.join(ROOT, decodeURI
       await p.evaluate(() => { localStorage.setItem('wn_last', '{"id":5}'); localStorage.setItem('wn_pred', '"x"'); localStorage.setItem('wn_onboard', '7') });
       assert.deepStrictEqual(await p.evaluate(() => [UX.last(), UX.onboarded()]), [null, false]) });
     assert.deepStrictEqual(errors, []); await ctx.close() }
+  for (const [vp, opts] of [['desktop', { viewport: { width: 1280, height: 900 } }], ['iPhone 13', devices['iPhone 13']]]) {
+    const ctx = await browser.newContext(opts), p = await ctx.newPage(), errors = []; p.on('pageerror', e => errors.push(e.message));
+    await p.goto(BASE); await p.waitForFunction('window.WN_WARM');
+    await test(`${vp}: young age bands (2–4, 5–6, 7–9) are offered, fit the screen, and 2–4 suggests early-years topics`, async () => {
+      await p.waitForSelector('.ux-welcome');
+      const chips = await p.$$eval('[data-band]', b => b.map(x => x.textContent));
+      assert.deepStrictEqual(chips.slice(0, 4), ['2–4', '5–6', '7–9', '10–12']); assert.ok(!chips.includes('Under 10'));
+      const over = await p.$$eval('[data-band]', (b, w) => b.filter(x => { const r = x.getBoundingClientRect(); return r.right > w + 0.5 || r.height < 44 }).map(x => x.textContent), await p.evaluate(() => document.documentElement.clientWidth));
+      assert.deepStrictEqual(over, []); assert.ok(await p.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth));
+      await p.click('[data-band="2-4"]'); await p.click('[data-goal="explore"]'); await p.click('[data-ux="start"]');
+      assert.strictEqual(await p.$eval('#pAge', x => x.value), '2-4'); assert.strictEqual(await p.evaluate(() => LEARN.level()), 'kid');
+      const ages = await p.$$eval('#learnHome ol.nextl li .age', a => a.map(x => x.textContent.match(/(\d+)–(\d+)/).slice(1).map(Number)));
+      assert.ok(ages.length >= 3, 'learn next list: ' + JSON.stringify(ages)); assert.ok(ages.every(([a]) => a <= 4), 'ages: ' + JSON.stringify(ages)) });
+    await test(`${vp}: an old saved 'u10' (Under 10) profile becomes 7–9`, async () => {
+      await p.evaluate(() => { const s = JSON.parse(localStorage.getItem('whynext.learn.v1')); s.age = 'u10'; localStorage.setItem('whynext.learn.v1', JSON.stringify(s)) });
+      await p.reload(); await p.waitForFunction('window.WN_WARM');
+      assert.strictEqual(await p.evaluate(() => JSON.parse(localStorage.getItem('whynext.learn.v1')).age), '7-9') });
+    assert.deepStrictEqual(errors, []); await ctx.close() }
   await browser.close(); server.close(); console.log(failures ? `${failures} failed` : 'all passed'); process.exit(failures ? 1 : 0) })();

@@ -11,10 +11,11 @@ for(const k in P.progress){const e=P.progress[k];if(!e||typeof e!=='object'||Arr
 function save(){try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){mem=true}}
 if(typeof WN!=='undefined')Object.assign(L,WN.store);
 const has=id=>!!L[id]||!!(typeof WN!=='undefined'&&WN.flag(id)),hasReel=id=>{const R=window.WN_REELS;if(R)return !!(R[id]&&R[id].length);const Z=window.WN_REELS_LAZY;return !!(Z&&Z.ids.includes(id))},nextTag=id=>has(id)?'<span class="tag new">lesson</span>':hasReel(id)?'<span class="tag vid">video</span>':'<span class="tag">coming soon</span>',band=()=>BANDS.find(b=>b.id===P.age);
+if(P.age==='u10'){P.age='7-9';save()} /* old 'Under 10' band (assumed nothing known) -> 7–9 */
 const prog=id=>P.progress[id]||{};
 function setProg(id,patch){P.progress[id]=Object.assign({},prog(id),patch,{at:LEARN_GEN.today()});save()}
 const assumeAge=()=>P.knownUpTo==='auto'?(band()?band().assumeKnownUpTo:0):+P.knownUpTo||0;
-const older=()=>!!band()&&band().id!=='u10';
+const older=()=>!!band()&&!band().young;
 const skipped=id=>{const n=N.get(id);return older()&&!!n&&(SKIP.subjects.includes(n.s)||SKIP.domains.includes(n.d))};
 const mastered=id=>prog(id).status==='mastered';
 const assumed=id=>{const n=N.get(id),s=prog(id).status;return !s&&!!n&&assumeAge()>0&&n.a[1]<=assumeAge()};
