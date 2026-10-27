@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Matches the A-level Mathematics specification (DfE content E: parametric equations, convert between Cartesian and parametric forms) and standard texts: x = 2t, y = t² gives y = x²/4; x = r cos t, y = r sin t gives x² + y² = r²; x = a cos t, y = b sin t gives x²/a² + y²/b² = 1. Restricted ranges are correct: x = t² ≥ 0 so x = t², y = t⁴ is the right half of y = x², and sin t ≥ 0 on 0 ≤ t ≤ π gives the top half of the unit circle. Every numeric answer was checked at the corners of its ranges by the items gate."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: squaring only part of t (y = x²/2, tag sq), dividing when you should multiply (mult), x² + y² = r instead of r² (r), adding cos t + sin t = 1 instead of squaring (add), swapping coordinates (swap), undoing a shift the wrong way (sub) and describing a restricted curve as the whole graph (whole, the step 5 prediction)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_param.js is about the parameter itself: stepping t along a track to plot x = 2t, y = t² point by point, eliminating t card by card until y = x²/4 runs through the points, sweeping an angle to trace a circle while changing r, building the ellipse equation from cos²t + sin²t = 1, and sweeping restricted ranges to see which part is traced. It passed the 30% shingle gate against all flag labs, including the graph and trig labs."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner plots before seeing the equation, then watches their eliminated equation pass through their own points; the circle sweep shows x² + y² staying at r² as t changes; the identity step makes them pick cos t = x/3 and sin t = y/2 before squaring; and the range step makes them sweep the whole t range before deciding which half is covered."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions with tempting wrong options: the point at t = −1 (sign slips), y = x²/2 versus x²/4, whether x = 3 cos t, y = 3 sin t is a circle of radius 3 or 9, whether x = 3 cos t, y = 2 sin t is a circle, and 'Does x = t², y = t⁴ trace the whole parabola y = x²?'. The canvas then tests each one."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with every wrong option tagged and explained, e.g. 'Square the whole of t, including the number: (x/3)² = x²/9.', 'cos t + sin t is not 1. Square them: cos²t + sin²t = 1.' and 'x = t² is never negative, so only the part with x ≥ 0 is traced.' A context-specific message was added for the (3, 6) point slip."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner audience aged 17 to 18: kid paragraphs use short sentences with worked numbers and pass the FK 6.5 target; adult paragraphs pass 9.5 and cover scope, both elimination methods, named mistakes and the lab tour. Notation is plain text with superscripts that screen readers can read."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler gate passed. Every paragraph has a worked example or a rule. Hints give the next concrete move (make t the subject, isolate cos t and sin t, check the sign of x) rather than general advice, and no explanation repeats another lesson above the 12% overlap limit."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked iPhone 13 (390 px) screenshots before and after Show me on every step: the axes, plotted points, t track and equation cards fit; the r and t tracks are thumb-sized; the final range step now shows the traced top half of the circle with a caption instead of an empty grid (fixed after review)."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has buttons: t−1 and t+1 with Plot point, r−1, r+1 and t + π/6, equation cards as buttons, and Sweep t. The canvas aria-label reports t and the point, e.g. 't = 2: x = 2 × 2 = 4, y = 2² = 4', and walk.cjs axe WCAG 2.1 AA found no violations in light and dark on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Department for Education (2016), Mathematics AS and A level content, section E: parametric equations",
+  "Pearson Edexcel (2017), A level Mathematics Pure Mathematics Year 2, Chapter 8 Parametric equations",
+  "AQA (2017), A-level Mathematics 7357 specification, B: parametric equations",
+  "Stewart, J. (2015), Calculus: Early Transcendentals, 8th ed., Section 10.1 Curves defined by parametric equations",
+  "Hart, K. M. (ed.) (1981), Children's Understanding of Mathematics 11-16 (algebraic misconceptions such as partial squaring)"
+ ]
+}
