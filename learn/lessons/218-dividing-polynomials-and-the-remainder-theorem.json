@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_EO7DufMP-N",
+ "title": "Dividing polynomials and the remainder theorem",
+ "audience": "learner",
+ "keyIdea": "Dividing p(x) by (x − a) gives p(x) = (x − a)q(x) + r, where the quotient q(x) is one degree lower and the remainder r is a number. Put x = a and the first term vanishes, so r = p(a): this is the remainder theorem. In particular (x − a) is a factor exactly when p(a) = 0 (the factor theorem), which lets you test factors, fully factorise cubics and find unknown coefficients.",
+ "explain": {
+  "kid": [
+   "You can divide one polynomial by another, just like numbers. Divide x³ − 4x² + x + 6 by (x − 2) one term at a time. What times x gives x³? It is x². Multiply back to get x³ − 2x², subtract, and repeat with what is left. The quotient is x² − 2x − 3 and the remainder is 0.",
+   "Here is the shortcut. Any division can be written as p(x) = (x − a)q(x) + r. Now put x = a. The bracket becomes 0, so p(a) = r. The remainder when you divide by (x − a) is just p(a). You never have to do the division to find it.",
+   "So (x − a) is a factor exactly when p(a) = 0. Which values are worth trying? If the cubic starts with x³ and has whole number coefficients, a must divide the constant term. For x³ − 2x² − 5x + 6, try ±1, ±2, ±3 and ±6. The graph crosses the x-axis at each root you find.",
+   "Watch the sign. Dividing by (x + 3) means a = −3, so you work out p(−3), not p(3). Once you have one factor, find the rest by inspection: write p(x) = (x + 1)(ax² + bx + c) and match the coefficients. If a coefficient is unknown, set p(a) equal to the remainder you want and solve."
+  ],
+  "adult": [
+   "This A-level topic (ages 16 to 18, Common Core A-APR.2 and A-APR.6) is about dividing a polynomial by a linear factor, by long division or by inspection. It also covers the remainder and factor theorems. Learners should divide a cubic by (x − 2), use p(a) to test a factor, and fully factorise a cubic when given one factor.",
+   "The key fact is p(x) = (x − a)q(x) + r. Here q has degree one less than p, and r is a number. Put x = a and you get r = p(a). To find roots, use this rule: if a cubic starts with x³ and has whole number coefficients, any whole number root divides the constant term. On a graph, p(a) is the height of the curve at x = a, so zero remainders sit where the curve meets the x-axis.",
+   "Common mistakes: using p(−a) instead of p(a), mostly with brackets like (x + 3); taking the constant term as the remainder; sign slips when subtracting in long division; a quotient of the wrong degree; thinking a remainder of 5 means (x − 5) is a factor; and stopping after one factor instead of also factorising the quadratic.",
+   "In the lab learners build the quotient of x³ − 4x² + x + 6 ÷ (x − 2) term by term, drag a along the graph to see the remainder equal p(a), test candidate factors of x³ − 2x² − 5x + 6, adjust a, b and c to divide by inspection, and slide k until a factor or remainder condition holds."
+  ]
+ },
+ "familyTip": "Ask your teenager to explain, without dividing, why the remainder of p(x) ÷ (x − a) is p(a). If they can write p(x) = (x − a)q(x) + r and substitute x = a, they understand the theorem, not just the trick.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the quotient when x³ − 4x² + x + 6 is divided by (x − 2)?",
+   "choices": [
+    "x² − 2x − 3",
+    "x² − 6x + 13",
+    "x² + 2x − 3"
+   ],
+   "answer": 0,
+   "hint": "Divide the leading term by x, multiply back and subtract, three times.",
+   "explain": "x² × (x − 2) = x³ − 2x² leaves −2x² + x + 6; −2x × (x − 2) leaves −3x + 6; −3 × (x − 2) leaves 0. So the quotient is x² − 2x − 3."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Find the remainder when x² + {b}x + 1 is divided by (x − {a}).",
+   "answer": "a*a+b*a+1",
+   "hint": "The remainder theorem says the remainder is p(a). Substitute x = {a}.",
+   "explain": "By the remainder theorem the remainder is p({a}) = {a}² + {b}×{a} + 1 = {=a*a+b*a+1}.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which shows that (x + 2) is a factor of p(x)?",
+   "choices": [
+    "p(−2) = 0",
+    "p(2) = 0",
+    "The constant term of p is 2"
+   ],
+   "answer": 0,
+   "hint": "(x + 2) = (x − a) with a = −2.",
+   "explain": "(x + 2) is x − (−2), so the factor theorem needs p(−2) = 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "p(x) = x³ + kx − {c}. Given (x − 1) is a factor, find k.",
+   "answer": "c-1",
+   "hint": "Put x = 1 and set p(1) = 0.",
+   "explain": "p(1) = 1 + k − {c} = 0, so k = {c} − 1 = {=c-1}.",
+   "params": {
+    "c": [
+     3,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Fully factorise x³ − 2x² − 5x + 6.",
+   "choices": [
+    "(x − 1)(x + 2)(x − 3)",
+    "(x + 1)(x − 2)(x + 3)",
+    "(x − 1)(x − 2)(x − 3)"
+   ],
+   "answer": 0,
+   "hint": "Test ±1, ±2, ±3, ±6. Which give 0?",
+   "explain": "q(1) = 0, q(−2) = 0 and q(3) = 0, so the factors are (x − 1), (x + 2) and (x − 3)."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the remainder when x³ + 2x − 5 is divided by (x − 1)?",
+    "choices": [
+     "−2",
+     "−8",
+     "−5"
+    ],
+    "answer": 0,
+    "hint": "Substitute x = 1 into the whole polynomial.",
+    "explain": "p(1) = 1 + 2 − 5 = −2. Using p(−1) gives −8, and −5 is only the constant term."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A quartic is divided by (x − 3). What is the degree of the quotient?",
+    "choices": [
+     "3",
+     "4",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Dividing by a linear factor lowers the degree by one.",
+    "explain": "x⁴ ÷ x = x³, so the quotient is a cubic, degree 3."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Find the remainder when 2x³ − x + {c} is divided by (x + 1).",
+    "answer": "c-1",
+    "hint": "(x + 1) means substitute x = −1.",
+    "explain": "p(−1) = −2 + 1 + {c} = {=c-1}.",
+    "params": {
+     "c": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "p(4) = 7. Which statement is true?",
+    "choices": [
+     "Dividing p(x) by (x − 4) leaves remainder 7",
+     "(x − 4) is a factor of p(x)",
+     "(x − 7) is a factor of p(x)"
+    ],
+    "answer": 0,
+    "hint": "A non-zero value means a non-zero remainder.",
+    "explain": "p(4) is the remainder on dividing by (x − 4). It is 7, not 0, so (x − 4) is not a factor."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Given x³ − 4x² + x + 6 = (x + 1)(x² + bx + c), find b and c.",
+    "choices": [
+     "b = −5, c = 6",
+     "b = −4, c = 6",
+     "b = −3, c = 6"
+    ],
+    "answer": 0,
+    "hint": "Match the x² coefficient: 1 + b = −4.",
+    "explain": "Expanding gives x³ + (1 + b)x² + (b + c)x + c. So c = 6 and 1 + b = −4, giving b = −5 (check: b + c = 1)."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "2x³ + kx² − 5x + {=4*t-6} has a factor (x − 2). Find k.",
+    "answer": "-t",
+    "hint": "Set f(2) = 0 and solve for k.",
+    "explain": "f(2) = 16 + 4k − 10 + {=4*t-6} = 0, so 4k = −{=4*t} and k = −{t}.",
+    "params": {
+     "t": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which values of a are worth testing as roots of x³ − 7x + 6?",
+    "choices": [
+     "±1, ±2, ±3, ±6",
+     "Only 1, 2, 3 and 6",
+     "Any number between −7 and 7"
+    ],
+    "answer": 0,
+    "hint": "An integer root must divide the constant term.",
+    "explain": "For a monic cubic with integer coefficients, an integer root divides 6, so test ±1, ±2, ±3, ±6 (both signs)."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why does the remainder of p(x) ÷ (x − a) equal p(a)?",
+    "choices": [
+     "p(x) = (x − a)q(x) + r, and x = a makes the first term 0",
+     "Because the remainder is always the constant term",
+     "Because a is always a root of p"
+    ],
+    "answer": 0,
+    "hint": "Write the division as an identity and substitute.",
+    "explain": "At x = a the term (x − a)q(x) is zero, leaving p(a) = r."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "x³ + x² − 4x − 4 has a factor (x + 1). Fully factorise it.",
+    "choices": [
+     "(x + 1)(x − 2)(x + 2)",
+     "(x + 1)(x − 4)(x + 1)",
+     "(x − 1)(x − 2)(x + 2)"
+    ],
+    "answer": 0,
+    "hint": "Divide by (x + 1) to get a quadratic, then factorise it.",
+    "explain": "x³ + x² − 4x − 4 = (x + 1)(x² − 4) = (x + 1)(x − 2)(x + 2)."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "p(x) = x³ − 4x² + x + 6. Work out p(a) for each bracket: is it a factor? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Factor",
+    "Not a factor"
+   ],
+   "items": [
+    [
+     "(x + 1)",
+     0
+    ],
+    [
+     "(x − 2)",
+     0
+    ],
+    [
+     "(x − 3)",
+     0
+    ],
+    [
+     "(x − 1)",
+     1
+    ],
+    [
+     "(x + 2)",
+     1
+    ],
+    [
+     "(x − 6)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagremth",
+  "caption": "Flagship lab: long division term by term, drag a to see remainder = p(a), hunt factors, divide by inspection and slide k to meet a factor condition.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
