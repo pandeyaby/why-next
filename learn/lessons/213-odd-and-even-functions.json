@@ -1,0 +1,285 @@
+{
+ "topicId": "mt_lzMMW-RVO7",
+ "title": "Odd and even functions",
+ "audience": "learner",
+ "keyIdea": "A function is even when f(−x) = f(x) for every x: its graph is its own mirror image in the y-axis. It is odd when f(−x) = −f(x) for every x: a half turn about the origin leaves its graph unchanged. Most functions are neither. To test one, work out f(−x) and compare it with f(x) and with −f(x).",
+ "explain": {
+  "kid": [
+   "Put −x into a function and see what comes out. If f(−x) = f(x) every time, f is even. The graph is the same on both sides of the y-axis, like a fold. x² is even, since (−3)² = 9 = 3².",
+   "If f(−x) = −f(x) every time, f is odd. Each output keeps its size but flips its sign. Turn the graph a half turn about O and it lands on itself. x³ is odd, since (−2)³ = −8.",
+   "Many functions are neither. x³ + 1 is not odd: f(1) = 2 but f(−1) = 0. One pair that fails is enough to rule a test out. But one pair that works does not prove a test passes.",
+   "For a polynomial, check the powers. Even powers and constants keep their sign. Odd powers flip. So x⁴ − 4x² is even and x³ − 4x is odd. cos x is even and sin x is odd. If f is odd and defined at 0, then f(0) = 0."
+  ],
+  "adult": [
+   "This A-level topic (ages 16 to 18) asks learners to classify functions as even, with f(−x) = f(x) and symmetry in the y-axis, or odd, with f(−x) = −f(x) and rotational symmetry of order 2 about the origin. The tests must hold for every x in a domain that is symmetric about 0.",
+   "The algebraic test is to simplify f(−x) and compare it with f(x) and with −f(x). For polynomials this reduces to the powers: only even powers (constants count as x⁰) gives even, only odd powers gives odd. Products follow sign rules: odd × odd is even, odd × even is odd, so x sin x is even.",
+   "Common mistakes: calling x³ + 1 odd because x³ is; thinking a constant breaks evenness; judging from one pair of values, which can only disprove a test; reading (x − 1)² as even because it is a mirror shape about another line; and forgetting that an odd function defined at 0 must pass through the origin.",
+   "In the lab, learners drag a point P and watch its partner Q at −x against a mirror ring and a half-turn ring. They turn a copy of x³ and x², sort six graphs, build an odd graph from its right half to hit two targets, and switch polynomial powers on and off. The challenge mixes classifying with using f(−a)."
+  ]
+ },
+ "familyTip": "Fold a sheet of squared paper down the middle and draw half a curve on one side. Press it to copy onto the other side: that is an even graph. Then try turning the sheet upside down to make an odd one.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "f is an odd function and f({a}) = {b}. What is f(−{a})?",
+   "answer": "-b",
+   "hint": "Odd means f(−x) = −f(x): the output keeps its size but flips its sign.",
+   "explain": "For an odd function the output flips sign, so f(−{a}) = −f({a}) = −{b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     3,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "g is an even function and g(−{a}) = {b}. What is g({a})?",
+   "answer": "b",
+   "hint": "Even means the outputs at x and −x are equal.",
+   "explain": "For an even function g(x) = g(−x), so g({a}) = g(−{a}) = {b}.",
+   "params": {
+    "a": [
+     1,
+     8
+    ],
+    "b": [
+     2,
+     15
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which of these functions is even?",
+   "choices": [
+    "x⁴ − 3x² + 5",
+    "x³ + x",
+    "x² + x"
+   ],
+   "answer": 0,
+   "hint": "Look for a function with only even powers. A constant counts as x⁰.",
+   "explain": "x⁴, x² and the constant 5 all keep their sign when x becomes −x, so f(−x) = f(x). x³ + x is odd and x² + x is neither."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is f(−x) when f(x) = x³ − 4x?",
+   "choices": [
+    "−x³ + 4x, which is −f(x)",
+    "x³ − 4x, which is f(x)",
+    "−x³ − 4x"
+   ],
+   "answer": 0,
+   "hint": "(−x)³ = −x³ and −4(−x) = +4x.",
+   "explain": "f(−x) = (−x)³ − 4(−x) = −x³ + 4x = −(x³ − 4x) = −f(x), so f is odd."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A graph is unchanged by a half turn about the origin. What kind of function is it?",
+   "choices": [
+    "Odd",
+    "Even",
+    "Neither"
+   ],
+   "answer": 0,
+   "hint": "A half turn sends (x, y) to (−x, −y).",
+   "explain": "If (x, y) on the graph always gives (−x, −y) on the graph, then f(−x) = −f(x): the function is odd."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Is f(x) = x³ + 1 odd, even or neither?",
+    "choices": [
+     "Neither",
+     "Odd",
+     "Even"
+    ],
+    "answer": 0,
+    "hint": "Work out f(1) and f(−1). Are they equal, opposite or neither?",
+    "explain": "f(1) = 2 and f(−1) = 0. These are neither equal nor opposite, so f is neither. The + 1 spoils the odd symmetry of x³."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Is f(x) = x sin x odd, even or neither?",
+    "choices": [
+     "Even",
+     "Odd",
+     "Neither"
+    ],
+    "answer": 0,
+    "hint": "x is odd and sin x is odd. What is odd × odd?",
+    "explain": "f(−x) = (−x)sin(−x) = (−x)(−sin x) = x sin x = f(x), so f is even."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why is cos x an even function?",
+    "choices": [
+     "cos(−x) = cos x, so its graph is symmetric in the y-axis",
+     "cos 0 = 1",
+     "Its graph passes through the origin"
+    ],
+    "answer": 0,
+    "hint": "Compare the cosine graph on each side of the y-axis.",
+    "explain": "The angle −x has the same x-coordinate on the unit circle as x, so cos(−x) = cos x. That is the even rule."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "f is odd and defined for every x. What is f(0)?",
+    "choices": [
+     "0",
+     "Any number",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "Put x = 0 into f(−x) = −f(x).",
+    "explain": "f(−0) = −f(0) means f(0) = −f(0), so 2f(0) = 0 and f(0) = 0. The graph must pass through the origin."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ana says f(x) = (x − 1)² is even because its graph is a symmetric U. What is wrong?",
+    "choices": [
+     "Its mirror line is x = 1, not the y-axis",
+     "Nothing: it is even",
+     "It is odd, because of the minus sign"
+    ],
+    "answer": 0,
+    "hint": "Where is the vertex of (x − 1)²?",
+    "explain": "Even means symmetric in the y-axis. (x − 1)² is symmetric about x = 1: f(−1) = 4 but f(1) = 0."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ben checks f(2) = −f(−2) for one function and says it is odd. Is that enough?",
+    "choices": [
+     "No: the rule must hold for every x",
+     "Yes: one pair proves it",
+     "Yes, if f(2) is positive"
+    ],
+    "answer": 0,
+    "hint": "Could another x break the rule?",
+    "explain": "One pair can rule a test out but cannot prove it. For example x⁴ − 4x² gives f(2) = 0 = −f(−2), yet it is even, not odd."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which function is odd?",
+    "choices": [
+     "x⁵ − 2x³ + x",
+     "x⁵ + 1",
+     "x⁴ + x"
+    ],
+    "answer": 0,
+    "hint": "Odd needs only odd powers and no constant.",
+    "explain": "Every term in x⁵ − 2x³ + x is an odd power, so each flips sign and f(−x) = −f(x). The other two mix odd and even powers."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "f(x) = x⁶ + 2x² − 7. What does the constant −7 do to the symmetry?",
+    "choices": [
+     "Nothing: −7 = −7x⁰, so f stays even",
+     "It makes f neither",
+     "It makes f odd"
+    ],
+    "answer": 0,
+    "hint": "Does −7 change when x becomes −x?",
+    "explain": "A constant is the same at x and −x, so it keeps f(−x) = f(x). Moving the graph up or down keeps y-axis symmetry."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "h is odd and h(−{a}) = {b}. What is h({a})?",
+    "answer": "-b",
+    "hint": "Odd means h(x) = −h(−x). Flip the sign of the output you know.",
+    "explain": "h({a}) = −h(−{a}) = −{b}. The input changes sign and so does the output.",
+    "params": {
+     "a": [
+      2,
+      7
+     ],
+     "b": [
+      3,
+      11
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "f(x) = x³ + {a}. What is f(0)?",
+    "answer": "a",
+    "hint": "Put x = 0 into the formula. Then ask: could an odd function have this value at 0?",
+    "explain": "f(0) = 0³ + {a} = {a}. That is not 0, so f cannot be odd: an odd function defined at 0 must have f(0) = 0.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Even, odd or neither? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Even",
+    "Odd",
+    "Neither"
+   ],
+   "items": [
+    [
+     "x⁴ + 1",
+     0
+    ],
+    [
+     "cos x",
+     0
+    ],
+    [
+     "x³ − 4x",
+     1
+    ],
+    [
+     "sin x",
+     1
+    ],
+    [
+     "x² + x",
+     2
+    ],
+    [
+     "(x − 1)²",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagoddev",
+  "caption": "Flagship lab: drag a point and its partner at −x, turn graphs half a turn, sort and build odd and even graphs, and switch powers on and off.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
