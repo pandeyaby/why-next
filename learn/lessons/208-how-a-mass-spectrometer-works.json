@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_fHNe665XRv",
+ "title": "How a mass spectrometer works",
+ "audience": "learner",
+ "keyIdea": "A time-of-flight mass spectrometer has four stages. The sample is ionised, so the electric field can push it and the detector can register it. The ions are accelerated so that all ions with the same charge get the same kinetic energy. In the flight tube, lighter ions move faster, so ions with a smaller mass-to-charge ratio (m/z) arrive first. At the detector each ion gains electrons, and the current shows how many ions of each m/z arrived.",
+ "explain": {
+  "kid": [
+   "A mass spectrometer sorts particles by mass. It has four stages: ionise, accelerate, fly, detect. The sample must be a gas, or a fine spray, so the particles move on their own.",
+   "First, ionise. An electron gun knocks an electron off each particle, so X becomes X⁺. Another method sprays the sample from a needle at high voltage, so each molecule picks up an H⁺ ion. Only charged particles feel the electric field, and only ions make a current at the detector.",
+   "Next, accelerate. An electric field gives every ion with the same charge the same kinetic energy. Kinetic energy is ½mv², so a lighter ion must move faster. In the flight tube there is no more push. The fast, light ions pull ahead, and the tube is a vacuum so they do not hit air.",
+   "Last, detect. Each ion hits the detector and gains electrons. That makes a current. The time an ion takes tells the computer its mass-to-charge ratio, m/z. The size of the current tells you how many ions had that m/z. A 2+ ion gets twice the push, so it acts like an ion of half the mass."
+  ],
+  "adult": [
+   "This A-level Chemistry topic (ages 16 to 18) covers the four stages of a time-of-flight (TOF) mass spectrometer. In electron impact ionisation, high-energy electrons from an electron gun knock an electron off each gaseous particle: X(g) + e⁻ → X⁺(g) + 2e⁻. In electrospray ionisation the sample, dissolved in a volatile solvent, is sprayed from a fine needle at high voltage, and each molecule gains a proton: X + H⁺ → XH⁺.",
+   "In the accelerating region an electric field gives each ion kinetic energy KE = zeV, so ions with the same charge get the same KE. From ½mv² = zeV, v = √(2zeV ÷ m). The flight tube has no field, so each ion keeps its speed, and the flight time is t = d ÷ v. Together these give t ∝ √(m/z): an ion with four times the m/z takes twice as long. At the detector, ions gain electrons and the current is proportional to the number of ions arriving.",
+   "Common mistakes: saying the ions are accelerated to the same speed rather than the same kinetic energy; thinking the tallest peak arrives first; separating by mass instead of mass-to-charge ratio, so ²⁴Mg²⁺ is wrongly placed at 24 instead of 12; and assuming flight time is proportional to mass. Learners also forget why ionising matters: neutral particles are not accelerated and cannot be detected.",
+   "In the lab, learners fire atoms with the electron gun off and on, race ²⁴Mg⁺ against ²⁶Mg⁺ with speed labels, build a boron spectrum and pick the first peak, switch on 2+ ions and find m/z 12, and then set an unknown m/z so its ion arrives at twice the time of ¹⁶O⁺. Numbers use d = 1.0 m and V = 2.0 kV, which give about 7.9 μs for ²⁴Mg⁺."
+  ]
+ },
+ "familyTip": "Roll a heavy ball and a light ball across a smooth floor with the same flick of a ruler, or the same push from a stretched rubber band. Ask which crosses the line first, then link it to lighter ions arriving first in a mass spectrometer.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Why must the sample be ionised in a time-of-flight mass spectrometer?",
+   "choices": [
+    "Only ions are accelerated by the electric field and make a current at the detector",
+    "Ionising makes the particles lighter so they fly faster",
+    "Ions are easier to see through the flight tube"
+   ],
+   "answer": 0,
+   "hint": "What does an electric field push, and what does the detector respond to?",
+   "explain": "An electric field only pushes charged particles, and the detector works when ions gain electrons. Losing one electron barely changes the mass."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An ion with m/z 16 takes {t} μs to reach the detector. How many μs does an ion with m/z 64 take in the same spectrometer?",
+   "answer": "2*t",
+   "hint": "Flight time grows with the square root of m/z. How many times bigger is 64 than 16?",
+   "explain": "64 is 4 × 16, and √4 = 2, so the time doubles: 2 × {t} = {=2*t} μs.",
+   "params": {
+    "t": [
+     4,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "After the accelerating plates, a ²⁴Mg⁺ ion and a ²⁶Mg⁺ ion have…",
+   "choices": [
+    "the same kinetic energy, so ²⁴Mg⁺ moves faster",
+    "the same speed",
+    "the same speed, but ²⁶Mg⁺ has more kinetic energy"
+   ],
+   "answer": 0,
+   "hint": "The field gives each ion with the same charge the same energy, zeV.",
+   "explain": "Both get KE = zeV. With KE = ½mv², the lighter ²⁴Mg⁺ must have the higher speed."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A molecule with relative molecular mass {m} is ionised by electrospray and gains one H⁺. At what m/z does its ion show up?",
+   "answer": "m+1",
+   "hint": "Electrospray adds a proton, which has a mass of 1, and a charge of 1+.",
+   "explain": "M + H⁺ → MH⁺, so the ion has mass {m} + 1 = {=m+1} and charge 1+, giving m/z = {=m+1}.",
+   "params": {
+    "m": [
+     46,
+     180
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "An ion with m/z {a} takes 5 μs. How many μs does an ion with m/z {=9*a} take in the same spectrometer?",
+   "answer": "15",
+   "hint": "How many times bigger is the m/z? Take the square root of that.",
+   "explain": "{=9*a} is 9 × {a}, and √9 = 3, so the time is 3 × 5 = 15 μs.",
+   "params": {
+    "a": [
+     2,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which list gives the four stages of a time-of-flight mass spectrometer in order?",
+    "choices": [
+     "Ionisation, acceleration, flight tube, detection",
+     "Acceleration, ionisation, detection, flight tube",
+     "Detection, ionisation, flight tube, acceleration"
+    ],
+    "answer": 0,
+    "hint": "Particles must be charged before they can be pushed.",
+    "explain": "Ionise first so the field can accelerate the ions, then they drift down the flight tube and are detected."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Boron is about 80% ¹¹B and 20% ¹⁰B. Which peak reaches the detector first?",
+    "choices": [
+     "The small ¹⁰B peak",
+     "The tall ¹¹B peak",
+     "Both at the same time, because they are the same element"
+    ],
+    "answer": 0,
+    "hint": "Does arrival time depend on how many ions there are, or on m/z?",
+    "explain": "¹⁰B⁺ has the smaller m/z, so it is faster and arrives first. Peak height shows abundance, not arrival order."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What equation describes electron impact ionisation of a particle X?",
+    "choices": [
+     "X(g) + e⁻ → X⁺(g) + 2e⁻",
+     "X(g) + e⁻ → X⁻(g)",
+     "X(g) → X⁺(g) + H⁺"
+    ],
+    "answer": 0,
+    "hint": "The fast electron knocks one electron off and keeps going.",
+    "explain": "The incoming electron knocks one electron off X, so two electrons leave and X⁺ is formed."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How does the detector give the abundance of each ion?",
+    "choices": [
+     "Ions gain electrons at the detector, and the current is bigger when more ions arrive",
+     "It measures how fast each ion moves",
+     "It weighs each ion as it lands"
+    ],
+    "answer": 0,
+    "hint": "What happens to a positive ion when it touches the detector?",
+    "explain": "Each ion picks up electrons at the detector. More ions of one m/z give a bigger current, which is the abundance."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "An ion with m/z {a} takes {t} μs. How many μs does an ion with m/z {=4*a} take in the same spectrometer?",
+    "answer": "2*t",
+    "hint": "Flight time grows with the square root of m/z. What is √4?",
+    "explain": "{=4*a} is 4 × {a}, and √4 = 2, so the time is 2 × {t} = {=2*t} μs.",
+    "params": {
+     "a": [
+      5,
+      12
+     ],
+     "t": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is the flight tube kept under a vacuum?",
+    "choices": [
+     "So the ions do not collide with air molecules",
+     "So the ions are pushed harder",
+     "So the ions gain electrons"
+    ],
+    "answer": 0,
+    "hint": "What could slow an ion down or knock it off course?",
+    "explain": "Air molecules would collide with the ions and scatter them, spoiling the flight times."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In electrospray ionisation, what happens to each molecule M?",
+    "choices": [
+     "It gains a proton to become MH⁺",
+     "It loses a proton to become M⁻",
+     "It splits into atoms"
+    ],
+    "answer": 0,
+    "hint": "The sample is sprayed at high voltage in a solvent and picks up an ion.",
+    "explain": "In electrospray ionisation each molecule gains an H⁺: M + H⁺ → MH⁺, so its m/z is one more than its relative molecular mass."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A sample gives ²⁴Mg⁺ at 7.9 μs. Where would ²⁴Mg²⁺ appear on the spectrum?",
+    "choices": [
+     "Earlier, at m/z 12",
+     "At the same time: same mass",
+     "Later, at m/z 48"
+    ],
+    "answer": 0,
+    "hint": "The spectrometer sorts by m/z, not by mass.",
+    "explain": "A 2+ ion gets twice the kinetic energy, so it behaves like m/z = 24 ÷ 2 = 12 and arrives first."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "An ion has a relative mass of {=2*h} and a charge of 2+. At what m/z does it show up?",
+    "answer": "h",
+    "hint": "The spectrometer sorts by mass divided by charge.",
+    "explain": "m/z = {=2*h} ÷ 2 = {h}, so this 2+ ion arrives with the 1+ ions of mass {h}, not with mass {=2*h}.",
+    "params": {
+     "h": [
+      10,
+      30
+     ]
+    }
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which stage does each event belong to? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Ionisation",
+    "Acceleration",
+    "Flight tube",
+    "Detection"
+   ],
+   "items": [
+    [
+     "Electron gun knocks off an electron",
+     0
+    ],
+    [
+     "Molecule gains H⁺ from a charged spray",
+     0
+    ],
+    [
+     "Ions get the same kinetic energy",
+     1
+    ],
+    [
+     "Light ions pull ahead",
+     2
+    ],
+    [
+     "Ions gain electrons and make a current",
+     3
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtof",
+  "caption": "Flagship lab: ionise, accelerate and race ions down a flight tube, read the spectrum, find 2+ ions and identify a mystery m/z.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
