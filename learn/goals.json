@@ -1,5 +1,5 @@
 {
- "note": "Profile goals and age-band defaults. Each goal points at a target topic; 'learn next' only suggests topics on the way to it, ranked by distance to it.",
+ "note": "Profile goals and age-band defaults. Each goal points at a target topic; 'learn next' only suggests topics on the way to it, ranked by distance to it. Young bands (young: true) follow the topic data's early age ranges (2–3, 3–4, 4–5 / 5–6 / 7–8, 7–9): they assume the previous band's topics are known and never skip early-years skills.",
  "goals": [
   {
    "id": "fractions",
@@ -34,10 +34,25 @@
  ],
  "bands": [
   {
-   "id": "u10",
-   "label": "Under 10",
+   "id": "2-4",
+   "label": "2–4",
    "assumeKnownUpTo": 0,
-   "reading": "kid"
+   "reading": "kid",
+   "young": true
+  },
+  {
+   "id": "5-6",
+   "label": "5–6",
+   "assumeKnownUpTo": 4,
+   "reading": "kid",
+   "young": true
+  },
+  {
+   "id": "7-9",
+   "label": "7–9",
+   "assumeKnownUpTo": 6,
+   "reading": "kid",
+   "young": true
   },
   {
    "id": "10-12",

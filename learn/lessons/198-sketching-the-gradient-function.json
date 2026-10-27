@@ -1,0 +1,272 @@
+{
+ "topicId": "mt_ChfDeaNk5a",
+ "title": "Sketching the gradient function",
+ "audience": "learner",
+ "keyIdea": "The graph of f′(x) shows the gradient of f at each x. Where f is flat (a turning point), f′ = 0, so each turning point of f becomes a point where f′ meets the x-axis. Where f goes up, f′ is above the axis; where f goes down, f′ is below it. Steeper means further from the axis. f′ copies the slope of f, never its height.",
+ "explain": {
+  "kid": [
+   "Pick a point on a curve and draw its tangent. The tangent's gradient tells you how steep the curve is there. Do this at every x, and plot each gradient as a dot. The dots make a new graph. That graph is f′(x), the gradient function.",
+   "Start with the flat points. At the top of a hill or the bottom of a valley, the tangent is flat. Its gradient is 0. So at that same x, the graph of f′ sits on the x-axis. Use the x of the turning point, not its height.",
+   "Next, the signs. Where f goes uphill, left to right, its gradient is positive, so f′ is above the axis. Where f goes downhill, f′ is below the axis. It does not matter if f itself is above or below the axis. Only the slope counts.",
+   "Last, the size. A steep part of f gives a value of f′ far from the axis. A gentle part gives a value close to it. So a cubic with a hill and a valley has an f′ shaped like a U that dips below the axis between the two turning points."
+  ],
+  "adult": [
+   "This topic, for ages 16 to 18, asks students to sketch the graph of f′ from the graph of f without a formula. It rests on one idea: f′(a) is the gradient of the tangent to y = f(x) at x = a. Reading that gradient across the whole graph produces the gradient function.",
+   "A reliable method has three passes. First, mark the x-values of the turning points of f on the new axes as zeros of f′. Second, decide the sign between them: f′ > 0 where f is increasing and f′ < 0 where it is decreasing. Third, judge size: steep sections give large |f′|, and the steepest point of a section is a maximum or minimum of f′.",
+   "Shapes follow from this. A quadratic gives a straight line, a cubic with two turning points gives a parabola with two roots, and a quartic W gives a cubic with three roots. For a polynomial, the degree drops by one. The sine curve gives a cosine-shaped curve.",
+   "Common mistakes: plotting the zeros of f′ at the heights of the turning points; giving f′ the sign of f rather than of its slope; copying the shape of f and shifting it; and putting a zero of f′ where f crosses the x-axis. A quick check is to pick one point, draw its tangent and see if the sign and rough size agree."
+  ]
+ },
+ "familyTip": "Draw a wiggly line on paper: a hill, then a valley. Ask your teenager to walk a pencil along it and say 'up', 'flat' or 'down' at each part. Then ask them to draw a second graph underneath that is above the line for 'up', on it for 'flat' and below it for 'down'.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "On the graph of f, where are the zeros of f′?",
+   "choices": [
+    "At the x-values of the turning points of f",
+    "Where f crosses the x-axis",
+    "At the heights of the turning points"
+   ],
+   "answer": 0,
+   "hint": "Where is the tangent to f flat?",
+   "explain": "A flat tangent has gradient 0, and that happens at the turning points of f. Use their x-values."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The tangent to y = f(x) at x = 2 passes through (2, {a}) and (3, {b}). What is f′(2)?",
+   "answer": "b-a",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "b": [
+     6,
+     12
+    ]
+   },
+   "hint": "f′(2) is the gradient of this tangent: change in y over change in x.",
+   "explain": "Gradient = ({b} − {a}) ÷ (3 − 2) = {=b-a}, so f′(2) = {=b-a}."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Just after a maximum, f is above the x-axis and going down. What is the sign of f′ there?",
+   "choices": [
+    "Negative",
+    "Positive",
+    "Zero"
+   ],
+   "answer": 0,
+   "hint": "Look at the slope, not at the height of f.",
+   "explain": "f is going down, so its tangent slopes down and f′ is negative, even though f itself is above the axis."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A curve y = f(x) has a minimum at x = {a}. What is f′({a})?",
+   "answer": "0*a",
+   "params": {
+    "a": [
+     -6,
+     6
+    ]
+   },
+   "hint": "At a minimum, what does the tangent look like?",
+   "explain": "The tangent at a minimum is flat, so its gradient is 0: f′({a}) = {=0*a}."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "f is a quadratic with a maximum, like an upside-down U. What does the graph of f′ look like?",
+   "choices": [
+    "A straight line sloping down",
+    "A U-shaped parabola",
+    "A flat line on the x-axis"
+   ],
+   "answer": 0,
+   "hint": "f goes up, is flat once, then goes down. What does f′ do?",
+   "explain": "f′ is positive, then 0 at the maximum, then negative. For a quadratic it is a straight line, so it slopes down through the axis."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "f′ is positive for x < 2 and negative for x > 2. What does f have at x = 2?",
+    "choices": [
+     "A maximum",
+     "A minimum",
+     "A point where it crosses the x-axis"
+    ],
+    "answer": 0,
+    "hint": "Positive gradient means going up. What comes after up then down?",
+    "explain": "Up, then flat, then down is a hill, so f has a maximum at x = 2."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "f has turning points at x = {a} and x = {b} and no others. Add the x-values where f′ = 0.",
+    "answer": "a+b",
+    "params": {
+     "a": [
+      -5,
+      -1
+     ],
+     "b": [
+      1,
+      5
+     ]
+    },
+    "hint": "f′ = 0 exactly at the turning points of f.",
+    "explain": "The zeros of f′ are x = {a} and x = {b}, and {a} + {b} = {=a+b}."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "f(x) = x². Which describes the graph of f′?",
+    "choices": [
+     "A straight line through the origin",
+     "A U-shape, like f",
+     "Always above the x-axis, since x² ≥ 0"
+    ],
+    "answer": 0,
+    "hint": "For x < 0, is the curve y = x² going up or down?",
+    "explain": "x² goes down for x < 0 and up for x > 0, with a flat point at 0. So f′ is negative, then 0, then positive: the line y = 2x."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Where f is going down most steeply, what is f′ doing?",
+    "choices": [
+     "Reaching its lowest (most negative) value",
+     "Crossing the x-axis",
+     "Reaching its highest value"
+    ],
+    "answer": 0,
+    "hint": "Steep and downhill: is the gradient a big positive or a big negative number?",
+    "explain": "The steepest downhill point has the most negative gradient, so f′ is at a minimum there."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "The tangent to y = f(x) at x = 1 passes through (1, {a}) and (3, {b}). What is f′(1)?",
+    "answer": "(b-a)/2",
+    "params": {
+     "a": [
+      0,
+      6
+     ],
+     "b": [
+      7,
+      15
+     ]
+    },
+    "hint": "Gradient = change in y ÷ change in x, and here x changes by 2.",
+    "explain": "Gradient = ({b} − {a}) ÷ (3 − 1) = {=(b-a)/2}, so f′(1) = {=(b-a)/2}."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A student sketches f′ by copying the graph of f and moving it down. What went wrong?",
+    "choices": [
+     "f′ shows the slope of f, not its shape or height",
+     "Nothing; that is the method",
+     "They should have moved it up instead"
+    ],
+    "answer": 0,
+    "hint": "What does each value of f′ measure?",
+    "explain": "f′(x) is the gradient of f at x. A copy of f shows heights, so its zeros and signs come out in the wrong places."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "f is a W shape with three turning points. How many times does the graph of f′ meet the x-axis?",
+    "choices": [
+     "3",
+     "2",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "Each flat point of f gives one zero of f′.",
+    "explain": "Three turning points give three zeros of f′. For f(x) = x⁴/4 − x², f′(x) = x³ − 2x has zeros at −√2, 0 and √2."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "On one stretch, f is below the x-axis and going up. What is the sign of f′ there?",
+    "choices": [
+     "Positive",
+     "Negative",
+     "Zero"
+    ],
+    "answer": 0,
+    "hint": "The sign of f′ comes from the slope of f, not from where f is.",
+    "explain": "f is climbing, so its gradient is positive. Being below the axis does not change that."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "The graph of f′ is a U-shaped parabola crossing the x-axis at x = −1 and x = 1. Which best describes f?",
+    "choices": [
+     "A cubic with a maximum at x = −1 and a minimum at x = 1",
+     "A cubic with a minimum at x = −1 and a maximum at x = 1",
+     "A U-shaped parabola with its minimum at x = 0"
+    ],
+    "answer": 0,
+    "hint": "Read the sign of f′ in each part: left of −1, between, right of 1.",
+    "explain": "f′ is +, then −, then +, so f goes up, down, up: a maximum at x = −1 and a minimum at x = 1."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Sort each part of a graph of f by what it tells you about f′ there.",
+  "opts": {
+   "bins": [
+    "f′ > 0",
+    "f′ = 0",
+    "f′ < 0"
+   ],
+   "items": [
+    [
+     "f climbs from left to right",
+     0
+    ],
+    [
+     "f is below the axis but rising",
+     0
+    ],
+    [
+     "the top of a hill on f",
+     1
+    ],
+    [
+     "the bottom of a valley on f",
+     1
+    ],
+    [
+     "f falls from left to right",
+     2
+    ],
+    [
+     "f is above the axis but falling",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggradf",
+  "caption": "Flagship lab: drag along f and drop each tangent gradient onto the f′ axes, mark zeros and signs, sketch f′ with handles, then match graphs.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

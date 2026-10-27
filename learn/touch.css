@@ -6,3 +6,24 @@
 @media (pointer:coarse){circle.vis-handle,circle[role=slider]{r:18px}#filters label{display:inline-flex;align-items:center}}
 @media (pointer:coarse){.vis-pt{grid-template-columns:repeat(18,44px);overflow-x:auto;padding-bottom:6px}.vis-pt .vis-el{min-width:44px}}
 .flag.young .lbtn{min-height:56px;min-width:56px;font-size:1.15rem;padding:8px 18px;border-radius:14px}.flag.young .fl-p,.flag.young .fl-pq,.flag.young .fl-tk{font-size:1.1rem;line-height:1.5}
+
+/* Phone polish (mobile-native audit, 2026-10-26). Each rule says why. */
+/* No grey/blue flash on tap: buttons give their own :active feedback below. */
+html{-webkit-tap-highlight-color:transparent}
+/* Taps fire at once (no double-tap-zoom wait) on controls; pinch zoom still works. */
+button,a,summary,label,select,input,.lbtn,.item,.vis-card,.mv{touch-action:manipulation}
+/* Press feedback on finger-down (the classic look had none; the 2052 look has its own). */
+html:not([data-theme="2052"]) .lbtn:active:not(:disabled){transform:scale(.97)}.lbtn{transition-property:transform,box-shadow,background-color,border-color;transition-duration:.12s;transition-timing-function:cubic-bezier(.23,1,.32,1)}
+/* Long-press on a button selects the button, not its label text. */
+.lbtn,.themebtn,.mv{-webkit-user-select:none;user-select:none}
+/* iOS zooms the page into any input under 16px and never zooms back out. */
+@media (pointer:coarse){.pform input,.pform select,.gd-in input,.numin,input[type=search],input[type=text],input:not([type]),select,textarea{font-size:16px}}
+/* The page now draws under the notch (viewport-fit=cover), so keep content and floating UI out of the unsafe zones. */
+body{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.gd{bottom:calc(12px + env(safe-area-inset-bottom));max-height:min(78dvh,620px)}
+/* A long unbroken search word wraps in the "No topics match" note instead of running off screen. */
+#list .empty,#list .empty b{overflow-wrap:anywhere}
+/* Safety net: anything without its own reduced-motion rule still stops moving. */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* break-ui: a 40-letter name with no spaces widened the whole page; a long goal name pushed its select off a 320px screen. */
+.lhome summary b{overflow-wrap:anywhere}.pform label{min-width:0;max-width:100%}.pform select,.pform input{max-width:100%}

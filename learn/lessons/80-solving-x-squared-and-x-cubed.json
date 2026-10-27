@@ -6,7 +6,8 @@
  "explain": {
   "kid": [
    "6 × 6 = 36. But −6 × −6 = 36 too! So x² = 36 has two answers: 6 and −6.",
-   "For cubes, 3 × 3 × 3 = 27, but −3 cubed is −27. So x³ = 27 has just one answer, 3."
+   "For cubes, 3 × 3 × 3 = 27, but −3 cubed is −27. So x³ = 27 has just one answer, 3.",
+   "To undo a square, use a square root and remember the ± sign. To undo a cube, use a cube root."
   ],
   "adult": [
    "To solve x² = p, take the square root of both sides and keep both signs: x = ±√p. If p is negative there is no real answer, because a square is never negative.",
@@ -20,8 +21,8 @@
    "id": "p1",
    "prompt": "x² = {=r*r}. What is the positive solution?",
    "answer": "r",
-   "hint": "Square root.",
-   "explain": "√{=r*r} = {r}, so x = ±{r}; the positive one is {r}.",
+   "hint": "Ask: which positive number times itself makes {=r*r}? That is the square root.",
+   "explain": "The square root of {=r*r} is {r}, so x = {r} or x = −{r}. The positive one is {r}.",
    "params": {
     "r": [
      2,
@@ -34,8 +35,8 @@
    "id": "p2",
    "prompt": "x³ = {=r*r*r}. What is x?",
    "answer": "r",
-   "hint": "Cube root.",
-   "explain": "∛{=r*r*r} = {r}.",
+   "hint": "Ask: which number times itself three times makes {=r*r*r}? That is the cube root.",
+   "explain": "The cube root of {=r*r*r} is {r}, because {r} × {r} × {r} = {=r*r*r}. A cube has only one real root.",
    "params": {
     "r": [
      2,
@@ -53,8 +54,8 @@
     "0"
    ],
    "answer": 0,
-   "hint": "7 and…?",
-   "explain": "7 and −7: two solutions."
+   "hint": "7 × 7 = 49. Can a negative number squared also make 49?",
+   "explain": "Both 7 × 7 and −7 × −7 make 49, so there are two solutions: 7 and −7."
   },
   {
    "type": "mc",
@@ -79,8 +80,8 @@
     "id": "m1",
     "prompt": "x² = {=r*r}. What is the negative solution?",
     "answer": "-r",
-    "hint": "Use −√p.",
-    "explain": "x = −√{=r*r} = −{r}.",
+    "hint": "Find the square root, then put a minus sign in front of it.",
+    "explain": "The square root of {=r*r} is {r}, so the negative solution is x = −{r}.",
     "params": {
      "r": [
       2,
@@ -120,8 +121,8 @@
     "id": "m4",
     "prompt": "x² = {=r*r}. What is the sum of the two solutions?",
     "answer": "0",
-    "hint": "They are opposites.",
-    "explain": "{r} + (−{r}) = 0.",
+    "hint": "The two solutions are the same number, one positive and one negative.",
+    "explain": "The solutions are {r} and −{r}. Opposites always add to zero: {r} + (−{r}) = 0.",
     "params": {
      "r": [
       2,
@@ -152,8 +153,8 @@
      "x = 81"
     ],
     "answer": 0,
-    "hint": "The curve is symmetric.",
-    "explain": "Both ±3 give 9."
+    "hint": "The y = x² curve is a mirror image on each side of the y-axis. Which numbers squared make 9?",
+    "explain": "3 × 3 = 9 and −3 × −3 = 9, so the line crosses the curve at x = −3 and x = 3."
    },
    {
     "type": "numeric",

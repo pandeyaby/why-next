@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Calibration is defined the standard way (of all answers given at p% confidence, about p% are right) and every number checks: Sam's 6 of 10 at 90% is a 30-point overconfidence gap; a calibrated 30/70/90% forecaster sees rain on about 3, 7 and 9 of 10 days; Ana's 12 of 20 at 90% is 60%; Leo's 9 of 10 at 50% is underconfidence; 0.3 × 0.2 = 0.06. The claims that people are overconfident mainly on hard items (the hard-easy effect) and that weather forecasters are well calibrated because of daily feedback follow Lichtenstein, Fischhoff and Phillips (1982) and Murphy and Winkler (1977). The adult text does not oversell: it says one dot is not a verdict and calibration needs many answers."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the beliefs that feeling sure means being right (step 1 predict 'About 9' vs 'Fewer, about 6'; challenge tag 'sure'), that a 30% forecast means it will not rain (step 2 predict '0 days'), that only unsure answers need checking (step 4 predict 'Unsure and wrong' vs the real answer 'Sure and wrong'; challenge q6), that first instincts are always best and a lucky high score proves guessing works (tag 'luck'), and that doubt means leave it blank or freeze (tags 'blank' and 'stuck'). The hypercorrection finding (Butterfield and Metcalfe, 2001), that high-confidence errors are worth catching and fixing, informs the four-box step."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "No other flagship builds a calibration chart: the learner reveals a tick/cross grid and drags a hit-rate bar against a stated 90%, sets rainy-day counts on three forecast rows until they match 30/70/90%, answers six real questions with a confidence rating that plots live dots against the diagonal, and sorts eight answer cards into a sure/unsure × right/wrong grid. gate_lab_distinct passes against every existing lab, including the Learning to Learn labs."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The idea comes from the learner's own actions: in step 1 the gap between 'said 90%' and the 60% marker the learner drags appears on one bar; in step 2 the rows only show '✓ calibrated' when rainy days match the forecast; in step 3 the learner's own answers become dots above or below the 'perfectly calibrated' line, so over- and underconfidence are visible rather than told; in step 5 each choice explains why checking, asking or flagging beats guessing or freezing."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with a strong pull to the wrong answer: 'Sam was 90% sure on all ten. How many were right?' (About 9 vs Fewer, about 6), 'A calibrated forecaster says 30% rain on 10 days. It rains on…' (0 days vs About 3 days) and 'Which mistakes are hardest to catch on your own?' (Unsure and wrong vs Sure and wrong). Each is locked before the action and the done line names the prediction and the real outcome."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six questions, each with two tagged wrong options and a reply per tag: 'flip' (Over means said more sure than the results; under means less), 'calc' (Turn it into a rate: right ÷ total, then compare with how sure they said), 'sure' (Feeling sure is a claim, not proof), 'blank' (A blank scores nothing. Answer, flag, and come back), 'stuck' (Doubt should trigger a quick check or a flag, not eat your time) and 'luck' (One run of results is not a rule). Option order rotates between rounds."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner text reads at FK grade 3.7 against the 6.5 target, with short lines such as 'Feeling sure and being right are two different things.' The adult text was rewritten from 10.3 to 7.9 (target 9.5). Lab labels are plain ('said 90%', 'actually right: 60%', 'how sure you said →') and every chart value is also given in words in the status line."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passes with no filler. Each learner paragraph carries one idea (sure is not right, what calibration means, the four boxes, using doubt). Adult paragraphs cover the evidence on overconfidence, how to talk about confidence without praising certainty, and what each lab step does. Practice and mastery items use different scenarios (forecasts, quiz hit rates, exam choices) and the parameterised items compute real hit rates."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on 360 px Android (dark) and iPhone 13 (light) after Show me on all six steps: the 10-answer grid fits in two rows of five, the hit-rate bar and 40–90% buttons wrap cleanly, forecast rows fit ten icons, the calibration chart keeps the 50% and 100% dots inside the plot (the axis was padded after the first pass clipped the 100% dot), the four boxes fit in a 2×2 grid, and every action has a button under the canvas."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has a named button alternative ('Reveal next answer', 'Sam was right 60% of the time', '30%: more', answer and confidence buttons, box buttons). The canvas aria-label is rewritten after each action with the state in words (for example 'Calibration chart: said 50%, right 1 of 1; said 70%, right 2 of 2; said 90%, right 2 of 2; said 100%, right 0 of 1'). The walkthrough's axe WCAG 2.1 AA check is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Lichtenstein, S., Fischhoff, B. and Phillips, L. D. (1982), Calibration of probabilities: the state of the art to 1980, in Kahneman, Slovic and Tversky (eds), Judgment under Uncertainty: Heuristics and Biases, Cambridge University Press",
+  "Murphy, A. H. and Winkler, R. L. (1977), Reliability of subjective probability forecasts of precipitation and temperature, Journal of the Royal Statistical Society Series C 26(1)",
+  "Butterfield, B. and Metcalfe, J. (2001), Errors committed with high confidence are hypercorrected, Journal of Experimental Psychology: Learning, Memory, and Cognition 27(6)",
+  "Education Endowment Foundation (2018, updated 2021), Metacognition and Self-Regulated Learning guidance report"
+ ]
+}

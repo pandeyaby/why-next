@@ -25,7 +25,7 @@ const pick={band:'',goal:''};
 function setSel(id,v){const s=document.getElementById(id);if(s&&v){s.value=v;s.dispatchEvent(new Event('change'))}}
 function finish(){const G=LEARN_DATA.goals,g=G.goals.find(x=>x.id===pick.goal);put(ONB,'done');
  setSel('pAge',pick.band);setSel('pGoal',pick.goal);
- if(typeof GUIDE_MOOD!=='undefined'&&GUIDE_MOOD.setProfile)GUIDE_MOOD.setProfile({goal:g&&g.id!=='explore'?g.label:'',level:pick.band==='u10'||pick.band==='10-12'?'kid':'auto'});
+ if(typeof GUIDE_MOOD!=='undefined'&&GUIDE_MOOD.setProfile)GUIDE_MOOD.setProfile({goal:g&&g.id!=='explore'?g.label:'',level:(G.bands.find(b=>b.id===pick.band)||{}).reading==='kid'?'kid':'auto'});
  render();requestAnimationFrame(()=>{const h=document.getElementById('lnH');if(h){h.scrollIntoView({block:'start'});h.setAttribute('tabindex','-1');h.focus({preventScroll:true})}})}
 
 // ---------- continue + progress map ----------
