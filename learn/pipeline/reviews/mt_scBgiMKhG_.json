@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "States the Simple View of Reading accurately (Gough and Tunmer 1986: reading comprehension = decoding x language comprehension, so either at zero gives zero) and the self-monitoring and rereading strategy from the EEF and National Reading Panel guidance. Every sentence judgement in the lab is unambiguous: coat/cold makes sense, swimming in a cake and riding to the bark do not, on/under/next to are placed exactly, and the story order lost-looked-found is fixed by the text."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the main early-reader misconceptions: that reading aloud fluently equals reading (Bip, step 0 prediction, challenge tag 'words', p1, m1), reading on past nonsense (step 2 prediction, tag 'skip', p3, m4), accepting a look-alike word such as goat for coat or snake for snack (step 2 option feedback 'looks', p2, m2, m9), ignoring small words on, in and under (step 3 prediction, tag 'small', p4, m3) and retelling out of order (step 4 feedback, tag 'order', p5, m6)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_meaning.js is a comprehension-monitoring lab with no counterpart among existing flagship labs: a robot that decodes perfectly but cannot answer, a sense-or-silly judge with literal pictures (a cake for 'swam in the cake'), a misread-word finder with look-alike repair cards, a drag-into-the-room scene where on, under, on the bed and next to are separate drop zones, and a picture retell in order. It passed the lab_distinct shingle gate against flagnewword and flagaloud."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step practises one part of reading for meaning by doing it: showing that decoding alone is not reading, checking 'does it make sense?', stopping to find and fix the misread word, building a mental picture by placing objects where the words say, and retelling first-next-last. Each done line states the habit learned."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions before acting: whether Bip really read the sentence, what Bip should do after 'Mum put the milk in the frog', and whether 'under the table' can mean on the table. Wrong choices are followed by the lab itself showing why (Bip cannot answer; the frog picture; the wrong-zone feedback)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating challenge questions covering meaning vs saying words, rereading, look-alike words, small position words, story order and matching a picture; every wrong option has a slip tag (words, skip, looks, small, order, pic) with a specific one-line reason, and stars reset on a miss."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Family audience for ages 5-6: kid paragraphs use very short sentences and concrete examples (Bip, the cake, on and under), adult paragraphs explain the research idea plainly; the readability gate passed against the 5.0 kid / 10.0 adult targets. On-canvas text is one short sentence at 17-19px."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passed with no filler phrases and low overlap; each paragraph does one job: what reading is, the sense check, rereading, picturing and retelling for kids; the Simple View, self-monitoring, common mistakes with a 'be careful not to jump in' tip, and the lab tour for adults."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "walk.cjs on iPhone 13 completed all steps and the challenge; screenshots on iPhone (light) and a 360x640 Android (dark) show the young-mode 56px buttons, large picture cards, and every canvas drag or tap also offered as a button (Bip reads it, Makes sense / Does not make sense, word buttons, placement buttons, story-line buttons)."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe returned zero violations in light and dark themes on desktop and phone; buttons are labelled with text or aria-label, the canvas aria-label and say line read out each sentence and feedback so a pre-reader can have it read aloud, and colour is never the only cue (first/next/last labels, 'look again' and 'Does that make sense?' pills)."
+  }
+ },
+ "sources": [
+  "Gough, P. B. and Tunmer, W. E. (1986), Decoding, reading, and reading disability, Remedial and Special Education 7(1): the Simple View of Reading",
+  "Education Endowment Foundation (2021), Improving Literacy in Key Stage 1, recommendation 4: comprehension strategies including monitoring and rereading",
+  "Department for Education (2013), English programmes of study KS1, Year 1 reading comprehension: checking that the text makes sense and correcting inaccurate reading",
+  "National Reading Panel (2000), Teaching Children to Read, chapter 4: comprehension monitoring, mental imagery and summarisation"
+ ]
+}
