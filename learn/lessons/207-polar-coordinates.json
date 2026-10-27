@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_oM7XSZb9pI",
+ "title": "Polar coordinates",
+ "audience": "learner",
+ "keyIdea": "A polar point (r, θ) is found by turning from the initial line by θ radians anticlockwise, then walking r units out from the pole. Adding or taking away 2π gives the same point, so every point has many polar names. A negative r means walk backwards, which is the same as turning an extra π. To change to Cartesian, use x = r cos θ and y = r sin θ.",
+ "explain": {
+  "kid": [
+   "Polar coordinates find a point by a turn and a walk. Start at the pole, O. Face along the initial line, which points right. Turn by θ, then walk r units out. So (3, π/2) means a quarter turn, then 3 steps: straight up.",
+   "θ is in radians and it turns anticlockwise. A half turn is π and a full turn is 2π. So 2π/3 is past straight up: the point (3, 2π/3) sits up and to the left. A negative θ, like −π/2, turns clockwise.",
+   "One point has many names. A full extra lap brings you back to the same ray. So (3, π/4), (3, 9π/4) and (3, −7π/4) are all one point. The pole is (0, θ) for any θ, since you never walk away.",
+   "If r is negative, face along θ but walk backwards. (−2, π/3) lands on the far side of the pole, at the same place as (2, 4π/3). To get x and y, use x = r cos θ and y = r sin θ. So (4, π) is the Cartesian point (−4, 0)."
+  ],
+  "adult": [
+   "This A-level Further Maths topic (ages 16 to 18) sets up the polar system: a fixed point O called the pole, a ray from it called the initial line, and points given as (r, θ). The angle is measured from the initial line, anticlockwise for positive θ, and in radians. The conversions are x = r cos θ, y = r sin θ and r² = x² + y².",
+   "Unlike Cartesian coordinates, polar names are not unique. (r, θ) and (r, θ + 2nπ) are the same point for any whole number n, and the pole is (0, θ) for every θ. If negative r is allowed, (−r, θ) is the same point as (r, θ + π). Exam boards often fix a principal form, such as r ≥ 0 with −π < θ ≤ π or 0 ≤ θ < 2π, so learners should check which their course uses.",
+   "Common mistakes: turning clockwise, as with bearings; measuring from the vertical instead of the initial line; reading 2π/3 as less than a right angle because it is a small number; and thinking (r, θ + π) is the same point, when it is opposite. Another slip is finding θ with tan⁻¹(y/x) and forgetting to check the quadrant.",
+   "In the lab, learners drag a point round a polar grid, plot points in three quadrants, wind extra laps to find three names for one point, walk backwards for negative r, and read x = r cos θ and y = r sin θ live. The challenge mixes plotting with naming the same point another way, with feedback on each slip."
+  ]
+ },
+ "familyTip": "Stand in a room facing one wall: that is the initial line. Call out a turn and a number of steps, such as \"a quarter turn left, then 3 steps\", and see where you end up. Then find another turn that ends in the same place.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In polar coordinates, where is θ measured from, and which way?",
+   "choices": [
+    "From the initial line, anticlockwise",
+    "From straight up, clockwise",
+    "From the initial line, clockwise"
+   ],
+   "answer": 0,
+   "hint": "Think of the ray that points right from the pole.",
+   "explain": "θ starts on the initial line and positive θ turns anticlockwise. Clockwise from straight up is how bearings work, not polar angles."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The polar point ({a}, π) has which Cartesian x-coordinate?",
+   "answer": "-a",
+   "hint": "Use x = r cos θ, and cos π = −1.",
+   "explain": "x = {a} × cos π = {a} × (−1) = −{a}. A half turn points left of the pole.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is another name for the point ({a}, π/3)?",
+   "choices": [
+    "({a}, 7π/3)",
+    "({a}, 4π/3)",
+    "({a}, −π/3)"
+   ],
+   "answer": 0,
+   "hint": "Which change is a full turn?",
+   "explain": "7π/3 = π/3 + 2π, a full extra lap, so ({a}, 7π/3) is the same point. Adding π points the other way, and −π/3 is the mirror image.",
+   "params": {
+    "a": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The polar point ({a}, π/2) has which Cartesian y-coordinate?",
+   "answer": "a",
+   "hint": "Use y = r sin θ, and sin(π/2) = 1.",
+   "explain": "y = {a} × sin(π/2) = {a}. A quarter turn points straight up, so the point is {a} units above the pole.",
+   "params": {
+    "a": [
+     1,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Where is the point (3, 2π/3)?",
+   "choices": [
+    "Up and to the left of the pole",
+    "Up and to the right of the pole",
+    "Down and to the left of the pole"
+   ],
+   "answer": 0,
+   "hint": "π/2 is straight up. Is 2π/3 more or less than π/2?",
+   "explain": "2π/3 is more than π/2 but less than π, so the ray points up and to the left."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the pole in polar coordinates?",
+    "choices": [
+     "The fixed point that r is measured from",
+     "The point where θ = π/2",
+     "The end of the initial line"
+    ],
+    "answer": 0,
+    "hint": "Where do you start before you turn and walk?",
+    "explain": "The pole O is the fixed starting point. r is the distance from it, and the initial line starts there."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which polar point is the same as (−{a}, π/6)?",
+    "choices": [
+     "({a}, 7π/6)",
+     "({a}, π/6)",
+     "({a}, −π/6)"
+    ],
+    "answer": 0,
+    "hint": "A negative r walks backwards. Which turn faces that way?",
+    "explain": "(−{a}, π/6) faces π/6 and walks back {a}, which is the same as turning an extra π: ({a}, 7π/6).",
+    "params": {
+     "a": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "The polar point ({a}, 3π/2) has which Cartesian y-coordinate?",
+    "answer": "-a",
+    "hint": "3π/2 is three quarters of a turn. Which way does that point?",
+    "explain": "y = {a} × sin(3π/2) = {a} × (−1) = −{a}. Three quarters of a turn points straight down.",
+    "params": {
+     "a": [
+      1,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why does a point have many polar names but only one Cartesian name?",
+    "choices": [
+     "Turning a full 2π more lands on the same ray",
+     "Because r can be any size",
+     "Because radians are not exact"
+    ],
+    "answer": 0,
+    "hint": "What happens if you turn one extra full lap?",
+    "explain": "(r, θ) and (r, θ + 2π) are the same point, so you can add or take away any number of full turns."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which polar point is the Cartesian point (0, {a})?",
+    "choices": [
+     "({a}, π/2)",
+     "({a}, 0)",
+     "(0, {a})"
+    ],
+    "answer": 0,
+    "hint": "The point is straight up, {a} from the pole.",
+    "explain": "Straight up is a quarter turn, π/2, and the distance is {a}, so ({a}, π/2). (0, {a}) in polar would be the pole.",
+    "params": {
+     "a": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Sam plots (2, π/3) by turning π/3 clockwise from straight up. What went wrong?",
+    "choices": [
+     "He used bearings: θ is anticlockwise from the initial line",
+     "Nothing, that is correct",
+     "He should have walked 3 units"
+    ],
+    "answer": 0,
+    "hint": "Where does θ start, and which way does it turn?",
+    "explain": "Polar angles start on the initial line, pointing right, and turn anticlockwise. Sam measured like a bearing."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which polar coordinates describe the pole?",
+    "choices": [
+     "(0, θ) for any θ",
+     "Only (0, 0)",
+     "(1, 0)"
+    ],
+    "answer": 0,
+    "hint": "If r = 0, does the turn matter?",
+    "explain": "With r = 0 you never walk away from O, so every angle gives the pole."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Is (4, π/4 + π) the same point as (4, π/4)?",
+    "choices": [
+     "No, it is on the opposite side of the pole",
+     "Yes, adding π is a full turn",
+     "Yes, because r is the same"
+    ],
+    "answer": 0,
+    "hint": "A full turn is 2π, not π.",
+    "explain": "Adding π is a half turn, so the ray points the opposite way. Only 2π comes back to the same point."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Same point as (2, π/3), or a different point? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Same point",
+    "Different point"
+   ],
+   "items": [
+    [
+     "(2, 7π/3)",
+     0
+    ],
+    [
+     "(2, −5π/3)",
+     0
+    ],
+    [
+     "(−2, 4π/3)",
+     0
+    ],
+    [
+     "(2, 4π/3)",
+     1
+    ],
+    [
+     "(2, −π/3)",
+     1
+    ],
+    [
+     "(−2, π/3)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpolar",
+  "caption": "Flagship lab: turn and walk to plot polar points, wind extra laps for new names, walk backwards for negative r and read off x and y.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
