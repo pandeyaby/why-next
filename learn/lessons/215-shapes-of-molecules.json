@@ -1,0 +1,268 @@
+{
+ "topicId": "mt_ANso-Gni70",
+ "title": "Shapes of molecules",
+ "audience": "learner",
+ "keyIdea": "Pairs of electrons round a central atom repel, so they spread out in 3D as far apart as they can. Count the regions: each bond counts once, even a double bond, and each lone pair counts too. Two regions give a linear shape (180°), three give trigonal planar (120°) and four give tetrahedral (109.5°). Lone pairs repel more than bonding pairs, so NH₃ is pyramidal (107°) and H₂O is bent (104.5°).",
+ "explain": {
+  "kid": [
+   "Electrons come in pairs round the central atom of a molecule. Pairs repel each other, so they spread out as far as they can. They spread in 3D, not just flat on the page. That is why methane, CH₄, is not a flat cross.",
+   "Count the regions of electrons round the central atom. Each bond is one region, and so is each double bond. Two regions sit 180° apart, as in CO₂: a linear shape. Three spread to 120°, as in BF₃: trigonal planar.",
+   "Four regions point to the corners of a tetrahedron. The bond angle is 109.5°, as in CH₄. A lone pair is a pair of electrons that is not in a bond. It still takes up a region, but we name the shape from the atoms we can see.",
+   "Lone pairs push harder than bonds, so they squeeze the bonds closer. NH₃ has 3 bonds and 1 lone pair: it is pyramidal, at 107°. H₂O has 2 bonds and 2 lone pairs: it is bent, at 104.5°. Each lone pair takes about 2.5° off."
+  ],
+  "adult": [
+   "This A-level chemistry topic (ages 16 to 18) uses valence shell electron pair repulsion (VSEPR) theory. The shape of a simple molecule or ion follows from the number of electron-pair regions round the central atom: bonding pairs and lone pairs, with a double or triple bond counted as one region.",
+   "Learners should know linear (2 regions, 180°), trigonal planar (3, 120°), tetrahedral (4, 109.5°), pyramidal (3 bonding + 1 lone pair, about 107°) and bent (2 bonding + 2 lone pairs, about 104.5°). The order of repulsion is lone pair–lone pair > lone pair–bonding pair > bonding pair–bonding pair, because a lone pair is held by one nucleus and sits closer to it.",
+   "Common mistakes: reading the flat drawing of CH₄ as 90°; counting a double bond as two regions; leaving lone pairs out, so NH₃ is called trigonal planar and H₂O linear; naming the shape from the regions rather than the atoms; giving 109.5° for NH₃ and H₂O; and counting lone electrons instead of pairs.",
+   "In the lab, learners squeeze a bond and watch it spring back, turn the molecule in 3D, build linear and trigonal planar shapes, add a lone pair to make NH₃, compare CH₄, NH₃ and H₂O, and work out PH₃ and H₂S from outer electrons. The challenge asks for the shape and angle of six species, including CO₂ and NH₄⁺."
+  ]
+ },
+ "familyTip": "Tie four balloons together at their knots. They push apart into a tetrahedron by themselves, just like the electron pairs in methane. Try two and three balloons to see the linear and flat triangle shapes.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the shape of a molecule with 4 bonding pairs and no lone pairs round the central atom?",
+   "choices": [
+    "Tetrahedral, 109.5°",
+    "Square planar, 90°",
+    "Pyramidal, 107°"
+   ],
+   "answer": 0,
+   "hint": "Four pairs spread out as far as they can in 3D.",
+   "explain": "Four regions point to the corners of a tetrahedron, 109.5° apart, as in CH₄. A flat square would put them only 90° apart."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A central atom has {a} bonding pairs and {b} lone pairs. How many regions of electrons are round it?",
+   "answer": "a+b",
+   "hint": "Bonding pairs and lone pairs both count as regions.",
+   "explain": "Regions = {a} bonding + {b} lone = {=a+b}. Lone pairs take up space just like bonds do, so both are counted.",
+   "params": {
+    "a": [
+     2,
+     4
+    ],
+    "b": [
+     0,
+     2
+    ]
+   },
+   "where": "a+b<=4"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Why is the bond angle in NH₃ (107°) smaller than in CH₄ (109.5°)?",
+   "choices": [
+    "The lone pair repels more strongly than a bonding pair",
+    "N is a smaller atom than C",
+    "NH₃ has fewer electrons in total"
+   ],
+   "answer": 0,
+   "hint": "What does N have that C in CH₄ does not?",
+   "explain": "N has a lone pair. It repels more than a bonding pair, so it pushes the three N–H bonds a little closer together."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A central atom has {a} outer electrons and makes {b} single bonds to H atoms. How many lone pairs does it have?",
+   "answer": "(a-b)/2",
+   "hint": "Each bond to H uses one of its outer electrons. Pair up the rest.",
+   "explain": "{a} − {b} = {=a-b} electrons are left over. Pair them up: {=(a-b)/2} lone pairs.",
+   "params": {
+    "a": [
+     5,
+     8
+    ],
+    "b": [
+     1,
+     4
+    ]
+   },
+   "where": "(a-b)%2==0 && a>=b && b+(a-b)/2<=4"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "How many regions of electrons are round the C atom in CO₂ (O=C=O)?",
+   "choices": [
+    "2",
+    "4",
+    "0"
+   ],
+   "answer": 0,
+   "hint": "A double bond points one way. Does it count once or twice?",
+   "explain": "Each double bond is one region, so C has 2 regions. They sit 180° apart and CO₂ is linear."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the shape of a water molecule, H₂O?",
+    "choices": [
+     "Bent, 104.5°",
+     "Linear, 180°",
+     "Tetrahedral, 109.5°"
+    ],
+    "answer": 0,
+    "hint": "O has 2 bonds and 2 lone pairs. Name the shape from the atoms.",
+    "explain": "The 4 regions are roughly tetrahedral, but only 2 hold atoms, so the shape is bent. The 2 lone pairs squeeze the angle to 104.5°."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "BF₃ has 3 bonding pairs and no lone pairs on B. What shape is it?",
+    "choices": [
+     "Trigonal planar, 120°",
+     "Pyramidal, 107°",
+     "Tetrahedral, 109.5°"
+    ],
+    "answer": 0,
+    "hint": "Three regions with no lone pair spread out in one plane.",
+    "explain": "Three regions get furthest apart at 120° in a flat triangle. There is no lone pair to push them into a pyramid."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Put these repulsions in order, strongest first.",
+    "choices": [
+     "lone–lone > lone–bond > bond–bond",
+     "bond–bond > lone–bond > lone–lone",
+     "They are all the same"
+    ],
+    "answer": 0,
+    "hint": "Lone pairs sit closer to the central atom and spread wider.",
+    "explain": "Lone pairs repel most, so lone–lone is strongest and bond–bond is weakest. That is why each lone pair closes the bond angle."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Sam says NH₃ is trigonal planar because N has three bonds. What did he miss?",
+    "choices": [
+     "The lone pair on N, which makes 4 regions",
+     "A double bond",
+     "Nothing, he is right"
+    ],
+    "answer": 0,
+    "hint": "N has 5 outer electrons. How many are used in bonds?",
+    "explain": "N uses 3 electrons in bonds and keeps 2 as a lone pair. With 4 regions the shape is pyramidal, not flat."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is the shape of the ammonium ion, NH₄⁺?",
+    "choices": [
+     "Tetrahedral, 109.5°",
+     "Pyramidal, 107°",
+     "Square planar, 90°"
+    ],
+    "answer": 0,
+    "hint": "The lone pair of NH₃ is used to bond the fourth H⁺.",
+    "explain": "NH₄⁺ has 4 bonding pairs and no lone pairs, so it is tetrahedral at 109.5°, like CH₄."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A central atom has {a} regions of electrons, and {b} of them are lone pairs. How many bonding pairs does it have?",
+    "answer": "a-b",
+    "hint": "Regions = bonding pairs + lone pairs.",
+    "explain": "{a} − {b} = {=a-b} bonding pairs. The lone pairs still count as regions, but they hold no atoms.",
+    "params": {
+     "a": [
+      2,
+      4
+     ],
+     "b": [
+      0,
+      2
+     ]
+    },
+    "where": "a-b>=2"
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why is CH₄ not a flat cross with 90° angles?",
+    "choices": [
+     "In 3D the pairs can get further apart, at 109.5°",
+     "Carbon atoms are always round",
+     "The H atoms attract each other"
+    ],
+    "answer": 0,
+    "hint": "Electron pairs spread as far apart as they can. Are they stuck on the page?",
+    "explain": "A flat cross only gives 90°. Spreading in 3D to the corners of a tetrahedron gives 109.5°, which is further apart."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A central atom has {b} outer electrons and makes {a} single bonds to H atoms. How many regions of electrons are round it?",
+    "answer": "a+(b-a)/2",
+    "hint": "Each bond is one region. Pair up the electrons not used in bonds to find the lone pairs.",
+    "explain": "{a} bonds + {=(b-a)/2} lone pairs = {=a+(b-a)/2} regions of electrons round the central atom.",
+    "params": {
+     "a": [
+      2,
+      4
+     ],
+     "b": [
+      2,
+      8
+     ]
+    },
+    "where": "(b-a)%2==0 && b>=a && a+(b-a)/2<=4"
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which shape? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Linear",
+    "Tetrahedral",
+    "Pyramidal",
+    "Bent"
+   ],
+   "items": [
+    [
+     "CO₂",
+     0
+    ],
+    [
+     "BeCl₂",
+     0
+    ],
+    [
+     "CH₄",
+     1
+    ],
+    [
+     "NH₄⁺",
+     1
+    ],
+    [
+     "NH₃",
+     2
+    ],
+    [
+     "H₂O",
+     3
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagvsepr",
+  "caption": "Flagship lab: squeeze and turn a 3D molecule, add bonds and lone pairs to build each shape, and watch lone pairs close the bond angle.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
