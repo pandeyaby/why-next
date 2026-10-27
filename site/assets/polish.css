@@ -1,0 +1,10 @@
+/* Phone polish (mobile-native audit, Oct 2026). Loaded after styles.css.
+   No tap flash, instant taps, press feedback, and no "stuck" hover lifts on touch screens. */
+html{-webkit-tap-highlight-color:transparent}
+a,button,.btn,label,summary{touch-action:manipulation}
+@media (hover:none),(pointer:coarse){
+  .btn:hover,.steps li:hover,.area:hover{transform:none;box-shadow:none}
+  .btn:hover .arr{transform:none}
+  .area:hover{border-color:var(--line)}
+  .btn:active{transform:scale(.97)}
+}
