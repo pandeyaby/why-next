@@ -1,0 +1,150 @@
+{
+ "topicId": "mt_ubY3aukn0T",
+ "title": "The quotient rule",
+ "audience": "learner",
+ "keyIdea": "To differentiate a quotient y = u/v, use dy/dx = (u′v − uv′)/v². The order on the top matters because of the minus sign, and the bottom is v squared. It follows from writing u/v as u·v⁻¹ and using the product and chain rules. It gives d/dx (tan x) = sec²x, and setting the numerator of the derivative to zero finds stationary points.",
+ "explain": {
+  "kid": [
+   "A quotient is one function divided by another, like x/(x + 1). It is tempting to differentiate the top and the bottom and divide, u′/v′. That fails. For x/(x + 1) it gives 1 everywhere, but the true slope falls as x grows.",
+   "The quotient rule says: if y = u/v, then dy/dx = (u′v − uv′)/v². Say it as: bottom times derivative of top, minus top times derivative of bottom, all over the bottom squared. Because of the minus sign, the order matters. Swap it and every answer flips sign.",
+   "Where does it come from? Write u/v as u times v⁻¹. The chain rule gives the derivative of v⁻¹ as −v′/v². Then the product rule gives u′/v − uv′/v². Put both over v² and you get the rule.",
+   "Two big uses. First, tan x = sin x / cos x, so its derivative is (cos²x + sin²x)/cos²x = sec²x. Second, to find stationary points of a quotient, set the top of dy/dx to zero. Where the bottom is zero, the function is undefined, so that is an asymptote, not a turning point."
+  ],
+  "adult": [
+   "In the DfE A level mathematics subject content, students must differentiate using the product rule, the quotient rule and the chain rule, and use these to find stationary points. The AP Calculus AB course covers this as Topic 2.9, The Quotient Rule, under the learning objective of calculating derivatives of products and quotients.",
+   "Students should know u′v − uv′ over v² and also see why it is true. The quickest proof writes u/v as u·v⁻¹, then uses the chain rule on v⁻¹ and the product rule on the result. This links three rules they already know.",
+   "Common mistakes: writing u′/v′; reversing the order to uv′ − u′v, which gives the right size with the wrong sign; forgetting to square v; expanding the denominator when it should stay factorised; and setting the whole derivative to zero by clearing denominators without checking where v = 0.",
+   "Encourage a quick sign check. If the original function is clearly rising, the derivative must be positive there. For tan x, the result sec²x is never below 1, which matches a graph that is always climbing."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each line a correct use of the quotient rule? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["✅ Correct", "❌ Slip"],
+   "items": [
+    ["d/dx [x/(x + 1)] = 1/(x + 1)²", 0],
+    ["d/dx (tan x) = sec²x", 0],
+    ["d/dx [1/(x² + 1)] = −2x/(x² + 1)²", 0],
+    ["d/dx (eˣ/x) = eˣ(x − 1)/x²", 0],
+    ["d/dx [x/(x + 1)] = 1", 1],
+    ["d/dx (sin x/x) = (sin x − x cos x)/x²", 1],
+    ["d/dx [(x + 1)/(x − 2)] = −3/(x − 2)", 1],
+    ["d/dx (eˣ/x) = eˣ", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagquot",
+  "caption": "Flagship lab: match slope curves, assemble the rule from tiles, tune a numerator, slide along tan x and flag stationary points.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "y = (x + {a})/(x − {b}). Find dy/dx at x = {=b+1}.",
+   "answer": "-(a+b)",
+   "hint": "u′ = 1 and v′ = 1, so the top is (x − {b}) − (x + {a}).",
+   "explain": "The top is (x − {b}) − (x + {a}) = −{=a+b}, so dy/dx = −{=a+b}/(x − {b})². At x = {=b+1} the bottom is 1, so dy/dx = −{=a+b}.",
+   "params": {"a": [1, 4], "b": [1, 3]}
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "y = {a}x/(x + 1). Find dy/dx at x = 0.",
+   "answer": "a",
+   "hint": "u = {a}x, v = x + 1. Use (u′v − uv′)/v².",
+   "explain": "u′v − uv′ = {a}(x + 1) − {a}x = {a}, so dy/dx = {a}/(x + 1)². At x = 0 that is {a}.",
+   "params": {"a": [2, 9]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Differentiate y = sin x / x.",
+   "choices": ["(x cos x − sin x)/x²", "(sin x − x cos x)/x²", "cos x"],
+   "answer": 0,
+   "hint": "u = sin x, v = x. The top is u′v − uv′.",
+   "explain": "u′v − uv′ = x cos x − sin x, over x². The second choice has the order reversed and cos x is u′/v′."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why is d/dx (tan x) = sec²x?",
+   "choices": ["(cos²x + sin²x)/cos²x = 1/cos²x", "The derivative of sin x divided by the derivative of cos x", "Because tan x = sec x"],
+   "answer": 0,
+   "hint": "Write tan x = sin x / cos x and use the quotient rule.",
+   "explain": "u′v − uv′ = cos x·cos x − sin x·(−sin x) = cos²x + sin²x = 1, over cos²x. Dividing derivatives gives −cot x, which is wrong."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Differentiate y = 1/(x² + 1).",
+    "choices": ["−2x/(x² + 1)²", "1/(2x)", "2x/(x² + 1)²"],
+    "answer": 0,
+    "hint": "u = 1, so u′ = 0. Then the top is 0·v − 1·2x.",
+    "explain": "The top is −2x and the bottom is (x² + 1)². 1/(2x) is u′/v′ upside down, and 2x/(x² + 1)² has lost the minus sign."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "y = (x + {a})/(x + {b}). Find dy/dx at x = {=1-b}.",
+    "answer": "b-a",
+    "hint": "u′ = v′ = 1, so the top is (x + {b}) − (x + {a}).",
+    "explain": "The top is {b} − {a} = {=b-a}, so dy/dx = {=b-a}/(x + {b})². At x = {=1-b} the bottom is 1, so dy/dx = {=b-a}.",
+    "params": {"a": [1, 3], "b": [4, 6]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A student gets d/dx [x/(x + 1)] = −1/(x + 1)². What went wrong?",
+    "choices": ["They used uv′ − u′v, the wrong order", "Nothing, it is correct", "They forgot to square v"],
+    "answer": 0,
+    "hint": "x/(x + 1) is rising for x > 0. What sign should the slope have?",
+    "explain": "The correct top is u′v − uv′ = (x + 1) − x = 1. Reversing the order flips the sign, giving a negative slope for a rising curve."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Where does the v² in the quotient rule come from?",
+    "choices": ["Differentiating v⁻¹ with the chain rule gives −v′/v²", "You square the top and the bottom", "It is a convention"],
+    "answer": 0,
+    "hint": "Write u/v as u·v⁻¹, then differentiate v⁻¹ with the chain rule: bring down the power and multiply by v′.",
+    "explain": "d/dx (v⁻¹) = −1·v⁻²·v′ = −v′/v². The product rule then gives u′/v − uv′/v², and over a common denominator that is (u′v − uv′)/v²."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "y = x²/(x + {a}) has a stationary point at x = 0. Find the x-coordinate of the other one.",
+    "answer": "-2*a",
+    "hint": "The top of dy/dx is 2x(x + {a}) − x² = x(x + {=2*a}).",
+    "explain": "dy/dx = x(x + {=2*a})/(x + {a})². The top is zero at x = 0 and x = −{=2*a}. The bottom is never part of the answer.",
+    "params": {"a": [1, 5]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "y = x²/(x + 1). Why is x = −1 not a stationary point?",
+    "choices": ["The function is undefined there: it is an asymptote", "dy/dx = 0 there", "It is a stationary point"],
+    "answer": 0,
+    "hint": "What happens to the denominator at x = −1?",
+    "explain": "At x = −1 the bottom is zero, so y is undefined and the graph has a vertical asymptote. Stationary points come from the top of dy/dx being zero."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Differentiate y = eˣ/x.",
+    "choices": ["eˣ(x − 1)/x²", "eˣ", "eˣ(1 − x)/x²"],
+    "answer": 0,
+    "hint": "u = eˣ and v = x, so u′ = eˣ and v′ = 1.",
+    "explain": "u′v − uv′ = x eˣ − eˣ = eˣ(x − 1), over x². eˣ is u′/v′, and eˣ(1 − x)/x² has the order reversed."
+   }
+  ]
+ }
+}
