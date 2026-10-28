@@ -1,0 +1,91 @@
+{
+ "topicId": "mt_9LzHabN_zX",
+ "title": "Things I like and things I can do",
+ "audience": "family",
+ "keyIdea": "Your likes belong to you. You can say what you like and what you do not like, and that is OK. Friends like some things the same and some things different. You can do lots of jobs by yourself, and you ask a grown-up when a job is hot, fast or not safe.",
+ "explain": {
+  "kid": [
+   "What food do you like? Say it out loud. I like apples! You can say no thanks too. That is OK.",
+   "Your friend may like other things. You like trains. Pip likes cars. You both like the ball. Same and different is fine.",
+   "You can do lots by yourself. You can put on your coat. You can wash your hands. You can tidy your toys.",
+   "Some jobs need a grown-up. The oven is hot. Roads have fast cars. Then you say, can you help me, please?"
+  ],
+  "adult": [
+   "At three and four, children are building a sense of self: what they like, what they are good at, and what they can manage alone. Early years guidance calls this self-awareness and growing independence in meeting their own care needs, such as washing hands and putting on a coat.",
+   "Saying a preference out loud is a real skill. Children learn that a like is not right or wrong, that a friend can like something different, and that they can still play together. The sentence frame 'I like... but my friend likes...' gives them words for this.",
+   "Common mistakes to watch for: a child thinks a friend is wrong for liking something different; a child copies the friend's answer instead of saying their own; and a child either tries risky jobs alone or gives up and waits instead of asking for help. Name the difference, and praise asking for help as a smart choice.",
+   "In the lab your child sorts foods into I like and No thanks, picks three toys and compares them with Pip's, sorts jobs into I can do it and Ask a grown-up, pours a drink up to a line, and makes an I like, Pip likes, I can card."
+  ]
+ },
+ "familyTip": "At snack time, take turns saying 'I like... but you like...'. Give your child one real job a day, like pouring their own water from a small jug or putting on their shoes, and wait before you step in.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Can you do it by yourself? Drag each job, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["💪 I can do it", "🙋 Ask a grown-up"],
+   "items": [["Wash my hands", 0], ["Put on my coat", 0], ["Tidy my toys", 0], ["Eat with a spoon", 0], ["Cross the road", 1], ["Use the oven", 1], ["Take medicine", 1], ["Use a sharp knife", 1]]
+  }
+ },
+ "lab": {
+  "type": "flaglike",
+  "caption": "Flagship lab: sort foods you like, compare toys with a friend, sort jobs you can do, pour a drink and make an I like card.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Mia likes peas. Leo does not like peas. Is that OK?",
+   "choices": ["Yes, people like different things", "No, Leo is wrong", "No, Mia is wrong"], "answer": 0,
+   "hint": "Is a like right or wrong, or does it just belong to you?",
+   "explain": "Yes. A like belongs to the person. Mia and Leo can like different foods and still be friends."},
+  {"type": "mc", "id": "p2", "prompt": "Ava has {n} toys. Which job can she do by herself?",
+   "choices": ["Tidy her toys", "Use the oven", "Cross the road"], "answer": 0,
+   "hint": "Which job is not hot, fast or sharp?",
+   "explain": "Ava can tidy all {n} toys into the box by herself. The oven and the road need a grown-up.",
+   "params": {"n": [3, 8]}},
+  {"type": "mc", "id": "p3", "prompt": "You like trains. Pip likes cars. What can you say?",
+   "choices": ["I like trains but Pip likes cars.", "Pip is wrong.", "I like cars."], "answer": 0,
+   "hint": "Say your like first, then Pip's like, with but in the middle.",
+   "explain": "I like trains but Pip likes cars. That says both likes and is kind to Pip."},
+  {"type": "mc", "id": "p4", "prompt": "Sam pours water for {n} friends. The cup is full to the line. What next?",
+   "choices": ["Stop pouring", "Pour more", "Shake the cup"], "answer": 0,
+   "hint": "What happens to water that goes past the line?",
+   "explain": "Stop at the line, or it spills. Then Sam can pour the next cup for his {n} friends.",
+   "params": {"n": [2, 6]}}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Which one tells what you like?",
+    "choices": ["I like bananas.", "I am 4.", "I can hop."], "answer": 0,
+    "hint": "Look for the words I like at the start.",
+    "explain": "I like bananas tells what you like. I am 4 tells your age, and I can hop tells what you can do."},
+   {"type": "mc", "id": "m2", "prompt": "Which job needs a grown-up?",
+    "choices": ["Use the oven", "Wash my hands", "Put on my coat"], "answer": 0,
+    "hint": "Which one is very hot and could burn you?",
+    "explain": "The oven is very hot, so a grown-up uses it. You can wash your hands and put on your coat."},
+   {"type": "mc", "id": "m3", "prompt": "You cannot reach your coat on the hook. What can you do?",
+    "choices": ["Ask a grown-up to help", "Climb on the shelf", "Give up"], "answer": 0,
+    "hint": "What do you say when a job is too hard or not safe?",
+    "explain": "Ask: can you help me, please? Climbing is not safe, and asking for help is a smart choice."},
+   {"type": "mc", "id": "m4", "prompt": "Leo picks {n} toys he likes. Pip picks other toys. Is that OK?",
+    "choices": ["Yes, friends can like different toys", "No, Pip must copy Leo", "No, they cannot play"], "answer": 0,
+    "hint": "Do friends have to like all the same things?",
+    "explain": "Yes. Leo likes his {n} toys and Pip likes others. They can still play together and share.",
+    "params": {"n": [2, 5]}},
+   {"type": "mc", "id": "m5", "prompt": "Which can you do all by yourself?",
+    "choices": ["Wash my hands", "Cross a busy road", "Take medicine"], "answer": 0,
+    "hint": "Which job is safe for you to do alone?",
+    "explain": "You can wash your hands: soap, rub, rinse, dry. Roads and medicine need a grown-up."},
+   {"type": "mc", "id": "m6", "prompt": "Mia does not like cheese. What can she say?",
+    "choices": ["No thanks", "Yuck, you are bad", "Throw it"], "answer": 0,
+    "hint": "Find the kind way to say you do not want it.",
+    "explain": "Mia can say no thanks. It is OK not to like a food, and no thanks is a kind way to say it."},
+   {"type": "mc", "id": "m7", "prompt": "Ava and Pip both like {n} red balls. What can they say?",
+    "choices": ["We both like balls", "Only I like balls", "Balls are bad"], "answer": 0,
+    "hint": "When you like the same thing, which word joins you both?",
+    "explain": "We both like balls. When friends like the same thing, they can play with the {n} balls together.",
+    "params": {"n": [2, 6]}}
+  ]
+ }
+}
