@@ -1,0 +1,249 @@
+{
+ "topicId": "mt_Y6P9y1Rz-u",
+ "title": "Understanding Why",
+ "audience": "family",
+ "keyIdea": "Knowing that something is true is a start. Knowing why it is true is stronger: you can rebuild a fact you forgot, spot when a rule stops working, and explain it to someone else. A real reason says how something works. 'Because it is the rule' or 'because the teacher said so' is not a reason. Ask 'why?' and 'how does that work?', and link each new idea to one you already know.",
+ "explain": {
+  "kid": [
+   "A fact tells you what is true. Puddles dry up. A reason tells you why. Puddles dry up because the water evaporates into the air.",
+   "Ask 'why?' and 'how does that work?' When you carry the 1 in a sum, it is one ten. Ten ones make one ten.",
+   "Some answers sound like reasons but are not. 'Because it is the rule.' 'Because the teacher said so.' They do not say how it works.",
+   "Knowing why helps. If you forget 7 × 8, split it: 5 × 8 is 40 and 2 × 8 is 16. That makes 56. You can also see when a rule breaks. 6 × ½ is 3, which is smaller."
+  ],
+  "adult": [
+   "This topic is about the difference between knowing that and knowing why, which teachers call procedural and conceptual understanding. A child who only knows the steps of column addition can carry out the method; a child who knows that the carried 1 is a ten made by regrouping (exchanging) ten ones can fix a slip, rebuild a forgotten step, and use the same idea later when ten tens make a hundred.",
+   "Asking 'why?' on purpose is a learning strategy. Research reviews call it elaborative interrogation and self-explanation, and the Education Endowment Foundation's guidance on metacognition recommends teaching children to explain their thinking out loud. The habit works best when the child already knows something about the topic, so link each new idea to an old one: 'That's like when...'.",
+   "Two common mistakes stand out. The first is accepting a fake reason: 'because it's the rule', 'because the teacher said so', or a circular answer such as 'it falls because it falls'. The second is over-trusting a rule learned without its reason. 'Multiplying makes bigger' is true only for numbers greater than 1; children who know that × means 'groups of' can see why 6 × 1, 6 × 0 and 6 × ½ break it.",
+   "In the lab your child bundles ten ones into a ten to see what carrying is, tests the 'multiplying makes bigger' rule until it breaks, sorts facts, real reasons and fake reasons, rebuilds 7 × 8 by splitting an array of rows two ways, and links new ideas to old ones."
+  ]
+ },
+ "familyTip": "When your child tells you a fact, ask 'How do you know?' or 'Why does that happen?' If the answer is 'because it just does', say 'Let's find out', and look it up or try it together.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it really explain why? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "💡 Real reason",
+    "🚫 Not a real reason"
+   ],
+   "items": [
+    [
+     "We carry because ten ones make one ten.",
+     0
+    ],
+    [
+     "Ice melts because the room warms it up.",
+     0
+    ],
+    [
+     "A shadow forms because your body blocks the light.",
+     0
+    ],
+    [
+     "7 × 8 = 8 × 7 because it is the same array turned round.",
+     0
+    ],
+    [
+     "We carry because that is the rule.",
+     1
+    ],
+    [
+     "Ice melts because it just does.",
+     1
+    ],
+    [
+     "Shadows form because my teacher said so.",
+     1
+    ],
+    [
+     "7 × 8 = 8 × 7 because it is in the times tables.",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwhy",
+  "caption": "Flagship lab: make a ten to see what carrying is, break the 'multiplying makes bigger' rule, sort real and fake reasons, rebuild 7 × 8, link new ideas to old.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In 38 + 25, the ones make 8 + 5 = 13. What does the carried 1 stand for?",
+   "choices": [
+    "One ten",
+    "One one",
+    "One hundred"
+   ],
+   "answer": 0,
+   "hint": "13 ones is the same as how many tens and how many ones?",
+   "explain": "One ten. 13 ones is 1 ten and 3 ones, so the 1 goes in the tens column."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Is {n} × ½ bigger or smaller than {n}?",
+   "choices": [
+    "Smaller",
+    "Bigger",
+    "The same"
+   ],
+   "answer": 0,
+   "hint": "× ½ means half of one group of {n}.",
+   "explain": "Smaller. Half of one group of {n} is {=n/2}. Multiplying makes bigger only when you multiply by more than 1.",
+   "params": {
+    "n": [
+     2,
+     20
+    ]
+   },
+   "where": "n % 2 == 0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which one is a real reason?",
+   "choices": [
+    "Plants need light because they use it to make food.",
+    "Plants need light because that is the rule.",
+    "Plants need light because plants need light."
+   ],
+   "answer": 0,
+   "hint": "A real reason says how it works.",
+   "explain": "Using light to make food says how it works. The other two give no reason at all."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "You forgot 6 × {n}. Which way rebuilds it?",
+   "choices": [
+    "5 × {n} plus 1 × {n}",
+    "6 + {n}",
+    "Guess a number near {n}"
+   ],
+   "answer": 0,
+   "hint": "6 rows of {n} can be split into 5 rows and 1 row.",
+   "explain": "5 × {n} = {=5*n} and 1 × {n} = {n}, so 6 × {n} = {=6*n}. Same dots, split into facts you know.",
+   "params": {
+    "n": [
+     3,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the difference between a fact and a reason?",
+    "choices": [
+     "A fact says what is true; a reason says why",
+     "There is no difference",
+     "A reason is always longer"
+    ],
+    "answer": 0,
+    "hint": "Puddles dry up. Puddles dry up because...",
+    "explain": "A fact says what is true. A reason says why or how it works."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sam says: 'A ball falls because it falls.' What is wrong?",
+    "choices": [
+     "It says the same thing again",
+     "Nothing, it is a good reason",
+     "It is too short"
+    ],
+    "answer": 0,
+    "hint": "Ask yourself: does it say how or why the ball falls, or just repeat it?",
+    "explain": "It just repeats the fact. A real reason is: gravity pulls it down towards the Earth."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why can knowing why help you?",
+    "choices": [
+     "You can rebuild a fact you forgot",
+     "You never have to practise",
+     "You will never get anything wrong"
+    ],
+    "answer": 0,
+    "hint": "Think about forgetting 7 × 8 in a test. What could you do?",
+    "explain": "If you forget 7 × 8, you can rebuild it from 5 × 8 and 2 × 8, because you know why it works."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "In {n} + 9, the ones make more than 10. What do you do with 10 of the ones?",
+    "choices": [
+     "Make them into one ten",
+     "Throw them away",
+     "Write 10 in the ones column"
+    ],
+    "answer": 0,
+    "hint": "Ten ones can be swapped for one ten. Where does a ten go?",
+    "explain": "Regroup them. Ten ones make one ten, so you carry one ten into the tens column. {n} + 9 = {=n+9}.",
+    "params": {
+     "n": [
+      12,
+      19
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which question helps you understand why?",
+    "choices": [
+     "How does that work?",
+     "Is it time to stop?",
+     "What page is it on?"
+    ],
+    "answer": 0,
+    "hint": "Which question asks about the reason?",
+    "explain": "'How does that work?' asks for the reason behind a fact."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Mia says: 'Multiplying always makes a number bigger.' She tests it on {n}. Which one breaks her rule?",
+    "choices": [
+     "{n} × 1",
+     "{n} × 2",
+     "{n} × 3"
+    ],
+    "answer": 0,
+    "hint": "How many groups of {n} is × 1?",
+    "explain": "{n} × 1 = {n}. One group of {n} is just {n}, so it is not bigger.",
+    "params": {
+     "n": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A new idea: 10 tens make 1 hundred. What old idea is it like?",
+    "choices": [
+     "10 ones make 1 ten",
+     "Half of 8 is 4",
+     "A shadow on a wall"
+    ],
+    "answer": 0,
+    "hint": "Look for another idea about making a bigger group.",
+    "explain": "It is like 10 ones make 1 ten. Both are about grouping in tens."
+   }
+  ]
+ }
+}
