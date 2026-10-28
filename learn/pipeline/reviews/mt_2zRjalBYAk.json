@@ -1,0 +1,19 @@
+{
+ "scores": {
+  "accuracy": {"score": 9, "evidence": "Linearisation L(x) = f(a) + f'(a)(x - a) and dy ~ (dy/dx)dx stated correctly; all numbers checked by hand: sqrt(4.1) ~ 2.025 vs 2.02485, sqrt(101) ~ 10.05 vs 10.0499, sqrt(26) ~ 5.1, 1.02^5 ~ 1.1 vs 1.104, ln 1.1 ~ 0.1 vs 0.0953, ring dA ~ pi = 3.14 vs exact 3.17 for r = 5, dr = 0.1, dV/V ~ 3dr/r. Error ~ f''(a)dx^2/2 gives error/dx^2 near 1/64 for sqrt x at 4, which the lab shows live. Sorter signs checked by computing each estimate."},
+  "misconceptions": {"score": 9, "evidence": "Targets using the slope at the new point, treating dx as the new x, reporting dy instead of f(a + dx), using the method with large steps, believing the estimate is exact, and confusing dA with the new area or pi*dr^2. Each appears as a distractor card or challenge option with its own corrective message."},
+  "lab_distinct": {"score": 9, "evidence": "Zoom-to-local-linearity with pinch/wheel and a log zoom bar, a card-built estimate with a delta-x/delta-y triangle, a live error/dx^2 readout, a curvature over/under judge on three functions and a growing-ring area model. No other lab zooms a curve onto its tangent or measures error scaling; passed the 30% shingle gate."},
+  "lab_teaches": {"score": 9, "evidence": "Order mirrors the A-level route: why it works (local straightness), the method on a known root, how good it is (quadratic error), which way it is wrong (concavity), then an applied small-change problem. Every step reports live numbers, not just a tick."},
+  "predictions": {"score": 9, "evidence": "Four steps ask for a locked prediction first (straight line on zoom, which slope to use, what halving dx does to the error, size of the area change) and the reveal compares the result with the prediction."},
+  "challenge_feedback": {"score": 9, "evidence": "Six rotating questions with shuffled options; each of the twelve wrong options gets its own message explaining the slip and the correct working, with a streak counter."},
+  "readability": {"score": 9, "evidence": "Learner kid text in short sentences with one idea each; adult text uses precise terms (linearisation, Leibniz notation, Taylor error term, concave/convex, relative change) within the readability limits checked by the pipeline."},
+  "no_filler": {"score": 9, "evidence": "Every paragraph carries a rule, a worked example or a named error; no generic praise or padding. Passed the filler and duplication gates."},
+  "mobile": {"score": 9, "evidence": "Narrow layout stacks graph above the panel; every interaction has a button in the control row as well as tap/drag/pinch targets; checked on iPhone 13 and Android screenshots."},
+  "accessibility": {"score": 9, "evidence": "Canvas aria-label and live status text describe the current numbers after every change; all controls are buttons with text; axe passed in light and dark themes on desktop and iPhone 13."}
+ },
+ "sources": [
+  "OpenStax Calculus Volume 1, section 4.2 Linear Approximations and Differentials",
+  "Stewart, J., Calculus: Early Transcendentals, section 3.10 Linear Approximations and Differentials",
+  "Taylor's theorem with remainder: error of the tangent-line approximation is f''(c)(x - a)^2 / 2"
+ ]
+}

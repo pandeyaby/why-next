@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "States d/dx(u/v) = (u\u2032v \u2212 uv\u2032)/v\u00b2 and derives it from u\u00b7v\u207b\u00b9 with the chain rule giving \u2212v\u2032/v\u00b2. Worked results were checked numerically against central differences: x/(x+1) \u2192 1/(x+1)\u00b2, x/(x\u00b2+1) \u2192 (1\u2212x\u00b2)/(x\u00b2+1)\u00b2, (x+1)/(x\u22122) \u2192 \u22123/(x\u22122)\u00b2, tan x \u2192 sec\u00b2x, x\u00b2/(x+1) \u2192 x(x+2)/(x+1)\u00b2 with max (\u22122, \u22124) and min (0, 0). Matches DfE A level content and AP Calculus AB Topic 2.9."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Each known error is made visible rather than just named: u\u2032/v\u2032 appears as a flat line that misses the falling slope dots, the reversed order uv\u2032 \u2212 u\u2032v appears as the mirror-image curve below the axis, a v or u\u2032v\u2032 tile gives a curve of the wrong height, k = 3 in the tuning step is the flipped numerator, and tapping x = \u22121 on x\u00b2/(x+1) explains asymptote versus stationary point."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Built around checking a quotient derivative against numerically sampled true-slope dots, which no other lab does: overlaying three candidate derivative curves, assembling the rule from five tiles with a live derivative curve, tuning a single numerator constant k against the dots, and flagging turning points beside a dashed asymptote. The product rule lab instead grows an area rectangle and builds answers from multiple-choice cards."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners confirm the rule empirically before using it: they see which formula matches the measured slopes at any x they drag to, place u\u2032v, uv\u2032 and v\u00b2 themselves and watch the curve snap onto the dots, find that the numerator of (x+1)/(x\u22122) is the constant \u22123, read sec\u00b2x off a live tangent until the slope is 2 at \u03c0/4, and locate both stationary points from the numerator of f\u2032."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four committed predictions: whether u\u2032/v\u2032 works for x/(x+1), whether (x+1)/(x\u22122) ever has positive slope, whether tan x can have slope below 1, and how many stationary points x\u00b2/(x+1) has. Each reveal restates the learner's choice and gives the reason: the falling dots, the constant negative numerator, cos\u00b2x \u2264 1, and the factorised numerator x(x+2)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions on sin x/x, 1/(x\u00b2+1), e\u02e3/x, tan x, the origin of v\u00b2 and stationary points of x/(x\u00b2+1). Every distractor maps to one tagged error with its own message: reversed order, differentiating top and bottom separately, lost minus sign, squaring the top, calling v\u00b2 a convention, confusing f = 0 with f\u2032 = 0, or mixing up sec x tan x."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner explanation is Flesch-Kincaid grade 4.3 and adult 9.4, under the band limits, while keeping exact terms: quotient, numerator, denominator, chain rule, product rule, stationary point, vertical asymptote, sec\u00b2x. The rule is also given in words as bottom times derivative of top, minus top times derivative of bottom, over the bottom squared."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every paragraph does one job: the trap, the rule, the proof, the two applications, curriculum placement, the proof for teachers, a list of five concrete mistakes, and a sign-check habit. Practice and mastery use different functions from the lesson text, and parameterised items generate fresh integer answers such as \u2212(a + b) and \u22122a."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on Android and iPhone 13 portrait plus desktop: graphs fill the canvas width with labels inside the frame, the tile row has five equal targets, the \u2212 1 and + 1 pads are full-width halves, dragging the cursor or tangent dot works with one finger, and Show me reaches the done state on every step inside the six-second gate."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe finds no violations in light or dark theme on desktop and phone. Every canvas action has a labelled button: move x left or right, pick a formula, place or remove a tile, nudge k, and flag x values. The aria-label and live region read the current x, true slope and candidate values in words, and the correct curve is marked by line weight and text as well as colour."
+  }
+ },
+ "sources": [
+  "Department for Education (2014), GCE AS and A level subject content for mathematics, Differentiation: product, quotient and chain rules; stationary points",
+  "College Board (2020), AP Calculus AB and BC Course and Exam Description, Topic 2.9 The Quotient Rule (FUN-3.B)",
+  "Pearson Edexcel A level Mathematics (9MA0) specification, Pure topic 7.4: differentiate using the product rule, the quotient rule and the chain rule",
+  "Orton, A. (1983), Students' understanding of differentiation, Educational Studies in Mathematics 14(3)"
+ ]
+}
