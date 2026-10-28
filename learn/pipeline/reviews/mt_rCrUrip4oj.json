@@ -1,0 +1,20 @@
+{
+ "scores": {
+  "accuracy": {"score": 9, "evidence": "Checked against the DfE A level Further Mathematics subject content (2017) and the AQA/Edexcel/OCR Further Maths specifications (arc length of y = f(x) and of parametric curves; hyperbolic functions). Chord totals for y = x² on [0,1] computed: n = 1, 2, 4, 8, 16 give 1.4142, 1.4604, 1.4743, 1.4778, 1.4787; exact (2√5 + ln(2 + √5))/4 = 1.4789. sinh(ln 2) = (2 − ½)/2 = 3/4 and cosh(ln 2) = 5/4. Circle x = r cos t, y = r sin t gives integrand r, s = rθ. y = (2/3)x^(3/2) gives 1 + (dy/dx)² = 1 + x. Lines 3t, 4t and 6t, 8t give 5 and 10 per unit t. ∫₀¹ x² dx = 1/3."},
+  "misconceptions": {"score": 9, "evidence": "Targets the documented slips: squaring y instead of dy/dx, dropping the 1 or the square root, using ∫ y dx (area) for length, giving cosh b (end height) instead of sinh b, x-limits or dx in a parametric integral, an extra 1 in the parametric integrand, and r² instead of r for a circle. Each has a named feedback message in the tiny-triangle cards, the pick step and the challenge."},
+  "lab_distinct": {"score": 9, "evidence": "No other flagship computes curve length: flag_arc.js is arc length of circles by angle (ages 11–16), flag_param.js plots and eliminates t, and the integration labs measure area. Chord doubling with a live total, the tiny δx/δy triangle, the catenary end drag and the area-shading wrong pick are new; the shingle gate passed against all flag_*.js files."},
+  "lab_teaches": {"score": 9, "evidence": "The learner first sees the length as a limit of chords, then derives the formula from Pythagoras, then uses the hyperbolic identity to get an exact length, then meets the parametric form where the integrand is constant, then separates length from area. This matches the topic: derive and use the arc length formula in Cartesian and parametric form."},
+  "predictions": {"score": 9, "evidence": "Five locked predictions with tempting wrong options: chords grow without limit or shrink to √2, ∫ (1 + dy/dx) dx or ∫ y dx as the formula, 5/4 or ln 2 for the catenary length, 2π or π/2 for the quarter circle, and ∫ x² dx for the length of y = x²."},
+  "challenge_feedback": {"score": 9, "evidence": "Six rotating questions with nine distinct m= messages: squared y, area, cosh vs sinh, r² vs r, radius not multiplied, missing square of √x, change in y vs length, per-unit length vs total, and an extra 1 in t form."},
+  "readability": {"score": 9, "evidence": "Kid paragraphs use short sentences and one worked example each (chords on y = x², tiny triangle, catenary to ln 2, circle). Adult text uses the precise A level terms: arc length, parametric, hyperbolic identity 1 + sinh²x = cosh²x, catenary, surface area of revolution."},
+  "no_filler": {"score": 9, "evidence": "Passed the filler regex and 12% duplicate gate. Kid text covers chords, derivation, an exact example and the parametric form with slips; adult text covers context, derivation, common mistakes and what the lab does."},
+  "mobile": {"score": 9, "evidence": "Checked 360 px Android screenshots in light and dark for all six steps: graph, triangle labels, catenary readout, circle sweep and integral cards fit and stay readable; every control is a full-size button."},
+  "accessibility": {"score": 9, "evidence": "walk.cjs: every task completes with Show me on desktop and iPhone 13, the challenge shows, axe WCAG 2.1 AA is clean in both themes, no console errors. Every drag has a button route (fewer/more chords, b ± 0.05 and b = ln 2, r ± 1 and θ + π/12, answer buttons) and the canvas aria-label reports each result."}
+ },
+ "sources": [
+  "Department for Education (2017), Further mathematics AS and A level subject content: arc length (Cartesian and parametric), hyperbolic functions",
+  "Pearson Edexcel A level Further Mathematics (9FM0) specification, Further Pure 1/2: arc length and surface area of revolution",
+  "AQA A level Further Mathematics (7367) specification, section on applications of integration: arc length",
+  "Mathematics in Education and Industry (MEI), Further Pure with Technology / Further Pure Core resources on arc length of a catenary"
+ ]
+}

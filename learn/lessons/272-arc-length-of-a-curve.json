@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_rCrUrip4oj",
+ "title": "Arc length of a curve",
+ "audience": "learner",
+ "keyIdea": "The arc length of y = f(x) from x = a to x = b is s = ∫ₐᵇ √(1 + (dy/dx)²) dx. It comes from Pythagoras on a tiny piece: δs² ≈ δx² + δy². For a parametric curve x = x(t), y = y(t), use s = ∫ √((dx/dt)² + (dy/dt)²) dt with limits in t. Square the derivative, not y, and do not confuse length with the area ∫ y dx. For y = cosh x, 1 + sinh²x = cosh²x, so the length from 0 to b is sinh b.",
+ "explain": {
+  "kid": [
+   "How long is the curve y = x² from x = 0 to x = 1? A ruler will not bend. So join points on the curve with straight chords and add their lengths. One chord gives √2, about 1.414. Sixteen chords give 1.479. More chords close in on the true length, about 1.479.",
+   "Zoom in on one tiny piece. It is almost straight. It is the long side of a right-angled triangle with sides δx and δy. So δs² ≈ δx² + δy². Take δx out: δs ≈ √(1 + (δy/δx)²) δx. Let δx shrink to 0 and add the pieces. You get s = ∫ √(1 + (dy/dx)²) dx.",
+   "Try y = cosh x from 0 to ln 2. Here dy/dx = sinh x. The identity 1 + sinh²x = cosh²x makes the root just cosh x. So s = sinh(ln 2) = 3/4. A common slip is to give cosh(ln 2) = 5/4. That is the height at the end, not the length.",
+   "For a parametric curve, use s = ∫ √((dx/dt)² + (dy/dt)²) dt, with limits in t. For x = r cos t, y = r sin t the root is just r. So an arc through angle θ has length rθ. Watch two slips. Do not square y instead of dy/dx. Do not use ∫ y dx, which is an area."
+  ],
+  "adult": [
+   "This A-level Further Mathematics topic (ages 17 to 18) finds the arc length of a curve by integration. Students use s = ∫ₐᵇ √(1 + (dy/dx)²) dx for y = f(x) and s = ∫ √((dx/dt)² + (dy/dt)²) dt for parametric curves. It builds on differentiation, integration, hyperbolic functions and parametric equations, and leads to surface areas of revolution.",
+   "The formula comes from approximating the curve by chords. On a small piece, δs² ≈ δx² + δy², so δs ≈ √(1 + (δy/δx)²) δx, and summing as δx → 0 gives the integral. Exam questions are built so the root simplifies: 1 + sinh²x = cosh²x for the catenary y = cosh x, a perfect square such as 1 + x for y = (2/3)x^(3/2), or (dx/dt)² + (dy/dt)² = r² for a circle, which gives s = rθ.",
+   "Common mistakes: squaring y instead of dy/dx; dropping the 1 or the square root; computing ∫ y dx, which is the area; giving the end height cosh b instead of the length sinh b; using x limits in a t integral or integrating with respect to the wrong variable; and adding a 1 inside the parametric integrand.",
+   "The lab has five parts. You double the number of chords on y = x² and watch the total settle at 1.479. You build the formula card by card from a tiny triangle. You drag the end of the catenary to ln 2 and read the length 3/4. You sweep a parametric circle where the integrand is the constant r. Last, you pick the arc length integral from area and slip look-alikes. The challenge revisits each slip."
+  ]
+ },
+ "familyTip": "Ask your teenager to lay a piece of string along a curve drawn on paper, then straighten it and measure it. Then ask them to explain why adding up tiny straight chords gives the same answer, and where Pythagoras comes in.",
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which integral gives the arc length of y = f(x) from x = a to x = b?",
+   "choices": [
+    "∫ √(1 + (dy/dx)²) dx",
+    "∫ (1 + dy/dx) dx",
+    "∫ y dx"
+   ],
+   "answer": 0,
+   "hint": "Use Pythagoras on a tiny piece: δs² ≈ δx² + δy².",
+   "explain": "δs ≈ √(1 + (δy/δx)²) δx. Summing as δx → 0 gives s = ∫ √(1 + (dy/dx)²) dx. ∫ y dx is the area."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "y = {a}x + 1. What is 1 + (dy/dx)²?",
+   "answer": "1+a*a",
+   "hint": "dy/dx is the gradient {a}. Square it, then add 1.",
+   "explain": "dy/dx = {a}, so 1 + (dy/dx)² = 1 + {=a*a} = {=1+a*a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Find the arc length of y = cosh x from x = 0 to x = ln 2.",
+   "choices": [
+    "3/4",
+    "5/4",
+    "ln 2"
+   ],
+   "answer": 0,
+   "hint": "1 + sinh²x = cosh²x, so the integrand is cosh x.",
+   "explain": "s = ∫₀^ln2 cosh x dx = sinh(ln 2) = (2 − ½)/2 = 3/4. 5/4 is cosh(ln 2), the height at the end."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "x = 3t, y = 4t for 0 ≤ t ≤ {k}. Find the arc length.",
+   "answer": "5*k",
+   "hint": "(dx/dt)² + (dy/dt)² = 9 + 16. Take the root, then integrate from 0 to {k}.",
+   "explain": "√(3² + 4²) = 5, so s = ∫₀^{k} 5 dt = 5 × {k} = {=5*k}.",
+   "params": {
+    "k": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "x = t², y = t³ for 0 ≤ t ≤ 1. Which integral is the arc length?",
+   "choices": [
+    "∫₀¹ √(1 + 9t⁴) dt",
+    "∫₀¹ √(4t² + 9t⁴) dt",
+    "∫₀¹ √(4t² + 9t⁴) dx"
+   ],
+   "answer": 1,
+   "hint": "Find dx/dt and dy/dt, square both and add. The limits are in t.",
+   "explain": "dx/dt = 2t and dy/dt = 3t², so the integrand is √(4t² + 9t⁴), integrated with respect to t."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "y = x² for 0 ≤ x ≤ 2. Which integral is the arc length?",
+    "choices": [
+     "∫₀² √(1 + x⁴) dx",
+     "∫₀² √(1 + 4x²) dx",
+     "∫₀² x² dx"
+    ],
+    "answer": 1,
+    "hint": "Differentiate first: dy/dx = 2x. Square that, not y.",
+    "explain": "(dy/dx)² = 4x², so s = ∫₀² √(1 + 4x²) dx. √(1 + x⁴) squares y, and ∫ x² dx is the area."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "x = {r} cos t, y = {r} sin t for 0 ≤ t ≤ 2π. The arc length is kπ. What is k?",
+    "answer": "2*r",
+    "hint": "(dx/dt)² + (dy/dt)² = {r}²(sin²t + cos²t), so the integrand is the radius {r}.",
+    "explain": "The integrand is {r}, so s = ∫₀^2π {r} dt = {=2*r}π. That is the circumference 2πr, so k = {=2*r}.",
+    "params": {
+     "r": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "y = cosh x for 0 ≤ x ≤ 1. What is the arc length?",
+    "choices": [
+     "cosh 1",
+     "sinh 1",
+     "cosh 1 − 1"
+    ],
+    "answer": 1,
+    "hint": "1 + sinh²x = cosh²x, so the integrand is cosh x. Then integrate cosh x.",
+    "explain": "s = ∫₀¹ cosh x dx = sinh 1 − sinh 0 = sinh 1, about 1.175. cosh 1 is the height at x = 1."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "y = (2/3)x^(3/2). What does 1 + (dy/dx)² simplify to?",
+    "choices": [
+     "1 + √x",
+     "1 + x",
+     "1 + (4/9)x³"
+    ],
+    "answer": 1,
+    "hint": "dy/dx = (2/3)(3/2)x^(1/2) = √x. Now square √x and add 1.",
+    "explain": "dy/dx = √x, so (dy/dx)² = x and 1 + (dy/dx)² = 1 + x. So s = ∫ √(1 + x) dx, which is easy to integrate."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "x = 6t, y = 8t for 0 ≤ t ≤ {k}. Find the arc length.",
+    "answer": "10*k",
+    "hint": "(dx/dt)² + (dy/dt)² = 36 + 64. Take the root, then integrate from 0 to {k}.",
+    "explain": "√(36 + 64) = 10, so s = ∫₀^{k} 10 dt = {=10*k}.",
+    "params": {
+     "k": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is ∫₀¹ x² dx not the arc length of y = x² from 0 to 1?",
+    "choices": [
+     "It is the area under the curve",
+     "It forgets the limits",
+     "It uses the wrong variable"
+    ],
+    "answer": 0,
+    "hint": "∫ y dx adds up thin strips of height y. What does that measure?",
+    "explain": "∫ y dx adds thin strips, so it gives the area, 1/3. The length needs √(1 + (dy/dx)²), and comes to about 1.479."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "x = t², y = 2t for 0 ≤ t ≤ 1. What is the integrand of the arc length?",
+    "choices": [
+     "√(1 + 4)",
+     "√(4t² + 4)",
+     "√(t⁴ + 4t²)"
+    ],
+    "answer": 1,
+    "hint": "dx/dt = 2t and dy/dt = 2. Square both and add, with no extra 1.",
+    "explain": "(dx/dt)² + (dy/dt)² = 4t² + 4, so s = ∫₀¹ √(4t² + 4) dt = ∫₀¹ 2√(t² + 1) dt."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each integral give an arc length or an area? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "📏 Arc length",
+    "▦ Area"
+   ],
+   "items": [
+    [
+     "∫₀¹ √(1 + 4x²) dx for y = x²",
+     0
+    ],
+    [
+     "∫₀¹ x² dx",
+     1
+    ],
+    [
+     "∫ √(1 + (dy/dx)²) dx",
+     0
+    ],
+    [
+     "∫ₐᵇ f(x) dx",
+     1
+    ],
+    [
+     "∫ √((dx/dt)² + (dy/dt)²) dt",
+     0
+    ],
+    [
+     "∫ y dx",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagarclen",
+  "caption": "Flagship lab: add chords, build the formula from a tiny triangle, measure a catenary, sweep a parametric circle and pick length from area.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
