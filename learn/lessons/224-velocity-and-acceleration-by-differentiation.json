@@ -1,0 +1,284 @@
+{
+ "topicId": "mt_CyACN8L0PA",
+ "title": "Velocity and acceleration by differentiation",
+ "audience": "learner",
+ "keyIdea": "For motion in a straight line, velocity is the rate of change of displacement and acceleration is the rate of change of velocity: v = ds/dt and a = dv/dt = d²s/dt². The particle is momentarily at rest when v = 0. The sign of v gives the direction, not the sign of s. It speeds up when v and a have the same sign and slows down when they have opposite signs.",
+ "explain": {
+  "kid": [
+   "A particle moves along a line. Its displacement s is how far it is from the start, with a sign for the side. If s = t³ − 6t² + 9t, then v = ds/dt = 3t² − 12t + 9. Velocity is just the gradient of the s graph.",
+   "Differentiate again to get acceleration: a = dv/dt = 6t − 12. So a is the gradient of the v graph, and the second derivative of s.",
+   "The particle is at rest for an instant when v = 0. Here 3(t − 1)(t − 3) = 0, so t = 1 and t = 3. Do not solve s = 0 by mistake. At t = 0, s = 0 but v = 9, so it is moving.",
+   "The sign of v tells you the direction. At t = 2, s = 2 is positive but v = −3, so it moves back. To tell if it speeds up, compare signs. Same signs of v and a: faster. Opposite signs: slower."
+  ],
+  "adult": [
+   "This A-level topic (ages 16 to 18) applies differentiation to motion in a straight line. Displacement s is a function of time, velocity is v = ds/dt and acceleration is a = dv/dt = d²s/dt². Every question here follows one chain: differentiate to move from s to v to a, and substitute or solve to answer it.",
+   "Three readings matter. First, momentarily at rest means v = 0, found by solving v(t) = 0. Second, the direction of motion is the sign of v; the sign of s only says which side of the start the particle is on. Third, speed increases when v and a have the same sign and falls when they have opposite signs, because then the acceleration acts against the motion.",
+   "Common mistakes: solving s = 0 instead of v = 0 for rest; assuming that at rest the acceleration is zero too (at t = 1 here, a = −6); reading a negative a as slowing down whatever the sign of v; differentiating only once when acceleration is asked for; and confusing distance travelled with displacement when the particle turns back. Be careful to state units: m, m/s and m/s².",
+   "In the lab learners build v = ds/dt and a = dv/dt term by term and drag a time cursor along linked s, v and a graphs while the particle moves on a track. They find a time when s is positive but v is negative, pin both rest times, pin where a = 0, and classify each interval as speeding up or slowing down."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "s = t³ − 6t² + 9t. Which is the velocity v?",
+   "choices": [
+    "3t² − 12t + 9",
+    "t³ − 6t² + 9",
+    "6t − 12"
+   ],
+   "answer": 0,
+   "hint": "Velocity is ds/dt: differentiate each term once.",
+   "explain": "v = ds/dt = 3t² − 12t + 9. 6t − 12 is the acceleration, a second derivative."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "s = {a}t² + {b}t (metres, t in seconds). Find the velocity at t = {c}.",
+   "answer": "2*a*c+b",
+   "hint": "Differentiate: v = 2({a})t + {b}, then put t = {c}.",
+   "explain": "v = {=2*a}t + {b}, so at t = {c}, v = {=2*a*c} + {b} = {=2*a*c+b} m/s.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     6
+    ],
+    "c": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "v = {a}t² − {b}t. Find the acceleration at t = {c}.",
+   "answer": "2*a*c-b",
+   "hint": "Acceleration is dv/dt. Differentiate v, then substitute.",
+   "explain": "a = dv/dt = {=2*a}t − {b}, so at t = {c}, a = {=2*a*c} − {b} = {=2*a*c-b} m/s².",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     3
+    ],
+    "c": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "At some time, v = −4 m/s and a = −3 m/s². What is happening?",
+   "choices": [
+    "It is speeding up",
+    "It is slowing down",
+    "It is at rest"
+   ],
+   "answer": 0,
+   "hint": "Compare the signs of v and a, not a alone.",
+   "explain": "v and a are both negative, so the acceleration is in the direction of motion and the particle speeds up."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "v = t² − {=p+q}t + {=p*q}. Find the first time (t > 0) the particle is at rest.",
+   "answer": "p",
+   "hint": "At rest means v = 0. Factorise the quadratic.",
+   "explain": "v = (t − {p})(t − {q}) = 0 gives t = {p} or t = {q}, so the first time is t = {p} s.",
+   "params": {
+    "p": [
+     1,
+     3
+    ],
+    "q": [
+     4,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does \"momentarily at rest\" mean?",
+    "choices": [
+     "v = 0",
+     "s = 0",
+     "a = 0"
+    ],
+    "answer": 0,
+    "hint": "Rest is about motion, not position.",
+    "explain": "At rest means the velocity is zero, v = 0. s = 0 means it is back at the start, which could happen while it is moving."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "s = {a}t³ + {b}t. Find the velocity at t = 2.",
+    "answer": "12*a+b",
+    "hint": "v = ds/dt = 3({a})t² + {b}; put t = 2.",
+    "explain": "v = {=3*a}t² + {b}, so at t = 2, v = {=12*a} + {b} = {=12*a+b} m/s.",
+    "params": {
+     "a": [
+      1,
+      3
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "s = t³ − {=3*k}t² + 5t. At what time is the acceleration zero?",
+    "answer": "k",
+    "hint": "Differentiate twice, then solve a = 0.",
+    "explain": "v = 3t² − {=6*k}t + 5 and a = 6t − {=6*k}. a = 0 when t = {k} s.",
+    "params": {
+     "k": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "s = t³ − 6t² + 9t. At t = 1 the particle is at rest. What is its acceleration?",
+    "choices": [
+     "−6 m/s²",
+     "0 m/s²",
+     "9 m/s²"
+    ],
+    "answer": 0,
+    "hint": "Find a = 6t − 12 and substitute t = 1.",
+    "explain": "a = 6(1) − 12 = −6 m/s². Being at rest does not mean the acceleration is zero."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "At t = 2, s = 2 m and v = −3 m/s. Which way is the particle moving?",
+    "choices": [
+     "In the negative direction",
+     "In the positive direction",
+     "It is not moving"
+    ],
+    "answer": 0,
+    "hint": "Direction comes from v, not s.",
+    "explain": "v is negative, so it moves in the negative direction, even though it is still on the positive side of the start."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "v = 3t² − 12t + 9 and a = 6t − 12. On 2 < t < 3, is the particle speeding up?",
+    "choices": [
+     "No, v < 0 and a > 0, so it slows down",
+     "Yes, a > 0 so it speeds up",
+     "Yes, v < 0 so it speeds up"
+    ],
+    "answer": 0,
+    "hint": "Find the sign of v and the sign of a on the interval.",
+    "explain": "For 2 < t < 3, v < 0 and a > 0. Opposite signs mean the acceleration acts against the motion, so it slows down."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "s = {=k}t² − t³. Find the velocity at t = 1.",
+    "answer": "2*k-3",
+    "hint": "v = ds/dt = 2({k})t − 3t².",
+    "explain": "v = {=2*k}t − 3t², so at t = 1, v = {=2*k} − 3 = {=2*k-3} m/s.",
+    "params": {
+     "k": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is the acceleration if s = 4t³ − t²?",
+    "choices": [
+     "24t − 2",
+     "12t² − 2t",
+     "12t − 2"
+    ],
+    "answer": 0,
+    "hint": "Differentiate twice: first s to v, then v to a.",
+    "explain": "v = 12t² − 2t, then a = dv/dt = 24t − 2. 12t² − 2t is only the velocity."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "s = t³ − 6t² + 9t. When is the particle at rest?",
+    "choices": [
+     "t = 1 and t = 3",
+     "t = 0 and t = 3",
+     "t = 2"
+    ],
+    "answer": 0,
+    "hint": "Solve v = 3t² − 12t + 9 = 0.",
+    "explain": "3(t − 1)(t − 3) = 0 gives t = 1 and t = 3. t = 0 and t = 3 are where s = 0, and t = 2 is where a = 0."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the particle speeding up or slowing down? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Speeding up",
+    "Slowing down"
+   ],
+   "items": [
+    [
+     "v = 5, a = 2",
+     0
+    ],
+    [
+     "v = −4, a = −3",
+     0
+    ],
+    [
+     "v = −1, a = −6",
+     0
+    ],
+    [
+     "v = 6, a = −2",
+     1
+    ],
+    [
+     "v = −3, a = 4",
+     1
+    ],
+    [
+     "v = 2, a = −1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagkin",
+  "caption": "Flagship lab: build v and a by differentiating, drag time along linked s, v, a graphs, find direction, rest times and when it speeds up.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

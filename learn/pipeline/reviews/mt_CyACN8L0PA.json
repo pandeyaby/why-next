@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "All calculus checked by hand: s = t³ − 6t² + 9t gives v = 3t² − 12t + 9 = 3(t − 1)(t − 3) and a = 6t − 12; rest at t = 1 and 3, a = 0 at t = 2, a(1) = −6. Interval signs: (0,1) v+ a− slowing, (1,2) v− a− speeding, (2,3) v− a+ slowing, (3,4) v+ a+ speeding. Challenge family s = t³ − 3(p+q)/2 t² + 3pq t has v = 3(t − p)(t − q), a(q) = 3(q − p), v(0) = 3pq, all integers for the chosen (p,q)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the standard kinematics slips: solving s = 0 for rest (step 3 prediction s = 0 vs v = 0, challenge tag 'szero', m1, m9), assuming a = 0 when at rest (step 4 prediction at t = 1, tag 'rest', m4), reading direction from s not v (step 2 prediction and task s>0 with v<0, m5), negative a always means slowing down (step 5 prediction on 1 < t < 2, tag 'asign', p4, m6), differentiating once only for acceleration (tag 'vel', m8) and dropping terms (tags 'drop', 'term')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_kin.js is a motion lab, not a gradient lab: a particle on a track with velocity and acceleration arrows is linked to stacked s, v and a graphs with a shared draggable time cursor, derivative tiles build v and then a term by term, rest times and a = 0 are pinned on the graphs, and intervals are shaded and sorted into speeding up or slowing down. It passed the 30% shingle gate against flagderiv, flaggradf, flagtan and flagoddev."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each task is one evidence statement: building v = ds/dt tile by tile practises differentiating s(t); the direction task forces finding a time where s > 0 but v < 0; pinning t = 1 and t = 3 is finding when the object is momentarily at rest; building a = dv/dt and reading it at given times is finding acceleration; the interval classification interprets the signs of v and a together. Each done line states the rule just used."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions with tempting wrong options taken from real errors: 'Yes, s is positive' for direction at t = 2, 's = 0' for momentarily at rest, 'Yes, at rest means a = 0' at t = 1, and 'Yes, negative a means slowing' on 1 < t < 2. Each is then tested on the canvas by dragging the time cursor and pinning values, and the reveal names what was predicted."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "The challenge generates rounds from five (p,q) pairs and four question kinds (rest times, acceleration at the second rest time, speeding up at t = p + 0.5, initial velocity). Every distractor carries a slip tag (azero, szero, vel, drop, asign, rest, s0, term) and a specific m= message explaining that exact mistake, for example 'That is where a = 0, not where v = 0'. Interval feedback in step 5 states the actual signs of v and a."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner audience: kid text FK grade 3.0 with short sentences and one worked example (s = t³ − 6t² + 9t) used throughout; adult text FK 9.8 within the 9.5 + 0.5 tolerance for a 16–18 maths topic, naming each mistake explicitly. Symbols are written with proper superscripts and minus signs; units m, m/s and m/s² are stated."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler phrases; every paragraph carries a definition, a worked value or a named mistake. Practice and mastery items each have a hint that says which derivative to take or which sign to compare, and explanations show the substituted working, e.g. 'a = 6(1) − 12 = −6 m/s². Being at rest does not mean the acceleration is zero.'"
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on iPhone 13 screenshots in both themes: stacked panels fit 390 px width, derivative tiles and the t − 0.25 / t + 0.25 buttons are full-size tap targets, dragging anywhere on the track or graphs moves the time cursor in 0.25 s steps, tangent line is clipped to its panel, and Show me finishes every task in under 6 s in the browser walk."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "The canvas has a live aria-label giving t, s, v and a and the current task; every drag action also has button equivalents (step buttons, interval choice buttons, tap tiles). Colour is never the only cue: graphs are labelled s, v, a with value chips, intervals carry 'faster'/'slower' text. The browser gate's axe scan reported no violations in light and dark themes."
+  }
+ },
+ "sources": [
+  "AQA A-level Mathematics 7357 specification, section R (kinematics): use calculus in kinematics for motion in a straight line, v = dr/dt, a = dv/dt = d²r/dt²",
+  "Pearson Edexcel A level Mathematics (9MA0) specification, section 9: kinematics using calculus",
+  "Department for Education (2016), Mathematics AS and A level subject content: mechanics, kinematics",
+  "Common Core State Standards for Mathematics, HSF-IF.B.6 (average and instantaneous rate of change) and AP Calculus AB CED Unit 4 (straight-line motion)"
+ ]
+}

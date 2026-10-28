@@ -1,0 +1,52 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the IUPAC Gold Book and the AQA 3.3.7 and OCR A 6.2.2 specifications: a chiral centre has four different groups, enantiomers are non-superimposable mirror images, they rotate plane-polarised light by equal angles in opposite directions, a racemic mixture shows no net rotation, and enantiomers share boiling points. The lab's mirror maths is exact: a mirror image is an odd permutation, rotations are even, so at most 2 of 4 groups ever coincide."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the known A-level errors: any carbon with OH is chiral (propan-2-ol prediction, tag oh), comparing attached atoms instead of whole groups (pentan-3-ol in the lab and tag atoms), counting a C=O carbon (lactic acid and alanine, tag cooh), believing a racemic mix rotates light (step 5 prediction, tag mix), and thinking enantiomers differ in formula or boiling point (tags formula and phys)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_chiral.js is the only lab that renders a 3D tetrahedral centre with wedge and dash bonds, rotates the mirror image about real symmetry axes (120 degrees about the top bond, 180 degrees about an edge axis), scores how many groups line up, finds a solving route by search, and simulates a polarimeter whose output rotation follows the enantiomer ratio. It passed the 30% shingle gate against every other flag lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners discover non-superimposability by failing: the counter never passes 2 of 4 however many turns they try, then one swap lets a few turns reach 4 of 4. Breaking a chiral centre with a single group change, and watching the output arrow shrink to zero at 50:50, makes the definitions concrete rather than memorised."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions with tempting wrong answers: whether the OH carbon of propan-2-ol is chiral (yes is tempting), whether the mirror image can be turned to fit (most say yes with the right turn), whether a swapped mirror image will fit (students often say still never), and what a 50:50 mix does to light. Each is tested by the lab and the reveal names the pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating questions (2-chlorobutane, pentan-3-ol, racemic light, how enantiomers differ, swapping groups, alanine, carvone smell). Every distractor is tagged with a targeted explanation, e.g. 'The COOH carbon has a C=O double bond, so only three groups. Only the CH carbon is chiral.' Answer order rotates each round."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner paragraphs score FK 3.3 against a 6.5 cap while keeping exact terms (enantiomer, racemic, plane-polarised). Adult paragraphs score FK 7.9 against 9.5, cover scope, the groups-not-atoms test, named mistakes and a lab tour. Canvas text uses short labels and condensed formulae."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler gate passed. Every tap in step 1 returns the actual four groups and a reason (two groups the same, only three groups, or four different). Feedback in steps 3 and 4 is a live count of groups lined up, and challenge feedback gives the chemistry rather than praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Reviewed iPhone 13 screenshots in both themes for all steps: the four-carbon chain fits in one row, the molecule and mirror sit side by side with labels readable, the back group was moved clear of the carbon by tilting the view, and opaque group boxes stop bonds striking through labels. Turn and flip work by swipe as well as buttons."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button twin (one button per carbon plus None here, one per group slot, Turn 120 degrees, Flip 180 degrees, Swap front two, More (+), More (−), 50:50). The aria-label reads the groups at each position and how many line up; walk.cjs ran axe WCAG 2.1 AA with no violations in light and dark on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "IUPAC Compendium of Chemical Terminology (Gold Book): chirality, enantiomer, racemate, optical activity",
+  "AQA A-level Chemistry 7405 specification, section 3.3.7 Optical isomerism",
+  "OCR A-level Chemistry A H432 specification, 6.2.2 Optical isomerism",
+  "Clayden, Greeves and Warren, Organic Chemistry (2nd ed.), chapter 14 Stereochemistry",
+  "Royal Society of Chemistry, Education in Chemistry: misconceptions in stereochemistry",
+  "Leitereg et al. (1971), Chemical and sensory data supporting the difference between the odors of the enantiomeric carvones, J. Agric. Food Chem. 19(4)"
+ ]
+}

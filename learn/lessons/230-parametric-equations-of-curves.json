@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_3bLrl-cWAS",
+ "title": "Parametric equations of curves",
+ "audience": "learner",
+ "keyIdea": "A parametric curve gives x and y separately in terms of a parameter t: x = f(t), y = g(t). Each value of t gives one point, so you can plot the curve from a table of t values. To find the Cartesian equation, eliminate t: make t the subject of one equation and substitute, or use an identity such as cos²t + sin²t = 1. x = r cos t, y = r sin t is a circle of radius r. Check the range: the parametric curve may cover only part of the Cartesian graph.",
+ "explain": {
+  "kid": [
+   "In a parametric curve, x and y each depend on a third variable t, called the parameter. Take x = 2t and y = t². Pick t = −1. Then x = −2 and y = 1, so the point is (−2, 1). A table of t values gives a set of points. Join them in order of t to get the curve.",
+   "To get a Cartesian equation, remove t. From x = 2t, t = x/2. Put that into y = t² to get y = (x/2)² = x²/4. The common slip is y = x²/2. The 2 must be squared too.",
+   "When t is inside sin and cos, use cos²t + sin²t = 1. For x = 3 cos t and y = 2 sin t, cos t = x/3 and sin t = y/2. So (x/3)² + (y/2)² = 1, an ellipse 6 wide and 4 tall. For x = r cos t and y = r sin t you get x² + y² = r², a circle of radius r.",
+   "Always check the range. x = t² is never negative. So x = t², y = t⁴ traces only the right half of y = x². And x = cos t, y = sin t for 0 ≤ t ≤ π gives only the top half of the unit circle."
+  ],
+  "adult": [
+   "This A-level topic (ages 17 to 18) describes curves with parametric equations x = f(t), y = g(t). Students plot curves from a table of parameter values, convert to Cartesian form by eliminating the parameter, and write the parametric form of a circle, x = r cos t, y = r sin t. It builds on functions, trigonometric identities and graph sketching, and leads to parametric differentiation and integration.",
+   "There are two main ways to eliminate the parameter. If one equation is easy to rearrange, make t the subject and substitute into the other: x = 2t, y = t² gives y = x²/4. If t appears inside sine and cosine, isolate cos t and sin t and use cos²t + sin²t = 1: x = a cos t, y = b sin t gives x²/a² + y²/b² = 1. The circle is the special case a = b = r.",
+   "Common mistakes: squaring only part of an expression, so (x/2)² becomes x²/2; dividing when you should multiply or the reverse when making t the subject; writing x + y = r or x² + y² = r for a circle of radius r; adding cos t + sin t = 1 instead of squaring; and forgetting the domain, so a curve such as x = t², y = t⁴ is described as the whole parabola y = x² when x can never be negative. Be careful to state any restriction on x or y with the Cartesian equation.",
+   "The lab has five parts. You step t along a track to plot x = 2t, y = t². You eliminate t card by card and see y = x²/4 run through the points. You set r and sweep t to trace a circle while x² + y² stays fixed. You build the ellipse equation from the identity. Last, you sweep two restricted curves and decide which part of the Cartesian graph they really cover."
+  ]
+ },
+ "familyTip": "Ask your teenager to explain a moving point as a story: at time t the point is at (2t, t²), so where is it at t = 0, 1 and 2, and which way is it going? Then ask what equation links x and y once time is taken away.",
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "x = {a}t, y = t². At t = {b}, what is the y-coordinate of the point?",
+   "answer": "b*b",
+   "hint": "Substitute t = {b} into y = t², so square {b}.",
+   "explain": "y = t² = {b}² = {=b*b}. The x-coordinate is {a} × {b} = {=a*b}, so the point is ({=a*b}, {=b*b}).",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "x = 2t, y = t². Which is the Cartesian equation?",
+   "choices": [
+    "y = x²/4",
+    "y = x²/2",
+    "y = 2x²"
+   ],
+   "answer": 0,
+   "hint": "t = x/2. Square all of it.",
+   "explain": "t = x/2, so y = (x/2)² = x²/4. Writing x²/2 forgets to square the 2."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "x = {r} cos t, y = {r} sin t. The curve is x² + y² = k. What is k?",
+   "answer": "r*r",
+   "hint": "x² + y² = r²cos²t + r²sin²t. Factor out r².",
+   "explain": "x² + y² = {r}²(cos²t + sin²t) = {r}² = {=r*r}. It is a circle of radius {r}, so k = {=r*r}.",
+   "params": {
+    "r": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "x = 3 cos t, y = 2 sin t. Which is the Cartesian equation?",
+   "choices": [
+    "(x/3)² + (y/2)² = 1",
+    "x/3 + y/2 = 1",
+    "x² + y² = 6"
+   ],
+   "answer": 0,
+   "hint": "Isolate cos t and sin t, then use cos²t + sin²t = 1.",
+   "explain": "cos t = x/3 and sin t = y/2, so (x/3)² + (y/2)² = 1: an ellipse. Adding x/3 + y/2 gives a line, because cos t + sin t is not 1."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "x = t + {a}, y = 2t. Find y when x = {b}.",
+   "answer": "2*(b-a)",
+   "hint": "First find t from x = t + {a}.",
+   "explain": "t = x − {a} = {b} − {a} = {=b-a}, so y = 2 × {=b-a} = {=2*(b-a)}.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     5,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "x = 3t, y = t². Which is the Cartesian equation?",
+    "choices": [
+     "y = x²/9",
+     "y = x²/3",
+     "y = 9x²"
+    ],
+    "answer": 0,
+    "hint": "Make t the subject of x = 3t.",
+    "explain": "t = x/3, so y = (x/3)² = x²/9."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which parametric equations describe a circle of radius 4 centred at the origin?",
+    "choices": [
+     "x = 4 cos t, y = 4 sin t",
+     "x = 4t, y = 4t",
+     "x = cos 4t, y = sin t"
+    ],
+    "answer": 0,
+    "hint": "A circle of radius r is x = r cos t, y = r sin t.",
+    "explain": "x = 4 cos t, y = 4 sin t gives x² + y² = 16, a circle of radius 4."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "x = t², y = t⁴ for all real t. Which describes the curve?",
+    "choices": [
+     "The part of y = x² with x ≥ 0",
+     "The whole parabola y = x²",
+     "The part of y = x² with x ≤ 0"
+    ],
+    "answer": 0,
+    "hint": "Can x = t² ever be negative? Think about the sign of x.",
+    "explain": "y = (t²)² = x², but x = t² ≥ 0, so only the right half of the parabola is traced."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "x = {a} cos t, y = {a} sin t. What is the radius of the circle?",
+    "answer": "a",
+    "hint": "x² + y² = r² for x = r cos t, y = r sin t.",
+    "explain": "x² + y² = {a}², so the radius is {a}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "x = cos t, y = sin t for 0 ≤ t ≤ π. What is traced?",
+    "choices": [
+     "The top half of the unit circle",
+     "The whole unit circle",
+     "The bottom half of the unit circle"
+    ],
+    "answer": 0,
+    "hint": "What sign does sin t have for 0 ≤ t ≤ π?",
+    "explain": "sin t ≥ 0 for 0 ≤ t ≤ π, so y ≥ 0: the top half of x² + y² = 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "x = t − {a}, y = 3t. Find y at the point where x = {b}.",
+    "answer": "3*(b+a)",
+    "hint": "Rearrange x = t − {a} to find t first.",
+    "explain": "t = x + {a} = {b} + {a} = {=b+a}, so y = 3 × {=b+a} = {=3*(b+a)}.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "x = 5 cos t, y = 2 sin t. How wide is the curve, from left to right?",
+    "choices": [
+     "10",
+     "5",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "cos t runs from −1 to 1, so x runs from −5 to 5.",
+    "explain": "cos t runs from −1 to 1, so x runs from −5 to 5: a width of 10. The height is 4."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "x = t − 2, y = t². Which is the Cartesian equation?",
+    "choices": [
+     "y = (x + 2)²",
+     "y = (x − 2)²",
+     "y = x² + 2"
+    ],
+    "answer": 0,
+    "hint": "Undo the − 2 first: from x = t − 2 you get t = x + 2.",
+    "explain": "t = x + 2, so y = (x + 2)². Writing (x − 2)² undoes the shift the wrong way."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each pair of parametric equations a circle centred at the origin? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Circle",
+    "Not a circle"
+   ],
+   "items": [
+    [
+     "x = 2 cos t, y = 2 sin t",
+     0
+    ],
+    [
+     "x = 3 cos t, y = 2 sin t",
+     1
+    ],
+    [
+     "x = 5 sin t, y = 5 cos t",
+     0
+    ],
+    [
+     "x = t, y = t²",
+     1
+    ],
+    [
+     "x = cos t, y = sin t",
+     0
+    ],
+    [
+     "x = 2t, y = 2t",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagparam",
+  "caption": "Flagship lab: plot from t, eliminate t card by card, sweep a circle, use cos²t + sin²t = 1, and find which part a restricted curve covers.",
+  "opts": {
+   "step": 0
+  }
+ }
+}

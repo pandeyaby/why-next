@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions match PSHE Association and NHS/Childline usage: assertive = saying what you need calmly while respecting others (not 'always winning', m7); passive = hiding your need (p2, m1); aggressive = attacking, blaming or threatening (m2); I-statement = 'I feel ... when ... could we ...' naming a feeling plus the action (p3, m4); negotiate = the two sides talk it out, mediate = a neutral helper in the middle (p5, m8), resolution = the agreed fix (m5), boundary = a line for how others treat you (m6). Compromise = both give a little (p4, step 3 needs tag 8-12 of 20 minutes)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the known confusions: being quiet and nice equals assertive (m1, challenge tag 'nice'), assertive means getting your way (m7), 'I feel like you are mean' counts as an I-statement though it is a label (step 2 trap tag 'label', m4), 'always/never' blame (tag 'always'), one side giving in counts as compromise (p4 choice 'Ben gives in', step 3 'One wins, one loses'), and mixing up negotiate vs mediate (step 4 special feedback, p5, tag 'mixup')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_assert.js is built around social-communication interactions found in no other flagship lab: a quiet-to-loud style track where Jo and Kai react to each tone, a three-bin passive/assertive/aggressive sorter with reasoned feedback, an I-statement builder that rejects blame/label/always phrases, and a draggable divider sharing a 20-minute break. It passed the lab_distinct shingle gate against flagcit (bystanders) and flagemo (feelings)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step practises one idea from the lesson by doing: hearing the same reply in three styles, classifying six replies, assembling an I-statement in the right order (I feel / when / Could we) and choosing non-blaming parts, physically negotiating a fair split of break time, and matching conflict, negotiate, mediate, resolution and boundary to concrete scenes. Done lines name what was learned."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Learners commit before acting: step 0 asks whether shouting will get Kai his pencil back fastest and best, step 2 asks which opening helps the other person listen, step 3 asks what makes a plan a compromise; wrong options get specific explanations (shouting works short-term but damages the friendship)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five mixed challenge questions (style spotting, assertive reply in a lunch-line push-in, I-statement repair, compromise, mediate vs negotiate). Every wrong option carries a slip tag (passive, aggro, blame, givein, mixup, nice) whose feedback names the exact slip rather than just 'wrong', and the run ends with a score and a retry."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner audience for ages 7-11: kid paragraphs use short sentences and everyday scenes (pencils, swings, break-time games) and the validator readability gate passed against the 6.5 kid / 9.5 adult targets; conflict words are always introduced with an example scene before the label."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passed with no filler phrases and low overlap; every paragraph either defines a style, shows the I-statement pattern, explains compromise vs giving in, or gives adults the common mistakes (assertive mistaken for loud, quiet-and-nice mistaken for assertive, 'I feel like you are rude', always/never, negotiate vs mediate) and how the lab practises each."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "walk.cjs on iPhone 13 completed all 6 steps, 5 tasks and the challenge with no console errors; screenshots on iPhone (light) and a 360x640 Android (dark) show cards, bins and the break bar fit the width, drag targets are large, and every drag has tap-button alternatives (More tag / More football, style buttons, match buttons)."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe returned zero violations in both light and dark themes on desktop and phone; every control has an aria-label, drag interactions have button equivalents, status text is announced through the say line, and colour is never the only cue (bins carry words and emoji, the track has text labels)."
+  }
+ },
+ "sources": [
+  "PSHE Association (2020), Programme of Study for PSHE Education KS1-5: Relationships theme, R11-R13 (respectful communication, resolving disagreements) and H assertiveness strands",
+  "Department for Education (2019), Relationships Education statutory guidance: Respectful relationships and Caring friendships (managing conflict, seeking help)",
+  "NHS Every Mind Matters and Childline guidance on being assertive and using 'I' statements",
+  "CASEL (2020) SEL framework: Relationship skills (communicating clearly, resolving conflicts constructively, negotiating)"
+ ]
+}

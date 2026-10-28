@@ -2,13 +2,15 @@
    Opt-in only (the learner turns on "Live AI Guide"); the browser falls back to the offline Guide on any error.
    Guards: preview-only (off in production), same-origin requests, a per-IP rate limit, size caps on input and output,
    an 8 s upstream timeout, and a safety system prompt for learners who may be children. The request carries only the
-   open lesson's text, up to two related lesson titles and key ideas, the question, and the learner's coarse state, reason and stated profile; never raw signals.
+   open lesson's text, up to two related lesson titles and key ideas (picked by keyword in the browser, refined on the server with one
+   small embedding of the question, see api/_kb.js), the question, and the learner's coarse state, reason and stated profile; never raw signals.
    Env: WN_GEMINI_API_KEY (Preview only). Optional WN_GUIDE_MODEL.
    Rate limits are shared by every instance through Why Next's Supabase project (rpc guide_rate_hit, see
    docs/guide-rate-limits.md): WN_RL_URL, WN_RL_KEY (publishable key), WN_RL_SECRET. Fail closed: if the store is not
    configured or does not answer, the proxy returns 503 and the browser uses the offline Guide. WN_RL_MEMORY=1 (local
    dev and unit tests only) allows the in-memory limiter alone. */
 import { createHash } from 'node:crypto';
+import { hybridRelated } from './_kb.js';
 export const MODEL_DEFAULT = 'gemini-3.1-flash-lite';
 export const LIMITS = { maxRelated: 2, perMinute: 6, perDay: 60, globalPerDay: 800, maxBody: 8000, maxQuestion: 400, maxContext: 3000, maxOutputTokens: 260, maxReply: 900, timeoutMs: 8000 };
 const STATES = ['focused', 'struggling', 'frustrated', 'bored', 'confident', 'tired', 'away'];
@@ -37,7 +39,9 @@ export function shapeInput(body) {
   const r = body.learner && typeof body.learner === 'object' ? body.learner : {}, p = r.profile && typeof r.profile === 'object' ? r.profile : {};
   const learner = { state: one(r.state, STATES, 'focused'), why: clip(r.why, 120), style: one(p.style, STYLES, 'balanced'), exam: clip(p.exam, 40), goal: clip(p.goal, 80), time: Number.isFinite(p.time) ? Math.min(120, Math.max(0, p.time)) : 0 };
   const related = Array.isArray(body.related) ? body.related.filter(r => r && typeof r === 'object' && r.title).slice(0, LIMITS.maxRelated).map(r => ({ title: clip(r.title, 120), keyIdea: clip(r.keyIdea, 300) })) : [];
-  return { q, lesson: Object.assign(lesson, { ctxText }), related, learner, tone: one(body.tone, TONES, 'calm'), level: one(body.level, LEVELS, 'adult') };
+  const ID = /^[A-Za-z0-9_-]{1,40}$/, K = body.kb && typeof body.kb === 'object' ? body.kb : null;
+  const kb = K ? { open: ID.test(K.open || '') ? K.open : '', kw: Array.isArray(K.kw) ? K.kw.filter(i => typeof i === 'string' && ID.test(i)).slice(0, 8) : [] } : null;
+  return { q, lesson: Object.assign(lesson, { ctxText }), related, kb, learner, tone: one(body.tone, TONES, 'calm'), level: one(body.level, LEVELS, 'adult') };
 }
 /* The Gemini request body: the safety prompt as system instruction, then the lesson and learner context, then the question. */
 export function buildRequest(x) {
@@ -101,6 +105,8 @@ export default async function handler(req, res, deps = {}) {
   const body = await readBody(req); if (body === null) return send(res, 413, { error: 'too_big' });
   const x = shapeInput(body); if (!x) return send(res, 400, { error: 'bad_input' });
   const model = /^[a-z0-9.-]+$/.test(env.WN_GUIDE_MODEL || '') ? env.WN_GUIDE_MODEL : MODEL_DEFAULT;
+  /* Meaning-based lesson finder (api/_kb.js): one small embedding call; on any failure the browser's keyword pick stands. */
+  if (x.kb && env.WN_KB_EMBED !== '0') { const hy = await hybridRelated(x.q, x.kb, key, fetchFn); if (hy) x.related = hy }
   const ac = new AbortController(), timer = setTimeout(() => ac.abort(), LIMITS.timeoutMs);
   try {
     const r = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: 'POST', signal: ac.signal, headers: { 'content-type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(buildRequest(x)) });

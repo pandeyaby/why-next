@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every value was checked by substitution: x³ − 4x² + x + 6 = (x − 2)(x² − 2x − 3) = (x + 1)(x − 2)(x − 3) with p(1) = 4 and p(0) = 6; x³ − 2x² − 5x + 6 = (x − 1)(x + 2)(x − 3) with q(−1) = 8; for 2x³ + kx² − 5x + 2, f(2) = 8 + 4k gives k = −2 and f(−1) = k + 5 = 6 gives k = 1; challenge answers x³ + 2x − 5 at 1 is −2, x³ − 7x + 6 has factor (x − 1), 2x³ + kx² + 3 with (x + 1) gives k = −1; m9 x³ + x² − 4x − 4 = (x + 1)(x − 2)(x + 2). The integer-root rule is stated only for monic cubics with integer coefficients, matching A-APR.2 and A-APR.6."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the slips listed in AQA and Edexcel examiner reports: using p(−a) for (x − a) or p(3) for (x + 3) (step 1 prediction, step 4 prediction, tag 'sign', p3, m3), taking the constant term as the remainder (step 0 prediction '6, the constant term', tag 'const', m1), sign errors and wrong powers in long division (step 0 options 2x, 3, x³, −2x², tags 'sign', 'deg', 'coef'), wrong quotient degree (tag 'deg', m2), reading a remainder as a root (tag 'swap', m4) and stopping after one factor (m9, step 3 done line)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The lab is built around division mechanics found in no other flagship lab: a long-division table that grows a row per chosen quotient term, a slider for a that moves a point on y = p(x) while the header reads 'remainder = p(a)', a tile grid of ±1, ±2, ±3, ±6 that reports q(a) and turns green on roots, a coefficient-matching panel for (x + 1)(ax² + bx + c) with live ≠ and = checks, and a k slider with a dashed target line. gate_lab_distinct passes, including against flaggradf and flagoddev."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners do the procedure before it is summarised: choosing x² then −2x then −3 and seeing the remainder row reach 0, dragging a and seeing the remainder change continuously with the curve height, and noticing that zero remainders sit exactly at x-axis crossings. The inspection panel shows why b must be −5 (1 + b = −4) before the done line gives the full factorisation, and the k step turns the factor theorem into an equation to solve."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with plausible wrong options the lab tests: the remainder of x³ − 4x² + x + 6 ÷ (x − 2) is 0 versus '6, the constant term'; dividing by (x − 1) gives p(1) = 4 versus p(−1) = 0 (the slider then shows both values); which candidates to test, factors of 6 versus any whole number from 1 to 10; and whether (x − 2) a factor means f(2) = 0 or f(−2) = 0. A.reveal states the learner's choice against the outcome."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions on fresh polynomials with options rotated each round. Each wrong option is tagged sign, const, deg, notfactor or swap, and each tag has its own message (for example 'Sign slip: (x − a) goes with p(a), so for (x + 1) substitute x = −1' and 'p(2) = 5 is about dividing by (x − 2); 5 is the remainder, not a root'). A streak counter tracks consistent success."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the learner readability limits for kid and adult text after the adult section was rewritten into shorter sentences. Learner paragraphs use one worked polynomial throughout, define the quotient and remainder in words, and keep notation (p(x) = (x − a)q(x) + r) to one line each with an explanation."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each learner paragraph adds one idea: long division worked step by step, the identity and why r = p(a), the factor theorem with the candidate rule and graph link, and sign care plus inspection and unknown coefficients. Adult paragraphs give standards, the key identity, a named list of mistakes and the lab summary. gate_content passes with no filler phrases."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked at 360 px Android and iPhone 13 in both themes and on desktop: the graph, slider and tile grid fit without overlap, factor tiles are at least 54 px tall in a 4 by 2 grid, the inspection tiles split into large ▲ and ▼ tap halves, and every canvas action has a matching button (a − 1, a + 1, a = ±n, b −, b +, k − 1, k + 1). Slider dragging and tapping both work."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe scans at every step before and after Show me in light and dark themes on desktop and iPhone report zero violations. All buttons have aria-labels (for example 'Test q(−2)', 'Increase b'), the canvas aria-label mirrors each spoken update including the current remainder, feedback uses a polite live region, and states use text as well as colour ('q = 0', '= / ≠', '(x − 3) is a factor')."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics, A-APR.2 (remainder theorem) and A-APR.6 (rewrite rational expressions by long division or inspection)",
+  "Department for Education (2016), Mathematics AS and A level content, section B: Algebra and functions B7 (simple algebraic division; use of the factor theorem)",
+  "Pearson Edexcel (2017), A level Mathematics Pure Year 1 textbook, chapter 7 Algebraic methods: algebraic division and the factor theorem",
+  "AQA (2019), A-level Mathematics 7357 Paper 1 Report on the Examination (factor theorem sign errors and incomplete factorisation)"
+ ]
+}

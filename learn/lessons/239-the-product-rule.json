@@ -1,0 +1,239 @@
+{
+ "topicId": "mt_d4wGJHnGW3",
+ "title": "The product rule",
+ "audience": "learner",
+ "keyIdea": "To differentiate a product y = uv, use d(uv)/dx = u dv/dx + v du/dx: keep one factor, differentiate the other, then swap and add. It is not du/dx × dv/dx. Picture a u-by-v rectangle growing: the new area is two strips, u·Δv and v·Δu, plus a corner that vanishes as the step shrinks. Factorise the answer to find where dy/dx = 0.",
+ "explain": {
+  "kid": [
+   "Say y is two things multiplied, like x² times eˣ. Call them u and v. To find the slope, keep u and differentiate v. Then keep v and differentiate u. Add the two. That is the product rule: u v′ + v u′.",
+   "Why two parts? Think of a box u wide and v tall. Its area is uv. If both sides grow a bit, the new area is a strip along the top and a strip down the side. There is a tiny corner too. As the step gets small, the corner gets so small it does not count.",
+   "Do not just multiply the two slopes. For x² times x³, which is x⁵, the true slope is 5x⁴. The slopes multiplied give 2x times 3x², which is 6x³. That is wrong. The rule gives 3x⁴ plus 2x⁴, which is 5x⁴. Right!",
+   "Tidy up by taking out what both parts share. For x² eˣ, the slope is x² eˣ plus 2x eˣ, which is x eˣ times (x + 2). Now you can see the slope is zero at x = 0 and at x = −2."
+  ],
+  "adult": [
+   "The product rule states that if y = u(x)v(x), then dy/dx = u dv/dx + v du/dx. It follows from first principles. The change in uv is uΔv + vΔu + ΔuΔv. Divide by h and let h tend to zero. The last term vanishes, since Δu tends to zero while Δv/h tends to dv/dx.",
+   "Students meet it with standard results: the derivatives of xⁿ, eˣ, ln x, sin x and cos x. Typical tasks are x²eˣ, x sin x and x³ ln x. They are expected to simplify by taking out a common factor. That form makes stationary points easy to find: x eˣ(x + 2) = 0 gives x = 0 or x = −2.",
+   "The most common mistake is to multiply the derivatives, writing u′v′. Others are dropping one of the two terms, using the power rule on eˣ, sign slips with cos x, and solving ln x = −1/3 as x = −1/3. A good habit is to write u, v, u′ and v′ out in a list before you combine them.",
+   "The lab builds the rule from the growing rectangle. It tests u′v′ against a product with a known answer. It then builds and factorises two derivatives, and finds a flat tangent on y = x sin x."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each line a correct use of the product rule? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✅ Correct",
+    "❌ Slip"
+   ],
+   "items": [
+    [
+     "d(x sin x)/dx = sin x + x cos x",
+     0
+    ],
+    [
+     "d(x eˣ)/dx = eˣ(x + 1)",
+     0
+    ],
+    [
+     "d(x² ln x)/dx = 2x ln x + x",
+     0
+    ],
+    [
+     "d(x³ cos x)/dx = 3x² cos x − x³ sin x",
+     0
+    ],
+    [
+     "d(x sin x)/dx = cos x",
+     1
+    ],
+    [
+     "d(x² eˣ)/dx = 2x eˣ",
+     1
+    ],
+    [
+     "d(x ln x)/dx = ln x",
+     1
+    ],
+    [
+     "d(eˣ cos x)/dx = eˣ(cos x + sin x)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagprod",
+  "caption": "Flagship lab: grow a u-by-v rectangle, test u′v′ against x⁵, build and factorise d(x²eˣ)/dx, find a flat tangent on x sin x, and solve for x³ ln x.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "y = x²(x + {a}). Find dy/dx at x = {b}.",
+   "answer": "3*b*b+2*a*b",
+   "hint": "u = x², v = x + {a}. Then dy/dx = u v′ + v u′ = x²·1 + (x + {a})·2x.",
+   "explain": "dy/dx = x² + 2x(x + {a}) = 3x² + {=2*a}x. At x = {b}: {=3*b*b} + {=2*a*b} = {=3*b*b+2*a*b}.",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Differentiate y = x sin x.",
+   "choices": [
+    "sin x + x cos x",
+    "cos x",
+    "x cos x"
+   ],
+   "answer": 0,
+   "hint": "u = x, v = sin x. Write u′ and v′ first, then u v′ + v u′.",
+   "explain": "u v′ + v u′ = x cos x + sin x · 1 = sin x + x cos x. cos x alone is u′v′, the classic slip."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "y = (x + {a})(x − {b}). Find dy/dx at x = 0.",
+   "answer": "a-b",
+   "hint": "u = x + {a}, v = x − {b}, and both u′ and v′ are 1.",
+   "explain": "dy/dx = (x + {a})·1 + (x − {b})·1 = 2x + {a} − {b}. At x = 0 this is {=a-b}.",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Differentiate y = x eˣ and factorise.",
+   "choices": [
+    "eˣ(x + 1)",
+    "eˣ",
+    "x eˣ⁻¹"
+   ],
+   "answer": 0,
+   "hint": "d(eˣ)/dx = eˣ. Use u v′ + v u′, then take out eˣ.",
+   "explain": "x·eˣ + eˣ·1 = eˣ(x + 1). Just eˣ is u′v′, and x eˣ⁻¹ wrongly uses the power rule on eˣ."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Differentiate y = x³ ln x.",
+    "choices": [
+     "3x² ln x + x²",
+     "3x",
+     "3x² ln x"
+    ],
+    "answer": 0,
+    "hint": "u = x³, v = ln x, and d(ln x)/dx = 1/x.",
+    "explain": "x³·(1/x) + ln x·3x² = x² + 3x² ln x. 3x is u′v′ and 3x² ln x drops the u v′ term."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "y = {a}x·x². Using the product rule with u = {a}x and v = x², find dy/dx at x = 2.",
+    "answer": "12*a",
+    "hint": "u′ = {a} and v′ = 2x. Then u v′ + v u′ = {a}x·2x + x²·{a}.",
+    "explain": "dy/dx = {=2*a}x² + {a}x² = {=3*a}x². At x = 2 that is {=3*a} × 4 = {=12*a}. Check: y = {a}x³ gives the same.",
+    "params": {
+     "a": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A student writes d(x² eˣ)/dx = 2x eˣ. What went wrong?",
+    "choices": [
+     "They multiplied the derivatives, u′v′",
+     "Nothing, it is correct",
+     "They should have added u and v"
+    ],
+    "answer": 0,
+    "hint": "Compare their answer with u v′ + v u′.",
+    "explain": "2x eˣ is u′ × v′. The full rule gives x²eˣ + 2x eˣ = x eˣ(x + 2)."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Differentiate y = x² cos x.",
+    "choices": [
+     "2x cos x − x² sin x",
+     "2x cos x + x² sin x",
+     "−2x sin x"
+    ],
+    "answer": 0,
+    "hint": "d(cos x)/dx = −sin x. Watch the sign.",
+    "explain": "u v′ + v u′ = x²(−sin x) + cos x·2x = 2x cos x − x² sin x. The plus sign forgets that cos x differentiates to −sin x."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "y = (x + {a})(x + {b}). Find dy/dx at x = 1.",
+    "answer": "2+a+b",
+    "hint": "Both factors have derivative 1, so dy/dx = (x + {a}) + (x + {b}).",
+    "explain": "dy/dx = 2x + {a} + {b}. At x = 1 that is 2 + {a} + {b} = {=2+a+b}.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "For y = x² eˣ, where is dy/dx = 0?",
+    "choices": [
+     "x = 0 and x = −2",
+     "x = 0 only",
+     "Nowhere, eˣ is never 0"
+    ],
+    "answer": 0,
+    "hint": "Factorise dy/dx = x²eˣ + 2x eˣ first.",
+    "explain": "dy/dx = x eˣ(x + 2). eˣ is never 0, so x = 0 or x = −2. Not factorising makes it easy to miss x = −2."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "y = x³ ln x has dy/dx = x²(3 ln x + 1). For x > 0, where is dy/dx = 0?",
+    "choices": [
+     "x = e^(−1/3)",
+     "x = −1/3",
+     "x = 0"
+    ],
+    "answer": 0,
+    "hint": "x² is not 0 for x > 0, so solve 3 ln x + 1 = 0 and undo ln with e.",
+    "explain": "ln x = −1/3, so x = e^(−1/3), about 0.72. x = 0 is outside the domain of ln x."
+   }
+  ]
+ }
+}

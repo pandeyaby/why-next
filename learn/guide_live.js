@@ -12,8 +12,10 @@ let lastFallback=0,lastSource='offline';
 function payload(c,text){const L=c.lesson||{},lv=c.level==='kid'?'kid':'adult',ex=L.explain&&(L.explain[lv]||L.explain.adult||L.explain.kid)||[];
  const m=c.learner||{},p=m.profile||{},item=document.querySelector('#pbox .qi:not([data-done]) .qp');
  return{q:String(text).slice(0,400),tone:c.tone,level:lv,lesson:{title:L.title||'',keyIdea:L.keyIdea||'',explain:ex.slice(0,6),prompt:item?item.textContent.slice(0,300):''},
-  learner:{state:m.state,why:m.why,profile:{style:p.style,exam:p.exam,goal:p.goal,time:p.time}},related:relatedLessons(text,L)}}
+  learner:{state:m.state,why:m.why,profile:{style:p.style,exam:p.exam,goal:p.goal,time:p.time}},related:relatedLessons(text,L),kb:kbHint(text,L)}}
 /* Up to two other Why Next lessons that fit the question (guide_kb.js), so the answer can come from the site and name a lesson. */
+/* Keyword ranking ids for the server's meaning-based finder (api/_kb.js), which fuses them with an embedding ranking. */
+function kbHint(text,L){try{return typeof GUIDE_KB==='undefined'||typeof LEARN==='undefined'?null:{open:String(L.topicId||''),kw:GUIDE_KB.search(text,LEARN.L,{k:8}).map(r=>r.id)}}catch(x){return null}}
 function relatedLessons(text,L){try{return typeof GUIDE_KB==='undefined'||typeof LEARN==='undefined'?[]:GUIDE_KB.related(text,LEARN.L,L.topicId,2).map(r=>({title:r.title,keyIdea:r.keyIdea}))}catch(x){return[]}}
 /* Ask the server; any failure falls back to the offline brain so the learner always gets an answer. */
 const liveBrain={name:'Live AI Guide (Gemini, via Why Next server)',async reply(c,text){const local=()=>GUIDE.localBrain.reply(c,text);

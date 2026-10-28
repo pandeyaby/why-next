@@ -57,4 +57,18 @@ await test('related lessons: at most two, clipped, junk dropped, and named in th
   assert.strictEqual(x.related.length, 2); assert.strictEqual(x.related[0].keyIdea.length, 300); assert.deepStrictEqual(x.related.map(r => r.title), ['Plants make food', 'B']);
   assert.match(buildRequest(x).contents[0].parts[0].text, /Other Why Next lessons that may fit: "Plants make food"/);
   assert.ok(!/Other Why Next lessons/.test(buildRequest(shapeInput({ q: 'hi' })).contents[0].parts[0].text)) });
+await test('lesson finder: server fuses an embedding ranking with the browser keyword ids; any embedding failure keeps the browser pick', async () => {
+  const kbm = await import('../api/_kb.js'); const unit = (i, j = -1) => { const v = Array(256).fill(0); v[i] = 1; if (j >= 0) v[j] = .9; return v };
+  kbm._setVectors({ items: [['A', 'Fractions', 0], ['B', 'Acids, alkalis and pH', 1], ['C', 'Waves', 2], ['D', 'Atoms', 3], ['E', 'Forces', 4]].map(([id, title, i]) => ({ id, title, keyIdea: 'k ' + title, vec: Float32Array.from(unit(i)) })) });
+  const x = shapeInput({ q: 'what does pH tell you', kb: { open: 'A', kw: ['C', 'bad id!', 'B'] } });
+  assert.deepStrictEqual(x.kb, { open: 'A', kw: ['C', 'B'] });
+  const calls = []; let sentText = '';
+  const mk = emb => async (url, init) => { calls.push(url); if (/embedContent$/.test(url)) return emb ? { ok: true, json: async () => ({ embedding: { values: unit(1, 2) } }) } : { ok: false, json: async () => ({}) };
+    sentText = JSON.parse(init.body).contents[0].parts[0].text; return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: 'ok' }] } }] }) } };
+  const body = { ...good, q: 'what does pH tell you', related: [{ title: 'Kw pick' }], kb: { open: 'E', kw: ['C', 'B'] } };
+  _resetLimits(); assert.strictEqual((await call({ body, fetch: mk(true) })).code, 200); assert.ok(calls.some(u => /gemini-embedding-001:embedContent$/.test(u)));
+  assert.match(sentText, /"Acids, alkalis and pH"/); assert.ok(!/Kw pick/.test(sentText));
+  _resetLimits(); assert.strictEqual((await call({ body, fetch: mk(false) })).code, 200); assert.match(sentText, /Kw pick/);
+  _resetLimits(); calls.length = 0; await call({ body: good, fetch: mk(true) }); assert.ok(!calls.some(u => /embedContent/.test(u)), 'no kb hint, no embedding call');
+  assert.deepStrictEqual(kbm.gate(['A', 'B', 'C'], 'A'), []); assert.deepStrictEqual(kbm.fuse(['B', 'C'], ['C', 'B']).slice(0, 2), ['B', 'C']); kbm._setVectors(undefined) });
 console.log(fails ? fails + ' failed' : 'all passed'); process.exit(fails ? 1 : 0);

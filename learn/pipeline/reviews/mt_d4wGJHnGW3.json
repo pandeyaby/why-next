@@ -1,0 +1,20 @@
+{
+ "scores": {
+  "accuracy": {"score": 9, "evidence": "States (uv)' = u v' + v u' and derives it from the area of a growing rectangle, with the corner term du·dv vanishing as h -> 0. Worked results were checked by hand: d(x^2 e^x) = e^x(x^2 + 2x), d(x sin x) = sin x + x cos x with a flat tangent near x = 2.03 where tan x = -x, d(x^3 ln x) = x^2(3 ln x + 1), and (2x+1)(x-3) has slope -1 at x = 1."},
+  "misconceptions": {"score": 9, "evidence": "Targets the classic slip of multiplying derivatives (u'v'): step 2 shows u'v' = 162 against the true slope 405 at x = 3 for x^2·x^3, the tangent step draws the wrong cos x line dashed in red, and card sorts include d(x^2 ln x) = 2x ln x + x vs 2/x style errors and dropped terms like e^x alone."},
+  "lab_distinct": {"score": 9, "evidence": "Built on an area model unique among the labs: a u-by-v rectangle with draggable h shows the two strips and the shrinking corner as a live percentage, then bar comparisons of true slope vs u'v', a draggable point on y = x sin x hunting a flat tangent, and term-building cards. Passed the 30% shingle gate against all labs."},
+  "lab_teaches": {"score": 9, "evidence": "Steps follow how A-level students meet the rule: why it is true (strips), proof that the naive guess fails at three x-values, building a derivative term by term, using it to find a stationary point, then applying it to x^3 ln x. Every step reports live numbers so the reasoning is visible, not just the answer."},
+  "predictions": {"score": 9, "evidence": "Two locked predictions: 'Is the derivative of uv just u' x v?' before the strip demo and 'For y = x^2·x^3 does (2x)(3x^2) give the slope?' before the bar test. Feedback restates the learner's choice and explains why it is right or wrong, as seen in the iPhone screenshots."},
+  "challenge_feedback": {"score": 9, "evidence": "The Challenge asks for d/dx(x sin x) and a quiz on (2x+1)(x-3) at x = 1 (answer -1); wrong choices get specific feedback naming the missing v u' term or the u'v' mistake rather than a bare 'try again', and at least three m= feedback messages cover distinct errors."},
+  "readability": {"score": 9, "evidence": "Learner-audience text measured kid FK 0.9 and adult FK 4.6, well under the 6.5 / 9.5 limits. Sentences are short, symbols are introduced once (u', v'), and each worked example shows one step per line so a Year 13 student can follow without a teacher."},
+  "no_filler": {"score": 9, "evidence": "Passed the filler regex and duplication gate. Every paragraph carries a step of the argument, an example or a named mistake; there is no motivational padding, and the adult section names the u'v' slip and forgetting to differentiate both factors."},
+  "mobile": {"score": 9, "evidence": "Walkthrough on iPhone 13 (390 px) passed: slider and point drag with large thumbs, nudge buttons (±0.02, ±0.1) give fine control without precise dragging, labels on the rectangle and bar chart stay readable, and quiz chips wrap without overflow in the dark-theme screenshots."},
+  "accessibility": {"score": 9, "evidence": "axe passed in light and dark themes with no contrast violations. Controls have aria-labels, every drag has button alternatives (h halve/double, x = 1/2/3, nudges), and the status line reads out the live values in text so colour is never the only cue."}
+ },
+ "sources": [
+  "Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0) specification, section 7.4: differentiation using the product rule",
+  "AQA A-level Mathematics (7357) specification, G6 / H: differentiate using the product, quotient and chain rules",
+  "Stewart, J., Calculus: Early Transcendentals, section 3.2 The Product and Quotient Rules (area-of-rectangle derivation)",
+  "OpenStax Calculus Volume 1, section 3.3 Differentiation Rules: the product rule"
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every decomposition was checked by recombining: 2/(x+1) + 3/(x−2) = (5x−1)/((x+1)(x−2)) with x = 0 check 0.5; (x+5)/((x−1)(x+2)) = 2/(x−1) − 1/(x+2); (3x+1)/((x−1)(x+1)) = 2/(x−1) + 1/(x+1); 4/((x−1)²(x+1)) = −1/(x−1) + 2/(x−1)² + 1/(x+1); (x²+x+1)/(x(x+1)) = 1 + 1/x − 1/(x+1). Parameterised items: p2/p3 give A = a, B = b from x = 1 and x = −2; m2/m3 with top (a+b)x + (a−b) give A = a, B = b; m5 B = −1/4, m9 checks at x = 0 give −3 both sides."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the slips named in Edexcel and AQA examiner reports: adding tops and bottoms (step 0 option '5', tag 'add', m1), substituting x = a for (x + a) (step 2 prediction and wrong option, tag 'sign', p3 hint, m5), giving a repeated factor one term (step 3 prediction and form 'repeat', p4, tag 'repeat'), writing A/(x−a) + B/(x−a) (form 'same', m6), splitting an improper fraction (step 4 red curve, tag 'improper', m4) and forgetting to divide by the remaining factor in cover-up (tag 'cover')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_pfrac.js is built on partial-fraction mechanics found in no other flagship lab: two integer sliders for A and B that redraw A/(x−1) + B/(x+2) against a dashed target rational curve with a live numerator readout, a cover-up panel that physically hides one factor, a form chooser for a repeated factor followed by substitution and coefficient comparison, and an asymptote picture showing why an improper fraction must be divided. It passed the lab_distinct shingle gate against every other flagship lab, including flagremth."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step makes one idea visible: splitting reverses adding (x = 0 numeric check), equal numerators mean equal curves (A + B = 1 and 2A − B = 5 read off the graph), cover-up is substitution of a root, a repeated factor needs one term per power (and the lower power needs coefficient comparison), and an improper fraction's horizontal asymptote y = 1 cannot be produced by proper partial fractions."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions before acting: whether 2/(x+1) + 3/(x−2) equals 5/(2x−1), which x to substitute to find A in A/(x−1), and how many fractions (x−1)² needs; each is then tested directly in the step, and wrong choices in the step trigger specific feedback."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating challenge questions (cover-up for A and B, form for a repeated factor, improper fractions, recombining, cover-up with x as a factor). Every wrong option is tagged (sign, swap, repeat, improper, add, coef, cover) with a one-line explanation of that exact slip; a streak counter resets on a miss."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner audience for 16-18: kid paragraphs walk through one worked example in short sentences and the readability gate passed against the 6.5 kid / 9.5 adult targets after simplifying the adult text. On-canvas maths is set as stacked fractions with a fraction bar rather than slash notation where it matters."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passed with no filler phrases and low overlap; kid paragraphs cover where the split comes from, the identity, cover-up with the sign warning, and the two special cases; adult paragraphs give scope and uses, the identity and two tools, a named list of common mistakes with a 'be careful' note on repeated factors, and the lab tour."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "walk.cjs on iPhone 13 completed all steps, tasks and the challenge; iPhone light and 360x640 Android dark screenshots show stacked fractions, graphs and sliders fitting the width with no overlap after a layout fix. Long option labels stack vertically, slider thumbs are 26px with whole-width hit areas, and every slider and card has a button equivalent (A −1/+1, B −1/+1, Put x = ...)."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe returned zero violations in light and dark themes on desktop and phone; buttons have text or aria-label (Decrease A, Increase A), the canvas aria-label and say line read the current A and B values, equations and feedback aloud, and colour is never the only cue (written 'covered' label, matched-numerator text, dashed vs solid curves)."
+  }
+ },
+ "sources": [
+  "Department for Education (2016), Mathematics AS and A level content, section B: Algebra and functions B8 (decompose rational functions into partial fractions, denominators not more complicated than squared linear terms)",
+  "Pearson Edexcel (2017), A level Mathematics Pure Year 2 textbook, chapter 1 Algebraic methods: partial fractions, repeated factors and improper fractions",
+  "Common Core State Standards for Mathematics, A-APR.6 and A-APR.7 (rewrite and add rational expressions)",
+  "Pearson Edexcel (2019), A level Mathematics 9MA0 Paper 1 Examiners' Report (partial fractions sign errors and missing repeated-factor terms)"
+ ]
+}

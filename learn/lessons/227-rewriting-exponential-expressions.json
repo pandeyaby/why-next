@@ -1,0 +1,239 @@
+{
+ "topicId": "mt_uSa9hP1DWx",
+ "title": "Rewriting exponential expressions",
+ "audience": "learner",
+ "keyIdea": "Exponent laws let you rewrite an exponential so its base shows the rate for a different period, without changing the function: aᵗ = (a^(1/n))^(nt) = (aᵏ)^(t/k). So 1.15ᵗ ≈ 1.0117^(12t) shows 15% a year as about 1.17% a month, and 2^(t/3) ≈ 1.26ᵗ shows a 3-year doubling time as 26% a year. Rates for a new period come from roots and powers of the growth factor, never from dividing or multiplying the percentage.",
+ "explain": {
+  "kid": [
+   "An exponential like y = 1.15ᵗ grows by 15% each year. The base 1.15 is the growth factor for one year. You can rewrite the same function so its base shows the rate for a month, a quarter or two years. The graph stays the same.",
+   "The key law is (aᵐ)ⁿ = a^(mn). So 1.15ᵗ = (1.15^(1/12))^(12t). Work out 1.15^(1/12) ≈ 1.0117. That gives 1.15ᵗ ≈ 1.0117^(12t), which is about 1.17% a month.",
+   "The trap is to divide the rate. 15 ÷ 12 = 1.25% a month looks right, but 1.0125¹² ≈ 1.161. That is 16.1% a year, which is too much. Growth on growth means each month needs a bit less than 1.25%.",
+   "Going the other way, raise the factor to a power. 1% a month gives 1.01¹² ≈ 1.1268, so 12.68% a year, not 12%. A law like 2^(t/3) doubles every 3 years. Rewrite it as (2^(1/3))ᵗ ≈ 1.26ᵗ to get 26% a year."
+  ],
+  "adult": [
+   "This A-level topic (ages 16 to 18) uses the laws of indices to rewrite exponential functions so that the base shows the growth or decay rate for a chosen period. The identity aᵗ = (a^(1/n))^(nt) = (aᵏ)^(t/k) changes the period without changing the function or its graph. It builds on graphs of exponential functions and leads into compound interest, half-life and modelling questions.",
+   "The method has two directions. To shorten the period, take a root of the growth factor: 15% a year gives a monthly factor of 1.15^(1/12) ≈ 1.0117. To lengthen it, raise the factor to a power: 1% a month gives 1.01¹² ≈ 1.1268 a year. Doubling and half-life laws work the same way, so 2^(t/3) = (2^(1/3))ᵗ ≈ 1.26ᵗ and 0.5^(t/8) has a daily factor of about 0.917.",
+   "Common mistakes: dividing the annual percentage by 12 to get a monthly rate; multiplying a monthly rate by 12 to get an annual one; adding 15% and 15% for two years instead of squaring 1.15; squaring the rate 0.15 instead of the factor 1.15; and changing the exponent without changing the base, as in 1.15^(12t). Be careful to round only at the end, since 1.0117 is already an approximation.",
+   "In the lab learners drag a monthly factor until twelve months make ×1.15, compound 1% a month month by month, read the yearly factor off the curve of 2^(t/3), sort six forms by whether they equal 1.15ᵗ, and convert a yearly rate to any period on one unchanged curve."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "y = 1.15ᵗ, with t in years. Which form shows the monthly rate?",
+   "choices": [
+    "1.0117^(12t)",
+    "1.0125^(12t)",
+    "1.15^(12t)"
+   ],
+   "answer": 0,
+   "hint": "The monthly factor m must satisfy m¹² = 1.15, so m = 1.15^(1/12).",
+   "explain": "1.15^(1/12) ≈ 1.0117, so 1.15ᵗ ≈ 1.0117^(12t). 1.0125 comes from 15 ÷ 12 and gives 16.1% a year."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A quantity grows by {=10*r}% each year. By what percentage does it grow over 2 years?",
+   "answer": "20*r+r*r",
+   "hint": "Square the growth factor 1 + {=r/10}, do not double the rate.",
+   "explain": "The 2-year factor is (1 + {=r/10})² = 1 + {=2*r/10} + {=r*r/100}, so the growth over 2 years is {=20*r+r*r}%.",
+   "params": {
+    "r": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "y = {b}^(2t). Write it as y = cᵗ. What is c?",
+   "answer": "b*b",
+   "hint": "Use (aᵐ)ⁿ = a^(mn): {b}^(2t) = ({b}²)ᵗ.",
+   "explain": "{b}^(2t) = ({b}²)ᵗ = {=b*b}ᵗ, so c = {=b*b}.",
+   "params": {
+    "b": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A loan grows by 1% each month. Which is its yearly growth factor?",
+   "choices": [
+    "1.01¹² ≈ 1.1268",
+    "1.12",
+    "1.01 × 12 = 12.12"
+   ],
+   "answer": 0,
+   "hint": "Twelve months means multiplying by 1.01 twelve times.",
+   "explain": "1.01^(12t) = (1.01¹²)ᵗ ≈ 1.1268ᵗ, so the yearly rate is 12.68%, a bit more than 12% because of growth on growth."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "y = 1.21ᵗ. Write it as y = k^(2t). What is k?",
+   "answer": 1.1,
+   "tolerance": 0.001,
+   "hint": "You need k² = 1.21, so take the square root.",
+   "explain": "k^(2t) = (k²)ᵗ, so k² = 1.21 and k = 1.1. The rate is 10% per half-period and 21% per whole period."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why is 1.0125^(12t) not the same function as 1.15ᵗ?",
+    "choices": [
+     "1.0125¹² ≈ 1.161, not 1.15",
+     "15 ÷ 12 is not 1.25",
+     "They are the same function"
+    ],
+    "answer": 0,
+    "hint": "Work out the yearly factor of 1.0125^(12t).",
+    "explain": "1.0125^(12t) = (1.0125¹²)ᵗ ≈ 1.161ᵗ, which is 16.1% a year. Dividing 15% by 12 ignores growth on growth."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "y = 3^(t/{k}), with t in years. Every how many years does y triple?",
+    "answer": "k",
+    "hint": "y triples when the exponent t/{k} goes up by 1.",
+    "explain": "3^(t/{k}) = (3^(1/{k}))ᵗ, and t/{k} increases by 1 every {k} years, so y triples every {k} years.",
+    "params": {
+     "k": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "y = {=q*q}^(t/2). Write it as y = cᵗ. What is c?",
+    "answer": "q",
+    "hint": "(a)^(t/2) = (a^(1/2))ᵗ: take the square root of the base.",
+    "explain": "{=q*q}^(t/2) = ({=q*q}^(1/2))ᵗ = {q}ᵗ, so c = {q}.",
+    "params": {
+     "q": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "y = 2^(t/5), with t in years. What is the yearly growth factor?",
+    "choices": [
+     "2^(1/5) ≈ 1.149",
+     "2 ÷ 5 = 0.4",
+     "1.4"
+    ],
+    "answer": 0,
+    "hint": "Rewrite 2^(t/5) as (2^(1/5))ᵗ.",
+    "explain": "2^(t/5) = (2^(1/5))ᵗ ≈ 1.149ᵗ, so it grows about 14.9% a year and doubles every 5 years."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A sample decays as y = 100 × 0.5^(t/8), with t in days. What happens each day?",
+    "choices": [
+     "×0.5^(1/8) ≈ 0.917, losing about 8.3%",
+     "It loses 50 ÷ 8 = 6.25%",
+     "×0.5 ÷ 8 = 0.0625"
+    ],
+    "answer": 0,
+    "hint": "The half-life is 8 days. Rewrite as (0.5^(1/8))ᵗ.",
+    "explain": "0.5^(t/8) = (0.5^(1/8))ᵗ ≈ 0.917ᵗ, so about 8.3% is lost each day. Dividing 50% by 8 ignores decay on decay."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A quantity grows by {=10*r}% a year. By what percentage does it grow over 3 years? Give your answer to 1 decimal place.",
+    "answer": "(1+r/10)*(1+r/10)*(1+r/10)*100-100",
+    "tolerance": 0.06,
+    "hint": "Cube the factor 1 + {=r/10}, then subtract 1.",
+    "explain": "(1 + {=r/10})³ = {=(1+r/10)*(1+r/10)*(1+r/10)}, so the growth over 3 years is about {=(1+r/10)*(1+r/10)*(1+r/10)*100-100}%.",
+    "params": {
+     "r": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "y = 1.0125^(12t), with t in years. What is the yearly percentage rate, to 1 decimal place?",
+    "answer": 16.1,
+    "tolerance": 0.06,
+    "hint": "Find the yearly factor 1.0125¹², then subtract 1.",
+    "explain": "1.0125¹² ≈ 1.1608, so the yearly rate is about 16.1%, not 15%."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which form is the same function as 1.2ᵗ?",
+    "choices": [
+     "1.44^(t/2)",
+     "1.4^(t/2)",
+     "1.2^(2t)"
+    ],
+    "answer": 0,
+    "hint": "Square the factor for a 2-year period, and halve the exponent.",
+    "explain": "1.44^(t/2) = (1.2²)^(t/2) = 1.2ᵗ. 1.4 adds 20% twice, and 1.2^(2t) grows 20% every half year."
+   }
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each form the same function as 1.2ᵗ? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Same as 1.2ᵗ",
+    "Different"
+   ],
+   "items": [
+    [
+     "1.44^(t/2)",
+     0
+    ],
+    [
+     "(1.2^(1/4))^(4t)",
+     0
+    ],
+    [
+     "1.0153^(12t)",
+     0
+    ],
+    [
+     "1.4^(t/2)",
+     1
+    ],
+    [
+     "1.0167^(12t)",
+     1
+    ],
+    [
+     "1.2^(4t)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrexp",
+  "caption": "Flagship lab: tune a monthly factor, compound month by month, read a doubling law, sort equal forms and convert any rate.",
+  "opts": {
+   "step": 0
+  }
+ }
+}
