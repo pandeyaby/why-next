@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_qRlLrCnazx",
+ "title": "Compound-angle and double-angle formulae",
+ "audience": "learner",
+ "keyIdea": "Sine and cosine do not split over addition: sin(A + B) is not sin A + sin B. The compound-angle formulae are sin(A ± B) = sin A cos B ± cos A sin B, cos(A ± B) = cos A cos B ∓ sin A sin B and tan(A ± B) = (tan A ± tan B)/(1 ∓ tan A tan B). Putting B = A gives the double-angle formulae: sin 2A = 2 sin A cos A, cos 2A = cos²A − sin²A = 2cos²A − 1 = 1 − 2sin²A, and tan 2A = 2 tan A/(1 − tan²A).",
+ "explain": {
+  "kid": [
+   "It is tempting to think sin(A + B) = sin A + sin B. Test it: A = 30° and B = 60° give sin 90° = 1. But sin 30° + sin 60° is about 1.37. No sine can be more than 1, so the rule is false.",
+   "The true rule is sin(A + B) = sin A cos B + cos A sin B. On a unit circle, the height of the point at angle A + B splits into two parts. One part is sin A cos B. The other is cos A sin B. They stack to the full height.",
+   "Cosine flips the sign: cos(A + B) = cos A cos B − sin A sin B. For A − B, swap B for −B. Since cos(−B) = cos B and sin(−B) = −sin B, each sign in the middle changes. These rules give exact values, such as sin 75° = sin(45° + 30°) = (√6 + √2)/4.",
+   "Set B = A to get double angles. sin 2A = 2 sin A cos A, not 2 sin A. cos 2A = cos²A − sin²A. Swap with sin²A + cos²A = 1 to get 2cos²A − 1 or 1 − 2sin²A. Pick the form that leaves one trig function in your equation."
+  ],
+  "adult": [
+   "These formulae sit in A-level Pure Mathematics (Edexcel, AQA and OCR, topic Trigonometry). Learners must know and use sin(A ± B), cos(A ± B) and tan(A ± B), find exact values, and use the double-angle forms to solve equations and prove identities. The formulae are in the formula book, but the uses are not.",
+   "The proof can be seen on a unit circle. Drop the point at angle A + B onto the ray at angle A. The height then splits into sin A cos B and cos A sin B. The minus sign in cos(A + B) comes from the second piece: it points back towards the y-axis. The rest follows by putting −B for B, or by dividing sin by cos for tan.",
+   "Common mistakes: splitting the function over the plus (sin(A + B) = sin A + sin B, sin 2A = 2 sin A); using a plus in cos(A + B); writing B − A in place of A − B; giving a decimal when an exact surd is asked for; picking the wrong form of cos 2A, so two trig functions remain; and dividing both sides by sin x, which loses the solutions where sin x = 0. A careful learner always factorises instead.",
+   "The lab starts with the tempting rule on a unit circle, then has the learner stack the two pieces that make the height of the A + B point. Next they fix the signs of three formulae with a live numeric check, build exact values for 15°, 75° and 105°, and pick every form of cos 2A beside a graph of sin 2A and 2 sin A."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each statement a true identity or a tempting myth? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✅ True identity",
+    "❌ Myth"
+   ],
+   "items": [
+    [
+     "sin 2A = 2 sin A cos A",
+     0
+    ],
+    [
+     "sin 2A = 2 sin A",
+     1
+    ],
+    [
+     "cos(A + B) = cos A cos B − sin A sin B",
+     0
+    ],
+    [
+     "sin(A + B) = sin A + sin B",
+     1
+    ],
+    [
+     "cos 2A = 1 − 2sin²A",
+     0
+    ],
+    [
+     "cos(A − B) = cos A − cos B",
+     1
+    ],
+    [
+     "sin(A − B) = sin A cos B − cos A sin B",
+     0
+    ],
+    [
+     "cos 2A = 2 cos A",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcomp",
+  "caption": "Flagship lab: test the tempting rule on a unit circle, stack the height of the A + B point, fix the signs, build exact values and pick every form of cos 2A.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Expand sin(x + {k}°).",
+   "choices": [
+    "sin x cos {k}° + cos x sin {k}°",
+    "sin x + sin {k}°",
+    "sin x cos {k}° − cos x sin {k}°"
+   ],
+   "answer": 0,
+   "hint": "Use sin(A + B) = sin A cos B + cos A sin B with A = x.",
+   "explain": "sin(x + {k}°) = sin x cos {k}° + cos x sin {k}°. Sine does not split over the plus, and the sign stays + for sine.",
+   "params": {
+    "k": [
+     10,
+     80
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Find the exact value of sin 15°.",
+   "choices": [
+    "(√6 − √2)/4",
+    "(√6 + √2)/4",
+    "√3/2 − √2/2"
+   ],
+   "answer": 0,
+   "hint": "Write 15° = 45° − 30° and use sin(A − B).",
+   "explain": "sin 15° = sin 45° cos 30° − cos 45° sin 30° = (√2/2)(√3/2) − (√2/2)(½) = (√6 − √2)/4."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Write sin {=2*t}° as a product of sin {t}° and cos {t}°.",
+   "choices": [
+    "2 sin {t}° cos {t}°",
+    "2 sin {t}°",
+    "sin {t}° cos {t}°"
+   ],
+   "answer": 0,
+   "hint": "sin 2A = 2 sin A cos A, with A = {t}°.",
+   "explain": "sin {=2*t}° = sin(2 × {t}°) = 2 sin {t}° cos {t}°. Doubling the angle does not double the sine, and the factor 2 is needed.",
+   "params": {
+    "t": [
+     10,
+     40
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which form of cos 2x turns 3 cos 2x + 5 cos x = 1 into a quadratic in cos x?",
+   "choices": [
+    "2cos²x − 1",
+    "1 − 2sin²x",
+    "cos²x − sin²x"
+   ],
+   "answer": 0,
+   "hint": "Pick the form that leaves only cos x.",
+   "explain": "2cos²x − 1 gives 6cos²x + 5cos x − 4 = 0, a quadratic in cos x. The other forms leave sin x in the equation."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "cos(A − B) = ?",
+    "choices": [
+     "cos A cos B + sin A sin B",
+     "cos A cos B − sin A sin B",
+     "cos A − cos B"
+    ],
+    "answer": 0,
+    "hint": "Cosine flips the sign of the angle operation.",
+    "explain": "cos(A − B) = cos A cos B + sin A sin B. With cos(A + B) the middle sign is minus; with A − B it becomes plus."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Expand cos({k}° − x).",
+    "choices": [
+     "cos {k}° cos x + sin {k}° sin x",
+     "cos {k}° cos x − sin {k}° sin x",
+     "cos {k}° − cos x"
+    ],
+    "answer": 0,
+    "hint": "cos(A − B) = cos A cos B + sin A sin B, with A = {k}° and B = x.",
+    "explain": "cos({k}° − x) = cos {k}° cos x + sin {k}° sin x. For cosine the sign flips: minus inside gives plus in the middle.",
+    "params": {
+     "k": [
+      10,
+      80
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Solve sin 2x = cos x for 0° < x < 90°.",
+    "choices": [
+     "x = 30°",
+     "x = 45°",
+     "x = 60°"
+    ],
+    "answer": 0,
+    "hint": "Write sin 2x = 2 sin x cos x and factorise; do not divide by cos x blindly.",
+    "explain": "2 sin x cos x − cos x = cos x(2 sin x − 1) = 0. In 0° < x < 90°, cos x ≠ 0, so sin x = ½ and x = 30°."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Simplify 2 sin {t}° cos {t}°.",
+    "choices": [
+     "sin {=2*t}°",
+     "2 sin {t}°",
+     "cos {=2*t}°"
+    ],
+    "answer": 0,
+    "hint": "Read sin 2A = 2 sin A cos A backwards.",
+    "explain": "2 sin {t}° cos {t}° = sin(2 × {t}°) = sin {=2*t}°. Read sin 2A = 2 sin A cos A backwards.",
+    "params": {
+     "t": [
+      5,
+      40
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is NOT equal to cos 2A?",
+    "choices": [
+     "2 cos A",
+     "1 − 2sin²A",
+     "cos²A − sin²A"
+    ],
+    "answer": 0,
+    "hint": "Test A = 60°: cos 120° = −½.",
+    "explain": "2 cos 60° = 1, but cos 120° = −½, so 2 cos A is wrong. The other two are true forms of cos 2A."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "tan(A + B) = ?",
+    "choices": [
+     "(tan A + tan B)/(1 − tan A tan B)",
+     "(tan A + tan B)/(1 + tan A tan B)",
+     "tan A + tan B"
+    ],
+    "answer": 0,
+    "hint": "Divide sin(A + B) by cos(A + B), then divide top and bottom by cos A cos B.",
+    "explain": "The bottom comes from cos(A + B), which has a minus, so tan(A + B) = (tan A + tan B)/(1 − tan A tan B)."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Prove-style step: cos⁴x − sin⁴x simplifies to?",
+    "choices": [
+     "cos 2x",
+     "1",
+     "cos 4x"
+    ],
+    "answer": 0,
+    "hint": "Difference of two squares, then sin²x + cos²x = 1.",
+    "explain": "cos⁴x − sin⁴x = (cos²x − sin²x)(cos²x + sin²x) = (cos 2x)(1) = cos 2x."
+   }
+  ]
+ }
+}
