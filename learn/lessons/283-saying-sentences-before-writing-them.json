@@ -1,0 +1,229 @@
+{
+ "topicId": "mt_PJyCGJz5Hv",
+ "title": "Saying Sentences Before Writing Them",
+ "audience": "family",
+ "keyIdea": "Before you write a sentence, say it out loud. Say it two or three times so it sticks in your head. Count the words on your fingers so you know how many to write. Write the words in the order you said them, then read it back to check it says what you said.",
+ "explain": {
+  "kid": [
+   "Before you write, say your sentence out loud. The dog runs to the park. Now say it again.",
+   "Say it two or three times. Then it stays in your head while your hand writes.",
+   "Say it slowly and put up a finger for each word. The cat naps has three words, so you need three words on the page.",
+   "Write the words in the same order you said them. Then read it back. Did a word go missing? Put it in."
+  ],
+  "adult": [
+   "In England, Year 1 pupils are taught to write sentences by saying out loud what they are going to write about and composing a sentence orally before writing it, then re-reading what they have written to check that it makes sense. Teachers call this oral rehearsal. US Common Core links the same habit to speaking in complete sentences and to drawing, dictating and writing (SL.K.6, W.K.2).",
+   "Young writers spend so much effort on letter formation and spelling that the sentence they meant can slip out of working memory mid-way. Saying it two or three times, counting the words on fingers, and saying each word as it is written all reduce that load. Many classes rehearse with a talk partner first, so the sentence is heard and improved before a pencil moves.",
+   "Common mistakes: starting to write with no sentence in mind, so it trails off or changes half-way; leaving out small words such as 'and', 'to' or 'the'; writing the words in a different order from the one said; counting letters or syllables instead of words; and never re-reading. A missing word is the slip that re-reading catches most often.",
+   "In the lab your child says a sentence three times, taps a finger for each word of three sentences, writes two sentences word by word in spoken order, finds the missing word in three written sentences, and writes two sentences from memory after hiding them."
+  ]
+ },
+ "familyTip": "Before your child writes a card or a list, ask them to tell you the sentence first. Say it back together twice, count the words on fingers, then write. When they finish, ask them to read it to you with a finger under each word.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Say it first, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "🗣️ Good before writing",
+    "✗ Not a good start"
+   ],
+   "items": [
+    [
+     "Say my sentence out loud",
+     0
+    ],
+    [
+     "Say it two or three times",
+     0
+    ],
+    [
+     "Count the words on my fingers",
+     0
+    ],
+    [
+     "Tell a partner my sentence",
+     0
+    ],
+    [
+     "Start writing with no idea",
+     1
+    ],
+    [
+     "Count the letters",
+     1
+    ],
+    [
+     "Skip reading it back",
+     1
+    ],
+    [
+     "Change the words while I write",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagoral",
+  "caption": "Flagship lab: say a sentence 3 times, count its words on fingers, write it in spoken order, find the missing word, and write from memory.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You want to write about your cat. What do you do first?",
+   "choices": [
+    "Say my sentence out loud",
+    "Start writing straight away",
+    "Draw a big box"
+   ],
+   "answer": 0,
+   "hint": "Your words need to be in your head before your pencil moves.",
+   "explain": "Say it out loud first. Then you know all the words before you write."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Your sentence has {n} words. You put up one finger for each word. How many fingers?",
+   "answer": "n",
+   "hint": "One finger for each word.",
+   "explain": "One finger per word, so {n} words need {n} fingers.",
+   "params": {
+    "n": [
+     3,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Zoe said: “I can see the moon.” She wrote: “I see the moon.” What went wrong?",
+   "choices": [
+    "The word can is missing",
+    "Nothing went wrong",
+    "She wrote too many words"
+   ],
+   "answer": 0,
+   "hint": "Read what she wrote and say what she said. Find the gap.",
+   "explain": "She said 'I can see', but wrote 'I see'. Reading it back finds the missing 'can'."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Leo counted {n} words when he said his sentence. He wrote {=n-1} words. How many words are missing?",
+   "answer": "1",
+   "hint": "Compare the words he said with the words he wrote.",
+   "explain": "He said {n} words and wrote one fewer, so 1 word is missing. Reading it back finds it.",
+   "params": {
+    "n": [
+     3,
+     7
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why say your sentence two or three times?",
+    "choices": [
+     "So I remember it while I write",
+     "So it gets longer",
+     "So I do not have to write it"
+    ],
+    "answer": 0,
+    "hint": "Think about what happens while your hand is busy writing.",
+    "explain": "Saying it again and again helps it stay in your head while you write."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How many words are in “We like to swim.”?",
+    "choices": [
+     "4",
+     "13",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "Put up a finger for each word, not each letter.",
+    "explain": "We, like, to, swim: 4 words. 13 is the number of letters."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You said: “My dog is big.” Which did you write the right way?",
+    "choices": [
+     "My dog is big.",
+     "My big is dog.",
+     "My cat is big."
+    ],
+    "answer": 0,
+    "hint": "Same words, same order as you said.",
+    "explain": "'My dog is big.' has the same words in the same order. The others mix up or change a word."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "You finish writing. What do you do next?",
+    "choices": [
+     "Read it back",
+     "Put it away",
+     "Rub it all out"
+    ],
+    "answer": 0,
+    "hint": "Check that the page says what you said.",
+    "explain": "Read it back to check it says what you meant, and fix any missing word."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Sara says: “I have {n} red pens.” How many words is that?",
+    "answer": "5",
+    "hint": "Put up a finger for each word. The number counts as one word too.",
+    "explain": "I, have, {n}, red, pens: 5 words, so Sara will write 5 words.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Tom said: “The bus is red.” He wrote: “The bus red.” Which word is missing?",
+    "choices": [
+     "is",
+     "bus",
+     "red"
+    ],
+    "answer": 0,
+    "hint": "Read each word he wrote and say each word he said, side by side.",
+    "explain": "He said 'The bus is red' but wrote 'The bus red'. The small word 'is' is missing."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Your sentence has {n} words. You have written 2 of them. How many more words to write?",
+    "answer": "n - 2",
+    "where": "n >= 3",
+    "hint": "Count your fingers: how many words are still to go?",
+    "explain": "{n} words take away the 2 you wrote leaves {=n-2} more to write.",
+    "params": {
+     "n": [
+      3,
+      7
+     ]
+    }
+   }
+  ]
+ }
+}
