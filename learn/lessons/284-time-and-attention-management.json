@@ -1,0 +1,229 @@
+{
+ "topicId": "mt_HoJGVsMO7H",
+ "title": "Time and Attention Management",
+ "audience": "learner",
+ "keyIdea": "Managing your time means choosing what to do first and planning when to do it. Put jobs that are important and due soon first, and fun jobs after them, so a fun job that runs over cannot squeeze a must-do. Guard your attention: deal with distractions before you start, and do one job at a time, because every switch costs time. Plan with how long jobs really take, plus a little spare.",
+ "explain": {
+  "kid": [
+   "You cannot do everything at once, so you choose an order. Ask two questions about each job. Does it matter? When is it due? Homework due tomorrow goes before a project due next week. A new game level can wait.",
+   "Do the must-dos first and the fun jobs last. Fun jobs often run over: one more level becomes three. If the game comes last and runs over, you only lose game time. If it comes first, your homework gets squeezed.",
+   "Distractions pull your attention away. Before you start, sort them out. Put your phone in another room. Find a quiet spot. Have a snack. If a thought keeps popping up, write it on a later list and carry on.",
+   "Do one job at a time. Every time you switch, it takes a little while to get back into the job. Last of all, time your jobs. Most people guess too short. Plan with the real time, plus a little spare."
+  ],
+  "adult": [
+   "At 9 to 11, children start to manage their own time. They plan a few tasks in a sensible order. They name what distracts them and how to deal with it. They do a dull task before a fun one without being told. This is self-management in the CASEL framework and in the IB PYP Personal, Social and Physical Education strand. Useful terms are prioritise, deadline, important, urgent, schedule, distraction, focus, task switching and time estimate.",
+   "Three research findings help. First, switching between tasks has a real cost. The mind must reload the rules of each task (Monsell, 2003). So homework mixed with messages takes longer and has more slips. Second, people of all ages guess too short for their own tasks. This is called the planning fallacy (Buehler, Griffin and Ross, 1994). Timing a task once and planning from that works better than a guess. Third, trying hard not to think of something tends to bring it back. Writing the thought down for later works better.",
+   "Common mistakes: picking jobs by mood, not by deadline; starting the fun job 'for five minutes'; keeping the phone in reach and checking it 'quickly'; thinking multitasking is faster; planning with a hopeful guess; and leaving a big project to the night before. The lab's minutes for switching and overruns are a simple model, not exact measures.",
+   "In the lab your child sorts six jobs into 'do tonight first' and 'can wait'. They build and run an evening plan before a 6:30 dinner. They pick a fix for four distractions. They drag a knob to see how switches add time. Then they plan two jobs from their real timings."
+  ]
+ },
+ "familyTip": "On a busy evening, ask your child to write the jobs on sticky notes and put them in order before starting. Afterwards, check together: did the plan work, what pulled their attention, and how long did each job really take?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Helps your focus, or breaks it? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "🎯 Helps focus",
+    "💥 Breaks focus"
+   ],
+   "items": [
+    [
+     "Phone in another room",
+     0
+    ],
+    [
+     "A snack before starting",
+     0
+    ],
+    [
+     "A later list for stray thoughts",
+     0
+    ],
+    [
+     "One job at a time",
+     0
+    ],
+    [
+     "Checking messages between questions",
+     1
+    ],
+    [
+     "TV on in the same room",
+     1
+    ],
+    [
+     "Starting with the game for five minutes",
+     1
+    ],
+    [
+     "Guessing the time without checking",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtime",
+  "caption": "Flagship lab: sort jobs by importance and deadline, run an evening plan, fix distractions, see what switching costs, and plan from real timings.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which job should come first tonight?",
+   "choices": [
+    "Spellings for tomorrow's test",
+    "A project due in two weeks",
+    "A new episode of a show"
+   ],
+   "answer": 0,
+   "hint": "Ask two questions: does it matter, and when is it due?",
+   "explain": "The spelling test is tomorrow, so it is important and due soonest. The project can get a small part later, and the show can wait."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Maths takes 12 minutes and messages take 6. In this model each switch between them costs 2 minutes. You switch {n} times. How many minutes in total?",
+   "answer": "18 + 2*n",
+   "hint": "Add the two jobs, then add 2 minutes for every switch.",
+   "explain": "12 + 6 = 18 minutes of work, plus 2 × {n} = {=2*n} minutes of switching, gives {=18+2*n} minutes.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Your phone keeps buzzing while you do homework. What is the best fix?",
+   "choices": [
+    "Put it in another room until you finish",
+    "Check it quickly each time",
+    "Turn it face down beside you"
+   ],
+   "answer": 0,
+   "hint": "Which choice makes it hardest to pick up?",
+   "explain": "Out of the room, you cannot check it 'just for a second'. Each quick check pulls you out of the work."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You guessed reading would take 20 minutes. When you timed it, it took {t} minutes. You plan the real time plus 5 minutes spare. How many minutes do you plan?",
+   "answer": "t + 5",
+   "hint": "Use the real time, not the guess, then add the spare.",
+   "explain": "The real time was {t} minutes. Add 5 spare and plan {=t+5} minutes.",
+   "params": {
+    "t": [
+     25,
+     40
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why do the fun job last rather than first?",
+    "choices": [
+     "If it runs over, it only eats fun time",
+     "Fun jobs are always short",
+     "You should never do fun jobs"
+    ],
+    "answer": 0,
+    "hint": "Think about what happens when 'one more level' turns into three.",
+    "explain": "Fun jobs often run over. If the fun job comes last, running over cannot squeeze a must-do."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A thought about the weekend keeps popping into your head while you work. What helps most?",
+    "choices": [
+     "Write it on a later list and carry on",
+     "Tell yourself not to think about it",
+     "Stop and plan the weekend now"
+    ],
+    "answer": 0,
+    "hint": "Pushing a thought away often makes it come back.",
+    "explain": "Writing it down parks the thought so you can return to it later. Trying not to think about it tends to bring it back."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "You have {m} minutes before dinner. Homework takes 40 minutes. How many minutes are left for other jobs?",
+    "answer": "m - 40",
+    "where": "m > 40",
+    "hint": "Take the homework time away from the time you have.",
+    "explain": "{m} − 40 = {=m-40} minutes left after the homework.",
+    "params": {
+     "m": [
+      60,
+      120
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Is doing homework while texting friends faster than doing one, then the other?",
+    "choices": [
+     "No, each switch costs time to get back in",
+     "Yes, two jobs at once is quicker",
+     "It makes no difference"
+    ],
+    "answer": 0,
+    "hint": "Think about restarting a job each time you come back to it.",
+    "explain": "Each switch means reloading what you were doing, so switching back and forth adds time and slips."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A science project is due next week. What is a good plan tonight?",
+    "choices": [
+     "Do one small part after today's must-dos",
+     "Leave it all until the night before",
+     "Do the whole project before tomorrow's homework"
+    ],
+    "answer": 0,
+    "hint": "It matters, but it is not due yet. What about tomorrow's jobs?",
+    "explain": "A small part now spreads the work out, and tomorrow's homework still comes first because it is due sooner."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You guessed a job would take 15 minutes. When you timed it, it took {t} minutes. How many minutes longer than your guess was it?",
+    "answer": "t - 15",
+    "hint": "Take your guess away from the real time.",
+    "explain": "{t} − 15 = {=t-15} minutes longer. Most people guess too short, so plan from the real time.",
+    "params": {
+     "t": [
+      20,
+      35
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The TV is on in the room where you do homework. What is the best fix?",
+    "choices": [
+     "Move to a quiet spot or ask for it off",
+     "Keep working and try harder",
+     "Watch it first, then do homework"
+    ],
+    "answer": 0,
+    "hint": "Can you stop your ears from listening?",
+    "explain": "Trying harder does not stop the TV pulling your attention. Changing the place removes the distraction."
+   }
+  ]
+ }
+}
