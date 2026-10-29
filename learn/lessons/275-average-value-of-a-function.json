@@ -1,0 +1,99 @@
+{
+ "topicId": "mt_XVHpgYrqML",
+ "title": "Average value of a function",
+ "audience": "learner",
+ "keyIdea": "The average value of f on [a, b] is f̄ = (1/(b − a)) ∫ₐᵇ f(x) dx: the area under the curve shared out evenly across the width. It is the height of the rectangle on [a, b] with the same area as the curve, and the limit of the mean of more and more equally spaced samples. It is not the mean of the two end values.",
+ "explain": {
+  "kid": [
+   "To find the mean of a list, you add the values and divide by how many there are. A function has a value at every point, so you cannot list them all. The integral does the adding, and the width of the interval does the dividing.",
+   "So the average value of f from a to b is f̄ = (1/(b − a)) ∫ₐᵇ f(x) dx. For x² on [0, 3], the integral is 9 and the width is 3, so the average is 3.",
+   "Picture the area as sand. Level it out across the same width. The flat height you get is the average. A rectangle of height 3 and width 3 holds the same 9 units of area as the curve.",
+   "Area below the x-axis counts as negative, so it pulls the average down. The average of sin x over a whole turn from 0 to 2π is 0, but from 0 to π it is 2/π."
+  ],
+  "adult": [
+   "In A level Mathematics the mean value of a function over an interval is defined as f̄ = (1/(b − a)) ∫ₐᵇ f(x) dx. It links integration to the mean of data: split [a, b] into n strips, sample f once in each, and the mean of the n samples is a Riemann sum divided by b − a. As n grows the sum tends to the integral, so the sample mean tends to f̄.",
+   "Geometrically, f̄ is the height of the rectangle on [a, b] whose area equals the signed area under the curve. If f is continuous, the mean value theorem for integrals says f(c) = f̄ for at least one c in [a, b]. For x² on [0, 3] that point is c = √3 ≈ 1.73, not the midpoint.",
+   "The most common mistake is to stop at the integral and forget to divide by b − a. Others are averaging the two end values (f(a) + f(b))/2, which works only for straight lines; using f at the midpoint; dividing by b instead of b − a; and forgetting that area below the axis is negative.",
+   "Contexts make it concrete: the average temperature over a day, average velocity as displacement ÷ time, or the mean power of a varying current. In the lab you level a line across y = x², take more and more samples, average a temperature model from 6 am to 6 pm (14 + 12/π ≈ 17.82 °C), find c with f(c) = f̄, and see the signed areas of sin x cancel."
+  ]
+ },
+ "familyTip": "Look at an hourly weather forecast together. Ask: is the average temperature today the same as the morning and evening values added and halved? Sketch the curve and talk about why a warm afternoon pulls the average up.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each statement about the average value of a function true or false? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["✓ True", "✗ False"],
+   "items": [["f̄ = (1/(b − a)) ∫ₐᵇ f(x) dx", 0], ["The average of x² on [0, 3] is 3", 0], ["A continuous f equals its average at some point in [a, b]", 0], ["The average of sin x on [0, 2π] is 0", 0], ["The average is always (f(a) + f(b)) / 2", 1], ["The average value is just ∫ₐᵇ f(x) dx", 1], ["f̄ is always f at the midpoint", 1], ["Area below the axis is ignored", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagavgval",
+  "caption": "Flagship lab: level a line across y = x², average more samples, find a day's mean temperature, locate c with f(c) = f̄ and cancel signed area.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Which expression gives the average value of f on [a, b]?",
+   "choices": ["(1/(b − a)) ∫ₐᵇ f(x) dx", "∫ₐᵇ f(x) dx", "(f(a) + f(b)) / 2"], "answer": 0,
+   "hint": "Find the total with an integral, then share it across the width.",
+   "explain": "Divide the integral by the width b − a. The integral alone is the total area; the end-value mean works only for straight lines."},
+  {"type": "numeric", "id": "p2", "prompt": "Find the average value of f(x) = {k}x² on [0, 3].",
+   "answer": "3*k",
+   "hint": "∫₀³ {k}x² dx = {k} × 9. Then divide by the width 3.",
+   "explain": "∫₀³ {k}x² dx = {k} × 27/3 = {=9*k}. Divide by 3 to get {=3*k}.",
+   "params": {"k": [1, 6]}},
+  {"type": "numeric", "id": "p3", "prompt": "Find the average value of f(x) = 2x + {m} on [0, 4].",
+   "answer": "4+m",
+   "hint": "∫₀⁴ (2x + {m}) dx = 16 + 4 × {m}. Divide by 4.",
+   "explain": "∫₀⁴ (2x + {m}) dx = 16 + {=4*m} = {=16+4*m}. Divided by 4 this is {=4+m}, which is also f(2), because f is a straight line.",
+   "params": {"m": [0, 8]}},
+  {"type": "mc", "id": "p4", "prompt": "What is the average value of sin x on [0, π]?",
+   "choices": ["2/π", "2", "0"], "answer": 0,
+   "hint": "∫₀^π sin x dx = 2. What is the width?",
+   "explain": "∫₀^π sin x dx = [−cos x]₀^π = 2. The width is π, so f̄ = 2/π ≈ 0.637. 0 is the average over a full period."},
+  {"type": "mc", "id": "p5", "prompt": "For f(x) = x² on [0, 3], where is f(c) equal to the average value 3?",
+   "choices": ["c = √3", "c = 1.5", "c = 3"], "answer": 0,
+   "hint": "Solve c² = 3 with c in [0, 3].",
+   "explain": "c² = 3 gives c = √3 ≈ 1.73. The midpoint 1.5 gives f = 2.25, which is below the average."}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Find the average value of x² on [0, 2].",
+    "choices": ["4/3", "8/3", "1"], "answer": 0,
+    "hint": "∫₀² x² dx = 8/3. Divide by the width 2.",
+    "explain": "(1/2) × 8/3 = 4/3. 8/3 forgets to divide, and 1 is f at the midpoint."},
+   {"type": "mc", "id": "m2", "prompt": "Find the average value of eˣ on [0, 1].",
+    "choices": ["e − 1", "(1 + e)/2", "e"], "answer": 0,
+    "hint": "∫₀¹ eˣ dx = e − 1, and the width is 1.",
+    "explain": "∫₀¹ eˣ dx = e − 1 ≈ 1.72, and dividing by 1 changes nothing. (1 + e)/2 ≈ 1.86 is the mean of the end values, which overestimates for this curve."},
+   {"type": "numeric", "id": "m3", "prompt": "Find the average value of f(x) = 3x² on [0, {b}].",
+    "answer": "b*b",
+    "hint": "∫₀^{b} 3x² dx = {b}³. Divide by {b}.",
+    "explain": "∫₀^{b} 3x² dx = [x³]₀^{b} = {=b*b*b}. Divided by {b} this is {=b*b}.",
+    "params": {"b": [1, 5]}},
+   {"type": "mc", "id": "m4", "prompt": "A model gives T = 14 − 6 cos(πt/12) °C, t in hours after midnight. Which is the average temperature from 6 am to 6 pm?",
+    "choices": ["(1/12) ∫₆¹⁸ T dt", "(T(6) + T(18)) / 2", "∫₆¹⁸ T dt"], "answer": 0,
+    "hint": "Integrate over the window, then divide by its length in hours.",
+    "explain": "(1/12) ∫₆¹⁸ T dt = 14 + 12/π ≈ 17.8 °C. Both end values are 14 °C, so averaging them misses the warm afternoon."},
+   {"type": "mc", "id": "m5", "prompt": "What is the average value of sin x on [0, 2π]?",
+    "choices": ["0", "2/π", "1/2"], "answer": 0,
+    "hint": "Area below the axis is negative.",
+    "explain": "∫₀^{2π} sin x dx = 0 because the area above the axis cancels the area below. So the average is 0."},
+   {"type": "numeric", "id": "m6", "prompt": "A runner's velocity is v(t) m/s for 0 ≤ t ≤ {t} s and she covers {=8*t} m. What is her average velocity in m/s?",
+    "answer": "8",
+    "hint": "∫ v dt is the displacement. Divide by the time.",
+    "explain": "Average velocity = (1/{t}) ∫₀^{t} v dt = {=8*t} ÷ {t} = 8 m/s.",
+    "params": {"t": [5, 20]}},
+   {"type": "mc", "id": "m7", "prompt": "Why does the mean of n equally spaced samples of f tend to f̄ as n grows?",
+    "choices": ["It is a Riemann sum divided by b − a", "Because the end values dominate", "It only works for straight lines"], "answer": 0,
+    "hint": "Each sample times the strip width (b − a)/n is one rectangle.",
+    "explain": "Mean = (1/n) Σ f(xᵢ) = (1/(b − a)) Σ f(xᵢ)(b − a)/n, a Riemann sum ÷ (b − a), which tends to (1/(b − a)) ∫ f dx."},
+   {"type": "mc", "id": "m8", "prompt": "Find the average value of 1/x on [1, e].",
+    "choices": ["1/(e − 1)", "1", "(1 + 1/e)/2"], "answer": 0,
+    "hint": "∫₁^e (1/x) dx = ln e − ln 1 = 1. The width is e − 1.",
+    "explain": "The integral is 1 and the width is e − 1, so f̄ = 1/(e − 1) ≈ 0.58. 1 forgets to divide."}
+  ]
+ }
+}
