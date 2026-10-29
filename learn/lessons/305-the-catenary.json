@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_3UmQMMUPnQ",
+ "title": "The catenary",
+ "audience": "learner",
+ "keyIdea": "A uniform flexible chain or cable hanging under its own weight takes the shape y = a cosh(x/a), the catenary, with lowest point (0, a). The parameter a = H/w is the horizontal tension divided by the weight per unit length: bigger a means a flatter chain. Near the vertex a cosh(x/a) ≈ a + x²/(2a), so a shallow chain looks like a parabola, but further out the cosh curve climbs much faster. For half-span L and sag s, a(cosh(L/a) − 1) = s, which is solved numerically; for small sag a ≈ L²/(2s). A parabola is the shape when the load is uniform per horizontal metre, as on a suspension bridge.",
+ "explain": {
+  "kid": [
+   "Hold a necklace by its two ends. The curve it makes is called a catenary. Its equation is y = a cosh(x/a). The lowest point is (0, a).",
+   "The number a tells you how flat the chain is. It equals the sideways pull in the chain divided by the weight of one metre of chain. Pull the ends apart and a grows, so the chain gets flatter.",
+   "Near the bottom, the chain looks like a parabola. The series cosh u = 1 + u²/2 + u⁴/24 + … gives a cosh(x/a) ≈ a + x²/(2a). Far from the bottom, the u⁴ term and beyond take over, and the chain climbs much faster than the parabola.",
+   "You can never pull a hanging chain perfectly straight. With less sag, a must be larger, so the pull must be larger. Zero sag would need an infinite pull."
+  ],
+  "adult": [
+   "This topic extends the A level hyperbolic functions content (definitions and graphs of sinh, cosh and tanh, as in Further Mathematics specifications) to modelling. A uniform cable of weight w per unit length has constant horizontal tension H. Balancing forces on a piece of cable gives y'' = (w/H)√(1 + y'²). Its solution with the vertex at (0, a) is y = a cosh(x/a), where a = H/w.",
+   "Key results: the curvature at the vertex is 1/a. The arc length from the vertex to x is a sinh(x/a), and the tension at height y is T = wy. For a cable of total length 2ℓ and sag s, the identity cosh² − sinh² = 1 gives a = (ℓ² − s²)/(2s). With the span 2L instead, a(cosh(L/a) − 1) = s has no closed form and needs a numerical method. Taking two terms of the Maclaurin series gives the estimate a ≈ L²/(2s).",
+   "Common mistakes: thinking a hanging chain is a parabola, as Galileo suggested; forgetting the scale factor, so the vertex is put at (0, 1); writing a + x²/2 for the approximation; using the full span instead of the half-span L; and believing a cable can be pulled straight. The estimate L²/(2s) is always too small, because the dropped terms are positive.",
+   "Parabola versus catenary depends on how the load is spread. Load per unit length of cable gives cosh; load per unit horizontal distance (a heavy level deck) gives a parabola. Hooke saw that an inverted hanging chain is the line of an arch in pure compression. In the lab the learner matches a, compares the curve with its parabola, pulls a 12 m chain tight and solves real cables for a."
+  ]
+ },
+ "familyTip": "Hang a thin chain or necklace in front of a squared background, photograph it and read off the lowest point and the two ends. Fit y = a cosh(x/a) and the parabola a + x²/(2a), and see where they part company.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Catenary or parabola? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Catenary y = a cosh(x/a)",
+    "Parabola"
+   ],
+   "items": [
+    [
+     "Load spread evenly along the cable itself",
+     0
+    ],
+    [
+     "Load spread evenly per horizontal metre",
+     1
+    ],
+    [
+     "Far out, grows like ½a·e^(|x|/a)",
+     0
+    ],
+    [
+     "Far out, grows like x²",
+     1
+    ],
+    [
+     "A necklace held at both ends",
+     0
+    ],
+    [
+     "A projectile path (no air resistance)",
+     1
+    ],
+    [
+     "Turned upside down: an arch in pure compression under its own weight",
+     0
+    ],
+    [
+     "A suspension bridge cable carrying an even deck",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcaten",
+  "caption": "Flagship lab: fit a to hanging chains, compare with the parabola, pull a chain tight and solve real cables.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where is the lowest point of y = 5 cosh(x/5)?",
+   "choices": [
+    "(0, 5)",
+    "(0, 1)",
+    "(5, 0)"
+   ],
+   "answer": 0,
+   "hint": "Put x = 0. What is cosh 0?",
+   "explain": "cosh 0 = 1, so y = 5 × 1 = 5. The vertex of y = a cosh(x/a) is (0, a)."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A cable hangs as y = {a} cosh(x/{a}) in metres. Its weight is {w} N per metre. Find the horizontal tension H in newtons.",
+   "answer": "w*a",
+   "hint": "The parameter a is the horizontal tension divided by the weight per metre, a = H/w. Rearrange to get H = wa.",
+   "explain": "H = w × a = {w} × {a} = {=w*a} N. The horizontal tension is the same all along the cable.",
+   "params": {
+    "a": [
+     5,
+     30
+    ],
+    "w": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is the parabola that matches y = a cosh(x/a) near its vertex?",
+   "choices": [
+    "y = a + x²/(2a)",
+    "y = 1 + x²/2",
+    "y = a + x²/2"
+   ],
+   "answer": 0,
+   "hint": "Use cosh u ≈ 1 + u²/2 with u = x/a, then multiply by a.",
+   "explain": "a(1 + x²/(2a²)) = a + x²/(2a). The a inside cosh(x/a) puts a² under x², and the factor a cancels one of them."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A chain of length {=4*m+2} m hangs with a sag of 1 m. Use a = (ℓ² − s²)/(2s), where ℓ is half the length, to find a in metres.",
+   "answer": "((2*m+1)*(2*m+1)-1)/2",
+   "hint": "Half the length is ℓ = {=2*m+1}. Put ℓ and s = 1 into the formula.",
+   "explain": "ℓ = {=2*m+1}, so a = ({=(2*m+1)*(2*m+1)} − 1)/2 = {=((2*m+1)*(2*m+1)-1)/2} m.",
+   "params": {
+    "m": [
+     2,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What happens to the chain y = a cosh(x/a) as a increases?",
+    "choices": [
+     "It gets flatter at the bottom",
+     "It gets steeper at the bottom",
+     "It only moves up"
+    ],
+    "answer": 0,
+    "hint": "The curvature at the vertex is 1/a.",
+    "explain": "The curvature at the vertex is 1/a, so a larger a means a flatter bottom. The curve is a scaled copy of cosh x, not a shifted one."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why is a ≈ L²/(2s) always an underestimate of a?",
+    "choices": [
+     "The dropped series terms of cosh are all positive",
+     "Cables stretch",
+     "Because L is the half-span"
+    ],
+    "answer": 0,
+    "hint": "Compare cosh u with 1 + u²/2.",
+    "explain": "cosh u − 1 = u²/2 + u⁴/24 + … is larger than u²/2, so the true sag for a given a is bigger, and the a that fits a given sag is larger than the estimate."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which shape does the main cable of a suspension bridge with a heavy level deck take?",
+    "choices": [
+     "Close to a parabola",
+     "Exactly a catenary",
+     "A circle"
+    ],
+    "answer": 0,
+    "hint": "Is the load spread along the cable or along the horizontal?",
+    "explain": "The heavy deck loads the cable evenly per horizontal metre, which gives a parabola. A cable with only its own weight is a catenary."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why can a hanging chain never be pulled perfectly straight?",
+    "choices": [
+     "Zero sag needs an infinite horizontal tension",
+     "The chain gets longer",
+     "Gravity is switched off when it is straight"
+    ],
+    "answer": 0,
+    "hint": "Look at a = (ℓ² − s²)/(2s) as s → 0.",
+    "explain": "As the sag s → 0, a → ∞, and H = wa → ∞. A straight cable has no vertical tension to carry its weight."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A cable spans 20 m with a small sag of 0.5 m. Roughly what is a?",
+    "choices": [
+     "100 m",
+     "400 m",
+     "10 m"
+    ],
+    "answer": 0,
+    "hint": "L is the half-span. Use a ≈ L²/(2s).",
+    "explain": "L = 10, so a ≈ 10²/(2 × 0.5) = 100 m. Using the full span gives 400, a common slip."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A cable spans {=4*k} m with a sag of 2 m. Estimate a in metres using a ≈ L²/(2s).",
+    "answer": "k*k",
+    "hint": "The half-span L is {=2*k} m.",
+    "explain": "L = {=2*k}, so a ≈ {=4*k*k}/(2 × 2) = {=k*k} m. The true a is a little larger.",
+    "params": {
+     "k": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A chain y = a cosh(x/a) has a = {a} m and weighs {w} N per metre. Its ends are {s} m above the lowest point. Using T = wy, find the tension at each end in newtons.",
+    "answer": "w*(a+s)",
+    "hint": "The ends are at height y = a + {s}.",
+    "explain": "y = {a} + {s} = {=a+s}, so T = {w} × {=a+s} = {=w*(a+s)} N.",
+    "params": {
+     "a": [
+      10,
+      30
+     ],
+     "w": [
+      2,
+      9
+     ],
+     "s": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is the arc length of y = a cosh(x/a) from x = 0 to x = X?",
+    "choices": [
+     "a sinh(X/a)",
+     "a cosh(X/a)",
+     "sinh X"
+    ],
+    "answer": 0,
+    "hint": "1 + sinh²u = cosh²u, so √(1 + y'²) = cosh(x/a).",
+    "explain": "y' = sinh(x/a), so √(1 + y'²) = cosh(x/a), which integrates to a sinh(X/a)."
+   }
+  ]
+ }
+}
