@@ -1,0 +1,192 @@
+{
+ "topicId": "mt_YwDSMqVcK4",
+ "title": "Counting up to five things",
+ "audience": "family",
+ "keyIdea": "To count, touch or move each thing once and say one number for it: one, two, three, four, five. The last number you say tells how many there are. Moving the things about does not change how many. To give someone three, count as you hand them over and stop when you say three. Very small groups, like the dots on a dice, can be seen at a glance.",
+ "explain": {
+  "kid": [
+   "Let us count ducks. Touch one duck and say one. Touch the next duck and say two. Go on: three, four.",
+   "Each duck gets one number. Do not skip a duck. Do not count a duck two times. Move each one to a new spot so you know it is done.",
+   "The last number you say is how many. You said four, so there are 4 ducks. You do not need to count them again.",
+   "Spread the ducks out, or push them close. There are still 4. When Mum asks for 3 spoons, count them out and stop when you say three."
+  ],
+  "adult": [
+   "This is the start of number in the early years. In England, Development Matters for 3 and 4 year olds asks children to say one number for each item in order (1, 2, 3, 4, 5), to know that the last number reached tells you how many there are in total (the cardinal principle), and to recognise up to 3 objects without counting (subitising). US Common Core K.CC.B.4 sets the same goals for kindergarten.",
+   "Reliable counting rests on Gelman and Gallistel's counting principles: one-to-one correspondence (one number word per object), stable order (the words always come in the same order), cardinality (the last word is the size of the set), order irrelevance (start anywhere, the total is the same) and abstraction (anything can be counted). Touching or moving each object keeps track of what has been counted.",
+   "Common mistakes: counting an object twice or skipping one; saying the words faster than pointing; recounting or reciting the list again when asked 'how many?', which shows the cardinal principle is not secure yet; thinking a spread-out row has more; and, when asked to 'give me three', grabbing a handful or handing over every item instead of stopping at three. 'Give me' tasks are the clearest test of cardinality.",
+   "In the lab your child touches or drags ducks and frogs into a counted row, answers 'how many?' after hearing a count, moves 5 stars about and checks there are still 5, counts strawberries onto a plate and stops at the number, and names small dot patterns at a glance."
+  ]
+ },
+ "familyTip": "Play 'give me' at snack time: ask for 2 grapes, then 4, then 3. Watch whether your child counts as they hand them over and stops at the number. Then ask 'how many have you got?' and see if they answer with one number or count again.",
+ "status": "self-checked",
+ "visual": {
+  "type": "counters",
+  "caption": "Tap or drag each counter to count it. The last number you say is how many.",
+  "opts": {
+   "mode": "count",
+   "n": 4
+  }
+ },
+ "lab": {
+  "type": "flagcount",
+  "caption": "Flagship lab: count by moving each thing once, find that the last number says how many, move stars, count out strawberries and spot dot groups.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Sam counts: one, two, three. How many cats are there?",
+   "choices": [
+    "3",
+    "1, 2, 3",
+    "1"
+   ],
+   "answer": 0,
+   "hint": "Which number did Sam say last?",
+   "explain": "Sam stopped at three, so there are 3 cats. The last number you say tells how many."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} ducks. You count them, then spread them out. How many ducks now?",
+   "answer": "n",
+   "hint": "Did any duck go away, or did any new duck come?",
+   "explain": "No duck came or went, so there are still {n}. Spreading out does not change how many.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Kim counts one block two times. What happens?",
+   "choices": [
+    "She gets one too many",
+    "She gets the right number",
+    "She gets one too few"
+   ],
+   "answer": 0,
+   "hint": "Counting a block twice adds an extra number.",
+   "explain": "Each thing gets only one number. Counting a block twice adds one extra, so the total is one too many."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "There are {n} fish. You count them from the other end. How many fish?",
+   "answer": "n",
+   "hint": "Each fish still gets one number. Does the start matter?",
+   "explain": "You can start at either end. Each fish still gets one number, so there are {n} fish.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How do you count the toys so you do not miss one?",
+    "choices": [
+     "Touch or move each one as you say a number",
+     "Look at them all and guess",
+     "Say the numbers fast"
+    ],
+    "answer": 0,
+    "hint": "Think about how you know a toy is done.",
+    "explain": "Touching or moving each toy as you say its number means none is missed and none is counted twice."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "'Give me 2 spoons.' When do you stop?",
+    "choices": [
+     "When I say two",
+     "When the spoons run out",
+     "After I say three"
+    ],
+    "answer": 0,
+    "hint": "Count as you give them. Listen for the number you were asked for.",
+    "explain": "Count one, two, and stop. Two is the number asked for."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Ben counts {n} cars, one number for each car. What is the last number he says?",
+    "answer": "n",
+    "hint": "Count from one, one number per car, and stop at the last car.",
+    "explain": "One number per car, so the count stops at {n}. That last number tells how many cars: {n}.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which count of 4 bees is right?",
+    "choices": [
+     "1, 2, 3, 4",
+     "1, 2, 4, 5",
+     "1, 2, 2, 3"
+    ],
+    "answer": 0,
+    "hint": "Each number once, in order, with no skips.",
+    "explain": "1, 2, 3, 4 says each number once, in order. The others skip 3 or say 2 twice."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "There are {n} stars in a row. You push them close together. How many stars now?",
+    "answer": "n",
+    "hint": "Did you add a star or take one away?",
+    "explain": "Pushing them close does not add or take away a star, so there are still {n}.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A dice shows 2 dots on top and 2 dots below. How many dots?",
+    "choices": [
+     "4",
+     "2",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Look at the top row, then the bottom row, and put them together.",
+    "explain": "2 on top and 2 below make 4. You can see it at a glance."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Mia counts 3 apples. Dad asks, 'How many apples?' What is the best answer?",
+    "choices": [
+     "Three",
+     "One, two, three",
+     "I need to count again"
+    ],
+    "answer": 0,
+    "hint": "The last number you said is the answer.",
+    "explain": "She already counted. The last number, three, is how many."
+   }
+  ]
+ }
+}
