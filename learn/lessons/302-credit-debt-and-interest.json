@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_3sQ7ndzhV0",
+ "title": "Credit, debt and interest",
+ "audience": "learner",
+ "keyIdea": "Credit means borrowing money now and paying it back later, usually with interest. The APR shows the yearly cost of borrowing, including fees, so it lets you compare deals. Interest compounds: you pay interest on earlier interest. Paying only the minimum on a credit card can take decades, a lower monthly payment over a longer term often costs more in total, and small buy now, pay later instalments add up. A Plan 5 student loan works differently: you repay 9% of earnings above £25,000, whatever you owe.",
+ "explain": {
+  "kid": [
+   "Credit is borrowed money. A credit card, an overdraft, a loan and buy now, pay later are all credit. The amount you borrow is the principal. Interest is the extra you pay for borrowing it. Debt is what you still owe.",
+   "The APR is the yearly cost of borrowing as a percentage. It includes interest and most fees, so it is the fair way to compare deals. A lower APR is cheaper. Interest also compounds. Each month you pay interest on last month's interest too. Leave £1,000 on a card at 24.9% APR for three years and you owe about £1,950.",
+   "A card only asks for a small minimum payment. On £1,500 at 24.9%, the minimum takes over 22 years and costs about £2,600 in interest. Paying a fixed £100 a month clears it in 18 months for £277. With loans, look at the total you repay, not just the monthly payment. A longer term means more months of interest.",
+   "Missed payments go on your credit file. Lenders check it when you want a phone contract, a car loan or a mortgage. A Plan 5 student loan is different. You pay 9% of what you earn above £25,000. If you earn less, you pay nothing. After 40 years, what is left is written off."
+  ],
+  "adult": [
+   "This lesson covers the money parts of PSHE Living in the Wider World at Key Stage 5. It builds on financial education in KS3 and KS4 citizenship. Pupils should use the terms credit, debt, principal, interest, APR, compound interest, minimum repayment, overdraft, credit file and deferred payment credit. They should also judge the total cost of credit.",
+   "All figures in the lab are worked out from the stated rates. A 24.9% APR is a monthly rate of about 1.87%. The minimum payment is modelled as interest plus 1% of the balance, or £5 if higher, which is the usual rule for UK cards. The loan figures use standard repayment maths. Most buy now, pay later deals became regulated by the FCA in July 2026, with checks on whether people can afford them.",
+   "Common mistakes: comparing loans on the monthly payment instead of the total repayable; thinking the minimum payment is a sensible plan; treating buy now, pay later as not being real debt; and ignoring overdraft charges. Many students also misread student loans. On Plan 5, what you owe does not change what you pay each month. It is 9% of earnings above £25,000, and interest is set by the RPI.",
+   "In the lab, your teenager drags a slider through three years of compound interest and tries five ways to clear £1,500. They reveal the full cost of two £3,000 loans and pick the cheaper one. Then they stack four pay in 3 buys against a £50 budget and slide a salary to see Plan 5 repayments."
+  ]
+ },
+ "familyTip": "Next time a loan, phone contract or pay in 3 offer comes up, ask your teenager to find two numbers: the APR and the total amount repayable. Then ask what happens if one payment is missed.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Costly or careful? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "💸 Costly: adds interest, fees or risk",
+    "✅ Careful: keeps the cost of credit down"
+   ],
+   "items": [
+    [
+     "Paying only the minimum on a card",
+     0
+    ],
+    [
+     "Choosing a loan on the lowest monthly payment",
+     0
+    ],
+    [
+     "Stacking several pay in 3 buys",
+     0
+    ],
+    [
+     "Going over your agreed overdraft",
+     0
+    ],
+    [
+     "Setting a fixed payment above the minimum",
+     1
+    ],
+    [
+     "Comparing deals by APR and total repayable",
+     1
+    ],
+    [
+     "Paying the card in full each month",
+     1
+    ],
+    [
+     "Checking your credit file for errors",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdebt",
+  "caption": "Flagship lab: watch interest compound, beat the minimum-payment trap, compare loans by total cost, stack pay in 3 buys and slide a Plan 5 salary.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What does APR stand for, and what does it show?",
+   "choices": [
+    "Annual percentage rate: the yearly cost of borrowing, including fees",
+    "Annual payment rate: the amount you repay each month",
+    "Average principal remaining: what you still owe"
+   ],
+   "answer": 0,
+   "hint": "It is a percentage that lets you compare the cost of different deals.",
+   "explain": "APR is the annual percentage rate. It shows the yearly cost of borrowing, including interest and most fees."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "On a Plan 5 student loan you repay 9% of earnings above £25,000. How much do you repay in a year on a salary of £{s},000?",
+   "answer": "(s-25)*90",
+   "hint": "Find how much of the salary is above £25,000, then take 9% of it.",
+   "explain": "£{s},000 − £25,000 = £{=(s-25)*1000}. 9% of that is £{=(s-25)*90} a year.",
+   "params": {
+    "s": [
+     27,
+     45
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You make {n} buys of £60 each, all pay in 3: a third now, then a third in each of the next two months. How much is due next month, in pounds?",
+   "answer": "n*20",
+   "hint": "Each £60 buy needs £20 next month.",
+   "explain": "{n} × £20 = £{=n*20} due next month, and the same the month after.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Loan A is £99.92 a month for 36 months. Loan B is £78.73 a month for 84 months. Which costs less in total?",
+   "choices": [
+    "Loan A",
+    "Loan B",
+    "They cost the same"
+   ],
+   "answer": 0,
+   "hint": "Multiply each monthly payment by the number of months.",
+   "explain": "Loan A totals about £3,597 and Loan B about £6,613. The lower monthly payment costs £3,016 more."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is compound interest?",
+    "choices": [
+     "Interest charged on the principal and on earlier interest",
+     "Interest charged only on the amount first borrowed",
+     "A fee for paying late"
+    ],
+    "answer": 0,
+    "hint": "Think of the £1,000 that grew to about £1,950 in three years.",
+    "explain": "Compound interest is charged on the principal and on interest already added, so the debt grows faster each year."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why does paying only the minimum on a credit card take so long?",
+    "choices": [
+     "The minimum shrinks as the balance shrinks, and most of it pays interest",
+     "The bank adds a new fee every month",
+     "The APR goes up each year"
+    ],
+    "answer": 0,
+    "hint": "The minimum is the interest plus 1% of the balance.",
+    "explain": "Most of each minimum payment covers interest, and the minimum falls as the balance falls, so £1,500 takes over 22 years."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "£{p}00 is borrowed at 10% a year, compounded yearly, with nothing repaid. What is owed after 2 years, in pounds?",
+    "answer": "p*121",
+    "hint": "Multiply by 1.1 for each year: 1.1 × 1.1 = 1.21.",
+    "explain": "£{p}00 × 1.21 = £{=p*121}. The second year charges interest on the first year's interest too.",
+    "params": {
+     "p": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "You borrow £1,000 and repay {n} monthly payments of £{m}. What is the cost of credit, in pounds?",
+    "answer": "n*m-1000",
+    "hint": "Total repaid minus the amount borrowed.",
+    "explain": "{n} × £{m} = £{=n*m}. Take away the £1,000 borrowed: the cost of credit is £{=n*m-1000}.",
+    "params": {
+     "n": [
+      12,
+      24
+     ],
+     "m": [
+      90,
+      120
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is the best way to compare two loans?",
+    "choices": [
+     "Compare the APR and the total amount repayable",
+     "Pick the lowest monthly payment",
+     "Pick the longest term"
+    ],
+    "answer": 0,
+    "hint": "Remember Loan A and Loan B in the lab.",
+    "explain": "The APR and the total repayable show the real cost. A lower monthly payment over a longer term usually costs more."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What can happen if you miss a buy now, pay later payment?",
+    "choices": [
+     "Late fees and a mark on your credit file",
+     "Nothing, because it is not real credit",
+     "The shop takes the item back and the debt ends"
+    ],
+    "answer": 0,
+    "hint": "Most of these deals are now regulated credit.",
+    "explain": "Missed payments can bring late fees and can be reported to credit reference agencies, which affects future borrowing."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Two graduates both earn £35,000. One owes £45,000 on Plan 5 and one owes £60,000. Who repays more each month?",
+    "choices": [
+     "They repay the same",
+     "The one who owes £60,000",
+     "The one who owes £45,000"
+    ],
+    "answer": 0,
+    "hint": "What decides the Plan 5 repayment?",
+    "explain": "Plan 5 repayments are 9% of earnings above £25,000, so both pay £900 a year, about £75 a month."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is a credit file?",
+    "choices": [
+     "A record of how you have used credit, checked by lenders",
+     "A list of your savings",
+     "A bank's list of interest rates"
+    ],
+    "answer": 0,
+    "hint": "Lenders look at it before they lend to you.",
+    "explain": "A credit file records your borrowing and repayments. Lenders check it for phones, car finance and mortgages."
+   }
+  ]
+ }
+}
