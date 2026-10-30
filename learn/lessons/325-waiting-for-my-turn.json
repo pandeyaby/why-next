@@ -1,0 +1,225 @@
+{
+ "topicId": "mt_oV3N23lat7",
+ "title": "Waiting for my turn",
+ "audience": "family",
+ "keyIdea": "Waiting means not having something yet, and not grabbing or pushing in. In a line, the one at the front goes next and everyone moves up, so your go always comes. You can say \"My turn next?\" and then wait. Waiting is easier with a job to do: count, sing a song or watch a sand timer. Asking again and again does not make the wait shorter.",
+ "explain": {
+  "kid": [
+   "You want a go on the slide. Ana is at the front. Ben is next. You are at the back. Ana goes. Ben goes. Then it is you!",
+   "Kit has the spade. You want it. Do not grab it. Say, \"My turn next?\" Then wait. Kit says, \"Yes, after me.\"",
+   "Waiting is hard. Give it a job. Count Kit's swings: 1, 2, 3, 4, 5. Sing a song. Watch the sand go down.",
+   "Asking \"Is it my go?\" again and again does not make it come faster. The sand falls at its own speed."
+  ],
+  "adult": [
+   "This is self-regulation, part of personal, social and emotional development. Development Matters suggests three and four year olds are learning to take turns and follow rules, and the Early Learning Goal for self-regulation asks children to wait for what they want and control their immediate impulses when appropriate.",
+   "Waiting is hard at this age because impulse control is still developing. Children wait longer when they have a strategy that moves their attention: counting, singing or watching a timer. Walter Mischel's studies found that children who distracted themselves, for example by singing, waited longer than those who stared at the treat.",
+   "Common mistakes by children: grabbing, pushing in, or asking \"Is it my go?\" over and over. A common adult slip is saying \"Wait!\" with no idea how long, or asking a child to wait far longer than they can. Keep early waits short, make the end visible (\"after 5 swings\", a sand timer) and praise the waiting, not just the turn.",
+   "In the lab your child taps who goes next until they reach the front, chooses waiting over grabbing, counts Kit's swings, sees that asking again does not make the sand fall faster, and sorts ways to wait."
+  ]
+ },
+ "familyTip": "Use a sand timer or count out loud together when your child is waiting for a turn or a snack. Start with very short waits and say what they did: \"You waited for 5 swings. That was hard, and you did it.\"",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it good waiting? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "⏳ Good waiting",
+    "✋ Not waiting"
+   ],
+   "items": [
+    ["Say \"My turn next?\"", 0],
+    ["Grab the bike", 1],
+    ["Sing while you wait", 0],
+    ["Push to the front", 1],
+    ["Count to 10", 0],
+    ["Shout \"Me now!\"", 1],
+    ["Watch the sand timer", 0],
+    ["Pull Dad's arm while he talks", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwait",
+  "caption": "Flagship lab: tap who goes next in the slide line, choose wait or grab, count the swings, watch the sand timer and sort ways to wait.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Kit has the red bike. You want it. What do you do?",
+   "choices": [
+    "Say \"My turn next?\" and wait",
+    "Grab it",
+    "Push Kit off"
+   ],
+   "answer": 0,
+   "hint": "Which one keeps Kit happy and still gets you a go?",
+   "explain": "Asking and waiting is kind and fair. Kit has her go, then you have yours."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} children in front of you in the line for the slide. How many go down before you?",
+   "answer": "n",
+   "hint": "Each child in front of you has one go first.",
+   "explain": "All {n} children in front of you go first. Then it is your go.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Gran is talking to a friend. You want to tell her something. What can you do?",
+   "choices": [
+    "Wait until she stops talking",
+    "Shout over her",
+    "Pull her arm hard"
+   ],
+   "answer": 0,
+   "hint": "What lets Gran finish and then listen to you?",
+   "explain": "When Gran finishes, she can listen to you properly. Shouting or pulling stops her talk."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Kit has {n} swings. You have counted {k} of them. How many more swings until your turn?",
+   "answer": "n-k",
+   "hint": "Count on from {k} up to {n}.",
+   "explain": "From {k} up to {n} is {=n-k} more swings. Then it is your turn.",
+   "params": {
+    "n": [
+     6,
+     10
+    ],
+    "k": [
+     1,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Ana, Ben and you are in a line. Ana is at the front. Who goes next?",
+    "choices": [
+     "Ana",
+     "Ben",
+     "You"
+    ],
+    "answer": 0,
+    "hint": "Who is at the front of the line?",
+    "explain": "The one at the front goes next. Ana is at the front, so Ana goes first."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The sand timer is still going. You ask \"Is it my go?\" again and again. What happens?",
+    "choices": [
+     "The sand falls the same",
+     "The sand falls faster",
+     "The sand stops"
+    ],
+    "answer": 0,
+    "hint": "Does talking change how fast sand falls?",
+    "explain": "The sand falls at its own speed. Asking does not make it go faster, so watch it instead."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which one helps you wait?",
+    "choices": [
+     "Sing a song",
+     "Grab the toy",
+     "Push in"
+    ],
+    "answer": 0,
+    "hint": "Which one gives you something to do while you wait?",
+    "explain": "Singing gives your waiting a job. Grabbing and pushing in are not waiting."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "You are number {p} in the line. How many children go before you?",
+    "answer": "p-1",
+    "hint": "Count the children in front of you. You are not counted.",
+    "explain": "If you are number {p}, there are {=p-1} children in front, so {=p-1} go first.",
+    "params": {
+     "p": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ben pushes to the front of the line. What happens?",
+    "choices": [
+     "The others are upset and he is sent back",
+     "Everyone is happy",
+     "He gets lots of goes"
+    ],
+    "answer": 0,
+    "hint": "Is pushing in fair to the children who waited?",
+    "explain": "Pushing in is not fair. The others are upset, and a grown-up sends Ben to the back."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Mum says, \"After 5 swings, it is your go.\" What can you do?",
+    "choices": [
+     "Count the 5 swings",
+     "Cry until it is your go",
+     "Climb on now"
+    ],
+    "answer": 0,
+    "hint": "Mum told you how long. How can you keep track?",
+    "explain": "Counting the 5 swings shows how long is left. When you get to 5, it is your go."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Each child has {s} swings. Kit is on the swing and has had {k}. How many more swings does Kit have?",
+    "answer": "s-k",
+    "hint": "Count on from {k} to {s}.",
+    "explain": "{s} take away {k} is {=s-k}. Count them, and then it is your turn.",
+    "params": {
+     "s": [
+      5,
+      8
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What do you say when you want a go next?",
+    "choices": [
+     "\"My turn next?\"",
+     "\"Give it to me now!\"",
+     "\"It is mine!\""
+    ],
+    "answer": 0,
+    "hint": "Which one is a kind way to ask?",
+    "explain": "\"My turn next?\" asks kindly and tells your friend you are waiting."
+   }
+  ]
+ }
+}
