@@ -1,0 +1,236 @@
+{
+ "topicId": "mt_qKtu9QvDr9",
+ "title": "When a binomial model fits",
+ "audience": "learner",
+ "keyIdea": "A count X follows a binomial distribution, X ~ B(n, p), only when four conditions hold: a fixed number of trials n, two outcomes per trial (success or failure), independent trials, and the same probability of success p on every trial. Before you use B(n, p), check each condition in the context. Sampling without replacement breaks independence, but when the population is large compared with the sample, B(n, p) is a good approximation.",
+ "explain": {
+  "kid": [
+   "A binomial model counts successes. You do a trial again and again. Each time, it is a success or a failure. X is the number of successes. We write X ~ B(n, p). Here n is the number of trials and p is the chance of a success on each one.",
+   "The model only fits when four things are true. First, n is fixed before you start. Second, each trial has just two outcomes. Third, the trials are independent, so one result does not change the next. Fourth, p stays the same on every trial. Check all four. If one fails, B(n, p) is the wrong model.",
+   "Watch out for \"until\". Rolling a die until you get a six has no fixed n, so it is not binomial. A score from 1 to 6 has six outcomes, not two. But \"is it a six?\" has two, so it can be binomial. Picking from a bag and keeping the counter out changes p each time. Then the trials are not independent.",
+   "Big groups help. Say a factory makes 10 000 bulbs and 10% are faulty. Take out 20 bulbs to test. Each one you remove barely moves the 10%. So B(20, 0.1) is a very good fit, even without replacement. With only 100 bulbs, p moves a lot, and the model is weaker."
+  ],
+  "adult": [
+   "This topic sits in the A level Mathematics content on the binomial distribution. Students should understand and use the binomial distribution as a model, and say when it is a suitable one. In the US, AP Statistics teaches the same checks as BINS (binary, independent, number fixed, same probability). It also adds the 10% condition: sampling without replacement is treated as independent when the sample is at most 10% of the population.",
+   "Key terms: trial, Bernoulli trial, success, failure, independent, random variable, X ~ B(n, p), with replacement, without replacement, population, sample, assumption and approximation. Students should state the model in context. For example: \"X is the number of faulty bulbs in a sample of 20, X ~ B(20, 0.1).\" They should also say which assumptions it rests on.",
+   "Common mistakes: using B(n, p) when n is not fixed, as in \"roll until a six\". Using it for counts with more than two outcomes, such as the score on a die. Taking p as the chance of failure when X counts successes. Ignoring sampling without replacement from a small group. Assuming independence for linked events, such as days of rain in a row or one family's children.",
+   "In the lab the learner lights the four condition lamps for three contexts. They draw counters from a bag with and without replacement and watch P(red) move. They slide the population size until 20 draws without replacement keep p within 0.09 to 0.11. Then they find the one broken condition in four contexts, and define X ~ B(n, p) by dragging n and picking p."
+  ]
+ },
+ "familyTip": "Take a pack of cards and draw five, keeping each card out. Say the chance the next card is a heart before each draw. Then do it again, putting each card back and shuffling. Talk about which version is binomial and why.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is B(n, p) a good model for X? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✅ Binomial fits",
+    "❌ Not binomial"
+   ],
+   "items": [
+    [
+     "X = heads in 12 fair coin flips",
+     0
+    ],
+    [
+     "X = sixes in 30 rolls of a die",
+     0
+    ],
+    [
+     "X = faulty items in 20 picked from 50 000",
+     0
+    ],
+    [
+     "X = correct guesses on 10 four-choice questions",
+     0
+    ],
+    [
+     "X = rolls until the first six",
+     1
+    ],
+    [
+     "X = the score on one die",
+     1
+    ],
+    [
+     "X = red cards in 5 drawn from 8, kept out",
+     1
+    ],
+    [
+     "X = rainy days in a row next week",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbfit",
+  "caption": "Flagship lab: light the four conditions, draw with and without replacement, slide the population size, find the broken condition, then define X ~ B(n, p).",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A fair die is rolled until a six appears. X is the number of rolls. Why is X not binomial?",
+   "choices": [
+    "The number of trials is not fixed",
+    "There are more than two outcomes",
+    "The probability of a six changes"
+   ],
+   "answer": 0,
+   "hint": "Ask how many trials there will be before you start. Do you know?",
+   "explain": "You keep rolling until a six, so n is not fixed in advance. Each roll still has two outcomes (six or not six) with p = 1/6."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a large batch, {k}% of bulbs are faulty. X is the number of bulbs that work in a sample of 20. X ~ B(20, p). What is p as a decimal?",
+   "answer": "(100-k)/100",
+   "hint": "X counts bulbs that work, not faulty ones. Success is a working bulb.",
+   "explain": "A bulb works with probability 1 − {k}/100 = {=(100-k)/100}. So X ~ B(20, {=(100-k)/100}). Using {=k/100} would count faulty bulbs instead.",
+   "params": {
+    "k": [
+     2,
+     15
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A bag holds 3 red and 7 blue counters. You take 4 out, one at a time, keeping each one out. Which condition fails?",
+   "choices": [
+    "Independence and a constant p",
+    "A fixed number of trials",
+    "Two outcomes per trial"
+   ],
+   "answer": 0,
+   "hint": "Work out P(red) on the second draw after a red came out first.",
+   "explain": "After a red is removed, P(red) falls from 3/10 to 2/9. The draws affect each other, so they are not independent and p is not constant."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A bag holds {r} red and {=11-r} blue counters. You draw one, keep it out, and it is red. What is P(red) on the next draw, as a decimal?",
+   "answer": "(r-1)/10",
+   "hint": "One red has gone. Count the reds left and the counters left.",
+   "explain": "There are {=r-1} reds left out of 10 counters, so P(red) = {=(r-1)/10}. It was {r}/11 at the start, so p has changed.",
+   "params": {
+    "r": [
+     2,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which of these can be modelled by a binomial distribution?",
+    "choices": [
+     "The number of heads in 15 flips of a fair coin",
+     "The number of flips until the first head",
+     "The score on one roll of a die"
+    ],
+    "answer": 0,
+    "hint": "Check all four: fixed n, two outcomes, independent trials, constant p.",
+    "explain": "Fifteen flips gives a fixed n, heads or tails, independent flips and p = 0.5. The second has no fixed n. The third has six outcomes."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A multiple-choice test has {n} questions, each with 4 options. A student guesses every answer. X is the number correct, X ~ B({n}, p). What is p?",
+    "answer": "0.25",
+    "hint": "On each question, how many of the options are right?",
+    "explain": "Each guess is correct with probability 1/4 = 0.25, whatever n is. So X ~ B({n}, 0.25).",
+    "params": {
+     "n": [
+      10,
+      30
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A school has 1200 students. 20 are picked at random without replacement. X is the number who walk to school. Is B(20, p) reasonable?",
+    "choices": [
+     "Yes: the sample is small next to the population, so p barely changes",
+     "No: without replacement can never be binomial",
+     "No: there are more than two outcomes"
+    ],
+    "answer": 0,
+    "hint": "Compare the sample size with the population size.",
+    "explain": "20 is under 2% of 1200, so removing each student hardly changes p. The trials are close to independent, and B(20, p) is a good approximation."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "X is the number of days it rains in the next 7 days. Which assumption is most doubtful?",
+    "choices": [
+     "Independent trials",
+     "A fixed number of trials",
+     "Two outcomes per trial"
+    ],
+    "answer": 0,
+    "hint": "Does rain today make rain tomorrow more likely?",
+    "explain": "Weather runs in spells, so one rainy day makes the next one more likely. That breaks independence, and p may also change across the week."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A population of {=10*n} items is sampled without replacement. Using the 10% condition, what is the largest sample size for which a binomial model is reasonable?",
+    "answer": "n",
+    "hint": "The sample should be at most 10% of the population.",
+    "explain": "10% of {=10*n} is {n}. A sample of {n} or fewer keeps p close to constant.",
+    "params": {
+     "n": [
+      20,
+      90
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "X counts the faulty phones in a sample of 25, and 4% are faulty. Which statement defines the model correctly?",
+    "choices": [
+     "X ~ B(25, 0.04)",
+     "X ~ B(0.04, 25)",
+     "X ~ B(25, 0.96)"
+    ],
+    "answer": 0,
+    "hint": "In B(n, p), n is the number of trials and p is the chance of a success. Here a success is a faulty phone.",
+    "explain": "n = 25 phones and p = 0.04, because X counts faulty ones. B(25, 0.96) would count phones that work."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A spinner has red, green and blue sections. X is the number of reds in 10 spins. Can X be binomial?",
+    "choices": [
+     "Yes, if success is red and failure is not red",
+     "No, because there are three colours",
+     "No, because spins are not independent"
+    ],
+    "answer": 0,
+    "hint": "Can you group the outcomes into exactly two?",
+    "explain": "Each spin is red or not red, which is two outcomes. With 10 independent spins and the same P(red), X ~ B(10, P(red))."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A bag has 5 red and 5 blue counters. Two are drawn with replacement. X is the number of reds. What is p for each draw?",
+    "answer": 0.5,
+    "hint": "With replacement, the bag is the same for every draw.",
+    "explain": "Each draw has 5 reds out of 10, so p = 1/2 every time. The draws are independent and X ~ B(2, 0.5)."
+   }
+  ]
+ }
+}
