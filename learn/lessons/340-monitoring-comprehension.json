@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_GugVunb2lI",
+ "title": "Monitoring Comprehension",
+ "audience": "family",
+ "keyIdea": "Reading every word is not the same as understanding. Good readers keep asking: does this make sense? When a line clunks, they stop and fix it. Reread if you lost track. Read on for a clue if a word is new. Make a picture in your head. If it still clunks, ask someone.",
+ "explain": {
+  "kid": [
+   "You can read every word in a line and still not get it. 'The rain was dry and hot.' You can say it, but it is wrong. Rain is wet!",
+   "When a line makes sense, it clicks. When it does not, it clunks. Stop at a clunk. Do not just keep going.",
+   "Then fix it. Lost track? Go back and read it again. A new word? Read on, because the next line may show what it means. Can't see it? Make a picture in your head.",
+   "Still stuck after that? Ask a grown-up. Asking is fine once you have tried a fix-up."
+  ],
+  "adult": [
+   "This is comprehension monitoring: noticing whether you have understood, not just whether you decoded the words. The National Curriculum for Years 1 and 2 asks pupils to check that the text makes sense to them as they read and to correct inaccurate reading. Common Core RF.1.4c and RF.2.4c ask children to use context to confirm or self-correct word recognition and understanding, rereading as necessary.",
+   "The core move is metacognitive: a reader keeps a running check on meaning, spots a breakdown (a clunk), and chooses a fix-up strategy. The main fix-ups at this age are rereading, reading on for a context clue, making a mental picture, and asking for help. Collaborative Strategic Reading calls this click and clunk. The EEF guidance on literacy in Key Stage 1 names monitoring as one of the strategies worth teaching directly.",
+   "Common mistakes: reading on fluently after a line that makes no sense; thinking that saying every word right means you understood; skipping a new word instead of using a clue; picking a fix-up that does not suit the problem, such as reading on when you lost the whole page; and losing track of who he, she or it refers to. A common adult slip is praising only accurate, fast reading aloud. Ask, \"Did that make sense?\" just as often.",
+   "In the lab your child finds the clunk line in three short stories, uses a clue line to work out famished, drenched and enormous, rereads to find who did what, matches four kinds of clunk to a fix-up, and then marks every line of two stories as click or clunk."
+  ]
+ },
+ "familyTip": "When you read together, slip in a silly line, such as \"Then the cat drove the bus to school.\" See if your child stops you. Praise the stop: \"You noticed that didn't make sense!\" Then ask, \"What could we do to fix it?\"",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Click or clunk? Drag each line, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✅ Click: it makes sense",
+    "🛑 Clunk: it does not"
+   ],
+   "items": [
+    [
+     "The dog wagged its tail.",
+     0
+    ],
+    [
+     "The fish climbed up the tree to sleep.",
+     1
+    ],
+    [
+     "We wore coats because it was cold.",
+     0
+    ],
+    [
+     "I put on my socks after my shoes, so my socks were on top.",
+     1
+    ],
+    [
+     "She ate soup with a fork and drank it all.",
+     1
+    ],
+    [
+     "The baby cried, so Dad picked her up.",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagclunk",
+  "caption": "Flagship lab: tap the line that clunks, use clues and rereading to fix it, and pick the right fix-up.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "\"Ben put his toast in the freezer to make it hot.\" Click or clunk?",
+   "choices": [
+    "Clunk: a freezer makes things cold",
+    "Click: I can read all of it",
+    "Click: toast can be hot"
+   ],
+   "answer": 0,
+   "hint": "Read it again. Does a freezer make things hot?",
+   "explain": "A freezer makes things cold, so the line does not make sense. That is a clunk, even though every word is easy."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A story has {n} lines. {k} of them clunk. How many lines make sense?",
+   "answer": "n-k",
+   "hint": "Take the clunk lines away from all the lines.",
+   "explain": "{n} lines take away {k} clunks leaves {=n-k} lines that click.",
+   "params": {
+    "n": [
+     5,
+     8
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "\"The giant was colossal. His head touched the clouds.\" What does colossal mean?",
+   "choices": [
+    "Very, very big",
+    "Very kind",
+    "Very fast"
+   ],
+   "answer": 0,
+   "hint": "Read on. What does the next line tell you about the giant?",
+   "explain": "His head touched the clouds, so colossal means very, very big. The next line was the clue."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Ava reads {a} pages. She has to reread {b} of them to get them. How many pages did she get the first time?",
+   "answer": "a-b",
+   "hint": "Take away the pages she had to reread.",
+   "explain": "{a} pages take away {b} reread pages leaves {=a-b} she got first time. Rereading the rest is what good readers do.",
+   "params": {
+    "a": [
+     6,
+     10
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Leo reads a page aloud with no mistakes, but cannot say what it was about. Did he understand it?",
+    "choices": [
+     "No, he read the words but missed the meaning",
+     "Yes, he said every word",
+     "Yes, because he read fast"
+    ],
+    "answer": 0,
+    "hint": "Is saying the words the same as getting the meaning?",
+    "explain": "Leo decoded the words but did not get the meaning. He should stop and reread, thinking about what it says."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You forgot what happened on the page you just read. Which fix-up suits this?",
+    "choices": [
+     "Reread the page",
+     "Read on for a clue",
+     "Turn the page and keep going"
+    ],
+    "answer": 0,
+    "hint": "You lost the whole page, not just one word.",
+    "explain": "When you lose track of a whole page, reread it. Reading on helps with one new word."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "\"Nia was exhausted. She fell asleep on the sofa.\" What does exhausted mean?",
+    "choices": [
+     "Very tired",
+     "Very happy",
+     "Very hungry"
+    ],
+    "answer": 0,
+    "hint": "What did Nia do next? Read on for the clue.",
+    "explain": "She fell asleep straight away, so exhausted means very tired. The next line was the clue."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "You read {n} lines. You stop at every clunk. You stopped {k} times. How many lines clicked?",
+    "answer": "n-k",
+    "hint": "Every stop was a clunk line.",
+    "explain": "{n} lines take away {k} clunks leaves {=n-k} lines that made sense.",
+    "params": {
+     "n": [
+      4,
+      7
+     ],
+     "k": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "\"Kai gave his dad a card. He said it was lovely.\" Who said it was lovely?",
+    "choices": [
+     "Dad",
+     "Kai",
+     "The card"
+    ],
+    "answer": 0,
+    "hint": "Who got the card? Reread the first line.",
+    "explain": "Dad got the card, so Dad said it was lovely. Rereading helps you work out who he is."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "\"The snowman melted in the cold.\" What should a good reader do?",
+    "choices": [
+     "Stop: snow melts when it is warm",
+     "Keep going, it is fine",
+     "Read it faster"
+    ],
+    "answer": 0,
+    "hint": "Does snow melt in the cold?",
+    "explain": "Snow melts when it is warm, so this line clunks. A good reader stops and checks."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "You tried {t} fix-ups and the line still clunks. You ask a grown-up. How many things did you try in all?",
+    "answer": "t+1",
+    "hint": "Count the fix-ups, then add the ask.",
+    "explain": "{t} fix-ups and 1 ask make {=t+1}. Asking is a good last step after trying.",
+    "params": {
+     "t": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "You cannot tell where the cat is hiding in the story. Which fix-up could help?",
+    "choices": [
+     "Make a picture in my head",
+     "Skip the page",
+     "Shut the book"
+    ],
+    "answer": 0,
+    "hint": "Try to see the room in your mind.",
+    "explain": "Making a picture in your head helps you see where things are. Then check it against the words."
+   }
+  ]
+ }
+}
