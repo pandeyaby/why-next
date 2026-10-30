@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_I9iSzpGRn5",
+ "title": "Understanding Bullying",
+ "audience": "family",
+ "keyIdea": "Bullying is hurting someone on purpose, again and again, when it is hard for them to stop it because the other person or group has more power. It can be physical (hitting, breaking things), verbal (names, threats), social (leaving someone out, spreading rumours) or cyberbullying (online). A one-off falling out or an accident is not bullying. Bullying is never the fault of the person it happens to. If it happens to you or you see it, tell a trusted grown-up, save any messages, and keep telling until it stops.",
+ "explain": {
+  "kid": [
+   "Friends fall out sometimes. They shout, then say sorry and play again. That is not bullying. Bullying is different. Someone hurts you on purpose. They do it again and again. And it is hard for you to make them stop.",
+   "Why is it hard to stop? The bully may be older or bigger. They may have a gang of friends. They may know a secret. That is called power.",
+   "There are four kinds. Physical is pushing or breaking your things. Verbal is mean names or threats. Social is leaving you out or telling lies about you. Cyber is mean messages or posts online.",
+   "Bullying is never your fault. Tell a grown-up you trust. Save mean messages to show them. If it does not stop, tell again. If you see it, be an upstander. Do not laugh along. Be kind to the person, and get a grown-up."
+  ],
+  "adult": [
+   "In England, Relationships Education is taught in every primary school. It covers the different types of bullying, including cyberbullying, and the harm it does. It also covers what bystanders should do (mainly tell an adult) and how to get help. The Anti-Bullying Alliance defines bullying as the repeated, intentional hurting of one person or group by another, where there is an imbalance of power. StopBullying.gov in the US uses the same three parts: unwanted aggressive behaviour, repetition, and a real or perceived power imbalance.",
+   "Key terms for this age: repeated, on purpose (intentional), power imbalance, physical, verbal, social or relational bullying (leaving out, rumours), cyberbullying, bystander, upstander, trusted adult and report. Many schools teach the STOP check: Several Times On Purpose. Power can come from size or age, from numbers, from being popular, or from knowing something private.",
+   "Common mistakes: calling every argument bullying, so the word loses its weight. Or the opposite: deciding that name-calling or leaving someone out is not real bullying because nobody was hit. Children often think telling makes it worse. They may hit back, reply to cruel messages, or delete them so there is no proof. A common adult slip is to say \"just ignore it\" or \"sort it out yourselves\" when the child faces a power gap they cannot fix alone.",
+   "In the lab your child marks the days a story happened on a week strip, to tell a falling out from a pattern. They sort accidents from things done on purpose. They load a see-saw with the bully's power, then level it with helpers. They sort examples into the four kinds, and sort actions into ones that help and ones that make it worse."
+  ]
+ },
+ "familyTip": "Ask, \"What would you do if someone kept being mean to a friend at school?\" and agree together who their trusted grown-ups are, at school and at home. If your child tells you about bullying, listen calmly, thank them for telling, write down what happened and when, and speak to the school.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Bullying or a falling out? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Bullying",
+    "Not bullying"
+   ],
+   "items": [
+    [
+     "Kit hides Mo's lunch every day and laughs",
+     0
+    ],
+    [
+     "Two friends argue once, then make up",
+     1
+    ],
+    [
+     "A gang tells Ana she can't play, all week",
+     0
+    ],
+    [
+     "Ben bumps Jo by accident in the line",
+     1
+    ],
+    [
+     "Mean posts about Leo, again and again",
+     0
+    ],
+    [
+     "Sam and Ella both want the swing, once",
+     1
+    ],
+    [
+     "An older boy takes Raj's ball every playtime",
+     0
+    ],
+    [
+     "A friend says sorry after a game gets rough",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbully",
+  "caption": "Flagship lab: falling out or bullying on a week strip, on purpose or accident, a power see-saw, the four kinds, and what helps.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which one is bullying?",
+   "choices": [
+    "Ola calls Finn a mean name every day",
+    "Ola and Finn argue once about a game",
+    "Ola trips over Finn's bag by accident"
+   ],
+   "answer": 0,
+   "hint": "Look for something done on purpose, again and again.",
+   "explain": "Calling Finn a name every day is on purpose and repeated. That is verbal bullying. An argument once or an accident is not bullying."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Max hid Ava's bag on {n} days this week. How many times did it happen?",
+   "answer": "n",
+   "hint": "Count one for each day he hid the bag.",
+   "explain": "It happened {n} times. Again and again, on purpose, is part of what makes it bullying.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Mean messages about Jade keep coming in a group chat. What kind of bullying is it?",
+   "choices": [
+    "Cyberbullying",
+    "Physical bullying",
+    "It is not bullying"
+   ],
+   "answer": 0,
+   "hint": "Where are the messages being sent?",
+   "explain": "Hurtful messages sent again and again online are cyberbullying. Jade should save them and show a trusted grown-up."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} children see Sam being pushed. {k} of them go and get a teacher. How many are only watching?",
+   "answer": "n-k",
+   "hint": "Take away the children who went to get help.",
+   "explain": "{n} take away {k} is {=n-k}. Those {=n-k} are bystanders. They could help too, by getting a grown-up or being kind to Sam.",
+   "params": {
+    "n": [
+     4,
+     8
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What makes bullying different from a falling out?",
+    "choices": [
+     "It is on purpose, again and again, and hard to stop",
+     "Someone gets cross",
+     "It happens at school"
+    ],
+    "answer": 0,
+    "hint": "Think of the STOP check: Several Times On Purpose.",
+    "explain": "Bullying is on purpose, repeated, and the other person has more power, so it is hard to stop. Friends can get cross once and make up."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Every day Kim tells the others, \"Don't play with Ana.\" What kind of bullying is it?",
+    "choices": [
+     "Social bullying",
+     "Physical bullying",
+     "It is not bullying because no one is hit"
+    ],
+    "answer": 0,
+    "hint": "Is Ana hurt in her body, or left out?",
+    "explain": "Leaving someone out on purpose, again and again, is social bullying. Bullying does not need hitting."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Leo is being bullied. A friend says, \"Don't tell, it will get worse.\" What should Leo do?",
+    "choices": [
+     "Tell a trusted grown-up",
+     "Keep it secret",
+     "Hit back"
+    ],
+    "answer": 0,
+    "hint": "Who has the power to make it stop?",
+    "explain": "A trusted grown-up can stop it. Secrets let bullying go on, and hitting back can get Leo hurt or in trouble."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Max has {k} friends who join in. With Max, how many are on the bully's side?",
+    "answer": "k+1",
+    "hint": "Count Max as well as his friends.",
+    "explain": "{k} friends and Max make {=k+1}. A group against one child is a power imbalance, so it is hard for that child to stop it alone.",
+    "params": {
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You see Ella being pushed over every playtime. What does an upstander do?",
+    "choices": [
+     "Gets a grown-up and is kind to Ella",
+     "Watches and says nothing",
+     "Pushes the bully"
+    ],
+    "answer": 0,
+    "hint": "An upstander helps in a safe way.",
+    "explain": "An upstander gets a grown-up and is kind to Ella. Watching does not help, and pushing could get someone hurt."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Jo got a mean message on {n} days. Each day there were 2 messages. How many messages should Jo save to show a grown-up?",
+    "answer": "2*n",
+    "hint": "2 messages each day, for {n} days.",
+    "explain": "2 messages on each of {n} days is {=2*n} messages. Saving them all shows the grown-up it keeps happening.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Ben kicks a ball and it hits Rosa by accident. He says sorry. Is it bullying?",
+    "choices": [
+     "No, it was an accident",
+     "Yes, Rosa got hurt",
+     "Yes, it was physical"
+    ],
+    "answer": 0,
+    "hint": "Did Ben mean to do it? Did it keep happening?",
+    "explain": "It was not on purpose, and it happened once. Getting hurt by accident is not bullying."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Raj told his teacher he is being bullied, but it has not stopped. What now?",
+    "choices": [
+     "Tell again, or tell another grown-up",
+     "Give up, telling does not work",
+     "Sort it out alone"
+    ],
+    "answer": 0,
+    "hint": "Telling once is not always enough.",
+    "explain": "Keep telling until it stops. Raj can tell his teacher again, or tell a parent or another grown-up at school."
+   }
+  ]
+ }
+}
