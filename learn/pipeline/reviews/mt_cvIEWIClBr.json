@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every count was recomputed: 4P3 = 24, 4C3 = 4, 8P3 = 336, 8C3 = 56, LEVEL = 5!/(2!2!) = 30, 10P4 = 5040, 10C4 = 210, 12C9 = 12C3 = 220, AABB = 6. The lab derives nCr from the code's own P and factorial functions, and the Pascal row bars match nC0..nCn for n = 1 to 10."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Covers the standard errors in A level counting questions: nCr used for medals or codes, nPr used for a committee, n to the power r when repeats are banned, adding stage counts, dividing LEVEL by only one 2!, and 0! taken as 0 or undefined. Each one is a distractor in the challenge or the mastery pool."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagperm is a counting lab with no chance or data in it: tapping runners onto a three-place podium, a 24-chip grid that collapses into colour-coded teams, a shelf of numbered books for n!, a Pascal-row bar chart where r and n − r light up together, and letter tiles with identical letters. It passed the shingle gate against the probability distributions and other maths labs."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner sees the formulas emerge before they are stated: the choices line fills 4 × 3 × 2 as places are taken, the grid shows each team appearing six times so 24 ÷ 6 = 4, stepping down to an empty shelf shows 0! = 1, and building ABA a second time from different A tiles shows why repeats are divided out."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three committed predictions with tempting wrong options: 12 or 64 podiums from 4 runners (64 is the n^r error), 24 or 12 teams of 3 (the nPr error), and 6 arrangements of AAB (ignoring identical letters). The 10C3 versus 10C7 prediction sets up the symmetry task."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with twelve tagged wrong answers (comb, pow, perm, add, rep, half, norep, sel, sym, ord, zero, undef). Each reply works the right number, for example that 720 = 10 × 9 × 8 forbids repeats while a code with repeats has 10³ = 1000."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner audience: kid text FK 3.3 against the 6.5 limit and adult text FK 5.5 against 9.5, measured with learn/readability.py. Factorial, permutation, combination and the multiplication principle are each named in plain words right after a worked example rather than before it."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler gate clean and overlap under 12 percent. The four kid paragraphs carry the podium, factorials, permutations versus teams, and the two questions about order and repeats; the adult paragraphs give A level and S-CP.9 placement, formulas with the symmetry argument, named mistakes and a lab tour."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 screenshots in both themes: four runner tiles and three podium slots fit at 390 px, the 24 podiums sit in a 4 by 6 grid of large chips, the 0! to 8! strip shows every value including 40320, and the Pascal row stays legible at n = 10. phone_sweep found 0 issues; walk.cjs passed on phone and desktop."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe reports no WCAG 2.1 AA violations in light or dark. Every canvas action has a labelled button (Runner A to D, Group team, n and r steppers, letter tiles by position), and the live region reads each podium, team, factorial and nCr value, so the lab works without the canvas or colour."
+  }
+ },
+ "sources": [
+  "DfE (2016) Mathematics AS and A level subject content: binomial expansion and the binomial distribution",
+  "Pearson Edexcel (2017) A level Further Mathematics specification, Further Statistics: permutations and combinations",
+  "Common Core State Standards for Mathematics (2010) S-CP.9 (+) Use permutations and combinations to compute probabilities of compound events",
+  "Brualdi, R. A. (2010) Introductory Combinatorics, 5th edition, chapters 2 and 3"
+ ]
+}
