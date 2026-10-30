@@ -1,0 +1,51 @@
+{
+  "topicId": "mt_4-vfMgmCVB",
+  "title": "Cohesion within paragraphs",
+  "audience": "learner",
+  "explain": {
+    "kid": [
+      "A good paragraph hangs together like a chain. Each sentence links back to the one before. Writers use small tools to make these links. They are called cohesive devices.",
+      "One tool is a pronoun. Foxes live in towns. They hunt at night. The word they points back to foxes. Keep the noun the first time, so the reader knows who they means. If he could mean two people, use the name again.",
+      "Another tool is a synonym, a new name for the same thing. The volcano erupted. Ash from the mountain fell on the town. Now you do not say volcano twice.",
+      "Adverbials link ideas too. Firstly, next and finally show the order of steps. As a result shows cause. However shows a contrast. For example gives one case. Pick the one that matches how the ideas connect."
+    ],
+    "adult": [
+      "Cohesion is how the sentences in a paragraph link to each other. The National Curriculum for England asks pupils in Years 5 and 6 to use a wide range of devices to build cohesion within a paragraph, such as then, after that, this and firstly. In Year 6 this widens to repetition, ellipsis and adverbials such as on the other hand or as a consequence.",
+      "The main devices are reference and linking. A pronoun or a synonym refers back to an earlier noun, its antecedent, which forms a reference chain. Adverbials of time and sequence order events or steps. Adverbials of cause, contrast and example show the logic between two ideas. A fronted adverbial often carries the link, followed by a comma.",
+      "Watch for three common mistakes. One is an ambiguous pronoun: in 'Mo gave Sam a book and he smiled', he could mean either boy. Another is swapping the first mention for a pronoun, so the chain has no anchor. A third is a linking adverbial that does not match the logic, such as however before a result.",
+      "In the lab, children tap a repeated noun to replace it with a pronoun and choose a synonym that names the same thing. They drag adverbials of sequence into a set of instructions and pick cause, contrast or example links. Finally they find the sentence that breaks the chain."
+    ]
+  },
+  "keyIdea": "A cohesive paragraph links each sentence back to the one before. Pronouns and synonyms refer back to a noun the reader has already met, called the antecedent, so keep the noun at its first mention. Adverbials of sequence such as firstly, next, after that and finally show order. Adverbials such as as a result, however and for example show cause, contrast and example. Choose the adverbial that matches how the two ideas really connect.",
+  "familyTip": "When your child reads you a paragraph they wrote, point at a he, she, it or they and ask \"Who or what does this point back to?\" If the answer could be two people, help them put the name back in.",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Which cohesive device? Drag each word, or tap it and then tap a box.",
+    "opts": {
+      "bins": ["Points back (pronoun)", "Shows order (sequence)", "Shows logic (cause, contrast)"],
+      "items": [["they", 0], ["it", 0], ["she", 0], ["Firstly", 1], ["After that", 1], ["Finally", 1], ["As a result", 2], ["However", 2], ["Therefore", 2]]
+    }
+  },
+  "lab": {"type": "flagcohe", "caption": "Flagship lab: swap repeats for pronouns and synonyms, order steps, link ideas, find the break.", "opts": {"step": 0}},
+  "practice": [
+    {"type": "mc", "id": "p1", "prompt": "Owls hunt at night. Owls have soft feathers. Which is the best way to write the second sentence?", "choices": ["They have soft feathers.", "Owls have soft feathers.", "It has soft feathers."], "answer": 0, "hint": "Owls is plural. Which pronoun points back to more than one?", "explain": "They points back to owls, so we do not repeat the noun. It would be for one thing only."},
+    {"type": "numeric", "id": "p2", "prompt": "A paragraph has {n} sentences. Every sentence after the first starts with a linking adverbial. How many linking adverbials are there?", "answer": "n-1", "hint": "The first sentence has nothing before it to link back to.", "explain": "Only the {=n-1} sentences after the first link back, so there are {=n-1} linking adverbials.", "params": {"n": [3, 7]}},
+    {"type": "mc", "id": "p3", "prompt": "It rained all morning. ___ the match was called off. Which adverbial fits?", "choices": ["As a result,", "However,", "For example,"], "answer": 0, "hint": "Did the rain cause something, or is this a surprise?", "explain": "The rain caused the match to be called off, so as a result shows the cause and effect."},
+    {"type": "numeric", "id": "p4", "prompt": "Instructions have {n} steps. Step 1 starts with Firstly and the last step starts with Finally. How many steps are left for words like Next or After that?", "answer": "n-2", "hint": "Take away the first step and the last step from the total.", "explain": "Two of the {n} steps already have Firstly and Finally, so {=n-2} steps are left for Next or After that.", "params": {"n": [4, 8]}}
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {"type": "mc", "id": "m1", "prompt": "Leo fed the dog. Leo took the dog for a walk. Which is the most cohesive second sentence?", "choices": ["Then he took it for a walk.", "Then Leo took the dog for a walk.", "Then it took him for a walk."], "answer": 0, "hint": "Keep Leo and the dog in the first sentence. Then point back to them.", "explain": "He points back to Leo and it points back to the dog, so nothing is repeated and the meaning stays clear."},
+      {"type": "mc", "id": "m2", "prompt": "Which word is a synonym that could replace the second 'the volcano'?", "choices": ["the mountain", "the town", "the lava"], "answer": 0, "hint": "A synonym must name the very same thing, not something nearby.", "explain": "The mountain names the same volcano in a new way. The town and the lava are different things."},
+      {"type": "numeric", "id": "m3", "prompt": "A paragraph names the fox {n} times. You keep the noun at the first mention only. How many times can you use a pronoun or synonym instead?", "answer": "n-1", "hint": "The first mention stays as the noun. What about all the others?", "explain": "The first mention keeps the noun as the antecedent, so the other {=n-1} mentions can be pronouns or synonyms.", "params": {"n": [3, 8]}},
+      {"type": "mc", "id": "m4", "prompt": "Penguins are birds. ___ they cannot fly. Which adverbial fits?", "choices": ["However,", "As a result,", "Firstly,"], "answer": 0, "hint": "Is not flying a result of being a bird, or a surprise?", "explain": "Most birds fly, so penguins not flying is a contrast. However shows the contrast."},
+      {"type": "mc", "id": "m5", "prompt": "Mo gave Sam a pen. He smiled. Why is this sentence unclear?", "choices": ["He could mean Mo or Sam.", "Smiled is spelt wrong.", "It needs a comma."], "answer": 0, "hint": "Ask who the pronoun points back to. Is there more than one choice?", "explain": "There are two boys, so he is ambiguous. Use the name, for example 'Sam smiled', to keep the chain clear."},
+      {"type": "numeric", "id": "m6", "prompt": "A recipe has {n} steps. Firstly and Finally are used once each. Next and After that fill the rest. How many steps use Next or After that?", "answer": "n-2", "hint": "Firstly takes one step and Finally takes one. Count what is left.", "explain": "Firstly and Finally take 2 of the {n} steps, leaving {=n-2} for Next or After that.", "params": {"n": [4, 9]}},
+      {"type": "mc", "id": "m7", "prompt": "Some animals sleep through winter. ___ hedgehogs hibernate from November. Which adverbial fits?", "choices": ["For example,", "However,", "As a result,"], "answer": 0, "hint": "Are hedgehogs a contrast, a result, or one case of the idea?", "explain": "Hedgehogs are one case of animals that sleep through winter, so for example is the right link."},
+      {"type": "mc", "id": "m8", "prompt": "Which sentence breaks the chain? (1) Bats hunt at night. (2) They use sound to find insects. (3) She went to the shop.", "choices": ["Sentence 3", "Sentence 2", "Sentence 1"], "answer": 0, "hint": "Look for a pronoun that does not point back to anything.", "explain": "She has no antecedent in the paragraph, so sentence 3 does not link back. Sentence 2 links with they."}
+    ]
+  }
+}
