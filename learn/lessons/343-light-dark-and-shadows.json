@@ -1,0 +1,249 @@
+{
+ "topicId": "mt_oa6bzrjUCU",
+ "title": "Light, dark and shadows",
+ "audience": "family",
+ "keyIdea": "We need light to see. Light comes from a light source, like the sun, a lamp, a torch or a candle. Dark is when there is no light. A shadow is a dark shape that forms when something blocks the light. The shadow is on the side away from the light, and it has the same shape as the thing blocking the light. No light means no shadow.",
+ "explain": {
+  "kid": [
+   "Switch off the lamp. It is dark! We need light to see. The sun, a lamp, a torch and a candle all give light.",
+   "A shiny spoon is bright, but it does not make light. It only bounces light. The Moon is the same. The sun lights it up.",
+   "Shine a torch at the wall. Put your hand in the light. Your hand stops the light, so a dark shape is on the wall. That is a shadow.",
+   "Move your hand near the torch. The shadow gets big! Move it near the wall. The shadow gets small. Switch the torch off. No light, no shadow."
+  ],
+  "adult": [
+   "This is early science about light. The US Next Generation Science Standards ask young children to show that objects in darkness can be seen only when lit (1-PS4-2) and to test what happens when objects are put in the path of a beam of light (1-PS4-3). The English national curriculum returns to it in Year 3: we need light to see, dark is the absence of light, and shadows form when an opaque object blocks light from a light source.",
+   "The key words are light source (something that makes its own light), shadow, block, and later opaque and transparent. A shadow falls on the side of the object away from the light. Its outline matches the object, but it has no colour or detail, because it is simply where the light cannot reach. Moving the object closer to the light makes the shadow bigger.",
+   "Common mistakes from classroom research: thinking shiny things or the Moon are light sources, when they only reflect light; believing we can still see a little in total darkness; thinking a shadow is a reflection, or a thing that belongs to the object and can be seen in the dark; and expecting the shadow on the same side as the light. Be careful with phrases like 'the dark comes in'. Dark is just no light.",
+   "In the lab your child finds the three light sources in a dark room, drags a teddy into a torch beam to make a shadow, switches the torch off to see the shadow go, moves the teddy to grow and shrink the shadow, and matches shadows to the toys that made them."
+  ]
+ },
+ "familyTip": "At bedtime, make shadow puppets with a torch on the wall. Ask \"Where will the shadow go?\" before you move your hand, then switch the torch off and ask where the shadow went.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it make its own light? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "☀ Gives light",
+    "✖ No light of its own"
+   ],
+   "items": [
+    [
+     "The sun",
+     0
+    ],
+    [
+     "A lamp",
+     0
+    ],
+    [
+     "A candle flame",
+     0
+    ],
+    [
+     "A shiny spoon",
+     1
+    ],
+    [
+     "The Moon",
+     1
+    ],
+    [
+     "A teddy",
+     1
+    ],
+    [
+     "A torch that is on",
+     0
+    ],
+    [
+     "A mirror",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagshadow",
+  "caption": "Flagship lab: find the light sources in the dark, make a teddy's shadow with a torch, switch it off, make it big and small, and match shadows to toys.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A torch shines on a teddy and makes a shadow. Where is the teddy's shadow?",
+   "choices": [
+    "On the wall behind the teddy",
+    "Next to the torch",
+    "On top of the torch"
+   ],
+   "answer": 0,
+   "hint": "The teddy blocks the light. Where can the light not reach?",
+   "explain": "The light cannot get past the teddy, so the shadow is on the wall behind it, away from the torch."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{n} children stand in the sunshine. Each one makes a shadow. How many shadows are there?",
+   "answer": "n",
+   "hint": "Each child blocks the sunlight and makes one shadow.",
+   "explain": "Every child blocks some light, so {n} children make {n} shadows.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which one is a light source?",
+   "choices": [
+    "A candle flame",
+    "A shiny spoon",
+    "A teddy"
+   ],
+   "answer": 0,
+   "hint": "A light source makes its own light.",
+   "explain": "A candle flame makes its own light. A spoon only bounces light, and a teddy makes none."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "There are {a} lamps on. You switch off {b} of them. How many lamps still give light?",
+   "answer": "a-b",
+   "hint": "Only the lamps that are on give light. Take away the ones you switched off.",
+   "explain": "{a} lamps take away {b} switched off leaves {=a-b} lamps giving light.",
+   "params": {
+    "a": [
+     3,
+     5
+    ],
+    "b": [
+     1,
+     2
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You switch off every light in a room with no windows. Can you see your shadow?",
+    "choices": [
+     "No, there is no light",
+     "Yes, shadows are always there",
+     "Yes, it gets darker"
+    ],
+    "answer": 0,
+    "hint": "A shadow is made when something blocks light. Is there any light?",
+    "explain": "With no light at all, nothing is blocked and you cannot see, so there is no shadow."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A red ball blocks the light. What colour is its shadow?",
+    "choices": [
+     "Dark, with no colour",
+     "Red like the ball",
+     "Yellow like the light"
+    ],
+    "answer": 0,
+    "hint": "A shadow is where the light cannot reach.",
+    "explain": "A shadow is just a place with less light, so it is dark. It has the ball's shape but not its colour."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{n} friends each hold up one hand in the torch light. How many hand shadows are on the wall?",
+    "answer": "n",
+    "hint": "Each hand blocks some light and makes its own shadow.",
+    "explain": "Each of the {n} hands blocks light, so there are {n} hand shadows on the wall.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The Moon looks bright at night. Does it make its own light?",
+    "choices": [
+     "No, sunlight bounces off it",
+     "Yes, like a lamp",
+     "Yes, but only at night"
+    ],
+    "answer": 0,
+    "hint": "Think of the shiny spoon. Bright is not the same as making light.",
+    "explain": "The Moon makes no light. We see it because light from the sun bounces off it."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You move your hand close to the torch. What happens to the shadow?",
+    "choices": [
+     "It gets bigger",
+     "It gets smaller",
+     "It goes away"
+    ],
+    "answer": 0,
+    "hint": "Close to the torch, your hand blocks more of the light.",
+    "explain": "Near the torch your hand blocks more light, so the shadow gets bigger."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{a} toys are in the torch light and {b} toys are in a dark box. How many toys make a shadow?",
+    "answer": "a",
+    "hint": "Only toys in the light can block light.",
+    "explain": "Only the {a} toys in the light block it and make shadows. The {b} toys in the dark box make none.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The sun is behind you. Where is your shadow?",
+    "choices": [
+     "In front of you",
+     "Behind you, near the sun",
+     "Nowhere"
+    ],
+    "answer": 0,
+    "hint": "The shadow is on the side away from the light.",
+    "explain": "You block the sunlight coming from behind, so your shadow falls in front of you."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A shadow on the wall is round. Which toy made it?",
+    "choices": [
+     "A ball",
+     "A star",
+     "A cup with a handle"
+    ],
+    "answer": 0,
+    "hint": "A shadow has the same outline as the thing blocking the light.",
+    "explain": "A round shadow comes from a round thing, so the ball made it."
+   }
+  ]
+ }
+}
