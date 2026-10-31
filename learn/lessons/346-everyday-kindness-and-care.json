@@ -1,0 +1,153 @@
+{
+ "topicId": "mt_lAvS72LOUO",
+ "title": "Everyday Kindness and Care",
+ "audience": "family",
+ "keyIdea": "Kindness starts with noticing. A sad face, tears, dropped things or a child on their own are clues that someone needs care. Then you do the kind act that fits: comfort, help, share or say kind words. Ask before you help, and listen if they say no thanks. Kindness is for everyone, not only friends, and if someone is hurt you get a grown-up.",
+ "explain": {
+  "kid": [
+   "Look at faces. Tears or a sad face tell you someone feels bad. Dropped books or a child on their own are clues too.",
+   "Then help in the way that fits. If books fall, pick them up. If a friend has no snack, share some. If someone falls and is hurt, ask \"Are you OK?\" and get a grown-up.",
+   "Kind words help too. Say \"That is sad. Shall we build it again?\" Do not laugh. Do not say \"Stop crying.\"",
+   "Ask \"Can I help?\" first. If they say no thanks, that is OK. Be kind to everyone, even a child you do not know."
+  ],
+  "adult": [
+   "This is early prosocial behaviour: comforting, helping, sharing and kind words. The EYFS early learning goal for managing self and building relationships asks children to show sensitivity to their own and to others' needs, and the PSHE Association programme for Key Stage 1 covers recognising how others feel and how to be kind. In the CASEL framework this sits under social awareness: empathy and showing concern for others' feelings.",
+   "Kindness has two parts. First the child must notice cues: facial expression, crying, body language and what happened, such as dropped things or a child playing alone. Then they choose an act that fits the need, which takes perspective-taking: what would help this person, not what I would like. Asking first respects the other child's choice, so help is offered, not forced.",
+   "Common mistakes: kindness only for friends, so the new or quiet child is left out; taking over a task to be helpful, which removes the other child's choice; telling an upset child to stop crying or cheer up, which dismisses the feeling; laughing when someone falls; and thinking it is a grown-up's job, so they walk past. Be careful not to force a hug or an apology. Praise the noticing as well as the act.",
+   "In the lab your child spots who needs care from faces and clues, drags the right kind act to each child, picks kind words for a fallen tower and a lost race, asks before helping and accepts no thanks, and sorts kind and unkind acts."
+  ]
+ },
+ "familyTip": "At bedtime, ask: \"Who did you notice today who needed some care? What did you do, or what could you do next time?\" Share one of your own too.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Kind or not kind? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Kind", "Not kind"],
+   "items": [["Share your snack", 0], ["Laugh at a fall", 1], ["Ask \"Can I help?\"", 0], ["Leave someone out", 1], ["Pick up dropped books", 0], ["Grab their toy to fix it", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagcare",
+  "caption": "Flagship lab: spot who needs care, give each child the right kind act, pick kind words, ask before helping, and sort kind and unkind acts.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A girl drops all her books in the hall. What is the kind thing to do?",
+   "choices": ["Help her pick them up", "Step over them", "Laugh at the mess"],
+   "answer": 0,
+   "hint": "Look at what happened. What would help her most right now?",
+   "explain": "Her books fell, so helping to pick them up fits what she needs. Laughing would make her feel worse."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Your class adds a marble to the kindness jar for each kind act. On Monday there were {a} kind acts and on Tuesday {b}. How many marbles were added?",
+   "answer": "a+b",
+   "hint": "One marble for each kind act. Add the two days together.",
+   "explain": "{a} marbles and {b} more makes {=a+b} marbles in the jar.",
+   "params": {"a": [2, 6], "b": [1, 5]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Your friend is crying because her tower fell. What could you say?",
+   "choices": ["That is sad. Shall we build it again?", "Stop crying, it is only blocks.", "Ha, it fell down!"],
+   "answer": 0,
+   "hint": "Kind words say what you see and offer help.",
+   "explain": "Saying it is sad shows you noticed her feeling, and offering to build again helps. Stop crying tells her the feeling is wrong."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You have {n} grapes. Your friend forgot his snack. You share so you both have the same. How many grapes does he get?",
+   "answer": "n/2",
+   "where": "n%2==0",
+   "hint": "Make two equal piles, one for you and one for him.",
+   "explain": "{n} grapes in two equal piles is {=n/2} each, so he gets {=n/2} grapes.",
+   "params": {"n": [4, 12]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Ben is trying to do his zip. What do you do first?",
+    "choices": ["Ask: \"Can I help?\"", "Do it for him right away", "Walk away"],
+    "answer": 0,
+    "hint": "He might want to do it on his own. How can you find out?",
+    "explain": "Asking first lets Ben choose. If he says yes, you help. If he says no thanks, that is fine."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A new girl is sitting on her own. She is not your friend yet. Should you be kind to her?",
+    "choices": ["Yes, kindness is for everyone", "No, only to friends", "Only if a grown-up says so"],
+    "answer": 0,
+    "hint": "Think about how it feels to be new and on your own.",
+    "explain": "Kindness is for everyone. Asking her to play could help her feel welcome."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "There are {n} children in the playground. One child is sitting alone and sad. How many of the other children could go and ask them to play?",
+    "answer": "n-1",
+    "hint": "Anyone can be kind. Count everyone except the sad child.",
+    "explain": "Everyone except the sad child could help, so {n} take away 1 is {=n-1} children.",
+    "params": {"n": [4, 12]}
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mo falls over and hurts his knee. What is the kind thing to do?",
+    "choices": ["Ask if he is OK and get a grown-up", "Keep playing, it is not your job", "Tell him to stop crying"],
+    "answer": 0,
+    "hint": "He is hurt. Who can help with a hurt knee?",
+    "explain": "Checking on him shows care, and a grown-up can help with the hurt knee. Walking past leaves him alone."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ana says \"No thanks, I can do it!\" when you offer help. What now?",
+    "choices": ["Say OK and tell her to ask if she needs you", "Do it for her anyway", "Get cross with her"],
+    "answer": 0,
+    "hint": "You asked, and she gave an answer. Listen to it.",
+    "explain": "She said no thanks, so you listen. Saying you are there if she needs you is still kind."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Sam drops {n} books. You pick up {k} of them and your friend picks up the rest. How many does your friend pick up?",
+    "answer": "n-k",
+    "where": "k<n",
+    "hint": "Start with all {n} books and take away the {k} you picked up.",
+    "explain": "{n} books take away the {k} you picked up leaves {=n-k} for your friend.",
+    "params": {"n": [5, 9], "k": [1, 4]}
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which one is a clue that someone needs some care?",
+    "choices": ["Tears on their face", "A big smile", "Running and laughing"],
+    "answer": 0,
+    "hint": "Look at faces. Which one shows someone feels bad?",
+    "explain": "Tears show someone is upset. A smile and laughing show they feel fine."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Lily's drawing has a wobbly line. You draw better lines. What is kind?",
+    "choices": ["Say what you like about it", "Fix it for her without asking", "Tell her it is wrong"],
+    "answer": 0,
+    "hint": "It is her drawing. How can you help her feel good about it?",
+    "explain": "Saying what you like is kind. Fixing it without asking takes her drawing away from her."
+   }
+  ]
+ }
+}
