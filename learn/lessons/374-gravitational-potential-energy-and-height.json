@@ -1,0 +1,171 @@
+{
+ "topicId": "mt_0DyF7bl4zh",
+ "title": "Gravitational potential energy and height",
+ "audience": "learner",
+ "keyIdea": "Lifting an object stores energy in its gravitational store. The energy stored is E = m × g × h: mass (kg) times gravitational field strength (N/kg) times the height gained (m). Double the mass or the height and the energy doubles. Weaker gravity, as on the Moon, stores less. When the object falls, that energy moves to the kinetic store.",
+ "explain": {
+  "kid": [
+   "When you lift a bag onto a shelf, you do work against gravity. That energy is not lost. It goes into the gravitational store of the bag and the Earth.",
+   "The amount depends on three things. A heavier bag stores more. A higher shelf stores more. And stronger gravity stores more. So E = m × g × h. On Earth, g is about 10 N/kg.",
+   "Only the change in height counts. Lift a box from a 1 m shelf to a 3 m shelf and the height gained is 2 m. The route does not matter. A ramp and a straight lift to the same shelf store the same energy.",
+   "On the Moon, g is only 1.6 N/kg. The same lift stores much less energy. When something falls, its gravitational store empties into its kinetic store, so it speeds up. Ignoring air, all of it ends up as kinetic energy at the ground."
+  ],
+  "adult": [
+   "This is Key Stage 3 physics in England. The energy topic asks pupils to treat energy as a quantity that can be calculated and to describe changes in a system, including changes in position in a field. The forces topic gives weight = mass × gravitational field strength, with g = 10 N/kg on Earth and different values on other planets. GCSE adds the equation Ep = m g h, often with g = 9.8 N/kg. In the US, NGSS MS-PS3-2 asks students to model how potential energy changes when objects interacting at a distance change their arrangement.",
+   "Two ideas carry most of the reasoning. First, the energy is proportional to each of m, g and h, so doubling one doubles the store. Second, only the change in vertical height matters. Ignoring friction, the path taken does not change the energy stored. The lab uses g = 10 N/kg on Earth, 3.7 N/kg on Mars and 1.6 N/kg on the Moon.",
+   "Common mistakes: using the final height instead of the height gained, or adding the two heights. Leaving g out and multiplying only mass by height. Using grams or centimetres without converting to kilograms and metres. Thinking a longer ramp stores more energy. And saying the energy is used up when an object falls, instead of transferred to the kinetic store. Be careful with the Moon too: the mass is the same there, but g is smaller, so the energy is smaller.",
+   "In the lab students lift a crate up a 5 m scale while a bar shows the gravitational store, swap 1, 2 and 4 kg crates at the same height, and send a crate to the same shelf by a straight lift, stairs and a ramp. They repeat a lift on Earth, Mars and the Moon, then let the crate fall and watch the gravitational store drain into the kinetic store."
+  ]
+ },
+ "familyTip": "Carry a bag of shopping up the stairs together and ask where the energy went. Then ask how you could get it back (drop or roll something down). Try the numbers: a 2 kg bag lifted 3 m stores 2 × 10 × 3 = 60 J.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "More energy in the gravitational store, or less? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "⬆️ More energy stored",
+    "⬇️ Less energy stored"
+   ],
+   "items": [
+    ["Lift the same crate twice as high", 0],
+    ["Do the same lift on the Moon", 1],
+    ["Use a crate with half the mass", 1],
+    ["Lift a heavier crate to the same shelf", 0],
+    ["Lower the crate to a shelf nearer the floor", 1],
+    ["Do the same lift where g is stronger", 0]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglift",
+  "caption": "Flagship lab: lift a crate and watch E = mgh, change the mass, try three routes, lift on Earth, Mars and the Moon, then let it fall.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A {m} kg box is lifted {h} m on Earth (g = 10 N/kg). How much energy goes into its gravitational store, in joules?",
+   "answer": "m*10*h",
+   "hint": "Use E = m × g × h. Multiply the mass by 10, then by the height.",
+   "explain": "E = {m} × 10 × {h} = {=m*10*h} J.",
+   "params": {"m": [1, 6], "h": [1, 5]}
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A {m} kg bag is moved from a 1 m shelf up to a {h} m shelf (g = 10 N/kg). How much does its gravitational store increase, in J?",
+   "answer": "m*10*(h-1)",
+   "hint": "Find the height gained first: the new height minus 1 m. Then use E = m × g × h.",
+   "explain": "Height gained = {h} − 1 = {=h-1} m, so E = {m} × 10 × {=h-1} = {=m*10*(h-1)} J.",
+   "params": {"m": [1, 5], "h": [2, 6]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The same 2 kg crate is lifted 3 m on Earth and on the Moon. Why does it store less energy on the Moon?",
+   "choices": ["g is smaller on the Moon", "Its mass is smaller on the Moon", "Energy cannot be stored on the Moon"],
+   "answer": 0,
+   "hint": "Mass is the amount of matter. Does that change when you fly to the Moon?",
+   "explain": "The mass stays 2 kg. The gravitational field strength drops from 10 to 1.6 N/kg, so m × g × h is smaller."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Two people take the same box to the same shelf. One uses a long ramp, one lifts it straight up. Ignoring friction, which box stores more energy?",
+   "choices": ["They store the same", "The one pushed up the ramp", "The one lifted straight up"],
+   "answer": 0,
+   "hint": "In the lab, every route to the 3 m shelf gave the same bar.",
+   "explain": "Only the mass, g and the height gained matter. Both boxes gained the same height, so they store the same energy."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A {m} kg rock sits on a ledge {h} m above the ground (g = 10 N/kg). How much energy is in its gravitational store, in J?",
+    "answer": "m*10*h",
+    "hint": "E = m × g × h, with g = 10 N/kg on Earth.",
+    "explain": "E = {m} × 10 × {h} = {=m*10*h} J.",
+    "params": {"m": [2, 8], "h": [2, 6]}
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You lift a box to twice the height. What happens to the energy in its gravitational store?",
+    "choices": ["It doubles", "It stays the same", "It goes up by 4 times"],
+    "answer": 0,
+    "hint": "E = m × g × h. What happens to the answer if h doubles?",
+    "explain": "Energy is proportional to height, so twice the height gives twice the energy."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A {g} g apple is lifted 2 m (g = 10 N/kg). How much energy is stored, in J? Change grams to kilograms first.",
+    "answer": "g/1000*10*2",
+    "hint": "Divide the grams by 1000 to get kilograms, then use E = m × g × h.",
+    "explain": "{g} g = {=g/1000} kg, so E = {=g/1000} × 10 × 2 = {=g/1000*10*2} J.",
+    "params": {"g": [100, 500]}
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A ball is dropped. Ignoring air resistance, where does the energy in its gravitational store go?",
+    "choices": ["Into its kinetic store", "It is used up", "It stays in the gravitational store"],
+    "answer": 0,
+    "hint": "The ball gets lower and faster. Which store gets bigger as it speeds up?",
+    "explain": "Energy is not used up. As the ball falls, the gravitational store empties into the kinetic store, so it speeds up."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A crate is lifted from a 2 m shelf to a 5 m shelf. Which height do you use in E = mgh?",
+    "choices": ["3 m", "5 m", "7 m"],
+    "answer": 0,
+    "hint": "The store changes by the height gained, not the final height.",
+    "explain": "Height gained = 5 m − 2 m = 3 m. Using 5 m or adding to 7 m are the common slips."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A 4 kg crate and a 1 kg crate sit on the same shelf. How does the energy in their gravitational stores compare?",
+    "choices": ["The 4 kg crate has 4 times as much", "They have the same", "The 1 kg crate has more"],
+    "answer": 0,
+    "hint": "Energy is proportional to mass.",
+    "explain": "Same g and same height, but 4 times the mass, so 4 times the energy."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "On the Moon, g = 1.6 N/kg. A 5 kg box is lifted {h} m. How much energy is stored, in J?",
+    "answer": "5*1.6*h",
+    "hint": "E = m × g × h, with g = 1.6 instead of 10.",
+    "explain": "E = 5 × 1.6 × {h} = {=5*1.6*h} J. On Earth the same lift would store {=5*10*h} J.",
+    "params": {"h": [1, 5]}
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A 2 kg crate stores 60 J in its gravitational store on Earth (g = 10 N/kg). How high is it, in metres?",
+    "answer": 3,
+    "hint": "Rearrange E = m × g × h: h = E ÷ (m × g).",
+    "explain": "h = 60 ÷ (2 × 10) = 60 ÷ 20 = 3 m."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why does a heavy bag lifted up the stairs store more energy than a light bag lifted the same height?",
+    "choices": ["It has more mass, and E is proportional to m", "It took longer to carry", "The stairs are steeper for it"],
+    "answer": 0,
+    "hint": "Which letter in E = m × g × h is different for the two bags?",
+    "explain": "g and h are the same for both, so the bag with more mass stores more energy. Time and steepness do not appear in the equation."
+   }
+  ]
+ }
+}
