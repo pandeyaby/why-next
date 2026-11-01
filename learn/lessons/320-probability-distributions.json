@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_KPo7lOiN6y",
+ "title": "Probability distributions",
+ "audience": "learner",
+ "keyIdea": "A random variable X gives a number to each outcome of an experiment, such as the total of two dice. Its probability distribution lists every value x with its probability P(X = x), in a table or a bar graph. Every probability is between 0 and 1, and together they sum to 1. You can build a distribution from theory, by counting equally likely outcomes, or estimate one from data using relative frequencies.",
+ "explain": {
+  "kid": [
+   "Roll two dice and add the scores. The total is a random variable, written with a capital letter: X. A small letter, x, stands for one value it can take. X can be any whole number from 2 to 12.",
+   "There are 6 × 6 = 36 equally likely outcomes. Count the ones that give each total. Seven comes from six pairs: (1, 6), (2, 5), (3, 4), (4, 3), (5, 2) and (6, 1). So P(X = 7) = 6/36. A total of 12 comes only from (6, 6), so P(X = 12) = 1/36. The totals are not equally likely.",
+   "A table of every value and its probability is the probability distribution. Two rules always hold. Each probability is between 0 and 1, and all of them add to 1. Use the sum to find an unknown. If P(X = x) = kx for x = 1, 2, 3 and 4, then k + 2k + 3k + 4k = 10k = 1, so k = 0.1.",
+   "Read the signs with care. P(X ≤ 4) includes 4, so it is 1/36 + 2/36 + 3/36 = 6/36. P(X < 4) leaves 4 out, so it is 3/36. You can also estimate a distribution from data. Roll the dice many times and divide each count by the number of rolls. These relative frequencies get close to the model, but they are rarely exact."
+  ],
+  "adult": [
+   "This topic is part of the A level Mathematics content on discrete probability distributions. Students should understand and use simple discrete distributions, with the binomial as a key example. In the US Common Core, standards S-MD.1, 3 and 4 ask students to define a random variable, graph its distribution, and find probabilities from theory or from data.",
+   "Key terms: sample space, outcome, discrete random variable, probability distribution (or probability function), P(X = x), cumulative probability P(X ≤ x) and relative frequency. A distribution is valid when no P(X = x) is below 0 and the probabilities sum to 1. A new variable from the same outcomes has a new distribution. For Y, the larger of two dice, P(Y = y) = (2y − 1)/36.",
+   "Common mistakes: assuming the values of X are equally likely, so P(X = 7) is taken as 1/11. Setting k = 1/n when P(X = x) = kx. Treating P(X < 4) as P(X ≤ 4). Accepting a negative probability because the list sums to 1. Calling a relative frequency the exact probability. Take care with notation as well: capital X is the variable and small x is one of its values.",
+   "In the lab the learner taps the 36 cells of a two-dice grid to build the distribution of the total. They slide k until kx sums to 1, and drag a cut to shade P(X ≤ 4), P(X < 4) and P(X ≥ 10). They roll 10, 100 and 1000 times and watch the relative frequencies settle near the model. Last, they build the distribution of the larger score from the same grid."
+  ]
+ },
+ "familyTip": "Roll two dice 50 times together and tally the totals. Before you start, each person bets on the most common total; then compare the tally with the 6/36 for seven.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Could this list be a probability distribution? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✅ Valid distribution",
+    "❌ Not valid"
+   ],
+   "items": [
+    [
+     "0.2, 0.5, 0.3",
+     0
+    ],
+    [
+     "1/6 six times",
+     0
+    ],
+    [
+     "0.1, 0.2, 0.3, 0.4",
+     0
+    ],
+    [
+     "1/36, 2/36, … 6/36, … 1/36 for 2 to 12",
+     0
+    ],
+    [
+     "0.4, 0.4, 0.4",
+     1
+    ],
+    [
+     "0.6, 0.5, −0.1",
+     1
+    ],
+    [
+     "0.25, 0.25, 0.25",
+     1
+    ],
+    [
+     "1.2, −0.2",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpdist",
+  "caption": "Flagship lab: build the two-dice total from 36 outcomes, slide k until kx sums to 1, shade ≤ and <, roll 1000 times, then build the larger score.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "X is the total of two fair dice. Which value of X is most likely?",
+   "choices": [
+    "7",
+    "12",
+    "All values are equally likely"
+   ],
+   "answer": 0,
+   "hint": "Count the pairs of scores that give each total out of the 36 outcomes.",
+   "explain": "Seven comes from 6 of the 36 outcomes, more than any other total, so P(X = 7) = 6/36 is the largest."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "X is the total of two fair dice. How many of the 36 equally likely outcomes give X = {t}?",
+   "answer": "t-1",
+   "hint": "List the pairs (first die, second die) that add to {t}, starting with (1, {=t-1}).",
+   "explain": "The pairs are (1, {=t-1}) up to ({=t-1}, 1), which is {=t-1} outcomes, so P(X = {t}) = {=t-1}/36.",
+   "params": {
+    "t": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "P(X = x) = kx for x = 1, 2, 3, 4. What is k?",
+   "choices": [
+    "0.1",
+    "0.25",
+    "1"
+   ],
+   "answer": 0,
+   "hint": "The probabilities must sum to 1. Write the sum in terms of k.",
+   "explain": "k + 2k + 3k + 4k = 10k = 1, so k = 0.1. The value 0.25 would only work if every probability were equal."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A discrete random variable takes the values 1, 2 and 3. P(X = 1) = 0.{a} and P(X = 2) = 0.{b}. Find P(X = 3).",
+   "answer": "(10-a-b)/10",
+   "hint": "All the probabilities in a distribution add up to 1.",
+   "explain": "P(X = 3) = 1 − 0.{a} − 0.{b} = {=(10-a-b)/10}.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     5
+    ]
+   },
+   "where": "a+b<10"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which list could be the probabilities of a probability distribution?",
+    "choices": [
+     "0.3, 0.3, 0.4",
+     "0.5, 0.5, 0.5",
+     "0.7, 0.4, −0.1"
+    ],
+    "answer": 0,
+    "hint": "Check both rules: no probability below 0 or above 1, and a sum of exactly 1.",
+    "explain": "0.3 + 0.3 + 0.4 = 1 with no negatives. The second sums to 1.5, and the third has a negative probability."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "X is the total of two fair dice. How many of the 36 outcomes give X ≤ {c}?",
+    "answer": "(c-1)*c/2",
+    "hint": "Add the outcomes for each total: a total of 2 has 1, a total of 3 has 2, and so on, up to {c}.",
+    "explain": "1 + 2 + … + {=c-1} = {=(c-1)*c/2} outcomes, so P(X ≤ {c}) = {=(c-1)*c/2}/36.",
+    "params": {
+     "c": [
+      2,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "X is the total of two fair dice. What is P(X < 4)?",
+    "choices": [
+     "3/36",
+     "6/36",
+     "2/36"
+    ],
+    "answer": 0,
+    "hint": "“<” is strict, so 4 is not included. Which totals are less than 4?",
+    "explain": "Only totals 2 and 3: 1/36 + 2/36 = 3/36. The answer 6/36 is P(X ≤ 4)."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Y is the larger score when two fair dice are rolled. What is P(Y = 6)?",
+    "choices": [
+     "11/36",
+     "6/36",
+     "1/36"
+    ],
+    "answer": 0,
+    "hint": "Count the cells in the 6 × 6 grid where at least one die shows 6.",
+    "explain": "Six cells have a 6 on the first die and six have a 6 on the second. (6, 6) is in both, so there are 6 + 6 − 1 = 11 outcomes and P(Y = 6) = 11/36."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A fair die is rolled {=6*n} times. How many sixes would you expect?",
+    "answer": "n",
+    "hint": "P(6) = 1/6. Multiply by the number of rolls.",
+    "explain": "{=6*n} × 1/6 = {n} sixes. The real count will vary around this.",
+    "params": {
+     "n": [
+      5,
+      50
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A spinner landed on red 43 times in 100 spins. Which statement is best?",
+    "choices": [
+     "0.43 is an estimate of P(red)",
+     "P(red) is exactly 0.43",
+     "P(red) must be 0.5"
+    ],
+    "answer": 0,
+    "hint": "Is a result from data the true probability, or an estimate of it?",
+    "explain": "43/100 = 0.43 is a relative frequency. It estimates P(red); more spins give a better estimate."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "P(X = x) = kx for x = 1, 2, 3, 4. Find P(X = {x}).",
+    "answer": "x/10",
+    "hint": "First find k from the rule that the probabilities sum to 1.",
+    "explain": "10k = 1 so k = 0.1, and P(X = {x}) = 0.1 × {x} = {=x/10}.",
+    "params": {
+     "x": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In the notation P(X = x), what does the capital X stand for?",
+    "choices": [
+     "The random variable",
+     "One value it can take",
+     "The probability"
+    ],
+    "answer": 0,
+    "hint": "One letter names the variable and the other names a value. Which is which?",
+    "explain": "Capital X is the random variable; small x is a particular value, such as 7."
+   }
+  ]
+ }
+}

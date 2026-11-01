@@ -1,0 +1,152 @@
+{
+ "topicId": "mt_YgrNBSr2TT",
+ "title": "Arithmetic sequences as linear functions",
+ "audience": "learner",
+ "keyIdea": "An arithmetic sequence adds the same common difference d each step, so its explicit formula is a(n) = a(1) + (n − 1)d. Rearranged, that is a(n) = dn + (a(1) − d): a linear function of n with slope d and intercept a(1) − d, the zeroth term. The points (n, a(n)) lie on a straight line, but only whole-number n count. A value is a term only if solving a(n) = value gives a whole number n.",
+ "explain": {
+  "kid": [
+   "Take 5, 8, 11, 14. Each term is 3 more than the last. That fixed step is the common difference, d = 3. The first term is a(1) = 5.",
+   "To reach term n you start at a(1) and add d, n − 1 times. Term 10 is 5 + 9 × 3 = 32. It is not 5 + 10 × 3, because the first term has no step yet.",
+   "Plot each term as a point (n, a(n)). The points sit on a straight line. Its slope is d. Go back one step from a(1) and you reach n = 0. That is where the line crosses the axis: 5 − 3 = 2. So a(n) = 3n + 2.",
+   "Is 59 a term of 7, 11, 15? Solve 7 + (n − 1) × 4 = 59. You get n = 14, a whole number, so yes. For 100 in 3, 8, 13 you get n = 20.4. There is no term 20.4, so 100 is not a term."
+  ]
+,
+  "adult": [
+   "This topic links sequences to functions. US Common Core F-BF.A.2 asks students to write arithmetic sequences with an explicit formula, F-IF.A.3 to see sequences as functions whose domain is a subset of the integers, and F-LE.A.2 to build linear functions from a table or two points. In GCSE Mathematics this is the nth-term rule dn + c for linear sequences, extended in A level to a + (n − 1)d.",
+   "The key move is the rearrangement a(1) + (n − 1)d = dn + (a(1) − d). The common difference is the slope, the rate of change per term, and the constant a(1) − d is the y-intercept, the value of the zeroth term. The graph is a set of separate points on a line, because the domain is n = 1, 2, 3 and so on. The recursive form a(n) = a(n − 1) + d says the same thing step by step.",
+   "Common mistakes: writing a(1) + nd, which is off by one step; taking the constant c to be the first term; getting the sign of d wrong for a falling sequence by subtracting the wrong way; joining the points as if n = 2.5 has a term; and rounding a non-whole n to claim a value is a term. Careful checking at n = 1 catches most of these.",
+   "In the lab you drag bars to build sequences, fit a line through the points and read off slope and intercept, choose the slope and constant of dn + c, move n along a track to find which term equals a value or prove none does, and explore what d = 0 and a(1) = d do to the graph."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which formula matches each sequence? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["3n + 2", "2n + 3", "13 − 3n"],
+   "items": [["5, 8, 11, …", 0], ["5, 7, 9, …", 1], ["10, 7, 4, …", 2], ["a(1) = 5, d = 3", 0], ["a(1) = 5, d = 2", 1], ["a(1) = 10, d = −3", 2]]
+  }
+ },
+ "lab": {
+  "type": "flagarith",
+  "caption": "Flagship lab: build sequences from a(1) and d, fit a line through (n, a(n)), write dn + c, find which term equals a value, and explore the graph.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which explicit formula gives the sequence 5, 8, 11, 14, …?",
+   "choices": ["a(n) = 3n + 2", "a(n) = 3n + 5", "a(n) = 5n + 3"],
+   "answer": 0,
+   "hint": "The step is the slope. Then check what the formula gives at n = 1.",
+   "explain": "d = 3, and the constant is a(1) − d = 5 − 3 = 2, so a(n) = 3n + 2. Check: n = 1 gives 5. The formula 3n + 5 gives 8 at n = 1."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An arithmetic sequence has a(1) = {a} and common difference d = {d}. Find a({n}).",
+   "answer": "a+(n-1)*d",
+   "hint": "Start at a(1) and add d once for each step. From term 1 to term {n} there are {=n-1} steps.",
+   "explain": "a({n}) = {a} + ({n} − 1) × {d} = {a} + {=(n-1)*d} = {=a+(n-1)*d}.",
+   "params": {"a": [2, 9], "d": [2, 6], "n": [10, 20]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The points (n, a(n)) of 20, 17, 14, … lie on a line. What is its slope?",
+   "choices": ["−3", "3", "20"],
+   "answer": 0,
+   "hint": "Slope is the change in a(n) when n goes up by 1. Take a term from the next one.",
+   "explain": "17 − 20 = −3, so each step down by 3 and the slope is −3. 20 is the first term, not the slope."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A sequence starts at {a} and goes up by {d} each step. Which term is equal to {=a+(k-1)*d}?",
+   "answer": "k",
+   "hint": "Solve {a} + (n − 1) × {d} = {=a+(k-1)*d}. Take {a} away first, then divide by {d}.",
+   "explain": "{=a+(k-1)*d} − {a} = {=(k-1)*d}, and {=(k-1)*d} ÷ {d} = {=k-1}, so n − 1 = {=k-1} and n = {k}.",
+   "params": {"a": [1, 9], "d": [2, 5], "k": [8, 30]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Mia writes a(n) = 4 + 3n for the sequence 4, 7, 10, …. What went wrong?",
+    "choices": ["She added n steps, so a(1) comes out as 7", "She has the wrong common difference", "Nothing, it is right"],
+    "answer": 0,
+    "hint": "Put n = 1 into her formula. Do you get the first term?",
+    "explain": "4 + 3 × 1 = 7, not 4. Term n has only n − 1 steps, so a(n) = 4 + 3(n − 1) = 3n + 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "The line through the points of an arithmetic sequence has slope {d} and crosses the vertical axis at {c}. Find the first term a(1).",
+    "answer": "c+d",
+    "hint": "The axis is at n = 0, the zeroth term. The first term is one step later.",
+    "explain": "a(n) = {d}n + {c}, so a(1) = {d} + {c} = {=c+d}.",
+    "params": {"d": [2, 7], "c": [-6, 6]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Is 50 a term of the sequence 2, 6, 10, 14, …?",
+    "choices": ["Yes, it is term 13", "No, 50 is not a multiple of 4", "Yes, it is term 12"],
+    "answer": 0,
+    "hint": "Solve 2 + (n − 1) × 4 = 50 and see if n is a whole number.",
+    "explain": "50 − 2 = 48 and 48 ÷ 4 = 12, so n − 1 = 12 and n = 13. The terms are not multiples of 4, so that test does not work."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "In an arithmetic sequence a(1) = {a} and a(2) = {b}. Find the common difference d.",
+    "answer": "b-a",
+    "where": "b!=a",
+    "hint": "d is the change from one term to the next: second term take away first term.",
+    "explain": "d = a(2) − a(1) = {b} − {a} = {=b-a}.",
+    "params": {"a": [1, 20], "b": [1, 20]}
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which sequence matches the line y = −2x + 9 at x = 1, 2, 3, …?",
+    "choices": ["7, 5, 3, 1, …", "9, 7, 5, 3, …", "−2, 7, 16, …"],
+    "answer": 0,
+    "hint": "Put x = 1 first. The intercept 9 belongs to x = 0.",
+    "explain": "x = 1 gives 7, then each step goes down by 2: 7, 5, 3, 1. The 9 is the zeroth term, so it is not in the list."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "The first row of a theatre has {a} seats and each row has {d} more seats than the row in front. How many seats are in row {n}?",
+    "answer": "a+(n-1)*d",
+    "hint": "Row 1 has {a}. Row {n} is {=n-1} rows further back.",
+    "explain": "Row {n} has {a} + ({n} − 1) × {d} = {=a+(n-1)*d} seats.",
+    "params": {"a": [10, 20], "d": [2, 4], "n": [5, 25]}
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In 100, 93, 86, …, which term is the first negative one?",
+    "choices": ["Term 16", "Term 15", "Term 14"],
+    "answer": 0,
+    "hint": "Solve 100 − 7(n − 1) < 0, then take the first whole n that works.",
+    "explain": "a(15) = 100 − 7 × 14 = 2 and a(16) = 100 − 7 × 15 = −5, so term 16 is the first below zero."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The nth term is a(n) = 5n − 2. What is the common difference?",
+    "choices": ["5", "−2", "3"],
+    "answer": 0,
+    "hint": "The common difference is the slope: the number in front of n.",
+    "explain": "Each time n goes up by 1, 5n goes up by 5, so d = 5. −2 is the zeroth term and 3 is the first term."
+   }
+  ]
+ }
+}

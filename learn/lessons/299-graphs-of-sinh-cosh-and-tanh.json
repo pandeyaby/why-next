@@ -1,0 +1,151 @@
+{
+ "topicId": "mt_HOw0im256L",
+ "title": "Graphs of sinh, cosh and tanh",
+ "audience": "learner",
+ "keyIdea": "Sketch each graph from its key features. y = cosh x is an even U with minimum point (0, 1) and range y ≥ 1. y = sinh x is odd, passes through the origin, always increases and takes every real value. y = tanh x is odd, passes through the origin with gradient 1 and has horizontal asymptotes y = 1 and y = −1, so its range is −1 < y < 1. All three have domain all real x, and for large positive x both sinh x and cosh x are close to ½eˣ.",
+ "explain": {
+  "kid": [
+   "Start with y = cosh x. It is a U shape. Its lowest point is (0, 1). It is even, so the y-axis is a mirror line. Near the middle it looks like y = 1 + x²/2. Far out it climbs much faster than any parabola.",
+   "Now y = sinh x. It goes through the origin. It always goes up, from very low on the left to very high on the right. It is odd, so turning the graph half a turn about O gives the same graph. Every real number is a value of sinh x.",
+   "Then y = tanh x. It also goes through O, with gradient 1 there. Out to the right it levels off just under y = 1. Out to the left it levels off just above y = −1. Those two lines are its asymptotes. It never reaches them.",
+   "Far to the right, e⁻ˣ is tiny. So sinh x and cosh x both get close to ½eˣ. Their gap is cosh x − sinh x = e⁻ˣ, and it shrinks to 0. Far to the left, cosh x is close to ½e⁻ˣ and sinh x is close to −½e⁻ˣ."
+  ],
+  "adult": [
+   "In A level Further Mathematics (Core Pure), students must know the domains and ranges of sinh, cosh and tanh and be able to sketch their graphs; the IB AA HL course treats similar curves in its extension work. A good sketch labels intercepts, the minimum point of cosh, the asymptotes of tanh, and the symmetry.",
+   "Common mistakes: drawing cosh through the origin by analogy with sin, giving cosh the range y ≥ 0, drawing tanh crossing y = 1, and giving sinh a turning point. Students also confuse odd and even: cosh is even (mirror in the y-axis) while sinh and tanh are odd (half-turn about O).",
+   "Graph sketching builds on transformations. For y = a cosh x + b with a > 0 the minimum moves to (0, a + b); for y = a tanh x + b the asymptotes move to y = b ± a. Comparing with ½eˣ explains the shape far out, and the graphs show why cosh x = k has two roots for k > 1 but sinh x = k always has exactly one.",
+   "In the lab the learner plots cosh from five points, names four mystery curves (including the impostor ½eˣ), scrubs far out to see sinh and cosh close in on ½eˣ, drags the asymptotes of tanh into place, matches stretched and shifted targets, and sorts ranges and features into the right function."
+  ]
+ },
+ "familyTip": "Ask your learner to sketch all three curves from memory on one set of axes in under a minute, then point to the one feature that tells each apart: the minimum (0, 1), the asymptotes y = ±1, or the steady climb through the origin.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which function has this feature? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["sinh x", "cosh x", "tanh x"],
+   "items": [
+    ["Range: all real y", 0],
+    ["Always increasing, no asymptotes", 0],
+    ["Range y ≥ 1", 1],
+    ["Minimum point (0, 1)", 1],
+    ["Even: mirror in the y-axis", 1],
+    ["Asymptotes y = 1 and y = −1", 2],
+    ["Range −1 < y < 1", 2]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghgraph",
+  "caption": "Flagship lab: plot cosh, name mystery curves, compare with ½eˣ, place tanh's asymptotes, stretch and shift, sort ranges.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which graph has horizontal asymptotes y = 1 and y = −1: sinh, cosh or tanh?",
+   "choices": ["y = tanh x", "y = sinh x", "y = cosh x"],
+   "answer": 0,
+   "hint": "Which one is a ratio that can never get past 1 in size?",
+   "explain": "tanh x = sinh x / cosh x and |sinh x| < cosh x, so the graph of tanh levels off towards y = ±1. sinh and cosh both grow without limit."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The graph of y = {a} cosh x + {b} is sketched. What is the y-coordinate of its minimum point?",
+   "answer": "a+b",
+   "hint": "The minimum of cosh x is (0, 1). Stretch by a, then shift by b.",
+   "explain": "cosh 0 = 1, so the minimum is at x = 0 with y = {a} × 1 + {b} = {=a+b}.",
+   "params": {"a": [2, 6], "b": [1, 5]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the range of y = cosh x?",
+   "choices": ["y ≥ 1", "y ≥ 0", "All real y"],
+   "answer": 0,
+   "hint": "Find the lowest point of the U and its height.",
+   "explain": "cosh has minimum value cosh 0 = 1 and grows on both sides, so the range is y ≥ 1. All real y is the range of sinh."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The graph of y = {a} tanh x + {b} has two horizontal asymptotes. What is the y-value of the upper one?",
+   "answer": "a+b",
+   "hint": "tanh levels off at y = 1. Stretch that by a and add b.",
+   "explain": "As x → ∞, tanh x → 1, so y → {a} × 1 + {b} = {=a+b}. The lower asymptote is y = {=b-a}.",
+   "params": {"a": [2, 5], "b": [1, 4]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "Which graph is symmetric in the y-axis?",
+    "choices": ["y = cosh x", "y = sinh x", "y = tanh x"],
+    "answer": 0,
+    "hint": "An even function has f(−x) = f(x). Which one is even?",
+    "explain": "cosh is even, so its graph is a mirror image in the y-axis. sinh and tanh are odd: they have half-turn symmetry about the origin."
+   },
+   {
+    "type": "mc", "id": "m2",
+    "prompt": "Which statement about the graph of y = sinh x is true?",
+    "choices": ["It passes through the origin and always increases", "It has a minimum at (0, 1)", "It has asymptotes y = ±1"],
+    "answer": 0,
+    "hint": "Put x = 0 into (eˣ − e⁻ˣ)/2 and think about its gradient.",
+    "explain": "sinh 0 = 0 and sinh x always increases, taking every real value. The minimum (0, 1) belongs to cosh, and the asymptotes y = ±1 to tanh."
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "How many solutions does cosh x = {k} have?",
+    "answer": "2",
+    "hint": "Draw the horizontal line y = {k} across the U of cosh x.",
+    "explain": "{k} > 1, and the U of cosh has its minimum at height 1, so the line y = {k} meets it twice, once each side of the y-axis: 2 solutions.",
+    "params": {"k": [2, 9]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "For large positive x, y = cosh x is closest to which curve?",
+    "choices": ["y = ½eˣ", "y = eˣ", "y = 1 + x²"],
+    "answer": 0,
+    "hint": "In (eˣ + e⁻ˣ)/2, which term becomes tiny for large x?",
+    "explain": "e⁻ˣ → 0, so cosh x ≈ ½eˣ. eˣ alone is twice too big, and any parabola is soon left far behind."
+   },
+   {
+    "type": "numeric", "id": "m5",
+    "prompt": "What is the y-coordinate of the minimum point of y = {a} cosh x − {b}?",
+    "answer": "a-b",
+    "hint": "At x = 0, cosh x = 1. Multiply by a, then subtract b.",
+    "explain": "The minimum is at x = 0: y = {a} × 1 − {b} = {=a-b}.",
+    "params": {"a": [3, 8], "b": [1, 2]}
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "What is the range of y = tanh x?",
+    "choices": ["−1 < y < 1", "−1 ≤ y ≤ 1", "All real y"],
+    "answer": 0,
+    "hint": "Does tanh ever actually reach its asymptotes?",
+    "explain": "tanh x gets ever closer to ±1 but never reaches them, so the inequalities are strict: −1 < y < 1."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "How many solutions does sinh x = −3 have?",
+    "choices": ["Exactly one", "Two", "None"],
+    "answer": 0,
+    "hint": "sinh always increases and takes every real value.",
+    "explain": "The graph of sinh rises from very low to very high with no turning point, so each horizontal line meets it exactly once, even below the x-axis."
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "What is the gradient of y = tanh x at the origin?",
+    "choices": ["1", "0", "−1"],
+    "answer": 0,
+    "hint": "Near x = 0, tanh x behaves like the line y = x.",
+    "explain": "Near 0, sinh x ≈ x and cosh x ≈ 1, so tanh x ≈ x and the gradient at O is 1. The graph is not flat there."
+   }
+  ]
+ }
+}

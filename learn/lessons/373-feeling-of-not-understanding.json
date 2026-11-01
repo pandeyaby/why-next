@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_klyw-tdlhP",
+ "title": "Feeling of not understanding",
+ "audience": "family",
+ "keyIdea": "When words do not make sense, your brain gives you a \"huh?\" feeling. Good learners notice that feeling and stop, instead of reading or listening past it. Then they fix it: read it again, look at the picture, slow down, or ask \"What does that mean?\"",
+ "explain": {
+  "kid": [
+   "Sometimes you read or hear words that do not fit. \"The fish rode a bike.\" Your brain goes: huh? That huh feeling is a good thing. It means your brain is checking.",
+   "When you feel huh, stop. Do not just keep going. Find the word where it went wrong.",
+   "Then fix it. Read the part again. Look at the picture. Slow down. Or ask, \"What does that mean?\"",
+   "Asking is not silly. Pretending you get it is the thing that keeps you stuck. Everyone feels huh, even grown-ups."
+  ],
+  "adult": [
+   "Researchers call this comprehension monitoring: noticing, while you read or listen, that something does not make sense. It is part of metacognition, which Flavell described as knowing about and checking your own thinking. Ellen Markman's classic studies found that many young children listen to instructions with an obvious gap or contradiction and still say they understood. So the skill has to be taught; it does not simply arrive with reading.",
+   "In England, the Year 1 and Year 2 English programmes of study ask pupils to check that the text makes sense to them as they read, and to correct inaccurate reading. The spoken language strand asks them to ask relevant questions to extend their understanding. In the US, Common Core RF.1.4c asks first graders to use context to confirm or self-correct word recognition and understanding, rereading as necessary. SL.1.3 asks them to ask questions to clarify something that is not understood. Fix-up strategies is the usual name for what comes after the noticing: reread, use the picture, slow down, ask.",
+   "Common mistakes: reading on fluently while the meaning has broken down (\"word calling\"), guessing at an instruction rather than asking, and pretending to understand because asking feels embarrassing. A second slip is reading the huh feeling as \"I am bad at this\" instead of a useful signal. Be careful not to rescue too fast. Give a moment for your child to notice the problem first, then praise the noticing as much as the answer.",
+   "In the lab your child sorts sentences into \"makes sense\" and \"huh?\", taps the exact word where a sentence goes wrong, and follows a grown-up's instructions where a new word (beneath, hamper) must be asked about before acting. Then they sort fix-ups that help from ones that hide the problem, and reread sentences where a word has two meanings (bat, bark, glasses)."
+  ]
+ },
+ "familyTip": "While reading together, sometimes read a sentence wrongly on purpose (\"The cat barked at the moon\") and see if your child stops you. When they do, cheer the stop. Teach one family phrase for the feeling, like \"Huh, wait!\", and use it yourself when you do not understand something.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Makes sense, or huh? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✅ Makes sense",
+    "🤔 Huh?"
+   ],
+   "items": [
+    [
+     "A bird sang in the tree.",
+     0
+    ],
+    [
+     "The car swam across the road.",
+     1
+    ],
+    [
+     "I brushed my teeth with a spoon.",
+     1
+    ],
+    [
+     "We put on hats in the rain.",
+     0
+    ],
+    [
+     "The ice cream was hot and crunchy.",
+     1
+    ],
+    [
+     "The baby slept in her cot.",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghuh",
+  "caption": "Flagship lab: sort makes sense or huh, tap the huh word, ask instead of guessing, sort fix-ups, and reread to fix a word.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which sentence should make you stop and say huh?",
+   "choices": [
+    "The dog drove the bus to town.",
+    "The dog ran in the park.",
+    "The dog ate its dinner."
+   ],
+   "answer": 0,
+   "hint": "Picture each one in your head. Which one could not really happen?",
+   "explain": "A dog cannot drive a bus, so that sentence does not make sense. Noticing it is the first step."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You read {n} sentences. 1 of them made you say huh, so you read it again. How many sentences made sense the first time?",
+   "answer": "n-1",
+   "hint": "Take the 1 huh sentence away from the {n} sentences.",
+   "explain": "{n} take away 1 is {=n-1}. You stopped on the 1 that did not make sense and fixed it.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The teacher says, \"Put your book beneath your chair.\" You do not know \"beneath\". What should you do?",
+   "choices": [
+    "Ask what \"beneath\" means",
+    "Guess and put it on the table",
+    "Do nothing"
+   ],
+   "answer": 0,
+   "hint": "In the lab, Huh? came before moving the ball.",
+   "explain": "Asking tells you that beneath means under. A guess could be wrong, and doing nothing leaves you stuck."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You felt huh {n} times today. Each time you asked one question. How many questions did you ask?",
+   "answer": "n",
+   "hint": "One huh, one question. Match them up.",
+   "explain": "{n} huh feelings, {n} questions. Each question helped you understand something new.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does the huh feeling tell you?",
+    "choices": [
+     "Something does not make sense yet",
+     "You are bad at reading",
+     "The book is broken"
+    ],
+    "answer": 0,
+    "hint": "Is it a stop sign for your brain, or a sign that you cannot do it?",
+    "explain": "The huh feeling is your brain checking. It tells you to stop and fix something, not that you are bad at it."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You feel huh while you read. What is a good fix-up?",
+    "choices": [
+     "Read the part again",
+     "Pretend you get it",
+     "Read on faster"
+    ],
+    "answer": 0,
+    "hint": "Which one helps you find out what went wrong?",
+    "explain": "Reading it again often fixes it. Pretending or racing on keeps you stuck."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "\"We wore big coats because it was so hot.\" Which word makes it go wrong?",
+    "choices": [
+     "hot",
+     "coats",
+     "wore"
+    ],
+    "answer": 0,
+    "hint": "When do we wear big coats?",
+    "explain": "Big coats are for cold days, so \"hot\" is the word where it stops making sense."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "\"The bat flew out of the cave.\" Which bat is it?",
+    "choices": [
+     "An animal that flies",
+     "A cricket bat",
+     "A baseball cap"
+    ],
+    "answer": 0,
+    "hint": "Read it again: what did the bat do?",
+    "explain": "A cricket bat cannot fly, so \"flew out of the cave\" tells you it is the animal."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Mia did not understand the story but said, \"I get it.\" What might happen?",
+    "choices": [
+     "She stays stuck",
+     "She understands it",
+     "The story changes"
+    ],
+    "answer": 0,
+    "hint": "Does pretending fix the problem?",
+    "explain": "Pretending hides the problem, so no one helps and Mia stays stuck. Asking would help."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Who feels the huh feeling sometimes?",
+    "choices": [
+     "Everyone, even grown-ups",
+     "Only small children",
+     "Only people who do not try"
+    ],
+    "answer": 0,
+    "hint": "Have you ever seen a grown-up ask what something means?",
+    "explain": "Everyone meets words and ideas they do not understand yet. Good learners notice and fix it."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A page has {n} hard words. You ask about 2 of them, and now you know them. How many hard words are left?",
+    "answer": "n-2",
+    "hint": "Start at {n} and take away the 2 words you asked about.",
+    "explain": "{n} take away 2 is {=n-2}. Each question turns a hard word into one you know.",
+    "params": {
+     "n": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "\"The dog wagged its tail and said meow.\" Which word is the huh word?",
+    "choices": [
+     "meow",
+     "tail",
+     "wagged"
+    ],
+    "answer": 0,
+    "hint": "What sound does a dog make?",
+    "explain": "Dogs say woof, so \"meow\" is where the sentence stops making sense."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "You read a hard page {n} times. Then you read it 1 more time, and it makes sense. How many times did you read it in all?",
+    "answer": "n+1",
+    "hint": "You read it {n} times, then 1 more time. Count on 1 from {n}.",
+    "explain": "{n} and 1 more is {=n+1}. Reading again is a fix-up that really works.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_O49ZpzYVnu",
+ "title": "Multiplying matrices",
+ "audience": "learner",
+ "keyIdea": "To multiply matrices, each entry of AB is found by taking a row of A and a column of B, multiplying the matching pairs of numbers and adding. AB is only defined when A and B are conformable for multiplication: the number of columns of A equals the number of rows of B. An m × n matrix times an n × p matrix gives an m × p matrix. Matrix multiplication is associative, (AB)C = A(BC), but not commutative: AB and BA are usually different. The identity matrix I has 1s on the leading diagonal and 0s elsewhere, and AI = IA = A.",
+ "explain": {
+  "kid": [
+   "Matrix multiplication is not done entry by entry. To find the entry in row i, column j of AB, take row i of A and column j of B. Multiply the first number of the row by the first number of the column, the second by the second, and so on, then add the products. So if row 1 of A is (2, 1) and column 1 of B is (4, 1), the entry is 2 × 4 + 1 × 1 = 9.",
+   "A product only exists when the row of A and the column of B have the same length. That means the number of columns of A must equal the number of rows of B. Write the orders side by side: (m × n)(n × p). If the inner numbers match, AB is defined, and the outer numbers give its order, m × p. A 2 × 3 matrix times a 3 × 1 matrix gives a 2 × 1 matrix, but a 3 × 2 times a 3 × 2 is not defined.",
+   "Order matters. With numbers, 3 × 4 = 4 × 3, but for matrices AB and BA are usually different, and one of them may not even exist. We say matrix multiplication is not commutative. It is associative, though: (AB)C = A(BC), so you may group a product of three matrices either way as long as you keep their order.",
+   "The identity matrix I is square, with 1s on the leading diagonal and 0s everywhere else. It acts like the number 1: AI = A and IA = A. A matrix product is also a neat way to do many calculations at once: a matrix of quantities times a column of prices gives every customer's total bill in one go."
+  ],
+  "adult": [
+   "This lesson covers multiplying matrices for A level Further Maths (Core Pure) and CCSS N-VM.8 and N-VM.9. It teaches when a product is defined, the row-by-column rule, the order of the product, and three properties: it is associative, it is not commutative, and the identity leaves a matrix unchanged. Key terms are order, conformable for multiplication, leading diagonal and identity matrix I.",
+   "The most common mistake is to multiply entries in matching positions, as you would add them. Ask students to say the rule aloud: row of the first, column of the second. Have them write out each sum of products before they simplify. A second slip is to read the order of the product from the inner numbers, not the outer ones. Then a 2 × 3 times a 3 × 4 is wrongly called 3 × 3.",
+   "A deeper misconception is that AB = BA, because ordinary numbers work that way. Be careful to show a pair where AB and BA differ. Also show pairs that do commute, such as any A with I, so students see that commuting is the exception. Note too that AB can be the zero matrix when neither A nor B is zero, which never happens with real numbers.",
+   "Exam questions often add unknown entries, or ask students to check that one matrix is the inverse of another. Ask students to write the orders first, decide if the product is defined, and only then work it out. A matrix of amounts times a column of prices gives every total at once, which shows why the row-by-column rule makes sense."
+  ]
+ },
+ "familyTip": "Write two small shopping lists as rows of numbers and a column of prices. Ask your learner to work out each total by multiplying along a row and down the column, then to explain why swapping the order of the two matrices does not work.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the product AB defined? Drag each pair of orders, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✓ AB defined",
+    "✗ AB not defined"
+   ],
+   "items": [
+    [
+     "2 × 3 times 3 × 1",
+     0
+    ],
+    [
+     "3 × 2 times 3 × 2",
+     1
+    ],
+    [
+     "1 × 4 times 4 × 1",
+     0
+    ],
+    [
+     "2 × 2 times 3 × 2",
+     1
+    ],
+    [
+     "3 × 3 times 3 × 2",
+     0
+    ],
+    [
+     "1 × 3 times 1 × 3",
+     1
+    ],
+    [
+     "4 × 1 times 1 × 4",
+     0
+    ],
+    [
+     "2 × 3 times 2 × 3",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmmul",
+  "caption": "Flagship lab: pick the row and column for each entry of AB, find the order of a product, test AB against BA, build the identity, and price two baskets.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A is 2 × 3 and B is 3 × 5. What is the order of AB?",
+   "choices": [
+    "2 × 5",
+    "3 × 3",
+    "AB is not defined"
+   ],
+   "answer": 0,
+   "hint": "Check the inner numbers match, then read the outer numbers.",
+   "explain": "The inner numbers 3 and 3 match, so AB is defined. The outer numbers give the order: 2 × 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A is a {m} × 3 matrix and B is a 3 × {p} matrix. How many entries does AB have?",
+   "answer": "m*p",
+   "hint": "Work out the order of AB from the outer numbers, then count rows times columns.",
+   "explain": "AB is {m} × {p}, so it has {m} × {p} = {=m*p} entries.",
+   "params": {
+    "m": [
+     1,
+     4
+    ],
+    "p": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which statement about 2 × 2 matrices A and B is true?",
+   "choices": [
+    "AB and BA can be different",
+    "AB always equals BA",
+    "AB is found by multiplying matching entries"
+   ],
+   "answer": 0,
+   "hint": "Think about the lab step where you swapped the order.",
+   "explain": "Matrix multiplication is not commutative, so AB and BA are usually different."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Work out the single entry of the 1 × 1 matrix [{a} 2] times the column [3; {b}].",
+   "answer": "3*a+2*b",
+   "hint": "Multiply first with first and second with second, then add.",
+   "explain": "{a} × 3 + 2 × {b} = {=3*a+2*b}. Row times column gives one number.",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     1,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A is 3 × 2 and B is 3 × 2. Which is true?",
+    "choices": [
+     "AB is not defined",
+     "AB is 3 × 2",
+     "AB is 2 × 2"
+    ],
+    "answer": 0,
+    "hint": "Compare the columns of A with the rows of B.",
+    "explain": "A has 2 columns but B has 3 rows, so they are not conformable for multiplication."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A = [1 0; 2 3] and B = [4; 1]. What is AB?",
+    "choices": [
+     "[4; 11]",
+     "[4; 3]",
+     "[5; 4]"
+    ],
+    "answer": 0,
+    "hint": "Row 1 of A times the column, then row 2 of A times the column.",
+    "explain": "1 × 4 + 0 × 1 = 4 and 2 × 4 + 3 × 1 = 11, so AB = [4; 11]."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which matrix is the 2 × 2 identity matrix I?",
+    "choices": [
+     "[1 0; 0 1]",
+     "[1 1; 1 1]",
+     "[0 1; 1 0]"
+    ],
+    "answer": 0,
+    "hint": "1s on the leading diagonal, 0s elsewhere.",
+    "explain": "I = [1 0; 0 1]. It leaves any 2 × 2 matrix unchanged: AI = IA = A."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which law holds for matrix multiplication?",
+    "choices": [
+     "(AB)C = A(BC)",
+     "AB = BA",
+     "If AB = 0 then A = 0 or B = 0"
+    ],
+    "answer": 0,
+    "hint": "One property carries over from numbers; the others do not.",
+    "explain": "Matrix multiplication is associative but not commutative, and non-zero matrices can multiply to give the zero matrix."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A is a 2 × {n} matrix and B is a {n} × 4 matrix. To find one entry of AB, how many products do you add?",
+    "answer": "n",
+    "hint": "Each entry uses a full row of A. How long is that row?",
+    "explain": "Each row of A has {n} entries, so each entry of AB is a sum of {=n} products.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Find the entry in row 1, column 1 of [{a} 1; 0 2] times [2 0; {b} 1].",
+    "answer": "2*a+b",
+    "hint": "Use row 1 of the first matrix and column 1 of the second.",
+    "explain": "{a} × 2 + 1 × {b} = {=2*a+b}.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Q is 2 × 3 (quantities) and P is 3 × 1 (prices). Which product gives the totals?",
+    "choices": [
+     "QP, which is 2 × 1",
+     "PQ, which is 3 × 3",
+     "QP, which is 3 × 3"
+    ],
+    "answer": 0,
+    "hint": "Check which order has matching inner numbers.",
+    "explain": "Q is 2 × 3 and P is 3 × 1, so QP is defined and is 2 × 1: one total per row of Q."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A = [1 2; 0 1] and B = [1 0; 1 1]. What is AB?",
+    "choices": [
+     "[3 2; 1 1]",
+     "[1 2; 1 3]",
+     "[1 0; 0 1]"
+    ],
+    "answer": 0,
+    "hint": "Row 1 of A is (1, 2); column 1 of B is (1, 1).",
+    "explain": "Row 1: 1 + 2 = 3 and 0 + 2 = 2; row 2: 0 + 1 = 1 and 0 + 1 = 1. So AB = [3 2; 1 1]. BA = [1 2; 1 3] is different."
+   }
+  ]
+ }
+}

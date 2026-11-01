@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "All entries are computed from nCr in code and match standard tables: row 6 is 1 6 15 20 15 6 1, ⁷C₃ = ⁷C₄ = 35, ⁸C₃ = 56, row 7 sums to 128, (a + b)⁴ = a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴, coefficient of x² in (1 + 2x)⁵ is 40. Pascal's rule, symmetry and the binomial theorem are stated as in A level content and CCSS A-APR.5."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented slips: counting rows from 1, reading the wrong position, multiplying instead of adding the two entries above, row sums as n² instead of 2ⁿ, confusing ⁿPᵣ with ⁿCᵣ (336 vs 56), and forgetting to raise the 2 in (1 + 2x)ⁿ. Each Challenge distractor maps to one of these with a matching explanation."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Unlike the permutations lab (podiums, factorial shelf, nCr bars), this lab is a live triangle: the learner fills cells by adding parents, drags a route down the lattice cell by cell, taps cells to locate ⁿCᵣ and mirror twins, taps rows to reveal 2ⁿ totals, and drags row-4 tiles onto expansion terms. No other flagship lab uses a lattice-path drag."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step proves a property rather than stating it: routes explain why entries add (every path arrives from one of two parents) and why ⁴C₂ = 6 (choose which 2 of 4 moves are R); doubling totals follow from L/R choices; the expansion step explains each coefficient as choosing which brackets give b. Wrong taps get the specific reason, e.g. 'That route ends at position 3. To end at position 2 you need exactly 2 R moves out of 4.'"
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Learners predict add versus multiply before building rows, the number of routes to row 4 position 2 before dragging them, the row 10 total from 1, 2, 4, 8 before tapping rows, and the number of terms in (a + b)⁴ before expanding. Each prediction is tested by what the lab then shows."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions cover ⁸C₃, row sums, a coefficient in (1 + x)⁶, symmetry of ¹⁰C₇, routes to row 5 position 1, and a²b³ in (a + b)⁵. Every wrong option has its own explanation naming the slip (for example '336 is ⁸P₃, where order matters. Divide by 3! = 6'), and a streak counter rewards runs."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner text reads at FK grade 0.7 for the explanation and 5.6 for the adult notes, well inside the 6.5 / 9.5 limits, while keeping the exact A level terms: binomial coefficient, n choose r, Pascal's rule, symmetry, binomial theorem. Notation is introduced in words before symbols."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each paragraph carries content: how to build rows, the ⁿCᵣ meaning with a worked example, the route argument for the addition rule, and the three consequences. Adult notes give curriculum references, key terms, common mistakes and the lab outline. There are no stock openers or empty praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on a 360x640 Android light view and iPhone 13 dark. The 8-row triangle fits the width with circles about 40 px across, numbers up to 35 stay legible, the tiles and slots fit five across, and every action has a large button alternative (L/R, row choices, 'Add up the next row'). Real touch drags were tested for a route and for a tile drop."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "The canvas aria-label reads each result, for example 'LRLR is new. 1 of 6.' and 'Yes, ⁶C₂ = 15.'; buttons have aria-labels such as 'Move down-right'; colours come from the theme palette and axe passes in light and dark. Highlighted cells also change ring width, so state is not shown by colour alone."
+  }
+ },
+ "sources": [
+  "DfE (2016) GCE AS and A level subject content for mathematics: binomial expansion, n! and nCr",
+  "Common Core State Standards for Mathematics, HSA-APR.C.5 (+) Binomial Theorem and Pascal's Triangle",
+  "Edwards, A. W. F. (2002) Pascal's Arithmetical Triangle: The Story of a Mathematical Idea, Johns Hopkins University Press",
+  "Graham, Knuth & Patashnik (1994) Concrete Mathematics, ch. 5 Binomial Coefficients"
+ ]
+}

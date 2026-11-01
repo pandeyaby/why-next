@@ -1,0 +1,266 @@
+{
+ "topicId": "mt_mc_MXRXbya",
+ "title": "Sum of an arithmetic series",
+ "audience": "learner",
+ "keyIdea": "An arithmetic series adds the terms of an arithmetic sequence. Write the sum forwards and backwards and add: every pair, first + last, has the same total, so 2Sₙ = n(a + l) and Sₙ = n/2 (a + l). With l = a + (n − 1)d this becomes Sₙ = n/2 (2a + (n − 1)d). The number of terms is n = (l − a)/d + 1. To find how many terms reach a total, solve the quadratic Sₙ = T and take the smallest positive whole n that works.",
+ "explain": {
+  "kid": [
+   "Gauss was said to add 1 to 100 in seconds. He paired the ends. 1 + 100 is 101. So is 2 + 99, and 3 + 98. There are 50 pairs. 50 × 101 is 5050.",
+   "This works for any arithmetic series, where each term goes up or down by the same step d. Write the sum forwards, then backwards, under it. Each column is first + last. There are n columns, and that is two copies of the sum. So the sum is n times (first + last), halved.",
+   "You need the last term. From term 1 to term n there are n − 1 jumps, not n. So l = a + (n − 1)d. Put it in: Sₙ = n/2 (2a + (n − 1)d).",
+   "Count terms with care. 5, 10, …, 50 has 9 gaps of 5, so 10 terms. To find when a sum passes a target, solve for n and round up. A count of terms can't be negative or a fraction."
+  ],
+  "adult": [
+   "This is the sum of a finite arithmetic series, a core A level and pre-calculus result. The Edexcel and AQA A level Mathematics specifications ask students to work with arithmetic sequences and series, including the formula for the nth term and the sum to n terms. They should also prove the sum formula. Sigma notation is used to write the sum.",
+   "The proof is the reversal argument. Write Sₙ = a + (a + d) + … + l, then write it again in reverse order and add. Every column totals a + l, so 2Sₙ = n(a + l). Substituting l = a + (n − 1)d gives the second form. Both forms are needed: the first when the last term is known, the second when only a, d and n are given.",
+   "Common mistakes: using a + nd for the nth term, an off-by-one slip; counting terms as (l − a)/d without adding 1; forgetting to halve, so 1 + 2 + … + 100 comes out as 10100; rounding the root of a quadratic down when the question asks when the sum first reaches a total; and keeping a negative or non-integer root even though n counts terms. With d < 0 the sum rises then falls, so take the smaller root.",
+   "In the lab, students flip and slide a copy of the staircase so every column holds a + l. They pick the last term from a + nd and n × d decoys and count terms on a number line. They tap the smallest n whose partial sum clears a target, then build series to hit goals while both formulas update."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Match each series to its sum. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Sum 55",
+    "Sum 100",
+    "Sum 0"
+   ],
+   "items": [
+    [
+     "1 + 2 + … + 10",
+     0
+    ],
+    [
+     "10 terms, a = 1, l = 10",
+     0
+    ],
+    [
+     "1 + 3 + 5 + … + 19",
+     1
+    ],
+    [
+     "n = 10, a = 1, d = 2",
+     1
+    ],
+    [
+     "−5 + −3 + … + 5",
+     2
+    ],
+    [
+     "n = 6, a = −5, l = 5",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsum",
+  "caption": "Flagship lab: pair a reversed copy so each column is a + l, then count terms and reach a total.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Sum of an arithmetic series: what is 1 + 2 + 3 + … + 100, using Gauss's pairing of first and last terms?",
+   "choices": [
+    "5050",
+    "10100",
+    "5000"
+   ],
+   "answer": 0,
+   "hint": "Pair 1 with 100, 2 with 99 and so on. How many pairs, and what is each pair worth?",
+   "explain": "There are 50 pairs, each worth 101, so the sum is 50 × 101 = 5050. 10100 counts the series twice."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An arithmetic series has first term {a}, common difference {d} and {n} terms. Find the sum Sₙ.",
+   "answer": "n*(2*a+(n-1)*d)/2",
+   "hint": "Use Sₙ = n/2 (2a + (n − 1)d). Work out 2a and (n − 1)d first.",
+   "explain": "Sₙ = {n}/2 × (2×{a} + {=n-1}×{d}) = {n}/2 × {=2*a+(n-1)*d} = {=n*(2*a+(n-1)*d)/2}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "d": [
+     2,
+     6
+    ],
+    "n": [
+     10,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How many terms are in the series 7 + 11 + 15 + … + 87?",
+   "choices": [
+    "21",
+    "20",
+    "22"
+   ],
+   "answer": 0,
+   "hint": "Find the number of gaps (l − a)/d first. How do gaps relate to terms?",
+   "explain": "(87 − 7) ÷ 4 = 20 gaps, and there is one more term than gaps, so n = 21."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "An arithmetic series has {n} terms, first term {a} and last term {l}. Find its sum.",
+   "answer": "n*(a+l)/2",
+   "hint": "When you know the first and last terms, use Sₙ = n/2 (a + l).",
+   "explain": "Sₙ = {n}/2 × ({a} + {l}) = {n}/2 × {=a+l} = {=n*(a+l)/2}.",
+   "params": {
+    "n": [
+     4,
+     20
+    ],
+    "a": [
+     1,
+     9
+    ],
+    "l": [
+     30,
+     60
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which expression gives the nth term of an arithmetic sequence with first term a and common difference d?",
+    "choices": [
+     "a + (n − 1)d",
+     "a + nd",
+     "nd"
+    ],
+    "answer": 0,
+    "hint": "Check your formula at n = 1. It should give a.",
+    "explain": "At n = 1 the formula must give a, so there are n − 1 jumps of d: a + (n − 1)d. a + nd gives a + d at n = 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Find the sum of the first {n} positive whole numbers, 1 + 2 + … + {n}.",
+    "answer": "n*(n+1)/2",
+    "hint": "Here a = 1 and l = {n}. Use Sₙ = n/2 (a + l).",
+    "explain": "S = {n}/2 × (1 + {n}) = {=n*(n+1)/2}.",
+    "params": {
+     "n": [
+      10,
+      60
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A student finds S₁₀ for a = 2, d = 3 as 5 × (4 + 30) = 170. What went wrong?",
+    "choices": [
+     "They used nd instead of (n − 1)d",
+     "They forgot to halve",
+     "Nothing, 170 is right"
+    ],
+    "answer": 0,
+    "hint": "Compare 30 with (n − 1)d for n = 10 and d = 3.",
+    "explain": "(n − 1)d = 9 × 3 = 27, not 30. The correct sum is 5 × (4 + 27) = 155."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "An arithmetic series starts at {a}, goes up by {d} each time and ends at {=a+d*k}. How many terms does it have?",
+    "answer": "k+1",
+    "hint": "The number of gaps is (l − a)/d. Then add one.",
+    "explain": "(l − a)/d = ({=a+d*k} − {a}) ÷ {d} = {k} gaps, so there are {k} + 1 = {=k+1} terms.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "d": [
+      2,
+      5
+     ],
+     "k": [
+      8,
+      30
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Sₙ = n² for 1 + 3 + 5 + …. What is the smallest n with Sₙ ≥ 150?",
+    "choices": [
+     "13",
+     "12",
+     "12.2"
+    ],
+    "answer": 0,
+    "hint": "Solve n² = 150, then decide which way to round.",
+    "explain": "n = √150 ≈ 12.2, but 12² = 144 is too small. Round up: 13² = 169 ≥ 150, so n = 13."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Solving Sₙ = T gives n = 9 or n = −11. What is the number of terms?",
+    "choices": [
+     "9",
+     "−11",
+     "Both"
+    ],
+    "answer": 0,
+    "hint": "n counts terms. Can you have a negative number of terms?",
+    "explain": "n must be a positive whole number, so reject −11. The series needs 9 terms."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why does the pairing proof give 2Sₙ = n(a + l)?",
+    "choices": [
+     "Adding the sum to itself reversed makes n columns, each a + l",
+     "Each term equals a + l",
+     "There are 2n terms in the series"
+    ],
+    "answer": 0,
+    "hint": "Write the sum forwards, then backwards underneath, and add each column.",
+    "explain": "Forwards and backwards, each column adds to a + l. There are n columns, and together they make two copies of Sₙ, so 2Sₙ = n(a + l)."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A series has first term {a}, common difference {d}. Find its {n}th term, the last term of the sum.",
+    "answer": "a+(n-1)*d",
+    "hint": "Use l = a + (n − 1)d. There are {=n-1} jumps from the first term.",
+    "explain": "l = {a} + {=n-1} × {d} = {=a+(n-1)*d}.",
+    "params": {
+     "a": [
+      2,
+      12
+     ],
+     "d": [
+      3,
+      7
+     ],
+     "n": [
+      10,
+      25
+     ]
+    }
+   }
+  ]
+ }
+}

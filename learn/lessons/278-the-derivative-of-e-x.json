@@ -1,0 +1,99 @@
+{
+ "topicId": "mt_gQhGu9FQNt",
+ "title": "The derivative of eˣ",
+ "audience": "learner",
+ "keyIdea": "e ≈ 2.718 is the one base for which the gradient of y = aˣ equals its height at every point, so d/dx(eˣ) = eˣ. For any base, d/dx(aˣ) = aˣ ln a, and by the chain rule d/dx(e^(kx)) = k·e^(kx), so d/dx(c·e^(kx)) = ck·e^(kx). The power rule does not apply, because the variable is in the exponent.",
+ "explain": {
+  "kid": [
+   "Draw y = 2ˣ and put a tangent on it. At every point the gradient is about 0.69 times the height. For 3ˣ it is about 1.10 times the height. So somewhere between 2 and 3 there is a base where the gradient is exactly the height.",
+   "That base is e, about 2.718. On y = eˣ the gradient at any point equals the height there. At x = 0 both are 1. At x = 2 both are about 7.39. So d/dx(eˣ) = eˣ.",
+   "Now stretch it to e^(kx). The chain rule brings the k down in front, so d/dx(e^(kx)) = k·e^(kx). A number in front just stays. So d/dx(5e^(2x)) = 10e^(2x).",
+   "This is why growth like P = 50e^(0.2t) speeds up. The rate is 0.2 × P, so the bigger P gets, the faster it grows."
+  ],
+  "adult": [
+   "In A level Mathematics (and IB Analysis and Approaches) students first meet e through gradients. From first principles, d/dx(aˣ) = lim [a^(x+h) − aˣ]/h = aˣ × lim (aʰ − 1)/h, so the gradient of every exponential is a fixed multiple of its height. That multiple is ln a. The number e is defined as the base for which the limit is exactly 1.",
+   "The results to know are d/dx(eˣ) = eˣ, d/dx(e^(kx)) = k·e^(kx), d/dx(c·e^(kx)) = ck·e^(kx) and, for any base, d/dx(aˣ) = aˣ ln a, since aˣ = e^(x ln a). Modelling uses the same idea: if P = P₀e^(kt) then dP/dt = kP, so the rate of growth is proportional to the size.",
+   "The most common mistake is using the power rule, writing x·eˣ⁻¹, as if eˣ were xⁿ. Other slips are forgetting the chain-rule factor k (writing e^(4x) for the derivative of e^(4x)), dropping the constant c, losing the minus sign for e^(−x), and thinking that every exponential is its own derivative, including 2ˣ.",
+   "In the lab you slide the base until gradient ÷ height = 1 and land on e, check gradient = height at several points on eˣ, shrink h to see (eʰ − 1)/h → 1 while (2ʰ − 1)/h → ln 2, stretch e^(kx) to read gradient = k × height, and build derivatives of c·e^(kx) from tiles."
+  ]
+ },
+ "familyTip": "Ask your teenager to explain why the gradient of eˣ is eˣ without saying 'because it is'. A good answer uses the tangent picture: on this curve, the slope at every point is the same number as the height.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each statement about the derivative of eˣ true or false? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["✓ True", "✗ False"],
+   "items": [["d/dx(eˣ) = eˣ", 0], ["d/dx(e^(3x)) = 3e^(3x)", 0], ["d/dx(2ˣ) = 2ˣ ln 2", 0], ["On y = eˣ the gradient equals the height", 0], ["d/dx(eˣ) = x·eˣ⁻¹", 1], ["d/dx(e^(3x)) = e^(3x)", 1], ["d/dx(2ˣ) = 2ˣ", 1], ["d/dx(e^(−x)) = e^(−x)", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagdex",
+  "caption": "Flagship lab: slide aˣ until gradient = height to find e, test points on eˣ, shrink h in (eʰ − 1)/h, stretch e^(kx) and build derivatives.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "What is d/dx(eˣ)?",
+   "choices": ["eˣ", "x·eˣ⁻¹", "eˣ⁻¹"], "answer": 0,
+   "hint": "On y = eˣ, compare the gradient at a point with the height there.",
+   "explain": "eˣ is its own derivative. x·eˣ⁻¹ applies the power rule, which is only for xⁿ, not for a variable in the exponent."},
+  {"type": "numeric", "id": "p2", "prompt": "f(x) = e^({k}x). f′(x) = A·e^({k}x). What is A?",
+   "answer": "k",
+   "hint": "The chain rule brings the number multiplying x down in front.",
+   "explain": "d/dx(e^({k}x)) = {k}e^({k}x), so A = {k}.",
+   "params": {"k": [2, 9]}},
+  {"type": "numeric", "id": "p3", "prompt": "f(x) = {c}e^(3x). f′(x) = A·e^(3x). What is A?",
+   "answer": "3*c",
+   "hint": "Keep the {c}, and multiply by the 3 that comes down.",
+   "explain": "f′(x) = {c} × 3 × e^(3x) = {=3*c}e^(3x), so A = {=3*c}.",
+   "params": {"c": [2, 9]}},
+  {"type": "mc", "id": "p4", "prompt": "For y = 2ˣ, how does the gradient compare with the height at any point?",
+   "choices": ["It is about 0.69 times the height", "It equals the height", "It is 2 times the height"], "answer": 0,
+   "hint": "d/dx(aˣ) = aˣ ln a. What is ln 2?",
+   "explain": "d/dx(2ˣ) = 2ˣ ln 2 and ln 2 ≈ 0.693, so the gradient is below the height. Only base e gives a ratio of exactly 1."},
+  {"type": "mc", "id": "p5", "prompt": "What is d/dx(e^(−x))?",
+   "choices": ["−e^(−x)", "e^(−x)", "−x·e^(−x − 1)"], "answer": 0,
+   "hint": "Here k = −1. What comes down in front?",
+   "explain": "k = −1 comes down, so the derivative is −e^(−x). The curve falls, so its gradient must be negative."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Why is e the special base for exponentials?",
+    "choices": ["On y = eˣ the gradient equals the height", "It is the largest base used", "eˣ grows faster than any other aˣ"], "answer": 0,
+    "hint": "Think about gradient ÷ height for y = aˣ.",
+    "explain": "For aˣ, gradient ÷ height = ln a, which is 1 only when a = e. 3ˣ and 10ˣ grow faster than eˣ, so size is not the reason."},
+   {"type": "mc", "id": "m2", "prompt": "Differentiate 5e^(2x).",
+    "choices": ["10e^(2x)", "5e^(2x)", "2e^(2x)"], "answer": 0,
+    "hint": "Keep the 5 and bring down the 2.",
+    "explain": "5 × 2 × e^(2x) = 10e^(2x). 5e^(2x) forgets the chain rule, and 2e^(2x) drops the constant."},
+   {"type": "numeric", "id": "m3", "prompt": "y = e^({k}x). Find dy/dx at x = 0.",
+    "answer": "k",
+    "hint": "dy/dx = {k}e^({k}x), and e⁰ = 1.",
+    "explain": "dy/dx = {k}e^({k}x). At x = 0, e⁰ = 1, so the gradient is {k}.",
+    "params": {"k": [2, 9]}},
+   {"type": "numeric", "id": "m4", "prompt": "P = {p}e^(2t). Find dP/dt at the moment when P = {p}.",
+    "answer": "2*p",
+    "hint": "dP/dt = 2 × P, so the rate is a multiple of the size.",
+    "explain": "dP/dt = 2 × {p}e^(2t) = 2P. When P = {p}, the rate is {=2*p}.",
+    "params": {"p": [10, 60]}},
+   {"type": "mc", "id": "m5", "prompt": "As h → 0, (eʰ − 1)/h tends to…",
+    "choices": ["1", "0", "e"], "answer": 0,
+    "hint": "Try h = 0.001: (e^0.001 − 1)/0.001.",
+    "explain": "(e^0.001 − 1)/0.001 ≈ 1.0005, which tends to 1. That limit is what makes d/dx(eˣ) = eˣ × 1."},
+   {"type": "mc", "id": "m6", "prompt": "What is d/dx(3ˣ)?",
+    "choices": ["3ˣ ln 3", "3ˣ", "x·3ˣ⁻¹"], "answer": 0,
+    "hint": "Write 3ˣ = e^(x ln 3), then use the chain rule.",
+    "explain": "3ˣ = e^(x ln 3), so by the chain rule the derivative is ln 3 · 3ˣ. Only base e is its own derivative."},
+   {"type": "mc", "id": "m7", "prompt": "Why does P = 100e^(0.3t) grow faster and faster?",
+    "choices": ["dP/dt = 0.3P, so a bigger P gives a bigger rate", "The 0.3 increases over time", "The gradient of an exponential is constant"], "answer": 0,
+    "hint": "Differentiate and write the answer in terms of P.",
+    "explain": "dP/dt = 0.3 × 100e^(0.3t) = 0.3P. The rate is proportional to the size, so growth speeds up as P grows."},
+   {"type": "mc", "id": "m8", "prompt": "Differentiate 4e^(x/2).",
+    "choices": ["2e^(x/2)", "8e^(x/2)", "4e^(x/2 − 1)"], "answer": 0,
+    "hint": "Here k = 1/2. Keep the 4 and multiply by k.",
+    "explain": "4 × 1/2 × e^(x/2) = 2e^(x/2). 8e^(x/2) divides by k, and taking 1 off the exponent is the power rule slip."}
+ ]
+ }
+}

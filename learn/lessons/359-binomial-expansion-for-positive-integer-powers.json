@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_SVzof1nq1D",
+ "title": "Binomial expansion for positive integer powers",
+ "audience": "learner",
+ "keyIdea": "For a positive whole number n, (a + b)ⁿ = aⁿ + ⁿC₁aⁿ⁻¹b + ⁿC₂aⁿ⁻²b² + … + bⁿ. Term r takes b from r of the n brackets and a from the other n − r, and ⁿCᵣ counts the ways to choose those brackets. When a or b has a number or a minus sign, such as 3x or −2x, the whole part is raised to the power, so the numbers and signs change.",
+ "explain": {
+  "kid": [
+   "Write (1 + x)³ as three brackets side by side: (1 + x)(1 + x)(1 + x). To multiply them out, you take either the 1 or the x from each bracket. There are 2 × 2 × 2 = 8 ways to do it. Three of them give x², because you pick x from 2 brackets and 1 from the last. So the x² term is 3x².",
+   "The same idea works for any power. In (a + b)ⁿ, the term with bʳ takes b from r brackets and a from the rest. So it is ⁿCᵣ aⁿ⁻ʳ bʳ. The two powers always add up to n. As the power of b goes up by one, the power of a goes down by one.",
+   "Now try (2 + 3x)⁴ and look for the x² term. You need 3x from 2 brackets. That is ⁴C₂ = 6 ways. The other 2 brackets give 2 × 2 = 4. The two 3x parts give (3x)² = 9x². Multiply: 6 × 4 × 9x² = 216x². Watch out: (3x)² is 9x², not 3x².",
+   "A minus sign rides along too. In (2 − 3x)⁵ the second part is −3x. An even power of −3x is positive, and an odd power is negative. So the signs go +, −, +, −, +, −. The full answer is 32 − 240x + 720x² − 1080x³ + 810x⁴ − 243x⁵."
+  ],
+  "adult": [
+   "This lesson covers the A level Mathematics pure content in England: understand and use the binomial expansion of (a + bx)ⁿ for positive integer n, with the notations n! and ⁿCᵣ. In the US, Common Core A-APR.5 (+) asks students to know and apply the Binomial Theorem for the expansion of (x + y)ⁿ in powers of x and y for a positive integer n. Students should expand fully, give the first few terms in ascending powers of x, and find a single coefficient.",
+   "Key terms: binomial, expansion, positive integer power, binomial coefficient ⁿCᵣ, general term ⁿCᵣ aⁿ⁻ʳ bʳ, coefficient, constant term, ascending powers of x, and the binomial theorem. Pascal's triangle and the factorial formula are taught in their own lesson. Here we use those values to build and read expansions, including terms with a number in front of x and terms with a minus sign.",
+   "Common mistakes: raising only the x, so (3x)² is written as 3x² instead of 9x². Dropping the power on the first part, so the 2 in (2 + 3x)⁴ is left out or given the wrong power. Using ⁿCₖ with the wrong k for the power wanted. Losing the minus sign of −2x, which makes odd powers come out positive. Writing (2 + x)³ = 8 + x³ and missing the middle terms. A careful check is to put x = 1 into both sides.",
+   "In the lab the learner taps the brackets of (1 + x)³ to make all 8 products and sees the tally 1, 3, 3, 1. They slide along the terms of (a + b)⁵ to match the powers of a and b. They build the x² term of (2 + 3x)⁴ from tiles with traps, set the signs of (2 − 3x)⁵, and pull single coefficients from expansions such as (1 − 2x)⁶."
+  ]
+ },
+ "familyTip": "Ask your learner to work out 11² = 121, 11³ = 1331 and 11⁴ = 14641. Each one is (10 + 1)ⁿ, so the digits are the binomial coefficients. Then ask why 11⁵ = 161051 breaks the pattern: the coefficients 10 carry into the next digit.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each coefficient positive or negative? Look at the power on the negative part. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Positive coefficient",
+    "Negative coefficient"
+   ],
+   "items": [
+    [
+     "x² term of (1 − 2x)⁵",
+     0
+    ],
+    [
+     "Constant term of (2 − x)⁶",
+     0
+    ],
+    [
+     "x⁴ term of (1 − x)⁷",
+     0
+    ],
+    [
+     "x³ term of (1 − 2x)⁵",
+     1
+    ],
+    [
+     "x term of (3 − x)⁴",
+     1
+    ],
+    [
+     "x⁵ term of (2 − x)⁵",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbexp",
+  "caption": "Flagship lab: tally (1 + x)³, match powers in (a + b)⁵, build the x² term of (2 + 3x)⁴, set signs of (2 − 3x)⁵, pull coefficients.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Binomial expansion: which is the term with b⁴ in (a + b)⁶?",
+   "choices": [
+    "15a²b⁴",
+    "15a⁴b⁴",
+    "6a²b⁴"
+   ],
+   "answer": 0,
+   "hint": "The powers of a and b add up to 6, and the coefficient is ⁶C₄.",
+   "explain": "b⁴ uses b from 4 of the 6 brackets, so a has power 6 − 4 = 2. The coefficient is ⁶C₄ = 15, giving 15a²b⁴."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is the coefficient of x in the expansion of (1 + {k}x)⁵?",
+   "answer": "5*k",
+   "hint": "The x term is r = 1: ⁵C₁ × 1⁴ × ({k}x)¹.",
+   "explain": "The x term is ⁵C₁ × ({k}x) = 5 × {k}x = {=5*k}x, so the coefficient is {=5*k}.",
+   "params": {
+    "k": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the coefficient of x² in (1 − 3x)⁴?",
+   "choices": [
+    "54",
+    "−54",
+    "18"
+   ],
+   "answer": 0,
+   "hint": "Use ⁴C₂ × (−3x)². Square the −3 as well as the x.",
+   "explain": "⁴C₂ × (−3x)² = 6 × 9x² = 54x². The square of −3 is +9, so the coefficient is 54, not −54 or 6 × 3 = 18."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "What is the constant term in the expansion of (2 + x)^{n}?",
+   "answer": "2**n",
+   "hint": "The constant term takes 2 from every bracket, so r = 0.",
+   "explain": "With r = 0 no bracket gives x, so the term is {n}C0 × 2^{n} = {=2**n}.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is the full expansion of (1 + 2x)⁴?",
+    "choices": [
+     "1 + 8x + 24x² + 32x³ + 16x⁴",
+     "1 + 4x + 6x² + 4x³ + x⁴",
+     "1 + 8x + 6x² + 4x³ + 16x⁴"
+    ],
+    "answer": 0,
+    "hint": "Use 1, 4, 6, 4, 1 and multiply each by the matching power of 2x.",
+    "explain": "The terms are 1, 4(2x), 6(2x)², 4(2x)³ and (2x)⁴, which give 1 + 8x + 24x² + 32x³ + 16x⁴. Check with x = 1: both sides make 81."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the coefficient of x³ in (2 + x)⁵?",
+    "choices": [
+     "40",
+     "10",
+     "80"
+    ],
+    "answer": 0,
+    "hint": "x³ needs r = 3, so the 2 appears in 5 − 3 = 2 brackets.",
+    "explain": "⁵C₃ × 2² × x³ = 10 × 4 × x³ = 40x³. Using 2³ by mistake gives 80."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is the x² term of (3 − 2x)⁴?",
+    "choices": [
+     "216x²",
+     "−216x²",
+     "24x²"
+    ],
+    "answer": 0,
+    "hint": "⁴C₂ × 3² × (−2x)². The square of −2x is positive.",
+    "explain": "⁴C₂ × 3² × (−2x)² = 6 × 9 × 4x² = 216x². An even power of a negative part is positive."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "What is the coefficient of x in the expansion of (1 − x)^{n}?",
+    "answer": "-n",
+    "hint": "The x term is {n}C1 × (−x). Keep the minus sign.",
+    "explain": "The x term is {n}C1 × (−x) = −{n}x, so the coefficient is {=-n}.",
+    "params": {
+     "n": [
+      3,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "How many terms are there in the full expansion of (x + 1)^{n}?",
+    "answer": "n+1",
+    "hint": "The power of 1 runs from 0 up to {n}. Count those values.",
+    "explain": "r takes every whole value from 0 to {n}, so there are {n} + 1 = {=n+1} terms.",
+    "params": {
+     "n": [
+      4,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is the coefficient of aⁿ⁻ʳbʳ in (a + b)ⁿ equal to ⁿCᵣ?",
+    "choices": [
+     "It counts the ways to choose which r of the n brackets give b",
+     "It is n multiplied by r",
+     "Each power of b doubles the coefficient"
+    ],
+    "answer": 0,
+    "hint": "Think about which bracket each b comes from.",
+    "explain": "Every product takes a or b from each of the n brackets. The products equal to aⁿ⁻ʳbʳ are the choices of r brackets for b, and there are ⁿCᵣ of them."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What are the first three terms of (1 + x/2)⁶ in ascending powers of x?",
+    "choices": [
+     "1 + 3x + 15x²/4",
+     "1 + 3x + 15x²/2",
+     "1 + 6x + 15x²"
+    ],
+    "answer": 0,
+    "hint": "Square the whole x/2 for the x² term: (x/2)² = x²/4.",
+    "explain": "1, then ⁶C₁ × x/2 = 3x, then ⁶C₂ × (x/2)² = 15 × x²/4. So the start is 1 + 3x + 15x²/4."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is the term independent of x in (x + 2/x)⁴?",
+    "choices": [
+     "24",
+     "6",
+     "16"
+    ],
+    "answer": 0,
+    "hint": "Term r has x⁴⁻ʳ × (2/x)ʳ. Which r makes the power of x zero?",
+    "explain": "The power of x is 4 − 2r, which is 0 when r = 2. That term is ⁴C₂ × x² × (2/x)² = 6 × 4 = 24."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A student writes (2 + x)³ = 8 + x³. What is the error?",
+    "choices": [
+     "The terms 12x and 6x² are missing",
+     "It should be 6 + x³",
+     "Nothing, it is right"
+    ],
+    "answer": 0,
+    "hint": "Put x = 1 into both sides and compare.",
+    "explain": "(2 + x)³ = 8 + 12x + 6x² + x³. With x = 1 the left side is 27 but 8 + 1 is only 9, so the middle terms were lost."
+   }
+  ]
+ }
+}

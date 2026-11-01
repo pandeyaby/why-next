@@ -1,0 +1,162 @@
+{
+ "topicId": "mt_KsTffVwqfA",
+ "title": "Isotopes",
+ "audience": "learner",
+ "keyIdea": "Isotopes are atoms of the same element with the same number of protons (the same atomic number Z) but different numbers of neutrons, so they have different mass numbers A. In nuclear notation such as ³⁷₁₇Cl, the neutron number is N = A − Z = 20. Isotopes have the same electrons and the same electron arrangement, so they react in the same way; only their masses (and sometimes their stability) differ. The relative atomic mass Ar of an element is the weighted mean mass of its isotopes, using their percentage abundances: chlorine is 75% ³⁵Cl and 25% ³⁷Cl, so Ar = (75 × 35 + 25 × 37) ÷ 100 = 35.5.",
+ "explain": {
+  "kid": [
+   "Every carbon atom has 6 protons. That is what makes it carbon. But the number of neutrons can change. Most carbon atoms have 6 neutrons. A few have 7 or 8. These forms of one element are called isotopes.",
+   "Nuclear notation shows both numbers. The mass number A goes on top. The atomic number Z goes below. To find the neutrons, take Z away from A. Carbon-14 has 14 − 6 = 8 neutrons.",
+   "Isotopes of one element have the same protons and the same electrons. So the electrons sit in the same shells, 2,4 for carbon. Electrons decide how atoms react. So carbon-12 and carbon-14 both burn to make carbon dioxide. Only the mass is different.",
+   "A sample of chlorine is a mix: 75% chlorine-35 and 25% chlorine-37. Its relative atomic mass is a weighted mean, not a plain average. Work out 75 × 35 + 25 × 37, then divide by 100. That gives 35.5, nearer 35 because chlorine-35 is more common."
+  ],
+  "adult": [
+   "This is AQA GCSE Chemistry 4.1.1.4 to 4.1.1.6 (and Combined Science 5.1.1): atoms of the same element have the same number of protons; isotopes have different numbers of neutrons; relative atomic mass is an average that takes account of the abundance of each isotope. Higher tier students calculate Ar from percentage abundances. OCR and Edexcel specifications match, and IB MYP Sciences covers it in atomic structure.",
+   "Key terms: atomic number Z is the number of protons; mass number A is protons plus neutrons; neutron number N = A − Z. A nuclide is one atom type written in nuclear notation, such as ¹⁴₆C. Electron arrangement (for example 2,8,7) depends only on Z, so isotopes share chemical properties. Percentage abundance is the share of atoms of each isotope; Ar is their weighted mean, with no units.",
+   "Common mistakes: students take the plain mean of the isotope masses (36 for chlorine instead of 35.5), or weight the wrong way round. Another slip is calling ¹⁴C and ¹⁴N isotopes because the mass numbers match; isotopes need the same Z. Be careful too with ions: ¹⁶O and ¹⁶O²⁻ differ in electrons, not neutrons, so they are not isotopes. Some students also think heavier isotopes react differently.",
+   "In the lab students sort nuclide pairs into isotopes or different elements, find N from nuclear notation, sort the properties isotopes share from those that differ, slide a pivot along a beam loaded with each isotope's abundance to find where it balances (that point is Ar), then work backwards from a known Ar to the abundance."
+  ]
+ },
+ "familyTip": "Look at the periodic table on a revision guide: chlorine shows 35.5, not a whole number. Ask: why is it not 35 or 37? Then try it with copper (69% ⁶³Cu, 31% ⁶⁵Cu) to get 63.6.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Isotopes or different elements? Compare the atomic numbers. Drag each pair, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Isotopes of one element", "Different elements"],
+   "items": [
+    ["¹²₆C and ¹³₆C", 0],
+    ["¹⁴₆C and ¹⁴₇N", 1],
+    ["¹⁶₈O and ¹⁸₈O", 0],
+    ["⁴⁰₁₈Ar and ⁴⁰₁₉K", 1],
+    ["²⁰₁₀Ne and ²²₁₀Ne", 0],
+    ["³²₁₆S and ³¹₁₅P", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagisot",
+  "caption": "Flagship lab: sort nuclides by atomic number, find neutron numbers, and balance a beam to find relative atomic mass.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Isotopes: which statement about ³⁵₁₇Cl and ³⁷₁₇Cl is true?",
+   "choices": ["Same protons, different neutrons", "Same neutrons, different protons", "Same mass number, different electrons"],
+   "answer": 0,
+   "hint": "Compare the bottom numbers (Z) first, then work out N = A − Z for each.",
+   "explain": "Both have Z = 17, so 17 protons. Neutrons are 35 − 17 = 18 and 37 − 17 = 20, so they are isotopes."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An isotope of an element has atomic number {z} and mass number {a}. How many neutrons does it have?",
+   "answer": "a-z",
+   "hint": "The mass number counts protons and neutrons together. Take the protons away.",
+   "explain": "N = A − Z = {a} − {z} = {=a-z} neutrons.",
+   "params": {"z": [6, 20], "a": [22, 44]},
+   "where": "a>2*z-2 && a<2*z+8"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Why do ¹²C and ¹⁴C have the same chemical properties?",
+   "choices": ["They have the same electron arrangement", "They have the same number of neutrons", "They have the same mass"],
+   "answer": 0,
+   "hint": "Which particles take part when atoms react and bond?",
+   "explain": "Both have 6 electrons arranged 2,4. Reactions depend on electrons, so the isotopes react the same way."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "An element has two isotopes: {p}% has mass 10 and the rest has mass 11. Calculate its relative atomic mass.",
+   "answer": "(p*10+(100-p)*11)/100",
+   "tolerance": 0.05,
+   "hint": "Multiply each mass by its percentage, add the results, then divide by 100.",
+   "explain": "Ar = ({p} × 10 + {=100-p} × 11) ÷ 100 = {=(p*10+(100-p)*11)/100}.",
+   "params": {"p": [10, 40]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What are isotopes?",
+    "choices": ["Atoms of the same element with different numbers of neutrons", "Atoms of different elements with the same mass number", "Atoms that have gained or lost electrons"],
+    "answer": 0,
+    "hint": "Isotopes belong to one element. Which particle number is allowed to change?",
+    "explain": "Isotopes have the same atomic number but different neutron numbers. Atoms that gain or lose electrons are ions."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which pair are isotopes of the same element?",
+    "choices": ["¹⁶₈O and ¹⁸₈O", "¹⁴₆C and ¹⁴₇N", "⁴⁰₁₈Ar and ⁴⁰₂₀Ca"],
+    "answer": 0,
+    "hint": "Isotopes must have the same bottom number, the atomic number Z.",
+    "explain": "Both oxygen nuclides have Z = 8. The other pairs share a mass number but have different Z, so they are different elements."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Uranium has atomic number 92. How many neutrons are in uranium-{a}?",
+    "answer": "a-92",
+    "hint": "Uranium-{a} has mass number {a}. Neutrons are A − Z.",
+    "explain": "N = {a} − 92 = {=a-92} neutrons. Every uranium isotope has 92 protons.",
+    "params": {"a": [232, 238]}
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Chlorine is 75% ³⁵Cl and 25% ³⁷Cl. What is its relative atomic mass?",
+    "choices": ["35.5", "36", "36.5"],
+    "answer": 0,
+    "hint": "Weight each mass by its abundance: (75 × 35 + 25 × 37) ÷ 100.",
+    "explain": "(2625 + 925) ÷ 100 = 35.5. It is nearer 35 because ³⁵Cl is the commoner isotope; 36 is the plain mean."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "An element is {p}% mass 20 and the rest mass 22. Calculate its relative atomic mass.",
+    "answer": "(p*20+(100-p)*22)/100",
+    "tolerance": 0.05,
+    "hint": "Find the percentage of mass 22 first: 100 − {p}. Then use the weighted mean.",
+    "explain": "Ar = ({p} × 20 + {=100-p} × 22) ÷ 100 = {=(p*20+(100-p)*22)/100}.",
+    "params": {"p": [60, 95]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "¹⁶₈O and ¹⁶₈O²⁻ are both shown. Are they isotopes?",
+    "choices": ["No: they differ in electrons, so one is an ion", "Yes: they have different charges", "Yes: they have the same mass number"],
+    "answer": 0,
+    "hint": "Work out the protons, neutrons and electrons for each. Which number is different?",
+    "explain": "Both have 8 protons and 8 neutrons. O²⁻ has 10 electrons, so it is an ion, not a different isotope."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Bromine has isotopes ⁷⁹Br and ⁸¹Br, and Ar = 79.9. What does this tell you?",
+    "choices": ["⁷⁹Br is slightly more common", "⁸¹Br is more common", "They are exactly equal"],
+    "answer": 0,
+    "hint": "Equal amounts would give exactly 80. Which way is 79.9 pulled?",
+    "explain": "79.9 is just below the midpoint of 80, so the lighter isotope ⁷⁹Br is slightly more common (about 55%)."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "An isotope has {p} protons and {n} neutrons. What is its mass number?",
+    "answer": "p+n",
+    "hint": "The mass number counts every particle in the nucleus.",
+    "explain": "A = protons + neutrons = {p} + {n} = {=p+n}.",
+    "params": {"p": [6, 17], "n": [6, 20]},
+    "where": "n>=p && n<=p+3"
+   }
+  ]
+ }
+}

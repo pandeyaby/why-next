@@ -1,0 +1,91 @@
+{
+ "topicId": "mt_sXRHr7tfS5",
+ "title": "Engaging Listeners and Valuing Viewpoints",
+ "audience": "family",
+ "keyIdea": "A good speaker wins the listeners' interest, keeps it and checks it. Start with a hook, speak at a steady pace and a clear volume, and look at your audience. Watch their faces and change what you do. When someone shares a view, agree, disagree or add on, and always give a reason. Use formal words for a class talk and informal words with friends.",
+ "explain": {
+  "kid": [
+   "When you give a talk, you want people to listen. Start with a hook: a surprising fact or a question.",
+   "Speak at a steady pace. Not too fast, not too slow. Speak up so the back row can hear. Look at the people, not just your notes.",
+   "Keep checking faces. A puzzled face? Say it again with an example. A yawn? Ask a question. A hand up? Stop and let them ask.",
+   "When a friend shares an idea, you can agree, disagree or add on. Always say why: 'I agree with Priya because…' Disagree with the idea, never the person."
+  ],
+  "adult": [
+   "The National Curriculum for spoken language (years 1 to 6) asks pupils to gain, maintain and monitor the interest of the listener, to consider and evaluate different viewpoints by attending to and building on the contributions of others, and to select and use appropriate registers. At seven and eight this shows up in show-and-tell, class talks and group discussion.",
+   "Engaging listeners has three parts. Gain: a hook such as a question or a surprising fact. Maintain: steady pace, clear volume, varied tone, and eye contact rather than reading from notes. Monitor: noticing puzzled, bored or lost faces and changing course, for example by giving an example or asking the audience a question.",
+   "Valuing viewpoints means replying to what someone actually said. Sentence stems help: 'I agree with … because', 'I disagree because', 'I'd like to add'. Common mistakes are a bare 'I disagree' with no reason, a reason that does not fit the stance, and criticising the person instead of the idea. Register is the last strand: formal language for a class talk, informal language with friends.",
+   "In the lab your child picks a hook and watches a class's attention, drags pace and volume dials and looks up from the notes until every listener smiles, reads four listener signs and picks the fix, builds agree, disagree and add-on replies to Priya with fitting reasons, and sorts lines into class talk or chatting with friends."
+  ]
+ },
+ "familyTip": "At dinner, let your child give a one-minute talk about their day. Before they start, ask: 'What is your hook?' Afterwards, share a view and ask them to reply with 'I agree because…' or 'I'd add…'.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it help listeners? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["✓ Helps listeners", "✗ Loses listeners"],
+   "items": [["Start with a question", 0], ["Look at your audience", 0], ["Speak up so the back row can hear", 0], ["Reply with a reason: 'I agree because…'", 0], ["Read your notes facing the board", 1], ["Talk really fast to finish", 1], ["Say 'That's a silly idea'", 1], ["Ignore a hand that goes up", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagengage",
+  "caption": "Flagship lab: hook a class, set pace, volume and eye contact, read listeners' faces, reply to Priya with reasons, and pick the right register.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Which is the best way to start a talk about sharks?",
+   "choices": ["\"Did you know some sharks never stop swimming?\"", "\"Um, this is about sharks.\"", "\"I don't really know much about sharks.\""], "answer": 0,
+   "hint": "Which one makes you want to hear more?",
+   "explain": "A surprising fact as a question is a hook. It makes the class want to listen."},
+  {"type": "mc", "id": "p2", "prompt": "There are {n} children in the back row. They cup their ears. What should you do?",
+   "choices": ["Speak up, clearly", "Talk faster", "Look at your notes"], "answer": 0,
+   "hint": "Cupping an ear is a sign. What does it tell you?",
+   "explain": "Speak up, clearly. The {n} children at the back cannot hear you, so faster or quieter will not help.",
+   "params": {"n": [2, 6]}},
+  {"type": "mc", "id": "p3", "prompt": "Priya says \"Hamsters make great class pets.\" Which reply values her view?",
+   "choices": ["\"I disagree, because they sleep all day.\"", "\"That's a silly idea, Priya.\"", "\"No.\""], "answer": 0,
+   "hint": "Talk about the idea, and give a reason.",
+   "explain": "\"I disagree, because they sleep all day.\" It is about her idea and gives a reason. Calling her silly is about the person."},
+  {"type": "mc", "id": "p4", "prompt": "Your talk lasts {n} minutes. Halfway, {k} children yawn. What should you do?",
+   "choices": ["Ask the class a question", "Keep reading your notes", "Speed up to finish"], "answer": 0,
+   "hint": "Yawning means they have drifted. How can you bring them back?",
+   "explain": "Ask the class a question. After about {=n/2} minutes, {k} yawns mean you need to bring them back in.",
+   "params": {"n": [4, 10], "k": [2, 5]}, "where": "n % 2 == 0"}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "What is a hook at the start of a talk?",
+    "choices": ["Something that makes people want to listen", "The title of your talk", "The last thing you say"], "answer": 0,
+    "hint": "Think of how a fishing hook catches a fish.",
+    "explain": "A hook catches your listeners: a question, a surprising fact or a short story."},
+   {"type": "mc", "id": "m2", "prompt": "Why should you look at your audience, not just your notes?",
+    "choices": ["They feel you are talking to them", "It makes you talk faster", "So you can skip parts"], "answer": 0,
+    "hint": "How does it feel when someone talks to you without looking up?",
+    "explain": "Eye contact makes listeners feel included, and it lets you check their faces."},
+   {"type": "mc", "id": "m3", "prompt": "A friend looks puzzled during your talk. What do you do?",
+    "choices": ["Say it again with an example", "Carry on faster", "Ignore it"], "answer": 0,
+    "hint": "A puzzled face means they did not follow.",
+    "explain": "Say it again with an example, so they can follow before you move on."},
+   {"type": "mc", "id": "m4", "prompt": "Which reply has a reason?",
+    "choices": ["\"I agree with Sam because we would have more time to read.\"", "\"I agree.\"", "\"Same as Sam.\""], "answer": 0,
+    "hint": "Look for the word 'because'.",
+    "explain": "\"I agree with Sam because…\" gives a reason. The others just say yes."},
+   {"type": "mc", "id": "m5", "prompt": "{n} people have shared ideas. You want to add on to the last one. Which start fits?",
+    "choices": ["\"I'd like to add that…\"", "\"You're wrong.\"", "\"Whatever.\""], "answer": 0,
+    "hint": "Adding on builds on what someone said.",
+    "explain": "\"I'd like to add that…\" builds on the last of the {n} ideas instead of knocking it down.",
+    "params": {"n": [2, 6]}},
+   {"type": "mc", "id": "m6", "prompt": "You talk for {n} minutes at a steady pace. Is it better to talk very fast and finish sooner?",
+    "choices": ["No, listeners lose track", "Yes, they like it short", "Yes, fast sounds exciting"], "answer": 0,
+    "hint": "Can people follow if you rush?",
+    "explain": "No. A steady pace for {n} minutes beats a rushed talk that nobody can follow.",
+    "params": {"n": [2, 5]}},
+   {"type": "mc", "id": "m7", "prompt": "Which line is best for the start of a class talk?",
+    "choices": ["\"Good morning, everyone. Today I will tell you about bees.\"", "\"Hiya! Bees, yeah?\"", "\"Oi, listen up!\""], "answer": 0,
+    "hint": "A class talk uses formal, polite language.",
+    "explain": "\"Good morning, everyone…\" is formal and polite, which fits a talk to the class."}
+  ]
+ }
+}

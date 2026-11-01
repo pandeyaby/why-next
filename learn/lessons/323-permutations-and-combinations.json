@@ -1,0 +1,241 @@
+{
+ "topicId": "mt_cvIEWIClBr",
+ "title": "Permutations and combinations",
+ "audience": "learner",
+ "keyIdea": "To count choices made one after another, multiply the number of options at each stage. A permutation is an arrangement where order matters: nPr = n! ÷ (n − r)! ways to arrange r things from n. A combination is a selection where order does not matter: nCr = nPr ÷ r!, because each group of r can be ordered in r! ways. When some items are identical, divide by the factorial of each repeat.",
+ "explain": {
+  "kid": [
+   "Four runners race for 1st, 2nd and 3rd. Any of the 4 can win. Then 3 are left for 2nd, and 2 for 3rd. So there are 4 × 3 × 2 = 24 podiums. When you make choices one after another, you multiply. This is the multiplication principle.",
+   "The number 4 × 3 × 2 × 1 is written 4! and said \"4 factorial\". It is the number of ways to put 4 different things in a row. So 3! = 6, 5! = 120 and 0! = 1. There is one way to arrange nothing.",
+   "An arrangement where order matters is a permutation. The 24 podiums are the permutations of 3 runners from 4, written 4P3. A team is different: a team of A, B and C is the same team in any order. Each team turns up 3! = 6 times among the 24 podiums. So there are 24 ÷ 6 = 4 teams. A choice where order does not matter is a combination, written 4C3.",
+   "Ask two questions every time. Does order matter? Can things repeat? A 3-digit code with repeats allowed has 10 × 10 × 10 = 1000 options. Identical letters cut the count. AAB has only 3 different orders, not 3! = 6, because swapping the two As changes nothing. Divide 3! by 2! to get 3."
+  ],
+  "adult": [
+   "This topic sits in A level Mathematics, where students use n!, nCr and the notation (n r) in the binomial expansion and the binomial distribution. Some boards examine permutations and combinations directly in Further Mathematics or in statistics options. In the US Common Core, S-CP.9 (+) asks students to use permutations and combinations to work out probabilities of compound events.",
+   "Key terms: multiplication principle, factorial, permutation, combination, arrangement and selection. The formulas are nPr = n! ÷ (n − r)! and nCr = n! ÷ (r!(n − r)!). The symmetry nCr = nC(n − r) holds because choosing r to take is the same as choosing n − r to leave. Arrangements of n items with groups of p and q identical items number n! ÷ (p! q!).",
+   "Common mistakes: using nCr when order matters, such as for medals or codes. Using nPr for a committee, so each group is counted r! times. Using n to the power r when repeats are not allowed. Adding the stage counts instead of multiplying. Dividing by only one factorial when two letters repeat. Students should take care to treat 0! = 1 as a rule, since it makes nC0 = nCn = 1.",
+   "In the lab the learner fills a 1st, 2nd and 3rd podium from four runners and watches the choices fall from 4 to 3 to 2. They gather all 24 podiums into 4 teams to see nCr = nPr ÷ r!. They step n! from 0! to 8! on a shelf of books. They explore a row of nCr bars where r and n − r light up together. Last, they build every different order of AAB and AABB."
+  ]
+ },
+ "familyTip": "At dinner, count the ways your family could sit in a row of chairs, then the ways to pick two people to wash up. Which number is bigger, and why?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does order matter? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "🏅 Order matters: permutation",
+    "👥 Order does not matter: combination"
+   ],
+   "items": [
+    [
+     "Gold, silver and bronze among 8 runners",
+     0
+    ],
+    [
+     "A 4-digit PIN",
+     0
+    ],
+    [
+     "Seating 5 guests in a row",
+     0
+    ],
+    [
+     "Choosing a captain and a vice-captain",
+     0
+    ],
+    [
+     "A team of 5 from a class of 30",
+     1
+    ],
+    [
+     "A hand of 7 cards",
+     1
+    ],
+    [
+     "Picking 3 toppings for a pizza",
+     1
+    ],
+    [
+     "Choosing 6 lottery numbers",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagperm",
+  "caption": "Flagship lab: fill a podium from 4 runners, gather 24 podiums into teams, step n! down to 0!, explore nCr = nC(n − r), then arrange AAB and AABB.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which situation is a combination, where order does not matter?",
+   "choices": [
+    "Choosing 3 people for a team",
+    "Giving out 1st, 2nd and 3rd prizes",
+    "Setting a 3-digit code"
+   ],
+   "answer": 0,
+   "hint": "Swap two of the chosen items. Does it make a different result?",
+   "explain": "A team of A, B and C is the same in any order, so it is a combination. Prizes and codes change when you swap, so order matters there."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In how many ways can a 1st and a 2nd prize be given to 2 different people from a group of {n}?",
+   "answer": "n*(n-1)",
+   "hint": "Count the choices for 1st prize, then the choices left for 2nd, and multiply.",
+   "explain": "{n} choices for 1st and {=n-1} for 2nd, so {n}P2 = {n} × {=n-1} = {=n*(n-1)} ways.",
+   "params": {
+    "n": [
+     5,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "How many ways are there to choose 2 people from {n}, when order does not matter?",
+   "answer": "n*(n-1)/2",
+   "hint": "Count ordered pairs first, then divide by 2!, the number of orders of each pair.",
+   "explain": "{n}P2 = {=n*(n-1)} ordered pairs, and each pair is counted 2! = 2 times, so {n}C2 = {=n*(n-1)/2}.",
+   "params": {
+    "n": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "How many different arrangements are there of the letters of the word EGG?",
+   "choices": [
+    "3",
+    "6",
+    "2"
+   ],
+   "answer": 0,
+   "hint": "Start with 3! for three letters, then allow for the two identical Gs.",
+   "explain": "3! = 6, but swapping the two Gs gives the same word, so divide by 2!: 6 ÷ 2 = 3 (EGG, GEG, GGE)."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "In how many different orders can 5 different books be put on a shelf?",
+    "choices": [
+     "120",
+     "25",
+     "15"
+    ],
+    "answer": 0,
+    "hint": "Multiply the choices for each position: 5 for the first, 4 for the second, and so on down to 1.",
+    "explain": "5! = 5 × 4 × 3 × 2 × 1 = 120 orders. 25 is 5 × 5, which would let one book be used twice."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A club has {n} members. In how many ways can it choose a president, a secretary and a treasurer, all different people?",
+    "answer": "n*(n-1)*(n-2)",
+    "hint": "The three jobs are different, so order matters. Multiply the choices for each job.",
+    "explain": "{n}P3 = {n} × {=n-1} × {=n-2} = {=n*(n-1)*(n-2)} ways.",
+    "params": {
+     "n": [
+      5,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "How many different groups of 3 can be chosen from {n} people?",
+    "answer": "n*(n-1)*(n-2)/6",
+    "hint": "Find {n}P3, then divide by 3! = 6, because each group can be ordered in 6 ways.",
+    "explain": "{n}C3 = {n} × {=n-1} × {=n-2} ÷ 6 = {=n*(n-1)*(n-2)/6} groups.",
+    "params": {
+     "n": [
+      4,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which of these is equal to 12C9?",
+    "choices": [
+     "12C3",
+     "12C4",
+     "12P9"
+    ],
+    "answer": 0,
+    "hint": "Choosing r items to take is the same as choosing n − r items to leave.",
+    "explain": "nCr = nC(n − r). With n = 12 and r = 9, n − r = 3, so 12C9 = 12C3 = 220."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is the value of 0!?",
+    "choices": [
+     "1",
+     "0",
+     "It is undefined"
+    ],
+    "answer": 0,
+    "hint": "Use n! = n × (n − 1)! with n = 1.",
+    "explain": "1! = 1 × 0!, and 1! = 1, so 0! = 1. There is exactly one way to arrange nothing."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "How many different arrangements are there of the letters of the word LEVEL?",
+    "choices": [
+     "30",
+     "60",
+     "120"
+    ],
+    "answer": 0,
+    "hint": "Start with 5!, then divide by the factorial of each repeated letter. Which letters repeat?",
+    "explain": "L appears twice and E appears twice, so 5! ÷ (2! × 2!) = 120 ÷ 4 = 30."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A lock uses 4 digits from 0 to 9, and digits may repeat. How many codes are possible?",
+    "choices": [
+     "10 000",
+     "5040",
+     "210"
+    ],
+    "answer": 0,
+    "hint": "Order matters and repeats are allowed. How many choices does each digit have?",
+    "explain": "Each of the 4 places has 10 choices, so 10 × 10 × 10 × 10 = 10 000. 5040 = 10P4 forbids repeats and 210 = 10C4 ignores order."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is nCr = nPr ÷ r!?",
+    "choices": [
+     "Each group of r appears r! times among the ordered lists",
+     "Combinations always have r! more options than permutations",
+     "Because you add r! extra orders to each group"
+    ],
+    "answer": 0,
+    "hint": "Think of the 24 podiums and the 4 teams in the lab.",
+    "explain": "nPr counts ordered lists. Each unordered group can be put in r! orders, so it is counted r! times; dividing by r! counts each group once."
+   }
+  ]
+ }
+}

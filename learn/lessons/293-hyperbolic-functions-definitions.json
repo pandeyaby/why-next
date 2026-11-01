@@ -1,0 +1,91 @@
+{
+ "topicId": "mt_pr_8DYFhDi",
+ "title": "Hyperbolic functions: definitions",
+ "audience": "learner",
+ "keyIdea": "The hyperbolic functions are built from eˣ and e⁻ˣ: cosh x = (eˣ + e⁻ˣ)/2, sinh x = (eˣ − e⁻ˣ)/2 and tanh x = sinh x / cosh x = (eˣ − e⁻ˣ)/(eˣ + e⁻ˣ). So cosh 0 = 1 and sinh 0 = 0; cosh is even with cosh x ≥ 1, sinh is odd, and −1 < tanh x < 1. The point (cosh t, sinh t) lies on the hyperbola x² − y² = 1, because cosh²t − sinh²t = 1. On a calculator, sinh 1 ≈ 1.1752, cosh 2 ≈ 3.7622 and tanh 0.5 ≈ 0.4621.",
+ "explain": {
+  "kid": [
+   "Take two curves, y = eˣ and y = e⁻ˣ. They cross at (0, 1). Add them and halve: that is cosh x, the midpoint of the two curves. So cosh x = (eˣ + e⁻ˣ)/2. At x = 0 both are 1, so cosh 0 = 1.",
+   "Now take the gap and halve it: sinh x = (eˣ − e⁻ˣ)/2. So sinh 0 = 0. Swap x for −x and eˣ swaps with e⁻ˣ. The sum stays the same, so cosh(−x) = cosh x. The gap flips sign, so sinh(−x) = −sinh x.",
+   "Divide them to get tanh x = sinh x / cosh x. The ½s cancel, so tanh x = (eˣ − e⁻ˣ)/(eˣ + e⁻ˣ). For big x, e⁻ˣ is tiny and both parts are about eˣ/2. So tanh x gets close to 1 but never reaches it.",
+   "Why 'hyperbolic'? Square them and subtract: cosh²t − sinh²t = 1 for every t. So the point (cosh t, sinh t) is on the hyperbola x² − y² = 1. In the same way, (cos t, sin t) is on the circle x² + y² = 1."
+  ],
+  "adult": [
+   "Hyperbolic functions are in A level Further Mathematics (Core Pure) and IB Analysis and Approaches HL extension work. Students must state the exponential definitions of sinh, cosh and tanh, and evaluate them with a calculator's hyp key. Later work builds on this: identities, graphs, inverse functions such as arsinh, and calculus.",
+   "Common mistakes: losing the ÷2, which doubles every answer, and swapping the signs, so cosh gets the minus. Students often write cosh 0 = 0 by analogy with sin 0. For tanh, many write (eˣ − e⁻ˣ)/2 over 2 again, or flip the fraction, which gives coth.",
+   "Useful checks follow from the definitions. cosh x + sinh x = eˣ and cosh x − sinh x = e⁻ˣ; multiplying them gives cosh²x − sinh²x = 1, the analogue of cos²x + sin²x = 1 with a sign change. cosh has minimum 1 at x = 0, and tanh has horizontal asymptotes y = ±1.",
+   "In the lab the learner drags x to see cosh as the midpoint of eˣ and e⁻ˣ, compares sinh(x) with sinh(−x), pushes tanh towards its asymptotes, traces (cosh t, sinh t) along the hyperbola, and builds sinh 1, cosh 2 and tanh 0.5 from numerator and denominator tiles."
+  ]
+ },
+ "familyTip": "Hang a light chain between two hooks: its curve is a cosh curve, called a catenary. Ask your learner to say why its lowest point is where x = 0, and what cosh 0 is.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "True or false for hyperbolic functions? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["✓ True", "✗ False"],
+   "items": [["cosh 0 = 1", 0], ["sinh(−x) = −sinh x", 0], ["cosh²x − sinh²x = 1", 0], ["−1 < tanh x < 1", 0], ["cosh x = (eˣ − e⁻ˣ)/2", 1], ["sinh 0 = 1", 1], ["tanh x = (eˣ − e⁻ˣ)/2", 1], ["cosh x can be 0", 1]]
+  }
+ },
+ "lab": {
+  "type": "flaghyper",
+  "caption": "Flagship lab: cosh as the midpoint of eˣ and e⁻ˣ, sinh as half the gap, tanh's asymptotes, the hyperbola x² − y² = 1, and evaluating values.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Which is the definition of cosh x?",
+   "choices": ["(eˣ + e⁻ˣ)/2", "(eˣ − e⁻ˣ)/2", "eˣ + e⁻ˣ"], "answer": 0,
+   "hint": "cosh is the midpoint of eˣ and e⁻ˣ: add, then halve.",
+   "explain": "cosh x = (eˣ + e⁻ˣ)/2. The minus version is sinh x, and eˣ + e⁻ˣ without the ÷2 is 2cosh x."},
+  {"type": "numeric", "id": "p2", "prompt": "At some value of x, eˣ + e⁻ˣ = {s}. What is cosh x?",
+   "answer": "s/2", "tolerance": 0.001,
+   "hint": "cosh x is the sum eˣ + e⁻ˣ, halved.",
+   "explain": "cosh x = (eˣ + e⁻ˣ)/2 = {s}/2 = {=s/2}.",
+   "params": {"s": [3, 12]}},
+  {"type": "numeric", "id": "p3", "prompt": "At some value of x, eˣ − e⁻ˣ = {d}. What is sinh(−x)?",
+   "answer": "-d/2", "tolerance": 0.001,
+   "hint": "First find sinh x. Then use the fact that sinh is odd.",
+   "explain": "sinh x = {d}/2, and sinh(−x) = −sinh x, so sinh(−x) = {=-d/2}.",
+   "params": {"d": [1, 9]}},
+  {"type": "mc", "id": "p4", "prompt": "Which values can tanh x take?",
+   "choices": ["Only values between −1 and 1", "Any real value", "Only values of 1 or more"], "answer": 0,
+   "hint": "For large x, sinh x and cosh x are both about eˣ/2.",
+   "explain": "−1 < tanh x < 1. The ratio sinh/cosh tends to 1 as x → ∞ and to −1 as x → −∞, without reaching either. Values of 1 or more belong to cosh."}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "What is cosh 0?",
+    "choices": ["1", "0", "2"], "answer": 0,
+    "hint": "e⁰ = 1. Put x = 0 into (eˣ + e⁻ˣ)/2.",
+    "explain": "cosh 0 = (1 + 1)/2 = 1. It is sinh 0 that equals 0, and 2 comes from forgetting the ÷2."},
+   {"type": "mc", "id": "m2", "prompt": "Which expression equals tanh x?",
+    "choices": ["(eˣ − e⁻ˣ)/(eˣ + e⁻ˣ)", "(eˣ + e⁻ˣ)/(eˣ − e⁻ˣ)", "(eˣ − e⁻ˣ)/2"], "answer": 0,
+    "hint": "tanh = sinh/cosh. What happens to the two ÷2s?",
+    "explain": "tanh x = [(eˣ − e⁻ˣ)/2] ÷ [(eˣ + e⁻ˣ)/2]; the ½s cancel. The flipped fraction is coth x, and (eˣ − e⁻ˣ)/2 is sinh x."},
+   {"type": "numeric", "id": "m3", "prompt": "For some x, cosh x + sinh x = {a}. What is eˣ?",
+    "answer": "a", "tolerance": 0.001,
+    "hint": "Add the two definitions. What happens to the e⁻ˣ terms?",
+    "explain": "cosh x + sinh x = (eˣ + e⁻ˣ)/2 + (eˣ − e⁻ˣ)/2 = eˣ, so eˣ = {a}.",
+    "params": {"a": [2, 9]}},
+   {"type": "numeric", "id": "m4", "prompt": "sinh x = {s}. Use cosh²x − sinh²x = 1 to find cosh²x.",
+    "answer": "s*s+1", "tolerance": 0.001,
+    "hint": "Rearrange: cosh²x = 1 + sinh²x.",
+    "explain": "cosh²x = 1 + sinh²x = 1 + {s}² = {=s*s+1}.",
+    "params": {"s": [1, 7]}},
+   {"type": "mc", "id": "m5", "prompt": "Which statement is true for every x?",
+    "choices": ["sinh(−x) = −sinh x", "sinh(−x) = sinh x", "cosh(−x) = −cosh x"], "answer": 0,
+    "hint": "Replacing x with −x swaps eˣ and e⁻ˣ. Which definition changes sign?",
+    "explain": "sinh is odd: swapping eˣ and e⁻ˣ flips the sign of the difference. cosh is even, since the sum does not change."},
+   {"type": "mc", "id": "m6", "prompt": "Using a calculator, what is sinh 1 to 4 significant figures?",
+    "choices": ["1.175", "2.350", "1.543"], "answer": 0,
+    "hint": "sinh 1 = (e − e⁻¹)/2, with e ≈ 2.71828.",
+    "explain": "(2.71828 − 0.36788)/2 = 1.175. 2.350 forgets the ÷2, and 1.543 is cosh 1."},
+   {"type": "mc", "id": "m7", "prompt": "What is the smallest value cosh x can take?",
+    "choices": ["1, at x = 0", "0, at x = 0", "It has no smallest value"], "answer": 0,
+    "hint": "cosh is the midpoint of eˣ and e⁻ˣ, and both are positive.",
+    "explain": "cosh x ≥ 1, with minimum cosh 0 = 1. The graph is a U-shape, the catenary, with its lowest point at (0, 1)."}
+  ]
+ }
+}

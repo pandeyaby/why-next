@@ -1,0 +1,234 @@
+{
+ "topicId": "mt_yoI41SePkG",
+ "title": "Types of data",
+ "audience": "learner",
+ "keyIdea": "Data is categorical when the values are names or labels, and numerical when the values are amounts you can work with. Numerical data is discrete when it is counted or comes in set steps, and continuous when it is measured and can take any value in a range. The type decides the chart: gaps between bars for categories and discrete values, touching bars for grouped continuous data, and a line for readings over time.",
+ "explain": {
+  "kid": [
+   "A variable is one thing you collect data about, like eye colour or height. First ask: are the values names or numbers? Eye colour gives blue, brown and green. Those are names, so the data is categorical.",
+   "Some numbers are only labels. A football shirt number or a bus route number names something. A quick test helps: does a mean make sense? The mean of shirt 7 and shirt 9 is not a shirt 8 player. So shirt numbers are categorical too.",
+   "Numerical data splits two ways. Discrete data is counted, or it comes in set steps. You can have 2 or 3 siblings, but never 2.5. Continuous data is measured. Between 152.5 cm and 152.6 cm there is 152.55 cm, and you can keep zooming in. Height, mass, time and age are continuous.",
+   "Rounding does not change the type. We say age in whole years, but age is time, so it is continuous. Now pick the chart. Use a bar chart with gaps, or a pie chart, for categories. Use bars with gaps for discrete data. Use touching bars, a histogram, for grouped continuous data like heights in groups of 10 cm. Use a line graph for readings over time."
+  ],
+  "adult": [
+   "This is KS3 statistics in the English national curriculum. Pupils draw and read tables, bar charts, pie charts and pictograms for categorical data. They use vertical line or bar charts for ungrouped and grouped numerical data. They compare discrete, continuous and grouped data. The same terms appear in Common Core grade 6 statistics, and GCSE assumes them.",
+   "Key terms: a variable is the thing you record. Categorical (qualitative) data are names or labels. Some are ordinal, with an order, like small, medium and large. Numerical (quantitative) data are amounts. Discrete data take separate values, and are often counts. Continuous data are measured, and can take any value in a range. Grouped continuous data uses class intervals written as inequalities, such as 150 ≤ h < 160. That way each value falls in exactly one class.",
+   "Common mistakes: calling any number numerical, when shirt and phone numbers are labels. Calling age or time discrete because it was rounded. Calling shoe size continuous, when sizes come in set steps (foot length is continuous). Drawing grouped heights with gaps between bars, as if 150.0 cm could not exist. Be careful with the word histogram. At KS3, touching bars with equal class widths are often called a frequency diagram. A true histogram, at GCSE Higher, plots frequency density.",
+   "In the lab, students sort variables with the mean test. They zoom into the gap between two heights, while the siblings line has nothing in between. They sort numbers into discrete or continuous, and try each chart on four data sets to see why it fits. Last, they run survey questions down a data tree."
+  ]
+ },
+ "familyTip": "At dinner, collect one bit of data about each person: favourite fruit, number of cousins, and hand span in cm. Ask which is categorical, which is discrete and which is continuous, and how you would draw each one.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What type of data is it? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "🏷️ Categorical",
+    "🔢 Discrete",
+    "📏 Continuous"
+   ],
+   "items": [
+    [
+     "Favourite fruit",
+     0
+    ],
+    [
+     "Number of cousins",
+     1
+    ],
+    [
+     "Hand span in cm",
+     2
+    ],
+    [
+     "Bus route number",
+     0
+    ],
+    [
+     "Goals scored in a match",
+     1
+    ],
+    [
+     "Time to run 100 m",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdtype",
+  "caption": "Flagship lab: sort variables, zoom into the gap between two values, pick a chart for each data set, and use a data tree.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Types of data: a survey records the reaction time of each pupil in seconds. What type of data is this?",
+   "choices": [
+    "Numerical and continuous",
+    "Numerical and discrete",
+    "Categorical"
+   ],
+   "answer": 0,
+   "hint": "Is time counted or measured? Could there be a value between 0.31 s and 0.32 s?",
+   "explain": "Time is measured, and 0.315 s lies between 0.31 s and 0.32 s. So reaction time is continuous numerical data."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A survey has {n} questions. 3 of them give categorical data. The rest give numerical data. How many questions give numerical data?",
+   "answer": "n-3",
+   "hint": "Every question gives either categorical or numerical data. Take the 3 categorical ones away from {n}.",
+   "explain": "{n} − 3 = {=n-3}. Each variable is one type or the other, so the rest are numerical.",
+   "params": {
+    "n": [
+     4,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which chart suits the favourite sport of each pupil in a class?",
+   "choices": [
+    "A bar chart with gaps",
+    "A histogram with touching bars",
+    "A line graph"
+   ],
+   "answer": 0,
+   "hint": "Sports are separate names. Does a value exist between football and tennis?",
+   "explain": "Sports are categories with nothing in between, so the bars should have gaps. A pie chart would also work."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Heights from 130 cm up to {=130+10*k} cm are grouped in classes of width 10 cm (130 ≤ h < 140, and so on). How many classes are there?",
+   "answer": "k",
+   "hint": "Find the total range, then divide by the class width of 10 cm.",
+   "explain": "The range is {=10*k} cm, and {=10*k} ÷ 10 = {k} classes of width 10 cm.",
+   "params": {
+    "k": [
+     3,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Football shirt numbers are which type of data?",
+    "choices": [
+     "Categorical",
+     "Numerical and discrete",
+     "Numerical and continuous"
+    ],
+    "answer": 0,
+    "hint": "Does the mean of two shirt numbers mean anything?",
+    "explain": "Shirt numbers are labels for players. Their mean has no meaning, so they are categorical data."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Age, given in whole years, is which type of data?",
+    "choices": [
+     "Continuous",
+     "Discrete",
+     "Categorical"
+    ],
+    "answer": 0,
+    "hint": "Is age counted or measured? Does rounding change what it is?",
+    "explain": "Age is time, which is measured, so it is continuous. Rounding to whole years is only how we record it."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "UK shoe sizes go 5, 5½, 6, 6½, and so on. What type of data is shoe size?",
+    "choices": [
+     "Discrete",
+     "Continuous",
+     "Categorical"
+    ],
+    "answer": 0,
+    "hint": "Can you buy a size 5.3 shoe?",
+    "explain": "Shoe sizes come in set steps, with no sizes in between, so the data is discrete. Foot length would be continuous."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A vertical line chart shows numbers of siblings, with a line at 0, 1, 2, and so on, up to {n}. How many lines are on the chart?",
+    "answer": "n+1",
+    "hint": "Count from 0, not from 1. Is 0 siblings one of the values?",
+    "explain": "The values are 0 to {n}, which is {=n+1} values. Counting from 0 adds one more than {n}.",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why should the bars touch on a chart of grouped heights?",
+    "choices": [
+     "Heights are continuous, so every value between groups exists",
+     "Touching bars look neater",
+     "There are more than 4 groups"
+    ],
+    "answer": 0,
+    "hint": "Is 150.0 cm a real height? Which group is it in?",
+    "explain": "Height is continuous, so there are no gaps in real values. The class 150 ≤ h < 160 starts where the last one stops."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Times from 10 s up to {=10+5*k} s are grouped in classes of width 5 s (10 ≤ t < 15, and so on). How many classes are there?",
+    "answer": "k",
+    "hint": "Work out the range of times, then divide by the class width.",
+    "explain": "The range is {=5*k} s, and {=5*k} ÷ 5 = {k} classes.",
+    "params": {
+     "k": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which variable gives discrete data?",
+    "choices": [
+     "Number of pets at home",
+     "Mass of a school bag",
+     "Length of a leaf"
+    ],
+    "answer": 0,
+    "hint": "Which one do you count, rather than measure?",
+    "explain": "Pets are counted in whole numbers, so the data is discrete. Mass and length are measured, so they are continuous."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The temperature is read every hour for one day. Which chart suits it best?",
+    "choices": [
+     "A line graph",
+     "A pie chart",
+     "A bar chart with gaps"
+    ],
+    "answer": 0,
+    "hint": "The temperature changes smoothly between the readings.",
+    "explain": "A line graph shows readings over time, and the line suggests the values in between. A pie chart needs parts of a whole."
+   }
+  ]
+ }
+}

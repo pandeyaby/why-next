@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_StMcuCitzP",
+ "title": "Solving quadratics by square roots",
+ "audience": "learner",
+ "keyIdea": "When a quadratic has only a squared term, or is written as a square equal to a number, you can solve it by square roots. First isolate the square, then take the square root of both sides and keep both signs: x² = k gives x = ±√k, and (x − p)² = q gives x = p ± √q. A positive k gives two real solutions, k = 0 gives one, and a negative k gives no real solutions.",
+ "explain": {
+  "kid": [
+   "Solve x² = 25. You want a number that gives 25 when you square it. 5 works. But −5 works too, because −5 × −5 = 25. So x = 5 or x = −5. We write this as x = ±5.",
+   "On a graph, x² = 25 asks where the curve y = x² meets the line y = 25. The line cuts the curve twice, once on each side of the y-axis. Those two crossing points are the two solutions.",
+   "Move the line down and watch. At y = 0 it just touches the curve, so x² = 0 has one solution, x = 0. Below zero it misses the curve. No real number squared is negative, so x² = −4 has no real solutions.",
+   "Some equations need a tidy-up first. For 3x² − 12 = 36, add 12 to both sides to get 3x² = 48. Divide by 3 to get x² = 16. Only now take the square root: x = ±4. Get the square on its own first, then root it. A bracket works the same way. (x − 2)² = 25 means x − 2 is 5 or −5. So x = 7 or x = −3. In short, (x − p)² = q gives x = p ± √q. If q is not a square number, keep the root exact, like x = 1 ± √5."
+  ],
+  "adult": [
+   "This topic sits in GCSE Mathematics (DfE 2013 subject content, A18: solve quadratic equations algebraically) and in Common Core A-REI.4.b, which asks students to solve quadratic equations by inspection, taking square roots and completing the square. It comes before factorising and the quadratic formula. It builds directly on solving x² = p from Key Stage 3.",
+   "Key terms: a quadratic equation has a squared term as its highest power. A solution, or root, is a value of x that makes the equation true. To isolate the square means to get x² or (x − p)² alone on one side. The ± sign records both square roots. The form (x − p)² = q is the completed-square form. Real solutions are where the graph crosses the line.",
+   "Common mistakes: writing only the positive root, so x² = 49 gives x = 7 and loses x = −7. Rooting before isolating, as if √(x² − 5) were x − √5. Halving instead of rooting, so x² = 50 becomes x = 25. Getting the sign of p wrong, so (x − 3)² = 16 gives x = −7 or 1. Claiming x² = −9 has solutions ±3, even though (−3)² = +9.",
+   "The lab links the algebra to the graph. Students drag the line y = k across y = x² and see ±√k appear. They find the cases k > 0, k = 0 and k < 0. They undo 3x² − 12 = 36 one step at a time, and early or one-sign roots are refused with reasons. Then they slide the parabola to solve (x − p)² = q and work backwards from two given solutions."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "How many real solutions does each equation have? Drag each equation, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Two real solutions",
+    "No real solutions"
+   ],
+   "items": [
+    [
+     "x² = 36",
+     0
+    ],
+    [
+     "x² = −36",
+     1
+    ],
+    [
+     "(x − 1)² = 9",
+     0
+    ],
+    [
+     "x² + 4 = 0",
+     1
+    ],
+    [
+     "2x² = 18",
+     0
+    ],
+    [
+     "(x + 3)² = −1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsqroot",
+  "caption": "Flagship lab: drag the line y = k across y = x² to see ±√k, undo 3x² − 12 = 36 step by step, and slide the parabola to solve (x − p)² = q.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Solve x² = 64.",
+   "choices": [
+    "x = 8 or x = −8",
+    "x = 8",
+    "x = 32"
+   ],
+   "answer": 0,
+   "hint": "Which numbers give 64 when squared? Think about negative numbers too.",
+   "explain": "8 × 8 = 64 and (−8) × (−8) = 64, so x = ±8. Squaring is undone by a square root, not by halving."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Solve {a}x² = {=a*9}. What is the positive solution?",
+   "answer": "3",
+   "hint": "Divide both sides by {a} first so that x² is on its own, then take the square root.",
+   "explain": "Divide by {a}: x² = 9. Then x = ±3, so the positive solution is 3.",
+   "params": {
+    "a": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is a good first step to solve 2x² + 7 = 57?",
+   "choices": [
+    "Subtract 7 from both sides",
+    "Take the square root of both sides",
+    "Divide only 57 by 2"
+   ],
+   "answer": 0,
+   "hint": "Get the squared term on its own before you take any square root.",
+   "explain": "Subtract 7: 2x² = 50. Divide by 2: x² = 25. Then x = ±5. Rooting first would wrongly split the root over +."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Solve (x − {p})² = 25. What is the larger solution?",
+   "answer": "p+5",
+   "hint": "x − {p} must be 5 or −5. Add {p} to each.",
+   "explain": "x − {p} = ±5, so x = {p} + 5 = {=p+5} or x = {p} − 5 = {=p-5}. The larger solution is {=p+5}.",
+   "params": {
+    "p": [
+     1,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Solve x² = 81.",
+    "choices": [
+     "x = 9 or x = −9",
+     "x = 9",
+     "x = 40.5"
+    ],
+    "answer": 0,
+    "hint": "A positive number has two square roots.",
+    "explain": "9² = 81 and (−9)² = 81, so x = ±9."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How many real solutions does x² = −16 have?",
+    "choices": [
+     "None",
+     "One: x = −4",
+     "Two: x = ±4"
+    ],
+    "answer": 0,
+    "hint": "Can a real number squared ever be negative?",
+    "explain": "Any real number squared is 0 or more. (−4)² = +16, so x² = −16 has no real solutions."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Solve x² − 11 = 25.",
+    "choices": [
+     "x = 6 or x = −6",
+     "x = ±√25 + 11",
+     "x = ±14"
+    ],
+    "answer": 0,
+    "hint": "Undo the − 11 before taking any root.",
+    "explain": "Add 11 to both sides: x² = 36. Then x = ±6."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Solve (x + 4)² = 9.",
+    "choices": [
+     "x = −1 or x = −7",
+     "x = 1 or x = 7",
+     "x = 3 or x = −3"
+    ],
+    "answer": 0,
+    "hint": "x + 4 is 3 or −3. Then subtract 4.",
+    "explain": "x + 4 = ±3, so x = −4 + 3 = −1 or x = −4 − 3 = −7."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Solve x² = {=n*n}. What is the negative solution?",
+    "answer": "-n",
+    "hint": "Find the positive square root of {=n*n} first, then use the minus sign.",
+    "explain": "{n}² = {=n*n}, so x = ±{n}. The negative solution is −{n}.",
+    "params": {
+     "n": [
+      3,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Solve (x − {p})² = 16. What is the smaller solution?",
+    "answer": "p-4",
+    "hint": "x − {p} must be 4 or −4. Add {p} to each.",
+    "explain": "x − {p} = ±4, so x = {=p+4} or x = {=p-4}. The smaller solution is {=p-4}.",
+    "params": {
+     "p": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Solve (x − 1)² = 5 exactly.",
+    "choices": [
+     "x = 1 ± √5",
+     "x = 1 ± 5",
+     "x = ±√5"
+    ],
+    "answer": 0,
+    "hint": "5 is not a square number, so keep the square root as √5.",
+    "explain": "x − 1 = ±√5, so x = 1 + √5 or x = 1 − √5. These are exact; about 3.24 and −1.24."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which equation has exactly one real solution?",
+    "choices": [
+     "(x − 5)² = 0",
+     "x² = 5",
+     "x² = −5"
+    ],
+    "answer": 0,
+    "hint": "A square is zero only when the inside is zero.",
+    "explain": "(x − 5)² = 0 only when x − 5 = 0, so x = 5 is the one solution. x² = 5 has two; x² = −5 has none."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Sam solves 4x² = 100 and writes x = ±10. What went wrong?",
+    "choices": [
+     "Sam rooted 100 before dividing by 4",
+     "Nothing, x = ±10 is right",
+     "Sam should have halved 100"
+    ],
+    "answer": 0,
+    "hint": "Get x² on its own first. Check: 4 × 10² = 400.",
+    "explain": "Divide by 4 first: x² = 25, so x = ±5. Check: 4 × 5² = 100. ±10 is the root of 100, not of 25."
+   }
+  ]
+ }
+}

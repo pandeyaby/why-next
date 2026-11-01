@@ -1,0 +1,163 @@
+{
+ "topicId": "mt_YKkCM63fSC",
+ "title": "Reading High-Frequency Words by Sight",
+ "audience": "family",
+ "keyIdea": "Some words come up in almost every book: the, said, was, you, they. Good readers know them at a glance, without sounding them out each time. Many of these words still sound out, like and or it. Some have a tricky part that does not say its usual sound, like the ai in said, which says e. Sound out the rest of the word, learn the tricky part by heart, and read the word lots of times until it is quick.",
+ "explain": {
+  "kid": [
+   "Some words are in every book. The, said, was, you. If you know them fast, reading feels easy.",
+   "Look at said. The s says s. The d says d. But the ai says e, not ai. That bit is the tricky part. Put a heart on it and learn it by heart.",
+   "Was and saw have the same letters. But the letters go in a new order, so it is a new word. Look at every letter, from the start.",
+   "Not every word we see a lot is tricky. And, it and can sound out. Read them, and the tricky ones, again and again. Soon you know them in a blink."
+  ],
+  "adult": [
+   "This is word reading in early phonics. The National Curriculum for Year 1 asks children to read common exception words, noting unusual correspondences between spelling and sound and where these occur in the word. Common Core RF.K.3c asks for common high-frequency words read by sight, and RF.1.3g for irregularly spelled words. Phonics programmes often call these tricky words. By 5 to 8, the aim is to read the common ones instantly in connected text.",
+   "Reading by sight is not memorising a word's shape. Ehri's work on orthographic mapping shows that a word becomes a sight word when its letters are linked to its sounds and stored. So teach the decodable part through each grapheme-phoneme correspondence (GPC). Then mark the irregular grapheme, the heart part, as the bit to learn by heart. Many high-frequency words, such as and, it and can, are fully decodable. Automaticity comes from many quick, accurate reads, then reading the word in sentences.",
+   "Common mistakes: treating every high-frequency word as irregular, so children stop using phonics; guessing from the first letter or the picture, which mixes up was and saw; drilling long lists of flashcards that never appear in real reading; and spelling a tricky word the way it sounds, like sed or thay. Be careful with too many new words at once. Three to five a week, mixed with known ones, works better.",
+   "In the lab your child taps the tricky part in said, was, you and the, then catches flashed words and picks was over saw. They build said, was and they from letter tiles that include the sound-alike traps. Then they find the words in real sentences and sort common words into sound it out and tricky part."
+  ]
+ },
+ "familyTip": "Write three tricky words on sticky notes and draw a small heart over the tricky part, like the ai in said. Hide them round the room. When your child finds one, they read it, then you both spot it in a bedtime book.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Can you sound it out, or does it have a tricky part? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Sound it out",
+    "Has a tricky part"
+   ],
+   "items": [
+    ["it", 0],
+    ["said", 1],
+    ["can", 0],
+    ["you", 1],
+    ["and", 0],
+    ["was", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsight",
+  "caption": "Flagship lab: tap the tricky part of a word, catch flashed words, build tricky words from tiles, spot them in sentences and sort them.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Sight words: which part of the word said is the tricky part?",
+   "choices": ["The ai, it says e", "The s at the start", "The d at the end"],
+   "answer": 0,
+   "hint": "Say each part. Which one does not make its usual sound?",
+   "explain": "s says s and d says d, as usual. The ai says e here, so the ai is the tricky part to learn by heart."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A page has {n} words. {k} of them are the word the. How many words on the page are not the?",
+   "answer": "n-k",
+   "hint": "Take the number of the words away from all the words.",
+   "explain": "{n} words take away {k} is {=n-k} words that are not the. The word the is so common it is worth knowing in a blink.",
+   "params": {"n": [20, 30], "k": [2, 6]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The letters are w, a, s. Which word is it?",
+   "choices": ["was", "saw", "wish"],
+   "answer": 0,
+   "hint": "Start at the first letter. Which word starts with w?",
+   "explain": "w, a, s is was. Saw has the same letters in a new order, so it starts with s."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You read the word said {n} times on each page of a book. How many times do you read it on 2 pages?",
+   "answer": "2*n",
+   "hint": "Count the times on one page, then the same again for the next page.",
+   "explain": "{n} on one page and {n} on the next is {=2*n} times. Reading a word that often helps you know it at a glance.",
+   "params": {"n": [2, 6]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Can you sound out the word and?",
+    "choices": ["Yes: a-n-d", "No, it is a tricky word", "No, you have to guess it"],
+    "answer": 0,
+    "hint": "Say the sound of each letter: a, n, d.",
+    "explain": "Every letter in and says its usual sound, so it sounds out. It is common, but not tricky."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How do we write the word that sounds like sed?",
+    "choices": ["said", "sed", "sad"],
+    "answer": 0,
+    "hint": "It is a tricky word. The middle is not written the way it sounds.",
+    "explain": "We write said. The ai in the middle says e: that is its tricky part."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "You know {n} tricky words. This week you learn {k} more. How many tricky words do you know now?",
+    "answer": "n+k",
+    "hint": "Start at {n} and count on {k}.",
+    "explain": "{n} and {k} more makes {=n+k} tricky words you can read in a blink.",
+    "params": {"n": [5, 12], "k": [2, 4]}
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which part of the word you is tricky?",
+    "choices": ["The ou, it says oo", "The y at the start", "None, it sounds out"],
+    "answer": 0,
+    "hint": "y says y as usual. What do the next two letters say?",
+    "explain": "The ou in you says oo, not its usual sound. That is the bit to learn by heart."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You are stuck on the word they. What helps most?",
+    "choices": ["Sound out th, then learn that ey says ay", "Guess from the picture", "Skip the word"],
+    "answer": 0,
+    "hint": "Use what you know first, then the tricky part.",
+    "explain": "th says th as usual. The ey says ay: learn that part by heart and read they lots of times."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A sentence has {n} words. You read {k} of them by sight. How many words do you still need to sound out?",
+    "answer": "n-k",
+    "hint": "Take the sight words away from all the words.",
+    "explain": "{n} words take away {k} sight words leaves {=n-k} words to sound out.",
+    "params": {"n": [6, 10], "k": [2, 5]}
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Was and saw use the same three letters. Are they the same word?",
+    "choices": ["No, the order is different", "Yes, same letters", "Yes, if you read fast"],
+    "answer": 0,
+    "hint": "Look at the first letter of each word.",
+    "explain": "The order of the letters makes the word. Was starts with w, saw starts with s."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In the word of, which letter does not say its usual sound?",
+    "choices": ["The f, it says v", "The o", "Both letters"],
+    "answer": 0,
+    "hint": "Say of slowly. Does the end sound like f in fish?",
+    "explain": "The f in of says v, like in van. That is the tricky part of of."
+   }
+  ]
+ }
+}

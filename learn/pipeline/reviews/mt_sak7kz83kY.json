@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Rules match the A level Further Mathematics matrices content and Common Core N-VM.7 and N-VM.8: sums and differences are only defined for matrices of the same order, entries in matching positions are combined, kA multiplies every entry, and B − A = −(A − B). Every number in the lab was recomputed by hand, for example 2A + B = [5 4; 1 0] and A − B = [−2 2; −1 −3] for the dial targets, and ½A = [1 −½; 0 2]."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Decoys and messages target the documented slips: multiplying matching entries instead of adding (the a·b chip), computing B − A when A − B is asked (the reversed chip), adding matrices with equal entry counts but different shapes (2 × 3 with 3 × 2 pair and count tag), scaling only the first row or entry (first tag) and adding the scalar instead of multiplying (plus3 tag)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagmadd differs from flagmtx, which builds orders and locates aᵢⱼ: here learners compute a result matrix entry by entry against operation decoys, judge conformability of order pairs, drag a scalar slider until kA equals a target, and tune two dials to solve kA + mB = C. No other lab uses linked scalar sliders on matrices, and the 30 percent shingle gate passed against all flag files including flagmtx."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners see the highlighted pair of matching entries in A and B while they choose the result, so element-wise addition is learned by doing it four times. The slider shows kA change live with matching entries turning green, making clear that k touches every entry and that negative k flips signs. The two-dial step forces using a zero entry of B to isolate k, which is a real solving strategy."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options: adding by multiplying rows by columns, believing a 2 × 3 and a 3 × 2 can be added because both have six entries, and believing A − B equals B − A. The entry fills, the Cannot add verdict and the reversed-sign decoy each confront the wrong choice before the done message replays it."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five rotating questions on conformability, row-matrix addition, scalar multiplication, reversing subtraction and commutativity, with ten tagged wrong-answer messages (count, turn, mult, minus, first, plus3, same, same2, part, order) that each name the exact slip, such as adding 3 to each entry instead of multiplying. A streak counter rewards consecutive correct answers."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner text sits near grade 3 on Flesch-Kincaid with one rule per paragraph, well under the 6.5 target, yet still uses order, entry, conformable for addition and scalar precisely. Adult text is near grade 8.5 and names the A level and Common Core codes. Matrices in prompts use the compact [a b; c d] row notation that the lab also prints."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Paragraphs each carry one rule or property: conformability, element-wise addition, non-commuting subtraction, scalar multiples and combinations. The adult section lists terms, the algebraic properties needed later (A + O = A, k(A + B) = kA + kB), the common mistakes and the lab map. Every practice item is a computation or a definedness judgement."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 light and Android dark screenshots show the three-matrix sum row, answer chips, order pairs, the k slider with labelled ticks and the two-dial step all fitting inside the canvas with generous spacing. Every chip, verdict and slider has a labelled button twin below the canvas, and the browser gate ran each Show me within the time limit on the phone profile."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core reported no violations in light and dark themes on desktop and iPhone 13. The canvas aria-label repeats each spoken result, such as 'Yes: 3 + 5 = 8', matched entries turn green and are also confirmed in words, and sliders can be driven entirely by the k −, k +, m −, m + and Check buttons with descriptive aria-labels."
+  }
+ },
+ "sources": [
+  "DfE (2017) Further mathematics AS and A level subject content: matrices (add, subtract and multiply conformable matrices; multiply a matrix by a scalar)",
+  "Common Core State Standards for Mathematics, Number and Quantity: Vector and Matrix Quantities N-VM.7 (+) and N-VM.8 (+)",
+  "Pearson Edexcel (2017) A level Further Mathematics specification 9FM0, Core Pure Mathematics 1: Matrices"
+ ]
+}

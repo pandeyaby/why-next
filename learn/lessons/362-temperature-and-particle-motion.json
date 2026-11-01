@@ -1,0 +1,243 @@
+{
+ "topicId": "mt_9JWPPZgdLu",
+ "title": "Temperature and particle motion",
+ "audience": "learner",
+ "keyIdea": "All particles are moving all the time: they vibrate in a solid, slide past each other in a liquid and fly about freely in a gas. Temperature is a measure of the average kinetic energy of the particles. When something is heated its particles move faster on average, but they do not get bigger. Temperature is not the same as thermal energy: a big cool bath can store far more energy than a small hot cup, because it has far more particles.",
+ "explain": {
+  "kid": [
+   "Everything is made of tiny particles, and they never sit still. In a solid they jiggle on the spot. In a liquid they slide past each other. In a gas they zoom about and bash into the walls. Even an ice cube has particles that vibrate.",
+   "Heat a gas and its particles move faster. Their energy of motion is called kinetic energy. The particles do not swell up or grow. They just move more. Not every particle has the same speed: some are slow and some are very fast. Temperature tells you the average kinetic energy of the particles.",
+   "Temperature is not the same as total energy. A cup of tea at 80 °C is hotter than a bath at 40 °C. Its particles are faster on average. But the bath has far more particles, so it stores much more thermal energy. It could melt far more ice.",
+   "Put a hot block against a cold block. Fast particles in the hot block bump slow ones in the cold block and pass on energy. The hot one cools and the cold one warms up. When both are the same temperature, the flow stops. That is called thermal equilibrium."
+  ],
+  "adult": [
+   "This is Key Stage 3 science in the national curriculum for England, under the particle model and energy. It also matches NGSS MS-PS1-4. Pupils link temperature to particle motion in solids, liquids and gases. They learn that heating raises the average kinetic energy of the particles. They also tell temperature apart from thermal energy, and see energy pass from hotter to cooler objects.",
+   "Useful terms are particle, kinetic energy, average, temperature, thermal energy store, internal energy, kelvin and thermal equilibrium. Absolute zero is 0 K, or about −273 °C. That is where particle motion is at its lowest. To turn degrees Celsius into kelvin, add 273.",
+   "Common mistakes: saying particles expand or melt when heated, rather than move faster. Many pupils think particles in a solid are still. Others think cold flows into things, or that a hotter object always holds more energy. Some say temperature is the speed of every particle, but speeds are spread out and temperature tracks the average.",
+   "In the lab your child heats and cools a gas on a thermometer and watches the speed bar. They freeze a moment to spot slow particles in the crowd. They match motion to each state and sort cards between a hot cup and a big warm bath. Then they press hot and cold blocks together and watch them meet in the middle. The lab ignores energy lost to the air."
+  ]
+ },
+ "familyTip": "Hold a mug of hot tea and then dip a hand in a warm bath. Which is hotter, and which holds more energy? Ask your child to explain it with particles.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is this about temperature or about total thermal energy? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "🌡️ Temperature (average per particle)",
+    "🔋 Thermal energy (total store)"
+   ],
+   "items": [
+    [
+     "Read with a thermometer",
+     0
+    ],
+    [
+     "Higher when particles move faster on average",
+     0
+    ],
+    [
+     "Measured in °C or kelvin",
+     0
+    ],
+    [
+     "Same for a spoonful and a jug of the same soup",
+     0
+    ],
+    [
+     "Bigger in a bath than in a cup at the same heat",
+     1
+    ],
+    [
+     "Depends on how many particles there are",
+     1
+    ],
+    [
+     "Measured in joules",
+     1
+    ],
+    [
+     "Melts more ice when it is a larger amount",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtemp",
+  "caption": "Flagship lab: heat a gas, freeze it to see a spread of speeds, match each state, split temperature from energy, and reach equilibrium.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What happens to the particles in a gas when it is heated?",
+   "choices": [
+    "They move faster on average",
+    "They get bigger",
+    "They stop moving"
+   ],
+   "answer": 0,
+   "hint": "Heating gives the particles more kinetic energy.",
+   "explain": "Heating raises the average kinetic energy, so the particles move faster. They do not change size."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Water is at {c} °C. What is its temperature in kelvin? (Add 273.)",
+   "answer": "c+273",
+   "hint": "Kelvin = degrees Celsius + 273.",
+   "explain": "The kelvin scale starts at absolute zero, so add 273: {c} + 273 = {=c+273} K.",
+   "params": {
+    "c": [
+     10,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How do particles move in a solid?",
+   "choices": [
+    "They vibrate about fixed places",
+    "They do not move at all",
+    "They fly about freely"
+   ],
+   "answer": 0,
+   "hint": "Think about the ice in the lab: still there, still jiggling.",
+   "explain": "Particles in a solid are held in place, but they still vibrate. Hotter means they vibrate more."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Two identical metal blocks touch. One is at {a} °C and the other at 20 °C. Ignoring energy lost to the air, what temperature do they both end at?",
+   "answer": "(a+20)/2",
+   "hint": "Identical blocks meet exactly halfway.",
+   "explain": "Halfway between {a} °C and 20 °C is {=(a+20)/2} °C.",
+   "params": {
+    "a": [
+     40,
+     100
+    ]
+   },
+   "where": "a%2==0"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A swimming pool at 25 °C and a sparkler at 1000 °C. Which has more thermal energy stored in total?",
+    "choices": [
+     "The pool",
+     "The sparkler",
+     "They have the same"
+    ],
+    "answer": 0,
+    "hint": "Total energy depends on how many particles there are, too.",
+    "explain": "The sparkler is hotter, but the pool has vastly more particles, so its thermal energy store is far bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What does temperature measure?",
+    "choices": [
+     "The average kinetic energy of the particles",
+     "The total energy in an object",
+     "The size of the particles"
+    ],
+    "answer": 0,
+    "hint": "Speeds are spread out, so we need a typical value.",
+    "explain": "Temperature is a measure of the average kinetic energy of the particles, not the total energy or their size."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A metal spoon sits in hot soup. Why does the spoon warm up?",
+    "choices": [
+     "Energy passes from the faster soup particles to the spoon",
+     "Cold flows out of the spoon into the soup",
+     "The spoon particles get bigger"
+    ],
+    "answer": 0,
+    "hint": "Energy goes from hotter to cooler.",
+    "explain": "Faster particles in the hot soup collide with the spoon and pass on energy until both are at the same temperature."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A gas is at {k} K. What is its temperature in °C? (Take away 273.)",
+    "answer": "k-273",
+    "hint": "Degrees Celsius = kelvin − 273.",
+    "explain": "Kelvin is 273 more than degrees Celsius, so take 273 away: {k} − 273 = {=k-273} °C.",
+    "params": {
+     "k": [
+      280,
+      370
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Food colouring spreads faster in hot water than in cold water. Why?",
+    "choices": [
+     "The particles move faster in hot water",
+     "Hot water pushes the colour",
+     "The colour particles are bigger"
+    ],
+    "answer": 0,
+    "hint": "Think about what heating does to particle speed.",
+    "explain": "In hot water all the particles move faster, so the colour mixes in sooner. Nothing pushes it."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "In a gas at 20 °C, do all the particles move at the same speed?",
+    "choices": [
+     "No, there is a spread of speeds",
+     "Yes, all exactly the same",
+     "Yes, they all stop"
+    ],
+    "answer": 0,
+    "hint": "Remember the frozen moment in the lab.",
+    "explain": "Particles keep colliding and swapping energy, so some are slow and some fast. The temperature reflects the average."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Two identical blocks touch: one at {a} °C and one at 10 °C. Ignoring losses, what is their final shared temperature in °C?",
+    "answer": "(a+10)/2",
+    "hint": "Identical blocks end halfway between the two.",
+    "explain": "Halfway between {a} °C and 10 °C is {=(a+10)/2} °C.",
+    "params": {
+     "a": [
+      30,
+      90
+     ]
+    },
+    "where": "a%2==0"
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Ice is cooled from −5 °C to −30 °C. What happens to its particles?",
+    "choices": [
+     "They vibrate less, but still move",
+     "They stop moving completely",
+     "They start to flow"
+    ],
+    "answer": 0,
+    "hint": "Motion is only at its lowest at absolute zero.",
+    "explain": "Cooling lowers the average kinetic energy, so the particles vibrate less. −30 °C is far above absolute zero, −273 °C."
+   }
+  ]
+ }
+}

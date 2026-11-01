@@ -1,0 +1,285 @@
+{
+ "topicId": "mt_sak7kz83kY",
+ "title": "Adding matrices and scalar multiples",
+ "audience": "learner",
+ "keyIdea": "Two matrices can be added or subtracted only when they have the same order; they are then conformable for addition. Add or subtract the entries in matching positions, and the answer has the same order. A scalar multiple kA multiplies every entry of A by the number k. Matrix addition is commutative (A + B = B + A), but subtraction is not: B − A = −(A − B).",
+ "explain": {
+  "kid": [
+   "To add two matrices, first check their shapes. They must have the same order, such as both 2 × 3. Then every entry in A has a partner in B, in the same row and the same column. We say the matrices are conformable for addition.",
+   "Now add each pair of partners. The top-left entry of A + B is the top-left of A plus the top-left of B, and so on for every place. Nothing mixes between places. The answer is the same size as A and B.",
+   "Subtraction works the same way, but order counts. A − B takes each entry of B away from the matching entry of A. If you work out B − A instead, every sign flips. So B − A = −(A − B). With addition the order does not matter: A + B = B + A.",
+   "A single number is called a scalar. To find 3A, multiply every entry of A by 3. To find −A, flip every sign. You can mix the two ideas. For 2A + B, double each entry of A first, then add B entry by entry. A 2 × 3 and a 3 × 2 can never be added, even though both hold six numbers."
+  ],
+  "adult": [
+   "This follows the matrices strand of A level Further Mathematics in England. Learners add, subtract and multiply conformable matrices, and multiply a matrix by a scalar. In the US it matches Common Core N-VM.7 (+): multiply matrices by scalars to make new matrices. It also covers the addition part of N-VM.8 (+): add, subtract and multiply matrices of the right dimensions. The step before is matrix notation and order.",
+   "Key terms: order (or dimensions), entry or element, conformable for addition, scalar, scalar multiple, zero matrix, and the additive inverse −A. The properties that matter later are A + B = B + A, (A + B) + C = A + (B + C), A + O = A, and k(A + B) = kA + kB.",
+   "Common mistakes: adding matrices of different orders because they hold the same number of entries; multiplying matching entries when asked to add; working out B − A when A − B was asked; and multiplying only the first row or first entry by the scalar. A subtler slip is adding a scalar to every entry and calling it kA.",
+   "In the lab, learners fill in A + B and then A − B one entry at a time, with the multiply and reversed-order slips offered as decoys. They judge four pairs of orders, drag k until kA matches three targets (including −A and ½A), and set two dials so that kA + mB hits a given matrix."
+  ]
+ },
+ "familyTip": "Write two small price lists as 2 × 2 matrices, one for each shop, with items as rows and sizes as columns. Ask your learner for the total cost matrix of buying one of everything at both shops, then for 2A if prices double. Ask them to explain why a 2 × 3 list cannot be added to these.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each sum or difference defined? Look at the orders. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Defined",
+    "Not defined"
+   ],
+   "items": [
+    [
+     "2 × 3 + 2 × 3",
+     0
+    ],
+    [
+     "3 × 1 − 3 × 1",
+     0
+    ],
+    [
+     "4A where A is 2 × 5",
+     0
+    ],
+    [
+     "2 × 3 + 3 × 2",
+     1
+    ],
+    [
+     "2 × 2 − 2 × 1",
+     1
+    ],
+    [
+     "1 × 4 + 4 × 1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmadd",
+  "caption": "Flagship lab: fill in A + B and A − B entry by entry, judge conformable orders, scale A by k, and hit kA + mB targets.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A is 3 × 2 and B is 2 × 3. Is A + B defined?",
+   "choices": [
+    "No, the orders are different",
+    "Yes, both have 6 entries",
+    "Yes, and it is 3 × 3"
+   ],
+   "answer": 0,
+   "hint": "For addition the two matrices need exactly the same order.",
+   "explain": "A is 3 × 2 and B is 2 × 3, so they are not conformable for addition. Having the same number of entries is not enough."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The entry in row 1, column 1 of A is {a} and of B is {b}. What is that entry of A + B?",
+   "answer": "a+b",
+   "hint": "Add the two entries in the same position.",
+   "explain": "Entries in matching positions are added: {a} + {b} = {=a+b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     -6,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "An entry of A is {a}. What is the matching entry of {k}A?",
+   "answer": "k*a",
+   "hint": "A scalar multiple multiplies every entry by the scalar.",
+   "explain": "{k} × {a} = {=k*a}. Every entry of A is multiplied by {k}.",
+   "params": {
+    "k": [
+     2,
+     5
+    ],
+    "a": [
+     -7,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A − B has 4 in row 2, column 1. What is that entry of B − A?",
+   "choices": [
+    "−4",
+    "4",
+    "0"
+   ],
+   "answer": 0,
+   "hint": "Reversing the order of a subtraction flips the sign of every entry: B − A = −(A − B).",
+   "explain": "Reversing a subtraction flips the sign of every entry, so the entry becomes −4."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "The entry in row 2, column 2 of A is {a} and of B is {b}. What is that entry of 2A + B?",
+   "answer": "2*a+b",
+   "hint": "Double the entry of A first, then add the entry of B.",
+   "explain": "2 × {a} + {b} = {=2*a+b}.",
+   "params": {
+    "a": [
+     -5,
+     6
+    ],
+    "b": [
+     1,
+     8
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which pair of matrices can be added?",
+    "choices": [
+     "A 2 × 4 and a 2 × 4",
+     "A 2 × 4 and a 4 × 2",
+     "A 1 × 8 and a 2 × 4"
+    ],
+    "answer": 0,
+    "hint": "The orders must be identical, rows and columns.",
+    "explain": "Only the two 2 × 4 matrices have the same order. The other pairs have 8 entries each but different shapes."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A = [1 4] and B = [2 −1]. What is A + B?",
+    "choices": [
+     "[3 3]",
+     "[2 −4]",
+     "[−1 5]"
+    ],
+    "answer": 0,
+    "hint": "Add the first entries, then the second entries.",
+    "explain": "1 + 2 = 3 and 4 + (−1) = 3, so A + B = [3 3]. [2 −4] multiplied the entries and [−1 5] subtracted them."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is 3A when A = [2 −1; 0 4]?",
+    "choices": [
+     "[6 −3; 0 12]",
+     "[6 −1; 0 4]",
+     "[5 2; 3 7]"
+    ],
+    "answer": 0,
+    "hint": "Multiply every entry by 3, including the zero.",
+    "explain": "3 × 2 = 6, 3 × (−1) = −3, 3 × 0 = 0 and 3 × 4 = 12. Multiplying only the first entry, or adding 3, is wrong."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "For conformable matrices A and B, which statement is always true?",
+    "choices": [
+     "A + B = B + A",
+     "A − B = B − A",
+     "A + B has a larger order than A"
+    ],
+    "answer": 0,
+    "hint": "Think about adding numbers in each position.",
+    "explain": "Each entry of A + B is a sum of two numbers, and a + b = b + a, so matrix addition is commutative. Subtraction is not, and the sum keeps the same order."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "An entry of A is {a} and the matching entry of B is {b}. What is that entry of A − B?",
+    "answer": "a-b",
+    "hint": "Take B's entry away from A's entry, in that order.",
+    "explain": "{a} − ({b}) = {=a-b}. Doing {b} − {a} would give B − A instead.",
+    "params": {
+     "a": [
+      -4,
+      9
+     ],
+     "b": [
+      -5,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A is a {r} × {k} matrix. How many entries does 5A have?",
+    "answer": "r*k",
+    "hint": "A scalar multiple has the same order as the matrix.",
+    "explain": "5A is still {r} × {k}, so it has {=r*k} entries. Only the values change.",
+    "params": {
+     "r": [
+      1,
+      4
+     ],
+     "k": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "In A + X = C, an entry of A is {a} and the matching entry of C is {c}. What is that entry of X?",
+    "answer": "c-a",
+    "hint": "X = C − A, entry by entry.",
+    "explain": "Subtract A from both sides: X = C − A, so the entry is {c} − ({a}) = {=c-a}.",
+    "params": {
+     "a": [
+      -6,
+      6
+     ],
+     "c": [
+      0,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A shop's sales for two weeks are matrices P and Q of the same order. What does P + Q give?",
+    "choices": [
+     "The total sales for each item and day over both weeks",
+     "The sales of the first item only",
+     "A matrix of a different order"
+    ],
+    "answer": 0,
+    "hint": "Each position stands for one item on one day.",
+    "explain": "Matching entries refer to the same item and day, so adding them gives the two-week total in every position, with the same order."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A = [4 −2]. What is −A?",
+    "choices": [
+     "[−4 2]",
+     "[−4 −2]",
+     "[4 2]"
+    ],
+    "answer": 0,
+    "hint": "−A means (−1)A: multiply every entry by −1.",
+    "explain": "(−1) × 4 = −4 and (−1) × (−2) = 2, so −A = [−4 2]. Every sign flips, not just one."
+   }
+  ]
+ }
+}

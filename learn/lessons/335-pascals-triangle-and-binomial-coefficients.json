@@ -1,0 +1,243 @@
+{
+ "topicId": "mt_AZ_KQRi_aY",
+ "title": "Pascal's triangle and binomial coefficients",
+ "audience": "learner",
+ "keyIdea": "Pascal's triangle starts with 1 at the top. Each row begins and ends with 1, and every other entry is the sum of the two entries above it. Counting rows and positions from 0, row n position r is the binomial coefficient ⁿCᵣ, the number of ways to choose r items from n. So each row is symmetric, row n adds up to 2ⁿ, and row n gives the coefficients of (a + b)ⁿ.",
+ "explain": {
+  "kid": [
+   "Write 1 at the top. Each new row starts and ends with 1. Every number inside is the sum of the two numbers just above it. So 1 2 1 gives 1 3 3 1, then 1 4 6 4 1. This is Pascal's triangle.",
+   "Count the rows from 0, so the top 1 is row 0. Count places along a row from 0 too. The entry in row n, place r is written ⁿCᵣ, said \"n choose r\". It counts the ways to pick r things from n. Row 4 is 1 4 6 4 1, so ⁴C₂ = 6: there are 6 ways to pick 2 of 4 friends.",
+   "Why add the two above? Think of routes down the triangle. Each step goes down-left or down-right. Any route to a cell must pass through one of the two cells above it. So its routes are their routes added up. A route of n steps with r right turns is a choice of r steps from n.",
+   "Three patterns follow. Each row reads the same both ways, so ⁶C₂ = ⁶C₄ = 15. Row n adds up to 2ⁿ, since each of n steps has 2 options. And row n gives the numbers in (a + b)ⁿ. For example, (a + b)³ = a³ + 3a²b + 3ab² + b³."
+  ],
+  "adult": [
+   "Pascal's triangle and binomial coefficients sit in A level Mathematics in England. Students must use n!, ⁿCᵣ and the binomial expansion of (a + bx)ⁿ for positive whole n, and link it to the binomial distribution. In the US Common Core, A-APR.5 (+) asks students to use the Binomial Theorem for (x + y)ⁿ, with the numbers found, for example, from Pascal's triangle.",
+   "Key terms: binomial coefficient, ⁿCᵣ or n choose r, Pascal's rule ⁿCᵣ = ⁿ⁻¹Cᵣ₋₁ + ⁿ⁻¹Cᵣ, symmetry ⁿCᵣ = ⁿCₙ₋ᵣ, and the binomial theorem (a + b)ⁿ = Σ ⁿCᵣ aⁿ⁻ʳ bʳ. The formula ⁿCᵣ = n! ÷ (r!(n − r)!) gives any entry without building the rows.",
+   "Common mistakes: counting rows from 1, so (a + b)⁵ is read from 1 4 6 4 1 instead of 1 5 10 10 5 1. Reading the wrong place in the row. Multiplying the two numbers above instead of adding them. Thinking a row adds up to n² rather than 2ⁿ. In expansions such as (1 + 2x)⁵, students forget to raise the 2 to a power as well, and write 10x² instead of 40x². Be careful to keep both parts of each term.",
+   "In the lab the learner fills rows 5 and 6 by adding pairs, drags all 6 routes to ⁴C₂, finds ⁶C₂, ⁷C₃ and their mirror cells, adds up rows 0 to 6 to see the totals double, and drags row 4 into the terms of (a + b)⁴. The Challenge mixes ⁿCᵣ values, row sums, symmetry and expansion coefficients."
+  ]
+ },
+ "familyTip": "Ask: how many different pizzas can you make if there are 5 toppings and each one can be on or off? Then check the answer is the sum of row 5, 1 + 5 + 10 + 10 + 5 + 1 = 32.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Use symmetry or the triangle: which value is each ⁿCᵣ? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Equals 10",
+    "Equals 15"
+   ],
+   "items": [
+    [
+     "⁵C₂",
+     0
+    ],
+    [
+     "⁶C₄",
+     1
+    ],
+    [
+     "¹⁰C₁",
+     0
+    ],
+    [
+     "¹⁵C₁₄",
+     1
+    ],
+    [
+     "⁵C₃",
+     0
+    ],
+    [
+     "⁶C₂",
+     1
+    ],
+    [
+     "¹⁰C₉",
+     0
+    ],
+    [
+     "¹⁵C₁",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpasc",
+  "caption": "Flagship lab: build rows by adding, drag every route to a cell, find ⁿCᵣ and its mirror, add up rows to see 2ⁿ, then expand (a + b)⁴.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Row {n} of Pascal's triangle starts 1, {n}, … What is the entry in position 2, which is {n}C2?",
+   "answer": "n*(n-1)/2",
+   "hint": "Use nC2 = n × (n − 1) ÷ 2, or add the two entries above it.",
+   "explain": "{n}C2 = {n} × {=n-1} ÷ 2 = {=n*(n-1)/2}. It counts the ways to choose 2 things from {n}.",
+   "params": {
+    "n": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What do all the entries in row {n} of Pascal's triangle add up to?",
+   "answer": "2**n",
+   "hint": "Rows 0, 1, 2 and 3 add up to 1, 2, 4 and 8. What is the pattern?",
+   "explain": "Each row doubles the one before, so row {n} adds up to 2 to the power {n} = {=2**n}.",
+   "params": {
+    "n": [
+     3,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Two neighbouring entries in row 7 are 21 and 35. What is the entry just below them in row 8?",
+   "choices": [
+    "56",
+    "735",
+    "14"
+   ],
+   "answer": 0,
+   "hint": "Each entry is made from the two entries just above it. Add, do not multiply.",
+   "explain": "21 + 35 = 56. This is Pascal's rule: ⁸C₃ = ⁷C₂ + ⁷C₃."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In the expansion of (1 + {a}x)⁴, what is the coefficient of x²?",
+   "answer": "6*a*a",
+   "hint": "Use ⁴C₂ from row 4, and square the {a} as well.",
+   "explain": "⁴C₂ × {a}² = 6 × {=a*a} = {=6*a*a}. The {a} is part of the term, so it is squared too.",
+   "params": {
+    "a": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which of these is equal to ¹²C₅?",
+    "choices": [
+     "¹²C₇",
+     "⁵C₁₂",
+     "¹²C₆"
+    ],
+    "answer": 0,
+    "hint": "Choosing 5 to take is the same as choosing how many to leave?",
+    "explain": "Symmetry: ⁿCᵣ = ⁿCₙ₋ᵣ, and 12 − 5 = 7, so ¹²C₅ = ¹²C₇ = 792."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Work out {n}C3.",
+    "answer": "n*(n-1)*(n-2)/6",
+    "hint": "Use n × (n − 1) × (n − 2) ÷ 3!, where 3! = 6.",
+    "explain": "{n} × {=n-1} × {=n-2} ÷ 6 = {=n*(n-1)*(n-2)/6}.",
+    "params": {
+     "n": [
+      5,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why is each entry in Pascal's triangle the sum of the two entries above it?",
+    "choices": [
+     "Every route down to a cell passes through one of the two cells above it",
+     "Because each row doubles",
+     "Because each row is symmetric"
+    ],
+    "answer": 0,
+    "hint": "Think about routes that move down-left or down-right.",
+    "explain": "A route to a cell arrives from the upper-left or the upper-right cell, so the counts of routes add."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "In the expansion of (a + b)^{n}, what is the coefficient of the term with exactly one b?",
+    "answer": "n",
+    "hint": "Choose which one of the n brackets gives the b.",
+    "explain": "There are {n}C1 = {=n} ways to choose the bracket that gives b, so the coefficient is {=n}.",
+    "params": {
+     "n": [
+      4,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A set has {n} items. How many subsets does it have, counting the empty set and the whole set?",
+    "answer": "2**n",
+    "hint": "Each item is either in or out. Or add up row {n}.",
+    "explain": "Each of the {n} items is in or out, so 2 to the power {n} = {=2**n} subsets. That is also the sum of row {n}.",
+    "params": {
+     "n": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is the coefficient of x² in (1 + 2x)⁵?",
+    "choices": [
+     "40",
+     "10",
+     "20"
+    ],
+    "answer": 0,
+    "hint": "Take ⁵C₂ and also square the 2.",
+    "explain": "⁵C₂ × 2² = 10 × 4 = 40. Forgetting to square the 2 gives 10."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which row of Pascal's triangle gives the coefficients of (a + b)⁶?",
+    "choices": [
+     "Row 6, counting the top 1 as row 0",
+     "Row 7, counting the top 1 as row 0",
+     "Row 5, counting the top 1 as row 0"
+    ],
+    "answer": 0,
+    "hint": "Row 1 is 1 1, which matches (a + b)¹ = a + b.",
+    "explain": "Row n matches (a + b)ⁿ when the top 1 is row 0. Row 6 is 1 6 15 20 15 6 1."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A student says ⁶C₂ = 6 × 2 = 12. What is the correct value?",
+    "choices": [
+     "15",
+     "12",
+     "30"
+    ],
+    "answer": 0,
+    "hint": "Use 6 × 5 ÷ 2!, or read row 6, position 2.",
+    "explain": "⁶C₂ = 6 × 5 ÷ 2 = 15. Row 6 is 1 6 15 20 15 6 1."
+   }
+  ]
+ }
+}

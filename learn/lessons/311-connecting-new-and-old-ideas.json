@@ -1,0 +1,77 @@
+{
+ "topicId": "mt_32B7xjUPwF",
+ "title": "Connecting New & Old Ideas",
+ "audience": "learner",
+ "keyIdea": "A new idea sticks better when you link it to something you already know: 'this is like…, because…'. The best links match how a thing works, not just how it looks or how you feel about it. Every link has limits, so say how the two are alike and how they are not. Make several links to build a web around a new topic. Old ideas can also mislead, so check an old idea against what you see before you lean on it.",
+ "explain": {
+  "kid": [
+   "When you learn something new, ask: what is this like? A bat's wing has long finger bones, just like your hand. Now the new idea has something to hook on to.",
+   "Pick a link that works the same way. Your heart is like a pump, because both squeeze to push liquid round. Saying a leaf is like grass, because both are green, does not tell you how a leaf works.",
+   "No link is perfect. A heart is alive and a pump is a machine. Say how they are alike and how they are not. Then the link will not trick you.",
+   "Make lots of links. Magnets? Think of fridge magnets, a compass and paper clips. But check old ideas too. Big things do not always sink: a huge ship floats!"
+  ],
+  "adult": [
+   "This is a metacognitive strategy. Cognitive science calls it elaborative encoding: new information is remembered better when it is tied to prior knowledge. Schema theory (Bartlett, Rumelhart) explains why. We understand new things by fitting them into the frameworks we already hold. The EEF guidance on metacognition and self-regulated learning recommends teaching pupils to activate prior knowledge and to say how a new idea connects to it.",
+   "Good connections are structural, not surface. An analogy helps when the relationship matches (a heart and a pump both move fluid with a one-way squeeze). It does not help when only a feature matches, such as colour or shape. Asking 'how is it like it, and how is it not?' teaches children where an analogy breaks down, which is part of understanding it.",
+   "Common mistakes: linking on looks alone; linking on feelings ('I like pizza'); treating an analogy as an exact match; building on a misconception (plants eat soil, multiplying always makes bigger, heavy things sink); and re-reading instead of linking. Prior knowledge helps only when it is checked.",
+   "In the lab your child links four new ideas to things they know, sorts how a heart is and is not like a pump, builds a web of useful links around magnets, picks the link that explains how something works over ones that only match the look or a feeling, and sorts old ideas that help from ones that mislead."
+  ]
+ },
+ "familyTip": "When your child learns something new, ask: what does that remind you of? Then ask: how is it the same, and how is it different? Share your own links too.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Good link or weak link? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "🔗 Good link: works the same way",
+    "🙈 Weak link: only looks the same"
+   ],
+   "items": [
+    ["Your heart is like a pump: both squeeze to push liquid round", 0],
+    ["A leaf is like grass: both are green", 1],
+    ["3 × 4 is like adding 4 three times", 0],
+    ["A fraction is like a pizza: both are round", 1],
+    ["Sound is like ripples spreading out in a pond", 0],
+    ["A magnet is like a horseshoe: same shape", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglink",
+  "caption": "Flagship lab: link new ideas to things you know, test where a link breaks, build a web, and spot old ideas that mislead.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Which is the best link for 'your heart pumps blood'?", "choices": ["A pump that squeezes water round", "A red balloon, because both are red", "My mum, because I love her"], "answer": 0,
+   "hint": "Look for the one that works the same way, not just looks the same.", "explain": "A heart and a pump both squeeze to push liquid round. Red or loved does not explain how it works."},
+  {"type": "numeric", "id": "p2", "prompt": "You link a new word to {n} things you know. Then you add 2 more links. How many links now?", "answer": "n+2",
+   "hint": "Start at {n} and count on 2 more links.", "explain": "{n} and 2 more is {=n+2} links. More links give more ways to find the idea again.", "params": {"n": [1, 6]}},
+  {"type": "mc", "id": "p3", "prompt": "A heart is like a pump. How is it NOT like a pump?", "choices": ["It is made of living muscle", "It pushes liquid round", "It squeezes again and again"], "answer": 0,
+   "hint": "Which one is true for a heart but not for a machine?", "explain": "A heart is alive and made of muscle. A pump is a machine. The other two are ways they are alike."},
+  {"type": "numeric", "id": "p4", "prompt": "3 × {n} is like adding {n} three times. What is {n} + {n} + {n}?", "answer": "3*n",
+   "hint": "Add {n} three times, or use your 3 times table.", "explain": "{n} + {n} + {n} = {=3*n}, which is the same as 3 × {n}.", "params": {"n": [2, 9]}}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "What makes a good link between a new idea and an old one?", "choices": ["They work the same way", "They are the same colour", "You like them both"], "answer": 0,
+    "hint": "Think about how it works, not how it looks.", "explain": "A link helps when the two work the same way. Colour or liking does not explain anything."},
+   {"type": "mc", "id": "m2", "prompt": "Why should you say how two things are different, as well as alike?", "choices": ["So the link does not trick you", "To make it longer", "Because links are always wrong"], "answer": 0,
+    "hint": "Is any link a perfect match?", "explain": "No link is perfect. Saying the differences stops you thinking a heart is a machine."},
+   {"type": "mc", "id": "m3", "prompt": "Mia thinks 'heavy things sink, so a big ship must sink'. What should she do?", "choices": ["Check it: big ships float", "Trust it", "Stop learning about ships"], "answer": 0,
+    "hint": "Does the old idea match what we see?", "explain": "Big ships float, so the old idea misleads here. Check old ideas before you lean on them."},
+   {"type": "mc", "id": "m4", "prompt": "Which is a useful link for learning about magnets?", "choices": ["A compass needle points north", "I had pasta for lunch", "My bag is blue"], "answer": 0,
+    "hint": "Which one is about what magnets do?", "explain": "A compass needle is a magnet, so it links to magnets. The others are true but do not help."},
+   {"type": "mc", "id": "m5", "prompt": "Sound spreads out as vibrations. Which link explains it?", "choices": ["Ripples spreading in a pond", "A drum, because it is round", "Music, because it is fun"], "answer": 0,
+    "hint": "What else spreads out from where it starts?", "explain": "Ripples spread out from a splash, like sound spreads out from a vibration."},
+   {"type": "mc", "id": "m6", "prompt": "Which helps you remember a new fact the most?", "choices": ["Linking it to something you know", "Reading it once", "Copying it in neat writing"], "answer": 0,
+    "hint": "Which gives the fact something to hook on to?", "explain": "A link joins the fact to what you know, so there is a way to find it again."},
+   {"type": "numeric", "id": "m7", "prompt": "You make {n} links for 'magnets'. 1 of them turns out to be wrong. How many good links are left?", "answer": "n-1",
+    "hint": "Take the wrong link away from {n}.", "explain": "{n} take away 1 is {=n-1} good links. Checking found the wrong one.", "params": {"n": [3, 8]}},
+   {"type": "numeric", "id": "m8", "prompt": "4 × {n} is like adding {n} four times. What is 4 × {n}?", "answer": "4*n",
+    "hint": "Add {n} four times: {n} + {n} + {n} + {n}.", "explain": "{n} + {n} + {n} + {n} = {=4*n}, so 4 × {n} = {=4*n}.", "params": {"n": [2, 9]}}
+  ]
+ }
+}

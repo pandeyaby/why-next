@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_8jWqKFty_I",
+ "title": "Sticking with it until it's finished",
+ "audience": "family",
+ "keyIdea": "Sticking with it means you choose a job, like a jigsaw, a drawing or a tower, and keep going until it is all done. Nearly done is not finished: look closely for any missing part. You can stop for snack or sleep, leave the job safe and come back to finish it. A big job gets done one small bit at a time. When it is done, say \"I finished it!\", show someone and feel proud.",
+ "explain": {
+  "kid": [
+   "You pick a jigsaw. You put in one piece, then more. Is it done? Not yet! It is done when every piece is in. The last piece is the best one.",
+   "Look closely before you say done. Does the face have two eyes? Does the car have all its wheels? If a bit is missing, add it.",
+   "Sometimes we stop. It is snack time, or bath time. Leave your tower safe. Then come back and add the top block.",
+   "A big picture has lots of bits. Do one bit. Then one more. When it is all done, say: I finished it! Then show a grown-up."
+  ],
+  "adult": [
+   "This is task persistence, one of the approaches to learning in early years frameworks. The EYFS framework names active learning as a characteristic of effective learning. Children concentrate, keep on trying and enjoy what they achieve. The Head Start framework lists persistence in tasks under approaches to learning. At 3 to 4 years the aim is to follow a short job they chose through to the end, and to know when it is done.",
+   "Three skills sit underneath. Checking for completion: young children often call a job done when it is mostly done, so teach them to look for the missing part. Resuming: a pause is not the end. Keeping the work safe and coming back to it builds the habit of finishing. Chunking: a long job feels possible when it is split into small bits you can see, like one row of the jigsaw or one colour at a time.",
+   "Common mistakes: finishing the job for the child because it is quicker, which takes away the finish; picking tasks that are far too big, such as a 48-piece jigsaw for a 3-year-old; packing work away at tidy-up time so there is nothing to come back to; and praising cleverness rather than effort. Be careful with praise. Name the process: you kept going until the last piece was in.",
+   "In the lab your child drags every jigsaw piece home and spots what a picture still needs. They leave a tower safe at snack time and come back to finish it. They colour a long caterpillar one part at a time while a bar fills. Then they practise the finish: last bit, say I finished it, show it."
+  ]
+ },
+ "familyTip": "Keep a 'not finished yet' shelf. When a jigsaw or drawing has to stop for dinner, put it there together, then bring it out the next day so your child can finish it and say, 'I finished it!'",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it finished yet? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Finished",
+    "Not finished yet"
+   ],
+   "items": [
+    [
+     "Jigsaw with every piece in",
+     0
+    ],
+    [
+     "Jigsaw with one gap",
+     1
+    ],
+    [
+     "Tower with its top block on",
+     0
+    ],
+    [
+     "Face with one eye",
+     1
+    ],
+    [
+     "Car with all 4 wheels",
+     0
+    ],
+    [
+     "Caterpillar half coloured",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagstick",
+  "caption": "Flagship lab: put in every jigsaw piece, spot what is missing, come back to a tower after snack, colour bit by bit and say I finished it.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Sticking with it: Mia's jigsaw has one piece left and she wants to stop. Is her jigsaw finished?",
+   "choices": [
+    "Not yet, one more piece",
+    "Yes, nearly done is finished",
+    "Yes, if she is tired"
+   ],
+   "answer": 0,
+   "hint": "A jigsaw is finished when every single piece is in. Count the gaps.",
+   "explain": "There is still one gap, so it is not finished yet. One more piece and Mia can say: I finished it!"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A jigsaw has {n} pieces. {k} pieces are in. How many more pieces until it is finished?",
+   "answer": "n-k",
+   "hint": "Count on from {k} to {n}, one piece at a time.",
+   "explain": "From {k} pieces to {n} pieces is {=n-k} more pieces, then the jigsaw is finished.",
+   "params": {
+    "n": [
+     6,
+     12
+    ],
+    "k": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "It is snack time and Leo's tower is not finished. What is the best thing to do?",
+   "choices": [
+    "Leave it safe and come back after snack",
+    "Knock it down",
+    "Forget about it"
+   ],
+   "answer": 0,
+   "hint": "Think about what lets Leo finish his tower later.",
+   "explain": "If he leaves it safe, the tower waits for him. After snack he can add the top block and finish it."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Sam builds a tower of {n} blocks, then stops for lunch and leaves it safe. After lunch, how many blocks are still in the tower?",
+   "answer": "n",
+   "hint": "Nobody knocked it down. Leaving it safe means nothing changes.",
+   "explain": "The tower still has {n} blocks, so Sam can carry on from {n} and finish it.",
+   "params": {
+    "n": [
+     2,
+     8
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A drawing of a car has only 3 wheels. Is it finished?",
+    "choices": [
+     "No, a wheel is missing",
+     "Yes, it is a car",
+     "Yes, 3 is enough"
+    ],
+    "answer": 0,
+    "hint": "Look closely. How many wheels does a car have?",
+    "explain": "A car has 4 wheels, so one is missing. Add the last wheel, then the car is finished."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Your big picture has lots of parts to colour. What helps you finish it?",
+    "choices": [
+     "Colour one part at a time",
+     "Scribble it all fast",
+     "Stop because it is big"
+    ],
+    "answer": 0,
+    "hint": "A big job is lots of little bits.",
+    "explain": "One part, then the next, then the next. Little bits add up until the whole picture is finished."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A caterpillar has {n} parts to colour. You have coloured {k}. How many parts are left?",
+    "answer": "n-k",
+    "hint": "Take the coloured parts away from all the parts.",
+    "explain": "{n} parts take away {k} coloured is {=n-k} left to colour, then it is finished.",
+    "params": {
+     "n": [
+      8,
+      10
+     ],
+     "k": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ava finished her jigsaw. What can she do now?",
+    "choices": [
+     "Say I finished it and show someone",
+     "Hide it",
+     "Break it up at once"
+    ],
+    "answer": 0,
+    "hint": "Finishing feels good. Who would like to see it?",
+    "explain": "She can say: I finished it! Showing a grown-up lets her feel proud of sticking with it."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ben stopped his drawing yesterday. What can he do today?",
+    "choices": [
+     "Come back and finish it",
+     "Throw it away",
+     "Start a new one and forget it"
+    ],
+    "answer": 0,
+    "hint": "A pause is not the end of a job.",
+    "explain": "Ben can take out his drawing and finish the last bits. Coming back counts as sticking with it."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A tower needs {n} blocks to reach the top. It has {k} blocks now. How many more blocks?",
+    "answer": "n-k",
+    "hint": "Count up from {k} to {n}.",
+    "explain": "{k} blocks plus {=n-k} more blocks makes {n}, so the tower needs {=n-k} more to be finished.",
+    "params": {
+     "n": [
+      6,
+      10
+     ],
+     "k": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "When is a jigsaw finished?",
+    "choices": [
+     "When every piece is in",
+     "When most pieces are in",
+     "When you want to stop"
+    ],
+    "answer": 0,
+    "hint": "Look for gaps. Are there any left?",
+    "explain": "A jigsaw is finished only when there are no gaps. Most pieces is not all pieces."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A face drawing has one eye. What does it need to be finished?",
+    "choices": [
+     "One more eye",
+     "A hat",
+     "Nothing, it is done"
+    ],
+    "answer": 0,
+    "hint": "How many eyes does a face have?",
+    "explain": "A face has two eyes, so it needs one more eye. Then the drawing is finished."
+   }
+  ]
+ }
+}

@@ -1,0 +1,237 @@
+{
+ "topicId": "mt_Shb7qv8HhX",
+ "title": "Binomial probabilities",
+ "audience": "learner",
+ "keyIdea": "If X ~ B(n, p), the chance of exactly r successes is P(X = r) = nCr × p^r × (1 − p)^(n − r). The power p^r covers the r successes, (1 − p)^(n − r) covers the n − r failures, and nCr counts the orders they can come in, since every order has the same chance. For ranges, add bars or use the complement: P(X ≥ k) = 1 − P(X ≤ k − 1).",
+ "explain": {
+  "kid": [
+   "Say a player scores 70% of her shots, and she takes 4. What is the chance that exactly 2 go in? Start with one order: in, in, miss, miss. The shots are independent, so we multiply. That gives 0.7 × 0.7 × 0.3 × 0.3 = 0.0441.",
+   "But there are other orders, like in, miss, in, miss. Each one has two 0.7s and two 0.3s. So each one has the same chance, 0.0441. We just need to count the orders. There are 4C2 = 6 of them, so the answer is 6 × 0.0441 = 0.2646.",
+   "That is the whole rule. P(X = r) = nCr × p to the power r × (1 − p) to the power n − r. The r successes give p to the power r. The n − r failures give 1 − p to the power n − r. Then nCr counts the orders.",
+   "For 'at least' or 'at most', add up bars. Often the other side is shorter. P(X ≥ 3) is 1 − P(X ≤ 2). Note the 2: 'at least 3' keeps 3 itself, so you take away 0, 1 and 2."
+  ],
+  "adult": [
+   "This topic matches the A level Mathematics statistics content: calculate probabilities using the binomial distribution, including cumulative probabilities. In the US, AP Statistics and the Common Core standard S-MD.3 ask students to build and use the distribution of a count of successes. Students should find P(X = r), P(X ≤ r) and P(X ≥ r) by hand and with a calculator, and state each answer in context.",
+   "Key terms: binomial distribution, X ~ B(n, p), trial, success, probability of success p, P(X = r), probability distribution, binomial coefficient nCr, cumulative probability P(X ≤ r), complement, and mean np. Checking that the model fits is a separate lesson. Here we take B(n, p) as given and work out probabilities.",
+   "Common mistakes: leaving out nCr and finding the chance of one order only. Using nPr, which counts each set of successes many times. Writing p × r for p to the power r. Swapping the powers, so p gets n − r. Most often, slips at the edge: P(X ≥ 4) is 1 − P(X ≤ 3), not 1 − P(X ≤ 4). Be careful too with 'more than' and 'fewer than', which leave out the end value.",
+   "In the lab the learner finds all six orders of two hits in four shots and sees each has the same chance. They build the formula from tiles with traps such as nPr. Then they read the whole B(10, 0.25) chart and shade bars for 'at least', 'at most' and 'more than' events."
+  ]
+ },
+ "familyTip": "Guess the answers to a 10-question quiz with 4 options each. The chance of exactly 5 right is 10C5 × 0.25^5 × 0.75^5, about 0.058, so about 6 in 100. Ask your learner why the most likely score is 2, not 5.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "X ~ B(10, 0.25). Which cumulative form gives each event? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "P(X ≤ k)",
+    "1 − P(X ≤ k − 1)"
+   ],
+   "items": [
+    [
+     "At most 2 right",
+     0
+    ],
+    [
+     "No more than 4 right",
+     0
+    ],
+    [
+     "Fewer than 3 right",
+     0
+    ],
+    [
+     "At least 3 right",
+     1
+    ],
+    [
+     "More than 4 right",
+     1
+    ],
+    [
+     "5 or more right",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbinp",
+  "caption": "Flagship lab: count orders of 2 hits in 4 shots, see each has equal chance, build nCr p^r (1 − p)^(n − r) from tiles, then read and shade B(10, 0.25).",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Binomial probabilities: X ~ B(4, 0.7). Which is P(X = 2)?",
+   "choices": [
+    "4C2 × 0.7² × 0.3²",
+    "0.7² × 0.3²",
+    "4P2 × 0.7² × 0.3²"
+   ],
+   "answer": 0,
+   "hint": "One order has chance 0.7² × 0.3². How many orders are there?",
+   "explain": "Each order of 2 successes and 2 failures has chance 0.7² × 0.3² = 0.0441. There are 4C2 = 6 orders, so P(X = 2) = 0.2646."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "X ~ B({n}, p). How many different orders give exactly 2 successes? (This is nC2.)",
+   "answer": "n*(n-1)/2",
+   "hint": "Choose which 2 of the n trials are the successes: nC2 = n × (n − 1) ÷ 2.",
+   "explain": "{n}C2 = {n} × {=n-1} ÷ 2 = {=n*(n-1)/2} orders, and each has the same chance p² (1 − p)^{=n-2}.",
+   "params": {
+    "n": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "X ~ B(10, 0.25). Which is P(X ≥ 3)?",
+   "choices": [
+    "1 − P(X ≤ 2)",
+    "1 − P(X ≤ 3)",
+    "P(X ≤ 3)"
+   ],
+   "answer": 0,
+   "hint": "'At least 3' keeps 3. Which values are left over?",
+   "explain": "The values not in X ≥ 3 are 0, 1 and 2. So P(X ≥ 3) = 1 − P(X ≤ 2) ≈ 1 − 0.5256 = 0.4744."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "X ~ B({n}, 0.3). In P(X = {r}) = {n}C{r} × 0.3^{r} × 0.7^k, what is the power k?",
+   "answer": "n-r",
+   "hint": "The power on 1 − p is the number of failures.",
+   "explain": "There are {r} successes out of {n} trials, so {n} − {r} = {=n-r} failures. The power on 0.7 is {=n-r}.",
+   "params": {
+    "n": [
+     8,
+     15
+    ],
+    "r": [
+     2,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You guess all 10 questions on a test. Each has 4 options. What is P(exactly 5 right), to 3 significant figures?",
+    "choices": [
+     "0.0584",
+     "0.000977",
+     "0.5"
+    ],
+    "answer": 0,
+    "hint": "Use 10C5 × 0.25⁵ × 0.75⁵.",
+    "explain": "10C5 × 0.25⁵ × 0.75⁵ = 252 × 0.000977 × 0.2373 ≈ 0.0584. Guessing half right is rare."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why do in, in, miss, miss and in, miss, in, miss have the same probability?",
+    "choices": [
+     "Each has the same number of p and 1 − p factors",
+     "The first is more likely, as hits come together",
+     "Their chances add to 1"
+    ],
+    "answer": 0,
+    "hint": "Write each as a product of four numbers.",
+    "explain": "Both are p × p × (1 − p) × (1 − p) in some order. Multiplying in a new order gives the same product, so every order has p² (1 − p)²."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A coin is flipped {n} times. How many different head-tail orders are there in total?",
+    "answer": "2**n",
+    "hint": "Each flip has 2 outcomes. Multiply for each flip.",
+    "explain": "Each flip doubles the count, so there are 2^{n} = {=2**n} orders. They split into nC0 + nC1 + … + nCn, one group for each number of heads.",
+    "params": {
+     "n": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "X ~ B(8, 0.3). What is P(X ≥ 1)?",
+    "choices": [
+     "1 − 0.7⁸",
+     "1 − 0.3⁸",
+     "8 × 0.3"
+    ],
+    "answer": 0,
+    "hint": "The only value left out is X = 0. What is P(X = 0)?",
+    "explain": "P(X = 0) means all 8 fail, so it is 0.7⁸ ≈ 0.0576. Then P(X ≥ 1) = 1 − 0.7⁸ ≈ 0.942."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You want P(X ≥ {k}) as 1 − P(X ≤ c). What is c?",
+    "answer": "k-1",
+    "hint": "'At least {k}' keeps {k}. The other side stops just below it.",
+    "explain": "The values left out of X ≥ {k} are 0 up to {=k-1}. So P(X ≥ {k}) = 1 − P(X ≤ {=k-1}).",
+    "params": {
+     "k": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "X ~ B(5, 0.6). Which is P(X = 2)?",
+    "choices": [
+     "5C2 × 0.6² × 0.4³",
+     "5C2 × 0.6³ × 0.4²",
+     "5 × 0.6 × 2"
+    ],
+    "answer": 0,
+    "hint": "The power on p is the number of successes.",
+    "explain": "2 successes give 0.6², and 3 failures give 0.4³. With 5C2 = 10 orders, P(X = 2) = 10 × 0.36 × 0.064 = 0.2304."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "X ~ B(10, 0.25). Which value of X is most likely?",
+    "choices": [
+     "2",
+     "5",
+     "0"
+    ],
+    "answer": 0,
+    "hint": "The mean is np = 2.5. The tallest bar is near it.",
+    "explain": "P(X = 2) ≈ 0.2816 is the tallest bar, just ahead of P(X = 3) ≈ 0.2503. Getting 5 right is only about 0.0584."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "X ~ B(20, 0.1). Which is P(X > 4)?",
+    "choices": [
+     "1 − P(X ≤ 4)",
+     "1 − P(X ≤ 3)",
+     "P(X ≤ 4)"
+    ],
+    "answer": 0,
+    "hint": "'More than 4' does not include 4.",
+    "explain": "X > 4 means 5 or more. The values left out are 0 to 4, so P(X > 4) = 1 − P(X ≤ 4)."
+   }
+  ]
+ }
+}

@@ -1,0 +1,240 @@
+{
+ "topicId": "mt_miGrca8zaS",
+ "title": "Breaking Tasks into Steps",
+ "audience": "family",
+ "keyIdea": "A big job feels hard to start because you see all of it at once. Break it into small, clear steps, put them in a sensible order, and start the first one now. If a step still feels too big, break it again. After each step, notice your progress: one done, on to the next.",
+ "explain": {
+  "kid": [
+   "Some jobs feel too big. Tidy your whole room? A poster for school? It is hard to know where to start.",
+   "So cut the job up. Clothes in the basket. Books on the shelf. Toys in the box. Each one is a small step.",
+   "A good step is small and clear. You know what to do, and you know when it is done. 'Get better at spelling' is not a step. 'Say three words out loud' is.",
+   "Do the first step now. If it still feels too big, cut it again. When a step is done, say 'One done!' and go on to the next."
+  ],
+  "adult": [
+   "At seven to nine, children start to get longer pieces of work: projects, reading logs, practice for a show. The PSHE Association programme of study for Key Stage 2 includes setting goals, breaking them into steps you can achieve, and noticing progress. Psychologists call this skill chunking. It is part of planning, which is still growing at this age.",
+   "Children get stuck when the whole job sits in front of them as one block. The first step should be small enough to start within a minute, like 'find three facts about frogs', not a wish like 'do a good poster'. Steps also need a sensible order: facts before writing, plan before drawing, checking last.",
+   "Common mistakes: steps that are just the whole job said again ('finish the story'), vague steps that can never be ticked off ('get better at maths'), leaving it all to the last night, and counting only what is left instead of what is done. Waiting until you feel ready is the classic slip. Starting a small step is what makes you feel ready.",
+   "In the lab your child chips a big job into four steps, orders the steps of a frog poster, sorts steps into small and clear or too big and fuzzy, splits steps that are still too big, and crosses stepping stones while saying a progress check after each one."
+  ]
+ },
+ "familyTip": "Next time a job feels big, write each step on a sticky note together. Stick them on the door in order, and let your child pull one off each time a step is done. Say 'one done!' out loud.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it a good small step? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✓ Small and clear",
+    "✗ Too big or fuzzy"
+   ],
+   "items": [
+    [
+     "Put my socks in the drawer",
+     0
+    ],
+    [
+     "Write the title of my poster",
+     0
+    ],
+    [
+     "Read page 1 of my book",
+     0
+    ],
+    [
+     "Say the 2 times table once",
+     0
+    ],
+    [
+     "Tidy everything",
+     1
+    ],
+    [
+     "Be good at reading",
+     1
+    ],
+    [
+     "Finish the whole project tonight",
+     1
+    ],
+    [
+     "Do some stuff",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsteps",
+  "caption": "Flagship lab: chip a big job into steps, order them, sort small and clear steps, split big ones and cross the stones.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is a good first step for tidying your room?",
+   "choices": [
+    "Put the clothes in the wash basket",
+    "Tidy everything at once",
+    "Wait until tomorrow"
+   ],
+   "answer": 0,
+   "hint": "A good step is small, and you can tell when it is done.",
+   "explain": "Put the clothes in the wash basket. It is small and clear, so you can start right now."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A project has {a} steps. You finished {b}. How many steps are left?",
+   "answer": "a-b",
+   "hint": "Take the steps you finished away from all the steps.",
+   "explain": "{=a-b} steps are left. You already did {b}, and that progress counts.",
+   "params": {
+    "a": [
+     5,
+     9
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What should come first when you make a poster about frogs?",
+   "choices": [
+    "Find some facts about frogs",
+    "Colour it in",
+    "Check the spellings"
+   ],
+   "answer": 0,
+   "hint": "What do you need before you can write anything?",
+   "explain": "Find some facts first. You cannot write about frogs until you know about them. Colouring and checking come last."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You read {n} pages a day. How many days to read a {=n*d} page book?",
+   "answer": "d",
+   "hint": "Share the pages out into equal daily steps.",
+   "explain": "{d} days. {=n*d} pages split into steps of {n} pages a day takes {d} days.",
+   "params": {
+    "n": [
+     2,
+     5
+    ],
+    "d": [
+     3,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why does breaking a job into steps help?",
+    "choices": [
+     "Each step is small enough to start",
+     "It makes the job longer",
+     "You can skip the hard part"
+    ],
+    "answer": 0,
+    "hint": "Think about how it feels to start a giant job.",
+    "explain": "Each step is small enough to start, so you are not stuck looking at the whole job."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which is a small, clear step?",
+    "choices": [
+     "Read the first 3 spellings out loud",
+     "Get better at spelling",
+     "Learn all the spellings"
+    ],
+    "answer": 0,
+    "hint": "Can you tell exactly when it is done?",
+    "explain": "Read the first 3 spellings out loud. You know what to do and when it is finished."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A step still feels too big. What should you do?",
+    "choices": [
+     "Break it into a smaller step",
+     "Give up",
+     "Do it all at once"
+    ],
+    "answer": 0,
+    "hint": "You can cut a step up again.",
+    "explain": "Break it into a smaller step, like the first sentence instead of the whole story."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "You finish step 1 of 4. What is a helpful thing to say?",
+    "choices": [
+     "One done! On to step 2.",
+     "Three left. Hopeless.",
+     "That does not count."
+    ],
+    "answer": 0,
+    "hint": "Notice what you did, not only what is left.",
+    "explain": "One done! On to step 2. Noticing progress gives you energy for the next step."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Your job has {a} steps. You do 1 step a day. How many days will it take?",
+    "answer": "a",
+    "hint": "One step each day, so count one day for every step.",
+    "explain": "{a} days: one step a day for {a} steps.",
+    "params": {
+     "a": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "You split a {=s*k} minute job into {k} steps of the same size. How many minutes is each step?",
+    "answer": "s",
+    "hint": "Share the minutes equally between the steps.",
+    "explain": "{s} minutes. {=s*k} minutes shared into {k} equal steps is {s} minutes each.",
+    "params": {
+     "s": [
+      5,
+      10
+     ],
+     "k": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Your book report is due Friday. It is Monday. What is the best plan?",
+    "choices": [
+     "Read a bit each day, then write",
+     "Do it all on Thursday night",
+     "Write it before reading"
+    ],
+    "answer": 0,
+    "hint": "Spread small steps out, in a sensible order.",
+    "explain": "Read a bit each day, then write. Leaving it all to one night makes one giant step."
+   }
+  ]
+ }
+}

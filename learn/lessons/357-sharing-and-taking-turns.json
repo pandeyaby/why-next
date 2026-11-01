@@ -1,0 +1,163 @@
+{
+ "topicId": "mt_QXnZ5TPCib",
+ "title": "Sharing and taking turns",
+ "audience": "family",
+ "keyIdea": "Taking turns means one person has a go, then the next, then back again: my turn, your turn. Sharing a toy means giving someone a turn with it, and the toy comes back when their go is done. If a friend has nothing to play with, you can offer a toy. When we share out food, one for you and one for me makes it fair, so everyone gets the same.",
+ "explain": {
+  "kid": [
+   "In a game, we take turns. I have a go. Then you have a go. Then it is my turn again. Say: my turn, your turn!",
+   "When you share your truck, your friend has a turn with it. It does not go away for good. When their go is done, it comes back to you.",
+   "Look around. Does a friend have no toy? You can give them one. Say: do you want a turn?",
+   "Sharing snacks? Give one to you, then one to your friend. Keep going. Now you both have the same. That is fair."
+  ],
+  "adult": [
+   "This sits in personal, social and emotional development, under building relationships. The EYFS early learning goal asks children to work and play cooperatively and take turns with others. Development Matters for 3 to 4 year olds names playing with one or more other children and finding solutions to conflicts. The Head Start framework lists cooperative play and turn-taking under relationships with other children. At 3 to 4, expect turn-taking with a grown-up's help, offering a toy now and then, and using the words my turn and your turn.",
+   "Three ideas sit underneath. Turn-taking is reciprocity: the go swaps after each move, so each child can predict when their next go comes. Turn-based sharing means lending a toy for a while, which is easier for this age than giving it away, because the toy comes back. Fair sharing is equal shares, made by dealing out one for you and one for me.",
+   "Common mistakes: making a child hand a toy over the moment another child asks, which teaches that sharing means losing; expecting a 3-year-old to share well with no help; very long turns, so the waiting child gives up; and praising only the child who gives. Be careful with blame, too. Grabbing at this age is normal. Name the step instead: ask for a turn, then wait for the toy to come back.",
+   "In the lab your child taps whose turn it is in a race game, lends Kit a fire truck and watches it come back, offers a toy to the friend who has none, deals out strawberries one each until the plates match, and sorts kind and unkind ways to play."
+  ]
+ },
+ "familyTip": "Play a short game with a die or a ball and say each swap out loud: 'My turn… your turn.' When a sibling wants a toy, try 'You can have it when Sam has finished', then make sure it really does come back.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Sharing or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Sharing and turns",
+    "Not sharing"
+   ],
+   "items": [
+    ["Rolling the ball back and forth", 0],
+    ["Grabbing the bike", 1],
+    ["Saying: your turn!", 0],
+    ["Keeping every block", 1],
+    ["Giving the truck back", 0],
+    ["Taking two goes in a row", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagshare",
+  "caption": "Flagship lab: take turns in a race game, lend a toy and see it come back, offer a toy, share snacks fairly and sort kind play.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Sharing and taking turns: you just rolled the dice in a game with Kit. Whose turn is it now?",
+   "choices": ["Kit's turn", "My turn again", "Nobody's turn"],
+   "answer": 0,
+   "hint": "In a game the turn swaps after every go. Who has not just gone?",
+   "explain": "You just had your go, so now it is Kit's turn. Then it swaps back to you."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {=2*k} grapes. You share them: one for you, one for Kit. How many grapes does each of you get?",
+   "answer": "k",
+   "hint": "Deal them out one at a time: one for you, one for Kit, until none are left.",
+   "explain": "{=2*k} grapes dealt one each makes {k} for you and {k} for Kit. Same for both, so it is fair.",
+   "params": {"k": [2, 5]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You let Pip have a turn with your teddy. What happens when Pip's go is done?",
+   "choices": ["The teddy comes back to me", "Pip keeps it for ever", "The teddy is lost"],
+   "answer": 0,
+   "hint": "Having a turn is like borrowing. What happens to things we borrow?",
+   "explain": "A turn ends, and then the teddy comes back to you. Sharing is giving a turn, not giving it away."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In a game, you have {n} goes and Kit has {n} goes. How many goes is that altogether?",
+   "answer": "2*n",
+   "hint": "Count your goes, then count on Kit's goes.",
+   "explain": "{n} goes for you and {n} goes for Kit makes {=2*n} goes altogether. You both got the same number.",
+   "params": {"n": [2, 5]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Mo has no toy to play with. You have three cars. What is kind?",
+    "choices": ["Offer Mo a car", "Keep all three cars", "Hide the cars"],
+    "answer": 0,
+    "hint": "Who has nothing? What could you give them?",
+    "explain": "Offer Mo one car. Mo has something to play with, and you still have two."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You want a turn on the swing. What can you say?",
+    "choices": ["Can I have a turn next?", "Get off, it's mine!", "Nothing, just push"],
+    "answer": 0,
+    "hint": "Use kind words to ask. Pushing and shouting hurt.",
+    "explain": "Ask: can I have a turn next? Then wait. When your friend is done, it is your go."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "You have {n} blocks. You give Kit 1 block to play with. How many blocks do you have now?",
+    "answer": "n-1",
+    "hint": "Take away the one you gave to Kit.",
+    "explain": "{n} blocks take away 1 is {=n-1} blocks. And Kit has 1 block too, so you can both build.",
+    "params": {"n": [3, 7]}
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Kit has 3 biscuits and you have 1. Is that fair?",
+    "choices": ["No, not the same", "Yes, it is fair", "Yes, Kit is bigger"],
+    "answer": 0,
+    "hint": "Fair means you both have the same number.",
+    "explain": "3 and 1 are not the same, so it is not fair. Deal them one each: 2 for Kit and 2 for you."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Pip is having a turn with your ball. You want it back now. What is best?",
+    "choices": ["Wait for Pip's go to end", "Grab it back", "Shout at Pip"],
+    "answer": 0,
+    "hint": "Pip is only having a turn. Will the ball come back?",
+    "explain": "Wait. When Pip's go is done, the ball comes back to you. Grabbing stops Pip's turn."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{n} children take turns on the slide. Each child has one go. How many goes until everyone has had a go?",
+    "answer": "n",
+    "hint": "One go for each child. Count the children.",
+    "explain": "One go each for {n} children is {n} goes. Then everyone has had a turn.",
+    "params": {"n": [3, 7]}
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In a game, Kit had a go and then you had a go. Who goes next?",
+    "choices": ["Kit", "Me", "The grown-up"],
+    "answer": 0,
+    "hint": "My turn, your turn: the go keeps swapping.",
+    "explain": "Kit, then you, so next it is Kit again. The turns swap after every go."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "You have the paint pot and your friend has none. What can you say?",
+    "choices": ["Do you want a turn?", "Go away", "It's all mine"],
+    "answer": 0,
+    "hint": "Think about how your friend feels with nothing to paint with.",
+    "explain": "Say: do you want a turn? Then you can take turns with the paint, or both use it."
+   }
+  ]
+ }
+}

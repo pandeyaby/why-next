@@ -1,0 +1,172 @@
+{
+ "topicId": "mt_YwE34zDyNz",
+ "title": "Asking to join in",
+ "audience": "family",
+ "keyIdea": "To join a game, watch first to see what the children are playing. Then ask with kind words, like \"Can I play?\", and give an idea for a part in their game. If they say \"Not now\", stay calm. Find something else to do, or ask again later.",
+ "explain": {
+  "kid": [
+   "You see kids playing. You want to play too! First, stop and watch. What are they playing? Who is in the game?",
+   "Then use kind words. Say \"Can I play?\" in a calm voice. Do not grab or push in. Grabbing spoils the game.",
+   "Give an idea that fits their game. If they play shops, say \"I can be the shopper!\" Now they can see how you fit in.",
+   "Some days they say \"Not now.\" That is OK. It does not mean never. Take a big breath. Find a new game, or ask again later."
+  ],
+  "adult": [
+   "Joining a group that is already playing is one of the hardest social skills for young children. In England it sits in the EYFS prime area Personal, Social and Emotional Development. The early learning goal Building Relationships asks children to work and play cooperatively and take turns with others, and to form friendships with peers. Development Matters suggests helping three- and four-year-olds find solutions to conflicts, for example accepting that not everyone can be Spider-Man in the game and suggesting other ideas. In the US, the Head Start ELOF goals for preschoolers include positive interactions with other children and cooperative play.",
+   "Research on group entry (Putallaz and Gottman; Corsaro's work on access rituals) finds the same pattern. Children who join well watch or hover first, then make a comment or offer that fits what the group is already doing. Children who are turned away more often call attention to themselves, change the game or barge in. Key words for this age: watch, ask, idea, join in, take turns, and the phrase \"not now\".",
+   "Common mistakes: grabbing a toy or pushing in, shouting \"Me! Me!\", trying to change the game (\"Let's play football instead\"), or hovering silently and never asking. Be careful with the other big slip too: hearing \"not now\" as \"they hate me\" or \"never\", and then giving up or spoiling the game. First refusals are very common, even for well-liked children, and a calm second try or a different group often works.",
+   "In the lab your child watches a game of shops and taps the clues that show the game. They sort kind and unkind ways to ask, and drag an idea that fits into three different games. They help Bo the bear after \"not now\" by picking calm next steps, and put watch, ask, give an idea and play in order. Every drag has a big button twin."
+  ]
+ },
+ "familyTip": "At the park, watch a group together for a moment first and whisper, \"What are they playing? What part could you be?\" Practise \"Can I play?\" with a soft toy at home, and sometimes have the toy say \"Not now\" so your child can try a calm next step.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "They said \"Not now.\" Good next step or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "👍 Good next step",
+    "👎 Not a good idea"
+   ],
+   "items": [
+    ["Find another game", 0],
+    ["Knock their tower over", 1],
+    ["Ask again a bit later", 0],
+    ["Shout \"You are mean!\"", 1],
+    ["Ask a different friend", 0],
+    ["Snatch their toy", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagentry",
+  "caption": "Flagship lab: watch a game and find the clues, sort ways to ask, give an idea that fits three games, help Bo after \"not now\", and order the join-in steps.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You want to join a game. What do you do first?",
+   "choices": ["Watch what they are playing", "Grab a toy", "Shout \"Me! Me!\""],
+   "answer": 0,
+   "hint": "Bo looked for clues before he asked. Why did that help?",
+   "explain": "Watch first. Then you know the game, and you can ask and give an idea that fits."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{n} children are playing shops. You ask \"Can I play?\" and they say yes. How many children are playing now?",
+   "answer": "n+1",
+   "hint": "Start with the {n} children. You join, so count on 1 more.",
+   "explain": "{n} and 1 more is {=n+1}. Kind words helped you join the game.",
+   "params": {"n": [2, 6]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "They are playing trains. Which idea fits their game?",
+   "choices": ["\"I can be the driver!\"", "\"Let's play football!\"", "\"Trains are boring.\""],
+   "answer": 0,
+   "hint": "Pick a part you can play in their train game.",
+   "explain": "A driver is part of the train game, so it shows you want to play with them, not change the game."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You hear \"Not now.\" You take {n} big, slow breaths, then 1 more. How many breaths is that?",
+   "answer": "n+1",
+   "hint": "Count the {n} breaths, then add the 1 extra breath.",
+   "explain": "{n} and 1 more is {=n+1}. Slow breaths help the sad or cross feeling get smaller.",
+   "params": {"n": [2, 5]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is a kind way to ask to join in?",
+    "choices": ["\"Can I play too?\"", "Push in", "Grab the ball"],
+    "answer": 0,
+    "hint": "Kind words, said in a calm voice, help others say yes.",
+    "explain": "\"Can I play too?\" uses kind words. Pushing and grabbing spoil the game."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "They say \"Not now.\" What does that mean?",
+    "choices": ["Not yet, maybe later", "They will never play with you", "They do not like you"],
+    "answer": 0,
+    "hint": "Is \"not now\" the same as \"never\"?",
+    "explain": "\"Not now\" means not yet. The game may be full, or they may be in the middle of something."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "They say \"Not now.\" What is a good thing to do?",
+    "choices": ["Find another game", "Knock their game over", "Shout at them"],
+    "answer": 0,
+    "hint": "Pick something calm that does not spoil their game.",
+    "explain": "Finding another game is calm and kind. You can ask again later."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Children are playing doctors. Which idea fits the game?",
+    "choices": ["\"I can be the patient!\"", "\"Let's play tag!\"", "\"I am the boss!\""],
+    "answer": 0,
+    "hint": "Which one is a part in a doctors game?",
+    "explain": "A doctor needs a patient, so that idea fits their game. Tag is a new game, and bossing spoils it."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why do you watch before you ask?",
+    "choices": ["To see what they are playing", "To grab a toy fast", "To find the boss"],
+    "answer": 0,
+    "hint": "In the lab, the apples and coins told Bo something.",
+    "explain": "Watching shows you the game, so you can give an idea that fits."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Bo stands near a game but says nothing at all. What can Bo do?",
+    "choices": ["Ask \"Can I play?\"", "Keep quiet all day", "Walk off and cry"],
+    "answer": 0,
+    "hint": "Do the children know Bo wants to play?",
+    "explain": "If Bo says nothing, the children may not know he wants to play. Kind words tell them."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "{n} children play pirates. 2 more children ask \"Can we play?\" and join. How many children play now?",
+    "answer": "n+2",
+    "hint": "Start at {n} and count on 2 more.",
+    "explain": "{n} and 2 more is {=n+2}. The game got bigger because they asked with kind words.",
+    "params": {"n": [2, 6]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What comes after you ask \"Can I play?\"",
+    "choices": ["Give an idea for a part", "Watch the game", "Go home"],
+    "answer": 0,
+    "hint": "The steps are watch, ask, give an idea, play.",
+    "explain": "After you ask, give an idea, like \"I can be the shopper!\" Then you play together."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "You ask {n} friends to play. 1 says \"Not now.\" The rest say yes. How many say yes?",
+    "answer": "n-1",
+    "hint": "Take the 1 who said \"not now\" away from {n}.",
+    "explain": "{n} take away 1 is {=n-1}. One \"not now\" is OK, because others may say yes.",
+    "params": {"n": [3, 6]}
+   }
+  ]
+ }
+}

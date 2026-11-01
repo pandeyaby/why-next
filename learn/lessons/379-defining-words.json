@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_f_dMmvzxwo",
+ "title": "Defining Words",
+ "audience": "family",
+ "keyIdea": "To define a word, say the group it belongs to (its category), then add a key attribute that makes it different from the rest of the group: \"A duck is a bird that swims and quacks.\" A key attribute must be true. Keep adding until the definition fits only your word. Then link the word to real life.",
+ "explain": {
+  "kid": [
+   "A definition tells what a word means. First, say what group it is in. A duck is a bird. A tiger is a big cat. A spoon is a tool.",
+   "But lots of birds are not ducks. So add a clue that makes a duck different. Ducks quack. \"A duck is a bird that quacks.\" Now it fits a duck and not a swan or an owl.",
+   "The clue must be true for the word. \"A duck is a bird with four legs\" is wrong. A duck has two legs. \"A hat is red\" is not good. Lots of hats are not red.",
+   "Do not use the word to say what it means. \"A spoon is a spoon\" does not help! Last, think of real life. Cozy is a warm bed or a soft blanket. That helps you know what cozy means."
+  ],
+  "adult": [
+   "This is the Common Core language standard L.1.5 for grade 1, built on in grades 2 and 3. Children sort words into categories (L.1.5a). They define words by category and by one or more key attributes, as in \"a duck is a bird that swims\" and \"a tiger is a large cat with stripes\" (L.1.5b). They also find real-life links between words and their use, such as places at home that are cozy (L.1.5c). In England the same skill sits in the Key Stage 1 programme: discussing and clarifying the meanings of words, and linking new meanings to known vocabulary.",
+   "Key terms: definition, category (the group a word belongs to), key attribute (a feature that separates it from others in the group), example, and real-life connection. Dictionaries use the same pattern of a group word followed by distinguishing features. That is why \"a duck is a bird that swims\" is a start but not the finish: swans and penguins swim too.",
+   "Common mistakes: naming a group that is too broad, such as \"a thing\" or \"something\". Choosing an attribute every member shares, like \"a bird that has wings\". Choosing one that is not always true (\"a hat is red\") or plain false. Defining by one example (\"a dog is like my dog\"). And using the word in its own definition. Be careful, too, that children do not stop at the group word.",
+   "In the lab your child drops a group word into \"A duck is a ___\" and watches the cards that no longer fit fade out. They add key attributes until only the duck, then the tiger, is left. They pick the best definition of spoon and of hat, sort six words into fruit, tools and clothes, and tap the cozy places in a home. Every drag has a big button twin."
+  ]
+ },
+ "familyTip": "Play \"Guess my word\" at dinner. Give the group and one clue: \"It is a fruit that is yellow.\" If more than one thing fits (a banana or a lemon), add another clue until only one is left. Then swap, and let your child give the clues.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it a good definition? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "👍 Group and key attribute",
+    "👎 Not a good definition"
+   ],
+   "items": [
+    [
+     "A duck is a bird that quacks.",
+     0
+    ],
+    [
+     "A tiger is a big cat with stripes.",
+     0
+    ],
+    [
+     "A spoon is a tool you eat soup with.",
+     0
+    ],
+    [
+     "A duck is a duck.",
+     1
+    ],
+    [
+     "A hat is red.",
+     1
+    ],
+    [
+     "A cat is a thing.",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdefine",
+  "caption": "Flagship lab: name the group, add key attributes until only one card fits, fix weak definitions, sort words into categories and find cozy places at home.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "\"A tiger is a ___.\" Which group word is closest?",
+   "choices": [
+    "big cat",
+    "thing",
+    "living thing"
+   ],
+   "answer": 0,
+   "hint": "Pick the smallest group that still fits a tiger.",
+   "explain": "A tiger is a big cat. \"A thing\" and \"a living thing\" are true, but they fit far too many other things."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} birds on the cards. {k} of them swim. You define a duck as \"a bird that swims\". How many cards does it fit?",
+   "answer": "k",
+   "hint": "Only the birds that swim still fit. How many swim?",
+   "explain": "It fits the {k} birds that swim, not only the duck. Add another key attribute, like \"that quacks\", so it fits just one.",
+   "params": {
+    "n": [
+     5,
+     8
+    ],
+    "k": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is the best definition of a spoon?",
+   "choices": [
+    "A spoon is a tool you use to eat soup.",
+    "A spoon is a spoon.",
+    "A spoon is something."
+   ],
+   "answer": 0,
+   "hint": "A good definition gives the group and a key attribute.",
+   "explain": "It gives the group (a tool) and what makes it a spoon (you eat soup with it). The others tell you nothing new."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "\"A fruit that is yellow\" fits {n} fruits on the table. You add \"and is long and bendy\". Now it fits only the banana. How many fruits did the new clue take away?",
+   "answer": "n-1",
+   "hint": "It went from {n} fruits to 1 fruit. How many were taken away?",
+   "explain": "{n} take away 1 is {=n-1}. A key attribute rules out the other fruits until only one is left.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the first part of a definition?",
+    "choices": [
+     "The group the word belongs to",
+     "A picture of the word",
+     "The word said again"
+    ],
+    "answer": 0,
+    "hint": "In the lab, we dropped a group card into \"A duck is a ___\".",
+    "explain": "Start with the group, or category: a duck is a bird. Then add a key attribute."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "\"A duck is a bird that has wings.\" Why is that not enough?",
+    "choices": [
+     "Every bird has wings",
+     "Ducks do not have wings",
+     "It is too long"
+    ],
+    "answer": 0,
+    "hint": "Does the clue rule out any other birds?",
+    "explain": "All birds have wings, so the clue does not make a duck different. Try \"that quacks\"."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which word goes in the group \"clothes\"?",
+    "choices": [
+     "coat",
+     "pear",
+     "hammer"
+    ],
+    "answer": 0,
+    "hint": "Clothes are things you wear.",
+    "explain": "You wear a coat, so it is clothes. A pear is fruit and a hammer is a tool."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "\"A hat is red.\" What is wrong with this definition?",
+    "choices": [
+     "Not every hat is red",
+     "Hats are never red",
+     "It needs more words"
+    ],
+    "answer": 0,
+    "hint": "A key attribute must be true for every hat.",
+    "explain": "Some hats are red, but many are not. A better one: a hat is clothing you wear on your head."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is a real-life link for the word \"cozy\"?",
+    "choices": [
+     "Curled up in a soft blanket",
+     "Standing in the cold rain",
+     "A loud, busy road"
+    ],
+    "answer": 0,
+    "hint": "Cozy means warm, safe and snug.",
+    "explain": "A soft blanket is warm and snug, so it is cozy. Cold rain and a loud road are not."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "\"A tiger is a big cat.\" A lion is a big cat too. What should you add?",
+    "choices": [
+     "\"with stripes\"",
+     "\"with fur\"",
+     "\"that is a tiger\""
+    ],
+    "answer": 0,
+    "hint": "Pick a clue a tiger has and a lion does not.",
+    "explain": "Tigers have stripes and lions do not. All big cats have fur, and \"that is a tiger\" uses the word itself."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "You sort {n} fruits and {k} tools into groups. How many words did you sort?",
+    "answer": "n+k",
+    "hint": "Add the fruits and the tools.",
+    "explain": "{n} + {k} = {=n+k} words. Sorting words into groups helps you see what each group means.",
+    "params": {
+     "n": [
+      2,
+      6
+     ],
+     "k": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "\"A bird that swims\" fits {n} birds. You add \"that quacks\", and now it fits only the duck. How many birds did the new clue rule out?",
+    "answer": "n-1",
+    "hint": "It went from {n} birds to just 1. How many were ruled out?",
+    "explain": "{n} take away 1 is {=n-1}. The key attribute ruled out every bird except the duck, so the definition is finished.",
+    "params": {
+     "n": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Mia says, \"A dog is like my dog Rex.\" What is missing?",
+    "choices": [
+     "The group and a key attribute",
+     "A longer name",
+     "Nothing is missing"
+    ],
+    "answer": 0,
+    "hint": "One dog is an example, not a definition.",
+    "explain": "Rex is one example. A definition says the group and a key attribute: a dog is an animal that barks."
+   }
+  ]
+ }
+}
