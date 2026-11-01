@@ -166,10 +166,10 @@ async function axe(p, label) {
   });
   await test('auto-drafted starters are hidden: an unwritten topic shows Coming soon with what to learn first', async () => {
     assert.strictEqual(await p.evaluate(() => DATA.nodes.filter(n => WN.flag(n.id)).length), 0);
-    await p.evaluate(() => select(DATA.nodes.find(n => n.n === 'Solving quadratics by factorising').id));
+    await p.evaluate(() => select(DATA.nodes.find(n => n.n === 'The Kekulé model of benzene').id));
     await p.waitForSelector('#learn.soon', { timeout: 10000 });
     const t = await p.textContent('#learn'); assert.match(t, /Coming soon/); assert.match(t, /What you will learn/); assert.match(t, /Learn these first/);
-    await p.click('#learn .soon-pre button'); await p.waitForFunction(() => !/Solving quadratics by factorising/.test(document.getElementById('learnH') ? document.getElementById('learnH').textContent : ''));
+    await p.click('#learn .soon-pre button'); await p.waitForFunction(() => !/The Kekulé model of benzene/.test(document.getElementById('learnH') ? document.getElementById('learnH').textContent : ''));
   });
   await test('axe: desktop, lesson open', async () => { await p.evaluate(() => select('mt_jHgRQ4hR0g')); await axe(p, 'desktop') });
   if (process.env.SHOTS) {
