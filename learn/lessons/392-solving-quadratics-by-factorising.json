@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_LVNI-HAtlQ",
+ "title": "Solving quadratics by factorising",
+ "audience": "learner",
+ "keyIdea": "To solve a quadratic by factorising, rearrange it so one side is 0, factorise, then set each factor equal to 0. This works because of the zero product property: if A × B = 0, then A = 0 or B = 0. So (x − 2)(x + 5) = 0 gives x = 2 or x = −5. Never divide by x, or you lose the root x = 0.",
+ "explain": {
+  "kid": [
+   "If two numbers multiply to make 0, one of them must be 0. 3 × 0 = 0, and 0 × 7 = 0. But 2 × 5 is not 0. Two numbers that are not 0 can never multiply to give 0. This is the zero product rule.",
+   "Use it on brackets. In (x − 2)(x + 5) = 0, either x − 2 = 0 or x + 5 = 0. So x = 2 or x = −5. Watch the signs: the sign flips when you solve each bracket. On a graph, these are the two points where the curve crosses the x-axis.",
+   "Most quadratics do not come in brackets. To solve x² + x − 12 = 0, factorise first. Find two numbers that multiply to −12 and add to 1. They are 4 and −3. So (x + 4)(x − 3) = 0, which gives x = −4 or x = 3. Check each one: (−4)² − 4 − 12 = 0.",
+   "The rule only works when one side is 0. For x² + x = 12, take 12 from both sides first. For x² = 5x, do not divide by x, or you lose x = 0. Write x² − 5x = 0, then x(x − 5) = 0. So x = 0 or x = 5. If a bracket has a number in front of x, solve it fully: 2x − 1 = 0 gives x = ½."
+  ],
+  "adult": [
+   "This topic is part of GCSE Mathematics (DfE 2013 subject content, A18: solve quadratic equations algebraically by factorising) and Common Core A-SSE.3.a and A-REI.4.b, which ask students to factor a quadratic to reveal its zeros. It builds on factorising x² + bx + c and on solving by square roots. It comes before completing the square and the quadratic formula.",
+   "Key terms: the zero product property says that if AB = 0, then A = 0 or B = 0. A root, or solution, is a value of x that makes the equation true. The roots of y = (x − a)(x − b) are where the graph crosses the x-axis. Standard form means ax² + bx + c = 0. A common factor of x, as in x² − 5x = x(x − 5), gives a root of 0.",
+   "Common mistakes: sign errors, so (x + 4)(x − 1) = 0 gives x = 4 and −1. Factorising before rearranging, as in x(x − 4) = 5, then setting x = 5 and x − 4 = 5. Dividing both sides by x, which loses x = 0. Giving only one root. Ignoring a coefficient, so 2x − 3 = 0 gives x = 3, not 3/2. Students should put each root back in to check.",
+   "In the lab, students slide x to make (x − 2)(x + 5) zero. They drag two roots on the x-axis to match target equations, and sign errors are named. They solve x² + x = 12 and x² = 5x by tapping steps in order; wrong moves are refused with reasons. They test (x − 2)(x − 3) = 6 on a graph and see why setting each bracket to 6 fails. Then they match factors such as 2x − 1 and 3x + 4 to their roots."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Ready for the zero rule, or rearrange first? Drag each equation, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Ready: a product equal to 0",
+    "Rearrange to = 0 first"
+   ],
+   "items": [
+    [
+     "(x − 3)(x + 1) = 0",
+     0
+    ],
+    [
+     "x(x − 4) = 5",
+     1
+    ],
+    [
+     "x(x + 9) = 0",
+     0
+    ],
+    [
+     "(x − 2)(x − 3) = 6",
+     1
+    ],
+    [
+     "(2x − 1)(x + 4) = 0",
+     0
+    ],
+    [
+     "x² + 3x = 10",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagzprod",
+  "caption": "Flagship lab: slide x to make a product zero, drag roots onto equations, solve in order, test why it must be 0, and match roots.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Solve (x − 3)(x + 7) = 0.",
+   "choices": [
+    "x = 3 or x = −7",
+    "x = −3 or x = 7",
+    "x = 3 or x = 7"
+   ],
+   "answer": 0,
+   "hint": "Set each bracket equal to 0 and solve it.",
+   "explain": "x − 3 = 0 gives x = 3. x + 7 = 0 gives x = −7. The sign flips when you solve each bracket."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Solve (x − {a})(x + {b}) = 0. What is the positive solution?",
+   "answer": "a",
+   "hint": "Set each bracket to 0. Which one gives a positive x?",
+   "explain": "x − {a} = 0 gives x = {a}, and x + {b} = 0 gives x = −{b}. The positive solution is {a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the first step to solve x² + 2x = 15?",
+   "choices": [
+    "Subtract 15 so one side is 0",
+    "Factorise: x(x + 2) = 15",
+    "Divide both sides by x"
+   ],
+   "answer": 0,
+   "hint": "The zero product rule needs 0 on one side.",
+   "explain": "x² + 2x − 15 = 0 factorises to (x + 5)(x − 3) = 0, so x = −5 or x = 3. x(x + 2) = 15 does not force either factor to be anything."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Solve x² = {k}x. What is the solution that is not 0?",
+   "answer": "k",
+   "hint": "Do not divide by x. Rearrange to x² − {k}x = 0 and take out x.",
+   "explain": "x² − {k}x = 0, so x(x − {k}) = 0. That gives x = 0 or x = {k}. The solution that is not 0 is {k}.",
+   "params": {
+    "k": [
+     2,
+     12
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Solve x² + 5x + 6 = 0.",
+    "choices": [
+     "x = −2 or x = −3",
+     "x = 2 or x = 3",
+     "x = −1 or x = −6"
+    ],
+    "answer": 0,
+    "hint": "Find two numbers that multiply to 6 and add to 5.",
+    "explain": "2 and 3 multiply to 6 and add to 5, so (x + 2)(x + 3) = 0. That gives x = −2 or x = −3."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Solve x² − 9x = 0.",
+    "choices": [
+     "x = 0 or x = 9",
+     "x = 9",
+     "x = 3 or x = −3"
+    ],
+    "answer": 0,
+    "hint": "Take out the common factor x.",
+    "explain": "x(x − 9) = 0, so x = 0 or x = 9. Dividing by x would lose x = 0."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Solve (2x + 1)(x − 4) = 0.",
+    "choices": [
+     "x = −1/2 or x = 4",
+     "x = −1 or x = 4",
+     "x = 1/2 or x = −4"
+    ],
+    "answer": 0,
+    "hint": "2x + 1 = 0: subtract 1, then divide by 2.",
+    "explain": "2x + 1 = 0 gives 2x = −1, so x = −1/2. x − 4 = 0 gives x = 4."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Solve x² − {=a+b}x + {=a*b} = 0. What is the larger solution?",
+    "answer": "b",
+    "hint": "Find two numbers that multiply to {=a*b} and add to {=a+b}.",
+    "explain": "{a} and {b} multiply to {=a*b} and add to {=a+b}, so (x − {a})(x − {b}) = 0. x = {a} or x = {b}, so the larger solution is {b}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      5,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Solve (x + {a})(x − 5) = 0. What is the negative solution?",
+    "answer": "-a",
+    "hint": "Set each bracket equal to 0. The bracket x + {a} = 0 gives the negative one: the sign flips.",
+    "explain": "x + {a} = 0 gives x = −{a}, and x − 5 = 0 gives x = 5. The negative solution is −{a}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Jo divides both sides of x² = 6x by x and writes x = 6. What is missing?",
+    "choices": [
+     "x = 0 is also a solution",
+     "Nothing, x = 6 is complete",
+     "x = −6 is also a solution"
+    ],
+    "answer": 0,
+    "hint": "Try x = 0 in the original equation.",
+    "explain": "0² = 6 × 0, so x = 0 works. Rearrange to x(x − 6) = 0 to get both x = 0 and x = 6."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why must x² − x = 12 be rearranged to = 0 before using the factors?",
+    "choices": [
+     "Only a product equal to 0 forces a factor to be 0",
+     "Factorising only works with even numbers",
+     "It makes the numbers smaller"
+    ],
+    "answer": 0,
+    "hint": "Many pairs of numbers multiply to 12.",
+    "explain": "x² − x − 12 = 0 gives (x − 4)(x + 3) = 0, so x = 4 or x = −3. With 12 on the right, the factors could be 3 and 4, 2 and 6, and so on."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Solve x² − 16 = 0 by factorising.",
+    "choices": [
+     "(x − 4)(x + 4) = 0, so x = 4 or x = −4",
+     "x = 4 only",
+     "x = 16"
+    ],
+    "answer": 0,
+    "hint": "x² − 16 is a difference of two squares.",
+    "explain": "x² − 16 = (x − 4)(x + 4), so x = 4 or x = −4."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which equation has solutions x = 2 and x = −6?",
+    "choices": [
+     "(x − 2)(x + 6) = 0",
+     "(x + 2)(x − 6) = 0",
+     "(x − 2)(x − 6) = 0"
+    ],
+    "answer": 0,
+    "hint": "x = 2 comes from x − 2 = 0.",
+    "explain": "x − 2 = 0 gives x = 2 and x + 6 = 0 gives x = −6, so (x − 2)(x + 6) = 0."
+   }
+  ]
+ }
+}
