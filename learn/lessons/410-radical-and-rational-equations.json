@@ -1,0 +1,154 @@
+{
+ "topicId": "mt_s8g2IrNW2g",
+ "title": "Radical and rational equations",
+ "audience": "learner",
+ "keyIdea": "To solve a radical equation, isolate the root, square both sides, solve, then check every candidate in the original. Squaring can add extraneous roots, because the squared equation is also true when the root is negative. To solve a rational equation, state the excluded values (where a denominator is 0), multiply through by the denominators, solve, then reject any candidate that is excluded.",
+ "explain": {
+  "kid": [
+   "A radical equation has the unknown under a square root, such as √(x + 3) = x − 3. To remove the root, get it alone on one side and square both sides: x + 3 = x² − 6x + 9. That gives the quadratic x² − 7x + 6 = 0, so x = 1 or x = 6. These are only candidates.",
+   "Check each candidate in the original equation. For x = 6, √9 = 3 and 6 − 3 = 3, so it works. For x = 1, √4 = 2 but 1 − 3 = −2. The principal square root is never negative, so x = 1 is an extraneous root. Reject it. The solution is x = 6 only.",
+   "Why did squaring add a root? Squaring both sides also solves −√(x + 3) = x − 3, because 2² and (−2)² are both 4. On a graph, x = 1 is where the line y = x − 3 meets the mirror curve y = −√(x + 3), not the real one. Squaring loses the sign, so the check is not optional.",
+   "Isolate before you square. In √(x + 1) + 1 = x, first subtract 1 to get √(x + 1) = x − 1. If you square too early, (√(x + 1) + 1)² is x + 2√(x + 1) + 2, and the root is still there. A rational equation has algebraic fractions, such as 6/x = x − 1. Note that x ≠ 0, multiply both sides by x to get x² − x − 6 = 0, and solve: x = 3 or x = −2. Both are allowed. In x/(x − 3) = 3/(x − 3) + 2, the only candidate is x = 3, which is excluded, so there is no solution."
+  ],
+  "adult": [
+   "This is A-level Pure Mathematics content. The DfE subject content (2014) asks students to solve equations, including those that reduce to quadratics, and to manipulate algebraic fractions. In the USA, Common Core HSA-REI.A.2 says students should 'solve simple rational and radical equations in one variable, and give examples showing how extraneous solutions may arise'.",
+   "The logic matters more than the steps. Squaring is not reversible: a = b implies a² = b², but a² = b² only implies a = ±b. So each step only works one way. The solution set can grow, and every candidate must be put back in. In the same way, multiplying by something that can be zero, such as (x − 3), can bring in a value outside the domain. So state the excluded values first.",
+   "Common mistakes: squaring term by term ((√x + 2)² written as x + 4, which misses the cross term 4√x); squaring before isolating the root; skipping the check, or checking in the squared equation instead of the original; dividing both sides by x and losing a root; and keeping a candidate that makes a denominator 0.",
+   "In the lab students probe the graphs of y = √(x + 3) and y = x − 3 to test the two candidates. They see the dashed mirror branch that every false root lies on, pick each line of working for an equation that must be isolated first, solve rational equations against excluded values on a number line, and practise on generated equations."
+  ]
+ },
+ "familyTip": "Ask: 'What did you check, and where?' A good answer is 'every candidate, in the original equation'. Then try √(x + 6) = x together: squaring gives x = 3 or x = −2, and only x = 3 survives.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "For √(x + 3) = x − 3 and 6/x = x − 1: is each value a solution? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Solution", "Rejected"],
+   "items": [["x = 6 in √(x + 3) = x − 3", 0], ["x = 1 in √(x + 3) = x − 3", 1], ["x = 3 in 6/x = x − 1", 0], ["x = −2 in 6/x = x − 1", 0], ["x = 0 in 6/x = x − 1", 1], ["x = 3 in x/(x − 3) = 3/(x − 3) + 2", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagradeq",
+  "caption": "Flagship lab: probe the graphs to test candidates, find false roots on the mirror branch, isolate then square, reject excluded values, and practise.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Squaring √(x + 2) = x gives x = 2 or x = −1. What is the solution?",
+   "choices": ["x = 2 only", "x = 2 or x = −1", "x = −1 only"],
+   "answer": 0,
+   "hint": "Substitute each candidate into the original equation. Can a square root equal −1?",
+   "explain": "x = 2: √4 = 2 ✓. x = −1: √1 = 1, but the right side is −1. A principal square root is never negative, so x = −1 is extraneous."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Solve √(x − {a}) = 3. What is x?",
+   "answer": "9+a",
+   "hint": "Square both sides: x − {a} = 9. Then add {a}.",
+   "explain": "x − {a} = 9, so x = {=9+a}. Check: √({=9+a} − {a}) = √9 = 3 ✓.",
+   "params": {"a": [1, 12]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the first step in solving √(x + 5) − 1 = x?",
+   "choices": ["Add 1 to both sides to isolate the root", "Square both sides straight away", "Divide both sides by x"],
+   "answer": 0,
+   "hint": "You want the square root alone on one side before you square.",
+   "explain": "Isolate first: √(x + 5) = x + 1. Squaring √(x + 5) − 1 directly leaves a cross term with the root still in it."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Solve {k}/x = 2. What is x?",
+   "answer": "k/2",
+   "where": "k%2==0",
+   "hint": "x ≠ 0. Multiply both sides by x: {k} = 2x. Then divide by 2.",
+   "explain": "{k} = 2x, so x = {=k/2}. It is not the excluded value 0, so it stands.",
+   "params": {"k": [4, 20]}
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Solve √(x + 6) = x.",
+    "choices": ["x = 3", "x = 3 or x = −2", "x = −2"],
+    "answer": 0,
+    "hint": "Square to get x² − x − 6 = 0, then test both roots in the original.",
+    "explain": "x² − x − 6 = 0 gives x = 3 or x = −2. √9 = 3 ✓, but √4 = 2, not −2, so x = −2 is extraneous."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A student writes (√x + 2)² = x + 4. What is wrong?",
+    "choices": ["The cross term is missing: it is x + 4√x + 4", "Nothing, it is correct", "It should be x + 2"],
+    "answer": 0,
+    "hint": "Expand (a + b)² = a² + 2ab + b² with a = √x and b = 2.",
+    "explain": "(√x + 2)² = x + 4√x + 4. Squaring term by term misses 2ab. That is why you isolate the root before squaring."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Solve x/(x − 3) = 3/(x − 3) + 2.",
+    "choices": ["No solution", "x = 3", "x = 0"],
+    "answer": 0,
+    "hint": "State the excluded value first, then multiply through by (x − 3).",
+    "explain": "x ≠ 3. Multiplying gives x = 3 + 2(x − 3), so x = 3, which is excluded. There is no solution."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Solve 6/x = x − 1.",
+    "choices": ["x = 3 or x = −2", "x = 3 only", "x = 0, 3 or −2"],
+    "answer": 0,
+    "hint": "x ≠ 0. Multiply by x to get a quadratic, then check against the excluded value.",
+    "explain": "6 = x² − x, so x² − x − 6 = 0 and x = 3 or x = −2. Neither is 0, and both check: 6/3 = 2 and 6/(−2) = −3."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Solve √(2x + {c}) = 5. What is x?",
+    "answer": "(25-c)/2",
+    "where": "c%2==1",
+    "hint": "Square both sides: 2x + {c} = 25. Then solve the linear equation.",
+    "explain": "2x = 25 − {c} = {=25-c}, so x = {=(25-c)/2}. Check: √({=25-c} + {c}) = √25 = 5 ✓.",
+    "params": {"c": [1, 15]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why can squaring both sides create an extraneous root?",
+    "choices": ["a² = b² is also true when a = −b, so it solves −√(…) = x − b as well", "Squaring always contains an arithmetic slip", "Square roots can be negative"],
+    "answer": 0,
+    "hint": "If a² = b², what are the two possibilities for a?",
+    "explain": "a = b implies a² = b², but a² = b² only implies a = ±b. The extra roots solve the equation with −√, so they must be rejected by checking."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Solve {k}/(x − 1) = 2. What is x?",
+    "answer": "k/2+1",
+    "where": "k%2==0",
+    "hint": "x ≠ 1. Multiply both sides by (x − 1): {k} = 2(x − 1).",
+    "explain": "{k} = 2x − 2, so 2x = {=k+2} and x = {=k/2+1}. It is not the excluded value 1, so it stands.",
+    "params": {"k": [2, 16]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Squaring √(x + 2) = x − 4 gives x = 7 or x = 2. Which are solutions?",
+    "choices": ["x = 7 only", "Both", "x = 2 only"],
+    "answer": 0,
+    "hint": "Check the sign of x − 4 for each candidate.",
+    "explain": "x = 7: √9 = 3 = 7 − 4 ✓. x = 2: √4 = 2, but 2 − 4 = −2, so x = 2 is extraneous."
+   }
+  ]
+ }
+}
