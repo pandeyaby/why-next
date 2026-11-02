@@ -69,13 +69,13 @@ and reports small targets, jargon, captions without an action and weak feedback.
 ## Loading (fast split build)
 
 `ext/make_viewer.py` writes `out/viewer.html` (page shell and CSS, about 15 KB), `out/wn/core.js` (compact map),
-`out/wn/learn.js` (lessons and visuals) and `out/wn/app.js`, all deferred, plus 46 per-domain detail chunks
+`out/wn/learn.js` (lessons and visuals) and `out/wn/app.js`, all deferred, plus 51 per-domain detail chunks
 `out/wn/d*.js` (descriptions, evidence, standards, link reasons, cluster notes). The page renders the map and the
 first lesson after loading only the chunks that topic needs; other chunks load when a topic needs them, and all of
 them load on the first search. Chunks are plain scripts, so the viewer works on GitHub Pages and from `file://`.
 `out/viewer-offline.html` is the same app in one file. Measure with `node scripts/serve_static.cjs out` (gzip, like Pages) and Lighthouse.
 
-`python3 learn/goal_coverage.py --list` lists every topic on a goal path for an age band and whether it has a lesson; `check_all.sh` fails if a required goal/band pair (now: integration, 16–18) has a gap.
+`python3 learn/goal_coverage.py --list` lists every topic on a goal path for an age band and whether it has a lesson; `check_all.sh` fails if a required goal/band pair (the 15 pairs in `REQUIRED` in `learn/goal_coverage.py`: fractions, algebra, calculus, integration and chemistry) has a gap.
 
 ## Reel catalogue
 
