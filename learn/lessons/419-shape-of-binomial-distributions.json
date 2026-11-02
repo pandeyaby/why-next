@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_QtfZ4htHBD",
+ "title": "Shape of binomial distributions",
+ "audience": "learner",
+ "keyIdea": "The shape of X ~ B(n, p) is set by n and p. The peak (mode) sits at or next to the mean np. When p < 0.5 the chart has positive skew, with a long tail to the right; p = 0.5 gives a symmetric chart; p > 0.5 gives negative skew. B(n, 1 − p) is the mirror image of B(n, p). As n grows, the spread √(np(1 − p)) grows and the skew fades.",
+ "explain": {
+  "kid": [
+   "Say you flip a fair coin 10 times and count heads. That count is X ~ B(10, 0.5). The bar chart has 11 bars, for 0 up to 10. It is tallest at 5 and falls away evenly on both sides, so it is symmetric.",
+   "Now say only 1 shot in 5 goes in, and you take 10 shots: X ~ B(10, 0.2). The mean is np = 10 × 0.2 = 2. Most of the bars near 0, 1 and 2 are tall. Then a thin tail runs off to the right. We call that positive skew. If p were 0.8, the chart would flip, with the tail on the left. That is negative skew.",
+   "The peak is the mode, the most likely value. It is always a whole number at or next to np. For B(10, 0.3), np = 3 and the mode is 3. For B(4, 0.1), np = 0.4, so the mode is 0.",
+   "The spread is the standard deviation, σ = √(np(1 − p)). It is largest when p = 0.5. If you keep p fixed and make n bigger, the mean moves right, the chart gets wider, and the skew gets weaker. The chart starts to look like a bell."
+  ],
+  "adult": [
+   "This topic matches the A level Mathematics statistics content on the binomial distribution, where students should be able to describe and sketch its shape and use it to model counts. AP Statistics asks students to describe the shape, centre and spread of a binomial distribution, with mean np and standard deviation √(np(1 − p)). The International Baccalaureate Mathematics courses use the same results. A useful exact fact is that the mode is ⌊(n + 1)p⌋, or both (n + 1)p and (n + 1)p − 1 when (n + 1)p is a whole number.",
+   "The most common mistake is to get the skew direction backwards. Students see the bars piled up on the left and call it negative or left skew. Skew is named after the tail, not the pile, so small p gives positive (right) skew. A second mistake is to think the peak sits in the middle of 0 to n. It sits near np, and only at n/2 when p = 0.5.",
+   "Students also often miss that B(n, p) and B(n, 1 − p) are reflections of each other. Counting failures instead of successes swaps p and 1 − p, so P(X = x) = P(Y = n − x). The skew measure (1 − 2p)/√(np(1 − p)) shows why the skew fades as n grows with p fixed, which links to the normal approximation later in the course.",
+   "In the lab your learner taps where they think each chart peaks before the bars appear. They drag p and see positive skew, symmetry and negative skew in turn. They drag p to mirror an outline of B(10, p₀), then grow n and hit mean targets while watching σ and skew. Last, they name unlabelled charts, including two with the same mean but different spread."
+  ]
+ },
+ "familyTip": "Ask your learner to sketch B(10, 0.2) and B(10, 0.8) side by side without a calculator, then explain which one has positive skew and why. Check with a calculator's binomial table: the two lists of probabilities should be the same, but in reverse order.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which shape does each binomial have? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Positive skew",
+    "Symmetric",
+    "Negative skew"
+   ],
+   "items": [
+    [
+     "B(12, 0.1)",
+     0
+    ],
+    [
+     "B(30, 0.25)",
+     0
+    ],
+    [
+     "B(8, 0.5)",
+     1
+    ],
+    [
+     "B(15, 0.5)",
+     1
+    ],
+    [
+     "B(10, 0.9)",
+     2
+    ],
+    [
+     "B(20, 0.65)",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbshape",
+  "caption": "Flagship lab: guess each peak before the bars appear, slide p through the three skews, mirror B(n, p), grow n and name unlabelled charts.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "X ~ B(15, 0.2). Which describes the shape?",
+   "choices": [
+    "Positive skew, tail to the right",
+    "Negative skew, tail to the left",
+    "Symmetric about 7.5"
+   ],
+   "answer": 0,
+   "hint": "With p small, most trials fail. Where do most of the bars pile up?",
+   "explain": "With p = 0.2 the bars pile up near np = 3 and the tail runs right, so it has positive skew. Skew is named after the tail."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "X ~ B({n}, 0.5). About which value is the distribution symmetric?",
+   "answer": "n/2",
+   "hint": "With p = 0.5 the chart is symmetric about its mean np.",
+   "explain": "The mean is np = {n} × 0.5 = {=n/2}, and with p = 0.5 the chart is symmetric about {=n/2}.",
+   "params": {
+    "n": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How are B(10, 0.3) and B(10, 0.7) related?",
+   "choices": [
+    "Mirror images: P(X = x) for one equals P(X = 10 − x) for the other",
+    "They are the same distribution",
+    "B(10, 0.7) is the same shape moved right by 4"
+   ],
+   "answer": 0,
+   "hint": "Count failures instead of successes.",
+   "explain": "They are mirror images about 5. Counting failures swaps p and 1 − p, so P(X = x) becomes P(X = 10 − x)."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "X ~ B({=10*n}, 0.3). What is the mean np?",
+   "answer": "3*n",
+   "hint": "Multiply the number of trials by p.",
+   "explain": "np = {=10*n} × 0.3 = {=3*n}. The peak of the chart is at or next to {=3*n}.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "X ~ B(20, 0.85). Which describes the shape?",
+    "choices": [
+     "Negative skew, tail to the left",
+     "Positive skew, tail to the right",
+     "Symmetric about 10"
+    ],
+    "answer": 0,
+    "hint": "Large p means mostly successes. Which side has the thin tail?",
+    "explain": "With p = 0.85 the bars pile up near np = 17 and the tail runs left, so it has negative skew."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "X ~ B(4, 0.1). What is the mode?",
+    "choices": [
+     "0",
+     "0.4",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "The mode is a whole number at or next to np.",
+    "explain": "np = 0.4, and the mode is ⌊(n + 1)p⌋ = ⌊0.5⌋ = 0. The mode must be a value X can take, so it is 0, not 0.4."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which has the larger standard deviation?",
+    "choices": [
+     "B(40, 0.5)",
+     "B(40, 0.1)",
+     "They are equal, as n is the same"
+    ],
+    "answer": 0,
+    "hint": "Use σ = √(np(1 − p)) for each one and compare the two numbers.",
+    "explain": "B(40, 0.5) has σ = √10 ≈ 3.16, and B(40, 0.1) has σ = √3.6 ≈ 1.90. The spread is largest when p = 0.5."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "p = 0.1 is fixed and n goes from 10 to 100. What happens to the skew?",
+    "choices": [
+     "It gets weaker",
+     "It gets stronger",
+     "It flips to negative"
+    ],
+    "answer": 0,
+    "hint": "The skew measure is (1 − 2p)/√(np(1 − p)). What happens as n grows?",
+    "explain": "It gets weaker. The top of (1 − 2p)/√(np(1 − p)) stays the same, but the bottom grows with n, so the chart looks more like a bell."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A chart has 11 bars, a peak at 8 and a long tail to the left. Which model fits?",
+    "choices": [
+     "B(10, 0.8)",
+     "B(10, 0.2)",
+     "B(11, 0.5)"
+    ],
+    "answer": 0,
+    "hint": "11 bars means n = 10. Where is np?",
+    "explain": "B(10, 0.8): 11 bars means n = 10, the peak at 8 fits np = 8, and a left tail means p > 0.5."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "X ~ B({=4*n}, 0.25). What is the mean?",
+    "answer": "n",
+    "hint": "The mean of a binomial is np: multiply the trials by p.",
+    "explain": "np = {=4*n} × 0.25 = {n}. The mode is at or next to {n}.",
+    "params": {
+     "n": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "X ~ B({n}, 0.5). What is the variance np(1 − p), times 4?",
+    "answer": "n",
+    "hint": "np(1 − p) = n × 0.5 × 0.5 = n ÷ 4. Multiply that by 4.",
+    "explain": "The variance is {n} × 0.5 × 0.5 = {n} ÷ 4, and 4 times that is {n}.",
+    "params": {
+     "n": [
+      4,
+      16
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Is it true that the peak of B(n, p) is always at n/2?",
+    "choices": [
+     "No, it is at or next to np",
+     "Yes, the middle is always tallest",
+     "Only when n is even"
+    ],
+    "answer": 0,
+    "hint": "Where does the mean np sit?",
+    "explain": "No. The peak is at or next to np, which is n/2 only when p = 0.5."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Two charts have mean 4: B(40, 0.1) and B(8, 0.5). How do they differ?",
+    "choices": [
+     "B(40, 0.1) is skewed and wider",
+     "They are identical",
+     "B(8, 0.5) is skewed to the right"
+    ],
+    "answer": 0,
+    "hint": "Same mean; compare σ and the value of p.",
+    "explain": "B(40, 0.1) has σ = √3.6 ≈ 1.90 and positive skew. B(8, 0.5) has σ = √2 ≈ 1.41 and is symmetric."
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the A level Mathematics statistics content (binomial distribution as a model for counts, its shape), AP Statistics (shape, centre np and spread √(np(1 − p)) of a binomial) and standard results: mode ⌊(n + 1)p⌋ with a double mode when (n + 1)p is whole, the reflection P(X = x) under B(n, p) equals P(X = n − x) under B(n, 1 − p), and skewness (1 − 2p)/√(np(1 − p)). Every numeric claim in the lab and items (σ of B(40, 0.5) ≈ 3.16, B(40, 0.1) ≈ 1.90, B(8, 0.5) ≈ 1.41) was recomputed."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented errors: naming skew after the pile not the tail (skewdir tag, p1, m1, adult text), peak at n/2 rather than np (middle tag, m8, peak-guess step with 0, np and middle prediction options), mode equal to a non-integer mean (meanmode tag, m2), B(n, 1 − p) as a different shape rather than a reflection (mirror tag, p3), spread depending only on n (spread tag, m3), and skew growing with n (grow tag, m4, grow prediction)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagbshape is a new lab built on a live B(n, p) bar chart: a hidden-bars peak guess with dashed outlines, a p slider with live skew wording, a mirror task against an outline of B(10, p₀), an n slider with the mean line, a ±σ bracket and a live skew number, and an unlabelled chart-matching round. It differs from flagbinp (nCr orders and cumulative shading) and flagbfit (model conditions); top shingle similarity is 3.8%."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step forces the idea to be used: commit to a peak bar before seeing the heights (wrong taps get 'the peak sits at or next to the mean np'), find all three skew shapes by dragging p, set p exactly to 1 − p₀ to make a mirror, hit mean targets 2, 6 and 10 by choosing n, and name charts from bars, peak, skew and spread, including two charts with mean 4 that differ only in σ."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions come before acting: where B(10, 0.3) peaks (0, np or the middle), which side B(12, 0.2) has its tail, and what happens to the skew as n grows with p fixed. A.reveal reports each guess back once the child has seen the answer on the chart."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with rotating answer order; each wrong option carries a tag (skewdir, middle, zero, mirror, grow, spread, meanmode) with its own explanation that names the rule and a number, e.g. 'σ = √(np(1 − p)) is largest when p = 0.5: √10 ≈ 3.16 against √3.6 ≈ 1.90.' Correct answers grow a streak."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner text grades at FK 0.7 by the tool (short sentences, worked numbers) and adult text at FK 6.9, both under the learner targets. Terms are introduced with a plain gloss: mode as the most likely value, skew named after the tail, spread as the standard deviation."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each paragraph carries a result: the symmetric coin case, positive and negative skew with np worked, the mode rule with the B(4, 0.1) edge case, and how σ and skew change with n. The adult text adds course references, the exact mode formula, two named mistakes with their fix, and the reflection and skewness results."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "The canvas uses a taller ratio on narrow screens, the slider track has a 34 px hit band and a 13 px knob, bar labels thin out (every 2nd or 5th) for large n, and every gesture has a button twin below the canvas (◀ ▶ Choose this bar, p − / p +, n − / n +, and B(n, p) choice buttons). Walkthrough checked on iPhone 13 and desktop."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "The canvas aria-label is updated with every move (current p or n, mean, σ, skew word, and result), controls sit in a labelled group with aria-labels on arrow buttons, challenge feedback is a polite live region, all colours come from theme tokens so contrast holds in light and dark, and axe runs clean in both themes."
+  }
+ },
+ "sources": [
+  "DfE (2016) Mathematics AS and A level content: statistical distributions (binomial)",
+  "College Board AP Statistics Course and Exam Description, Unit 4 (binomial distribution: shape, centre and spread)",
+  "IB Mathematics: Analysis and Approaches guide, binomial distribution",
+  "Standard results: mode floor((n+1)p); skewness (1-2p)/sqrt(np(1-p)) (e.g. NIST/SEMATECH e-Handbook of Statistical Methods, binomial distribution)"
+ ]
+}
