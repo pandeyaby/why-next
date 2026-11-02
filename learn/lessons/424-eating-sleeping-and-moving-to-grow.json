@@ -1,0 +1,151 @@
+{
+ "topicId": "mt_85mWt1eV2S",
+ "title": "Eating, sleeping and moving to grow",
+ "audience": "family",
+ "keyIdea": "People and animals need food, water, sleep and moving to grow and stay healthy. Your body gives clues: a rumbling tummy needs food, a dry mouth needs water and yawning needs sleep. Fruit and vegetables are every day foods; sweets are a sometimes treat. Children need about 10 to 13 hours of sleep a day and lots of active play. You were a baby, and now you are bigger: you are still growing.",
+ "explain": {
+  "kid": [
+   "Look at a baby photo of you. You were small! Now you are big. You are still growing.",
+   "To grow, your body needs four things: food, water, sleep and moving. Pets need them too.",
+   "Your body tells you what it needs. A rumbling tummy says eat. A dry mouth says drink water. A big yawn says sleep.",
+   "Fruit and vegetables are good every day. Sweets are just for sometimes. Sleep all night, and run, jump and climb in the day. That makes your heart strong."
+  ],
+  "adult": [
+   "In England, Development Matters (2023) asks 3 and 4 year olds to make healthy choices about food, drink, activity and toothbrushing. In Reception, children talk about what keeps them healthy: physical activity, healthy eating, toothbrushing, screen time and a good sleep routine. Year 2 science then covers the basic needs of animals, including humans (water, food and air), and why exercise, the right amounts of different foods and hygiene matter.",
+   "The numbers behind the lab: the UK Chief Medical Officers advise that 3 and 4 year olds are active for at least 180 minutes a day, with 60 of them energetic. The American Academy of Sleep Medicine says children aged 3 to 5 need 10 to 13 hours of sleep in 24 hours, naps included. The NHS Eatwell Guide puts fruit and vegetables at the base of every day eating, and foods high in sugar as small and less often.",
+   "Common mistakes: thinking food alone makes you grow, so sleep and play do not matter; thinking sweets are good because they give energy; seeing bedtime as a punishment; and thinking grown-ups keep getting taller. Be careful with good food and bad food labels. Every day and sometimes keeps meals calm and is closer to the advice.",
+   "In the lab your child drags food, water or a bed to a child whose body gives a clue. They sort foods onto a plate or into a treat jar and drag the moon across the night until a sleep battery fills. They line people up from baby to grown-up, then run, jump and climb while a heart beats faster. Every drag has a big button twin."
+  ]
+ },
+ "familyTip": "At bedtime, ask: what did you eat, drink and play today that helps you grow? Look at a baby photo together and find three ways your child has grown.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Every day food or sometimes food? Drag each one to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Every day", "Sometimes"],
+   "items": [["banana", 0], ["sweets", 1], ["broccoli", 0], ["crisps", 1], ["water", 0], ["cake", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagthrive",
+  "caption": "Flagship lab: answer body clues, sort every day and sometimes foods, fill a sleep battery, line up from baby to grown-up, and run, jump and climb.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ava's tummy is rumbling. What does her body need?",
+   "choices": ["Food", "Sleep", "A ball"],
+   "answer": 0,
+   "hint": "A rumbling tummy is a clue. What fills a tummy?",
+   "explain": "A rumbling tummy means Ava is hungry, so her body needs food."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Teddy slept {n} hours. He needs 10 hours to fill his sleep battery. How many more hours does he need?",
+   "answer": "10-n",
+   "hint": "Count on from {n} up to 10.",
+   "explain": "From {n} up to 10 is {=10-n} more hours. Children need about 10 to 13 hours of sleep.",
+   "params": {"n": [5, 9]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which one is a sometimes food?",
+   "choices": ["Sweets", "An apple", "A carrot"],
+   "answer": 0,
+   "hint": "Which one has lots of sugar?",
+   "explain": "Sweets have lots of sugar, so they are a small treat for sometimes. Apples and carrots are good every day."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You had {n} drinks of water today. After running you have 1 more. How many drinks is that?",
+   "answer": "n+1",
+   "hint": "Start at {n} and count 1 more.",
+   "explain": "{n} and 1 more makes {=n+1} drinks. Water helps your body, most of all after you run about.",
+   "params": {"n": [2, 6]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Leo keeps yawning. What does his body need?",
+    "choices": ["Sleep", "Sweets", "A run"],
+    "answer": 0,
+    "hint": "Yawning is a clue. When do you yawn?",
+    "explain": "Yawning means Leo is tired, so his body needs sleep."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What do people and animals need to grow?",
+    "choices": ["Food, water, sleep and moving", "Only food", "Only sweets"],
+    "answer": 0,
+    "hint": "Think of four things. Food is one of them.",
+    "explain": "Food, water, sleep and moving all help bodies grow, for people and for pets."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Look at a baby photo of you. What has changed?",
+    "choices": ["I am bigger now", "I am smaller now", "Nothing has changed"],
+    "answer": 0,
+    "hint": "Were you big or small when you were a baby?",
+    "explain": "You were small as a baby. Now you are bigger, and you are still growing."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which one makes your heart beat faster?",
+    "choices": ["Running in the park", "Sitting on the sofa", "Sleeping"],
+    "answer": 0,
+    "hint": "Put your hand on your chest after you run. What do you feel?",
+    "explain": "Running makes your heart beat faster, and that makes it strong."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Your mouth is dry after playing. What helps?",
+    "choices": ["A drink of water", "Going to bed", "A sweet"],
+    "answer": 0,
+    "hint": "A dry mouth is a clue. What does it want?",
+    "explain": "A dry mouth means you are thirsty, so a drink of water helps."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "You ran round the tree {n} times and jumped {k} times. How many goes is that?",
+    "answer": "n+k",
+    "hint": "Count the runs, then count on the jumps.",
+    "explain": "{n} runs and {k} jumps make {=n+k} goes. Moving every day makes your muscles strong.",
+    "params": {"n": [1, 5], "k": [1, 4]}
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A puppy eats {n} meals each day. How many meals does it eat in 2 days?",
+    "answer": "2*n",
+    "hint": "Count the meals for one day, then count them again for day two.",
+    "explain": "{n} meals each day for 2 days is {=2*n} meals. Animals need food to grow, just like you.",
+    "params": {"n": [2, 5]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Is staying up very late good for growing?",
+    "choices": ["No, sleep helps you grow", "Yes, more time to play", "Yes, if you eat sweets"],
+    "answer": 0,
+    "hint": "What does your body do while you sleep?",
+    "explain": "Your body grows and rests while you sleep. Staying up late leaves you tired."
+   }
+  ]
+ }
+}
