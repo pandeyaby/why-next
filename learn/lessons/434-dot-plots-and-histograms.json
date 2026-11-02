@@ -1,0 +1,241 @@
+{
+ "topicId": "mt_QPcvhTzMmD",
+ "title": "Dot plots and histograms",
+ "audience": "learner",
+ "keyIdea": "A dot plot puts one dot for each value above a number line, so you can see every value and describe the shape: clusters, gaps, peaks and outliers. When there are many values, or the data is continuous, a histogram groups them into classes of equal width; the bar height is the frequency, and the bars touch because each class runs straight into the next (20 ≤ t < 30, then 30 ≤ t < 40). The class width you choose decides how much of the shape you can see.",
+ "explain": {
+  "kid": [
+   "A dot plot is a number line with one dot for every value. Ten football matches give ten dots. Dots with the same value stack up, so the tallest stack shows the most common value: the mode, or peak.",
+   "Then read the shape. A cluster is a group of values close together. A gap is a stretch of the number line inside the data with no dots. An outlier is a value far away from the rest. A gap does not mean a value is impossible; it means no one in this data had it.",
+   "With 300 heights a dot plot becomes a forest of towers. A histogram groups the values into classes of equal width, such as 140 ≤ h < 150 cm, and draws one bar per class. The height of the bar is the frequency: how many values fall in that class.",
+   "The bars touch because the classes join with no gaps between them: a height can be 149.9 cm or 150 cm. Each value goes in exactly one class, and a boundary value goes in the class it starts. Very thin classes make a spiky picture; very wide ones hide the shape in a couple of bars."
+  ],
+  "adult": [
+   "Curriculum links: Common Core 6.SP.4 asks students to display numerical data in plots on a number line, including dot plots, histograms and box plots, and 6.SP.2 and 6.SP.5 to describe a distribution by its centre, spread and overall shape. In England, KS3 statistics asks pupils to construct and interpret appropriate tables, charts and diagrams, including grouped frequency tables for continuous data, which leads to GCSE histograms (where unequal widths use frequency density; this lesson keeps to equal widths, so frequency is the bar height).",
+   "Key terms: distribution, frequency, class (class interval), class width, class boundary, mode and modal class, cluster, gap, peak, outlier, discrete and continuous data. Writing classes as inequalities such as 20 ≤ t < 30 makes it clear which class a boundary value belongs to.",
+   "Common mistakes: reading the height of a stack as the value (saying the peak is 6 when 6 is how many dots sit at 2 goals), treating a gap as an impossible value, putting a boundary value such as 30 s in the class that ends at 30, drawing gaps between histogram bars as if the data were categories, and being careful about class width, since very wide classes can hide two peaks.",
+   "In the lab students plot ten match results as stacked dots, find a peak, a gap and an outlier in travel times, change the class width of a histogram of 40 heights from 2 to 20 cm and compare shapes, drag bar tops to build a histogram from a frequency table, then read the modal class and place a boundary value."
+  ]
+ },
+ "familyTip": "Ask everyone at home how many minutes it took them to get ready this morning, and draw a dot plot on paper. Is there a cluster, a gap or an outlier? Then group the times into 5-minute classes and draw touching bars.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which chart suits the data? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "📍 Dot plot",
+    "📊 Histogram"
+   ],
+   "items": [
+    [
+     "Goals in 10 matches",
+     0
+    ],
+    [
+     "Heights of 300 pupils",
+     1
+    ],
+    [
+     "Shoe sizes of 15 friends",
+     0
+    ],
+    [
+     "Reaction times of 80 people",
+     1
+    ],
+    [
+     "Pets owned by 20 pupils",
+     0
+    ],
+    [
+     "Masses of 120 apples",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghist",
+  "caption": "Flagship lab: stack dots, find peaks, gaps and outliers, change class width, build a histogram from a table and read it.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A dot plot shows stacks of 2, 5, 3 and 1 dots above 0, 1, 2 and 3 pets. What is the mode?",
+   "choices": [
+    "1 pet",
+    "5 pets",
+    "3 pets"
+   ],
+   "answer": 0,
+   "hint": "The mode is the value under the tallest stack, not the number of dots in it.",
+   "explain": "The tallest stack has 5 dots and it sits above 1 pet, so the mode is 1 pet."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A histogram of heights has {n} equal classes, each 5 cm wide. The first class starts at 130 cm. At what height in cm does the last class end?",
+   "answer": "130+5*n",
+   "hint": "Each class adds 5 cm. Work out how far {n} classes of 5 cm reach from 130.",
+   "explain": "{n} × 5 = {=5*n} cm, and 130 + {=5*n} = {=130+5*n} cm. Equal widths mean the classes step along evenly.",
+   "params": {
+    "n": [
+     3,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The classes are 20 ≤ t < 30 and 30 ≤ t < 40. A runner's time is exactly 30 s. Which class does it go in?",
+   "choices": [
+    "30 ≤ t < 40",
+    "20 ≤ t < 30",
+    "Both classes"
+   ],
+   "answer": 0,
+   "hint": "Read the inequality signs. Which class can include 30 itself?",
+   "explain": "20 ≤ t < 30 stops just below 30. 30 ≤ t < 40 includes 30, so the time goes there, and only there."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A histogram has bars of frequency {a}, {b} and 6. How many values does it show in total?",
+   "answer": "a+b+6",
+   "hint": "Each bar height is the number of values in that class. Add them.",
+   "explain": "{a} + {b} + 6 = {=a+b+6} values altogether.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     3,
+     12
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A dot plot of quiz scores has no dots above 7, but dots on both sides. What is the best description?",
+    "choices": [
+     "A gap: no one in this data scored 7",
+     "Scoring 7 is impossible",
+     "7 is an outlier"
+    ],
+    "answer": 0,
+    "hint": "Think about what an empty spot inside the data means, and what it does not mean.",
+    "explain": "It is a gap. No one in this group scored 7, but another group could."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why do the bars of a histogram touch?",
+    "choices": [
+     "The classes join with no gaps between them",
+     "To save space on the page",
+     "Because the data is categorical"
+    ],
+    "answer": 0,
+    "hint": "Think about times such as 29.9 s and 30 s. Is there any space between the classes?",
+    "explain": "Histograms show continuous (or grouped) numerical data. One class ends where the next starts, so the bars touch."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You record the heights of 300 pupils. Which display shows the shape most clearly?",
+    "choices": [
+     "A histogram with equal-width classes",
+     "A dot plot with one dot for each pupil",
+     "A histogram with a single 100 cm wide bar"
+    ],
+    "answer": 0,
+    "hint": "300 dots make very tall stacks; one huge bar hides everything.",
+    "explain": "Grouping into sensible equal classes shows the distribution. 300 dots are too many, and one bar shows no shape."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Travel times cluster from 5 to 10 minutes, and one pupil took 45 minutes. What is 45?",
+    "choices": [
+     "An outlier",
+     "The peak",
+     "A gap"
+    ],
+    "answer": 0,
+    "hint": "Is 45 near the other values or far away from them?",
+    "explain": "45 is far from the cluster at 5–10, so it is an outlier. It is real data, so check it, but do not delete it without a reason."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Classes are 0 ≤ t < 10, 10 ≤ t < 20, 20 ≤ t < 30 with frequencies 4, 11, 6. What is the modal class?",
+    "choices": [
+     "10 ≤ t < 20",
+     "11",
+     "20 ≤ t < 30"
+    ],
+    "answer": 0,
+    "hint": "The modal class is a class, not a number of values. Find the tallest bar.",
+    "explain": "11 is the highest frequency, so 10 ≤ t < 20 is the modal class."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The same 40 heights are drawn with classes 2 cm wide and with classes 20 cm wide. What happens with the 20 cm classes?",
+    "choices": [
+     "Only two bars, so the shape is hidden",
+     "More detail appears",
+     "The total frequency changes"
+    ],
+    "answer": 0,
+    "hint": "How many 20 cm classes fit between 130 and 170 cm?",
+    "explain": "40 ÷ 20 = 2 bars. The total is still 40, but the peak and spread disappear."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A dot plot has {n} dots. {k} of them sit at the peak value. How many dots are at other values?",
+    "answer": "n-k",
+    "hint": "Each dot is one value. Take the dots at the peak away from the total.",
+    "explain": "{n} − {k} = {=n-k} dots at other values.",
+    "params": {
+     "n": [
+      15,
+      30
+     ],
+     "k": [
+      4,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Times are grouped into classes 10 s wide: 0 ≤ t < 10, 10 ≤ t < 20, and so on. Every time is less than {k} × 10 s, and some are just under it. How many classes do you need?",
+    "answer": "k",
+    "hint": "Each class covers 10 s. How many lots of 10 s reach from 0 up to {k} × 10 s?",
+    "explain": "The times run from 0 up to {=10*k} s, and {=10*k} ÷ 10 = {k}, so you need {k} classes and {k} touching bars.",
+    "params": {
+     "k": [
+      3,
+      8
+     ]
+    }
+   }
+  ]
+ }
+}
