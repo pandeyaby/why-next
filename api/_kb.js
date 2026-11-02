@@ -1,10 +1,12 @@
 /* Why Next? Guide lesson finder, server half: meaning-based (embedding) ranking fused with the browser's keyword ranking.
    The browser (learn/guide_kb.js, BM25) sends its top lesson ids; here the question gets one small Gemini embedding
    (gemini-embedding-001, 256 dims) and is compared with lesson vectors precomputed at build time
-   (scripts/build_kb_vectors.mjs -> api/_kb_vectors.json, int8). Reciprocal rank fusion, embeddings weighted 2:1, k=10.
+   (scripts/build_kb_vectors.mjs -> api/_kb_vectors.json, int8). Reciprocal rank fusion, embeddings weighted 1.3:1, k=1: with
+   so small a k the top-2 is each ranker's best pick (embeddings first) unless both agree on a lesson, which then wins.
+   The old k=10, 2:1 let the embedding ranker's 2nd-4th picks push out the keyword ranker's correct first pick.
    Any failure (no vectors, no key, slow or bad embedding call) returns null and the caller keeps the keyword result. */
 import { readFileSync } from 'node:fs';
-export const EMBED_MODEL = 'gemini-embedding-001', EMBED_DIM = 256, FUSE = { we: 2, wk: 1, k: 10, depth: 20 };
+export const EMBED_MODEL = 'gemini-embedding-001', EMBED_DIM = 256, FUSE = { we: 1.3, wk: 1, k: 1, depth: 20 };
 let store;
 export function loadVectors(file = new URL('./_kb_vectors.json', import.meta.url)) {
   if (store !== undefined) return store;
