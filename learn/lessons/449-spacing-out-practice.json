@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_FNPXqeq2zG",
+ "title": "Spacing out practice",
+ "audience": "learner",
+ "keyIdea": "Memory fades fast after you study, then more slowly: the forgetting curve. Spreading the same practice over several days (spaced or distributed practice) keeps far more in the long run than cramming it into one go (massed practice), even though cramming can feel fine on test day. Review when something is getting hard to recall but is not gone. Each review makes the memory last longer, so the gaps can grow: an expanding schedule such as 1, 3 and 7 days.",
+ "explain": {
+  "kid": [
+   "Right after you learn something, you remember almost all of it. Then it starts to slip away, fast at first and then more slowly. A graph of this drop is called the forgetting curve. Without a review, much of a new topic can be gone within days.",
+   "Cramming means doing all your study in one go, often the night before a test. It can work on the day, but the memory fades soon after. Spacing means doing the same amount of practice over several days. With the same total time, spaced practice keeps much more a month later. This is called the spacing effect.",
+   "The best time to review is when the topic is getting hard to recall, but not yet gone. Review too soon and you are just repeating what you already know. Wait too long and you have to learn it again. That bit of effort when you recall something is part of what makes it stick.",
+   "Each review makes the memory stronger, so you can wait longer before the next one. Try gaps of 1 day, then 3 days, then a week. Keep coming back to old topics too, for example a few questions on last month's work in today's homework."
+  ],
+  "adult": [
+   "The spacing effect is one of the most reliable results in learning research. Ebbinghaus first plotted a forgetting curve in 1885. A large review by Cepeda and colleagues in 2006 found that spreading study across sessions beats massing it into one, for the same total time. Dunlosky and colleagues in 2013 rated distributed practice as one of only two techniques with high utility for students.",
+   "The lab uses a simple model: recall falls as e to the power of minus t over S, where S is how long the memory lasts. Each review resets recall and grows S. It grows more when recall had faded further. That captures why a well-timed review helps more than an instant one. The numbers are an illustration, not a forecast for a real learner.",
+   "Common mistakes: judging a method by how fluent it feels, so cramming and re-reading seem to work; reviewing straight after study, when there is little to gain; waiting so long that the topic must be relearned; and keeping every gap the same rather than letting it grow. Be careful with the claim that one gap suits all: the best gap grows with how long the material must last.",
+   "In the lab your child places four study sessions on a two-week calendar and compares recall on test day and a month later. They pick a good review day as a memory gets stronger, put gaps of 1, 3 and 7 days in the best order, and sort study plans into spaced or massed."
+  ]
+ },
+ "familyTip": "Before a test, help plan short sessions across the fortnight instead of one long one. Write the review days on a calendar with growing gaps, such as tomorrow, three days later and next week, and make each review a quick self-quiz, not a re-read.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Spaced or massed practice? Drag each plan, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Spaced practice",
+    "Massed practice (cramming)"
+   ],
+   "items": [
+    [
+     "Quiz yourself on Monday, Wednesday and Saturday",
+     0
+    ],
+    [
+     "Read the notes five times the night before",
+     1
+    ],
+    [
+     "Ten minutes of times tables every day",
+     0
+    ],
+    [
+     "One three-hour session on Sunday",
+     1
+    ],
+    [
+     "Revisit last term's topic this week",
+     0
+    ],
+    [
+     "Copy the same page out four times in a row",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagspaced",
+  "caption": "Flagship lab: plan study days on a forgetting curve, time a review, grow the gaps, and sort spaced from massed plans.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Two students each study for 2 hours. Ana does it all the night before. Ben does 20 minutes on 6 different days. Who is likely to remember more a month later?",
+   "choices": [
+    "Ben",
+    "Ana",
+    "They will remember the same"
+   ],
+   "answer": 0,
+   "hint": "Same total time. What is different about how it is spread?",
+   "explain": "Ben spread the same 2 hours over 6 days. Spaced practice keeps much more in the long run than massed practice."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Each review gap is double the one before. The first gap is {a} days. On which day after learning is the third review?",
+   "answer": "7*a",
+   "hint": "The gaps are {a}, then {=2*a}, then {=4*a} days. Add them up.",
+   "explain": "{a} + {=2*a} + {=4*a} = {=7*a}, so the third review is on day {=7*a}.",
+   "params": {
+    "a": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You learned some new words an hour ago and can still recall them all. Is now a good time for your first review?",
+   "choices": [
+    "No, wait until they get harder to recall",
+    "Yes, review as soon as possible",
+    "No, wait a few months"
+   ],
+   "answer": 0,
+   "hint": "A review helps most when recall takes some effort.",
+   "explain": "Reviewing while you still know it all adds little. Wait about a day, when the words are getting harder to recall but are not gone."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Sam revises in {a} short sessions of {b} minutes, each on a different day. How many minutes does he revise in total?",
+   "answer": "a*b",
+   "hint": "Multiply the number of sessions by the minutes in each one.",
+   "explain": "{a} × {b} = {=a*b} minutes, spread over {a} days instead of one long sitting.",
+   "params": {
+    "a": [
+     3,
+     6
+    ],
+    "b": [
+     10,
+     25
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does the forgetting curve show?",
+    "choices": [
+     "Recall drops fast at first, then more slowly",
+     "Recall stays the same for a week, then drops",
+     "Recall rises the longer you wait"
+    ],
+    "answer": 0,
+    "hint": "Think about how much you remember an hour, a day and a week after learning.",
+    "explain": "The curve drops steeply soon after learning and then levels off."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why does cramming often feel like it works?",
+    "choices": [
+     "Recall is high on test day, but it fades fast after",
+     "It builds the longest-lasting memories",
+     "You cannot forget what you crammed"
+    ],
+    "answer": 0,
+    "hint": "Compare test day with a month later.",
+    "explain": "Crammed facts can be recalled on the day, but they fade quickly. Spacing keeps them for longer."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which review schedule is expanding?",
+    "choices": [
+     "Day 1, day 4, day 11",
+     "Day 1, day 2, day 3",
+     "Day 7, day 10, day 11"
+    ],
+    "answer": 0,
+    "hint": "In an expanding schedule each gap is longer than the one before.",
+    "explain": "Gaps of 1, 3 and 7 days grow each time, so day 1, day 4, day 11 is expanding."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is massed practice?",
+    "choices": [
+     "Re-reading a chapter three times in a row",
+     "Quizzing yourself every other day",
+     "Revisiting last month's topic today"
+    ],
+    "answer": 0,
+    "hint": "Massed practice has no gaps between the goes.",
+    "explain": "Three re-reads in a row are bunched together with no gaps, so that is massed."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "When is a review most useful?",
+    "choices": [
+     "When the topic is getting hard to recall, but not gone",
+     "Straight after you finish learning",
+     "Once you have forgotten it completely"
+    ],
+    "answer": 0,
+    "hint": "Too soon adds little. Too late means relearning.",
+    "explain": "A review when recall takes effort, but still works, strengthens the memory most."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A test is in {a} days. You review every {b} days, starting on day {b}. How many reviews fit before or on the test day?",
+    "answer": "(a-a%b)/b",
+    "hint": "Count the multiples of {b} up to {a}.",
+    "explain": "Reviews fall on day {b}, {=2*b}, and so on, so {=(a-a%b)/b} reviews fit within {a} days.",
+    "params": {
+     "a": [
+      12,
+      15
+     ],
+     "b": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Mia's review gaps are 1 day, 3 days and {a} days. On which day after learning is her third review?",
+    "answer": "4+a",
+    "hint": "Add the three gaps together to find the day.",
+    "explain": "1 + 3 + {a} = {=4+a}, so the third review is on day {=4+a}.",
+    "params": {
+     "a": [
+      5,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "After each review, how should the next gap change?",
+    "choices": [
+     "It can be a bit longer",
+     "It should be shorter",
+     "It must always stay the same"
+    ],
+    "answer": 0,
+    "hint": "Each review makes the memory stronger.",
+    "explain": "A stronger memory lasts longer before it fades, so the next gap can grow."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Ravi studies the same total time as Jo but over 5 days instead of 1. What is this called?",
+    "choices": [
+     "Spaced practice",
+     "Massed practice",
+     "Cramming"
+    ],
+    "answer": 0,
+    "hint": "Is the practice spread out or bunched together?",
+    "explain": "Spreading the same time over several days is spaced, or distributed, practice."
+   }
+  ]
+ }
+}
