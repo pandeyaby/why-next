@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_8-POYyg7GJ",
+ "title": "Predicting what happens next",
+ "audience": "family",
+ "keyIdea": "A prediction is a guess about what will happen next in a story. A good prediction uses clues: the title, the pictures, and what has happened so far. Say why you think it: \"I think the ice cream will melt because the sun is hot.\" Then read on and check. If the story gives a new clue, change your guess. A guess that turns out wrong is not a mistake.",
+ "explain": {
+  "kid": [
+   "Stop before you turn the page. Ask: what will happen next? Your guess is called a prediction.",
+   "Look for clues. The title is a clue. The pictures are clues. What has happened so far is a clue too. A book called The Big Snow will be about cold and snow.",
+   "Say why. \"I think he is going to the beach because he has a spade and a sun hat.\" The part after because is your clue.",
+   "Then turn the page and check. Was it right? If something new happens, like rain, change your guess. Good readers change their guess all the time. That is not getting it wrong."
+  ],
+  "adult": [
+   "The English National Curriculum asks Year 1 pupils to predict what might happen on the basis of what has been read so far, and to discuss the significance of the title and events. In Years 3 and 4 this grows into predicting from details stated and implied. The Early Years goal for comprehension asks children to anticipate key events in stories.",
+   "Prediction is an active comprehension strategy. The child joins what the text has told them (title, illustrations, events) with what they already know about the world, then checks the guess as they read. Asking 'What makes you think that?' turns a wild guess into a reasoned one. Revising a prediction when new evidence appears is the skill, not a failure.",
+   "Common mistakes: guessing with no link to the story (the dog will fly to the moon), ignoring the title and pictures, giving a guess without a reason, holding on to a first guess after the story has changed, and feeling that a wrong guess means they are bad at reading.",
+   "In the lab your child sorts clues from non-clues on a book cover, picks the guess that fits three short picture stories, finds the clue that backs a guess, and then reads a new page and decides to keep or change the guess. Every drag has a big button twin."
+  ]
+ },
+ "familyTip": "At bedtime, stop before the last page and ask: 'What do you think will happen? What makes you think that?' Make your own guess too, and when one of you is wrong, say: 'Ooh, I need to change my guess!'",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "The book is called “The Lost Puppy”. Is each thing a clue about what will happen? Drag it to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Clue",
+    "Not a clue"
+   ],
+   "items": [
+    [
+     "The word Lost",
+     0
+    ],
+    [
+     "A puppy alone in the rain",
+     0
+    ],
+    [
+     "A girl calling a name",
+     0
+    ],
+    [
+     "The page number",
+     1
+    ],
+    [
+     "The book is thin",
+     1
+    ],
+    [
+     "The colour of the letters",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpgnext",
+  "caption": "Flagship lab: find the clues on a cover, guess what happens next, say why, then turn the page and keep or change your guess.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ella puts on her coat and picks up her umbrella. What will she do next?",
+   "choices": [
+    "Go out in the rain",
+    "Have a bath",
+    "Go to sleep"
+   ],
+   "answer": 0,
+   "hint": "Think about the clues. When do you need a coat and an umbrella?",
+   "explain": "A coat and an umbrella are clues that she is going out in the rain."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A book has {n} pages. You stop at the end of every page, but not the last one, to guess what happens next. How many guesses do you make?",
+   "answer": "n-1",
+   "hint": "After the last page there is nothing left to guess. Take one away.",
+   "explain": "{n} pages, but no guess after the last one, so {=n-1} guesses.",
+   "params": {
+    "n": [
+     4,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which prediction says why?",
+   "choices": [
+    "I think the tower will fall because it wobbles.",
+    "I think the tower will fall.",
+    "Towers are fun."
+   ],
+   "answer": 0,
+   "hint": "Look for the word because. The part after it is the clue.",
+   "explain": "Because it wobbles is the reason. A good prediction tells you the clue."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Max makes {a} guesses while he reads. {b} of them turn out right. He changes the rest. How many guesses does he change?",
+   "answer": "a-b",
+   "hint": "Take the right guesses away from all the guesses.",
+   "explain": "{a} guesses take away {b} right ones leaves {=a-b} changed. Changing a guess is what good readers do.",
+   "params": {
+    "a": [
+     5,
+     9
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A book is called “The Hungry Bear”. What will it be about?",
+    "choices": [
+     "A bear looking for food",
+     "A fish who can sing",
+     "A trip to the shops for shoes"
+    ],
+    "answer": 0,
+    "hint": "The title is a clue. Look at both words: hungry and bear.",
+    "explain": "Hungry and bear tell you it is about a bear who wants food."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You guessed the boy will win the race. Then he trips and falls. What should you do?",
+    "choices": [
+     "Change my guess",
+     "Keep it, because I said it first",
+     "Stop reading the book"
+    ],
+    "answer": 0,
+    "hint": "Something new happened. Is it a new clue?",
+    "explain": "The fall is a new clue. Good readers change the guess and read on."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which of these is a clue about what will happen?",
+    "choices": [
+     "A picture of a big dark cloud",
+     "The number at the bottom of the page",
+     "How heavy the book is"
+    ],
+    "answer": 0,
+    "hint": "Clues are in the words and pictures of the story.",
+    "explain": "A dark cloud is a clue that rain may come. Page numbers and weight tell you nothing about the story."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Zak’s guess turned out wrong. What does that mean?",
+    "choices": [
+     "Nothing bad. He reads on and checks.",
+     "He is bad at reading.",
+     "He should stop guessing."
+    ],
+    "answer": 0,
+    "hint": "Do good readers always guess right?",
+    "explain": "Good readers often guess wrong. A guess helps you think, and you change it as you read."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "The cat sees a bird. The cat gets low and still. What will happen next?",
+    "choices": [
+     "The cat jumps at the bird",
+     "The cat reads a book",
+     "The cat bakes a cake"
+    ],
+    "answer": 0,
+    "hint": "What do cats do when they get low and still near a bird?",
+    "explain": "Getting low and still is a clue that the cat is about to pounce."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ana says, “The ice will melt.” What should she add to make it a good prediction?",
+    "choices": [
+     "Because the sun is out",
+     "A big smile",
+     "Nothing, it is done"
+    ],
+    "answer": 0,
+    "hint": "A good prediction says why. Which part is a reason?",
+    "explain": "Because the sun is out gives the clue, so it is a reasoned guess."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A story has {n} pictures. You find 2 clues in each picture. How many clues do you find?",
+    "answer": "2*n",
+    "hint": "Each picture gives 2 clues. Count in twos.",
+    "explain": "{n} pictures with 2 clues each makes {=2*n} clues.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "You guessed it is a birthday. The next page shows a cake with candles. What do you do?",
+    "choices": [
+     "Keep my guess, the cake fits it",
+     "Change my guess",
+     "Guess something new for fun"
+    ],
+    "answer": 0,
+    "hint": "Does the new page fit your guess or go against it?",
+    "explain": "A cake with candles fits a birthday, so you keep the guess."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "Lily makes {a} guesses in a story. She keeps {b} of them because the next page fits. She changes the rest. How many does she change?",
+    "answer": "a-b",
+    "hint": "Take away the guesses she keeps. The rest are the ones she changes.",
+    "explain": "{a} guesses take away {b} kept leaves {=a-b} changed. Keeping and changing are both good reading.",
+    "params": {
+     "a": [
+      6,
+      10
+     ],
+     "b": [
+      2,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
