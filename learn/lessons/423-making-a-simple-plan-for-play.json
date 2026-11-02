@@ -1,0 +1,237 @@
+{
+ "topicId": "mt_i-v_xZ6cry",
+ "title": "Making a simple plan for play",
+ "audience": "family",
+ "keyIdea": "A plan says what you will make before you start: \"I will build a house for Teddy.\" Then you get only the things the plan needs, make it, and check it against the plan at the end. If a part is missing, you add it. If something runs out, you swap in a thing that does the same job. Say it, get it, make it, check it.",
+ "explain": {
+  "kid": [
+   "A plan is what you will make. Say it out loud first. I will build a house for Teddy. That is a plan.",
+   "I like blocks is not a plan. It does not say what you will make. Go! is not a plan. It just starts.",
+   "Next, get what you need. A house needs blocks and a door. It does not need a spoon or a ball. Put them in a box or a tray.",
+   "Then make it. At the end, look at the plan. Is a part missing? Put it on. Did the blocks run out? Use boxes. They stack too."
+  ],
+  "adult": [
+   "This is the plan-do-review cycle. Many early years settings use it, such as HighScope nurseries. In England, Development Matters (2023) lists it as part of creating and thinking critically. Children plan how to reach a goal. They check how well it is going, change their strategy when they need to, and review how well it worked.",
+   "It also leads to the Early Learning Goal for self-regulation: set and work towards simple goals. The skills behind it are called executive function. Working memory holds the plan in mind. Inhibitory control stops a grab for every toy. Cognitive flexibility lets a child swap when something runs out. The Education Endowment Foundation finds that self-regulation strategies help young learners.",
+   "Common mistakes: a plan that is only a wish (\"I'm playing\"), an adult who does the planning, a plan too big to finish, a plan that is never allowed to change, and no check at the end. Be careful not to praise only the finished model. Ask your child to compare it with what they said.",
+   "In the lab your child picks the bubble that is a real plan. They drag only what the house plan needs into a basket and put the four plan cards in order. They spot what is missing by comparing a plan picture with a made one. When the blocks run out, they pick a swap that does the same job. Every drag has a big button twin."
+  ]
+ },
+ "familyTip": "Before play, ask: What will you make? What do you need? Let your child fetch it. At the end, ask: Does it match your plan? What would you change next time?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Plan: a house for Teddy. Drag each thing to Need it or Do not need it, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Need it",
+    "Do not need it"
+   ],
+   "items": [
+    [
+     "blocks",
+     0
+    ],
+    [
+     "a spoon",
+     1
+    ],
+    [
+     "a door",
+     0
+    ],
+    [
+     "a ball",
+     1
+    ],
+    [
+     "a roof",
+     0
+    ],
+    [
+     "a toy car",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagplan",
+  "caption": "Flagship lab: say a plan, fill the basket with just what the plan needs, order the plan cards, check against the plan and swap when something runs out.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Sam wants to make a picture of a dog. Which one is his plan?",
+   "choices": [
+    "I will draw a dog.",
+    "I like dogs.",
+    "Go!"
+   ],
+   "answer": 0,
+   "hint": "A plan says what you will make. Listen for I will.",
+   "explain": "I will draw a dog says what he will make, so it is a plan. I like dogs is just a feeling."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Your plan needs {n} blocks. You have 2 blocks. How many more do you need to get?",
+   "answer": "n-2",
+   "hint": "Count on from 2 up to the number the plan needs.",
+   "explain": "From 2 up to {n} is {=n-2} more blocks. Get them before you start, so you do not stop halfway.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You made Teddy's house. What do you do now?",
+   "choices": [
+    "Check it with my plan",
+    "Say my plan",
+    "Get more toys"
+   ],
+   "answer": 0,
+   "hint": "Say it, get it, make it, then what?",
+   "explain": "After you make it, you check it. Look at the plan and see if every part is there."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The plan has a roof, a door and {n} windows. How many parts is that in all?",
+   "answer": "n+2",
+   "hint": "Count the roof and the door, then count on the windows.",
+   "explain": "Roof and door make 2, and {n} windows makes {=n+2} parts. Check all of them at the end.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which one is a plan?",
+    "choices": [
+     "I will make a boat for Duck.",
+     "Boats float.",
+     "I am playing."
+    ],
+    "answer": 0,
+    "hint": "A plan says what you will make. Which one says I will make?",
+    "explain": "I will make a boat for Duck says what and who it is for. Boats float is a fact, not a plan."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Plan: a tower of blocks. What do you need?",
+    "choices": [
+     "Blocks",
+     "A cup of juice",
+     "Every toy in the box"
+    ],
+    "answer": 0,
+    "hint": "Look at the plan. What is a tower made of?",
+    "explain": "A tower of blocks needs blocks. Taking every toy makes a mess and gets in the way."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What comes first?",
+    "choices": [
+     "Say my plan",
+     "Check it",
+     "Make it"
+    ],
+    "answer": 0,
+    "hint": "You need to know what you will make before you start.",
+    "explain": "Say your plan first. Then get what you need, make it, and check it at the end."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The plan shows a car with 4 wheels. Your car has 3 wheels. What now?",
+    "choices": [
+     "Add one more wheel",
+     "Say it is done",
+     "Throw it away"
+    ],
+    "answer": 0,
+    "hint": "Compare your car with the plan. What is missing?",
+    "explain": "The plan has 4 wheels and yours has 3, so add one more. Checking shows you what to fix."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "No more paper for your cat picture! What can you use?",
+    "choices": [
+     "A piece of card",
+     "A ball",
+     "Stop and cry"
+    ],
+    "answer": 0,
+    "hint": "You need something flat to draw on.",
+    "explain": "Card is flat, so it does the same job as paper. Swap it in and keep to your plan."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Your plan needs {n} cars for a race. You have got {k}. How many more cars do you need?",
+    "answer": "n-k",
+    "hint": "Count on from the cars you have to the number the plan needs.",
+    "explain": "From {k} up to {n} is {=n-k} more cars. Now you have just what the plan needs.",
+    "params": {
+     "n": [
+      5,
+      9
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Mia's plan needs {n} blocks for each wall. Her house has 2 walls. How many blocks does she need?",
+    "answer": "2*n",
+    "hint": "Count the blocks for one wall, then count them again for the other.",
+    "explain": "Two walls of {n} blocks is {=2*n} blocks. Getting them first means she will not run out.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why do you check your work at the end?",
+    "choices": [
+     "To see if it matches my plan",
+     "To make it messy",
+     "To start again"
+    ],
+    "answer": 0,
+    "hint": "What do you look at when you check?",
+    "explain": "You check to see if it matches your plan. If a part is missing, you can add it."
+   }
+  ]
+ }
+}
