@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_ZhvwM6LMBL",
+ "title": "Reading fluently",
+ "audience": "family",
+ "keyIdea": "Fluent reading sounds like talking. You read the words right, at talking speed, with a voice that fits. Read in scoops, groups of words that go together, not one word at a time. Let the end mark set your voice: calm for a full stop, up for a question mark, strong for an exclamation mark. Pick a book where you can read 9 or 10 words out of 10, and read it again and again. Each time, the stops get fewer and the reading gets smoother.",
+ "explain": {
+  "kid": [
+   "Fluent reading sounds like talking. A robot reads like this: the… big… dog… ran. You can read in scoops. The big dog… ran to the park. Each scoop is a group of words that go together.",
+   "Look at the mark at the end. A full stop says: stop, and be calm. A question mark says: you are asking, so let your voice go up. An exclamation mark says: use a strong voice!",
+   "Fast is not the best. Too fast and you run past the stops, and it does not make sense. Too slow and you forget the start. Read at talking speed.",
+   "Read the same book again. The first time, you may get stuck and sound out a word. The next time it is quicker. Pick books where you can read 9 or 10 words out of 10."
+  ],
+  "adult": [
+   "Fluency means reading the words correctly, at a natural pace, with expression. Experts call the expression part prosody. When reading is fluent, your child has more attention left for meaning. The English national curriculum asks Year 1 pupils to read aloud books that match the phonics they know, and to reread them to build fluency and confidence. In Year 2 they read such books accurately, automatically and without undue hesitation. Common Core RF.K.4 asks for emergent-reader texts read with purpose and understanding. RF.1.4b asks for reading aloud with accuracy, appropriate rate and expression on successive readings.",
+   "Key words: accuracy (words read correctly), automaticity (knowing a word at once, with no slow sounding out), rate (how many words are read correctly in a minute), prosody (phrasing, stress and the rise and fall of the voice), phrasing (reading in groups of words that belong together, often called scooping), repeated reading (reading the same text a few times) and a decodable book (one that uses only the phonics your child has been taught). This topic asks for reading with at least 90% accuracy, about 9 words in 10. Many teachers aim higher, about 19 words in 20, for reading alone. Below 9 in 10, read the book together. The DfE reading framework adds that a decodable book should match the sounds already taught, so every word can be sounded out.",
+   "Common mistakes: treating speed as the goal, so children race past full stops and lose the meaning; robot reading, one word at a time; a flat voice that ignores question and exclamation marks; books that are too hard, so every line stops for sounding out; reading a book once and moving on; and guessing words from the picture. Be careful not to time children with a stopwatch at this age. Praise smooth rereading with a voice that fits.",
+   "In the lab your child taps where the first scoop of a line ends. They drag a calm, asking or excited voice onto lines that end in a full stop, question mark or exclamation mark. They read one page three times and see the stops fall from 3 to 1 to none. They sort four books by how many words in 10 they can read. Last, they drag a speed dial to hear why snail and rocket reading both lose the meaning. Every drag has a big button twin."
+  ]
+ },
+ "familyTip": "Pick a short book your child knows well. Read one page to them like a storyteller, then let them read the same page back to you. Read it again tomorrow. Point out one thing that got better, like a smooth scoop or a question that went up.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Fluent or not yet? Drag each way of reading, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fluent",
+    "Not yet"
+   ],
+   "items": [
+    [
+     "Reads in scoops, like talking",
+     0
+    ],
+    [
+     "Reads one… word… at… a… time",
+     1
+    ],
+    [
+     "Voice goes up at a question mark",
+     0
+    ],
+    [
+     "Races past every full stop",
+     1
+    ],
+    [
+     "Reads the book again to get smoother",
+     0
+    ],
+    [
+     "Gets stuck on 5 words in 10",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfluent",
+  "caption": "Flagship lab: scoop words into phrases, set the voice from the end mark, reread a page, pick a just right book and find talking speed.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which way of reading sounds most like talking?",
+   "choices": [
+    "My cat… sat on the mat.",
+    "My… cat… sat… on… the… mat.",
+    "Mycatsatonthemat."
+   ],
+   "answer": 0,
+   "hint": "Talking puts words that go together into one group, a scoop.",
+   "explain": "My cat… sat on the mat reads in two scoops, like talking. One word at a time sounds like a robot, and running it all together is too fast to follow."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A page has 10 words. You get stuck on {n} of them. How many words can you read?",
+   "answer": "10-n",
+   "hint": "Take the words you got stuck on away from 10.",
+   "explain": "10 take away {n} is {=10-n}. If that is 9 or 10, the book is just right for reading by yourself.",
+   "params": {
+    "n": [
+     0,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A line ends with a question mark: Where is my hat? How should your voice go?",
+   "choices": [
+    "Up at the end, like asking",
+    "Flat, the same as every line",
+    "Loud and strong, like shouting"
+   ],
+   "answer": 0,
+   "hint": "Look at the mark at the end of the line. What does it tell you?",
+   "explain": "A question mark means you are asking, so your voice goes up. A strong voice is for an exclamation mark, and a flat voice hides the question."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Mia reads a page and gets stuck {n} times. Each time she reads it again, she gets stuck 1 time fewer. How many times does she get stuck on her next read?",
+   "answer": "n-1",
+   "hint": "Take 1 away from the number of times she got stuck.",
+   "explain": "{n} take away 1 is {=n-1}. Each reread makes the words easier, so the stops go down.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Leo reads very, very fast. He runs past every full stop. What goes wrong?",
+    "choices": [
+     "It stops making sense",
+     "Nothing, fast is best",
+     "His voice goes up too much"
+    ],
+    "answer": 0,
+    "hint": "Think about what the full stops are for.",
+    "explain": "Racing past the full stops runs the ideas together, so it stops making sense. Fluent reading is talking speed, not a race."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which book is just right to read by yourself?",
+    "choices": [
+     "I can read 9 of 10 words",
+     "I can read 6 of 10 words",
+     "I can read 4 of 10 words"
+    ],
+    "answer": 0,
+    "hint": "Just right means only a few words need sounding out.",
+    "explain": "9 of 10 words is just right. With 6 or 4 of 10 there are too many stops, so read those books with a grown-up."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "We won the race! How do you read this line?",
+    "choices": [
+     "With a strong, happy voice",
+     "In a quiet, flat voice",
+     "Like asking a question"
+    ],
+    "answer": 0,
+    "hint": "Look at the mark at the end of the line.",
+    "explain": "An exclamation mark asks for a strong voice that shows the feeling. A question would end with a question mark."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is the best way to get smoother at reading a book?",
+    "choices": [
+     "Read it again and again",
+     "Read it once and stop",
+     "Look at the pictures and guess"
+    ],
+    "answer": 0,
+    "hint": "Think about what happens to the stops each time you read the same page.",
+    "explain": "Rereading the same book makes the words quicker each time, so the reading gets smoother. Guessing from pictures skips the real words."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Where does the first scoop end in: The little bird sang in the tree.",
+    "choices": [
+     "After bird",
+     "After The",
+     "After sang in"
+    ],
+    "answer": 0,
+    "hint": "Ask: who? Then ask: what did it do?",
+    "explain": "Who? The little bird. What did it do? Sang in the tree. So the first scoop ends after bird."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Zoe reads: The… dog… is… wet. What can she try?",
+    "choices": [
+     "Read it in scoops: The dog… is wet.",
+     "Read it faster with no stops",
+     "Say each word louder"
+    ],
+    "answer": 0,
+    "hint": "One word at a time sounds like a robot. Group the words.",
+    "explain": "Reading in scoops, The dog… is wet, sounds like talking. Going faster or louder does not group the words."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A line has {n} scoops. Each scoop has 3 words. How many words are in the line?",
+    "answer": "3*n",
+    "hint": "Count 3 words for each scoop.",
+    "explain": "{n} scoops of 3 words make {=3*n} words. You read each scoop in one go.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Sam reads a page of 10 words and can read {n} of them. How many does he get stuck on?",
+    "answer": "10-n",
+    "hint": "Take the words he can read away from 10.",
+    "explain": "10 take away {n} is {=10-n}. If he gets stuck on more than 1 word in 10, read the book together.",
+    "params": {
+     "n": [
+      5,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Is the cat asleep? and The cat is asleep. have the same words. How do you read them?",
+    "choices": [
+     "Differently: the question goes up",
+     "The same, because the words match",
+     "Both loud and strong"
+    ],
+    "answer": 0,
+    "hint": "Look at the two end marks.",
+    "explain": "The end mark changes the voice. The question goes up, and the full stop line is calm."
+   }
+  ]
+ }
+}
