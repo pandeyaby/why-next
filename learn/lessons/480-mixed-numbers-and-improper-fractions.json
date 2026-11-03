@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_o_p-3tCxiM",
+ "title": "Mixed numbers and improper fractions",
+ "audience": "learner",
+ "keyIdea": "An improper fraction has a numerator bigger than (or equal to) its denominator, so it is worth 1 or more, like 11/4. A mixed number writes the same amount as a whole number and a proper fraction, like 2 3/4. To convert 11/4, find how many groups of 4 fit in 11 (2, remainder 3): 2 3/4. To go back, multiply the wholes by the denominator and add the numerator: 3 2/5 = (3 × 5 + 2)/5 = 17/5.",
+ "explain": {
+  "kid": [
+   "A fraction can be more than 1. Think of a bar cut into 4 equal parts. Each part is a quarter. 4 quarters fill the bar, so 4/4 is 1 whole. If you have 7 quarters, the first bar fills up and 3 quarters go into a second bar.",
+   "We can write that amount in two ways. 7/4 is an improper fraction. Its top number, the numerator, is bigger than its bottom number, the denominator. 1 3/4 is a mixed number. It is a whole number and a fraction side by side. Both name the same amount.",
+   "To turn an improper fraction into a mixed number, make as many wholes as you can. For 11/4, groups of 4 fit into 11 two times, with 3 left. So 11/4 is 2 3/4. This is just division with a remainder: 11 ÷ 4 = 2 r 3.",
+   "To go the other way, break every whole into pieces. In 3 2/5, each whole is 5 fifths, so 3 wholes are 15 fifths. Add the 2 fifths and you get 17 fifths, or 17/5. Wholes times the denominator, then add the numerator."
+  ],
+  "adult": [
+   "This is the England National Curriculum Year 5 statement: recognise mixed numbers and improper fractions, convert from one form to the other, and write statements greater than 1 as a mixed number (for example 2/5 + 4/5 = 6/5 = 1 1/5). The US Common Core builds the same idea in 4.NF.B.3, where fractions are sums of unit fractions. The key fact is that n/n = 1, so every group of d pieces of size 1/d is one whole.",
+   "A common mistake is the belief that a fraction must be less than 1, so 7/4 looks impossible or gets placed between 0 and 1 on a number line. Others read the digits instead of the quantity, so 11/4 becomes 1 1/4. When converting back, children often add all the numbers (3 2/5 becomes 5/5) or drop the whole part entirely. Each slip shows the child is not yet thinking of the whole as d pieces of size 1/d.",
+   "The lab keeps the bar model in view the whole time. Your child pours quarters into bars and watches 7/4 spill into a second bar. Then they bundle 11 quarters into wholes, cut the 3 wholes of 3 2/5 into fifths and count all 17 pieces. They build targets piece by piece and place 9/4 and 2 1/2 on a number line.",
+   "Only teach the shortcut (multiply and add, or divide and keep the remainder) once the pictures make sense. Then ask your child why it works. A good answer is: each whole is worth the denominator in pieces."
+  ]
+ },
+ "familyTip": "Cut toast or a chocolate bar into quarters and share out 9 pieces between plates that each hold 4. Ask how many full plates and how many extra quarters there are, then write it both ways: 9/4 and 2 1/4.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Proper fraction, improper fraction or mixed number? Drag each one, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Proper fraction",
+    "Improper fraction",
+    "Mixed number"
+   ],
+   "items": [
+    [
+     "3/4",
+     0
+    ],
+    [
+     "9/4",
+     1
+    ],
+    [
+     "2 1/4",
+     2
+    ],
+    [
+     "5/5",
+     1
+    ],
+    [
+     "7/10",
+     0
+    ],
+    [
+     "1 1/2",
+     2
+    ],
+    [
+     "11/3",
+     1
+    ],
+    [
+     "4 2/3",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagimpf",
+  "caption": "Flagship lab: pour quarters past a whole, bundle 11/4, cut 3 2/5 into fifths and place 9/4 on a number line.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is an improper fraction?",
+   "choices": [
+    "8/5",
+    "5/8",
+    "1 3/5"
+   ],
+   "answer": 0,
+   "hint": "Look for a numerator that is as big as or bigger than the denominator.",
+   "explain": "8/5 has 8 on top and 5 underneath, so it is more than 1 whole. 5/8 is less than 1, and 1 3/5 is a mixed number."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A mixed number has {w} wholes and 1/{d} more. How many pieces of size 1/{d} is that in total? (Write the numerator of the improper fraction.)",
+   "answer": "w*d+1",
+   "hint": "Each whole is {d} pieces. Multiply the wholes by {d}, then add the extra 1.",
+   "explain": "{w} × {d} = {=w*d} pieces in the wholes, plus 1 more makes {=w*d+1}. So the improper fraction is {=w*d+1}/{d}.",
+   "params": {
+    "w": [
+     2,
+     6
+    ],
+    "d": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Write {n}/4 as a mixed number. How many wholes does it have?",
+   "answer": "(n-n%4)/4",
+   "hint": "How many groups of 4 fit into {n}? The remainder becomes the fraction part.",
+   "explain": "{n} ÷ 4 = {=(n-n%4)/4} remainder {=n%4}, so {n}/4 has {=(n-n%4)/4} wholes.",
+   "params": {
+    "n": [
+     9,
+     23
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Ella says 3 2/5 = 5/5 because 3 + 2 = 5. What went wrong?",
+   "choices": [
+    "Each whole is 5 fifths, so she needed 3 × 5 + 2 = 17",
+    "She should have done 3 × 2 = 6",
+    "Nothing, 5/5 is right"
+   ],
+   "answer": 0,
+   "hint": "How many fifths are in just one whole?",
+   "explain": "One whole is 5 fifths, so 3 wholes are 15 fifths. With the extra 2 fifths, 3 2/5 = 17/5. Adding 3 + 2 treats wholes and fifths as the same size."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is 11/4 as a mixed number?",
+    "choices": [
+     "2 3/4",
+     "1 1/4",
+     "3 2/4"
+    ],
+    "answer": 0,
+    "hint": "How many groups of 4 fit in 11, and what is left over?",
+    "explain": "11 ÷ 4 = 2 remainder 3. So 11/4 = 2 3/4. Reading the digits as 1 1/4 is a common slip."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Write 2 3/5 as an improper fraction.",
+    "choices": [
+     "13/5",
+     "5/5",
+     "6/5"
+    ],
+    "answer": 0,
+    "hint": "Turn each whole into fifths first.",
+    "explain": "2 wholes are 10 fifths. Add 3 fifths to get 13/5."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Where does 7/4 go on a number line?",
+    "choices": [
+     "Between 1 and 2",
+     "Between 0 and 1",
+     "At 7"
+    ],
+    "answer": 0,
+    "hint": "Is 7 quarters more or less than 4 quarters?",
+    "explain": "4 quarters make 1, and 8 quarters make 2. 7 quarters is between them, so 7/4 = 1 3/4 sits between 1 and 2."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "How many thirds are in {w} wholes?",
+    "answer": "w*3",
+    "hint": "1 whole is cut into 3 thirds, so count 3 for every whole.",
+    "explain": "Each whole is 3 thirds, so {w} wholes are {w} × 3 = {=w*3} thirds. That is {=w*3}/3.",
+    "params": {
+     "w": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which number sentence is true?",
+    "choices": [
+     "2/5 + 4/5 = 6/5 = 1 1/5",
+     "2/5 + 4/5 = 6/10",
+     "2/5 + 4/5 = 6/5 = 6 1/5"
+    ],
+    "answer": 0,
+    "hint": "Fifths add to fifths, then check if you have more than 5 of them.",
+    "explain": "2 fifths and 4 fifths make 6 fifths. That is 1 whole (5 fifths) and 1 fifth more, so 6/5 = 1 1/5."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is 12/4 written as a whole number?",
+    "choices": [
+     "3",
+     "12",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "How many groups of 4 quarters can you make from 12?",
+    "explain": "12 quarters make exactly 3 groups of 4, so 12/4 = 3 with nothing left over."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A pizza is cut into 8 slices. You eat {n} slices from a pile of pizzas. Write {n}/8 as a mixed number. How many slices are in the fraction part?",
+    "answer": "n%8",
+    "hint": "Take away full pizzas of 8 slices until fewer than 8 are left.",
+    "explain": "{n} ÷ 8 = {=(n-n%8)/8} remainder {=n%8}, so there are {=n%8} slices, or {=n%8}/8, in the fraction part.",
+    "params": {
+     "n": [
+      9,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is the biggest?",
+    "choices": [
+     "9/4",
+     "2",
+     "7/4"
+    ],
+    "answer": 0,
+    "hint": "Change everything to quarters: 2 is 8 quarters.",
+    "explain": "2 = 8/4, so 9/4 is biggest. 9/4 = 2 1/4, a quarter more than 2."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Sam turns 4 1/3 into 4/3. What did he forget?",
+    "choices": [
+     "The 4 wholes are 12 thirds, so it should be 13/3",
+     "He should have written 41/3",
+     "Nothing, 4/3 is right"
+    ],
+    "answer": 0,
+    "hint": "Does 4/3 still include all 4 wholes?",
+    "explain": "4/3 is only 1 1/3. The 4 wholes are 4 × 3 = 12 thirds; add 1 third to get 13/3."
+   }
+  ]
+ }
+}
