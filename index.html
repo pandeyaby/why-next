@@ -10,6 +10,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23C2461C'/%3E%3Cpath d='M14.5 15.2a5.6 5.6 0 0 1 11 1.3c0 3.6-5.3 4.2-5.3 7.6' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round'/%3E%3Ccircle cx='20.2' cy='29.6' r='2.2' fill='white'/%3E%3C/svg%3E">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preload" href="site/assets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="site/assets/fonts/nunito-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site/assets/styles.css">
 <link rel="stylesheet" href="site/assets/polish.css">
 </head>
@@ -23,16 +24,16 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav" id="top">
   <div class="wrap nav-in">
-    <a class="brand" href="#top"><svg class="logo" aria-hidden="true"><use href="#i-logo"/></svg><span>Why Next?</span></a>
+    <a class="brand" href="#top"><span>Why next<i class="brand-q">?</i></span></a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#try">Try it</a></li>
-        <li><a href="#kitchen">Kitchen table</a></li>
-        <li><a href="#open">Open &amp; free</a></li>
+        <li><a href="#subj-maths">Maths</a></li>
+        <li><a href="#subj-science">Science</a></li>
+        <li><a href="#subj-english">English</a></li>
+        <li><a href="#kitchen">For parents</a></li>
       </ul>
     </nav>
-    <a class="btn btn-sm nav-cta" href="out/viewer.html">Explore the map</a>
+    <a class="btn btn-sm btn-ghost nav-cta" href="out/viewer.html">Open the map</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" hidden>
       <svg class="i-open" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       <svg class="i-close" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -42,10 +43,10 @@
   <div class="menu-panel" id="menu" hidden>
     <nav aria-label="Mobile">
       <ul>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#try">Try it</a></li>
-        <li><a href="#kitchen">Kitchen table</a></li>
-        <li><a href="#open">Open &amp; free</a></li>
+        <li><a href="#subj-maths">Maths</a></li>
+        <li><a href="#subj-science">Science</a></li>
+        <li><a href="#subj-english">English</a></li>
+        <li><a href="#kitchen">For parents</a></li>
       </ul>
       <a class="btn" href="out/viewer.html">Explore the map <svg width="16" height="16" class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </nav>
@@ -54,59 +55,30 @@
 
 <main id="main">
 <!-- HERO -->
-<section class="hero" aria-labelledby="hero-h">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow"><span>A free, open learning map · <span class="nw">ages 2–18</span></span></p>
-      <h1 id="hero-h">Why Next<span class="qm">?</span></h1>
-      <p class="tagline">See what your child is ready to learn next, and <em>why</em> each step comes first.</p>
-      <p class="lede">Around age eleven, homework turns into algebra, chemistry and physics, and stops looking like anything most of us remember. Why Next? sets out secondary maths and science as small, connected steps, each with a plain reason. You don’t need to be the expert to help. You just need to see what comes next.</p>
-      <div class="cta-row">
-        <a class="btn" href="out/viewer.html">Explore the map <svg width="16" height="16" class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-ghost" href="#try">Try the 1-minute demo</a>
-        <a class="btn btn-ghost" href="out/viewer.html#reels">▶ Watch 1886 short video explainers</a>
-      </div>
-      <ul class="trust" aria-label="At a glance">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free to use</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>No sign-up</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>No tracking</li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Open data on <a href="https://github.com/pandeyaby/why-next">GitHub</a></li>
-      </ul>
+<section class="hero2" aria-labelledby="hero-h">
+  <div class="wrap hero2-grid">
+    <div>
+      <h1 id="hero-h">One small step,<br>then the next one.</h1>
+      <p class="hero2-lede">Short lessons for ages 2 to 18 that build on each other. Your child learns the idea; you get a note on how to help at home.</p>
+      <div class="hero2-cta"><a class="btn" href="out/viewer.html">Pick up where you left off</a><a class="btn btn-ghost" href="out/viewer.html">See all the lessons</a></div>
+      <nav class="ages" aria-label="Start at an age">
+        <a href="out/viewer.html#t=mt_WcfaSfVT33">2–4</a><a href="out/viewer.html#t=mt_N8CpN1EJrP">5–7</a><a href="out/viewer.html#t=mt_Kr3IyA6m-O">8–11</a><a href="out/viewer.html#t=mt_hCVPYlF-7Y">11–14</a><a href="out/viewer.html#t=mt_1VmTUxBrNd">14–18</a>
+      </nav>
     </div>
-    <div class="hero-art">
-      <svg class="hero-map" viewBox="0 0 560 620" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-        <defs><radialGradient id="g-sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE3A8"/><stop offset="1" stop-color="#FFE3A8" stop-opacity="0"/></radialGradient>
-          <mask id="m-route" maskUnits="userSpaceOnUse" x="0" y="0" width="560" height="620"><path class="route" d="M34 600C70 540 20 470 52 420s40-120 10-170 10-120 80-140 150-60 230-40 120-40 150-50" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round"/></mask></defs>
-        <path d="M70 120c80-90 300-110 420-40s70 220 50 330-90 200-230 200-260-40-290-150S-10 210 70 120z" fill="#FBE8D0"/>
-        <g fill="none" stroke="#EDD2AE" stroke-width="1.5">
-          <path d="M100 150c70-70 260-84 360-30s60 180 44 270-76 160-196 160-216-32-240-120S36 220 100 150z"/>
-          <path d="M136 190c56-52 206-62 286-22s48 140 34 210-60 124-154 124-170-24-188-92-34-170 22-220z"/>
-          <path d="M176 232c40-36 148-44 204-14s34 98 24 148-42 86-108 86-120-18-132-64-24-120 12-156z"/>
-        </g>
-        <circle cx="500" cy="70" r="80" fill="url(#g-sun)"/>
-        <path mask="url(#m-route)" d="M34 600C70 540 20 470 52 420s40-120 10-170 10-120 80-140 150-60 230-40 120-40 150-50" fill="none" stroke="#D9542B" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="1 13"/>
-        <g class="pin p1"><circle cx="52" cy="420" r="13" fill="#1D6E41"/><path d="M46 420l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
-        <g class="pin p2"><circle cx="62" cy="250" r="13" fill="#1D6E41"/><path d="M56 250l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
-        <g class="pin p3"><circle cx="142" cy="110" r="15" fill="#C2461C"/><circle cx="142" cy="110" r="25" fill="none" stroke="#D9542B" stroke-width="2" opacity=".35"/></g>
-        <g class="pin p4"><circle cx="372" cy="70" r="12" fill="#fff" stroke="#2C4CA8" stroke-width="3"/>
-          <path d="M522 60V14" stroke="#1B2130" stroke-width="3" stroke-linecap="round"/><path d="M522 14l30 9-30 10z" fill="#F2B33D"/></g>
-        <g fill="#F2B33D"><path d="M250 20l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M30 130l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
-      </svg>
-      <figure class="hero-card" aria-labelledby="hero-cap">
-        <p class="hc-kicker">A real path from the map</p>
-        <figcaption id="hero-cap" class="hc-title">Why does “Completing the square” come where it does?</figcaption>
-        <ol class="chain">
-          <li class="chain-node done"><span class="dot" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span><b>Solving Linear Equations</b><small>from age 11</small></span></li>
-          <li class="chain-why"><span class="why-chip">why?</span> Getting the squared term on its own first uses the same balancing steps as linear equations.</li>
-          <li class="chain-node now"><span class="dot" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span><span><b>Solving quadratics by square roots</b><small>from age 14</small></span></li>
-          <li class="chain-why"><span class="why-chip">why?</span> After completing the square the equation is solved by square roots.</li>
-          <li class="chain-node later"><span class="dot" aria-hidden="true"><svg><use href="#i-ring"/></svg></span><span><b>Completing the square</b><small>from age 15</small></span></li>
-        </ol>
-        <p class="hc-foot">Three steps and their reasons, word for word from the dataset.</p>
-      </figure>
-      <span class="bubble bubble-a" aria-hidden="true">Why do I need this?</span>
-      <span class="bubble bubble-b" aria-hidden="true">What comes next?</span>
-    </div>
+    <a class="today" href="out/viewer.html#t=mt_WcfaSfVT33" aria-label="Try a lesson: One-to-one counting, maths for ages 2 to 4">
+      <span class="k">Maths · Ages 2–4</span>
+      <span class="today-h">One-to-one counting</span>
+      <span class="today-p">Let’s count the dots. Touch each one once.</span>
+      <span class="dots" aria-hidden="true"><b class="f">1</b><b class="f">2</b><b></b><b></b><b></b></span>
+      <span class="prog" aria-hidden="true"><i></i></span>
+      <span class="note"><b>For you:</b> count stairs or socks together, and make a mistake now and then so they can catch you.</span>
+    </a>
+  </div>
+  <div class="wrap subj">
+    <section id="subj-maths" aria-labelledby="sm-h"><h2 id="sm-h"><span class="sdot s-maths" aria-hidden="true"></span>Maths</h2><p>From counting to the unit circle.</p><ul><li><a href="out/viewer.html#t=mt_Kr3IyA6m-O">Fractions on a number line</a><em>8–11</em></li><li><a href="out/viewer.html#t=mt_hCVPYlF-7Y">Square and cube numbers</a><em>11–14</em></li><li><a href="out/viewer.html#t=mt_1VmTUxBrNd">Pythagoras’ theorem</a><em>14–18</em></li></ul></section>
+    <section id="subj-science" aria-labelledby="ss-h"><h2 id="ss-h"><span class="sdot s-science" aria-hidden="true"></span>Science</h2><p>Look closely, then ask why.</p><ul><li><a href="out/viewer.html#t=mt_Vw2uPbCosk">Plants need water and light</a><em>5–7</em></li><li><a href="out/viewer.html#t=mt_UKmtuAsSLN">Reversible changes</a><em>8–11</em></li><li><a href="out/viewer.html#t=mt_dx_t8RtPt5">Covalent bonding</a><em>14–18</em></li></ul></section>
+    <section id="subj-english" aria-labelledby="se-h"><h2 id="se-h"><span class="sdot s-english" aria-hidden="true"></span>English</h2><p>Saying it, then writing it.</p><ul><li><a href="out/viewer.html#t=mt_yBJyCfhtem">Basic nouns and verbs</a><em>5–7</em></li><li><a href="out/viewer.html#t=mt_N8CpN1EJrP">Building sentences</a><em>5–7</em></li><li><a href="out/viewer.html#t=mt_0QJoKWABdC">Fronted adverbials and commas</a><em>8–11</em></li></ul></section>
+    <section aria-labelledby="sn-h"><h2 id="sn-h"><span class="sdot s-next" aria-hidden="true"></span>Next up</h2><p>A few good next steps.</p><ul><li><a href="out/viewer.html#t=mt_cFltwUQi-d">Fractions of amounts</a><em>8–11</em></li><li><a href="out/viewer.html#t=mt_-c4Ca_nBzX">Probability as a fraction</a><em>11–14</em></li><li><a href="out/viewer.html#t=mt_Jvg_r4yWaY">Energy stores and transfers</a><em>14–18</em></li></ul></section>
   </div>
 </section>
 

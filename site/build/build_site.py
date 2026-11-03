@@ -78,20 +78,21 @@ css = open(os.path.join(SITE, 'assets/styles.css'), encoding='utf-8').read() + '
 js_inf = open(os.path.join(SITE, 'assets/infer.js'), encoding='utf-8').read()
 js_soft = open(os.path.join(SITE, 'assets/soften.js'), encoding='utf-8').read()
 import base64
+nunito_b64 = base64.b64encode(open(os.path.join(SITE, 'assets/fonts/nunito-latin-wght.woff2'), 'rb').read()).decode()
 font_b64 = base64.b64encode(open(os.path.join(SITE, 'assets/fonts/fraunces-latin-wght.woff2'), 'rb').read()).decode()
 ROBOTS = '<meta name="robots" content="noindex">' if '--noindex' in sys.argv else ''
 js_app = open(os.path.join(SITE, 'assets/app.js'), encoding='utf-8').read()
 def multi(base, viewer):
     attr = ' data-viewer="%s"' % viewer + (' data-base="%s"' % base if base else '')
     return (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--HTMLATTR-->', attr).replace('%%VIEWER%%', viewer)
-            .replace('<!--CSS-->', '<link rel="preload" href="%sassets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="%sassets/styles.css">\n<link rel="stylesheet" href="%sassets/polish.css">' % (base, base, base))
+            .replace('<!--CSS-->', '<link rel="preload" href="%sassets/fonts/fraunces-latin-wght.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="%sassets/fonts/nunito-latin-wght.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="stylesheet" href="%sassets/styles.css">\n<link rel="stylesheet" href="%sassets/polish.css">' % (base, base, base, base))
             .replace('<!--DATA-->', '')
             .replace('<!--JS-->', ''.join('<script src="%sassets/%s.js" defer></script>\n' % (base, n) for n in ('soften', 'infer', 'app')).rstrip()))
 open(os.path.join(SITE, 'index.html'), 'w', encoding='utf-8').write(multi('', '../out/viewer.html'))
 # Repo root index.html: the GitHub Pages homepage (https://pandeyaby.github.io/why-next/), assets served from site/
 open(os.path.join(SITE, '..', 'index.html'), 'w', encoding='utf-8').write(multi('site/', 'out/viewer.html'))
 safe_json = demo_raw.replace('</', '<\\/')
-single = (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--HTMLATTR-->', '').replace('%%VIEWER%%', 'https://pandeyaby.github.io/why-next/out/viewer.html').replace('<!--CSS-->', '<style>\n' + css.replace('url("fonts/fraunces-latin-wght.woff2")', 'url(data:font/woff2;base64,' + font_b64 + ')') + '\n</style>')
+single = (out.replace('<!--ROBOTS-->', ROBOTS).replace('<!--HTMLATTR-->', '').replace('%%VIEWER%%', 'https://pandeyaby.github.io/why-next/out/viewer.html').replace('<!--CSS-->', '<style>\n' + css.replace('url("fonts/fraunces-latin-wght.woff2")', 'url(data:font/woff2;base64,' + font_b64 + ')').replace('url("fonts/nunito-latin-wght.woff2")', 'url(data:font/woff2;base64,' + nunito_b64 + ')') + '\n</style>')
              .replace('<!--DATA-->', '<script type="application/json" id="whynext-data">' + safe_json + '</script>')
              .replace('<!--JS-->', '<script>\n' + js_soft + '\n</script>\n<script>\n' + js_inf + '\n</script>\n<script>\n' + js_app + '\n</script>'))
 dest = os.environ.get('WHYNEXT_SINGLE_FILE', '/workspace/why-next-site.html')  # CI points this at a temp dir
