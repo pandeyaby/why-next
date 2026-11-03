@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_c29FaCTNsx",
+ "title": "Pictograms and tally charts",
+ "audience": "family",
+ "keyIdea": "A tally chart counts as you go: one line for each thing, and the 5th line goes across the other 4 to make a gate of 5, so you can count in 5s. A pictogram shows the same data with pictures. The key tells you what one picture means: if each picture means 2, count in 2s, and half a picture means 1. A block diagram stacks one block for each thing, so the tallest column is the most popular. To find how many more, find the difference between two totals: take the smaller from the bigger.",
+ "explain": {
+  "kid": [
+   "Tally marks help you count. Draw one line for each vote. The 5th line goes across the other 4. That makes a gate. A gate is 5.",
+   "A pictogram uses pictures. Look at the key first. If one picture means 1, count the pictures. If one picture means 2, count in 2s. Half a picture means 1.",
+   "A block diagram has one block for each vote. The tallest column has the most votes. The shortest has the fewest.",
+   "How many more? Find the difference. Walk 6, car 4. Take 4 from 6. That is 2 more."
+  ],
+  "adult": [
+   "In England, Year 2 statistics asks children to interpret and construct simple pictograms, tally charts, block diagrams and simple tables, to ask and answer simple questions by counting the number of objects in each category and sorting the categories by quantity, and to ask and answer questions about totalling and comparing categorical data. Year 3 moves to pictograms where one symbol stands for more than one, such as 2, 5 or 10. In the US, Common Core 2.MD.D.10 asks for picture graphs and bar graphs with a single-unit scale.",
+   "The ideas underneath: a tally is a running count, and the gate of five lets you count in 5s instead of in 1s. In a pictogram the key is the scale. With a key of 2, a row of 4 pictures means 8, and half a picture means 1. A block diagram is an early bar chart: each block is one item, so the height of a column shows its total, and two columns can be compared block by block.",
+   "Common mistakes to watch for: drawing five upright lines instead of four and a line across; counting the pictures and forgetting the key, so 4 pictures read as 4 instead of 8; treating half a picture as a whole one; adding the two numbers when asked how many more; and reading the most popular as the first row rather than the longest one.",
+   "In the lab your child tallies 11 fruit votes into gates of 5, turns the tally into a pictogram, builds a pictogram where each picture means 2 with a half picture for 1, stacks a block diagram from a tally, and finds how many more by spotting the blocks with no partner. Wrong taps get feedback that names the slip."
+  ]
+ },
+ "familyTip": "Count something together this week, such as the colours of cars that pass or the fruit in the bowl, and keep a tally on paper in gates of 5. Then draw it as a pictogram and ask: which had the most, and how many more than the least?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Tally chart, pictogram or block diagram? Drag each one, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Tally chart",
+    "Pictogram",
+    "Block diagram"
+   ],
+   "items": [
+    [
+     "Lines in gates of 5",
+     0
+    ],
+    [
+     "Count as each vote comes in",
+     0
+    ],
+    [
+     "Pictures in rows",
+     1
+    ],
+    [
+     "Has a key: each picture means 2",
+     1
+    ],
+    [
+     "One block for each vote, in columns",
+     2
+    ],
+    [
+     "The tallest column has the most",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtally",
+  "caption": "Flagship lab: tally votes in gates of 5, build pictograms with keys of 1 and 2, stack a block diagram and find how many more.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "How do you draw 5 with tally marks?",
+   "choices": [
+    "4 lines and 1 line across them",
+    "5 lines standing up",
+    "The number 5"
+   ],
+   "answer": 0,
+   "hint": "The 5th line does something different from the first 4.",
+   "explain": "The 5th line goes across the other 4. That makes a gate of 5 that is quick to count."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Each picture in a pictogram means 2 votes. A row has {n} pictures. How many votes is that?",
+   "answer": "2*n",
+   "hint": "Count in 2s, once for each picture.",
+   "explain": "{n} pictures of 2 votes each is {=2*n} votes. Count in 2s.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A block diagram shows {a} children like red and {b} like blue. How many more like red than blue?",
+   "answer": "a-b",
+   "hint": "How many more means find the difference. Take the smaller number from the bigger one.",
+   "explain": "{a} take away {b} is {=a-b}, so {=a-b} more children like red.",
+   "params": {
+    "a": [
+     6,
+     9
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Each picture means 2 votes. A row has 3 whole pictures and a half picture. How many votes?",
+   "choices": [
+    "7",
+    "4",
+    "8"
+   ],
+   "answer": 0,
+   "hint": "Count in 2s for the whole pictures. Half of 2 is 1.",
+   "explain": "3 whole pictures are 2, 4, 6, and the half picture is 1 more, so 7 votes."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A tally has {g} gates of 5 and {s} more single lines. How many is that?",
+    "answer": "5*g+s",
+    "hint": "Count the gates in 5s, then count on the single lines.",
+    "explain": "{g} gates make {=5*g}. Count on {s} more to get {=5*g+s}.",
+    "params": {
+     "g": [
+      1,
+      3
+     ],
+     "s": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Each picture means 2 votes. Cats have 4 pictures. How many votes for cats?",
+    "choices": [
+     "8",
+     "4",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "Look at the key before you count.",
+    "explain": "Each picture is 2 votes, so count in 2s: 2, 4, 6, 8."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "In a block diagram, which column shows the most popular?",
+    "choices": [
+     "The tallest one",
+     "The first one",
+     "The shortest one"
+    ],
+    "answer": 0,
+    "hint": "Each block is one vote, so more blocks means more votes.",
+    "explain": "The tallest column has the most blocks, so it has the most votes."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Walk has 6 votes. Bus has 2. How many more for walk?",
+    "choices": [
+     "4",
+     "8",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "How many more means find the difference, not add.",
+    "explain": "6 take away 2 is 4, so 4 more children walk."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Each picture means 2 votes. What does half a picture mean?",
+    "choices": [
+     "1 vote",
+     "2 votes",
+     "Half a child"
+    ],
+    "answer": 0,
+    "hint": "A whole picture is 2 votes. What is half of 2?",
+    "explain": "Half of 2 is 1, so half a picture means 1 vote."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Apples got {a} votes and pears got {b} votes. How many votes in all?",
+    "answer": "a+b",
+    "hint": "In all means add the two totals together.",
+    "explain": "{a} and {b} make {=a+b} votes in all.",
+    "params": {
+     "a": [
+      3,
+      8
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why do we cross the 5th tally mark?",
+    "choices": [
+     "So we can count in 5s",
+     "To show a mistake",
+     "Because 5 is the end"
+    ],
+    "answer": 0,
+    "hint": "Think about counting lots of tally marks quickly.",
+    "explain": "A gate of 5 lets you count 5, 10, 15 instead of counting every line."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Each picture means 1 vote. Bananas have 3 pictures. How many tally marks should bananas have?",
+    "choices": [
+     "3",
+     "1",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "A tally chart and a pictogram show the same counts.",
+    "explain": "One picture for each vote, so 3 pictures match 3 tally marks."
+   }
+  ]
+ }
+}
