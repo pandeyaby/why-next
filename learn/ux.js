@@ -16,8 +16,8 @@ function open(id){select(id,true);requestAnimationFrame(()=>{const l=document.ge
 
 // ---------- welcome: two questions that set the age band and goal (and the Guide's "About me") ----------
 function welcome(){const G=LEARN_DATA.goals;
- return `<section class="card ux-welcome" aria-labelledby="uxwH"><h2 id="uxwH" class="lh">👋 Welcome! Two quick questions</h2>
- <p class="muted small">So we can suggest where to start. Saved only on this device; change it any time under “Make it yours”.</p>
+ return `<section class="card ux-welcome" aria-labelledby="uxwH"><h2 id="uxwH" class="lh">Hello! Who’s learning today?</h2>
+ <p class="muted small">Two taps and we’ll suggest a good place to start. It stays on this device, and you can change it any time.</p>
  <fieldset class="ux-q"><legend>How old are you?</legend><div class="ux-chips">${G.bands.map(b=>`<button type="button" class="lbtn sm" data-band="${esc(b.id)}" aria-pressed="false">${esc(b.label)}</button>`).join('')}</div></fieldset>
  <fieldset class="ux-q"><legend>What would you like to work on?</legend><div class="ux-chips">${G.goals.map(g=>`<button type="button" class="lbtn sm" data-goal="${esc(g.id)}" aria-pressed="false">${esc(g.label)}</button>`).join('')}</div></fieldset>
  <p><button type="button" class="lbtn" data-ux="start" disabled>Show me where to start</button> <button type="button" class="linkish" data-ux="skip">Skip for now</button></p></section>`}
@@ -56,14 +56,14 @@ function onClick(e){const b=e.target.closest('button');if(!b||!b.closest('#uxTop
 
 // ---------- in a lesson: jump to the lab, and predict-then-reveal when there is no lab ----------
 function labJump(root){const lb=document.getElementById('lbox'),hd=root.querySelector('.lhead');if(!lb||!hd||hd.querySelector('.ux-lab'))return;
- const b=document.createElement('button');b.type='button';b.className='lbtn sm ux-lab';b.textContent='🧪 Jump to the lab';
+ const b=document.createElement('button');b.type='button';b.className='lbtn sm ux-lab';b.textContent='Jump to the lab';
  b.onclick=()=>{lb.scrollIntoView({block:'start'});const f=lb.querySelector('button,input,select,[tabindex]');(f||lb).focus({preventScroll:true})};hd.appendChild(b)}
 function predict(root,id){const les=LEARN.L[id];if(!les||les.lab||!Array.isArray(les.practice)||root.querySelector('.ux-pred'))return;
  if(predicted().includes(id))return;const src=les.practice.find(x=>x&&x.type==='mc');if(!src)return;
  const key=root.querySelector('p.key');if(!key)return;let it;try{it=LEARN_GEN.make(src)}catch(x){return}if(!it||!Array.isArray(it.choices))return;
  const hid=[];for(let n=key.nextElementSibling;n&&n.tagName==='P';n=n.nextElementSibling)hid.push(n);
  const box=document.createElement('div');box.className='ux-pred';box.setAttribute('role','group');box.setAttribute('aria-labelledby','uxpQ');
- box.innerHTML=`<p class="ux-pt">🤔 <b>Predict first.</b> Have a guess before you read on; it’s fine to be wrong.</p><p id="uxpQ">${esc(it.prompt)}</p><div class="ux-chips">${it.choices.map((c,i)=>`<button type="button" class="lbtn sm" data-i="${i}">${esc(c)}</button>`).join('')}</div>
+ box.innerHTML=`<p class="ux-pt"><b>Have a guess first.</b> Wrong guesses are how brains learn, so go for it.</p><p id="uxpQ">${esc(it.prompt)}</p><div class="ux-chips">${it.choices.map((c,i)=>`<button type="button" class="lbtn sm" data-i="${i}">${esc(c)}</button>`).join('')}</div>
  <p class="ux-pf" role="status" aria-live="polite"></p><button type="button" class="linkish ux-skip">Skip and show the explanation</button>`;
  key.before(box);hid.concat(key).forEach(p=>p.hidden=true);
  const reveal=msg=>{box.querySelector('.ux-pf').textContent=msg;box.querySelector('.ux-skip').remove();hid.concat(key).forEach(p=>p.hidden=false);

@@ -4,10 +4,10 @@
 (()=>{const R=VIS.reg,nf=VIS.nf;
 /* lab kit: chs = [{goal, test(), set()}]; returns {check()} to call after every change */
 VIS.lab=(c,chs)=>{let mode='sandbox',i=0,won=false;const bar=c.el('div',{class:'lab-bar',role:'group','aria-label':'Lab mode'});c.fig.insertBefore(bar,c.stage);
- const bS=c.el('button',{type:'button',class:'lbtn sm on','aria-pressed':'true'},bar,'Sandbox'),bC=c.el('button',{type:'button',class:'lbtn sm','aria-pressed':'false'},bar,'🎯 Challenge');
- const goal=c.el('p',{class:'lab-goal',role:'status'},bar,'Sandbox: change anything and watch what happens.');const nx=c.el('button',{type:'button',class:'lbtn sm ghost',hidden:''},bar,'Next challenge');
+ const bS=c.el('button',{type:'button',class:'lbtn sm on','aria-pressed':'true'},bar,'Sandbox'),bC=c.el('button',{type:'button',class:'lbtn sm','aria-pressed':'false'},bar,'Challenge');
+ const goal=c.el('p',{class:'lab-goal',role:'status'},bar,'Free play: try anything and see what changes.');const nx=c.el('button',{type:'button',class:'lbtn sm ghost',hidden:''},bar,'Next challenge');
  const show=()=>{bS.classList.toggle('on',mode==='sandbox');bC.classList.toggle('on',mode!=='sandbox');bS.setAttribute('aria-pressed',mode==='sandbox');bC.setAttribute('aria-pressed',mode!=='sandbox');
-  goal.textContent=mode==='sandbox'?'Sandbox: change anything and watch what happens.':`Challenge ${i+1} of ${chs.length}: ${chs[i].goal}`;goal.classList.remove('win');nx.hidden=true};
+  goal.textContent=mode==='sandbox'?'Free play: try anything and see what changes.':`Challenge ${i+1} of ${chs.length}: ${chs[i].goal}`;goal.classList.remove('win');nx.hidden=true};
  const start=()=>{won=false;chs[i].set&&chs[i].set();show();api.check()};
  bS.onclick=()=>{mode='sandbox';show()};bC.onclick=()=>{mode='challenge';start()};nx.onclick=()=>{i=(i+1)%chs.length;start()};
  const api={check(){if(mode!=='challenge'||won)return;let ok=false;try{ok=chs[i].test()}catch(e){}if(!ok)return;won=true;goal.textContent=`✓ Challenge ${i+1} done! ${chs[i].win||''}`;goal.classList.add('win');nx.hidden=false;
