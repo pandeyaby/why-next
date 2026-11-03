@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_FHIAv6dfhU",
+ "title": "Factors, multiples, and primes",
+ "audience": "family",
+ "keyIdea": "A factor of a number goes into it exactly, with nothing left over. Factors come in pairs that multiply to the number: 12 = 1 × 12 = 2 × 6 = 3 × 4, so the factors of 12 are 1, 2, 3, 4, 6 and 12. A multiple is in a number's times table: 12 is a multiple of 3 and of 4. A prime number has exactly two factors, 1 and itself, so its tiles only make one long row; 1 is not prime, and 2 is the only even prime. A common factor goes into two numbers, and a common multiple is in both their times tables.",
+ "explain": {
+  "kid": [
+   "Put 12 tiles into rows. You can make 1 row of 12, 2 rows of 6, or 3 rows of 4. Each full rectangle is a factor pair.",
+   "A factor goes into a number with nothing left over. The factors of 12 are 1, 2, 3, 4, 6 and 12. A multiple is in the times table. 24 is a multiple of 6.",
+   "Some numbers only make 1 long row. 7 is like that. Its only factors are 1 and 7. A number with just 2 factors is a prime number.",
+   "Odd does not mean prime. 9 is odd, but 9 = 3 × 3. And 1 is not prime, because it has only 1 factor. A common factor goes into both numbers. A common multiple is in both times tables. 24 is in the 6s and the 8s."
+  ],
+  "adult": [
+   "This matches England's Year 5 aims: find all factor pairs of a number, find common factors of two numbers, know the words prime number, prime factor and composite number, and decide if a number up to 100 is prime. Year 6 adds common multiples. In the US, Common Core 4.OA.B.4 asks for all factor pairs from 1 to 100 and prime or composite, and 6.NS.B.4 adds the greatest common factor and least common multiple.",
+   "A factor pair is two whole numbers that multiply to the number, so each pair is a full rectangle of tiles. Work from 1 upwards and stop when the pairs meet: 36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6. A prime has exactly two factors. A composite number has more than two. 1 is neither. To test a number below 100, divide by 2, 3, 5 and 7. If none goes in, it is prime, because any factor pair must have one number below 10.",
+   "Common mistakes to watch for: thinking every odd number is prime (9, 15, 21, 51), counting 1 as prime, leaving 1 and the number itself out of a factor list, mixing up factors and multiples, and taking the product as the lowest common multiple (6 × 8 = 48, but 24 comes first).",
+   "In the lab your child changes how many tiles go in each row to find the factor pairs of 12, tries rectangles to sort 7, 9, 2, 15 and 1 into prime and not prime, taps the common factors of 24 and 36, finds the common multiples of 6 and 8 on a 1 to 60 grid, and tests 91 and 97 by dividing by 2, 3, 5 and 7."
+  ]
+ },
+ "familyTip": "Get 24 coins or pasta shapes. Ask your child to make every rectangle they can, and write each one as a pair, like 3 × 8. Then try 23. Why does it only make one row? Take turns naming a number under 50 and asking: prime or not?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Prime or not? Drag each number, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Prime (exactly 2 factors)",
+    "Not prime"
+   ],
+   "items": [
+    [
+     "2",
+     0
+    ],
+    [
+     "9",
+     1
+    ],
+    [
+     "13",
+     0
+    ],
+    [
+     "1",
+     1
+    ],
+    [
+     "21",
+     1
+    ],
+    [
+     "29",
+     0
+    ],
+    [
+     "51",
+     1
+    ],
+    [
+     "97",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfpair",
+  "caption": "Flagship lab: build tile rectangles to find factor pairs, sort primes, tap common factors and common multiples, and test 91 and 97.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is a factor pair of 36?",
+   "choices": [
+    "4 and 9",
+    "5 and 7",
+    "6 and 30"
+   ],
+   "answer": 0,
+   "hint": "A factor pair multiplies to make the number. Multiply each pair.",
+   "explain": "4 × 9 = 36, so 4 and 9 are a factor pair. 5 × 7 = 35 and 6 + 30 = 36 but 6 × 30 = 180."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You put {n} tiles in rows of 5. How many tiles are left over?",
+   "answer": "n%5",
+   "hint": "Count how many full rows of 5 you can make, then see what is left.",
+   "explain": "{n} tiles in rows of 5 leave {=n%5} over. If none are left over, 5 is a factor of {n}.",
+   "params": {
+    "n": [
+     21,
+     39
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What is the {k}th multiple of 7? (The 1st is 7.)",
+   "answer": "7*k",
+   "hint": "Count in 7s, {k} times, or work out 7 × {k}.",
+   "explain": "The {k}th multiple of 7 is 7 × {k} = {=7*k}.",
+   "params": {
+    "k": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Is 21 a prime number?",
+   "choices": [
+    "No, 21 = 3 × 7",
+    "Yes, it is odd",
+    "Yes, it is not in the 2s"
+   ],
+   "answer": 0,
+   "hint": "Try making a rectangle. Does 21 divide by 3?",
+   "explain": "21 = 3 × 7, so it has more than two factors and is not prime. Being odd is not enough."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which list shows all the factors of 20?",
+    "choices": [
+     "1, 2, 4, 5, 10, 20",
+     "2, 4, 5, 10",
+     "20, 40, 60"
+    ],
+    "answer": 0,
+    "hint": "Find the pairs: 1 × 20, 2 × 10, 4 × 5. Do not forget 1 and 20.",
+    "explain": "1 × 20, 2 × 10 and 4 × 5 give the factors 1, 2, 4, 5, 10 and 20. 20, 40, 60 are multiples."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why is 1 not a prime number?",
+    "choices": [
+     "It has only 1 factor",
+     "It is too small",
+     "It is odd"
+    ],
+    "answer": 0,
+    "hint": "A prime has exactly two factors. How many does 1 have?",
+    "explain": "1 has just one factor, itself. A prime needs exactly two, so 1 is not prime."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is the lowest common multiple of 6 and 8?",
+    "choices": [
+     "24",
+     "48",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "List the 6s and the 8s. Which number comes first in both lists?",
+    "explain": "6, 12, 18, 24 and 8, 16, 24: 24 is first in both. 48 is a common multiple, but not the lowest."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is the highest common factor of 18 and 24?",
+    "choices": [
+     "6",
+     "3",
+     "72"
+    ],
+    "answer": 0,
+    "hint": "List the factors of each. Which is the biggest one in both lists?",
+    "explain": "Common factors are 1, 2, 3 and 6, so the highest is 6. 72 is a common multiple."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which number is prime?",
+    "choices": [
+     "29",
+     "27",
+     "39"
+    ],
+    "answer": 0,
+    "hint": "Try dividing each by 2, 3, 5 and 7.",
+    "explain": "27 = 3 × 9 and 39 = 3 × 13, but nothing below 10 goes into 29 except 1, so 29 is prime."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{r} rows of {c} tiles make a full rectangle. How many tiles is that?",
+    "answer": "r*c",
+    "hint": "A rectangle with {r} rows of {c} has {r} × {c} tiles.",
+    "explain": "{r} × {c} = {=r*c}, so {r} and {c} are a factor pair of {=r*c}.",
+    "params": {
+     "r": [
+      2,
+      9
+     ],
+     "c": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Ella says 13 is a multiple of 3 because it has a 3 in it. Is she right?",
+    "choices": [
+     "No, 13 ÷ 3 leaves 1 over",
+     "Yes, it has a 3",
+     "Yes, all odd numbers are"
+    ],
+    "answer": 0,
+    "hint": "A multiple of 3 is in the 3 times table. Is 13 in it?",
+    "explain": "The 3s go 3, 6, 9, 12, 15. 13 is not one of them, so it is not a multiple of 3."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "How many tiles are left over if you put {n} tiles in rows of 4?",
+    "answer": "n%4",
+    "hint": "Find the biggest multiple of 4 that is not more than {n}.",
+    "explain": "{n} tiles in rows of 4 leave {=n%4} over. Zero over would mean 4 is a factor of {n}.",
+    "params": {
+     "n": [
+      17,
+      31
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "To check if 89 is prime, which numbers do you need to try dividing by?",
+    "choices": [
+     "2, 3, 5 and 7",
+     "Every number up to 88",
+     "Only 2"
+    ],
+    "answer": 0,
+    "hint": "10 × 10 = 100. In any factor pair of 89, one number must be below 10.",
+    "explain": "Only primes below 10 need testing: 2, 3, 5 and 7. None goes into 89, so 89 is prime."
+   }
+  ]
+ }
+}
