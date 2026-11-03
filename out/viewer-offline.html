@@ -566,6 +566,22 @@ html[data-theme="classic"] .qi.ok .fb{animation:wnfb .4s ease-out both}
 @keyframes wnfb{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){html[data-theme="classic"] .qi.ok,html[data-theme="classic"] .qi.ok .fb{animation:none}}
 @keyframes fxglow{50%{stroke-width:6}}
+/* Phones: lesson first, topic map as a bottom sheet */
+.sheetbtn{display:none}
+@media (max-width:760px){
+html.wn-lesson body{padding-bottom:84px}
+html.wn-lesson #main{display:flex;flex-direction:column}
+html.wn-lesson #detail{order:-1}
+html.wn-lesson #side{position:fixed;left:0;right:0;bottom:0;z-index:40;height:auto;max-height:84px;border:1.5px solid var(--wn-line,#E6DCC6);border-bottom:0;border-radius:16px 16px 0 0;background:var(--wn-card,#FFFDF8);overflow:hidden;padding-bottom:env(safe-area-inset-bottom)}
+html.wn-lesson #side header>h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}html.wn-lesson #side header>small,html.wn-lesson #side .themebtn,html.wn-lesson #side #filters,html.wn-lesson #side #list{display:none}
+html.wn-lesson #side header{display:flex;gap:8px;align-items:center;padding:10px 12px}
+html.wn-lesson #side #q{margin:0;flex:1}
+html.wn-lesson .sheetbtn{display:block;flex:none;min-height:44px;margin:0;padding:8px 14px;border:1.5px solid var(--wn-ink,#1E2230);border-radius:8px;background:transparent;color:inherit;font:inherit;font-weight:700}
+html.wn-lesson #side{display:flex;flex-direction:column}
+html.wn-lesson.wn-sheet #side{max-height:85vh;max-height:85dvh}
+html.wn-lesson.wn-sheet #side .themebtn{display:inline-block}html.wn-lesson.wn-sheet #side #filters{display:flex;padding:0 12px 8px}html.wn-lesson.wn-sheet #side header{flex-wrap:wrap}
+html.wn-lesson.wn-sheet #side #list{display:block;flex:1;min-height:0;max-height:none;overflow:auto}
+}
 
 </style></head><body>
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
@@ -52952,7 +52968,7 @@ const needFor=id=>[...new Set([...ancestors(id,false)].map(u=>N.get(u).k))];
 /* #t=<topic id> deep-links a topic; on phones a picked topic scrolls into view (the list sits above it). */
 /* subject art slot (assets/art/subject-*.webp); removed quietly if the file is missing (e.g. the offline file) */
 function subjIcon(s){if(window.WN_OFFLINE)return'';s=String(s||'');const k=/math/i.test(s)?'maths':/scien|chem|phys|bio/i.test(s)?'science':/english|read|writ|phon/i.test(s)?'english':/comput/i.test(s)?'computing':/learn/i.test(s)?'learning-to-learn':/personal|social|health|pshe/i.test(s)?'personal-social':'';return k?`<img class="subj-ic" src="../assets/art/subject-${k}.webp" alt="" width="44" height="44" onerror="this.remove()">`:''}
-function select(id,user){const moved=sel!==id&&(sel!=null||user===true);sel=id;try{const bn=N.get(id),a0=bn&&bn.a?+bn.a[0]:99,band=a0<=4?'early':a0<=10?'primary':a0<=13?'middle':'senior',dt=document.getElementById('detail');if(dt)dt.dataset.band=band}catch(e){}renderList();try{history.replaceState(null,'','#t='+encodeURIComponent(id))}catch(e){}
+function select(id,user){const moved=sel!==id&&(sel!=null||user===true);sel=id;try{const H=document.documentElement;H.classList.add('wn-lesson');if(user===true&&H.classList.contains('wn-sheet')){H.classList.remove('wn-sheet');scrollTo(0,0)}}catch(e){}try{const bn=N.get(id),a0=bn&&bn.a?+bn.a[0]:99,band=a0<=4?'early':a0<=10?'primary':a0<=13?'middle':'senior',dt=document.getElementById('detail');if(dt)dt.dataset.band=band}catch(e){}renderList();try{history.replaceState(null,'','#t='+encodeURIComponent(id))}catch(e){}
  if(moved&&window.matchMedia&&matchMedia('(max-width: 800px)').matches)setTimeout(()=>{const d=document.getElementById('detail');if(d)d.scrollIntoView({block:'start'})},0);const lz=LEARN.L[id]&&LEARN.L[id]._lz;if(lz)WN.lbload(N.get(id).k).then(()=>{if(sel===id&&!LEARN.L[id]._lz)select(id)},()=>{const b=document.getElementById('lzwait');if(b)b.textContent='This lesson could not load. Check your connection and pick it again.'});
  document.getElementById('detail').innerHTML=`<div class="card" id="dcard"></div>${lz?'<section class="learn card"><p class="muted" id="lzwait" role="status">Loading the lesson…</p></section>':LEARN_PANEL.panel(id)}<div id="dclu"></div><div class="card cv"><b>Hard-prerequisite graph</b><div id="dgraph"></div></div>
  <div class="card cv"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span><div id="dtree"></div></div>`;
@@ -52992,4 +53008,6 @@ function mapZoom(){const g=document.getElementById('dgraph'),sv=g&&g.querySelect
  g.querySelectorAll('[data-z]').forEach(b=>b.onclick=()=>set(+b.dataset.z));set(1)}
 // After first paint, quietly fetch lesson bodies and the visuals bundle so opening a lesson is instant.
 {const w=()=>WN.warm().then(()=>{window.WN_WARM=1},()=>{});const iw=()=>setTimeout(()=>(window.requestIdleCallback||setTimeout)(w,{timeout:2000}),window.WN_OFFLINE?0:3500);if(document.readyState==='complete')iw();else addEventListener('load',iw)}
+
+;(function(){const H=document.documentElement,side=document.getElementById('side');if(!side)return;const b=document.createElement('button');b.type='button';b.id='sheetBtn';b.className='sheetbtn';b.setAttribute('aria-expanded','false');b.textContent='All topics';(side.querySelector('header')||side).insertBefore(b,(side.querySelector('header')||side).firstChild);const set=o=>{H.classList.toggle('wn-sheet',o);b.setAttribute('aria-expanded',String(o));b.textContent=o?'Close topics':'All topics'};b.addEventListener('click',()=>set(!H.classList.contains('wn-sheet')));const q=document.getElementById('q');if(q)q.addEventListener('focus',()=>set(true));new MutationObserver(()=>b.setAttribute('aria-expanded',String(H.classList.contains('wn-sheet')))).observe(H,{attributes:true,attributeFilter:['class']})})();
 </script></body></html>

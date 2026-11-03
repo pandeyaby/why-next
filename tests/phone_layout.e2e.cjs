@@ -21,7 +21,7 @@ const overlaps = () => {
     await p.goto(URL); await p.waitForFunction('window.WN_WARM');
     for (const theme of ['dark', 'light']) {
       const cur = await p.evaluate(() => document.documentElement.dataset.theme || 'dark');
-      if ((theme === 'light') !== (cur === 'classic' || cur === 'light')) await p.click('#themeBtn');
+      if ((theme === 'light') !== (cur === 'classic' || cur === 'light')) await p.evaluate(() => document.getElementById('themeBtn').click());
       const open = async id => { await p.evaluate(id => select(id), id); await p.waitForSelector('.vis.flag .fl-cv', { timeout: 10000 }); await p.waitForTimeout(500) };
       for (const [id, name] of [['mt_q8uN41TdjS', 'wave diagrams (7 steps)'], ['mt_dx_t8RtPt5', 'covalent bonding'], ['mt_LxK9OKZQZX', 'wave rope']])
         await test(`${phone}, ${theme}: ${name}: Guide tab covers nothing and the lab is not clipped at any step`, async () => {
@@ -38,6 +38,12 @@ const overlaps = () => {
         const size = await p.$eval('#gdFab', f => { const r = f.getBoundingClientRect(); return [r.width, r.height] }); assert.ok(size[0] >= 24 && size[1] >= 44, 'target size ' + size);
         await p.click('#gdFab'); assert.ok(await p.isVisible('#guide'), 'guide opens'); await p.click('#guide .gd-x'); assert.ok(await p.isVisible('#gdFab'), 'tab returns') });
     }
+    await test(`${phone}: lesson comes first; the topic map is a bottom sheet that opens and closes`, async () => {
+      await p.evaluate(() => select('mt_q8uN41TdjS', true)); await p.waitForTimeout(300);
+      const r = await p.evaluate(() => { const d = document.getElementById('detail').getBoundingClientRect(), s = document.getElementById('side').getBoundingClientRect(); return { dTop: d.top + scrollY, sTop: s.top, sH: s.height, vh: innerHeight, list: getComputedStyle(document.getElementById('list')).display } });
+      assert.ok(r.dTop < 200, 'lesson starts near the top: ' + r.dTop); assert.ok(r.sH <= 100 && r.sTop >= r.vh - 101, 'sheet is collapsed at the bottom'); assert.strictEqual(r.list, 'none');
+      await p.click('#sheetBtn'); assert.ok(await p.isVisible('#list .item'), 'sheet opens to the topic list'); assert.strictEqual(await p.getAttribute('#sheetBtn', 'aria-expanded'), 'true');
+      await p.click('#sheetBtn'); assert.strictEqual(await p.getAttribute('#sheetBtn', 'aria-expanded'), 'false') });
     await test(`${phone}: no page errors`, async () => assert.deepStrictEqual(errors, []));
     await ctx.close();
   }

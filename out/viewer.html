@@ -566,6 +566,22 @@ html[data-theme="classic"] .qi.ok .fb{animation:wnfb .4s ease-out both}
 @keyframes wnfb{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){html[data-theme="classic"] .qi.ok,html[data-theme="classic"] .qi.ok .fb{animation:none}}
 @keyframes fxglow{50%{stroke-width:6}}
+/* Phones: lesson first, topic map as a bottom sheet */
+.sheetbtn{display:none}
+@media (max-width:760px){
+html.wn-lesson body{padding-bottom:84px}
+html.wn-lesson #main{display:flex;flex-direction:column}
+html.wn-lesson #detail{order:-1}
+html.wn-lesson #side{position:fixed;left:0;right:0;bottom:0;z-index:40;height:auto;max-height:84px;border:1.5px solid var(--wn-line,#E6DCC6);border-bottom:0;border-radius:16px 16px 0 0;background:var(--wn-card,#FFFDF8);overflow:hidden;padding-bottom:env(safe-area-inset-bottom)}
+html.wn-lesson #side header>h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}html.wn-lesson #side header>small,html.wn-lesson #side .themebtn,html.wn-lesson #side #filters,html.wn-lesson #side #list{display:none}
+html.wn-lesson #side header{display:flex;gap:8px;align-items:center;padding:10px 12px}
+html.wn-lesson #side #q{margin:0;flex:1}
+html.wn-lesson .sheetbtn{display:block;flex:none;min-height:44px;margin:0;padding:8px 14px;border:1.5px solid var(--wn-ink,#1E2230);border-radius:8px;background:transparent;color:inherit;font:inherit;font-weight:700}
+html.wn-lesson #side{display:flex;flex-direction:column}
+html.wn-lesson.wn-sheet #side{max-height:85vh;max-height:85dvh}
+html.wn-lesson.wn-sheet #side .themebtn{display:inline-block}html.wn-lesson.wn-sheet #side #filters{display:flex;padding:0 12px 8px}html.wn-lesson.wn-sheet #side header{flex-wrap:wrap}
+html.wn-lesson.wn-sheet #side #list{display:block;flex:1;min-height:0;max-height:none;overflow:auto}
+}
 
 </style></head><body>
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
@@ -578,4 +594,4 @@ html[data-theme="classic"] .qi.ok .fb{animation:wnfb .4s ease-out both}
 <details class="howmap"><summary>How to read the map</summary><span class="legend"><span><span class="st h">hard</span> required</span><span><span class="st s">soft</span> helpful</span><span><span class="st b">bridge</span> link from a Why Next? topic into the upstream v1 map</span>
 <span style="color:var(--new)">■ Why Next? topic</span> <span style="color:var(--old)">■ upstream v1 topic</span></span>
 <p class="muted" id="stats">971 Why Next? topics · 2247 Why Next? edges (520 bridge edges into upstream v1) · 938 upstream v1 ancestor topics shown for context.</p></details><p style="margin:6px 0 0"><b>New: learn here too.</b> Topics marked <span class="dia" style="color:#7c3aed">◆</span> have a short interactive lesson. Set up a profile below to get “learn next” picks.</p><p class="muted" style="font-size:12px;margin-bottom:0">Builds on the Marble Skill Taxonomy v1 © Generative Spark, Inc. (github.com/withmarbleapp/os-taxonomy), used under ODbL 1.0 (database) and CC BY-SA 4.0 (content); this derived dataset is released under the same terms and is not affiliated with or endorsed by Generative Spark, Inc.</p></div><div id="learnHome"></div><div id="detail"></div></main>
-<script defer src="wn/core.js?v=547eadea09"></script><script defer src="wn/learn.js?v=f03ab80b20"></script><script defer src="wn/app.js?v=f566f202f0"></script></body></html>
+<script defer src="wn/core.js?v=547eadea09"></script><script defer src="wn/learn.js?v=f03ab80b20"></script><script defer src="wn/app.js?v=984db3c6d8"></script></body></html>
