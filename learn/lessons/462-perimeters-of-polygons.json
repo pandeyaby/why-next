@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_WtcFrxGOgw",
+ "title": "Perimeters of polygons",
+ "audience": "learner",
+ "keyIdea": "The perimeter is the total distance all the way round the edge of a flat shape. Add the lengths of every side and keep the unit, such as cm or m. A rectangle has two pairs of equal sides, so its perimeter is length + width + length + width. If you know the perimeter and every side but one, subtract the sides you know. Two rectangles can have the same perimeter but different areas, or the same area but different perimeters.",
+ "explain": {
+  "kid": [
+   "Put your finger on one corner of a shape. Run it along every side until you get back to the start. The distance your finger went is the perimeter. For a rectangle 8 cm long and 5 cm wide, that is 8 + 5 + 8 + 5 = 26 cm.",
+   "A polygon is a flat shape with straight sides. To find its perimeter, add up all its sides. Count the sides first, so you do not miss one. A hexagon has 6 sides. If each one is 4 cm, the perimeter is 6 × 4 = 24 cm.",
+   "Sometimes one side is missing. A pentagon has a perimeter of 30 cm, and four of its sides add up to 26 cm. The last side must be 30 − 26 = 4 cm. For a rectangle with perimeter 24 cm and one side of 8 cm, take off both 8 cm sides. That leaves 8 cm for the two other sides, so each is 4 cm.",
+   "Perimeter is not the same as area. Area counts the squares inside. A 6 by 6 square and an 11 by 1 strip both have a perimeter of 24 cm. But the square holds 36 squares and the strip holds only 11."
+  ],
+  "adult": [
+   "This is US Common Core 3.MD.D.8. Children solve problems with the perimeters of polygons. They find the perimeter from side lengths, find an unknown side, and show rectangles with the same perimeter but different areas, or the same area but different perimeters. In England, Year 3 pupils measure the perimeter of simple 2-D shapes. Year 4 pupils measure and work out the perimeter of a rectilinear figure, including squares, in cm and m.",
+   "Perimeter is a length, so it is measured in cm or m. Area is measured in square units. For a rectangle, perimeter = 2 × (length + width). Let children add all four sides first, so the formula means something. Finding a missing side is the inverse: take the known sides from the perimeter. For a rectangle, take off both known sides and then halve what is left.",
+   "Common mistakes: counting the squares inside, which gives the area; adding only the two labelled sides of a rectangle; taking a known side off only once when finding a missing side; forgetting to halve at the end; adding the perimeter to the known sides; and miscounting the sides of a polygon. A careful check is to walk round the shape and tick each side as it is added.",
+   "In the lab your child walks round an 8 cm by 5 cm rectangle side by side, finds missing sides of a pentagon, a quadrilateral and a regular hexagon, solves rectangles from their perimeter, drags the corner of a rectangle that keeps a perimeter of 24 cm while its area changes, and builds every rectangle from 12 squares to compare their perimeters."
+  ]
+ },
+ "familyTip": "Use a piece of string to go round a book, a table mat or a door, then measure the string with a ruler or tape measure. Ask which object has the longest edge. Then lay 12 coins or cards in different rectangles and count the edge of each.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it about the perimeter or the area? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Perimeter (the edge)",
+    "Area (the inside)"
+   ],
+   "items": [
+    [
+     "A fence round a garden",
+     0
+    ],
+    [
+     "Grass seed to cover a lawn",
+     1
+    ],
+    [
+     "Ribbon round a card",
+     0
+    ],
+    [
+     "Carpet for a floor",
+     1
+    ],
+    [
+     "A frame round a picture",
+     0
+    ],
+    [
+     "Paint for a wall",
+     1
+    ],
+    [
+     "Tape round a box lid",
+     0
+    ],
+    [
+     "Tiles on a bathroom floor",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagperim",
+  "caption": "Flagship lab: walk round a rectangle, find missing sides, stretch a 24 cm rectangle and compare shapes made of 12 squares.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A rectangle is {a} cm long and {b} cm wide. What is its perimeter in cm?",
+   "answer": "2*a+2*b",
+   "hint": "Add all four sides: {a} + {b} + {a} + {b}.",
+   "explain": "{a} + {b} + {a} + {b} = {=2*a+2*b}, so the perimeter is {=2*a+2*b} cm.",
+   "params": {
+    "a": [
+     4,
+     12
+    ],
+    "b": [
+     2,
+     9
+    ]
+   },
+   "where": "a>b"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A rectangle has a perimeter of {=2*a+2*b} cm. One side is {a} cm. How long is the other side in cm?",
+   "answer": "b",
+   "hint": "Take off both {a} cm sides, then halve what is left.",
+   "explain": "{=2*a+2*b} − {a} − {a} = {=2*b}, and half of {=2*b} is {b}. The other side is {b} cm.",
+   "params": {
+    "a": [
+     5,
+     12
+    ],
+    "b": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A pentagon has sides of 6 cm, 4 cm, 5 cm, 7 cm and 3 cm. What is its perimeter?",
+   "choices": [
+    "25 cm",
+    "22 cm",
+    "5 cm"
+   ],
+   "answer": 0,
+   "hint": "A pentagon has 5 sides. Tick each one as you add it.",
+   "explain": "6 + 4 + 5 + 7 + 3 = 25, so the perimeter is 25 cm. 22 cm misses the 3 cm side, and 5 cm is just the number of sides."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A 3 by 7 rectangle and a 5 by 5 square both have a perimeter of 20 cm. Which has the bigger area?",
+   "choices": [
+    "The 5 by 5 square",
+    "The 3 by 7 rectangle",
+    "They have the same area"
+   ],
+   "answer": 0,
+   "hint": "Area is the squares inside: multiply length by width for each one.",
+   "explain": "3 + 7 + 3 + 7 = 20 and 5 + 5 + 5 + 5 = 20, so the perimeters match. But 5 × 5 = 25 squares and 3 × 7 = 21 squares, so the square has the bigger area."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A square has sides of {s} cm. What is its perimeter in cm?",
+    "answer": "4*s",
+    "hint": "A square has 4 equal sides. Add {s} four times.",
+    "explain": "{s} + {s} + {s} + {s} = {=4*s}, so the perimeter is {=4*s} cm.",
+    "params": {
+     "s": [
+      3,
+      15
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A triangle has a perimeter of {=a+b+c} cm. Two sides are {a} cm and {b} cm. How long is the third side in cm?",
+    "answer": "c",
+    "hint": "Add the two sides you know, then take that from {=a+b+c}.",
+    "explain": "{a} + {b} = {=a+b}, and {=a+b+c} − {=a+b} = {c}. The third side is {c} cm.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      3,
+      9
+     ],
+     "c": [
+      3,
+      9
+     ]
+    },
+    "where": "c<a+b && a<b+c && b<a+c"
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A rectangle is 9 cm by 2 cm. Mo says the perimeter is 18 cm. What went wrong?",
+    "choices": [
+     "He found the area, 9 × 2, not the edge",
+     "Nothing, 18 cm is right",
+     "He added only two sides"
+    ],
+    "answer": 0,
+    "hint": "Is 9 × 2 the distance round the edge or the squares inside?",
+    "explain": "9 × 2 = 18 is the area in squares. The perimeter is 9 + 2 + 9 + 2 = 22 cm."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A rectangle has a perimeter of 30 cm. One side is 10 cm. How long is the other side?",
+    "choices": [
+     "5 cm",
+     "20 cm",
+     "10 cm"
+    ],
+    "answer": 0,
+    "hint": "There are two sides of 10 cm. Take both off, then halve what is left.",
+    "explain": "30 − 10 − 10 = 10 cm for the two other sides, so each is 5 cm. 20 cm takes off only one side, and 10 cm forgets to halve."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "12 squares are laid out as a 12 by 1 strip and as a 4 by 3 rectangle. Which has the longer perimeter?",
+    "choices": [
+     "The 12 by 1 strip",
+     "The 4 by 3 rectangle",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Add the four sides of each one.",
+    "explain": "12 + 1 + 12 + 1 = 26 cm and 4 + 3 + 4 + 3 = 14 cm. Same area, but the strip has the longer perimeter."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "An octagon has 8 equal sides of 3 cm. What is its perimeter?",
+    "choices": [
+     "24 cm",
+     "11 cm",
+     "18 cm"
+    ],
+    "answer": 0,
+    "hint": "Count the sides: 8 of them, each 3 cm.",
+    "explain": "8 × 3 = 24, so the perimeter is 24 cm. 11 cm adds 8 and 3, and 18 cm counts only 6 sides."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A quadrilateral has a perimeter of 26 cm. Three sides are 9 cm, 4 cm and 7 cm. How long is the fourth side?",
+    "choices": [
+     "6 cm",
+     "20 cm",
+     "46 cm"
+    ],
+    "answer": 0,
+    "hint": "Add the three sides you know, then subtract from 26.",
+    "explain": "9 + 4 + 7 = 20, and 26 − 20 = 6 cm. 20 cm is the known sides, and 46 cm adds the perimeter on."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which unit fits the perimeter of a playground?",
+    "choices": [
+     "metres (m)",
+     "square metres (m²)",
+     "kilograms (kg)"
+    ],
+    "answer": 0,
+    "hint": "Perimeter is a length: how far round the edge.",
+    "explain": "Perimeter is a distance, so it is measured in metres. Square metres measure area, and kilograms measure mass."
+   }
+  ]
+ }
+}
