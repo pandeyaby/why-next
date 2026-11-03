@@ -1,0 +1,95 @@
+{
+ "topicId": "mt_50bMWX7wRf",
+ "title": "Statistical questions and variability",
+ "audience": "learner",
+ "keyIdea": "A statistical question is one that expects variability in the answers: How many pets do pupils in my class have? is statistical, but How old am I? has one answer and is not. The data collected to answer a statistical question has a distribution, which can be described by its centre (such as the mean or median), its spread (such as the range) and its overall shape.",
+ "explain": {
+  "kid": [
+   "Some questions have one fixed answer. How many days are in a week? Everyone says 7. Other questions get different answers from different people, like How many pets do you have? Those are statistical questions.",
+   "A statistical question expects variability. That means the answers vary. Having a number answer is not enough. How old am I? gives a number, but there is only one answer, so it is not statistical.",
+   "When you collect the answers, they form a distribution. You can show it on a dot plot. The centre is a typical value, like the mean or the median. The spread tells you how far apart the values are. The range is the largest value take away the smallest.",
+   "Two sets of data can share a centre but have very different spreads. Scores of 4, 5, 5, 5, 6 and scores of 1, 3, 5, 7, 9 both have a mean of 5. The first set is packed close together. The second is spread out."
+  ],
+  "adult": [
+   "This topic matches Common Core 6.SP.1 and 6.SP.2: recognise a statistical question as one that anticipates variability in the data, and understand that a data set has a distribution described by its centre, spread and overall shape. In England the same ideas sit in Key Stage 3 statistics, where pupils describe and compare distributions using averages and the range.",
+   "Variability can come from asking many people (heights in a class) or from measuring one thing many times (how long my walk to school takes each day). The test is whether repeated answers are expected to differ, not what the question is about.",
+   "Common mistakes: thinking any question with a number answer is statistical. Calling a question about one person statistical because the topic, such as age, could vary. Using only the mean to compare two groups and ignoring spread. Mixing up the range with the largest value, or the median with the mean.",
+   "In the lab, learners sort six questions and collect answers onto dot plots to see a stack with range 0 next to a spread of answers. They drag dots to reach goals, such as range 0 with mean 5 or range 8 with the same mean, while mean, median and range update live. Last, they compare two classes by centre and spread."
+  ]
+ },
+ "familyTip": "At dinner, ask a question everyone answers, such as How many hours did you sleep last night? Write the answers down and talk about the middle value and how far apart the answers are. Then ask What day is it today? and notice why that one has no spread.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Statistical or not? Drag each question to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Statistical question", "Not statistical"],
+   "items": [
+    ["How tall are the pupils in my class?", 0],
+    ["How tall is the school door?", 1],
+    ["How many books did each pupil read this term?", 0],
+    ["How many sides does a square have?", 1],
+    ["What time do pupils go to bed?", 0],
+    ["What year is it?", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagspread",
+  "caption": "Flagship lab: sort statistical questions, collect answers onto dot plots, drag dots to change centre and spread, then compare two classes.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is a statistical question?",
+   "choices": ["How many minutes do pupils in Year 7 spend on homework each night?", "How many minutes are in an hour?", "How many minutes did I spend on homework last night?"],
+   "answer": 0,
+   "hint": "Would different people, or different times, give different answers?",
+   "explain": "Homework time varies from pupil to pupil, so we expect variability. An hour always has 60 minutes, and one person on one night gives one answer."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A dot plot shows the number of pets owned by pupils. The smallest value is {a} and the largest is {a}+{b}. What is the range?",
+   "answer": "b",
+   "hint": "Range = largest value − smallest value.",
+   "explain": "Range = ({a}+{b}) − {a} = {b}. The range measures spread, not the size of the values.",
+   "params": {"a": [0, 3], "b": [2, 7]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Class A scored 6, 7, 7, 8 and Class B scored 2, 5, 9, 12. Both have a mean of 7. What is different?",
+   "choices": ["The spread: Class B's scores are more spread out", "The centre: Class B scored higher", "Nothing, the data is the same"],
+   "answer": 0,
+   "hint": "Find each range: largest minus smallest.",
+   "explain": "Class A has range 2 and Class B has range 10. Same centre, very different spread."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Every one of {n} pupils is asked how many wheels a bicycle has, and each says 2. What is the range of the answers?",
+   "answer": "0",
+   "hint": "If every answer is the same, how far apart are the largest and smallest?",
+   "explain": "All {n} answers are 2, so the range is 2 − 2 = 0. No variability means the question is not statistical.",
+   "params": {"n": [5, 30]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Why is How many legs does a spider have? not a statistical question?", "choices": ["Every answer is the same, 8", "It is about animals", "It has a number answer"], "answer": 0, "hint": "A statistical question expects the answers to vary.", "explain": "Spiders have 8 legs, so every answer is 8 and nothing varies. Number answers can still be statistical if they vary."},
+   {"type": "mc", "id": "m2", "prompt": "Data: 1, 2, 2, 3, 7. What is the median?", "choices": ["2", "3", "6"], "answer": 0, "hint": "Sort the values and pick the middle one.", "explain": "The middle of 1, 2, 2, 3, 7 is 2. The mean is 3 and the range is 6."},
+   {"type": "mc", "id": "m3", "prompt": "Which change makes a question statistical?", "choices": ["How tall am I? becomes How tall are pupils in my class?", "How tall am I? becomes How tall am I in metres?", "How tall am I? becomes How tall was I last year?"], "answer": 0, "hint": "Look for a version where many different answers are expected.", "explain": "Asking a whole class gives many heights that vary. The other versions still have one answer each."},
+   {"type": "mc", "id": "m4", "prompt": "Two data sets both have a mean of 10. Set P has range 2 and set Q has range 15. Which is more consistent?", "choices": ["P", "Q", "They are equally consistent"], "answer": 0, "hint": "Consistent means the values are close together.", "explain": "P's values sit within 2 of each other, so P is more consistent. The equal means hide the difference in spread."},
+   {"type": "numeric", "id": "m5", "prompt": "Pupils' travel times to school range from {a} minutes to {b} minutes. What is the range?", "answer": "b-a", "hint": "Subtract the smallest time from the largest.", "explain": "{b} − {a} = {=b-a} minutes.", "params": {"a": [3, 9], "b": [15, 40]}},
+   {"type": "mc", "id": "m6", "prompt": "Which describes the spread of a data set?", "choices": ["The range", "The median", "The mean"], "answer": 0, "hint": "Centre is a typical value; spread is how far apart values are.", "explain": "The range measures spread. The mean and median are measures of centre."},
+   {"type": "numeric", "id": "m7", "prompt": "Five pupils each scored {s} on a quiz. What is the mean score?", "answer": "s", "hint": "If every value is the same, the typical value is that value.", "explain": "Five scores of {s} add to {=5*s}, and {=5*s} ÷ 5 = {s}. The range is 0.", "params": {"s": [3, 9]}},
+   {"type": "mc", "id": "m8", "prompt": "Most dots on a plot sit at 1 and 2, with a few out at 9 and 10. What does this tell you about its shape?", "choices": ["It is skewed: most values are low with a long tail to the right", "It is symmetric", "It has no spread"], "answer": 0, "hint": "Where are most of the dots, and where does the tail go?", "explain": "The pile sits on the left and a tail stretches right, so the distribution is skewed, and the mean is pulled above the median."},
+   {"type": "numeric", "id": "m9", "prompt": "A data set is {k}, {k}, {k}, {k}+{d}. What is the range?", "answer": "d", "hint": "Range is the largest value minus the smallest value.", "explain": "Largest {=k+d} minus smallest {k} gives a range of {d}.", "params": {"k": [2, 6], "d": [1, 5]}}
+  ]
+ }
+}
