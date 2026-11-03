@@ -303,10 +303,10 @@ function grade(q,it,ans,id){const les=LEARN.L[id],pre=q.dataset.pre;let ok;
   else if(tries<2){fb(q,'Nearly. Hint: '+it.hint+' Have another go.','bad');VIS.cue();emit('wrong',{id,hint:it.hint,prompt:it.prompt})}
   else{fb(q,'Not quite. Here is how it works: '+it.explain+reveal,'bad');q.dataset.done=1}
   LEARN_FX.sync(id);const pd=LEARN.prog(id).practice||{};const s=document.getElementById('pScore');if(s)s.textContent=`(${Object.keys(pd).length}/${les.practice.length} correct)`;return}
- lockQ(q,ok);fb(q,(ok?'✓ Correct. ':'✗ Not this time. ')+it.explain+(ok?'':reveal),ok?'good':'bad');
+ lockQ(q,ok);fb(q,(ok?'✓ Yes, that’s right. ':'Not this time. ')+it.explain+(ok?'':reveal),ok?'good':'bad');
  if(pre==='r'){const all=[...document.querySelectorAll('#rbox .qi')];if(!all.every(x=>x.dataset.done))return;
   const good=all.every(x=>x.dataset.ok);LEARN.reviewDone(id,good);LEARN.update();
-  document.getElementById('rres').innerHTML=good?'✅ <b>Still got it.</b> Next review in a while longer.':'<b>A little rusty.</b> Have a look at the practice below; this topic will come back for review tomorrow.';return}
+  document.getElementById('rres').innerHTML=good?'✓ <b>Still got it.</b> You remember this one, so we’ll come back to it in a while.':'<b>A little rusty.</b> Have a look at the practice below; this topic will come back for review tomorrow.';return}
  const all=[...document.querySelectorAll('#mbox .qi')];if(!all.every(x=>x.dataset.done))return;
  const score=all.filter(x=>x.dataset.ok).length,pass=score>=les.mastery.passMark,pr=LEARN.prog(id),res=document.getElementById('mres'),was=pr.status==='mastered';
  LEARN.setProg(id,{best:Math.max(score,Number.isFinite(pr.best)?pr.best:0),status:pass||was?'mastered':'practising'});if(pass)LEARN.scheduleAfterMastery(id);LEARN.update();

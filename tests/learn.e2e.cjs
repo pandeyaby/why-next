@@ -29,7 +29,7 @@ async function answer(p, pre, it, wrongFirst) {
     }
     await p.click(`${q} [data-act=check]`);
   }
-  assert.match(await p.textContent(`${q} .fb`), /Correct|That’s it/, `${pre} ${it.id} not marked correct`);
+  assert.match(await p.textContent(`${q} .fb`), /Correct|That’s it|that’s right/, `${pre} ${it.id} not marked correct`);
 }
 async function axe(p, label) {
   await p.addScriptTag({ path: AXE });
