@@ -18,7 +18,7 @@ struct AboutView: View {
                 HStack(spacing: 16) {
                     AppIconView(size: 72)
                     VStack(alignment: .leading, spacing: 2) {
-                        Text("Why Next?").font(.rounded(.title))
+                        Text("Why Next?").font(.display(.title))
                             .accessibilityAddTraits(.isHeader)
                         Text("What to learn next, and why.").foregroundStyle(.secondary)
                         Text("Version \(appVersion) · draft").font(.caption).foregroundStyle(.secondary)

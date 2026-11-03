@@ -60,7 +60,7 @@ struct ResultsView: View {
         let pct = area.count > 0 ? Int((100 * Double(mc) / Double(area.count)).rounded()) : 0
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
-                .font(.rounded(.largeTitle))
+                .font(.display(.largeTitle))
                 .accessibilityAddTraits(.isHeader)
             Text("Checked \(date.formatted(date: .abbreviated, time: .omitted))")
                 .font(.caption)
@@ -216,7 +216,7 @@ struct ResultsView: View {
                 .font(.caption.weight(.bold))
                 .textCase(.uppercase)
                 .foregroundStyle(.secondary)
-            Text(n(node)).font(.rounded(.title3)).accessibilityAddTraits(.isHeader)
+            Text(n(node)).font(.display(.title3)).accessibilityAddTraits(.isHeader)
             if let cl = model.data.cluster(for: node) {
                 Text(Rich.text([("The bigger picture (\(model.data.domainName(of: node)), from age \(cl.ageStart)): ", true), (TextSoftener.summary(cl.summary, name: name), false)]))
             }

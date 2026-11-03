@@ -19,7 +19,7 @@ struct TopicDetailView: View {
             VStack(alignment: .leading, spacing: 18) {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(n.name)
-                        .font(.rounded(.largeTitle))
+                        .font(.display(.largeTitle))
                         .accessibilityAddTraits(.isHeader)
                     FlowChips(items: [d.ageText(node).capitalizedFirst, d.domainName(of: node)] + (area.map { [$0.label] } ?? []))
                     if let status = model.status(of: node) {

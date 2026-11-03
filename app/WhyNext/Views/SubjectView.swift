@@ -41,7 +41,7 @@ struct SubjectView: View {
     @ViewBuilder private var questions: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("\(area.label): three quick questions")
-                .font(.rounded(.title2))
+                .font(.display(.title2))
                 .accessibilityAddTraits(.isHeader)
             Text("Answer for \(childName ?? "your child") as best you can. There are no wrong answers; it’s a starting point for a conversation, not a test.")
                 .foregroundStyle(.secondary)
@@ -88,7 +88,7 @@ struct QuestionCard: View {
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.secondary)
             Text(node.name)
-                .font(.rounded(.headline))
+                .font(.display(.headline))
                 .accessibilityAddTraits(.isHeader)
             Text(TextSoftener.personalize(probe.prompt, name: childName))
                 .fixedSize(horizontal: false, vertical: true)

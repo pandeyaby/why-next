@@ -45,7 +45,7 @@ struct KitchenCard: View {
                 .textCase(.uppercase)
                 .foregroundStyle(.secondary)
             HStack(alignment: .firstTextBaseline) {
-                Text(idea.topicName).font(.rounded(.title3)).accessibilityAddTraits(.isHeader)
+                Text(idea.topicName).font(.display(.title3)).accessibilityAddTraits(.isHeader)
                 Spacer(minLength: 4)
                 Text(WhyNextData.ageText(idea.ageStart, idea.ageEnd)).font(.caption).foregroundStyle(.secondary)
             }

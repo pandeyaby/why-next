@@ -11,14 +11,14 @@ struct OnboardingView: View {
         ScrollView {
             VStack(spacing: 24) {
                 AppIconView(size: 104)
-                    .shadow(color: Theme.coral.opacity(0.3), radius: 16, y: 8)
+                    .shadow(color: Theme.ink, radius: 0, x: 3, y: 3)
                     .padding(.top, 32)
                 VStack(spacing: 8) {
                     Text("Why Next?")
-                        .font(.rounded(.largeTitle))
+                        .font(.display(.largeTitle))
                         .accessibilityAddTraits(.isHeader)
                     Text("What to learn next, and why.")
-                        .font(.rounded(.title3, weight: .medium))
+                        .font(.display(.title3, weight: .medium))
                         .foregroundStyle(.secondary)
                 }
                 Text(
@@ -29,7 +29,7 @@ struct OnboardingView: View {
 
                 Card {
                     Text("Who are we mapping?")
-                        .font(.rounded(.headline))
+                        .font(.display(.headline))
                         .accessibilityAddTraits(.isHeader)
                     ChildFields(name: $name, age: $age)
                     Button {
@@ -82,7 +82,7 @@ struct ChildFields: View {
                 HStack {
                     Text("Age").font(.subheadline.weight(.semibold))
                     Spacer()
-                    Text("\(age)").font(.rounded(.title3)).monospacedDigit()
+                    Text("\(age)").font(.display(.title3)).monospacedDigit()
                 }
             }
             .accessibilityLabel("Age")

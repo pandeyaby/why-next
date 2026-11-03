@@ -1,6 +1,7 @@
 import SwiftUI
 import WhyNextCore
 
+/// "Paper" palette shared with the web (learn/paper.css): warm paper, ink, flat fills, no gradients or glows.
 /// Warm, family-friendly palette. Every colour has a light and a dark variant in Assets.xcassets.
 enum Theme {
     static let coral = Color("Coral")  // accent, "Up next"
@@ -11,6 +12,7 @@ enum Theme {
     static let canvas = Color("Canvas")  // page background
     static let card = Color("Card")  // card background
     static let honey = Color("Honey")  // kitchen-table highlight
+    static let ink = Color("Ink")  // text, borders and the printed offset shadow
 
     static func color(for status: TopicStatus) -> Color {
         switch status {
@@ -34,8 +36,8 @@ enum Theme {
 }
 
 extension Font {
-    /// Rounded headings that still follow Dynamic Type.
-    static func rounded(_ style: Font.TextStyle, weight: Font.Weight = .bold) -> Font {
-        .system(style, design: .rounded, weight: weight)
+    /// Book-like serif headings (New York) that still follow Dynamic Type. Matches the web's Fraunces headings.
+    static func display(_ style: Font.TextStyle, weight: Font.Weight = .bold) -> Font {
+        .system(style, design: .serif, weight: weight)
     }
 }

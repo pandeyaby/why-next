@@ -11,12 +11,12 @@ struct Card<Content: View>: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(16)
             .background(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
                     .fill(Theme.card)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .strokeBorder((tint ?? .secondary).opacity(tint == nil ? 0.15 : 0.45), lineWidth: 1)
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .strokeBorder(tint ?? Theme.ink.opacity(0.18), lineWidth: tint == nil ? 1.5 : 2)
             )
     }
 }
@@ -31,7 +31,7 @@ struct SectionHeader: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Label {
-                Text(title).font(.rounded(.title3))
+                Text(title).font(.display(.title3))
             } icon: {
                 Image(systemName: systemImage).foregroundStyle(tint)
             }
@@ -79,10 +79,11 @@ struct Avatar: View {
 
     var body: some View {
         Text(String(name.prefix(1)).uppercased())
-            .font(.system(size: size * 0.45, weight: .bold, design: .rounded))
+            .font(.system(size: size * 0.45, weight: .bold, design: .serif))
             .foregroundStyle(.white)
             .frame(width: size, height: size)
-            .background(Circle().fill(LinearGradient(colors: [Theme.coral, Theme.honey], startPoint: .topLeading, endPoint: .bottomTrailing)))
+            .background(Circle().fill(Theme.coral))
+            .overlay(Circle().strokeBorder(Theme.ink, lineWidth: 1.5))
             .accessibilityHidden(true)
     }
 }
