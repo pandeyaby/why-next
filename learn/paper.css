@@ -1,0 +1,103 @@
+/* Why Next? "paper" design: the default look. Warm paper, ink, one accent per subject, flat fills, no glows.
+   Shared tokens live here so the home page, the lesson shell and the Mac app use the same values.
+   html[data-theme=classic] is the paper look (the default); html[data-theme=2052] is a plain night mode. */
+:root{--wn-paper:#FBF6EC;--wn-paper-2:#F3ECDD;--wn-card:#FFFDF8;--wn-ink:#1E2230;--wn-ink-2:#3A3F4F;--wn-muted:#565B6B;--wn-line:#E3DACA;--wn-line-2:#CFC4B0;
+ --wn-tomato:#D9553B;--wn-tomato-ink:#B23F27;--wn-tomato-soft:#FBE5DE;--wn-moss:#5C7A3A;--wn-moss-ink:#46602A;--wn-moss-soft:#EAF1DF;--wn-cobalt:#2F55B8;--wn-cobalt-soft:#E6ECFA;--wn-ochre:#C9922A;--wn-ochre-ink:#8A5F12;--wn-ochre-soft:#F6EBD3;
+ --wn-serif:"Fraunces",ui-serif,Georgia,"Times New Roman",serif;--wn-sans:"Nunito",ui-rounded,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --wn-r1:8px;--wn-r2:16px;--wn-ease:cubic-bezier(.23,1,.32,1)}
+@font-face{font-family:"Nunito";src:url("../site/assets/fonts/nunito-latin-wght.woff2") format("woff2");font-weight:200 1000;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("../site/assets/fonts/fraunces-latin-wght.woff2") format("woff2");font-weight:300 900;font-display:swap}
+html[data-theme="classic"]{--bg:var(--wn-paper);--new:#1F3F8F;--old:#4A5262;--bridge:#8A4A00}
+html[data-theme="classic"] body{font-family:var(--wn-sans);font-size:15px;color:var(--wn-ink);background:var(--wn-paper)}
+html[data-theme="classic"] #side{background:var(--wn-card);border-right:1px solid var(--wn-line)}
+html[data-theme="classic"] #side header{border-bottom:1px solid var(--wn-line)}
+html[data-theme="classic"] #side h1{font-family:var(--wn-serif);font-size:22px;font-weight:700;letter-spacing:-.01em;color:var(--wn-ink)}
+html[data-theme="classic"] #side small,html[data-theme="classic"] .muted{color:var(--wn-muted)}
+html[data-theme="classic"] #q{border:1.5px solid var(--wn-line-2);border-radius:var(--wn-r1);padding:9px 11px;background:#fff;font:inherit}
+html[data-theme="classic"] #q:focus{outline:none;border-color:var(--wn-ink);box-shadow:none}
+html[data-theme="classic"] #filters label{background:var(--wn-paper-2);color:var(--wn-ink-2);border-radius:var(--wn-r1);padding:4px 8px}
+html[data-theme="classic"] .dom{background:var(--wn-card);color:var(--wn-ink-2);text-transform:none;letter-spacing:0;font-family:var(--wn-serif);font-size:14px;font-weight:600}
+html[data-theme="classic"] .item{border-radius:var(--wn-r1);margin:0 6px;transition:background-color .15s}
+@media (hover:hover) and (pointer:fine){html[data-theme="classic"] .item:hover{background:var(--wn-paper-2)}}
+html[data-theme="classic"] .item.sel{background:var(--wn-paper-2);box-shadow:inset 3px 0 0 var(--wn-tomato)}
+html[data-theme="classic"] .card{background:var(--wn-card);border:1.5px solid var(--wn-line);border-radius:var(--wn-r2);padding:18px 20px}
+html[data-theme="classic"] #dcard h2,html[data-theme="classic"] .lh,html[data-theme="classic"] .card h2{font-family:var(--wn-serif);font-weight:700;letter-spacing:-.01em;color:var(--wn-ink)}
+html[data-theme="classic"] #dcard h2{font-size:30px;line-height:1.15}
+html[data-theme="classic"] .learn{border:1px solid var(--wn-line);box-shadow:none}
+html[data-theme="classic"] .learn .lsub{font-family:var(--wn-serif);font-size:19px;font-weight:600;color:var(--wn-ink);margin-top:24px}
+html[data-theme="classic"] .key{background:var(--wn-paper-2);border-radius:var(--wn-r1);padding:10px 14px;font-family:var(--wn-serif);font-size:17px}
+html[data-theme="classic"] .tip{background:var(--wn-moss-soft);border-radius:var(--wn-r1)}
+html[data-theme="classic"] .review{background:#FFF8E6;border-color:#E7C77A}
+html[data-theme="classic"] .lbtn{background:var(--wn-ink);border:1.5px solid var(--wn-ink);color:#fff;border-radius:var(--wn-r1);font-weight:600;transition:transform .12s var(--wn-ease),background-color .15s ease,border-color .15s ease}
+html[data-theme="classic"] .lbtn.ghost,html[data-theme="classic"] .lbtn.choice,html[data-theme="classic"] .lbtn.sm{background:#fff;color:var(--wn-ink);box-shadow:none}
+html[data-theme="classic"] .lbtn.on,html[data-theme="classic"] .lbtn[aria-pressed=true]{background:var(--wn-ink);color:#fff}
+html[data-theme="classic"] .lbtn:active:not(:disabled){transform:scale(.98)}
+html[data-theme="classic"] .tag{border-radius:6px;background:var(--wn-paper-2);color:var(--wn-ink-2)}html[data-theme="classic"] .tag.new{background:var(--wn-cobalt-soft);color:#1F3F8F}html[data-theme="classic"] .tag.vid{background:var(--wn-ochre-soft);color:#6B4500}
+html[data-theme="classic"] .qi{border:1.5px solid var(--wn-line);border-radius:var(--wn-r1)}
+html[data-theme="classic"] svg{border-color:var(--wn-line)}
+html[data-theme="classic"] .themebtn{border:1.5px solid var(--wn-ink);color:var(--wn-ink);background:#fff;border-radius:var(--wn-r1)}
+html[data-theme="classic"] :focus-visible{outline:3px solid #1F3F8F;outline-offset:2px}
+/* plain night mode: the old 2052 theme without stars, grid, glow or gradients */
+html[data-theme="2052"]{--bg:#12151C;--panel:#1A1F29}
+html[data-theme="2052"] body{background:#12151C;font-family:var(--wn-sans)}
+html[data-theme="2052"] body::before,html[data-theme="2052"] body::after{display:none}
+html[data-theme="2052"] #side{background:#161A22;backdrop-filter:none;-webkit-backdrop-filter:none}
+html[data-theme="2052"] #side h1{background:none;-webkit-text-fill-color:#fff;color:#fff;text-shadow:none;text-transform:none;letter-spacing:0;font-family:var(--wn-serif);font-size:22px}
+html[data-theme="2052"] .card{background:#1A1F29;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+html[data-theme="2052"] #dcard h2{text-shadow:none;font-family:var(--wn-serif)}
+html[data-theme="2052"] .item.sel{background:rgba(255,255,255,.08)}
+html[data-theme="2052"] .lbtn,html[data-theme="2052"] .lbtn.on,html[data-theme="2052"] .lbtn[aria-pressed=true]{background:#2E3B5C;box-shadow:none}
+html[data-theme="2052"] .learn{box-shadow:none;border-color:#4B5878}
+html[data-theme="2052"] .vis{background:#161A22;box-shadow:none}html[data-theme="2052"] .vis::before{display:none}
+html[data-theme="2052"] .linkish:hover,html[data-theme="2052"] .vis-line.cur{text-shadow:none}
+html[data-theme="2052"] .gn circle,html[data-theme="2052"] .vis-curve,html[data-theme="2052"] .vis-dot,html[data-theme="2052"] .vis-handle,html[data-theme="2052"] .pring .pr-fg{filter:none}
+html[data-theme="2052"] .dom{background:#161A22;text-transform:none;letter-spacing:0;font-size:13px}
+@media (prefers-reduced-motion:reduce){html[data-theme] .lbtn,html[data-theme] .item{transition:none}}
+/* age bands: #detail[data-band] comes from the topic's starting age (early 2-4, primary 5-10, middle 11-13, senior 14-18) */
+#detail[data-band=early] .learn{font-size:19px;line-height:1.55}
+#detail[data-band=early] .learn .key{font-size:24px;line-height:1.3}
+#detail[data-band=early] .learn .lbtn{min-height:56px;padding:10px 20px;font-size:18px}
+#detail[data-band=early] .learn .lsub{font-size:24px}
+#detail[data-band=early] #dcard h2{font-size:36px}
+#detail[data-band=primary] .learn{font-size:17px;line-height:1.6}
+#detail[data-band=primary] .learn .key{font-size:20px}
+#detail[data-band=primary] .learn .lbtn{min-height:48px}
+#detail[data-band=middle] .learn{font-size:16px;line-height:1.65}
+#detail[data-band=middle] .learn .key{line-height:1.5}
+#detail[data-band=senior] .learn{font-size:16px;line-height:1.65}
+#detail[data-band=senior] .learn>p,#detail[data-band=senior] .learn .key{max-width:68ch}
+/* phones: the lesson comes first, topics follow */
+/* art slots */
+.dtitle{display:flex;align-items:center;gap:12px}.subj-ic{width:44px;height:44px;flex:none}
+#detail[data-band=early] .subj-ic{width:64px;height:64px}
+/* a shared lesson link opens on the lesson; the welcome and how-to cards follow it */
+html.wn-deep #main{display:flex;flex-direction:column}html.wn-deep #detail{order:-1}
+
+/* approved mockups: headings in soft Fraunces, Nunito body, answers as calm full-width rows, a quiet tick when right */
+html[data-theme] h1,html[data-theme] h2,html[data-theme] h3{font-variation-settings:"SOFT" 50,"opsz" 72}
+html[data-theme="classic"] #dcard h2,html[data-theme="classic"] .learn .lsub,html[data-theme="classic"] .lh{font-weight:560}
+.key .key-l{display:block;font:800 12px/1.2 var(--wn-sans);letter-spacing:.06em;text-transform:uppercase;color:var(--wn-tomato-ink);margin-bottom:4px}
+html[data-theme="2052"] .key .key-l{color:#F2A58F}
+html[data-theme="classic"] .choices{display:grid;gap:10px}
+html[data-theme="classic"] .lbtn.choice{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;min-height:52px;padding:12px 18px;border:2px solid var(--wn-line);border-radius:var(--wn-r1);background:var(--wn-card);color:var(--wn-ink);font-weight:700;font-size:1.05em}
+@media (hover:hover) and (pointer:fine){html[data-theme="classic"] .lbtn.choice:hover:not(:disabled){border-color:var(--wn-line-2)}}
+html[data-theme="classic"] .lbtn.choice.picked{border-color:var(--wn-ink)}
+html[data-theme="classic"] .qi.ok{border-color:var(--wn-moss);background:var(--wn-moss-soft)}
+html[data-theme="classic"] .qi.ok .lbtn.choice.picked{border-color:var(--wn-moss);background:var(--wn-moss-soft);color:var(--wn-moss-ink)}
+html[data-theme="classic"] .qi.no{border-color:var(--wn-tomato);background:var(--wn-tomato-soft)}
+html[data-theme="classic"] .fb.good{color:var(--wn-moss-ink);font-weight:700}html[data-theme="classic"] .fb.bad{color:var(--wn-tomato-ink)}
+html[data-theme="classic"] .pring .pr-fg{stroke:var(--wn-tomato)}html[data-theme="classic"] .pring .pr-bg{stroke:var(--wn-paper-2)}
+html[data-theme="classic"] .tag.new{background:var(--wn-cobalt-soft);color:#24448F}
+html[data-theme="classic"] a{color:#24448F}
+/* labs: calm paper panels, a quiet tick when a challenge is won */
+html[data-theme="classic"] .lab-bar{padding:8px 10px;background:var(--wn-card);border:1px solid var(--wn-line);border-radius:var(--wn-r1)}
+html[data-theme="classic"] .lab-goal{color:var(--wn-ink)}
+html[data-theme="classic"] .lab-goal.win{color:var(--wn-moss-ink)}
+html[data-theme="2052"] .lab-goal.win{color:#A7D98A}
+html[data-theme="classic"] .vis{border-radius:var(--wn-r2)}
+.lab-goal.win{animation:wn-tick .3s var(--wn-ease) both}
+@keyframes wn-tick{from{transform:translateY(4px);opacity:.4}}
+@media (prefers-reduced-motion:reduce){.lab-goal.win{animation:none}}
+/* subject slots: flat colour shapes beside the title */
+.subj-ic{border-radius:var(--wn-r1)}
+@media (max-width:600px){html[data-theme="classic"] .card{padding:14px 12px}}

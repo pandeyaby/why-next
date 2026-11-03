@@ -84,7 +84,7 @@ for _f in glob.glob("learn/reels/*"):
 REEL_HOST = "https://etzqrmcwnxpbysnltdxt.supabase.co/storage/v1/object/public/why-next-reels/"
 _reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";window.WN_RHOST=" + json.dumps(REEL_HOST) + ";window.WN_RPARTS=" + json.dumps({k: f"https://cdn.jsdelivr.net/gh/pandeyaby/why-next@{v['sha']}/" for k, v in _parts.items()}, separators=(",", ":")) + ";\n"
 learn_js = _reels + learn_js
-css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css", "guide.css", "ux.css"))
+css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css", "guide.css", "ux.css", "paper.css"))
 
 # Split build: the page shell plus small cacheable scripts; per-domain detail chunks load on demand.
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
@@ -154,5 +154,10 @@ open(f"{outdir}/viewer.html", "w").write(shell.replace("/*__SCRIPTS__*/", tags))
 _reels_off = "window.WN_REELS=" + json.dumps({t: L for t, L in ((t, [r for r in L if not r.get('x')]) for t, L in _rm.items()) if L}, separators=(",", ":")) + ";\n"
 # Offline build: the same scripts inlined into one file that works with no network.
 inline = "".join(f"<script>{t}</script>" for t in ["window.WN_OFFLINE=1;" + files["core.js"], "".join(chunk_js), "".join(les_js), "const LEARN_DATA=" + learn + ";\n" + _reels_off + learn_js[len(_reels):], files["app.js"]])
-open(f"{outdir}/viewer-offline.html", "w").write(shell.replace("/*__SCRIPTS__*/", inline))
+# offline file: no network at all, so inline the heading font and tell the app to skip image slots
+import base64 as _b64
+_font = 'url(data:font/woff2;base64,' + _b64.b64encode(open("site/assets/fonts/fraunces-latin-wght.woff2", "rb").read()).decode() + ')'
+_nun = 'url(data:font/woff2;base64,' + _b64.b64encode(open("site/assets/fonts/nunito-latin-wght.woff2", "rb").read()).decode() + ')'
+offline = shell.replace('url("../site/assets/fonts/fraunces-latin-wght.woff2")', _font).replace('url("../site/assets/fonts/nunito-latin-wght.woff2")', _nun).replace("<head>", "<head><script>window.WN_OFFLINE=1</script>", 1)
+open(f"{outdir}/viewer-offline.html", "w").write(offline.replace("/*__SCRIPTS__*/", inline))
 print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons +", len(starters), "starter lessons,", len(chunks), "detail chunks")
