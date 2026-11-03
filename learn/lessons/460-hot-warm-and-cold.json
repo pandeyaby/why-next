@@ -1,0 +1,151 @@
+{
+ "topicId": "mt_lnS7wvclyR",
+ "title": "Hot, warm and cold",
+ "audience": "family",
+ "keyIdea": "Things can feel hot, warm or cold. Ice and snow are cold. A bath and baby milk should be warm. Fire, an oven and a full teapot are hot, and hot things can burn, even when they do not look hot. Hot things left out cool down. Warmth makes ice melt, and cold keeps it frozen.",
+ "explain": {
+  "kid": [
+   "Ice is cold. Snow is cold. Cold makes your fingers chilly.",
+   "A bath is warm. Warm feels nice, not too hot and not too cold. Fire is hot. Hot can hurt you.",
+   "A pan can be hot and still look cold. Do not touch to check. Ask a grown-up.",
+   "Hot cocoa cools down if you wait. An ice lolly melts in the warm sun. In the freezer it stays hard."
+  ],
+  "adult": [
+   "In England this sits in the Early Years Foundation Stage. Development Matters lists, for 3 and 4 year olds in Understanding the World, exploring how things work and talking about the differences between materials and the changes they notice, such as ice melting. Children also learn to stay safe and to know that hot things can be dangerous, which links to Personal, Social and Emotional Development. Temperature in degrees Celsius comes later, in Key Stage 2.",
+   "The ideas at this age are words and cause and effect. Hot, warm and cold are three points on one scale, and warm sits in between. Heat moves from a hotter thing to a cooler one, so a hot drink left on the table cools to room temperature and an ice lolly in the sun warms and melts. Adding cold water to a hot bath makes it cooler, and adding hot water makes it warmer. A red line on a thermometer gets taller when things get hotter.",
+   "Common mistakes: thinking you can touch something to find out if it is hot, so teach looking for clues and asking a grown-up; thinking a hot pan, iron or oven door must look red or steamy; thinking a hot drink left out gets hotter, or turns icy; and using warm and hot as the same word. Be careful to use warm for just right and hot for can hurt.",
+   "In the lab your child sorts six things into hot, warm and cold, finds the three hot things in a kitchen, waits for hot cocoa to cool to warm before drinking it, puts an ice lolly in the sun and in the freezer, and uses the hot and cold taps to make two baths warm."
+  ]
+ },
+ "familyTip": "At bath time, let your child watch you test the water with your elbow, and ask: too hot, too cold or just warm? Put an ice cube on one plate in the sun and one in the fridge, and look again after lunch. In the kitchen, point to the cooker, kettle and iron and say: hot, do not touch.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each one hot or cold? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Hot", "Cold"],
+   "items": [["🔥 Fire", 0], ["🧊 Ice cube", 1], ["☕ Hot drink", 0], ["⛄ Snowman", 1], ["🍳 Pan on the cooker", 0], ["🍦 Ice cream", 1], ["🕯️ Candle flame", 0], ["❄️ Snow", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagwarm",
+  "caption": "Flagship lab: sort hot, warm and cold things, spot hot things in a kitchen, let cocoa cool, melt an ice lolly and run a warm bath.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which one is cold?",
+   "choices": ["Snow", "Fire", "A bath"],
+   "answer": 0,
+   "hint": "Which one makes your fingers chilly?",
+   "explain": "Snow is cold. Fire is hot, and a bath should be warm."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {h} hot cups and {c} cold cups. How many cold cups?",
+   "answer": "c",
+   "hint": "Count only the cold cups. Leave out the hot ones.",
+   "explain": "The cold cups are the ones to count. There are {=c} cold cups.",
+   "params": {"h": [1, 4], "c": [1, 5]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "The bath has {h} jugs of hot water. A grown-up adds {c} jugs of cold water to cool it. How many jugs of water now?",
+   "answer": "h+c",
+   "hint": "Count the hot jugs, then keep counting the cold jugs.",
+   "explain": "{h} hot jugs and {c} cold jugs make {=h+c} jugs. The cold water made the bath cooler.",
+   "params": {"h": [1, 4], "c": [1, 4]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A pan is on the cooker. What do you do?",
+   "choices": ["Ask a grown-up", "Touch it to check", "Pick it up"],
+   "answer": 0,
+   "hint": "A pan can be hot even when it does not look hot.",
+   "explain": "Do not touch to check. A hot pan can burn you. Ask a grown-up."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "{n} ice lollies sit in the hot sun. They all melt. How many melted?",
+    "answer": "n",
+    "hint": "The warm sun melts every ice lolly in it.",
+    "explain": "The sun is warm, so all {=n} ice lollies melted.",
+    "params": {"n": [2, 6]}
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "You put {n} ice cubes in the freezer. How many are still hard ice?",
+    "answer": "n",
+    "hint": "The freezer is cold. Cold keeps ice frozen.",
+    "explain": "The freezer is cold, so all {=n} ice cubes stay hard.",
+    "params": {"n": [2, 6]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Hot cocoa waits on the table. What happens?",
+    "choices": ["It gets cooler", "It gets hotter", "It turns to ice"],
+    "answer": 0,
+    "hint": "Think about a drink you left for a long time.",
+    "explain": "Hot things left out cool down. The cocoa goes from hot to warm."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which one is warm, not hot?",
+    "choices": ["Baby milk", "Fire", "Snow"],
+    "answer": 0,
+    "hint": "Warm is just right. It does not hurt.",
+    "explain": "Baby milk should be warm. Fire is hot and snow is cold."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "The bath is too hot. What do you add?",
+    "choices": ["Cold water", "Hot water", "Bubbles"],
+    "answer": 0,
+    "hint": "You want the bath to feel less hot.",
+    "explain": "Cold water makes the bath cooler. Hot water would make it hotter."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Where does an ice lolly melt?",
+    "choices": ["In the warm sun", "In the freezer", "In the fridge door"],
+    "answer": 0,
+    "hint": "Melting needs warmth. Which place is warm?",
+    "explain": "The warm sun melts the lolly. The freezer is cold, so it stays hard."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which one can burn you?",
+    "choices": ["An iron that is on", "A teddy", "An apple"],
+    "answer": 0,
+    "hint": "Which one gets hot to do its job?",
+    "explain": "An iron gets hot, so it can burn. A teddy and an apple are safe."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The red line on a thermometer gets taller. What is happening?",
+    "choices": ["It is getting hotter", "It is getting colder", "Nothing"],
+    "answer": 0,
+    "hint": "A tall red line goes with hot things.",
+    "explain": "The red line gets taller when it gets hotter, and shorter when it gets colder."
+   }
+  ]
+ }
+}
