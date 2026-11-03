@@ -39,6 +39,10 @@ SUBJECT_BY_DOMAIN = {
     "Speaking & Listening": "English",
     "Vocabulary": "English",
     "English Thinking": "English",
+    # wave 7: more ages 2-7 Science
+    "Earth's Systems": "Science",
+    "The Human Body": "Science",
+    "Ecosystems & Habitats": "Science",
 }
 
 def std(code):

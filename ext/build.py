@@ -20,7 +20,7 @@ import src_waves, src_electricity, src_geometry, src_stats, src_calculus  # noqa
 import src_organic, src_hypothesis, src_matrices, src_series  # noqa: F401,E402  (wave 3)
 import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  # noqa: F401,E402  (wave 4)
 import src_hyperbolic, src_conics, src_carbonyl, src_amino  # noqa: F401,E402  (wave 5)
-import src_early_sci, src_early_psd, src_early_l2l, src_early_maths, src_early_found  # noqa: F401,E402  (wave 6: ages 2-4)
+import src_early_sci, src_early_sci2, src_early_psd, src_early_l2l, src_early_maths, src_early_found  # noqa: F401,E402  (wave 6: ages 2-4)
 import src_teen_eng, src_teen_l2l, src_teen_psd  # noqa: F401,E402  (wave 6: secondary English, Learning to Learn, PSD)
 
 EXT_VERSION = "whynext-0.6"
