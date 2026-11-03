@@ -1,0 +1,151 @@
+{
+ "topicId": "mt_7XcCG43ZZW",
+ "title": "Numbers up to 10 into pairs",
+ "audience": "family",
+ "keyIdea": "A number can be split into two parts in more than one way. 6 is 1 and 5, 2 and 4, or 3 and 3. These pairs are number bonds. The two parts together make the whole. If you know the whole and one part, count on to find the other part. Turn a pair around, 2 and 4 or 4 and 2, and it still makes the same whole.",
+ "explain": {
+  "kid": [
+   "Make a train of 6 cubes. Break it into two bits. You might get 2 and 4. Join it up and break it again. Now you might get 1 and 5. Both make 6.",
+   "A ten frame has 10 spaces. Put in 7 red dots. Fill the gaps with yellow. You need 3 yellow. 7 and 3 make 10.",
+   "Hide some bears under a cup. There are 8 in all. You see 5. Count on from 5: 6, 7, 8. That is 3 more. So 3 bears are under the cup.",
+   "Turn the train around. 2 and 4 is the same as 4 and 2. It is still 6 cubes. Nothing was added and nothing went away."
+  ],
+  "adult": [
+   "These are number bonds: the pairs of numbers that make a given whole. US Common Core K.OA.A.3 asks kindergarten children to decompose numbers up to 10 into pairs in more than one way, and K.OA.A.4 asks them to find the number that makes 10 with any number from 1 to 9. In England, the Early Learning Goal for Number expects automatic recall of number bonds up to 5 and some to 10, and the Year 1 programme of study says to represent and use number bonds and related subtraction facts within 20.",
+   "The key idea is part-whole: a whole can be partitioned into parts, and the parts recombine to make the same whole. The cherry diagram (a part-whole model) shows this with the whole in the top circle and the two parts below. The ten frame helps because a child can see the empty spaces, so the bond to 10 is the gap. Turning a pair around is commutativity: 3 + 7 and 7 + 3 make the same total, which halves the facts a child needs to learn.",
+   "Common mistakes: adding the two numbers given instead of finding the missing part, so 9 in all with 6 showing gives 15; naming the part you can see, so the answer is 6; being one out when counting on, because the child counts the starting number again; and treating 4 and 6 as a new fact after learning 6 and 4. Ask how the child knows, and check the parts by joining them back up.",
+   "In the lab your child breaks a 6-cube train at every gap to find all five ways, fills ten frames that start with 7, 4 and 9 red counters, works out how many bears hide under a cup, builds three part-whole models for 10, and turns cube trains around to see that the total stays the same."
+  ]
+ },
+ "familyTip": "Use 10 small toys and a cup. Hide some under the cup and ask how many are hiding. Then swap jobs. Count the gaps in an egg box with 10 spaces, or hold up 7 fingers and ask how many more make 10.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each pair make 10? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Makes 10", "Not 10"],
+   "items": [["7 and 3", 0], ["6 and 3", 1], ["5 and 5", 0], ["8 and 1", 1], ["9 and 1", 0], ["4 and 4", 1], ["2 and 8", 0], ["6 and 5", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagbond",
+  "caption": "Flagship lab: break a cube train every way, fill ten frames, find bears under a cup, build part-whole models and turn pairs around.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What goes with 7 to make 10?",
+   "choices": ["3", "4", "17"],
+   "answer": 0,
+   "hint": "Put 7 dots in a ten frame. How many spaces are still empty?",
+   "explain": "7 and 3 make 10. Count on from 7: 8, 9, 10. That is 3 more."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A ten frame has {n} dots. How many more dots fill it up to 10?",
+   "answer": "10-n",
+   "hint": "Count the empty spaces, or count on from {n} to 10.",
+   "explain": "{n} and {=10-n} make 10, so {=10-n} more dots fill the frame.",
+   "params": {"n": [1, 9]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "There are {w} bears in all. You can see {s}. How many are under the cup?",
+   "answer": "w-s",
+   "hint": "Start at {s} and count on until you say {w}.",
+   "explain": "{s} and {=w-s} make {w}, so {=w-s} bears are hiding under the cup.",
+   "params": {"w": [5, 10], "s": [1, 4]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "2 and 4 make 6. What do 4 and 2 make?",
+   "choices": ["6", "7", "2"],
+   "answer": 0,
+   "hint": "It is the same two parts, just turned around.",
+   "explain": "Turning the parts around does not change the whole. 4 and 2 make 6, just like 2 and 4."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "What goes with {n} to make 10?",
+    "answer": "10-n",
+    "hint": "Hold up {n} fingers. How many fingers are still down?",
+    "explain": "{n} and {=10-n} make 10. The fingers still down show {=10-n}.",
+    "params": {"n": [1, 9]}
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A train has {w} cubes. You break off {k}. How many cubes are in the other part?",
+    "answer": "w-k",
+    "hint": "The two parts join back to make {w}. Count on from {k} to {w}.",
+    "explain": "{k} and {=w-k} make {w}, so the other part has {=w-k} cubes.",
+    "params": {"w": [6, 10], "k": [1, 5]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which pair makes 5?",
+    "choices": ["2 and 3", "2 and 2", "5 and 5"],
+    "answer": 0,
+    "hint": "Join the two parts. Do you get 5?",
+    "explain": "2 and 3 make 5. 2 and 2 make 4, and 5 and 5 make 10."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "9 bears in all. You see 6. Sam says 15 are hiding. What went wrong?",
+    "choices": ["He added instead of finding the missing part", "Nothing went wrong", "He counted the bears he could see"],
+    "answer": 0,
+    "hint": "Can more bears hide than there are in all?",
+    "explain": "9 is all the bears, so the hidden part is less than 9. Count on from 6 to 9: 3 bears are hiding."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How many different ways can you break a train of 4 cubes into 2 parts?",
+    "choices": ["3", "4", "2"],
+    "answer": 0,
+    "hint": "Try every gap: after 1 cube, after 2 cubes, after 3 cubes.",
+    "explain": "A 4-cube train has 3 gaps: 1 and 3, 2 and 2, 3 and 1. So there are 3 ways."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "In a part-whole model the whole is 8 and one part is 5. What is the other part?",
+    "choices": ["3", "13", "4"],
+    "answer": 0,
+    "hint": "The two parts must join to make the whole, 8.",
+    "explain": "5 and 3 make 8, so the other part is 3. 13 is too big, because a part is smaller than the whole."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is the same as 3 and 7?",
+    "choices": ["7 and 3", "3 and 6", "4 and 7"],
+    "answer": 0,
+    "hint": "Look for the same two numbers, turned around.",
+    "explain": "7 and 3 is 3 and 7 turned around. Both make 10."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Ten frame: 6 red and some yellow fill it. How many yellow?",
+    "choices": ["4", "6", "10"],
+    "answer": 0,
+    "hint": "The red and yellow dots together fill all 10 spaces.",
+    "explain": "6 and 4 make 10, so there are 4 yellow. 6 is the red and 10 is all of them."
+   }
+  ]
+ }
+}
