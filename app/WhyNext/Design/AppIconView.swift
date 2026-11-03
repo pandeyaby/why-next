@@ -32,9 +32,8 @@ struct AppIconView: View {
         }
         .frame(width: size, height: size)
         .background(
-            LinearGradient(
-                colors: [Color(red: 1.0, green: 0.55, blue: 0.42), Color(red: 0.98, green: 0.74, blue: 0.36)],
-                startPoint: .topLeading, endPoint: .bottomTrailing)
+            // flat tomato, per the approved paper mockups: no gradients
+            Color(red: 0.851, green: 0.333, blue: 0.231)
         )
         .clipShape(RoundedRectangle(cornerRadius: rounded ? size * 0.225 : 0, style: .continuous))
         .accessibilityHidden(true)
