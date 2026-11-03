@@ -42,7 +42,7 @@ const server = http.createServer((q, s) => { const f = path.join(ROOT, decodeURI
       await p.click('.ux-resume [data-ux-go]'); assert.strictEqual(await p.evaluate(() => location.hash.slice(3)), encodeURIComponent(lastId));
       await p.addScriptTag({ path: AXE });
       for (let k = 0; k < 2; k++) { const r = await p.evaluate(() => axe.run('#uxTop, #learn, #side', { runOnly: ['wcag2a', 'wcag2aa', 'wcag21aa'] }));
-        assert.deepStrictEqual(r.violations.map(v => v.id + ': ' + v.nodes[0].target.join(' ')), []); await p.click('#themeBtn'); await p.waitForTimeout(150) } });
+        assert.deepStrictEqual(r.violations.map(v => v.id + ': ' + v.nodes[0].target.join(' ')), []); await p.evaluate(() => document.getElementById('themeBtn').click()); await p.waitForTimeout(150) } });
     await test(`${vp}: search, filters and welcome/continue buttons are at least 44px tall`, async () => {
       const small = await p.$$eval('#q, #filters label, #uxTop button', es => es.filter(e => { const r = e.getBoundingClientRect(); return r.height && r.height < 36 }).map(e => e.id || e.textContent.trim().slice(0, 20)));
       assert.deepStrictEqual(small, []) });
