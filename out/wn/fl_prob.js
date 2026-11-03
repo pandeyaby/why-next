@@ -33,7 +33,7 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
   g.tray.forEach(([x,y,gr])=>{ctx.fillStyle=A.alpha(C.tx,.08);P.rrect(x-34,y-34,68,68,14);ctx.fill();counter(A,x,y,gr,20);counter(A,x+8,y+8,gr,20);P.label(gr?'green':'blue',x,y+46,{font:'600 11px system-ui'})});
   const n=st.bag.length,gN=st.bag.filter(x=>x).length;P.label(`P(green) = ${n?gN+'/'+n:'?'}${n&&gcd(gN,n)>1&&gN?' = '+fr(gN,n):''}`,g.bx,H*.1,{font:`800 ${A.narrow?16:19}px system-ui`,pill:1,bg:A.alpha(C.gr,.92),col:'#04140a'});
   if(st.drag&&st.drag.k==='ctr')counter(A,st.drag.x,st.drag.y,st.drag.g,20);
-  if(!A.isDone&&!st.drag&&A.pred[3]!=null){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 drag counters into the bag · tap one to take it out',W/2,H*.93,{pill:1,bg:A.alpha(C.am,.95),col:'#111',font:'600 12px system-ui'});ctx.globalAlpha=1}};
+  if(!A.isDone&&!st.drag&&A.pred[3]!=null){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('drag counters into the bag · tap one to take it out',W/2,H*.93,{pill:1,bg:A.alpha(C.am,.95),col:'#111',font:'600 12px system-ui'});ctx.globalAlpha=1}};
  const CARDS=[['🎲 roll a 6',1/6],['🪙 heads',1/2],['🎲 roll a 7',0],['🌅 sun rises',1],['🎯 spinner: 1 of 4 parts',1/4]];
  const lineG=A=>{const{W,H}=A;return{l:W*.08,r:W*.92,y:H*.72,X:v=>W*.08+v*W*.84,v:x=>(x-W*.08)/(W*.84)}};
  const cwOf=(A,i)=>{const fs=A.narrow?11:13;A.ctx.font=`700 ${fs}px system-ui`;return A.ctx.measureText(CARDS[i][0].split(' ').slice(1).join(' ')).width+fs*2.6+14};
@@ -50,15 +50,15 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
  const draw=(A,dt)=>{const{ctx,W,H,paint:P,col:C}=A;A.pb={st,geo:()=>geo(A),handle:()=>handle(A,geo(A)),bagG:()=>bagG(A),bagSpots,lineG:()=>{const g=lineG(A);return{l:g.l,r:g.r,y:g.y}},cardXY:i=>cardXY(A,i)};
   if(st.w){const s=Math.sign(st.w);st.phi+=st.w*dt;st.w-=s*22*dt;if(Math.sign(st.w)!==s){st.w=0;land()}}
   if(A.step===3){bag(A);return}if(A.step===4){scale(A);return}
-  if(A.step===0){ctx.fillStyle=P.lin(0,0,0,H,[[0,'#3b0764'],[1,'#1e1b4b']]);ctx.fillRect(0,0,W,H);for(let i=0;i<16;i++){const x=(i+.5)*W/16;P.glow(i%2?'#fde047':'#f472b6',10);P.ball(x,10,4,i%2?'#fde047':'#f472b6');P.noShadow()}
+  if(A.step===0){const FL=document.documentElement.dataset.theme!=='2052';ctx.fillStyle=FL?C.pn:P.lin(0,0,0,H,[[0,'#3b0764'],[1,'#1e1b4b']]);ctx.fillRect(0,0,W,H);if(!FL)for(let i=0;i<16;i++){const x=(i+.5)*W/16;P.glow(i%2?'#fde047':'#f472b6',10);P.ball(x,10,4,i%2?'#fde047':'#f472b6');P.noShadow()}
    ctx.fillStyle='#b91c1c';for(let i=0;i<8;i++){ctx.beginPath();ctx.moveTo(i*W/8,18);ctx.lineTo((i+1)*W/8,18);ctx.lineTo((i+.5)*W/8,46);ctx.fill()}}
   else{ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.rd,.05)],[1,C.pn]]);ctx.fillRect(0,0,W,H)}
   const g=geo(A);spinner(A,g);
   if(A.step===1||A.step===2||A.step===5){const[hx,hy]=handle(A,g);P.glow(A.alpha(C.am,.9),14);P.ball(hx,hy,12,C.am);P.noShadow();
-   if(!A.isDone&&!st.drag){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 drag the red edge',hx+(A.narrow?-10:16),hy+(A.narrow?30:0),{align:A.narrow?'center':'left',pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}}
+   if(!A.isDone&&!st.drag){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('Drag the red edge',hx+(A.narrow?-10:16),hy+(A.narrow?30:0),{align:A.narrow?'center':'left',pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}}
   const big=A.step===0||A.step===5;if(big||A.step===6){const tx=A.narrow?W*.1:W*.62,tw=A.narrow?W*.8:W*.32,ty=A.narrow?H*.89:H*.46;if(big)tally(A,tx,ty,tw)}
   if(A.step)P.label(A.step===6?`P(red) = ${fr(st.red.length,st.n)}`:A.step===2?`red covers ${Math.round(st.frac*24)}/24${gcd(Math.round(st.frac*24),24)>1?' = '+fr(Math.round(st.frac*24),24):''} of the circle`:A.step===0?'':`P(red) = ${fr(st.red.length,st.n)}`,A.narrow?W/2:W*.78,A.narrow?H*.05:H*.2,{font:`800 ${A.narrow?15:18}px system-ui`,pill:1,bg:A.alpha(C.rd,.92),col:'#fff'});
-  if(A.step===0&&A.pred[0]!=null&&!st.w&&st.spins<5){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 flick the wheel round',g.cx,g.cy+g.R+30,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}
+  if(A.step===0&&A.pred[0]!=null&&!st.w&&st.spins<5){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('Flick the wheel round',g.cx,g.cy+g.R+30,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}
   if(A.step===5||A.step===6){if(!st.drag&&st.spins===0){ctx.globalAlpha=.7;P.label('tap parts to colour them red',g.cx,g.cy+g.R+30,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}}};
  const steps=[
   {h:'The fairground spinner',p:'Red, blue and yellow, all the same size. You win a prize on red.',predict:{q:'What fraction of spins should land on red?',opts:['1/2 (red or not red)','1/3','1/4'],ans:1},task:'Flick the wheel round 5 times',show:()=>{for(let i=st.spins;i<5;i++){st.phi+=Math.random()*TAU;land()}},go:()=>{st.mode='eq';st.n=3;st.red=[0];st.spins=st.hits=0;chk=()=>{if(st.spins>=5)A.done(`Red came up ${st.hits} of ${st.spins}. Five spins wobble, but 3 equal parts with 1 red means P(red) = 1/3 in the long run.`+A.reveal(0))}}},

@@ -582,6 +582,7 @@ html.wn-lesson.wn-sheet #side{max-height:85vh;max-height:85dvh}
 html.wn-lesson.wn-sheet #side .themebtn{display:inline-block}html.wn-lesson.wn-sheet #side #filters{display:flex;padding:0 12px 8px}html.wn-lesson.wn-sheet #side header{flex-wrap:wrap}
 html.wn-lesson.wn-sheet #side #list{display:block;flex:1;min-height:0;max-height:none;overflow:auto}
 }
+html[data-theme="classic"] .fl-snd{white-space:nowrap;font:600 13px var(--wn-sans);min-height:36px;padding:4px 10px;border:1.5px solid var(--wn-line);border-radius:var(--wn-r1);background:transparent;color:var(--wn-ink)}
 
 </style></head><body>
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
@@ -1939,13 +1940,14 @@ const FK=(()=>{const ease={io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,out:x=>1-Ma
  const theme=el=>{const cs=getComputedStyle(el),v=(n,d)=>(cs.getPropertyValue(n)||'').trim()||d;return{tx:v('--tx','#111'),mu:v('--mu','#666'),ln:v('--line','#ccc'),bg:v('--bg','#fff'),pn:v('--panel','#fff'),ac:v('--new','#2563eb'),cy:v('--cy','#0891b2'),or:v('--am','#d97706'),am:v('--am','#d97706'),panel:v('--panel','#fff'),gr:v('--gr','#059669'),rd:v('--rd','#dc2626'),vi:v('--vi','#7c3aed'),pk:v('--pk','#db2777'),dark:(()=>{const b=rgb(v('--bg','#fff'));return b[0]*.3+b[1]*.59+b[2]*.11<110})()}};
  const cx0=document.createElement('canvas').getContext('2d'),rgb=c=>{cx0.fillStyle='#000';cx0.fillStyle=c;const v=cx0.fillStyle;if(v[0]==='#')return[1,3,5].map(i=>parseInt(v.slice(i,i+2),16)).concat(1);const m=v.match(/[\d.]+/g)||[0,0,0,1];return[+m[0],+m[1],+m[2],m[3]==null?1:+m[3]]};
  const mix=(a,b,t)=>{const A=rgb(a),B=rgb(b);return`rgb(${A.slice(0,3).map((x,i)=>Math.round(x+(B[i]-x)*t)).join(',')})`},alpha=(c,a)=>{const A=rgb(c);return`rgba(${A[0]},${A[1]},${A[2]},${a})`};
+ const flat=()=>{try{return document.documentElement.dataset.theme!=='2052'}catch(e){return true}},pick=stops=>{if(stops.some(([,c])=>rgb(c)[3]<.05))return'rgba(0,0,0,0)';let b=stops[0];for(const st of stops)if(Math.abs(st[0]-.5)<Math.abs(b[0]-.5))b=st;return b[1]};
  const paint=ctx=>({
   rrect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()},
-  shadow(blur=12,dy=4,a=.28){ctx.shadowColor=`rgba(0,0,0,${a})`;ctx.shadowBlur=blur;ctx.shadowOffsetY=dy;ctx.shadowOffsetX=0},
+  shadow(blur=12,dy=4,a=.28){if(flat())return this.noShadow();ctx.shadowColor=`rgba(0,0,0,${a})`;ctx.shadowBlur=blur;ctx.shadowOffsetY=dy;ctx.shadowOffsetX=0},
   noShadow(){ctx.shadowColor='transparent';ctx.shadowBlur=0;ctx.shadowOffsetY=0},
-  glow(col,blur=14){ctx.shadowColor=col;ctx.shadowBlur=blur;ctx.shadowOffsetY=0},
-  lin(x0,y0,x1,y1,stops){const g=ctx.createLinearGradient(x0,y0,x1,y1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
-  rad(x,y,r0,r1,stops){const g=ctx.createRadialGradient(x,y,r0,x,y,r1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
+  glow(col,blur=14){if(flat())return this.noShadow();ctx.shadowColor=col;ctx.shadowBlur=blur;ctx.shadowOffsetY=0},
+  lin(x0,y0,x1,y1,stops){if(flat())return pick(stops);const g=ctx.createLinearGradient(x0,y0,x1,y1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
+  rad(x,y,r0,r1,stops){if(flat())return pick(stops);const g=ctx.createRadialGradient(x,y,r0,x,y,r1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
   ball(x,y,r,col,hi='#fff'){ctx.fillStyle=this.rad(x-r*.35,y-r*.4,r*.1,r*1.1,[[0,mix(col,hi,.65)],[.45,col],[1,mix(col,'#000000',.35)]]);ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill()},
   label(txt,x,y,opt={}){ctx.save();ctx.font=opt.font||'600 13px system-ui,sans-serif';const w=ctx.measureText(txt).width+12,h=20;let bx=x-(opt.align==='left'?0:opt.align==='right'?w:w/2),by=y-h/2;
    const CW=ctx.canvas.width/(ctx.getTransform().a||1);bx=Math.max(4,Math.min(CW-w-4,bx));if(opt.avoid)for(const r of opt.avoid){if(bx<r.x+r.w&&bx+w>r.x&&by<r.y+r.h&&by+h>r.y)by=r.y+r.h+3}
@@ -1955,7 +1957,7 @@ const FK=(()=>{const ease={io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,out:x=>1-Ma
   draw(ctx){for(const p of P){const a=1-p.age/p.life;ctx.globalAlpha=Math.max(0,a);ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x,p.y,p.r*(p.shrink?a:1),0,7);ctx.fill()}ctx.globalAlpha=1}}}
  function shell(c,cfg){const fig=c.fig,st=c.stage,E=c.el;fig.classList.add('flag');const reduced=()=>!!(c.reduced&&c.reduced());
   const wrap=E('div',{class:'fl-wrap'},st),story=E('div',{class:'fl-story'},wrap),top=E('div',{class:'fl-top'},story),dots=E('div',{class:'fl-dots',role:'tablist','aria-label':'Steps'},top);
-  const sb=E('button',{type:'button',class:'fl-snd','aria-pressed':String(sound.on()),'aria-label':'Sound effects'},top,sound.on()?'🔊':'🔈');sb.onclick=()=>{sound.set(!sound.on());sb.textContent=sound.on()?'🔊':'🔈';sb.setAttribute('aria-pressed',String(sound.on()));sound.step()};
+  const sb=E('button',{type:'button',class:'fl-snd','aria-pressed':String(sound.on()),'aria-label':'Sound effects'},top,sound.on()?'Sound on':'Sound off');sb.onclick=()=>{sound.set(!sound.on());sb.textContent=sound.on()?'Sound on':'Sound off';sb.setAttribute('aria-pressed',String(sound.on()));sound.step()};
   const H=E('h4',{class:'fl-h'},story,''),Pp=E('p',{class:'fl-p'},story,''),extra=E('div',{class:'fl-extra'},story),nav=E('div',{class:'fl-nav'},story);
   const bp=E('button',{type:'button',class:'lbtn ghost sm'},nav,'← Back'),bn=E('button',{type:'button',class:'lbtn sm'},nav,'Next →');
   const stage=E('div',{class:'fl-stage'},wrap),cv=E('canvas',{class:'fl-cv',role:'img'},stage),below=E('div',{class:'fl-below'},stage);
@@ -34994,7 +34996,7 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
   g.tray.forEach(([x,y,gr])=>{ctx.fillStyle=A.alpha(C.tx,.08);P.rrect(x-34,y-34,68,68,14);ctx.fill();counter(A,x,y,gr,20);counter(A,x+8,y+8,gr,20);P.label(gr?'green':'blue',x,y+46,{font:'600 11px system-ui'})});
   const n=st.bag.length,gN=st.bag.filter(x=>x).length;P.label(`P(green) = ${n?gN+'/'+n:'?'}${n&&gcd(gN,n)>1&&gN?' = '+fr(gN,n):''}`,g.bx,H*.1,{font:`800 ${A.narrow?16:19}px system-ui`,pill:1,bg:A.alpha(C.gr,.92),col:'#04140a'});
   if(st.drag&&st.drag.k==='ctr')counter(A,st.drag.x,st.drag.y,st.drag.g,20);
-  if(!A.isDone&&!st.drag&&A.pred[3]!=null){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 drag counters into the bag · tap one to take it out',W/2,H*.93,{pill:1,bg:A.alpha(C.am,.95),col:'#111',font:'600 12px system-ui'});ctx.globalAlpha=1}};
+  if(!A.isDone&&!st.drag&&A.pred[3]!=null){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('drag counters into the bag · tap one to take it out',W/2,H*.93,{pill:1,bg:A.alpha(C.am,.95),col:'#111',font:'600 12px system-ui'});ctx.globalAlpha=1}};
  const CARDS=[['🎲 roll a 6',1/6],['🪙 heads',1/2],['🎲 roll a 7',0],['🌅 sun rises',1],['🎯 spinner: 1 of 4 parts',1/4]];
  const lineG=A=>{const{W,H}=A;return{l:W*.08,r:W*.92,y:H*.72,X:v=>W*.08+v*W*.84,v:x=>(x-W*.08)/(W*.84)}};
  const cwOf=(A,i)=>{const fs=A.narrow?11:13;A.ctx.font=`700 ${fs}px system-ui`;return A.ctx.measureText(CARDS[i][0].split(' ').slice(1).join(' ')).width+fs*2.6+14};
@@ -35011,15 +35013,15 @@ VIS.reg('flagprob',c=>{let A,chal;const st={n:3,red:[0],frac:1/3,phi:-Math.PI/2,
  const draw=(A,dt)=>{const{ctx,W,H,paint:P,col:C}=A;A.pb={st,geo:()=>geo(A),handle:()=>handle(A,geo(A)),bagG:()=>bagG(A),bagSpots,lineG:()=>{const g=lineG(A);return{l:g.l,r:g.r,y:g.y}},cardXY:i=>cardXY(A,i)};
   if(st.w){const s=Math.sign(st.w);st.phi+=st.w*dt;st.w-=s*22*dt;if(Math.sign(st.w)!==s){st.w=0;land()}}
   if(A.step===3){bag(A);return}if(A.step===4){scale(A);return}
-  if(A.step===0){ctx.fillStyle=P.lin(0,0,0,H,[[0,'#3b0764'],[1,'#1e1b4b']]);ctx.fillRect(0,0,W,H);for(let i=0;i<16;i++){const x=(i+.5)*W/16;P.glow(i%2?'#fde047':'#f472b6',10);P.ball(x,10,4,i%2?'#fde047':'#f472b6');P.noShadow()}
+  if(A.step===0){const FL=document.documentElement.dataset.theme!=='2052';ctx.fillStyle=FL?C.pn:P.lin(0,0,0,H,[[0,'#3b0764'],[1,'#1e1b4b']]);ctx.fillRect(0,0,W,H);if(!FL)for(let i=0;i<16;i++){const x=(i+.5)*W/16;P.glow(i%2?'#fde047':'#f472b6',10);P.ball(x,10,4,i%2?'#fde047':'#f472b6');P.noShadow()}
    ctx.fillStyle='#b91c1c';for(let i=0;i<8;i++){ctx.beginPath();ctx.moveTo(i*W/8,18);ctx.lineTo((i+1)*W/8,18);ctx.lineTo((i+.5)*W/8,46);ctx.fill()}}
   else{ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.rd,.05)],[1,C.pn]]);ctx.fillRect(0,0,W,H)}
   const g=geo(A);spinner(A,g);
   if(A.step===1||A.step===2||A.step===5){const[hx,hy]=handle(A,g);P.glow(A.alpha(C.am,.9),14);P.ball(hx,hy,12,C.am);P.noShadow();
-   if(!A.isDone&&!st.drag){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 drag the red edge',hx+(A.narrow?-10:16),hy+(A.narrow?30:0),{align:A.narrow?'center':'left',pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}}
+   if(!A.isDone&&!st.drag){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('Drag the red edge',hx+(A.narrow?-10:16),hy+(A.narrow?30:0),{align:A.narrow?'center':'left',pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}}
   const big=A.step===0||A.step===5;if(big||A.step===6){const tx=A.narrow?W*.1:W*.62,tw=A.narrow?W*.8:W*.32,ty=A.narrow?H*.89:H*.46;if(big)tally(A,tx,ty,tw)}
   if(A.step)P.label(A.step===6?`P(red) = ${fr(st.red.length,st.n)}`:A.step===2?`red covers ${Math.round(st.frac*24)}/24${gcd(Math.round(st.frac*24),24)>1?' = '+fr(Math.round(st.frac*24),24):''} of the circle`:A.step===0?'':`P(red) = ${fr(st.red.length,st.n)}`,A.narrow?W/2:W*.78,A.narrow?H*.05:H*.2,{font:`800 ${A.narrow?15:18}px system-ui`,pill:1,bg:A.alpha(C.rd,.92),col:'#fff'});
-  if(A.step===0&&A.pred[0]!=null&&!st.w&&st.spins<5){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('👆 flick the wheel round',g.cx,g.cy+g.R+30,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}
+  if(A.step===0&&A.pred[0]!=null&&!st.w&&st.spins<5){ctx.globalAlpha=.55+.45*Math.sin(performance.now()/230);P.label('Flick the wheel round',g.cx,g.cy+g.R+30,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}
   if(A.step===5||A.step===6){if(!st.drag&&st.spins===0){ctx.globalAlpha=.7;P.label('tap parts to colour them red',g.cx,g.cy+g.R+30,{pill:1,bg:A.alpha(C.am,.95),col:'#111'});ctx.globalAlpha=1}}};
  const steps=[
   {h:'The fairground spinner',p:'Red, blue and yellow, all the same size. You win a prize on red.',predict:{q:'What fraction of spins should land on red?',opts:['1/2 (red or not red)','1/3','1/4'],ans:1},task:'Flick the wheel round 5 times',show:()=>{for(let i=st.spins;i<5;i++){st.phi+=Math.random()*TAU;land()}},go:()=>{st.mode='eq';st.n=3;st.red=[0];st.spins=st.hits=0;chk=()=>{if(st.spins>=5)A.done(`Red came up ${st.hits} of ${st.spins}. Five spins wobble, but 3 equal parts with 1 red means P(red) = 1/3 in the long run.`+A.reveal(0))}}},

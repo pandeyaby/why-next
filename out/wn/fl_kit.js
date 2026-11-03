@@ -12,13 +12,14 @@ const FK=(()=>{const ease={io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,out:x=>1-Ma
  const theme=el=>{const cs=getComputedStyle(el),v=(n,d)=>(cs.getPropertyValue(n)||'').trim()||d;return{tx:v('--tx','#111'),mu:v('--mu','#666'),ln:v('--line','#ccc'),bg:v('--bg','#fff'),pn:v('--panel','#fff'),ac:v('--new','#2563eb'),cy:v('--cy','#0891b2'),or:v('--am','#d97706'),am:v('--am','#d97706'),panel:v('--panel','#fff'),gr:v('--gr','#059669'),rd:v('--rd','#dc2626'),vi:v('--vi','#7c3aed'),pk:v('--pk','#db2777'),dark:(()=>{const b=rgb(v('--bg','#fff'));return b[0]*.3+b[1]*.59+b[2]*.11<110})()}};
  const cx0=document.createElement('canvas').getContext('2d'),rgb=c=>{cx0.fillStyle='#000';cx0.fillStyle=c;const v=cx0.fillStyle;if(v[0]==='#')return[1,3,5].map(i=>parseInt(v.slice(i,i+2),16)).concat(1);const m=v.match(/[\d.]+/g)||[0,0,0,1];return[+m[0],+m[1],+m[2],m[3]==null?1:+m[3]]};
  const mix=(a,b,t)=>{const A=rgb(a),B=rgb(b);return`rgb(${A.slice(0,3).map((x,i)=>Math.round(x+(B[i]-x)*t)).join(',')})`},alpha=(c,a)=>{const A=rgb(c);return`rgba(${A[0]},${A[1]},${A[2]},${a})`};
+ const flat=()=>{try{return document.documentElement.dataset.theme!=='2052'}catch(e){return true}},pick=stops=>{if(stops.some(([,c])=>rgb(c)[3]<.05))return'rgba(0,0,0,0)';let b=stops[0];for(const st of stops)if(Math.abs(st[0]-.5)<Math.abs(b[0]-.5))b=st;return b[1]};
  const paint=ctx=>({
   rrect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()},
-  shadow(blur=12,dy=4,a=.28){ctx.shadowColor=`rgba(0,0,0,${a})`;ctx.shadowBlur=blur;ctx.shadowOffsetY=dy;ctx.shadowOffsetX=0},
+  shadow(blur=12,dy=4,a=.28){if(flat())return this.noShadow();ctx.shadowColor=`rgba(0,0,0,${a})`;ctx.shadowBlur=blur;ctx.shadowOffsetY=dy;ctx.shadowOffsetX=0},
   noShadow(){ctx.shadowColor='transparent';ctx.shadowBlur=0;ctx.shadowOffsetY=0},
-  glow(col,blur=14){ctx.shadowColor=col;ctx.shadowBlur=blur;ctx.shadowOffsetY=0},
-  lin(x0,y0,x1,y1,stops){const g=ctx.createLinearGradient(x0,y0,x1,y1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
-  rad(x,y,r0,r1,stops){const g=ctx.createRadialGradient(x,y,r0,x,y,r1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
+  glow(col,blur=14){if(flat())return this.noShadow();ctx.shadowColor=col;ctx.shadowBlur=blur;ctx.shadowOffsetY=0},
+  lin(x0,y0,x1,y1,stops){if(flat())return pick(stops);const g=ctx.createLinearGradient(x0,y0,x1,y1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
+  rad(x,y,r0,r1,stops){if(flat())return pick(stops);const g=ctx.createRadialGradient(x,y,r0,x,y,r1);stops.forEach(([o,c])=>g.addColorStop(o,c));return g},
   ball(x,y,r,col,hi='#fff'){ctx.fillStyle=this.rad(x-r*.35,y-r*.4,r*.1,r*1.1,[[0,mix(col,hi,.65)],[.45,col],[1,mix(col,'#000000',.35)]]);ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill()},
   label(txt,x,y,opt={}){ctx.save();ctx.font=opt.font||'600 13px system-ui,sans-serif';const w=ctx.measureText(txt).width+12,h=20;let bx=x-(opt.align==='left'?0:opt.align==='right'?w:w/2),by=y-h/2;
    const CW=ctx.canvas.width/(ctx.getTransform().a||1);bx=Math.max(4,Math.min(CW-w-4,bx));if(opt.avoid)for(const r of opt.avoid){if(bx<r.x+r.w&&bx+w>r.x&&by<r.y+r.h&&by+h>r.y)by=r.y+r.h+3}
@@ -28,7 +29,7 @@ const FK=(()=>{const ease={io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,out:x=>1-Ma
   draw(ctx){for(const p of P){const a=1-p.age/p.life;ctx.globalAlpha=Math.max(0,a);ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x,p.y,p.r*(p.shrink?a:1),0,7);ctx.fill()}ctx.globalAlpha=1}}}
  function shell(c,cfg){const fig=c.fig,st=c.stage,E=c.el;fig.classList.add('flag');const reduced=()=>!!(c.reduced&&c.reduced());
   const wrap=E('div',{class:'fl-wrap'},st),story=E('div',{class:'fl-story'},wrap),top=E('div',{class:'fl-top'},story),dots=E('div',{class:'fl-dots',role:'tablist','aria-label':'Steps'},top);
-  const sb=E('button',{type:'button',class:'fl-snd','aria-pressed':String(sound.on()),'aria-label':'Sound effects'},top,sound.on()?'🔊':'🔈');sb.onclick=()=>{sound.set(!sound.on());sb.textContent=sound.on()?'🔊':'🔈';sb.setAttribute('aria-pressed',String(sound.on()));sound.step()};
+  const sb=E('button',{type:'button',class:'fl-snd','aria-pressed':String(sound.on()),'aria-label':'Sound effects'},top,sound.on()?'Sound on':'Sound off');sb.onclick=()=>{sound.set(!sound.on());sb.textContent=sound.on()?'Sound on':'Sound off';sb.setAttribute('aria-pressed',String(sound.on()));sound.step()};
   const H=E('h4',{class:'fl-h'},story,''),Pp=E('p',{class:'fl-p'},story,''),extra=E('div',{class:'fl-extra'},story),nav=E('div',{class:'fl-nav'},story);
   const bp=E('button',{type:'button',class:'lbtn ghost sm'},nav,'← Back'),bn=E('button',{type:'button',class:'lbtn sm'},nav,'Next →');
   const stage=E('div',{class:'fl-stage'},wrap),cv=E('canvas',{class:'fl-cv',role:'img'},stage),below=E('div',{class:'fl-below'},stage);
