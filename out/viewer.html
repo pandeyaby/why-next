@@ -480,7 +480,7 @@ html[data-theme="classic"] .lbtn{background:var(--wn-ink);border:1.5px solid var
 html[data-theme="classic"] .lbtn.ghost,html[data-theme="classic"] .lbtn.choice,html[data-theme="classic"] .lbtn.sm{background:#fff;color:var(--wn-ink);box-shadow:none}
 html[data-theme="classic"] .lbtn.on,html[data-theme="classic"] .lbtn[aria-pressed=true]{background:var(--wn-ink);color:#fff}
 html[data-theme="classic"] .lbtn:active:not(:disabled){transform:scale(.98)}
-html[data-theme="classic"] .tag{border-radius:6px;background:var(--wn-paper-2);color:var(--wn-ink-2)}html[data-theme="classic"] .tag.new{background:var(--wn-cobalt-soft);color:#1F3F8F}html[data-theme="classic"] .tag.vid{background:var(--wn-ochre-soft);color:#6B4500}
+html[data-theme="classic"] .tag{border-radius:var(--wn-r1);background:var(--wn-paper-2);color:var(--wn-ink-2)}html[data-theme="classic"] .tag.new{background:var(--wn-cobalt-soft);color:#1F3F8F}html[data-theme="classic"] .tag.vid{background:var(--wn-ochre-soft);color:#6B4500}
 html[data-theme="classic"] .qi{border:1.5px solid var(--wn-line);border-radius:var(--wn-r1)}
 html[data-theme="classic"] svg{border-color:var(--wn-line)}
 html[data-theme="classic"] .themebtn{border:1.5px solid var(--wn-ink);color:var(--wn-ink);background:#fff;border-radius:var(--wn-r1)}
@@ -553,6 +553,18 @@ html[data-theme="classic"] .sel .age{color:var(--wn-ink-2)}
 html[data-theme="2052"] .sel .age{color:#E7E2D6}
 html[data-theme="2052"] #side .item.sel{background:#262B36}
 html[data-theme] .item{transition:none}
+/* Phase 5: labs and the correct-answer moment in the paper look: flat, no glow, one quiet moss confirmation */
+html[data-theme="classic"] svg .vis-cue{filter:none;stroke:var(--wn-ochre,#B7791F);stroke-width:3}
+html[data-theme="classic"] .fl-cv{box-shadow:none;border:1.5px solid var(--wn-line);border-radius:var(--wn-r2)}
+html[data-theme="classic"] .vis.flag.lab-won .fl-stage{box-shadow:inset 0 0 0 2px var(--wn-moss)}
+html[data-theme="classic"] .gn circle.g-next{filter:none;animation:none;stroke:var(--wn-ochre,#B7791F);stroke-width:4}
+html[data-theme="classic"] .item .lb-n{animation:none}
+html[data-theme="classic"] .fx-win{box-shadow:none;border:2px solid var(--wn-moss);border-radius:var(--wn-r1)}
+html[data-theme="classic"] .qi.ok{animation:wnok .3s ease-out}
+html[data-theme="classic"] .qi.ok .fb{animation:wnfb .4s ease-out both}
+@keyframes wnok{from{border-color:var(--wn-line)}to{border-color:var(--wn-moss)}}
+@keyframes wnfb{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html[data-theme="classic"] .qi.ok,html[data-theme="classic"] .qi.ok .fb{animation:none}}
 
 </style></head><body>
 <aside id="side" aria-label="Topics"><header><h1>Why Next?</h1>
