@@ -1,0 +1,158 @@
+{
+ "topicId": "mt_0XxyaQLRhn",
+ "title": "Telling Time: Hours and Half Hours",
+ "audience": "family",
+ "keyIdea": "An analogue clock has two hands. The short hand is the hour hand: it points to the hour. The long hand is the minute hand: when it points to 12 the time is o'clock, and when it points to 6 it is half past. While the long hand goes all the way round once, one hour passes and the short hand moves on one number, so at half past the short hand sits halfway between two numbers. Half past 4 means the short hand has just passed the 4, not reached the 5.",
+ "explain": {
+  "kid": [
+   "A clock has two hands. The short hand tells the hour. The long hand tells the minutes.",
+   "When the long hand points to 12, we say o'clock. Look where the short hand points. On the 3? It is 3 o'clock.",
+   "When the long hand goes all the way round, one hour has passed. The short hand moves on to the next number.",
+   "When the long hand points to 6, we say half past. The short hand is halfway to the next number. Just past 4? It is half past 4."
+  ],
+  "adult": [
+   "In England this is Year 1 Measurement in the National Curriculum: tell the time to the hour and half past the hour, and draw the hands on a clock face to show these times. Children also learn the language before and after, and sequence events in time. In the US, Common Core 1.MD.B.3 asks first graders to tell and write time in hours and half-hours using analogue and digital clocks.",
+   "Why the hour hand moves: both hands turn all the time. The minute hand goes once round the face in 60 minutes, and in that time the hour hand travels from one number to the next. So at half past, the hour hand is halfway between two numbers, and the hour you say is the number it has just passed.",
+   "Common mistakes to watch for: children often read the hands the wrong way round, so 3 o'clock becomes 12 o'clock; they draw the hour hand right on the number at half past; at half past 4 they say half past 5 because the short hand is close to the 5; and they read the long hand on 6 as 6 o'clock. Always ask: which hand is the short one, and which number has it just passed?",
+   "In the lab your child turns the long hand once round and watches the short hand move on one number, reads three o'clock times, drags the short hand to make 7 o'clock and 2 o'clock, turns the long hand to the 6 to make half past 4, and reads three half-past clocks. Every step works by dragging on the clock or with big buttons."
+  ]
+ },
+ "familyTip": "Pick two times in your day, like 8 o'clock for school and half past 6 for dinner. At those times, look at a real clock together and ask: where is the long hand? Where is the short hand?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "O'clock or half past? Drag each one, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["O'clock", "Half past"],
+   "items": [
+    ["Long hand on 12", 0],
+    ["Long hand on 6", 1],
+    ["Short hand right on a number", 0],
+    ["Short hand between two numbers", 1],
+    ["3 o'clock", 0],
+    ["Half past 3", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagclock",
+  "caption": "Flagship lab: turn the long hand to move the hour, read o'clock and half-past clocks, and drag the hands to set a time.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The long hand is on 12. The short hand is on 4. What time is it?",
+   "choices": ["4 o'clock", "12 o'clock", "Half past 4"],
+   "answer": 0,
+   "hint": "The short hand tells the hour. The long hand on 12 means o'clock.",
+   "explain": "The short hand points to 4 and the long hand is on 12, so it is 4 o'clock."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "It is {h} o'clock. One hour passes. What o'clock is it now?",
+   "answer": "h+1",
+   "hint": "In one hour the short hand moves on to the next number.",
+   "explain": "One hour after {h} o'clock it is {=h+1} o'clock. The long hand went all the way round once.",
+   "params": {"h": [1, 10]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "It is half past {h}. The short hand is between {h} and which number?",
+   "answer": "h+1",
+   "hint": "At half past, the short hand is halfway to the next number.",
+   "explain": "At half past {h} the short hand is halfway between {h} and {=h+1}.",
+   "params": {"h": [1, 11]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "The long hand is on 6. What do we say?",
+   "choices": ["Half past", "O'clock", "6 o'clock"],
+   "answer": 0,
+   "hint": "The long hand has gone half way round the clock.",
+   "explain": "The long hand on 6 means half past. Then read the hour from the short hand."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which hand tells the hour?",
+    "choices": ["The short hand", "The long hand", "Both hands"],
+    "answer": 0,
+    "hint": "One hand is short and one is long. Which one points to the hour?",
+    "explain": "The short hand is the hour hand. The long hand shows the minutes."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The long hand is on 6. The short hand is between 8 and 9. What time is it?",
+    "choices": ["Half past 8", "Half past 9", "6 o'clock"],
+    "answer": 0,
+    "hint": "Which number has the short hand just gone past?",
+    "explain": "The short hand has just passed 8 and the long hand is on 6, so it is half past 8."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Where is the long hand at 7 o'clock?",
+    "choices": ["On the 12", "On the 7", "On the 6"],
+    "answer": 0,
+    "hint": "O'clock times always have the long hand in the same place.",
+    "explain": "At any o'clock time the long hand points to 12. The short hand points to 7."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Where is the short hand at half past 2?",
+    "choices": ["Halfway between 2 and 3", "Right on the 2", "On the 6"],
+    "answer": 0,
+    "hint": "The short hand keeps moving while the long hand turns.",
+    "explain": "At half past 2 the short hand has moved halfway from 2 towards 3."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "It is {a} o'clock. The long hand goes all the way round {n} times. What o'clock is it now?",
+    "answer": "a+n",
+    "hint": "Each full turn of the long hand is 1 hour. Count on {n} hours from {a}.",
+    "explain": "{n} full turns is {n} hours, so {a} o'clock becomes {=a+n} o'clock.",
+    "params": {"a": [1, 6], "n": [1, 3]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "How long does the long hand take to go all the way round?",
+    "choices": ["1 hour", "1 minute", "12 hours"],
+    "answer": 0,
+    "hint": "One full turn of the long hand moves the short hand on one number.",
+    "explain": "One full turn of the long hand takes 1 hour, which is 60 minutes."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "The long hand is on 12 and the short hand is on {h}. It is ___ o'clock.",
+    "answer": "h",
+    "hint": "With the long hand on 12, read the number the short hand points to.",
+    "explain": "The short hand points to {h}, so it is {h} o'clock.",
+    "params": {"h": [1, 12]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam says the clock shows 12 o'clock. The long hand is on 12 and the short hand is on 3. What did Sam do?",
+    "choices": ["Read the hands the wrong way round", "Read it right", "Forgot the half past"],
+    "answer": 0,
+    "hint": "Which hand should Sam look at for the hour?",
+    "explain": "Sam read the long hand as the hour. The short hand is on 3, so it is 3 o'clock."
+   }
+  ]
+ }
+}
