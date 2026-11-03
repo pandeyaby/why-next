@@ -254,14 +254,22 @@ def print_report(report):
 
 # ---------------- commands ----------------
 def cmd_next(n=12):
-    r = sh(["node", "scripts/pipeline/rank.cjs", "80"], timeout=300)
-    ranked = json.loads(r.stdout)
     q = load_queue()
+    prev = list(q["next"])
+    queued = {d["topic"] for d in prev}
+    # rank deep enough that every topic already queued is reached; the top n are unchanged by a larger limit
+    r = sh(["node", "scripts/pipeline/rank.cjs", str(max(80, 3 * len(queued) + n))], timeout=300)
+    ranked = json.loads(r.stdout)
     skip = {d["topic"] for d in q["done"]} | {d["topic"] for d in q.get("skipped", [])}
     first = [t for p in PRIORITY for t in ranked if t["id"] == p]
     rest = [t for t in ranked if t["id"] not in PRIORITY]
+    picks = [t for t in first + rest if t["id"] not in skip]
+    # keep the top n, plus any topic that was already queued (so a re-rank never drops queued topics)
     q["next"] = [{"topic": t["id"], "name": t["name"], "subject": t["subject"], "ages": t["ages"], "downstream": t["downstream"], "reels": t["reels"]}
-                 for t in first + rest if t["id"] not in skip][:n]
+                 for i, t in enumerate(picks) if i < n or t["id"] in queued]
+    # queued topics the ranker cannot see (not in the viewer graph) are carried over unchanged
+    kept = {e["topic"] for e in q["next"]}
+    q["next"] += [e for e in prev if e["topic"] not in kept and e["topic"] not in skip]
     save_queue(q); cmd_status()
 
 
