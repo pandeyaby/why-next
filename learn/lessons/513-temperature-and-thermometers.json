@@ -1,0 +1,210 @@
+{
+ "topicId": "mt_PrWc-HZzDl",
+ "title": "Temperature and Thermometers",
+ "audience": "family",
+ "keyIdea": "Temperature is how hot or cold something is. A thermometer measures it in degrees Celsius, written °C. When it gets hotter, the red line goes up; when it gets colder, the line goes down. Read the number where the line stops. More degrees means hotter. Your hand can be fooled, but a thermometer is not.",
+ "explain": {
+  "kid": [
+   "Temperature means how hot or cold a thing is. We can feel it with our skin. But our hands can be fooled.",
+   "A thermometer tells us the temperature. It has a thin glass tube, a round bulb at the bottom and numbers up the side. The numbers are the scale.",
+   "Put it in hot water and the red line goes up. Put it in cold water and the line goes down. To read it, look at the top of the red line. Then read the number next to it.",
+   "We say degrees Celsius. We write °C. A big number like 30 °C is hot. A small number like 3 °C is cold. A big bucket is not hotter just because it is big."
+  ],
+  "adult": [
+   "In England, Year 2 maths asks children to measure temperature in degrees Celsius with a thermometer, and to read a scale to the nearest mark. Year 1 science links weather words to the seasons. In the US, kindergarten science (K-PS3-1) has children notice how sunlight warms things. This lesson joins the two: what temperature is, what a thermometer does, and how to read one.",
+   "A liquid thermometer works because the coloured liquid in the bulb takes up more room as it warms, so it is pushed up the thin tube. As it cools, it shrinks back down. Water freezes at 0 °C, a comfy room is about 20 °C and the body is about 37 °C. The words cold, cool, warm and hot are rough guides, not fixed rules. Here we use under 10 °C for cold, 10 to 17 for cool, 18 to 25 for warm and over 25 for hot air outside.",
+   "Common mistakes: trusting a hand over a thermometer. After icy water, room water feels warm; John Locke wrote about this three-bowls test in 1690. Children also read the top of the glass tube, not the top of the liquid. They read the nearest printed number when the line sits between two. And they think a big amount of water must be hotter than a small amount. Temperature says how hot, not how much.",
+   "In the lab your child fools their own hand with three bowls, dips a thermometer into four cups and watches the line move, reads three thermometers, drags the line to match hot, warm, cool and cold days, and measures a big bucket against a small cup."
+  ]
+ },
+ "familyTip": "Put a kitchen or bath thermometer in a glass of cold tap water, then in warm (not hot) water. Ask first: 'Will the line go up or down?' Read the number together each time. Try one outside in the morning and again after lunch.",
+ "status": "self-checked",
+ "visual": {
+  "type": "thermo",
+  "caption": "Drag the red line up and down. Read the number where the line stops: more degrees is hotter.",
+  "opts": {
+   "min": 0,
+   "max": 40,
+   "t": 20,
+   "step": 1
+  }
+ },
+ "lab": {
+  "type": "flagtherm",
+  "caption": "Flagship lab: fool your hand with three bowls, dip a thermometer in 4 cups, read 3 scales, set the line for 4 days, compare a bucket and a cup.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "In the morning it was {a} °C. By lunch it was {b} degrees warmer. What was the temperature at lunch?",
+   "answer": "a+b",
+   "hint": "Warmer means the red line goes up. Count on from {a}.",
+   "explain": "Warmer means more degrees. {a} and {b} more make {=a+b}, so it was {=a+b} °C at lunch.",
+   "params": {
+    "a": [
+     8,
+     15
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The red line is at {a} °C. The water cools down by {b} degrees. Where is the line now?",
+   "answer": "a-b",
+   "hint": "Cooler means the line goes down. Count back from {a}.",
+   "explain": "Cooling makes the line go down. {a} take away {b} is {=a-b}, so the line is at {=a-b} °C.",
+   "params": {
+    "a": [
+     20,
+     30
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What do we use to find the temperature of the bath water?",
+   "choices": [
+    "A thermometer",
+    "A ruler",
+    "A clock"
+   ],
+   "answer": 0,
+   "hint": "Which tool has a red line and a scale in °C?",
+   "explain": "A thermometer measures temperature. A ruler measures length and a clock tells the time."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Where do you read a thermometer?",
+   "choices": [
+    "Where the red line stops",
+    "At the top of the glass tube",
+    "At the round bulb"
+   ],
+   "answer": 0,
+   "hint": "The tube is always the same length. What moves?",
+   "explain": "The red line moves. Read the number next to the top of the red line, not the top of the tube."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A cup of water is {a} °C. It warms up by {b} degrees in the sun. What is it now?",
+    "answer": "a+b",
+    "hint": "Warming up means more degrees. Add them.",
+    "explain": "The sun warms it, so the line goes up: {a} and {b} more make {=a+b} °C.",
+    "params": {
+     "a": [
+      10,
+      20
+     ],
+     "b": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Today it is {a} °C. Yesterday it was {b} degrees colder. What was it yesterday?",
+    "answer": "a-b",
+    "hint": "Colder means fewer degrees. Count back.",
+    "explain": "Colder means the line was lower. {a} take away {b} is {=a-b}, so it was {=a-b} °C yesterday.",
+    "params": {
+     "a": [
+      15,
+      25
+     ],
+     "b": [
+      2,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is hotter?",
+    "choices": [
+     "30 °C",
+     "20 °C",
+     "10 °C"
+    ],
+    "answer": 0,
+    "hint": "More degrees means hotter. Which number is biggest?",
+    "explain": "30 is the biggest number, so 30 °C is the hottest. 10 °C is the coldest."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The thermometer says 3 °C. What is the day like?",
+    "choices": [
+     "Cold",
+     "Warm",
+     "Hot"
+    ],
+    "answer": 0,
+    "hint": "Is 3 a big number or a small number of degrees?",
+    "explain": "3 °C is under 10 °C, so it is a cold day. Put on a coat, hat and gloves."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You put a thermometer into warm bath water. What does the red line do?",
+    "choices": [
+     "It goes up",
+     "It goes down",
+     "It stays still"
+    ],
+    "answer": 0,
+    "hint": "Warmer water: more degrees or fewer?",
+    "explain": "Warm water makes the liquid in the bulb take up more room, so the red line goes up."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Your hand was in icy water. Now a bowl feels warm. What should you do?",
+    "choices": [
+     "Check it with a thermometer",
+     "Trust your hand",
+     "Say it is hot"
+    ],
+    "answer": 0,
+    "hint": "Can a cold hand be fooled?",
+    "explain": "After icy water, cool things feel warm. A thermometer is not fooled, so check with one."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A big bucket is 10 °C. A small cup is 35 °C. Which is hotter?",
+    "choices": [
+     "The small cup",
+     "The big bucket",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Look at the numbers, not the size.",
+    "explain": "35 is more than 10, so the small cup is hotter. Big does not mean hot."
+   }
+  ]
+ }
+}
