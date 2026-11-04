@@ -1,0 +1,240 @@
+{
+ "topicId": "mt_6xNmQLzuqm",
+ "title": "Understanding Area",
+ "audience": "learner",
+ "keyIdea": "Area is the amount of flat surface a shape covers. We measure it in unit squares: a square with sides of 1 unit has an area of 1 square unit. Cover the shape with unit squares, with no gaps and no overlaps, and count them. Area is different from perimeter, which is the distance round the edge.",
+ "explain": {
+  "kid": [
+   "Area is how much flat space a shape covers. Think of the floor of your room. A rug that covers more of the floor has a bigger area.",
+   "To measure area we use a unit square. It is a square with sides 1 unit long, like 1 cm. Its area is 1 square unit. Cover the shape with unit squares and count them. A rectangle 4 squares long and 3 squares wide holds 3 rows of 4, so its area is 12 square units.",
+   "The count is only fair if the squares are all the same size, with no gaps and no overlaps. Circles leave gaps. Tiles on top of each other get counted twice. If you move a square to a new spot, the area stays the same, but the edge can get longer.",
+   "Area is not perimeter. Perimeter is the length all the way round the edge, like a fence. Area is the space inside, like a carpet. Some shapes have half squares. Two halves make one whole square unit, so count the wholes and then pair up the halves."
+  ],
+  "adult": [
+   "The US Common Core starts area in Grade 3. It says 'a square with side length 1 unit, called \"a unit square,\" is said to have \"one square unit\" of area'. A shape that can be covered 'without gaps or overlaps by n unit squares' has an area of n square units (3.MD.5). Children measure it 'by counting unit squares' (3.MD.6). In England, Year 4 pupils 'find the area of rectilinear shapes by counting squares'. Year 5 then works out the area of rectangles in cm² and m².",
+   "Area measures flat space, so the unit must be an area too. Counting only works when the units fit the shape exactly. They must be equal squares, with no gaps and no overlaps. Seeing a rectangle as rows of equal squares (3 rows of 4) leads to length × width later. If you move the same squares into a new shape, the area stays the same, even when the perimeter changes.",
+   "Common mistakes: mixing up area and perimeter (counting the squares round the edge, or adding the sides); counting mixed sizes, circles or overlapping tiles as if they were unit squares; thinking a longer shape must have more area; counting each half square as a whole, or leaving halves out; and giving no unit, or cm instead of square cm.",
+   "In the lab learners drag across a grid to cover shapes. They judge whether a tiling gives a fair count. They move one square and see the area stay put while the perimeter changes. They decide whether a job needs area or perimeter, and they pair up half squares."
+  ]
+ },
+ "familyTip": "Use sticky notes or square crackers as unit squares. Cover a book cover or a tray and count them, then ask: would it be fair to use some big and some small ones? Move one cracker to stick out at the side and ask whether there is more cracker now.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the job need area or perimeter? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Area",
+    "Perimeter"
+   ],
+   "items": [
+    [
+     "Carpet for a bedroom floor",
+     0
+    ],
+    [
+     "A fence round a field",
+     1
+    ],
+    [
+     "Paint for a wall",
+     0
+    ],
+    [
+     "A border round a noticeboard",
+     1
+    ],
+    [
+     "Grass seed for a lawn",
+     0
+    ],
+    [
+     "A frame round a photo",
+     1
+    ],
+    [
+     "Wrapping paper for the top of a box",
+     0
+    ],
+    [
+     "Lace round the edge of a tablecloth",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcover",
+  "caption": "Flagship lab: cover shapes with unit squares, judge fair tilings, move a square, tell area from perimeter, pair half squares.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A rectangle is {a} squares long and {b} squares wide. How many square units is its area?",
+   "answer": "a*b",
+   "hint": "It has {b} rows, and each row has {a} squares. Count them all, or add the rows.",
+   "explain": "{b} rows of {a} unit squares make {=a*b} squares, so the area is {=a*b} square units.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A shape is made of {a} whole squares and {=2*b} half squares. What is its area in square units?",
+   "answer": "a+b",
+   "hint": "Two half squares make one whole square. How many wholes do the {=2*b} halves make?",
+   "explain": "{=2*b} halves make {b} whole squares. {a} + {b} = {=a+b}, so the area is {=a+b} square units.",
+   "params": {
+    "a": [
+     3,
+     9
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Kai covers a shape with 9 circles and says its area is 9 square units. What is wrong?",
+   "choices": [
+    "Circles leave gaps, so they do not measure area fairly",
+    "Nothing, 9 circles is 9 square units",
+    "He should have counted the edge instead"
+   ],
+   "answer": 0,
+   "hint": "Can circles fit together with no gaps between them?",
+   "explain": "Circles leave gaps, so some of the shape is not counted. Area must be measured with unit squares that fit with no gaps and no overlaps."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "You want to buy a fence to go round a garden. What do you need to measure?",
+   "choices": [
+    "The perimeter",
+    "The area",
+    "The number of plants"
+   ],
+   "answer": 0,
+   "hint": "Does the fence cover the garden, or go round its edge?",
+   "explain": "A fence goes round the edge, so you need the perimeter. Area would tell you how much grass or soil is inside."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A shape is covered by {a} rows of unit squares with {b} squares in each row. What is its area in square units?",
+    "answer": "a*b",
+    "hint": "Each row has {b} squares. Add one row at a time.",
+    "explain": "{a} rows of {b} make {=a*b} unit squares, so the area is {=a*b} square units.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A shape has an area of {a} square units. You move one of its squares to a new spot that still touches the shape. What is the area now?",
+    "answer": "a",
+    "hint": "Did you add a square or take one away?",
+    "explain": "The same {a} unit squares are still there, just in a different place, so the area is still {a} square units. Only the perimeter can change.",
+    "params": {
+     "a": [
+      5,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What does 'one square unit' mean?",
+    "choices": [
+     "The area of a square with sides 1 unit long",
+     "A line 1 unit long",
+     "Any tile, whatever its size"
+    ],
+    "answer": 0,
+    "hint": "A unit square has sides of 1 unit.",
+    "explain": "One square unit is the area of a unit square, a square with each side 1 unit long. A line 1 unit long is a length, not an area."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ava covers a rectangle with 8 tiles, but some tiles are big and some are small. Is its area 8 square units?",
+    "choices": [
+     "No, the tiles must all be the same unit square",
+     "Yes, 8 tiles is 8 square units",
+     "Yes, if the big tiles are at the edge"
+    ],
+    "answer": 0,
+    "hint": "Would a big tile and a small tile count as the same amount of space?",
+    "explain": "No. Mixed sizes do not give a fair count, because a big tile covers more space than a small one. Use equal unit squares."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Shape A is 6 squares long and 1 square wide. Shape B is 3 squares long and 2 squares wide. Which has the bigger area?",
+    "choices": [
+     "They have the same area, 6 square units",
+     "Shape A, because it is longer",
+     "Shape B, because it is wider"
+    ],
+    "answer": 0,
+    "hint": "Count the unit squares in each shape.",
+    "explain": "A has 6 squares and B has 2 rows of 3, which is also 6. Both are 6 square units. Looking longer does not mean more area."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A shape has 5 whole squares and 4 half squares. Leo says the area is 9 square units. What should it be?",
+    "choices": [
+     "7 square units",
+     "9 square units",
+     "5 square units"
+    ],
+    "answer": 0,
+    "hint": "Two half squares make one whole square.",
+    "explain": "The 4 halves make 2 whole squares, so the area is 5 + 2 = 7 square units. Leo counted each half as a whole."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A rectangle is 4 squares long and 2 squares wide. Which is its area?",
+    "choices": [
+     "8 square units",
+     "12 units",
+     "6 square units"
+    ],
+    "answer": 0,
+    "hint": "Count the squares inside, not the length of the edge.",
+    "explain": "2 rows of 4 make 8 unit squares, so the area is 8 square units. 12 units is the perimeter, the distance round the edge, and 6 adds the two sides."
+   }
+  ]
+ }
+}
