@@ -1,0 +1,236 @@
+{
+ "topicId": "mt_13CtLTcWUB",
+ "title": "Herbivores, Carnivores & Omnivores",
+ "audience": "family",
+ "keyIdea": "We can sort animals by what they eat. A herbivore eats only plants, like a cow or a rabbit. A carnivore eats only meat, like a lion or a cat. An omnivore eats both plants and meat, like a bear, a pig or a person. What an animal eats decides its group, not how big it is, how it looks or where it lives.",
+ "explain": {
+  "kid": [
+   "Every animal needs food. But they do not all eat the same food. Some eat plants. Some eat meat. Some eat both.",
+   "A cow eats grass. A rabbit eats grass and leaves. They eat only plants. An animal that eats only plants is a herbivore.",
+   "A lion eats meat. A cat eats meat and fish. An animal that eats only meat is a carnivore. A bear eats berries and fish. It eats plants and meat, so it is an omnivore. You are an omnivore too!",
+   "Big does not mean meat. An elephant is huge, and it eats only plants. So to sort an animal, ask: what does it eat?"
+  ],
+  "adult": [
+   "In England, the Year 1 programme of study for Animals, including humans asks pupils to identify and name a variety of common animals that are carnivores, herbivores and omnivores. The idea links to Year 2 work on how animals get food and to Year 4 work on teeth and food chains.",
+   "The three terms are about diet. Herbivores eat plants, carnivores eat other animals, and omnivores eat both. Fish counts as meat here, and so do insects and worms, which is why a hen that eats seeds and worms is an omnivore. As a species, humans are omnivores, although some people choose not to eat meat.",
+   "Common mistakes: thinking big or fierce-looking animals must be carnivores, when elephants, rhinos and gorillas eat mostly plants; thinking small or cute animals must eat plants, when a pet cat needs meat; putting a bear or a pig in a one-food group; and sorting by habitat or looks, such as farm animals or furry animals, instead of food. Ask your child for the reason every time.",
+   "In the lab your child drags food to a rabbit, a cat and a bear and sees which foods each one takes. Then they sort six animals into a plants bowl, a meat bowl and a both bowl, and pick the reason for three groups, where only a food reason is right."
+  ]
+ },
+ "familyTip": "At dinner, sort what is on your plates into foods from plants and foods from animals. Then ask: if a rabbit sat down with us, what could it eat? What about a cat? And a bear? Next time you see an animal at the park or on TV, ask your child what it eats, and whether that makes it a herbivore, a carnivore or an omnivore.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does this animal eat only plants, only meat, or both? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Herbivore",
+    "Carnivore",
+    "Omnivore"
+   ],
+   "items": [
+    ["horse", 0],
+    ["tiger", 1],
+    ["pig", 2],
+    ["giraffe", 0],
+    ["wolf", 1],
+    ["bear", 2],
+    ["sheep", 0],
+    ["owl", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdiet",
+  "caption": "Flagship lab: feed a rabbit, a cat and a bear by dragging food, sort six animals into plant, meat and both bowls, and pick the food reason for each group.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A giraffe eats {n} kilograms of leaves a day and no meat at all. What is a giraffe?",
+   "choices": [
+    "A herbivore",
+    "A carnivore",
+    "An omnivore"
+   ],
+   "answer": 0,
+   "hint": "Leaves come from plants. Does it eat any meat?",
+   "explain": "A giraffe eats only plants, such as leaves, so it is a herbivore. Being tall and big does not change that.",
+   "params": {
+    "n": [
+     20,
+     30
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "At the farm there are {a} cows and {b} sheep. Cows and sheep both eat only plants. How many herbivores are there?",
+   "answer": "a+b",
+   "hint": "Every cow and every sheep is a herbivore. Add the two numbers.",
+   "explain": "{a} cows + {b} sheep = {=a+b} herbivores, because they all eat only plants.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A pig eats apples, corn and worms. Which group is it in?",
+   "choices": [
+    "Omnivore",
+    "Herbivore",
+    "Carnivore"
+   ],
+   "answer": 0,
+   "hint": "Apples and corn are plants. Worms are animals.",
+   "explain": "A pig eats plants and animals, so it is an omnivore. Worms count as meat."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Max says a cat is a herbivore because it is small and soft. Is he right?",
+   "choices": [
+    "No, a cat eats meat, so it is a carnivore",
+    "Yes, small animals eat plants",
+    "Yes, soft animals eat plants"
+   ],
+   "answer": 0,
+   "hint": "What does a cat eat? Being small or soft is not about food.",
+   "explain": "No. A cat eats meat and fish, so it is a carnivore. How an animal looks does not tell us its group."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A zoo has {a} lions and {b} tigers. Lions and tigers eat only meat. How many carnivores is that?",
+    "answer": "a+b",
+    "hint": "Lions and tigers are both carnivores. Add them up.",
+    "explain": "{a} lions + {b} tigers = {=a+b} carnivores, because they all eat only meat.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A hen pecks at seeds and {n} worms. What is a hen?",
+    "choices": [
+     "An omnivore",
+     "A herbivore",
+     "A carnivore"
+    ],
+    "answer": 0,
+    "hint": "Seeds come from plants. Worms are animals.",
+    "explain": "A hen eats seeds, which are plants, and worms, which are animals. Eating both makes it an omnivore.",
+    "params": {
+     "n": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What does a herbivore eat?",
+    "choices": [
+     "Only plants",
+     "Only meat",
+     "Plants and meat"
+    ],
+    "answer": 0,
+    "hint": "Think of the rabbit in the lab. Which foods did it take?",
+    "explain": "A herbivore eats only plants, such as grass, leaves and fruit. Cows and rabbits are herbivores."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "An elephant is the biggest animal on land. Which group is it in?",
+    "choices": [
+     "Herbivore",
+     "Carnivore",
+     "Omnivore"
+    ],
+    "answer": 0,
+    "hint": "Do not go by size. What does an elephant eat?",
+    "explain": "An elephant eats grass, leaves, bark and fruit, all plants, so it is a herbivore. Big does not mean meat eater."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "An owl catches mice and beetles to eat. What is an owl?",
+    "choices": [
+     "A carnivore",
+     "A herbivore",
+     "An omnivore"
+    ],
+    "answer": 0,
+    "hint": "Mice and beetles are animals. Does the owl eat plants too?",
+    "explain": "Mice and beetles are animals, so an owl eats meat. It does not eat plants, so it is a carnivore."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the best reason a cow is a herbivore?",
+    "choices": [
+     "It eats only grass and plants",
+     "It lives on a farm",
+     "It has spots"
+    ],
+    "answer": 0,
+    "hint": "The group is about food. Which reason talks about food?",
+    "explain": "A cow is a herbivore because it eats only plants. Where it lives and how it looks are not reasons."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "You eat toast, apples and fish fingers. What does that make you?",
+    "choices": [
+     "An omnivore",
+     "A herbivore",
+     "A carnivore"
+    ],
+    "answer": 0,
+    "hint": "Toast and apples come from plants. Fish is meat.",
+    "explain": "You eat plants and meat, so you are an omnivore, just like a bear or a pig."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A bear eats berries and fish. Sam says it is a carnivore. What did Sam forget?",
+    "choices": [
+     "Berries are plants, so it eats both",
+     "Bears do not eat fish",
+     "Nothing, Sam is right"
+    ],
+    "answer": 0,
+    "hint": "Look at both foods. Is one of them a plant?",
+    "explain": "Sam forgot the berries. A bear eats plants and meat, so it is an omnivore, not a carnivore."
+   }
+  ]
+ }
+}
