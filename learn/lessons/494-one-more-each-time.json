@@ -1,0 +1,206 @@
+{
+ "topicId": "mt_sYpKWbq5ra",
+ "title": "One More Each Time",
+ "audience": "family",
+ "keyIdea": "Each counting number is one more than the number before it. Add one thing to a group of 5 and there are 6; add one more and there are 7. So one more than a number is the next number we say when we count, and one less is the number just before. You do not need to count a group again from 1: keep the number in your head and count on one.",
+ "explain": {
+  "kid": [
+   "Here are 5 blocks. Put one more on top. Now there are 6. Put on one more. Now there are 7. Each time you add one, you get the next number.",
+   "So one more than 5 is 6. That is the number you say next when you count: 5, 6. One more than 9 is 10.",
+   "One less is the other way. Take one block off 7, and 6 are left. One less is the number you say just before.",
+   "If you know there are 6 in a box and one more goes in, you do not have to count them all again. Say 6 in your head, then say 7."
+  ],
+  "adult": [
+   "This is the successor idea: each number in the counting sequence names a quantity exactly one larger than the number before it. The US Common Core puts it in Kindergarten (K.CC.4c, 'each successive number name refers to a quantity that is one larger'), and the English national curriculum asks Year 1 pupils, 'given a number, identify one more and one less'. Reception children meet it in the early learning goal for number.",
+   "It joins two skills your child may already have: saying the number names in order (the stable order) and knowing that the last number counted tells how many (cardinality). One more links them: moving one step along the count adds exactly one object. Counting on from a known number, instead of recounting from 1, grows out of this and leads to adding.",
+   "Common mistakes to watch for: saying the same number back (one more than 4 is 4); giving the number before (one more than 4 is 3); jumping two (4, then 6); and tipping out a group to count it all again from 1 when one more is added. Crossing a decade boundary is a classic slip too: one more than 9 is 10, and one more than 19 is 20, not 'ten-teen'.",
+   "In the lab your child drags cubes onto a tower and hears the next number each time, builds a staircase where each step is one cube taller, hops a frog one more along a 1 to 10 track, takes a cube away to find one less, and counts on from a number hidden in a cup."
+  ]
+ },
+ "familyTip": "On the stairs, say the number of each step as you climb: one, two, three. Stop and ask, 'What number is one more step?' Then come down one and ask, 'What is one less?' At snack time, put 5 grapes in a cup, show one more going in, and ask how many without tipping them out.",
+ "status": "self-checked",
+ "visual": {
+  "type": "counters",
+  "caption": "5 and one more. Push the groups together and count: there are 6.",
+  "opts": {
+   "mode": "combine",
+   "a": 5,
+   "b": 1
+  }
+ },
+ "lab": {
+  "type": "flagstair",
+  "caption": "Flagship lab: add one cube at a time, build a number staircase, hop one more on a track, take one away, and count on from a hidden number.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Sam has {a} blocks. He adds one more. How many blocks now?",
+   "answer": "a+1",
+   "hint": "Say {a}, then say the next number.",
+   "explain": "One more than {a} is {=a+1}. It is the next number when we count.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {a} birds on a wall. One flies away. How many are left?",
+   "answer": "a-1",
+   "hint": "One less is the number you say just before {a}.",
+   "explain": "One less than {a} is {=a-1}. It comes just before {a} when we count.",
+   "params": {
+    "a": [
+     3,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is one more than 9?",
+   "choices": [
+    "10",
+    "8",
+    "9"
+   ],
+   "answer": 0,
+   "hint": "Count to 9. What number do you say next?",
+   "explain": "One more than 9 is 10. After 9 we say 10."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "There are 6 toys in a box. Mum puts in one more. What is the quick way to know how many?",
+   "choices": [
+    "Say 6, then say 7",
+    "Tip them out and count from 1",
+    "Say 6 again"
+   ],
+   "answer": 0,
+   "hint": "You already know there are 6. Do you need to count those again?",
+   "explain": "Keep 6 in your head and count on one: 7. There are 7 toys."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A tower has {a} cubes. You put one more on top. How many cubes now?",
+    "answer": "a+1",
+    "hint": "Adding one cube gives the next counting number after {a}.",
+    "explain": "{a} and one more makes {=a+1}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "What number is one less than {a}?",
+    "answer": "a-1",
+    "hint": "Count back one step from {a}.",
+    "explain": "One less than {a} is {=a-1}, the number just before it.",
+    "params": {
+     "a": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mia says one more than 4 is 3. Is she right?",
+    "choices": [
+     "No, one more than 4 is 5",
+     "Yes, it is 3",
+     "No, it is 4"
+    ],
+    "answer": 0,
+    "hint": "One more makes the group bigger. Is 3 bigger than 4?",
+    "explain": "No. 3 is one less than 4. One more than 4 is 5, the number after it."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which number comes just after 7?",
+    "choices": [
+     "8",
+     "6",
+     "9"
+    ],
+    "answer": 0,
+    "hint": "Count 5, 6, 7, and say the next one.",
+    "explain": "8 comes just after 7, so 8 is one more than 7."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Jo has 3 stickers. Kit has one more than Jo. How many does Kit have?",
+    "choices": [
+     "4",
+     "3",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Start at 3 and count on just one.",
+    "explain": "One more than 3 is 4, so Kit has 4 stickers."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A staircase has 1 block, then 2, then 3. How many blocks does the next step need?",
+    "choices": [
+     "4",
+     "3",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "Each step is one block taller than the step before.",
+    "explain": "Each step is one more. One more than 3 is 4, so the next step needs 4 blocks."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Ben has 5 grapes. He eats one. Which is right?",
+    "choices": [
+     "He has 4, one less than 5",
+     "He has 6, one more than 5",
+     "He still has 5"
+    ],
+    "answer": 0,
+    "hint": "Eating one makes the group smaller. Count back one.",
+    "explain": "Eating one takes one away. One less than 5 is 4."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "8 ducks are on a pond. One more lands. How many now?",
+    "choices": [
+     "9",
+     "10",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Say 8 in your head and count on one.",
+    "explain": "8 and one more makes 9. 10 would be two more."
+   }
+  ]
+ }
+}
