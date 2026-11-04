@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_NOE4SeMUKC",
+ "title": "Sleep, screens and wellbeing",
+ "audience": "learner",
+ "keyIdea": "Teenagers need 8 to 10 hours of sleep a night, but in puberty the body clock shifts later, so many feel awake at bedtime and tired at school. Big weekend lie-ins cause social jet lag. Phones at night cut sleep mostly by pushing sleep later and keeping the brain alert; light is a smaller effect. Caffeine has a half-life of about 5 hours. Regular sleep and wake times protect mood, focus and health.",
+ "explain": {
+  "kid": [
+   "Most people aged 13 to 18 need 8 to 10 hours of sleep a night. Many get less on school nights. Missing sleep shows up as low mood, a short temper, poor focus and slower reactions. Sleep is also when the brain stores what you learned that day.",
+   "In puberty your body clock shifts. The sleep signal, a hormone called melatonin, starts later in the evening. At 10 you might feel sleepy by 8:30 pm. At 16 it can be 10:30 pm or later. That is biology, not laziness. But school still starts early, so your habits matter.",
+   "Sleeping from 1 am to noon at the weekend feels great. But it moves your body clock, like flying to a new time zone. Then Monday morning feels like jet lag. Scientists call this social jet lag. A lie-in of about an hour is fine. A huge one makes the week harder.",
+   "Phones cost sleep in three ways. Time on the phone pushes sleep later. Games, chats and alerts keep your brain switched on. Bright light also delays sleep a little. Night mode helps with light, but not the other two. Caffeine matters too: about half of it is still in you 5 hours later."
+  ],
+  "adult": [
+   "In England, the statutory RSHE guidance says secondary pupils should learn the importance of good quality sleep. It also covers how a lack of sleep can affect weight, mood and ability to learn. The American Academy of Sleep Medicine advises 8 to 10 hours a night for ages 13 to 18. Key words are sleep need, body clock (circadian rhythm), melatonin, social jet lag, sleep hygiene and caffeine half-life.",
+   "Common mistakes to watch for: calling a late teen body clock laziness; thinking a long weekend lie-in pays back a sleep debt; trusting night mode to fix phone use at night; and having energy drinks in the afternoon. Another slip is treating sleep as spare time to cut when work piles up, when it is what makes the work stick.",
+   "The science: Carskadon's studies show melatonin onset shifts later in puberty, often by one to two hours. Social jet lag is the gap between the middle of sleep on free days and on school days. A gap of two hours or more is linked to worse mood and grades. Reviews find screens mainly cut sleep by delaying bedtime and raising alertness. Lab studies show the light effect is real but smaller. Caffeine's half-life is about 5 hours in most adults, but it varies a lot.",
+   "The lab has five scenes. Your teen sets a bedtime that gives 8 to 10 hours before a 7 am alarm. They compare when sleep starts at 10 and at 16. They cut social jet lag by changing a weekend sleep. They switch off phone habits on an example night and see which ones matter most. Finally they time an energy drink on a caffeine decay curve."
+  ]
+ },
+ "familyTip": "Agree one change together for a fortnight, such as phones charging outside the bedroom from 10 pm, or a weekend wake-up no more than an hour after school days. Keep it as an experiment and talk about mood and energy at the end.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Helps or harms a teenager's sleep? Drag each one, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Helps sleep",
+    "Harms sleep"
+   ],
+   "items": [
+    [
+     "Same wake-up time most days",
+     0
+    ],
+    [
+     "Sleeping until 1 pm on Sunday",
+     1
+    ],
+    [
+     "Phone charging outside the bedroom",
+     0
+    ],
+    [
+     "Scrolling in bed after lights out",
+     1
+    ],
+    [
+     "No caffeine after lunch",
+     0
+    ],
+    [
+     "Energy drink at 8 pm",
+     1
+    ],
+    [
+     "Notifications off at night",
+     0
+    ],
+    [
+     "Gaming until you fall asleep",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsleep",
+  "caption": "Flagship lab: set a bedtime for 8 to 10 hours, see the teen body clock shift, cut social jet lag, fix phone habits and time caffeine.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "How much sleep do most 13 to 18 year olds need each night?",
+   "choices": [
+    "8 to 10 hours",
+    "5 to 6 hours",
+    "12 to 14 hours"
+   ],
+   "answer": 0,
+   "hint": "The advice for teens is more than for adults.",
+   "explain": "The American Academy of Sleep Medicine advises 8 to 10 hours for ages 13 to 18. Adults need about 7 to 9."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Your alarm is at 7 am. You fall asleep at {b} pm. How many hours of sleep do you get?",
+   "answer": "19-b",
+   "hint": "Count the hours from {b} pm to midnight, then add 7.",
+   "explain": "From {b} pm to midnight is {=12-b} hours, plus 7 more to 7 am, so {=19-b} hours.",
+   "params": {
+    "b": [
+     8,
+     11
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Caffeine has a half-life of about 5 hours. Five hours after an energy drink, {c} mg is left. How many mg were in the drink?",
+   "answer": "2*c",
+   "hint": "After one half-life, half is left. So the drink had double.",
+   "explain": "{c} mg is half of what you drank, so the drink had 2 × {c} = {=2*c} mg.",
+   "params": {
+    "c": [
+     30,
+     80
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why do many teenagers not feel sleepy until late at night?",
+   "choices": [
+    "Their body clock shifts later in puberty",
+    "They are lazy",
+    "They have too much energy from food"
+   ],
+   "answer": 0,
+   "hint": "Think about the sleep hormone melatonin.",
+   "explain": "In puberty melatonin starts later in the evening, often by one to two hours. It is biology, not laziness."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is social jet lag?",
+    "choices": [
+     "Your sleep shifting between school days and free days",
+     "Feeling tired after a real flight",
+     "Staying up late with friends once"
+    ],
+    "answer": 0,
+    "hint": "It is about the weekly pattern, not travel.",
+    "explain": "Social jet lag is the gap between the middle of your sleep on free days and on school days. Big gaps feel like flying across time zones."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which phone habit costs the most sleep?",
+    "choices": [
+     "Scrolling in bed after lights out",
+     "Having night mode off",
+     "Charging it in the kitchen"
+    ],
+    "answer": 0,
+    "hint": "Which one eats up time and keeps your brain busy?",
+    "explain": "Scrolling pushes sleep later and keeps you alert. Light matters less. Charging it elsewhere helps."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Does night mode on a phone fix the effect of screens on sleep?",
+    "choices": [
+     "Only a little: time and alertness matter more",
+     "Yes, it removes all the effects",
+     "No, it makes sleep worse"
+    ],
+    "answer": 0,
+    "hint": "Night mode only changes the light.",
+    "explain": "Night mode reduces bright light a little. Scrolling still uses time and keeps your brain alert."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "On school nights you sleep {s} hours. You need 9. How many hours short are you over 5 school nights?",
+    "answer": "5*(9-s)",
+    "hint": "Find the gap for one night, then times by 5.",
+    "explain": "Each night is {=9-s} hours short, so 5 nights make {=5*(9-s)} hours.",
+    "params": {
+     "s": [
+      5,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You sleep 6 hours a night all week. What helps most?",
+    "choices": [
+     "A regular, earlier bedtime",
+     "Sleeping until 2 pm on Sunday",
+     "More energy drinks"
+    ],
+    "answer": 0,
+    "hint": "What fixes the pattern, not just one day?",
+    "explain": "A steady earlier bedtime adds sleep every night. A huge lie-in gives social jet lag."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "School nights you sleep 10:30 pm to 7 am. On Saturday you sleep from 11 pm until {w} am. How many hours do you sleep on Saturday?",
+    "answer": "w+1",
+    "hint": "From 11 pm to midnight is 1 hour. Then add {w}.",
+    "explain": "1 hour to midnight plus {w} more is {=w+1} hours.",
+    "params": {
+     "w": [
+      7,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which drink time is best for sleep, with bed at 10:30 pm?",
+    "choices": [
+     "Lunchtime",
+     "5 pm",
+     "9 pm"
+    ],
+    "answer": 0,
+    "hint": "Half the caffeine is still there 5 hours later.",
+    "explain": "At lunchtime most of the caffeine is gone by 10:30 pm. At 9 pm almost all of it is still in you."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is a sign of not enough sleep?",
+    "choices": [
+     "Low mood and poor focus",
+     "Feeling calm and alert",
+     "Better reaction times"
+    ],
+    "answer": 0,
+    "hint": "What happens to your brain when it is tired?",
+    "explain": "Short sleep is linked to low mood, a short temper, poor focus and slower reactions."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Your friend says sleep is spare time to cut when work piles up. What is true?",
+    "choices": [
+     "Sleep helps store what you learned",
+     "Sleep has no effect on learning",
+     "Cutting sleep always gives better grades"
+    ],
+    "answer": 0,
+    "hint": "What happens to memories during sleep?",
+    "explain": "The brain stores the day's learning during sleep, so cutting it can undo the extra study."
+   }
+  ]
+ }
+}
