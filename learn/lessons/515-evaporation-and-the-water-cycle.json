@@ -1,0 +1,131 @@
+{
+ "topicId": "mt_Qkewo5M3_c",
+ "title": "Evaporation and the Water Cycle",
+ "audience": "family",
+ "keyIdea": "Evaporation is liquid water turning into water vapour, an invisible gas. It happens at any temperature, and the warmer it is, the faster it happens. Condensation is water vapour cooling and turning back into liquid drops. In the water cycle, water evaporates from seas and lakes, condenses into clouds, falls as precipitation and is collected in rivers and seas.",
+ "explain": {
+  "kid": [
+   "A puddle dries up after rain. The water does not vanish. It turns into a gas called water vapour. This is evaporation. Water vapour is in the air, but you cannot see it.",
+   "Water can evaporate when it is cold. It does not need to boil. But warm water evaporates faster. That is why puddles dry fast on a hot day and slowly on a cold day.",
+   "Put a cold can on a table. Soon it is wet. The drops come from the air! Water vapour touches the cold can, cools down and turns back into liquid. This is condensation.",
+   "The same water goes round and round. It evaporates from the sea. High up, it cools and condenses into clouds. The drops join and fall as rain. This is precipitation. Rivers carry it back to the sea. This is collection."
+  ],
+  "adult": [
+   "England's Year 4 programme of study asks children to identify the part played by evaporation and condensation in the water cycle and to associate the rate of evaporation with temperature. It builds on 'States of matter', where children learn that water can be a solid, a liquid or a gas.",
+   "Evaporation is a liquid turning into a gas at its surface. It happens at any temperature, so a puddle dries at 10 °C. Warmth speeds it up, and so do wind and a bigger surface. Boiling is different: it happens at 100 °C, and bubbles of vapour form all through the liquid. Condensation is the reverse: water vapour cools on a cold surface or in cold air and becomes liquid.",
+   "A common misconception is that a cloud, or the white 'steam' from a kettle, is water vapour. Water vapour is invisible. Clouds and steam are tiny drops of liquid water, or ice in cold clouds. Children also say that drops on a cold glass leaked through it, or that water must boil to evaporate. Be careful with 'it dried up': ask where the water went.",
+   "In the lab your child runs a puddle clock, races saucers in a fridge, a room and a sunny window, waits beside a cold and a warm can, labels evaporation, condensation, precipitation and collection on a picture, and zooms into a cloud until the drops join and fall."
+  ]
+ },
+ "familyTip": "Draw round a puddle with chalk in the morning, then again at lunchtime. Ask where the water went. Then take a cold drink out of the fridge and ask where the drops on the outside came from.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Evaporation or condensation? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Evaporation: liquid to gas", "Condensation: gas to liquid"],
+   "items": [["A puddle dries in the sun", 0], ["Wet washing dries on a line", 0], ["Sea water rises into the air", 0], ["Wet hair dries", 0], ["Drops form on a cold can", 1], ["A mirror mists up after a bath", 1], ["Clouds form in cold air", 1], ["Dew on grass in the morning", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagevap",
+  "caption": "Flagship lab: watch a puddle evaporate, race 3 saucers, find where the drops on a cold can come from, label the water cycle and zoom into a cloud.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "numeric", "id": "p1",
+   "prompt": "A saucer holds {a} ml of water. {b} ml evaporates each hour. How many ml are left after 2 hours?",
+   "answer": "a-2*b",
+   "hint": "Two hours means two lots of {b} ml go into the air.",
+   "explain": "2 × {b} = {=2*b} ml evaporates, so {a} − {=2*b} = {=a-2*b} ml is left.",
+   "params": {"a": [60, 100], "b": [5, 20]}
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "A puddle holds {=b*k} ml. On a hot day {b} ml evaporates each hour. How many hours until it is dry?",
+   "answer": "k",
+   "hint": "How many lots of {b} ml make {=b*k} ml?",
+   "explain": "{=b*k} ÷ {b} = {k}, so the puddle is dry after {k} hours.",
+   "params": {"b": [5, 10], "k": [2, 6]}
+  },
+  {
+   "type": "mc", "id": "p3",
+   "prompt": "Which puddle dries fastest?",
+   "choices": ["One on a hot, sunny day", "One on a cold, cloudy day", "They all dry at the same speed"],
+   "answer": 0,
+   "hint": "Does warmth make evaporation faster or slower?",
+   "explain": "The higher the temperature, the faster water evaporates, so the puddle on the hot day dries first."
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "Drops appear on the outside of a cold glass. Where did they come from?",
+   "choices": ["Water vapour in the air condensed", "The drink leaked through the glass", "The glass is sweating"],
+   "answer": 0,
+   "hint": "What is in the air all around the glass?",
+   "explain": "The air holds invisible water vapour. Next to the cold glass it cools and condenses into liquid drops."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric", "id": "m1",
+    "prompt": "A fridge saucer loses {a} ml an hour. A saucer on a sunny sill loses {b} ml an hour. How many more ml does the sunny one lose in 3 hours?",
+    "answer": "3*(b-a)",
+    "hint": "Find the difference for one hour, then times it by 3.",
+    "explain": "Each hour the sunny saucer loses {=b-a} ml more, so in 3 hours it loses {=3*(b-a)} ml more.",
+    "params": {"a": [2, 5], "b": [15, 25]}
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "Wet washing holds {=b*k} g of water. It loses {b} g an hour on the line. How many hours until it is dry?",
+    "answer": "k",
+    "hint": "Share {=b*k} into lots of {b}.",
+    "explain": "{=b*k} ÷ {b} = {k}, so the washing is dry after {k} hours.",
+    "params": {"b": [20, 50], "k": [2, 8]}
+   },
+   {
+    "type": "mc", "id": "m3",
+    "prompt": "What is evaporation?",
+    "choices": ["A liquid turning into a gas", "A gas turning into a liquid", "Water falling from clouds"],
+    "answer": 0,
+    "hint": "Think of a puddle drying up.",
+    "explain": "Evaporation is liquid turning into gas, like puddle water becoming water vapour."
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "What is a cloud made of?",
+    "choices": ["Tiny drops of water or bits of ice", "Water vapour gas", "Smoke"],
+    "answer": 0,
+    "hint": "Can you see water vapour?",
+    "explain": "Water vapour is invisible. We see clouds because they are tiny drops of liquid water or ice."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "Does water have to boil before it can evaporate?",
+    "choices": ["No: it evaporates at any temperature", "Yes: only at 100 °C", "Yes: only in sunshine"],
+    "answer": 0,
+    "hint": "Do puddles dry on cool, cloudy days?",
+    "explain": "Puddles dry on cool days too, so water evaporates at any temperature. Warmth just makes it faster."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Rain, snow and hail falling from clouds is called...",
+    "choices": ["Precipitation", "Condensation", "Collection"],
+    "answer": 0,
+    "hint": "It is the step where water comes back down.",
+    "explain": "Water falling from clouds as rain, snow or hail is precipitation."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "Which order shows the water cycle?",
+    "choices": ["Evaporation, condensation, precipitation, collection", "Condensation, evaporation, collection, precipitation", "Precipitation, evaporation, collection, condensation"],
+    "answer": 0,
+    "hint": "Start at the sea: the water has to go up first.",
+    "explain": "Water evaporates from the sea, condenses into clouds, falls as precipitation and is collected in rivers and seas."
+   }
+  ]
+ }
+}
