@@ -1,0 +1,132 @@
+{
+ "topicId": "mt_IfEgu0X449",
+ "title": "Comparing Fractions",
+ "audience": "family",
+ "keyIdea": "To compare unit fractions, look at the denominator: the more equal parts a whole is cut into, the smaller each part, so 1/3 > 1/5. When two fractions have the same denominator, the parts are the same size, so the one with the bigger numerator is bigger: 4/5 > 2/5. Only compare fractions of the same whole.",
+ "explain": {
+  "kid": [
+   "A fraction has two numbers. The bottom one is the denominator. It says how many equal parts the whole is cut into. The top one is the numerator. It says how many parts you have.",
+   "Cut a bar into 2 equal parts. Each part is big. Cut the same bar into 5 equal parts. Each part is small. So 1/2 is bigger than 1/5, even though 5 is a bigger number than 2.",
+   "Now look at 2/5 and 4/5. Both are fifths, so the parts are the same size. 4 parts is more than 2 parts. So 4/5 is bigger.",
+   "We use signs to show which is bigger. The sign > means greater than. The sign < means less than. The open side always faces the bigger one: 1/3 > 1/6 and 2/7 < 6/7."
+  ],
+  "adult": [
+   "England's Year 3 programme asks pupils to 'compare and order unit fractions, and fractions with the same denominators'; the US Grade 3 standard 3.NF.A.3d asks them to compare two fractions with the same numerator or the same denominator by reasoning about their size, and to record the result with >, = or <. Both stress that the fractions must refer to the same whole.",
+   "A unit fraction has numerator 1. Its size depends only on the denominator: one whole shared into more equal parts gives smaller parts, so 1/2 > 1/3 > 1/4 > 1/5. With the same denominator the parts are equal in size, so the numerator decides: 5/8 > 3/8. With the same numerator, the smaller denominator gives the bigger fraction, which is the same idea as for unit fractions.",
+   "The most common mistake is whole-number thinking: a bigger denominator 'looks bigger', so 1/5 is called more than 1/3. Children also say 2/5 and 4/5 are equal 'because both are fifths', flip the < and > signs, and compare halves and quarters of different-sized wholes. Bars of the same length are the fix: cut them and lay the parts side by side.",
+   "In the lab your child cuts one bar into more and more parts, orders four unit fractions, shades pairs of fifths and eighths and picks the bigger, places < and > between fractions, and lays a half of a small pizza on a quarter of a giant one."
+  ]
+ },
+ "familyTip": "Fold two strips of paper the same length: one into halves, one into quarters. Ask, 'Which piece is bigger, one half or one quarter?' before you hold them side by side. Then shade 1 quarter and 3 quarters and ask which is more.",
+ "status": "self-checked",
+ "visual": {
+  "type": "fracbar",
+  "caption": "Two bars the same length: one cut into thirds, one into fifths. One third is bigger than one fifth.",
+  "opts": {"d": 3, "shade": 1, "compare": 5, "compareShade": 1}
+ },
+ "lab": {
+  "type": "flagfcmp",
+  "caption": "Flagship lab: cut one bar into more parts, order unit fractions, shade and compare fifths and eighths, place < and >, and compare pizza slices.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "numeric", "id": "p1",
+   "prompt": "Which is bigger, {a}/10 or {b}/10? Type its numerator.",
+   "answer": "a*(a>b)+b*(b>a)",
+   "where": "a!=b",
+   "hint": "Both are tenths, so the parts are the same size. Which has more parts?",
+   "explain": "Same denominator, same-size parts. More parts is bigger, so the bigger one has numerator {=a*(a>b)+b*(b>a)}.",
+   "params": {"a": [1, 9], "b": [1, 9]}
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "Which is bigger, 1/{a} or 1/{b}? Type its denominator.",
+   "answer": "a*(a<b)+b*(b<a)",
+   "where": "a!=b",
+   "hint": "Fewer equal parts means bigger parts. Which denominator is smaller?",
+   "explain": "Cutting into fewer parts makes each part bigger, so the bigger unit fraction has denominator {=a*(a<b)+b*(b<a)}.",
+   "params": {"a": [2, 10], "b": [2, 10]}
+  },
+  {
+   "type": "mc", "id": "p3",
+   "prompt": "Which sign goes in the gap? 3/7 __ 5/7",
+   "choices": ["<", ">", "="],
+   "answer": 0,
+   "hint": "Which one is bigger? The open side faces the bigger fraction.",
+   "explain": "Both are sevenths, and 5 sevenths is more than 3 sevenths. So 3/7 < 5/7: the open side faces 5/7."
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "Which list goes from biggest to smallest?",
+   "choices": ["1/2, 1/4, 1/8", "1/8, 1/4, 1/2", "1/4, 1/2, 1/8"],
+   "answer": 0,
+   "hint": "Halves are the biggest parts. Which parts are smallest?",
+   "explain": "More equal parts means smaller parts. Halves are biggest, then quarters, then eighths: 1/2, 1/4, 1/8."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric", "id": "m1",
+    "prompt": "Ana ate {a}/12 of a cake. Ben ate {b}/12 of the same cake. How many more twelfths did Ana eat?",
+    "answer": "a-b",
+    "where": "a>b",
+    "hint": "Both are twelfths of the same cake. Take the smaller numerator from the bigger one.",
+    "explain": "Same cake, same-size twelfths. {a} twelfths is {=a-b} more than {b} twelfths, so Ana ate {=a-b} more.",
+    "params": {"a": [5, 11], "b": [1, 4]}
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "Two strips are the same length. One is cut into {a} equal parts, the other into {b}. Type how many parts are in the strip with the bigger parts.",
+    "answer": "a*(a<b)+b*(b<a)",
+    "where": "a!=b",
+    "hint": "Which strip was cut into fewer parts?",
+    "explain": "Fewer cuts make bigger parts, so the strip with the bigger parts has {=a*(a<b)+b*(b<a)} parts.",
+    "params": {"a": [2, 9], "b": [2, 9]}
+   },
+   {
+    "type": "mc", "id": "m3",
+    "prompt": "Which is bigger: 1/3 or 1/5?",
+    "choices": ["1/3", "1/5", "They are equal"],
+    "answer": 0,
+    "hint": "Thirds or fifths: which are bigger parts?",
+    "explain": "A whole cut into 3 parts has bigger parts than a whole cut into 5, so 1/3 > 1/5."
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Which is bigger: 2/5 or 4/5?",
+    "choices": ["4/5", "2/5", "They are equal: both are fifths"],
+    "answer": 0,
+    "hint": "The parts are the same size. Count them.",
+    "explain": "Both are fifths, so the parts match. 4 parts is more than 2 parts, so 4/5 is bigger."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "Which is true?",
+    "choices": ["1/6 < 1/4", "1/6 > 1/4", "1/6 = 1/4"],
+    "answer": 0,
+    "hint": "Sixths are smaller parts than quarters. Where does the open side face?",
+    "explain": "Sixths are smaller than quarters, so 1/6 is less: 1/6 < 1/4."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Which list goes from smallest to biggest?",
+    "choices": ["1/5, 1/4, 1/3", "1/3, 1/4, 1/5", "1/4, 1/5, 1/3"],
+    "answer": 0,
+    "hint": "The biggest denominator makes the smallest parts.",
+    "explain": "Fifths are the smallest parts here and thirds are the biggest: 1/5, 1/4, 1/3."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "Mia has 1/2 of a small pizza. Leo has 1/4 of a giant pizza. Must Mia have more?",
+    "choices": ["No, the pizzas are not the same size", "Yes, 1/2 is always more", "No, 4 is more than 2"],
+    "answer": 0,
+    "hint": "Are the two wholes the same size?",
+    "explain": "1/2 > 1/4 only for the same whole. A quarter of a giant pizza can be more than half a small one."
+   }
+  ]
+ }
+}
