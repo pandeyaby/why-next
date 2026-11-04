@@ -1,0 +1,151 @@
+{
+ "topicId": "mt_ezc2m_0dzN",
+ "title": "Finding a missing number in addition",
+ "audience": "family",
+ "keyIdea": "A take-away can be turned into an add-on question. 10 − 8 = ? asks the same thing as 8 + ? = 10: what do I add to 8 to make 10? So you can use adding to subtract. Start on the smaller number and count up to the bigger one, or use an adding fact you already know: 6 + 4 = 10 tells you 10 − 6 = 4 and 10 − 4 = 6.",
+ "explain": {
+  "kid": [
+   "A bus has 10 seats. 8 kids are on. How many more can get on? Count up from 8: 9, 10. That is 2 more. So 8 + 2 = 10.",
+   "Now think of it the other way. 10 seats, and 8 are taken. 10 take away 8 is 2. It is the same 2. 10 − 8 and 8 + ? = 10 ask the same thing.",
+   "When the two numbers are close, count up. For 12 − 9, start on 9 and hop: 10, 11, 12. Count the hops, not the start. That is 3 hops, so 12 − 9 = 3.",
+   "Facts you know help too. If you know 7 + 5 = 12, then you know 12 − 7 = 5. The box in 9 = 4 + □ is the part that is missing: 5."
+  ],
+  "adult": [
+   "This is subtraction as an unknown addend. The US Common Core puts it in Grade 1 (1.OA.4, 'understand subtraction as an unknown-addend problem', for example 'subtract 10 − 8 by finding the number that makes 10 when added to 8'), and 1.OA.8 asks children to find the unknown in equations such as 8 + ? = 11 and 5 = □ − 3. The English national curriculum asks Year 1 pupils to 'solve missing number problems such as 7 = □ − 9' and to use related subtraction facts within 20.",
+   "The big idea is the part–whole relationship: two parts make a whole, so if you know the whole and one part, the missing part is the whole minus the known part. That is why one addition fact (6 + 4 = 10) gives a fact family of two subtractions (10 − 6 = 4, 10 − 4 = 6). Counting up from the smaller number to the larger one, often called finding the difference, is far quicker than counting back when the numbers are close: 15 − 13 is 2 hops up rather than 13 hops back.",
+   "Common mistakes to watch for: adding the two numbers you can see (writing 18 for 8 + □ = 10); giving back the known part or the whole instead of the missing part; counting the start number as a hop, so 12 − 9 comes out as 4; and reading the equals sign as 'the answer comes next', so 9 = 4 + □ gets 13. Say '= means is the same as' and check by putting the answer back in the gap.",
+   "In the lab your child fills empty seats on a bus and sees both number sentences, matches each take-away to the add-on question that asks the same thing, hops a frog up a number track and counts the hops, uses a known fact to answer a take-away, and fills the box on a balance until both sides are level."
+  ]
+ },
+ "familyTip": "At snack time, line up 10 grapes in two rows of five and eat some while your child looks away. Ask, 'How many did I eat?' Let them count up from what is left to 10. Then say the take-away out loud together: '10 take away 7 is 3.' Try it with 9 or 12 grapes too.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the missing part 2 or 3? Count up from the small number. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Missing part is 2", "Missing part is 3"],
+   "items": [["10 − 8", 0], ["9 − 6", 1], ["7 − 5", 0], ["7 − 4", 1], ["12 − 10", 0], ["11 − 8", 1], ["5 + □ = 7", 0], ["6 + □ = 9", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagcountup",
+  "caption": "Flagship lab: fill the empty seats on a bus, match take-aways to add-on questions, count up on a number track, use a fact you know, and level a balance.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "{a} + □ = 10. What number goes in the box?",
+   "answer": "10-a",
+   "hint": "Start on {a} and count up to 10. Count the hops.",
+   "explain": "{a} and {=10-a} make 10, so the box is {=10-a}. That also means 10 − {a} = {=10-a}.",
+   "params": {"a": [3, 9]}
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is {b} − {a}? Think: {a} + ? = {b}.",
+   "answer": "b-a",
+   "hint": "Put your finger on {a} on a number track and hop up to {b}. How many hops?",
+   "explain": "From {a} up to {b} is {=b-a} hops, so {b} − {a} = {=b-a}.",
+   "params": {"a": [6, 9], "b": [11, 13]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which question asks the same thing as 10 − 7?",
+   "choices": ["7 + □ = 10", "10 + 7 = □", "7 − 10 = □"],
+   "answer": 0,
+   "hint": "10 − 7 asks: what do I add to 7 to get back to 10?",
+   "explain": "7 + □ = 10 asks what joins 7 to make 10. The answer is 3 for both: 10 − 7 = 3."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "9 = 4 + □. What goes in the box?",
+   "choices": ["13", "5", "9"],
+   "answer": 1,
+   "hint": "= means 'is the same as'. 4 and what make 9?",
+   "explain": "4 and 5 make 9, so both sides are the same: 9 = 4 + 5. 13 comes from adding 9 and 4, which is not the question."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A bus has 10 seats. {a} children are on it. How many more can get on?",
+    "answer": "10-a",
+    "hint": "Count up from {a} to 10, or think {a} + ? = 10.",
+    "explain": "{a} + {=10-a} = 10, so {=10-a} more can get on. 10 − {a} = {=10-a}.",
+    "params": {"a": [2, 8]}
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "□ + {a} = {b}. What number goes in the box?",
+    "answer": "b-a",
+    "hint": "The box is the missing part. Count up from {a} to {b}.",
+    "explain": "{=b-a} and {a} make {b}, so the box is {=b-a}.",
+    "params": {"a": [3, 6], "b": [9, 12]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You know 6 + 4 = 10. What is 10 − 6?",
+    "choices": ["16", "10", "4"],
+    "answer": 2,
+    "hint": "6 and 4 make 10. Take the 6 away. Which part is left?",
+    "explain": "6 + 4 = 10, so taking 6 from 10 leaves the other part: 10 − 6 = 4."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ali works out 12 − 9 by counting up: 9, 10, 11, 12. He says 4. What went wrong?",
+    "choices": ["He counted 9 as a hop", "He should add 12 and 9", "Nothing, 4 is right"],
+    "answer": 0,
+    "hint": "Count only the hops: 9 to 10, 10 to 11, 11 to 12.",
+    "explain": "He counted the start number. There are 3 hops, so 12 − 9 = 3."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is the quick way to do 15 − 13?",
+    "choices": ["Count back 13 hops from 15", "Count up from 13 to 15", "Add 15 and 13"],
+    "answer": 1,
+    "hint": "The two numbers are close together.",
+    "explain": "13 to 15 is only 2 hops, so 15 − 13 = 2. Counting back 13 hops gets there too, but takes much longer."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Sam says 8 + □ = 10 has 18 in the box. Is he right?",
+    "choices": ["No, the box is 2", "Yes, 8 and 10 make 18", "No, the box is 10"],
+    "answer": 0,
+    "hint": "Put his answer back: is 8 + 18 the same as 10?",
+    "explain": "8 + 18 is far more than 10. The box is 2, because 8 + 2 = 10."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "7 + 5 = 12. Which take-away is also true?",
+    "choices": ["12 − 5 = 7", "12 − 5 = 12", "7 − 5 = 12"],
+    "answer": 0,
+    "hint": "Take one part away from the whole, 12. What part is left?",
+    "explain": "12 is the whole and 7 and 5 are the parts. Take away 5 and 7 is left: 12 − 5 = 7."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "There are 9 apples in a box that holds 12. How many more fit?",
+    "choices": ["3", "21", "9"],
+    "answer": 0,
+    "hint": "Count up from 9 to 12 and count the hops.",
+    "explain": "9, then 10, 11, 12: 3 hops. 9 + 3 = 12, so 3 more apples fit."
+   }
+  ]
+ }
+}
