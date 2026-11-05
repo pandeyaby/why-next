@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_Y9XKzLrUAZ",
+ "title": "Turns and Directions",
+ "audience": "family",
+ "keyIdea": "A turn is measured by how much of a whole circle you go round. A quarter turn is one of four equal parts, a half turn is two quarter turns and leaves you facing behind you, a three-quarter turn is three quarter turns, and a whole turn is four quarter turns that bring you back to face the way you started. Clockwise means turning the same way as the hands on a clock; anticlockwise is the other way.",
+ "explain": {
+  "kid": [
+   "Stand up and face the door. Now turn all the way round until you face the door again. That is a whole turn.",
+   "Cut the whole turn into four equal bits. One bit is a quarter turn. Two bits make a half turn. Now you face behind you.",
+   "Three bits make a three-quarter turn. Four bits make a whole turn, and you are back where you began.",
+   "Clockwise means you turn the same way as the hands on a clock. Anticlockwise means you turn the other way."
+  ],
+  "adult": [
+   "Year 1 pupils in England learn to 'describe position, direction and movement, including whole, half, quarter and three-quarter turns'. Year 2 adds the words clockwise and anticlockwise and links a quarter turn to a right angle. Words to use: turn, whole turn, half turn, quarter turn, three-quarter turn, clockwise, anticlockwise, left, right, forwards, backwards, face.",
+   "Common mistakes: thinking a whole turn leaves you facing backwards (that is a half turn); counting the starting position as the first quarter; mixing up clockwise and anticlockwise; and not seeing that three quarter turns clockwise end in the same place as one quarter turn anticlockwise. A half turn ends in the same place whichever way you go.",
+   "In the lab your child turns Pip one quarter at a time, by button or by dragging round Pip. A shaded wedge fills a quarter, a half, three quarters or the whole circle, so the size of the turn is something they can see. Then they turn Pip to face the house, the ball and the pond, choosing the shortest turn each time."
+  ]
+ },
+ "familyTip": "Play 'Robot': your child is the robot and you give orders such as 'quarter turn clockwise' or 'half turn'. Put a teddy, a cup, a book and a shoe on four sides of them, and ask 'What are you facing now?' after each turn. Then swap, and let them give the orders.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "After this turn, do you face the same way as at the start? Drag each turn, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Same way as the start",
+    "A new way"
+   ],
+   "items": [
+    [
+     "a whole turn",
+     0
+    ],
+    [
+     "a half turn",
+     1
+    ],
+    [
+     "a quarter turn",
+     1
+    ],
+    [
+     "four quarter turns",
+     0
+    ],
+    [
+     "a three-quarter turn",
+     1
+    ],
+    [
+     "two whole turns",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagturn",
+  "caption": "Flagship lab: turn Pip by quarter turns, watch the wedge fill, try anticlockwise, then face what you are asked.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You face the window and make a whole turn. What do you face now?",
+   "choices": [
+    "the window",
+    "the wall behind you",
+    "the wall at your side"
+   ],
+   "answer": 0,
+   "hint": "A whole turn goes all the way round the circle.",
+   "explain": "A whole turn brings you back to face the way you started, so you face the window again."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which way is clockwise?",
+   "choices": [
+    "the way the hands on a clock go",
+    "the other way from clock hands",
+    "straight forwards"
+   ],
+   "answer": 0,
+   "hint": "The word has 'clock' in it. Think of the clock hands moving.",
+   "explain": "Clockwise means turning the same way as the hands on a clock: from 12 round to 3."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "How many quarter turns are there in {n} whole turns?",
+   "answer": "4*n",
+   "hint": "One whole turn is 4 quarter turns. Count 4 for each whole turn.",
+   "explain": "Each whole turn has 4 quarter turns, so {n} whole turns have {=4*n} quarter turns.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many half turns make {n} whole turns?",
+   "answer": "2*n",
+   "hint": "One whole turn is 2 half turns. Count 2 for each whole turn.",
+   "explain": "Each whole turn has 2 half turns, so {n} whole turns have {=2*n} half turns.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Pip faces the tree. The house is a quarter turn clockwise. Pip turns a quarter turn anticlockwise. Does Pip face the house?",
+   "choices": [
+    "No, Pip turned the other way",
+    "Yes, any quarter turn works",
+    "Yes, but only if Pip turns fast"
+   ],
+   "answer": 0,
+   "hint": "Clockwise and anticlockwise go opposite ways.",
+   "explain": "The house is clockwise from the tree. An anticlockwise quarter turn goes the other way, so Pip faces the ball instead."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many quarter turns make a half turn?",
+    "choices": [
+     "2",
+     "1",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "Half the circle is two of the four equal parts.",
+    "explain": "Two quarter turns make a half turn. Four quarter turns make a whole turn."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You face the door and make a half turn. Where do you face now?",
+    "choices": [
+     "behind you, away from the door",
+     "the door",
+     "to your side"
+    ],
+    "answer": 0,
+    "hint": "A half turn goes halfway round the circle.",
+    "explain": "A half turn leaves you facing the opposite way, so the door is behind you."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Pip faces the tree. Which turn makes Pip face the tree again?",
+    "choices": [
+     "a whole turn",
+     "a half turn",
+     "a three-quarter turn"
+    ],
+    "answer": 0,
+    "hint": "Which turn goes all the way round the circle?",
+    "explain": "Only a whole turn, four quarter turns, brings Pip back to the tree. A half turn faces the pond."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A three-quarter turn clockwise ends in the same place as…",
+    "choices": [
+     "a quarter turn anticlockwise",
+     "a quarter turn clockwise",
+     "a half turn"
+    ],
+    "answer": 0,
+    "hint": "Three quarters one way leaves one quarter left to go round.",
+    "explain": "Three quarter turns clockwise and one quarter turn anticlockwise both end at the same spot, the ball, if you start at the tree."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Mia makes a half turn clockwise. Sam makes a half turn anticlockwise. Both start facing the board. What do they face at the end?",
+    "choices": [
+     "the same way: away from the board",
+     "different ways",
+     "the board"
+    ],
+    "answer": 0,
+    "hint": "Halfway round a circle is the same spot from either side.",
+    "explain": "A half turn ends facing behind you whichever way you turn, so both face away from the board."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Anticlockwise means turning…",
+    "choices": [
+     "the other way from clock hands",
+     "the same way as clock hands",
+     "a whole turn"
+    ],
+    "answer": 0,
+    "hint": "'Anti' means against, so it goes against the clock hands.",
+    "explain": "Anticlockwise is the opposite way to the hands on a clock."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A clock hand points at 12. It makes {n} quarter turns clockwise. How many quarter turns is that short of {k} whole turns?",
+    "answer": "4*k-n",
+    "hint": "Each whole turn is 4 quarter turns. Work out how many quarter turns {k} whole turns need first.",
+    "explain": "{k} whole turns are {=4*k} quarter turns, and {=4*k} − {n} = {=4*k-n}.",
+    "params": {
+     "n": [
+      1,
+      3
+     ],
+     "k": [
+      1,
+      2
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Pip faces the tree and turns a quarter turn clockwise. Leo says 'Pip has now made a half turn because Pip faces a new thing.' Is Leo right?",
+    "choices": [
+     "No, it is one quarter turn",
+     "Yes, it is a half turn",
+     "Yes, it is a whole turn"
+    ],
+    "answer": 0,
+    "hint": "Count the quarter turns, not the things Pip faces.",
+    "explain": "Pip turned one quarter of the circle. A half turn needs two quarter turns and leaves Pip facing behind."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "Pip makes {n} whole turns and then one more half turn. How many half turns is that altogether?",
+    "answer": "2*n+1",
+    "hint": "Each whole turn is 2 half turns. Count those first, then add the extra half turn.",
+    "explain": "{n} whole turns are {=2*n} half turns, and one more makes {=2*n+1} half turns.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
