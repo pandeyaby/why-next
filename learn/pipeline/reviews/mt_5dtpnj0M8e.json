@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions match A-level Further Mathematics matrices content and standard linear algebra texts: (Aᵀ)ᵢⱼ = aⱼᵢ, m × n becomes n × m, (Aᵀ)ᵀ = A, (A + B)ᵀ = Aᵀ + Bᵀ, (AB)ᵀ = BᵀAᵀ with the index proof, symmetric means Aᵀ = A, skew-symmetric means Aᵀ = −A. The lab product was computed: AB = [[5, 3], [5, 3]], so (AB)ᵀ = [[5, 5], [3, 3]], matching BᵀAᵀ."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets keeping the order m × n (step 0 prediction, challenge 'same'), placing an entry back in its own position (step 1 replies), thinking the diagonal moves (step 2), writing (AB)ᵀ = AᵀBᵀ (step 3, where the wrong order visibly gives a 3 × 3 result), and confusing symmetric with skew-symmetric or 'all entries equal' in the challenge."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagtransp is a pick-and-place matrix bench: rows of A are sent to columns of Aᵀ, single entries are placed by swapping indices, the fixed diagonal is found by tapping, Aᵀ and Bᵀ tiles are ordered in product boxes and a symmetric matrix is completed with live Aᵀ beside it. It passes the 30% shingle gate against flagmmul, flagmadd and the other matrix labs."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step isolates one property of the transpose: rows to columns and the order swap, then the index rule entry by entry, then the leading diagonal as the mirror line, then the reversed product rule proven by sizes and entries, then symmetry where red entries in the live Aᵀ show exactly which mirror pairs still differ."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions are locked in before acting: the order of Aᵀ for a 2 × 3 matrix, where a₂₃ goes, which entries stay fixed, which product equals (AB)ᵀ and the value of a₂₁ in a symmetric matrix. Each distractor is a real slip, and the reveal line quotes the learner's guess against the result."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions map every wrong option to a targeted why() reply, for example 'That is the same position. The transpose swaps the indices', 'Check the sizes: AᵀBᵀ often does not even exist', 'Aᵀ = −A is called skew-symmetric' and '(AAᵀ)ᵀ = (Aᵀ)ᵀAᵀ = AAᵀ for every A'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner paragraphs use short sentences, one idea each (rows become columns, the size flips, indices swap, two key rules) and pass the learner kid FK gate. The adult paragraphs list the exact terms and properties, give the index proof of the product rule and name the common errors, and pass the learner adult gate."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No stock phrases: every sentence states a definition, a property, a proof step or a slip. The family tip uses a timetable or league table and a times-table grid, real tables whose rows and columns can be swapped and where the symmetric case can be seen directly."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Walked through on iPhone 13 in dark and light themes after enlarging the cells: two 3 × 3 matrices fit side by side with readable entries, the product step shows (AB)ᵀ, the answer boxes, the Aᵀ and Bᵀ tiles and the result in one view, and the entry buttons wrap into rows below the canvas."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe reports no violations in light and dark themes. Every canvas tap has a labelled button twin (rows, columns, each entry, Aᵀ and Bᵀ tiles, plus and minus for each gap), the canvas aria-label and live text say each move in words, and the challenge feedback sits in a polite live region."
+  }
+ },
+ "sources": [
+  "Pearson Edexcel Level 3 Advanced GCE in Further Mathematics (9FM0) specification, Core Pure Mathematics: matrices",
+  "Strang, G. (2016) Introduction to Linear Algebra, 5th edition, section 2.7 Transposes and permutations",
+  "Anton, H. and Rorres, C. Elementary Linear Algebra, theorem on properties of the transpose including (AB)ᵀ = BᵀAᵀ",
+  "MIT OpenCourseWare 18.06 Linear Algebra, lecture 5: transposes and symmetric matrices, RᵀR is always symmetric"
+ ]
+}
