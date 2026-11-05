@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_SH7QgFl8-v",
+ "title": "Transformations on a grid",
+ "audience": "family",
+ "keyIdea": "A transformation moves a shape to a new position on a grid. A translation slides every point the same distance in the same direction, described as squares left or right and up or down (or by a vector). A rotation turns the shape about a fixed centre of rotation by an angle such as a quarter turn (90°) or a half turn (180°), clockwise or anticlockwise. A reflection flips it in a mirror line into a mirror image. All three keep lengths and angles, so the image is congruent to the original.",
+ "explain": {
+  "kid": [
+   "A shape can move on squared paper in three ways. It can slide. It can turn. It can flip.",
+   "A slide is called a translation. Every square moves the same way. Count how far one corner goes: some squares across, then some up or down.",
+   "A turn is called a rotation. The shape spins round a dot that stays still. A quarter turn is like a clock hand going from 12 to 3. Two quarter turns make a half turn.",
+   "A flip is called a reflection. The shape lands like a mirror picture and faces the other way. Be careful: after all three moves the shape is just as big. Only its place, or the way it faces, changes."
+  ],
+  "adult": [
+   "In England's maths curriculum, Year 4 pupils 'describe movements between positions as translations of a given unit to the left/right and up/down'. In Year 6 they 'draw and translate simple shapes on the coordinate plane, and reflect them in the axes'. Key Stage 3 adds rotations about a centre and asks pupils to identify congruent shapes made by rotations, reflections and translations.",
+   "A translation is fixed by one movement: how far across and how far up or down. Every point of the shape moves by that amount, so one arrow from a corner to its image says it all. Later this becomes a column vector. A rotation needs three facts: the centre, the angle, and the direction. A reflection needs a mirror line. Each of these moves keeps side lengths and angles, so the image is congruent.",
+   "Common mistakes: children often count the gap between the shape and its image instead of the distance a corner moves. Many swap across and up, so (2, 3) moved 4 right and 1 up becomes (3, 7). With rotations they forget the centre, or mix up clockwise and anticlockwise. Some also call any mirror image a rotation. Asking 'which way does it face now?' helps here.",
+   "In the lab your child slides a flag onto an outline, 4 right and 2 up. Then they draw the arrow from corner A to its image to describe a slide. Next they give the flag a quarter turn and a half turn about a dot. Last, they pick which copy is a reflection, a rotation or a translation."
+  ]
+ },
+ "familyTip": "Draw a 6 by 6 grid and cut a small L shape from card. Take turns calling out moves, such as '3 right, 1 up' or 'quarter turn clockwise about this corner', while the other moves the card. Trace each copy and ask: is it the same size? Which way is it facing?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Translation, rotation or reflection? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Translation",
+    "Rotation",
+    "Reflection"
+   ],
+   "items": [
+    [
+     "A chess rook moving 3 squares forward",
+     0
+    ],
+    [
+     "A lift going up 2 floors",
+     0
+    ],
+    [
+     "A drawer sliding out",
+     0
+    ],
+    [
+     "A clock hand moving from 12 to 3",
+     1
+    ],
+    [
+     "A wheel turning a half turn",
+     1
+    ],
+    [
+     "A door swinging open on its hinge",
+     1
+    ],
+    [
+     "Your face in a mirror",
+     2
+    ],
+    [
+     "Butterfly wings folded onto each other",
+     2
+    ],
+    [
+     "A left glove compared with a right glove",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagslide",
+  "caption": "Flagship lab: slide a flag onto an outline, draw the arrow that describes a slide, turn it a quarter and a half turn, then name the move.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A shape slides 3 squares to the right without turning. What is this move called?",
+   "choices": [
+    "a translation",
+    "a rotation",
+    "a reflection"
+   ],
+   "answer": 0,
+   "hint": "Did the shape turn or flip, or did it only change place?",
+   "explain": "Sliding without turning or flipping is a translation. Every square moved 3 to the right."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Point (2, {a}) is translated 5 squares right and {b} squares up. What is the second number of its new position?",
+   "answer": "a+b",
+   "hint": "Moving up adds to the second number. Moving right changes only the first.",
+   "explain": "{a} + {b} = {=a+b}, so the point lands on (7, {=a+b}).",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A shape is translated {a} squares left and then {b} more squares left. How many squares left has it moved in total?",
+   "answer": "a+b",
+   "hint": "Both moves go the same way, so join them together.",
+   "explain": "{a} + {b} = {=a+b} squares to the left. Two translations make one translation.",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A flagpole points up. The flag makes a quarter turn clockwise. Which way does the pole point now?",
+   "choices": [
+    "right",
+    "left",
+    "down"
+   ],
+   "answer": 0,
+   "hint": "Think of a clock hand at 12 moving a quarter turn clockwise.",
+   "explain": "A quarter turn clockwise takes 12 o'clock to 3 o'clock, so the pole points to the right."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "After a translation, how does the new shape compare with the old one?",
+    "choices": [
+     "same size and shape",
+     "bigger",
+     "a different shape"
+    ],
+    "answer": 0,
+    "hint": "A translation only slides. Does sliding stretch anything?",
+    "explain": "Translations, rotations and reflections keep lengths and angles, so the image is congruent: same size and shape."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which move makes a mirror image that faces the other way?",
+    "choices": [
+     "a reflection",
+     "a translation",
+     "a rotation"
+    ],
+    "answer": 0,
+    "hint": "Think about what you see in a mirror.",
+    "explain": "A reflection flips the shape in a mirror line, so the image faces the other way."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Corner A is at ({a}, 1). The shape is translated {b} squares right. What is the first number of A's new position?",
+    "answer": "a+b",
+    "hint": "Moving right adds to the first number.",
+    "explain": "{a} + {b} = {=a+b}, so A moves to ({=a+b}, 1).",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How many quarter turns make a half turn?",
+    "choices": [
+     "2",
+     "4",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "A quarter turn is 90°. A half turn is 180°.",
+    "explain": "Two 90° turns make 180°, which is a half turn."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A shape makes a half turn about a point. Does it matter if you turn clockwise or anticlockwise?",
+    "choices": [
+     "no, it ends the same",
+     "yes, it ends in a different place",
+     "only if the shape is a square"
+    ],
+    "answer": 0,
+    "hint": "Try 180° one way and 180° the other way on a clock face.",
+    "explain": "Half a turn either way reaches the same place, because 180° is exactly half of a full turn."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A point moves from (1, {=a+b}) to (1, {a}). How many squares down did it move?",
+    "answer": "b",
+    "hint": "Only the second number changed. Find the difference.",
+    "explain": "{=a+b} − {a} = {b}, so it moved {b} squares down.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "To describe a rotation, which facts do you need?",
+    "choices": [
+     "centre, angle and direction",
+     "only the angle",
+     "the mirror line"
+    ],
+    "answer": 0,
+    "hint": "Where does it turn about, how far, and which way?",
+    "explain": "A rotation needs its centre, its angle (such as 90°) and its direction (clockwise or anticlockwise)."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A pupil says the shape moved 2 squares because there are 2 empty squares between it and its image. The shape is 3 squares wide. What should they do?",
+    "choices": [
+     "count how far one corner moves",
+     "count only the gap",
+     "count the squares inside the shape"
+    ],
+    "answer": 0,
+    "hint": "Pick one corner and follow it to the same corner of the image.",
+    "explain": "Count the distance a corner moves, not the gap. Here it is 2 + 3 = 5 squares."
+   }
+  ]
+ }
+}
