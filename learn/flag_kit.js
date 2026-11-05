@@ -58,6 +58,6 @@ const FK=(()=>{const ease={io:x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,out:x=>1-Ma
    if(h.pinch)cv.addEventListener('wheel',e=>{e.preventDefault();h.pinch(Math.exp(-e.deltaY*.002))},{passive:false})};
   cv.__A=api;api.fx=particles();api.every(dt=>api.fx.step(dt));
   api.toT=e=>{const r=cv.getBoundingClientRect();return{x:(e.clientX-r.left)*api.W/r.width,y:(e.clientY-r.top)*api.H/r.height}};cv.style.touchAction='none';
-  const ro=typeof ResizeObserver!=='undefined'?new ResizeObserver(size):null;if(ro)ro.observe(stage);c.stops.push(()=>{if(raf)cancelAnimationFrame(raf);if(ro)ro.disconnect()});
+  const ro=typeof ResizeObserver!=='undefined'?new ResizeObserver(size):null;if(ro)ro.observe(stage);const th=()=>{api.col=theme(fig);api.redraw()};document.addEventListener('wntheme',th);c.stops.push(()=>{if(raf)cancelAnimationFrame(raf);if(ro)ro.disconnect();document.removeEventListener('wntheme',th)});
   api.start=()=>{size();cfg.init&&cfg.init(api);go(c.opts.step||0)};return api}
  return{shell,ease,sound,theme,mix,alpha,particles}})();

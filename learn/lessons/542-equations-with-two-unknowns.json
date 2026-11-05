@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_YFS7JFk64p",
+ "title": "Equations with Two Unknowns",
+ "audience": "learner",
+ "keyIdea": "An equation with two unknowns, such as a + b = 10, usually has many solutions: each solution is a pair of numbers (a, b) that makes the equation true. To find them all, work systematically: try a = 0, 1, 2 and so on, and work out b each time. Order matters, so (3, 7) and (7, 3) are different pairs. A second equation (a second clue) can narrow the pairs down to just one.",
+ "explain": {
+  "kid": [
+   "Look at a + b = 10. There are two unknowns, a and b. Many pairs work: 3 and 7, 6 and 4, 10 and 0. Each pair that makes the equation true is a solution.",
+   "Write a pair as (a, b), with a first. So (3, 7) means a = 3 and b = 7. (7, 3) is a different pair, because a and b have swapped.",
+   "To find every pair, be systematic. Start with a = 1, then a = 2, then a = 3. Work out b each time. For a + b = 8 with both at least 1, you get 7 pairs.",
+   "In 2a + b = 15, a is doubled. If a = 4, then 2a = 8 and b = 15 − 8 = 7. A second clue can leave only one pair: a + b = 10 and a − b = 2 are both true only for (6, 4)."
+  ],
+  "adult": [
+   "In Year 6 of the National Curriculum in England, pupils find pairs of numbers that satisfy an equation with two unknowns and enumerate possibilities of combinations of two variables. This prepares for linear graphs and simultaneous equations in secondary school, and links to US grade 6 work on equations and variables (6.EE.5, 6.EE.6).",
+   "Key terms: unknown, variable, equation, solution, ordered pair (a, b), systematic listing, constraint. The main shift is from a missing-number problem with one answer to an equation whose solutions form a set.",
+   "Common misconceptions: thinking every equation has exactly one answer; treating (3, 5) and (5, 3) as the same pair; reading 2a as 2 + a or as a two-digit number; listing pairs at random and missing some; and stopping at a pair that fits only one of two clues.",
+   "The lab plots each pair you test on a grid. Correct pairs for a + b = 10 fall on a straight diagonal line, which is an early look at a linear graph. The free play step adds a + 3b = 18 so you meet a coefficient on b too."
+  ]
+ },
+ "familyTip": "Try a 'secret numbers' game: think of two numbers that add to 12 and give one more clue, such as 'their difference is 4'. Your child lists the pairs for the first clue in order, then checks each against the second clue.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each pair fit a + b = 10? Drag it, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fits a + b = 10",
+    "Does not fit"
+   ],
+   "items": [
+    [
+     "(3, 7)",
+     0
+    ],
+    [
+     "(7, 3)",
+     0
+    ],
+    [
+     "(4, 5)",
+     1
+    ],
+    [
+     "(10, 0)",
+     0
+    ],
+    [
+     "(6, 6)",
+     1
+    ],
+    [
+     "(2, 9)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpairs",
+  "caption": "Flagship lab: test pairs (a, b) on a grid, list every solution in order, then add a second clue that leaves just one pair.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which pair is a solution of a + b = 9?",
+   "choices": [
+    "(4, 5)",
+    "(4, 4)",
+    "(9, 9)"
+   ],
+   "answer": 0,
+   "hint": "Put a and b into the equation and check the total is 9.",
+   "explain": "4 + 5 = 9, so (4, 5) works. 4 + 4 = 8 and 9 + 9 = 18 do not."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "a + b = 6, and a and b are whole numbers from 0 upwards. How many pairs are there?",
+   "choices": [
+    "7",
+    "6",
+    "3"
+   ],
+   "answer": 0,
+   "hint": "List them in order: a = 0, 1, 2 and so on up to 6.",
+   "explain": "a can be 0, 1, 2, 3, 4, 5 or 6, and b is 6 − a each time. That is 7 pairs."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "a + b = {n}. If a = {a}, what is b?",
+   "answer": "n-a",
+   "hint": "b is what you add to a to make the total. Subtract a from the total.",
+   "explain": "b is the total take away a: {n} − {a} = {=n-a}. Check: {a} + {=n-a} = {n}.",
+   "params": {
+    "n": [
+     12,
+     20
+    ],
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "2a + b = {n}. If a = {a}, what is b?",
+   "answer": "n-2*a",
+   "hint": "2a means 2 × a. Work that out first, then take it away from the total.",
+   "explain": "2 × {a} = {=2*a}, and {n} − {=2*a} = {=n-2*a}, so b = {=n-2*a}.",
+   "params": {
+    "n": [
+     15,
+     25
+    ],
+    "a": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which pair fits both a + b = 10 and a − b = 4?",
+   "choices": [
+    "(7, 3)",
+    "(6, 4)",
+    "(8, 4)"
+   ],
+   "answer": 0,
+   "hint": "Check each pair against both clues, not just one.",
+   "explain": "7 + 3 = 10 and 7 − 3 = 4. (6, 4) gives a difference of 2, and (8, 4) adds to 12."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many whole-number solutions does a + b = 10 have?",
+    "choices": [
+     "more than one",
+     "exactly one",
+     "none"
+    ],
+    "answer": 0,
+    "hint": "Try a = 1, then a = 2. Does each give a b that works?",
+    "explain": "(0, 10), (1, 9), (2, 8) and more all work. With a and b from 0 to 10 there are 11 pairs."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sam says (2, 6) and (6, 2) are the same solution of a + b = 8. Is he right?",
+    "choices": [
+     "no: a and b swap, so they are different pairs",
+     "yes: they add to the same total",
+     "yes: order never matters"
+    ],
+    "answer": 0,
+    "hint": "In (a, b) the first number is always a.",
+    "explain": "(2, 6) means a = 2, b = 6. (6, 2) means a = 6, b = 2. Both fit, but they are two different pairs."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "In 2a + b = 13, what does 2a mean?",
+    "choices": [
+     "2 × a",
+     "2 + a",
+     "a two-digit number starting with 2"
+    ],
+    "answer": 0,
+    "hint": "A number written right next to a letter means multiply.",
+    "explain": "2a means 2 × a. If a = 3, then 2a = 6 and b = 13 − 6 = 7."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "For a + b = 10, a goes up by 1. What happens to b?",
+    "choices": [
+     "it goes down by 1",
+     "it goes up by 1",
+     "it stays the same"
+    ],
+    "answer": 0,
+    "hint": "The total must stay 10. Compare (3, 7) with (4, 6).",
+    "explain": "If a gets 1 bigger, b must get 1 smaller so the total stays 10, as in (3, 7) then (4, 6)."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which pair fits both a + b = 9 and a − b = 1?",
+    "choices": [
+     "(5, 4)",
+     "(6, 3)",
+     "(4, 5)"
+    ],
+    "answer": 0,
+    "hint": "List pairs for the first clue, then test each with the second.",
+    "explain": "5 + 4 = 9 and 5 − 4 = 1. (6, 3) has difference 3, and (4, 5) gives 4 − 5 = −1."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Pens cost £2 and rubbers cost £1. Mia spends exactly £7. How many ways can she buy at least one of each?",
+    "choices": [
+     "3",
+     "7",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "Write 2p + r = 7 and try p = 1, 2, 3.",
+    "explain": "p = 1, r = 5; p = 2, r = 3; p = 3, r = 1. That is 3 ways."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "a + b = {n}, with a and b whole numbers from 0 to {n}. How many pairs (a, b) are there?",
+    "answer": "n+1",
+    "hint": "a can be 0, 1, 2 and so on up to the total. Count those values.",
+    "explain": "a can be any whole number from 0 to {n}, which is {=n+1} values, and each gives one b. So there are {=n+1} pairs.",
+    "params": {
+     "n": [
+      5,
+      15
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "a + 3b = {n}. If b = {b}, what is a?",
+    "answer": "n-3*b",
+    "hint": "3b means 3 × b. Work that out, then subtract it from the total.",
+    "explain": "3 × {b} = {=3*b}, so a = {n} − {=3*b} = {=n-3*b}.",
+    "params": {
+     "n": [
+      20,
+      30
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
