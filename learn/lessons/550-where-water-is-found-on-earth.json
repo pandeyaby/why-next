@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_nRF_VRntrW",
+ "title": "Where water is found on Earth",
+ "audience": "family",
+ "keyIdea": "Water is found in oceans and seas, in rivers, lakes and ponds, frozen in glaciers, ice sheets and snow, under the ground and in clouds. Almost all of it, about 97 of every 100 cups, is salty ocean water. Only about 3 cups are fresh, and most of that fresh water is frozen ice. Fresh water under the ground fills tiny gaps in rock and soil. Lakes and rivers hold only a few drops of the 100 cups. Water can be liquid, like a river, or solid, like ice.",
+ "explain": {
+  "kid": [
+   "Water is in lots of places. It is in the sea and the ocean. It is in rivers, lakes and ponds. It is in clouds, and it is even under the ground.",
+   "Sea water is salty. You must not drink it. Rivers, lakes and rain are fresh water, with very little salt.",
+   "Water can be a liquid that flows, like a river. It can also be solid, like ice and snow. A glacier is a huge river of ice. Its ice is fresh water.",
+   "Pretend all the water on Earth fills 100 cups. 97 cups are salty sea water. Only 3 cups are fresh. Most of those are ice. Lakes and rivers are just a few drops."
+  ],
+  "adult": [
+   "This topic matches NGSS 2-ESS2-3: obtain information to identify where water is found on Earth and that it can be solid or liquid. Useful words: ocean, sea, salt water, fresh water, river, lake, pond, glacier, ice sheet, iceberg, groundwater, solid, liquid.",
+   "The figures come from the USGS summary of Earth's water (after Gleick, 1996). Oceans and seas hold about 96.5% of all water; with salty groundwater and salt lakes, about 97.5% is salty. About 2.5% is fresh. Of the fresh water, about 69% is frozen in ice caps and glaciers, about 30% is groundwater, and only about 1% is in lakes, rivers, soil, swamps and the air. The 100-cup model rounds these to 97 salty, 2 ice, 1 underground and a few drops for lakes and rivers.",
+   "Common mistakes: thinking most fresh water is in rivers and lakes, because those are the fresh water children see; thinking groundwater is an underground lake or river, when it mostly fills the small gaps between grains of soil and cracks in rock; thinking ice and snow are not water; and thinking an iceberg is salty because it floats in the sea, when it broke off a glacier made from snow.",
+   "In the lab your child sorts water places into salty, fresh and frozen, pours Earth's water into 100 cups, puts ice, groundwater and lakes on the right share of the fresh water, digs a well down to the wet rock and pumps it up, then finds every place with fresh water on a map."
+  ]
+ },
+ "familyTip": "Pour 100 small spoonfuls of water into a big bowl. Take out 3 spoonfuls for 'fresh water'. Put 2 of them in the freezer for ice. Then ask: 'How much is left for every lake and river?' (just a drop from the last spoon).",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Solid or liquid? Drag each kind of water to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Solid water",
+    "Liquid water"
+   ],
+   "items": [
+    [
+     "an ice cube",
+     0
+    ],
+    [
+     "rain",
+     1
+    ],
+    [
+     "a puddle",
+     1
+    ],
+    [
+     "an icicle",
+     0
+    ],
+    [
+     "a snowflake",
+     0
+    ],
+    [
+     "a river",
+     1
+    ],
+    [
+     "hailstones",
+     0
+    ],
+    [
+     "the sea",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwater",
+  "caption": "Flagship lab: sort salty, fresh and frozen water, pour 100 cups, split the fresh water, dig a well and find fresh water on a map.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where is most of the water on Earth?",
+   "choices": [
+    "in the oceans",
+    "in rivers",
+    "in clouds"
+   ],
+   "answer": 0,
+   "hint": "Think of the 100 cups. Which jar filled almost all of them?",
+   "explain": "The oceans hold about 97 of every 100 cups of Earth's water. Rivers and clouds hold only a little."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which of these is fresh water?",
+   "choices": [
+    "a lake",
+    "the sea",
+    "the ocean"
+   ],
+   "answer": 0,
+   "hint": "Fresh water has very little salt. Seas and oceans are salty.",
+   "explain": "A lake is fresh water. The sea and the ocean are salty water."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You fill {n} cups with sea water and {k} cups with rain water. How many cups hold fresh water?",
+   "answer": "k",
+   "hint": "Sea water is salty. Rain water is fresh. Count only the fresh cups.",
+   "explain": "Only the rain water is fresh, so {k} cups hold fresh water. The {n} cups of sea water are salty.",
+   "params": {
+    "n": [
+     2,
+     6
+    ],
+    "k": [
+     1,
+     5
+    ]
+   },
+   "where": "n!=k"
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Out of every 100 cups of Earth's water, 2 cups are ice. How many cups are ice out of {=100*n} cups?",
+   "answer": "2*n",
+   "hint": "There are {n} lots of 100 cups. Each 100 has 2 cups of ice.",
+   "explain": "{n} lots of 2 cups is {=2*n} cups of ice out of {=100*n} cups.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Is a glacier solid or liquid water?",
+   "choices": [
+    "solid",
+    "liquid",
+    "it is not water"
+   ],
+   "answer": 0,
+   "hint": "A glacier is a huge sheet of ice that moves very slowly.",
+   "explain": "A glacier is ice, so it is solid water. It is fresh water, made from snow."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Where is most of Earth's fresh water?",
+    "choices": [
+     "frozen as ice",
+     "in rivers and lakes",
+     "in the sea"
+    ],
+    "answer": 0,
+    "hint": "Most fresh water is in glaciers and ice sheets.",
+    "explain": "About 69 of every 100 parts of fresh water are ice. Rivers and lakes are a tiny sliver, and the sea is salty."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is water under the ground like?",
+    "choices": [
+     "water in tiny gaps in rock and soil",
+     "a big underground lake",
+     "there is none"
+    ],
+    "answer": 0,
+    "hint": "Think of the well in the lab. What did the pipe reach?",
+    "explain": "Groundwater fills the tiny gaps between bits of rock and soil, like water in a sponge. A well pumps it up."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Can people drink sea water?",
+    "choices": [
+     "No, it is too salty",
+     "Yes, it is just water",
+     "Yes, if it is cold"
+    ],
+    "answer": 0,
+    "hint": "Think about what makes sea water different from river water.",
+    "explain": "Sea water is salty, so it is not safe to drink. Cooling it does not take the salt out."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "From the 100-cup model, you put all 3 fresh cups on a table, then add {n} salty ocean cups. How many cups are on the table?",
+    "answer": "3+n",
+    "hint": "Start with the 3 fresh cups, then count on the salty cups you added.",
+    "explain": "3 + {n} = {=3+n} cups. Only 3 of them are fresh; the other {n} are salty sea water.",
+    "params": {
+     "n": [
+      2,
+      7
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A class finds water in {n} lakes, {k} rivers and 1 ocean. How many of these places hold fresh water?",
+    "answer": "n+k",
+    "hint": "Lakes and rivers are fresh water. The ocean is salty.",
+    "explain": "{n} lakes + {k} rivers = {=n+k} places with fresh water. The ocean is salty, so it is not counted.",
+    "params": {
+     "n": [
+      1,
+      4
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "An iceberg floats in the salty sea. What is it made of?",
+    "choices": [
+     "frozen fresh water",
+     "frozen salty water",
+     "white rock"
+    ],
+    "answer": 0,
+    "hint": "An iceberg breaks off the end of a glacier.",
+    "explain": "An iceberg broke off a glacier, which formed from snow, so it is frozen fresh water."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which one is solid water?",
+    "choices": [
+     "snow",
+     "rain",
+     "a pond"
+    ],
+    "answer": 0,
+    "hint": "Solid water keeps its shape. Liquid water flows.",
+    "explain": "Snow is frozen water, so it is solid. Rain and pond water are liquid."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Out of 100 cups of Earth's water, about how many are salty?",
+    "choices": [
+     "97",
+     "50",
+     "3"
+    ],
+    "answer": 0,
+    "hint": "Most of Earth is covered by salty oceans.",
+    "explain": "About 97 of every 100 cups are salty. Only about 3 cups are fresh."
+   }
+  ]
+ }
+}
