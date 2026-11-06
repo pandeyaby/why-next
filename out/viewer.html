@@ -262,9 +262,9 @@ html[data-theme="2052"] ul.tree{border-left-color:rgba(125,211,252,.25)}html[dat
 html[data-theme="2052"] .dia{color:var(--vi)}
 html[data-theme="2052"] svg{background:rgba(2,6,23,.45);border-color:var(--line);border-radius:8px}
 html[data-theme="2052"] .linkish{color:var(--cy)}@media (hover:hover) and (pointer:fine){html[data-theme="2052"] .linkish:hover{text-shadow:0 0 10px rgba(103,232,249,.6)}}
-html[data-theme="2052"] .lbtn{background:linear-gradient(135deg,#6d28d9,#0e7490);border:1px solid rgba(196,181,253,.55);color:#fff;border-radius:8px;box-shadow:0 0 0 rgba(103,232,249,0);transition:box-shadow .25s,transform .15s,background-color .2s}
+html[data-theme="2052"] .lbtn{background:linear-gradient(135deg,#6d28d9,#0e7490);border:1px solid rgba(196,181,253,.55);color:#fff;border-radius:8px;box-shadow:0 0 0 rgba(103,232,249,0);transition:box-shadow .25s,transform .15s}
 @media (hover:hover) and (pointer:fine){html[data-theme="2052"] .lbtn:hover:not(:disabled){box-shadow:0 0 18px rgba(103,232,249,.45);transform:translateY(-1px)}}html[data-theme="2052"] .lbtn:active:not(:disabled){transform:translateY(1px) scale(.98)}
-html[data-theme="2052"] .lbtn.ghost,html[data-theme="2052"] .lbtn.choice,html[data-theme="2052"] .lbtn.sm{background:rgba(2,6,23,.92);color:#ede9fe;border-color:rgba(196,181,253,.7)}
+html[data-theme="2052"] .lbtn.ghost,html[data-theme="2052"] .lbtn.choice,html[data-theme="2052"] .lbtn.sm{background:#020617;color:#ede9fe;border-color:rgba(196,181,253,.7)}
 html[data-theme="2052"] .lbtn.on,html[data-theme="2052"] .lbtn[aria-pressed=true]{background:linear-gradient(135deg,#6d28d9,#0e7490);color:#fff;box-shadow:0 0 14px rgba(196,181,253,.45)}
 html[data-theme="2052"] .learn{border:1px solid rgba(196,181,253,.55);box-shadow:0 0 0 1px rgba(103,232,249,.12),0 0 42px rgba(124,58,237,.25),0 10px 40px rgba(0,0,0,.35)}
 html[data-theme="2052"] .learn .lsub{color:var(--vi);letter-spacing:.04em}
@@ -335,7 +335,7 @@ html{-webkit-tap-highlight-color:transparent}
 /* Taps fire at once (no double-tap-zoom wait) on controls; pinch zoom still works. */
 button,a,summary,label,select,input,.lbtn,.item,.vis-card,.mv{touch-action:manipulation}
 /* Press feedback on finger-down (the classic look had none; the 2052 look has its own). */
-html:not([data-theme="2052"]) .lbtn:active:not(:disabled){transform:scale(.97)}.lbtn{transition-property:transform,box-shadow,background-color,border-color;transition-duration:.12s;transition-timing-function:cubic-bezier(.23,1,.32,1)}
+html:not([data-theme="2052"]) .lbtn:active:not(:disabled){transform:scale(.97)}.lbtn{transition-property:transform,box-shadow,border-color;transition-duration:.12s;transition-timing-function:cubic-bezier(.23,1,.32,1)}
 /* Long-press on a button selects the button, not its label text. */
 .lbtn,.themebtn,.mv{-webkit-user-select:none;user-select:none}
 /* iOS zooms the page into any input under 16px and never zooms back out. */
@@ -476,7 +476,7 @@ html[data-theme="classic"] .learn .lsub{font-family:var(--wn-serif);font-size:19
 html[data-theme="classic"] .key{background:var(--wn-paper-2);border-radius:var(--wn-r1);padding:10px 14px;font-family:var(--wn-serif);font-size:17px}
 html[data-theme="classic"] .tip{background:var(--wn-moss-soft);border-radius:var(--wn-r1)}
 html[data-theme="classic"] .review{background:#FFF8E6;border-color:#E7C77A}
-html[data-theme="classic"] .lbtn{background:var(--wn-ink);border:1.5px solid var(--wn-ink);color:#fff;border-radius:var(--wn-r1);font-weight:600;transition:transform .12s var(--wn-ease),background-color .15s ease,border-color .15s ease}
+html[data-theme="classic"] .lbtn{background:var(--wn-ink);border:1.5px solid var(--wn-ink);color:#fff;border-radius:var(--wn-r1);font-weight:600;transition:transform .12s var(--wn-ease),border-color .15s ease}
 html[data-theme="classic"] .lbtn.ghost,html[data-theme="classic"] .lbtn.choice,html[data-theme="classic"] .lbtn.sm{background:#fff;color:var(--wn-ink);box-shadow:none}
 html[data-theme="classic"] .lbtn.on,html[data-theme="classic"] .lbtn[aria-pressed=true]{background:var(--wn-ink);color:#fff}
 html[data-theme="classic"] .lbtn:active:not(:disabled){transform:scale(.98)}
@@ -495,6 +495,7 @@ html[data-theme="2052"] .card{background:#1A1F29;backdrop-filter:none;-webkit-ba
 html[data-theme="2052"] #dcard h2{text-shadow:none;font-family:var(--wn-serif)}
 html[data-theme="2052"] .item.sel{background:rgba(255,255,255,.08)}
 html[data-theme="2052"] .lbtn,html[data-theme="2052"] .lbtn.on,html[data-theme="2052"] .lbtn[aria-pressed=true]{background:#2E3B5C;box-shadow:none}
+html[data-theme="2052"] .lbtn.ghost,html[data-theme="2052"] .lbtn.choice,html[data-theme="2052"] .lbtn.sm{background:#020617;color:#ede9fe;border-color:#4B5878}
 html[data-theme="2052"] .learn{box-shadow:none;border-color:#4B5878}
 html[data-theme="2052"] .vis{background:#161A22;box-shadow:none}html[data-theme="2052"] .vis::before{display:none}
 html[data-theme="2052"] .vis-line.cur{text-shadow:none}@media (hover:hover) and (pointer:fine){html[data-theme="2052"] .linkish:hover{text-shadow:none}}
