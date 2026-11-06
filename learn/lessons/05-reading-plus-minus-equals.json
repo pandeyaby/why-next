@@ -1,242 +1,254 @@
 {
- "topicId": "mt_8RmpkDxT9L",
- "title": "Reading +, − and =",
- "audience": "family",
- "keyIdea": "+ means add, − means take away, and = means 'is the same as'.",
- "explain": {
-  "kid": [
-   "+ means plus, or add. − means minus, or take away. = means equals, or 'is the same as'.",
-   "4 + 1 = 5 is read 'four plus one equals five'. You can also write it the other way round: 5 = 4 + 1."
+  "topicId": "mt_8RmpkDxT9L",
+  "title": "Reading +, \u2212, and = symbols",
+  "audience": "family",
+  "keyIdea": "The + sign means put together (add). The \u2212 sign means take away (subtract). The = sign means is the same as \u2014 both sides have the same value, not just \u201cwrite the answer on the right\u201d.",
+  "familyTip": "Write 4 + 2 = 6 and 6 = 4 + 2 on a whiteboard. Ask your child to read both aloud and say why both are fair.",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Number signs \u2014 fair idea or myth? Drag each clue, or tap it and then tap a box.",
+    "opts": {
+      "bins": [
+        "Fair idea",
+        "Myth / mix-up"
+      ],
+      "items": [
+        [
+          "+ means put together",
+          0
+        ],
+        [
+          "\u2212 means take away",
+          0
+        ],
+        [
+          "= means is the same as",
+          0
+        ],
+        [
+          "= only means the answer box on the right",
+          1
+        ],
+        [
+          "5 = 3 + 2 is a fair sentence",
+          0
+        ],
+        [
+          "+ and \u2212 mean the same thing",
+          1
+        ]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagpmeq",
+    "caption": "Flagship lab: name +, \u2212 and =, read a sentence aloud, catch the answer-box myth, then challenge.",
+    "opts": {
+      "step": 0
+    }
+  },
+  "explain": {
+    "kid": [
+      "Plus (+) means put together.",
+      "Minus (\u2212) means take away.",
+      "Equals (=) means is the same as.",
+      "Both sides of = must match in value."
+    ],
+    "adult": [
+      "NC Y1 Number / CCSS 1.OA: read and interpret +, \u2212 and = in number sentences. Equals means sameness of value, not a cue to write an answer on the right.",
+      "Common mistakes: reading + as take-away; treating = as an answer box; rejecting sentences like 5 = 2 + 3.",
+      "In the lab your child names each sign, reads 3 + 2 = 5 in words, accepts 5 = 3 + 2 as fair, then tries the challenge."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "The + sign means\u2026",
+      "choices": [
+        "put together / add",
+        "take away",
+        "the answer box only"
+      ],
+      "answer": 0,
+      "hint": "Think of two groups sliding into one total.",
+      "explain": "Plus means put together or add."
+    },
+    {
+      "type": "mc",
+      "id": "p2",
+      "prompt": "The = sign means\u2026",
+      "choices": [
+        "is the same as",
+        "always put the answer on the right",
+        "take away"
+      ],
+      "answer": 0,
+      "hint": "Both sides should balance in value.",
+      "explain": "Equals means both sides have the same value."
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "You read {n} number sentences aloud. How many did you read?",
+      "answer": "n",
+      "hint": "Count each sentence you said in words.",
+      "explain": "You read {n} number sentences.",
+      "params": {
+        "n": [
+          2,
+          6
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "A sheet has {n} signs. {k} are plus signs. How many are not plus?",
+      "answer": "n-k",
+      "hint": "Subtract the plus signs from the total.",
+      "explain": "{n} signs minus {k} plus leaves {=n-k} other signs.",
+      "params": {
+        "n": [
+          5,
+          9
+        ],
+        "k": [
+          1,
+          4
+        ]
+      },
+      "where": "n>k"
+    },
+    {
+      "type": "order",
+      "id": "p5",
+      "prompt": "Order the words for reading 2 + 3 = 5.",
+      "items": [
+        "two plus",
+        "three equals",
+        "five"
+      ],
+      "hint": "Start with the first number and the plus.",
+      "explain": "two plus, three equals, five."
+    }
   ],
-  "adult": [
-   "Number sentences are a child's first algebraic notation. Read + as 'plus', − as 'minus' (or 'subtract') and = as 'equals, the same amount as'.",
-   "Show sentences in both directions, like 5 = 4 + 1, so that = doesn't come to mean 'the answer goes next'. That habit causes trouble later."
-  ]
- },
- "familyTip": "Write a sum with a gap for the symbol, such as 4 _ 2 = 6, and let your child fill in the sign.",
- "practice": [
-  {
-   "type": "mc",
-   "id": "p1",
-   "prompt": "How do you read 6 − 2 = 4?",
-   "choices": [
-    "six minus two equals four",
-    "six plus two equals four",
-    "six equals two minus four"
-   ],
-   "answer": 0,
-   "hint": "− is read 'minus'.",
-   "explain": "6 − 2 = 4 is 'six minus two equals four'."
-  },
-  {
-   "type": "mc",
-   "id": "p2",
-   "prompt": "Fill the gap: {a} □ {b} = {=a+b}. Which symbol goes in the box?",
-   "choices": [
-    "+",
-    "−",
-    "="
-   ],
-   "answer": 0,
-   "hint": "Is {=a+b} bigger or smaller than {a}?",
-   "explain": "{a} + {b} = {=a+b}.",
-   "params": {
-    "a": [
-     2,
-     9
-    ],
-    "b": [
-     2,
-     9
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "The \u2212 sign means\u2026",
+        "choices": [
+          "take away / subtract",
+          "put together",
+          "draw a line only"
+        ],
+        "answer": 0,
+        "hint": "Think of removing counters from a group.",
+        "explain": "Minus means take away or subtract."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "How do you read 4 + 1 = 5?",
+        "choices": [
+          "four plus one equals five",
+          "four take away one equals five",
+          "four answer-box five"
+        ],
+        "answer": 0,
+        "hint": "Say plus for + and equals for =.",
+        "explain": "4 + 1 = 5 reads as four plus one equals five."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "Is 5 = 2 + 3 a fair sentence?",
+        "choices": [
+          "yes \u2014 both sides are the same",
+          "no \u2014 the answer must sit on the right",
+          "no \u2014 equals only means take away"
+        ],
+        "answer": 0,
+        "hint": "Check whether both sides match in value.",
+        "explain": "5 and 2 + 3 are the same value, so the sentence is fair."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "In 6 \u2212 1 = 5, the \u2212 means\u2026",
+        "choices": [
+          "take away",
+          "put together",
+          "is the same as"
+        ],
+        "answer": 0,
+        "hint": "One counter is removed from the group of six.",
+        "explain": "The minus sign marks take-away."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "You matched {n} signs to their meanings. How many matches?",
+        "answer": "n",
+        "hint": "That match count is the answer.",
+        "explain": "You made {n} correct sign matches.",
+        "params": {
+          "n": [
+            3,
+            8
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "{n} cards show +, \u2212 or =. {k} show equals. How many show + or \u2212?",
+        "answer": "n-k",
+        "hint": "Subtract the equals cards from the pack.",
+        "explain": "{n} minus {k} equals cards leaves {=n-k} plus or minus cards.",
+        "params": {
+          "n": [
+            6,
+            10
+          ],
+          "k": [
+            1,
+            4
+          ]
+        },
+        "where": "n>k"
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "Why learn the three signs?",
+        "choices": [
+          "so number sentences can be read and written clearly",
+          "so every sum hides the first number",
+          "because = is only a decoration"
+        ],
+        "answer": 0,
+        "hint": "Signs are the words of maths sentences.",
+        "explain": "Plus, minus and equals let you read and write number sentences."
+      },
+      {
+        "type": "mc",
+        "id": "m8",
+        "prompt": "Which reading is correct for 7 \u2212 2 = 5?",
+        "choices": [
+          "seven minus two equals five",
+          "seven plus two equals five",
+          "seven answer-box five"
+        ],
+        "answer": 0,
+        "hint": "Use minus for \u2212 and equals for =.",
+        "explain": "7 \u2212 2 = 5 is seven minus two equals five."
+      }
     ]
-   }
-  },
-  {
-   "type": "mc",
-   "id": "p3",
-   "prompt": "Which symbol goes in the box? 9 □ 3 = 6",
-   "choices": [
-    "+",
-    "−",
-    "="
-   ],
-   "answer": 1,
-   "hint": "Is 6 smaller or bigger than 9? Smaller means something was taken away.",
-   "explain": "9 − 3 = 6."
-  },
-  {
-   "type": "order",
-   "id": "p4",
-   "prompt": "Build the number sentence for 'five take away one is four'.",
-   "items": [
-    "5",
-    "−",
-    "1",
-    "=",
-    "4"
-   ],
-   "hint": "Start with the number you begin with.",
-   "explain": "5 − 1 = 4."
-  },
-  {
-   "type": "mc",
-   "id": "p5",
-   "prompt": "Fill the gap: {a} □ {b} = {=a-b}. Which symbol goes in the box?",
-   "choices": [
-    "+",
-    "−",
-    "="
-   ],
-   "answer": 1,
-   "hint": "Is {=a-b} bigger or smaller than {a}?",
-   "explain": "{a} − {b} = {=a-b}.",
-   "params": {
-    "a": [
-     6,
-     12
-    ],
-    "b": [
-     1,
-     4
-    ]
-   }
   }
- ],
- "mastery": {
-  "passMark": 3,
-  "draw": 4,
-  "pool": [
-   {
-    "type": "mc",
-    "id": "m1",
-    "prompt": "Which says 'two plus two is the same as four'?",
-    "choices": [
-     "2 + 2 = 4",
-     "2 − 2 = 4",
-     "4 + 2 = 2"
-    ],
-    "answer": 0,
-    "hint": "Look for plus, then equals.",
-    "explain": "2 + 2 = 4."
-   },
-   {
-    "type": "mc",
-    "id": "m2",
-    "prompt": "Which symbol goes in the box? 8 □ 2 = 10",
-    "choices": [
-     "+",
-     "−",
-     "="
-    ],
-    "answer": 0,
-    "hint": "10 is bigger than 8.",
-    "explain": "8 + 2 = 10."
-   },
-   {
-    "type": "mc",
-    "id": "m3",
-    "prompt": "Which number sentence is written correctly?",
-    "choices": [
-     "7 = 5 + 2",
-     "7 + = 5 2",
-     "= 7 5 + 2"
-    ],
-    "answer": 0,
-    "hint": "Each symbol needs a number on both sides.",
-    "explain": "7 = 5 + 2 is a correct, true sentence: 7 is the same as 5 + 2."
-   },
-   {
-    "type": "mc",
-    "id": "m4",
-    "prompt": "Which symbol goes in the box? {a} □ {b} = {=a+b}",
-    "choices": [
-     "+",
-     "−",
-     "="
-    ],
-    "answer": 0,
-    "hint": "Is the answer bigger or smaller than {a}?",
-    "explain": "{a} + {b} = {=a+b}.",
-    "params": {
-     "a": [
-      2,
-      9
-     ],
-     "b": [
-      2,
-      9
-     ]
-    }
-   },
-   {
-    "type": "mc",
-    "id": "m5",
-    "prompt": "Which symbol goes in the box? {a} □ {b} = {=a-b}",
-    "choices": [
-     "+",
-     "−",
-     "="
-    ],
-    "answer": 1,
-    "hint": "Is the answer bigger or smaller than {a}?",
-    "explain": "{a} − {b} = {=a-b}.",
-    "params": {
-     "a": [
-      5,
-      15
-     ],
-     "b": [
-      1,
-      4
-     ]
-    }
-   },
-   {
-    "type": "mc",
-    "id": "m6",
-    "prompt": "How do you read {a} + {b} = {=a+b}?",
-    "choices": [
-     "{a} plus {b} equals {=a+b}",
-     "{a} minus {b} equals {=a+b}",
-     "{a} equals {b} plus {=a+b}"
-    ],
-    "answer": 0,
-    "hint": "+ is read 'plus'.",
-    "explain": "It's read '{a} plus {b} equals {=a+b}'.",
-    "params": {
-     "a": [
-      2,
-      9
-     ],
-     "b": [
-      2,
-      9
-     ]
-    }
-   },
-   {
-    "type": "mc",
-    "id": "m7",
-    "prompt": "What does = mean?",
-    "choices": [
-     "Is the same as",
-     "The answer comes next",
-     "Add"
-    ],
-    "answer": 0,
-    "hint": "Think of a balanced seesaw.",
-    "explain": "= means both sides are the same amount."
-   }
-  ]
- },
- "status": "self-checked",
- "visual": {
-  "type": "symbols",
-  "caption": "Choose + or −, change the numbers, and read the sentence. The bottom row shows what = means.",
-  "opts": {
-   "a": 7,
-   "b": 2,
-   "op": "-"
-  }
- }
 }
