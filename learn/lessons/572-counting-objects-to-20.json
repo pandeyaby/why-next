@@ -1,0 +1,254 @@
+{
+  "topicId": "mt_yqAL6O5i_v",
+  "title": "Counting objects to 20",
+  "audience": "family",
+  "keyIdea": "Count each object once, say the number names in order, and stop at the target. The last number you say is how many objects there are — even when you count past ten into the teens.",
+  "familyTip": "Put out a handful of spoons (about 12–18). Ask your child to tap each once and stop at a number you choose. Then spread the same spoons farther apart and ask: 'Still the same number?'",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Careful counting — fair idea or myth? Drag each clue, or tap it and then tap a box.",
+    "opts": {
+      "bins": [
+        "Fair idea",
+        "Myth / mix-up"
+      ],
+      "items": [
+        [
+          "last number said is how many",
+          0
+        ],
+        [
+          "tap some objects twice to be sure",
+          1
+        ],
+        [
+          "stop when you reach the target",
+          0
+        ],
+        [
+          "moving objects always changes the total",
+          1
+        ],
+        [
+          "sixteen is ten and six ones",
+          0
+        ],
+        [
+          "skip from 19 straight to 21",
+          1
+        ]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagobj20",
+    "caption": "Flagship lab: tap objects to a target, catch double-counts, keep the total after a rearrange, build a teen, then challenge.",
+    "opts": {
+      "step": 0
+    }
+  },
+  "explain": {
+    "kid": [
+      "Tap each object once. Say one number for each tap.",
+      "The last number you say is how many are there.",
+      "Stop when you reach the target. Do not keep tapping.",
+      "Teens are ten and some ones. Sixteen is ten and six."
+    ],
+    "adult": [
+      "EYFS / Y1 counting and cardinality (NC Number; CCSS K.CC): count objects to 20, one-to-one correspondence, cardinal principle, conservation when rearranged, teen structure as ten-and-ones.",
+      "Common mistakes: double-counting, skipping an object or a number name, thinking a spread-out group is 'more', treating teens as separate from tens and ones.",
+      "In the lab your child fills a mat to a target, fixes a double-count, checks that 14 stays 14 after a move, builds 16 from 10, then tries challenge traps for those slips."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "The last number you say tells you…",
+      "choices": [
+        "how many objects there are",
+        "the colour of the mat",
+        "which object to tap twice"
+      ],
+      "answer": 0,
+      "hint": "Finish a count of cups on the table and look at the final number word.",
+      "explain": "The cardinal principle: the last number names the total."
+    },
+    {
+      "type": "mc",
+      "id": "p2",
+      "prompt": "Double-counting an object makes the total…",
+      "choices": [
+        "too big",
+        "too small",
+        "exactly right every time"
+      ],
+      "answer": 0,
+      "hint": "If you tap one spoon twice in a count of ten, what happens to the total?",
+      "explain": "An extra tap adds one to the spoken total, so it is too big."
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "You count {n} buttons, tapping each once. How many buttons are there?",
+      "answer": "n",
+      "hint": "The count you finished is the total.",
+      "explain": "A fair one-to-one count ends on {n}, so there are {n} buttons.",
+      "params": {
+        "n": [
+          8,
+          20
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "A mat has {n} counters. You add {k} more. How many now?",
+      "answer": "n+k",
+      "hint": "Add the new counters to the starting number.",
+      "explain": "{n} plus {k} makes {=n+k}.",
+      "params": {
+        "n": [
+          7,
+          14
+        ],
+        "k": [
+          1,
+          6
+        ]
+      },
+      "where": "n+k<=20"
+    },
+    {
+      "type": "order",
+      "id": "p5",
+      "prompt": "Order these counts from smallest to largest.",
+      "items": [
+        "ten and two ones (12)",
+        "ten and six ones (16)",
+        "ten and nine ones (19)"
+      ],
+      "hint": "Compare the ones after the ten.",
+      "explain": "Compare the ones after the ten: 12, then 16, then 19."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "You move 14 counters farther apart. The number is…",
+        "choices": [
+          "still 14",
+          "now bigger",
+          "now smaller"
+        ],
+        "answer": 0,
+        "hint": "Nothing was added or taken away.",
+        "explain": "Conservation: rearranging does not change how many."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Seventeen is…",
+        "choices": [
+          "ten and seven ones",
+          "seven tens",
+          "twenty take away one only"
+        ],
+        "answer": 0,
+        "hint": "Teens are built from a ten and some ones.",
+        "explain": "Seventeen means one ten and seven ones (10 + 7)."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "When the target is 20 you should…",
+        "choices": [
+          "stop at 20",
+          "keep tapping to 25",
+          "skip from 19 to 21"
+        ],
+        "answer": 0,
+        "hint": "Targets mean stop exactly there.",
+        "explain": "Stop when the last number matches the target."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "A skip in the count makes the total…",
+        "choices": [
+          "too small",
+          "too big",
+          "exact every time"
+        ],
+        "answer": 0,
+        "hint": "Missing an object leaves one out of the spoken total.",
+        "explain": "Skipping under-counts the group."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "You fairly counted {n} shells. How many shells?",
+        "answer": "n",
+        "hint": "The fair count is the total.",
+        "explain": "A fair one-to-one count ends on {n}, so there are {n} shells.",
+        "params": {
+          "n": [
+            11,
+            20
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "A tray shows {n} cubes. You take away {k}. How many left?",
+        "answer": "n-k",
+        "hint": "Subtract the ones you removed.",
+        "explain": "{n} minus {k} leaves {=n-k}.",
+        "params": {
+          "n": [
+            12,
+            20
+          ],
+          "k": [
+            1,
+            8
+          ]
+        },
+        "where": "n>k"
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "Why tap each object only once?",
+        "choices": [
+          "so the last number matches how many",
+          "so the mat looks emptier",
+          "because teens ignore ones"
+        ],
+        "answer": 0,
+        "hint": "One tap ↔ one object keeps the total honest.",
+        "explain": "One-to-one counting keeps the cardinal total correct."
+      },
+      {
+        "type": "mc",
+        "id": "m8",
+        "prompt": "Sixteen means…",
+        "choices": [
+          "ten and six ones",
+          "six and then stop",
+          "twenty take away one"
+        ],
+        "answer": 0,
+        "hint": "Hear 'six-teen' as six with a ten.",
+        "explain": "Sixteen means one ten and six ones (10 + 6)."
+      }
+    ]
+  }
+}
