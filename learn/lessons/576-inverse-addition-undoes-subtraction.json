@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_ehGS_uVSJv",
+ "title": "Inverse: addition undoes subtraction",
+ "audience": "family",
+ "keyIdea": "Addition and subtraction undo each other. You can check a sum by subtracting, and solve missing-number problems with the inverse.",
+ "familyTip": "Write 13 + 5 = 18, then ask your child to say 18 − 5 = 13 without recounting. Next try □ + 9 = 14 using 14 − 9.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Inverse add and subtract — fair idea or myth? Drag each clue, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "addition undoes subtraction",
+     0
+    ],
+    [
+     "check 15 + 7 = 22 with 22 − 7 = 15",
+     0
+    ],
+    [
+     "□ + 9 = 14 means □ = 14 − 9",
+     0
+    ],
+    [
+     "add and subtract are unrelated",
+     1
+    ],
+    [
+     "you must always recount from scratch",
+     1
+    ],
+    [
+     "5 + 9 = 14 and 14 − 9 = 5 are a pair",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaginvadd",
+  "caption": "Flagship lab: undo an add, check a sum, solve a missing number, show a fact-family pair, reject recount-from-scratch, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Add and take away undo each other.",
+   "If 5 + 3 makes 8, then 8 − 3 brings you back to 5.",
+   "You can check a sum by subtracting. You can find a missing number the same way.",
+   "You do not need to count all over again from the start."
+  ],
+  "adult": [
+   "NC Y2 / CCSS 1.OA.4: use the inverse link between addition and subtraction to check calculations and solve missing-number problems. Words: inverse, undo, check, missing number, fact family.",
+   "Common mistakes: thinking add and subtract are unrelated; recounting from scratch instead of reusing a fact; for □ + 9 = 14 adding 14 + 9 instead of subtracting.",
+   "In the lab your child undoes an add with subtract, checks 15 + 7 = 22 using 22 − 7, solves □ + 9 = 14, shows a fact-family pair, and rejects the recount myth."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "After 5 + 3 = 8, what undoes the add?",
+   "choices": [
+    "subtract 3",
+    "add 3 again",
+    "ignore the 3"
+   ],
+   "answer": 0,
+   "hint": "Think of the reverse of adding the same number.",
+   "explain": "Subtract 3 undoes add 3, so you return to 5. That is what inverse means."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "To check 15 + 7 = 22 you…",
+   "choices": [
+    "calculate 22 − 7 = 15",
+    "add 7 again",
+    "count only the 15"
+   ],
+   "answer": 0,
+   "hint": "Use the reverse operation on the total to check the sum.",
+   "explain": "22 − 7 = 15 checks that 15 + 7 = 22 using the same three numbers."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You know {a} + {b} = {=a+b}. What is {=a+b} − {b}?",
+   "answer": "a",
+   "hint": "Subtract undoes the add — take {b} from the total.",
+   "explain": "{a} + {b} = {=a+b}, so {=a+b} − {b} returns {a}. Inverse reuses the fact.",
+   "params": {
+    "a": [
+     4,
+     9
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "□ + {b} = {=a+b}. What number goes in the box?",
+   "answer": "a",
+   "hint": "Use inverse: total minus the known addend {b}.",
+   "explain": "□ = {=a+b} − {b} = {a}. Missing-number problems use the undoing subtract.",
+   "params": {
+    "a": [
+     3,
+     8
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order the steps to check a sum with inverse.",
+   "items": [
+    "write the addition fact",
+    "subtract the same addend from the total",
+    "see if you get the other addend"
+   ],
+   "hint": "Start from the addition fact you already wrote, then reverse it.",
+   "explain": "Write the add, subtract the same addend from the total, and match the other addend."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "□ + 9 = 14 means □ is…",
+    "choices": [
+     "14 − 9 = 5",
+     "14 + 9 = 23",
+     "9 − 14"
+    ],
+    "answer": 0,
+    "hint": "Use inverse subtract: total minus 9.",
+    "explain": "□ = 14 − 9 = 5. The inverse turns a missing addend into a subtract."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "14 − 9 = 5 undoes…",
+    "choices": [
+     "5 + 9 = 14",
+     "14 + 9 = 23",
+     "9 − 5 = 4"
+    ],
+    "answer": 0,
+    "hint": "Look for the matching addition that these numbers undo.",
+    "explain": "14 − 9 = 5 undoes 5 + 9 = 14 — an undoing pair / fact family."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Knowing 13 + 5 = 18, 18 − 5 is…",
+    "choices": [
+     "13 — use the inverse",
+     "must recount from scratch",
+     "always 18 again"
+    ],
+    "answer": 0,
+    "hint": "Reuse the known fact with the reverse operation.",
+    "explain": "Inverse gives 18 − 5 = 13 without recounting from scratch."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Addition and subtraction…",
+    "choices": [
+     "undo each other",
+     "never help each other",
+     "only work with the same sign"
+    ],
+    "answer": 0,
+    "hint": "Think “undo” — one reverses the other.",
+    "explain": "Addition and subtraction undo each other, which is why checks and missing numbers work."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Check: {a} + {b} = {=a+b}. What is {=a+b} − {a}?",
+    "answer": "b",
+    "hint": "Subtract the other addend from the total to finish the check.",
+    "explain": "{=a+b} − {a} = {b}, so the original sum checks out both ways.",
+    "params": {
+     "a": [
+      5,
+      12
+     ],
+     "b": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "□ + {b} = {t}. What is □? (Use {t} − {b}.)",
+    "answer": "t-b",
+    "hint": "Missing addend: take the known addend {b} from the total {t}.",
+    "explain": "□ = {t} − {b} = {=t-b}. Inverse solves the box.",
+    "params": {
+     "t": [
+      10,
+      16
+     ],
+     "b": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why learn inverse?",
+    "choices": [
+     "to check sums and find missing numbers",
+     "so you never subtract",
+     "because add and subtract are the same"
+    ],
+    "answer": 0,
+    "hint": "Think about checking a sum and finding a missing number.",
+    "explain": "Inverse checks calculations and finds missing numbers without starting over."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Saying add and subtract are unrelated is…",
+    "choices": [
+     "a mistake — they undo each other",
+     "always true",
+     "required"
+    ],
+    "answer": 0,
+    "hint": "They form undoing pairs, not separate worlds.",
+    "explain": "Saying they are unrelated is a mistake — add and subtract undo each other."
+   }
+  ]
+ }
+}
