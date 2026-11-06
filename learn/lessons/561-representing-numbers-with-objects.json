@@ -1,0 +1,260 @@
+{
+  "topicId": "mt_pAcaehday5",
+  "title": "Representing Numbers with Objects",
+  "audience": "family",
+  "keyIdea": "A numeral stands for a count (cardinality). Represent it by placing exactly that many objects. Matching collections share the same count, even if the objects look different. The digit shape is a symbol — do not count its loops.",
+  "familyTip": "Show a numeral card (e.g. 4). Ask: 'Can you put out that many spoons?' Then mix apple counters and car counters: 'Do 3 apples and 3 cars show the same number?'",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Does it represent 4? Drag each clue, or tap it and then tap a box.",
+    "opts": {
+      "bins": [
+        "Represents 4",
+        "Does not represent 4"
+      ],
+      "items": [
+        [
+          "four counters",
+          0
+        ],
+        [
+          "one counter shaped like a 4",
+          1
+        ],
+        [
+          "2 apples and 2 cars",
+          0
+        ],
+        [
+          "six counters for luck",
+          1
+        ],
+        [
+          "four fingers held up",
+          0
+        ],
+        [
+          "the curly loops in a written 8",
+          1
+        ]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagrepnum",
+    "caption": "Flagship lab: build a numeral with counters, match equal counts, fix trays, and catch digit-shape slips.",
+    "opts": {
+      "step": 0
+    }
+  },
+  "explain": {
+    "kid": [
+      "A number like 4 means four things. You can show it with four counters, four spoons or four fingers.",
+      "Two groups show the same number when they have the same count — even if one group is apples and the other is cars.",
+      "The written digit is a symbol. Do not count the loops in an 8. Count the objects you place.",
+      "If a tray has too many, take some away. If it has too few, add some. Stop when the count matches the numeral."
+    ],
+    "adult": [
+      "EYFS / Year 1 number: cardinality and representation with concrete manipulatives. Link numeral → quantity. Words: represent, count, numeral, digit, same number, too many, too few.",
+      "Common mistakes: counting loops in a digit; adding extras 'for luck'; matching by object kind or colour instead of count; thinking a single object shaped like a 4 represents 4.",
+      "In the lab your child builds a shown numeral, picks the tray with the right count, judges same vs different across object kinds, fixes a tray, matches digit to object count, then faces challenge traps for those slips."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "To represent 5, place…",
+      "choices": [
+        "exactly 5 objects",
+        "1 object shaped like 5",
+        "extra objects for luck"
+      ],
+      "answer": 0,
+      "hint": "The count of objects must match the numeral.",
+      "explain": "Representation means the object count equals the numeral. Shape tricks and extras change the number."
+    },
+    {
+      "type": "mc",
+      "id": "p2",
+      "prompt": "3 apples and 3 cars…",
+      "choices": [
+        "show the same number",
+        "cannot match because they look different",
+        "show 6 because you add them"
+      ],
+      "answer": 0,
+      "hint": "Compare the counts, not the kinds of objects.",
+      "explain": "Both sides have 3, so they represent the same number. Kind of object does not change the count."
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "A tray must show {n}. It has {k} counters. How many should you take away?",
+      "answer": "k-n",
+      "hint": "Subtract the target numeral from the counters on the tray.",
+      "explain": "You have {k} and need {n}, so take away {=k-n}.",
+      "params": {
+        "n": [
+          2,
+          4
+        ],
+        "k": [
+          5,
+          8
+        ]
+      },
+      "where": "k>n"
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "Numeral {n}. Tray has {k}. How many counters must you add?",
+      "answer": "n-k",
+      "hint": "Find how many more to reach the numeral.",
+      "explain": "Need {n}; have {k}; add {=n-k}.",
+      "params": {
+        "n": [
+          4,
+          7
+        ],
+        "k": [
+          1,
+          3
+        ]
+      },
+      "where": "n>k"
+    },
+    {
+      "type": "mc",
+      "id": "p5",
+      "prompt": "The loops in a written 8…",
+      "choices": [
+        "are not objects to count for eight",
+        "mean you only need 2 counters",
+        "replace the need for objects"
+      ],
+      "answer": 0,
+      "hint": "A digit is a symbol for a count.",
+      "explain": "Digits are symbols. Represent 8 with eight objects, not by counting loops in the digit."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "Representing 2 means…",
+        "choices": [
+          "placing exactly 2 objects",
+          "placing 20 to be safe",
+          "placing none and saying two"
+        ],
+        "answer": 0,
+        "hint": "Match the object count to the numeral.",
+        "explain": "Exactly 2 objects represent the numeral 2. Extras or empty trays do not."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Which tray represents 4?",
+        "choices": [
+          "four counters",
+          "one counter shaped like 4",
+          "six counters for luck"
+        ],
+        "answer": 0,
+        "hint": "Count the objects on the tray.",
+        "explain": "Four counters represent 4. A 4-shaped object or extras do not."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "Same number means…",
+        "choices": [
+          "same count of objects",
+          "same colour toys",
+          "same size toys"
+        ],
+        "answer": 0,
+        "hint": "Focus on how many, not how they look.",
+        "explain": "Equal counts represent the same number. Colour and size do not change cardinality."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "A digit is…",
+        "choices": [
+          "a symbol for a count",
+          "a pile of loops to count",
+          "always larger when curlier"
+        ],
+        "answer": 0,
+        "hint": "Think symbol versus quantity.",
+        "explain": "Digits stand for counts. Do not treat digit curves as objects."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "Build numeral {n} with counters. How many counters?",
+        "answer": "n",
+        "hint": "Use one counter for each unit the numeral names.",
+        "explain": "Place {n} counters to represent {n}.",
+        "params": {
+          "n": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "Left tray {n}, right tray {k} (right has more). How many more on the right?",
+        "answer": "k-n",
+        "hint": "Subtract the smaller count from the larger count.",
+        "explain": "{k} − {n} = {=k-n} more on the right tray.",
+        "params": {
+          "n": [
+            2,
+            4
+          ],
+          "k": [
+            5,
+            8
+          ]
+        },
+        "where": "k>n"
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "Tray has 6; numeral is 4. You should…",
+        "choices": [
+          "take 2 away",
+          "add 4 more",
+          "ignore the numeral"
+        ],
+        "answer": 0,
+        "hint": "Change the tray until the count matches.",
+        "explain": "6 − 2 = 4. Taking two away makes the tray represent 4."
+      },
+      {
+        "type": "mc",
+        "id": "m8",
+        "prompt": "Why match object counts to numerals?",
+        "choices": [
+          "so the symbol and quantity agree",
+          "so the tray looks full",
+          "so toys stay pretty"
+        ],
+        "answer": 0,
+        "hint": "Representation links numeral and quantity.",
+        "explain": "Cardinality links the numeral to how many objects you show. Fullness and looks are not the goal."
+      }
+    ]
+  }
+}
