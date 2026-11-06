@@ -1,0 +1,202 @@
+{
+  "topicId": "mt_muxjw0fxxN",
+  "title": "Wild, Farm & Pet Animals",
+  "audience": "family",
+  "keyIdea": "Animals fit three care groups: wild animals find their own food and shelter in nature and should be watched from a safe distance; farm animals are kept by people for food, wool or eggs; pets are kept for companionship and need people to feed and care for them every day.",
+  "familyTip": "Sort toy animals into wild / farm / pet boxes. Ask: 'Who finds their own food?' and 'Who should we only watch, not touch?' Point out a fox in a book versus the family dog.",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Wild, farm or pet idea? Drag each clue, or tap it and then tap a box.",
+    "opts": {
+      "bins": ["Matches the idea", "Does not match"],
+      "items": [
+        ["fox finds its own food in nature", 0],
+        ["sheep kept for wool on a farm", 0],
+        ["grab a wild fox for a cuddle", 1],
+        ["dog needs people to feed it daily", 0],
+        ["call every animal a pet", 1],
+        ["watch wild animals from a safe distance", 0]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagfarm",
+    "caption": "Flagship lab: sort wild/farm/pet animals, match who finds food vs who needs people, keep distance from wild, then challenge.",
+    "opts": {"step": 0}
+  },
+  "explain": {
+    "kid": [
+      "Wild animals live in nature. They find their own food and homes. Watch them from a safe distance — do not touch.",
+      "Farm animals live with people who keep them for food, wool or eggs — like sheep, cows and hens.",
+      "Pets live with families for friendship. People must feed them and look after them every day.",
+      "A fox is wild. A sheep is a farm animal. A dog can be a pet. They need different kinds of care."
+    ],
+    "adult": [
+      "KS1 Science / living things: animals in familiar habitats and human care contexts. Categories: wild, farm, pet. Words: wild, farm, pet, shelter, companionship, observe, distance.",
+      "Common mistakes: treating every friendly-looking animal as a pet; trying to touch or feed wild animals; thinking farm animals look after themselves like wild ones; assuming pets can find all their food outdoors alone.",
+      "In the lab your child sorts animals into the three groups, matches food/shelter jobs, chooses watch-not-touch for wild, rejects grab-a-fox, then faces challenge traps for those slips."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "A wild animal…",
+      "choices": [
+        "finds its own food and shelter in nature",
+        "must live in a house as a pet",
+        "is only kept for wool"
+      ],
+      "answer": 0,
+      "hint": "Think of a fox or deer living outdoors without a human feeder.",
+      "explain": "Wild animals meet their own needs in nature; people should observe, not keep them as pets."
+    },
+    {
+      "type": "mc",
+      "id": "p2",
+      "prompt": "Farm animals are kept…",
+      "choices": [
+        "by people for food, wool or eggs",
+        "only for cuddles like every pet",
+        "with no human care at all"
+      ],
+      "answer": 0,
+      "hint": "Sheep, cows and hens are classic farm examples.",
+      "explain": "People keep farm animals for products such as food, wool or eggs."
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "You sort {n} toy animals into wild, farm and pet boxes with none left over. How many animals did you sort?",
+      "answer": "n",
+      "hint": "Every toy goes into exactly one care group.",
+      "explain": "All {n} toys were sorted into the three groups.",
+      "params": {"n": [3, 9]}
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "A set has {n} wild stickers and {k} pet stickers. How many stickers in all?",
+      "answer": "n+k",
+      "hint": "Add the wild count and the pet count together.",
+      "explain": "{n} wild + {k} pet = {=n+k} stickers.",
+      "params": {"n": [2, 5], "k": [1, 4]}
+    },
+    {
+      "type": "mc",
+      "id": "p5",
+      "prompt": "If you see a fox in the garden…",
+      "choices": [
+        "watch from a safe distance — do not grab it",
+        "pick it up for a cuddle",
+        "put it in a sheep pen as a farm animal"
+      ],
+      "answer": 0,
+      "hint": "Wild animals are not pets; keep space for safety.",
+      "explain": "Wild animals should be observed from a distance, not handled."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "Pets need…",
+        "choices": [
+          "people to feed and care for them daily",
+          "no human help ever",
+          "to hunt alone in the forest always"
+        ],
+        "answer": 0,
+        "hint": "Companionship animals rely on owners for food, water and care.",
+        "explain": "Pets depend on people for daily care — unlike wild animals."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Calling every animal a pet is…",
+        "choices": [
+          "a mistake — wild and farm groups differ",
+          "always correct",
+          "required by science"
+        ],
+        "answer": 0,
+        "hint": "Foxes and sheep are not the same care group as a house dog.",
+        "explain": "Wild, farm and pet are different categories with different care rules."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "A sheep on a farm…",
+        "choices": [
+          "is a farm animal kept for wool or food",
+          "is always a wild animal with no people",
+          "must be a house pet"
+        ],
+        "answer": 0,
+        "hint": "Farms keep animals for products such as wool.",
+        "explain": "Sheep are classic farm animals cared for by people for products."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Why keep distance from wild animals?",
+        "choices": [
+          "they look after themselves and can be unsafe to touch",
+          "they are secretly all pets",
+          "farms forbid watching nature"
+        ],
+        "answer": 0,
+        "hint": "Observe wildlife; do not treat it like a cuddly pet.",
+        "explain": "Wild animals meet their own needs and should not be approached for cuddles."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "Three boxes hold wild, farm and pet. You place {n} animals, one group each round for {n} rounds. How many placed?",
+        "answer": "n",
+        "hint": "Each placement adds one animal to a group.",
+        "explain": "You placed {n} animals across the care groups.",
+        "params": {"n": [3, 6]}
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "A poster shows {n} farm animals and you add {k} pet photos. How many animals on the poster now?",
+        "answer": "n+k",
+        "hint": "Add the farm count and the new pet photos.",
+        "explain": "{n} + {k} = {=n+k} animals shown.",
+        "params": {"n": [2, 6], "k": [1, 3]}
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "A dog that lives in a house for friendship is…",
+        "choices": [
+          "a pet",
+          "always a wild animal",
+          "only a farm sheep"
+        ],
+        "answer": 0,
+        "hint": "Companionship at home is the pet category.",
+        "explain": "House dogs kept for companionship are pets."
+      },
+      {
+        "type": "mc",
+        "id": "m8",
+        "prompt": "Farm animals looking after themselves with no people…",
+        "choices": [
+          "mixes them up with wild animals",
+          "is the farm definition",
+          "means they are pets"
+        ],
+        "answer": 0,
+        "hint": "Farm animals are kept and cared for by people.",
+        "explain": "Self-sufficient living in nature describes wild animals, not farm stock."
+      }
+    ]
+  }
+}
