@@ -1,0 +1,243 @@
+{
+ "topicId": "mt_M5PPDJStGm",
+ "title": "Rote counting to 100",
+ "audience": "family",
+ "keyIdea": "Rote counting is saying number names in order from 0 to 100 \u2014 forwards, backwards, or starting from any number \u2014 without skipping or repeating.",
+ "familyTip": "Count aloud in the car to 20, then from 47 to 55. Try backward from 20. Catch skips together: 'Did we say 16?'",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Fair counting idea or mix-up? Drag each clue, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "after 7 comes 8",
+     0
+    ],
+    [
+     "after 29 comes 30",
+     0
+    ],
+    [
+     "from 47 next is 48",
+     0
+    ],
+    [
+     "after 7 comes 9",
+     1
+    ],
+    [
+     "from 47 you must restart at 1",
+     1
+    ],
+    [
+     "before 15 comes 14",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrote",
+  "caption": "Flagship lab: count to 20, on toward 100, back, start at 47, catch slips, challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Rote counting means saying number names in order.",
+   "You can count forward to 100, backward from 20, or start in the middle like 47.",
+   "Do not skip a number or say the same number twice.",
+   "After 29 comes 30. After 99 comes 100."
+  ],
+  "adult": [
+   "CCSS K.CC.1\u20132 / NC Y1 NPV: recite 1\u2013100, count on from any number, count back. Words: sequence, forward, backward, skip, repeat.",
+   "Common mistakes: skipping (15, 17); repeating; restarting at 1 when asked to begin at 47; confusing rote saying with skip-counting in 2s.",
+   "In the lab your child taps a track to 20 and 40, counts back to 10, continues from 47, and spots a skipped-16 slip."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "After 7 comes\u2026",
+   "choices": [
+    "8",
+    "9",
+    "6"
+   ],
+   "answer": 0,
+   "hint": "Say the very next number name.",
+   "explain": "The sequence goes \u20266, 7, 8\u2026"
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Start at 47. Next is\u2026",
+   "choices": [
+    "48",
+    "1",
+    "47 again"
+   ],
+   "answer": 0,
+   "hint": "Keep going \u2014 do not restart at 1.",
+   "explain": "From 47 the next name is 48."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What comes after {n}?",
+   "answer": "n+1",
+   "hint": "Add one to the number you hear.",
+   "explain": "After {n} the next name in order is {=n+1}. Do not skip.",
+   "params": {
+    "n": [
+     11,
+     28
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "What comes before {n}?",
+   "answer": "n-1",
+   "hint": "Count back one name from the number you hear.",
+   "explain": "Before {n} the prior name in order is {=n-1}.",
+   "params": {
+    "n": [
+     5,
+     20
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order: count on from a middle start.",
+   "items": [
+    "hear the start number",
+    "say the next name",
+    "keep going without restarting at 1"
+   ],
+   "hint": "Begin where you are told, then continue.",
+   "explain": "Start anywhere in the sequence and continue in order."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "After 29 comes\u2026",
+    "choices": [
+     "30",
+     "20",
+     "39"
+    ],
+    "answer": 0,
+    "hint": "Ones roll into the next ten.",
+    "explain": "After 29 the ones roll over: the next name is 30."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Before 15 comes\u2026",
+    "choices": [
+     "14",
+     "16",
+     "15 again"
+    ],
+    "answer": 0,
+    "hint": "Backward uses the same order in reverse.",
+    "explain": "Counting back from 15 lands on 14."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which list has a slip?",
+    "choices": [
+     "15, 17 (skipped 16)",
+     "15, 16, 17",
+     "10, 11, 12"
+    ],
+    "answer": 0,
+    "hint": "Look for a missing or repeated name.",
+    "explain": "15 to 17 skips 16 \u2014 that is a slip."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Rote counting means\u2026",
+    "choices": [
+     "saying numbers in order",
+     "only matching objects",
+     "only counting in 2s"
+    ],
+    "answer": 0,
+    "hint": "Think of the spoken number list.",
+    "explain": "Rote counting is the ordered number-name sequence."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "After {n} comes?",
+    "answer": "n+1",
+    "hint": "One more in the sequence.",
+    "explain": "After {n} comes {=n+1} when you count forward by ones.",
+    "params": {
+     "n": [
+      40,
+      60
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Before {n} comes?",
+    "answer": "n-1",
+    "hint": "One less when counting back.",
+    "explain": "Before {n} comes {=n-1} when you count backward by ones.",
+    "params": {
+     "n": [
+      12,
+      19
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "From 99 next is\u2026",
+    "choices": [
+     "100",
+     "90",
+     "199"
+    ],
+    "answer": 0,
+    "hint": "End of the 0\u2013100 sequence.",
+    "explain": "After 99 the sequence reaches 100, the end of this count."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: fix a skipped number.",
+    "items": [
+     "notice a gap in the list",
+     "say the missing name",
+     "continue in order"
+    ],
+    "hint": "Catch the skip, fill it, then keep going.",
+    "explain": "Repair skips, then resume the sequence."
+   }
+  ]
+ }
+}
