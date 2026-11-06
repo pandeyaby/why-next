@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_Hw70LI5xza",
+ "title": "Observation vs Interpretation",
+ "audience": "family",
+ "keyIdea": "An observation is what you see, hear, or measure. An interpretation is a guess about why or what it means. Keep them separate so claims rest on evidence.",
+ "familyTip": "Look out the window together. Ask: 'What do you see?' then 'What do you think is going on?' Label each sentence as see or think.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Observation or interpretation? Drag each clue, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Observation",
+    "Interpretation"
+   ],
+   "items": [
+    [
+     "The ice is melting",
+     0
+    ],
+    [
+     "The ice feels sad",
+     1
+    ],
+    [
+     "I hear a beep",
+     0
+    ],
+    [
+     "The machine is lonely",
+     1
+    ],
+    [
+     "The leaf is green",
+     0
+    ],
+    [
+     "The leaf is jealous",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagobsvs",
+  "caption": "Flagship lab: sort see/hear from guesses, name jar drops, reject angry-as-observation, match height evidence, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An observation is what you see, hear, or measure.",
+   "An interpretation is a guess about why or what it means.",
+   "\"The dog barked\" is what you heard. \"It was angry\" is a guess.",
+   "Good science claims need observations as evidence."
+  ],
+  "adult": [
+   "Working scientifically (KS1/KS2): an observation is what you see, hear or measure. An interpretation is a guess about why. Words: observe, evidence, claim, measure.",
+   "Common mistakes: calling a feeling an observation; using \"I feel it grew\" as evidence; treating observation and interpretation as the same.",
+   "In the lab your child sorts clues, names water drops (not a homesick jar), rejects angry as an observation, and links growth to measured height."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "\"The ice is melting\" is…",
+   "choices": [
+    "an observation",
+    "an interpretation",
+    "neither"
+   ],
+   "answer": 0,
+   "hint": "Can you see or measure it?",
+   "explain": "Melting is what you sense — an observation."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "\"The dog was angry\" after a bark is…",
+   "choices": [
+    "an interpretation",
+    "a pure observation",
+    "a measurement"
+   ],
+   "answer": 0,
+   "hint": "You heard a bark; anger is a meaning you added.",
+   "explain": "Anger is an interpretation layered on the bark."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A plant was {a} cm, now {b} cm. Growth in cm?",
+   "answer": "b-a",
+   "hint": "Subtract start height from new height.",
+   "explain": "{b} − {a} = {=b-a} cm — an observation used as evidence.",
+   "params": {
+    "a": [
+     3,
+     6
+    ],
+    "b": [
+     7,
+     10
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You record {n} beeps. How many did you hear?",
+   "answer": "n",
+   "hint": "The count is the observation.",
+   "explain": "You heard {n} beeps — that count is the observation.",
+   "params": {
+    "n": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order steps to check a claim carefully.",
+   "items": [
+    "write what you observed",
+    "write your guess separately",
+    "see if the observation supports the guess"
+   ],
+   "hint": "Facts first, then meaning.",
+   "explain": "Separate observation from interpretation, then test the link."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Water drops on glass are…",
+    "choices": [
+     "an observation",
+     "proof the jar is sad",
+     "a feeling"
+    ],
+    "answer": 0,
+    "hint": "Ask what your eyes actually saw on the glass.",
+    "explain": "Drops are sensed; sadness is a story."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Best evidence a plant grew?",
+    "choices": [
+     "height 4 cm then 7 cm",
+     "the plant looks proud",
+     "I feel it grew"
+    ],
+    "answer": 0,
+    "hint": "Prefer a number you measured with a ruler.",
+    "explain": "Measured height change is observation evidence."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which can you check by looking?",
+    "choices": [
+     "The leaf is green",
+     "The leaf is jealous",
+     "The leaf wants friends"
+    ],
+    "answer": 0,
+    "hint": "Colour is something you can see and check.",
+    "explain": "Green is checkable; jealousy is not."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Observation and interpretation…",
+    "choices": [
+     "are different and both useful",
+     "are the same",
+     "should never be written"
+    ],
+    "answer": 0,
+    "hint": "Scientists use both — labelled clearly.",
+    "explain": "Keep them distinct so claims rest on evidence."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Thermometer shows {t} °C. What temperature did you observe?",
+    "answer": "t",
+    "hint": "Read the number shown on the instrument.",
+    "explain": "{t} °C is the observation from the thermometer.",
+    "params": {
+     "t": [
+      10,
+      30
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Count {a} red blocks and {b} blue. How many blocks observed in all?",
+    "answer": "a+b",
+    "hint": "Add the red and blue counts you can see.",
+    "explain": "{a} + {b} = {=a+b} blocks observed.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why separate observation from interpretation?",
+    "choices": [
+     "so claims rest on what was sensed",
+     "so you never guess",
+     "because observations are wrong"
+    ],
+    "answer": 0,
+    "hint": "Evidence underpins claims.",
+    "explain": "Guesses are fine when labelled; claims need observations."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: talk about a dog bark carefully.",
+    "items": [
+     "say what you heard (the bark)",
+     "say your guess (maybe it wants food)",
+     "keep the guess labelled as a guess"
+    ],
+    "hint": "Start from the sense data you heard.",
+    "explain": "Report the bark, then the guess, clearly separated."
+   }
+  ]
+ }
+}
