@@ -1,0 +1,254 @@
+{
+  "topicId": "mt_p6frRFuxS6",
+  "title": "Transparent, Translucent & Opaque",
+  "audience": "family",
+  "keyIdea": "Materials treat light in three ways. Transparent materials let you see clearly through them. Translucent materials let some light through but the view is blurry. Opaque materials block light so you cannot see through them.",
+  "familyTip": "Shine a torch through clear plastic, tissue paper and a book. Ask: 'Can you see the torch shape clearly, only a glow, or nothing?' Sort three more household materials the same way.",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Light through materials — fair idea or myth? Drag each clue, or tap it and then tap a box.",
+    "opts": {
+      "bins": [
+        "Fair idea",
+        "Myth / mix-up"
+      ],
+      "items": [
+        [
+          "clear glass is transparent",
+          0
+        ],
+        [
+          "every material is transparent",
+          1
+        ],
+        [
+          "frosted tissue is translucent",
+          0
+        ],
+        [
+          "opaque means you can read through it",
+          1
+        ],
+        [
+          "thick card blocks the beam",
+          0
+        ],
+        [
+          "wood is usually opaque",
+          0
+        ]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagtto",
+    "caption": "Flagship lab: shine through clear, frosted and card; sort three classes; predict wood; then challenge.",
+    "opts": {
+      "step": 0
+    }
+  },
+  "explain": {
+    "kid": [
+      "Transparent means you can see clearly through it.",
+      "Translucent means some light gets through, but it looks blurry.",
+      "Opaque means the light is blocked. You cannot see through it.",
+      "Test with a torch: clear view, blurry glow, or no light past."
+    ],
+    "adult": [
+      "KS1 science: light and materials. Words: transparent, translucent, opaque, beam, torch, clear, blurry, block.",
+      "Common mistakes: calling every clear-looking thing transparent; mixing translucent with opaque; thinking opaque means you can still read through it; skipping a torch test.",
+      "In the lab your child shines through glass, tissue and card, sorts all three, predicts wood is opaque, then tries challenge traps for those slips."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "Transparent means…",
+      "choices": [
+        "you can see clearly through it",
+        "light is fully blocked",
+        "it is always metal"
+      ],
+      "answer": 0,
+      "hint": "Think of a clear window.",
+      "explain": "Transparent materials give a clear view through them."
+    },
+    {
+      "type": "mc",
+      "id": "p2",
+      "prompt": "Opaque means…",
+      "choices": [
+        "light is blocked",
+        "you see every detail",
+        "must be clear plastic"
+      ],
+      "answer": 0,
+      "hint": "Think of a thick book in front of a torch.",
+      "explain": "Opaque materials stop the light beam."
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "You test {n} materials with a torch. How many materials did you test?",
+      "answer": "n",
+      "hint": "The count of tested materials is the answer.",
+      "explain": "You tested {n} materials.",
+      "params": {
+        "n": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "A tray has {n} materials. {k} are opaque. How many are not opaque?",
+      "answer": "n-k",
+      "hint": "Subtract the opaque count from the total.",
+      "explain": "{n} minus {k} opaque leaves {=n-k} that are not opaque.",
+      "params": {
+        "n": [
+          5,
+          9
+        ],
+        "k": [
+          2,
+          4
+        ]
+      },
+      "where": "n>k"
+    },
+    {
+      "type": "order",
+      "id": "p5",
+      "prompt": "Order from most light through to least.",
+      "items": [
+        "transparent clear glass",
+        "translucent frosted tissue",
+        "opaque thick card"
+      ],
+      "hint": "Clear view first, then blurry, then blocked.",
+      "explain": "Transparent → translucent → opaque."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "Translucent means…",
+        "choices": [
+          "some light passes, but the view is blurry",
+          "perfect clear detail",
+          "no light at all"
+        ],
+        "answer": 0,
+        "hint": "Think of frosted glass or tissue over a torch.",
+        "explain": "Translucent lets light through as a blurry glow."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Clear glass is…",
+        "choices": [
+          "transparent",
+          "opaque",
+          "only translucent"
+        ],
+        "answer": 0,
+        "hint": "You can read a sign through a clear window.",
+        "explain": "Clear glass is transparent."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "Thick card is…",
+        "choices": [
+          "opaque",
+          "transparent",
+          "always translucent"
+        ],
+        "answer": 0,
+        "hint": "A torch beam stops on thick card.",
+        "explain": "Thick card is opaque."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Frosted tissue is…",
+        "choices": [
+          "translucent",
+          "opaque wood",
+          "perfectly transparent"
+        ],
+        "answer": 0,
+        "hint": "You get a glow, not a sharp view.",
+        "explain": "Frosted tissue is translucent."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "You correctly sort {n} materials into transparent, translucent or opaque. How many did you sort?",
+        "answer": "n",
+        "hint": "The number you sorted is the answer.",
+        "explain": "You sorted {n} materials.",
+        "params": {
+          "n": [
+            3,
+            9
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "A kit has {n} samples. {k} are transparent. How many are not transparent?",
+        "answer": "n-k",
+        "hint": "Subtract transparent from the total.",
+        "explain": "{n} minus {k} transparent leaves {=n-k}.",
+        "params": {
+          "n": [
+            6,
+            10
+          ],
+          "k": [
+            1,
+            3
+          ]
+        },
+        "where": "n>k"
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "Wood is usually…",
+        "choices": [
+          "opaque",
+          "transparent",
+          "translucent like tissue"
+        ],
+        "answer": 0,
+        "hint": "You cannot see through a wooden door.",
+        "explain": "Wood blocks light, so it is opaque."
+      },
+      {
+        "type": "mc",
+        "id": "m8",
+        "prompt": "Why use a torch to test?",
+        "choices": [
+          "to see if light passes, blurs or stops",
+          "to make the material louder",
+          "because colour never matters for light"
+        ],
+        "answer": 0,
+        "hint": "The beam shows how the material treats light.",
+        "explain": "A torch shows clear view, blurry glow, or blocked light."
+      }
+    ]
+  }
+}
