@@ -1,0 +1,268 @@
+{
+ "topicId": "mt_NWUGQ7J3Or",
+ "title": "Mean absolute deviation",
+ "audience": "learner",
+ "keyIdea": "The mean absolute deviation (MAD) is the average of how far each value sits from the mean: for each value find |value − mean|, then average those absolute deviations. Same mean can hide very different MAD; MAD measures typical distance from the centre, not the range and not the mean itself.",
+ "familyTip": "With five dinner times or phone-battery percentages, find the mean together, then the absolute distance of each number from that mean, then average those distances — that average is the MAD.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "MAD idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True MAD idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "MAD averages |value − mean|",
+     0
+    ],
+    [
+     "Two sets can share a mean but have different MAD",
+     0
+    ],
+    [
+     "MAD is the same as the range",
+     1
+    ],
+    [
+     "MAD is just another name for the mean",
+     1
+    ],
+    [
+     "Absolute deviation drops the sign of the distance",
+     0
+    ],
+    [
+     "A bigger MAD means values sit farther from the mean on average",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmad",
+  "caption": "Flagship lab: find the mean, mark absolute deviations, average them into MAD, compare two same-mean sets, catch mean/range mix-ups, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "First find the mean of your data. Then for each value, find how far it is from that mean — ignore whether it was above or below. That distance is the absolute deviation.",
+   "Add those absolute deviations and divide by how many values you have. The result is the mean absolute deviation, or MAD. It tells you the typical distance from the mean.",
+   "Two data sets can share the same mean but have different MAD. Scores 4, 5, 5, 6 and scores 1, 5, 5, 9 both have mean 5, but the second set is more spread out so its MAD is larger.",
+   "MAD is not the range (largest minus smallest) and not the mean itself. Range uses only the ends; MAD uses every value's distance from the centre."
+  ],
+  "adult": [
+   "CCSS 6.SP.5c: use centre and spread (including MAD) with the shape of the data. England KS3: find and read averages and spread. Not the same as Statistical questions and variability (flagspread) or Dot plots and histograms (flaghist).",
+   "Words: mean, absolute deviation, MAD, spread. Common mistakes: calling MAD the range; thinking MAD is the mean; forgetting absolute value so signed gaps cancel; averaging only the biggest gap.",
+   "In the lab your child finds the mean, marks each |x − mean|, averages them into the MAD, compares two same-mean sets, spots mean/range mix-ups, and practises the steps."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The MAD is…",
+   "choices": [
+    "the average of the absolute deviations from the mean",
+    "the largest value minus the smallest",
+    "another name for the mean"
+   ],
+   "answer": 0,
+   "hint": "Think: average of |value − mean|, not the range.",
+   "explain": "MAD = mean of |each value − mean|. Range uses only the extremes; the mean is the centre, not the spread."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Four absolute deviations from the mean are {a}, {a}, {a} and {a}. What is the MAD?",
+   "answer": "a",
+   "hint": "Average four equal absolute deviations — the average equals each one.",
+   "explain": "MAD = ({a}+{a}+{a}+{a})/4 = {a}. Equal absolute deviations average to that same value.",
+   "params": {
+    "a": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Set A: 5, 5, 5. Set B: 1, 5, 9. Both have mean 5. Which has the larger MAD?",
+   "choices": [
+    "Set B",
+    "Set A",
+    "They must have the same MAD because the means match"
+   ],
+   "answer": 0,
+   "hint": "Same centre can hide different typical distances from that centre.",
+   "explain": "Set A has MAD 0. Set B's values sit farther from 5, so MAD is larger. Same mean ≠ same MAD."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Values {a}, {a}, {a}. Absolute deviations from the mean are all 0. What is the MAD?",
+   "answer": "0",
+   "hint": "If every value equals the mean, every absolute deviation is 0.",
+   "explain": "All values are {a}, so mean = {a} and MAD = 0. Zero MAD means no spread about the mean.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Four absolute deviations from the mean are {a}, {a}, {b}, {b}. What is the MAD?",
+   "answer": "(a+a+b+b)/4",
+   "hint": "MAD is the average of the absolute deviations.",
+   "explain": "MAD = ({a}+{a}+{b}+{b})/4 = {=(a+a+b+b)/4}.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why take the absolute value when finding deviations for MAD?",
+    "choices": [
+     "so distances above and below the mean do not cancel",
+     "so the MAD equals the range",
+     "so the MAD equals the mean"
+    ],
+    "answer": 0,
+    "hint": "Without absolute value, signed deviations sum to zero about the mean.",
+    "explain": "Absolute value keeps distance. Signed deviations about the mean cancel; MAD would wrongly become 0."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which is the mix-up?",
+    "choices": [
+     "MAD is the same as the range",
+     "MAD averages |value − mean|",
+     "Same mean can hide different MAD"
+    ],
+    "answer": 0,
+    "hint": "Range uses only the ends; MAD uses every value.",
+    "explain": "Range = max − min. MAD averages absolute deviations from the mean — different measure."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Data 3, 5, 7. Mean is 5. Absolute deviations are…",
+    "choices": [
+     "2, 0, 2",
+     "3, 5, 7",
+     "0, 0, 0"
+    ],
+    "answer": 0,
+    "hint": "Compute |3−5|, |5−5| and |7−5| carefully.",
+    "explain": "|3−5|=2, |5−5|=0, |7−5|=2. Then MAD = (2+0+2)/3 = 4/3."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Absolute deviations 1, 1, 1, {a}. MAD = (1+1+1+{a})/4. Enter that MAD when a={a}.",
+    "answer": "(3+a)/4",
+    "hint": "Add the four absolute deviations, then divide by 4.",
+    "explain": "MAD = (3+{a})/4 = {=(3+a)/4}.",
+    "params": {
+     "a": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A bigger MAD means…",
+    "choices": [
+     "values sit farther from the mean on average",
+     "the mean is larger",
+     "the range must be zero"
+    ],
+    "answer": 0,
+    "hint": "MAD measures typical distance from the centre.",
+    "explain": "Larger MAD → typically farther from the mean. It does not force the mean to grow or the range to vanish."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Correct MAD steps start with…",
+    "choices": [
+     "find the mean → absolute deviations → average them",
+     "find the range → call it MAD",
+     "add the raw values and stop"
+    ],
+    "answer": 0,
+    "hint": "Centre first, then distances, then average.",
+    "explain": "Mean, then |x − mean| for each x, then average those absolute deviations."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Data {a}, {a}+2. Mean = {a}+1. Absolute deviations are both 1. MAD?",
+    "answer": "1",
+    "hint": "Two absolute deviations of 1 each — average them.",
+    "explain": "MAD = (1+1)/2 = 1. Both values sit 1 unit from the mean {a}+1.",
+    "params": {
+     "a": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Range of 2, 5, 9 is 7. MAD of the same set is…",
+    "choices": [
+     "not necessarily 7 — range and MAD are different measures",
+     "always equal to the range",
+     "always equal to the mean"
+    ],
+    "answer": 0,
+    "hint": "Range uses ends only; MAD averages every absolute deviation.",
+    "explain": "Mean = 16/3. Absolute deviations differ from 7. Range ≠ MAD in general."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "{n} identical absolute deviations of {d} each. What is the MAD?",
+    "answer": "d",
+    "hint": "Average of n copies of d is d.",
+    "explain": "MAD = ({n}×{d})/{n} = {d}.",
+    "params": {
+     "n": [
+      3,
+      8
+     ],
+     "d": [
+      1,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
