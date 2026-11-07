@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_lcf8lx-LkZ",
+ "title": "Contact & Non-Contact Forces",
+ "audience": "family",
+ "keyIdea": "Some forces only work when two things touch: a kick, a push on a door, friction. These are contact forces. Other forces act across a gap: a magnet pulls a paper clip before it touches it, and gravity pulls a falling apple. These are non-contact forces, and they get weaker as the gap grows.",
+ "familyTip": "Lay a paper clip on the table and slide a fridge magnet towards it along a ruler. Note the gap when the clip first jumps. Then try again with a sheet of paper, then a thick book, between them.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the force need touching? Drag each force into a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "contact force (touching)",
+    "non-contact force (across a gap)"
+   ],
+   "items": [
+    [
+     "kicking a football",
+     0
+    ],
+    [
+     "a magnet pulling a pin",
+     1
+    ],
+    [
+     "friction on a sliding box",
+     0
+    ],
+    [
+     "a dropped cup falling",
+     1
+    ],
+    [
+     "pulling a rope",
+     0
+    ],
+    [
+     "two magnets pushing apart",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggapforce",
+  "caption": "Flagship lab: push a ball with and without touching, pull a clip across a gap, measure pull against gap, test through card, sort forces and float a magnet.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some forces need two things to touch. When you kick a ball, your foot must touch it. When you open a door, your hand pulls on the handle. These are contact forces. Friction is one too, because two surfaces rub.",
+   "Some forces work across a gap. Slide a magnet slowly towards a paper clip. The clip jumps to the magnet before they touch. A force that acts at a distance is a non-contact force.",
+   "The gap matters. A magnet pulls hard when it is close and more weakly as you move it away. A push from your hand stops as soon as there is any gap at all.",
+   "Gravity is a non-contact force too. Nothing touches a falling apple, but the Earth pulls it down. A magnet can even pull through thin paper or card, which is how notes stay on a fridge."
+  ],
+  "adult": [
+   "Ages 7 to 8. This is the Year 3 Forces and magnets requirement in England: notice that some forces need contact between two objects, but magnetic forces can act at a distance. It follows Friction & Surfaces and Magnets Pull Some Things, and leads to work on gravity and air resistance in Year 5.",
+   "A contact force acts only where two objects touch: pushes, pulls by hand or rope, friction and air resistance. A non-contact force acts across a gap: magnetism, gravity and the electrostatic force. Non-contact forces weaken as the distance grows. The pull values in the lab chart are a simple model, not measurements, but the shape matches what a class finds with a ruler, a fridge magnet and a paper clip.",
+   "Common mistakes: thinking a magnet must touch to pull. Thinking its pull switches off at a fixed distance, when it fades. Calling friction non-contact because it cannot be seen. Believing any material blocks magnetism; thin paper and card do not. And thinking a floating magnet rests on nothing, when the other magnet pushes it up.",
+   "In the lab your child tries to push a ball from a gap, then while touching. They slide a magnet until a clip jumps across the gap. They chart hand push and magnet pull at gaps from 0 to 5 cm. Then they test the pull through paper, card and a thick book, sort six forces, and make a ring magnet float."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A magnet pulls a paper clip towards it from 2 cm away. What kind of force is this?",
+   "choices": [
+    "a contact force",
+    "a non-contact force",
+    "not a force"
+   ],
+   "answer": 1,
+   "hint": "Were the magnet and the clip touching when the clip started to move?",
+   "explain": "The clip moved while there was still a gap, so the magnetic force acted at a distance. That makes it a non-contact force."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which of these is a contact force?",
+   "choices": [
+    "gravity pulling a ball down",
+    "a magnet pulling a nail",
+    "your hand pushing a trolley"
+   ],
+   "answer": 2,
+   "hint": "Look for the one where the two things must touch.",
+   "explain": "Your hand must touch the trolley to push it, so it is a contact force. Gravity and magnetism both act across a gap."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A paper clip is {a} cm from a magnet. The clip jumps when the gap is 3 cm or less. How many cm closer must you slide the magnet?",
+   "answer": "a-3",
+   "hint": "Take 3 away from the gap you start with.",
+   "explain": "{a} − 3 = {=a-3} cm. Once the gap is 3 cm, the pull is strong enough to move the clip without the magnet touching it.",
+   "params": {
+    "a": [
+     5,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Sam's magnet first pulls a clip from {a} cm away. Zoe's weaker magnet only pulls it from {b} cm away. How many cm bigger is the gap for Sam's magnet?",
+   "answer": "a-b",
+   "hint": "Find the difference between the two gaps.",
+   "explain": "{a} − {b} = {=a-b} cm. A stronger magnet can pull across a bigger gap, but both pulls are non-contact forces.",
+   "params": {
+    "a": [
+     6,
+     10
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You slowly move a magnet away from a pin. What happens to its pull on the pin?",
+   "choices": [
+    "it gets weaker",
+    "it gets stronger",
+    "it stays the same until it suddenly stops"
+   ],
+   "answer": 0,
+   "hint": "Think about the chart in the lab as the gap grew.",
+   "explain": "A magnet's pull fades bit by bit as the gap grows. It does not switch off at one fixed distance."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why is friction a contact force?",
+    "choices": [
+     "it needs two surfaces rubbing together",
+     "you cannot see it",
+     "it only happens on ice"
+    ],
+    "answer": 0,
+    "hint": "Do the two things need to touch for friction to act?",
+    "explain": "Friction only acts where two surfaces touch and rub. Being invisible does not make a force non-contact."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "An apple falls from a tree. Which force pulls it to the ground?",
+    "choices": [
+     "friction",
+     "gravity",
+     "a push from the branch"
+    ],
+    "answer": 1,
+    "hint": "Nothing is touching the apple as it falls.",
+    "explain": "Gravity is the Earth pulling the apple across the gap. It is a non-contact force, like magnetism."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A magnet holds a drawing on the fridge. What does this show?",
+    "choices": [
+     "magnets only pull paper",
+     "a magnetic force can act through thin paper",
+     "the paper is made of iron"
+    ],
+    "answer": 1,
+    "hint": "What is the magnet really pulling on?",
+    "explain": "The magnet pulls on the steel fridge door through the thin paper. The paper just gets trapped in between."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Two magnets with like poles facing are on a pencil. The top one hangs in the air. What holds it up?",
+    "choices": [
+     "nothing, it floats on air",
+     "the bottom magnet pushing it across the gap",
+     "the pencil gripping it"
+    ],
+    "answer": 1,
+    "hint": "Like poles repel. What is the bottom magnet doing to the top one?",
+    "explain": "The bottom magnet repels the top one across the gap. That push is a non-contact force holding it up."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which group lists only non-contact forces?",
+    "choices": [
+     "gravity and magnetism",
+     "friction and gravity",
+     "a kick and magnetism"
+    ],
+    "answer": 0,
+    "hint": "Cross out any force that needs touching.",
+    "explain": "Gravity and magnetism both act across a gap. Friction and a kick need touching, so they are contact forces."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You hold your hand 5 cm from a toy car and push the air. Why does the car not move?",
+    "choices": [
+     "your push is a contact force and you are not touching",
+     "the car is too heavy for any push",
+     "pushes only work on balls"
+    ],
+    "answer": 0,
+    "hint": "What does a push need to work?",
+    "explain": "A push from your hand is a contact force. With a gap, nothing passes from your hand to the car."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Mo puts a thick book between a magnet and a clip, and the clip falls. Why?",
+    "choices": [
+     "the book makes the gap too big for the pull",
+     "books are magnetic",
+     "magnets never work through anything"
+    ],
+    "answer": 0,
+    "hint": "Paper and card did not stop the pull. What is different about a thick book?",
+    "explain": "The book pushes the magnet and clip far apart. Magnetic pull weakens with distance, so it is too weak to hold the clip."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A magnet pulls a clip from {a} cm away. A second magnet pulls it from twice as far. How far away, in cm, does the second magnet pull the clip?",
+    "answer": "2*a",
+    "hint": "Twice as far means multiply by 2.",
+    "explain": "{a} × 2 = {=2*a} cm. The second magnet is stronger, so its non-contact pull reaches across a bigger gap.",
+    "params": {
+     "a": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A clip jumps to a magnet when the gap is {b} cm or less. The clip starts {a} cm away. How many cm must the magnet move before the clip jumps?",
+    "answer": "a-b",
+    "hint": "Find the difference between the starting gap and the jumping gap.",
+    "explain": "{a} − {b} = {=a-b} cm. The magnet never touches the clip: its pull acts across the last {b} cm.",
+    "params": {
+     "a": [
+      8,
+      12
+     ],
+     "b": [
+      2,
+      4
+     ]
+    }
+   }
+  ]
+ }
+}
