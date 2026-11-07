@@ -1,0 +1,269 @@
+{
+ "topicId": "mt_I2JvJ-gxSh",
+ "title": "Calculating kinetic energy",
+ "audience": "learner",
+ "keyIdea": "Kinetic energy KE = ½ m v² with mass in kg and speed in m/s, giving joules. Square the speed, keep the half, and rearrange with v = √(2 KE / m). Doubling speed multiplies KE by four because of v².",
+ "familyTip": "Ask: a 60 kg cyclist at 5 m/s — what is KE? Then: if speed doubles, does energy double or quadruple?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "KE calculation idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "KE = ½ m v²",
+     0
+    ],
+    [
+     "double v → 4× KE",
+     0
+    ],
+    [
+     "KE = m × v",
+     1
+    ],
+    [
+     "v = √(2 KE / m)",
+     0
+    ],
+    [
+     "double v → 2× KE",
+     1
+    ],
+    [
+     "kg and m/s give joules",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagkeq",
+  "caption": "Flagship lab: reveal KE = ½mv², calculate 750 J, show the v² four-times rule, rearrange for speed, catch mix-ups, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Moving things have kinetic energy. The formula is KE = ½ m v². Mass m is in kilograms and speed v is in metres per second. The answer is in joules (J).",
+   "Work carefully: square the speed first, multiply by the mass, then multiply by one half. Example: 60 kg at 5 m/s → ½ × 60 × 25 = 750 J.",
+   "Because of the v², doubling the speed multiplies the energy by four. Tripling the speed multiplies it by nine. Mass only scales the energy once.",
+   "To find speed from energy and mass, rearrange: v = √(2 KE / m). Take the positive root for speed."
+  ],
+  "adult": [
+   "Ages 14 to 16. GCSE Energy / NGSS HS-PS3-1: calculate and rearrange KE = ½mv² with coherent SI units. This is the calculation lesson; the mass–speed dependence demo is the related conceptual topic.",
+   "Words: kinetic energy, joule, mass, speed, square, rearrange, square root. Common mistakes: forgetting the ½; not squaring v; using KE = mv; thinking doubling speed only doubles KE; mixing grams with m/s.",
+   "In the lab the learner reveals the formula, computes 750 J, sees the four-times rule, solves for v, spots the double-speed myth, and orders the method."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "KE equals…",
+   "choices": [
+    "½ m v²",
+    "m × v",
+    "½ m + v²"
+   ],
+   "answer": 0,
+   "hint": "Half mass times speed squared.",
+   "explain": "The kinetic energy formula is KE = ½ m v². Products of mass and speed, or sums, are wrong."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "m = {a} kg, v = {b} m/s. KE in J?",
+   "answer": "a*b*b/2",
+   "hint": "Square the speed, multiply by mass, then by one half.",
+   "explain": "KE = ½ × {a} × {b}² = {=a*b*b/2} J.",
+   "params": {
+    "a": [
+     2,
+     8
+    ],
+    "b": [
+     2,
+     6
+    ]
+   },
+   "where": "(a*b*b)%2==0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "If speed doubles and mass stays the same, KE…",
+   "choices": [
+    "becomes 4 times as big",
+    "doubles",
+    "stays the same"
+   ],
+   "answer": 0,
+   "hint": "Remember the speed is squared.",
+   "explain": "v² means (2v)² = 4v², so kinetic energy becomes four times as large."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "m = {a} kg at 4 m/s. KE in J?",
+   "answer": "a*8",
+   "hint": "½ × m × 4² = ½ × m × 16 = 8m.",
+   "explain": "KE = ½ × {a} × 16 = {=a*8} J.",
+   "params": {
+    "a": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is the mix-up?",
+   "choices": [
+    "doubling speed only doubles KE",
+    "doubling speed multiplies KE by 4",
+    "KE = ½ m v²"
+   ],
+   "answer": 0,
+   "hint": "Spot the false claim about doubling speed.",
+   "explain": "Because of v², doubling speed multiplies KE by four, not two."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Units of KE from kg and m/s are…",
+    "choices": [
+     "joules (J)",
+     "m/s only",
+     "kg only"
+    ],
+    "answer": 0,
+    "hint": "Name the energy unit from mass and speed.",
+    "explain": "With mass in kg and speed in m/s, KE is in joules."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "To find speed from KE and mass use…",
+    "choices": [
+     "v = √(2 KE / m)",
+     "v = KE / m",
+     "v = ½ m KE"
+    ],
+    "answer": 0,
+    "hint": "Rearrange KE = ½mv² for v carefully.",
+    "explain": "Multiply by 2, divide by m, then take the square root."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "m = {a} kg, v = {b} m/s. KE?",
+    "answer": "a*b*b/2",
+    "hint": "Square v, then multiply by half the mass.",
+    "explain": "KE = ½ × {a} × {b}² = {=a*b*b/2} J.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      2,
+      5
+     ]
+    },
+    "where": "(a*b*b)%2==0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Tripling speed multiplies KE by…",
+    "choices": [
+     "9",
+     "3",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "Square the scale factor on speed.",
+    "explain": "(3v)² = 9v², so kinetic energy becomes nine times as large."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Forgetting the ½ in KE = ½mv²…",
+    "choices": [
+     "doubles the energy wrongly",
+     "cancels the square",
+     "fixes the units"
+    ],
+    "answer": 0,
+    "hint": "What does dropping the half do to the value?",
+    "explain": "Leaving out ½ makes the calculated energy twice as large as it should be."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "KE = {a} J and m = 2 kg. What is v²?",
+    "answer": "a",
+    "hint": "From KE = ½mv² with m = 2, KE = v², so v² equals KE.",
+    "explain": "½ × 2 × v² = v² = {a}, so v² = {=a}.",
+    "params": {
+     "a": [
+      4,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The key skill here vs the mass–speed lab is…",
+    "choices": [
+     "calculating and rearranging KE = ½mv²",
+     "only watching a cart with no numbers",
+     "naming energy stores on a ramp"
+    ],
+    "answer": 0,
+    "hint": "Focus on the calculation work here.",
+    "explain": "Here you calculate and rearrange with units. Cart demos and store bars live in related lessons."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "m = {a} kg at v = 2 m/s. KE?",
+    "answer": "2*a",
+    "hint": "½ × m × 2² equals 2m joules.",
+    "explain": "KE = ½ × {a} × 4 = {=2*a} J.",
+    "params": {
+     "a": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Using KE = m v instead of ½ m v²…",
+    "choices": [
+     "misses the half and the square",
+     "always still correct",
+     "converts units for free"
+    ],
+    "answer": 0,
+    "hint": "Check both missing pieces in that wrong formula.",
+    "explain": "KE = mv drops both the factor of ½ and the square on speed."
+   }
+  ]
+ }
+}

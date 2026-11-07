@@ -1,0 +1,268 @@
+{
+ "topicId": "mt_GcEXOVIC7t",
+ "title": "Factorising a difference of two squares",
+ "audience": "learner",
+ "keyIdea": "Expressions of the form a² − b² factorise as (a + b)(a − b). Both terms must be perfect squares with a minus between them. Handle coefficients such as 9x² − 25 as (3x + 5)(3x − 5). Sums like x² + 49 do not use this pattern over the reals.",
+ "familyTip": "Ask: factorise x² − 64. Then: why does x² + 49 not work the same way?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Difference-of-squares idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "a² − b² = (a + b)(a − b)",
+     0
+    ],
+    [
+     "x² − 49 = (x + 7)(x − 7)",
+     0
+    ],
+    [
+     "a² − b² = (a − b)²",
+     1
+    ],
+    [
+     "9x² − 25 = (3x + 5)(3x − 5)",
+     0
+    ],
+    [
+     "x² + 49 uses the same pattern",
+     1
+    ],
+    [
+     "need two squares and a minus",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaga2b2",
+  "caption": "Flagship lab: reveal a²−b²=(a+b)(a−b), build (x+7)(x−7), factorise 9x²−25, reject x²+49, catch mix-ups, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A difference of two squares is one square take away another square, like a² − b². It factorises as (a + b)(a − b).",
+   "Example: x² − 49 is x² − 7², so (x + 7)(x − 7). Expand to check: the middle terms cancel and you get back x² − 49.",
+   "With coefficients, take square roots of both square terms. 9x² − 25 is (3x)² − 5², so (3x + 5)(3x − 5).",
+   "A sum of squares such as x² + 49 does not factorise with this pattern over the real numbers. You need the minus."
+  ],
+  "adult": [
+   "Ages 14 to 16. GCSE Algebra / CCSS A-SSE.2: factorise a² − b² including simple coefficients. Separate from the geometric perfect-squares area demo.",
+   "Words: difference of two squares, factorise, perfect square, coefficient, expand, sum of squares. Common mistakes: writing (a − b)² for a² − b²; treating x² + n as a difference; taking √(9x²) as 9x; dropping one bracket.",
+   "In the lab the learner reveals the identity, marks both brackets for x² − 49, factorises 9x² − 25, rejects the sum, spots the (a − b)² myth, and orders the method."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "a² − b² factorises as…",
+   "choices": [
+    "(a + b)(a − b)",
+    "(a − b)²",
+    "(a + b)²"
+   ],
+   "answer": 0,
+   "hint": "One sum bracket and one difference bracket.",
+   "explain": "The identity is a² − b² = (a + b)(a − b). A single squared bracket is a different expansion."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Compute {a}² − {b}².",
+   "answer": "a*a-b*b",
+   "hint": "Square each number, then subtract. Same as (a+b)(a−b).",
+   "explain": "{a}² − {b}² = {=a*a-b*b}.",
+   "params": {
+    "a": [
+     5,
+     12
+    ],
+    "b": [
+     1,
+     4
+    ]
+   },
+   "where": "a>b"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "9x² − 25 factorises as…",
+   "choices": [
+    "(3x + 5)(3x − 5)",
+    "(9x + 5)(x − 5)",
+    "(3x − 5)²"
+   ],
+   "answer": 0,
+   "hint": "√(9x²) = 3x and √25 = 5.",
+   "explain": "(3x)² − 5² = (3x + 5)(3x − 5)."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "(x + {a})(x − {a}) expands to x² − ?",
+   "answer": "a*a",
+   "hint": "The constant term is a squared.",
+   "explain": "(x + {a})(x − {a}) = x² − {a}², so the subtracted number is {=a*a}.",
+   "params": {
+    "a": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is the mix-up?",
+   "choices": [
+    "a² − b² = (a − b)²",
+    "a² − b² = (a + b)(a − b)",
+    "9x² − 25 = (3x + 5)(3x − 5)"
+   ],
+   "answer": 0,
+   "hint": "Spot the false identity.",
+   "explain": "(a − b)² expands to a² − 2ab + b², not a difference of squares."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "x² − 81 equals…",
+    "choices": [
+     "(x + 9)(x − 9)",
+     "(x − 9)²",
+     "(x + 81)(x − 1)"
+    ],
+    "answer": 0,
+    "hint": "81 is 9 squared.",
+    "explain": "x² − 9² = (x + 9)(x − 9)."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "4x² − 9 equals…",
+    "choices": [
+     "(2x + 3)(2x − 3)",
+     "(4x + 3)(x − 3)",
+     "(2x − 3)²"
+    ],
+    "answer": 0,
+    "hint": "√(4x²) = 2x.",
+    "explain": "(2x)² − 3² = (2x + 3)(2x − 3)."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Value of {a}² − {b}²?",
+    "answer": "(a+b)*(a-b)",
+    "hint": "Use (a+b)(a−b), or square and subtract.",
+    "explain": "{a}² − {b}² = ({a}+{b})({a}−{b}) = {=(a+b)*(a-b)}.",
+    "params": {
+     "a": [
+      6,
+      15
+     ],
+     "b": [
+      1,
+      5
+     ]
+    },
+    "where": "a>b"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "√(9x²) as a factor part is…",
+    "choices": [
+     "3x",
+     "9x",
+     "x only"
+    ],
+    "answer": 0,
+    "hint": "Square-root the coefficient too.",
+    "explain": "√9 × √(x²) = 3x, not 9x."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "x² + 36 factorises as a² − b²?",
+    "choices": [
+     "no — it is a sum",
+     "yes as (x + 6)(x − 6)",
+     "yes as (x − 6)²"
+    ],
+    "answer": 0,
+    "hint": "Plus blocks the pattern.",
+    "explain": "Over the reals, a sum of squares does not use a² − b²."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "For x² − {a}² the brackets use ± what number?",
+    "answer": "a",
+    "hint": "The square root of the second square term goes in both brackets.",
+    "explain": "x² − {a}² = (x + {a})(x − {a}), so the number is {=a}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The key skill here vs the area demo is…",
+    "choices": [
+     "algebraic factorising of a² − b² including coefficients",
+     "only cutting paper squares with no algebra",
+     "solving quadratics by the formula only"
+    ],
+    "answer": 0,
+    "hint": "Focus on the algebraic factorisation skill.",
+    "explain": "Here you factorise expressions. Geometric demos live in the perfect-squares lesson."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "16y² − 25 equals…",
+    "choices": [
+     "(4y + 5)(4y − 5)",
+     "(16y + 5)(y − 5)",
+     "(4y − 5)²"
+    ],
+    "answer": 0,
+    "hint": "√(16y²) = 4y.",
+    "explain": "(4y)² − 5² = (4y + 5)(4y − 5)."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Writing (a − b)² for a² − b²…",
+    "choices": [
+     "adds a false −2ab middle term",
+     "is always identical",
+     "removes the need for squares"
+    ],
+    "answer": 0,
+    "hint": "Compare the two expansions carefully.",
+    "explain": "(a − b)² = a² − 2ab + b², which is not a² − b²."
+   }
+  ]
+ }
+}
