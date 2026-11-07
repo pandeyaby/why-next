@@ -1,0 +1,255 @@
+{
+ "topicId": "mt_-p_xp4hMvh",
+ "title": "Friction & Surfaces",
+ "audience": "family",
+ "keyIdea": "Friction is a force between two surfaces that rub together. It always acts against the motion. Rough surfaces like carpet and sandpaper make more friction than smooth ones like ice, so a toy car given the same push stops sooner on a rough floor.",
+ "familyTip": "Roll the same toy car down the same book ramp onto a rug, a wooden floor and a tiled floor. Keep the push the same each time and measure how far it rolls with a tape measure or in footsteps.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "More friction or less friction? Drag each surface into a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "more friction (rough)",
+    "less friction (smooth)"
+   ],
+   "items": [
+    [
+     "sandpaper",
+     0
+    ],
+    [
+     "ice",
+     1
+    ],
+    [
+     "carpet",
+     0
+    ],
+    [
+     "polished floor",
+     1
+    ],
+    [
+     "grass",
+     0
+    ],
+    [
+     "glass",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfrict",
+  "caption": "Flagship lab: roll a car on four floors, see friction point backwards, run a fair test, tilt a ramp and walk on ice.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "When two surfaces rub, they make a force called friction. Friction slows moving things down. It always pulls the other way to the way a thing is moving.",
+   "Rough surfaces have more friction. Push a toy car on carpet and it soon stops. Give it the same push on ice and it rolls a long way, because smooth ice has less friction.",
+   "To compare two floors, do a fair test. Use the same car and the same push. Change only the floor. Then you know the floor made the difference.",
+   "Friction is useful too. It lets your shoes grip so you can walk, and it lets bike brakes stop the wheels. On ice there is too little friction, so you slip."
+  ],
+  "adult": [
+   "Ages 7 to 8. This matches Year 3 Forces and magnets in England: compare how things move on different surfaces. It builds on Pushes and Pulls and on Forces Vocabulary, and comes before contact and non-contact forces.",
+   "Friction is a contact force. It acts along the surfaces that touch, and it acts against the motion (or against the way a still object would start to slide). Rough surfaces have more bumps that catch, so they make more friction than smooth ones. The car distances and slide angles in the lab are a simple model, not measured data, but the order (ice, wood, carpet, sandpaper) matches what classes find.",
+   "Common mistakes: thinking a moving thing stops because the push runs out (friction stops it); drawing friction in the same direction as the motion; thinking soft carpet lets things roll further; thinking friction is always bad; and changing the push as well as the surface, which makes the test unfair.",
+   "In the lab your child rolls the same car on four floors, drags a block both ways and sees friction point backwards, runs a fair test with the same push, ranks floors from slippery to grippy, tilts a ramp until a block slides, and walks across ice with smooth and grippy soles."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A toy car gets the same push on carpet and on a smooth floor. Where does it roll further?",
+   "choices": [
+    "on the carpet",
+    "on the smooth floor",
+    "the same on both"
+   ],
+   "answer": 1,
+   "hint": "Which surface rubs more against the wheels?",
+   "explain": "The smooth floor makes less friction, so the car keeps rolling for longer. Carpet is rougher, so it slows the car sooner."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "You slide a book to the right across a table. Which way does friction act on the book?",
+   "choices": [
+    "to the right",
+    "to the left",
+    "upwards"
+   ],
+   "answer": 1,
+   "hint": "Friction always acts against the way the thing is moving.",
+   "explain": "The book moves right, so friction acts to the left. That is why the book slows down and stops."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A car rolls {a} cm on wood and {b} cm on carpet with the same push. How many cm further does it go on wood?",
+   "answer": "a-b",
+   "hint": "Take the carpet distance away from the wood distance.",
+   "explain": "{a} − {b} = {=a-b} cm. It goes further on wood because wood makes less friction than carpet.",
+   "params": {
+    "a": [
+     120,
+     180
+    ],
+    "b": [
+     40,
+     90
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In a fair test, a car rolls {a} cm on tiles. On sandpaper it rolls only a quarter as far. How far does it roll on sandpaper, in cm?",
+   "answer": "a/4",
+   "where": "a%4==0",
+   "hint": "A quarter means divide by 4.",
+   "explain": "{a} ÷ 4 = {=a/4} cm. Sandpaper is much rougher than tiles, so it makes much more friction.",
+   "params": {
+    "a": [
+     80,
+     200
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Ava tests wood with a gentle push and carpet with a hard push. Why is this not a fair test?",
+   "choices": [
+    "She changed the push as well as the floor",
+    "She used two different floors",
+    "She used the same car"
+   ],
+   "answer": 0,
+   "hint": "In a fair test you change only one thing.",
+   "explain": "Changing the floor is the point of the test. Changing the push as well means you cannot tell which change made the difference."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which surface makes the most friction?",
+    "choices": [
+     "ice",
+     "glass",
+     "sandpaper"
+    ],
+    "answer": 2,
+    "hint": "Think about which surface feels the roughest.",
+    "explain": "Sandpaper is rough and full of tiny bumps that catch, so it makes the most friction. Ice and glass are smooth."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A rolling ball slows down and stops on grass. Why?",
+    "choices": [
+     "Friction from the grass slows it down",
+     "The push it was given ran out",
+     "The grass pushes it forward"
+    ],
+    "answer": 0,
+    "hint": "A force is needed to slow something down.",
+    "explain": "The ball does not stop because a push ran out. Friction between the ball and the grass acts against its motion and slows it."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why do people put grit or sand on icy paths?",
+    "choices": [
+     "to make more friction so feet grip",
+     "to make the ice more slippery",
+     "to make the path smoother"
+    ],
+    "answer": 0,
+    "hint": "Grit makes the surface rougher.",
+    "explain": "Grit makes the surface rougher, so there is more friction and shoes can grip without slipping."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A block starts to slide on a wooden ramp at {a}°. On a rougher ramp it needs {b}° more. At what angle does it slide on the rough ramp?",
+    "answer": "a+b",
+    "hint": "Add the extra degrees to the wooden ramp angle.",
+    "explain": "{a} + {b} = {=a+b}°. The rougher ramp has more friction, so it must be steeper before the block slides.",
+    "params": {
+     "a": [
+      15,
+      25
+     ],
+     "b": [
+      5,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You push a box to the left. Which arrow shows friction on the box?",
+    "choices": [
+     "an arrow pointing right",
+     "an arrow pointing left",
+     "an arrow pointing down"
+    ],
+    "answer": 0,
+    "hint": "Friction acts against the motion.",
+    "explain": "The box moves left, so friction points right. An arrow pointing down would show gravity, not friction."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which of these shows friction being useful?",
+    "choices": [
+     "bike brakes stopping a wheel",
+     "a sledge slowing on a path",
+     "a heavy box that is hard to drag"
+    ],
+    "answer": 0,
+    "hint": "Look for the one where we want things to slow or grip.",
+    "explain": "Brakes work by rubbing pads on the wheel, making friction on purpose. The other two show friction getting in the way."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "To test which mat makes the most friction, what must you change?",
+    "choices": [
+     "only the mat",
+     "the mat and the car",
+     "the mat and the push"
+    ],
+    "answer": 0,
+    "hint": "A fair test changes one thing only.",
+    "explain": "Change only the mat and keep the car and push the same. Then any difference in distance must come from the mat."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "With the same push, a car rolls {a} cm on lino and twice as far on ice. How far does it roll on ice, in cm?",
+    "answer": "2*a",
+    "hint": "Twice as far means multiply by 2.",
+    "explain": "{a} × 2 = {=2*a} cm. Ice is smoother than lino, so there is less friction to slow the car.",
+    "params": {
+     "a": [
+      50,
+      150
+     ]
+    }
+   }
+  ]
+ }
+}
