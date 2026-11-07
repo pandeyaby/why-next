@@ -1,0 +1,144 @@
+{
+ "topicId": "mt_jY7uf0Cb7o",
+ "title": "Place value of each digit",
+ "audience": "family",
+ "keyIdea": "In a four-digit number each digit sits in a place: thousands, hundreds, tens or ones. The place sets the digit's value, so in 7,345 the 7 is worth 7000, the 3 is worth 300, the 4 is worth 40 and the 5 is worth 5. Each place is worth 10 times the place to its right, and a 0 holds an empty place (3,052 is not 352).",
+ "familyTip": "Read a four-digit number together, like a year (2026) or a price. Point at one digit and ask: what is this digit worth? Then say it as parts: 2000 + 0 + 20 + 6.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Where is the 7 in each number? Drag each card to the place of its 7, or tap it then a box.",
+  "opts": {
+   "bins": ["thousands", "hundreds", "tens", "ones"],
+   "items": [["7,312", 0], ["2,701", 1], ["1,374", 2], ["4,217", 3], ["7,005", 0], ["9,876", 2]]
+  }
+ },
+ "lab": {
+  "type": "flagpvc",
+  "caption": "Flagship lab: build with place value counters, value each 5 in 5,555, hold a place with 0, swap ten 100s for 1000, sort parts.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "A four-digit number has four places. From the left they are thousands, hundreds, tens and ones.",
+   "The place tells you what a digit is worth. In 7,345 the 7 is in the thousands place. So it is worth 7000, not 7.",
+   "Each place is worth 10 times the place on its right. Ten 100s make one 1000.",
+   "If a place is empty, we write 0 to hold it. 3,052 has no hundreds. Without the 0 it would be 352."
+  ],
+  "adult": [
+   "Ages 8 to 9. National Curriculum Year 4: recognise the place value of each digit in a four-digit number (thousands, hundreds, tens and ones). CCSS 4.NBT.1 and 4.NBT.2: a digit in one place represents ten times what it represents in the place to its right; read and write numbers in expanded form.",
+   "A digit's value is the digit times its place: in 6,218 the 6 is worth 6 × 1000 = 6000. Expanded form writes the number as the sum of these values: 6000 + 200 + 10 + 8.",
+   "Common mistakes: giving the digit instead of its value (the 7 in 7,345 is 'worth 7'); leaving out a zero that holds an empty place (writing 5 thousands and 7 ones as 57); writing jumbled parts in the order given (80 + 6000 + 9 + 700 as 8697); and thinking 13 hundreds can sit in one place instead of exchanging ten 100s for a 1000.",
+   "In the lab your child builds numbers with place value counters, taps each 5 in 5,555, builds 3,052, exchanges ten 100 counters for one 1000, and drops jumbled parts into their columns."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "In 7,345, what is the 7 worth?",
+   "choices": ["7000", "7", "700"], "answer": 0,
+   "hint": "Which place is the 7 in? Count the places from the right: ones, tens, hundreds, thousands.",
+   "explain": "The 7 is in the thousands place, so it is worth 7 thousands: 7000. Just '7' forgets its place."
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "What number is {a}000 + {b}00 + {c}0 + {d}?",
+   "answer": "a*1000+b*100+c*10+d",
+   "hint": "Put each part in its own place: thousands, hundreds, tens, ones.",
+   "explain": "{a} thousands, {b} hundreds, {c} tens and {d} ones make {=a*1000+b*100+c*10+d}.",
+   "params": {"a": [1, 9], "b": [1, 9], "c": [1, 9], "d": [1, 4]}
+  },
+  {
+   "type": "numeric", "id": "p3",
+   "prompt": "In the number {=a*1000+b*100+c*10+d}, what is the hundreds digit worth?",
+   "answer": "b*100",
+   "hint": "Find the second digit from the left. It counts hundreds.",
+   "explain": "The hundreds digit is {b}. It counts hundreds, so it is worth {b} × 100 = {=b*100}.",
+   "params": {"a": [1, 9], "b": [1, 9], "c": [0, 9], "d": [0, 4]}
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "Which number has 4 thousands, 0 hundreds, 6 tens and 2 ones?",
+   "choices": ["4,062", "462", "4,602"], "answer": 0,
+   "hint": "There are no hundreds. What digit holds an empty place?",
+   "explain": "Write 4 for thousands, 0 for hundreds, 6 for tens and 2 for ones: 4,062. Without the 0 you get 462, which is only 4 hundreds."
+  },
+  {
+   "type": "mc", "id": "p5",
+   "prompt": "13 hundreds is the same as …",
+   "choices": ["1 thousand and 3 hundreds", "13 thousands", "1 hundred and 3 tens"], "answer": 0,
+   "hint": "Ten 100s make one 1000. How many hundreds are left over?",
+   "explain": "Ten of the 13 hundreds make 1 thousand, and 3 hundreds are left. So 13 hundreds is 1,300."
+  }
+ ],
+ "mastery": {
+  "passMark": 4, "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "What is the 6 in 6,218 worth?",
+    "choices": ["6000", "600", "6"], "answer": 0,
+    "hint": "The 6 is the first of four digits. Which place is that?",
+    "explain": "The 6 is in the thousands place, so it is worth 6000. 600 would put it one place too far right."
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "A shop has {a} boxes of 1000 beads, {b} bags of 100 beads and {c} loose beads. How many beads?",
+    "answer": "a*1000+b*100+c",
+    "hint": "There are no tens. Which digit holds the tens place?",
+    "explain": "{a} thousands, {b} hundreds, 0 tens and {c} ones. With a 0 in the tens place that is {=a*1000+b*100+c} beads.",
+    "params": {"a": [1, 9], "b": [1, 9], "c": [1, 9]}
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "What is the tens digit of {=a*1000+b*100+c*10+d} worth?",
+    "answer": "c*10",
+    "hint": "The tens digit is second from the right.",
+    "explain": "The tens digit is {c}, so it is worth {c} × 10 = {=c*10}.",
+    "params": {"a": [1, 9], "b": [0, 9], "c": [1, 9], "d": [0, 3]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Ben writes 5 thousands and 7 ones as 57. What should it be?",
+    "choices": ["5,007", "5,070", "507"], "answer": 0,
+    "hint": "Write a digit for every place. Empty places get a 0.",
+    "explain": "5 thousands, 0 hundreds, 0 tens, 7 ones is 5,007. Ben left out the two zeros, so his 5 slid into the tens place."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "Which digit in 2,946 is in the hundreds place?",
+    "choices": ["9", "2", "4"], "answer": 0,
+    "hint": "From the right: ones, tens, hundreds.",
+    "explain": "6 is ones, 4 is tens and 9 is hundreds. The 2 is thousands. So the 9 is worth 900."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Which is the expanded form of 8,305?",
+    "choices": ["8000 + 300 + 5", "8000 + 300 + 50", "800 + 30 + 5"], "answer": 0,
+    "hint": "Write each digit's value. The 0 tens add nothing.",
+    "explain": "8 thousands = 8000, 3 hundreds = 300, 0 tens = 0 and 5 ones = 5. So 8,305 = 8000 + 300 + 5."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "How many hundreds make one thousand?",
+    "choices": ["10", "100", "1000"], "answer": 0,
+    "hint": "Each place is worth 10 times the place on its right.",
+    "explain": "Ten 100s make 1000, just as ten 10s make 100 and ten 1s make 10."
+   },
+   {
+    "type": "order", "id": "m8",
+    "prompt": "Put these numbers in order, smallest first.",
+    "items": ["3,099", "3,190", "3,901", "9,013"],
+    "hint": "Compare thousands first. If they match, compare hundreds, then tens.",
+    "explain": "9,013 has the most thousands, so it is largest. The others have 3 thousands; 0, 1 and 9 hundreds put them in order: 3,099, 3,190, 3,901."
+   },
+   {
+    "type": "mc", "id": "m9",
+    "prompt": "In 4,444, the thousands 4 is how many times the hundreds 4?",
+    "choices": ["10 times", "4 times", "1000 times"], "answer": 0,
+    "hint": "Write the value of each 4, then compare 4000 with 400.",
+    "explain": "The thousands 4 is worth 4000 and the hundreds 4 is worth 400. 4000 is 10 times 400, one place to the left."
+   }
+  ]
+ }
+}
