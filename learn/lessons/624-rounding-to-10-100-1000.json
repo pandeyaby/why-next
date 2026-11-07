@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_NLSfvB9vUl",
+ "title": "Rounding to 10, 100, 1000",
+ "audience": "family",
+ "keyIdea": "To round a number, find the two multiples it sits between and choose the nearer one. Look at the digit just right of the place you round to: 5 or more rounds up, 4 or less rounds down. So 4,367 is 4,370 to the nearest 10, 4,400 to the nearest 100 and 4,000 to the nearest 1000.",
+ "familyTip": "In a shop or on a car trip, pick a price or a distance and take turns rounding it to the nearest 10 and the nearest 100. Ask which two numbers it sits between, and which is nearer.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Rounded to the nearest 100, is it 300 or 400? Drag each number into a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "rounds to 300",
+    "rounds to 400"
+   ],
+   "items": [
+    [
+     "349",
+     0
+    ],
+    [
+     "351",
+     1
+    ],
+    [
+     "310",
+     0
+    ],
+    [
+     "350",
+     1
+    ],
+    [
+     "298",
+     0
+    ],
+    [
+     "399",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagroundnl",
+  "caption": "Flagship lab: drag a marker along number lines to the nearer 10, 100 or 1000, meet the halfway rule, round one number three ways and estimate a sum.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Rounding gives a simpler number that is close to the real one. 37 is between 30 and 40. It is 7 away from 30 and only 3 away from 40. So 37 rounded to the nearest 10 is 40.",
+   "You do not need to count the gaps every time. Look at the digit just to the right of the place you are rounding to. If it is 5 or more, round up. If it is 4 or less, round down.",
+   "To round 4,367 to the nearest 100, look at the tens digit. It is 6, so round up to 4,400. To the nearest 1000, look at the hundreds digit. It is 3, so round down to 4,000.",
+   "A number exactly halfway, like 65 or 250, rounds up. And always round in one step. 349 is nearer 300 than 400, even though 349 rounds to 350 first."
+  ],
+  "adult": [
+   "Ages 8 to 9. This matches CCSS 3.NBT.1 (use place value understanding to round whole numbers to the nearest 10 or 100) and Year 4 Number and place value in England (round any number to the nearest 10, 100 or 1000). It builds on Place value of each digit and leads into estimating and checking calculations.",
+   "Rounding to the nearest unit means choosing the multiple of that unit at the smallest distance. The digit test, 5 or more rounds up, is a shortcut for that distance comparison. A number exactly halfway has no nearer multiple, so the school rule is to round it up. The number line keeps the meaning of nearest in view.",
+   "Common mistakes: keeping only the first digit, so 37 becomes 30. Rounding in two steps, so 349 goes to 350 and then 400. Looking at the wrong digit, such as the ones digit when rounding to 100. Giving the nearest 10 when asked for the nearest 100. And rounding 65 down because it feels like it should go either way.",
+   "In the lab your child drags a marker along a number line and sees the distance to each end, finds the halfway case, rounds to the nearest 100 and 1000, rounds 4,367 three ways with the deciding digit lit, and estimates 389 + 512 as 400 + 500."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Round 74 to the nearest 10.",
+   "choices": [
+    "70",
+    "80",
+    "74"
+   ],
+   "answer": 0,
+   "hint": "74 is between 70 and 80. Which is nearer?",
+   "explain": "74 is 4 from 70 and 6 from 80, so it rounds to 70. The ones digit 4 is less than 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Round {a} to the nearest 10.",
+   "answer": "a-a%10+10*(a%10>=5)",
+   "hint": "Look at the ones digit. 5 or more rounds up.",
+   "explain": "{a} rounds to {=a-a%10+10*(a%10>=5)}. Check the ones digit: 5 or more rounds up, 4 or less rounds down.",
+   "params": {
+    "a": [
+     21,
+     98
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Round {a} to the nearest 100.",
+   "answer": "a-a%100+100*(a%100>=50)",
+   "hint": "Look at the tens digit, and round in one step.",
+   "explain": "{a} rounds to {=a-a%100+100*(a%100>=50)}. Only the tens digit decides; do not round to the nearest 10 first.",
+   "params": {
+    "a": [
+     110,
+     990
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Round 349 to the nearest 100.",
+   "choices": [
+    "300",
+    "350",
+    "400"
+   ],
+   "answer": 0,
+   "hint": "Is 349 above or below the halfway point, 350?",
+   "explain": "349 is 49 from 300 and 51 from 400, so it rounds to 300. Rounding to 350 first and then up to 400 is a common slip."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Round 4,738 to the nearest 1000.",
+   "choices": [
+    "4,000",
+    "4,700",
+    "5,000"
+   ],
+   "answer": 2,
+   "hint": "Look at the hundreds digit.",
+   "explain": "The hundreds digit is 7, which is 5 or more, so 4,738 rounds up to 5,000. 4,700 is the nearest 100, not the nearest 1000."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Round 65 to the nearest 10.",
+    "choices": [
+     "60",
+     "70",
+     "65"
+    ],
+    "answer": 1,
+    "hint": "65 is exactly halfway between 60 and 70.",
+    "explain": "A number exactly halfway rounds up, so 65 rounds to 70."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which digit do you look at to round 5,283 to the nearest 100?",
+    "choices": [
+     "the tens digit, 8",
+     "the ones digit, 3",
+     "the thousands digit, 5"
+    ],
+    "answer": 0,
+    "hint": "Look one place to the right of the hundreds.",
+    "explain": "To round to the nearest 100, look at the tens digit. It is 8, so 5,283 rounds up to 5,300."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Round {a} to the nearest 1000.",
+    "answer": "a-a%1000+1000*(a%1000>=500)",
+    "hint": "Look at the hundreds digit. 5 or more rounds up.",
+    "explain": "{a} rounds to {=a-a%1000+1000*(a%1000>=500)}. The hundreds digit decides.",
+    "params": {
+     "a": [
+      1100,
+      9800
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Round 4,367 to the nearest 10.",
+    "choices": [
+     "4,360",
+     "4,370",
+     "4,400"
+    ],
+    "answer": 1,
+    "hint": "Rounding to the nearest 10 means looking at the ones digit.",
+    "explain": "The ones digit is 7, so round the tens up: 4,370. 4,400 is the nearest 100."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Max says 449 rounded to the nearest 100 is 500, because 449 rounds to 450, and 450 rounds to 500. What went wrong?",
+    "choices": [
+     "he rounded twice; 449 is nearer 400",
+     "nothing, he is right",
+     "he should round to 450"
+    ],
+    "answer": 0,
+    "hint": "Is 449 above or below halfway, 450?",
+    "explain": "449 is 49 from 400 and 51 from 500, so it rounds to 400. Rounding in two steps moved it the wrong way."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Use rounding to the nearest 100 to estimate 612 + 289.",
+    "choices": [
+     "about 900",
+     "about 800",
+     "about 1,000"
+    ],
+    "answer": 0,
+    "hint": "Round each number first, then add.",
+    "explain": "612 rounds to 600 and 289 rounds to 300. 600 + 300 = 900. The exact answer is 901."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A number rounds to {a}0 to the nearest 10. What is the smallest whole number it could be?",
+    "answer": "a*10-5",
+    "hint": "Which numbers below {a}0 still round up to it?",
+    "explain": "{=a*10-5} is the smallest, because it is exactly halfway and halfway rounds up. {=a*10-6} would round down.",
+    "params": {
+     "a": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which number rounds to 2,000 to the nearest 1000?",
+    "choices": [
+     "2,499",
+     "2,500",
+     "1,499"
+    ],
+    "answer": 0,
+    "hint": "Halfway between 2,000 and 3,000 is 2,500.",
+    "explain": "2,499 is below halfway, so it rounds down to 2,000. 2,500 rounds up to 3,000 and 1,499 rounds to 1,000."
+   }
+  ]
+ }
+}
