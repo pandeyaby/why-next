@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_DOe893F6gN",
+ "title": "Choosing measurement units",
+ "audience": "family",
+ "keyIdea": "Pick the unit that fits what you measure: cm or m for length, g or kg for mass, °C for temperature, ml or litres for capacity — not one unit for everything.",
+ "familyTip": "Point at a pencil, a door, a juice carton and a bag. Ask: cm or m? ml or litres? g or kg?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Sensible unit idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True unit idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "pencil length → cm",
+     0
+    ],
+    [
+     "playground length → m",
+     0
+    ],
+    [
+     "always use cm for every length",
+     1
+    ],
+    [
+     "day’s heat → °C",
+     0
+    ],
+    [
+     "full school bag → kg",
+     0
+    ],
+    [
+     "swimming pool → millilitres",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagunits",
+  "caption": "Flagship lab: match pencil→cm, spot silly pool units, estimate bag→kg, pick °C, catch always-cm myth, sort capacity units.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Different jobs need different units.",
+   "Length uses centimetres or metres. Mass uses grams or kilograms.",
+   "Temperature uses degrees Celsius. Capacity uses millilitres or litres.",
+   "A tiny unit for a huge thing — or the wrong kind of unit — is a mix-up."
+  ],
+  "adult": [
+   "NC Y2 Measurement: choose and use the right units — m or cm for length, kg or g for mass, °C for temperature, litres or ml for capacity. Distinct from Measuring Length and Height, Measuring mass and weight, and reading a thermometer.",
+   "Words: unit, centimetre, metre, gram, kilogram, Celsius, millilitre, litre. Common mistakes: always using cm; using kg for heat; using ml for a swimming pool.",
+   "In the lab your child matches object to unit, spots a silly unit, estimates then picks, chooses °C, catches the always-cm myth, and sorts capacity units."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Best unit for a pencil’s length?",
+   "choices": [
+    "cm",
+    "m",
+    "kg"
+   ],
+   "answer": 0,
+   "hint": "A pencil is short — think small length units.",
+   "explain": "A pencil is measured in centimetres, not metres or kilograms."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Silly unit for a swimming pool’s capacity?",
+   "choices": [
+    "millilitres (ml)",
+    "metres for length",
+    "large capacity units"
+   ],
+   "answer": 0,
+   "hint": "Millilitres are tiny drops.",
+   "explain": "Millilitres are far too small for a pool’s capacity."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Best unit for a full school bag’s mass?",
+   "choices": [
+    "kg",
+    "g",
+    "°C"
+   ],
+   "answer": 0,
+   "hint": "Heavy to lift — grams or kilograms?",
+   "explain": "A full bag is about kilograms, not grams or degrees."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many centimetres are in {a} metres?",
+   "answer": "a*100",
+   "hint": "1 metre = 100 centimetres. Multiply the metres by 100.",
+   "explain": "{a} metres equals {=a*100} centimetres — useful when you switch length units.",
+   "params": {
+    "a": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A jug holds {a} litres. About how many 100 ml cups is that (10 cups per litre × litres)?",
+   "answer": "a*10",
+   "hint": "Each litre is about ten 100 ml cups.",
+   "explain": "{a} litres × 10 cups per litre ≈ {=a*10} cups.",
+   "params": {
+    "a": [
+     1,
+     4
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Unit for how hot the day is?",
+    "choices": [
+     "°C",
+     "cm",
+     "litres"
+    ],
+    "answer": 0,
+    "hint": "Heat and cold need a temperature unit.",
+    "explain": "Temperature uses degrees Celsius (°C)."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which is the mix-up?",
+    "choices": [
+     "Always use cm for every length",
+     "Use m for a playground",
+     "Use ml for a medicine spoon"
+    ],
+    "answer": 0,
+    "hint": "Long distances need larger length units.",
+    "explain": "Not every length should use cm — playgrounds need metres."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Juice carton capacity uses…",
+    "choices": [
+     "ml or litres",
+     "°C",
+     "kg only"
+    ],
+    "answer": 0,
+    "hint": "A carton holds liquid — think capacity, not heat or mass.",
+    "explain": "Capacity of a carton is in ml or litres."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Paper width best unit?",
+    "choices": [
+     "cm",
+     "km",
+     "°C"
+    ],
+    "answer": 0,
+    "hint": "A sheet of paper is short across.",
+    "explain": "Paper width is a small length — centimetres."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A grape’s mass is best in…",
+    "choices": [
+     "g",
+     "kg",
+     "m"
+    ],
+    "answer": 0,
+    "hint": "A grape is light; pick the small mass unit, not kilograms.",
+    "explain": "A grape is about grams, not kilograms or metres."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "How many cm in {a} metres?",
+    "answer": "a*100",
+    "hint": "1 m = 100 cm. Multiply metres by 100.",
+    "explain": "{a} metres equals {=a*100} centimetres.",
+    "params": {
+     "a": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "{a} litres as 100 ml cups (10 per litre)?",
+    "answer": "a*10",
+    "hint": "Multiply litres by 10 for 100 ml cups.",
+    "explain": "{a} litres is about {=a*10} cups of 100 ml.",
+    "params": {
+     "a": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Choosing units means…",
+    "choices": [
+     "matching unit to length, mass, heat or capacity",
+     "always using cm",
+     "using kg for temperature"
+    ],
+    "answer": 0,
+    "hint": "Think which attribute you are measuring.",
+    "explain": "Pick m/cm, kg/g, °C, or ml/litres to match the job."
+   }
+  ]
+ }
+}
