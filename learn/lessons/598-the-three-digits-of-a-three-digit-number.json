@@ -1,0 +1,274 @@
+{
+ "topicId": "mt_aPBzD28_mT",
+ "title": "The three digits of a three-digit number",
+ "audience": "family",
+ "keyIdea": "In a three-digit number the digits stand for hundreds, tens and ones — so 347 means 3 hundreds + 4 tens + 7 ones, not 3+4+7 and not a swap of places.",
+ "familyTip": "Write 347. Ask: how many hundred flats? How many ten rods? How many ones? Build it with base-ten blocks if you have them.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Three-digit place idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True place-value idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "left digit counts hundreds",
+     0
+    ],
+    [
+     "middle digit counts tens",
+     0
+    ],
+    [
+     "347 means 3 + 4 + 7 = 14",
+     1
+    ],
+    [
+     "305 is 3 hundreds + 0 tens + 5 ones",
+     0
+    ],
+    [
+     "347 means 7 hundreds + 4 tens + 3 ones",
+     1
+    ],
+    [
+     "a zero can hold an empty place",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flag3digit",
+  "caption": "Flagship lab: build 241 on H–T–O, expand 347, name hundreds-digit worth, read 305 with zero, catch digit-sum myth, build 516.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A three-digit number has hundreds, tens and ones places.",
+   "The left digit tells how many hundreds. The middle tells tens. The right tells ones.",
+   "347 means 3 hundreds, 4 tens and 7 ones — not 3 plus 4 plus 7.",
+   "A zero can hold a place, like the 0 tens in 305."
+  ],
+  "adult": [
+   "CCSS 2.NBT.1: understand that the three digits of a three-digit number represent amounts of hundreds, tens and ones; 100 can be thought of as a bundle of ten tens (called a hundred). Distinct from The two digits of a two-digit number, A Hundred Is Ten Tens (bundling), Counting within 1,000 (hops), and The multiples of 100.",
+   "Words: hundreds, tens, ones, place value, expand, placeholder zero. Common mistakes: summing digits; swapping places; reading the hundreds digit as tens or ones; ignoring zero as a place holder.",
+   "In the lab your child builds 241 on an H–T–O chart, expands 347, names what the hundreds digit is worth, reads 305 with a zero tens place, spots the digit-sum mix-up, and builds 516."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "2 hundreds + 4 tens + 1 one equals…",
+   "choices": [
+    "241",
+    "7",
+    "214"
+   ],
+   "answer": 0,
+   "hint": "Hundreds are worth 100 each. Do not add the digits as ones.",
+   "explain": "2×100 + 4×10 + 1 = 241. Summing to 7 or swapping places is a mix-up."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "347 expands to…",
+   "choices": [
+    "3 hundreds + 4 tens + 7 ones",
+    "3 + 4 + 7 = 14",
+    "7 hundreds + 4 tens + 3 ones"
+   ],
+   "answer": 0,
+   "hint": "Left = hundreds, middle = tens, right = ones.",
+   "explain": "347 = 3 hundreds + 4 tens + 7 ones."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The 5 in 520 means…",
+   "choices": [
+    "5 hundreds (500)",
+    "5 tens",
+    "5 + 2 + 0"
+   ],
+   "answer": 0,
+   "hint": "Which place is the 5 sitting in?",
+   "explain": "The 5 is in the hundreds place, so it means five hundreds."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{h} hundreds + {t} tens + {o} ones = ?",
+   "answer": "h*100+t*10+o",
+   "hint": "100×hundreds + 10×tens + ones.",
+   "explain": "{h}×100 + {t}×10 + {o} = {=h*100+t*10+o}.",
+   "params": {
+    "h": [
+     1,
+     5
+    ],
+    "t": [
+     0,
+     8
+    ],
+    "o": [
+     0,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "How many hundreds in {n}?",
+   "answer": "(n-n%100)/100",
+   "hint": "The left digit of a three-digit number.",
+   "explain": "{n} has {=(n-n%100)/100} hundreds.",
+   "params": {
+    "n": [
+     105,
+     890
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "305 is…",
+    "choices": [
+     "3 hundreds + 0 tens + 5 ones",
+     "3 + 0 + 5 = 8",
+     "just 35"
+    ],
+    "answer": 0,
+    "hint": "Zero can hold the tens place.",
+    "explain": "305 = 3 hundreds + 0 tens + 5 ones."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "516 needs…",
+    "choices": [
+     "5 hundreds + 1 ten + 6 ones",
+     "1 hundred + 5 tens + 6 ones",
+     "5 + 1 + 6 ones only"
+    ],
+    "answer": 0,
+    "hint": "Match each digit to its place.",
+    "explain": "516 = 5 hundreds + 1 ten + 6 ones."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "400 is…",
+    "choices": [
+     "4 hundreds + 0 tens + 0 ones",
+     "4 tens",
+     "40 with decoration zeros"
+    ],
+    "answer": 0,
+    "hint": "A multiple of 100 still has three places.",
+    "explain": "400 = 4 hundreds + 0 tens + 0 ones."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is the mix-up?",
+    "choices": [
+     "347 means 3 + 4 + 7 = 14",
+     "Left digit counts hundreds",
+     "Middle digit counts tens"
+    ],
+    "answer": 0,
+    "hint": "Spot the digit-summing mix-up among the choices.",
+    "explain": "Digits name place values; summing them as ones is the mix-up."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "812 expands to…",
+    "choices": [
+     "8 hundreds + 1 ten + 2 ones",
+     "8 + 1 + 2 = 11",
+     "2 hundreds + 1 ten + 8 ones"
+    ],
+    "answer": 0,
+    "hint": "Do not reverse or sum the digits.",
+    "explain": "812 = 8 hundreds + 1 ten + 2 ones."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Compose: {h} hundreds, {t} tens, {o} ones make…",
+    "answer": "h*100+t*10+o",
+    "hint": "Place values multiply then add.",
+    "explain": "{h}×100 + {t}×10 + {o} = {=h*100+t*10+o}.",
+    "params": {
+     "h": [
+      2,
+      7
+     ],
+     "t": [
+      1,
+      6
+     ],
+     "o": [
+      0,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The tens digit of 264 is…",
+    "choices": [
+     "6",
+     "2",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "Tens sit in the middle place.",
+    "explain": "In 264 the tens digit is 6."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Place value for three digits means…",
+    "choices": [
+     "each digit’s worth depends on hundreds, tens or ones place",
+     "add the three digits",
+     "always swap left and right"
+    ],
+    "answer": 0,
+    "hint": "Think of the hundreds–tens–ones chart places.",
+    "explain": "The same digit means hundreds, tens or ones depending on place."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "How many ones in {n} (ones digit)?",
+    "answer": "n%10",
+    "hint": "The ones digit is the rightmost digit of the number.",
+    "explain": "{n} has ones digit {=n%10}.",
+    "params": {
+     "n": [
+      123,
+      678
+     ]
+    }
+   }
+  ]
+ }
+}
