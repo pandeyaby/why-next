@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_s2mfRBoTal",
+ "title": "Number bonds",
+ "audience": "family",
+ "keyIdea": "Number bonds within 20 are pairs of numbers that add to a total up to 20, plus the related subtraction fact. If 8 + 7 = 15, then 15 − 7 = 8. Quick recall of these bonds means you do not recount from one every time.",
+ "familyTip": "Play 'I say 8 + 7' and wait for 15, then ask 'so 15 take away 7?'. Use two colours of counters for each part of the bond.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "True bond idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True bond idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "8 + 7 = 15 is a bond within 20",
+     0
+    ],
+    [
+     "15 − 7 = 8 uses the related fact",
+     0
+    ],
+    [
+     "bonds only ever make exactly 10",
+     1
+    ],
+    [
+     "9 + 6 snaps to 15",
+     0
+    ],
+    [
+     "always recount every subtraction from 1",
+     1
+    ],
+    [
+     "pairs and related facts up to 20",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnb20",
+  "caption": "Flagship lab: build bonds to 15 and 18, use related subtraction, snap recall, catch make-10-only myth.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A number bond is a pair that adds to a total. Within 20 you need many pairs, not only partners of 10.",
+   "If 8 + 7 = 15, then 15 − 7 = 8. The same bond helps subtraction.",
+   "Try to snap the answer quickly: hear 9 + 6 and say 15 without counting every bead.",
+   "Bonds within 20 are addition pairs and the matching take-away facts you can recall."
+  ],
+  "adult": [
+   "NC Y1 addition and subtraction: recall number bonds (addition and related subtraction facts) within 20. Distinct from bonds to 10 on a ten-frame (K.OA.4 / 'Number bonds to 9' topic).",
+   "Words: number bond, pair, related fact, within 20, recall. Common mistakes: treating bonds as only make-10; recounting every subtraction from 1; off-by-one sums (8+7 as 14 or 17).",
+   "In the lab your child builds 8+7 and 11+7, uses 15−7=8, snaps 9+6, and spots the make-10-only mix-up."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "8 + 7 equals…",
+   "choices": [
+    "15",
+    "14",
+    "17"
+   ],
+   "answer": 0,
+   "hint": "Add the two parts of the bond carefully.",
+   "explain": "8 and 7 are a bond to 15: 8 + 7 = 15."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "15 − 7 using the bond is…",
+   "choices": [
+    "8",
+    "7",
+    "15"
+   ],
+   "answer": 0,
+   "hint": "Use the related addition fact 8 + 7 = 15.",
+   "explain": "Because 8 + 7 = 15, the related fact is 15 − 7 = 8."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What is {a} + {b}?",
+   "answer": "a+b",
+   "hint": "Add the two parts to find the bond total.",
+   "explain": "Add the parts: {a} + {b} makes the bond total {=a+b}.",
+   "params": {
+    "a": [
+     6,
+     9
+    ],
+    "b": [
+     4,
+     8
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Related fact: ({a} + {b}) − {b} = ?",
+   "answer": "a",
+   "hint": "Related subtraction returns the other part of the bond.",
+   "explain": "From {a} + {b}, taking away {b} leaves {=a}.",
+   "params": {
+    "a": [
+     5,
+     9
+    ],
+    "b": [
+     3,
+     7
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order: use a bond for subtraction.",
+   "items": [
+    "recall the addition pair",
+    "write the related take-away",
+    "check the leftover part"
+   ],
+   "hint": "Know the sum first, then flip to subtraction.",
+   "explain": "Recall a + b = c, then use c − b = a, then check."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "9 + 6 equals…",
+    "choices": [
+     "15",
+     "16",
+     "14"
+    ],
+    "answer": 0,
+    "hint": "Snap the bond total without counting every unit.",
+    "explain": "9 and 6 are partners to 15."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "11 + 7 equals…",
+    "choices": [
+     "18",
+     "17",
+     "19"
+    ],
+    "answer": 0,
+    "hint": "Add eleven and seven for a within-20 bond.",
+    "explain": "11 + 7 = 18 is a number bond within 20."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is a mix-up?",
+    "choices": [
+     "Bonds only ever make 10",
+     "Use 8+7 to get 15−7",
+     "Snap 9+6 as 15"
+    ],
+    "answer": 0,
+    "hint": "Bonds within 20 cover many totals, not only ten.",
+    "explain": "Make-10 pairs are useful, but bonds within 20 include more totals."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Number bonds within 20 means…",
+    "choices": [
+     "pairs and related facts to 20",
+     "only ten-frame partners of 10",
+     "always count every object"
+    ],
+    "answer": 0,
+    "hint": "Think pairs plus matching subtraction facts.",
+    "explain": "Recall addition pairs and related subtraction within 20."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Bond total: {a} + {b}",
+    "answer": "a+b",
+    "hint": "Sum the two parts of the bond.",
+    "explain": "The bond total is {=a+b}.",
+    "params": {
+     "a": [
+      4,
+      9
+     ],
+     "b": [
+      5,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Related: ({a} + {b}) − {b} = ?",
+    "answer": "a",
+    "hint": "The leftover part equals the other addend.",
+    "explain": "Taking {b} from {a} + {b} leaves {=a}.",
+    "params": {
+     "a": [
+      6,
+      9
+     ],
+     "b": [
+      4,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "13 − 5 using 8 + 5…",
+    "choices": [
+     "8",
+     "5",
+     "13"
+    ],
+    "answer": 0,
+    "hint": "Flip the known addition fact to subtraction.",
+    "explain": "8 + 5 = 13, so 13 − 5 = 8."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: teach a within-20 bond.",
+    "items": [
+     "build the addition pair",
+     "name the related subtraction",
+     "practise quick recall"
+    ],
+    "hint": "Build, relate, then snap.",
+    "explain": "Form the pair, link the take-away fact, then speed up recall."
+   }
+  ]
+ }
+}
