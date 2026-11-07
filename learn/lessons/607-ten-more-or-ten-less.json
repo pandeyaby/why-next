@@ -1,0 +1,144 @@
+{
+ "topicId": "mt_kw7xmp68rU",
+ "title": "10 More or 10 Less",
+ "audience": "family",
+ "keyIdea": "To find 10 more or 10 less than a two-digit number, change the tens digit by 1 and keep the ones digit the same: 10 more than 56 is 66, and 10 less is 46. On a hundred square, 10 more is the number straight below and 10 less is straight above, so there is no need to count on in ones.",
+ "familyTip": "Point at a house number or a page number, like 34. Ask: what is 10 more? What is 10 less? Then check on a hundred square or with bundles of 10 straws.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Start at 52. Is each number 10 more, 10 less, or not a jump of 10? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": ["10 more than 52", "10 less than 52", "Not a jump of 10"],
+   "items": [["62", 0], ["42", 1], ["53", 2], ["51", 2], ["63", 2]]
+  }
+ },
+ "lab": {
+  "type": "flagtenjump",
+  "caption": "Flagship lab: jump a row on the hundred square, add and take tens, sort 10 more, 10 less and 1 more, then fix a piece of the square.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "A ten is a group of 10. To find 10 more, add one ten. To find 10 less, take one ten away.",
+   "Look at 56. It has 5 tens and 6 ones. Add a ten and you get 6 tens and 6 ones. That is 66.",
+   "Only the tens digit moves, by one. The ones digit stays the same. So 10 less than 56 is 46.",
+   "On a hundred square, 10 more is the box just under the number. 10 less is the box just above it. You do not need to count."
+  ],
+  "adult": [
+   "Ages 6 to 7. CCSS 1.NBT.5: given a two-digit number, mentally find 10 more or 10 less without having to count, and explain the reasoning. In England, Year 2 place value (tens and ones) leads to the Year 3 aim to find 10 or 100 more or less than a given number.",
+   "The reason is place value. A two-digit number is tens and ones, so adding or removing one ten changes only the tens digit. On a hundred square each row holds 10 numbers, which puts 10 more directly below.",
+   "Common mistakes: counting on 10 single steps on fingers, which is slow and error-prone; giving 57 for 10 more than 56 because the ones digit was changed; going the wrong way on the square; and changing both digits.",
+   "In the lab your child jumps down rows, adds and removes ten rods, sorts 10 more, 10 less and 1 more cards, then rebuilds a cut-out piece of the hundred square."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "What is 10 more than 56?",
+   "choices": ["66", "57", "46"], "answer": 0,
+   "hint": "Add one ten. Which digit counts the tens?",
+   "explain": "56 has 5 tens. One more ten makes 6 tens, and the 6 ones stay. So it is 66. 57 is only 1 more."
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "What is 10 more than {=a*10+b}?",
+   "answer": "a*10+b+10",
+   "hint": "Make the tens digit one bigger. Keep the ones digit.",
+   "explain": "{=a*10+b} has {a} tens and {b} ones. One more ten gives {=a+1} tens and {b} ones, which is {=a*10+b+10}.",
+   "params": {"a": [1, 8], "b": [0, 9]}
+  },
+  {
+   "type": "numeric", "id": "p3",
+   "prompt": "What is 10 less than {=a*10+b}?",
+   "answer": "a*10+b-10",
+   "hint": "Make the tens digit one smaller. Keep the ones digit.",
+   "explain": "{=a*10+b} has {a} tens. Take one ten away to leave {=a-1} tens and {b} ones, which is {=a*10+b-10}.",
+   "params": {"a": [2, 9], "b": [0, 9]}
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "You find 10 less than 73. Which digit changes?",
+   "choices": ["The tens digit", "The ones digit", "Both digits"], "answer": 0,
+   "hint": "10 less takes away one ten, not one single.",
+   "explain": "73 is 7 tens and 3 ones. Taking a ten leaves 6 tens and 3 ones: 63. Only the tens digit changed."
+  },
+  {
+   "type": "mc", "id": "p5",
+   "prompt": "On a hundred square, where is 10 more than 34?",
+   "choices": ["The box just below 34", "The box just right of 34", "The box just above 34"], "answer": 0,
+   "hint": "Each row has 10 numbers. Which way do the numbers get bigger by 10?",
+   "explain": "Going down one row adds 10, so 44 sits just below 34. The box to the right is 35, only 1 more."
+  }
+ ],
+ "mastery": {
+  "passMark": 4, "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "What is 10 less than 81?",
+    "choices": ["71", "80", "91"], "answer": 0,
+    "hint": "Take one ten from 8 tens. The 1 one stays.",
+    "explain": "81 is 8 tens and 1 one. One ten less is 7 tens and 1 one: 71. 80 is only 1 less, and 91 is 10 more."
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "Sam has {=a*10+b} stickers. He gets a pack of 10 more. How many now?",
+    "answer": "a*10+b+10",
+    "hint": "A pack of 10 is one more ten. Change the tens digit.",
+    "explain": "{=a*10+b} plus one ten is {=a+1} tens and {b} ones, so Sam has {=a*10+b+10} stickers.",
+    "params": {"a": [1, 8], "b": [1, 9]}
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "A shop has {=a*10+b} apples. It sells a bag of 10. How many are left?",
+    "answer": "a*10+b-10",
+    "hint": "Selling a bag of 10 is taking one ten away.",
+    "explain": "{=a*10+b} take away one ten is {=a-1} tens and {b} ones. That leaves {=a*10+b-10} apples.",
+    "params": {"a": [2, 9], "b": [1, 9]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Mia says 10 more than 48 is 49. What did she do?",
+    "choices": ["She added 1, not 10", "She is right", "She took 10 away"], "answer": 0,
+    "hint": "Look at which digit Mia changed.",
+    "explain": "49 is 1 more: Mia changed the ones digit. 10 more changes the tens digit, so the answer is 58."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "Which number is just above 67 on a hundred square?",
+    "choices": ["57", "77", "66"], "answer": 0,
+    "hint": "Going up one row takes 10 away.",
+    "explain": "One row up is 10 less, so 57 is above 67. 77 is below it, and 66 is to its left."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Which pair shows 10 more?",
+    "choices": ["29 and 39", "29 and 30", "29 and 28"], "answer": 0,
+    "hint": "In a jump of 10 the ones digit stays the same.",
+    "explain": "29 to 39 keeps 9 ones and adds a ten. 29 to 30 is 1 more, and 28 is 1 less."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "What is the quickest way to find 10 more than 45?",
+    "choices": ["Make the 4 into a 5: 55", "Count on 10 fingers", "Add 1 to get 46"], "answer": 0,
+    "hint": "Think tens and ones. You do not need to count in ones.",
+    "explain": "45 is 4 tens and 5 ones. One more ten makes 5 tens: 55. Counting fingers works but is slow, and 46 is only 1 more."
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "What is 10 more than 90?",
+    "choices": ["100", "91", "80"], "answer": 0,
+    "hint": "9 tens and one more ten make 10 tens.",
+    "explain": "10 tens is one hundred, so 10 more than 90 is 100. 91 is 1 more and 80 is 10 less."
+   },
+   {
+    "type": "order", "id": "m9",
+    "prompt": "Put these in order, each one 10 more than the last.",
+    "items": ["14", "24", "34", "44"],
+    "hint": "Keep the 4 ones. Make the tens digit go up by 1 each time.",
+    "explain": "14, 24, 34, 44: the ones digit stays 4 and the tens digit counts 1, 2, 3, 4."
+   }
+  ]
+ }
+}
