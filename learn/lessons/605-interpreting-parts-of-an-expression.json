@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_15lv5BBcGd",
+ "title": "Interpreting parts of an expression in context",
+ "audience": "learner",
+ "keyIdea": "In a formula that models a situation, each term, factor and coefficient has a meaning. Read 3 + 1.5m as flag fall plus rate per mile; read P(1 + r)ⁿ with P as start and (1 + r) as the growth factor treated as one quantity.",
+ "familyTip": "Show a taxi fare 3 + 1.5m and ask what the 3 and the 1.5 mean in real life before anyone calculates a number.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Meaning or mix-up? Drag each claim, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True meaning",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "in 3+1.5m, 1.5 is £ per mile",
+     0
+    ],
+    [
+     "in 3+1.5m, 3 can be flag fall",
+     0
+    ],
+    [
+     "P is the growth factor in P(1+r)ⁿ",
+     1
+    ],
+    [
+     "(1+r) is the growth factor",
+     0
+    ],
+    [
+     "a bracket can be one quantity",
+     0
+    ],
+    [
+     "every number in a formula is a rate",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagasse",
+  "caption": "Flagship lab: map taxi parts, mark growth factor, treat a bracket as one quantity, spot the rate coefficient, catch mix-ups, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A formula is more than numbers to crunch. Each part can stand for something real: a starting charge, a rate, a growth factor, or a count of periods.",
+   "In 3 + 1.5m, the 3 is a fixed flag-fall and 1.5 is pounds for each mile. In P(1 + r)ⁿ, P is the start and (1 + r) is the growth factor for each period.",
+   "Sometimes a bracket is one quantity. In 2(x + 5), the factor (x + 5) is a single lump multiplied by 2.",
+   "Ask which part controls the rate of change. In 20 + 4h, the coefficient 4 is the hourly rate."
+  ],
+  "adult": [
+   "Ages 14 to 16. CCSS A-SSE.1: interpret terms, factors and coefficients in context; view complicated parts as single quantities. Not the rewrite-equivalent-forms lesson.",
+   "Words: term, factor, coefficient, growth factor, flag fall, rate. Common mistakes: calling every number a rate; saying P is the growth factor; splitting a bracket that should stay one quantity.",
+   "In the lab the learner maps taxi and compound-growth parts, treats a bracket as one factor, marks the rate coefficient, and spots mix-ups."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In 3 + 1.5m, the 1.5 means…",
+   "choices": [
+    "pounds per mile",
+    "the flag-fall charge",
+    "miles travelled only"
+   ],
+   "answer": 0,
+   "hint": "Which number multiplies the miles?",
+   "explain": "1.5 is the coefficient of m — the rate in pounds per mile. The 3 is the fixed start."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "In P(1 + r)ⁿ the growth factor is…",
+   "choices": [
+    "(1 + r)",
+    "P alone",
+    "only n"
+   ],
+   "answer": 0,
+   "hint": "Which part multiplies the amount each period?",
+   "explain": "(1 + r) is the growth factor. P is the starting amount; n counts periods."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Fare = {a} + {b}m. Flag-fall in pounds?",
+   "answer": "a",
+   "hint": "The fixed term is the flag fall.",
+   "explain": "The constant term {a} is the flag-fall charge in pounds.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "In 2(x + 5), (x + 5) is best seen as…",
+   "choices": [
+    "one factor (a single quantity)",
+    "two final separate answers",
+    "only a coefficient"
+   ],
+   "answer": 0,
+   "hint": "A-SSE.1b: complicated parts as single quantities.",
+   "explain": "Treat (x + 5) as one factor multiplied by 2."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Cost = {a} + {b}h. Hourly rate?",
+   "answer": "b",
+   "hint": "The coefficient of h is pounds per hour.",
+   "explain": "The coefficient {b} is the hourly rate.",
+   "params": {
+    "a": [
+     10,
+     30
+    ],
+    "b": [
+     3,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is the mix-up?",
+    "choices": [
+     "P is the growth factor in P(1+r)ⁿ",
+     "(1+r) is the growth factor",
+     "3 in 3+1.5m can be flag fall"
+    ],
+    "answer": 0,
+    "hint": "Who starts the amount, and who grows it?",
+    "explain": "P is the start. The growth factor is (1 + r)."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A coefficient is…",
+    "choices": [
+     "the number multiplying a variable or factor",
+     "always the total bill",
+     "the letter itself"
+    ],
+    "answer": 0,
+    "hint": "Think of the 4 in 4h. Read each part against the real situation before calculating.",
+    "explain": "A coefficient multiplies a variable or factor; it is not the letter and not automatically the total."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Fare = {a} + 1.5m for {b} miles. Flag fall still?",
+    "answer": "a",
+    "hint": "Flag fall does not change with miles.",
+    "explain": "Flag fall stays {a} pounds even when miles are {b}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      3,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Best first step when reading a formula is…",
+    "choices": [
+     "name what the formula models",
+     "multiply every number together",
+     "ignore the letters"
+    ],
+    "answer": 0,
+    "hint": "Meaning before blind arithmetic.",
+    "explain": "Start from the real situation, then map each part."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "In Cost = 20 + 4h, what sets how fast cost grows with h?",
+    "choices": [
+     "the coefficient 4",
+     "only the 20",
+     "the letter h with no number"
+    ],
+    "answer": 0,
+    "hint": "Which part is the rate? Read each part against the real situation before calculating.",
+    "explain": "Changing 4 changes the hourly rate. The 20 is a fixed start."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Growth factor each year is 1.0{a}. As a percent increase?",
+    "answer": "a",
+    "hint": "1.05 means 5% growth; read the hundredths.",
+    "explain": "1.0{a} means a {a}% increase per period.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "This lesson vs rewriting expressions is mainly about…",
+    "choices": [
+     "what each part means in a real situation",
+     "only expanding brackets for speed",
+     "plotting graphs of the formula"
+    ],
+    "answer": 0,
+    "hint": "Interpretation in context, not rewrite drills.",
+    "explain": "A-SSE.1 focuses on meaning of terms, factors and coefficients in context."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Treating (1 + r) as one quantity means…",
+    "choices": [
+     "the whole bracket is the growth factor",
+     "you must split 1 and r into two bills",
+     "r must be ignored"
+    ],
+    "answer": 0,
+    "hint": "Single quantity / factor.",
+    "explain": "(1 + r) stays together as the growth factor each period."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "Standing charge {a} plus {b} per unit. Coefficient of units?",
+    "answer": "b",
+    "hint": "Which number multiplies the unit count?",
+    "explain": "The per-unit rate {b} is the coefficient.",
+    "params": {
+     "a": [
+      5,
+      20
+     ],
+     "b": [
+      2,
+      8
+     ]
+    }
+   }
+  ]
+ }
+}
