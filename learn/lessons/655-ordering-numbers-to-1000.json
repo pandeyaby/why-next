@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_AQcVRBddko",
+ "title": "Ordering Numbers to 1000",
+ "audience": "family",
+ "keyIdea": "To compare two numbers up to 1000, line up the places and scan from the left: hundreds first, then tens, then ones. The first place where the digits differ decides. Record it with >, = or <, and order a set by doing the same scan.",
+ "familyTip": "Write two house numbers or page numbers one above the other, ones under ones. Ask which place to check first, then which place decides. Try a tricky pair like 305 and 350, or 98 and 120.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which symbol fits each pair? Drag the pair into >, = or <, or tap the pair then a box.",
+  "opts": {
+   "bins": [
+    ">",
+    "=",
+    "<"
+   ],
+   "items": [
+    [
+     "412 ? 398",
+     0
+    ],
+    [
+     "305 ? 350",
+     2
+    ],
+    [
+     "726 ? 726",
+     1
+    ],
+    [
+     "98 ? 120",
+     2
+    ],
+    [
+     "640 ? 604",
+     0
+    ],
+    [
+     "815 ? 851",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagord1k",
+  "caption": "Flagship lab: tap the place that decides on a hundreds, tens and ones chart, drag a symbol into the gap, then order four numbers onto a 0 to 1000 line.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A three-digit number has hundreds, tens and ones. In 412 the 4 means 4 hundreds.",
+   "Start on the left. If one number has more hundreds, it is the bigger one. You can stop there. 412 is bigger than 398, even though 9 and 8 look big.",
+   "If the hundreds are the same, they do not help. Move right and look at the tens. Then the ones if you need to.",
+   "A zero still holds a place. 305 has no tens, but 350 has 5 tens. So 305 is less than 350. 98 has no hundreds at all. Put its ones under the ones of 120 first. Then you can see 98 is less."
+  ],
+  "adult": [
+   "Ages 7 to 8. CCSS 2.NBT.4: compare two three-digit numbers based on meanings of the hundreds, tens and ones digits, using >, = and < symbols to record the results. National Curriculum Year 3 number and place value: compare and order numbers up to 1000.",
+   "The method is a left-to-right scan of aligned place-value columns. The first column where the digits differ decides the comparison, and every column to its right is irrelevant: 412 > 398 because 4 hundreds > 3 hundreds, regardless of 98 > 12. Ordering a set repeats the scan, grouping by hundreds and then by tens.",
+   "Common mistakes: letting the larger tens or ones digits win (calling 398 bigger than 412); treating numbers with the same digits as equal (305 and 350); ignoring a zero that holds a place; comparing the first digits of a two-digit and a three-digit number without aligning the places (98 vs 120, '9 > 1'); and turning the > or < sign the wrong way.",
+   "In the lab your child taps the column that decides on a chart of hundreds flats, tens rods and ones cubes, drags a symbol into the gap between 708 and 780, then drags 640, 604, 460 and 406 into order and sees them land on a 0 to 1000 number line."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is greater: 412 or 398?",
+   "choices": [
+    "412",
+    "398",
+    "They are equal"
+   ],
+   "answer": 0,
+   "hint": "Check the hundreds digit of each number before anything else.",
+   "explain": "412 has 4 hundreds and 398 has 3 hundreds. More hundreds wins, so 412 > 398."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which symbol fits: 305 ? 350",
+   "choices": [
+    "<",
+    ">",
+    "="
+   ],
+   "answer": 0,
+   "hint": "The hundreds match, so compare the tens. The zero means no tens.",
+   "explain": "Both have 3 hundreds. 0 tens is less than 5 tens, so 305 < 350."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What number has {h} hundreds, {t} tens and {o} ones?",
+   "answer": "h*100+t*10+o",
+   "hint": "Each hundred is worth 100 and each ten is worth 10. Add the ones last.",
+   "explain": "{h} hundreds, {t} tens and {o} ones make {=h*100+t*10+o}.",
+   "params": {
+    "h": [
+     1,
+     9
+    ],
+    "t": [
+     0,
+     9
+    ],
+    "o": [
+     0,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Order 640, 604, 460 and 406. Which comes first (smallest)?",
+   "choices": [
+    "406",
+    "460",
+    "604",
+    "640"
+   ],
+   "answer": 0,
+   "hint": "Find the numbers with the fewest hundreds, then compare their tens.",
+   "explain": "406 and 460 have 4 hundreds. 0 tens is less than 6 tens, so 406 is smallest."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "What is the hundreds digit of {=h*100+t*10+o}?",
+   "answer": "h",
+   "hint": "In a three-digit number the hundreds digit is the one on the left.",
+   "explain": "{=h*100+t*10+o} is {h} hundreds, {t} tens and {o} ones, so the hundreds digit is {h}.",
+   "params": {
+    "h": [
+     1,
+     9
+    ],
+    "t": [
+     0,
+     9
+    ],
+    "o": [
+     0,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is less: 98 or 120?",
+    "choices": [
+     "98",
+     "120",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "98 has no hundreds digit. Line up the ones before you compare.",
+    "explain": "98 has 0 hundreds and 120 has 1 hundred, so 98 < 120."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which symbol fits: 726 ? 726",
+    "choices": [
+     "=",
+     ">",
+     "<"
+    ],
+    "answer": 0,
+    "hint": "Check every place: hundreds, tens and ones.",
+    "explain": "Every place matches (7 hundreds, 2 tens, 6 ones), so 726 = 726."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which symbol fits: 708 ? 780",
+    "choices": [
+     "<",
+     ">",
+     "="
+    ],
+    "answer": 0,
+    "hint": "Same hundreds, so the tens decide. The open side faces the greater number.",
+    "explain": "Both have 7 hundreds. 0 tens is less than 8 tens, so 708 < 780."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Sam says 398 > 412 because 9 and 8 are big digits. What went wrong?",
+    "choices": [
+     "The hundreds decide first",
+     "He used the wrong symbol only",
+     "The ones decide first"
+    ],
+    "answer": 0,
+    "hint": "Scan from the left. Which place differs first?",
+    "explain": "3 hundreds is less than 4 hundreds, so 398 < 412. The tens and ones never get a say."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "What is 100 more than {=h*100+t*10+o}?",
+    "answer": "h*100+t*10+o+100",
+    "hint": "100 more means the hundreds digit goes up by one. Tens and ones stay the same.",
+    "explain": "{=h*100+t*10+o} plus one hundred is {=h*100+t*10+o+100}.",
+    "params": {
+     "h": [
+      1,
+      8
+     ],
+     "t": [
+      0,
+      9
+     ],
+     "o": [
+      0,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is greatest: 563, 536 or 365?",
+    "choices": [
+     "563",
+     "536",
+     "365"
+    ],
+    "answer": 0,
+    "hint": "Two numbers have 5 hundreds. Compare their tens.",
+    "explain": "563 and 536 both have 5 hundreds. 6 tens beat 3 tens, so 563 is greatest."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "What is the tens digit of {=h*100+t*10+o}?",
+    "answer": "t",
+    "hint": "The tens digit is the middle digit of a three-digit number.",
+    "explain": "{=h*100+t*10+o} has {t} tens, so the tens digit is {t}.",
+    "params": {
+     "h": [
+      1,
+      9
+     ],
+     "t": [
+      0,
+      9
+     ],
+     "o": [
+      0,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Are 305 and 350 equal because they use the same digits?",
+    "choices": [
+     "No: 305 has 0 tens, 350 has 5 tens",
+     "Yes: same digits means equal",
+     "Yes: both have 3 hundreds"
+    ],
+    "answer": 0,
+    "hint": "Equal needs every place to match, not just the same digits.",
+    "explain": "The tens differ (0 and 5), so 305 < 350. Same digits in different places give different numbers."
+   }
+  ]
+ }
+}
