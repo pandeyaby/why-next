@@ -1,0 +1,261 @@
+{
+ "topicId": "mt_JiZ3H90Xg8",
+ "title": "Risk, Uncertainty, and Cognitive Bias",
+ "audience": "learner",
+ "keyIdea": "A risk is a choice where the odds can be known (1 in 6 for a dice); uncertainty is a choice where nobody can know the odds (whether you will like a new club). Our brains judge both with shortcuts that can mislead: the availability bias (vivid stories make rare things feel likely), present bias (now feels bigger than later), optimism bias ('it won't happen to me') and groupthink (a group agrees instead of checking). Teens are especially drawn to risk when friends are watching. A simple plan helps: pause, list options, check facts and odds, check your values, choose, then review.",
+ "familyTip": "Next time a news story scares someone at home, ask together: 'How often does this really happen?' and look it up. When a choice comes up (a trip, a phone deal, a party), try the plan out loud: what are the options, what are the facts, what matters to us? Then talk later about how it went.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which bias is pulling? Drag each thought, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "availability bias",
+    "present bias",
+    "optimism bias"
+   ],
+   "items": [
+    [
+     "I saw a shark film, so I won't swim in the sea.",
+     0
+    ],
+    [
+     "I'll save next month; I want the trainers today.",
+     1
+    ],
+    [
+     "Other people crash on bikes, but not me.",
+     2
+    ],
+    [
+     "After plane-crash news, flying feels deadly.",
+     0
+    ],
+    [
+     "One more episode, then I'll do homework.",
+     1
+    ],
+    [
+     "I won't get caught out by a scam text.",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrisk",
+  "caption": "Flagship lab: sort risk from uncertainty, watch news inflate a fear, choose now or later, split a class at the middle, flag groupthink, order a plan.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A risk is a choice where you can know the odds. A fair dice lands on 6 one time in 6. Uncertainty is a choice where nobody knows the odds, like how a new school will feel. For uncertain choices, your values matter even more.",
+   "Your brain uses shortcuts to judge what is likely, and they can trick you. The availability bias makes things you can easily picture feel common. Shark attacks are in the news, but they kill fewer than 15 people a year. Malaria, spread by mosquitoes, killed about 600,000 people in 2022.",
+   "Present bias makes now feel bigger than later, so you put off revision. Optimism bias says 'it won't happen to me'. Groupthink is when a group wants to agree so much that nobody checks the plan. Teenagers take more risks when friends are watching.",
+   "A plan slows you down so the shortcuts have less pull: pause, list your options, check the facts and odds, check your values, choose, and then look back at how it went."
+  ],
+  "adult": [
+   "Ages 11 to 12. This fits PSHE Association KS3 work on managing risk and making choices, and the CASEL skill of responsible decision-making. Key terms: risk and uncertainty (Knight, 1921), heuristic, the availability heuristic (Tversky and Kahneman, 1973), present bias, optimism bias (Weinstein, 1980), groupthink (Janis, 1972), and values.",
+   "The point is not that mental shortcuts are bad. They are fast and often good enough. They go wrong in four places: rare but vivid events, a reward now against a cost later, judging your own risk, and choices made in a group. In one study, teens took more risks in a driving game when friends watched, but adults hardly changed (Gardner and Steinberg, 2005).",
+   "Common mistakes: treating an uncertain choice as if the odds were known; thinking a bias means someone is stupid, when everyone has them; believing that knowing about a bias makes it go away; and thinking facts always give the answer. When the facts run out, a good thinker names what matters to them and decides on that.",
+   "In the lab the learner sorts six cases into risk or uncertainty. They watch three shark stories push up a 'feels likely' bar while the real numbers stay put. They make the £10 today or £11 tomorrow choice (Thaler, 1981), drag a line to split 30 drivers at the middle, flag groupthink in a group chat about jumping off a pier, and put a six-step plan in order."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is a risk, not an uncertainty?",
+   "choices": [
+    "drawing a red card from a full pack",
+    "whether a new friend will stay a friend",
+    "what music will be popular in ten years"
+   ],
+   "answer": 0,
+   "hint": "For a risk, you can work out the odds exactly before it happens.",
+   "explain": "Half of a full pack is red, so the odds are 26 in 52, or 1 in 2. The other two have odds nobody can know."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A class of {n} people ranks how safe they are. At most how many can be safer than the middle person?",
+   "answer": "n/2",
+   "hint": "The middle splits the group in half. How many are on one side?",
+   "explain": "Half of {n} is {=n/2}, so at most {=n/2} people can be above the middle. If more claim it, some are showing optimism bias.",
+   "params": {
+    "n": [
+     10,
+     40
+    ]
+   },
+   "where": "n%2==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A raffle has {t} tickets and you have {k}. Out of {t}, how many chances do you have to win? (This is a risk: the odds are known.)",
+   "answer": "k",
+   "hint": "Each ticket is one chance. Count your tickets.",
+   "explain": "You hold {k} of the {t} tickets, so you have {k} chances in {t}. Known odds make this a risk.",
+   "params": {
+    "t": [
+     50,
+     200
+    ],
+    "k": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Ben saw three news stories about lightning strikes and now won't play football in the rain. Which bias is most likely?",
+   "choices": [
+    "availability bias",
+    "present bias",
+    "groupthink"
+   ],
+   "answer": 0,
+   "hint": "Did something vivid make the danger feel more common?",
+   "explain": "Vivid news made a rare event easy to picture, so it feels likely. That is availability. Checking the real numbers is the fix."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why do many people take £10 today over £11 tomorrow, but wait for £11 when both are a year away?",
+   "choices": [
+    "present bias: now feels bigger than later",
+    "optimism bias: they think they'll be richer",
+    "the extra £1 is worth more in a year"
+   ],
+   "answer": 0,
+   "hint": "The wait is one day both times. What changed?",
+   "explain": "Only the distance from now changed. A reward today pulls harder than one tomorrow, but in a year both feel far away. That is present bias."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which choice is uncertain rather than risky?",
+    "choices": [
+     "whether you will enjoy a new hobby",
+     "rolling a 1 on a dice",
+     "tossing heads on a coin"
+    ],
+    "answer": 0,
+    "hint": "Could anyone tell you the odds in advance?",
+    "explain": "No one can give odds for enjoying a hobby, so it is uncertain. Dice and coins have known odds, so they are risks."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "In a survey of {n} drivers, {s} said they were safer than the middle driver. How many of them at least must be wrong?",
+    "answer": "s-n/2",
+    "hint": "Only half of {n} can be above the middle. How many more than that said yes?",
+    "explain": "Half of {n} is {=n/2}. {s} − {=n/2} = {=s-n/2}, so at least {=s-n/2} must be wrong. That gap is optimism bias.",
+    "params": {
+     "n": [
+      20,
+      40
+     ],
+     "s": [
+      16,
+      38
+     ]
+    },
+    "where": "n%2==0 && s>n/2 && s<=n"
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Nobody in a group questions a dangerous plan, and the one person who doubts it is told to stop being boring. What is this?",
+    "choices": [
+     "groupthink",
+     "availability bias",
+     "uncertainty"
+    ],
+    "answer": 0,
+    "hint": "Is the group checking the plan, or pushing everyone to agree?",
+    "explain": "Pressure on someone who disagrees is a classic sign of groupthink. Asking a real question or calling a vote breaks it."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is the first step of the decision plan?",
+    "choices": [
+     "pause",
+     "choose",
+     "ask the group to vote"
+    ],
+    "answer": 0,
+    "hint": "Before options or facts, what slows the fast brain down?",
+    "explain": "Pausing gives you time to notice a bias before it decides for you. Then list options, check facts and odds, check values, choose, review."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Priya says, 'I know about optimism bias, so it can't affect me.' What is wrong?",
+    "choices": [
+     "knowing about a bias does not switch it off",
+     "optimism bias only affects adults",
+     "nothing, she is right"
+    ],
+    "answer": 0,
+    "hint": "Do biases go away just because you can name them?",
+    "explain": "Everyone has these biases, even experts. Naming them helps only if you also use a check, like looking at the real numbers."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Teenagers in a study took more risks in a driving game when what happened?",
+    "choices": [
+     "friends were watching",
+     "they were alone",
+     "an adult was in charge"
+    ],
+    "answer": 0,
+    "hint": "Think about the groupthink step.",
+    "explain": "Gardner and Steinberg (2005) found teens took more risks with peers watching, while adults barely changed. Knowing this helps you plan ahead."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A bag has {r} red and {b} blue counters. How many chances out of {=r+b} are there of picking red?",
+    "answer": "r",
+    "hint": "Each counter is one chance. How many are red?",
+    "explain": "{r} of the {=r+b} counters are red, so there are {r} chances in {=r+b}. Known odds make it a risk.",
+    "params": {
+     "r": [
+      1,
+      6
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The facts don't settle whether to join a new club. What should help you decide?",
+    "choices": [
+     "what you value, such as making friends or trying new things",
+     "whatever your friends are doing",
+     "whichever feels best right now"
+    ],
+    "answer": 0,
+    "hint": "When the odds can't be known, what is left to guide you?",
+    "explain": "Under uncertainty, your values carry the decision. Following the group risks groupthink, and 'right now' risks present bias."
+   }
+  ]
+ }
+}
