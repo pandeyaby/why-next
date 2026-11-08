@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_cChv2j_-Da",
+ "title": "Fluent adding and subtracting within 100",
+ "audience": "family",
+ "keyIdea": "Being fluent within 100 means choosing a quick, reliable way for the numbers in front of you. Split both numbers into tens and ones when no number is near a ten (46 + 37 = 70 + 13 = 83). Round and adjust when one number is 1 or 2 from a ten (68 + 29 = 68 + 30 − 1 = 97; 83 − 19 = 83 − 20 + 1 = 64). Count up when two numbers are close (91 − 87: 87 → 90 → 91 is 4). Then check with the inverse: 83 − 25 = 58 because 58 + 25 = 83.",
+ "familyTip": "When you see two prices, ask 'What's the quickest way?' before anyone works it out. For £68 + £29, say 'add 30 and take 1 back'. For 'how much more is 91p than 87p?', count up together: 3 to 90, 1 more to 91. Then ask your child to check a take-away by adding back.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Check each answer by adding back. Drag it, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "adds back to the start: right",
+    "does not add back: a slip"
+   ],
+   "items": [
+    [
+     "83 − 25 = 58",
+     0
+    ],
+    [
+     "64 − 28 = 44",
+     1
+    ],
+    [
+     "70 − 36 = 34",
+     0
+    ],
+    [
+     "52 − 17 = 45",
+     1
+    ],
+    [
+     "91 − 46 = 45",
+     0
+    ],
+    [
+     "75 − 38 = 43",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagflu100",
+  "caption": "Flagship lab: split into tens and ones, round and adjust, count up a small gap, pick the quickest strategy, check with the inverse.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Look at the numbers first, then pick a quick way. One way is to split into tens and ones. For 46 + 37, add the tens: 40 + 30 = 70. Add the ones: 6 + 7 = 13. Then 70 + 13 = 83. The 13 has one more ten in it.",
+   "Round and adjust. 29 is one less than 30. So 68 + 29 is 68 + 30, take 1 away. That is 97. For 83 − 19, take away 20, then give 1 back. That is 64.",
+   "Count up when the numbers are close. For 91 − 87, go from 87 up to 90. That is 3. Then 1 more to 91. So the gap is 4.",
+   "Check by adding back. If 83 − 25 = 58, then 58 + 25 must make 83. It does, so the answer is right."
+  ],
+  "adult": [
+   "Ages 7 to 8. This is CCSS 2.NBT.5 (fluently add and subtract within 100 using strategies based on place value, properties of operations, and the relationship between addition and subtraction) and the NC Year 2 and Year 3 mental calculation statements. Key words: partition, tens and ones, compensation (round and adjust), difference, counting up (complementary addition), inverse.",
+   "Fluency here is flexibility plus accuracy, not speed alone. Partitioning works for any pair and leans on place value. Compensation uses a near multiple of ten and then corrects the over- or under-shoot. Counting up treats subtraction as finding the difference, which is fastest when the two numbers are close. The inverse check turns every take-away into an addition the child already trusts.",
+   "Common mistakes: losing the extra ten when the ones total more than 9 (46 + 37 = 73); writing the parts side by side (713); adjusting the wrong way after rounding (68 + 29 = 99, or 83 − 19 = 62); taking the smaller ones digit from the larger regardless of order (83 − 25 = 62, since 5 − 3 = 2); and using one slow method, such as counting back in ones, for every question.",
+   "In the lab your child drags 40, 6, 30 and 7 into tens and ones boxes, taps a jump of 30 or 20 on a number line and then fixes it by 1, drags a dot to count up from 87 to 91, sorts six sums by the quickest strategy, and checks Sam's 83 − 25 = 62 by adding 62 + 25 = 87, then drags the answer to 58."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the quickest way to work out 57 + 39?",
+   "choices": [
+    "add 40, then take 1 away",
+    "count on 39 ones from 57",
+    "add 30, then add 10 more"
+   ],
+   "answer": 0,
+   "hint": "Is 39 close to a whole ten? How far from 40 is it?",
+   "explain": "39 is 1 less than 40. 57 + 40 = 97, then take back the extra 1: 96."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Work out {a} + {b}.",
+   "answer": "a+b",
+   "hint": "Add the tens, add the ones, then join them. Watch for an extra ten in the ones.",
+   "explain": "{a} + {b} = {=a+b}. Tens: {=a-a%10} + {=b-b%10}. Ones: {=a%10} + {=b%10}. Then add the two totals.",
+   "params": {
+    "a": [
+     24,
+     58
+    ],
+    "b": [
+     16,
+     39
+    ]
+   },
+   "where": "a%10+b%10>=10 && a+b<100"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Work out {a} − {=10*t-1} by taking away {=10*t} and then adjusting.",
+   "answer": "a-10*t+1",
+   "hint": "Take away {=10*t}. You took 1 too many, so give 1 back.",
+   "explain": "{a} − {=10*t} = {=a-10*t}, then add 1 back: {=a-10*t+1}.",
+   "params": {
+    "a": [
+     61,
+     95
+    ],
+    "t": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "What is {=b+d} − {b}? Count up from {b}.",
+   "answer": "d",
+   "hint": "How far from {b} up to the next ten? Then how far from there to {=b+d}?",
+   "explain": "From {b} up to {=b+d} is {d}, so {=b+d} − {b} = {d}.",
+   "params": {
+    "b": [
+     56,
+     88
+    ],
+    "d": [
+     2,
+     6
+    ]
+   },
+   "where": "b%10>=5"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Sam says 83 − 25 = 62. Which check shows the slip?",
+   "choices": [
+    "62 + 25 = 87, not 83",
+    "83 + 25 = 108",
+    "62 − 25 = 37"
+   ],
+   "answer": 0,
+   "hint": "Adding undoes taking away. Add the answer to the number taken away.",
+   "explain": "62 + 25 = 87, which is not 83, so 62 is wrong. Sam did 5 − 3. The right answer is 58, because 58 + 25 = 83."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A shop has {a} red pens and {b} blue pens. How many pens is that?",
+    "answer": "a+b",
+    "hint": "Split both numbers into tens and ones. Do the ones make another ten?",
+    "explain": "{a} + {b} = {=a+b}. The ones {=a%10} + {=b%10} made more than 9, so one more ten joins the tens.",
+    "params": {
+     "a": [
+      33,
+      66
+     ],
+     "b": [
+      18,
+      29
+     ]
+    },
+    "where": "a%10+b%10>=10 && a+b<100"
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Work out {a} + {=10*t-1}.",
+    "answer": "a+10*t-1",
+    "hint": "{=10*t-1} is 1 less than {=10*t}. Add {=10*t}, then take 1 away.",
+    "explain": "{a} + {=10*t} = {=a+10*t}, then take back the extra 1: {=a+10*t-1}.",
+    "params": {
+     "a": [
+      21,
+      59
+     ],
+     "t": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mo works out 68 + 29 as 68 + 30 + 1 = 99. What is the slip?",
+    "choices": [
+     "30 is 1 too many, so take 1 away: 97",
+     "Mo should have added 20",
+     "nothing, 99 is right"
+    ],
+    "answer": 0,
+    "hint": "Is 30 more or less than 29? Which way should the fix go?",
+    "explain": "30 is 1 more than 29, so adding 30 adds 1 too many. Take it back: 98 − 1 = 97."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is the quickest way to work out 73 − 68?",
+    "choices": [
+     "count up from 68 to 73",
+     "count back 68 ones from 73",
+     "split 68 into 60 and 8 and take each away"
+    ],
+    "answer": 0,
+    "hint": "Are 73 and 68 close together?",
+    "explain": "68 to 70 is 2, 70 to 73 is 3, so the gap is 5. Counting back 68 ones would be very slow."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ali says 54 − 27 = 33. What went wrong?",
+    "choices": [
+     "Ali did 7 − 4 in the ones instead of taking a ten",
+     "Ali added instead",
+     "nothing, 33 is right"
+    ],
+    "answer": 0,
+    "hint": "Check it: does 33 + 27 make 54?",
+    "explain": "33 + 27 = 60, not 54. You cannot take 7 from 4, so take a ten: 14 − 7 = 7 and 4 tens − 2 tens = 2 tens. 54 − 27 = 27."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which addition checks that 91 − 46 = 45?",
+    "choices": [
+     "45 + 46",
+     "91 + 46",
+     "45 + 91"
+    ],
+    "answer": 0,
+    "hint": "Add the answer to the number that was taken away.",
+    "explain": "45 + 46 = 91, which is where we started, so 91 − 46 = 45 is right."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "What is {a} − {b}?",
+    "answer": "a-b",
+    "hint": "Can you take {=b%10} from {=a%10}? If not, take a ten first. Check by adding back.",
+    "explain": "{a} − {b} = {=a-b}. Check: {=a-b} + {b} = {a}.",
+    "params": {
+     "a": [
+      52,
+      94
+     ],
+     "b": [
+      15,
+      38
+     ]
+    },
+    "where": "a%10<b%10"
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "46 + 37: why is the answer in the 80s, not the 70s?",
+    "choices": [
+     "6 + 7 = 13, which holds another ten",
+     "you always round up",
+     "37 is close to 40"
+    ],
+    "answer": 0,
+    "hint": "Add the ones on their own. Is the total more than 9?",
+    "explain": "40 + 30 = 70, and 6 + 7 = 13. 13 is 1 ten and 3 ones, so 70 + 13 = 83."
+   }
+  ]
+ }
+}
