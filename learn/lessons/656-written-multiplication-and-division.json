@@ -1,0 +1,235 @@
+{
+ "topicId": "mt_DyGBW3ZHh3",
+ "title": "Written Multiplication & Division",
+ "audience": "family",
+ "keyIdea": "To multiply a two-digit number by a one-digit number, partition it into tens and ones, multiply each part with a times-table fact and add: 23 × 4 = 80 + 12 = 92. In the short written method, start with the ones and carry any ten. To divide, take away chunks of a known fact and count the groups: 96 ÷ 8 = 10 + 2 = 12. Check with the inverse: 12 × 8 = 96.",
+ "familyTip": "Ask for 23 × 4 out loud. Then ask: what is 20 × 4, and what is 3 × 4? Add them. For sharing, try 68 ÷ 4 with 68 pennies or pasta: first make 10 groups of 4, then see how many more groups fit.",
+ "status": "self-checked",
+ "visual": {
+  "type": "array",
+  "caption": "Drag the split: 4 × 23 is 4 × 20 plus 4 × 3.",
+  "opts": {
+   "rows": 4,
+   "cols": 23,
+   "split": 20
+  }
+ },
+ "lab": {
+  "type": "flagwmd",
+  "caption": "Flagship lab: cut a 23 by 4 array, carry the ten, spot the slip in 47 × 3, then divide by dragging fact chunks onto a bar.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "To work out 23 × 4, split 23 into 20 and 3. Then 20 × 4 = 80 and 3 × 4 = 12. Add them: 80 + 12 = 92.",
+   "When you write it down, start with the ones. 3 × 4 = 12. That is 1 ten and 2 ones. Write the 2 and carry the 1 ten.",
+   "Next do the tens. 2 tens × 4 = 8 tens. Add the 1 ten you carried to get 9 tens. So the answer is 92.",
+   "To work out 96 ÷ 8, take away groups of 8 you know. 10 groups of 8 is 80. That leaves 16, which is 2 more groups. 10 + 2 = 12 groups. Check it: 12 × 8 = 96."
+  ],
+  "adult": [
+   "Ages 7 to 8. National Curriculum Year 3: write and work out multiplication and division statements using the tables they know. This includes two-digit numbers times one-digit numbers, first in the head and then with formal written methods. The 3, 4 and 8 times tables are the Year 3 facts used here.",
+   "Partitioning uses the distributive law: 23 × 4 = 20 × 4 + 3 × 4. Short multiplication is the same idea in columns. Start with the ones and carry any ten. Chunking takes away multiples of the divisor that come from known facts, such as 10 × 8 = 80 and 2 × 8 = 16. The answer is the number of groups taken, not the size of what is left.",
+   "Common mistakes: multiplying the tens but only adding the ones (20 × 4 + 3 = 83); forgetting the carried ten (82, not 92); writing both part answers side by side (812); dividing each digit on its own (9 ÷ 8 and 6 ÷ 8); stopping after the first chunk (96 ÷ 8 = 10); and giving the amount left instead of the number of groups.",
+   "In the lab your child drags a cut across a 23 by 4 array to see 80 + 12. Then they carry the ten in a column layout and pick the right working for 47 × 3. Last, they fill a 96 bar and a 68 bar with groups and check a division with its inverse."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is 23 × 4?",
+   "choices": [
+    "92",
+    "83",
+    "812"
+   ],
+   "answer": 0,
+   "hint": "Split 23 into 20 and 3. Multiply both parts by 4, then add.",
+   "explain": "20 × 4 = 80 and 3 × 4 = 12. 80 + 12 = 92."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Work out {t}0 × {m} by thinking of {t} tens.",
+   "answer": "t*10*m",
+   "hint": "{t} tens times {m} is {=t*m} tens. Then turn tens into a number.",
+   "explain": "{t} tens × {m} = {=t*m} tens = {=t*10*m}.",
+   "params": {
+    "t": [
+     1,
+     9
+    ],
+    "m": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Work out {=t*10+o} × 3 by partitioning into tens and ones.",
+   "answer": "(t*10+o)*3",
+   "hint": "Multiply the tens part and the ones part by 3 separately, then add the two answers.",
+   "explain": "{=t*10} × 3 = {=t*30} and {o} × 3 = {=o*3}. Together that is {=(t*10+o)*3}.",
+   "params": {
+    "t": [
+     1,
+     3
+    ],
+    "o": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is 96 ÷ 8?",
+   "choices": [
+    "12",
+    "10",
+    "11"
+   ],
+   "answer": 0,
+   "hint": "10 groups of 8 is 80. How many more groups of 8 fit into what is left?",
+   "explain": "96 − 80 = 16, and 16 is 2 groups of 8. 10 + 2 = 12, so 96 ÷ 8 = 12."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "In 47 × 3 the ones give 7 × 3 = 21. What do you write in the ones column?",
+   "choices": [
+    "1, and carry 2 tens",
+    "21",
+    "2, and carry 1 ten"
+   ],
+   "answer": 0,
+   "hint": "21 is 2 tens and 1 one. Only one digit fits in the ones column.",
+   "explain": "Write the 1 one and carry the 2 tens. Then 4 × 3 = 12 tens, plus 2 tens = 14 tens, so 47 × 3 = 141."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is 68 ÷ 4?",
+    "choices": [
+     "17",
+     "10",
+     "28"
+    ],
+    "answer": 0,
+    "hint": "Take away 10 groups of 4 first. How many groups of 4 are in what is left?",
+    "explain": "10 × 4 = 40, leaving 28. 28 is 7 groups of 4. 10 + 7 = 17."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Mia says 23 × 4 = 83. What did she do?",
+    "choices": [
+     "Added 3 instead of multiplying it by 4",
+     "Forgot to carry",
+     "Wrote two answers side by side"
+    ],
+    "answer": 0,
+    "hint": "Look at 20 × 4 = 80. What happened to the 3?",
+    "explain": "She worked out 20 × 4 = 80 but then only added 3. The 3 must be multiplied too: 3 × 4 = 12, so 92."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Work out {=t*10+o} × 4 by partitioning.",
+    "answer": "(t*10+o)*4",
+    "hint": "Split the number into tens and ones. Times each part by 4, then add.",
+    "explain": "{=t*10} × 4 = {=t*40} and {o} × 4 = {=o*4}, so the answer is {=(t*10+o)*4}.",
+    "params": {
+     "t": [
+      1,
+      2
+     ],
+     "o": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which fact checks that 84 ÷ 4 = 21?",
+    "choices": [
+     "21 × 4 = 84",
+     "84 × 4 = 336",
+     "21 + 4 = 25"
+    ],
+    "answer": 0,
+    "hint": "Multiplication undoes division.",
+    "explain": "21 groups of 4 make 84 again, so 21 × 4 = 84 checks the division."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Work out {=d*10+d*k} ÷ {d}. Take away 10 groups of {d} first.",
+    "answer": "10+k",
+    "hint": "10 groups of {d} is {=d*10}. How many groups of {d} are in the {=d*k} left?",
+    "explain": "{=d*10} is 10 groups and {=d*k} is {k} groups, so {=d*10+d*k} ÷ {d} = {=10+k}.",
+    "params": {
+     "d": [
+      2,
+      5
+     ],
+     "k": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is 34 × 5?",
+    "choices": [
+     "170",
+     "150",
+     "154"
+    ],
+    "answer": 0,
+    "hint": "4 × 5 = 20 is 2 tens and 0 ones. Remember to carry the 2 tens.",
+    "explain": "30 × 5 = 150 and 4 × 5 = 20. 150 + 20 = 170."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Tom says 96 ÷ 8 = 10 because 10 × 8 = 80. What did he miss?",
+    "choices": [
+     "16 is still left: 2 more groups",
+     "Nothing, 10 is right",
+     "He should divide 9 and 6 by 8"
+    ],
+    "answer": 0,
+    "hint": "After taking away 80, is anything left of the 96?",
+    "explain": "96 − 80 = 16, which is 2 more groups of 8. So 96 ÷ 8 = 12."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is 75 ÷ 5?",
+    "choices": [
+     "15",
+     "10",
+     "70"
+    ],
+    "answer": 0,
+    "hint": "10 groups of 5 is 50. How many groups of 5 are in the 25 left?",
+    "explain": "50 is 10 groups and 25 is 5 groups. 10 + 5 = 15."
+   }
+  ]
+ }
+}
