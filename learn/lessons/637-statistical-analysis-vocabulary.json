@@ -1,0 +1,240 @@
+{
+ "topicId": "mt_fmm-P17Vka",
+ "title": "Statistical Analysis Vocabulary",
+ "audience": "family",
+ "keyIdea": "Each statistics word names one job. Frequency counts how often a value comes up. The mode is the most common value. The median is the middle value once the data is in order. The mean is the total shared equally. The range is the largest value minus the smallest. An outlier is far from the rest. A scatter graph shows pairs of values, and correlation names their pattern.",
+ "familyTip": "Ask everyone at home how many hours they slept last night. Write the numbers down. Together, find the mode (most common), put them in order to find the median, add and share to find the mean, and take the smallest from the largest for the range. Then ask: what would happen to each if a baby who slept 16 hours joined in?",
+ "status": "self-checked",
+ "visual": {
+  "type": "statlab",
+  "caption": "Drag the dots. Watch the mean (dashed line), the median (triangle), the mode and the range change.",
+  "opts": {
+   "vals": [
+    2,
+    4,
+    5,
+    7,
+    7,
+    9,
+    14
+   ],
+   "max": 20,
+   "target": 8
+  }
+ },
+ "lab": {
+  "type": "flagstatvoc",
+  "caption": "Flagship lab: vote to change the mode, swap score cards to find the median, level cube towers to find the mean, drag an outlier, and label three scatter graphs.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Data is a set of facts, often numbers. Frequency is how many times a value comes up. The mode is the value that comes up most often. If two values tie, there are two modes.",
+   "The median is the middle value. First put the numbers in order, from small to big. Then find the one in the middle. If there are two in the middle, the median is halfway between them.",
+   "The mean is a fair share. Add up all the values to get the total. Then divide by how many values there are. The range is the biggest value take away the smallest. It shows how spread out the data is.",
+   "An outlier is a value far from the rest. It can pull the mean a long way, but the median hardly moves. A scatter graph shows pairs of values as dots. If both go up together, that is a positive pattern. If one goes up as the other goes down, it is negative. If the dots are all over, there is no pattern. The word for this pattern is correlation."
+  ],
+  "adult": [
+   "Ages 9 to 11. In the National Curriculum in England, Year 6 statistics asks pupils to calculate and interpret the mean as an average. Mode, median and range are common in Key Stage 2 practice. Key Stage 3 adds measures of spread, outliers, and scatter graphs for two variables. This lesson teaches the words so a child can say what each measure describes, not only work it out.",
+   "Mode: the most frequent value or category. A set can have two modes, or none if every value occurs once. Median: the middle of the ordered data; with an even number of values, it is the mean of the two middle values. Mean: the sum divided by the number of values. Range: largest minus smallest, a measure of spread rather than an average. An outlier is a value far from the rest; it moves the mean and the range a lot and the median very little. Correlation describes the trend on a scatter graph: positive, negative or none.",
+   "Common mistakes: giving the highest frequency (the count) as the mode, instead of the value it belongs to. Finding the middle of a list that has not been put in order. Mixing up mean and median. Giving the largest value as the range. Reading a correlation as proof that one thing causes the other.",
+   "In the lab your child adds votes until grape becomes the mode. They swap five score cards into order to find the median. They move cubes between towers of 2, 4 and 9 until all are 5, the mean. They drag one quiz score out to make an outlier while the median stays put. Last, they label three scatter graphs as positive, negative or no correlation."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Favourite pets: dog 6 votes, cat 8 votes, fish 3 votes. What is the mode?",
+   "choices": [
+    "cat",
+    "8",
+    "dog"
+   ],
+   "answer": 0,
+   "hint": "The mode is the most common answer. Which pet has the highest frequency?",
+   "explain": "Cat has the highest frequency (8 votes), so the mode is cat. The number 8 is the frequency, not the mode itself."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Scores 7, 3, 9, 1, 5. What is the median?",
+   "choices": [
+    "5",
+    "9",
+    "3"
+   ],
+   "answer": 0,
+   "hint": "Put the scores in order from smallest to largest first, then take the middle one.",
+   "explain": "In order: 1, 3, 5, 7, 9. The middle value is 5. The 9 sits in the middle of the list as written, but that list was not in order."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Heights of three plants: {a} cm, {=a+2} cm and {=a+b} cm. What is the range in cm?",
+   "answer": "b",
+   "hint": "Range = largest value − smallest value. Which plant is tallest, and which is shortest?",
+   "explain": "Largest {=a+b} − smallest {a} = {b}. So the range is {b} cm.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     4,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Three children read {a}, {b} and {c} books. What is the mean number of books?",
+   "answer": "(a+b+c)/3",
+   "hint": "Add the three numbers to get the total, then share the total equally between 3 children.",
+   "explain": "Total {=a+b+c} ÷ 3 = {=(a+b+c)/3}. The mean is {=(a+b+c)/3} books.",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     2,
+     8
+    ],
+    "c": [
+     3,
+     12
+    ]
+   },
+   "where": "(a+b+c)%3==0"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "On a scatter graph of hours of practice and spelling score, the dots rise from left to right. This shows…",
+   "choices": [
+    "positive correlation",
+    "negative correlation",
+    "no correlation"
+   ],
+   "answer": 0,
+   "hint": "Do both values go up together, or does one go down as the other goes up?",
+   "explain": "Both values go up together, so it is positive correlation. Negative would mean the dots fall from left to right."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which word means the value that comes up most often?",
+    "choices": [
+     "mode",
+     "median",
+     "range"
+    ],
+    "answer": 0,
+    "hint": "Most often means the highest frequency.",
+    "explain": "The mode is the most common value. The median is the middle value in order, and the range is the largest minus the smallest."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Shoe sizes 2, 5, 5, 6, 8. One child with size 13 joins. Which measure changes the most?",
+    "choices": [
+     "the mean",
+     "the median",
+     "the mode"
+    ],
+    "answer": 0,
+    "hint": "An outlier pulls the total up a lot. Which measure uses the total?",
+    "explain": "Size 13 is an outlier. The mean uses the total, so it rises a lot (from 5.2 to about 6.5). The median moves from 5 to 5.5, and the mode stays 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Find the median of {=a+4}, {a}, {=a+8}, {=a+2}, {=a+6}.",
+    "answer": "a+4",
+    "hint": "Order the five numbers from smallest to largest, then take the third one.",
+    "explain": "In order: {a}, {=a+2}, {=a+4}, {=a+6}, {=a+8}. The middle (third) value is {=a+4}.",
+    "params": {
+     "a": [
+      1,
+      20
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Find the mean of {a}, {=a+2}, {=a+4} and {=a+6}.",
+    "answer": "a+3",
+    "hint": "Add the four numbers, then divide the total by 4.",
+    "explain": "Total {=4*a+12} ÷ 4 = {=a+3}. The mean is {=a+3}.",
+    "params": {
+     "a": [
+      1,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Times in a race: 12 s, 15 s, 14 s, 20 s. What is the range?",
+    "choices": [
+     "8 s",
+     "20 s",
+     "14.5 s"
+    ],
+    "answer": 0,
+    "hint": "Range = largest time − smallest time.",
+    "explain": "Largest 20 s − smallest 12 s = 8 s. 20 s is only the largest value, and 14.5 s is the median."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ice cream sales and sunburn cases both rise in summer. A scatter graph shows positive correlation. What can you say?",
+    "choices": [
+     "they rise together, but ice cream does not cause sunburn",
+     "ice cream causes sunburn",
+     "there is no correlation"
+    ],
+    "answer": 0,
+    "hint": "Correlation describes a pattern. Is there a third thing, like sunny weather, behind both?",
+    "explain": "Both rise together, which is positive correlation. Sunny weather drives both. Correlation alone never proves cause."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Scores 4, 9, 6, 6, 10. Which statement is true?",
+    "choices": [
+     "mode 6, median 6, range 6",
+     "mode 6, median 6, range 10",
+     "mode 2, median 6, range 6"
+    ],
+    "answer": 0,
+    "hint": "Mode: most common value. Median: middle once in order. Range: largest minus smallest.",
+    "explain": "In order: 4, 6, 6, 9, 10. The mode is 6 (it comes up twice), the median is 6, and the range is 10 − 4 = 6. The 2 is the frequency of 6, not the mode."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is an outlier?",
+    "choices": [
+     "a value far from the rest of the data",
+     "the largest value in any set",
+     "the value that comes up most often"
+    ],
+    "answer": 0,
+    "hint": "Think of one dot sitting a long way from the others.",
+    "explain": "An outlier is far from the rest. Every set has a largest value, but that is only an outlier if it is far away. The most common value is the mode."
+   }
+  ]
+ }
+}
