@@ -1,0 +1,162 @@
+{
+ "topicId": "mt_loYPGHJ8lm",
+ "title": "Reading and drawing circuit diagrams",
+ "audience": "family",
+ "keyIdea": "A circuit diagram uses standard symbols instead of pictures. A cell is a long thin line and a short thick line. A battery is two or more cells joined. A lamp is a circle with a cross. A switch drawn open has a gap, so the lamp is off; closed means joined, so the lamp lights. A buzzer is a dome. Wires are straight lines. A lamp only lights if the loop is complete.",
+ "familyTip": "Look at a torch or a battery toy together. Ask your child to draw its circuit using symbols, not pictures: cell, switch, lamp, and straight wires. Then ask: what does the switch do when you press it, and how would you draw that? Swap roles: you draw a diagram with a gap, and they spot why it will not work.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Read each circuit. Will the lamp light? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": ["lamp lights (complete)", "lamp off (broken)"],
+   "items": [["cell, closed switch and lamp in one loop", 0], ["cell, open switch and lamp", 1], ["cell and lamp with a gap in the wire", 1], ["battery of two cells and a lamp, all joined", 0], ["lamp and closed switch, but no cell", 1], ["cell, closed switch, buzzer and lamp in one loop", 0]]
+  }
+ },
+ "lab": {
+  "type": "flagcdiag",
+  "caption": "Flagship lab: match five symbols, close a gap with a wire, flip a switch, draw a cell–switch–buzzer loop, and match a real circuit to its diagram.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A circuit diagram is a map of a circuit. It uses simple symbols, not pictures. Each part has its own symbol, so anyone can read it.",
+   "A cell is a long thin line next to a short thick line. Two or more cells joined make a battery. A lamp is a circle with a cross in it. A buzzer looks like a dome. Wires are straight lines with square corners.",
+   "A switch can be open or closed. An open switch is drawn lifted up, with a gap. The gap breaks the loop, so the lamp is off. A closed switch joins the gap, so the lamp lights.",
+   "Power only flows round a full loop. If there is a gap anywhere, the lamp stays off. Real wires bend and curl, but the diagram still uses straight lines. What matters is which parts there are, how many cells, and whether the loop is joined up."
+  ],
+  "adult": [
+   "Ages 9 to 10. In the National Curriculum in England, Year 6 Electricity asks pupils to use recognised symbols when drawing a simple series circuit. It also links the brightness of lamps and the loudness of buzzers to the number and voltage of cells, and covers the on and off positions of switches. Year 4 Electricity has already covered complete circuits and switches.",
+   "The symbols here follow the standard forms taught in UK schools. A cell is a long thin line (the positive side) beside a short thick line. A battery is two or more cells joined end to end. A lamp is a circle with a diagonal cross. A switch is a break with a hinged line: lifted is open and off, flat is closed and on. A buzzer is drawn as a dome on a flat base. Wires are straight lines with right-angle corners. In a single loop, the position of the switch does not matter.",
+   "Common mistakes: thinking an open switch is on, as an open door lets you through. Drawing a picture of a bulb instead of the symbol. Mixing up the cell and lamp symbols. Drawing wiggly wires, or leaving gaps at the corners. Believing the switch must sit next to the positive end of the cell. Expecting a lamp to light when there is a gap somewhere else in the loop.",
+   "In the lab your child taps the symbol for each of five components. They drag a wire into a gap and see the lamp light. They tap a switch open and closed. They draw a loop with a cell, a closed switch and a buzzer by tapping slots, in any order. Last, they pick which of three diagrams matches a real circuit with curly wires, two cells, a pressed switch and a buzzer."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is the symbol for a lamp?",
+   "choices": ["a circle with a cross in it", "a long thin line and a short thick line", "a dome on a flat base"],
+   "answer": 0,
+   "hint": "Think of a round bulb with a cross drawn through it.",
+   "explain": "A lamp is a circle with a cross. The long and short lines are a cell, and the dome is a buzzer."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "A diagram shows a cell, an open switch and a lamp in one loop. Does the lamp light?",
+   "choices": ["no, the open switch makes a gap", "yes, open means electricity gets through", "yes, but only dimly"],
+   "answer": 0,
+   "hint": "An open switch is drawn lifted up. Is the loop joined all the way round?",
+   "explain": "An open switch leaves a gap, so the circuit is broken and the lamp is off. Closing the switch joins the gap."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A battery is made of {n} cells joined end to end. Each cell is drawn with one long and one short line. How many lines are in the battery symbol?",
+   "answer": "2*n",
+   "hint": "Each cell adds two lines. Double the number of cells.",
+   "explain": "{n} cells × 2 lines = {=2*n} lines.",
+   "params": {"n": [2, 6]}
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A circuit diagram has {a} cells, {b} lamps and 1 switch, all in one loop. How many components are there?",
+   "answer": "a+b+1",
+   "hint": "Count every symbol except the wires: cells, lamps and the switch.",
+   "explain": "{a} cells + {b} lamps + 1 switch = {=a+b+1} components. Wires join components but are not counted here.",
+   "params": {"a": [1, 3], "b": [1, 4]}
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "How are wires drawn in a circuit diagram?",
+   "choices": ["as straight lines with square corners", "curly, like real wires", "they are left out"],
+   "answer": 0,
+   "hint": "A diagram is a neat map, not a photo.",
+   "explain": "Wires are straight lines with square corners. The real wires may curl, but only the parts and how they join matter."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A long thin line next to a short thick line is the symbol for…",
+    "choices": ["a cell", "a lamp", "a switch"],
+    "answer": 0,
+    "hint": "This part gives the push that makes electricity flow.",
+    "explain": "That is a cell. Two or more cells joined make a battery. A lamp is a circle with a cross, and a switch is a line with a gap."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A closed switch is drawn…",
+    "choices": ["flat, joining the gap", "lifted up, with a gap", "as a circle with a cross"],
+    "answer": 0,
+    "hint": "Closed means joined, so the loop has no gap.",
+    "explain": "A closed switch lies flat and joins the gap, so the circuit is complete. A lifted switch is open."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A battery symbol in a diagram shows {n} short thick lines. How many cells make up the battery?",
+    "answer": "n",
+    "hint": "Each cell has one short thick line.",
+    "explain": "One short thick line per cell, so the battery has {n} cells.",
+    "params": {"n": [2, 6]}
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A loop has {a} cells, {b} buzzers and {c} switches. How many components are in the diagram?",
+    "answer": "a+b+c",
+    "hint": "Add up every symbol that is not a wire.",
+    "explain": "{a} + {b} + {c} = {=a+b+c} components.",
+    "params": {"a": [1, 3], "b": [1, 2], "c": [1, 2]}
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A diagram shows two cells instead of one, with the same lamp. Compared with one cell, the lamp is…",
+    "choices": ["brighter", "dimmer", "exactly the same"],
+    "answer": 0,
+    "hint": "More cells give a bigger push.",
+    "explain": "Two cells give a bigger push (a higher voltage), so the same lamp shines brighter."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A real circuit has two cells, a pressed switch and a buzzer, joined with curly wires. Which diagram matches?",
+    "choices": ["two cells, a closed switch and a buzzer, with straight wires", "one cell, a closed switch and a lamp", "two cells, an open switch and a buzzer"],
+    "answer": 0,
+    "hint": "Count the cells, check the switch, and check lamp or buzzer.",
+    "explain": "Two cells, closed switch (pressed on) and a buzzer. Curly wires are drawn straight. The other diagrams have the wrong cell count, a lamp, or an open switch."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In a single loop with a cell, a switch and a lamp, does it matter which side of the lamp the switch is on?",
+    "choices": ["no, it works the same anywhere in the loop", "yes, it must be next to the + side of the cell", "yes, it must touch the lamp"],
+    "answer": 0,
+    "hint": "In one loop, a gap anywhere stops the whole loop.",
+    "explain": "In one loop, the switch breaks or joins the whole circuit wherever it sits. Its place does not change what it does."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A diagram has a cell, a closed switch and a lamp, but one corner of the wire is not joined. Will the lamp light?",
+    "choices": ["no, the gap breaks the circuit", "yes, the switch is closed", "yes, corners do not count"],
+    "answer": 0,
+    "hint": "Follow the wire all the way round. Is there any gap?",
+    "explain": "Any gap breaks the circuit, even at a corner. A closed switch cannot help if the loop is broken somewhere else."
+   }
+  ]
+ }
+}
