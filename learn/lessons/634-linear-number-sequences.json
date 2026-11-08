@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_hBZwbst0ow",
+ "title": "Linear number sequences",
+ "audience": "family",
+ "keyIdea": "A linear sequence uses the same step from each term to the next. That step is the term-to-term rule. It can add, take away, or use a decimal, such as +4, −3 or +0.5. The 10th term is the first term plus 9 of those steps, not 10. If the step changes, as in 2, 4, 8, 16, the sequence is not linear.",
+ "familyTip": "Write a short list such as 3, 7, 11, 15. Ask your child to say the term-to-term rule, then the next two terms, then the 10th term. Try a take-away list and a decimal list (1, 1.5, 2, 2.5) as well. If they add 10 steps instead of 9, count the jumps from the first term to the tenth on your fingers.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each list use the same step every time (linear), or does the step change? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "same step (linear)",
+    "step changes (not linear)"
+   ],
+   "items": [
+    [
+     "3, 7, 11, 15",
+     0
+    ],
+    [
+     "2, 4, 8, 16",
+     1
+    ],
+    [
+     "20, 17, 14, 11",
+     0
+    ],
+    [
+     "1, 4, 9, 16",
+     1
+    ],
+    [
+     "1, 1.5, 2, 2.5",
+     0
+    ],
+    [
+     "5, 5, 5, 5",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglinseq",
+  "caption": "Flagship lab: reveal each gap to find the term-to-term rule, continue the list, find a 10th term with 9 jumps, and sort linear from changing-step lists.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A number sequence is a list of numbers in order. Each number is a term. The first term comes first. Then comes the second term.",
+   "A linear sequence uses the same step each time. That step is the term-to-term rule. From 3 to 7 is add 4. From 7 to 11 is add 4. So the rule is add 4.",
+   "The step can take away, or use a decimal. 20, 17, 14, 11 takes away 3 each time. 1, 1.5, 2, 2.5 adds 0.5 each time. If the step changes, the sequence is not linear. 2, 4, 8, 16 doubles, so it is not linear.",
+   "To find a later term, count the jumps from the first term. The 10th term is 9 jumps after the first. Start at 3 and add 4, nine times. That is 3 + 9 × 4 = 39. A common slip is to add 10 jumps and get 43."
+  ],
+  "adult": [
+   "Ages 10 to 11. In the National Curriculum in England, Year 6 algebra asks children to generate and describe linear number sequences. A linear sequence has a constant term-to-term rule, also called a common difference. The step may be positive, negative or a decimal, such as add 4, take away 3, or add 0.5.",
+   "The position-to-term view follows from that rule. The 10th term is the first term plus 9 equal steps, because you jump 9 times to get from term 1 to term 10. Later work writes this as the nth term. That is n times the step, then a start correction.",
+   "Common mistakes: treating the gap from the first term to the last term as the rule (for 3, 7, 11, 15, taking 15 minus 3 equals 12). Adding n steps instead of n minus 1 steps to find the nth term, so the 10th term of 3, 7, 11 becomes 43 instead of 39. Calling a doubling sequence linear, because each term grows, even though the step itself changes (2, 4, 8, 16).",
+   "In the lab your child taps the gaps to find the term-to-term rule, including take-away and decimal steps. They add the next term, then find a later term by counting n minus 1 jumps. They sort linear sequences from ones whose step changes. The challenge asks them to name the rule, continue a sequence, and pick a later term."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The list 3, 7, 11, 15 uses the same step each time. What is the term-to-term rule?",
+   "choices": [
+    "add 4",
+    "add 12",
+    "add 3"
+   ],
+   "answer": 0,
+   "hint": "Check the gap from each term to the next, not from the first term to the last.",
+   "explain": "7 − 3 = 4, 11 − 7 = 4 and 15 − 11 = 4. The rule is add 4. Add 12 is the gap from 3 all the way to 15, which skips the terms in between."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A linear sequence starts at {a} and adds {d} each time. What is the next term after {a}?",
+   "answer": "a+d",
+   "hint": "Apply the term-to-term rule once to the first term.",
+   "explain": "The next term is {a} + {d} = {=a+d}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "d": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A linear sequence starts at {a} and adds {d} each time. What is the 10th term?",
+   "answer": "a+9*d",
+   "hint": "From the first term to the 10th term there are 9 jumps, not 10.",
+   "explain": "The 10th term is the first term plus 9 steps: {a} + 9 × {d} = {=a+9*d}. Adding 10 steps would give {=a+10*d}, which is the 11th term.",
+   "params": {
+    "a": [
+     2,
+     8
+    ],
+    "d": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "The list 20, 17, 14, 11. What is the term-to-term rule?",
+   "choices": [
+    "take away 3",
+    "take away 9",
+    "add 3"
+   ],
+   "answer": 0,
+   "hint": "The numbers are getting smaller, so the step takes away. Check one gap, then check the next.",
+   "explain": "20 − 17 = 3, 17 − 14 = 3 and 14 − 11 = 3. The rule is take away 3. Take away 9 is first to last (20 − 11), which is three steps at once."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Is 2, 4, 8, 16 a linear sequence?",
+   "choices": [
+    "No, because the step changes (add 2, then 4, then 8)",
+    "Yes, because each term is bigger than the last",
+    "Yes, because there is a clear rule: double each time"
+   ],
+   "answer": 0,
+   "hint": "Linear means the step from each term to the next is the same number.",
+   "explain": "The gaps are +2, +4 and +8. The step itself grows, so the sequence is not linear. Doubling is a rule, but it is not a constant term-to-term step."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What makes a number sequence linear?",
+    "choices": [
+     "the step from each term to the next is the same",
+     "every term is bigger than the one before",
+     "the last term minus the first term is the rule"
+    ],
+    "answer": 0,
+    "hint": "Think about the term-to-term rule, not whether the list goes up.",
+    "explain": "A linear sequence has a constant term-to-term rule, also called a common difference. Going up is not enough: 2, 4, 8, 16 goes up, but the step changes."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A linear sequence starts at {a} and adds {d} each time. The first four terms are {a}, {=a+d}, {=a+2*d}, {=a+3*d}. What is the fifth term?",
+    "answer": "a+4*d",
+    "hint": "Apply the same step once more to the fourth term.",
+    "explain": "The fifth term is {=a+3*d} + {d} = {=a+4*d}. That is the first term plus 4 steps.",
+    "params": {
+     "a": [
+      3,
+      8
+     ],
+     "d": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "The list 3, 7, 11, 15… What is the 10th term?",
+    "choices": [
+     "39",
+     "43",
+     "19"
+    ],
+    "answer": 0,
+    "hint": "Count how many jumps take you from the first term to the 10th term.",
+    "explain": "There are 9 jumps from term 1 to term 10. 3 + 9 × 4 = 39. 43 is 3 + 10 × 4, which would be the 11th term. 19 is only the next term after 15."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A linear sequence starts at {a} and takes away {d} each time. What is the 5th term?",
+    "answer": "a-4*d",
+    "hint": "The 5th term is 4 take-away steps after the first term.",
+    "explain": "Four jumps of take away {d} from {a} gives {a} − 4 × {d} = {=a-4*d}.",
+    "params": {
+     "a": [
+      20,
+      30
+     ],
+     "d": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "The list 1, 1.5, 2, 2.5. What comes next?",
+    "choices": [
+     "3",
+     "3.5",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "Check the gap between 1 and 1.5, then apply that gap once more to 2.5.",
+    "explain": "Each gap is +0.5, so 2.5 + 0.5 = 3. 3.5 would be two extra steps. 6 treats 1.5 as if the point were not there."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Is 1, 4, 9, 16 a linear sequence?",
+    "choices": [
+     "No, the gaps are +3, +5, +7",
+     "Yes, each term is a square number",
+     "Yes, the list keeps going up"
+    ],
+    "answer": 0,
+    "hint": "Write the gap from each term to the next, and see if those gaps match.",
+    "explain": "4 − 1 = 3, 9 − 4 = 5 and 16 − 9 = 7. The step changes, so the sequence is not linear, even though the terms are square numbers."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A linear sequence starts at {a} and the next terms are {=a+d}, {=a+2*d} and {=a+3*d}. What number is added each time?",
+    "answer": "d",
+    "hint": "Subtract a term from the term after it.",
+    "explain": "{=a+d} − {a} = {d}, and the later gaps match, so the term-to-term step is {d}.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "d": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The list 4, 10, 16, 22. Someone says the rule is add 18. What went wrong?",
+    "choices": [
+     "They used first to last (22 − 4) instead of each gap",
+     "They should have said add 22",
+     "The list is not linear, so there is no rule"
+    ],
+    "answer": 0,
+    "hint": "18 is the gap from the first term all the way to the last term.",
+    "explain": "22 − 4 = 18, but that skips two terms. Each neighbouring gap is +6, so the term-to-term rule is add 6."
+   }
+  ]
+ }
+}
