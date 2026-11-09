@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_qgb76wHN2X",
+ "title": "Fair testing",
+ "audience": "family",
+ "keyIdea": "A fair test changes one variable, measures one variable and keeps every other variable the same. Then any difference in the results must come from the one thing you changed. Repeating a test helps you spot a reading that went wrong.",
+ "familyTip": "Make paper parachutes from a bin bag or tissue paper with the same string and the same paper clip. Ask: what will we change, what will we measure, and what must stay the same? Drop each one from the same step, time it on a phone, write the times in a table, and do every drop three times.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Question: which soil is best for growing beans? Sort each variable. Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Change",
+    "Measure",
+    "Keep the same"
+   ],
+   "items": [
+    [
+     "Kind of soil",
+     0
+    ],
+    [
+     "Height of the plant after 2 weeks",
+     1
+    ],
+    [
+     "Amount of water each day",
+     2
+    ],
+    [
+     "Light from the window",
+     2
+    ],
+    [
+     "Size of the pot",
+     2
+    ],
+    [
+     "Kind of bean seed",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfairvar",
+  "caption": "Flagship lab: sort parachute variables, fix a two-change test, record fall times, repeat to catch an odd result, plan a bean test.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Does a bigger parachute fall more slowly? To find out, you need a fair test. The things that can change in a test are called variables.",
+   "Change one variable. Here that is the size of the parachute. Measure one variable: the time it takes to fall. Keep all the other variables the same, like the height and the load.",
+   "If you change two things, the test cannot answer the question. Say B is bigger and dropped from higher up. If B takes longer, which change did it? You cannot tell.",
+   "Write your results in a table and look for a pattern. Do each drop three times. If one time is far from the others, something went wrong. Do that drop again."
+  ],
+  "adult": [
+   "Ages 7 to 9. In England, Years 3 and 4 science asks children to set up simple practical enquiries, comparative and fair tests. They also make careful measurements in standard units, record results in tables and draw simple conclusions. Repeat readings are formally taught in Years 5 and 6; here they are a first taste.",
+   "The words to use are variable, change, measure and keep the same. In secondary school these become the independent, dependent and control variables. A comparative test compares things, such as which ball bounces highest. It becomes a fair test when everything except the thing being compared is kept the same.",
+   "Common mistakes: changing two variables at once; mixing up what you change with what you measure; keeping the tested variable the same as well; trusting a single reading; and calling a test fair just because each thing got something, such as water, when the amounts differ.",
+   "In the lab your child sorts five parachute variables into change, measure and keep the same. They drop a big parachute from higher up and see why the result proves nothing until the heights match. They record 10, 15 and 20 cm canopies in a table and pick the pattern. Then they repeat a drop to catch an odd reading and plan a fair bean test."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You test which ball bounces highest. Which variable do you change?",
+   "choices": [
+    "The kind of ball",
+    "The height of the bounce",
+    "The height you drop it from"
+   ],
+   "answer": 0,
+   "hint": "The question asks about the kind of ball.",
+   "explain": "You change the kind of ball, measure the bounce height and keep the drop height the same."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a fair soil test, the bean in compost grew {b} cm and the bean in sand grew {a} cm. How many cm taller is the compost bean?",
+   "answer": "b-a",
+   "hint": "Take the smaller height away from the bigger one.",
+   "explain": "{b} − {a} = {=b-a} cm. Only the soil changed, so the soil made the difference.",
+   "params": {
+    "a": [
+     3,
+     8
+    ],
+    "b": [
+     10,
+     15
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Pot A gets {w} ml of water a day. For a fair soil test, how many ml does pot B get?",
+   "answer": "w",
+   "hint": "Only the soil changes. What about the water?",
+   "explain": "Pot B also gets {w} ml. Water is a variable you keep the same, so only the soil is different.",
+   "params": {
+    "w": [
+     20,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Parachute A: small, dropped from 2 m. Parachute B: big, dropped from 3 m. B is slower. What can you say?",
+   "choices": [
+    "Nothing sure, because two things changed",
+    "Big parachutes fall more slowly",
+    "Height does not matter"
+   ],
+   "answer": 0,
+   "hint": "Count how many variables are different between A and B.",
+   "explain": "Size and height both changed, so you cannot tell which one made B slower. Drop both from the same height."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Times for the same drop: 2.4 s, 2.5 s and 3.6 s. What should you do?",
+   "choices": [
+    "Repeat the 3.6 s drop",
+    "Use 3.6 s because it is the biggest",
+    "Stop, because the test failed"
+   ],
+   "answer": 0,
+   "hint": "Which time is far away from the other two?",
+   "explain": "3.6 s does not fit with 2.4 s and 2.5 s, so something went wrong in that drop, like a draught. Do it again."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which soil is best for beans? What do you measure?",
+    "choices": [
+     "The height of each plant after 2 weeks",
+     "The kind of soil",
+     "The amount of water"
+    ],
+    "answer": 0,
+    "hint": "What number tells you how well each plant grew?",
+    "explain": "You measure plant height. The soil is what you change and the water stays the same."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Ella puts one plant in the sun with lots of water and one in the shade with a little. Why is this unfair?",
+    "choices": [
+     "Light and water both changed",
+     "Plants need water",
+     "She used two plants"
+    ],
+    "answer": 0,
+    "hint": "Count the variables that are different.",
+    "explain": "Two variables changed, light and water, so she cannot tell which one made the difference."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Cars roll down a ramp onto carpet, wood and tiles. Which must stay the same?",
+    "choices": [
+     "The car and the ramp height",
+     "The floor surface",
+     "How far the car rolls"
+    ],
+    "answer": 0,
+    "hint": "The surface is changed and the distance is measured. What is left?",
+    "explain": "Keep the car and the ramp height the same. Change the surface and measure how far it rolls."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why do scientists repeat a test?",
+    "choices": [
+     "To check a result and spot one that went wrong",
+     "To make the test take longer",
+     "To change the answer they get"
+    ],
+    "answer": 0,
+    "hint": "Think about the 3.6 s drop.",
+    "explain": "Repeating shows whether a result is typical. A reading far from the others can then be done again."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You drop every parachute from {h} cm. What height do you use for the last one?",
+    "answer": "h",
+    "hint": "Height is a variable you keep the same.",
+    "explain": "Use {h} cm again. Only the canopy size changes, so the height stays at {h} cm.",
+    "params": {
+     "h": [
+      100,
+      200
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Results: 10 cm canopy 1.2 s, 15 cm 1.8 s, 20 cm 2.4 s. What is the pattern?",
+    "choices": [
+     "The bigger the canopy, the longer it takes to fall",
+     "The bigger the canopy, the faster it falls",
+     "Size makes no difference"
+    ],
+    "answer": 0,
+    "hint": "Read the times from the smallest canopy to the biggest.",
+    "explain": "The times go up as the canopy gets bigger, so bigger parachutes take longer to fall."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A test has {k} variables you keep the same, 1 you change and 1 you measure. How many variables is that in all?",
+    "answer": "k+2",
+    "hint": "Add the one you change and the one you measure.",
+    "explain": "{k} + 1 + 1 = {=k+2} variables. Only 1 of them is changed on purpose.",
+    "params": {
+     "k": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Tom tests which cloth dries fastest. He keeps the cloths the same too. What went wrong?",
+    "choices": [
+     "The cloth is what he tests, so it must change",
+     "Nothing, it is fair",
+     "He should measure the cloth"
+    ],
+    "answer": 0,
+    "hint": "In a fair test one variable must change. Which one?",
+    "explain": "The kind of cloth is the variable to change. If it stays the same there is nothing to compare."
+   }
+  ]
+ }
+}
