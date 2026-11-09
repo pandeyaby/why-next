@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_NCrbQe0LdB",
+ "title": "Honest Conversations and Conflict Repair",
+ "audience": "learner",
+ "keyIdea": "An honest conversation goes after the problem, not the person. Start with what actually happened (an observation), say how you felt, say what you need, and ask for one clear thing (a request). If you are the one who did the harm, a real apology names exactly what you did, takes responsibility with no 'but', shows you understand the hurt, and says what will change. Saying sorry starts the repair; trust comes back slowly, through weeks of keeping your word. Friendships that get through a conflict honestly often end up stronger than ones that avoid it.",
+ "familyTip": "Next time there is a falling-out at home, try the four parts out loud yourself: 'When the plates were left in the sink (what happened), I felt fed up (feeling), because I need help with the washing up (need). Could you clear them tonight (request)?' Then ask your child to spot the four parts. If you owe an apology, model one with no 'but'.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "A real apology or a face-saving sorry? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Real apology",
+    "Face-saving sorry"
+   ],
+   "items": [
+    [
+     "I'm sorry I read your messages. That was wrong.",
+     0
+    ],
+    [
+     "Sorry if you were upset.",
+     1
+    ],
+    [
+     "I see it embarrassed you. I'll ask first from now on.",
+     0
+    ],
+    [
+     "Sorry, but you overreact to everything.",
+     1
+    ],
+    [
+     "I was only joking, chill.",
+     1
+    ],
+    [
+     "It was my choice, and I'm sorry.",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrepair",
+  "caption": "Flagship lab: sort facts from judgements, build a clean four-part message, build a real apology, rebuild trust week by week, and compare avoiding with talking.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "When a friend hurts you, it is tempting to say 'You're so selfish' or 'You always do this.' Those are judgements: they label the person, so your friend defends themselves instead of listening. Start with an observation instead: what actually happened, the kind of thing a camera could record. 'You told Mia what I said about the party.'",
+   "Then say how you felt, what you need and what you are asking for. 'I felt embarrassed and hurt, because I need to trust that private things stay private. Could you check with me before you share something I told you?' Watch out for 'I feel that you are a liar.' That is a judgement in disguise. Real feelings are words like hurt, worried or embarrassed.",
+   "If you are the one who caused the hurt, a real apology does four things. It names what you did, owns it with no excuses, shows you see how it hurt them, and says what will change. A face-saving sorry just ends the awkward moment: 'Sorry if you were upset', 'I was only joking', or 'Sorry, but you started it.' The word 'but' cancels everything before it.",
+   "Saying sorry starts the repair, but trust comes back slowly, through what you do week after week. One slip can undo weeks of effort. Avoiding the problem feels easier, but the hurt stays and comes out later. Friends who talk it through honestly often end up closer than before."
+  ],
+  "adult": [
+   "Ages 12 to 13. In England, the 2019 guidance for Relationships Education says secondary pupils should learn what makes a healthy friendship, including trust. They should also learn practical ways to manage conflict and repair a friendship. The PSHE Association's KS3 plan covers conflict, saying sorry and forgiving. Key words: observation, judgement, feeling, need, request, responsibility, apology, trust, repair.",
+   "The four-part message comes from Marshall Rosenberg's Nonviolent Communication: observation, feeling, need, request. Studies of teenage friendships suggest that how a conflict is handled matters more than whether it happens. Talking it out and making up, rather than avoiding it or forcing a win, goes with friendships that last (see Laursen and colleagues on peer conflict).",
+   "Common mistakes: using 'always' or 'never', which turns a fact into a judgement; 'I feel that you…', which is a judgement dressed as a feeling; vague requests ('be better') or orders; the 'sorry if you were upset' apology; 'but' and 'only joking', which shift the blame or shrink the hurt; and expecting trust to come back the moment you say sorry. Long excuses also sound like defending, so keep an apology short.",
+   "In the lab your child sorts six things people say into facts and judgements. They build a four-part message until each part is clean, and build an apology while a repair meter reacts to blame and 'if'. Then they rebuild trust over eight weeks and compare ten weeks of avoiding a problem with talking it through. This is about everyday falling-outs. Bullying, threats or abuse need an adult's help, not just a good talk."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is an observation, not a judgement?",
+   "choices": [
+    "You left before the end of my match.",
+    "You never support me.",
+    "You're a fake friend."
+   ],
+   "answer": 0,
+   "hint": "Could a camera record it? Does it use always or never?",
+   "explain": "'You left before the end of my match' is a fact anyone could see. The others label the person or use 'never'."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "After an apology, trust is at {t}%. Each week you keep your word it goes up 10 points. What is it after {w} weeks?",
+   "answer": "t+10*w",
+   "hint": "Add 10 points for each of the {w} weeks to {t}.",
+   "explain": "{t} + 10 × {w} = {=t+10*w}%. Trust grows a little each week, not all at once.",
+   "params": {
+    "t": [
+     20,
+     40
+    ],
+    "w": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "\"Sorry if you were upset, but it was only a joke.\" What makes this a face-saving sorry?",
+   "choices": [
+    "It doubts their feelings and shrinks what happened",
+    "It is too short",
+    "It uses the word sorry"
+   ],
+   "answer": 0,
+   "hint": "Look at 'if', 'but' and 'only a joke'.",
+   "explain": "'If' doubts that they were hurt, and 'but… only a joke' shrinks it and shifts the blame. It does not name or own what was done."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Trust is back up to {t}%. Then you break your promise and it drops by 25 points. What is it now?",
+   "answer": "t-25",
+   "hint": "Take 25 points away from {t}.",
+   "explain": "{t} − 25 = {=t-25}%. One slip can undo two or three weeks of kept promises.",
+   "params": {
+    "t": [
+     40,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is a clear request?",
+   "choices": [
+    "Could you tell me if plans change, so I'm not waiting?",
+    "Just stop being like this.",
+    "You need to change."
+   ],
+   "answer": 0,
+   "hint": "Does it ask for one action they could say yes to?",
+   "explain": "It asks for one specific action. 'Stop being like this' and 'you need to change' are vague and sound like orders."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What are the four parts of a clean message, in order?",
+    "choices": [
+     "Observation, feeling, need, request",
+     "Blame, feeling, demand, sorry",
+     "Judgement, feeling, threat, request"
+    ],
+    "answer": 0,
+    "hint": "Start with what happened and end with what you are asking for.",
+    "explain": "Observation (what happened), feeling, need, then request. It names the problem without attacking the person."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "\"I feel that you're lying to me.\" Is this a feeling?",
+    "choices": [
+     "No, it's a judgement dressed as a feeling",
+     "Yes, it starts with 'I feel'",
+     "Yes, because it's honest"
+    ],
+    "answer": 0,
+    "hint": "Is 'lying' something you feel, or something you think they did?",
+    "explain": "'I feel that…' usually hides a judgement about the other person. A feeling would be 'worried' or 'hurt'."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which apology takes real responsibility?",
+    "choices": [
+     "I shared your photo without asking. That was wrong of me.",
+     "Sorry, but everyone does it.",
+     "Sorry you feel that way."
+    ],
+    "answer": 0,
+    "hint": "Does it name what was done and own it with no excuse?",
+    "explain": "It names the action and owns it. 'But everyone does it' is an excuse, and 'sorry you feel that way' blames their feelings."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A friend says sorry properly, then keeps doing the same thing. What happens to trust?",
+    "choices": [
+     "It falls further, because the words weren't backed up",
+     "It goes back to full straight away",
+     "Nothing changes"
+    ],
+    "answer": 0,
+    "hint": "Trust is rebuilt by what people do over time.",
+    "explain": "Words start the repair, but broken promises after an apology make trust fall further. Actions over weeks rebuild it."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Trust starts at {s}% and rises {k} points each week you keep your word. What is it after {w} weeks?",
+    "answer": "s+k*w",
+    "hint": "Work out {k} × {w}, then add {s}.",
+    "explain": "{s} + {k} × {w} = {=s+k*w}%. Steady effort, week by week, is what rebuilds trust.",
+    "params": {
+     "s": [
+      10,
+      30
+     ],
+     "k": [
+      5,
+      10
+     ],
+     "w": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is avoiding a problem with a friend often worse in the long run?",
+    "choices": [
+     "The hurt stays and builds up, and comes out in small digs",
+     "Problems always disappear on their own",
+     "Avoiding it makes the friendship stronger"
+    ],
+    "answer": 0,
+    "hint": "What happened to the 'avoid it' line in the lab?",
+    "explain": "Avoided hurt doesn't vanish. It builds up and slowly cools the friendship, while an honest talk can repair it."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which opening gives your friend the best chance to listen?",
+    "choices": [
+     "When you read my messages without asking…",
+     "You're so nosy, you always do this…",
+     "Everyone says you can't be trusted…"
+    ],
+    "answer": 0,
+    "hint": "Pick the one that describes what happened.",
+    "explain": "Starting with the action they took lets them hear it. Labels, 'always' and 'everyone says' make people defend themselves."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What should a real apology say about the future?",
+    "choices": [
+     "What you will do differently, so they can check",
+     "Nothing: the past is the past",
+     "That it will never be mentioned again"
+    ],
+    "answer": 0,
+    "hint": "How can the other person know things will change?",
+    "explain": "Saying what will change (and then doing it) is how an apology turns into repair."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "Your friend sent {m} messages and you replied to {r} of them. How many went unanswered?",
+    "answer": "m-r",
+    "hint": "Take the replies away from all the messages.",
+    "explain": "{m} − {r} = {=m-r} unanswered. 'You didn't reply to {=m-r} of my messages' is an observation, not a judgement.",
+    "params": {
+     "m": [
+      6,
+      10
+     ],
+     "r": [
+      1,
+      4
+     ]
+    }
+   }
+  ]
+ }
+}
