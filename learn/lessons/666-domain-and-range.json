@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_MeqFcUAszE",
+ "title": "Domain and range",
+ "audience": "learner",
+ "keyIdea": "The domain of a function is the set of inputs it can take; the range is the set of outputs it actually gives. Read the domain from how far a graph spreads along the x-axis and the range from how far it spreads up the y-axis. Square roots of negatives, division by zero and the real situation can all restrict the domain.",
+ "familyTip": "Ask: what numbers are you allowed to put in, and what numbers can come out? For a phone bill or a taxi fare, ask whether negative minutes or half a passenger make sense. Then ask whether the graph should be a line or separate dots.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "For f(x) = √(x − 1), which inputs are in the domain? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "In the domain",
+    "Not in the domain"
+   ],
+   "items": [
+    [
+     "x = 1",
+     0
+    ],
+    [
+     "x = 5",
+     0
+    ],
+    [
+     "x = 0",
+     1
+    ],
+    [
+     "x = −3",
+     1
+    ],
+    [
+     "x = 1.5",
+     0
+    ],
+    [
+     "x = −1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdomrng",
+  "caption": "Flagship lab: jam a √x machine, squash a graph onto each axis, cut a projectile model at landing, find the hole in 1/(x − 2), keep tickets as dots.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A function takes an input and gives an output. The domain is every input you are allowed to use. The range is every output that can come out.",
+   "Some inputs break a function. √x has no real value when x is negative, so its domain is x ≥ 0. In 1/(x − 2), x = 2 would mean dividing by zero, so x = 2 is left out.",
+   "On a graph, squash the curve flat onto the x-axis: the shadow is the domain. Squash it onto the y-axis: that shadow is the range. Look for a turning point, because the ends are not always the highest or lowest outputs.",
+   "Real situations add limits. A ball thrown up with h = 20t − 5t² lands at t = 4, so 0 ≤ t ≤ 4 makes sense. Tickets come in whole numbers, so that graph is a set of dots, not a line."
+  ],
+  "adult": [
+   "Ages 14 to 16. This matches Common Core F-IF.1 (a function gives each input in its domain exactly one output in its range) and F-IF.5 (relate the domain to the context). In England it supports GCSE function work and the A-level idea of domain and range for mappings.",
+   "Read the domain from the x-extent of a graph and the range from its y-extent, checking turning points as well as endpoints. For x² − 1 on −2 ≤ x ≤ 3 the endpoints give 3 and 8, but the vertex gives −1, so the range is −1 ≤ y ≤ 8. Square roots need the expression inside to be at least 0. Denominators must not be 0. A model's context can cut the domain further, and counted quantities give a discrete domain.",
+   "Common mistakes: taking the range from the endpoints only and missing a turning point; swapping domain and range; leaving x = 2 in the domain of 1/(x − 2); allowing negative time or a part of a ticket because the formula still gives a number; writing x ≥ 0 for √(x − 3) instead of solving x − 3 ≥ 0.",
+   "In the lab you feed a square-root machine, squash a parabola onto each axis, trim a projectile path to its landing time, slide towards the gap in 1/(x − 2) and decide whether ticket costs should be joined. The challenge mixes all of these."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the domain of f(x) = √(x − 5)?",
+   "choices": [
+    "x ≥ 5",
+    "x ≥ 0",
+    "x ≠ 5"
+   ],
+   "answer": 0,
+   "hint": "The expression under the root must be 0 or more: solve x − 5 ≥ 0.",
+   "explain": "x − 5 ≥ 0 gives x ≥ 5. x ≥ 0 would allow x = 1, but √(1 − 5) = √(−4) has no real value."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "f(x) = 1/(x − {a}). Which value of x is not in the domain?",
+   "answer": "a",
+   "hint": "Find the x that makes the denominator equal to 0.",
+   "explain": "x − {a} = 0 when x = {a}, and dividing by 0 has no value, so x = {a} is excluded.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "g(x) = x² on the domain −{a} ≤ x ≤ {b}. What is the smallest value in the range?",
+   "answer": "0",
+   "hint": "The domain includes x = 0. What is g(0)?",
+   "explain": "The parabola's vertex is at x = 0, which is inside the domain, so the minimum output is g(0) = 0, not an endpoint value.",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A ball's height is h(t) = {k}t − 5t² metres. At what time t (seconds) does it land, ending the sensible domain?",
+   "answer": "k/5",
+   "hint": "Set h(t) = 0 and factorise: t({k} − 5t) = 0.",
+   "explain": "t = 0 or t = {k}/5 = {=k/5}. The ball lands at t = {=k/5}, so the domain is 0 ≤ t ≤ {=k/5}.",
+   "params": {
+    "k": [
+     10,
+     40
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Pens cost £2 each and a shop sells up to 10. Which describes the domain of the cost C(n) = 2n?",
+   "choices": [
+    "n = 0, 1, 2, …, 10",
+    "0 ≤ n ≤ 10, any value",
+    "All real n"
+   ],
+   "answer": 0,
+   "hint": "Can you buy 3.7 pens? Think about what n counts.",
+   "explain": "Pens are counted, so n is a whole number from 0 to 10. The graph is 11 separate dots."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A graph is drawn from (−3, 4) to (2, −1) as a straight line. What is its domain?",
+    "choices": [
+     "−3 ≤ x ≤ 2",
+     "−1 ≤ x ≤ 4",
+     "All real x"
+    ],
+    "answer": 0,
+    "hint": "The domain is the spread of x-values the graph covers.",
+    "explain": "x runs from −3 to 2. −1 to 4 are the y-values, which give the range."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the range of f(x) = x² + 3 for all real x?",
+    "choices": [
+     "y ≥ 3",
+     "All real y",
+     "y ≥ 0"
+    ],
+    "answer": 0,
+    "hint": "x² is never negative. What is the smallest it can be?",
+    "explain": "The smallest x² can be is 0, so the smallest output is 3. Every y ≥ 3 is reached."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is the domain of f(x) = 4/(2x − 6)?",
+    "choices": [
+     "x ≠ 3",
+     "x ≠ 6",
+     "x ≠ −3"
+    ],
+    "answer": 0,
+    "hint": "Set the denominator 2x − 6 equal to 0 and solve.",
+    "explain": "2x − 6 = 0 when x = 3, so x = 3 is excluded and every other real x is allowed."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ravi says the range of g(x) = x² − 4x on 0 ≤ x ≤ 5 is 0 ≤ y ≤ 5, using g(0) and g(5). What did he miss?",
+    "choices": [
+     "The turning point at x = 2 gives −4, so the range is −4 ≤ y ≤ 5",
+     "Nothing, he is right",
+     "The range should use the x-values 0 to 5"
+    ],
+    "answer": 0,
+    "hint": "Complete the square or find where the graph turns.",
+    "explain": "g(x) = (x − 2)² − 4 has its minimum −4 at x = 2, inside the domain. So the range is −4 ≤ y ≤ 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "f(x) = √(x + {a}). What is the smallest x in the domain?",
+    "answer": "-a",
+    "hint": "The inside of the root must be 0 or more: solve x + {a} ≥ 0.",
+    "explain": "x + {a} ≥ 0 gives x ≥ {=-a}, so the smallest input is {=-a}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A candle is 20 cm tall and burns 2 cm per hour: L = 20 − 2t. What is a sensible domain?",
+    "choices": [
+     "0 ≤ t ≤ 10",
+     "All real t",
+     "0 ≤ t ≤ 20"
+    ],
+    "answer": 0,
+    "hint": "When is the candle used up? Time cannot be negative.",
+    "explain": "L = 0 when t = 10, and t starts at 0. So 0 ≤ t ≤ 10, and the range is 0 ≤ L ≤ 20."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which statement about f(x) = 1/x is true?",
+    "choices": [
+     "Its domain and its range both leave out 0",
+     "Its domain is all real x",
+     "Its range is y > 0"
+    ],
+    "answer": 0,
+    "hint": "Can x be 0? Can 1/x ever equal 0?",
+    "explain": "x = 0 is excluded because of division by zero, and 1/x is never 0, so 0 is missing from the range too. Negative x gives negative outputs."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "f(x) = 3x + 1 on the domain 0 ≤ x ≤ {b}. What is the largest value in the range?",
+    "answer": "3*b+1",
+    "hint": "The line goes up as x increases, so the largest output is at the right-hand end.",
+    "explain": "f({b}) = 3 × {b} + 1 = {=3*b+1}. The range is 1 ≤ y ≤ {=3*b+1}.",
+    "params": {
+     "b": [
+      2,
+      12
+     ]
+    }
+   }
+  ]
+ }
+}
