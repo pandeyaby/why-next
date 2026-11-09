@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_ML5t7n2-U8",
+ "title": "Area of Triangles & Parallelograms",
+ "audience": "learner",
+ "keyIdea": "A parallelogram can be cut and rearranged into a rectangle with the same base and the same height, so its area is base × height. Two copies of any triangle fit together to make a parallelogram, so a triangle's area is half of that: ½ × base × height. The height must be the perpendicular height, measured at a right angle to the base, not the length of a slanted side.",
+ "explain": {
+  "kid": [
+   "A parallelogram is a four-sided shape with two pairs of parallel sides. It looks like a rectangle that has been pushed over. Cut a triangle off one end, slide it to the other end, and you get a rectangle. Nothing is added and nothing is lost, so the area stays the same.",
+   "That rectangle is as long as the base of the parallelogram and as tall as its height. So the area of a parallelogram is base × height. A base of 8 cm and a height of 5 cm gives 8 × 5 = 40 cm². Area is always in square units, like cm². To work back, height = area ÷ base.",
+   "The height is the distance straight up from the base. It meets the base at a right angle. The slanted side is not the height. It leans over, so it is longer. If you use it, your answer comes out too big.",
+   "Now take any triangle and an exact copy. Turn the copy upside down and join it on. The two triangles make a parallelogram. So one triangle is half of it: area = ½ × base × height. A base of 12 cm and a height of 7 cm gives ½ × 12 × 7 = 42 cm²."
+  ],
+  "adult": [
+   "Ages 10 to 11 (NC Year 6: calculate the area of parallelograms and triangles; CCSS 6.G.A.1). The two formulae are not new rules to learn by heart. Both come from the rectangle. A parallelogram can be cut and moved into a rectangle with the same base and height. Two copies of a triangle make a parallelogram.",
+   "Any side can be the base. The height that goes with it is the distance from that base to the opposite side or corner, measured at a right angle. In an obtuse triangle this height can fall outside the shape, on the base line made longer. The lab shows this when the top corner slides past the end of the base.",
+   "Common mistakes: using the slanted side instead of the height; forgetting to halve for a triangle, or halving a parallelogram; adding base and height; and writing cm instead of cm². Many children also think that leaning a shape over changes its area, because the sides get longer. The perimeter grows, but the area stays the same.",
+   "In the lab your child slides a cut triangle to make a rectangle, leans the top edge and sees the area stay at 40 cm², picks between a 5 cm slanted side and a 4 cm height, joins a turned copy of a triangle into a parallelogram, drags a top corner past the base, and builds a triangle of 18 cm²."
+  ]
+ },
+ "familyTip": "Cut a parallelogram out of squared paper. Ask your child to cut it once and rearrange it into a rectangle, then count the squares in both. Next cut a parallelogram along a diagonal: do the two triangles match exactly? Ask which length they would measure with a ruler and set square to find the height.",
+ "status": "self-checked",
+ "visual": {
+  "type": "formula",
+  "caption": "Slide the base and the height. Triangle area = base × height ÷ 2, half of the parallelogram with the same base and height.",
+  "opts": {
+   "name": "triangle area",
+   "expr": "b × h ÷ 2",
+   "vars": {
+    "b": [
+     2,
+     12,
+     8
+    ],
+    "h": [
+     1,
+     10,
+     5
+    ]
+   },
+   "unit": "cm²"
+  }
+ },
+ "lab": {
+  "type": "flagtripar",
+  "caption": "Flagship lab: slide a triangle to make a rectangle, lean a parallelogram, find the height, join two triangles, build 18 cm².",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A parallelogram has a base of {b} cm and a perpendicular height of {h} cm. What is its area in cm²?",
+   "answer": "b*h",
+   "hint": "A parallelogram rearranges into a rectangle with the same base and height.",
+   "explain": "Area = base × height = {b} × {h} = {=b*h} cm².",
+   "params": {
+    "b": [
+     3,
+     12
+    ],
+    "h": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A triangle has a base of {=2*k} cm and a perpendicular height of {h} cm. What is its area in cm²?",
+   "answer": "k*h",
+   "hint": "Work out base × height, then halve it, because a triangle is half a parallelogram.",
+   "explain": "½ × {=2*k} × {h} = {=k*h} cm². Base × height is {=2*k*h}, and half of that is {=k*h}.",
+   "params": {
+    "k": [
+     2,
+     7
+    ],
+    "h": [
+     3,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A parallelogram has a base of 6 cm, slanted sides of 5 cm and a perpendicular height of 4 cm. Which calculation gives its area?",
+   "choices": [
+    "6 × 4",
+    "6 × 5",
+    "6 × 5 ÷ 2"
+   ],
+   "answer": 0,
+   "hint": "Which length meets the base at a right angle?",
+   "explain": "The height is 4 cm because it is perpendicular to the base. 6 × 4 = 24 cm². The 5 cm side leans, so it is longer than the height."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why is the area of a triangle half of base × height?",
+   "choices": [
+    "Two copies of the triangle fit together to make a parallelogram with that base and height",
+    "A triangle has three sides instead of four",
+    "Triangles are always half as tall as rectangles"
+   ],
+   "answer": 0,
+   "hint": "Think about the turned copy in the lab.",
+   "explain": "Turn a copy of the triangle and join it on: the pair makes a parallelogram of area base × height, so one triangle is half."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A parallelogram has an area of {=b*h} cm² and a base of {b} cm. What is its perpendicular height in cm?",
+   "answer": "h",
+   "hint": "Base × height = area, so divide the area by the base.",
+   "explain": "{=b*h} ÷ {b} = {h}, so the height is {h} cm.",
+   "params": {
+    "b": [
+     3,
+     9
+    ],
+    "h": [
+     2,
+     8
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Some cloth is cut into a triangle with a base of {=2*k} cm and a perpendicular height of {h} cm. What is its area in cm²?",
+    "answer": "k*h",
+    "hint": "Work out base × height, then halve it: a triangle is half a parallelogram.",
+    "explain": "½ × {=2*k} × {h} = {=k*h} cm².",
+    "params": {
+     "k": [
+      2,
+      6
+     ],
+     "h": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A parallelogram-shaped tile has a base of {b} cm and a perpendicular height of {h} cm. What is its area in cm²?",
+    "answer": "b*h",
+    "hint": "Do not halve for a parallelogram: it slides into a whole rectangle.",
+    "explain": "Area = base × height = {b} × {h} = {=b*h} cm². No halving, because a parallelogram rearranges into a whole rectangle.",
+    "params": {
+     "b": [
+      4,
+      12
+     ],
+     "h": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A triangle has a base of 10 cm, a slanted side of 5 cm and a perpendicular height of 4 cm. What is its area?",
+    "choices": [
+     "20 cm²",
+     "25 cm²",
+     "40 cm²"
+    ],
+    "answer": 0,
+    "hint": "Use the height that is at a right angle to the base, and remember to halve.",
+    "explain": "½ × 10 × 4 = 20 cm². 25 cm² uses the slanted side, and 40 cm² forgets to halve."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "You push the top of a rectangle sideways to make a parallelogram. The base and the height stay the same. What happens to the area?",
+    "choices": [
+     "It stays the same",
+     "It gets bigger, because the sides get longer",
+     "It gets smaller, because the shape is squashed"
+    ],
+    "answer": 0,
+    "hint": "Area depends on the base and the perpendicular height.",
+    "explain": "The sides get longer, so the perimeter grows, but base × height has not changed, so the area is the same."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A triangle and a parallelogram have the same base and the same perpendicular height. Which is true?",
+    "choices": [
+     "The triangle's area is half the parallelogram's",
+     "They have equal areas",
+     "The triangle's area is a third of the parallelogram's"
+    ],
+    "answer": 0,
+    "hint": "How many copies of the triangle fill the parallelogram?",
+    "explain": "Two copies of the triangle make the parallelogram, so the triangle's area is half."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A triangle has an area of {=k*h} cm² and a perpendicular height of {h} cm. What is its base in cm?",
+    "answer": "2*k",
+    "hint": "Double the area to get base × height, then divide by the height.",
+    "explain": "{=k*h} × 2 = {=2*k*h}, and {=2*k*h} ÷ {h} = {=2*k}. The base is {=2*k} cm.",
+    "params": {
+     "k": [
+      2,
+      6
+     ],
+     "h": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which unit could measure the area of a triangle?",
+    "choices": [
+     "cm²",
+     "cm",
+     "cm³"
+    ],
+    "answer": 0,
+    "hint": "Area counts how many unit squares cover the shape.",
+    "explain": "Area counts square units, so it is measured in cm² (or m², mm²). cm is a length and cm³ is a volume."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In an obtuse triangle the top corner is past the end of the base. Where is the perpendicular height?",
+    "choices": [
+     "Outside the triangle, down to the base line extended",
+     "Along the longest side",
+     "There is no height"
+    ],
+    "answer": 0,
+    "hint": "The height always meets the base line at a right angle.",
+    "explain": "Extend the base line and drop the height from the top corner at a right angle. It lies outside the triangle but is still the height."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A garden bed is a parallelogram {b} m long with a perpendicular width of {h} m. A bag of bark covers 1 m². How many bags are needed?",
+    "answer": "b*h",
+    "hint": "Work out the area in m², one bag per square metre.",
+    "explain": "{b} × {h} = {=b*h} m², so {=b*h} bags.",
+    "params": {
+     "b": [
+      3,
+      9
+     ],
+     "h": [
+      2,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
