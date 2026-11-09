@@ -1,0 +1,229 @@
+{
+ "topicId": "mt_Cg8VPguS_V",
+ "title": "Calculating the Mean",
+ "audience": "learner",
+ "keyIdea": "The mean is one kind of average. To find it, add up all the values to get the total, then divide by how many values there are: mean = total ÷ number of values. It is the level every value would have if the total were shared out equally. The mean does not have to be one of the values, and it can be a decimal. Every value counts, so one very big or very small value moves the mean. If you know the mean, the total is mean × number of values, which lets you find a missing value.",
+ "familyTip": "After a board game or a few rounds of a quiz, write down each person's scores. Stack coins or Lego bricks to match the scores, then move bricks from the tall stacks to the short ones until they are level. Check it with a sum: add the scores and divide by how many rounds there were.",
+ "status": "self-checked",
+ "visual": {
+  "type": "share",
+  "caption": "The mean shares the total out fairly. Deal 35 points equally between 5 rounds: each round gets 7.",
+  "opts": {
+   "total": 35,
+   "groups": 5
+  }
+ },
+ "lab": {
+  "type": "flagmean",
+  "caption": "Flagship lab: level towers of cubes, pile them up and share them out, split spare cubes into halves, stretch one score and find a missing one.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An average is one number that sums up a set of numbers. The mean is the average you get by sharing. Add up all the values to get the total. Then divide the total by how many values there are. For the scores 6, 8, 7, 5 and 9, the total is 35. There are 5 scores, and 35 ÷ 5 = 7, so the mean is 7.",
+   "Think of each score as a tower of cubes. Move cubes from the tall towers to the short ones until they are all level. No cubes are added or lost, so the total stays the same. The level they end up at is the mean.",
+   "The mean does not have to be one of the values. The mean of 3, 5, 6 and 8 is 22 ÷ 4 = 5.5, even though nobody scored 5.5. Every value counts, even a 0. One very big score pulls the mean up, but only by its share. If one score of 9 becomes 24, the total goes up by 15, and 15 ÷ 5 = 3, so the mean goes up by 3.",
+   "You can work backwards. If 5 rounds have a mean of 8, the total must be 8 × 5 = 40. If four of the scores add up to 34, the last one is 40 − 34 = 6."
+  ],
+  "adult": [
+   "Ages 10 to 11 (NC Year 6 statistics: calculate and interpret the mean as an average; CCSS 6.SP.A.3 and 6.SP.B.5c). The mean is the total divided by the number of values. It is often explained as a fair share, or as the level reached when towers of cubes are evened out; the lab uses both pictures.",
+   "Common mistakes: stopping at the total and not dividing; dividing by the wrong count, often by leaving out a value of 0; giving the middle value (the median) or the most common value (the mode) when the mean is asked for; believing the mean must be a whole number or one of the data values; and thinking a missing value must equal the mean.",
+   "Interpreting the mean matters as much as calculating it. Because every value is used, one extreme value (an outlier) can pull the mean a long way from most of the data, which is when the median may describe the set better. The mean also lets you compare groups of different sizes, such as two teams with different numbers of players.",
+   "In the lab your child levels five score towers, tips them into one pile and shares it out, levels 3, 5, 6 and 8 and cuts the spare cubes in half to reach 5.5, stretches one score to 24 and watches the mean rise by only 3, then sets a missing score so the mean is exactly 8."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "How do you find the mean of a set of numbers?",
+   "choices": [
+    "Add them all, then divide by how many numbers there are",
+    "Pick the number in the middle",
+    "Take the smallest from the biggest"
+   ],
+   "answer": 0,
+   "hint": "Think of tipping every tower onto one pile, then sharing the pile out.",
+   "explain": "The mean is the total shared equally: add all the values, then divide by how many values there are. The middle number is the median, and biggest minus smallest is the range."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Four quiz scores have a mean of {m}. What is the total of the four scores?",
+   "answer": "4*m",
+   "hint": "Mean = total ÷ 4, so the total is the mean times 4.",
+   "explain": "Total = mean × number of values = {m} × 4 = {=4*m}.",
+   "params": {
+    "m": [
+     5,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Find the mean of 72, 85, 90, 68 and 95.",
+   "answer": 82,
+   "hint": "Add the five scores first, then divide the total by 5.",
+   "explain": "72 + 85 + 90 + 68 + 95 = 410, and 410 ÷ 5 = 82. The mean is 82, even though nobody scored exactly 82."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Five scores have a mean of {m}. Four of them add up to {t}. What is the fifth score?",
+   "answer": "5*m-t",
+   "hint": "Work out the total the five scores must make, then take away the four you know.",
+   "explain": "The total must be {m} × 5 = {=5*m}. Then {=5*m} − {t} = {=5*m-t}, so the fifth score is {=5*m-t}.",
+   "params": {
+    "m": [
+     6,
+     10
+    ],
+    "t": [
+     16,
+     24
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Mia says the mean of 3, 5, 6 and 8 can't be 5.5 because nobody scored 5.5. Is she right?",
+   "choices": [
+    "No: the mean is a fair share and can be a value nobody got",
+    "Yes: the mean is always one of the values",
+    "Yes: the mean must be a whole number"
+   ],
+   "answer": 0,
+   "hint": "Level the towers in your head. Where do the 2 spare cubes go?",
+   "explain": "3 + 5 + 6 + 8 = 22, and 22 ÷ 4 = 5.5. Sharing the total equally gives 5.5 each, so the mean can be a decimal that is not in the data."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A family scored 6, 8, 7, 5 and 9 in five rounds of a board game. What is the mean score?",
+    "answer": 7,
+    "hint": "Add the five scores, then divide by the number of rounds.",
+    "explain": "6 + 8 + 7 + 5 + 9 = 35, and 35 ÷ 5 = 7."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the mean of 2, 0 and 4?",
+    "choices": [
+     "2",
+     "3",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "How many values are there? Does the 0 count?",
+    "explain": "The total is 6, and there are 3 values, including the 0. 6 ÷ 3 = 2. Leaving out the 0 and dividing by 2 gives 3, which is wrong."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Find the mean of {a}, {=a+2} and {=a+4}.",
+    "answer": "a+2",
+    "hint": "Add the three numbers, then divide by 3. Or even them out: take 2 from the biggest and give it to the smallest.",
+    "explain": "The total is 3 × {a} + 6 = {=3*a+6}, and {=3*a+6} ÷ 3 = {=a+2}. Evening out the three numbers gives the same answer.",
+    "params": {
+     "a": [
+      3,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Scores 6, 8, 7, 5 and 9 have a mean of 7. The 9 is changed to 24. What happens to the mean?",
+    "choices": [
+     "It goes up by 3, to 10",
+     "It goes up by 15, to 22",
+     "It stays at 7"
+    ],
+    "answer": 0,
+    "hint": "The total goes up by 15. How is that shared between 5 scores?",
+    "explain": "The new total is 50, and 50 ÷ 5 = 10. The extra 15 is shared between all 5 scores, so the mean only rises by 3."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Two scores have a mean of {m}. One of them is {a}. What is the other score?",
+    "answer": "2*m-a",
+    "hint": "Two scores with a mean of {m} must add up to {m} × 2.",
+    "explain": "The total is {m} × 2 = {=2*m}. The other score is {=2*m} − {a} = {=2*m-a}.",
+    "params": {
+     "m": [
+      10,
+      20
+     ],
+     "a": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Find the mean of 4, 6, 7 and 9.",
+    "choices": [
+     "6.5",
+     "5.2",
+     "26"
+    ],
+    "answer": 0,
+    "hint": "Count the values carefully before you divide.",
+    "explain": "The total is 26 and there are 4 values, so the mean is 26 ÷ 4 = 6.5. Dividing by 5 gives 5.2, and 26 is only the total."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Three scores have a mean of 10. Two of them are 8 and 9. What is the third score?",
+    "choices": [
+     "13",
+     "10",
+     "17"
+    ],
+    "answer": 0,
+    "hint": "First find the total the three scores must make.",
+    "explain": "The total must be 10 × 3 = 30. The two you know make 17, so the third is 30 − 17 = 13. The missing value does not have to equal the mean."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Team A (4 players) scored a mean of 12 goals each. Team B (6 players) scored a mean of 9 goals each. Which team scored more goals in total?",
+    "choices": [
+     "Team B, with 54 goals",
+     "Team A, because its mean is higher",
+     "They scored the same"
+    ],
+    "answer": 0,
+    "hint": "Turn each mean back into a total: mean × number of players.",
+    "explain": "Team A scored 12 × 4 = 48 goals and Team B scored 9 × 6 = 54. A higher mean does not mean a higher total when the groups are different sizes."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Six children have heights of 128, 130, 131, 133, 134 and 170 cm. Why is the mean a poor way to describe a typical height here?",
+    "choices": [
+     "The 170 cm value pulls the mean above most of the heights",
+     "The mean can't be used for heights",
+     "There are too few heights to add up"
+    ],
+    "answer": 0,
+    "hint": "Work out the mean, then compare it with the heights.",
+    "explain": "The total is 826, and 826 ÷ 6 is about 137.7 cm, which is taller than five of the six children. One extreme value pulls the mean a long way."
+   }
+  ]
+ }
+}
