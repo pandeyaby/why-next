@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_gMSFymQlrW",
+ "title": "Evaluating Arguments in Non-Fiction",
+ "audience": "learner",
+ "keyIdea": "To evaluate an argument, find the main claim, then test the support. Is the evidence relevant to the claim, and is there enough of it? Is the reasoning sound, or does it lean on tricks like attacking the person? Check who is writing, then decide which side is more convincing and say why.",
+ "familyTip": "Pick a letter page, an advert or a speech clip. Ask three questions together: what do they want us to believe, what is their evidence, and is there a trick in there? Take turns finding the weakest sentence. Then argue the other side and see whose evidence weighs more.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Claim: our school should start at 9:30. Is each line evidence, a reasoning trick, or not relevant? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Relevant evidence",
+    "Reasoning trick",
+    "Not relevant"
+   ],
+   "items": [
+    [
+     "Pupils at two schools that started later slept 34 minutes more on average",
+     0
+    ],
+    [
+     "Anyone who wants an 8:30 start just hates teenagers",
+     1
+    ],
+    [
+     "The school was built in 1974",
+     2
+    ],
+    [
+     "Everyone in my class agrees, so it must be right",
+     1
+    ],
+    [
+     "Attendance rose when one trial school moved its start later",
+     0
+    ],
+    [
+     "The head teacher drives a blue car",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagweigh",
+  "caption": "Flagship lab: find the claim, drag evidence onto a scale or into the bin, weigh it, name four tricks, read a biased source and judge two sides.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An argument tries to make you accept a claim. The claim is the main point, like: close Mill Road to cars at school times. Everything else in the text should support it.",
+   "First check the evidence is relevant. A fact can be true but beside the point. 'The road was paved in 1952' tells you nothing about safety now.",
+   "Then check there is enough. One story about a near miss is weak, because it is a single case. A trial at 12 schools is strong, because it covers many cases and was measured. Good arguments put several pieces together.",
+   "Watch for tricks that sound like reasons. Attacking the person, giving only two choices, saying everyone agrees, and claiming one step leads to disaster all skip the evidence. Then ask who wrote it. Bias does not make a writer wrong, but it tells you to check their facts more closely."
+  ],
+  "adult": [
+   "Ages 11 to 14. The KS3 English programme of study asks pupils to read critically, to see how writers make and support claims, and to tell fact from opinion. US standards (RI.6.8 to RI.8.8) add judging whether reasoning is sound and evidence is relevant and sufficient.",
+   "A useful order is claim, evidence, reasoning, source. Relevance asks whether the evidence is about the claim. Sufficiency asks whether there is enough of it, based on how many cases it covers and how carefully it was measured. Common fallacies at this age are ad hominem (attacking the person), false dilemma (only two options), bandwagon (popularity as proof) and slippery slope (one step leads to an extreme).",
+   "Common mistakes: judging an argument by how confident or emotional it sounds; treating any true fact as support; letting one vivid anecdote outweigh a large study; dismissing a biased source outright rather than checking it; and counting how many people agree rather than weighing reasons.",
+   "In the lab a sample editorial and reply letter, written for the lab, are tested in six steps. The learner finds the claim and sorts five evidence cards onto a scale or into a bin. They rate the relevant ones strong, some or weak until the scale passes enough. Then they name four tricks in the letter, sort a biased writer's lines into fact and opinion, and judge which side is more convincing and why."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A writer argues that the town needs a new library. Which sentence is the main claim?",
+   "choices": [
+    "The town should build a new library.",
+    "The old library opened in 1960.",
+    "Do you love reading?"
+   ],
+   "answer": 0,
+   "hint": "The claim is the point the whole text wants you to accept.",
+   "explain": "The claim is that the town should build a library. The date is background and the question is a hook."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Evidence weights: strong = 3, some = 2, weak = 1. An argument has {s} strong pieces and {w} weak ones. What is its total weight?",
+   "answer": "3*s+w",
+   "hint": "Multiply the strong pieces by 3, then add the weak ones.",
+   "explain": "3 × {s} + {w} = {=3*s+w}. Strong, measured evidence adds far more than weak single stories.",
+   "params": {
+    "s": [
+     1,
+     4
+    ],
+    "w": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "An article gives {n} pieces of evidence. {k} of them are true but not about the claim. How many are relevant?",
+   "answer": "n-k",
+   "hint": "Take away the pieces that are beside the point.",
+   "explain": "{n} − {k} = {=n-k} relevant pieces. True but off-topic facts add nothing to the argument.",
+   "params": {
+    "n": [
+     6,
+     10
+    ],
+    "k": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "“If we let pupils use phones at lunch, soon they will use them in every lesson.” Which trick is this?",
+   "choices": [
+    "Slippery slope",
+    "Bandwagon",
+    "Attacking the person"
+   ],
+   "answer": 0,
+   "hint": "Does it claim one step will lead to an extreme?",
+   "explain": "It claims one small step leads to an extreme with no evidence. That is a slippery slope."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A report saying fizzy drinks are healthy was paid for by a drinks company. What should you do?",
+   "choices": [
+    "Check its evidence closely",
+    "Believe it, they are experts",
+    "Ignore it, it must be false"
+   ],
+   "answer": 0,
+   "hint": "Bias is a reason to check, not a verdict.",
+   "explain": "The company gains if you believe it, so look hard at its evidence. Bias does not prove it wrong."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Claim: the park needs more bins. Which evidence is relevant?",
+    "choices": [
+     "A litter count found 200 items in one week",
+     "The park has a pond",
+     "The mayor likes ducks"
+    ],
+    "answer": 0,
+    "hint": "Which one is about litter?",
+    "explain": "The litter count is about the problem bins would fix. The pond and the mayor are beside the point."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "“My gran drank coffee every day and lived to 100, so coffee is good for you.” How strong is this?",
+    "choices": [
+     "Weak: it is one case",
+     "Strong: it really happened",
+     "Strong: 100 is very old"
+    ],
+    "answer": 0,
+    "hint": "How many people does the evidence cover?",
+    "explain": "One person is a single case. It cannot outweigh studies of thousands of people."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "“Either we cancel sports day or the exams will be ruined.” What is wrong with this?",
+    "choices": [
+     "It gives only two options",
+     "It uses a fact",
+     "It is too polite"
+    ],
+    "answer": 0,
+    "hint": "Are there really only two choices?",
+    "explain": "It is a false choice. There are other options, like moving sports day to a different week."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which makes an argument more convincing?",
+    "choices": [
+     "Relevant evidence that covers many cases",
+     "Lots of exclamation marks",
+     "A famous person agreeing"
+    ],
+    "answer": 0,
+    "hint": "Think about what the scale in the lab weighed.",
+    "explain": "Relevant, sufficient evidence makes a claim convincing. Tone and famous fans add no evidence."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A survey asked {a} pupils and {b} of them wanted longer lunch. How many did not?",
+    "answer": "a-b",
+    "hint": "Take the yes answers away from the total asked.",
+    "explain": "{a} − {b} = {=a-b} pupils did not. A fair writer reports both numbers, not just the ones that help.",
+    "params": {
+     "a": [
+      40,
+      60
+     ],
+     "b": [
+      20,
+      35
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "“Only selfish people disagree with the new rules.” Which trick is this?",
+    "choices": [
+     "Attacking the person",
+     "Slippery slope",
+     "False choice"
+    ],
+    "answer": 0,
+    "hint": "Is it about the rules or about the people?",
+    "explain": "It insults the people who disagree instead of answering their reasons. That is attacking the person."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Side A has evidence weighing {a}. Side B has evidence weighing {b} and uses 3 tricks. By how much does A's evidence outweigh B's?",
+    "answer": "a-b",
+    "hint": "Subtract B's weight from A's. Tricks add no weight.",
+    "explain": "{a} − {b} = {=a-b}. The tricks do not count as evidence, so A is more convincing.",
+    "params": {
+     "a": [
+      6,
+      9
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Two letters argue about a new skate park. How should you decide which is more convincing?",
+    "choices": [
+     "Compare the relevance and amount of evidence and the reasoning",
+     "Pick the angrier letter",
+     "Pick the one more people signed"
+    ],
+    "answer": 0,
+    "hint": "What did the lab weigh on the scales?",
+    "explain": "Weigh each side's relevant evidence and check for tricks. Anger and numbers of signatures are not evidence."
+   }
+  ]
+ }
+}
