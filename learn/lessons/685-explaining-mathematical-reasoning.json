@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_kJ5wYzO8qC",
+ "title": "Explaining Mathematical Reasoning",
+ "audience": "family",
+ "keyIdea": "Explaining your reasoning means showing how you know an answer, not just saying it. You can explain with a drawing, a number sentence or words, step by step: '8 + 5: I took 2 from the 5 to make 10. Then 3 were left. 10 + 3 = 13.' To justify an answer, check it another way. Take-away undoes adding, so 15 − 6 = 9 checks 9 + 6 = 15. A near double checks too: 7 + 7 = 14, so 7 + 8 = 15. If both ways agree, you can be sure. If they do not, one has a slip. To find a slip in a worked example, check each step in turn.",
+ "familyTip": "When your child gives an answer, ask 'How did you work that out?' and 'Can you show me another way?' Praise the steps, not just the answer. Now and then, make a deliberate mistake, like '7 + 6 is 12 because I made ten', and let them find your slip.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it an explanation, or just an answer? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Shows how I know",
+    "Just an answer"
+   ],
+   "items": [
+    [
+     "8 + 2 = 10, then 10 + 3 = 13",
+     0
+    ],
+    [
+     "Double 6 is 12, one more is 13",
+     0
+    ],
+    [
+     "I drew 3 groups of 2 and counted 6",
+     0
+    ],
+    [
+     "It is 13",
+     1
+    ],
+    [
+     "I just knew it",
+     1
+    ],
+    [
+     "My friend said 13",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagexplain",
+  "caption": "Flagship lab: make ten, finish the sentence that explains it, check with take-away and a near double, and find the slip.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "In maths, the answer is only half the job. The other half is saying how you know. That is called explaining your reasoning.",
+   "Say your steps in order. For 8 + 5: I started with 8. I took 2 from the 5 to make 10. Then I added the 3 left. So 8 + 5 = 13. You can also show it with a drawing or a number sentence.",
+   "Check it another way. Take-away undoes adding. To check 9 + 6 = 15, take 6 away from 15. You get 9 again, so it is right. You can use a double too: 7 + 7 = 14, so 7 + 8 is one more, 15.",
+   "To find a mistake, check each step. Sam said 7 + 6 = 12. He wrote 6 take away 3 leaves 2. That step is wrong. It leaves 3, so the answer is 13."
+  ],
+  "adult": [
+   "Ages 6 to 7. The NC aims ask children to reason mathematically and justify using mathematical language, and Year 2 asks them to use the inverse relationship between addition and subtraction to check calculations. In KS1 this means explaining a strategy with a drawing, a number sentence or words, checking by a second method, and spotting errors. Key words: explain, reason, justify, method, strategy, number sentence, stem sentence, make ten, inverse, near double, check, and same answer.",
+   "Common mistakes: giving only the answer or 'I just knew'; telling the steps out of order or leaving one out; checking 9 + 6 = 15 with 15 + 6 instead of 15 − 6; thinking that a second method could give a different right answer; getting a near double one out (7 + 8 as 14 or 16); splitting a number wrongly (7 as 5 and 1); and accepting a worked example because the last line looks tidy instead of checking each step.",
+   "Asking 'how do you know?' and 'can you show me another way?' builds the habit of justifying. A stem sentence ('I took … to make 10. Then … were left.') gives children the words for their steps. Making ten uses number bonds to 10 and partitioning; the inverse and near doubles are good second methods. Finding a deliberate mistake (a 'what went wrong?' task) helps children check their own work.",
+   "In the lab your child makes ten to add 8 + 5 with ten frames and fills the gaps in a sentence that explains it. They check 9 + 6 = 15 by cutting 6 cubes off a bar of 15, find 7 + 8 with the near double 7 + 7 = 14, and find the wrong step in three worked examples, such as '6 take away 3 leaves 2' and '7 is 5 and 1'."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is the best explanation for 9 + 4 = 13?",
+   "choices": [
+    "9 + 1 = 10, then 10 + 3 = 13",
+    "It is 13 because I know it",
+    "13 is a big number"
+   ],
+   "answer": 0,
+   "hint": "Which one shows the steps you took?",
+   "explain": "It shows each step: take 1 from the 4 to make 10, then add the 3 that are left."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "To add 9 + {b}, make ten first: 9 + 1 = 10. How many are left to add to 10?",
+   "answer": "b-1",
+   "hint": "You used 1 of the {b} to make ten. What is left?",
+   "explain": "{b} take away 1 leaves {=b-1}, so 10 + {=b-1} = {=9+b}.",
+   "params": {
+    "b": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Check {a} + {b} = {=a+b} the other way round. What is {=a+b} − {b}?",
+   "answer": "a",
+   "hint": "Take-away undoes adding. Taking away the {b} you added takes you back to the start.",
+   "explain": "{=a+b} − {b} = {a}, the number we started with, so {a} + {b} = {=a+b} is right.",
+   "params": {
+    "a": [
+     5,
+     12
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Leo did 6 + 7 two ways and got 13 and 12. What should he do?",
+   "choices": [
+    "Check both ways to find the slip",
+    "Pick the bigger answer",
+    "Pick the first answer"
+   ],
+   "answer": 0,
+   "hint": "Can 6 + 7 have two right answers?",
+   "explain": "A sum has one right answer, so one way has a slip. Checking each step finds it. 6 + 7 = 13."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Mia said: '7 + 5. 7 + 3 = 10. 5 take away 3 leaves 1. 10 + 1 = 11.' Which step is wrong?",
+   "choices": [
+    "5 take away 3 leaves 1",
+    "7 + 3 = 10",
+    "10 + 1 = 11"
+   ],
+   "answer": 0,
+   "hint": "Check each step. What is 5 take away 3?",
+   "explain": "5 take away 3 leaves 2, not 1. So 10 + 2 = 12, and 7 + 5 = 12."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does it mean to explain your reasoning?",
+    "choices": [
+     "Show how you know the answer",
+     "Say the answer louder",
+     "Write the answer twice"
+    ],
+    "answer": 0,
+    "hint": "Think of the sentence you finished in the lab: it said each step.",
+    "explain": "Explaining means showing your steps with words, a drawing or a number sentence, so someone else can follow them."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "8 + {b}: 8 + 2 = 10. Then 10 + what?",
+    "answer": "b-2",
+    "hint": "You used 2 of the {b} to make ten.",
+    "explain": "{b} take away 2 leaves {=b-2}, so 10 + {=b-2} = {=8+b}.",
+    "params": {
+     "b": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ben did 13 − 6 like this: '6 is 3 and 2. 13 − 3 = 10. 10 − 2 = 8.' Which step is wrong?",
+    "choices": [
+     "6 is 3 and 2",
+     "13 − 3 = 10",
+     "10 − 2 = 8"
+    ],
+    "answer": 0,
+    "hint": "Check each step. Do 3 and 2 make 6?",
+    "explain": "3 and 2 make 5, not 6. 6 is 3 and 3, so 10 − 3 = 7, and 13 − 6 = 7."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which take-away checks 8 + 7 = 15?",
+    "choices": [
+     "15 − 7 = 8",
+     "15 + 7 = 22",
+     "8 − 7 = 1"
+    ],
+    "answer": 0,
+    "hint": "Start from the whole, 15, and take away what you added.",
+    "explain": "Take-away undoes adding. 15 − 7 = 8, the number you started with, so 8 + 7 = 15 is right."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You work out 9 + 6 by making ten, then check with 15 − 6. Both fit. What does that show?",
+    "choices": [
+     "15 is very likely right",
+     "One way must be wrong",
+     "You need a third answer"
+    ],
+    "answer": 0,
+    "hint": "What does it mean when two ways agree?",
+    "explain": "Two different ways that agree are a good check, so you can be sure 9 + 6 = 15 is right."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Double {d} is {=2*d}. So what is {d} + {=d+1}?",
+    "answer": "2*d+1",
+    "hint": "{=d+1} is one more than {d}, so the answer is one more than the double.",
+    "explain": "{d} + {d} = {=2*d}, and {=d+1} is one more, so {d} + {=d+1} = {=2*d+1}.",
+    "params": {
+     "d": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Zoe did 14 − 6 like this: 14 − 4 = 10, then 10 − 2 = 8. Is she right?",
+    "choices": [
+     "Yes, 14 − 6 = 8",
+     "No, the answer is 10",
+     "No, the answer is 20"
+    ],
+    "answer": 0,
+    "hint": "6 is 4 and 2. Did she take away both parts?",
+    "explain": "She took 4 to get to 10, then the other 2. 10 − 2 = 8, so 14 − 6 = 8."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Finish the explanation: '9 + 5. I took 1 from the 5 to make 10. Then … were left.'",
+    "choices": [
+     "4",
+     "5",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "You had 5 and used 1 to make 10.",
+    "explain": "5 take away 1 leaves 4. So 10 + 4 = 14, and 9 + 5 = 14."
+   }
+  ]
+ }
+}
