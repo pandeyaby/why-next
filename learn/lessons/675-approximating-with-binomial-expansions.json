@@ -1,0 +1,265 @@
+{
+ "topicId": "mt_--rbLIY5QB",
+ "title": "Approximating with binomial expansions",
+ "audience": "learner",
+ "keyIdea": "When x is small, the powers of x shrink so fast that the first few terms of (1 + x)ⁿ = 1 + nx + ⁿC₂x² + ⁿC₃x³ + … give almost all of its value. Rewrite the number in the form a(1 + x)ⁿ with x small, keep track of the signs when x is negative, and add terms until the first term you leave out is too small to change the accuracy you need.",
+ "familyTip": "Ask your teen to estimate 1.01¹⁰ in their head with 1 + 10(0.01) + 45(0.01)², then check it on a calculator. Then try 1.5¹⁰ the same way and talk about why the same method gives a poor answer.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Will the first few terms give a good estimate? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "✅ Good estimate",
+    "❌ Poor estimate"
+   ],
+   "items": [
+    [
+     "1.001²⁰ from 1 + 20(0.001)",
+     0
+    ],
+    [
+     "0.99⁵ from 1 − 5(0.01) + 10(0.01)²",
+     0
+    ],
+    [
+     "1.03⁶ from 1 + 6(0.03) + 15(0.03)²",
+     0
+    ],
+    [
+     "1.5¹⁰ from 1 + 10(0.5) + 45(0.5)²",
+     1
+    ],
+    [
+     "2⁸ from 1 + 8(1) + 28(1)²",
+     1
+    ],
+    [
+     "1.2¹² from 1 + 12(0.2)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbapx",
+  "caption": "Flagship lab: watch later terms shrink, build 1.02¹⁰ to 4 d.p., fix the signs of 0.98⁶, pick the right form, find where 3 terms fail.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Write 1.02¹⁰ as (1 + 0.02)¹⁰ and expand: 1 + 10(0.02) + 45(0.02)² + 120(0.02)³ + … The terms are 1, 0.2, 0.018, 0.00096 and so on. Each one is much smaller than the one before. So the first few terms give almost all of the answer: 1 + 0.2 + 0.018 + 0.00096 = 1.21896, and a calculator gives 1.21899.",
+   "Why do the terms shrink? To get from the xᵏ term to the next one, you multiply by (n − k)x ÷ (k + 1). With x = 0.02 that is a small number. The coefficients grow at first, but the powers of x shrink much faster.",
+   "First, get the number into the form a(1 + x)ⁿ with x small. For 0.997⁸, x = −0.003. For 2.01⁵, take out the 2: 2.01⁵ = 2⁵(1 + 0.005)⁵. When x is negative, odd powers are negative and even powers positive, so the signs alternate: 0.98⁶ ≈ 1 − 0.12 + 0.006 − 0.00016.",
+   "How many terms do you need? Look at the first term you leave out. The error is about that size. If it is too small to change the decimal place you want, stop. If x is not small, like 0.5, the left-out terms are big and the estimate is poor."
+  ],
+  "adult": [
+   "Ages 16 to 18 (A-level Maths, binomial expansion for positive integer n). The skill is using a truncated expansion of (1 + x)ⁿ to estimate a power and judging how accurate it is. The ratio of consecutive terms is (n − k)x/(k + 1), so when nx is small the terms fall away quickly and the first omitted term is a good estimate of the error.",
+   "Worked values: 1.02¹⁰ = 1.2189944… Two terms give 1.2, three give 1.218 and four give 1.21896, which is correct to 4 d.p. For 0.98⁶ = 0.8858424…, four terms with alternating signs give 0.88584, so 0.98⁶ ≈ 0.8858.",
+   "Common mistakes: using the whole number as x, so 0.997 instead of −0.003; slipping a decimal place in x; forgetting that a negative x makes odd-power terms negative; writing 2.01⁵ as 2(1 + 0.005)⁵ instead of 2⁵(1 + 0.005)⁵; stopping too early without checking the next term; and trusting the method when x is large.",
+   "In the lab, learners compare term sizes on a log scale, add terms one at a time against a calculator value, fix the signs of a negative-x expansion, choose the right form for three numbers, and drag x along a graph to find where a 3-term estimate of (1 + x)¹⁰ is no longer within 1%. That happens between x = 0.04 and x = 0.05."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which expansion should you use to estimate 1.004⁹?",
+   "choices": [
+    "(1 + 0.004)⁹",
+    "(1 + 0.04)⁹",
+    "(1 + 1.004)⁹"
+   ],
+   "answer": 0,
+   "hint": "x is the small amount added to 1.",
+   "explain": "1.004 = 1 + 0.004, so x = 0.004 and the expansion is (1 + 0.004)⁹."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Use the first two terms, 1 + nx, to estimate 1.0{k} to the power {n}.",
+   "answer": "1+n*k/100",
+   "hint": "Here x = 0.0{k}. Multiply it by {n} and add 1.",
+   "explain": "1 + {n} × 0.0{k} = {=1+n*k/100}. The next term is positive, so the true value is a little bigger.",
+   "params": {
+    "k": [
+     1,
+     9
+    ],
+    "n": [
+     2,
+     8
+    ]
+   },
+   "tolerance": 0.0005
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the sign of the x³ term in (1 − 0.05)⁷?",
+   "choices": [
+    "Negative",
+    "Positive",
+    "There is no x³ term"
+   ],
+   "answer": 0,
+   "hint": "x = −0.05. Is a negative number cubed positive or negative?",
+   "explain": "(−0.05)³ is negative, so the x³ term is negative. Odd powers of a negative x are negative."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In (1 + 0.01) to the power {n}, the x² term is {n}C2 × 0.0001. How many ten-thousandths is that?",
+   "answer": "n*(n-1)/2",
+   "hint": "{n}C2 = {n} × ({n} − 1) ÷ 2.",
+   "explain": "{n}C2 = {=n*(n-1)/2}, so the x² term is {=n*(n-1)/2} ten-thousandths.",
+   "params": {
+    "n": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You stop an expansion and the first term you left out is 0.0003. About how big is the error?",
+   "choices": [
+    "About 0.0003",
+    "Exactly 0",
+    "About 0.3"
+   ],
+   "answer": 0,
+   "hint": "When x is small, the left-out terms are dominated by the first one.",
+   "explain": "The later left-out terms are much smaller still, so the error is about the size of the first term left out, 0.0003."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "To estimate 0.995⁶ with (1 + x)⁶, what is x?",
+    "choices": [
+     "−0.005",
+     "0.995",
+     "−0.05"
+    ],
+    "answer": 0,
+    "hint": "0.995 is 1 minus a small number.",
+    "explain": "0.995 = 1 − 0.005, so x = −0.005."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How should you rewrite 2.02⁴ to use a binomial expansion?",
+    "choices": [
+     "2⁴(1 + 0.01)⁴",
+     "2(1 + 0.01)⁴",
+     "2⁴(1 + 0.02)⁴"
+    ],
+    "answer": 0,
+    "hint": "Take out the factor 2, then raise it to the power 4.",
+    "explain": "2.02 = 2(1.01), so 2.02⁴ = 2⁴(1 + 0.01)⁴ = 16(1 + 0.01)⁴."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Use the first two terms, 1 − nx, to estimate 0.99 to the power {n}.",
+    "answer": "1-n/100",
+    "hint": "Here x = −0.01, so 1 + nx is 1 − {n} × 0.01.",
+    "explain": "1 − {n} × 0.01 = {=1-n/100}. The next term is positive, so the true value is a little bigger.",
+    "params": {
+     "n": [
+      2,
+      9
+     ]
+    },
+    "tolerance": 0.0005
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why do later terms of (1 + 0.01)²⁰ get small?",
+    "choices": [
+     "Each new power of 0.01 makes the term much smaller",
+     "The coefficients get smaller",
+     "The terms are subtracted"
+    ],
+    "answer": 0,
+    "hint": "Compare the coefficients with the powers of x.",
+    "explain": "The coefficients grow at first (20, 190, 1140), but each power of 0.01 divides by 100, which wins."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "For which x is 1 + 10x + 45x² a poor estimate of (1 + x)¹⁰?",
+    "choices": [
+     "x = 0.4",
+     "x = 0.01",
+     "x = 0.02"
+    ],
+    "answer": 0,
+    "hint": "Look for the x where the left-out terms are not small.",
+    "explain": "At x = 0.4 the x³ term alone is 120 × 0.064 = 7.68, so the estimate is far too small."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "In (1 + x) to the power {n}, the x³ term is {n}C3 x³. What is {n}C3?",
+    "answer": "n*(n-1)*(n-2)/6",
+    "hint": "{n}C3 = {n} × ({n} − 1) × ({n} − 2) ÷ 6.",
+    "explain": "{n}C3 = {=n*(n-1)*(n-2)/6}. This tells you how big the x³ term is.",
+    "params": {
+     "n": [
+      5,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Three terms give 1.02¹⁰ ≈ 1.218. Why is that not right to 4 d.p.?",
+    "choices": [
+     "The next term, 0.00096, changes the 4th decimal place",
+     "Three terms are always exact",
+     "The terms should be subtracted"
+    ],
+    "answer": 0,
+    "hint": "Look at the size of the first term left out.",
+    "explain": "The 4th term is 0.00096, so 1.218 becomes 1.21896, which rounds to 1.2190. The true value is 1.21899."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Estimate 1.01¹⁰ with 1 + 10x + 45x².",
+    "choices": [
+     "1.1045",
+     "1.1",
+     "1.145"
+    ],
+    "answer": 0,
+    "hint": "x = 0.01, so x² = 0.0001.",
+    "explain": "1 + 10(0.01) + 45(0.0001) = 1 + 0.1 + 0.0045 = 1.1045. A calculator gives 1.10462."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Is 1.02¹⁰ bigger or smaller than 1 + 10(0.02) = 1.2?",
+    "choices": [
+     "Bigger",
+     "Smaller",
+     "Equal"
+    ],
+    "answer": 0,
+    "hint": "Are any of the left-out terms negative?",
+    "explain": "All the terms are positive when x is positive, so the true value 1.21899 is bigger than 1.2."
+   }
+  ]
+ }
+}
