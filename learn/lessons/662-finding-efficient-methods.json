@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_RFeVlw0QvX",
+ "title": "Finding efficient methods",
+ "audience": "family",
+ "keyIdea": "Look for what repeats, then use it to count faster or to say what comes next. Things in pairs can be counted in 2s, hands in 5s and packs of ten in 10s, and the total is the same as counting in 1s. Adding 1 always gives the next number. On a hundred square, 10 more is one row down.",
+ "familyTip": "Put socks or shoes in pairs and count them in 2s together, then check by counting in 1s. Count hands in 5s. On the stairs, ask: we are on step 6, what is 1 more? Ask your child how they knew without counting from 1.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which is the quick way to count each one? Drag each card into 2s, 5s or 10s, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Count in 2s",
+    "Count in 5s",
+    "Count in 10s"
+   ],
+   "items": [
+    [
+     "Pairs of socks",
+     0
+    ],
+    [
+     "Pairs of shoes",
+     0
+    ],
+    [
+     "Fingers on each hand",
+     1
+    ],
+    [
+     "5p coins",
+     1
+    ],
+    [
+     "Packs of 10 pencils",
+     2
+    ],
+    [
+     "10p coins",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flageffic",
+  "caption": "Flagship lab: count socks in 2s, find 1 more, find 10 more on a hundred square, hop in 2s from 1, count hands in 5s and predict a tower.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some things come in groups that are the same. Socks come in 2s. A hand has 5 fingers. So you can count in 2s or in 5s. It is quicker than 1, 2, 3.",
+   "Count 5 pairs of socks in 2s: 2, 4, 6, 8, 10. Count them in 1s and you get 10 too. A quick way gives the same answer.",
+   "Look for the pattern. 1 more is always the next number: 19 and 1 more is 20. On a hundred square, 10 more is the number just below.",
+   "A pattern helps you guess what comes next. 5, 10, 15, 20 ends in 5, 0, 5, 0. So 25 comes next. Hops of 2 from 1 land on 1, 3, 5, 7, 9."
+  ],
+  "adult": [
+   "Ages 5 to 6. This is the habit of spotting what repeats and using it. It feeds the Year 1 goals in England: count in 2s, 5s and 10s, and find one more and one less. In the early years goals, children count past 20 and see the pattern in the number system.",
+   "Skip counting gives the same total as counting in ones, as long as every group holds the same number. Adding 1 always moves to the next number. A hundred square is built in rows of ten. So 10 more is straight down: the tens digit goes up by 1 and the ones digit stays.",
+   "Common mistakes: counting the groups, not the things (4 pairs of socks is 8, not 4). Adding 1 instead of the jump (5, 10, 15, 16). Moving across, not down, on a hundred square, so 23 + 10 becomes 24. Losing the odd and even pattern, such as saying 10 when counting in 2s from 1.",
+   "In the lab your child counts socks in 2s and checks the total in 1s. They find 1 more on a number track and 10 more on a hundred square. They hop a frog in 2s from 1, count hands in 5s and say what comes next. Last, they use towers of 2, 4 and 6 cubes to say tower 5 before it is built."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "3 pairs of socks. Count in 2s. How many socks?",
+   "choices": [
+    "6",
+    "3",
+    "5"
+   ],
+   "answer": 0,
+   "hint": "Say 2 for each pair: 2, 4, …",
+   "explain": "2, 4, 6. There are 6 socks. 3 is the number of pairs."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is {n} + 1?",
+   "answer": "n+1",
+   "hint": "1 more is the next number when you count.",
+   "explain": "The number after {n} is {=n+1}, so {n} + 1 = {=n+1}.",
+   "params": {
+    "n": [
+     3,
+     19
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "5, 10, 15, 20. What comes next?",
+   "choices": [
+    "25",
+    "21",
+    "30"
+   ],
+   "answer": 0,
+   "hint": "Each jump is 5. The numbers end in 5, 0, 5, 0.",
+   "explain": "20 and 5 more is 25. 21 only adds 1."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "On a hundred square you are on {n}. You move one row down. What number are you on?",
+   "answer": "n+10",
+   "hint": "Each row has 10 numbers, so one row down is 10 more.",
+   "explain": "One row down is 10 more: {n} + 10 = {=n+10}.",
+   "params": {
+    "n": [
+     11,
+     39
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Ben counts 4 pairs of shoes and says 4. What went wrong?",
+   "choices": [
+    "He counted the pairs, not the shoes",
+    "He counted in 5s",
+    "Nothing, he is right"
+   ],
+   "answer": 0,
+   "hint": "Each pair has 2 shoes. Count in 2s.",
+   "explain": "2, 4, 6, 8. There are 8 shoes in 4 pairs."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "2, 4, 6, 8. What comes next?",
+    "choices": [
+     "10",
+     "9",
+     "12"
+    ],
+    "answer": 0,
+    "hint": "The jump is 2 each time: 2, 4, 6, 8, then 2 more.",
+    "explain": "8 and 2 more is 10. 9 only adds 1, and 12 jumps too far."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is 23 + 10?",
+    "choices": [
+     "33",
+     "24",
+     "13"
+    ],
+    "answer": 0,
+    "hint": "10 more is one row down on a hundred square.",
+    "explain": "Straight below 23 is 33. The tens go up by 1 and the ones stay 3."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A frog hops in 2s from 1: 1, 3, 5, 7. Where does it land next?",
+    "choices": [
+     "9",
+     "8",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "Hops of 2 from 1 land on odd numbers.",
+    "explain": "7 and 2 more is 9. The frog lands on 1, 3, 5, 7, 9: all odd numbers."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{h} hands. Each hand has 5 fingers. Count in 5s. How many fingers?",
+    "answer": "5*h",
+    "hint": "Say 5 for each hand: 5, 10, 15 …",
+    "explain": "Counting in 5s {h} times gives {=5*h} fingers.",
+    "params": {
+     "h": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Towers have 2, 4 and 6 cubes. How many cubes are in tower 4?",
+    "choices": [
+     "8",
+     "7",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "Each tower has 2 more than the one before.",
+    "explain": "6 and 2 more is 8. Tower 5 would have 10."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Mia counts 5 pairs of socks in 2s and gets 10. Then she counts in 1s. What will she get?",
+    "choices": [
+     "10",
+     "5",
+     "20"
+    ],
+    "answer": 0,
+    "hint": "The socks do not change. Only the way of counting changes.",
+    "explain": "It is still 10. Counting in 2s is quicker, but the total is the same."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "What is {n} + 10?",
+    "answer": "n+10",
+    "hint": "10 more: the tens go up by 1 and the ones stay.",
+    "explain": "{n} + 10 = {=n+10}. It is one row down on a hundred square.",
+    "params": {
+     "n": [
+      12,
+      48
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is the quick way to count 10p coins?",
+    "choices": [
+     "Count in 10s",
+     "Count in 1s",
+     "Count in 5s"
+    ],
+    "answer": 0,
+    "hint": "How much is each coin worth?",
+    "explain": "Each coin is 10p, so count 10, 20, 30. Counting in 1s or 5s gets the wrong total."
+   }
+  ]
+ }
+}
