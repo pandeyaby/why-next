@@ -1,0 +1,144 @@
+{
+ "topicId": "mt_Jvvh5P06NV",
+ "title": "Area by Tiling",
+ "audience": "family",
+ "keyIdea": "Tile a rectangle with unit squares in rows. Every row has the same number of squares, so the area is the number of rows times the number in each row. That is the same as multiplying the two side lengths: a 4 by 6 rectangle has 4 × 6 = 24 square units. Area is measured in squares, such as cm² or m².",
+ "familyTip": "Find a rectangle at home that is covered in squares, such as a chocolate bar, an ice cube tray or floor tiles. Count the squares in one row and the number of rows, then multiply. Count them one by one to check. Ask which is quicker.",
+ "status": "self-checked",
+ "visual": {
+  "type": "array",
+  "caption": "An array of unit squares: rows of the same length. Count the rows and the squares in one row, then multiply.",
+  "opts": {"rows": 4, "cols": 6}
+ },
+ "lab": {
+  "type": "flagtiles",
+  "caption": "Flagship lab: lay rows of squares, multiply from one row and column, turn a rectangle, find two with area 12, double a side, tile a room in m².",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Area is how many unit squares cover a shape. To find the area of a rectangle, tile it with squares in rows. A rectangle 6 squares long and 4 squares wide has 4 rows. Each row has 6 squares.",
+   "You can count the rows in steps: 6, 12, 18, 24. That is 4 lots of 6, so 4 × 6 = 24. The area is the length times the width.",
+   "You do not need to draw every square. If you know one row has 7 squares and there are 3 rows, the area is 3 × 7 = 21. Do not add the sides: 7 + 3 is not the number of squares inside.",
+   "Turn a rectangle round and the area stays the same, because 3 × 5 = 5 × 3. Write the unit as squares: cm² for square centimetres and m² for square metres."
+  ],
+  "adult": [
+   "Ages 8 to 9. This matches the US Common Core standard 3.MD.C.7a: find the area of a rectangle with whole-number side lengths by tiling it, and show that the answer equals the product of the side lengths. In England, Year 4 finds the area of rectilinear shapes by counting squares, which leads to the length × width formula in Year 5.",
+   "Tiling turns a rectangle into an array. The rows are equal groups, so the area is rows × squares in a row, which is width × length. This is why the formula works, and it links area to multiplication facts and to the commutative law: a 3 by 5 rectangle turned round is a 5 by 3 rectangle with the same 15 squares.",
+   "Common mistakes: adding the two side lengths (6 + 4 = 10) instead of multiplying; counting the squares round the edge or finding the perimeter (20) instead of the area; counting only the squares that are drawn when a diagram shows just one row and one column; and writing the area in cm or m instead of square units (cm² or m²).",
+   "In the lab your child lays rows of 6 into a 6 by 4 rectangle and sees 6, 12, 18, 24 become 4 × 6, picks 3 × 7 from a part-tiled rectangle, turns 5 by 3 into 3 by 5, stretches a rectangle to find 3 × 4 and 2 × 6, doubles one side to double the area, and tiles a 4 m by 3 m room to find 12 m²."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "A rectangle is tiled with 3 rows. Each row has 5 unit squares. What is its area?",
+   "choices": ["15 square units", "8 square units", "16 square units"],
+   "answer": 0,
+   "hint": "3 rows of 5. Multiply the rows by the squares in each row.",
+   "explain": "3 rows of 5 is 5, 10, 15, so the area is 3 × 5 = 15 square units."
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "A rectangle is {a} cm long and {b} cm wide. It is tiled with 1 cm squares. What is its area in cm²?",
+   "answer": "a*b",
+   "hint": "There are {b} rows, and each row has {a} squares. Multiply.",
+   "explain": "{b} rows of {a} squares is {a} × {b} = {=a*b}, so the area is {=a*b} cm².",
+   "params": {"a": [3, 9], "b": [2, 6]}
+  },
+  {
+   "type": "mc", "id": "p3",
+   "prompt": "Only the top row and the first column of a rectangle are tiled. The top row has 8 squares. The column has 4 squares. What is the area?",
+   "choices": ["32 square units", "12 square units", "11 square units"],
+   "answer": 0,
+   "hint": "Every row is the same as the top row. How many rows are there?",
+   "explain": "There are 4 rows of 8, so the area is 4 × 8 = 32 square units. 12 adds the sides and 11 counts only the drawn squares."
+  },
+  {
+   "type": "numeric", "id": "p4",
+   "prompt": "A rug has an area of {a} × {b} square metres. It is turned round, so it is {b} m long and {a} m wide. What is its area now in m²?",
+   "answer": "a*b",
+   "hint": "Turning a rectangle round does not change how many squares cover it.",
+   "explain": "{b} × {a} is the same as {a} × {b}, so the area is still {=a*b} m².",
+   "params": {"a": [2, 5], "b": [3, 7]}
+  },
+  {
+   "type": "mc", "id": "p5",
+   "prompt": "A rectangle is 6 cm long and 4 cm wide. Mia says its area is 10 cm². What did she do?",
+   "choices": ["She added the sides instead of multiplying", "She found the perimeter", "Nothing, she is right"],
+   "answer": 0,
+   "hint": "Work out 6 + 4 and 6 × 4. Which is the number of squares inside?",
+   "explain": "6 + 4 = 10 adds the sides. The area is 4 rows of 6 squares: 6 × 4 = 24 cm²."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "A room is 5 m long and 4 m wide. What is its area?",
+    "choices": ["20 m²", "9 m²", "18 m"],
+    "answer": 0,
+    "hint": "Tile it with 1 metre squares in your head: 4 rows of 5.",
+    "explain": "4 rows of 5 metre squares is 5 × 4 = 20 m². 18 m is the perimeter, a length round the edge."
+   },
+   {
+    "type": "mc", "id": "m2",
+    "prompt": "Which rectangle has an area of 12 square units?",
+    "choices": ["3 by 4", "3 by 9", "5 by 7"],
+    "answer": 0,
+    "hint": "Multiply the two sides of each rectangle.",
+    "explain": "3 × 4 = 12. The others are 3 × 9 = 27 and 5 × 7 = 35."
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "A chocolate bar has {r} rows with {k} squares in each row. How many squares are there?",
+    "answer": "r*k",
+    "hint": "Equal rows: multiply the number of rows by the squares in one row.",
+    "explain": "{r} rows of {k} is {r} × {k} = {=r*k} squares.",
+    "params": {"r": [2, 5], "k": [3, 8]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "A 4 by 3 rectangle has an area of 12. It is made 8 long and still 3 wide. What is the new area?",
+    "choices": ["24", "16", "12"],
+    "answer": 0,
+    "hint": "Each row now has 8 squares. How many rows are there?",
+    "explain": "3 rows of 8 is 8 × 3 = 24, double the old area of 12."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "Why is the area of a 6 by 4 rectangle the same as 6 × 4?",
+    "choices": ["It has 4 equal rows of 6 squares", "Because 6 + 4 is 10", "Because it has 4 sides"],
+    "answer": 0,
+    "hint": "Picture the squares in rows. Are the rows the same?",
+    "explain": "Tiled, it makes 4 rows with 6 squares in each. Equal rows of 6 is 4 lots of 6, which is 6 × 4 = 24."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "A rectangle is 7 cm long and 2 cm wide. Which answer has the right number and unit?",
+    "choices": ["14 cm²", "14 cm", "9 cm²"],
+    "answer": 0,
+    "hint": "Multiply the sides, then remember area is counted in squares.",
+    "explain": "7 × 2 = 14 squares of 1 cm², so the area is 14 cm², not 14 cm."
+   },
+   {
+    "type": "numeric", "id": "m7",
+    "prompt": "A patio is {a} m long and {b} m wide. It is covered with 1 metre square slabs. How many slabs are needed?",
+    "answer": "a*b",
+    "hint": "There are {b} rows of slabs with {a} slabs in each row.",
+    "explain": "{b} rows of {a} slabs is {a} × {b} = {=a*b} slabs, an area of {=a*b} m².",
+    "params": {"a": [4, 9], "b": [2, 5]}
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "A rectangle has an area of 18 square units. One side is 6. How long is the other side?",
+    "choices": ["3", "12", "6"],
+    "answer": 0,
+    "hint": "How many rows of 6 make 18?",
+    "explain": "3 rows of 6 is 18, so the other side is 3, because 6 × 3 = 18."
+   }
+  ]
+ }
+}
