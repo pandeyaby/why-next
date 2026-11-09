@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_prqHs1rg3D",
+ "title": "Mains wiring and plug safety",
+ "audience": "learner",
+ "keyIdea": "UK mains electricity is an alternating supply at about 230 V and 50 Hz. A three-core cable has a brown live wire, which carries the alternating potential difference from the supply; a blue neutral wire, which completes the circuit and is at or close to 0 V; and a green-and-yellow earth wire, which is at 0 V and only carries a current if there is a fault. The fuse and the switch are in the live wire. Your body is at 0 V, so touching the live wire drives a current through you, even when an appliance's switch is off. If a fault makes a metal case live, the earth wire gives a low-resistance path: a large current flows, the fuse melts and the live wire is cut off.",
+ "familyTip": "Look at the label on a plug or a kettle base together. Find the power in watts, divide it by 230 to get the normal current, and check that the fuse rating (often printed on the fuse or the plug) is just above it. Never open a plug that is plugged in, and never touch the pins.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which wire is it: live, neutral or earth? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "🟫 Live",
+    "🟦 Neutral",
+    "🟩 Earth"
+   ],
+   "items": [
+    [
+     "Brown, about 230 V",
+     0
+    ],
+    [
+     "Has the fuse and the switch in it",
+     0
+    ],
+    [
+     "Blue, completes the circuit",
+     1
+    ],
+    [
+     "At or close to 0 V in normal use",
+     1
+    ],
+    [
+     "Green and yellow stripes",
+     2
+    ],
+    [
+     "Joined to a metal case, carries current only in a fault",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagplug",
+  "caption": "Flagship lab: wire a UK plug, probe each wire with the switch off, touch a faulty unearthed case, then let the earth wire blow the fuse and pick fuse ratings.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Mains electricity in the UK is an alternating current (ac) supply at about 230 V and 50 Hz. Most appliances join to it with a three-core cable. The brown live wire carries the alternating potential difference from the supply. The blue neutral wire completes the circuit and is at or close to 0 V. The green-and-yellow earth wire is at 0 V and only carries a current if something goes wrong.",
+   "In a UK plug, the brown live wire goes to the bottom right terminal, through the fuse. The blue neutral wire goes to the bottom left. The earth wire goes to the top terminal, joined to the longest pin. Switches and fuses are always in the live wire, so they can cut off the 230 V.",
+   "Your body is at about 0 V, the same as the earth. If you touch the live wire, there is a potential difference of 230 V across you, so a current flows through you to the ground. That is an electric shock, and it can kill. The live wire is still dangerous when an appliance is switched off, because the cable up to the switch is still joined to the supply.",
+   "Now suppose a loose live wire touches the metal case of a kettle. Without an earth wire, the case is at 230 V and touching it gives you a shock. With the earth wire joined to the case, the current has a very low-resistance path to earth. A large current flows, the fuse melts and the live wire is cut off. The fuse rating should be just above the normal current, I = P ÷ V. A 60 W lamp needs a 3 A fuse and a 2760 W kettle needs 13 A."
+  ],
+  "adult": [
+   "Ages 14 to 16 (AQA GCSE Physics 4.2.3 and the matching OCR and Edexcel content). Students should name the three wires and their colours, state the potential of each, explain why the live wire is dangerous even when a switch is open, and explain how the earth wire and fuse work together to protect someone when a fault makes a metal case live.",
+   "Common mistakes: thinking the earth wire carries current all the time, or that it stops current; thinking the neutral wire is dangerous and the live is safe when off; putting the fuse in the neutral; and believing the biggest fuse is the safest. Students also slip on fuse choice: a 1200 W hair dryer takes about 5.2 A, so a 5 A fuse is too small and it needs 13 A.",
+   "The physics behind the danger is potential difference. The body is near earth potential, so contact with the live wire puts about 230 V across the body. The earth wire works because its resistance is very low. A fault then makes a large current, which melts the fuse (or trips a circuit breaker). Appliances with plastic cases are double insulated and use two-core cable with no earth wire.",
+   "In the lab students drag each wire to its terminal and get named feedback on wrong ones. They probe the wires with the lamp off and find the live wire in the cable still reads 230 V. They touch an unearthed faulty case, then reconnect the earth and watch the fault current melt the fuse. Last, they work out I = P ÷ V for a lamp, an iron and a kettle and fit 3 A, 5 A and 13 A fuses."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which wire is brown, carries about 230 V and has the fuse in it?",
+   "choices": [
+    "Live",
+    "Neutral",
+    "Earth"
+   ],
+   "answer": 0,
+   "hint": "The fuse must be able to cut off the 230 V.",
+   "explain": "The brown live wire carries the alternating potential difference of about 230 V. The fuse and switch go in it so they can disconnect it."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An appliance has a power of {=230*k} W and runs on 230 V mains. What is the normal current, in amps?",
+   "answer": "k",
+   "hint": "Use I = P ÷ V, with V = 230 V for UK mains.",
+   "explain": "I = P ÷ V = {=230*k} ÷ 230 = {k} A. The fuse rating should be just above this.",
+   "params": {
+    "k": [
+     1,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A lamp is switched off at its own switch. Is the live wire in its cable safe to touch?",
+   "choices": [
+    "No: it is still at about 230 V",
+    "Yes: switching off makes it 0 V",
+    "Yes: only the neutral wire can give a shock"
+   ],
+   "answer": 0,
+   "hint": "Where is the switch? Is the cable before it still joined to the supply?",
+   "explain": "The switch only breaks the circuit at the lamp. The live wire back to the socket is still at 230 V, and your body at 0 V would complete a path to earth."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A heater draws a current of {i} A from the 230 V mains. What is its power in watts?",
+   "answer": "230*i",
+   "hint": "Rearrange I = P ÷ V into P = I × V.",
+   "explain": "P = I × V = {i} × 230 = {=230*i} W.",
+   "params": {
+    "i": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A loose live wire touches the metal case of an earthed kettle. What happens?",
+   "choices": [
+    "A large current flows to earth and the fuse melts",
+    "The earth wire stops any current flowing",
+    "Nothing, until someone touches the case"
+   ],
+   "answer": 0,
+   "hint": "The earth wire has a very low resistance.",
+   "explain": "The earth wire gives an easy path, so a very large current flows through the live and earth wires. The fuse melts and cuts off the live wire, so the case cannot stay live."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the potential of the neutral wire in normal use?",
+    "choices": [
+     "At or close to 0 V",
+     "About 230 V",
+     "About 115 V"
+    ],
+    "answer": 0,
+    "hint": "Which wire carries the 230 V from the supply?",
+    "explain": "The neutral wire completes the circuit and is at or close to 0 V. The live wire is at about 230 V."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "In a UK plug, where does the brown wire go?",
+    "choices": [
+     "Bottom right, through the fuse",
+     "Bottom left",
+     "The top terminal"
+    ],
+    "answer": 0,
+    "hint": "Remember BRown goes Bottom Right, through the fuse.",
+    "explain": "The brown live wire goes to the bottom right terminal through the fuse. Blue goes bottom left and green-and-yellow earth goes to the top."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A hair dryer is rated 1200 W on 230 V. Which fuse should it have: 3 A, 5 A or 13 A?",
+    "choices": [
+     "13 A",
+     "5 A",
+     "3 A"
+    ],
+    "answer": 0,
+    "hint": "Work out I = P ÷ V first. The fuse must be above it.",
+    "explain": "I = 1200 ÷ 230 ≈ 5.2 A, which is more than 5 A. A 5 A fuse would melt in normal use, so it needs the next size up, 13 A."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A kettle is rated {=230*k} W on 230 V. What is its normal current, in amps?",
+    "answer": "k",
+    "hint": "I = P ÷ V, with V = 230 V.",
+    "explain": "I = {=230*k} ÷ 230 = {k} A. That is why kettles have a 13 A fuse.",
+    "params": {
+     "k": [
+      9,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why is touching the live wire dangerous?",
+    "choices": [
+     "There is a large potential difference between it and your body at 0 V",
+     "Your body is at 230 V too",
+     "The live wire is always very hot"
+    ],
+    "answer": 0,
+    "hint": "Current flows when there is a potential difference.",
+    "explain": "You are at about 0 V and the live wire is at about 230 V, so a current flows through you to earth."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why should a 60 W lamp have a 3 A fuse rather than a 13 A one?",
+    "choices": [
+     "A 13 A fuse might not melt in a fault, so the thin cable could overheat",
+     "A 13 A fuse makes the lamp brighter",
+     "A 3 A fuse uses less energy"
+    ],
+    "answer": 0,
+    "hint": "The lamp takes only about 0.26 A. What does the fuse do?",
+    "explain": "The fuse should melt at a current just above normal. A 13 A fuse lets a fault current far bigger than the lamp needs flow, so the cable could overheat before it melts."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A fault makes a current of {i} A flow through the live and earth wires. The fuse is rated at 13 A. By how many amps does the fault current go over the rating?",
+    "answer": "i-13",
+    "hint": "Take the fuse rating away from the fault current.",
+    "explain": "{i} − 13 = {=i-13} A over the rating, so the fuse melts and cuts off the live wire.",
+    "params": {
+     "i": [
+      40,
+      100
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A hair straightener has a plastic case and a two-core cable. Why does it need no earth wire?",
+    "choices": [
+     "It is double insulated, so the case cannot become live",
+     "It does not use mains electricity",
+     "The fuse does the job of the earth wire"
+    ],
+    "answer": 0,
+    "hint": "What is the case made of? Can it conduct?",
+    "explain": "Plastic is an insulator, so a loose live wire cannot make the case live. Double-insulated appliances use two-core cable."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "When does the earth wire carry a current?",
+    "choices": [
+     "Only if there is a fault",
+     "All the time the appliance is on",
+     "Only when the appliance is switched off"
+    ],
+    "answer": 0,
+    "hint": "In normal use, current goes in by the live and back by the neutral.",
+    "explain": "The earth wire is a safety wire at 0 V. It only carries a current if a fault connects the live wire to the case."
+   }
+  ]
+ }
+}

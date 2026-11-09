@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the AQA GCSE Physics (8463) specification 4.2.3 'Domestic uses and safety': mains is ac at 230 V and 50 Hz; live wire brown and carries the alternating potential difference; neutral blue, completes the circuit, at or close to earth potential (0 V); earth green-and-yellow, at 0 V, only carries a current if there is a fault; 'the live wire may be dangerous even when a switch in the mains circuit is open'. Plug terminals (brown bottom right via the fuse, blue bottom left, earth top) and 3/5/13 A ratings follow BS 1363. Arithmetic: 60 ÷ 230 = 0.26 A → 3 A; 1100 ÷ 230 = 4.78 A → 5 A; 2760 ÷ 230 = 12.0 A → 13 A; 1200 ÷ 230 = 5.22 A → 13 A. Parameterised items are exact by construction (P = 230k gives I = k for k 1..12 and 9..12; P = 230i for i 2..12; i − 13 for i 40..100)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors described in the IOP 'Supporting Physics Teaching' electricity notes and typical of GCSE answers on 4.2.3: an open switch makes the live wire safe (step 2 prediction '0 V', challenge tag offsafe, p3); the earth wire carries current all the time or blocks current (m9, tags stopflow/sponge, p5); the neutral is the dangerous wire or carries the fuse (step 1 prediction, tag neutral, p1); the biggest fuse is safest (step 5 prediction '13 A', m6, tags brighter/useless); choosing a 5 A fuse for a 5.2 A hair dryer (tag toolow, m3); and two-core appliances being unsafe or not mains (m8, tags notmains/fusealone)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagplug models this topic's own safety system: a UK plug whose wires must be dragged to the correct terminals; a voltmeter that reads 230 V on the live wire with the switch open; a fault in which an unearthed metal case reaches 230 V and current flows through a touching person; a reconnected earth whose fault current melts the fuse; and fuse selection from I = P ÷ V. flagzap teaches young children socket safety, flagcirc series and parallel circuits; none wires a plug, probes potentials or blows a fuse. The 6-shingle gate passes against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Wrong terminals are refused with the reason (the fuse must be in the live wire to cut off 230 V); the voltmeter shows 230 V on the cable side of the open switch and 0 V after it, so the learner sees why 'off' is not 'safe'; touching the unearthed case turns it red and draws the current path through the person; after reconnecting the earth, switching on draws the large fault current along the live and earth wires, the fuse greys out as 'fuse melted' and touching the case now reads 0 V; the fuse step shows I = P ÷ V before the learner chooses, and a too-small or too-big fuse gets a reason."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions, each with a tempting wrong option that the lab disproves: the fuse is in the 'neutral' or 'earth' wire (only the right terminal through the fuse accepts brown); the live wire is '0 V, because it is off' (the probe reads 230 V); touching a faulty unearthed case 'is safe, the kettle still works' (shock); with the earth connected 'nothing happens' (the fuse melts); a 60 W lamp should have '13 A, the biggest is safest' (13 A is rejected with the fault-current reason)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Eleven wrong-answer messages that name the slip: neutral (neutral is near 0 V, fuse goes in live), earthlive (earth only carries current in a fault), offsafe (the switch breaks the circuit at the lamp, the cable is still joined to 230 V), swap (switching off does not swap the wires), stopflow and sponge (the earth gives an easy path, not a block), toolow (1200 ÷ 230 ≈ 5.2 A, more than 5 A), brighter and useless (the fuse does not change the current or energy), notmains and fusealone (double insulation)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes: learner kid text FK 4.8 (limit 7.0) and adult FK 6.6 (limit 10.0). Each wire is introduced with its colour, its potential and its job in one sentence; 'potential difference', 'fault', 'double insulated' and 'fuse rating' are explained where first used, with numbers (230 V, 0 V, 60 W → 3 A, 2760 W → 13 A). Lab buttons say what they do (brown → right, Probe live, Touch the case, Reconnect the earth, 13 A fuse)."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passes (no banned phrases, explanation overlap under 12% against every lesson, including 489 Using electricity safely). Kid paragraphs: the supply and the three wires; wiring a plug; why the live wire is dangerous even when off; earth plus fuse and fuse ratings. Adult paragraphs: specification points; named common mistakes; the potential-difference physics and double insulation; what each lab step does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots on iPhone 13 (390 px) in light and dark themes after Show me on all 6 steps. Fixed after the first pass: the lamp box inherited a 4 px switch stroke, and challenge questions showed an empty canvas (now a labelled legend of the three wire colours). Terminals are 26 px across with a 34 px drop radius; wire ends are grabbed within 26 px; the fault picture keeps socket, fuse, case and person in view at 390 px; the earth wire's yellow stripe stays visible on the dark panel; buttons wrap two to a row."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag or tap has a button: '<colour> → left/top/right' for the next wire (aria-label names the terminal), Switch on/off, Probe live/neutral/earth, Touch the case, Reconnect the earth, Switch on with the fault, and one button per fuse rating (aria-label names the appliance). say() updates the canvas aria-label and visible narration with each reading in volts and each outcome. walk.cjs (desktop and iPhone 13) completes all 5 tasks with Show me, shows the challenge, axe (WCAG 2.1 AA) is clean in both themes, no console errors."
+  }
+ },
+ "sources": [
+  "AQA GCSE Physics (8463) specification, 4.2.3 Domestic uses and safety (three-core cables, potentials of live, neutral and earth, live wire dangerous when a switch is open)",
+  "BS 1363 (UK 13 A plugs and sockets): terminal positions and standard fuse ratings 3 A, 5 A and 13 A",
+  "Institute of Physics, Supporting Physics Teaching: electricity in the home (earthing, fuses, double insulation)",
+  "Topic mt_prqHs1rg3D evidence lines in out/merged/data/topics.json"
+ ]
+}
