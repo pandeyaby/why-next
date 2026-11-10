@@ -48,7 +48,7 @@ function drawSky(){const E=M.e,G=geo();earth(G,E.h,[['Ava',0,'#e11d48']]);const 
  const gy=y0+h*.78;if(d){const t=(r-6)/12,sx=x0+w*.1+t*w*.8,sy=gy-up*h*.6;g.fillStyle=SUN;g.beginPath();g.arc(sx,sy,A.narrow?14:18,0,TAU);g.fill()}
  g.fillStyle=GRASS;g.fillRect(x0,gy,w,y0+h-gy);g.strokeStyle='#ffffff';g.lineWidth=2;g.strokeRect(x0+1,y0+1,w-2,h-2);
  pill('East',x0+w*.13,gy+h*.11,{f:12});pill('West',x0+w*.87,gy+h*.11,{f:12});pill("Ava's sky",x0+w/2,gy+h*.11,{f:12});
- pill(`${clock(E.h)} · spun ${Math.max(0,Math.round(E.spun))} h`,A.narrow?A.W/2:A.W*.25,A.narrow?A.H*.06:A.H*.08,{ok:E.done,f:12})}
+ pill(`${clock(E.h)} · spun ${Math.max(0,Math.round(E.spun))} h`,A.narrow?A.W*.2:A.W*.25,A.narrow?A.H*.05:A.H*.08,{ok:E.done,f:12})}
 /* step 3: orbit */
 function og(){return{cx:A.W/2,cy:A.H*.52,rx:Math.min(A.W*.38,A.H*.62),ry:A.H*.34}}
 function drawOrbit(){const O=M.o,g=A.ctx,{cx,cy,rx,ry}=og();g.fillStyle=SPACE;g.fillRect(0,0,A.W,A.H);
