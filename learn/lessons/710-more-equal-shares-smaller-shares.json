@@ -1,0 +1,242 @@
+{
+ "topicId": "mt_hyvHv2BCwb",
+ "title": "More equal shares, smaller shares",
+ "audience": "family",
+ "keyIdea": "When one shape is cut into more equal shares, each share is smaller. A pizza shared by 2 gives halves; the same pizza shared by 4 gives quarters, and a quarter is smaller than a half. Two quarters cover one half exactly. Equal shares must all be the same size: four parts of different sizes are not quarters.",
+ "familyTip": "Fold a slice of bread or a sheet of paper in half and ask which piece your child wants. Fold the other one in half twice. Put one quarter on one half: which is bigger? Then ask: if granny joins us, will our cake slices get bigger or smaller?",
+ "status": "self-checked",
+ "visual": {
+  "type": "fracbar",
+  "caption": "One bar cut into halves and the same bar cut into quarters. One half is shaded and one quarter is shaded: which shaded piece is bigger?",
+  "opts": {
+   "d": 2,
+   "shade": 1,
+   "compare": 4,
+   "compareShade": 1
+  }
+ },
+ "lab": {
+  "type": "flagmoresh",
+  "caption": "Flagship lab: add friends to one pizza, fold paper again and again, cover a half with quarters, judge fair cuts and line up slices from biggest to smallest.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Think of one pizza. If 2 of you share it, you each get a big slice. That slice is a half.",
+   "Now 4 of you share the same pizza. It is cut into 4 slices. Each slice is a quarter. A quarter is smaller than a half.",
+   "More people share, so each slice gets smaller. The pizza did not change. It was cut into more parts. Fair shares are all the same size. If one part is big and one is small, they are not halves or quarters.",
+   "Fold a paper in half. You get 2 parts. Fold it again. You get 4 parts. Two quarters fit on one half."
+  ],
+  "adult": [
+   "Ages 6 to 7. This is US Common Core 1.G.3: partition circles and rectangles into two and four equal shares, use the words halves, fourths and quarters, and understand that decomposing into more equal shares creates smaller shares. It matches the Year 1 fractions aims in the National Curriculum in England. Key words: whole, equal shares, half, halves, quarter, fourth, smaller.",
+   "The big idea runs against counting. Children know that 4 is more than 2, so many expect a quarter to be bigger than a half. The fix is to compare pieces of the same whole: lay one quarter on one half and see the gap. Fraction symbols such as one half and one quarter come later, in Year 2 and in grade 3.",
+   "Common mistakes: thinking a quarter is bigger because 4 is bigger than 2; calling any four pieces quarters, even when they are different sizes; thinking two folds give three parts; and comparing pieces from wholes of different sizes. A quarter of a big pizza can be bigger than a half of a tiny one, so always use the same whole.",
+   "In the lab your child adds friends to one pizza and watches one share shrink. They fold paper up to 8 parts, cover a half with two quarters and judge five cuts as equal or not. Last, they line up slices shared by 2, 3, 4, 6 and 8 people, from biggest to smallest."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The same cake is cut into halves and into quarters. Which piece is bigger?",
+   "choices": [
+    "A half",
+    "A quarter",
+    "They are the same size"
+   ],
+   "answer": 0,
+   "hint": "Lay a quarter on top of a half. Does it cover it all?",
+   "explain": "A half is bigger. A quarter covers only part of a half, because 2 quarters make 1 half."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A cake is cut into halves. Then each half is cut into {k} equal pieces. How many pieces are there now?",
+   "answer": "2*k",
+   "hint": "There are 2 halves, and each one now has {k} pieces.",
+   "explain": "2 halves with {k} pieces each make 2 × {k} = {=2*k} pieces. More pieces, so each piece is smaller than a half.",
+   "params": {
+    "k": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A pizza is shared by 2 people, then the same pizza is shared by 4 people. What happens to each slice?",
+   "choices": [
+    "It gets smaller",
+    "It gets bigger",
+    "It stays the same"
+   ],
+   "answer": 0,
+   "hint": "The pizza stays the same size. It is cut into more parts.",
+   "explain": "More people share the same pizza, so each person gets a smaller slice."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many quarters fit exactly on {h} halves of the same shape?",
+   "answer": "2*h",
+   "hint": "Two quarters cover one half.",
+   "explain": "Each half takes 2 quarters, so {h} halves take {=2*h} quarters.",
+   "params": {
+    "h": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A sandwich is cut into 4 parts. Two parts are wide and two are thin. Are they quarters?",
+   "choices": [
+    "No, the parts are not equal",
+    "Yes, there are 4 parts",
+    "Yes, if you cut it with a knife"
+   ],
+   "answer": 0,
+   "hint": "Quarters must all be the same size.",
+   "explain": "Quarters are 4 equal parts. Wide and thin parts are not equal, so they are not quarters."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which slice of the same pizza is bigger?",
+    "choices": [
+     "A slice when 2 share",
+     "A slice when 8 share",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Fewer people share the pizza in one of them.",
+    "explain": "Shared by 2, each slice is a half. Shared by 8, each slice is much smaller."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why is a quarter smaller than a half of the same shape?",
+    "choices": [
+     "The shape is cut into more equal parts",
+     "Because 4 is a small number",
+     "Because quarters are always square"
+    ],
+    "answer": 0,
+    "hint": "How many parts is the shape cut into for quarters?",
+    "explain": "For quarters the same shape is cut into 4 equal parts instead of 2, so each part is smaller."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A circle is cut into 2 parts. One part is big and one is small. Are they halves?",
+    "choices": [
+     "No, halves are equal",
+     "Yes, there are 2 parts",
+     "Yes, it is a circle"
+    ],
+    "answer": 0,
+    "hint": "What must be true about halves?",
+    "explain": "Halves are 2 equal parts. A big part and a small part are not halves."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{n} friends share one pizza fairly. Then {k} more friends come. How many equal slices are needed now?",
+    "answer": "n+k",
+    "hint": "Everyone needs one equal slice, the new friends too.",
+    "explain": "{n} + {k} = {=n+k} people, so the pizza is cut into {=n+k} equal slices. More slices means each one is smaller.",
+    "params": {
+     "n": [
+      2,
+      4
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Two people share a pizza. Then two more people come. What should you do so that it is fair?",
+    "choices": [
+     "Cut each half into 2 equal parts",
+     "Give the new people the crusts",
+     "Cut one more slice"
+    ],
+    "answer": 0,
+    "hint": "Now 4 people need equal shares.",
+    "explain": "Cut each half in two. That gives 4 equal quarters, one for each person, and each is smaller than a half."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Each pizza is cut into quarters. How many quarters are in {w} whole pizzas?",
+    "answer": "4*w",
+    "hint": "One whole pizza is 4 quarters.",
+    "explain": "Each whole is 4 quarters, so {w} pizzas make 4 × {w} = {=4*w} quarters.",
+    "params": {
+     "w": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Fold a paper in half, then fold it in half again. What are the parts called?",
+    "choices": [
+     "Quarters",
+     "Halves",
+     "Thirds"
+    ],
+    "answer": 0,
+    "hint": "Count the parts when you open it.",
+    "explain": "Two folds make 4 equal parts, and 4 equal parts are quarters."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A pizza is cut into {n} equal slices. {k} slices are eaten. How many slices are left?",
+    "answer": "n-k",
+    "hint": "Take the eaten slices away from all the slices.",
+    "explain": "{n} − {k} = {=n-k}. There are {=n-k} slices left.",
+    "params": {
+     "n": [
+      6,
+      8
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Sam has a half of a small cookie. Ana has a quarter of a giant pizza. Can we say Sam's piece is bigger?",
+    "choices": [
+     "No, the wholes are different sizes",
+     "Yes, a half is always bigger",
+     "Yes, cookies are sweet"
+    ],
+    "answer": 0,
+    "hint": "Halves and quarters can only be compared on the same whole.",
+    "explain": "A half is bigger than a quarter only when both come from the same whole. A giant pizza's quarter can be bigger than a tiny cookie's half."
+   }
+  ]
+ }
+}
