@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_AB-TEMXSGJ",
+ "title": "Weather vs Climate",
+ "audience": "learner",
+ "keyIdea": "Weather is what the air is doing at one place and time: sunny or rainy, hot or cold, windy or still. It can change from hour to hour and day to day. Climate is the usual weather of a place, worked out from about 30 years of weather records. One snowy day or one hot summer is weather. It does not change the climate on its own.",
+ "familyTip": "For one week, write down the weather each morning: sun, cloud or rain, and how warm it feels. At the end of the week, look it up: what is the usual weather in your town for this month? Talk about which days fitted the usual pattern and which did not.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it about weather (now or the next few days) or climate (the usual pattern over many years)? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Weather: now or soon",
+    "Climate: the usual pattern"
+   ],
+   "items": [
+    [
+     "It is snowing right now",
+     0
+    ],
+    [
+     "Winters here are usually cold",
+     1
+    ],
+    [
+     "There will be a storm tonight",
+     0
+    ],
+    [
+     "Deserts get very little rain",
+     1
+    ],
+    [
+     "It is 30 °C this afternoon",
+     0
+    ],
+    [
+     "London gets some rain every month",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwxclim",
+  "caption": "Flagship lab: open a week of weather, stack 30 Julys, drag one January day to −4 °C, label three climate graphs, then pick forecast or climate.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Look out of the window. Is it sunny? Is it raining? Is it cold? That is the weather. Weather is what the air is doing at one place and one time. Weather can change fast. A sunny morning can turn into a wet afternoon. One week can have sun, cloud and rain, and warm days and cool days.",
+   "Climate is the usual weather of a place. Scientists look at about 30 years of weather to find it. They ask: what is a July here usually like? How much rain falls in a normal year?",
+   "Different places have different climates. Singapore is hot and very wet in every month. London gets some rain every month and has cool winters. Cairo is in a desert and gets almost no rain.",
+   "One odd day does not change the climate. If it snows once in a warm place, that is weather. The climate only changes when the pattern changes over many years. A forecast tells you the weather for today and the next few days. So check the forecast to choose a coat for tomorrow. Check the climate to know which month is usually warmest."
+  ],
+  "adult": [
+   "Ages 7 to 9. This links to the National Curriculum in England for geography. At key stage 1, children identify seasonal and daily weather patterns in the UK. At key stage 2, they learn about climate zones. It also matches NGSS 3-ESS2-1 and 3-ESS2-2: use data to describe the typical weather in a season, and describe the climates of different regions. Key words: weather, climate, typical, average, pattern, forecast, temperature, rainfall, climate zone.",
+   "Weather experts find a climate by averaging 30 years of records. This is called a climate normal. The Met Office and the World Meteorological Organization now use 1991 to 2020. In the lab, the London rain bars are those normals for Heathrow, rounded. Singapore and Cairo are rounded normals too. The July and January values are made-up years, set close to London's real averages, so that one heatwave or one freezing day can be seen against the pattern.",
+   "Common mistakes: using weather and climate as if they mean the same thing; thinking one cold day or one snowfall disproves a warming climate; thinking one hot week proves it; thinking climate means the weather for a week or a season; and reading a climate graph as if it were a forecast. The lab and the challenge target each of these.",
+   "In the lab your child opens a week of changing weather. They add 30 years of July highs and see the average stay near 22 °C, even past a 26 °C heatwave. They drag one January day from 7 °C to −4 °C, and the month's average only falls from 7.2 to 6.8 °C. Then they label three real rain graphs and sort questions into forecast or climate."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which sentence is about weather?",
+   "choices": [
+    "It is raining this morning",
+    "Deserts get very little rain",
+    "Winters here are usually cold"
+   ],
+   "answer": 0,
+   "hint": "Weather is now or the next few days. Look for a time like today or this morning.",
+   "explain": "This morning is one time, so it is weather. The other two say what is usual over many years, so they are climate."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Scientists find a climate from about 30 years of weather. They have {n} years of records. How many more years do they need to reach 30?",
+   "answer": "30-n",
+   "hint": "Count on from the years they have up to 30.",
+   "explain": "30 − {n} = {=30-n}, so they need {=30-n} more years.",
+   "params": {
+    "n": [
+     5,
+     25
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "It snowed for one day in a warm city. What does that tell you?",
+   "choices": [
+    "It was unusual weather",
+    "The climate is now cold",
+    "The city has no climate"
+   ],
+   "answer": 0,
+   "hint": "Is one day a long pattern or one time?",
+   "explain": "One day of snow is weather. The climate is still warm, because it comes from many years of weather."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Monday was {a} °C and Tuesday was {b} °C. How many degrees warmer was Tuesday?",
+   "answer": "b-a",
+   "hint": "Take the smaller temperature away from the bigger one.",
+   "explain": "{b} − {a} = {=b-a}, so Tuesday was {=b-a} degrees warmer. Weather can change a lot from one day to the next.",
+   "params": {
+    "a": [
+     6,
+     10
+    ],
+    "b": [
+     12,
+     18
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You want to know what to wear for school tomorrow. What should you check?",
+   "choices": [
+    "The weather forecast",
+    "A climate graph",
+    "A photo from last summer"
+   ],
+   "answer": 0,
+   "hint": "Which one tells you about the next few days?",
+   "explain": "A forecast tells you the weather for the next few days. A climate graph only shows what is usual."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is climate?",
+    "choices": [
+     "The usual weather of a place over many years",
+     "The weather right now",
+     "The weather for one week"
+    ],
+    "answer": 0,
+    "hint": "Think of about 30 years of weather.",
+    "explain": "Climate is the usual pattern, worked out from about 30 years of weather."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which sentence is about climate?",
+    "choices": [
+     "London gets some rain every month",
+     "It will be windy later",
+     "There is fog this morning"
+    ],
+    "answer": 0,
+    "hint": "Look for a pattern that is usual, not one time.",
+    "explain": "Some rain every month is London's usual pattern, so it is climate. Windy later and fog this morning are weather."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "One summer is very hot. Does that alone show the climate has changed?",
+    "choices": [
+     "No, one summer is not a long pattern",
+     "Yes, the climate is hotter",
+     "Yes, climate is one summer"
+    ],
+    "answer": 0,
+    "hint": "How many years do scientists use to find a climate?",
+    "explain": "One hot summer is weather. The climate changes only if summers keep getting hotter over many years."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "It was {t} °C at 9 am and 5 degrees warmer at 3 pm. What was it at 3 pm (°C)?",
+    "answer": "t+5",
+    "hint": "Warmer means a bigger number, so add the 5 degrees on.",
+    "explain": "{t} + 5 = {=t+5}, so it was {=t+5} °C. The weather changed in one day.",
+    "params": {
+     "t": [
+      4,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Cairo is in a desert. What is its usual rain like?",
+    "choices": [
+     "Almost no rain all year",
+     "Very wet every month",
+     "Rain every day"
+    ],
+    "answer": 0,
+    "hint": "What do deserts usually get very little of?",
+    "explain": "Cairo's climate is dry: it gets almost no rain in most months."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A forecast tells you about…",
+    "choices": [
+     "Today and the next few days",
+     "The usual weather over 30 years",
+     "Weather a hundred years ago"
+    ],
+    "answer": 0,
+    "hint": "You check it before you go out.",
+    "explain": "A forecast is about the weather soon. The climate is the usual pattern over many years."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A week had {s} sunny days. The rest were rainy. How many rainy days were there?",
+    "answer": "7-s",
+    "hint": "A week has 7 days. Take away the sunny ones.",
+    "explain": "7 − {s} = {=7-s} rainy days.",
+    "params": {
+     "s": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Mia says, 'It is raining today, so this place has a wet climate.' What is right?",
+    "choices": [
+     "One rainy day is weather, not climate",
+     "Mia is right",
+     "Climate is only about today"
+    ],
+    "answer": 0,
+    "hint": "Climate needs many years, not one day.",
+    "explain": "To know the climate you need many years of weather. One rainy day does not tell you."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Singapore is hot and wet in every month. What is that?",
+    "choices": [
+     "Singapore's climate",
+     "Today's weather in Singapore",
+     "A weather forecast"
+    ],
+    "answer": 0,
+    "hint": "Is it about one day, or what is usual?",
+    "explain": "Hot and wet every month is Singapore's usual pattern, so it is its climate."
+   }
+  ]
+ }
+}
