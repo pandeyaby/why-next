@@ -1,0 +1,285 @@
+{
+ "topicId": "mt_VAWV_l7J0D",
+ "title": "Early Word Problems",
+ "audience": "family",
+ "keyIdea": "A word problem is a story with a number missing. First find the whole (all of them together) and the parts that make it. Then ask which one is missing. If a part is missing, take the part you know from the whole, or count on from the part up to the whole. If the start is missing, undo the change: add back what went away. How many more means the difference. Last, check that the answer makes sense in the story.",
+ "familyTip": "Make up tiny stories at snack time with the missing number in different places: 'I had some grapes, I ate 3, and now I have 9. How many did I have at first?' Let your child use the real grapes or draw a bar with the whole on top. Ask them to tell you the story back with their answer in it to check.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which number is missing? Drag each story, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "A part is missing",
+    "The whole is missing"
+   ],
+   "items": [
+    [
+     "7 shells, found some more, now 12",
+     0
+    ],
+    [
+     "6 red cars and 8 blue cars",
+     1
+    ],
+    [
+     "13 stickers, gave some away, 6 left",
+     0
+    ],
+    [
+     "Some birds, 5 flew away, 8 left",
+     1
+    ],
+    [
+     "15 children, some on the bus, 9 in class",
+     0
+    ],
+    [
+     "4 cakes eaten, 9 cakes left",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwprob",
+  "caption": "Flagship lab: build a bar model, count on to a missing part, find a missing start, mark extra cubes to compare, and check answers make sense.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A word problem is a story with a missing number. Ben has 7 red cars and 5 blue cars. How many cars? All the cars together is the whole. The red cars and the blue cars are the parts. The whole is 12.",
+   "Sometimes a part is missing. Mia has 7 shells. She finds some more. Now she has 12. The word more does not mean add 7 and 12. The 12 is the whole. Count on from 7 to 12: 8, 9, 10, 11, 12. She found 5.",
+   "Sometimes the start is missing. Some birds sat on a fence. 5 flew away and 8 are left. To find the start, add back the ones that flew: 8 + 5 = 13. There were 13 at first.",
+   "How many more means find the gap. Sam has 13 and Ana has 9. Line them up. Sam has 4 with no partner, so Sam has 4 more. At the end, check: does your answer fit the story? If you eat some sweets, you must have fewer left."
+  ],
+  "adult": [
+   "Ages 5 to 7. This matches CCSS 1.OA.1: use addition and subtraction within 20 to solve word problems about adding to, taking from, putting together, taking apart and comparing, with unknowns in all positions, using objects, drawings and equations with a symbol for the unknown. It also matches the National Curriculum in England, Year 1: solve one-step problems using concrete objects and pictorial representations, and missing number problems such as 7 = □ − 9. Key words: part, whole, part–whole model, bar model, count on, difference, number sentence, inverse.",
+   "The CCSS problem-type table sorts stories by situation and by which number is unknown: result, change or start. Result-unknown stories (12 sweets, eat 4, how many left?) are the easiest. Change-unknown and start-unknown stories are harder, because the action in the story points one way and the calculation goes the other. A bar model puts every type into one picture: the whole on top, the parts below. Once the child can see which box is empty, the operation follows from it.",
+   "Common mistakes: keyword hunting, so 'more' always means add (7 + 12 for the shells) and 'away' always means take away (8 − 5 for the birds); giving a number from the story as the answer, such as the whole; answering 'how many more?' with the bigger number or the total; reading 7 = □ − 9 as if the answer must come after the equals sign; and not checking whether the answer makes sense. The lab, the practice and the challenge target each of these.",
+   "In the lab your child drags numbers onto a bar model for three stories, fills a row of cubes by counting on from the part they know to the whole, picks the number sentence that finds a missing start, taps the extra cubes in two lined-up trains to find a difference, and judges four answers, including 7 = □ − 9, as making sense or not."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Mia has {a} shells. She finds some more. Now she has {w}. How many did she find?",
+   "answer": "w-a",
+   "hint": "{w} is the whole. Count on from {a} up to {w}.",
+   "explain": "{a} + {=w-a} = {w}, so Mia found {=w-a} shells. Do not add {a} and {w}: {w} is already the whole.",
+   "params": {
+    "a": [
+     4,
+     9
+    ],
+    "w": [
+     12,
+     18
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Some birds sat on a fence. {b} flew away. {c} are left. How many were there at first?",
+   "answer": "b+c",
+   "hint": "Birds went away, so add them back to the ones left.",
+   "explain": "{c} + {b} = {=b+c}. There were {=b+c} birds at first, and {=b+c} − {b} = {c} checks it.",
+   "params": {
+    "b": [
+     3,
+     8
+    ],
+    "c": [
+     4,
+     11
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "There were 15 apples. 6 were eaten. 9 are left. Which number is the whole?",
+   "choices": [
+    "15",
+    "9",
+    "6"
+   ],
+   "answer": 0,
+   "hint": "The whole is all of them together, before any were eaten.",
+   "explain": "15 is all the apples. 6 eaten and 9 left are the two parts, and 6 + 9 = 15."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Sam has {a} stickers. Ana has {b}. How many more stickers does Sam have than Ana?",
+   "answer": "a-b",
+   "hint": "Line them up. Count the stickers Sam has with no partner.",
+   "explain": "{a} − {b} = {=a-b}. Sam has {=a-b} more. The answer is the difference, not {a}.",
+   "params": {
+    "a": [
+     12,
+     19
+    ],
+    "b": [
+     5,
+     11
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "20 grapes. You eat 5. Which answer makes sense?",
+   "choices": [
+    "15 left",
+    "25 left",
+    "5 left"
+   ],
+   "answer": 0,
+   "hint": "If you eat some, will you have more or fewer than 20?",
+   "explain": "You have fewer than 20 after eating some: 20 − 5 = 15. 25 is more than you started with."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "{a} children are on the bus. Some more get on. Now there are {w}. How many got on?",
+    "answer": "w-a",
+    "hint": "{w} is all the children now. How many from {a} to {w}?",
+    "explain": "{a} + {=w-a} = {w}, so {=w-a} children got on.",
+    "params": {
+     "a": [
+      5,
+      10
+     ],
+     "w": [
+      13,
+      19
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Leo had some marbles. He won {b} more. Now he has {w}. How many did he have at first?",
+    "answer": "w-b",
+    "hint": "He won some, so take those off to get back to the start.",
+    "explain": "{w} − {b} = {=w-b}. He had {=w-b} at first, and {=w-b} + {b} = {w} checks it.",
+    "params": {
+     "b": [
+      3,
+      7
+     ],
+     "w": [
+      12,
+      19
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "7 = □ − 9. What number goes in the box?",
+    "choices": [
+     "16",
+     "2",
+     "7"
+    ],
+    "answer": 0,
+    "hint": "The equals sign means both sides are the same. What take away 9 leaves 7?",
+    "explain": "16 − 9 = 7, so the box is 16. The answer does not have to come after the equals sign."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Tom had 13 stickers. He gave some away. He has 6 left. Which number sentence finds how many he gave away?",
+    "choices": [
+     "13 − 6 = 7",
+     "13 + 6 = 19",
+     "6 − 13"
+    ],
+    "answer": 0,
+    "hint": "13 is the whole. 6 is one part. Find the other part.",
+    "explain": "The whole take away the part you know gives the missing part: 13 − 6 = 7."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ben has 9 pens. Zara has 13. How many fewer pens does Ben have?",
+    "choices": [
+     "4",
+     "9",
+     "22"
+    ],
+    "answer": 0,
+    "hint": "Fewer means the difference. Line up the pens.",
+    "explain": "13 − 9 = 4. Ben has 4 fewer. 9 is how many Ben has, and 22 is both added together."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Some ducks were on a pond. 4 swam away. 7 are left. Ella says there were 3 at first. Does that make sense?",
+    "choices": [
+     "No, the start must be more than 7",
+     "Yes, 7 − 4 = 3",
+     "Yes, 3 is a small number"
+    ],
+    "answer": 0,
+    "hint": "If ducks swam away, was the start more or less than the 7 left?",
+    "explain": "The start must be more than 7, because some swam away. Add them back: 7 + 4 = 11."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In a bar model, what goes on the top bar?",
+    "choices": [
+     "The whole",
+     "The smallest part",
+     "The answer, every time"
+    ],
+    "answer": 0,
+    "hint": "Think of 7 red cars and 5 blue cars. What covers all of them?",
+    "explain": "The whole goes on top, and the parts that make it go underneath. Any of them can be the missing number."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "There are {w} grapes. You eat {b}. How many are left?",
+    "answer": "w-b",
+    "hint": "You eat some, so there will be fewer than {w}.",
+    "explain": "{w} − {b} = {=w-b} grapes left. That is fewer than {w}, so it makes sense.",
+    "params": {
+     "w": [
+      11,
+      20
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "The story says 'more'. Does that always mean you add?",
+    "choices": [
+     "No, first find the whole and the parts",
+     "Yes, more always means add",
+     "Yes, if the numbers are small"
+    ],
+    "answer": 0,
+    "hint": "Think of Mia: 7 shells, found more, now 12. What do you do?",
+    "explain": "Not always. For Mia, 12 is the whole, so the missing part is 12 − 7 = 5. Find the whole and the parts first."
+   }
+  ]
+ }
+}
