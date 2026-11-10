@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_gQjbsGA876",
+ "title": "Taking useful notes",
+ "audience": "learner",
+ "keyIdea": "Useful notes are not a copy of the text. Pick out the key words, put the ideas in your own words without changing the meaning, and use shorthand you will still understand next week. A Cornell page splits your notes into three parts: cue questions on the left, short notes on the right and a summary at the bottom, written last. The real power comes later. Cover the notes, answer the cue questions from memory, then check. Testing yourself like this makes ideas stick far better than reading your notes again.",
+ "familyTip": "After your next lesson, rule a page into a Cornell layout. Write your notes on the right, add two or three questions on the left that evening, and a one-line summary at the bottom. Two days later, cover the right side and answer the questions out loud. Mark what you missed and look only at those notes again.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which habits make notes useful? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Useful habit",
+    "Not useful"
+   ],
+   "items": [
+    [
+     "Key words and short phrases",
+     0
+    ],
+    [
+     "Copy every word",
+     1
+    ],
+    [
+     "Write in your own words",
+     0
+    ],
+    [
+     "Highlight the whole page",
+     1
+    ],
+    [
+     "Add questions to test yourself",
+     0
+    ],
+    [
+     "Only read the notes again",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcornell",
+  "caption": "Flagship lab: keep only key words, choose a note in your own words, shorten with clear symbols, build a Cornell page, then cover it and test yourself.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Notes are not a copy of the page. When you copy every word, your hand does the work and your brain can switch off. Instead, pick out the key words: the words that carry the meaning. Small linking words like the, of and which can go. A sentence of 24 words can often become a note of 6 or 7.",
+   "Next, put the idea in your own words. This is called paraphrasing. It makes you think about what the text means, and that thinking helps you remember. But be careful. Your words must say the same thing as the text. If the book says bee numbers have fallen in some places, writing that bees are dying out everywhere changes the meaning.",
+   "Shorthand saves time. Arrows, symbols and short forms such as → for leads to, ↓ for falling and + for and work well. Keep the key words whole, though. A note like p → s + f looks clever today, but next week you may not know what it meant.",
+   "A Cornell page has three parts. Short notes go in the wide column on the right. Questions about those notes go in the narrow cue column on the left. A one or two sentence summary goes at the bottom, written last, when you can see the whole page. The cue column is the clever part. Later, cover the notes, read each question and answer it from memory. Then check. Rereading feels easy, so it fools you. Pulling the answer out of your memory is harder, and that effort is what makes it stick."
+  ],
+  "adult": [
+   "Ages 11 to 12 Learning to Learn. It supports the National Curriculum in England for key stage 3 English, which asks pupils to make notes and to summarise, and the Education Endowment Foundation guidance on metacognition and self-regulated learning. Key terms: key words, paraphrase, shorthand, Cornell notes, cue column, summary, retrieval practice, the testing effect. The nearby lesson on main ideas (flaggist, ages 7 to 10) finds the main idea of a paragraph; this one is about building notes you can study from.",
+   "The Cornell system was set out by Walter Pauk at Cornell University. The page is split into a notes column, a narrower cue column and a summary strip. Its value comes less from the layout than from what it makes pupils do: select, rewrite in their own words, ask questions and later test themselves.",
+   "Copying is the most common mistake. Pupils who write verbatim produce longer notes but process the ideas less deeply, and in Mueller and Oppenheimer's 2014 laptop study, more verbatim notes went with weaker answers to conceptual questions. Later replications found the laptop effect smaller than first reported, but the case against verbatim copying holds. The second common mistake is a paraphrase that changes the meaning, often by turning some into all or might into will. The third is shorthand so heavy it cannot be read later.",
+   "Another common mistake is treating rereading and highlighting as revision. Dunlosky and colleagues (2013) rated both as low utility. Roediger and Karpicke (2006) found that students who practised recalling a passage remembered much more after a week than students who reread it, even though rereaders felt more confident. The cue column turns notes into a ready-made self-test. In the lab, the word counts and character counts are a guide, not a rule."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Your teacher talks quickly. What should you write down?",
+   "choices": [
+    "Key words and short phrases in my own words",
+    "Every word, as fast as I can",
+    "Nothing, I will remember it"
+   ],
+   "answer": 0,
+   "hint": "You cannot keep up with every word. What carries the meaning?",
+   "explain": "Key words and short phrases capture the meaning, and putting them in your own words makes you think about it."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A sentence has {a} words. Your note keeps only {b} key words. How many words did you leave out?",
+   "answer": "a-b",
+   "hint": "Take the key words you kept away from the whole sentence.",
+   "explain": "{a} words take away {b} kept is {=a-b} words left out, mostly small linking words.",
+   "params": {
+    "a": [
+     20,
+     30
+    ],
+    "b": [
+     5,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The text says: some bee numbers have fallen because of habitat loss. Which note keeps the meaning?",
+   "choices": [
+    "Some bees ↓: lost habitat",
+    "All bees dying out everywhere",
+    "Bees like new habitats"
+   ],
+   "answer": 0,
+   "hint": "Check each word against the text. Did it say all bees, or some?",
+   "explain": "Some bees ↓: lost habitat says the same thing in fewer words. All bees everywhere changes the meaning."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You write {n} cue questions on each page of notes. You have 3 pages. How many questions can you test yourself on?",
+   "answer": "3*n",
+   "hint": "Each page has {n} questions. Add them up for 3 pages.",
+   "explain": "3 pages with {n} questions each gives {=3*n} questions to answer from memory.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Where does the summary go on a Cornell page, and when do you write it?",
+   "choices": [
+    "At the bottom, written last",
+    "At the top, written first",
+    "In the cue column, before the notes"
+   ],
+   "answer": 0,
+   "hint": "A summary sums up the whole page. When can you see the whole page?",
+   "explain": "The summary goes in the strip at the bottom and is written last, once all the notes are there."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why does copying every word help you learn less?",
+    "choices": [
+     "You do not have to think about the ideas",
+     "Your notes become too short",
+     "Copying is against the rules"
+    ],
+    "answer": 0,
+    "hint": "Think about what your brain is doing while your hand copies.",
+    "explain": "Copying word for word lets your brain switch off, so the ideas are processed less and stick less."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What goes in the cue column of a Cornell page?",
+    "choices": [
+     "Questions about the notes",
+     "The full notes",
+     "A drawing of the topic"
+    ],
+    "answer": 0,
+    "hint": "The cue column is used for testing yourself later.",
+    "explain": "Cue questions go in the narrow left column, so you can cover the notes and answer from memory."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which note is shorthand you will still understand next week?",
+    "choices": [
+     "Bees carry pollen → seeds + fruit",
+     "B c p → s + f",
+     "Bees, pollen, it is important for plants and seeds and fruit"
+    ],
+    "answer": 0,
+    "hint": "Symbols for linking words are fine. What about the key words?",
+    "explain": "Symbols replace the linking words but the key words stay whole, so the note is short and still clear."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which way of revising your notes works best?",
+    "choices": [
+     "Cover them and answer the cue questions from memory",
+     "Read them again three times",
+     "Highlight the important parts"
+    ],
+    "answer": 0,
+    "hint": "Which one makes you pull the answer out of your memory?",
+    "explain": "Answering from memory is retrieval practice. It is harder than rereading, and that effort makes ideas stick."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You test yourself on {n} cue questions and get 2 wrong. How many did you get right?",
+    "answer": "n-2",
+    "hint": "Take the 2 wrong answers away from {n}.",
+    "explain": "{n} questions take away 2 wrong is {=n-2} right. Look again at the notes for the 2 you missed.",
+    "params": {
+     "n": [
+      5,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What does paraphrase mean?",
+    "choices": [
+     "Say the same idea in your own words",
+     "Copy a sentence exactly",
+     "Make up a new idea"
+    ],
+    "answer": 0,
+    "hint": "Para means beside. It sits beside the original and means the same.",
+    "explain": "A paraphrase puts the same idea in your own words, without changing the meaning."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A text says honeybees dance to show where food is. Your friend writes: honeybees dance when happy. What went wrong?",
+    "choices": [
+     "The meaning changed",
+     "It is too short",
+     "It uses shorthand"
+    ],
+    "answer": 0,
+    "hint": "Compare the reason in the text with the reason in the note.",
+    "explain": "The text says the dance shows where food is. The note gives a different reason, so the meaning changed."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "You review your notes {n} minutes after class, then again for the same time two days later. How many minutes is that in total?",
+    "answer": "2*n",
+    "hint": "It is the same time twice.",
+    "explain": "{n} minutes twice is {=2*n} minutes. Short, spaced self-tests beat one long reread.",
+    "params": {
+     "n": [
+      5,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why does rereading your notes feel like it works?",
+    "choices": [
+     "The words look familiar, so you feel you know them",
+     "It is the fastest way to remember",
+     "Your teacher checks it"
+    ],
+    "answer": 0,
+    "hint": "Feeling familiar is not the same as being able to recall.",
+    "explain": "Familiar words feel known, but that does not mean you can recall them. Testing yourself shows what you really know."
+   }
+  ]
+ }
+}
