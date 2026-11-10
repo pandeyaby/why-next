@@ -4352,30 +4352,40 @@
     "build failed: Traceback (most recent call last):\n  File \"/workspace/why-next/ext/make_viewer.py\", line 49, in <module>\n    assert not missing, f\"lesson topics not in the viewer: {missing}\"\n           ^^^^^^^^^^^\nAssertionError: lesson topics not in the viewer: ['mt_brgde1Vx0P']\n",
     "build failed: Traceback (most recent call last):\n  File \"/workspace/why-next/ext/make_viewer.py\", line 49, in <module>\n    assert not missing, f\"lesson topics not in the viewer: {missing}\"\n           ^^^^^^^^^^^\nAssertionError: lesson topics not in the viewer: ['mt_brgde1Vx0P']\n"
    ]
+  },
+  {
+   "topic": "mt_70Ys4i1AB1",
+   "lesson": "learn/lessons/728-compound-words.json",
+   "date": "2026-11-10",
+   "attempts": 1,
+   "reasons": [
+    "not in the viewer graph: ext/make_viewer.py only bundles lessons for out/topics.ext.json topics and their ancestors, and Compound Words is neither (assert 'lesson topics not in the viewer')",
+    "every other gate passed (lab_registered, lab_distinct, lab_structure, content, items, review); the draft lesson, flagcmpd lab and review are kept outside the repo in /workspace/why-next-pending/mt_70Ys4i1AB1/ for a retry once the topic is in the viewer"
+   ]
   }
  ],
  "next": [
   {
-   "topic": "mt_70Ys4i1AB1",
-   "name": "Compound Words",
-   "subject": "English",
-   "ages": "5-8",
-   "downstream": 0,
-   "reels": false
-  },
-  {
-   "topic": "mt_XjwUlmxdCT",
-   "name": "Combining Simple Shapes",
+   "topic": "mt_VAWV_l7J0D",
+   "name": "Early Word Problems",
    "subject": "Mathematics",
-   "ages": "5-6",
+   "ages": "5-7",
    "downstream": 0,
    "reels": false
   },
   {
-   "topic": "mt_X7Tu94-a2m",
-   "name": "Friendships change over time",
-   "subject": "Personal & Social Development",
-   "ages": "7-9",
+   "topic": "mt_O9dH94NFae",
+   "name": "Polar Bears",
+   "subject": "Science",
+   "ages": "5-7",
+   "downstream": 0,
+   "reels": false
+  },
+  {
+   "topic": "mt_gQjbsGA876",
+   "name": "Taking useful notes",
+   "subject": "Learning to Learn",
+   "ages": "11-12",
    "downstream": 0,
    "reels": false
   },
@@ -5431,6 +5441,18 @@
    "topic": "mt_sBcRdUfAzV",
    "name": "2-D shapes (age 6+)",
    "reason": "Overlaps 'Circles, squares and triangles' (flagshape, counting sides and corners), 'Lines of symmetry' (flagsymm, fold lines) and 'Regular and irregular polygons' (flagregpol); sides plus vertical symmetry is already covered.",
+   "date": "2026-11-10"
+  },
+  {
+   "topic": "mt_XjwUlmxdCT",
+   "name": "Combining Simple Shapes",
+   "reason": "Not in the viewer graph (not an out/topics.ext.json topic or an ancestor of one), so make_viewer.py refuses a lesson for it; same blocker as Compound Words. Needs the viewer to include young upstream-only topics before it can be built.",
+   "date": "2026-11-10"
+  },
+  {
+   "topic": "mt_X7Tu94-a2m",
+   "name": "Friendships change over time",
+   "reason": "Not in the viewer graph (not an out/topics.ext.json topic or an ancestor of one), so make_viewer.py refuses a lesson for it; same blocker as Compound Words. Needs the viewer to include young upstream-only topics before it can be built.",
    "date": "2026-11-10"
   }
  ],
