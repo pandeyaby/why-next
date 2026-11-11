@@ -45,13 +45,13 @@ function tickDots(dt){if(rm()||!A)return false;const v=['cool','scale','dbl'].in
 function setC(c,src){const v=stage();c=Math.max(-273,Math.min(TOP,c));if(v==='dbl'){if(c===S.c2)return;S.c2=c}else{if(c===S.c&&src!=='show')return;S.c=c}A.sound.tick();
  if(v==='cool'){say(c===-273?'−273 °C = 0 K: absolute zero. The particles have the least possible kinetic energy. Nothing can be colder.':`${fC(c)} = ${fK(c)}. Colder means slower particles.`);
   if(c===-273&&!S.won){S.won=1;A.sound.pop();S.want()}}
- if(v==='scale'){say(`${fC(c)} = ${fK(c)}.`);if(!S.lock&&S.won<3&&c===FIND[S.j][0]){S.won++;A.sound.pop();say(`Found it: ${fK(c)} = ${fC(c)}. Add 273 to go from °C to K.`);if(S.won<3){S.lock=1;setTimeout(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:700)}S.want()}}
+ if(v==='scale'){say(`${fC(c)} = ${fK(c)}.`);if(!S.lock&&S.won<3&&c===FIND[S.j][0]){S.won++;A.sound.pop();say(`Found it: ${fK(c)} = ${fC(c)}. Add 273 to go from °C to K.`);if(S.won<3){S.lock=1;later(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:700)}S.want()}}
  if(v==='dbl')say(`Box B: ${fC(S.c2)} = ${fK(S.c2)}. Box A: ${fK(DBL[S.j][0])}.`);keys();A.redraw()}
 const step=d=>{const v=stage(),cur=v==='dbl'?S.c2:S.c,i=STOPS.indexOf(nearest(cur));if(v==='cool'&&cur===-273&&d<0)return miss('No lower stop: 0 K is the bottom of the Kelvin scale. Particles cannot have less than the least possible energy.',-1);setC(STOPS[Math.max(0,Math.min(STOPS.length-1,i+d))])};
 /* convert cards */
 const zone=k=>{const w=(A.W-36)/3;return{x:8+k*(w+10),y:A.H*.58,w,h:A.H*.26}};
 function conv(k){if(stage()!=='conv'||S.won>=4||S.lock)return;const[q,ops]=CONV[S.j],o=ops[(k+S.j)%3];if(o[1]!==1)return miss(CWHY[o[1]],k);
- S.won++;A.sound.pop();say(`Yes: ${q.replace(' in',' =').replace('?','')} ${o[0]}.`);if(S.won<4){S.lock=1;setTimeout(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:650)}keys();A.redraw();S.want()}
+ S.won++;A.sound.pop();say(`Yes: ${q.replace(' in',' =').replace('?','')} ${o[0]}.`);if(S.won<4){S.lock=1;later(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:650)}keys();A.redraw();S.want()}
 function drawConv(g){const C=A.col,[q,ops]=CONV[Math.min(S.j,3)],w=Math.min(A.W-30,420);card(g,{x:(A.W-w)/2,y:A.H*.1,w,h:A.H*.28});txt(g,q,A.W/2,A.H*.24,24,900);
  txt(g,'K = °C + 273     °C = K − 273',A.W/2,A.H*.47,13,800);[0,1,2].forEach(k=>{const z=zone(k);card(g,z,S.bad===k);txt(g,ops[(k+S.j)%3][0],z.x+z.w/2,z.y+z.h/2,A.narrow?15:18,900)});txt(g,`${Math.min(S.won,4)} of 4`,A.W/2,A.H*.93,12,800)}
 /* pressure line */
@@ -70,7 +70,7 @@ function drawLine(g){const C=A.col;g.strokeStyle=C.tx;g.lineWidth=2;g.beginPath(
 function checkDbl(){if(stage()!=='dbl'||S.won>=3||S.lock)return;const[a,b]=DBL[S.j],ka=a+273,kb=S.c2+273;
  if(S.c2!==b)return miss(S.c2===2*a?`You doubled the Celsius number. Energy follows kelvin: ${ka} K × 2 = ${2*ka} K = ${fC(b)}.`:`Box B is ${kb} K, which is ${(kb/ka).toFixed(2)} times ${ka} K. You need exactly 2 times: ${2*ka} K.`,-1);
  S.won++;A.sound.pop();say(`Double: ${ka} K to ${kb} K, so the average kinetic energy doubles. In Celsius that is ${fC(a)} to ${fC(b)}.`);
- if(S.won<3){S.lock=1;setTimeout(()=>{S.lock=0;S.j++;S.c2=20;keys();A.redraw()},rm()?10:500)}keys();A.redraw();S.want()}
+ if(S.won<3){S.lock=1;later(()=>{S.lock=0;S.j++;S.c2=20;keys();A.redraw()},rm()?10:500)}keys();A.redraw();S.want()}
 function drawDbl(g){const C=A.col,a=DBL[Math.min(S.j,2)][0],w=A.W*.38,h=A.H*(A.narrow?.44:.38);drawBox(g,a,{x:A.W*.06,y:A.H*.2,w,h},`A: ${fC(a)} = ${fK(a)}`);drawBox(g,S.c2,{x:A.W*.56,y:A.H*.2,w,h},`B: ${fC(S.c2)} = ${fK(S.c2)}`);
  txt(g,S.won<3?'Make B’s particles carry twice A’s average kinetic energy':'All three doubled in kelvin.',A.W/2,A.H*.06,13,900);txt(g,'Drag across the canvas or use Colder / Warmer',A.W/2,A.H*.94,11,700)}
 /* shared */
@@ -88,6 +88,7 @@ function down(p){const v=stage();if(v==='cool'||v==='scale'||v==='dbl'){S.grab=1
 function move(p){if(!S.grab)return;const v=stage();if(v==='line')return setProbe(Math.max(-273,fromX(p.x)));if(v==='dbl')return setC(nearest((p.x/A.W)*(TOP+273)-273));setC(nearest(toC(p.y)))}
 function up(){S.grab=0}
 const ready=(n,ok,msg)=>()=>{if(A.step===n&&ok()&&(!steps[n].predict||A.pred[n]!=null))A.done(msg+A.reveal(n))};
+const later=(fn,ms)=>{const k=tok;setTimeout(()=>{if(k===tok)fn()},ms)};
 function demo(list,gap){const k=++tok;list.forEach((fn,j)=>setTimeout(()=>{if(k===tok)fn()},rm()?j*40+30:(j+1)*(gap||300)))}
 const clear=()=>{tok++;Object.assign(S,init0())};
 const steps=[

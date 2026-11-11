@@ -43,7 +43,7 @@ function drawReact(g){const C=A.col,ph=S.phase,t=S.times[S.times.length-1];lab(g
 /* 2 chart */
 function setI(i){if(stage()!=='chart')return;i=Math.max(0,Math.min(5,i));if(i===S.i)return;S.i=i;A.sound.tick();say(`${MPH[i]} mph: thinking ${TH[i]} m + braking ${BR[i]} m = ${TH[i]+BR[i]} m.`);keys();A.redraw()}
 function checkI(){if(stage()!=='chart'||S.won>=3||S.lock)return;const[q,ans,bad]=HUNT[S.j];if(S.i!==ans)return miss(bad(S.i),-1);
- S.won++;A.sound.pop();say(`Yes: ${MPH[ans]} mph is ${q}.`);if(S.won<3){S.lock=1;setTimeout(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:500)}keys();A.redraw();S.want()}
+ S.won++;A.sound.pop();say(`Yes: ${MPH[ans]} mph is ${q}.`);if(S.won<3){S.lock=1;later(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:500)}keys();A.redraw();S.want()}
 const BX=m=>A.W*.2+m/100*A.W*.74,rowY=i=>A.H*.12+i*A.H*.11;
 function drawChart(g){const C=A.col;MPH.forEach((v,i)=>{const y=rowY(i),h=A.H*.07,on=i===S.i;lab(g,v+' mph',A.W*.18,y+h/2,12,on?900:700,'right');
   g.fillStyle=A.alpha(C.cy,on?.9:.4);g.fillRect(BX(0),y,BX(TH[i])-BX(0),h);g.fillStyle=A.alpha(C.or,on?.9:.4);g.fillRect(BX(TH[i]),y,BX(TH[i]+BR[i])-BX(TH[i]),h);
@@ -53,7 +53,7 @@ function drawChart(g){const C=A.col;MPH.forEach((v,i)=>{const y=rowY(i),h=A.H*.0
 /* 3 sort factors */
 const bin=k=>{const w=(A.W-36)/3;return{x:8+k*(w+10),y:A.H*.56,w,h:A.H*.3}},BINS=['Thinking','Braking','Both'];
 function sortF(k){if(stage()!=='sort'||S.won>=6||S.lock)return;const[t,want,why]=FAC[S.j];if(k!==want)return miss(`${t}: ${why}`,k);
- S.won++;A.sound.pop();say(`Right. ${why}`);if(S.won<6){S.lock=1;setTimeout(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:450)}keys();A.redraw();S.want()}
+ S.won++;A.sound.pop();say(`Right. ${why}`);if(S.won<6){S.lock=1;later(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:450)}keys();A.redraw();S.want()}
 function drawSort(g){const C=A.col,w=Math.min(A.W-30,440);tile(g,{x:(A.W-w)/2,y:A.H*.1,w,h:A.H*.28});lab(g,FAC[Math.min(S.j,5)][0],A.W/2,A.H*.24,20,900);lab(g,`${Math.min(S.won,6)} of 6`,A.W/2,A.H*.47,12,800);
  BINS.forEach((t,k)=>{const z=bin(k);g.fillStyle=A.alpha([C.cy,C.or,C.vi][k],.16);A.paint.rrect(z.x,z.y,z.w,z.h,10);g.fill();g.strokeStyle=S.bad===k?C.rd:C.tx;g.lineWidth=S.bad===k?5:2;g.stroke();lab(g,t,z.x+z.w/2,z.y+z.h/2,A.narrow?13:15,900)})}
 /* 4 hazard runs */
@@ -63,13 +63,13 @@ function drive(){if(stage()!=='road'||S.won>=3||S.lock)return;const i=S.i,d=stop
  if(d>GAP){S.res=`Stopped at ${d} m: ${d-GAP} m past the hazard.`;return miss(`${MPH[i]} mph needs ${d} m on this road, more than the ${GAP} m gap. Go slower.`,-1)}
  if(i<best){S.res=`Stopped at ${d} m. Safe.`;return miss(`Safe at ${d} m, but ${MPH[i+1]} mph also stops in time here. Find the fastest safe speed.`,-1)}
  S.won++;S.res=`Stopped at ${d} m, before the hazard.`;A.sound.pop();say(`${MPH[i]} mph: ${d} m. The fastest safe speed on ${ROADS[S.j][0].toLowerCase()}.`);
- if(S.won<3){S.lock=1;setTimeout(()=>{S.lock=0;S.j++;S.i=1;S.car=0;S.res='';keys();A.redraw()},rm()?10:600)}keys();A.redraw();S.want()}
+ if(S.won<3){S.lock=1;later(()=>{S.lock=0;S.j++;S.i=1;S.car=0;S.res='';keys();A.redraw()},rm()?10:600)}keys();A.redraw();S.want()}
 function drawRoad(g){const C=A.col,r=ROADS[Math.min(S.j,2)];lab(g,`Run ${Math.min(S.j+1,3)} of 3: ${r[0]}`,A.W/2,A.H*.08,13,900);lab(g,`Speed: ${MPH[S.i]} mph`,A.W/2,A.H*.2,18,900);
  road(g,A.H*.5,S.car,GAP);if(S.res)lab(g,S.res,A.W/2,A.H*.78,13,900);lab(g,`Stop within ${GAP} m`,A.W/2,A.H*.9,12,800)}
 /* 5 speed squared */
 const opt=k=>{const w=(A.W-36)/3;return{x:8+k*(w+10),y:A.H*.66,w,h:A.H*.2}};
 function pickSq(k){if(stage()!=='sq'||S.won>=3||S.lock)return;const[q,ops,f]=SQ[S.j],o=ops[(k+S.j)%3];if(o[1]!==1)return miss(SWHY[o[1]],k);
- S.won++;A.sound.pop();say(`Yes: ${o[0]}. ${f}× the speed gives ${f*f}× the kinetic energy, so ${f*f}× the braking distance.`);if(S.won<3){S.lock=1;setTimeout(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:550)}keys();A.redraw();S.want()}
+ S.won++;A.sound.pop();say(`Yes: ${o[0]}. ${f}× the speed gives ${f*f}× the kinetic energy, so ${f*f}× the braking distance.`);if(S.won<3){S.lock=1;later(()=>{S.lock=0;S.j++;keys();A.redraw()},rm()?10:550)}keys();A.redraw();S.want()}
 function drawSq(g){const C=A.col,[q,ops,f]=SQ[Math.min(S.j,2)],n=f<1?2:f,u=Math.min(A.H*.1,A.W*.1),ox=A.W/2-n*u/2;lab(g,q,A.W/2,A.H*.07,14,900);
  for(let a=0;a<n;a++)for(let b=0;b<n;b++){const sm=f<1?(a<1&&b<1):1;g.fillStyle=A.alpha(C.or,sm?.7:.12);g.fillRect(ox+a*u,A.H*.16+b*u,u-3,u-3)}
  lab(g,f<1?'Kinetic energy: 1 square of 4':`Kinetic energy: ${n*n} × the 20 mph energy`,A.W/2,A.H*.16+n*u+14,11,800);
@@ -90,6 +90,7 @@ function down(p){const v=stage();if(v==='react'){brake();return false}
  if(v==='road'){if(p.y<A.H*.32)drive();else setRoadI(Math.round((p.x/A.W)*5));return false}
  if(v==='sort'){const k=[0,1,2].find(k=>inside(p,bin(k)));if(k!=null)sortF(k)}if(v==='sq'){const k=[0,1,2].find(k=>inside(p,opt(k)));if(k!=null)pickSq(k)}return false}
 const ready=(n,ok,msg)=>()=>{if(A.step===n&&ok()&&(!steps[n].predict||A.pred[n]!=null))A.done(msg+A.reveal(n))};
+const later=(fn,ms)=>{const k=tok;setTimeout(()=>{if(k===tok)fn()},ms)};
 function demo(list,gap){const k=++tok;list.forEach((fn,j)=>setTimeout(()=>{if(k===tok)fn()},rm()?j*40+30:(j+1)*(gap||300)))}
 const clear=()=>{tok++;clearTimeout(timer);Object.assign(S,init0())};
 const steps=[
