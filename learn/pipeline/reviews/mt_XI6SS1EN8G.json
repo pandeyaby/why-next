@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE GCSE combined science and physics subject content (particle model: absolute zero −273 °C, converting between kelvin and Celsius, average kinetic energy of gas molecules proportional to kelvin temperature) and NIST SP 330 (SI Brochure) for the kelvin and the rule that it is written K, not °K. 0 K = −273.15 °C is noted in the adult text and rounded to −273 as GCSE does. Every conversion was recomputed: 77 K = −196 °C, −40 °C = 233 K, 20 °C = 293 K, 37 °C = 310 K, 100 °C = 373 K. The lab's pressure line uses p = 100 × (θ + 273)/273 kPa, giving 111, 122 and 133 kPa at 30, 60 and 90 °C and exactly zero at −273 °C. 27 °C to 54 °C is 300 K to 327 K, a 9% rise."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: adding 273 to a temperature change (10 °C rise as 283 K, 5 °C as 278 K, 15 °C as 288 K), subtracting instead of adding (20 °C as 253 K), treating −40 + 273 as 313, writing negative kelvin (−313 K), equating 0 K with 0 °C, thinking there is no lower limit to temperature, and doubling the Celsius value to double particle energy (27 → 54 °C, −73 → −146 °C)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagkelv is built round the Kelvin scale itself: a twin °C/K thermometer that will not go below 0 K, kelvin targets to find on it, °C ↔ K conversion cards, extrapolating a sealed gas's pressure–temperature line to zero pressure, and doubling particle energy in kelvin. flagtemp (particle motion, thermal equilibrium) and flagtherm (reading a thermometer, ages 5–7) use other mechanisms, and the shingle gate passed against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner cools the gas and finds the Colder button simply refuses to go past −273 °C while the particles stop; the text then names absolute zero. Finding 373 K, 77 K and 310 K on the twin scale shows the ticks are evenly spaced on both sides, so the scales differ only by 273. Dragging the probe down the pressure line shows the zero lands at −273 °C before the text says so. The doubling step shows the energy bar only doubles when kelvin doubles."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions, each with a tempting wrong option: how cold a gas can get (no limit, or 0 °C), how much a 10 °C rise is in kelvin (283 K is the classic slip), and what 27 °C → 54 °C does to particle energy (doubles is tempting; it is 9%). The task in the same step settles each, and A.reveal quotes the prediction back."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five rotating challenge questions with tagged wrong answers: 350 °C is told to subtract 273, −77 °C that it is not a sign change, 278 K that 273 is added to readings not changes, 400 °C that it is 673 K, −146 °C that doubling −73 °C makes it colder, plus feedback for 'scientists chose to skip negatives' and 'water freezes'. Conversion cards and the doubling check also name the slip for each wrong tap."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons.py passed the learner readability limits (kid ≤ 6.5, adult ≤ 9.5). Kid paragraphs use short sentences and one worked number each (0 °C = 273 K, 77 K = −196 °C, 10 °C rise = 10 K). Precise terms are kept: absolute zero, kelvin, kinetic energy, Kelvin scale, Celsius; the adult text adds absolute (thermodynamic) temperature and internal energy."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The filler gate passed and overlap with the temperature and particle motion lesson is under the 12% limit. Every kid paragraph carries a rule plus an example, the adult text lists curriculum links, terms, mistakes and what the lab does, and the family tip gives a concrete conversion (−89 °C ≈ 184 K)."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at iPhone 13 (390 px) in light and dark for every step before and after Show me. The thermometer's °C and K tick labels, the particle box and its energy bar fit side by side; conversion answers fit three across; the pressure graph labels −273 to 100 °C without clipping. The first screenshots showed the two 'Average kinetic energy' labels running together in the doubling step, so narrow boxes now use 'Avg KE' and taller boxes."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: every Show me finished, the challenge rendered, axe found no WCAG 2.1 AA violations in light or dark, and there were no console or page errors. Every drag has button twins (Colder, Warmer, Check box B, the three answer buttons, 10 °C colder, ±1 °C). The canvas aria-label states each reading, for example '−273 °C = 0 K: absolute zero. The particles have the least possible kinetic energy.' Particle motion stops under reduced motion."
+  }
+ },
+ "sources": [
+  "DfE (2015) GCSE combined science and physics subject content: particle model of matter (absolute zero, kelvin and Celsius, gas temperature and average kinetic energy)",
+  "AQA GCSE Physics 8463 specification 4.3.3 particle model and pressure",
+  "BIPM / NIST SP 330 The International System of Units (SI): the kelvin, 0 °C = 273.15 K",
+  "NGSS HS-PS3-2"
+ ]
+}
