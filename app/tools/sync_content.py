@@ -9,7 +9,7 @@
 Writes app/WhyNext/Resources/Web/ (added to the app as a folder reference, see project.yml):
   index.html   the web viewer (out/viewer.html) with a small app shim: reels play from the bundled reels/ folder
                and window.WN_TOPIC (set by the app) opens that topic once the page is ready
-  wn/          the split web build (map, lessons, the flagships (21 on visual-draft, 12 on main), visuals; same files the live site serves)
+  wn/          the split web build (map, lessons, flagship labs, visuals; same files the live site serves)
   content.json what the native app needs: which topics have a lesson / a flagship, and the reel manifest
   reels/       every reel's mp4 + vtt captions + jpg poster, downloaded from the reels-part-<k> branches at the
                commits pinned in learn/reels/parts.json (about 100 MB, so it is git-ignored, never committed)
@@ -18,10 +18,16 @@ import argparse, io, json, os, re, shutil, sys, tarfile, tempfile, urllib.reques
 APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(APP, "WhyNext", "Resources", "Web")
 REPO = "pandeyaby/why-next"
-FLAGS = {"flagderiv", "flagplace", "flagfrac", "flagneg", "flageq", "flagline", "flagarea", "flagatom", "flagacid", "flagstate", "flagprob", "flagpyth"}
-# flagships added on visual-draft (21 in total there); main has only the first 12
-FLAGS |= {"flagenergy", "flagcirc", "flagwave", "flagnuc", "flagshell", "flagcov", "flagunit", "flagwread", "flagsub"}
-FLAGS12 = FLAGS - {"flagenergy", "flagcirc", "flagwave", "flagnuc", "flagshell", "flagcov", "flagunit", "flagwread", "flagsub"}
+# Original 12 flagships (still the set on main). Later visual-draft labs are discovered from learn/flag_*.js.
+FLAGS12 = {"flagderiv", "flagplace", "flagfrac", "flagneg", "flageq", "flagline", "flagarea", "flagatom", "flagacid", "flagstate", "flagprob", "flagpyth"}
+def discover_flags(src):
+    found = set(FLAGS12)
+    d = os.path.join(src, "learn")
+    if os.path.isdir(d):
+        for f in os.listdir(d):
+            if f.startswith("flag_") and f.endswith(".js"):
+                found.add("flag" + f[5:-3])  # flag_deriv.js -> flagderiv
+    return found
 
 def fetch_tree(ref, dest, only=None):
     """Download github.com/REPO at ref as a tarball and extract it (optionally only paths starting with `only`)."""
@@ -50,7 +56,8 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--web"); ap.add_argument("--ref", default="main"); ap.add_argument("--no-reels", action="store_true")
     a = ap.parse_args(); tmp = tempfile.mkdtemp()
     src = a.web or tmp
-    if not a.web: print("downloading", REPO, "@", a.ref); fetch_tree(a.ref, tmp, only=["out/viewer.html", "out/wn/", "learn/reels/", "learn/lessons/"])
+    if not a.web: print("downloading", REPO, "@", a.ref); fetch_tree(a.ref, tmp, only=["out/viewer.html", "out/wn/", "learn/reels/", "learn/lessons/", "learn/flag_"])
+    FLAGS = discover_flags(src)
     viewer = open(os.path.join(src, "out/viewer.html"), encoding="utf-8").read()
     assert "wn/app.js" in viewer, "out/viewer.html is not the split web build"
     os.makedirs(OUT, exist_ok=True)
@@ -61,7 +68,7 @@ def main():
         if not f.endswith(".json"): continue
         L = json.load(open(os.path.join(src, "learn/lessons", f), encoding="utf-8")); tid = L["topicId"]
         lessons[tid] = L.get("title") or L.get("name") or tid
-        m = re.search(r'"(flag[a-z]+)"', json.dumps(L))
+        m = re.search(r'"(flag[a-z0-9]+)"', json.dumps(L))
         if m and m.group(1) in FLAGS: flags[tid] = m.group(1)
     man = json.load(open(os.path.join(src, "learn/reels/manifest.json"), encoding="utf-8"))
     parts = json.load(open(os.path.join(src, "learn/reels/parts.json"), encoding="utf-8"))

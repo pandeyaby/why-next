@@ -58,9 +58,14 @@ final class ContentTests: XCTestCase {
         let url = web.appendingPathComponent("content.json")
         guard FileManager.default.fileExists(atPath: url.path) else { throw XCTSkip("no synced content") }
         let c = try BundledContent.load(from: url)
-        XCTAssertGreaterThanOrEqual(c.flagships.count, 12)  // visual-draft has 21 (main has 12)
+        XCTAssertGreaterThanOrEqual(c.flagships.count, 12)  // visual-draft has hundreds; main has 12
         let d = try WhyNextData.bundled(); let ids = Set(d.nodes.compactMap(\.topicId))
-        for t in c.flagships.keys { XCTAssertTrue(ids.contains(t), "flagship \(t) is a node on the map") }
+        // The compact native map is the six demo subjects; later flagships (English, early years, etc.) may sit outside it.
+        let original: Set<String> = ["flagderiv", "flagplace", "flagfrac", "flagneg", "flageq", "flagline", "flagarea", "flagatom", "flagacid", "flagstate", "flagprob", "flagpyth"]
+        XCTAssertTrue(original.isSubset(of: Set(c.flagships.values)))
+        let onMapLabs = Set(c.flagships.filter { ids.contains($0.key) }.map { $0.value })
+        XCTAssertTrue(original.isSubset(of: onMapLabs), "original 12 flagships are on the compact map")
+        for t in c.flagships.keys { XCTAssertTrue(c.hasLesson(t), "flagship \(t) has a lesson") }
         let reelDir = web.appendingPathComponent("reels")
         if FileManager.default.fileExists(atPath: reelDir.path) {
             for r in c.reels.values.flatMap({ $0 }) {

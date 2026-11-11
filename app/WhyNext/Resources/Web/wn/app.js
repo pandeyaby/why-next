@@ -3,13 +3,19 @@ for(const e of DATA.edges){(PRE.get(e.t)||PRE.set(e.t,[]).get(e.t)).push(e);(POS
 const isBridge=e=>N.get(e.t).new&&!N.get(e.p).new;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let sel=null;
-function renderList(){const q=document.getElementById('q').value.toLowerCase(),old=document.getElementById('showOld').checked,only=document.getElementById('onlyLes').checked;LEARN.refreshNext();
- let h='',dom='';for(const n of DATA.nodes){if(only&&!LEARN.has(n.id))continue;if(!n.new&&!old&&!LEARN.has(n.id)&&!LEARN.isNext(n.id))continue;if(q&&!(n.n+' '+(n.desc||'')).toLowerCase().includes(q))continue;
+/* Search matches every word in any order, ignoring case, accents, punctuation and a plural "s"; it looks across all topics. */
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ');
+const hayOf=new Map();const hay=n=>{let h=hayOf.get(n.id);if(h==null||(n.desc&&!h.d)){h={t:' '+norm(n.n+' '+(n.desc||'')+' '+n.s+' '+n.d)+' ',d:!!n.desc};hayOf.set(n.id,h)}return h.t};
+const matches=(n,ws)=>{const h=hay(n);return ws.every(w=>h.includes(w)||(w.length>3&&w.endsWith('s')&&h.includes(w.slice(0,-1))))};
+function renderList(){const qRaw=document.getElementById('q').value.trim(),ws=norm(qRaw).split(' ').filter(Boolean),q=ws.length>0,old=document.getElementById('showOld').checked,only=document.getElementById('onlyLes').checked;LEARN.refreshNext();
+ let h='',dom='',cnt=0;for(const n of DATA.nodes){if(only&&!LEARN.has(n.id))continue;if(!q&&!n.new&&!old&&!LEARN.has(n.id)&&!LEARN.isNext(n.id))continue;if(q&&!matches(n,ws))continue;cnt++;
  const d=n.s+' / '+n.d;if(d!==dom){h+=`${dom?'</div>':''}<div class="grp"><div class="dom">${esc(d)}</div>`;dom=d}
  h+=`<div class="item${sel===n.id?' sel':''}" role="button" tabindex="0" data-id="${n.id}"${sel===n.id?' aria-current="true"':''}><span class="nm ${n.new?'new':'old'}">${esc(n.n)}</span><span class="lbs"><span class="age">${n.a[0]}–${n.a[1]}</span>${LEARN.badge(n.id)}</span></div>`}
- document.getElementById('list').innerHTML=h?h+'</div>':'<p class="muted" style="padding:12px">No matches</p>'}
-document.getElementById('list').onclick=e=>{const it=e.target.closest('.item');if(it)select(it.dataset.id)};
-document.getElementById('list').onkeydown=e=>{const it=e.target.closest('.item');if(it&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(it.dataset.id);const l=document.getElementById('learn');if(l)l.focus()}};
+ document.getElementById('list').innerHTML=h?h+'</div>':`<div class="empty" style="padding:12px"><p><b>No topics match “${esc(qRaw)}”.</b></p><p class="muted">Try one shorter word${only?', or include topics without lessons':''}.</p><button type="button" class="lbtn sm" data-clear="1">Clear search</button>${only?'<button type="button" class="lbtn sm" data-alltopics="1">Show all topics</button>':''}</div>`;
+ const qc=document.getElementById('qcount');if(qc)qc.textContent=q?(cnt?`${cnt} topic${cnt>1?'s':''} found`:'No topics found'):''}
+document.getElementById('list').onclick=e=>{const it=e.target.closest('.item');if(it){select(it.dataset.id,true);return}
+ const qi=document.getElementById('q');if(e.target.closest('[data-clear]')){qi.value='';renderList();qi.focus()}else if(e.target.closest('[data-alltopics]')){document.getElementById('onlyLes').checked=false;renderList();qi.focus()}};
+document.getElementById('list').onkeydown=e=>{const it=e.target.closest('.item');if(it&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(it.dataset.id,true);const l=document.getElementById('learn');if(l)l.focus()}};
 document.getElementById('q').oninput=()=>{renderList();if(!WN.all)WN.loadAll().then(renderList)};document.getElementById('showOld').onchange=renderList;document.getElementById('onlyLes').onchange=renderList;
 function ancestors(id,hardOnly){const s=new Set([id]),st=[id];while(st.length){const u=st.pop();for(const e of PRE.get(u)||[]){if(hardOnly&&!e.h)continue;if(!s.has(e.p)){s.add(e.p);st.push(e.p)}}}return s}
 function tree(id,seen,depth){const es=(PRE.get(id)||[]).slice().sort((a,b)=>b.h-a.h);if(!es.length)return'';let h='<ul class="tree">';
@@ -35,7 +41,9 @@ function graph(id){const anc=ancestors(id,true);if(anc.size>220)return`<p class=
    chunks (wn/d*.js); the map and lessons render without it, and fill() completes the page once they load. */
 const needFor=id=>[...new Set([...ancestors(id,false)].map(u=>N.get(u).k))];
 /* #t=<topic id> deep-links a topic; on phones a picked topic scrolls into view (the list sits above it). */
-function select(id){const moved=sel!=null&&sel!==id;sel=id;renderList();try{history.replaceState(null,'','#t='+encodeURIComponent(id))}catch(e){}
+/* subject art slot (assets/art/subject-*.webp); removed quietly if the file is missing (e.g. the offline file) */
+function subjIcon(s){if(window.WN_OFFLINE)return'';s=String(s||'');const k=/math/i.test(s)?'maths':/scien|chem|phys|bio/i.test(s)?'science':/english|read|writ|phon/i.test(s)?'english':/comput/i.test(s)?'computing':/learn/i.test(s)?'learning-to-learn':/personal|social|health|pshe/i.test(s)?'personal-social':'';return k?`<img class="subj-ic" src="../assets/art/subject-${k}.webp" alt="" width="44" height="44" onerror="this.remove()">`:''}
+function select(id,user){const moved=sel!==id&&(sel!=null||user===true);sel=id;try{const H=document.documentElement;H.classList.add('wn-lesson');if(user===true&&H.classList.contains('wn-sheet')){H.classList.remove('wn-sheet');scrollTo(0,0)}}catch(e){}try{const bn=N.get(id),a0=bn&&bn.a?+bn.a[0]:99,band=a0<=4?'early':a0<=10?'primary':a0<=13?'middle':'senior',dt=document.getElementById('detail');if(dt)dt.dataset.band=band}catch(e){}renderList();try{history.replaceState(null,'','#t='+encodeURIComponent(id))}catch(e){}
  if(moved&&window.matchMedia&&matchMedia('(max-width: 800px)').matches)setTimeout(()=>{const d=document.getElementById('detail');if(d)d.scrollIntoView({block:'start'})},0);const lz=LEARN.L[id]&&LEARN.L[id]._lz;if(lz)WN.lbload(N.get(id).k).then(()=>{if(sel===id&&!LEARN.L[id]._lz)select(id)},()=>{const b=document.getElementById('lzwait');if(b)b.textContent='This lesson could not load. Check your connection and pick it again.'});
  document.getElementById('detail').innerHTML=`<div class="card" id="dcard"></div>${lz?'<section class="learn card"><p class="muted" id="lzwait" role="status">Loading the lesson…</p></section>':LEARN_PANEL.panel(id)}<div id="dclu"></div><div class="card cv"><b>Hard-prerequisite graph</b><div id="dgraph"></div></div>
  <div class="card cv"><b>Prerequisite chain</b> <span class="muted">(click ▸ to expand)</span><div id="dtree"></div></div>`;
@@ -44,7 +52,7 @@ function select(id){const moved=sel!=null&&sel!==id;sel=id;renderList();try{hist
  const need=needFor(id);if(!WN.has(need))WN.load(need).then(()=>{if(sel===id)fill(id)})}
 function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(needFor(id)),wait='<p class="muted">Loading details…</p>';
  const clu=(DATA.clusters||{})[n.s+'|'+n.d+'|'+n.a[0]];const prim=[...anc].filter(u=>!N.get(u).new&&N.get(u).a[0]<=10).length;const users=(POST.get(id)||[]).map(e=>N.get(e.t));
- document.getElementById('dcard').innerHTML=`<h2 style="margin:0 0 4px">${esc(n.n)}</h2>
+ document.getElementById('dcard').innerHTML=`<h2 style="margin:0 0 4px" class="dtitle">${subjIcon(n.s)}${esc(n.n)}</h2>
  <span class="tag ${n.new?'new':'old'}">${n.new?'Why Next? topic':'earlier topic'}</span><span class="tag">${esc(n.s)} / ${esc(n.d)}</span><span class="tag">ages ${n.a[0]}–${n.a[1]}</span>${LEARN.badge(id)}
  ${n.desc==null?wait:`<p>${gloss(n.desc)}</p>`}
  <details class="teach"><summary>For teachers and parents: evidence, standards and map data</summary>${(n.ev||[]).length?'<b>Evidence</b><ul>'+n.ev.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':''}
@@ -56,14 +64,14 @@ function fill(id,quick){const n=N.get(id),anc=ancestors(id,false),ok=WN.has(need
  quick?setTimeout(below,0):below()}
 document.getElementById('detail').onclick=e=>{if(e.target.closest('.learn'))return;const t=e.target.closest('.tog');if(t){const li=t.parentElement,box=li.querySelector(':scope>div[style]');if(box){const o=box.style.display!=='none';box.style.display=o?'none':'block';t.textContent=o?'▸':'▾'}return}
  const g=e.target.closest('[data-id]');if(g)select(g.dataset.id)};
-LEARN.home();renderList();const wantReels=location.hash==='#reels',deep=(/[#&]t=([^&]+)/.exec(location.hash)||[])[1],first=(deep&&N.get(decodeURIComponent(deep)))||LEARN.nextList(0).find(n=>LEARN.has(n.id))||DATA.nodes.find(n=>n.new&&n.n==='Solving quadratics by factorising')||DATA.nodes.find(n=>n.new);WN.load(needFor(first.id)).then(()=>select(first.id),()=>select(first.id));
+if(/[#&]t=/.test(location.hash))document.documentElement.classList.add('wn-deep');LEARN.home();renderList();const wantReels=location.hash==='#reels',deep=(/[#&]t=([^&]+)/.exec(location.hash)||[])[1],first=(deep&&N.get(decodeURIComponent(deep)))||LEARN.nextList(0).find(n=>LEARN.has(n.id))||DATA.nodes.find(n=>n.new&&n.n==='Solving quadratics by factorising')||DATA.nodes.find(n=>n.new);WN.load(needFor(first.id)).then(()=>select(first.id),()=>select(first.id));
 /* #reels (linked from the homepage): bring the home reel strip into view once it has filled. */
 if(wantReels){const t0=Date.now(),seek=()=>{const h=document.getElementById('homeReels');if(h&&!h.hidden&&h.children.length){(h.previousElementSibling||h).scrollIntoView({block:'start'});return}if(Date.now()-t0<8000)setTimeout(seek,200)};seek()}
 
-/* theme switch (2052 default, classic light) and gentle pointer parallax for the background and map */
+/* theme switch (paper look by default, plain night mode) and gentle pointer parallax for the background and map */
 (()=>{const R=document.documentElement,b=document.getElementById('themeBtn');if(!b)return;
- const sync=()=>{const c=R.dataset.theme==='classic';b.setAttribute('aria-pressed',c);b.textContent=c?'2052 look':'Classic look';b.title=c?'Switch to the dark, glowing 2052 design':'Switch to the original light design'};
- b.onclick=()=>{R.dataset.theme=R.dataset.theme==='classic'?'2052':'classic';try{localStorage.setItem('whynext.theme',R.dataset.theme)}catch(e){}sync();document.dispatchEvent(new Event('wntheme'))};sync();
+ const sync=()=>{const n=R.dataset.theme==='2052';b.setAttribute('aria-pressed',n);b.textContent=n?'Day mode':'Night mode';b.title=n?'Switch to the light paper look':'Switch to the dark night look'};
+ b.onclick=()=>{R.dataset.theme=R.dataset.theme==='classic'?'2052':'classic';try{localStorage.setItem('whynext.look',R.dataset.theme)}catch(e){}sync();document.dispatchEvent(new Event('wntheme'))};sync();
  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(pointer:fine)').matches)return;let raf=0,X=0,Y=0;
  addEventListener('pointermove',e=>{X=e.clientX/innerWidth*2-1;Y=e.clientY/innerHeight*2-1;if(!raf)raf=requestAnimationFrame(()=>{raf=0;R.style.setProperty('--px',X.toFixed(3));R.style.setProperty('--py',Y.toFixed(3))})},{passive:true})})();
 
@@ -75,3 +83,5 @@ function mapZoom(){const g=document.getElementById('dgraph'),sv=g&&g.querySelect
  g.querySelectorAll('[data-z]').forEach(b=>b.onclick=()=>set(+b.dataset.z));set(1)}
 // After first paint, quietly fetch lesson bodies and the visuals bundle so opening a lesson is instant.
 {const w=()=>WN.warm().then(()=>{window.WN_WARM=1},()=>{});const iw=()=>setTimeout(()=>(window.requestIdleCallback||setTimeout)(w,{timeout:2000}),window.WN_OFFLINE?0:3500);if(document.readyState==='complete')iw();else addEventListener('load',iw)}
+
+;(function(){const H=document.documentElement,side=document.getElementById('side');if(!side)return;const b=document.createElement('button');b.type='button';b.id='sheetBtn';b.className='sheetbtn';b.setAttribute('aria-expanded','false');b.textContent='All topics';(side.querySelector('header')||side).insertBefore(b,(side.querySelector('header')||side).firstChild);const set=o=>{H.classList.toggle('wn-sheet',o);b.setAttribute('aria-expanded',String(o));b.textContent=o?'Close topics':'All topics'};b.addEventListener('click',()=>set(!H.classList.contains('wn-sheet')));const q=document.getElementById('q');if(q)q.addEventListener('focus',()=>set(true));new MutationObserver(()=>b.setAttribute('aria-expanded',String(H.classList.contains('wn-sheet')))).observe(H,{attributes:true,attributeFilter:['class']})})();

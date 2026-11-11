@@ -49,7 +49,11 @@ for src in re.findall(r'src="(wn/[^"?]+)', html): assert os.path.exists(f'{W}/{s
 lazy = open(f'{W}/wn/learn.js', encoding='utf-8').read()
 for f in set(re.findall(r'"((?:fl_|vis|reels|b\d|l\d|d\d)[\w]*\.js)\?v=', lazy)): assert os.path.exists(f'{W}/wn/{f}'), f
 ids = set(n.get('i') for n in json.load(open('WhyNextCore/Sources/WhyNextCore/Resources/whynext-data.json', encoding='utf-8'))['nodes'])
-assert set(c['flagships']) <= ids, 'flagship topics are on the map'
+# The compact native map covers the six demo subjects. Flagships for English, early years, etc. can sit outside it.
+FLAGS12 = {"flagderiv", "flagplace", "flagfrac", "flagneg", "flageq", "flagline", "flagarea", "flagatom", "flagacid", "flagstate", "flagprob", "flagpyth"}
+on_map = {tid for tid, lab in c['flagships'].items() if tid in ids}
+assert FLAGS12 <= set(c['flagships'].values()), 'original 12 flagships are recorded'
+assert FLAGS12 <= {c['flagships'][t] for t in on_map}, 'original 12 flagships are on the compact map'
 reels = [r for L in c['reels'].values() for r in L]
 if os.path.isdir(f'{W}/reels'):
     for r in reels:

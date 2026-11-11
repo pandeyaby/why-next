@@ -31,7 +31,7 @@ VIS.reg('flagwread',c=>{let A,chal,sand,read,gapOut,dirBtns,panelBtns,playBtn,on
  const unitOf=()=>st.mk.dir==='up'?'cm':UNIT[st.mk.panel];
  // ---------- layout ----------
  /* Two panels stacked: 26 px for each title, 32 px under each for the axis numbers and name. */
- function geo(A){const{W,H}=A,l=A.narrow?40:50,r=12,top=26,under=32,ph=(H-2*top-2*under)/2;
+ function geo(A){const{W,H}=A,l=A.narrow?40:50,r=12,top=26,under=32,hint=28,ph=(H-2*top-2*under-hint)/2;   // 'hint': a strip under the graphs for the drag hint, so it never sits on a graph title
   const mk=(y,kind)=>({kind,x:l,y,w:W-l-r,h:ph});return{dist:mk(top,'dist'),time:mk(top+ph+under+top,'time')}}
  const px=(P,u)=>P.x+P.w*u/SPAN, py=(P,v)=>P.y+P.h/2-v*P.h/(2*YMAX);
  // ---------- words ----------
@@ -95,7 +95,7 @@ VIS.reg('flagwread',c=>{let A,chal,sand,read,gapOut,dirBtns,panelBtns,playBtn,on
   Pt.label(`${r2(gap())} ${u}`,lx,ly,{font:'700 12px system-ui',bg:A.alpha(C.am,.97),col:ink,align:m.dir==='across'?undefined:'right'})}
  function draw(A){const{ctx,W,H,paint:P,col:C}=A,G=geo(A);ctx.fillStyle=P.lin(0,0,0,H,[[0,A.mix(C.pn,C.cy,.04)],[1,C.pn]]);ctx.fillRect(0,0,W,H);
   drawPanel(A,G.dist);drawPanel(A,G.time);
-  if(!st.touched)P.label('👆 drag a marker on the graph',W/2,G.time.y-17,{pill:1,bg:A.alpha(C.am,.95),col:'#111'})}
+  if(!st.touched)P.label('👆 drag a marker on the graph',W/2,H-13,{pill:1,bg:A.alpha(C.am,.95),col:'#111'})}
  // ---------- steps ----------
  const fresh=(o,tool)=>{st.play=false;st.t=0;st.hideVals=false;Object.assign(st,{amp:4,T:2,v:.8},o);setTool(...tool);if(playBtn)syncPlay()};
  const tell=t=>c.say(t);
