@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Temperature changes come from standard enthalpies of solution (CRC Handbook): CaCl2 −81.3 kJ/mol (M 110.98), NH4NO3 +25.7 (M 80.04), NH4Cl +14.8 (M 53.49), NaCl +3.9 (M 58.44), shared by 50 g water at 4.18 J/g °C: 3.5, −1.54, −1.32 and −0.32 °C per gram, so 5 g gives +17.5, −7.7, −6.6, −1.6 °C. 7 g CaCl2 ends at 44.5 °C and 10 g NH4NO3 at 4.6 °C, both well under solubility limits. The model (no losses) is stated in the adult text with a note that real results are smaller. Felt-sleeve curves use Newton cooling: above 30 °C for 11.2 min vs 2.2 and 1.6 min. Product chemistry (iron oxidation, sodium acetate crystallising, NH4NO3 or urea cold packs) checked against RSC Education resources."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented ideas from RSC and AAAS research on energy: 'cold flows in' or 'the solid gives out cold' (step 1 prediction and two challenge answers), any temperature change labelled exothermic, changing two variables in a 'fair' test (the fair-test step starts with water and cup both different), more water believed to give a bigger change, insulation believed to make more energy, and 'more is always better' (the tune step rejects anything above 45 °C as a burn risk and below 0 °C as a freezing risk)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flaghpack is an engineering design cycle for a warming or cooling device: test four dissolving solids, choose against design briefs, set up a one-variable fair test by toggling cup B, tune the mass to a safe target window, and choose an insulation improvement from cooling curves. reactlab (acid + alkali neutralisation with indicator) and flagwarm (ages 3–5 hot/warm/cold sorting) share none of these mechanics. The shingle gate passed under 30%."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner adds each solid and reads the thermometer before any label appears, so 'up = exothermic, down = endothermic' is discovered from data; the briefs make them use both direction and size of change; the fair-test step only runs once the mass is the sole difference and then shows the rise doubling; the tune step makes them reason with a per-gram rate because the end temperature is only revealed by testing; cooling curves show insulation keeps the pack above 30 °C for 11 minutes rather than 2."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options: 'the solid gave out cold' for the ammonium nitrate drop (the thermometer and the text show energy leaving the water), 'the rise stays the same' with double the mass (the fair test gives +35 vs +17.5 °C), and 'a felt sleeve releases more energy' (the curve starts at the same peak and only cools more slowly). Each is revealed with A.reveal after the task."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five rotating questions with tagged wrong answers: 'Cold does not flow. The dissolving took energy from the water' for 'gave out cold'; 'a fall means energy went into the change' for 'any change is exothermic'; 'twice the solid gives twice the energy' and 'more solid gives more energy, not less' for the same and half answers; 'keep solid, mass, water volume and start temperature the same' and 'if everything changes, you cannot tell what caused the result'; 'it warms up, so energy is released' for the sodium acetate warmer; and 'more water spreads the same energy over more mass' for the weak cold pack. In-lab misses name the slip for each brief, each wrong fair-test setup (nothing differs, two differ, the wrong one differs) and each wrong design."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons.py readability passed: kid text FK 3.2 (limit 6.5); the adult text was rewritten from FK 10.6 to 8.2 (limit 9.5) with shorter sentences. Kid paragraphs name the real substances and one number each (below about 45 °C). Precise terms are kept: exothermic, endothermic, energy transfer, surroundings, fair test, independent/dependent/control variables, insulation, thermal conductivity."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The filler gate passed and explanation overlap with the existing exothermic and endothermic reactions lesson is under 12%. Every kid paragraph is a rule plus the evidence for it; the adult text gives the NGSS link, the model behind the lab numbers, the named mistakes, real products and a safety note; the family tip asks a concrete energy-direction question and a wrapped vs bare comparison."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at iPhone 13 (390 px) in light and dark for every step before and after Show me. The four jars fit in one row with formula and two-word name; the cup, thermometer and 5 g results table sit side by side; the fair-test rows are full-height tap targets; the tune slider spans the width with 1 to 15 g labels; the per-gram label was shortened after it clipped at 390 px; design cards stack above the cooling graph without overlap."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: every Show me completed, the challenge rendered, axe found no WCAG 2.1 AA violations in light or dark, and no console or page errors. Every tap or drag has a button twin (Add each solid, the four solid names, B: mass/water/cup/start, Run test, ± 1 g, Test, each design) with full-name aria-labels, and the canvas aria-label reads each result, e.g. '5 g Ammonium nitrate: 20 °C to 12.3 °C (−7.7 °C). Endothermic'."
+  }
+ },
+ "sources": [
+  "NGSS MS-PS1-6 (design, construct and test a device that releases or absorbs thermal energy by chemical processes)",
+  "CRC Handbook of Chemistry and Physics: enthalpies of solution of CaCl2, NH4NO3, NH4Cl and NaCl",
+  "RSC Education: 'Exothermic or endothermic?' and hand warmer / cold pack practicals with safety notes (CLEAPSS)",
+  "AQA GCSE Chemistry 8462 section 4.5.1 exothermic and endothermic reactions (required practical temperature changes)"
+ ]
+}
