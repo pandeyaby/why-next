@@ -1,0 +1,261 @@
+{
+ "topicId": "mt_VRieg2xgD3",
+ "title": "Random sampling methods",
+ "audience": "learner",
+ "keyIdea": "A random sample gives every member of the population a known, equal chance of being picked, so who ends up in the sample is not decided by convenience or by the person choosing. In a simple random sample you number everyone and use random numbers, skipping repeats and numbers not on the list. In a systematic sample you take every kth member, where k = population ÷ sample size, after a random start from 1 to k; it fails if the list repeats with the same gap. In a stratified sample you split the population into groups and sample each in proportion: (group size ÷ population) × sample size, then choose at random within each group.",
+ "familyTip": "Take a class register or a list of 30 names. Roll two dice, or use a phone’s random number tool, to pick 5 names, and talk about what to do with a repeat or a number over 30. Then try every 6th name from a random start. Finally ask: if the class is 18 girls and 12 boys, how many of each should a stratified sample of 10 have? (6 and 4.)",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which sampling method is it? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Simple random",
+    "Systematic",
+    "Stratified"
+   ],
+   "items": [
+    [
+     "Raffle tickets drawn from a drum",
+     0
+    ],
+    [
+     "Every 50th phone off the line, random start",
+     1
+    ],
+    [
+     "Same share of each shift as the workforce",
+     2
+    ],
+    [
+     "Random number generator picks 40 IDs",
+     0
+    ],
+    [
+     "Every 10th visitor from a random first visitor",
+     1
+    ],
+    [
+     "Each region sampled in proportion to its population",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrsamp",
+  "caption": "Flagship lab: random number table, systematic interval and start, a hidden pattern, a stratified sample, and matching methods.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A sample is a small group chosen to stand for a bigger group, the population. A sample is only useful if it is fair. Random choice makes it fair: every member has the same chance of being picked.",
+   "Simple random sample: give everyone a number, then use random numbers to choose. If a number comes up twice, skip it. If a number is not on the list, skip that too.",
+   "Systematic sample: to choose 6 from a list of 60, take every 10th person, because 60 ÷ 6 = 10. Pick the first one at random from 1 to 10. Watch out: if the list has a pattern that repeats every 10, you might pick only one kind of person.",
+   "Stratified sample: split the population into groups, like year groups. Give each group a share of the sample that matches its size. A year with 240 of 800 students gets 240 ÷ 800 × 40 = 12 of a sample of 40. Then pick at random inside each group."
+  ],
+  "adult": [
+   "Ages 13 to 15. GCSE Mathematics and GCSE Statistics (AQA, Edexcel, OCR) ask students to describe and carry out simple random, systematic and stratified sampling. They must also work out a stratified sample in proportion. CCSS 7.SP.1 shows random sampling as the way to get a fair sample. Key terms: population, sampling frame, sample, simple random sample, systematic sample, sampling interval, stratum (strata), proportional allocation, bias.",
+   "Exact meanings: in a simple random sample, every possible sample of size n is equally likely. So each member also has the same chance. A systematic sample with a random start gives each member a 1 in k chance, but not every set of members can be picked. So it is not a simple random sample. It goes wrong when the list has a pattern with the same gap as k. A stratified sample fixes how many come from each group, usually in proportion, then picks at random inside each group. That makes sure every group is there.",
+   "Common mistakes: swapping an out-of-range number for a nearby one, which gives some people extra chances; keeping repeats; using n or N × n instead of N ÷ n for the gap; always starting at 1 instead of at random; giving each group the same number whatever its size; rounding the groups so the total is no longer the sample size; and calling a sample of whoever is nearby random. Random choice removes bias in who is picked. It does not make a sample match the population exactly.",
+   "In the lab you accept or skip eight random number pairs for a list of 50. You set the gap and start for a sample of 6 from 60, then find the start that picks only corner houses on a street where every 10th house is a corner house. You set the numbers for a stratified sample from a school of 800, and match situations to methods. Every wrong move names the slip."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A list has {=20*k} names. You want a systematic sample of 20. What is the sampling interval k?",
+   "answer": "k",
+   "hint": "Interval = population size ÷ sample size.",
+   "explain": "{=20*k} ÷ 20 = {k}, so take every {k}th name after a random start from 1 to {k}.",
+   "params": {
+    "k": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A school has 800 students. Year 7 has {=40*y} students. How many Year 7 students should be in a stratified sample of 40?",
+   "answer": "2*y",
+   "hint": "Year 7’s share of the school, times the sample size: (size ÷ 800) × 40.",
+   "explain": "{=40*y} ÷ 800 × 40 = {=2*y} Year 7 students.",
+   "params": {
+    "y": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Students are numbered 01 to 60. The random number table gives 72. What should you do?",
+   "choices": [
+    "Skip 72 and read the next pair",
+    "Use student 60 instead",
+    "Use student 12, since 72 − 60 = 12"
+   ],
+   "answer": 0,
+   "hint": "Would swapping in another number give some students an extra chance?",
+   "explain": "There is no student 72, so skip it. Swapping in another student would give that student more chances than the rest."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Every 10th flat in a block is a large flat on the corner. Is a systematic sample with k = 10 a good idea?",
+   "choices": [
+    "No, it could pick only corner flats or none",
+    "Yes, systematic samples are always fair",
+    "Yes, if you start at flat 1"
+   ],
+   "answer": 0,
+   "hint": "Compare the interval with the pattern in the list.",
+   "explain": "The list repeats every 10, the same as k, so the sample could be all corner flats or none. Use a simple random sample."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is NOT a random sample?",
+   "choices": [
+    "The first 30 people through the door",
+    "30 names drawn from a hat of everyone",
+    "30 IDs chosen by a random number generator"
+   ],
+   "answer": 0,
+   "hint": "Does everyone have the same chance of being first through the door?",
+   "explain": "The first 30 through the door is an opportunity (convenience) sample. People who arrive early are more likely to be picked."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A factory makes {=50*k} phones a day. Quality control wants a systematic sample of 50. What is the sampling interval?",
+    "answer": "k",
+    "hint": "Divide the number of phones by the sample size.",
+    "explain": "{=50*k} ÷ 50 = {k}, so test every {k}th phone after a random start.",
+    "params": {
+     "k": [
+      3,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A club has 300 members: {=30*a} juniors and the rest seniors. How many juniors in a stratified sample of 30?",
+    "answer": "3*a",
+    "hint": "Find the juniors’ share of the club, then take that share of 30.",
+    "explain": "{=30*a} ÷ 300 × 30 = {=3*a} juniors.",
+    "params": {
+     "a": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What makes a sample random?",
+    "choices": [
+     "Every member has a known, equal chance of being chosen",
+     "The person choosing picks a good mix",
+     "It is large"
+    ],
+    "answer": 0,
+    "hint": "Think about who decides who is picked.",
+    "explain": "In a random sample chance decides, and every member has the same chance. A big or hand-picked sample can still be biased."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A random number repeats. What do you do in a simple random sample?",
+    "choices": [
+     "Skip it and use the next number",
+     "Count that person twice",
+     "Start again from the beginning"
+    ],
+    "answer": 0,
+    "hint": "Should one person be in the sample twice?",
+    "explain": "Skip the repeat so each person appears at most once, and carry on until the sample is full."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A school has 600 girls and 400 boys. For a stratified sample of 50, which split is right?",
+    "choices": [
+     "30 girls, 20 boys",
+     "25 girls, 25 boys",
+     "60 girls, 40 boys"
+    ],
+    "answer": 0,
+    "hint": "Girls are 600 of 1000 students.",
+    "explain": "600 ÷ 1000 × 50 = 30 girls and 400 ÷ 1000 × 50 = 20 boys."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "For a systematic sample with k = 8, where should the start be?",
+    "choices": [
+     "A random number from 1 to 8",
+     "Always 1",
+     "Always 8"
+    ],
+    "answer": 0,
+    "hint": "The start should be left to chance too.",
+    "explain": "Choosing the start at random from 1 to 8 gives every member the same 1 in 8 chance."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A sampling frame lists {=25*n} households. You want a sample of 25. Using a systematic sample, how many households are skipped between each one picked?",
+    "answer": "n-1",
+    "hint": "Find the interval first. You pick one in each block of that size.",
+    "explain": "The interval is {=25*n} ÷ 25 = {n}, so {=n-1} households are skipped between picks.",
+    "params": {
+     "n": [
+      4,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why might a researcher choose stratified sampling?",
+    "choices": [
+     "To make sure each group is represented in proportion",
+     "Because it needs no random choice",
+     "Because it is the quickest to set up"
+    ],
+    "answer": 0,
+    "hint": "What does stratifying guarantee?",
+    "explain": "Stratifying fixes each group’s share so every group is represented in proportion. Random choice is still used inside each group."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Does a random sample always match the population exactly?",
+    "choices": [
+     "No, results still vary by chance",
+     "Yes, random means exact",
+     "Yes, if it is systematic"
+    ],
+    "answer": 0,
+    "hint": "Two random samples from the same population can give different results.",
+    "explain": "Random selection removes bias in who is chosen, but any sample still varies by chance. Bigger samples vary less."
+   }
+  ]
+ }
+}
