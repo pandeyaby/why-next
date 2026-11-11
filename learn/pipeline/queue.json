@@ -4557,11 +4557,11 @@
    "reels": true
   },
   {
-   "topic": "mt_3ugRQuzlbH",
-   "name": "The quadratic formula",
+   "topic": "mt_cmjGCYDHFw",
+   "name": "Modelling exponential growth",
    "subject": "Mathematics",
    "ages": "15-17",
-   "downstream": 47,
+   "downstream": 78,
    "reels": true
   },
   {
@@ -4578,6 +4578,38 @@
    "subject": "Mathematics",
    "ages": "17-18",
    "downstream": 21,
+   "reels": true
+  },
+  {
+   "topic": "mt_yaA6FGCJ6V",
+   "name": "State symbols",
+   "subject": "Science",
+   "ages": "14-15",
+   "downstream": 0,
+   "reels": true
+  },
+  {
+   "topic": "mt_QGZgv63WxC",
+   "name": "Bias in samples and surveys",
+   "subject": "Mathematics",
+   "ages": "13-15",
+   "downstream": 12,
+   "reels": true
+  },
+  {
+   "topic": "mt_KjrUFpwlgx",
+   "name": "The Doppler effect",
+   "subject": "Science",
+   "ages": "16-18",
+   "downstream": 1,
+   "reels": true
+  },
+  {
+   "topic": "mt_3ugRQuzlbH",
+   "name": "The quadratic formula",
+   "subject": "Mathematics",
+   "ages": "15-17",
+   "downstream": 47,
    "reels": true
   }
  ],
@@ -5525,6 +5557,6 @@
    "date": "2026-11-11"
   }
  ],
- "_note_age_mix": "2026-11-11 (4 AM run): the ranker still finds no unbuilt ages 2-11 topic in the viewer graph, so this run built three 11+ topics (per Abhinav's Nov 10 approval): The Kelvin scale and absolute zero (Science 14-16, flagkelv), Stopping distances (Science 14-16, flagbrake), and the run's one 16-18 slot, Finding a term or coefficient in a binomial expansion (Maths 16-18, flagbterm, built round the term independent of x and an unknown constant, not single coefficients, which flagbexp already covers). flagkelv and flagbrake also got a fix so a step timer left over from a previous step cannot skip a card. Next: Linear versus exponential growth (Maths 15-17), Designing a hand warmer or cold pack (Science 13-15), The molecular ion peak (16-18 slot). More young topics (English and P&S ages 4-11 in data/topics.json) are outside the viewer graph and need Abhinav's yes to add. Hybrid finder 87.0% vs 85% floor.",
+ "_note_age_mix": "2026-11-11 (6 AM run): the ranker still finds no unbuilt ages 2-11 topic in the viewer graph, so this run built three 11+ topics (per Abhinav's Nov 10 approval): Linear versus exponential growth (Maths 15-17, flaglinexp), Designing a hand warmer or cold pack (Science 13-15, flaghpack), and the run's one 16-18 slot, The molecular ion peak (Science 16-18, flagmion, built round reading M+ past base-peak and M+1 decoys, not the spectrometer itself, which flagtof covers). Next: Balanced equations for burning alkanes (Science 14-16), Random sampling methods (Maths 13-15), Judging binomial assumptions in context (16-18 slot). Modelling exponential growth (Maths 15-17) is newly unlocked; check overlap with flaggrow, flagrexp and flaglinexp before building it. More young topics (English and P&S ages 4-11 in data/topics.json) are outside the viewer graph and need Abhinav's yes to add. Hybrid finder 87.1% vs 85% floor.",
  "_note_queue_policy": "2026-11-11: Classification Keys (mt_brgde1Vx0P) already used its approved one-more-retry and is in done (learn/lessons/740-classification-keys.json, flagkey, 2026-11-10). Do not re-queue it. scripts/lesson_pipeline.py now marks a topic skipped permanently if it fails a second time (attempts >= 2). The under-11 ranker decision is dropped: it is resolved by hand-queuing young topics onto visual-draft, not by a ranker code change."
 }
