@@ -1,0 +1,241 @@
+{
+ "topicId": "mt_RrmTYzKeFl",
+ "title": "Proving Pythagoras' theorem and its converse",
+ "audience": "learner",
+ "keyIdea": "Pythagoras' theorem says: if a triangle has a right angle, then a² + b² = c², where c is the hypotenuse. One proof puts four copies of the triangle inside a square of side a + b in two ways. The gap left over is c² one way and a² + b² the other, and both gaps are the same big square minus the same four triangles. The converse runs the other way: if a² + b² = c² for the longest side c, then the angle opposite c is a right angle.",
+ "explain": {
+  "kid": [
+   "Take one right triangle with short sides a and b and long side c. Make four copies. Put them in the corners of a big square with side a + b. The gap in the middle is a tilted square. Each of its sides is c, so its area is c².",
+   "Now slide the same four triangles into new places in the same big square. Pair them up into two rectangles. This time the gaps are two squares: one is a by a and the other is b by b. Their total area is a² + b².",
+   "Why must the gaps match? Both times the gap is the big square minus the same four triangles. Nothing was added or lost. So c² = a² + b². This works for any right triangle, not just one you drew.",
+   "The converse flips the order. You start with three side lengths and ask if there is a right angle. Square the two shorter sides and add. If that equals the square of the longest side, the angle opposite the longest side is 90°. Sides 9, 12 and 15 pass: 81 + 144 = 225 = 15²."
+  ],
+  "adult": [
+   "This lesson covers the GCSE Mathematics content in England on Pythagoras' theorem and the US Common Core standard 8.G.B.6: explain a proof of the Pythagorean Theorem and its converse. Learners explain an area (rearrangement) proof, state the theorem and its converse as two separate conditional statements, and use the converse to decide whether a triangle with given sides is right-angled.",
+   "Key terms: hypotenuse, right angle, conditional statement, converse, proof, rearrangement, area, and Pythagorean triple. The theorem has the form 'if the angle is 90°, then a² + b² = c²'. The converse has the form 'if a² + b² = c², then the angle opposite c is 90°'. Both are true, but each needs its own proof; the converse can be proved by building a right triangle with legs a and b and showing it is congruent (SSS) to the given one.",
+   "Common mistakes: squaring the first two numbers listed instead of the two shorter sides, so 13, 5 and 12 is wrongly rejected. Adding the sides (7 + 24 = 31) instead of their squares. Treating a picture as a proof without saying why the areas are equal. Using a² + b² = c² inside the proof itself, which is circular. Thinking a true statement makes its converse true; 'a square has four right angles' is true, but its converse is false.",
+   "In the lab the learner slides three triangles so the uncovered c² becomes a² and b², orders the four lines of the area argument, sorts real jobs into theorem or converse, tests four side lists with the longest side as c, and then uses c² compared with a² + b² to name triangles as acute, right or obtuse."
+  ]
+ },
+ "familyTip": "Use a tape measure to check a corner at home. Mark 30 cm along one edge and 40 cm along the other. If the gap between the marks is exactly 50 cm, the corner is square. Builders use this 3-4-5 check, and it is the converse of Pythagoras at work.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each triangle right-angled? Square the two shorter sides, add, and compare with the square of the longest side. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Right-angled",
+    "Not right-angled"
+   ],
+   "items": [
+    [
+     "Sides 9, 12, 15",
+     0
+    ],
+    [
+     "Sides 7, 24, 25",
+     0
+    ],
+    [
+     "Sides 13, 5, 12",
+     0
+    ],
+    [
+     "Sides 6, 8, 11",
+     1
+    ],
+    [
+     "Sides 8, 15, 16",
+     1
+    ],
+    [
+     "Sides 5, 6, 8",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpproof",
+  "caption": "Flagship lab: slide four triangles to turn c² into a² + b², order the proof, sort theorem from converse, test side lists, and name acute, right or obtuse.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In the rearrangement proof, why is the uncovered area the same in both pictures?",
+   "choices": [
+    "Both are the same big square minus the same four triangles",
+    "Because a² + b² = c²",
+    "The two pictures look about the same"
+   ],
+   "answer": 0,
+   "hint": "Think about what stays the same when the triangles slide: the outer square and the pieces.",
+   "explain": "The big square has side a + b both times, and the four triangles are the same. Equal total minus equal pieces leaves equal gaps, so c² = a² + b². Using a² + b² = c² as the reason would be circular."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A triangle has sides {=3*k}, {=4*k} and {=5*k}. Work out a² + b² using the two shorter sides.",
+   "answer": "25*k*k",
+   "hint": "Square {=3*k} and {=4*k}, then add. Compare with {=5*k}².",
+   "explain": "{=3*k}² + {=4*k}² = {=9*k*k} + {=16*k*k} = {=25*k*k}, which equals {=5*k}², so by the converse the triangle is right-angled.",
+   "params": {
+    "k": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which statement is the converse of Pythagoras' theorem?",
+   "choices": [
+    "If a² + b² = c² for the longest side c, then the angle opposite c is 90°",
+    "If a triangle has a right angle, then a² + b² = c²",
+    "If a triangle has no right angle, then a + b = c"
+   ],
+   "answer": 0,
+   "hint": "A converse swaps the 'if' part and the 'then' part.",
+   "explain": "The theorem says right angle → a² + b² = c². The converse swaps them: a² + b² = c² → right angle. The second choice is the theorem itself."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Sides 6, 8 and {c}. Work out c² − (a² + b²), using {c} as the longest side.",
+   "answer": "c*c-100",
+   "hint": "6² + 8² = 100. Square {c} and subtract 100.",
+   "explain": "{c}² − 100 = {=c*c-100}. Only 0 would mean a right angle; a positive answer means the angle opposite {c} is obtuse.",
+   "params": {
+    "c": [
+     11,
+     16
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A triangle has sides 7, 24 and 25. Is it right-angled?",
+    "choices": [
+     "Yes, because 49 + 576 = 625 = 25²",
+     "No, because 7 + 24 is not 25",
+     "You cannot tell without measuring an angle"
+    ],
+    "answer": 0,
+    "hint": "Square the two shorter sides and add, then compare with 25².",
+    "explain": "7² + 24² = 49 + 576 = 625 and 25² = 625. They are equal, so by the converse the angle opposite 25 is a right angle. Adding the sides themselves proves nothing."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sides 10, 26 and 24. Which check uses the converse correctly?",
+    "choices": [
+     "10² + 24² = 26²",
+     "10² + 26² = 24²",
+     "10² + 24² + 26² = 0"
+    ],
+    "answer": 0,
+    "hint": "c must be the longest side, wherever it appears in the list.",
+    "explain": "26 is the longest side, so check 10² + 24² = 100 + 576 = 676 = 26². It is right-angled, with the right angle opposite the 26 side."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A builder marks 3 m and 4 m along two walls and finds the gap is 5 m. What has she used?",
+    "choices": [
+     "The converse: the sides fit, so the corner is 90°",
+     "The theorem: the corner is 90°, so the sides fit",
+     "Neither, it is just a guess"
+    ],
+    "answer": 0,
+    "hint": "Did she start from a known right angle, or from three lengths?",
+    "explain": "She started from three measured lengths and concluded the corner is square. Going from a² + b² = c² to a right angle is the converse."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A right triangle has legs a = {a} and b = {b}. In the rearrangement proof, what is the side of the big square?",
+    "answer": "a+b",
+    "hint": "Each side of the big square is made of one short side a and one short side b.",
+    "explain": "Each edge of the big square runs along a leg a and a leg b, so its side is {a} + {b} = {=a+b}.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "In the rearrangement proof with legs a = {a} and b = {b}, what is the total area of the four triangles?",
+    "answer": "2*a*b",
+    "hint": "Each triangle has area ½ × {a} × {b}. There are four.",
+    "explain": "4 × ½ × {a} × {b} = 2 × {a} × {b} = {=2*a*b}. This is the same in both pictures, which is why the gaps match.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Sides 5, 6 and 8. What kind of triangle is it?",
+    "choices": [
+     "Obtuse",
+     "Right-angled",
+     "Acute"
+    ],
+    "answer": 0,
+    "hint": "Square the longest side, 8, and compare it with 5² + 6².",
+    "explain": "5² + 6² = 61 and 8² = 64. c² is bigger than a² + b², so the angle opposite 8 is more than 90°: obtuse."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "'If a shape is a square, it has four right angles' is true. What about its converse?",
+    "choices": [
+     "False: a rectangle has four right angles but may not be a square",
+     "True, because the converse of a true statement is always true",
+     "It is the same statement"
+    ],
+    "answer": 0,
+    "hint": "Find a shape with four right angles that is not a square.",
+    "explain": "A 2 by 5 rectangle has four right angles but is not a square, so the converse is false. That is why Pythagoras' converse needs its own proof."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which step would make a proof of Pythagoras' theorem circular?",
+    "choices": [
+     "Saying the gaps match because a² + b² = c²",
+     "Saying the big square has side a + b",
+     "Saying each triangle has area ½ab"
+    ],
+    "answer": 0,
+    "hint": "Circular means using the result you are trying to prove.",
+    "explain": "a² + b² = c² is what the proof sets out to show, so it cannot be a reason inside the proof. The gaps match because both are the big square minus the same four triangles."
+   }
+  ]
+ }
+}
