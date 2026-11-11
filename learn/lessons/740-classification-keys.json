@@ -1,0 +1,65 @@
+{
+ "topicId": "mt_brgde1Vx0P",
+ "title": "Classification Keys",
+ "audience": "family",
+ "keyIdea": "A classification key is a set of yes or no questions that helps you name a living thing. Each question splits a group in two, so you follow one branch at a time until only one name is left. Good key questions ask about one feature that anyone can see, count or check.",
+ "explain": {
+  "kid": [
+   "You find a small animal in the garden. What is it? A key can help. A key is a list of yes or no questions. You answer one, then follow the branch to the next.",
+   "Say the animal has legs. The next question asks, 'Does it have 6 legs?' A spider has 8 legs, so the answer is no. The key says it is a spider.",
+   "Good key questions are about things you can see or count. 'Is it cute?' is not a good question, because people do not agree. 'Does it have wings?' is a good one.",
+   "Each question splits a group into two smaller groups: the yes group and the no group. Keep splitting until each living thing is on its own. Keys work for plants and leaves too."
+  ],
+  "adult": [
+   "The English national curriculum for Year 4 asks pupils to 'recognise that living things can be grouped in a variety of ways' and to 'explore and use classification keys to help group, identify and name a variety of living things in their local and wider environment'. Year 6 builds on this when pupils classify living things by observable characteristics and give reasons. The yes or no format is called a dichotomous key.",
+   "Each question tests one observable feature and splits the current group into two. Following answers from the first question narrows the group until one name remains. A key for n living things needs n − 1 questions, because each question makes one extra group. Keys can be drawn as branching diagrams or written as numbered pairs of statements.",
+   "Common mistakes: asking opinion or vague questions such as 'Is it pretty?' or 'Is it big?'; asking two things at once, like legs and wings together; choosing a question every member answers the same way, so nothing splits; calling a spider an insect; and skipping a question to jump to the name. Be careful to answer only the question in front of you.",
+   "In the lab your child follows a minibeast key for a spider, snail, ladybird and worm, judges five possible key questions, picks the question that splits three animal groups, builds a three-question key for a bird, bat, fish and crab, and uses a leaf key to name oak, ash, holly and horse chestnut leaves."
+  ]
+ },
+ "familyTip": "On a walk, collect four leaves or spot four animals. Take turns inventing one yes or no question that splits them into two groups, then another for each group, until every one has its own name.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "The key asks: 'Does it have 6 legs?' Drag each animal into the yes or no box, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Yes: 6 legs", "No"],
+   "items": [["Ladybird", 0], ["Spider", 1], ["Ant", 0], ["Snail", 1], ["Bee", 0], ["Worm", 1], ["Beetle", 0], ["Woodlouse", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagkey",
+  "caption": "Flagship lab: follow a minibeast key, judge key questions, split groups, build your own key, and name leaves with a leaf key.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "numeric","id": "p1","prompt": "A yes or no key names {a} different animals. Each question splits one group in two. How many questions does the key need?","answer": "a-1",
+   "hint": "Each question makes one more group. Start with 1 group and count up to {a}.","explain": "You start with 1 group. Each question adds one group, so reaching {a} groups takes {a} − 1 = {=a-1} questions.","params": {"a": [3, 8]}},
+  {"type": "numeric","id": "p2","prompt": "{a} animals go into a key. It asks 'Does it have wings?' and {b} say yes. How many go down the no branch?","answer": "a-b",
+   "hint": "Every animal goes down one branch: yes or no.","explain": "All {a} animals answer, and {b} say yes, so {a} − {b} = {=a-b} go down the no branch.","params": {"a": [6, 10],"b": [1, 5]}},
+  {"type": "numeric","id": "p3","prompt": "You start with 1 group and ask {a} yes or no questions. Each question splits one group in two. How many groups do you end with?","answer": "a+1",
+   "hint": "Each split turns one group into two, so you gain one group each time.","explain": "Each question adds one group: 1 + {a} = {=a+1} groups at the end.","params": {"a": [1, 6]}},
+  {"type": "mc","id": "p4","prompt": "Which is a good question for a key?","choices": ["Does it have a shell?","Is it lovely?","Is it quite small?"],"answer": 0,
+   "hint": "Can everyone look and give the same answer?","explain": "Anyone can check for a shell, so everyone gives the same answer. Lovely is an opinion, and quite small is vague."}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "numeric","id": "m1","prompt": "{a} minibeasts go into a key. The first question is 'Does it have legs?' and {b} of them have legs. How many go down the no branch?","answer": "a-b",
+    "hint": "The minibeasts without legs take the no branch.","explain": "{b} of the {a} have legs, so {a} − {b} = {=a-b} have no legs and go down the no branch.","params": {"a": [6, 12],"b": [1, 5]}},
+   {"type": "numeric","id": "m2","prompt": "A key names {a} different trees by their leaves. How many yes or no questions does it need?","answer": "a-1",
+    "hint": "Each question makes one more group. How many splits until there are {a} groups?","explain": "Each question splits one group into two. Going from 1 group to {a} takes {a} − 1 = {=a-1} questions.","params": {"a": [4, 9]}},
+   {"type": "mc","id": "m3","prompt": "A key asks 'Does it have 6 legs?' about a spider. Which way does it go?","choices": ["No, a spider has 8 legs","Yes, spiders are insects","It does not fit the key"],"answer": 0,
+    "hint": "Count a spider's legs. Is a spider an insect?","explain": "A spider has 8 legs, so the answer is no. Spiders are not insects: insects have 6 legs."},
+   {"type": "mc","id": "m4","prompt": "Why is 'Does it have legs and wings?' a poor key question?","choices": ["It asks two things at once","It is too short","No animal has wings"],"answer": 0,
+    "hint": "What would you answer for an animal with legs but no wings?","explain": "It asks about legs and wings together. An animal with legs but no wings has no clear answer, so ask one thing at a time."},
+   {"type": "mc","id": "m5","prompt": "Bee, butterfly, fish, frog. Which question splits them into two groups?","choices": ["Does it have wings?","Is it alive?","Is it nice?"],"answer": 0,
+    "hint": "Which question gets some yes answers and some no answers?","explain": "The bee and butterfly have wings; the fish and frog do not. All four are alive, so that does not split them, and nice is an opinion."},
+   {"type": "mc","id": "m6","prompt": "A leaf key asks 'Is the leaf in one piece?' An ash leaf has many leaflets along a stalk. What is the answer?","choices": ["No","Yes","It depends on the size"],"answer": 0,
+    "hint": "Is an ash leaf one piece, or many small leaflets?","explain": "An ash leaf is made of many leaflets, so it is not in one piece. The answer is no."},
+   {"type": "mc","id": "m7","prompt": "What does a classification key help you do?","choices": ["Name a living thing by answering questions","Count how many animals there are","Show who eats what"],"answer": 0,
+    "hint": "Think about what you have at the end of the key.","explain": "A key leads you, one yes or no answer at a time, to the name of a living thing. Showing who eats what is a food chain."}
+  ]
+ }
+}
