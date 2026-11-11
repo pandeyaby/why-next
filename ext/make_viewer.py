@@ -1,4 +1,5 @@
-"""Generate the Why Next? viewer (new topics plus their upstream v1 ancestors).
+"""Generate the Why Next? viewer (new topics plus their upstream v1 ancestors,
+and a small seed list of young v1 topics that are not already in that ancestor set).
 
 out/viewer.html + out/wn/*.js: fast split build for the web (map first, detail chunks on demand).
 out/viewer-offline.html: the same app in one file that works with no network.
@@ -17,8 +18,22 @@ D = json.load(open("out/merged/data/dependencies.json"))["dependencies"]
 pre = {}
 for e in D:
     pre.setdefault(e["topicId"], []).append(e)
-# include all ancestors of new topics (so chains run back to primary)
-keep, stack = set(new), list(new)
+# Upstream v1 topics kept even when they are not ancestors of a Why Next? topic.
+# These are young (ages 2–11) curriculum topics the lesson builder is approved to
+# write flagship lessons for (Abhinav, 10 Nov 2026). Names are the exact v1 /
+# curriculum terms. Their prerequisite ancestors are pulled in by the walk below.
+SEED_V1 = [
+    "mt_70Ys4i1AB1",  # Compound Words (English, 5–8)
+    "mt_XjwUlmxdCT",  # Combining Simple Shapes (Mathematics, 5–6)
+    "mt_X7Tu94-a2m",  # Friendships change over time (Personal & Social Development, 7–9)
+    "mt_SdIWVjzopp",  # Bones & Muscles (Science, 5–7)
+    "mt_0u4KLbvBa1",  # Odd and even numbers (Mathematics, 6–7)
+    "mt_brgde1Vx0P",  # Classification Keys (Science, 8–9)
+]
+missing_seed = [i for i in SEED_V1 if i not in by]
+assert not missing_seed, f"SEED_V1 ids not in merged topics: {missing_seed}"
+# include all ancestors of new topics and of the seeded v1 topics (chains back to primary)
+keep, stack = set(new) | set(SEED_V1), list(dict.fromkeys(list(new) + SEED_V1))
 while stack:
     u = stack.pop()
     for e in pre.get(u, []):

@@ -4404,30 +4404,56 @@
    "date": "2026-11-10"
   }
  ],
- "failed": [
-  {
-   "topic": "mt_brgde1Vx0P",
-   "lesson": "learn/lessons/511-classification-keys.json",
-   "date": "2026-11-04",
-   "attempts": 1,
-   "reasons": [
-    "review: missing learn/pipeline/reviews/mt_brgde1Vx0P.json (strict 9/10 self-review, see RUBRIC.md)",
-    "build failed: Traceback (most recent call last):\n  File \"/workspace/why-next/ext/make_viewer.py\", line 49, in <module>\n    assert not missing, f\"lesson topics not in the viewer: {missing}\"\n           ^^^^^^^^^^^\nAssertionError: lesson topics not in the viewer: ['mt_brgde1Vx0P']\n",
-    "build failed: Traceback (most recent call last):\n  File \"/workspace/why-next/ext/make_viewer.py\", line 49, in <module>\n    assert not missing, f\"lesson topics not in the viewer: {missing}\"\n           ^^^^^^^^^^^\nAssertionError: lesson topics not in the viewer: ['mt_brgde1Vx0P']\n"
-   ]
-  },
+ "failed": [],
+ "next": [
   {
    "topic": "mt_70Ys4i1AB1",
-   "lesson": "learn/lessons/728-compound-words.json",
-   "date": "2026-11-10",
-   "attempts": 1,
-   "reasons": [
-    "not in the viewer graph: ext/make_viewer.py only bundles lessons for out/topics.ext.json topics and their ancestors, and Compound Words is neither (assert 'lesson topics not in the viewer')",
-    "every other gate passed (lab_registered, lab_distinct, lab_structure, content, items, review); the draft lesson, flagcmpd lab and review are kept outside the repo in /workspace/why-next-pending/mt_70Ys4i1AB1/ for a retry once the topic is in the viewer"
-   ]
-  }
- ],
- "next": [
+   "name": "Compound Words",
+   "subject": "English",
+   "ages": "5-8",
+   "downstream": 1,
+   "reels": false
+  },
+  {
+   "topic": "mt_XjwUlmxdCT",
+   "name": "Combining Simple Shapes",
+   "subject": "Mathematics",
+   "ages": "5-6",
+   "downstream": 1,
+   "reels": false
+  },
+  {
+   "topic": "mt_X7Tu94-a2m",
+   "name": "Friendships change over time",
+   "subject": "Personal & Social Development",
+   "ages": "7-9",
+   "downstream": 0,
+   "reels": false
+  },
+  {
+   "topic": "mt_SdIWVjzopp",
+   "name": "Bones & Muscles",
+   "subject": "Science",
+   "ages": "5-7",
+   "downstream": 15,
+   "reels": false
+  },
+  {
+   "topic": "mt_0u4KLbvBa1",
+   "name": "Odd and even numbers",
+   "subject": "Mathematics",
+   "ages": "6-7",
+   "downstream": 0,
+   "reels": false
+  },
+  {
+   "topic": "mt_brgde1Vx0P",
+   "name": "Classification Keys",
+   "subject": "Science",
+   "ages": "8-9",
+   "downstream": 7,
+   "reels": false
+  },
   {
    "topic": "mt_BLzNxSSdWu",
    "name": "Writing Character & Dialogue",
@@ -5483,18 +5509,6 @@
    "date": "2026-11-09"
   },
   {
-   "topic": "mt_SdIWVjzopp",
-   "name": "Bones & Muscles",
-   "reason": "Not in the viewer graph (not a Why Next? topic or an ancestor of one), so ext/make_viewer.py rejects a lesson for it. A full draft (lesson + flagbones lab) is saved at /workspace/wn_drafts/bones-muscles/ in case the topic is added to the map.",
-   "date": "2026-11-09"
-  },
-  {
-   "topic": "mt_0u4KLbvBa1",
-   "name": "Odd and even numbers",
-   "reason": "Not in the viewer graph (not a Why Next? topic or an ancestor of one), so ext/make_viewer.py rejects a lesson for it.",
-   "date": "2026-11-09"
-  },
-  {
    "topic": "mt_wh3UqnWsa7",
    "name": "Multiplication as repeated addition (age 6+)",
    "reason": "Overlaps 'Multiplying as repeated adding' (07, array visual), 'Division as equal sharing' (08) and 'Times tables for 2, 5 and 10' (flagttfam, equal groups and fact families); a new lab would repeat equal groups and arrays.",
@@ -5505,19 +5519,7 @@
    "name": "2-D shapes (age 6+)",
    "reason": "Overlaps 'Circles, squares and triangles' (flagshape, counting sides and corners), 'Lines of symmetry' (flagsymm, fold lines) and 'Regular and irregular polygons' (flagregpol); sides plus vertical symmetry is already covered.",
    "date": "2026-11-10"
-  },
-  {
-   "topic": "mt_XjwUlmxdCT",
-   "name": "Combining Simple Shapes",
-   "reason": "Not in the viewer graph (not an out/topics.ext.json topic or an ancestor of one), so make_viewer.py refuses a lesson for it; same blocker as Compound Words. Needs the viewer to include young upstream-only topics before it can be built.",
-   "date": "2026-11-10"
-  },
-  {
-   "topic": "mt_X7Tu94-a2m",
-   "name": "Friendships change over time",
-   "reason": "Not in the viewer graph (not an out/topics.ext.json topic or an ancestor of one), so make_viewer.py refuses a lesson for it; same blocker as Compound Words. Needs the viewer to include young upstream-only topics before it can be built.",
-   "date": "2026-11-10"
   }
  ],
- "_note_age_mix": "2026-11-10 (6 PM run): three lessons, two of three for ages 2-11, none for 16-18: Maths 6-7 Sequence intervals of time (flagivl: pick the longer of pairs in hours vs minutes shown as minute bars, order 90 minutes / 2 hours / 1 hour, mark intervals on an 8-to-5 timeline, hop the hours across 12 o'clock, fit a 2-hour ride and 1-hour walk into free gaps), English 11-14 Tracing Theme Across a Text (flagtheme: original Mara-and-the-boat story; sort topic/theme/plot, sharpen weak theme statements, place beats as introduces/develops/turning point/resolves/setting only, graph the change, strike opinions from a summary), Science 5-7 Our Solar System (flagssys: rocket up past clouds and planes until space begins, air-or-space sort, zoom out from home to Earth to the Sun's planets, build the solar system with far stars outside, find Earth and name the group; kept distinct from 574 Naming the planets and 705 The Sun is a star). No topics for ages 2-11 are left in the viewer graph after this run (rank.cjs 400 lists none), so the 2-of-3 young quota cannot be met until young upstream-only topics (Compound Words, Combining Simple Shapes, Friendships change over time, Bones & Muscles, Odd and even numbers, Classification keys) are added to the viewer: needs Abhinav's call. Next hand-queued (non-Maths/Science, youngest left): Writing Character & Dialogue (English 11-14), Sympathy Versus Empathy (P&S 12-13), Explaining and connecting: elaboration and concept maps (Learning to Learn 14-15)."
+ "_note_age_mix": "2026-11-10 (evening): Abhinav approved adding the six young upstream-only v1 topics to the viewer keep-set (ext/make_viewer.py SEED_V1) so the lesson builder can write flagship lessons for them, using the exact curriculum/v1 names: Compound Words (English 5-8), Combining Simple Shapes (Mathematics 5-6), Friendships change over time (Personal & Social Development 7-9), Bones & Muscles (Science 5-7), Odd and even numbers (Mathematics 6-7), and Classification Keys (Science 8-9). Compound Words and Classification Keys were moved from failed back to the front of next (drafts remain outside the repo at /workspace/why-next-pending/mt_70Ys4i1AB1/ and /workspace/wn-run-1104a/parked-classification-keys/; Bones & Muscles draft at /workspace/wn_drafts/bones-muscles/ if present). The other four were un-skipped and hand-queued too (Maths/Science v1 topics are only ranked when already in next). Until those lessons are built, later slots may still be ages 11+. Previously queued 11+ topics follow the six: Writing Character & Dialogue (English 11-14), Sympathy Versus Empathy (P&S 12-13), Explaining and connecting: elaboration and concept maps (Learning to Learn 14-15)."
 }
