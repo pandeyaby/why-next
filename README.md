@@ -46,7 +46,7 @@ python3 ext/build.py && python3 ext/check_schema.py && python3 ext/make_viewer.p
 
 ## Lessons and labs
 
-Every one of the 1,568 topics has a lesson. 103 are hand-written (`learn/lessons/`). The other 1,465 are **starter lessons** built by
+Every one of the 1,568 topics has a lesson. 386 are hand-written (`learn/lessons/`). The other 1,182 are **starter lessons** built by
 `python3 learn/autogen/starter.py --report` into `learn/auto/*.json`, and are labelled in the app as "Starter lesson … not yet reviewed by a teacher".
 
 - **Archetypes** (`learn/autogen/arch_*.py`) supply a lab, explanations and question templates for a kind of topic (written multiplication, quadratics, acids, handwriting, friendship …).
