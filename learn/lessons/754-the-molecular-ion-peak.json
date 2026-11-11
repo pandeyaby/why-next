@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_wvlOthX5-O",
+ "title": "The molecular ion peak",
+ "audience": "learner",
+ "keyIdea": "In a mass spectrum, the molecular ion peak M⁺ comes from whole molecules that have lost one electron. It is the peak with the highest m/z, apart from a very small M+1 peak caused by carbon-13, and because the ion has a charge of 1+, its m/z equals the relative molecular mass Mr. It is often not the tallest peak: the tallest, the base peak, is usually a fragment. M⁺ can tell compounds apart when their Mr values differ, but not when two compounds have the same Mr.",
+ "explain": {
+  "kid": [
+   "A mass spectrometer turns molecules into ions and sorts them by mass. Some whole molecules lose just one electron. That gives the molecular ion, written M⁺. Its mass is the mass of the whole molecule.",
+   "Many molecules break into pieces called fragments. Each piece makes its own peak, to the left of M⁺. So M⁺ is the peak furthest to the right. It is often not the tallest peak. The tallest one is the base peak, and it is often a fragment.",
+   "The ion has a charge of 1+, so its m/z value is just its mass. Read the m/z of M⁺ and you have the Mr of the compound. Pentane shows M⁺ at 72, so its Mr is 72.",
+   "Look out for a tiny peak one unit to the right of M⁺. About 1 in 90 carbon atoms is carbon-13, so a few molecules weigh one more. That small M+1 peak is not M⁺. M⁺ is the bigger peak just before it. To name an unknown, find M⁺, then add up the masses in each formula you are given. Use C = 12, H = 1 and O = 16. The formula that matches is the one. But two compounds can share an Mr, like butane and propanone at 58. Then M⁺ alone cannot tell them apart."
+  ],
+  "adult": [
+   "This lesson matches A-level Chemistry mass spectrometry in England (AQA 7405 section 3.3.6.2 and OCR A H432 4.2.4). In electron impact or electrospray spectra of organic compounds, the molecular ion M⁺ gives the relative molecular mass. Fragments, the base peak and the M+1 peak are named so learners do not confuse them with M⁺.",
+   "Key terms: molecular ion M⁺, mass-to-charge ratio m/z, relative molecular mass Mr, relative abundance, base peak, fragment ion, fragmentation, M+1 peak and carbon-13. M⁺ is formed when a molecule loses one electron, M + e⁻ → M⁺ + 2e⁻. Spectra in the lab are rounded from NIST electron-impact data. In some, such as alcohols, M⁺ is very small, and in others, such as benzene, it is also the base peak.",
+   "Common mistakes: taking the tallest peak as M⁺; taking the tiny M+1 peak as M⁺ because it has the highest m/z; adding the formula masses wrongly, for example forgetting the hydrogen in OH; and thinking fragments can be heavier than M⁺. Another slip is assuming the same M⁺ means the same compound; C₄H₁₀ and C₃H₆O are both 58.",
+   "In the lab the learner chooses M⁺ in three spectra where the base peak is a decoy, then in three with an M+1 peak, including benzene, where M⁺ is the base peak. They name three unknowns by adding up formula masses, find fragment peaks from the mass lost, and decide which of two spectra matches a compound."
+  ]
+ },
+ "familyTip": "Pick two snacks with ingredients you can count, and act out a mass spectrometer: one stays whole and the rest break into pieces. Ask which reading tells you the mass of the whole snack, the biggest pile of pieces or the heaviest single item weighed.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each peak come from the whole molecule (M⁺) or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "M⁺: gives Mr",
+    "Not M⁺"
+   ],
+   "items": [
+    [
+     "Pentane: the peak at m/z 72",
+     0
+    ],
+    [
+     "Ethanol: the peak at m/z 46",
+     0
+    ],
+    [
+     "Benzene: the peak at m/z 78, which is also the tallest",
+     0
+    ],
+    [
+     "Pentane: the tallest peak, at m/z 43",
+     1
+    ],
+    [
+     "Hexane: the tiny peak at m/z 87, just right of 86",
+     1
+    ],
+    [
+     "Propanone: the peak at m/z 15",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmion",
+  "caption": "Flagship lab: pick M⁺ past the base peak and M+1, work out Mr to name unknowns, find fragments by mass lost, and tell spectra apart by M⁺.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which peak in a mass spectrum is the molecular ion peak, M⁺?",
+   "choices": [
+    "The peak with the highest m/z, apart from a tiny M+1 peak",
+    "The tallest peak",
+    "The peak with the lowest m/z"
+   ],
+   "answer": 0,
+   "hint": "M⁺ is the whole molecule, so it is the heaviest ion apart from isotope peaks.",
+   "explain": "M⁺ is the whole molecule with one electron removed, so it has the highest m/z apart from the small M+1 peak from carbon-13. The tallest peak is the base peak, often a fragment."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An alkane CₙH₂ₙ₊₂ has {n} carbon atoms. Using C = 12 and H = 1, at what m/z is its M⁺ peak?",
+   "answer": "12*n+2*n+2",
+   "hint": "Count the hydrogens: 2n + 2. Then add 12 for each carbon and 1 for each hydrogen.",
+   "explain": "Mr = 12 × {n} + 1 × (2 × {n} + 2) = {=12*n+2*n+2}, so M⁺ is at m/z {=12*n+2*n+2}.",
+   "params": {
+    "n": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A compound has M⁺ at m/z {m}. A fragment peak is at m/z {=m-15}. What mass was lost to make the fragment?",
+   "answer": "15",
+   "hint": "Mass lost = M⁺ − fragment m/z.",
+   "explain": "{m} − {=m-15} = 15. A loss of 15 usually means a CH₃ group broke off.",
+   "params": {
+    "m": [
+     58,
+     100
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Hexane has a peak at m/z 86 and a much smaller one at 87. What is its Mr?",
+   "choices": [
+    "86",
+    "87",
+    "57, the tallest peak"
+   ],
+   "answer": 0,
+   "hint": "What makes a tiny peak one unit above M⁺?",
+   "explain": "The tiny peak at 87 is the M+1 peak from molecules containing a carbon-13 atom. M⁺ is at 86, so Mr = 86."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A spectrum's tallest peak is at m/z 31. There are also peaks at 45 and 46, and nothing higher. What is the Mr?",
+    "choices": [
+     "46",
+     "31",
+     "45"
+    ],
+    "answer": 0,
+    "hint": "Look for the peak furthest to the right.",
+    "explain": "M⁺ is the highest m/z peak, 46, so Mr = 46 (ethanol). 31 is the base peak, a fragment, and 45 is the ion after losing one hydrogen."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How is the molecular ion M⁺ formed?",
+    "choices": [
+     "A whole molecule loses one electron",
+     "A molecule gains one proton",
+     "A molecule breaks into two fragments"
+    ],
+    "answer": 0,
+    "hint": "The ion has the same mass as the molecule and a charge of 1+.",
+    "explain": "M + e⁻ → M⁺ + 2e⁻: a fast electron knocks one electron out, leaving a 1+ ion with almost exactly the molecule's mass."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "An unknown shows M⁺ at m/z 60. Which formula fits? (C = 12, H = 1, O = 16)",
+    "choices": [
+     "C₃H₇OH",
+     "C₂H₅OH",
+     "C₄H₁₀"
+    ],
+    "answer": 0,
+    "hint": "Add up each formula. Don't forget the H in OH.",
+    "explain": "C₃H₇OH = 3 × 12 + 8 × 1 + 16 = 60. C₂H₅OH is 46 and C₄H₁₀ is 58."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "An alcohol CₙH₂ₙ₊₁OH has {n} carbon atoms. Using C = 12, H = 1 and O = 16, at what m/z is its M⁺ peak?",
+    "answer": "12*n+2*n+2+16",
+    "hint": "There are 2n + 1 hydrogens on the carbons plus 1 in OH, so 2n + 2 hydrogens in all.",
+    "explain": "Mr = 12 × {n} + (2 × {n} + 2) + 16 = {=12*n+2*n+2+16}.",
+    "params": {
+     "n": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why is the base peak often not M⁺?",
+    "choices": [
+     "Many molecular ions break up, so a fragment can be the most common ion",
+     "The base peak is always the lightest ion",
+     "M⁺ is never detected"
+    ],
+    "answer": 0,
+    "hint": "The base peak is the tallest. What makes one ion very common?",
+    "explain": "The base peak is the most abundant ion. Molecular ions often fragment, so a stable fragment can outnumber them. In benzene, though, M⁺ is stable and is also the base peak."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Butane, C₄H₁₀, and propanone, C₃H₆O, both show M⁺ at m/z 58. What can you conclude?",
+    "choices": [
+     "They have the same Mr, so M⁺ alone cannot tell them apart",
+     "They are the same compound",
+     "One spectrum must be wrong"
+    ],
+    "answer": 0,
+    "hint": "Add up both formulas with C = 12, H = 1 and O = 16, then compare.",
+    "explain": "4 × 12 + 10 = 58 and 3 × 12 + 6 + 16 = 58. Different compounds can share an Mr, so you need fragments, infrared or NMR to tell them apart."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A compound with M⁺ at m/z {m} loses C₂H₅ (mass 29). At what m/z is the fragment peak?",
+    "answer": "m-29",
+    "hint": "Fragment m/z = M⁺ − mass lost.",
+    "explain": "{m} − 29 = {=m-29}. A fragment is always lighter than the molecular ion.",
+    "params": {
+     "m": [
+      72,
+      100
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which spectrum belongs to hexane, C₆H₁₄?",
+    "choices": [
+     "The one with M⁺ at m/z 86",
+     "The one with M⁺ at m/z 72",
+     "The one with its tallest peak at m/z 86 or above"
+    ],
+    "answer": 0,
+    "hint": "Work out the Mr of C₆H₁₄ first.",
+    "explain": "C₆H₁₄ = 6 × 12 + 14 = 86, so its M⁺ is at 86. The spectrum with M⁺ at 72 is pentane. Hexane's tallest peak is a fragment at 57."
+   }
+  ]
+ }
+}
