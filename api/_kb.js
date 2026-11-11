@@ -23,6 +23,25 @@ export function fuse(embIds, kwIds, f = FUSE) { const S = new Map();
   embIds.slice(0, f.depth).forEach((id, r) => S.set(id, (S.get(id) || 0) + f.we / (f.k + r + 1)));
   (kwIds || []).slice(0, f.depth).forEach((id, r) => S.set(id, (S.get(id) || 0) + f.wk / (f.k + r + 1)));
   return [...S].sort((a, b) => b[1] - a[1]).map(x => x[0]) }
+/* Same token rules as learn/guide_kb.js. If a lesson just outside the top 2 (ranks 3-4) shares two or more
+   title words with the question, and the current top 2 share fewer, swap it into second place. */
+const STOP = new Set(('a an the is are was were be been to of and or in on at for with what whats why how do does did done i im you your it its '+
+ 'this that these those my me can could would should about from as by not no yes so if then than there their they we our which who whom '+
+ 'am as be by go he if in is it me my no of oh ok on or so to up us we hi ya yo '+
+ 'when where will just like get got make makes made mean means thing things really very much many some any one two help please tell '+
+ 'explain show know want need use used using work works way lot also more most other into out up down over only same each every').split(' '));
+const SYM = [[/²/g,' squared '],[/³/g,' cubed '],[/√/g,' root surd '],[/÷/g,' divide '],[/×/g,' multiply '],[/%/g,' percent '],[/°/g,' degrees '],[/π/g,' pi circle '],[/λ/g,' wavelength '],[/[θ]/g,' angle '],[/\d\s*\/\s*\d/g,' fraction '],[/\b[a-z]\s*\^\s*\d/gi,' power ']];
+export function tokens(s){s=String(s||'').replace(/\{=?[^}]*\}/g,' ');for(const [r,t] of SYM)s=s.replace(r,t);return s.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').split(' ')
+ .filter(w=>w.length>1&&!STOP.has(w)).map(w=>w.length>5?w.replace(/(ings|ing|ers|ies|es|ed|s)$/,''):w.length>3?w.replace(/s$/,''):w)}
+export function titlePromote(ids, query, titleOf, depth = 4, minTok = 2) {
+  if (!ids || ids.length < 3) return ids || [];
+  const qtok = tokens(query), tok = id => tokens(titleOf(id) || '').filter(w => qtok.includes(w)).length;
+  const topT = Math.max(tok(ids[0]), tok(ids[1] || ''));
+  const cand = ids.slice(2, depth).filter(id => tok(id) >= minTok && tok(id) > topT);
+  if (!cand.length) return ids;
+  cand.sort((a, b) => tok(b) - tok(a));
+  const w = cand[0];
+  return [ids[0], w, ...ids.filter(x => x !== w && x !== ids[0])] }
 /* Same gate as the browser: nothing when the open lesson is already in the top 3, else the top 2 others. */
 export function gate(ids, openId, k = 2) { const top = ids.slice(0, 3); if (openId && top.includes(openId)) return []; return ids.filter(id => id !== openId).slice(0, k) }
 export async function embedQuery(q, key, fetchFn = fetch, ms = 2500) { const ac = new AbortController(), t = setTimeout(() => ac.abort(), ms);
@@ -33,5 +52,6 @@ export async function embedQuery(q, key, fetchFn = fetch, ms = 2500) { const ac 
 /* Related lessons for a question: [{title, keyIdea}] or null (use the browser's keyword result). */
 export async function hybridRelated(q, kb, key, fetchFn = fetch) { const s = loadVectors(); if (!s || !key || !kb) return null;
   const qv = await embedQuery(q, key, fetchFn); if (!qv) return null;
-  const ids = gate(fuse(rankByVector(qv, s), kb.kw), kb.open), by = new Map(s.items.map(it => [it.id, it]));
+  const by = new Map(s.items.map(it => [it.id, it]));
+  const ids = gate(titlePromote(fuse(rankByVector(qv, s), kb.kw), q, id => (by.get(id) || {}).title), kb.open);
   return ids.map(id => by.get(id)).filter(Boolean).map(it => ({ title: it.title, keyIdea: it.keyIdea })) }

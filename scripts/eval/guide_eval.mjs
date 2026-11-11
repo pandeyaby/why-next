@@ -11,8 +11,8 @@
                                                   --no-kb to leave out related lessons (for a paired A/B), --runs=3 for pass^k.
    Results go to scripts/eval/results/guide-<date>.json (git-ignored). */
 import fs from 'node:fs'; import path from 'node:path'; import { fileURLToPath } from 'node:url';
-import { shapeInput, buildRequest, replyText, MODEL_DEFAULT } from '../../api/guide.js';
-import { hybridRelated, loadVectors, decode, rankByVector, fuse } from '../../api/_kb.js';
+import { shapeInput, buildRequest, replyText, safeReply, MODEL_DEFAULT } from '../../api/guide.js';
+import { hybridRelated, loadVectors, decode, rankByVector, fuse, titlePromote } from '../../api/_kb.js';
 const HERE = path.dirname(fileURLToPath(import.meta.url)), ROOT = path.resolve(HERE, '../..');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const [k, v] = a.replace(/^--/, '').split('='); return [k, v ?? true] }));
 const GUIDE_KB = new Function(fs.readFileSync(path.join(ROOT, 'learn/guide_kb.js'), 'utf8').replace(/if\(typeof module[^\n]*/, '') + ';return GUIDE_KB')();
@@ -43,7 +43,7 @@ function offline() {
   if (!V || !Q) bad.push('missing api/_kb_vectors.json or fixtures/p1_query_vectors.json; run node scripts/build_kb_vectors.mjs');
   else { const have = new Set(V.items.map(i => i.id)), qv = new Map(Q.items.map(i => [i.id, i.v])); let hh = 0, ht = 0; const stale = [];
     for (const l of Object.values(lessons)) { const p = (l.practice || [])[0]; if (!p || !p.prompt) continue; if (!have.has(l.topicId) || !qv.has(l.topicId)) { stale.push(l.title); continue } ht++;
-      const kw = GUIDE_KB.search(p.prompt.replace(/\{=?[^}]*\}/g, '3'), lessons, { k: 8 }).map(r => r.id); if (fuse(rankByVector(Array.from(decode(qv.get(l.topicId))), V), kw).slice(0, 2).includes(l.topicId)) hh++ }
+      const q = p.prompt.replace(/\{=?[^}]*\}/g, '3'), kw = GUIDE_KB.search(q, lessons, { k: 8 }).map(r => r.id); if (titlePromote(fuse(rankByVector(Array.from(decode(qv.get(l.topicId))), V), kw), q, id => (lessons[id] || {}).title).slice(0, 2).includes(l.topicId)) hh++ }
     console.log(`hybrid finder (server: keywords + embeddings) hit@2: ${hh}/${ht} (${(100 * hh / ht).toFixed(1)}%; CI floor 85%)${stale.length ? ` · ${stale.length} lessons without vectors yet (keyword only): run node scripts/build_kb_vectors.mjs` : ''}`);
     if (hh / ht < 0.85) bad.push('hybrid lesson finder below 85%'); if (stale.length > 30) bad.push(stale.length + ' lessons have no vectors') }
   if (bad.length) { bad.forEach(b => console.log('BAD', b)); process.exit(1) }
@@ -93,7 +93,7 @@ async function live() {
   const only = args.only ? new Set(String(args.only).split(',')) : null, rows = [];
   for (const c of cases) { if (only && !only.has(c.id)) continue;
     const tries = [];
-    for (let k = 0; k < runs; k++) { const r = await gemini(await requestFor(c, kbMode, key), key, model); const t = r.text || '';
+    for (let k = 0; k < runs; k++) { const r = await gemini(await requestFor(c, kbMode, key), key, model); const t = safeReply(c.q, r.text || '', c.lesson && byFile[c.lesson] && byFile[c.lesson].title);
       const fails = r.error && !r.blocked ? ['error: ' + r.error] : r.blocked ? (c.kind === 'unsafe' || c.kind === 'injection' ? [] : ['blocked: no answer']) : grade(c, t);
       const j = args.judge && t ? await judge(c, t, key, model) : null; if (j) for (const k2 of ['correct', 'age_appropriate', 'safe', 'on_topic']) if (j[k2] === false) fails.push('judge ' + k2 + ': ' + (j.why || ''));
       tries.push({ reply: t, fails, codePass: !grade(c, t).length || !!r.blocked, judge: j }) }
