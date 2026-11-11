@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Chart values are the Highway Code (Rule 126) typical stopping distances: 20 mph 6 + 6 = 12 m, 30 mph 9 + 14 = 23 m, 40 mph 12 + 24 = 36 m, 50 mph 15 + 38 = 53 m, 60 mph 18 + 55 = 73 m, 70 mph 21 + 75 = 96 m. 30 mph = 13.4 m/s, so a 0.66 s reaction gives 8.8 m, matching the 9 m figure. The hazard runs were checked by hand: dry 40 mph 36 m (50 mph 53 m fails), wet with braking doubled 30 mph 9 + 28 = 37 m (40 mph 60 m fails), tired with thinking doubled 30 mph 18 + 14 = 32 m (40 mph 48 m fails). The v² rule follows from F × d = ½mv²: 6 m at 20 mph gives 24 m at 40 and 54 m at 60 (chart 55). Factor sorting follows the DfE GCSE physics list (tiredness, drugs, alcohol, distractions; wet or icy roads, poor brakes or tyres)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: wet or icy roads put under thinking distance, tiredness or alcohol under braking distance, braking distance doubling when speed doubles (28 m at 60 mph, 12 m at 40 mph, falls to ½), adding or dividing speed and reaction time instead of multiplying (20.7 m, 28.6 m), doubling both parts for a tired driver (46 m), and 'brakes get weaker at speed'."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagbrake is about stopping distance itself: a live reaction-time test turned into metres at 30 mph, a stacked thinking + braking chart by speed, a three-way factor sort, hazard runs that change thinking or braking separately, and kinetic-energy squares for the v² rule. flagkemv (kinetic energy vs mass and speed) and flagfrict (friction on surfaces, ages 7–8) use other mechanisms, and the shingle gate passed against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner measures their own reaction time first and sees the car move 8–9 m before braking, so thinking distance = speed × reaction time is discovered, not told. Hunting for the speed whose braking is 4× the 30 mph value finds 60 mph, not 40. The hazard runs show the same 30 mph is the limit for wet and tired runs for different reasons, one stretching each part. The energy squares show 4 and 9 times before the answer is confirmed."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options: braking distance from 30 to 60 mph (doubles is tempting; it is about 4 times), which part a tired driver lengthens (braking is tempting), and how the kinetic energy changes at twice the speed (twice is tempting). The chart hunt, factor sort and energy squares settle each, and A.reveal quotes the prediction back."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five rotating challenge questions, each wrong answer with its own correction: alcohol as braking, 'neither if they drive slowly', 28 m at 60 mph (linear thinking), 14 m unchanged, ice as thinking distance, 'both equally', 28.6 m (divided), 20.7 m (added), 'brakes get weaker', and 'driver reacts more slowly'. The sort, hunt, hazard and energy steps also name the slip for each wrong tap, for example '40 mph needs 60 m on this road, more than the 40 m gap'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons.py passed the learner readability limits (kid ≤ 6.5, adult ≤ 9.5). Kid paragraphs use short sentences with one concrete number each (two thirds of a second, 9 + 14 = 23 m, 55 m not 28 m). Precise terms are kept: thinking distance, braking distance, stopping distance, reaction time, kinetic energy, friction, braking force, work done."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The filler gate passed and explanation overlap with every other lesson is under 12%. Each kid paragraph gives a rule and an example; the adult text gives the full Highway Code table, the F × d = ½mv² link and the common mistakes. The family tip uses roadside posts and the 23 m figure at 30 mph."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at iPhone 13 (390 px) in light and dark for every step before and after Show me. The traffic light, road ruler 0–60 m, stacked bars with mph labels and totals, the three sort bins and the hazard run all fit. The first screenshots showed 'stays the same' clipped in a 105 px answer tile and a squashed title, so the option became 'is unchanged', the title '60 → 30 mph: braking distance…', and the energy squares were enlarged."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: every Show me finished, the challenge rendered, axe found no WCAG 2.1 AA violations in light or dark, and there were no console or page errors. Every canvas tap has a button twin (Start test / Brake!, Slower, Faster, Check this speed, Thinking / Braking / Both, Drive, the three answers). The canvas aria-label states each result, for example 'Reaction time 0.66 s. At 30 mph (13.4 m/s) the car travels 8.8 m before you even touch the brake.' Show me works with reduced motion because the demo brakes directly."
+  }
+ },
+ "sources": [
+  "The Highway Code (UK), Rule 126 and typical stopping distances chart",
+  "DfE (2015) GCSE combined science and physics subject content: forces and braking, stopping distance, reaction time, factors affecting braking distance",
+  "AQA GCSE Physics 8463 specification 4.5.6.3 stopping distance and 4.5.6.3.2 reaction time",
+  "NGSS HS-PS2-1 and HS-PS3-1"
+ ]
+}
