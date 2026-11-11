@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE GCSE mathematics subject content (A11 and A18: deduce turning points by completing the square, and solve quadratics by completing the square), Common Core A-SSE.B.3b and A-REI.B.4a. Every form was expanded again by hand and in node: x² + 6x + 2 = (x + 3)² − 7, x² − 8x + 3 = (x − 4)² − 13, x² + 10x + 1 = (x + 5)² − 24, x² + 3x = (x + 1.5)² − 2.25, x² + 8x + 5 = (x + 4)² − 11, x² − 10x + 30 = (x − 5)² + 5. Roots −3 ± √7 ≈ −0.354 and −5.646 match the quadratic formula. Turning points (2, 3) and (−3, −7) were checked on the plotted curves."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented exam slips: using b instead of b/2 (the 10, −8 and 3 traps, the (x + 6)² line and the (x + 8)² + 5 challenge), forgetting to subtract p² (the (x + 3)² + 2 line, +2 in the corner predict, and (x + 4)² + 5), the wrong sign of p or of the turning point ((5, −2) and the −5/4/−1.5 traps), swapping the coordinates ((−2, −5)), and losing the negative root (−3 + √7 only, x = 4 only)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagcsq is built around completing the square itself. Algebra-tile strips are split round an x² tile to expose the (b/2)² corner, the corner is filled from c and the rest is borrowed and taken away, a point slides along y = (x + p)² + q to find the vertex, and the equation is solved line by line. The factorising (flagzprod) and square-root (flagsqroot) labs use other mechanisms, and the shingle gate passed against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner places the strips and sees the 3 × 3 gap before the text names p² = 9. Filling the gap shows 2 of their own units and 7 borrowed, and that is where the −7 comes from. Picking p from four values with b, −b/2 and p² traps builds the halve-and-keep-the-sign rule. Sliding to the lowest point shows that the square term is 0 only at x = −p."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions, each with a tempting wrong option. How many unit squares the corner needs (6, the coefficient, is tempting; 36 is 6²). What q is in (x + 3)² + q (+2, keeping c, is the classic slip). Whether (x − 2)² + 3 can go below 3 for negative x. The following step settles each one and A.reveal quotes it back."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five rotating challenge questions with tagged wrong answers, each with its own correction: (x + 8)² + 5 is told to halve 8, (x + 4)² + 5 that 16 was added and must be removed, 7 as the minimum that it is the value at x = 0, (5, −2) that the bracket is 0 at x = −5, x = 4 only that 9 has two square roots, and 55 that p² is subtracted. The strip, p, turning-point and solve steps also name the specific slip for each wrong tap."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "The kid paragraphs read at FK grade 1.2 and the adult paragraphs at 5.6 (limits 6.5 and 9.5). Each kid paragraph has one worked example: the tile picture, the borrowing check, the halve-and-subtract rule on x² − 8x + 3, and why the form gives the minimum and the roots. Precise terms are used: perfect square, completed-square form, turning point, vertex, minimum value, line of symmetry."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The filler gate passed, and overlap with the factorising, square-root and graph lessons is under 12 percent. The adult text says plainly that a·x² cases with a ≠ 1 are not covered, rather than padding. The family tip gives a concrete table of values, 7, 4, 3, 4, 7, to find the minimum and the symmetry."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at iPhone 13 (390 px) in light and dark for every step and after Show me. The x² tile with 3 + 3 strips and the 3 × 3 corner fits with the borrowing line below it, and the six tray strips sit in two columns. The four p cards fit across, the parabola grid is labelled from −6 to 4, and the three solve lines fit full width. Negative coordinates were changed to a true minus sign after the first screenshots showed hyphens."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13. Every Show me finished, the challenge rendered, axe found no WCAG 2.1 AA violations in light or dark, and there were no console or page errors. Every canvas action has a button twin: strip to right or bottom, use or borrow a unit, each p value, Left, Right, This is the lowest point, and each solve line. The canvas aria-label states each result, for example 'Corner full: 2 of your own and 7 borrowed. x² + 6x + 2 = (x + 3)² − 7.'"
+  }
+ },
+ "sources": [
+  "DfE (2013) Mathematics GCSE subject content and assessment objectives: A11 (turning points by completing the square) and A18 (solve quadratic equations by completing the square)",
+  "Common Core State Standards for Mathematics: HSA-SSE.B.3b and HSA-REI.B.4a",
+  "Pearson Edexcel GCSE (9-1) Mathematics examiner reports: common errors in completing the square (b instead of b/2, sign of the turning point)"
+ ]
+}

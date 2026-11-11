@@ -1,0 +1,220 @@
+{
+ "topicId": "mt_7S_v-VkBHK",
+ "title": "Completing the square",
+ "audience": "learner",
+ "keyIdea": "Completing the square rewrites x² + bx + c as (x + p)² + q, where p = b/2 and q = c − p². It works because (x + p)² = x² + 2px + p², so you add p² to make a perfect square and take it away again. In this form you can read off the turning point (−p, q), see that the minimum value is q, and solve the equation by taking square roots.",
+ "explain": {
+  "kid": [
+   "Picture x² + 6x as tiles: one big x by x square and six thin x strips. Put 3 strips down the right side and 3 along the bottom. Now it is nearly a square with side x + 3. Only a 3 by 3 corner is missing. That corner is 9 small squares.",
+   "x² + 6x + 2 only has 2 small squares. Use them in the corner and borrow 7 more. The shape is now (x + 3)². But you borrowed 7, so you must take 7 away. That gives x² + 6x + 2 = (x + 3)² − 7. Check it: (x + 3)² is x² + 6x + 9, and 9 − 7 = 2.",
+   "The rule is short. Halve the number in front of x to get p, and keep its sign. Then take p² away from the number on the end. For x² − 8x + 3, half of −8 is −4. So it is (x − 4)² − 16 + 3, which is (x − 4)² − 13.",
+   "Why is this useful? A square can never be less than 0. So (x − 2)² + 3 is smallest when the bracket is 0, at x = 2, and the smallest value is 3. The graph's turning point is (2, 3). You can also solve equations: (x + 3)² = 7 gives x + 3 = √7 or −√7, so x = −3 ± √7."
+  ],
+  "adult": [
+   "This lesson covers the GCSE Mathematics content in England on completing the square (Higher tier). Learners write x² + bx + c in the form (x + p)² + q, use it to find turning points, and solve quadratic equations. It also matches the US Common Core standards A-SSE.B.3b (complete the square to reveal the maximum or minimum value) and A-REI.B.4a (use completing the square to transform an equation).",
+   "Key terms: quadratic expression, perfect square, completing the square, completed-square form (x + p)² + q, turning point (vertex), minimum value, line of symmetry x = −p, and the ± square root. The identity behind it is (x + p)² = x² + 2px + p², so p = b/2. Cases where the x² term has a number in front, such as 2x² + 12x + 1, are a next step and are not covered here.",
+   "Common mistakes: using b instead of b/2, so x² + 8x becomes (x + 8)². Forgetting to subtract p², so q is left as c. Giving p the wrong sign, or reading the turning point of (x + 5)² − 2 as (5, −2) instead of (−5, −2). Swapping the coordinates of the turning point. Taking only the positive square root when solving, which loses one of the two solutions.",
+   "In the lab the learner splits six x-strips round an x² tile to see the 3 × 3 gap, then fills the gap from the +2 and borrows 7. They pick p for three quadratics, with traps for b, −b/2 and p². Then they slide along two parabolas to mark the turning point, and choose each line of a solution of x² + 6x + 2 = 0."
+  ]
+ },
+ "familyTip": "Ask your learner for the smallest value of x² − 4x + 7 without drawing a graph. Then try a few numbers together: x = 0, 1, 2, 3 and 4 give 7, 4, 3, 4 and 7. Ask why 3 is the smallest, and why the values are the same on both sides of x = 2.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which completed-square form matches each quadratic? Halve b for p, then take p² from c. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "(x + 3)² − 7",
+    "(x − 4)² − 13",
+    "(x + 5)² − 24"
+   ],
+   "items": [
+    ["x² + 6x + 2", 0],
+    ["x² − 8x + 3", 1],
+    ["x² + 10x + 1", 2],
+    ["(x + 3)(x + 3) − 7", 0],
+    ["x² − 8x + 16 − 13", 1],
+    ["x² + 10x + 25 − 24", 2]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcsq",
+  "caption": "Flagship lab: split x-strips round an x² tile, fill and borrow the corner, halve b, find turning points, solve x² + 6x + 2 = 0.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Write x² + {=2*k}x + 1 as (x + p)² + q. What is p?",
+   "answer": "k",
+   "hint": "p is half of the number in front of x: half of {=2*k}.",
+   "explain": "Half of {=2*k} is {k}, so p = {k} and x² + {=2*k}x + 1 = (x + {k})² + 1 − {=k*k}.",
+   "params": {
+    "k": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "x² + {=2*k}x + {c} = (x + {k})² + q. What is q?",
+   "answer": "c-k*k",
+   "hint": "(x + {k})² adds {=k*k}. Take that away from {c}.",
+   "explain": "q = {c} − {k}² = {c} − {=k*k} = {=c-k*k}.",
+   "params": {
+    "k": [
+     1,
+     6
+    ],
+    "c": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the turning point of y = (x + 5)² − 2?",
+   "choices": [
+    "(−5, −2)",
+    "(5, −2)",
+    "(−2, −5)"
+   ],
+   "answer": 0,
+   "hint": "The square is 0 when x + 5 = 0. What is y there?",
+   "explain": "(x + 5)² = 0 when x = −5, and then y = −2. So the turning point is (−5, −2). The sign inside the bracket flips for the x-coordinate."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Solve (x − 1)² = 9.",
+   "choices": [
+    "x = 4 or x = −2",
+    "x = 4",
+    "x = 10"
+   ],
+   "answer": 0,
+   "hint": "9 has two square roots, 3 and −3.",
+   "explain": "x − 1 = 3 or x − 1 = −3, so x = 4 or x = −2. Taking only the positive root loses x = −2."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Write x² + 8x + 5 in completed-square form.",
+    "choices": [
+     "(x + 4)² − 11",
+     "(x + 8)² + 5",
+     "(x + 4)² + 5"
+    ],
+    "answer": 0,
+    "hint": "Halve 8 for p, then take p² away from 5.",
+    "explain": "Half of 8 is 4, and (x + 4)² = x² + 8x + 16. So x² + 8x + 5 = (x + 4)² − 16 + 5 = (x + 4)² − 11."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the minimum value of x² − 4x + 7?",
+    "choices": [
+     "3",
+     "7",
+     "−2"
+    ],
+    "answer": 0,
+    "hint": "Complete the square first: half of −4 is −2.",
+    "explain": "x² − 4x + 7 = (x − 2)² + 3. The square is never negative, so the smallest value is 3, at x = 2."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "y = x² − {=2*k}x + 20. What is the x-coordinate of its turning point?",
+    "answer": "k",
+    "hint": "Complete the square: half of −{=2*k} is −{k}, so the bracket is (x − {k}).",
+    "explain": "y = (x − {k})² + 20 − {=k*k}. The bracket is 0 when x = {k}, so the turning point has x-coordinate {k}.",
+    "params": {
+     "k": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "x² + {=2*k}x + 30 has a minimum value. What is it?",
+    "answer": "30-k*k",
+    "hint": "Write it as (x + {k})² + q, then q is the minimum.",
+    "explain": "x² + {=2*k}x + 30 = (x + {k})² + 30 − {=k*k}, so the minimum value is {=30-k*k}, reached at x = −{k}.",
+    "params": {
+     "k": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Solve x² + 6x + 2 = 0 by completing the square.",
+    "choices": [
+     "x = −3 ± √7",
+     "x = 3 ± √7",
+     "x = −3 + √7 only"
+    ],
+    "answer": 0,
+    "hint": "x² + 6x + 2 = (x + 3)² − 7. Set that to 0 and isolate the square.",
+    "explain": "(x + 3)² = 7, so x + 3 = ±√7 and x = −3 ± √7 (about −0.35 or −5.65). Both roots count."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "x² − 10x + 30 = (x − 5)² + q. What is q?",
+    "choices": [
+     "5",
+     "−5",
+     "55"
+    ],
+    "answer": 0,
+    "hint": "(x − 5)² = x² − 10x + 25. What do you add to 25 to get 30?",
+    "explain": "q = 30 − 25 = 5. Subtract p², do not add it, and keep the sign of the result."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why does completing the square tell you the minimum of x² + bx + c?",
+    "choices": [
+     "(x + p)² is never negative, so the expression is smallest when the bracket is 0",
+     "Because q is always 0",
+     "Because the x² term disappears"
+    ],
+    "answer": 0,
+    "hint": "What is the smallest value a square can take?",
+    "explain": "A square is 0 or more, so (x + p)² + q is at least q, and equals q when x = −p. That is the turning point (−p, q)."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is the completed-square form of x² + 3x?",
+    "choices": [
+     "(x + 1.5)² − 2.25",
+     "(x + 3)² − 9",
+     "(x + 1.5)² + 2.25"
+    ],
+    "answer": 0,
+    "hint": "Half of 3 is 1.5, and 1.5² = 2.25.",
+    "explain": "(x + 1.5)² = x² + 3x + 2.25, so x² + 3x = (x + 1.5)² − 2.25."
+   }
+  ]
+ }
+}
