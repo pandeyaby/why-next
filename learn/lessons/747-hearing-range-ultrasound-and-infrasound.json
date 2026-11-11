@@ -1,0 +1,238 @@
+{
+ "topicId": "mt_fGkpBRyoHO",
+ "title": "Hearing range, ultrasound and infrasound",
+ "audience": "learner",
+ "keyIdea": "People can hear sounds with frequencies from about 20 Hz to 20 000 Hz (20 kHz). Sound below 20 Hz is infrasound and sound above 20 000 Hz is ultrasound. Both are real sound waves, just outside the human hearing range. Other animals hear different ranges: a dog hears up to about 45 000 Hz and an elephant down to about 16 Hz. The top of the human range falls as people get older.",
+ "explain": {
+  "kid": [
+   "A sound is a vibration that travels through the air. Its frequency is how many vibrations pass each second. We measure it in hertz, Hz. A deep hum might be 100 Hz. A whistle might be 3000 Hz. A high frequency gives a high pitch.",
+   "Your ears only pick up part of the range. Most young people hear from about 20 Hz to 20 000 Hz. Sound below 20 Hz is called infrasound. Sound above 20 000 Hz is called ultrasound. These are still sound waves. Our ears just do not respond to them.",
+   "Watch the units. 1 kHz means 1000 Hz, so 20 kHz is 20 000 Hz. A sound at 25 kHz is ultrasound. A sound at 15 kHz is not; it is 15 000 Hz, which most teenagers can hear.",
+   "Animals hear other ranges. A dog hears up to about 45 000 Hz, so a dog whistle at 30 000 Hz calls the dog but seems silent to you. Bats call with ultrasound. Elephants rumble with infrasound. Your own top limit drops as you age, so older people often miss high sounds."
+  ],
+  "adult": [
+   "This lesson covers the GCSE Physics content in England on sound waves. The range of normal human hearing is about 20 Hz to 20 kHz. Ultrasound has a frequency above that range and infrasound has one below it. It also supports NGSS MS-PS4-1 on wave frequency, and the GCSE uses of ultrasound and infrasound, such as medical scans and studying the inside of the Earth.",
+   "Key terms: frequency, hertz (Hz), kilohertz (kHz), pitch, amplitude, hearing range, infrasound, ultrasound, echolocation and age-related hearing loss (presbycusis). The animal ranges here are rough values from lab hearing tests. A dog hears about 67 Hz to 45 kHz, a cat about 48 Hz to 85 kHz, and an elephant about 16 Hz to 12 kHz.",
+   "Common mistakes: thinking ultrasound means a very loud sound, or that loud ultrasound becomes audible. Loudness depends on amplitude, not frequency. Thinking infrasound or ultrasound is not sound at all. Mixing up kHz and Hz, so 15 kHz is called ultrasound, or 20 kHz is read as 2000 Hz. Assuming everyone hears the same range; the top falls with age and varies between people.",
+   "In the lab the learner drags a tone along a log frequency line through all three zones. They sort sounds given in Hz and kHz, and hunt for tones a dog, cat or elephant hears that people cannot. They see which of three ages hears a tone, then sort real uses into infrasound or ultrasound."
+  ]
+ },
+ "familyTip": "Search for a free online hearing test tone sweep and play it quietly at the same volume for everyone at home. Note the frequency where each person stops hearing it. Younger people usually hear higher, which shows the top of the range falling with age. Keep the volume low.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Infrasound, audible or ultrasound? Turn kHz into Hz first, then compare with 20 Hz and 20 000 Hz. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Infrasound (below 20 Hz)",
+    "Audible to people",
+    "Ultrasound (above 20 000 Hz)"
+   ],
+   "items": [
+    [
+     "10 Hz",
+     0
+    ],
+    [
+     "Elephant rumble at 14 Hz",
+     0
+    ],
+    [
+     "440 Hz",
+     1
+    ],
+    [
+     "15 kHz",
+     1
+    ],
+    [
+     "40 kHz",
+     2
+    ],
+    [
+     "Bat call at 50 000 Hz",
+     2
+    ],
+    [
+     "Baby scan at 3 MHz",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghear",
+  "caption": "Flagship lab: drag a tone through infra, audible and ultra, sort Hz and kHz, find tones only animals hear, see hearing fall with age.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Roughly what range of frequencies can a young person hear?",
+   "choices": [
+    "20 Hz to 20 000 Hz",
+    "0 Hz to 2000 Hz",
+    "200 Hz to 200 000 Hz"
+   ],
+   "answer": 0,
+   "hint": "The lower limit is 20 Hz and the top is 20 kHz.",
+   "explain": "Young people hear about 20 Hz to 20 000 Hz (20 kHz). Below that is infrasound and above it is ultrasound."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A sound has a frequency of {k} kHz. What is that in Hz?",
+   "answer": "k*1000",
+   "hint": "1 kHz = 1000 Hz, so multiply {k} by 1000.",
+   "explain": "{k} kHz = {k} × 1000 = {=k*1000} Hz.",
+   "params": {
+    "k": [
+     2,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A dog whistle works at 30 000 Hz. Why does it seem silent to you?",
+   "choices": [
+    "It is ultrasound: above the top of human hearing, but inside a dog's range",
+    "It makes no sound wave at all",
+    "It is too quiet for people but loud for dogs"
+   ],
+   "answer": 0,
+   "hint": "Compare 30 000 Hz with 20 000 Hz for people and about 45 000 Hz for dogs.",
+   "explain": "30 000 Hz is above the 20 000 Hz human limit, so it is ultrasound to us. Dogs hear up to about 45 000 Hz, so they hear it. It is still a sound wave."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A test tone is at {f} Hz. How many Hz is it above the 20 000 Hz top of human hearing?",
+   "answer": "f-20000",
+   "hint": "Subtract 20 000 from {f}.",
+   "explain": "{f} − 20 000 = {=f-20000} Hz above the limit, so this tone is ultrasound.",
+   "params": {
+    "f": [
+     21000,
+     21009
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which of these is infrasound?",
+    "choices": [
+     "15 Hz",
+     "15 kHz",
+     "150 Hz"
+    ],
+    "answer": 0,
+    "hint": "Infrasound is below 20 Hz. Turn kHz into Hz before you compare.",
+    "explain": "15 Hz is below 20 Hz, so it is infrasound. 15 kHz is 15 000 Hz and 150 Hz is a low hum; both are audible."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A bat calls at 50 000 Hz. Why can people not hear it?",
+    "choices": [
+     "It is above 20 000 Hz, so it is ultrasound",
+     "Bat calls are too quiet",
+     "It is not a sound wave"
+    ],
+    "answer": 0,
+    "hint": "Compare the frequency with the top of human hearing.",
+    "explain": "50 000 Hz is far above the 20 000 Hz limit, so it is ultrasound. Bats use it to echolocate. Loudness is not the reason."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Turning up the volume on a 25 000 Hz tone will…",
+    "choices": [
+     "not make it audible to people, because the frequency stays above 20 000 Hz",
+     "make it audible once it is loud enough",
+     "lower its frequency into the audible range"
+    ],
+    "answer": 0,
+    "hint": "Volume changes the amplitude of the wave. What changes the pitch?",
+    "explain": "Volume changes amplitude, not frequency. The tone stays at 25 000 Hz, which is ultrasound, so people still cannot hear it."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "An elephant rumble has a frequency of {f} Hz. How many Hz below the 20 Hz human limit is it?",
+    "answer": "20-f",
+    "hint": "The human limit is 20 Hz. Subtract {f} from 20 to find the gap.",
+    "explain": "20 − {f} = {=20-f} Hz below the limit, so the rumble is infrasound.",
+    "params": {
+     "f": [
+      12,
+      19
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A machine makes a {k} kHz whine. What is its frequency in Hz?",
+    "answer": "k*1000",
+    "hint": "k stands for kilo, which means 1000.",
+    "explain": "{k} × 1000 = {=k*1000} Hz.",
+    "params": {
+     "k": [
+      21,
+      90
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A shop plays a 17 000 Hz tone. Who is most likely to hear it?",
+    "choices": [
+     "Teenagers",
+     "Older adults",
+     "Nobody, because it is ultrasound"
+    ],
+    "answer": 0,
+    "hint": "Is 17 000 Hz above 20 000 Hz? Which ears lose high pitches first?",
+    "explain": "17 000 Hz is below 20 000 Hz, so it is audible, but the top of the range falls with age. Teenagers usually still hear it; many older adults do not."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which use relies on ultrasound?",
+    "choices": [
+     "Scanning a baby in the womb",
+     "Elephants calling across the plains",
+     "Detecting a far-off volcano erupting"
+    ],
+    "answer": 0,
+    "hint": "Ultrasound is above 20 000 Hz; the other two are very low rumbles.",
+    "explain": "Pregnancy scans use ultrasound of a few million hertz. Elephant calls and volcano rumbles include infrasound, below 20 Hz."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "How many hertz is 20 kHz?",
+    "choices": [
+     "20 000 Hz",
+     "2000 Hz",
+     "200 Hz"
+    ],
+    "answer": 0,
+    "hint": "Kilo means 1000, so multiply the 20 by 1000.",
+    "explain": "20 kHz = 20 × 1000 = 20 000 Hz, the top of the human hearing range."
+   }
+  ]
+ }
+}
