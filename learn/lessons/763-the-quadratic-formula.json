@@ -1,0 +1,268 @@
+{
+ "topicId": "mt_3ugRQuzlbH",
+ "title": "The quadratic formula",
+ "audience": "learner",
+ "keyIdea": "Any quadratic equation ax² + bx + c = 0 (with a ≠ 0) can be solved with x = (−b ± √(b² − 4ac)) ÷ 2a. First rearrange so one side is 0, then read a, b and c with their signs. The discriminant b² − 4ac tells you how many real roots there are before you finish: positive gives two, zero gives one repeated root, negative gives none, because the curve misses the x-axis. When b² − 4ac is not a square number, the roots are irrational, which is when the formula beats factorising.",
+ "familyTip": "Pick a quadratic that factorises, like x² − 5x + 6 = 0, and solve it two ways: by factorising, (x − 2)(x − 3) = 0, and with the formula. Getting 2 and 3 both times is a great check. Then try x² + 2x − 4 = 0, which does not factorise, and check the formula's answers by putting them back into the equation on a calculator.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Work out b² − 4ac for each equation, then drag it to the number of real roots, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "2 real roots",
+    "1 repeated root",
+    "No real roots"
+   ],
+   "items": [
+    [
+     "x² − 5x + 6 = 0",
+     0
+    ],
+    [
+     "x² + 4x + 4 = 0",
+     1
+    ],
+    [
+     "x² + x + 3 = 0",
+     2
+    ],
+    [
+     "2x² − 3x − 5 = 0",
+     0
+    ],
+    [
+     "4x² − 12x + 9 = 0",
+     1
+    ],
+    [
+     "x² − 2x + 5 = 0",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagqform",
+  "caption": "Flagship lab: read a, b and c, drag a parabola to see b² − 4ac decide the roots, run the formula stage by stage, find roots on a graph, catch slips.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some quadratics factorise neatly. Many do not. The quadratic formula solves any of them: x = (−b ± √(b² − 4ac)) ÷ 2a.",
+   "First get the equation into the form ax² + bx + c = 0. If it says 3x² + 4 = 8x, move the 8x across: 3x² − 8x + 4 = 0. Now a = 3, b = −8 and c = 4. Each number keeps its sign.",
+   "The part under the root, b² − 4ac, is called the discriminant. If it is positive, there are two roots, and the curve crosses the x-axis twice. If it is zero, there is one repeated root, and the curve just touches. If it is negative, there are no real roots, because you cannot take the square root of a negative number.",
+   "Work in stages: −b, then b², then 4ac, then the root, then divide everything on top by 2a. Watch the signs. If b = −5, then −b = 5 and b² = 25, never −25. The ± gives you two answers, one with + and one with −."
+  ],
+  "adult": [
+   "Ages 15 to 17. In England this is GCSE Mathematics Higher content A18 (solve quadratic equations by factorising, completing the square and the quadratic formula), and A level uses the discriminant to find the number of real roots. In the US, CCSS HSA-REI.B.4b asks students to solve quadratics with the formula and to recognise when it gives complex solutions. Key terms: coefficient, discriminant, root, repeated root, irrational.",
+   "The formula comes from completing the square on ax² + bx + c = 0. Divide by a, move c/a across, add (b/2a)² to both sides and take square roots. That is why 2a divides the whole top, not just the root. The discriminant decides the roots: b² − 4ac > 0 gives two real roots, = 0 gives one repeated root at x = −b/2a, and < 0 gives no real roots.",
+   "Common mistakes: reading b and c without their signs, or before the equation is rearranged to = 0; writing b² as negative when b is negative, often from typing −5² into a calculator, which gives −25; dividing only the square root by 2a; forgetting the ±, so one root is lost; and adding 4ac instead of subtracting it. Be careful also with a = −1 when the x² term is negative.",
+   "In the lab your learner picks a, b and c for four equations in different layouts, drags y = x² − 2x + c to make the discriminant positive, zero and negative, runs the formula on x² − 5x + 6 = 0 one stage at a time, finds the irrational roots of x² + 2x − 4 = 0 on the graph and checks them against −1 ± √5, and finds the wrong line in four worked solutions."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In 4x² − x − 7 = 0, what are a, b and c?",
+   "choices": [
+    "a = 4, b = −1, c = −7",
+    "a = 4, b = 1, c = 7",
+    "a = 4, b = 0, c = −7"
+   ],
+   "answer": 0,
+   "hint": "−x means −1x. Keep every sign.",
+   "explain": "a = 4, b = −1 (from −x) and c = −7. Signs go with the numbers."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "For x² + {b}x + {c} = 0, work out the discriminant b² − 4ac.",
+   "answer": "b*b-4*c",
+   "hint": "Here a = 1. Square b, then take away 4 times c.",
+   "explain": "b² − 4ac = {b}² − 4 × 1 × {c} = {=b*b-4*c}.",
+   "params": {
+    "b": [
+     2,
+     9
+    ],
+    "c": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "x² + 2x + 7 = 0 has b² − 4ac = −24. How many real roots does it have?",
+   "choices": [
+    "None",
+    "Two",
+    "One"
+   ],
+   "answer": 0,
+   "hint": "Can you take the square root of a negative number?",
+   "explain": "The discriminant is negative, so there are no real roots. The curve stays above the x-axis."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Use the formula to solve x² − {=r+q}x + {=r*q} = 0. Give the larger root.",
+   "answer": "r",
+   "hint": "a = 1, b = −{=r+q}, c = {=r*q}. Work out b² − 4ac, take its root, then use + for the larger root.",
+   "explain": "b² − 4ac = {=(r+q)*(r+q)-4*r*q}, whose root is {=r-q}, so x = ({=r+q} + {=r-q}) ÷ 2 = {r}.",
+   "params": {
+    "r": [
+     5,
+     9
+    ],
+    "q": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which shows the formula correctly?",
+   "choices": [
+    "x = (−b ± √(b² − 4ac)) ÷ 2a",
+    "x = −b ± (√(b² − 4ac) ÷ 2a)",
+    "x = (−b ± √(b² + 4ac)) ÷ 2a"
+   ],
+   "answer": 0,
+   "hint": "2a divides the whole top, and it is b² minus 4ac.",
+   "explain": "x = (−b ± √(b² − 4ac)) ÷ 2a: the whole top is over 2a, and 4ac is subtracted."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "b = −6. What is b²?",
+    "choices": [
+     "36",
+     "−36",
+     "−12"
+    ],
+    "answer": 0,
+    "hint": "Multiply −6 by −6. Two negatives make a positive.",
+    "explain": "(−6) × (−6) = 36. A square of a real number is never negative."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "2x² = 5x + 3. Written as ax² + bx + c = 0, what are b and c?",
+    "choices": [
+     "b = −5, c = −3",
+     "b = 5, c = 3",
+     "b = −5, c = 3"
+    ],
+    "answer": 0,
+    "hint": "Move 5x and 3 to the left. Their signs change.",
+    "explain": "2x² − 5x − 3 = 0, so b = −5 and c = −3."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "x² − 6x + 9 = 0. How many real roots are there?",
+    "choices": [
+     "One repeated root",
+     "Two",
+     "None"
+    ],
+    "answer": 0,
+    "hint": "Work out b² − 4ac = 36 − 36.",
+    "explain": "b² − 4ac = 0, so there is one repeated root, x = 3. The curve touches the x-axis."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "For {a}x² + 5x + 1 = 0, work out b² − 4ac.",
+    "answer": "25-4*a",
+    "hint": "b = 5 and c = 1. Work out 25 − 4 × a × 1.",
+    "explain": "b² − 4ac = 25 − 4 × {a} × 1 = {=25-4*a}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A student writes x = −4 ± √12 ÷ 2 for x² + 4x + 1 = 0 and gets −2.27. What went wrong?",
+    "choices": [
+     "Only the root was divided by 2",
+     "b was squared wrongly",
+     "c should be −1"
+    ],
+    "answer": 0,
+    "hint": "What should 2a divide: just the root, or all of −b ± √12?",
+    "explain": "2a divides the whole top: (−4 ± √12) ÷ 2 = −0.27 or −3.73."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "For 2x² + {b}x − 3 = 0, work out b² − 4ac.",
+    "answer": "b*b+24",
+    "hint": "a = 2 and c = −3, so −4ac = −4 × 2 × (−3) = +24. Add it to b².",
+    "explain": "b² − 4ac = {b}² + 24 = {=b*b+24}.",
+    "params": {
+     "b": [
+      1,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "When does the formula give irrational roots?",
+    "choices": [
+     "When b² − 4ac is positive but not a square number",
+     "When b² − 4ac is zero",
+     "When a is negative"
+    ],
+    "answer": 0,
+    "hint": "Think about √20 compared with √16.",
+    "explain": "If b² − 4ac is positive but not a perfect square, its root is irrational, like √20 in x² + 2x − 4 = 0."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A student gets only x = 4 for x² − 2x − 8 = 0. What did they forget?",
+    "choices": [
+     "The ±, which gives x = −2 as well",
+     "To square b",
+     "To make one side 0"
+    ],
+    "answer": 0,
+    "hint": "How many answers does ± give?",
+    "explain": "(2 ± 6) ÷ 2 gives 4 and −2. Using only + loses a root."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why does 2a divide the whole of −b ± √(b² − 4ac)?",
+    "choices": [
+     "It comes from completing the square on the whole equation",
+     "It is just a convention",
+     "Because b is always even"
+    ],
+    "answer": 0,
+    "hint": "Think about where x + b/2a comes from.",
+    "explain": "Completing the square gives x + b/2a = ±√(b² − 4ac)/2a, so both parts share the 2a."
+   }
+  ]
+ }
+}
