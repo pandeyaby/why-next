@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_6XCURuNwPw",
+ "title": "Sequence intervals of time",
+ "audience": "family",
+ "keyIdea": "An interval of time is how long something lasts, from its start to its end. To compare two intervals, look at the units first: 1 hour is 60 minutes, so 2 hours (120 minutes) is longer than 45 minutes even though 45 is the bigger number. To put intervals in order, change them to the same unit and line them up from shortest to longest. On a timeline each interval is a bar from start to end, and the longer bar took longer. To find how long, hop from the start time to the end time and count the hours; after 12 o'clock the clock starts again at 1.",
+ "familyTip": "At teatime, list three things your child did today and how long each took, such as a 20-minute walk, a 1-hour swim and a 2-hour party. Ask them to put the three in order from shortest to longest, and to say how they know. Change hours to minutes together when the units are different.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Shorter or longer than 1 hour? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Shorter than 1 hour",
+    "Longer than 1 hour"
+   ],
+   "items": [
+    [
+     "45 minutes",
+     0
+    ],
+    [
+     "2 hours",
+     1
+    ],
+    [
+     "90 minutes",
+     1
+    ],
+    [
+     "half an hour",
+     0
+    ],
+    [
+     "3 hours",
+     1
+    ],
+    [
+     "20 minutes",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagivl",
+  "caption": "Flagship lab: compare hours and minutes, line up three intervals, mark a timeline, hop the hours across 12 and fit activities into gaps.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An interval is how long something lasts, from the start to the end. A film can last 2 hours. A bath can last 20 minutes.",
+   "To see which lasts longer, look at the unit. Hours are long and minutes are short. 1 hour is 60 minutes, so 2 hours is 120 minutes. That is longer than 45 minutes, even though 45 is a bigger number.",
+   "To put a few things in order, turn them all into minutes. Then line them up from the shortest to the longest.",
+   "On a timeline, each thing is a bar from its start to its end. To find how long it took, hop from the start and count the hours. From 11 o'clock to 2 o'clock you hop to 12, 1 and 2. That is 3 hops, so 3 hours."
+  ],
+  "adult": [
+   "Ages 6 to 7. This is the National Curriculum in England for Year 2 Measurement: compare and sequence intervals of time, and know the number of minutes in an hour and the number of hours in a day. It prepares for Common Core 3.MD.A.1 (solve problems about time intervals in minutes). Key words: interval, duration, start time, end time, timeline, longer, shorter, sequence, hour, minute.",
+   "Comparing intervals needs one unit. At this stage children turn whole hours into minutes (1 hour is 60 minutes, half an hour is 30 minutes) and compare the minutes. Sequencing then means ordering three or more intervals by length. A timeline turns each interval into a bar, so its length can be seen, and counting on in hours from the start time to the end time finds the length without subtraction.",
+   "Common mistakes: judging by the number and ignoring the unit, so 45 minutes seems longer than 2 hours; thinking the activity that ends last took longest; subtracting clock numbers across 12 o'clock, so 11 o'clock to 2 o'clock becomes 9 hours; giving the end time as the answer to how long; and squeezing an activity into a gap that is too short. Every step of the lab targets one of these.",
+   "In the lab your child picks the longer of three pairs given in different units and sees both turned into minute bars, orders a 90-minute match, a 2-hour film and a 1-hour ride, marks three activities on an 8 o'clock to 5 o'clock timeline, hops the hours from 11 to 2 and from 12 to 4, and drags a 2-hour ride and a 1-hour walk into the free gaps of a busy day."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A film takes 2 hours. A football match takes 90 minutes. Which takes longer?",
+   "choices": [
+    "The film",
+    "The football match",
+    "They take the same time"
+   ],
+   "answer": 0,
+   "hint": "Change 2 hours into minutes. Each hour is 60 minutes.",
+   "explain": "2 hours is 120 minutes. That is longer than 90 minutes, so the film takes longer."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "How many minutes are there in {n} hours?",
+   "answer": "60*n",
+   "hint": "Each hour is 60 minutes. Count in sixties, one for each hour.",
+   "explain": "{n} hours is {n} lots of 60 minutes, which is {=60*n} minutes.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A trip starts at {a} o'clock and ends at {=a+b} o'clock. How many hours does it last?",
+   "answer": "b",
+   "hint": "Put your finger on {a} and hop on one hour at a time until you reach {=a+b}.",
+   "explain": "From {a} o'clock to {=a+b} o'clock is {b} hops, so the trip lasts {b} hours.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Swimming goes from 11 o'clock to 1 o'clock. How long is that?",
+   "choices": [
+    "2 hours",
+    "10 hours",
+    "1 hour"
+   ],
+   "answer": 0,
+   "hint": "Hop on from 11. After 12 the clock starts again at 1.",
+   "explain": "From 11 you hop to 12, then to 1. That is 2 hops, so 2 hours, not 11 take away 1."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which list goes from shortest to longest?",
+   "choices": [
+    "20 minutes, 1 hour, 2 hours",
+    "2 hours, 20 minutes, 1 hour",
+    "1 hour, 2 hours, 20 minutes"
+   ],
+   "answer": 0,
+   "hint": "Turn each into minutes first: 1 hour is 60 minutes.",
+   "explain": "20 minutes, then 60 minutes, then 120 minutes. So 20 minutes, 1 hour, 2 hours is shortest to longest."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is longer: 1 hour or 50 minutes?",
+    "choices": [
+     "1 hour",
+     "50 minutes",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "How many minutes are in 1 hour?",
+    "explain": "1 hour is 60 minutes, which is longer than 50 minutes, even though 1 is a small number."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A game takes 1 hour. A walk takes {n} minutes. How many minutes longer is the game?",
+    "answer": "60-n",
+    "hint": "Change 1 hour to 60 minutes, then count on from {n} to 60.",
+    "explain": "The game is 60 minutes, so it is {=60-n} minutes longer than the {n}-minute walk.",
+    "params": {
+     "n": [
+      10,
+      50
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mia reads from 9 o'clock to 12 o'clock. Sam plays from 4 o'clock to 5 o'clock. Sam finished later. Who spent longer?",
+    "choices": [
+     "Mia",
+     "Sam",
+     "Both the same"
+    ],
+    "answer": 0,
+    "hint": "Do not look at who finished last. Count the hours from start to end for each.",
+    "explain": "Mia hops 10, 11, 12: 3 hours. Sam hops to 5: 1 hour. Ending later does not mean taking longer."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A free gap goes from 3 o'clock to 4 o'clock. Which fits in it?",
+    "choices": [
+     "A 30-minute bath",
+     "A 2-hour film",
+     "A 3-hour trip"
+    ],
+    "answer": 0,
+    "hint": "How long is the gap? Is the activity shorter than that?",
+    "explain": "The gap is 1 hour, or 60 minutes. Only the 30-minute bath is short enough to fit."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A trip goes from 10 o'clock in the morning to {n} o'clock in the afternoon. How many hours is it?",
+    "answer": "n+2",
+    "hint": "Hop from 10 to 11 to 12, then on from 1 to {n}.",
+    "explain": "10 to 12 is 2 hours, and 12 to {n} is {n} more, so the trip is {=n+2} hours.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "How many minutes are in half an hour?",
+    "choices": [
+     "30",
+     "50",
+     "60"
+    ],
+    "answer": 0,
+    "hint": "A whole hour is 60 minutes. Half of it is one of two equal parts.",
+    "explain": "Half of 60 minutes is 30 minutes, so half an hour is 30 minutes."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which of these usually takes the longest?",
+    "choices": [
+     "A school day",
+     "A film",
+     "A bath"
+    ],
+    "answer": 0,
+    "hint": "Think about how many hours each one lasts.",
+    "explain": "A school day lasts about 6 hours, a film about 2 hours and a bath about 20 minutes."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "On a timeline, what shows how long something took?",
+    "choices": [
+     "The length of its bar",
+     "Where the bar ends",
+     "The colour of the bar"
+    ],
+    "answer": 0,
+    "hint": "A bar starts at the start time and stops at the end time.",
+    "explain": "The longer the bar, the longer it took. Where it ends only tells you when it finished."
+   }
+  ]
+ }
+}
