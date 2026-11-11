@@ -1,5 +1,7 @@
 """Generate the Why Next? viewer (new topics plus their upstream v1 ancestors,
-and a small seed list of young v1 topics that are not already in that ancestor set).
+and a seed set of young v1 topics that are not already in that ancestor set:
+every v1 English and Personal & Social Development topic for ages 4–11, plus
+a few already-built Maths and Science seeds).
 
 out/viewer.html + out/wn/*.js: fast split build for the web (map first, detail chunks on demand).
 out/viewer-offline.html: the same app in one file that works with no network.
@@ -20,16 +22,28 @@ for e in D:
     pre.setdefault(e["topicId"], []).append(e)
 # Upstream v1 topics kept even when they are not ancestors of a Why Next? topic.
 # These are young (ages 2–11) curriculum topics the lesson builder is approved to
-# write flagship lessons for (Abhinav, 10 Nov 2026). Names are the exact v1 /
-# curriculum terms. Their prerequisite ancestors are pulled in by the walk below.
-SEED_V1 = [
-    "mt_70Ys4i1AB1",  # Compound Words (English, 5–8)
+# write flagship lessons for. Names are the exact v1 / curriculum terms. Their
+# prerequisite ancestors are pulled in by the walk below.
+# 10 Nov 2026: six explicit seeds. The two English / Personal & Social topics
+# from that set are also included by the 11 Nov rule below; the four Maths and
+# Science topics stay listed here because they are already-built lessons.
+# 11 Nov 2026: every v1 English and Personal & Social Development topic with
+# ages 4–11 (ageRangeStart >= 4, ageRangeEnd <= 11) from data/topics.json.
+SEED_V1_MATHS_SCIENCE = [
     "mt_XjwUlmxdCT",  # Combining Simple Shapes (Mathematics, 5–6)
-    "mt_X7Tu94-a2m",  # Friendships change over time (Personal & Social Development, 7–9)
     "mt_SdIWVjzopp",  # Bones & Muscles (Science, 5–7)
     "mt_0u4KLbvBa1",  # Odd and even numbers (Mathematics, 6–7)
     "mt_brgde1Vx0P",  # Classification Keys (Science, 8–9)
 ]
+_v1_ids = {t["id"] for t in json.load(open("data/topics.json"))["topics"]}
+SEED_V1_ENGLISH_PS = [
+    t["id"] for t in T
+    if t["id"] in _v1_ids
+    and t["subject"] in ("English", "Personal & Social Development")
+    and t["ageRangeStart"] >= 4 and t["ageRangeEnd"] <= 11
+]
+SEED_V1_ENGLISH_PS.sort(key=lambda i: (by[i]["subject"], by[i]["ageRangeStart"], by[i]["name"], i))
+SEED_V1 = list(dict.fromkeys(SEED_V1_MATHS_SCIENCE + SEED_V1_ENGLISH_PS))
 missing_seed = [i for i in SEED_V1 if i not in by]
 assert not missing_seed, f"SEED_V1 ids not in merged topics: {missing_seed}"
 # include all ancestors of new topics and of the seeded v1 topics (chains back to primary)

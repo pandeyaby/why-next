@@ -4533,6 +4533,102 @@
  "failed": [],
  "next": [
   {
+   "topic": "mt_-mw3JeIjhU",
+   "name": "Punctuating Direct Speech",
+   "subject": "English",
+   "ages": "7-10",
+   "downstream": 3,
+   "reels": false
+  },
+  {
+   "topic": "mt_7D-vlii8F-",
+   "name": "The Present Perfect Tense",
+   "subject": "English",
+   "ages": "7-11",
+   "downstream": 3,
+   "reels": false
+  },
+  {
+   "topic": "mt_0Vza3H42G0",
+   "name": "Judging binomial assumptions in context",
+   "subject": "Mathematics",
+   "ages": "16-18",
+   "downstream": 0,
+   "reels": true
+  },
+  {
+   "topic": "mt_lp3qyEujIv",
+   "name": "Inference vs Explicit Meaning",
+   "subject": "English",
+   "ages": "7-9",
+   "downstream": 2,
+   "reels": false
+  },
+  {
+   "topic": "mt_j351evNNnB",
+   "name": "Adjectives vs adverbs",
+   "subject": "English",
+   "ages": "7-8",
+   "downstream": 2,
+   "reels": false
+  },
+  {
+   "topic": "mt_7ooqjw-QwG",
+   "name": "Hyperbolic identities",
+   "subject": "Mathematics",
+   "ages": "17-18",
+   "downstream": 21,
+   "reels": true
+  },
+  {
+   "topic": "mt_nFBLNoChD0",
+   "name": "Irregular Plural Nouns",
+   "subject": "English",
+   "ages": "7-9",
+   "downstream": 1,
+   "reels": false
+  },
+  {
+   "topic": "mt_37QCuGOxFe",
+   "name": "Homophones",
+   "subject": "English",
+   "ages": "7-9",
+   "downstream": 1,
+   "reels": false
+  },
+  {
+   "topic": "mt_KjrUFpwlgx",
+   "name": "The Doppler effect",
+   "subject": "Science",
+   "ages": "16-18",
+   "downstream": 1,
+   "reels": true
+  },
+  {
+   "topic": "mt_6W5zzDIGZH",
+   "name": "Using a Dictionary to Check Spellings",
+   "subject": "English",
+   "ages": "7-11",
+   "downstream": 1,
+   "reels": false
+  },
+  {
+   "topic": "mt_KIG5FQI5fC",
+   "name": "Irregular past tense verbs",
+   "subject": "English",
+   "ages": "7-8",
+   "downstream": 0,
+   "reels": false
+  },
+  {
+   "topic": "mt_JgoXdMnb97",
+   "name": "Binomial expansion for any rational power",
+   "subject": "Mathematics",
+   "ages": "17-18",
+   "downstream": 0,
+   "reels": true
+  },
+  {
    "topic": "mt_YkBr38oBBk",
    "name": "Balanced equations for burning alkanes",
    "subject": "Science",
@@ -4546,14 +4642,6 @@
    "subject": "Mathematics",
    "ages": "13-15",
    "downstream": 43,
-   "reels": true
-  },
-  {
-   "topic": "mt_0Vza3H42G0",
-   "name": "Judging binomial assumptions in context",
-   "subject": "Mathematics",
-   "ages": "16-18",
-   "downstream": 0,
    "reels": true
   },
   {
@@ -4573,14 +4661,6 @@
    "reels": true
   },
   {
-   "topic": "mt_7ooqjw-QwG",
-   "name": "Hyperbolic identities",
-   "subject": "Mathematics",
-   "ages": "17-18",
-   "downstream": 21,
-   "reels": true
-  },
-  {
    "topic": "mt_yaA6FGCJ6V",
    "name": "State symbols",
    "subject": "Science",
@@ -4594,14 +4674,6 @@
    "subject": "Mathematics",
    "ages": "13-15",
    "downstream": 12,
-   "reels": true
-  },
-  {
-   "topic": "mt_KjrUFpwlgx",
-   "name": "The Doppler effect",
-   "subject": "Science",
-   "ages": "16-18",
-   "downstream": 1,
    "reels": true
   },
   {
@@ -5419,12 +5491,6 @@
    "date": "2026-11-05"
   },
   {
-   "topic": "mt_roAgL1rQRF",
-   "name": "Trigraphs",
-   "reason": "Not in viewer keep set (out/topics.ext.json + ancestors); hand-written lesson would fail make_viewer assert. Prefer in-keep ages 4–6 Subtraction as taking away.",
-   "date": "2026-11-05"
-  },
-  {
    "topic": "mt_hniI4E-OCE",
    "name": "Odd or Even",
    "reason": "Not in the viewer keep set (not in topics.ext.json and not an ancestor of a new topic), so make_viewer refuses any lesson for it. Revisit if foundation edges later pull it into keep.",
@@ -5557,6 +5623,6 @@
    "date": "2026-11-11"
   }
  ],
- "_note_age_mix": "2026-11-11 (6 AM run): the ranker still finds no unbuilt ages 2-11 topic in the viewer graph, so this run built three 11+ topics (per Abhinav's Nov 10 approval): Linear versus exponential growth (Maths 15-17, flaglinexp), Designing a hand warmer or cold pack (Science 13-15, flaghpack), and the run's one 16-18 slot, The molecular ion peak (Science 16-18, flagmion, built round reading M+ past base-peak and M+1 decoys, not the spectrometer itself, which flagtof covers). Next: Balanced equations for burning alkanes (Science 14-16), Random sampling methods (Maths 13-15), Judging binomial assumptions in context (16-18 slot). Modelling exponential growth (Maths 15-17) is newly unlocked; check overlap with flaggrow, flagrexp and flaglinexp before building it. More young topics (English and P&S ages 4-11 in data/topics.json) are outside the viewer graph and need Abhinav's yes to add. Hybrid finder 87.1% vs 85% floor.",
+ "_note_age_mix": "2026-11-11 (morning): Abhinav approved adding the young (ages 4–11) v1 English and Personal & Social Development topics that were in data/topics.json but missing from the viewer graph (ext/make_viewer.py SEED_V1), so the lesson builder's ranker can pick ages 2–11 work. 113 topics were added to the keep-set (110 English, 3 Personal & Social; no new ancestors). Examples: English — Spaces Between Words (4–6), Capitals for Names, Days and I (5–7), Trigraphs (5–6), Punctuating Direct Speech (7–10); Personal & Social — Asking for Help (5–7), Patience and Delayed Gratification (5–7), Peer Pressure and Resisting It (9–11). Trigraphs was un-skipped (it had been skipped only because it was not in the keep-set). The ranker now fills ages 2–11 slots from the newly visible English 7–11 cell first. Next: Punctuating Direct Speech (English 7–10), The Present Perfect Tense (English 7–11), then the run's one 16–18 slot, Judging binomial assumptions in context (Mathematics 16–18). Previously queued 11+ topics remain further down the list. Do not build lessons in this change; the next scheduled builder run will.",
  "_note_queue_policy": "2026-11-11: Classification Keys (mt_brgde1Vx0P) already used its approved one-more-retry and is in done (learn/lessons/740-classification-keys.json, flagkey, 2026-11-10). Do not re-queue it. scripts/lesson_pipeline.py now marks a topic skipped permanently if it fails a second time (attempts >= 2). The under-11 ranker decision is dropped: it is resolved by hand-queuing young topics onto visual-draft, not by a ranker code change."
 }
