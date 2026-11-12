@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against CCSS F-LE.2 ('Construct linear and exponential functions … given a graph, a description of a relationship, or two input-output pairs') and F-BF.1a, and the DfE GCSE Mathematics subject content (compound interest, growth and decay). Every number in the lab, lesson and items was recomputed in Python: 500·1.04⁸ = 684.28 and 500·1.04⁹ = 711.66 (first passes £700 at t = 9); 800·3⁴ = 64,800 and 800·3⁵ = 194,400; 40·1.25¹¹ = 465.7 and 40·1.25¹² = 582.1; 40·1.25³ = 78.1; 40·1.25¹⁰⁰ ≈ 1.96 × 10¹¹; 40·1.25⁴⁰ ≈ 3.0 × 10⁵ (a first draft said 5 × 10⁵ and was corrected); 800·3³⁰ ≈ 1.65 × 10¹⁷; 12000·1.03¹² = 17,109; 100·2⁷² ≈ 4.7 × 10²³; 500·1.04¹⁰ = 740.12; 100·1.1⁶ = 177.2; the two-point pairs (2, 450)/(5, 1518.75), (1, 1100)/(3, 1331), (2, 72)/(4, 162) give b = 1.5, 1.1, 1.5 and a = 200, 1000, 32. The world population comparison uses about 8 × 10⁹ people."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "The documented errors in exponential modelling are each targeted: using the multi-step ratio as the one-step factor (step 1 prediction 'b = 4', the near-ratio feedback in the fit step, 'noroot' tags in step 5, mastery m1 and m8); dividing the rise by the number of steps instead of taking a root (the 1.125, 1.105 and 1.625 options, tag 'divide', challenge 'split'); writing the rate as the factor (0.04, 4, 1.4 chips; challenge 'rate'); substituting the calendar year for t (step 2 prediction, chip 'the year, e.g. 2030', challenge 'year'); leaving a as a value not at t = 0 (tags 'late', 'onestep', 'twice', 'fwd'); simple-interest thinking (step 3 prediction '10 years: 40% ÷ 4%', challenge 'add'); and trusting long-range predictions (step 4 and challenge 'trust'/'never')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagexpmod is about building and using a model, not about reading one: a b-slider that bends a curve through two data points with live model-versus-data readout, a three-slot a/b/t builder driven by word problems, a draggable time marker against a dashed target line to find the first whole step, a reasonable-or-broken sort of real predictions, and a ratio→root→divide-back solver from two points neither at t = 0. flaggrow (start value and factor), flagexpg (graph features), flaglinexp (linear vs exponential) and flagrexp (rewriting rates) have none of these; lab_distinct passed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers each rule from the lab before the step summary names it: setting b = 4 in the bacteria set returns '4.00 is the change over 2 hours. b is for ONE hour: b^2 = 4.00'; dropping the marker at t = 10 for £700 returns 't = 10 gives 740, but it passed 700 earlier. Find the FIRST time'; picking 450 as a returns '450 is the value at t = 2, not 0. Divide by b^2'. The live readout under the graph ('t = 2: model 338, data 800') lets the learner close in on b themselves."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions each hold the tempting wrong answer the lab then disproves: 'b = 4 because 800 ÷ 200 = 4' (the curve overshoots the second dot), 't = 2030' (the builder rejects it and explains 2030 years of growth), 'after 10 years: 40% ÷ 4%' (the marker shows £712 at t = 9) and 'yes, the model says so' for two years of 25% weekly growth (the sort puts 2 × 10¹¹ cases under Model breaks down). The completion line names the learner's own pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five challenge questions, every wrong option tagged with its own message: 'rate' (0.05 is the rate; multiply by 1.05), 'add' (compound growth multiplies; adding gives a line), 'whole' (that is the change over all steps; take the root), 'split' (1.5 × 1.5 = 2.25, not 3), 'year' (t = 2026 − 2020 = 6), 'late' (300 is at t = 1; a = 300 ÷ 1.5), 'fwd' (you multiplied by b; divide to go back), 'trust' and 'never' (check real limits; models work for a while)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Measured with learn/readability.py: learner kid FK grade 0.5 (limit 6.5; digits and symbols are stripped by the scorer) and adult 6.0 (limit 9.5). Kid paragraphs define a, b and t in one sentence each, then walk one worked example per idea (story → model, two points → model, prediction → sense check) in short sentences."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every kid sentence states a definition, a rule or a worked number; the adult text gives the US and England requirements, the three-part method, seven named mistakes and what the lab does. The content gate found no filler phrases and the explanation is under 12% the same as every other lesson, including 135, 136, 227 and 752 on related exponential topics."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for all six steps. The first dark screenshot showed the step 4 prediction card text in the light theme colour on a white card (unreadable); it now uses dark ink. Step 5 first drew a flat y = a line before b was chosen, which looked like a wrong model; the curve is now hidden until b is found. The graph keeps axis labels inside 360 px, the b slider knob is 30 px with ±0.01/±0.1 buttons below, the time marker has a 22 px handle, and the dark-theme curve and marker use lighter indigo and green. The browser walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: −0.1, −0.01, +0.01, +0.1 and 'Check b' (aria-labels give the current b), a/b/t chips with the slot in each label, 't − 1', 't + 1' and 'This t' (labels give the current t), 'Reasonable'/'Model breaks down' with the prediction named, and b/a options. Tapping the track or graph also moves the slider or marker. The canvas aria-label is rewritten after every action with the model-versus-data feedback, challenge feedback is a role=status live region, and axe (WCAG 2.1 AA) found no violations in either theme on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics: F-LE.2, F-BF.1a",
+  "Department for Education (2013) GCSE subject content: Mathematics (growth and decay problems, including compound interest)",
+  "United Nations, World Population Prospects 2024 (world population about 8.2 billion), for the reasonableness checks"
+ ]
+}
