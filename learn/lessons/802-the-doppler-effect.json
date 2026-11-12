@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_KjrUFpwlgx",
+ "title": "The Doppler effect",
+ "audience": "learner",
+ "keyIdea": "When a source of waves moves, each wavefront spreads out from where the source was when it was made. The waves bunch up ahead of the source and spread out behind it, while their speed through the medium stays the same. Because v = fλ, a listener ahead hears a higher frequency and a listener behind hears a lower one: f' = f·v/(v − vs) for an approaching source and f·v/(v + vs) for a receding one. Light shows the same effect: a galaxy moving away has its spectral lines shifted to longer wavelengths (red-shift), with Δλ/λ ≈ v/c when v is much less than c.",
+ "familyTip": "Next time an ambulance, a motorbike or a train horn passes, stop and listen for the moment the pitch drops. Ask who hears it higher: the driver or the person on the pavement it is heading towards? (The driver hears the true pitch.)",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Higher or lower than the true frequency? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "higher f / blue-shift",
+    "lower f / red-shift"
+   ],
+   "items": [
+    [
+     "siren coming towards you",
+     0
+    ],
+    [
+     "siren moving away from you",
+     1
+    ],
+    [
+     "galaxy receding from Earth",
+     1
+    ],
+    [
+     "star moving towards Earth",
+     0
+    ],
+    [
+     "train horn after it has passed",
+     1
+    ],
+    [
+     "listener ahead of a moving source",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdopp",
+  "caption": "Flagship lab: set a source's speed to halve the wavelength ahead, pick heard frequencies, follow a passing siren, match a galaxy spectrum and read wavefronts.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "When a source of waves moves, each new wavefront starts from a new place. Ahead of the source the wavefronts are squashed together, so the wavelength is shorter. Behind it they are spread out, so the wavelength is longer. The waves still travel through the air at the same speed.",
+   "Because v = fλ and v stays the same, a shorter wavelength means a higher frequency. A listener ahead hears a higher pitch and a listener behind hears a lower one. For a source moving at speed vs, the heard frequency is f' = f·v/(v − vs) when it comes towards you and f' = f·v/(v + vs) when it moves away.",
+   "A passing siren sounds high, then low. Only the part of its velocity along your line of sight counts, so the pitch falls smoothly as it passes. You hear the true pitch at the moment it is level with you.",
+   "Light does the same. Light from a galaxy moving away is stretched to longer wavelengths, so its spectral lines move towards the red end of the spectrum. This is red-shift. When v is much smaller than c, Δλ/λ ≈ v/c, so the size of the shift gives the speed. Galaxies moving towards us, such as Andromeda, show a blue-shift."
+  ],
+  "adult": [
+   "Ages 16 to 18. OCR A-level Physics A (H556) and the AQA A-level astrophysics option (7408) use Δλ/λ ≈ Δf/f ≈ v/c for light. Red-shift z = v/c when v is much less than c. GCSE physics treats red-shift as evidence that the universe is expanding. The sound formula for a moving source, f' = f·v/(v ∓ vs), is in IB Physics. It follows straight from v = fλ.",
+   "The idea to hold on to: the medium sets the wave speed, and the moving source only changes the spacing. In one period T the source moves vs·T, so the wavelength ahead is (v − vs)T. The heard frequency is v divided by that. For a listener off to the side, only the part of the velocity along the line of sight counts. That is why a passing siren drops smoothly, not in one jump.",
+   "Common mistakes: thinking the sound travels faster ahead of the source (v + vs); mixing up the signs, when an approaching source always divides by v − vs; mixing up pitch with loudness, so a siren seems to rise in pitch as it gets closer; reading red-shift as 'the galaxy looks red' or as motion towards us; and using the formula when vs reaches v, where a shock wave forms instead.",
+   "In the lab you set a source's speed so the wavelength ahead halves. You pick the heard frequency for three listeners, with two tempting wrong answers each time. Then you drag an ambulance past a listener to find where the true pitch is heard, match three galaxy spectra to find their speeds and read four wavefront diagrams."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A source of sound moves to the right. Where is the wavelength shortest?",
+   "choices": [
+    "ahead of it, on the right",
+    "behind it, on the left",
+    "the same everywhere"
+   ],
+   "answer": 0,
+   "hint": "Each wavefront starts from where the source was when it was made.",
+   "explain": "The source chases its own waves to the right, so they bunch up there. Behind, they spread out."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A source emitting {f} Hz moves towards you at 68 m/s. Sound travels at 340 m/s. What frequency do you hear, in Hz?",
+   "answer": "f*340/(340-68)",
+   "hint": "An approaching source divides by v − vs.",
+   "explain": "f' = {f} × 340 ÷ (340 − 68) = {f} × 1.25 = {=f*340/(340-68)} Hz.",
+   "params": {
+    "f": [
+     400,
+     800
+    ]
+   },
+   "where": "f%4==0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Why does an approaching siren sound higher than its true pitch?",
+   "choices": [
+    "Its wavefronts arrive closer together, so more arrive each second.",
+    "The sound travels faster towards you.",
+    "It gets louder as it comes closer."
+   ],
+   "answer": 0,
+   "hint": "Which stays fixed, the wave speed or the wavelength?",
+   "explain": "The wave speed stays the same, so a shorter wavelength means a higher frequency. Loudness is a different property."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A source emitting {f} Hz moves away from you at 85 m/s. Sound travels at 340 m/s. What frequency do you hear, in Hz?",
+   "answer": "f*340/(340+85)",
+   "hint": "A receding source divides by v + vs.",
+   "explain": "f' = {f} × 340 ÷ (340 + 85) = {f} × 0.8 = {=f*340/(340+85)} Hz.",
+   "params": {
+    "f": [
+     300,
+     700
+    ]
+   },
+   "where": "f%5==0"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A distant galaxy's spectral lines appear at longer wavelengths than the same lines in the lab. What does this show?",
+   "choices": [
+    "The galaxy is moving away from us.",
+    "The galaxy is moving towards us.",
+    "The galaxy is hotter than the Sun."
+   ],
+   "answer": 0,
+   "hint": "Longer wavelength is a shift towards the red end.",
+   "explain": "A shift to longer wavelengths is red-shift, which means the galaxy is receding."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "For sound from a moving source, what is the same ahead of and behind the source?",
+    "choices": [
+     "the wave speed",
+     "the wavelength",
+     "the frequency heard"
+    ],
+    "answer": 0,
+    "hint": "The medium sets one of these.",
+    "explain": "The wave speed is set by the air, so it is the same both ways. The wavelength and the heard frequency change."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A spectral line emitted at 500 nm is observed at {o} nm. Using v ≈ c·Δλ/λ with c = 300 000 km/s, how fast is the galaxy receding, in km/s?",
+    "answer": "(o-500)*600",
+    "hint": "Find Δλ first, then multiply by c/λ.",
+    "explain": "Δλ = {=o-500} nm, so v ≈ 300000 × {=o-500} ÷ 500 = {=(o-500)*600} km/s.",
+    "params": {
+     "o": [
+      501,
+      520
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You stand beside a road as an ambulance passes. When do you hear its true frequency?",
+    "choices": [
+     "when it is level with you",
+     "when it is 50 m away and approaching",
+     "never"
+    ],
+    "answer": 0,
+    "hint": "Which part of its velocity counts for the Doppler effect?",
+    "explain": "Level with you, its velocity is across your line of sight, so none of it is towards or away from you and f is unchanged."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "In a ripple tank, waves travel at 30 cm/s. A dipper makes {f} waves per second while moving forward at {s} cm/s. How far apart are the wavefronts ahead of it, in cm?",
+    "answer": "(30-s)/f",
+    "hint": "In one period, the wave moves 30 ÷ f cm and the dipper moves s ÷ f cm.",
+    "explain": "The gap ahead is ({=30-s}) ÷ {f} = {=(30-s)/f} cm, because the dipper catches up {s} ÷ {f} cm each period.",
+    "params": {
+     "f": [
+      1,
+      5
+     ],
+     "s": [
+      2,
+      10
+     ]
+    },
+    "where": "f!=3"
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A source approaches you at 34 m/s, emitting 900 Hz. Sound travels at 340 m/s. What do you hear?",
+    "choices": [
+     "1000 Hz",
+     "about 818 Hz",
+     "990 Hz"
+    ],
+    "answer": 0,
+    "hint": "It is coming towards you, so use f' = f·v/(v − vs) with v − vs = 306.",
+    "explain": "900 × 340 ÷ 306 = 1000 Hz. About 818 Hz is the receding value, and 990 Hz wrongly treats the sound as moving at v + vs."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Lines in the spectrum of the Andromeda galaxy are slightly blue-shifted. What does this mean?",
+    "choices": [
+     "Andromeda is moving towards us.",
+     "Andromeda is moving away from us.",
+     "Andromeda is cooling down."
+    ],
+    "answer": 0,
+    "hint": "Blue-shift is a shift to shorter wavelengths.",
+    "explain": "Shorter wavelengths mean the source is approaching. Andromeda is moving towards the Milky Way at about 300 km/s."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In a wavefront diagram the rings are bunched on the left and spread out on the right. Which way is the source moving?",
+    "choices": [
+     "to the left",
+     "to the right",
+     "it is not moving"
+    ],
+    "answer": 0,
+    "hint": "Waves bunch on the side the source moves towards.",
+    "explain": "The source moves left, chasing its waves on that side. A still source makes rings with one centre."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A train sounds its horn while moving away from you at 20 m/s. Compared with the horn's true pitch, what do you hear?",
+    "choices": [
+     "a lower pitch",
+     "a higher pitch",
+     "the same pitch"
+    ],
+    "answer": 0,
+    "hint": "Moving away stretches the waves.",
+    "explain": "The wavelength reaching you is stretched, so the frequency is lower: f·340/(340 + 20)."
+   }
+  ]
+ }
+}
