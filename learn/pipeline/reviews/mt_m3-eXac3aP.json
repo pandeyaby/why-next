@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against English Appendix 2 of the national curriculum in England (Year 5 punctuation: 'brackets, dashes or commas to indicate parenthesis'; terminology: parenthesis, bracket, dash) and the topic's own evidence that dashes give an aside the most prominence and brackets the least. All three pairs are presented as correct punctuation, with the choice framed as emphasis, so no option is called wrong grammar. Full-stop placement follows standard UK usage: when the bracketed words are part of the sentence the full stop goes after the closing bracket, and an aside at the very end with a dash or comma loses its second mark to the full stop (mk() writes 'We ate lunch – the one by the river.'). The adult text distinguishes the spaced en dash and unspaced em dash from a hyphen. The Eiffel Tower height in p1 (330 m) matches the current official figure."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented Year 5–6 slips: the missing second mark (close-the-pair step, FIX 'one' items, m5, challenge q1 and q3), mixing a bracket with a dash (FIX 'mix' items, m7, challenge q4), bracketing words the sentence needs (pair step and lift step, both of which show the learner what is left after the lift test), the full stop inside the closing bracket (FIX 'stop' item, m2, challenge q4) and thinking brackets are the only way to mark parenthesis (challenge q5, m6)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagparen is built on the lift test: tapping a chunk removes it and prints what is left, two taps place a ( before the first and a ) after the last extra word, a dashed slot either side of a highlighted aside takes a dragged pair of brackets, dashes or commas, and closing a half-finished pair shows the remainder when the pair is too short or swallows main-sentence words. Existing punctuation labs (flagcomma lists, flagdspeech speech marks, flagfront fronted adverbials, flagmarks terminology) have no lift test or emphasis choice; lab_distinct passed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the rule from the remainder text before the step text confirms it: lifting out 'stands in the town square' returns 'you get “The oldest building built in 1642.” That is not a complete sentence'; bracketing too much returns 'You bracketed “building built in 1642 stands in the town square”, leaving “The oldest.”'; closing the comma too early returns 'Lift out the pair and you get “My brother older than me lives in London.”'. The emphasis step makes the same aside louder or quieter depending on the pair chosen."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with a tempting wrong option: 'lives in London' as the liftable part (disproved when lifting it leaves 'My brother who is older than me'-style fragments in the lift step), 'one, at the start' for brackets (the pair step needs a second tap and the challenge rejects a single bracket), and 'brackets ( )' as the loudest pair (the emphasis step rejects brackets for every 'really stand out' sentence with a message that brackets keep it quiet). The completion line names the learner's own pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five challenge questions, each wrong option carrying its own message: a single bracket ('they come in pairs'), brackets round the wrong words (the lift test leaves 'Sam my is here'), brackets chosen for emphasis ('correct but quiet'), full stops as parenthesis marks, the comma that is already there versus the closing one, swallowing 'sleeps' from the main sentence, the full stop inside the bracket, a mixed dash and bracket, and parenthesis mistaken for the key words or for brackets only."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 4.0 (family limit 5.0) and adult 9.1 (limit 10.0). Kid sentences are short and each paragraph carries one example sentence; the canvas prompts are one line ('Tap the first word of the extra information: ( goes before it.'). Grammatical terms beyond parenthesis, bracket and dash (relative clause, renaming noun phrase) stay in the adult text."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every kid paragraph teaches one rule with a worked sentence (lift test, pairs, loudness, end-of-sentence full stop); the adult text gives the curriculum source, the unifying lift test, named mistakes with examples and what the lab does. The content gate found no filler phrases and the explanation is under 12% the same as every other lesson."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for every step and for wrong-answer states (lift step with the red remainder line, bracket step after a wrong span, emphasis step after choosing brackets, close step after swallowing 'lives', proofreading after a missing bracket). Word chips wrap onto new rows at 33 px tall, sentences in the lift and proofreading cards wrap inside the card, and the three mark tiles fit one row. The browser walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button under the canvas: 'Lift out: built in 1642', one button per word with labels 'Bracket opens before built' / 'Bracket closes after 1642', 'Use dashes', 'Closing comma after me', and one button per proofreading sentence. The canvas aria-label is rewritten after each action with the feedback, challenge feedback is a role=status live region, and axe (WCAG 2.1 AA) found no violations in either theme on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) The national curriculum in England: English Appendix 2, Vocabulary, grammar and punctuation, Year 5 (brackets, dashes or commas to indicate parenthesis; terminology: relative clause, parenthesis, bracket, dash)",
+  "Standards and Testing Agency, English grammar, punctuation and spelling test framework (KS2), content domain G5.9 parenthesis, used for the full-stop and pairing conventions",
+  "Topic evidence mt_m3-eXac3aP (dashes give the aside most prominence and brackets the least)"
+ ]
+}
