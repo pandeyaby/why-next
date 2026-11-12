@@ -1,0 +1,82 @@
+{
+ "topicId": "mt_7x4MgNuBd8",
+ "title": "Two-way tables and relative frequencies",
+ "audience": "learner",
+ "keyIdea": "A two-way table counts people by two categories at once, such as year group and favourite activity. Each person sits in exactly one cell; row totals add across, column totals add down, and both sets add to the grand total. A relative frequency is a count divided by a total. Divide by the grand total for a joint relative frequency (Year 9 and music, out of everyone). Divide by a row or column total for a conditional one (music, out of the Year 9s). Two variables are associated when the conditional relative frequencies differ between rows; compare percentages, not counts, because groups differ in size.",
+ "familyTip": "Ask everyone at a family gathering two questions, like adult or child and tea or juice, and build the table together on paper. Then ask: what fraction of the children chose juice? And what fraction of everyone are children who chose juice? Talk about why the answers differ.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What do you divide by? Drag each question, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["grand total", "a row total", "a column total"],
+   "items": [["Fraction of all students who are Year 9 and like music", 0], ["Fraction of Year 9s who like music", 1], ["Fraction of music fans who are Year 9", 2], ["Fraction of everyone who is Year 7 and likes sport", 0], ["Fraction of Year 7s who like sport", 1], ["Fraction of sport fans who are Year 7", 2]]
+  }
+ },
+ "lab": {
+  "type": "flagtwoway",
+  "caption": "Flagship lab: sort survey cards into a two-way table, fill gaps from totals, tap the right denominator, drag rows to remove an association, judge links.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "A two-way table sorts people by two things at once. The rows might be year groups and the columns what they chose. Every person goes in exactly one cell.",
+   "Row totals add across. Column totals add down. Both lead to the same grand total, so you can use totals to find a missing cell by subtracting.",
+   "A relative frequency is a count divided by a total. Out of everyone, divide by the grand total. Out of one group, such as the Year 9s, divide by that group's total.",
+   "To spot a link, compare percentages in each row. If 40% of Year 7s and 40% of Year 9s choose music, there is no link, even if more Year 9s were asked."
+  ],
+  "adult": [
+   "Ages 13 to 15. Common Core 8.SP.4 asks students to build and read two-way tables of two categorical variables and to use row or column relative frequencies to describe a possible association. S-ID.5 names joint, marginal and conditional relative frequencies. GCSE Mathematics (AQA 8300, P and S strands) uses two-way tables for frequencies and probabilities.",
+   "A joint relative frequency divides a cell by the grand total. A marginal one divides a row or column total by the grand total. A conditional one divides a cell by its row or column total, and the wording tells you which: 'of the Year 9s' means the Year 9 row. Row and column percentages answer different questions, so 30/50 (Year 9s who like music) is not the same as 30/42 (music fans who are Year 9).",
+   "Common mistakes: dividing by the grand total when the question names a group, using the row total when the column is meant, adding a cell to a total instead of subtracting, judging association from raw counts when group sizes differ, and reading an association as a cause. Equal conditional relative frequencies in every row mean no association in that sample.",
+   "In the lab students sort eight survey cards into a 2 by 2 table, find four missing values from totals in an 80-student table, tap the total to divide by for four questions, drag the Year 9 music count until both rows show 40% (20 of 50), and judge three tables by row percentages."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Year 7 row: sport 18, music ?, total 30. What is the missing cell?", "choices": ["12", "48", "18"], "answer": 0,
+   "hint": "The two cells in a row add up to the row total.",
+   "explain": "18 + ? = 30, so ? = 30 − 18 = 12. Adding 18 to 30 counts the sport fans twice."},
+  {"type": "numeric", "id": "p2", "prompt": "A row total is {t}. One cell in that row is {a}. What is the other cell?", "answer": "t-a",
+   "hint": "The two cells add to the row total, so subtract the cell you know.",
+   "explain": "{t} − {a} = {=t-a}. The row total already includes {a}.", "params": {"t": [30, 60], "a": [5, 25]}},
+  {"type": "mc", "id": "p3", "prompt": "80 students: 30 are Year 9s who like music, and there are 50 Year 9s. What fraction of Year 9s like music?", "choices": ["30/50", "30/80", "50/80"], "answer": 0,
+   "hint": "'Of Year 9s' tells you which total goes on the bottom.",
+   "explain": "Out of the 50 Year 9s, 30 like music: 30/50 = 0.6. 30/80 is the joint relative frequency, and 50/80 is the share who are in Year 9."},
+  {"type": "numeric", "id": "p4", "prompt": "Of 50 Year 8s, {a} cycle to school. What percentage of the Year 8s cycle?", "answer": "a*2",
+   "hint": "Divide by the Year 8 total, then multiply by 100.",
+   "explain": "{a} ÷ 50 × 100 = {=a*2}%. This is a conditional relative frequency: out of the Year 8s only.", "params": {"a": [5, 45]}},
+  {"type": "mc", "id": "p5", "prompt": "Of 20 left-handers, 6 wear glasses. Of 80 right-handers, 24 wear glasses. Is wearing glasses associated with handedness here?", "choices": ["No, both are 30%", "Yes, 24 is more than 6", "Yes, there are more right-handers"], "answer": 0,
+   "hint": "Turn each row into a percentage before you compare.",
+   "explain": "6/20 = 30% and 24/80 = 30%. The counts differ only because the groups differ in size, so there is no association."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "In a survey of 80, 18 are Year 7s who prefer sport. What is the joint relative frequency of Year 7 and sport?", "choices": ["18/80", "18/30", "18/38"], "answer": 0,
+    "hint": "Joint means out of everyone.",
+    "explain": "Joint relative frequency divides by the grand total: 18/80 = 0.225. 18/30 is conditional on Year 7, and 18/38 is conditional on sport."},
+   {"type": "numeric", "id": "m2", "prompt": "The two column totals of a two-way table are {a} and {b}. What is the grand total?", "answer": "a+b",
+    "hint": "Every person is in exactly one column.",
+    "explain": "{a} + {b} = {=a+b}. The row totals must add to the same number.", "params": {"a": [20, 60], "b": [20, 60]}},
+   {"type": "mc", "id": "m3", "prompt": "42 students prefer music; 30 of them are in Year 9. What fraction of music fans are in Year 9?", "choices": ["30/42", "30/50", "30/80"], "answer": 0,
+    "hint": "'Of music fans' tells you to divide by the music column total.",
+    "explain": "Out of the 42 music fans, 30 are Year 9: 30/42 ≈ 0.71. 30/50 answers a different question: the share of Year 9s who like music."},
+   {"type": "numeric", "id": "m4", "prompt": "Of 25 Year 10s asked, {a} have a part-time job. What percentage of these Year 10s have a job?", "answer": "a*4",
+    "hint": "Divide by 25, then multiply by 100.",
+    "explain": "{a} ÷ 25 × 100 = {=a*4}%. The bottom of the fraction is the Year 10 total, because the question is about Year 10s.", "params": {"a": [1, 24]}},
+   {"type": "mc", "id": "m5", "prompt": "70% of dog owners walk daily but only 20% of non-owners do. What can you conclude?", "choices": ["Dog ownership and walking daily are associated", "Owning a dog makes people walk", "Nothing, the groups are different"], "answer": 0,
+    "hint": "A table shows whether percentages differ. Does it show why?",
+    "explain": "70% and 20% differ, so the two are associated. The table cannot show cause: people who already walk may choose to get dogs."},
+   {"type": "mc", "id": "m6", "prompt": "40% of the 30 Year 7s and 40% of the 50 Year 9s prefer music. Is year group associated with preferring music?", "choices": ["No", "Yes, more Year 9s prefer music", "Yes, the groups are different sizes"], "answer": 0,
+    "hint": "Compare the percentages, not the counts.",
+    "explain": "Both rows are 40%, so there is no association. 20 Year 9s is more than 12 Year 7s only because more Year 9s were asked."},
+   {"type": "mc", "id": "m7", "prompt": "Year 9 row: sport ?, music 30, total 50. Sport column total is 38. Which is the missing cell?", "choices": ["20", "8", "68"], "answer": 0,
+    "hint": "Use the row: the two Year 9 cells add to 50.",
+    "explain": "50 − 30 = 20. Check with the column: Year 7 sport is 38 − 20 = 18. 68 adds instead of subtracting."},
+   {"type": "mc", "id": "m8", "prompt": "Why do row percentages and column percentages give different answers?", "choices": ["They divide by different totals", "One of them is always wrong", "They count different people"], "answer": 0,
+    "hint": "Look at what goes on the bottom of each fraction.",
+    "explain": "Row percentages divide by a row total and column percentages by a column total, so they answer different questions about the same cell."}
+  ]
+ }
+}
