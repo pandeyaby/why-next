@@ -1,0 +1,284 @@
+{
+ "topicId": "mt_Jq0MjURrRC",
+ "title": "Tricky words",
+ "audience": "family",
+ "keyIdea": "Tricky words are common words that do not spell the way they sound, like said, was, come, friend and school. They are also called common exception words. Most of a tricky word still sounds out; usually one part breaks the rule, like the ai in said or the ch in school. Learn that part by heart with look, cover, write, check. The days of the week are tricky too: every one ends in day, and Wednesday has a d you do not hear.",
+ "familyTip": "Pick three tricky words a week, like said, come and friend. Your child looks at one, says the letters, covers it, writes it, then checks. Circle the tricky part in a bright colour. At breakfast, ask them to spell today's day name, and hunt for the d in Wednesday.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each word sound out, or does it have a tricky part? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "sounds out",
+    "has a tricky part"
+   ],
+   "items": [
+    [
+     "cat",
+     0
+    ],
+    [
+     "said",
+     1
+    ],
+    [
+     "sun",
+     0
+    ],
+    [
+     "come",
+     1
+    ],
+    [
+     "went",
+     0
+    ],
+    [
+     "school",
+     1
+    ],
+    [
+     "shop",
+     0
+    ],
+    [
+     "friend",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagexcept",
+  "caption": "Flagship lab: fix the tricky part of sound-it-out spellings, look-cover-write-check, build the days of the week, fix sentences and sort word families.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Most words spell the way they sound. Say cat: c, a, t. Write c, a, t. Done.",
+   "Some words do not. Say said. It sounds like sed. But we write s, a, i, d. Words like this are tricky words.",
+   "Only one part is tricky. In said, the s and the d are fine. Only the ai is odd. In school, only the ch is odd.",
+   "To learn one: look at it, cover it, write it, then check. Do it again on another day. The days of the week are tricky too. They all end in day. Wednesday has a d we do not say."
+  ],
+  "adult": [
+   "Ages 5 to 8. The National Curriculum in England calls these common exception words: words where the usual grapheme for a sound is not used, or where a rule not yet taught applies. Year 1 includes said, says, was, were, come, some, love, friend, school, put, push, pull and our; Year 2 adds door, eye, could, should, would, because, pretty, any, many, people and water. Children also learn to spell the days of the week in Year 1. In US terms this sits with Common Core L.1.2d and L.2.2d (spelling common irregular words).",
+   "Tricky does not mean the whole word is irregular. In said, only the ai is unusual; s and d follow the rules. Teachers often mark the tricky part (sometimes with a heart) and teach the rest by phonics. For weekdays, the regular ending day helps, and some starts carry history: Wednesday comes from Woden's day, so it keeps a d that is no longer spoken.",
+   "Common mistakes: spelling by sound alone (sed, wos, cum, skool, becos, frend), leaving out a silent letter (Wensday, cud), getting the letters right but in the wrong order (siad, freind), and practising a word once and expecting it to stick. Short, spaced practice with look, cover, write, check works better than copying a word ten times in a row.",
+   "In the lab your child swaps the one wrong part of five sound-it-out spellings (skool to school), writes four words from memory after covering them, builds all seven day names, finds the misspelt tricky word in five sentences, and sorts words into two families that share a trick (could, would, should; come, some, Monday)."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Mum ___ yes. Which spelling is right?",
+   "choices": [
+    "said",
+    "sed",
+    "siad"
+   ],
+   "answer": 0,
+   "hint": "It sounds like sed, but it is a tricky word. Look at the middle.",
+   "explain": "said is s, a, i, d. sed is how it sounds, and siad has the a and i the wrong way round."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A tricky word has {n} letters. Only one part, 2 letters long, is tricky. How many letters spell the usual way?",
+   "answer": "n-2",
+   "hint": "Take the 2 tricky letters away from all the letters.",
+   "explain": "{n} letters take away 2 tricky letters leaves {=n-2}. In said, only ai is tricky, so s and d spell the usual way.",
+   "params": {
+    "n": [
+     3,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which day comes after Tuesday?",
+   "choices": [
+    "Wednesday",
+    "Wensday",
+    "Thursday"
+   ],
+   "answer": 0,
+   "hint": "Say the days in order. Then check for the d you cannot hear.",
+   "explain": "After Tuesday comes Wednesday. It has a d after the We. Wensday leaves it out, and Thursday comes later."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Monday is school day 1 and Friday is school day 5. Today is school day {n}. How many school days come after today?",
+   "answer": "5-n",
+   "hint": "There are 5 school days. Count the days after today.",
+   "explain": "5 school days, and you are on day {n}, so {=5-n} more come after today.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which part of friend is the tricky part?",
+   "choices": [
+    "ie",
+    "fr",
+    "nd"
+   ],
+   "answer": 0,
+   "hint": "Which letters do not spell the sound the usual way?",
+   "explain": "fr and nd sound out. The ie says e, which is not the usual way to spell that sound."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is spelt right?",
+    "choices": [
+     "school",
+     "skool",
+     "scool"
+    ],
+    "answer": 0,
+    "hint": "The k sound in school is spelt in an odd way.",
+    "explain": "school spells the k sound with ch. skool and scool are how it sounds."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "We had fun ___ it was sunny.",
+    "choices": [
+     "because",
+     "becos",
+     "becuase"
+    ],
+    "answer": 0,
+    "hint": "It sounds like becos. The real word has au and an e on the end.",
+    "explain": "because is b, e, c, a, u, s, e. becos is spelt by sound, and becuase has the u and a swapped."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which day is spelt right?",
+    "choices": [
+     "Saturday",
+     "Saterday",
+     "Satday"
+    ],
+    "answer": 0,
+    "hint": "Say it slowly: Sat, ur, day.",
+    "explain": "Saturday has ur in the middle. Saterday uses the wrong letters, and Satday misses a part."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is the best way to learn a tricky word?",
+    "choices": [
+     "Look, cover, write, check",
+     "Sound out each letter",
+     "Copy it 10 times fast"
+    ],
+    "answer": 0,
+    "hint": "Sounding out gives the wrong spelling for a tricky word.",
+    "explain": "Look, cover, write, check makes you spell it from memory. Copying fast does not make you remember."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "could, would and should share a trick. What is it?",
+    "choices": [
+     "they end in ould",
+     "they start with c",
+     "they have oo"
+    ],
+    "answer": 0,
+    "hint": "Look at the end of each word.",
+    "explain": "All three end in ould, which says ood. The l is not heard."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Sam learns {n} tricky words each week. How many does Sam learn in {w} weeks?",
+    "answer": "n*w",
+    "hint": "Each week adds {n} more words. Count up {n} at a time, {w} times.",
+    "explain": "{n} words a week for {w} weeks is {=n*w} words. A few words each week sticks better than lots at once.",
+    "params": {
+     "n": [
+      1,
+      3
+     ],
+     "w": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Come and play. Which word has the same trick as come?",
+    "choices": [
+     "some",
+     "cup",
+     "cone"
+    ],
+    "answer": 0,
+    "hint": "In come, the o says u. Find another o that says u.",
+    "explain": "some has an o that says u and an e at the end, like come. cup uses u, and cone has a long o."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "My ___ is kind.",
+    "choices": [
+     "friend",
+     "frend",
+     "freind"
+    ],
+    "answer": 0,
+    "hint": "There is an i before the e.",
+    "explain": "friend is f, r, i, e, n, d. frend is spelt by sound, and freind puts e before i."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which word sounds out with no tricky part?",
+    "choices": [
+     "dog",
+     "was",
+     "said"
+    ],
+    "answer": 0,
+    "hint": "Say each word. Do the letters match the sounds?",
+    "explain": "dog is d, o, g, as it sounds. was sounds like wos and said sounds like sed."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "There are 7 days in a week. Ana can spell {n} of the day names. How many does she still need to learn?",
+    "answer": "7-n",
+    "hint": "Take the days she knows away from all 7 days.",
+    "explain": "7 days take away the {n} she knows leaves {=7-n} to learn. Start with the tricky ones, like Wednesday.",
+    "params": {
+     "n": [
+      1,
+      6
+     ]
+    }
+   }
+  ]
+ }
+}
