@@ -1,0 +1,277 @@
+{
+ "topicId": "mt_QGZgv63WxC",
+ "title": "Bias in samples and surveys",
+ "audience": "learner",
+ "keyIdea": "Bias is a fault in how a survey is done that pushes the result the same way every time. It has three common sources: who is asked (sampling bias, such as a convenience sample or a self-selected online poll), how they are asked (a leading or loaded question), and who replies (non-response bias, when the people who answer differ from those who do not). A bigger sample cuts random error but does not fix bias; each source needs its own fix: a random sample from a full list, neutral wording, and follow-ups until every group replies.",
+ "familyTip": "Next time a headline says '9 out of 10 people agree', ask your teenager three questions together: Who was asked? What exactly was the question? How many people did not reply? Try rewriting a slanted question from an advert or a school survey so it no longer hints at the answer.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each part of the survey fair, or a source of bias? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair method",
+    "Source of bias"
+   ],
+   "items": [
+    [
+     "Names drawn at random from the full town list",
+     0
+    ],
+    [
+     "Asking people outside the skate shop",
+     1
+    ],
+    [
+     "\"Don't you agree the town badly needs…?\"",
+     1
+    ],
+    [
+     "\"Should the town build a skate park?\"",
+     0
+    ],
+    [
+     "Counting only the 15% who replied, mostly retired people",
+     1
+    ],
+    [
+     "Reminders until every group replies at a similar rate",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsurvey",
+  "caption": "Flagship lab: move a survey stand, reword a leading question, drag reply rates, sort faulty surveys and fix a plan.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A survey is only as good as its method. Bias is a fault in the method that pushes the answer the same way every time. It is not bad luck, and a bigger sample does not cure it.",
+   "Sampling bias comes from who you ask. Ask 200 people at a skate shop about a new skate park and most are teens who skate. The result comes out too high. A random sample from a full list of the town gives everyone the same chance.",
+   "A leading question pushes people to one answer. Compare 'Don't you agree the town badly needs a fun, safe skate park?' with 'Should the town build a skate park?' The people are the same. Only the words changed, and so did the result.",
+   "Non-response bias comes from who answers. If teens reply less often than adults, the replies hold too many adult views. Sending more forms does not help, because the same people still reply. Reminders that get replies from every group do help."
+  ],
+  "adult": [
+   "Ages 13 to 15. GCSE Mathematics in England asks students to infer properties of populations from a sample and to know the limitations of sampling, and KS3 statistics includes designing surveys. In the US, Common Core 7.SP.A.1 states that generalisations from a sample are valid only if the sample is representative, and HSS-IC.B.3 asks students to explain how randomisation relates to sample surveys.",
+   "Three sources of bias are worth naming. Sampling or selection bias: the method or list leaves groups out or over-represents them, as in convenience samples and self-selected, voluntary-response polls. Response bias from wording: leading or loaded questions, which survey researchers such as Pew Research Center have shown can shift results by many percentage points. Non-response bias: the people who do not reply differ from those who do.",
+   "The key idea is that bias is systematic error, while sampling variability is random error. A larger sample shrinks random error but leaves bias untouched, so a huge biased survey can be confidently wrong: the 1936 Literary Digest poll had about 2.4 million replies and still picked the wrong winner of the US election. Common mistakes: thinking a big sample cannot be biased, calling any surprising result biased, and fixing the sample while keeping a leading question.",
+   "In the lab students move a survey stand between a skate shop, a library and a random draw from the town list, reword a leading question one phrase at a time, drag reply rates for teens and adults (and see that ten times as many forms changes nothing), sort six faulty surveys by kind of bias, and fix a plan until its estimate matches the census value of 52%. The lab's town and its figures are a model, not real survey data."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A survey about school dinners asks only students in the lunch queue. What kind of bias is this?",
+   "choices": [
+    "Sampling bias: who is asked",
+    "A leading question",
+    "Non-response bias"
+   ],
+   "answer": 0,
+   "hint": "Who is missing from the lunch queue?",
+   "explain": "Students who bring packed lunches are never asked, so the sample over-represents people who already buy school dinners."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A council posts {=100*n} survey forms and {=10*k}% of them come back. How many forms come back?",
+   "answer": "10*n*k",
+   "hint": "Find that percentage of the number of forms posted.",
+   "explain": "{=10*k}% of {=100*n} is {=10*n*k} forms. If the people who did not reply differ from those who did, the result has non-response bias.",
+   "params": {
+    "n": [
+     2,
+     9
+    ],
+    "k": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which question is neutral?",
+   "choices": [
+    "How would you rate the school canteen?",
+    "Don't you think the canteen is poor?",
+    "How bad is the canteen food?"
+   ],
+   "answer": 0,
+   "hint": "A neutral question does not hint at the answer it wants.",
+   "explain": "'How would you rate' lets people give any view. The other two assume the canteen is poor, which leads the answer."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A sample of 20 people includes {t} teenagers. What percentage of the sample are teenagers?",
+   "answer": "5*t",
+   "hint": "Each person is 5% of a sample of 20.",
+   "explain": "{t} out of 20 is {=5*t}%. Compare it with the share of teenagers in the whole town to see whether they are over- or under-represented.",
+   "params": {
+    "t": [
+     2,
+     18
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A biased survey is repeated with 10 times as many people, using the same method. What happens to the bias?",
+   "choices": [
+    "It stays: a bigger sample cuts random error, not bias",
+    "It disappears",
+    "It gets ten times smaller"
+   ],
+   "answer": 0,
+   "hint": "Is bias caused by bad luck or by the method?",
+   "explain": "Bias comes from the method, so asking more people the same way gives the same lean. Only random error shrinks."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is bias in a survey?",
+    "choices": [
+     "A fault in the method that pushes results the same way each time",
+     "Random luck in who gets picked",
+     "Any result you did not expect"
+    ],
+    "answer": 0,
+    "hint": "Think about whether repeating the survey would fix it.",
+    "explain": "Bias is systematic: repeat the survey the same way and it leans the same way again. Random luck varies from sample to sample."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "An online poll on a cycling club website asks if the town needs more cycle lanes. Why might it be biased?",
+    "choices": [
+     "Most people who see and answer it are cyclists",
+     "The question is too short",
+     "Online polls always have too few replies"
+    ],
+    "answer": 0,
+    "hint": "Who visits that website, and who chooses to answer?",
+    "explain": "It is a self-selected sample from a cycling site, so cyclists are over-represented and the yes share comes out too high."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "In a town, 40% of people are teens. A sample of 50 at a skate shop has {t} teens. How many more teens is that than a representative sample of 50 would have?",
+    "answer": "t-20",
+    "hint": "First find 40% of 50, the number of teens a fair sample would have.",
+    "explain": "A representative sample of 50 would have 40% teens, which is 20. {t} − 20 = {=t-20} extra teens.",
+    "params": {
+     "t": [
+      25,
+      48
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is a leading question?",
+    "choices": [
+     "Wouldn't you agree that homework is a waste of time?",
+     "How many hours of homework do you do a week?",
+     "Do you do homework at the weekend?"
+    ],
+    "answer": 0,
+    "hint": "Which one tells you the answer it hopes for?",
+    "explain": "'Wouldn't you agree…' pushes people towards yes. The other two ask for facts without hinting at an answer."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Forms went to a random sample, but only 20% of teens and 60% of adults replied. What kind of bias is this?",
+    "choices": [
+     "Non-response bias",
+     "A leading question",
+     "Sampling bias in who was sent forms"
+    ],
+    "answer": 0,
+    "hint": "The forms went to a fair sample. What went wrong after that?",
+    "explain": "The sample was random, but the replies over-represent adults. That is non-response bias."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which change fixes non-response bias best?",
+    "choices": [
+     "Follow up with reminders until all groups reply at similar rates",
+     "Send forms to ten times as many people",
+     "Ask a shorter question"
+    ],
+    "answer": 0,
+    "hint": "The problem is who replies, not how many forms are sent.",
+    "explain": "Follow-ups raise the reply rate of the groups that were missing. More forms keep the same mix of replies."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "In a model, a neutral question gets {y}% yes. A leading version adds 15 percentage points. What percentage say yes to the leading version?",
+    "answer": "y+15",
+    "hint": "Add the 15 points to the neutral result.",
+    "explain": "{y}% plus 15 points is {=y+15}%. The people did not change; only the wording did.",
+    "params": {
+     "y": [
+      30,
+      60
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is a random sample from a full list better than asking people in the street?",
+    "choices": [
+     "Everyone on the list has the same chance of being picked",
+     "It is quicker",
+     "It always gives the exact true value"
+    ],
+    "answer": 0,
+    "hint": "Think about who walks down that street at that time.",
+    "explain": "Random selection from a full list gives every person the same chance, so no group is left out by the method. It still has random error."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "Out of 50 forms sent, {k} came back. What percentage replied?",
+    "answer": "2*k",
+    "hint": "Each form is 2% of 50, so double the number that came back.",
+    "explain": "{k} out of 50 is {=2*k}%. A low reply rate is a warning sign of possible non-response bias.",
+    "params": {
+     "k": [
+      5,
+      45
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "The 1936 Literary Digest poll had about 2.4 million replies but picked the wrong election winner. What does this show?",
+    "choices": [
+     "A huge sample can still be biased",
+     "Big samples are always wrong",
+     "The question must have been leading"
+    ],
+    "answer": 0,
+    "hint": "Did the size of the poll protect it?",
+    "explain": "Its list and its replies over-represented richer voters. Size cuts random error but cannot fix bias in who is asked or who replies."
+   }
+  ]
+ }
+}
