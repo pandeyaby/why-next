@@ -1,0 +1,270 @@
+{
+ "topicId": "mt_ue5GFWCKQR",
+ "title": "The product rule for counting",
+ "audience": "learner",
+ "keyIdea": "If a task is done in stages, and each choice at one stage can go with every choice at the next, the number of outcomes is the product of the number of choices at each stage: 3 tops and 2 trousers give 3 × 2 = 6 outfits. That is the product rule (AND means multiply). If you make only one choice, from one group OR another, add instead: 4 sandwiches or 3 soups gives 4 + 3 = 7. Restrictions change the count for a stage: with no repeats each later stage has one fewer choice (10 × 9 × 8 = 720 three-digit codes), and a number cannot start with 0 (9 × 10 × 10 = 900). Check small cases by listing systematically.",
+ "familyTip": "Count the outfits in a wardrobe or the meals on a menu together: how many tops, how many trousers, how many outfits? Then ask whether a bike lock with 3 dials (0 to 9) is safe: how many codes would a thief need to try?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Do you multiply or add? Drag each situation, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "multiply: this AND that",
+    "add: this OR that"
+   ],
+   "items": [
+    [
+     "Choose a starter and a main course",
+     0
+    ],
+    [
+     "Choose one pet: a cat or a dog",
+     1
+    ],
+    [
+     "Roll two dice",
+     0
+    ],
+    [
+     "Buy one ticket: front row or back row",
+     1
+    ],
+    [
+     "Pick a colour and a size of T-shirt",
+     0
+    ],
+    [
+     "Pick one prize from box A or box B",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagways",
+  "caption": "Flagship lab: list every outfit, grow a block of choices to hit targets, sort AND from OR, list codes with no repeats and count codes place by place.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "You have 3 tops and 2 pairs of trousers. Each top can go with each pair, so there are 3 × 2 = 6 outfits. Listing them in a grid shows why: 3 rows of 2.",
+   "This is the product rule. When you choose one thing AND then another, multiply the number of choices at each stage. Three stages of 4, 5 and 3 give 4 × 5 × 3 = 60.",
+   "If you make only ONE choice, from one group OR another, add. One item from 4 sandwiches or 3 soups is 4 + 3 = 7 choices.",
+   "Watch for rules. With no repeats, each place has one fewer choice: 10 × 9 × 8 = 720 codes. A 3-digit number cannot start with 0, so it is 9 × 10 × 10 = 900."
+  ],
+  "adult": [
+   "Ages 13 to 15. The GCSE (9–1) subject content for England, N5, asks students to use systematic listing and the product rule for counting. The same rule later counts outcomes in probability, and it is the first step to permutations and combinations.",
+   "The rule needs two things. The choices are made together or one after another. And the number of choices at each stage stays the same, whatever was picked before. With no repeats, the next stage always has one fewer option, so 5 runners give 5 × 4 = 20 gold and silver results. A stage with 1 option multiplies the total by 1.",
+   "Common mistakes: adding when the choices are made together (3 + 2 outfits, not 3 × 2); multiplying when only one choice is made; leaving out a stage; keeping all 10 digits when repeats are banned; letting a number start with 0; and halving results where order matters.",
+   "In the lab you list all 6 outfits from 3 tops and 2 trousers. You set three stages to hit totals of 12, 30 and 18. You sort six situations into multiply and add, find the 6 codes from A, B and C with no repeats, and set the choices for each place of four codes."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A café offers {a} sandwiches and {b} drinks. How many sandwich-and-drink meals are there?",
+   "answer": "a*b",
+   "hint": "Each sandwich can go with every drink. Multiply the choices at each stage.",
+   "explain": "{a} × {b} = {=a*b} meals, because each of the {a} sandwiches pairs with all {b} drinks.",
+   "params": {
+    "a": [
+     3,
+     7
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "You choose ONE film: one of 5 comedies or one of 4 cartoons. How many choices?",
+   "choices": [
+    "9",
+    "20",
+    "5"
+   ],
+   "answer": 0,
+   "hint": "Is this one choice or two? One choice from one group or another means add.",
+   "explain": "You make only one choice, from one group or the other, so add: 5 + 4 = 9. 20 would be choosing a comedy and a cartoon."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A lock has {n} dials, each showing a digit from 0 to 9. How many codes are possible?",
+   "answer": "10**n",
+   "hint": "Each dial has 10 choices and the dials are independent. Multiply 10 by itself once per dial.",
+   "explain": "10 multiplied {n} times gives {=10**n} codes.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} runners race. In how many ways can gold and silver be awarded?",
+   "answer": "n*(n-1)",
+   "hint": "Gold has {n} choices. One runner cannot also win silver, so how many are left?",
+   "explain": "{n} choices for gold, then {=n-1} for silver: {n} × {=n-1} = {=n*(n-1)} ways.",
+   "params": {
+    "n": [
+     4,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "How many 3-digit numbers are there (100 to 999)?",
+   "choices": [
+    "900",
+    "1000",
+    "720"
+   ],
+   "answer": 0,
+   "hint": "The first digit cannot be 0. How many choices does it have?",
+   "explain": "9 choices for the first digit (1 to 9), then 10 and 10: 9 × 10 × 10 = 900. 1000 would allow a leading 0."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A menu has {a} starters, {b} mains and 2 desserts. How many three-course meals are there?",
+    "answer": "a*b*2",
+    "hint": "Three stages: multiply the number of choices at all three.",
+    "explain": "{a} × {b} × 2 = {=a*b*2} meals.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How many 3-digit codes use digits 0 to 9 with no digit used twice?",
+    "choices": [
+     "720",
+     "1000",
+     "27"
+    ],
+    "answer": 0,
+    "hint": "Each place uses up one digit. How many are left for the next place?",
+    "explain": "10 choices, then 9, then 8: 10 × 9 × 8 = 720. 1000 allows repeats, and 27 adds 10 + 9 + 8."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which situation uses adding, not multiplying?",
+    "choices": [
+     "Choosing one prize from box A or box B",
+     "Choosing a shirt and a hat",
+     "Rolling a dice and flipping a coin"
+    ],
+    "answer": 0,
+    "hint": "In which one do you make only one choice?",
+    "explain": "One prize from box A or box B is a single choice from two groups, so add. The others make two choices together, so multiply."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Codes are made of {n} letters from A to E, and letters may repeat. How many codes are there?",
+    "answer": "5**n",
+    "hint": "Each place has all 5 letters. Multiply 5 by itself once per place.",
+    "explain": "5 multiplied {n} times gives {=5**n} codes.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A game adds a stage with only 1 option. What happens to the number of outcomes?",
+    "choices": [
+     "It stays the same",
+     "It goes up by 1",
+     "It doubles"
+    ],
+    "answer": 0,
+    "hint": "Each stage multiplies the total. What is a number times 1?",
+    "explain": "Multiplying by 1 leaves the total unchanged, so a 1-option stage adds no new outcomes."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{n} students. One is chosen as captain and a different one as vice-captain. How many ways?",
+    "answer": "n*(n-1)",
+    "hint": "After the captain is chosen, one fewer student is left for vice-captain.",
+    "explain": "{n} × {=n-1} = {=n*(n-1)} ways.",
+    "params": {
+     "n": [
+      5,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Ali says 3 tops and 4 trousers make 7 outfits. What is his mistake?",
+    "choices": [
+     "He added instead of multiplying: it is 12",
+     "He should have subtracted",
+     "Nothing: 7 is right"
+    ],
+    "answer": 0,
+    "hint": "Does each top go with each pair of trousers?",
+    "explain": "Each of the 3 tops goes with all 4 trousers, so 3 × 4 = 12. Adding counts single items, not outfits."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A number plate has 2 letters (26 choices each) then {d} digits (0 to 9). How many plates?",
+    "answer": "26*26*10**d",
+    "hint": "Multiply the choices for every place: 26, 26, then 10 for each digit.",
+    "explain": "26 × 26 × 10 to the power {d} = {=26*26*10**d} plates.",
+    "params": {
+     "d": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "How many 2-letter codes can be made from A, B and C with no letter used twice?",
+    "choices": [
+     "6",
+     "9",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "3 choices for the first letter. How many are left for the second?",
+    "explain": "3 × 2 = 6: AB, AC, BA, BC, CA, CB. 9 includes AA, BB and CC, which repeat a letter."
+   }
+  ]
+ }
+}
