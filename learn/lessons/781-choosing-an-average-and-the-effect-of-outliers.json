@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_1MoKvPonsZ",
+ "title": "Choosing an average and the effect of outliers",
+ "audience": "learner",
+ "keyIdea": "The mean, the median and the mode each answer the question 'what is a typical value?' in a different way, so choose the one that suits the data. The mean uses every value, so a single outlier, a value far from the rest, can pull it a long way. The median is the middle value when the data is in order, so it barely moves when an extreme value changes. In skewed data the mean is pulled towards the long tail. Use the mean when values are close together with no outliers, the median when there are outliers or skew (house prices, pay), and the mode for the most common value or for categories such as favourite fruit.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which average gives the most useful typical value? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "mean",
+    "median",
+    "mode"
+   ],
+   "items": [
+    [
+     "Pay in a firm with a very highly paid boss",
+     1
+    ],
+    [
+     "Most popular shoe size to stock",
+     2
+    ],
+    [
+     "Five similar lap times",
+     0
+    ],
+    [
+     "House prices in a street with one mansion",
+     1
+    ],
+    [
+     "Favourite sport of a class",
+     2
+    ],
+    [
+     "Heights of pupils, no outliers",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagoutlr",
+  "caption": "Flagship lab: stretch one value and watch the mean and median, hunt for outliers, place the mean of skewed data, and decode claims.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An average is one value that sums up a set of data. There are three. The mean is the total shared out equally. The median is the middle value when the data is in order. The mode is the value that comes up most often.",
+   "An outlier is a value far away from the rest. Take the pocket money 4, 5, 5, 6, 7, 7, 7, 8 and 9. The mean is about 6.4 and the median is 7. Change the 9 to 40. The mean jumps to about 9.9, more than all but one of the values. The median is still 7.",
+   "The mean uses every value, so one huge value drags it. The median only cares about the middle, so it hardly moves. When data has a long tail on one side, it is skewed, and the mean is pulled towards the tail.",
+   "So pick with care. Values close together with no outliers: use the mean, because it uses every value. Outliers or skew, like house prices or pay: use the median. Most common value, or categories like favourite fruit: use the mode. Check an outlier before you remove it. Only take it out if it is a mistake."
+  ],
+  "adult": [
+   "Ages 12 to 14. The KS3 programme of study in England asks pupils to describe, interpret and compare distributions using appropriate measures of central tendency (mean, mode, median) and spread, including outliers. Common Core 6.SP.5c and 6.SP.5d ask students to relate the choice of measure of centre to the shape of the distribution and the context.",
+   "The mean is not resistant: changing one value by d changes the mean of n values by d/n, however extreme the value. The median is resistant: changing the largest value never moves it. In a right-skewed distribution such as income the mean usually lies above the median, and in a left-skewed one below it. The mode is the only average for categorical data and may not exist or may not be unique.",
+   "Common mistakes: always choosing the mean; thinking the largest or smallest value is automatically an outlier; deleting outliers without a reason (an outlier should be checked, and removed only if it is an error); thinking the median moves when an extreme value grows; expecting the mean and median to be equal in skewed data; and calling the range an average.",
+   "In the lab the learner drags the top value of a pocket money set from 9 to 30 or more and watches the mean move while the median stays at 7, decides whether each of three dot plots has an outlier, places the mean of a right-skewed and a left-skewed set by eye and checks it, matches six contexts to the best average, and decodes which average each of three true claims about one firm's pay used."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Data: 3, 4, 4, 5, 60. Which average best shows a typical value?",
+   "choices": [
+    "the median",
+    "the mean",
+    "the largest value"
+   ],
+   "answer": 0,
+   "hint": "Is there a value far from the rest? Which average does that value pull?",
+   "explain": "60 is an outlier. The mean is 76 ÷ 5 = 15.2, bigger than four of the five values. The median, 4, is typical."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The mean of 5 values is {m}. One value goes up by {d} and the rest stay the same. What is the new mean?",
+   "answer": "m+d/5",
+   "hint": "The total goes up by {d}. Share that extra out between the 5 values.",
+   "explain": "The total rises by {d}, so the mean rises by {d} ÷ 5. New mean = {m} + {=d/5} = {=m+d/5}.",
+   "params": {
+    "m": [
+     10,
+     20
+    ],
+    "d": [
+     5,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which average can you find for the favourite colours of a class?",
+   "choices": [
+    "the mode",
+    "the mean",
+    "the median"
+   ],
+   "answer": 0,
+   "hint": "Can you add colours or put them in order?",
+   "explain": "Colours are categories, not numbers, so there is no mean or median. The mode is the most common colour."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The data is 2, 4, 6, 8 and {x}. Here {x} is the largest value. What is the median?",
+   "answer": "6",
+   "hint": "Put the five values in order. Which one is in the middle?",
+   "explain": "In order: 2, 4, 6, 8, {x}. The middle value is 6, whatever the size of {x}, so the median is 6.",
+   "params": {
+    "x": [
+     9,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Pay in a firm: 18, 19, 20, 21, 22, 24, 25, 90 (£ thousand). Which is true?",
+   "choices": [
+    "The mean is higher than the median",
+    "The mean equals the median",
+    "The median is higher than the mean"
+   ],
+   "answer": 0,
+   "hint": "The data has a long tail of high values. Which average does the tail pull?",
+   "explain": "The mean is 239 ÷ 8 ≈ 29.9 and the median is 21.5. The 90 pulls the mean up."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Values 5, 6, 7, 8, 9. The 9 changes to 90. What happens to the median?",
+    "choices": [
+     "It stays 7",
+     "It goes up a lot",
+     "It becomes 90"
+    ],
+    "answer": 0,
+    "hint": "The median is the middle value. Does the middle change?",
+    "explain": "The middle value is still 7. The mean rises from 7 to 23.2, but the median stays 7."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "The mean of 4 numbers is {m}. A fifth number, {x}, is added. What is the new mean?",
+    "answer": "(4*m+x)/5",
+    "hint": "Work out the old total first: mean × 4. Then add {x} and divide by 5.",
+    "explain": "Old total = 4 × {m} = {=4*m}. New total = {=4*m+x}. New mean = {=4*m+x} ÷ 5 = {=(4*m+x)/5}.",
+    "params": {
+     "m": [
+      10,
+      20
+     ],
+     "x": [
+      50,
+      90
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Heights: 150, 152, 153, 155 and 1540 cm. What should you do with 1540?",
+    "choices": [
+     "Check it: it is probably a typing error for 154",
+     "Keep it and use the mean",
+     "Always delete the largest value"
+    ],
+    "answer": 0,
+    "hint": "Could a person really be 1540 cm tall?",
+    "explain": "1540 cm is over 15 m, so it is almost certainly an error. Check it; remove or correct it only for a reason like this."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Lap times 14, 15, 15, 16, 17 seconds. Is 17 an outlier?",
+    "choices": [
+     "No, it is close to the rest",
+     "Yes, it is the largest value",
+     "Yes, because it appears once"
+    ],
+    "answer": 0,
+    "hint": "An outlier is far from the rest, not just the biggest.",
+    "explain": "17 is only 1 second above 16. Every set has a largest value; it is an outlier only if it sits far away."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Data: 1, 3, 3, 5 and {x}, where {x} is bigger than 5. What is the median?",
+    "answer": "3",
+    "hint": "Order the five values and pick the third one.",
+    "explain": "In order: 1, 3, 3, 5, {x}. The third value is 3, so the median is 3 for any {x} above 5.",
+    "params": {
+     "x": [
+      6,
+      60
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A shop wants to know which shoe size to order most of. Which average?",
+    "choices": [
+     "the mode",
+     "the mean",
+     "the median"
+    ],
+    "answer": 0,
+    "hint": "Which average tells you the size that sells most often?",
+    "explain": "The mode is the most common size. A mean such as 5.7 is not a size the shop can order."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Staff pay (£ thousand): 20, 22, 22, 25, 26, 300. An advert says 'average pay £69.2k'. Which average did it use?",
+    "choices": [
+     "the mean",
+     "the median",
+     "the mode"
+    ],
+    "answer": 0,
+    "hint": "Add up all six values and divide by 6.",
+    "explain": "415 ÷ 6 ≈ 69.2, so it is the mean, pulled up by the 300. The median is 23.5 and the mode is 22."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Marks 61, 64, 66, 67, 70, all close together. Which average uses every mark?",
+    "choices": [
+     "the mean",
+     "the median",
+     "the mode"
+    ],
+    "answer": 0,
+    "hint": "Which average adds up all the values?",
+    "explain": "The mean uses every mark, and with no outliers it is a fair typical value: 328 ÷ 5 = 65.6."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Quiz marks 4, 15, 16, 17, 17, 18, 19, 19. The tail is on the low side. How do the averages compare?",
+    "choices": [
+     "The mean is lower than the median",
+     "The mean is higher than the median",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "The 4 pulls one average down. Which one uses every value?",
+    "explain": "The mean is 125 ÷ 8 ≈ 15.6 and the median is 17. The low 4 pulls the mean below the median."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "Which of these is NOT an average?",
+    "choices": [
+     "the range",
+     "the median",
+     "the mode"
+    ],
+    "answer": 0,
+    "hint": "One of these measures spread, not a typical value.",
+    "explain": "The range is largest minus smallest, a measure of spread. The mean, median and mode are averages."
+   }
+  ]
+ }
+}
