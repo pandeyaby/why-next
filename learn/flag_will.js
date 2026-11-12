@@ -102,7 +102,7 @@ function play(i,acts,ms){steps[i].go();const me=gen;acts.forEach((f,j)=>setTimeo
 function buttons(){if(!pad)return;pad.innerHTML='';const k=stage(),b=(t,f,l)=>{c.el('button',{type:'button',class:'lbtn','aria-label':l||t},pad,t).onclick=f};
  if(k==='clue'&&S.clue.n<CLUE.length)['Past','Present','Future'].forEach((t,j)=>b(t,()=>clue(j),`${CLUE[S.clue.n][0]}: ${t}`));
  if(k==='agr'&&S.agr.n<AGR.length){const q=AGR[S.agr.n];END.forEach((t,j)=>b(j?'+'+t:t,()=>agr(j),`${q[0]} ${q[1]}, ${t}`))}
- if(k==='will'&&S.will.n<WILL.length)WILL[S.will.n][3].forEach((t,j)=>b(t,()=>will(j),`${WILL[S.will.n][0]} ${t} ${WILL[S.will.n][1]}`));
+ if(k==='will'&&S.will.n<WILL.length)willTiles().sort((x,y)=>x.x-y.x).forEach(r=>b(r.t,()=>will(r.j),`${WILL[S.will.n][0]} ${r.t}`));
  if(k==='table'&&S.table.n<ORDER.length)TROW.forEach((v,r)=>TCOL.forEach((t,q)=>b(`${v}: ${t}`,()=>table(r,q),`${v}, ${t}`)));
  if(k==='plan'&&Object.keys(S.plan.fix).length<2)PLAN.forEach((t,i)=>{if(!S.plan.fix[i])b(t.replace('.',''),()=>plan(i),`Fix ${t.replace('.','')}`)});
  if(k==='build'&&S.build.n<BUILD.length)chips().out.forEach(r=>b(r.t,()=>build(r.i),`Add ${r.t}`))}

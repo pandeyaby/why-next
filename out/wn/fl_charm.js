@@ -89,9 +89,9 @@ function arm(i,desc,ok,msg){fresh();out(desc);M.check=()=>{if(A.step===i&&ok()&&
 function auto(i,acts,ms){steps[i].go();const me=run;acts.forEach((f,j)=>setTimeout(()=>{if(me===run)f()},ms*(j+1)))}
 function keys(){if(!ctl)return;ctl.innerHTML='';const s=at(),b=(t,f,l)=>{c.el('button',{type:'button',class:'lbtn','aria-label':l||t},ctl,t).onclick=f};
  if(SORTS[s]&&M[s].n<SORTS[s][0].length){const [L,H]=SORTS[s];H.forEach((t,j)=>b(t,()=>place(s,L,j),`${L[M[s].n][0]}: ${t}`))}
- if(s==='why'&&M.why.n<WHY.length)WHY[M.why.n][2].forEach((t,j)=>b(t,()=>why(j),'Because '+t));
+ if(s==='why'&&M.why.n<WHY.length)whyOpts().sort((x,y)=>x.y-y.y).forEach(r=>b(r.t,()=>why(r.j),'Because '+r.t));
  if(s==='meter'&&M.meter.n<METER.length){const q=METER[M.meter.n];[q[0],'in between',q[1]].forEach((t,z)=>b(t,()=>meter(z),`Place the marker: ${t}`))}
- if(s==='best'&&M.best.n<BEST.length)BEST[M.best.n][1].forEach((t,j)=>b(t,()=>best(j),'Proof: '+t))}
+ if(s==='best'&&M.best.n<BEST.length)bestOpts().sort((x,y)=>x.y-y.y).forEach(r=>b(r.t,()=>best(r.j),'Proof: '+r.t))}
 const steps=[
 {h:'Trait or feeling?',p:'A trait is what a character is like most of the time, like brave or honest. A feeling is how they feel at one moment, like scared or cross. Drag each word.',
 predict:{q:'Zara is cross because her bike broke. Is cross a trait?',opts:['yes, she is a cross person','no, a feeling for now'],ans:1},task:'Sort all 10 words',
