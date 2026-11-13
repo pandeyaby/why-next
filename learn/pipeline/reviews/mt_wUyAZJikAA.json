@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the national curriculum in England, English Appendix 2 Year 6 (punctuation of bullet points to list information) and the Years 5–6 writing programme, the GOV.UK style guide entry on bullet points (lead-in line, bullets make sense running on from it, lower case start, no end punctuation for fragments, no 'and'/'or' after a bullet) and New Hart's Rules ch. 4 on vertical lists (fragments without end punctuation, full-sentence items with capitals and full stops, consistency within a list). The lesson states that schools use more than one house style and makes consistency the marking rule, so it does not teach one style as the only correct one. Every lab item was checked by hand: each KIND bullet's subject and verb, each ODD list's single break in pattern, each RUN option read after its lead-in."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented bullet slips: thinking every bullet needs a full stop (prediction 1, KIND fragments, m1), mixing capitals across bullets (ODD 1, prediction 2, challenge q5, m2, m5), a missing or stray full stop on one bullet (ODD 2 and 4), one full sentence among short phrases (ODD 3, m8, challenge q1), a bullet that does not run on from the lead-in or breaks the form (you should using lights, A good friend keeping secrets, we saw we fed the goats; prediction 3, p5, m6), and keeping the commas or the and from the sentence list (SPLIT feedback, challenge q3, m3, m9)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagbullet is built on the punctuation of a vertical list: a single bullet judged sentence or phrase, a lead-in-plus-bullets sheet where the learner taps the bullet that breaks the start/end/form pattern, a drag of candidate bullets into an empty line under a lead-in, per-bullet capital and full-stop toggles that turn green when a row matches the named style, and a sentence list whose items are tapped in order into bullets while the commas and and are rejected. flaglayout (381) chooses between bullets, numbered lists and tables and flagmarks (454) names the bullet mark's job; neither punctuates the bullets. lab_distinct gate under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The conventions come from the feedback: choosing a full stop for a water bottle returns 'No verb, so not a sentence'; tapping a pencil in the mixed list says it matches the others; dropping 'using lights at night' says you should using lights does not work; toggling a bullet that was already right says why it was right for this style; tapping and in the sentence list says the and is dropped in a bullet list."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with a tempting wrong option the task disproves: 'yes, every bullet ends with one' for a water bottle (KIND 1 is no full stop), 'yes, any bullet can start with a capital' for a pencil / a ruler / A rubber (ODD 1 makes A rubber the odd one out), and 'Lights are a good idea.' as the next safety bullet (RUN 1 accepts only use lights at night). Step text was rewritten so it does not state the answer before the prediction, and A.reveal names the locked-in pick at the end of each task."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with twelve wrong-answer messages naming the slip: capital and full stop on Gloves. break the pattern, a whole sentence among phrases, a sentence needs its full stop, bullets never end with commas, drop the and, no comma at the end of a bullet, you need to tying does not run on, the passive does not follow you need to, mixed capitals, mixed full stops, phrases need neither, and a mixed list slows the reader down."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 3.6 (family limit 5.0), adult 8.9 (limit 10.0). Kid paragraphs each give one example (You will need:, a torch, The bus leaves at nine, you should using lights does not). Canvas text is short; feedback is one or two sentences. The lab was trimmed under the 20 KB pre-commit limit by shortening feedback wording and dropping a fourth run-on list, not by removing any misconception check."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Kid paragraphs cover what bullets and lead-ins are, phrase versus sentence endings, consistency, and running on from the lead-in plus dropping commas and and. Adult text gives the Year 6 Appendix 2 statement, the house-style caveat, the GOV.UK-style convention, five named mistakes and what the lab does. The content gate found no filler and the explanation is under 12% similar to every other lesson, including 381 layout and 813 colons and semicolons in lists."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px screenshots in light and dark for all six steps and a wrong state per task (full stop picked for a water bottle, a pencil tapped as odd, a bullet toggled, a coat tapped, the drag slot). Fixed two things found on the screenshots: sentence-list chips wrapped 'a coat' onto two lines (chip padding raised), and the 'no full stop' end box showed a middle dot that looked like a full stop (now blank). The style label box was made taller so its two lines fit. Walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button under the canvas: the two sentence/phrase answers (labelled with the bullet text), one button per bullet in the odd-one-out list ('Bullet 3 breaks the pattern: A rubber'), one per run-on option ('Use the bullet: use lights at night') as the alternative to dragging, first-letter and end buttons per bullet in the match step, and one button per item, comma and and in the sentence list ('Make the comma a bullet'). The canvas aria-label is rewritten after every action, challenge feedback is a role=status live region, warnings switch to #fda4af on dark, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) National curriculum in England: English Appendix 2, Year 6 punctuation (punctuation of bullet points to list information)",
+  "GOV.UK style guide: bullet points (lead-in line, bullets run on from it, lower case, no full stops after fragments, no 'and'/'or')",
+  "New Hart's Rules (Oxford), chapter on lists: vertical lists, punctuation of fragment and full-sentence items",
+  "Topic evidence mt_wUyAZJikAA (consistent capitalisation and punctuation; full stops for sentence bullets, none for fragments; parallel structure)"
+ ]
+}
