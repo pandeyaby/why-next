@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_HdI1y5KsBl",
+ "title": "Apostrophes for plural possession",
+ "audience": "family",
+ "keyIdea": "To show that something belongs to more than one owner, write the plural owner word first, then add the apostrophe. If the plural ends in s, the mark goes after that s and nothing else is added: the girls' bags, the dogs' kennel. If the plural does not end in s, add 's, just as you would for one owner: the children's toys, the women's team, the mice's nest. To read a possessive, look at everything before the mark: that is the owner word, so the dog's bones belong to one dog and the dogs' bones belong to several.",
+ "familyTip": "Next time you are out, point at things that belong to a group: the players' shirts, the ducks' pond, the children's playground. Ask your child to say the owner word out loud, count the owners, and then say where the apostrophe goes.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "One owner or more than one? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "one owner",
+    "more than one owner"
+   ],
+   "items": [
+    [
+     "the cat's bed",
+     0
+    ],
+    [
+     "the cats' bed",
+     1
+    ],
+    [
+     "the boy's coat",
+     0
+    ],
+    [
+     "the boys' coats",
+     1
+    ],
+    [
+     "the children's toys",
+     1
+    ],
+    [
+     "the teacher's desk",
+     0
+    ],
+    [
+     "the men's shoes",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagplposs",
+  "caption": "Flagship lab: count the owners, drop the apostrophe after the whole owner word, add 's to plurals with no s, read who owns what, and proofread.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "You know that the dog's bone means one dog owns the bone. Now there are three dogs, and they share a kennel. We write the dogs' kennel. The mark goes after the s.",
+   "Here is the trick. Write the owner word first. Count the owners: three dogs, so the word is dogs. Then put the mark straight after it. dogs already ends in s, so stop. Do not add another s.",
+   "Some words mean more than one but do not end in s. Think of children, women, men and mice. They take 's, just like one owner: the children's toys, the mice's nest.",
+   "When you read, look at the word before the mark. That is the owner. The girl's bags means one girl. The girls' bags means more than one girl."
+  ],
+  "adult": [
+   "Ages 7 to 10. In England, Year 2 pupils learn the apostrophe for one owner. Year 4 adds plural owners, such as girls' and boys' (English Appendix 2). Appendix 1 gives the rule. The mark goes after the plural form. If the plural already ends in s, no extra s is added. If it does not, add 's, as in children's.",
+   "The rule is two steps, always in this order. First, write the owner word as it should be: girl for one, girls for several. Second, put the mark straight after it. Add s only if the word does not already end in s. Reading works the same way backwards. Everything before the mark is the owner word, so it tells you how many owners there are.",
+   "Common mistakes: writing girl's when there are several girls; adding an extra s (girls's); making up a plural that does not exist (childrens', womens'); leaving the mark out (the womens race); and putting a mark on a plain plural that owns nothing (three apple's). Be careful when reading, too. The dog's bones can be many bones that all belong to one dog.",
+   "In the lab your child names four pictures by counting the owners. Then they drag the mark into the right gap in five owner words and pick the ending for four plurals with no s. Last, they read five phrases to say how many owners there are, and find the mistake in five sentences."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Four girls share one tent. Which is right?",
+   "choices": [
+    "the girls' tent",
+    "the girl's tent",
+    "the girls tent"
+   ],
+   "answer": 0,
+   "hint": "Count the owners first. Then write the owner word and add the mark.",
+   "explain": "There are four girls, so the owner word is girls. It ends in s, so the mark goes after it: the girls' tent."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} dogs. Each dog has 2 bowls. How many bowls are there in 'the dogs' bowls'?",
+   "answer": "n*2",
+   "hint": "The dogs' bowls means the bowls of all the dogs, not just one.",
+   "explain": "dogs' means more than one dog. {n} dogs × 2 bowls = {=n*2} bowls.",
+   "params": {
+    "n": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The coats belong to the children. Which is right?",
+   "choices": [
+    "the children's coats",
+    "the childrens' coats",
+    "the children' coats"
+   ],
+   "answer": 0,
+   "hint": "Does the word children end in s?",
+   "explain": "children is already plural and has no s at the end, so it takes 's: the children's coats. There is no word childrens."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A sign says 'the boys' changing room'. {b} boys and {g} girls are at the pool. How many people does the room belong to?",
+   "answer": "b",
+   "hint": "Look at the owner word before the apostrophe.",
+   "explain": "The owner word is boys, so the room belongs to the {b} boys, not the {g} girls.",
+   "params": {
+    "b": [
+     3,
+     12
+    ],
+    "g": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What does 'the cat's kittens' tell you?",
+   "choices": [
+    "one cat has the kittens",
+    "many cats have the kittens",
+    "the kittens are all cats"
+   ],
+   "answer": 0,
+   "hint": "The word before the mark is the owner.",
+   "explain": "The mark comes straight after cat, so there is one cat. It can still have many kittens."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "The teachers all use one staff room. Which is right?",
+    "choices": [
+     "the teachers' room",
+     "the teacher's room",
+     "the teachers's room"
+    ],
+    "answer": 0,
+    "hint": "teachers already ends in s.",
+    "explain": "The owner word is teachers. It ends in s, so add only the mark: the teachers' room."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The race is for women. Which is right?",
+    "choices": [
+     "the women's race",
+     "the womens' race",
+     "the womens race"
+    ],
+    "answer": 0,
+    "hint": "women is already more than one woman.",
+    "explain": "women does not end in s, so it takes 's: the women's race."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which sentence about pets is right?",
+    "choices": [
+     "We have three cats.",
+     "We have three cat's.",
+     "We have three cats'."
+    ],
+    "answer": 0,
+    "hint": "Do the cats own anything in this sentence?",
+    "explain": "cats just means more than one cat. Nothing belongs to them, so there is no apostrophe."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "'The {n} players' shirts' – each player has one shirt. How many shirts is that?",
+    "answer": "n",
+    "hint": "players' means all the players, not one.",
+    "explain": "The shirts belong to all {n} players, one each: {n} shirts.",
+    "params": {
+     "n": [
+      5,
+      11
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Sam writes 'the boy's bikes' about five boys. What should he write?",
+    "choices": [
+     "the boys' bikes",
+     "the boys's bikes",
+     "the boy's' bikes"
+    ],
+    "answer": 0,
+    "hint": "First write the owner word for five boys.",
+    "explain": "Five boys gives the owner word boys. It ends in s, so the mark goes after it: the boys' bikes."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The mice share one hole. Which is right?",
+    "choices": [
+     "the mice's hole",
+     "the mices' hole",
+     "the mouse's hole"
+    ],
+    "answer": 0,
+    "hint": "mice is the plural of mouse, and it has no s at the end.",
+    "explain": "mice is already plural and does not end in s, so it takes 's: the mice's hole. mouse's would mean just one mouse."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What does 'the birds' nest' tell you?",
+    "choices": [
+     "more than one bird owns the nest",
+     "one bird owns the nest",
+     "there are many nests"
+    ],
+    "answer": 0,
+    "hint": "Everything before the mark is the owner word.",
+    "explain": "The owner word is birds, so more than one bird owns it. One bird would be the bird's nest."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A farm has {h} horses. 'The horses' field' and 'the horse's saddle' are on a sign. How many horses own the field?",
+    "answer": "h",
+    "hint": "Look at where the mark is in horses'.",
+    "explain": "horses' means all the horses, so the field belongs to {h} horses. horse's is one horse.",
+    "params": {
+     "h": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Where does the apostrophe go after a plural that ends in s?",
+    "choices": [
+     "after the s, with nothing added",
+     "before the s",
+     "after the s, then another s"
+    ],
+    "answer": 0,
+    "hint": "Write the whole owner word first.",
+    "explain": "Write the whole plural, then the mark: girls', dogs'. No extra s is added."
+   }
+  ]
+ }
+}
