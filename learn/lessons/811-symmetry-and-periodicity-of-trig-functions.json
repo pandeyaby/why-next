@@ -1,0 +1,266 @@
+{
+ "topicId": "mt_PqH6rvJBbi",
+ "title": "Symmetry and periodicity of trig functions",
+ "audience": "learner",
+ "keyIdea": "Sine and cosine repeat every full turn, so sin(θ + 2π) = sin θ and cos(θ + 2π) = cos θ; their period is 2π. Tangent repeats every half-turn, so its period is π. On the unit circle, −θ is the mirror image of θ in the x-axis, which keeps x and flips y: cos(−θ) = cos θ (cosine is even) and sin(−θ) = −sin θ (sine is odd). The mirror in the y-axis gives π − θ, which keeps the height: sin(π − θ) = sin θ and cos(π − θ) = −cos θ. Symmetry finds the partner solution in one turn; the period finds the rest.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each identity true for every θ? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "always true",
+    "not true"
+   ],
+   "items": [
+    [
+     "sin(θ + 2π) = sin θ",
+     0
+    ],
+    [
+     "cos(−θ) = cos θ",
+     0
+    ],
+    [
+     "sin(π − θ) = sin θ",
+     0
+    ],
+    [
+     "tan(θ + π) = tan θ",
+     0
+    ],
+    [
+     "sin(−θ) = sin θ",
+     1
+    ],
+    [
+     "cos(π − θ) = cos θ",
+     1
+    ],
+    [
+     "cos(θ + π) = cos θ",
+     1
+    ],
+    [
+     "tan(θ + 2π) = −tan θ",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtsym",
+  "caption": "Flagship lab: slide a graph copy to find each period, mirror points to −θ and π − θ, sort identities, solve with symmetry and period.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Turn a point once round the unit circle and it lands where it started. So sin and cos repeat every 2π. We say their period is 2π. Tan repeats sooner, every π.",
+   "Now turn the same angle the other way, to −θ. The new point is the mirror image in the x-axis. Its x is the same, so cos(−θ) = cos θ. Its y flips, so sin(−θ) = −sin θ.",
+   "Mirror the point in the y-axis instead. That gives the angle π − θ. The height does not change, so sin(π − θ) = sin θ. For example, sin(5π/6) = sin(π/6) = 1/2.",
+   "This is how you find every answer. To solve sin x = 1/2, start with x = π/6. The mirror gives 5π/6. Then add 2π to each one for every extra turn you need."
+  ],
+  "adult": [
+   "Ages 16 to 18: A-level Pure Mathematics and the US standard F-TF.4, which asks students to use the unit circle to explain symmetry (odd and even) and periodicity of trigonometric functions. The unit-circle definition makes each fact a picture rather than a rule to memorise.",
+   "A function f is periodic with period p if f(x + p) = f(x) for all x, and p is the smallest positive such number. A full turn returns the point to itself, so sine and cosine have period 2π (360°). A half-turn sends (x, y) to (−x, −y), which flips both but leaves y/x alone, so tangent has period π (180°). A function is even if f(−x) = f(x), so its graph is symmetric in the y-axis; it is odd if f(−x) = −f(x), so its graph has rotational symmetry about the origin. Cosine is even and sine is odd.",
+   "Common mistakes: writing cos(−θ) = −cos θ by treating the minus sign as if it always comes out; copying sin(π − θ) = sin θ to cos and missing the sign change, cos(π − θ) = −cos θ; giving tan a period of 2π, which is a period but not the smallest; reading sin(θ + 2π) as sin θ + 2π; and stopping at the calculator value when solving, which misses the partner from symmetry and every solution from the period. Careful with ranges: count every turn the interval covers.",
+   "In the lab you slide a dashed copy of each graph until it fits to find three periods, place Q at −θ and at π − θ for four angles each, and sort seven identities as always true or not. Then you tap every solution of four equations on their graphs, the last over two full turns."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "sin(π/6) = 1/2. What is sin(5π/6)?",
+   "choices": [
+    "1/2",
+    "−1/2",
+    "√3/2"
+   ],
+   "answer": 0,
+   "hint": "5π/6 = π − π/6. What does the mirror in the y-axis do to the height?",
+   "explain": "sin(π − θ) = sin θ, so sin(5π/6) = sin(π/6) = 1/2. The mirror in the y-axis keeps the height."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "θ = {a}°. Which angle between 90° and 180° has the same sine as θ?",
+   "answer": "180-a",
+   "hint": "Use sin(180° − θ) = sin θ: mirror the point in the y-axis.",
+   "explain": "sin(180° − θ) = sin θ, so the angle is 180° − {a}° = {=180-a}°.",
+   "params": {
+    "a": [
+     10,
+     80
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is true for every θ?",
+   "choices": [
+    "cos(−θ) = cos θ",
+    "cos(−θ) = −cos θ",
+    "sin(−θ) = sin θ"
+   ],
+   "answer": 0,
+   "hint": "−θ is the mirror image in the x-axis. Which coordinate stays the same?",
+   "explain": "The mirror in the x-axis keeps x, so cos(−θ) = cos θ: cosine is even. It flips y, so sin(−θ) = −sin θ."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many solutions has sin x = 1/2 for 0 ≤ x ≤ {n}·2π?",
+   "answer": "2*n",
+   "hint": "Find the two solutions in one turn, then count the turns.",
+   "explain": "Each full turn gives two solutions (π/6 and 5π/6, plus 2π each turn). {n} turns give {=2*n} solutions.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What is the period of y = tan x?",
+   "choices": [
+    "π",
+    "2π",
+    "π/2"
+   ],
+   "answer": 0,
+   "hint": "A half-turn flips both x and y. What happens to y/x?",
+   "explain": "tan(x + π) = tan x because a half-turn flips both coordinates and leaves y/x alone. 2π also works but is not the smallest."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which describes the graph of y = cos x?",
+    "choices": [
+     "symmetric in the y-axis, because cosine is even",
+     "rotational symmetry about the origin, because cosine is odd",
+     "no symmetry"
+    ],
+    "answer": 0,
+    "hint": "Compare cos(−x) with cos x.",
+    "explain": "cos(−x) = cos x, so cosine is even and its graph is a mirror image in the y-axis."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "cos(π − θ) is equal to",
+    "choices": [
+     "−cos θ",
+     "cos θ",
+     "sin θ"
+    ],
+    "answer": 0,
+    "hint": "π − θ is the mirror in the y-axis. What happens to x?",
+    "explain": "The mirror in the y-axis flips x, so cos(π − θ) = −cos θ."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "One solution of cos x = c is x = {a}°. What is the next solution above 360° that comes from the period alone?",
+    "answer": "a+360",
+    "hint": "Cosine repeats every 360°.",
+    "explain": "cos(x + 360°) = cos x, so {a}° + 360° = {=a+360}° is also a solution.",
+    "params": {
+     "a": [
+      10,
+      80
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "sin(θ + 2π) is equal to",
+    "choices": [
+     "sin θ",
+     "sin θ + 2π",
+     "−sin θ"
+    ],
+    "answer": 0,
+    "hint": "Adding 2π inside the bracket is a full turn.",
+    "explain": "A full turn lands on the same point, so sin(θ + 2π) = sin θ."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "How many solutions has tan x = 1 for 0 ≤ x < {n}π?",
+    "answer": "n",
+    "hint": "tan has period π, and there is one solution in each interval of length π.",
+    "explain": "x = π/4 + kπ, one in each interval of length π, so there are {=n} solutions in 0 ≤ x < {n}π.",
+    "params": {
+     "n": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which pair of angles in 0 ≤ x ≤ 2π solves cos x = −1/2?",
+    "choices": [
+     "2π/3 and 4π/3",
+     "π/3 and 2π/3",
+     "2π/3 and 5π/3"
+    ],
+    "answer": 0,
+    "hint": "Cosine is negative on the left. cos(2π − θ) = cos θ gives the partner.",
+    "explain": "cos(2π/3) = −1/2. The mirror in the x-axis keeps x, so 2π − 2π/3 = 4π/3 also works."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "sin(−π/2) is equal to",
+    "choices": [
+     "−1",
+     "1",
+     "0"
+    ],
+    "answer": 0,
+    "hint": "Sine is odd: what does the minus sign do?",
+    "explain": "sin(−θ) = −sin θ, so sin(−π/2) = −sin(π/2) = −1."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why does tan have period π when sin and cos have period 2π?",
+    "choices": [
+     "A half-turn flips both sin and cos, so their ratio is unchanged.",
+     "tan grows twice as fast as sin.",
+     "tan is only defined up to π."
+    ],
+    "answer": 0,
+    "hint": "tan θ = sin θ / cos θ. What does a half-turn do to each?",
+    "explain": "sin(θ + π) = −sin θ and cos(θ + π) = −cos θ, so the ratio sin/cos is the same."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "sin x = 0.4 has a solution x = α between 0 and π/2. Which other solution lies in 0 ≤ x ≤ 2π?",
+    "choices": [
+     "π − α",
+     "−α",
+     "π + α"
+    ],
+    "answer": 0,
+    "hint": "Same sine means the same height.",
+    "explain": "sin(π − α) = sin α, the mirror in the y-axis. −α and π + α give −0.4."
+   }
+  ]
+ }
+}
