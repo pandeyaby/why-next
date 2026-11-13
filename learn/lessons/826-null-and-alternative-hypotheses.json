@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_Roy8xE8n4T",
+ "title": "Null and alternative hypotheses",
+ "audience": "learner",
+ "keyIdea": "A hypothesis test starts with two statements about a population parameter, such as the proportion p, the mean μ or the correlation ρ, never about a sample statistic such as p̂, x̄ or r. The null hypothesis H₀ is an equality at the claimed or 'nothing unusual' value (H₀: p = 0.25). The alternative hypothesis H₁ says how the parameter differs, and its direction comes from the claim, decided before the data are seen: 'more' gives H₁: p > 0.25, 'less' gives p < 0.25 (both one-tailed), and 'different' with no direction gives p ≠ 0.25 (two-tailed). H₁ never includes the H₀ value, so ≥ and ≤ are not used.",
+ "familyTip": "Make up a claim together, such as 'this cereal box toy is in 1 in 4 boxes'. Ask your teenager to write H₀ and H₁ if they suspect the toy is rarer than that, then if they just think the claim is wrong. Then ask why the hypotheses do not use the number they found in their own boxes.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which quantities can appear in a hypothesis? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "parameter: can go in H₀ or H₁",
+    "statistic: never in H₀ or H₁"
+   ],
+   "items": [
+    [
+     "p, the proportion of all voters",
+     0
+    ],
+    [
+     "p̂ = 0.35 from 60 spins",
+     1
+    ],
+    [
+     "μ, the mean of all bags",
+     0
+    ],
+    [
+     "x̄ = 498 g from 30 bags",
+     1
+    ],
+    [
+     "ρ, the population correlation",
+     0
+    ],
+    [
+     "r = 0.42 from 20 pairs",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnullh",
+  "caption": "Flagship lab: sort parameters from statistics, drag the value into H₀, drag the sign into H₁, shade H₁ on a line, pick the correct pair.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A hypothesis test asks whether a sample is strong enough evidence against a claim about a whole population. The claim is about a parameter: p for a proportion, μ for a mean, ρ for a correlation. You never know it exactly. What you know is a statistic from your sample, like p̂ = 21/60 = 0.35. The statistic is your evidence, so it never goes in a hypothesis.",
+   "The null hypothesis H₀ says nothing unusual is going on, so the parameter equals the claimed value. A spinner that should land on red 25% of the time gives H₀: p = 0.25. H₀ is always an equality, because the test works out probabilities assuming exactly that value.",
+   "The alternative H₁ says how you think the parameter differs. Read the claim. If someone suspects red comes up more often, H₁: p > 0.25. If they suspect less often, H₁: p < 0.25. Both are one-tailed. If they only think the spinner is biased, with no direction, H₁: p ≠ 0.25, which is two-tailed.",
+   "Choose H₁ before you look at the data. Getting 0.35 in your sample does not mean H₁ should be p > 0.25; the question you were asked decides that. And H₁ never includes the H₀ value, so write p > 0.25, not p ≥ 0.25."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is A level Statistics. At AS, students test a binomial proportion. At A level, they also test the mean of a normal model and a correlation. IB and AP Statistics cover the same skill. Students must state hypotheses about the population for a given context. They must also pick a one-tailed or two-tailed test from the wording.",
+   "The terms: a parameter (p, μ, ρ) is a fixed number for the whole population, and we do not know it. A statistic (p̂, x̄, r) is worked out from a sample, and it changes from sample to sample. H₀ is an equality, because the test needs one exact value to find probabilities, such as X ~ B(n, 0.25). H₁ is one-tailed (< or >) or two-tailed (≠). It is fixed before the data come in.",
+   "Common mistakes: using the sample value (H₀: p = 0.35), using a sample symbol (H₁: x̄ < 500), putting an inequality in H₀, swapping H₀ and H₁, and using ≥ or ≤ in H₁. Others pick the tail after seeing which way the data went, or write a count for p (H₀: p = 21). Mark schemes also want p defined in context, such as the chance the spinner lands on red.",
+   "In the lab students sort eight cards into parameters and statistics. They drag the claimed value into H₀ for three contexts, and drag <, > or ≠ into H₁ for four claims. They shade the values of p that H₁ allows on a number line; tapping the H₀ point gets feedback. Last, they pick the one correct pair of hypotheses for a proportion, a mean and a correlation."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A drug company claims its drug helps more than 40% of patients. In a trial, 52 of 100 are helped. Which hypotheses test the claim?",
+   "choices": [
+    "H₀: p = 0.4, H₁: p > 0.4",
+    "H₀: p = 0.52, H₁: p > 0.52",
+    "H₀: p > 0.4, H₁: p = 0.4"
+   ],
+   "answer": 0,
+   "hint": "H₀ uses the claimed value as an equality. The claim's direction goes in H₁.",
+   "explain": "H₀: p = 0.4 is the value being tested and H₁: p > 0.4 is the claim of more than 40%. 0.52 is the sample proportion, and the equality always goes in H₀."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "H₀: p = 0.25 for a spinner landing on red. It is spun {=4*m} times. How many reds does H₀ lead you to expect?",
+   "answer": "m",
+   "hint": "Under H₀ the expected number is n × p.",
+   "explain": "{=4*m} × 0.25 = {m} reds expected if H₀ is true. A result far from {m} is evidence against H₀.",
+   "params": {
+    "m": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Ali thinks a coin is biased but does not say which way. Which H₁?",
+   "choices": [
+    "p ≠ 0.5",
+    "p > 0.5",
+    "p < 0.5"
+   ],
+   "answer": 0,
+   "hint": "Does the claim give a direction?",
+   "explain": "Biased with no direction means p could be above or below 0.5, so H₁: p ≠ 0.5, a two-tailed test."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A firm claims {a}% of customers reuse its bags. You test the claim. Under H₀, how many out of 100 customers do you expect to reuse bags?",
+   "answer": "a",
+   "hint": "H₀ takes the firm's claimed proportion as true.",
+   "explain": "H₀: p = {a}/100, so 100 × {a}/100 = {a} customers are expected to reuse bags.",
+   "params": {
+    "a": [
+     20,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why do hypotheses use p and not the sample proportion p̂?",
+   "choices": [
+    "The test is about the unknown population value; p̂ is the evidence",
+    "p̂ is too hard to calculate",
+    "p̂ is only used in two-tailed tests"
+   ],
+   "answer": 0,
+   "hint": "Which one do you already know, and which one is the question about?",
+   "explain": "You already know p̂ from the sample. The question is about p, the population proportion, which you cannot see directly; p̂ is the evidence used to judge it."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Bags of flour should hold 500 g on average. A buyer thinks they hold less. Which hypotheses?",
+    "choices": [
+     "H₀: μ = 500, H₁: μ < 500",
+     "H₀: x̄ = 500, H₁: x̄ < 500",
+     "H₀: μ = 500, H₁: μ ≤ 500"
+    ],
+    "answer": 0,
+    "hint": "Use the population mean, and keep the H₀ value out of H₁.",
+    "explain": "μ is the population mean, so H₀: μ = 500 and H₁: μ < 500. x̄ is the sample mean, and H₁ cannot include 500 itself."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Is there any correlation between hours of sleep and test score? Which hypotheses?",
+    "choices": [
+     "H₀: ρ = 0, H₁: ρ ≠ 0",
+     "H₀: r = 0, H₁: r ≠ 0",
+     "H₀: ρ = 0, H₁: ρ > 0"
+    ],
+    "answer": 0,
+    "hint": "Any correlation has no direction. Use the population symbol.",
+    "explain": "ρ is the population correlation; r comes from the sample. 'Any correlation' gives a two-tailed H₁: ρ ≠ 0."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A dice gives 28 sixes in 120 rolls. Someone thinks it shows sixes less often than a fair dice. Which H₀?",
+    "choices": [
+     "p = 1/6",
+     "p = 28/120",
+     "p < 1/6"
+    ],
+    "answer": 0,
+    "hint": "H₀ is an equality at the fair value.",
+    "explain": "A fair dice has p = 1/6, so H₀: p = 1/6. 28/120 is the sample result, and p < 1/6 is H₁."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which of these is a valid alternative hypothesis when H₀: p = 0.3?",
+    "choices": [
+     "p > 0.3",
+     "p ≥ 0.3",
+     "p̂ > 0.3"
+    ],
+    "answer": 0,
+    "hint": "H₁ must be about the parameter and must not include 0.3.",
+    "explain": "p > 0.3 is valid. p ≥ 0.3 includes the H₀ value, and p̂ is a sample statistic."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A sample gives p̂ = 0.18 when H₀ is p = 0.25. The question asked whether p has changed. Which H₁?",
+    "choices": [
+     "p ≠ 0.25",
+     "p < 0.25",
+     "p > 0.25"
+    ],
+    "answer": 0,
+    "hint": "The question, not the sample, decides the direction.",
+    "explain": "'Has changed' has no direction, so H₁: p ≠ 0.25. The sample being below 0.25 does not make the test one-tailed."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is a parameter?",
+    "choices": [
+     "μ, the mean height of all students in a school",
+     "x̄ = 162 cm for 25 students",
+     "r = 0.6 for 15 pairs"
+    ],
+    "answer": 0,
+    "hint": "A parameter describes the whole population.",
+    "explain": "μ describes the whole population. x̄ and r are calculated from samples, so they are statistics."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "H₀: p = 0.5 for a coin. It is tossed {=2*m} times. How many heads does H₀ lead you to expect?",
+    "answer": "m",
+    "hint": "Expected number = n × p under H₀.",
+    "explain": "{=2*m} × 0.5 = {m} heads are expected if H₀ is true.",
+    "params": {
+     "m": [
+      10,
+      40
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A claim says 1 in {k} special dice rolls shows a star, so H₀: p = 1/{k}. In {=k*m} rolls, how many stars does H₀ lead you to expect?",
+    "answer": "m",
+    "hint": "Multiply the number of rolls by the H₀ probability.",
+    "explain": "{=k*m} × 1/{k} = {m} stars expected under H₀.",
+    "params": {
+     "k": [
+      4,
+      10
+     ],
+     "m": [
+      5,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A rival suspects that more than 10% of a firm's parts are faulty. The firm claims 10%. Which hypotheses?",
+    "choices": [
+     "H₀: p = 0.1, H₁: p > 0.1",
+     "H₀: p = 0.1, H₁: p < 0.1",
+     "H₀: p > 0.1, H₁: p = 0.1"
+    ],
+    "answer": 0,
+    "hint": "The firm's figure goes in H₀; the rival's suspicion sets H₁.",
+    "explain": "H₀: p = 0.1 is the firm's claim and H₁: p > 0.1 is the rival's suspicion of more faults. The equality never goes in H₁."
+   }
+  ]
+ }
+}
