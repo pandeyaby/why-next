@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE A level Mathematics subject content (Pure: differentiation of sin kx and cos kx; small-angle approximations sin θ ≈ θ, cos θ ≈ 1 − θ²/2 underpinning the derivation) and the first-principles identity [sin(x+h) − sin x]/h = sin x (cos h − 1)/h + cos x (sin h)/h with (sin h)/h → 1, (cos h − 1)/h → 0 for h in radians. Lab values recomputed: tangent gradients at 0, π/2, π, 3π/2, 2π are 1, 0, −1, 0, 1; sin(1.2)/1.2 = 0.7767, sin(0.01)/0.01 = 0.99998; sin(60°)/60 = 0.0144 and the degree limit π/180 = 0.01745; all five combination derivatives and the cycle counts (6th derivative of sin = −sin, 8th of cos = cos) verified."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented errors: confusing height with gradient (prediction 1 '0 because sin 0 = 0', challenge q2 and q5 decoy 0, m2); losing the minus in d/dx(cos x) (prediction 2, the gradient-graph sign-slip feedback, DIFF 2 decoy 5 sin x, m1); giving −cos x as the derivative of sin x, i.e. mixing with integration (DIFF 4 feedback, cycle feedback); believing the result holds in degrees (prediction 3, the degrees round, m5, challenge q3); dropping the coefficient or keeping a constant (DIFF 2, DIFF 5, m4); and confusing where cos x = 0 with where its gradient is 0 (challenge q6, m8)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagdtrig is about this result only: a tangent slid along sin x visits five marks whose gradients (1, 0, −1, 0, 1) are plotted and trace out cos x; numerical gradient dots of sin, cos, −sin and −cos are named; a chord from the origin to (h, sin h) is shrunk in radians and then in degrees against y = x to show the 1 versus π/180 limit; and a four-box derivative cycle is filled by drag and used for nth derivatives. flaggradf (198) sketches gradient functions of polynomials and flagdex (278) builds e from aˣ; neither covers the radian limit or the trig cycle. lab_distinct gate under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each result is seen before it is named: at x = π the tangent reads −1 and the feedback adds cos π = −1; after four marks a faint cos x curve appears through the gradient dots; picking cos x as the gradient of cos explains that the gradient must be 0 where cos peaks; picking sin x for d/dx(cos x) says cos is falling just after 0 so the gradient is negative; the degrees round leaves sin h / h at 0.0175 instead of 1, matching π/180."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions each with a tempting wrong option the task disproves: '0, because sin 0 = 0' (the tangent at x = 0 reads 1.00), 'sin x' for d/dx(cos x) (graph 2's dots trace −sin x), and 'yes, the same' in degrees (round 2 settles at 0.0175 = π/180, not 1). A.reveal names the locked-in pick when each task completes."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with twelve wrong-answer messages naming the slip: −cos x differentiates to +sin x, sin gives +cos with no minus, sin π = 0 is the height not the gradient, cos π = −1 so the curve is falling, degrees are allowed but add π/180, it is the limit sin h / h that needs radians, cos x is the 1st and −sin x the 2nd derivative, cos(π/2) = 0 is the height, the missing minus, and the difference between cos x = 0 and −sin x = 0."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 2.5 (learner limit 6.5), adult 8.3 (limit 9.5). Kid paragraphs walk through three tangent readings, then the plotted gradients, the radian limit with its number (π/180 ≈ 0.0175) and one worked combination. Canvas text is short labels and one-line feedback; symbols use the true minus sign and π throughout. The lab file was trimmed under the 20 KB pre-commit limit by shortening feedback wording, not by removing any feedback."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Kid paragraphs cover the tangent readings, the gradient graph, why radians and term-by-term rules with the cycle; adult text gives the A level content statement, the first-principles algebra and the degree version via the chain rule, the named mistakes with a graph check, and what the lab does. The content gate found no filler and the explanation is under 12% similar to every other lesson, including 198 sketching the gradient function, 278 the derivative of eˣ and 133 radian measure."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for all six steps and wrong states (point at π and 2π, sin x picked as its own gradient, −sin x dragged into the cos box, a wrong combination). Replaced dashed vertical guides that crossed the gradient label with ring markers on the curve, moved the 'y = x (gradient 1)' label off the title, added arrowheads to the cycle so its direction reads at 360 px, and kept answer cards at least 46 px tall. Walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag and tap has a button under the canvas: 'x = π' etc. move the tangent point (labelled 'Move the point to x = π'), the four function names for each gradient graph, h-value buttons for both units ('Set h to 0.01 radians'), each candidate derivative, the four cards for the cycle ('Next derivative: cos x') and then the cycle boxes for nth derivatives. The canvas aria-label is rewritten after every action with the reading or feedback, challenge feedback is a role=status live region, curve, tangent and dot colours switch to lighter tints on dark, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Department for Education (2016) Mathematics AS and A level subject content: Pure mathematics, differentiation of sin kx and cos kx; small-angle approximations",
+  "IB Mathematics: Analysis and Approaches guide (first assessment 2021), SL 5.6 derivatives of sin x and cos x",
+  "Stewart, J. Calculus: Early Transcendentals, §3.3 Derivatives of trigonometric functions (lim sin θ/θ = 1 for θ in radians; derivatives of sin and cos)",
+  "Topic evidence mt_TFYv6VLecL (differentiate 3 sin x − cos x; explain the result from gradient graphs; explain why radians are required)"
+ ]
+}
