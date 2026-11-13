@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_DTh97eD63o",
+ "title": "Fragmentation patterns",
+ "audience": "learner",
+ "keyIdea": "In a mass spectrometer, the molecular ion M⁺• can break apart. One bond splits, giving a positive fragment ion and a neutral radical: M⁺• → X⁺ + Y•. Only the ion is deflected and detected, so each fragment peak has the m/z of a cation. Common fragments are CH₃⁺ (15), C₂H₅⁺ (29), CH₃CO⁺ or C₃H₇⁺ (43), CH₂OH⁺ (31) and C₆H₅⁺ (77). The tallest (base) peak comes from the most stable cation, such as an acylium ion RCO⁺ or a secondary carbocation. Isomers share M⁺ but break differently, so their fragments tell them apart: propan-1-ol gives 31, propan-2-ol gives 45.",
+ "familyTip": "Take any small molecule, such as butanone, and draw its structure. Break each bond in turn and write both possible cations with their masses (C = 12, H = 1, O = 16). Then look up its real spectrum (the NIST Chemistry WebBook is free) and tick off which fragments appear.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which molecule makes each fragment peak? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "propan-1-ol",
+    "propan-2-ol",
+    "both"
+   ],
+   "items": [
+    [
+     "CH₂OH⁺ at m/z 31",
+     0
+    ],
+    [
+     "base peak at 31",
+     0
+    ],
+    [
+     "CH₃CH(OH)⁺ at m/z 45",
+     1
+    ],
+    [
+     "base peak at 45",
+     1
+    ],
+    [
+     "M⁺ at m/z 60",
+     2
+    ],
+    [
+     "a peak at m/z 29",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfrag",
+  "caption": "Flagship lab: snip bonds in butanone to make fragment peaks, put the charge on the detected piece, predict base peaks, tell isomers apart and label a spectrum.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The molecular ion M⁺• has lost one electron. It has a + charge and one odd electron. It has spare energy, so it often breaks. One bond splits into two pieces.",
+   "One piece keeps the charge. It is a cation, X⁺. The other piece gets the odd electron. It is a neutral radical, Y•. Only ions are bent by the field and reach the detector. So one break gives one peak, at the mass of the cation.",
+   "Learn the common peaks. CH₃⁺ is 15. C₂H₅⁺ is 29. CH₃CO⁺ is 43, and so is C₃H₇⁺. CH₂OH⁺ is 31. C₆H₅⁺ is 77. Work out others with C = 12, H = 1 and O = 16.",
+   "The tallest peak is the base peak. It comes from the most stable cation, since more of those form. RCO⁺ ions and cations with more groups on the charged carbon are stable. Isomers have the same M⁺. Their fragments differ, so use them to tell the isomers apart."
+  ],
+  "adult": [
+   "Ages 17 to 18, A-level Chemistry (organic analysis by mass spectrometry). Students explain that the molecular ion breaks into a cation and a radical. They write an equation for a fragmentation, link major peaks to fragments and use fragments to tell isomers apart, such as propan-1-ol and propan-2-ol.",
+   "In electron impact, M loses an electron to give M⁺•, a radical cation. One bond breaks to give X⁺ + Y•, or X• + Y⁺. Only the cation is detected. For a 1+ ion, its m/z is its mass. Peak height depends on how stable the cation is. Acylium ions RCO⁺ give the base peak: 43 in propanone and butanone, 57 in pentan-3-one. CH₂OH⁺ (31) is the base peak of propan-1-ol, and CH₃CHOH⁺ (45) of propan-2-ol.",
+   "Common mistakes: drawing both pieces as ions or both as radicals; putting the + on the piece whose mass does not match the peak; taking the base peak to be M⁺, which is often small; and naming isomers from M⁺ alone. Careful: 43 can be CH₃CO⁺ or C₃H₇⁺, and 29 can be C₂H₅⁺ or CHO⁺, so check which one the structure can make.",
+   "In the lab the learner breaks bonds in butanone and chooses which piece keeps the charge until four peaks appear, then drags the + to the detected piece in four equations. They predict three base peaks, match five spectra to one of two isomers and label five peaks of butanone."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In M⁺• → X⁺ + Y•, which species is detected?",
+   "choices": [
+    "X⁺ only",
+    "Y• only",
+    "both X⁺ and Y•"
+   ],
+   "answer": 0,
+   "hint": "Only charged particles are deflected and reach the detector.",
+   "explain": "X⁺ is a cation, so it is detected. Y• is a neutral radical, so it is not."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An alkane CₙH₂ₙ₊₂ with n = {n} loses CH₃•. At what m/z is the fragment peak?",
+   "answer": "14*n+2-15",
+   "hint": "Mr of CₙH₂ₙ₊₂ is 12n + (2n + 2). Then take away 15 for CH₃.",
+   "explain": "Mr = 14 × {n} + 2 = {=14*n+2}. Losing CH₃ (15) leaves a cation at m/z {=14*n+2-15}.",
+   "params": {
+    "n": [
+     4,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A ketone shows its base peak at m/z 43. Which fragment is it most likely to be?",
+   "choices": [
+    "CH₃CO⁺",
+    "C₂H₅⁺",
+    "CH₃⁺"
+   ],
+   "answer": 0,
+   "hint": "Work out 12 + 3 + 12 + 16, and think about which ions are stable.",
+   "explain": "CH₃CO⁺ = 12 + 3 + 12 + 16 = 43, a stable acylium ion. C₂H₅⁺ is 29 and CH₃⁺ is 15."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A molecular ion with M = {m} loses C₂H₅•. At what m/z is the fragment peak?",
+   "answer": "m-29",
+   "hint": "C₂H₅ has mass 2 × 12 + 5 × 1.",
+   "explain": "C₂H₅ = 29, so the cation is at {m} − 29 = {=m-29}.",
+   "params": {
+    "m": [
+     58,
+     100
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which peak tells propan-1-ol apart from propan-2-ol?",
+   "choices": [
+    "31 for propan-1-ol, 45 for propan-2-ol",
+    "60 for both",
+    "29 for both"
+   ],
+   "answer": 0,
+   "hint": "The two have the same Mr, so look at the fragments.",
+   "explain": "Propan-1-ol makes CH₂OH⁺ (31); propan-2-ol makes CH₃CHOH⁺ (45). Both have M⁺ at 60."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which equation shows a fragmentation correctly?",
+    "choices": [
+     "[CH₃COCH₃]⁺• → CH₃CO⁺ + CH₃•",
+     "[CH₃COCH₃]⁺• → CH₃CO⁺ + CH₃⁺",
+     "[CH₃COCH₃]⁺• → CH₃CO• + CH₃•"
+    ],
+    "answer": 0,
+    "hint": "One piece keeps the charge; the other takes the odd electron.",
+    "explain": "The charge stays on one piece and the odd electron goes to the other: CH₃CO⁺ + CH₃•."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "An aromatic compound has a peak at m/z 77. Which ion is it?",
+    "choices": [
+     "C₆H₅⁺",
+     "C₆H₆⁺•",
+     "C₆H₅•"
+    ],
+    "answer": 0,
+    "hint": "6 × 12 + 5 × 1, and only ions are detected.",
+    "explain": "C₆H₅⁺ = 72 + 5 = 77. C₆H₆ is 78, and a radical is not detected."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why is the peak at m/z 43 taller than M⁺ (58) in propanone?",
+    "choices": [
+     "CH₃CO⁺ is a stable cation, and many M⁺ ions break up to form it",
+     "heavier ions are never detected",
+     "CH₃⁺ is the most stable ion"
+    ],
+    "answer": 0,
+    "hint": "Peak height reflects how many of that ion reach the detector.",
+    "explain": "Many M⁺• ions fragment before detection, and the stable acylium ion CH₃CO⁺ forms readily, so 43 is the base peak."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A ketone CH₃CO–R has M = {m}. It splits into CH₃CO⁺ and R•. What is the mass of R?",
+    "answer": "m-43",
+    "hint": "CH₃CO has mass 43; the rest of the molecule is R.",
+    "explain": "R = {m} − 43 = {=m-43}. The peak itself is at 43, because only CH₃CO⁺ is detected.",
+    "params": {
+     "m": [
+      58,
+      114
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Pentan-2-one and pentan-3-one both have M⁺ at 86. Which spectrum is pentan-3-one?",
+    "choices": [
+     "base peak 57, no large 43",
+     "base peak 43, small 71",
+     "base peak 86"
+    ],
+    "answer": 0,
+    "hint": "Pentan-3-one is C₂H₅COC₂H₅. Which acylium ion can it make?",
+    "explain": "Pentan-3-one gives C₂H₅CO⁺ at 57. Pentan-2-one has a CH₃ next to the C=O, so it gives CH₃CO⁺ at 43."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A peak at m/z 29 in an aldehyde could be which two ions?",
+    "choices": [
+     "CHO⁺ or C₂H₅⁺",
+     "CH₃⁺ or CH₂OH⁺",
+     "CH₃CO⁺ or C₃H₇⁺"
+    ],
+    "answer": 0,
+    "hint": "Work out 12 + 1 + 16 and 2 × 12 + 5.",
+    "explain": "CHO⁺ = 29 and C₂H₅⁺ = 29. CH₃CO⁺ and C₃H₇⁺ are both 43."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "An alcohol CₙH₂ₙ₊₁OH with n = {n} loses a CH₃• radical. At what m/z is the fragment peak?",
+    "answer": "14*n+18-15",
+    "hint": "Mr of CₙH₂ₙ₊₁OH is 14n + 18. Take away 15 for CH₃.",
+    "explain": "Mr = 14 × {n} + 18 = {=14*n+18}. Losing CH₃ (15) gives a peak at {=14*n+18-15}.",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A student says the base peak is always the molecular ion. What is wrong?",
+    "choices": [
+     "M⁺ is often small; the base peak is the most stable fragment",
+     "the base peak is always at m/z 15",
+     "the base peak is the lightest ion"
+    ],
+    "answer": 0,
+    "hint": "Think about what happens to most M⁺• ions before they reach the detector.",
+    "explain": "Many molecular ions break up, so M⁺ is often small. The base peak is the most abundant ion, usually a stable fragment."
+   }
+  ]
+ }
+}

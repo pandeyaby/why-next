@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every fragment mass recomputed with C = 12, H = 1, O = 16 (CH₃⁺ 15, C₂H₅⁺ and CHO⁺ 29, CH₂OH⁺ 31, CH₃CO⁺ and C₃H₇⁺ 43, CH₃CHOH⁺ 45, C₂H₅CO⁺ and CH₃COCH₂⁺ 57, C₆H₅⁺ 77; butanone pieces 15 + 28 + 14 + 15 = 72). All spectra in the lab were re-fetched from the NIST Chemistry WebBook EI peak tables on 2026-11-12 and rounded: propanone 43 (100), 58 (25), 15 (12); butanone 43 (100), 72 (25), 29 (17), 57 (8), 15 (4); 2-methylpropane base 43; pentan-3-one 57 (100), 29 (59), 86 (21); pentan-2-one 43 (100), 86 (20), 71 (10), 58 (10); propan-1-ol 31 (100); propan-2-ol 45 (100); propanal 58 (100), 29 (88); benzaldehyde 77 (100). The propanal item was corrected after this check so it no longer calls 29 its base peak."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented A-level errors: both fragments shown as ions or both as radicals (prediction 2, challenge q2, m1), counting two peaks per bond break (prediction 1), the + put on the piece whose mass does not match the peak (step 2 feedback names the piece's mass), the base peak taken to be M⁺ (prediction 3, step 3 feedback for 58/86, m8), naming isomers from M⁺ alone (step 4 feedback, challenge q3), and the ambiguity of 43 (CH₃CO⁺ vs C₃H₇⁺) and 29 (C₂H₅⁺ vs CHO⁺) in the adult text and m6."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagfrag models the fragmentation step itself: tapping a bond in butanone to split M⁺•, choosing which piece keeps the charge to grow a peak while the radical is reported as undetected, dragging a + onto the detected piece of an equation, predicting base peaks from cation stability, matching isomer spectra and labelling peaks. flagmion (finding M⁺ and Mr, ignoring M+1) and flagtof (how a TOF spectrometer works) cover neither bond fission nor charge placement; the lab_distinct gate passed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers each idea by acting: one break followed by one charge choice adds exactly one peak, and repeating a piece reports 'You already have the peak at 15', so the four peaks of butanone come from different bonds and charge sides; wrong charge placement explains that the piece's mass is not the m/z; tapping 58 for propanone explains that most molecular ions break up; dragging propan-1-ol's spectrum to propan-2-ol says both have M⁺ 60 and points to 31."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong answers: 'two, one for each piece' (step 1 shows one peak per break), 'another ion' for Y (step 2 makes the other piece the neutral radical every time), and '58, the molecular ion' as propanone's tallest peak (step 3 answer is 43, CH₃CO⁺). A.reveal names the learner's locked-in pick when each task completes."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five challenge questions with ten wrong-answer messages that each name the slip: CH₃⁺ at 15 and C₂H₅⁺ at 29 for a 43 peak, sharing the charge across both pieces, no charged piece at all, comparing M⁺ for isomers, a peak both alcohols share, 57 mistaken for M⁺ of C₅H₁₀O (86), C₂H₅⁺ as the stable cation, C₆H₆ at 78, and a radical being detected."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 1.8 (learner limit 6.5), adult 7.0 (limit 9.5) after splitting the long adult sentences. Kid paragraphs keep one idea each (what M⁺• is, cation vs radical, the common peaks, base peak and isomers) in short sentences; canvas prompts are one line."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each paragraph teaches or warns: the kid text gives the mechanism, the detection rule, the masses to learn and the stability rule; the adult text gives the specification context, the equation, named base peaks, the mistakes and what the lab does. The content gate found no filler phrases and the explanation is under 12% similar to every other lesson, including 754 The molecular ion peak."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for all six steps and wrong-answer states (a piece already used, the + on CH₃ for propanone, 15 chosen as tallest, a mismatched isomer, a label on the wrong peak). Peak tick labels are placed tallest-first and skipped when they would overlap, the 27/29 cluster was removed from the labelling spectrum so every peak target is 22 px wide with clear gaps, and the neutral prompt no longer shows in the warning colour. Walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: 'Break CH₃–CO', 'Charge on CH₃CO (43)', 'Tallest is m/z 43', 'Spectrum is propan-2-ol CH₃CH(OH)CH₃' and 'Put CH₃CO⁺ on m/z 43', so no drag or precise tap is needed. The canvas aria-label is rewritten after every action with the equation or feedback, challenge feedback is a role=status live region, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "NIST Chemistry WebBook, SRD 69: electron-ionisation mass spectra of propanone, butanone, 2-methylpropane, pentan-2-one, pentan-3-one, propan-1-ol, propan-2-ol, propanal and benzaldehyde (peak tables fetched 2026-11-12)",
+  "OCR A-level Chemistry A (H432) 6.3.2 Spectroscopy: mass spectrometry, molecular ion peak and analysis of fragmentation peaks to identify parts of structures",
+  "Topic evidence mt_DTh97eD63o (equation for a fragmentation; fragments for major peaks; propan-1-ol vs propan-2-ol)"
+ ]
+}
