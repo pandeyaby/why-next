@@ -1,0 +1,261 @@
+{
+ "topicId": "mt_ANgm0g3IFK",
+ "title": "Reciprocal hyperbolic functions",
+ "audience": "learner",
+ "keyIdea": "The reciprocal hyperbolic functions are sech x = 1/cosh x, cosech x = 1/sinh x and coth x = 1/tanh x. They are reciprocals, not inverses: cosh⁻¹ x means arcosh x. Because cosh x ≥ 1, the graph of sech x has its peak at (0, 1), stays between 0 and 1 and tends to 0 at both ends. Because sinh 0 = tanh 0 = 0, cosech x and coth x are undefined at x = 0; cosech x tends to 0 for large |x|, and coth x tends to ±1, with |coth x| > 1. Dividing cosh²x − sinh²x = 1 by cosh²x gives 1 − tanh²x = sech²x, and dividing by sinh²x gives coth²x − 1 = cosech²x.",
+ "familyTip": "Ask your teenager to sketch y = cosh x and then, without a calculator, sketch y = sech x on the same axes by flipping each height. Where is sech x biggest? Why can it never be negative? Then ask them to explain why the −1 in cosh⁻¹ x does not mean 1/cosh x.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which function has each feature? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "sech x",
+    "cosech x",
+    "coth x"
+   ],
+   "items": [
+    [
+     "passes through (0, 1)",
+     0
+    ],
+    [
+     "always between 0 and 1",
+     0
+    ],
+    [
+     "odd, tends to 0 as x → ∞",
+     1
+    ],
+    [
+     "equals 1 / sinh x",
+     1
+    ],
+    [
+     "horizontal asymptotes y = ±1",
+     2
+    ],
+    [
+     "never between −1 and 1",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrecip",
+  "caption": "Flagship lab: plot sech x from cosh x, tell reciprocal from inverse, match graphs, test ranges, build identities, find exact values.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Each hyperbolic function has a reciprocal: sech x = 1/cosh x, cosech x = 1/sinh x and coth x = 1/tanh x. Say them as 'sheck', 'co-shek' and 'coth'.",
+   "Do not mix up reciprocal and inverse. cosh⁻¹ x is the inverse function, arcosh x. It undoes cosh. The reciprocal is 1/cosh x, so we give it its own name, sech.",
+   "To sketch sech x, flip the heights of cosh x. cosh 0 = 1, so sech 0 = 1, the top of the graph. As x grows, cosh x grows fast, so sech x drops towards 0. It is never 0 and never negative.",
+   "sinh 0 = 0 and tanh 0 = 0, so cosech x and coth x break at x = 0. cosech x tends to 0 for large x. coth x levels off at 1 and −1, so it can never be between them. Divide cosh²x − sinh²x = 1 by cosh²x and you get 1 − tanh²x = sech²x."
+  ],
+  "adult": [
+   "Ages 17 to 18, A-level Further Mathematics (hyperbolic functions). Students define sech, cosech and coth as reciprocals and sketch their graphs. They also derive 1 − tanh²x = sech²x and coth²x − 1 = cosech²x from cosh²x − sinh²x = 1. These results are used later for derivatives (d/dx tanh x = sech²x) and for integration.",
+   "Each graph follows from its parent. sech x is even, has a maximum of 1 at x = 0 and tends to 0, so its range is 0 < y ≤ 1. cosech x is odd, has the asymptote x = 0 and tends to 0 at both ends, so it takes every value except 0. coth x is odd, has asymptotes x = 0 and y = ±1, and its range is |y| > 1.",
+   "Common mistakes: reading cosh⁻¹ x as 1/cosh x; copying the trig identity 1 + tan²x = sec²x with a plus sign; pairing sech with sinh; giving sech x a range of y ≥ 1, which is the range of cosh; and taking the negative root for sinh x when x > 0 is given. Careful with exact values: from cosh x = 5/4, sinh²x = 9/16, so sinh x = 3/4 when x > 0.",
+   "In the lab your child plots four points of sech x by dragging a dot to 1/cosh x, sorts notation into reciprocal or inverse, and matches the three graphs. Then they judge seven values as possible or impossible, fill six gaps to build both identities, and find five exact values from cosh x = 5/4."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is the definition of coth x?",
+   "choices": [
+    "1 / tanh x",
+    "1 / cosh x",
+    "the inverse function of tanh"
+   ],
+   "answer": 0,
+   "hint": "co pairs with the function whose name it shares: tanh.",
+   "explain": "coth x = 1/tanh x = cosh x / sinh x. The inverse function of tanh is artanh x."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "sech x = 1/{n}. Find cosh x.",
+   "answer": "n",
+   "hint": "sech x is the reciprocal of cosh x, so flip it back.",
+   "explain": "cosh x = 1 / sech x = 1 / (1/{n}) = {n}. It is at least 1, as cosh x always is.",
+   "params": {
+    "n": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the range of y = sech x?",
+   "choices": [
+    "0 < y ≤ 1",
+    "y ≥ 1",
+    "−1 < y < 1"
+   ],
+   "answer": 0,
+   "hint": "cosh x ≥ 1 for every x. What does that do to 1/cosh x?",
+   "explain": "cosh x ≥ 1, so 0 < 1/cosh x ≤ 1. The maximum, 1, is at x = 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "tanh x = 1/{t}. Find coth x.",
+   "answer": "t",
+   "hint": "coth x is the reciprocal of tanh x.",
+   "explain": "coth x = 1 / (1/{t}) = {t}. That is more than 1, as every value of |coth x| must be.",
+   "params": {
+    "t": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Dividing cosh²x − sinh²x = 1 by cosh²x gives which identity?",
+   "choices": [
+    "1 − tanh²x = sech²x",
+    "1 + tanh²x = sech²x",
+    "coth²x − 1 = cosech²x"
+   ],
+   "answer": 0,
+   "hint": "cosh²x/cosh²x = 1 and sinh²x/cosh²x = tanh²x.",
+   "explain": "1 − tanh²x = 1/cosh²x = sech²x. Dividing by sinh²x instead gives coth²x − 1 = cosech²x."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does cosh⁻¹ x mean?",
+    "choices": [
+     "arcosh x, the inverse function",
+     "1 / cosh x",
+     "sech x"
+    ],
+    "answer": 0,
+    "hint": "A −1 on a function name is not a power.",
+    "explain": "cosh⁻¹ x is the inverse function arcosh x. The reciprocal 1/cosh x is called sech x."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which function is undefined at x = 0?",
+    "choices": [
+     "cosech x",
+     "sech x",
+     "tanh x"
+    ],
+    "answer": 0,
+    "hint": "Which parent function is 0 at x = 0?",
+    "explain": "sinh 0 = 0, so cosech 0 = 1/0 is undefined. sech 0 = 1 and tanh 0 = 0 are both defined."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "cosh x = 5/4 and x > 0. What is tanh x?",
+    "choices": [
+     "3/5",
+     "4/5",
+     "5/3"
+    ],
+    "answer": 0,
+    "hint": "Find sinh x from cosh²x − sinh²x = 1 first.",
+    "explain": "sinh²x = 25/16 − 1 = 9/16, so sinh x = 3/4. tanh x = (3/4) ÷ (5/4) = 3/5."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "tanh x = {a}/10. Find sech²x as a decimal.",
+    "answer": "1-(a/10)*(a/10)",
+    "hint": "Use the identity 1 − tanh²x = sech²x.",
+    "explain": "sech²x = 1 − ({a}/10)² = {=1-(a/10)*(a/10)}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    },
+    "tolerance": 0.001
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which value can coth x NOT take?",
+    "choices": [
+     "0.5",
+     "−3",
+     "1.2"
+    ],
+    "answer": 0,
+    "hint": "|tanh x| < 1. What does that mean for its reciprocal?",
+    "explain": "|tanh x| < 1, so |coth x| > 1. coth x can be −3 or 1.2, but never 0.5."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What happens to sech x as x → ∞?",
+    "choices": [
+     "it tends to 0",
+     "it tends to 1",
+     "it grows without limit"
+    ],
+    "answer": 0,
+    "hint": "What does cosh x do as x grows?",
+    "explain": "cosh x grows without limit, so its reciprocal sech x tends to 0. It never reaches 0."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Dividing cosh²x − sinh²x = 1 by sinh²x gives which identity?",
+    "choices": [
+     "coth²x − 1 = cosech²x",
+     "1 − coth²x = cosech²x",
+     "coth²x + 1 = cosech²x"
+    ],
+    "answer": 0,
+    "hint": "cosh²x/sinh²x = coth²x and sinh²x/sinh²x = 1.",
+    "explain": "coth²x − 1 = 1/sinh²x = cosech²x. It is the hyperbolic version of 1 + cot²x = cosec²x, with a sign change."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "cosech x = {s}. Use coth²x − 1 = cosech²x to find coth²x.",
+    "answer": "1+s*s",
+    "hint": "Rearrange the identity: coth²x = 1 + cosech²x.",
+    "explain": "coth²x = 1 + {s}² = {=1+s*s}. It is more than 1, as |coth x| > 1 requires.",
+    "params": {
+     "s": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which graph is even?",
+    "choices": [
+     "y = sech x",
+     "y = cosech x",
+     "y = coth x"
+    ],
+    "answer": 0,
+    "hint": "An even function has the same value at x and −x.",
+    "explain": "cosh is even, so sech is even. sinh and tanh are odd, so cosech and coth are odd too."
+   }
+  ]
+ }
+}
