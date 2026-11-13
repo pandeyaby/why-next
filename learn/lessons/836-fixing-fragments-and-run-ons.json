@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_7oZ2YenzhX",
+ "title": "Fixing Fragments & Run-Ons",
+ "audience": "family",
+ "keyIdea": "A sentence needs a subject (who or what) and a predicate (what they did or are, with a verb). A fragment is missing one of them, or is only half a sentence, like a because-part on its own: \"Running through the park.\" has no subject, so fix it by adding one: \"The dog was running through the park.\" A run-on squashes two complete sentences together with nothing between them: \"I like cats I also like dogs.\" Mend it with a full stop and a capital letter, a semicolon, or a comma plus a joining word (and, but, so). A comma on its own is not enough; that is a comma splice.",
+ "familyTip": "Read your child's writing aloud together, exactly as written. Where your voice drops and stops, a sentence should end. If a word group sounds like an answer to a question nobody asked (\"After the match.\"), ask who did what after the match. If you run out of breath, look for a missing full stop.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Full sentence, fragment or run-on? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "full sentence",
+    "fragment",
+    "run-on"
+   ],
+   "items": [
+    [
+     "The cat slept.",
+     0
+    ],
+    [
+     "Under the bed.",
+     1
+    ],
+    [
+     "The cat slept it was tired.",
+     2
+    ],
+    [
+     "Because it was tired.",
+     1
+    ],
+    [
+     "The cat slept because it was tired.",
+     0
+    ],
+    [
+     "It rained we got wet.",
+     2
+    ],
+    [
+     "Sitting by the fire.",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrunon",
+  "caption": "Flagship lab: test word groups for a who and a did-what, mend fragments, find where run-ons break, mend them three ways, and sort a paragraph.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A sentence needs two parts. It needs a who: the person or thing. It needs a did-what: what they did, with a verb. In \"The dog ran.\" the who is the dog. The did-what is ran.",
+   "A fragment is a bit of a sentence. \"Running through the park.\" has no who. \"My little brother.\" has no did-what. \"Because it was raining.\" is only half. A capital and a full stop do not make it whole.",
+   "To mend a fragment, add what is missing. The dog was running through the park. We stayed in because it was raining.",
+   "A run-on is two sentences squashed into one. \"I like cats I also like dogs.\" Read it out loud. Your voice stops after cats. Put a full stop there, and a capital I. Or use a comma and and. A comma on its own is not enough."
+  ],
+  "adult": [
+   "Ages 9 to 10. This is Common Core L.4.1f: produce complete sentences, recognising and correcting inappropriate fragments and run-ons. In England the Key Stage 2 grammar terms are sentence, clause, subject and verb, and pupils learn to demarcate sentences with full stops, use semicolons between independent clauses (Year 6), and join clauses with coordinating and subordinating conjunctions.",
+   "A complete sentence has at least one independent (main) clause: a subject plus a predicate with a finite verb. Fragments are usually a phrase with no subject (Jumped over the wall), a noun phrase with no predicate (My little brother and his friend), a participle phrase with no finite verb (Running through the park), or a subordinate clause standing alone (Because it was raining). The fix is to supply the missing part or attach the subordinate clause to a main clause.",
+   "A run-on (fused sentence) puts two independent clauses side by side with no punctuation. Three standard repairs: a full stop and capital letter, a semicolon when the ideas are closely linked, or a comma plus a coordinating conjunction (and, but, so, or). The joining word must fit the meaning: but marks a contrast, so marks a result.",
+   "Common mistakes: thinking a capital letter and full stop make any word group a sentence; mending a run-on with a comma alone (a comma splice, which is still an error); judging by length, when Birds sing is a full sentence and a long phrase can still be a fragment; and picking a joining word that changes the meaning. Note that writers sometimes use fragments on purpose for effect; at this age the goal is to spot and control them. In the lab your child tests six word groups, mends four fragments, taps where four run-ons break, mends four more, and sorts a paragraph."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which word group is a full sentence?",
+   "choices": [
+    "The baby laughed.",
+    "Laughing at the clown.",
+    "Because the baby laughed."
+   ],
+   "answer": 0,
+   "hint": "Look for a who and a did-what, with nothing left hanging.",
+   "explain": "The baby (who) laughed (did what). Laughing at the clown has no who, and Because the baby laughed is only half a sentence."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A run-on squashes {n} complete sentences together with no punctuation between them. How many breaks does it need?",
+   "answer": "n-1",
+   "hint": "A break goes between each pair of sentences, not after the last one.",
+   "explain": "{n} sentences need a break between each pair: {=n-1} breaks. Each can be a full stop, a semicolon or a comma with a joining word.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which mends the run-on \"Tom shouted nobody heard him\"?",
+   "choices": [
+    "Tom shouted, but nobody heard him.",
+    "Tom shouted, nobody heard him.",
+    "Tom shouted but, nobody heard him."
+   ],
+   "answer": 0,
+   "hint": "A comma on its own cannot join two sentences. Which joining word fits?",
+   "explain": "Tom shouted, but nobody heard him. But marks the surprise. The comma-only version is a comma splice, and the comma goes before the joining word, not after."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A paragraph has {a} full sentences, {b} fragments and {c} run-ons. How many word groups need mending?",
+   "answer": "b+c",
+   "hint": "Full sentences are fine. Count the ones with a problem.",
+   "explain": "{b} fragments + {c} run-ons = {=b+c} to mend. The {a} full sentences stay as they are.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     3
+    ],
+    "c": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What is missing from \"My best friend and her sister.\"?",
+   "choices": [
+    "What they did (a verb part)",
+    "Who it is about",
+    "A capital letter"
+   ],
+   "answer": 0,
+   "hint": "Ask: who? Then: did what?",
+   "explain": "We know who: my best friend and her sister. We do not know what they did, so it needs a predicate, like: My best friend and her sister came to tea."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is a fragment?",
+    "choices": [
+     "After the football match.",
+     "We cheered.",
+     "The match ended, and we cheered."
+    ],
+    "answer": 0,
+    "hint": "Which one leaves you asking who did what?",
+    "explain": "After the football match tells you when, but nobody does anything. We cheered is short but complete."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "\"It was cold, we wore coats.\" What is the problem?",
+    "choices": [
+     "A comma splice: a comma alone joins two sentences",
+     "It is a fragment",
+     "Nothing is wrong"
+    ],
+    "answer": 0,
+    "hint": "How many who-did-what parts are there, and what is between them?",
+    "explain": "There are two sentences with only a comma between them. Use a full stop, a semicolon, or a comma and so."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which joining word fits? \"I was hungry, ___ I made a sandwich.\"",
+    "choices": [
+     "so",
+     "but",
+     "or"
+    ],
+    "answer": 0,
+    "hint": "Did being hungry cause the sandwich, or go against it?",
+    "explain": "Being hungry is the reason for the sandwich, so the joining word that shows a result is so."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is the best mend for \"Running to catch the bus.\"?",
+    "choices": [
+     "I was running to catch the bus.",
+     "Running to catch the big bus.",
+     "And running to catch the bus."
+    ],
+    "answer": 0,
+    "hint": "What is missing: the who or the did-what?",
+    "explain": "The fragment has no who and no full verb. I was running adds both. Making it longer does not mend it."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Is \"Birds sing.\" a sentence?",
+    "choices": [
+     "Yes: birds (who) sing (did what)",
+     "No: it is too short",
+     "No: it needs a joining word"
+    ],
+    "answer": 0,
+    "hint": "Length does not matter. Look for the two parts.",
+    "explain": "Birds is the subject and sing is the predicate, so it is a complete sentence."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Each run-on in a story squashes two sentences together. You split {n} run-ons with full stops. How many sentences do you make?",
+    "answer": "2*n",
+    "hint": "Each run-on becomes two sentences.",
+    "explain": "{n} run-ons × 2 = {=2*n} sentences.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A story has {a} sentences, and {b} of them are run-ons that each hide two sentences. After you split them all, how many sentences does it have?",
+    "answer": "a+b",
+    "hint": "Each split adds one more sentence.",
+    "explain": "Each of the {b} splits turns one run-on into two, adding one each: {a} + {b} = {=a+b} sentences.",
+    "params": {
+     "a": [
+      5,
+      9
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which mends \"The film was long I enjoyed it\" without changing the meaning?",
+    "choices": [
+     "The film was long, but I enjoyed it.",
+     "The film was long, so I enjoyed it.",
+     "The film was long, I enjoyed it."
+    ],
+    "answer": 0,
+    "hint": "Is enjoying a long film a result or a surprise?",
+    "explain": "But marks the contrast: long, yet enjoyed. So would say the length caused the fun, and the comma alone is a splice."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Where does the first sentence end in \"Mum baked a cake we ate it all\"?",
+    "choices": [
+     "After cake",
+     "After baked",
+     "After ate"
+    ],
+    "answer": 0,
+    "hint": "Find the first full who-did-what part.",
+    "explain": "Mum baked a cake is complete, and we ate it all is a second sentence. Mum baked a cake. We ate it all."
+   }
+  ]
+ }
+}
