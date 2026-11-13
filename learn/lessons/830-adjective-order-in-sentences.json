@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_VVx0hPPSKi",
+ "title": "Adjective Order in Sentences",
+ "audience": "family",
+ "keyIdea": "When two or more adjectives come before a noun, English puts their kinds in a usual order: opinion, size, age or shape, colour, origin, material, purpose. So we say a small red bag, not a red small bag, and a lovely old house, not an old lovely house. Opinion words (what someone thinks) come before fact words (what anyone can check). A purpose word, like running in running shoes, stays right next to its noun.",
+ "familyTip": "Play the wrong-order game at dinner. Say a phrase in a jumbled order, like the plastic big box or a sleeping green bag, and ask your child to fix it. Then ask what kind each word is: how big, what colour, what it is made of. Most children can hear the right order before they can explain it, so let the ear lead and the kinds explain.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the order sound right? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "sounds right",
+    "sounds wrong"
+   ],
+   "items": [
+    [
+     "a small red bag",
+     0
+    ],
+    [
+     "a red small bag",
+     1
+    ],
+    [
+     "a lovely old coat",
+     0
+    ],
+    [
+     "a wooden big table",
+     1
+    ],
+    [
+     "a tall grey stone castle",
+     0
+    ],
+    [
+     "a sleeping green bag",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagadjord",
+  "caption": "Flagship lab: name adjective kinds, build and fix phrases, sort opinion from fact, place purpose words, build your own.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An adjective is a describing word. Some tell what you think, like lovely. Some tell size, age, shape or colour. Some tell where a thing is from, what it is made of, or what it is for.",
+   "When you use two or more, they go in an order. Opinion comes first. Then size. Then age or shape. Then colour, where it is from, what it is made of, and what it is for. That is why we say a small red bag.",
+   "Your ear often knows the order already. A red small bag sounds odd. If a phrase sounds odd, ask what kind each word is, then put the kinds in order.",
+   "A purpose word tells what a thing is for. In running shoes, running tells what the shoes are for. It stays next to the noun, so we say black running shoes."
+  ],
+  "adult": [
+   "Ages 9 to 10. Common Core L.4.1d asks children to order adjectives within sentences according to conventional patterns, such as a small red bag rather than a red small bag. In England this sits with expanded noun phrases in Years 3 and 4.",
+   "The pattern is a habit of English, not a law. Grammar guides give it as opinion, size, age, shape, colour, origin, material, purpose. Some guides swap age and shape, so the lab never tests those two together. Opinion words are judgements; the rest are facts that can be checked. A purpose word (running, frying, sleeping) is often a noun or -ing form that forms a unit with the head noun.",
+   "Common mistakes. Children may put colour before size (a red small bag), an opinion after a fact (an old lovely house), or a material word too early (a wooden big table). Some split a purpose word from its noun (a sleeping green bag). Others pile on four or five adjectives; two or three is usually plenty in good writing.",
+   "In the lab your child names the kind of eight adjectives. They build five phrases slot by slot and fix four jumbled ones with a single swap. They sort opinion words from fact words and drop a describing word in front of a purpose word. Last, they build three phrases of their own from a word bank."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which phrase about the cat sounds right?",
+   "choices": [
+    "a big black cat",
+    "a black big cat",
+    "a cat big black"
+   ],
+   "answer": 0,
+   "hint": "Which kind comes first: size or colour?",
+   "explain": "Big is size and black is colour. Size comes before colour, so it is a big black cat."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Number the kinds: opinion 1, size 2, age 3, shape 4, colour 5, origin 6, material 7, purpose 8. A phrase uses a word of kind {b} and a word of kind {a}. Which kind number goes first?",
+   "answer": "a",
+   "hint": "The kinds go up in number from left to right.",
+   "explain": "In the usual order the smaller kind number comes first, so kind {a} goes before kind {b}.",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     5,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What kind of adjective is French in a French cheese?",
+   "choices": [
+    "origin",
+    "opinion",
+    "material"
+   ],
+   "answer": 0,
+   "hint": "Does it tell what someone thinks, what it is made of, or where it is from?",
+   "explain": "French tells where the cheese comes from, so it is an origin word."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A phrase has {n} adjectives of different kinds, in exactly the reverse of the usual order. You may swap any two words at a time. What is the fewest swaps that puts them in order?",
+   "answer": "(n-n%2)/2",
+   "hint": "Swap the first and last word, then the next two in from each end.",
+   "explain": "Each swap fixes the two words at the ends of what is left. {n} words need {=(n-n%2)/2} swaps; a middle word, if there is one, is already in place.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which phrase about the scarf sounds right?",
+   "choices": [
+    "a beautiful silk scarf",
+    "a silk beautiful scarf",
+    "a scarf beautiful silk"
+   ],
+   "answer": 0,
+   "hint": "Which word is an opinion?",
+   "explain": "Beautiful is what someone thinks, so it comes first. Silk is a material, which sits close to the noun."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which phrase about the castle sounds right?",
+    "choices": [
+     "a tall grey stone castle",
+     "a stone grey tall castle",
+     "a grey tall stone castle"
+    ],
+    "answer": 0,
+    "hint": "Size, then colour, then material.",
+    "explain": "Tall is size, grey is colour and stone is material, so the order is tall grey stone."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Where does blue go with frying pan?",
+    "choices": [
+     "a blue frying pan",
+     "a frying blue pan",
+     "a pan blue frying"
+    ],
+    "answer": 0,
+    "hint": "Frying tells what the pan is for. Should anything split it from pan?",
+    "explain": "Frying tells what the pan is for, so it stays next to the noun. Blue goes in front: a blue frying pan."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which word is an opinion adjective?",
+    "choices": [
+     "wonderful",
+     "square",
+     "plastic"
+    ],
+    "answer": 0,
+    "hint": "Which one could two people disagree about?",
+    "explain": "Wonderful is what someone thinks. Square is a shape and plastic is a material, which anyone can check."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Fix it: the cotton white shirt. Which is right?",
+    "choices": [
+     "the white cotton shirt",
+     "the shirt white cotton",
+     "the cotton white shirt"
+    ],
+    "answer": 0,
+    "hint": "Which comes first: colour or material?",
+    "explain": "White is colour and cotton is material. Colour comes before material, so it is the white cotton shirt."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which phrase about the wall sounds right?",
+    "choices": [
+     "a huge old Roman wall",
+     "a Roman old huge wall",
+     "an old huge Roman wall"
+    ],
+    "answer": 0,
+    "hint": "Size, then age, then where it is from.",
+    "explain": "Huge is size, old is age and Roman is origin, so the order is huge old Roman."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Kinds are numbered opinion 1, size 2, age 3, shape 4, colour 5, origin 6, material 7, purpose 8. A phrase uses kinds {a} and {b}. Which number goes second?",
+    "answer": "b",
+    "hint": "Smaller number first, bigger number second.",
+    "explain": "The kinds go up from left to right, so kind {a} comes first and kind {b} second.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      5,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A writer puts {n} adjectives before a noun, one of each kind, and then adds an opinion word. How many adjectives come before the opinion word?",
+    "answer": "0",
+    "hint": "Where does an opinion word go?",
+    "explain": "An opinion word goes first, before all {n} fact words, so 0 adjectives come before it.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why does a delicious Italian pizza sound right?",
+    "choices": [
+     "The opinion word comes before the origin word.",
+     "Longer words always come first.",
+     "Words that start with a capital go last."
+    ],
+    "answer": 0,
+    "hint": "What kinds are delicious and Italian?",
+    "explain": "Delicious is an opinion and Italian is origin. Opinion words come before fact words, so delicious goes first."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "What kind of adjective is wooden in a wooden spoon?",
+    "choices": [
+     "material",
+     "colour",
+     "purpose"
+    ],
+    "answer": 0,
+    "hint": "Does it tell colour, what it is made of, or what it is for?",
+    "explain": "Wooden tells what the spoon is made of, so it is a material word."
+   }
+  ]
+ }
+}
