@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Isotope masses are the NIST atomic weights and isotopic compositions values (¹H 1.00782503, ¹⁴N 14.00307401, ¹⁶O 15.99491462, ¹²C 12 exactly by definition of the dalton), shown to 6 d.p. Every accurate mass in the lab and items was recomputed in node and rounded to 4 d.p.: CO 27.9949, N₂ 28.0061, C₂H₄ 28.0313, CO₂ 43.9898, N₂O 44.0011, C₂H₄O 44.0262, C₃H₈ 44.0626, CH₂O 30.0106, N₂H₂ 30.0218, C₂H₆ 30.0470, C₂H₂O₂ 58.0055, C₃H₆O 58.0419, C₄H₁₀ 58.0783, C₂H₄O₂ 60.0211, CH₄N₂O 60.0324, C₃H₈O 60.0575, matching the topic's CO/N₂/C₂H₄ values. The decimal-place answers (0, 1, 2, 2) were checked by rounding. Electron mass is noted as ignored at A level. The adult text notes that exam data at 4 d.p. (1.0078, 14.0031, 15.9949) can shift the last digit (C₃H₆O 58.0417 v 58.0419) and that HRMS cannot separate isomers."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented A-level errors: using average Ar (H 1.008, C 12.011, N 14.0067) instead of isotope masses (SLIP 1 and 2, challenge q4 and q5, m1, m3, m6), rounding the sum to a whole number (SLIP 3, prediction 1 and 4), thinking ¹²C is 12 because it is rounded (prediction 2, challenge q2, p3), miscounting hydrogens (SLIP 4), believing low resolution can never separate formulae (decimal dial set 1 at 0 d.p., m7), and reading the base peak or M+1 as M⁺ (challenge q6, m4)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagaccm is built on accurate-mass arithmetic: formula cards dragged onto peaks on a zoomed 27.985–28.04 m/z axis, a C/H/N/O counter builder whose live sum must equal M⁺ to 4 d.p. with feedback on how far off a same-nominal-mass formula is, a decimal-places dial that shows when rounded values merge or split, spectrum matching and a worked-sum slip finder. flagtof (208) is about the instrument's four stages and flagmion (754) is about choosing the M⁺ peak; neither sums isotope masses. lab_distinct gate is 6% or less against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the rule by doing: building C₃H₈ for 44.0262 returns 'Nominal mass 44 fits, but 44.0626 is 0.0364 too high. Same 44, wrong formula'; releasing the dial at 1 d.p. for CO/N₂/C₂H₄ says two of them both read 28.0; releasing it at 1 d.p. for C₂H₆O/C₂H₄O says they split, but fewer decimal places already separate them; picking C₄H₁₀ for 58.0419 gives its sum and the gap."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options the tasks disprove: 'yes, they are all 28' (the peaks sit at three different m/z), 'all atoms weigh whole numbers' for ¹²C v ¹H (the builder sums 1.007825 per H), and 'yes, the nominal mass fits' for C₄H₁₀ at 58.0419 (MATCH 1 shows 58.0783). A.reveal names the locked-in pick when each task ends."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with twelve wrong-answer messages naming the slip: CO₂ is 0.0364 too low, C₃H₈ is 0.0364 too high, isotope masses are not whole numbers, ¹²C is exact by definition not rounded, the masses differ only after the decimal point, N₂ ionises but rounds to 28, 1.008 is the average Ar, a whole number loses the decimals, 28.0134 uses Ar 14.0067, only ¹²C is a whole number, the tallest peak is the base peak, and M+1 comes from ¹³C."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: learner kid FK grade 3.2 (limit 6.5), adult 4.7 (limit 9.5). Kid paragraphs keep one idea each: the problem with 28, why decimals exist, the three isotope masses, and the method. Canvas prompts are one sentence and feedback gives the computed sum and the gap."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Kid paragraphs state the problem, the mass-defect reason, the data and the method. Adult text gives the specification context and NIST data source, the mass-defect arithmetic (CH₄ v O is 0.0364), the ignored electron mass, five named mistakes and what the lab does. Content gate found no filler; explanation under 12% similar to every other lesson, including 413 instrumental analysis, 208 the TOF instrument and 754 the molecular ion peak."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px screenshots in light and dark for all six steps plus a wrong-answer state on each task (C₂H₄ dropped on 28.0061, −C on an empty formula, dial at 1 d.p. for set 1, C₄H₁₀ chosen, line 2 tapped). The 6 d.p. isotope table fits in one line at 12 px with a max-width guard; the three peaks are 60+ px apart; + and − pads are 44 px tall with counts under each. Walkthrough passed on iPhone 13 and desktop."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag and tap has a button twin: one per peak ('Put C₂H₄ on the peak at 28.0313'), Add/Take away one C, H, N or O, one per decimal setting ('Read to 2 decimal places'), one per candidate formula, and one per worked line ('Line 3, H: 4 × 1.008 = 4.032, is wrong'). The canvas aria-label is rewritten after every action, challenge feedback is a role=status live region, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "NIST Atomic Weights and Isotopic Compositions for All Elements (¹H 1.00782503207, ¹⁴N 14.0030740048, ¹⁶O 15.99491461956; ¹²C = 12 exactly)",
+  "BIPM SI Brochure, 9th edition (2019): the dalton / unified atomic mass unit as 1/12 of the mass of a ¹²C atom",
+  "AQA AS and A-level Chemistry (7404/7405) specification, 3.3.6.2 mass spectrometry: precise atomic masses and the precise molecular-ion m/z give the molecular formula",
+  "Topic evidence mt_Ubr42RkTx7 (CO 27.9949, N₂ 28.0061, C₂H₄ 28.0313; M⁺ 44.0262 against C₂H₄O, CO₂, C₃H₈)"
+ ]
+}
