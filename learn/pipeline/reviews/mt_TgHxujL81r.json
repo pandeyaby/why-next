@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE National Curriculum in England Year 5 fractions statement ('multiply proper fractions and mixed numbers by whole numbers, supported by materials and diagrams') and CCSS 4.NF.B.4 (a/b as a multiple of 1/b; n × (a/b) = (n × a)/b). Every worked value recomputed: 3 × 2/5 = 6/5 = 1 1/5, 5 × 1/4 = 5/4 = 1 1/4, 4 × 3/8 = 12/8 = 1 4/8 = 1 1/2, 2 1/3 × 3 = 7, 5 × 3/4 = 15/4 = 3 3/4, 2 1/5 × 3 = 6 3/5, 6 × 2/3 = 4, 4 × 2/3 = 2 2/3; lab targets 3 × 1/2, 3 × 2/3, 5 × 1/2 hit 1 1/2, 2, 2 1/2. Parameterised answers 2n, n, 3n are integers at all corners."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors reported in the fractions research (Hart 1981 CSMS; NCETM fractions guidance; EEF 'Improving Mathematics in KS2/3' on fractions): multiplying the denominator too (prediction option 6/15, challenge tag both, mastery m5), adding the whole number to the numerator (tag add), multiplying only the whole part of a mixed number (prediction 6 1/3, tag wholeonly) or only the fraction (fraconly), 'multiplying makes bigger' / 'a fraction product cannot pass 1' (step 2 prediction, tags bigger/same), and remainder errors when converting to a mixed number (pack step wrong answers, tag rem)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagfxw is built on stacking coloured copies of one fraction onto bars split into fixed-size parts, so the learner sees the part size stay constant while the count of parts multiplies, then packs full bars into wholes and copies the wholes and parts of a mixed number separately. It differs from flagfrac/flagfadd/flagfcmp (naming, adding, comparing fractions) and the Fractions of amounts lesson (flag lab for 10-fractions-of-amounts). Gate: under 30% shingle overlap with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea is met in the lab before the text states it: the bars show 3 copies of 2/5 filling 6 fifths (not fifteenths), the fifth quarter spills past a full bar, packing a full bar of 8/8 turns 12/8 into 1 4/8, three copies of 2 1/3 leave 3 thirds that make one more whole, and the target step shows that different card × copies combinations reach the same amount."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions each with a tempting wrong option: 6/15 for 3 × 2/5 (the bars stay fifths), 'less than 1: multiplying a fraction makes it smaller' for 5 × 1/4 (the first bar fills and one quarter spills over), and 6 1/3 for 2 1/3 × 3 (the three thirds visibly make another whole). Completion messages echo the choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions, two wrong options each, each with its own message, e.g. 'You multiplied the bottom too. The parts stay the same size, so only the top number is multiplied', 'You copied the wholes but not the fifth. 3 copies of 1/5 is 3/5', 'Each copy is less than 1 whole, so 6 copies is less than 6'. In-lab slips are named too ('That bar has only 4/8 in it. Only a full bar of 8/8 packs into a whole', 'too big. Take copies away')."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons.py passes; kid paragraphs about grade 1.7, adult about 6.5. Canvas shows one equation line per state ('2/5 + 2/5 + 2/5 = 6/5', '= 1 1/5') and each step heading is a short instruction."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Every step has one job (copies, crossing 1, packing, mixed numbers, building targets) and each feedback line states a number or the reason for it."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on 360 px screenshots before and after Show me for every step: bars span the width with eighths still tappable, the five fraction cards fit one row, and equations stay inside the canvas. The step-5 Show me initially picked the wrong cards (target 2 was not reached), which was fixed so the walkthrough completes."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Everything is doable with buttons: 'Add a copy of 2/5', 'Pack the full bar', '= 1 4/8', fraction-card buttons, '− copy', '+ copy', 'Check'. The canvas aria-label reads the state, e.g. '3 times 2/5. Copies 2 of 3: 4/5.' Challenge feedback is aria-live. walk.cjs reports axe (WCAG 2.1 AA) clean in light and dark on desktop and iPhone 13 with no console errors."
+  }
+ },
+ "sources": [
+  "DfE National Curriculum in England: mathematics programmes of study, Year 5 fractions",
+  "Common Core State Standards for Mathematics 4.NF.B.4",
+  "NCETM, 'Teaching fractions' professional development materials",
+  "Hart, K. (1981) Children's Understanding of Mathematics: 11–16 (CSMS), fractions chapter",
+  "EEF (2017) Improving Mathematics in Key Stages Two and Three"
+ ]
+}
