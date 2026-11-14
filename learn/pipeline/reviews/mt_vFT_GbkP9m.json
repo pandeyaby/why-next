@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE National Curriculum in England, Science Year 6 Electricity statutory requirements (brightness of a lamp and volume of a buzzer with the number and voltage of cells; reasons for variations in how components function), the ASE/PSTT primary electricity guidance and BBC Bitesize KS2 'Changing circuits'. Numbers worked by hand: 1, 2, 3, 4 cells of 1.5 V give 1.5, 3, 4.5, 6 V; two opposed 1.5 V cells give 0 V; AA, C and D alkaline cells are all nominally 1.5 V (they differ in capacity); two identical lamps in series on 6 V get 3 V each and on 3 V get 1.5 V each; m4 (n − 1) × 1.5 and m8 v ÷ 1.5 checked at every parameter corner. The lab models brightness from the voltage across each lamp relative to its 3 V rating, which matches the series-circuit physics taught at this age; the adult text adds that classroom lamps should be rated above the supply so nothing blows."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented primary electricity misconceptions: a bulb is just on or off (step 1 prediction, challenge tag nochange); a bigger cell gives a bigger push (step 3 prediction, AA/C/D test, tag size, mastery m3); cell direction does not matter (step 2 prediction, flip feedback, tags ignoredir and half, m4); more cells is always better (four cells blow the 3 V bulb in step 1, tags safe and under, m2); adding bulbs does not change brightness (step 5 sharing, tags same and close, m5); and cell versus battery vocabulary (key idea, m7)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagcells is about this topic's own mechanism, the number and direction of cells: cells are dragged or tapped into a series holder with a live total-volts readout, a 3 V lamp's glow grows with voltage and its filament breaks at 6 V, cells are turned round to cancel, AA/C/D cells of different drawn sizes give identical glow, a buzzer's sound arcs and a motor's spin rate follow the cell count, and two lamps share the voltage. The lab_distinct gate passes it under 30% against every flagship lab, including the circuit-diagram, series/parallel, switches, current-and-voltage and conventional-current labs."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner sees the rule before reading it: the glow grows from dim (1.5 V) to bright (3 V), a fourth cell makes the filament snap with feedback naming twice the 3 V label; turning one cell makes the meter read 0 V and the lamp go dark; swapping AA for D leaves the meter at 1.5 V and the glow unchanged; the buzzer gains a sound arc and the motor spins faster per cell; and the two-lamp loop stays dim until 4 cells give 3 V each."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option the lab disproves: 'the same: a bulb is just on or off' (the second cell visibly brightens it), 'bright: two cells are two cells' with one reversed (the meter reads 0 V and the lamp is off), and 'brighter: a bigger cell pushes harder' for a D cell (same 1.5 V reading and the same glow)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge items whose wrong options each carry a tagged message naming the slip: dimmer (confusing extra cells with extra bulbs), nochange (on/off thinking), ignoredir (ignoring cell direction), half (one cell's voltage instead of cancelling), size (cell size as voltage), fit (thinking a D cell breaks the circuit), safe (6 V on a 3 V bulb), under (miscounting 4 × 1.5 V), same (forgetting bulbs share voltage) and close (3 cells give only 2.25 V each)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the learner readability limits: kid text Flesch-Kincaid 1.7, adult 9.4. Kid paragraphs define cell, voltage, volts and battery once each in short sentences, with concrete numbers (1.5 V, 3 V, 0 V); lab steps are one to three short sentences."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step tests one variable (number, direction, size, component, number of bulbs), the meter states the actual sum (2 cells: 3 V → bright; 6 V shared by 2 bulbs = 3 V each), and each item explanation shows the arithmetic or the reason."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px touch in light and dark for each step before and after Show me: the holder fits 4 cells with readable + and − ends, the glow stays on the canvas after the loop was narrowed, the lamp, buzzer and motor labels sit beside their parts instead of on the wire (moved after the first screenshots), the AA/C/D cards fit one row, both lamps in the two-lamp loop are labelled, and the feedback strip sits clear of the tray."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: '+ cell' and '− cell', 'Turn cell 1/2' (aria-label gives the current direction), 'AA cell / C cell / D cell', and 'Buzzer / Motor'. The canvas aria-label reads the cell count, total volts, volts per lamp and the lamp state after every move; the motor stops spinning when reduced motion is set; challenge feedback is an aria-live status; walk.cjs reports axe (WCAG 2.1 AA) clean in both themes on desktop and iPhone 13 with no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education, National Curriculum in England: Science programmes of study, Year 6 Electricity (statutory requirements and notes)",
+  "BBC Bitesize KS2 Science: Changing circuits (number of cells, brightness of bulbs, volume of buzzers)",
+  "Association for Science Education / Primary Science Teaching Trust: primary electricity guidance and common misconceptions",
+  "Energizer and Duracell alkaline cell datasheets: AA, C and D cells nominal 1.5 V"
+ ]
+}
