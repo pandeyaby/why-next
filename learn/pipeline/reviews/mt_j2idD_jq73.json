@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against Common Core L.4.2c (comma before a coordinating conjunction in a compound sentence) and L.5.2, the National Curriculum in England English Appendix 2 (Year 2 coordination with and/or/but; Years 5–6 commas to clarify meaning), and the Purdue OWL and Chicago Manual of Style rules on commas with independent clauses versus compound predicates. The adult text records the real usage note that style guides allow the comma to be dropped between very short, clear clauses and that British writers omit it more often, so the rule is not overstated. Every lab sentence was checked by hand: each 'comma' item has a subject and finite verb on both sides, each 'no comma' item has a subject-less second predicate."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented comma errors for this standard: a comma before every and, including compound predicates (step 1 prediction 'She sang and danced', edit items 'Ben ran, and jumped', challenge tag onewho), the comma after the conjunction (step 2 prediction, gap feedback 'Not after so', challenge tag after), the comma splice (practice p5, mastery m6, challenge tag splice), a missing comma between two full clauses (edit items, challenge tag missing), and treating and in a phrase such as fish and chips or black and white as joining sentences (step 5, mastery m5)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagcjoin is built around the cover test for this rule: a sentence split into its two halves around the conjunction is sorted by whether both halves stand alone, the learner taps the actual gap between words where the comma goes, drags a FANBOYS word into a two-clause frame, edits comma-present/comma-missing sentences, and taps which of two ands joins clauses. flagrunon (run-ons) and flagclause (clauses and conjunctions) never place commas in gaps or separate compound predicates from compound sentences; the lab_distinct gate reports it under 30% similar to every other lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The rule is discovered through feedback: filing 'Mia sang and danced at the end' under comma returns 'Danced at the end has no who. Mia does both things, so this is one sentence with two verbs'; tapping the gap after so returns 'The comma goes before the joining word, not after it'; dragging but into 'The shop was shut, ___ we went home' says but shows a contrast while the second part is a result; choosing the first and in 'Sam and Ali went to the park and Ali climbed a tree' explains that it joins two names."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Two predictions with tempting wrong options: 'She sang and danced needs a comma because a comma goes before every and' (the sorting step disproves it with four subject-less second halves) and 'the comma goes after but' (the gap step only accepts the gap before the conjunction and names the slip)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge items; every wrong option carries a tag with its own message: comma after the conjunction, comma splice, compound predicate given a comma ('one person does two things'), missing comma between two clauses, and a comma splitting one half in the middle."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the kid (≤ 6.5) and adult limits. Kid paragraphs use who and doing word alongside the terms joining word and compound sentence, with one rule per paragraph and short example sentences; lab text uses the same words (two halves, stand alone, before not after)."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step states one test in one or two sentences, and every feedback line names the subject or verb that decides the answer, for example 'Polished it has no who of its own. Dad did both, so no comma.'"
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px touch (1.5x) in light and dark for every step before and after Show me: the split sentence halves wrap inside their boxes, word chips wrap onto new rows with the gap dots visible, the 1st/2nd labels under each and no longer touch the next row (fixed after the first screenshots, chip height was decoupled from row spacing), completion messages wrap (also fixed after review), and feedback stays above the button row."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: comma / no comma, one 'after <word>' button per gap, each joining word, add / take out / right, and first and / second and. The canvas aria-label reads the current sentence and the feedback after each move, challenge feedback is an aria-live status, and the walkthrough's axe run (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for English Language Arts L.4.2c and L.5.2",
+  "National Curriculum in England: English programmes of study and Appendix 2, vocabulary, grammar and punctuation (DfE 2013)",
+  "Purdue OWL: Commas with independent clauses and compound predicates",
+  "The Chicago Manual of Style, 17th ed., 6.22–6.23 (commas between independent clauses; compound predicates)"
+ ]
+}
