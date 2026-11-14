@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_P2SaOnZ52j",
+ "title": "Why heating curves have flat sections",
+ "audience": "learner",
+ "keyIdea": "A heating curve plots temperature against time as a substance is heated steadily. On the sloping sections one state is warming up: the energy makes the particles move faster, so the temperature rises. On the flat sections the substance is changing state (melting or boiling): the energy is used to overcome the forces between particles and change their arrangement, so the temperature stays constant until the change is complete. Two states are present on a flat section. The flat sections show the melting point and the boiling point. Boiling takes much more energy than melting, so its flat section is longer. On a cooling curve the flat section is freezing: forming bonds releases energy that balances the heat lost.",
+ "familyTip": "Next time you boil a pan of water, put a cooking thermometer in it. Ask your child to predict what the reading will do once the water is bubbling hard. It sticks near 100 °C even with the heat on full. Ask them where the energy from the hob is going.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Slope or flat section of a heating curve? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "sloping section",
+    "flat section"
+   ],
+   "items": [
+    [
+     "ice warming from −20 °C to 0 °C",
+     0
+    ],
+    [
+     "ice melting at 0 °C",
+     1
+    ],
+    [
+     "water warming from 20 °C to 80 °C",
+     0
+    ],
+    [
+     "water boiling at 100 °C",
+     1
+    ],
+    [
+     "two states present together",
+     1
+    ],
+    [
+     "particles speeding up",
+     0
+    ],
+    [
+     "forces between particles being overcome",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagheatc",
+  "caption": "Flagship lab: heat ice by dragging the clock, label a heating curve, say where the energy goes, read ethanol's melting and boiling points, explain freezing.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Put ice on a heater that never turns off. Plot its temperature every few seconds. The line climbs, goes flat, climbs, goes flat, then climbs again. That shape is a heating curve.",
+   "On a slope, one state is warming up. The energy makes the particles move faster, so the temperature goes up.",
+   "On a flat part, the state is changing. Ice is melting, or water is boiling. The energy pulls the particles apart and changes how they are arranged. It does not speed them up, so the temperature stays the same until the change is done. Ice and water are both there at once.",
+   "The flat parts tell you the melting point and the boiling point. For water they are 0 °C and 100 °C. Boiling needs far more energy than melting, so that flat part is much longer. A cooling curve goes flat when a liquid freezes."
+  ],
+  "adult": [
+   "Ages 12 to 14. This is KS3 chemistry in England (changes of state and the particle model) and NGSS MS-PS1-4, which links thermal energy to particle motion and changes of state. Learners should name the state or states on each section of a temperature–time graph and read melting and boiling points from the flat sections.",
+   "On a sloping section the energy supplied increases the kinetic energy of the particles, so the temperature rises. On a flat section the energy is used to overcome the forces of attraction between particles, so the arrangement changes but the average speed does not. The temperature stays constant until the change of state is complete. This energy is the latent heat. For water it is about 334 J per gram to melt and about 2260 J per gram to boil, so the boiling plateau is much longer.",
+   "The lab heats 100 g of ice from −20 °C with a 100 W heater and uses real values for an ideal setup with no heat loss: about 42 s to warm the ice, 334 s to melt, 418 s to heat the water to 100 °C and 2260 s to boil it all. On a cooling curve, such as stearic acid freezing at about 69 °C, bonds form as the liquid freezes and release energy that balances the heat lost to the room.",
+   "Common mistakes: thinking the heater stops working or the energy is lost on a flat section; expecting a steady rise during melting; thinking particles slow down on the flat part; saying a flat section has only one state; and mixing up melting and boiling flat parts. Pure substances give sharp flat sections; mixtures change state over a range."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ice is heated steadily. What does the temperature do while the ice melts?",
+   "choices": [
+    "It stays at 0 °C until all the ice has melted",
+    "It rises slowly and steadily",
+    "It drops below 0 °C"
+   ],
+   "answer": 0,
+   "hint": "Melting is a change of state. What does the energy do then?",
+   "explain": "While the ice melts, the energy pulls particles apart instead of speeding them up, so the temperature holds at 0 °C."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Melting ice needs about 334 J per gram. How many joules does it take to melt {m} g of ice at 0 °C?",
+   "answer": "334*m",
+   "hint": "Multiply the energy per gram by the mass.",
+   "explain": "334 J per gram × {m} g = {=334*m} J. The temperature stays at 0 °C the whole time.",
+   "params": {
+    "m": [
+     10,
+     100
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which section of a heating curve has two states present?",
+   "choices": [
+    "A flat section",
+    "A sloping section",
+    "The very start of the graph"
+   ],
+   "answer": 0,
+   "hint": "When is one state turning into another?",
+   "explain": "On a flat section the state is changing, so both states are there, such as ice and water."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A heating curve is flat at {b} °C while a liquid is heated. What is its boiling point in °C?",
+   "answer": "b",
+   "hint": "A flat section while a liquid is heated is boiling.",
+   "explain": "The flat section marks the change of state, so the boiling point is {b} °C.",
+   "params": {
+    "b": [
+     40,
+     140
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "On a flat section, the heater is still on. Where does its energy go?",
+   "choices": [
+    "It overcomes forces between particles",
+    "It is lost because the heater stops working",
+    "It makes the particles move faster"
+   ],
+   "answer": 0,
+   "hint": "The temperature is not rising, so particles are not speeding up.",
+   "explain": "The energy goes into breaking up the arrangement of particles, which changes the state."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "For water on a steady heater, which flat section is longer?",
+    "choices": [
+     "Boiling at 100 °C",
+     "Melting at 0 °C",
+     "They are the same length"
+    ],
+    "answer": 0,
+    "hint": "Compare 334 J per gram for melting with 2260 J per gram for boiling.",
+    "explain": "Boiling needs about 2260 J per gram, almost 7 times as much as melting, so its flat section lasts much longer."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "On a sloping section of a heating curve, what is happening to the particles?",
+    "choices": [
+     "They move faster",
+     "They pull apart into a new state",
+     "They stop moving"
+    ],
+    "answer": 0,
+    "hint": "The temperature is rising on a slope.",
+    "explain": "A rising temperature means the particles' average speed is going up. Only one state is present."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ethanol's heating curve is flat at −114 °C and at 78 °C. What state is ethanol at 20 °C?",
+    "choices": [
+     "Liquid",
+     "Solid",
+     "Gas"
+    ],
+    "answer": 0,
+    "hint": "Is 20 °C between the melting point and the boiling point?",
+    "explain": "20 °C is above the melting point (−114 °C) and below the boiling point (78 °C), so ethanol is a liquid."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Liquid stearic acid cools and its curve goes flat at 69 °C. Why?",
+    "choices": [
+     "It is freezing, and bonds forming give out energy",
+     "It has stopped losing heat",
+     "The thermometer is broken"
+    ],
+    "answer": 0,
+    "hint": "What change of state happens on cooling?",
+    "explain": "As it freezes, forming bonds releases energy that balances the heat lost, so the temperature holds."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Boiling water needs about 2260 J per gram. How many joules to boil away {m} g of water at 100 °C?",
+    "answer": "2260*m",
+    "hint": "Multiply the energy per gram by the mass in grams.",
+    "explain": "2260 J per gram × {m} g = {=2260*m} J, all at 100 °C.",
+    "params": {
+     "m": [
+      5,
+      50
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A heating curve has three sloping sections. What happens between them?",
+    "choices": [
+     "Flat sections, where the state changes",
+     "The heater turns off",
+     "The temperature falls"
+    ],
+    "answer": 0,
+    "hint": "Think about melting and boiling.",
+    "explain": "The slopes are solid, liquid and gas warming. Between them are flat sections for melting and boiling."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A 100 W heater gives 100 J each second. Melting {m} g of ice needs 334 J per gram. How many seconds does the melting take?",
+    "answer": "334*m/100",
+    "hint": "Find the energy needed, then divide by 100 J per second.",
+    "explain": "334 × {m} = {=334*m} J, and {=334*m} ÷ 100 = {=334*m/100} seconds, all at 0 °C.",
+    "params": {
+     "m": [
+      10,
+      100
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which statement about a flat section is true?",
+    "choices": [
+     "The average speed of the particles stays the same",
+     "The particles slow down",
+     "Energy stops flowing in"
+    ],
+    "answer": 0,
+    "hint": "Temperature measures the average speed of the particles.",
+    "explain": "The temperature is constant, so the average speed is constant. Energy still flows in and changes the arrangement."
+   }
+  ]
+ }
+}
