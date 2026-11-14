@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_ELbEbi-0o7",
+ "title": "Bearings",
+ "audience": "family",
+ "keyIdea": "A bearing gives a direction as an angle measured from North, turning clockwise, written with three figures: East is 090°, South 180°, West 270°, and 5° is written 005°. To measure the bearing of B from A, stand at A, face North and turn clockwise until you face B. The bearing back again, of A from B, differs by exactly 180°, because the North lines at A and B are parallel: add 180° if the bearing is under 180°, otherwise take 180° away. Bearings and a scale drawing together let you plot a route and find how far and in what direction the finish is from the start.",
+ "familyTip": "On a walk or a map app, pick a landmark and stand facing North (most phones have a compass). Estimate the bearing of the landmark, then check it. Ask: what is the bearing back home from the landmark? It should be 180° different.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "A correctly written bearing, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "correct bearing",
+    "not written as a bearing"
+   ],
+   "items": [
+    [
+     "045°",
+     0
+    ],
+    [
+     "45°",
+     1
+    ],
+    [
+     "270°",
+     0
+    ],
+    [
+     "090°",
+     0
+    ],
+    [
+     "5°",
+     1
+    ],
+    [
+     "005°",
+     0
+    ],
+    [
+     "−030°",
+     1
+    ],
+    [
+     "400°",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbear",
+  "caption": "Flagship lab: swing an arm from North to set and measure bearings, point back from B to A, pick back bearings, and read a trip's bearing.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A bearing tells you a direction as an angle. There are three rules. Start facing North. Turn clockwise. Write the angle with three figures.",
+   "So East is 090°, South is 180° and West is 270°. An angle of 5° is written 005°. North-west is halfway between West and North, so it is 315°.",
+   "To find the bearing of B from A, stand at A. Face North. Turn clockwise until you face B. The angle you turned is the bearing.",
+   "The way back is different. If B is on 070° from A, then A is on 250° from B. Add 180°. If the bearing is 180° or more, take 180° away instead. That keeps it under 360°."
+  ],
+  "adult": [
+   "Ages 13 to 15. In England, bearings appear in Key Stage 3 geometry and measures (measure angles, interpret maps and scale drawings, and use bearings) and again in GCSE content G15. Learners need the angle facts for parallel lines, accurate use of a protractor, and scale drawing. Bearings feed into later work with vectors, trigonometry in navigation, and the sine and cosine rules.",
+   "The three conventions are: measure from North, measure clockwise, and give three figures, so values run from 000° to 359°. A back bearing differs by 180° because the North lines through the two points are parallel; the angles where line AB crosses them are co-interior, so they add to 180°. On a trip of 4 km on 090° then 3 km on 180°, the finish is 5 km from the start on a bearing of about 127°, because tan of the extra angle is 3 ÷ 4.",
+   "Accurate drawing matters. Draw a North line at every point you measure from, put the protractor's centre on that point, and line up its zero with North. Estimate first: a bearing pointing into the south-west must be between 180° and 270°.",
+   "Common mistakes: measuring anticlockwise (reading 050° for a north-west point that is really 310°), measuring from East or from the line of travel, writing 45° instead of 045°, giving the same bearing for the return trip, using 180° minus the bearing or 360° minus the bearing for a back bearing, and ending up with values over 360°. The lab tests each of these: you set and measure bearings with a draggable arm, point back from B, choose back bearings and read a trip's bearing from a scale drawing."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the bearing of due South?",
+   "choices": [
+    "180°",
+    "090°",
+    "270°"
+   ],
+   "answer": 0,
+   "hint": "Start at North and turn clockwise. South is half a full turn.",
+   "explain": "South is half a turn clockwise from North, so 180°. 090° is East and 270° is West."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "B is on a bearing of {b}° from A. What is the bearing of A from B, in degrees?",
+   "answer": "b+180",
+   "hint": "The back bearing differs by 180°. Is the bearing under 180°?",
+   "explain": "{b} is under 180, so add 180: the bearing of A from B is {=b+180}°.",
+   "params": {
+    "b": [
+     100,
+     170
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A lighthouse is on a bearing of {b}° from a boat. What is the bearing of the boat from the lighthouse, in degrees?",
+   "answer": "b-180",
+   "hint": "The bearing is 180° or more, so take 180° away.",
+   "explain": "{b} − 180 = {=b-180}, so the boat is on a bearing of {=b-180}° from the lighthouse (written with three figures).",
+   "params": {
+    "b": [
+     200,
+     350
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Kai writes a bearing of 8° as 8°. How should it be written?",
+   "choices": [
+    "008°",
+    "080°",
+    "800°"
+   ],
+   "answer": 0,
+   "hint": "Bearings always have three figures. Where do the zeros go?",
+   "explain": "Put zeros in front to make three figures: 008°. 080° is a different direction, 80°, and 800° is not a bearing."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A plane flies north-east. What is its bearing?",
+   "choices": [
+    "045°",
+    "315°",
+    "135°"
+   ],
+   "answer": 0,
+   "hint": "North-east is halfway between North (000°) and East (090°).",
+   "explain": "Halfway between 000° and 090° is 045°. 315° is north-west and 135° is south-east."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which direction is a bearing of 270°?",
+    "choices": [
+     "West",
+     "East",
+     "South"
+    ],
+    "answer": 0,
+    "hint": "Turn clockwise from North: East is 090°, South 180°.",
+    "explain": "Three quarter turns clockwise from North face West, so 270° is West. East would be 090°."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "B is on a bearing of 120° from A. What is the bearing of A from B?",
+    "choices": [
+     "300°",
+     "060°",
+     "120°"
+    ],
+    "answer": 0,
+    "hint": "Is 120 under 180? Then add 180.",
+    "explain": "120 + 180 = 300, so A is on 300° from B. 060° is 180 − 120, and 120° is the bearing of B from A, not the way back."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mo measures from North but turns anticlockwise, and gets 040°. What is the real bearing?",
+    "choices": [
+     "320°",
+     "040°",
+     "140°"
+    ],
+    "answer": 0,
+    "hint": "An anticlockwise turn of 40° is the same as a clockwise turn of 360° − 40°.",
+    "explain": "Turning 40° anticlockwise ends where a 320° clockwise turn ends, so the bearing is 320°."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A boat sails 4 km on 090°, then 3 km on 180°. How far is it from the start?",
+    "choices": [
+     "5 km",
+     "7 km",
+     "1 km"
+    ],
+    "answer": 0,
+    "hint": "The legs make a right angle. Use Pythagoras.",
+    "explain": "The legs meet at a right angle, so the distance is √(4² + 3²) = √25 = 5 km. 7 km is the distance sailed, not the straight-line distance."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A ship is on a bearing of {b}° from a port. What is the bearing of the port from the ship, in degrees?",
+    "answer": "b-180",
+    "hint": "The bearing is over 180°, so take 180° away.",
+    "explain": "{b} − 180 = {=b-180}. The port is on a bearing of {=b-180}° from the ship.",
+    "params": {
+     "b": [
+      190,
+      350
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why does a back bearing differ by exactly 180°?",
+    "choices": [
+     "The North lines at A and B are parallel, so co-interior angles with AB add to 180°",
+     "A straight line is 360°",
+     "Bearings are measured anticlockwise"
+    ],
+    "answer": 0,
+    "hint": "Draw North lines at both points. How are they related?",
+    "explain": "North lines at A and B are parallel. The line AB crosses both, making co-interior angles that add to 180°, so the bearings differ by 180°."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which bearing is written correctly?",
+    "choices": [
+     "062°",
+     "62°",
+     "62° N"
+    ],
+    "answer": 0,
+    "hint": "Count the figures. A bearing always has three.",
+    "explain": "062° has three figures. 62° is missing the leading zero, and a bearing needs no compass letter."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Ella says the bearing of A from B is 360° minus the bearing of B from A. Test her rule with 070°.",
+    "choices": [
+     "Wrong: 360 − 70 = 290°, but the back bearing is 250°",
+     "Right: it gives 250°",
+     "Right for every bearing"
+    ],
+    "answer": 0,
+    "hint": "Work out 70 + 180 and compare with 360 − 70.",
+    "explain": "The back bearing of 070° is 070 + 180 = 250°. Her rule gives 290°, which flips East and West instead of turning round."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "A buoy is on a bearing of {b}° from a ship. What is the bearing of the ship from the buoy, in degrees?",
+    "answer": "b+180",
+    "hint": "The bearing is under 180°, so add 180°.",
+    "explain": "{b} + 180 = {=b+180}, so the ship is on a bearing of {=b+180}° from the buoy.",
+    "params": {
+     "b": [
+      100,
+      170
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A boat sails 4 km due East, then 3 km due South. Which bearing takes it straight back to the start?",
+    "choices": [
+     "about 307°",
+     "about 127°",
+     "about 053°"
+    ],
+    "answer": 0,
+    "hint": "The bearing of the finish from the start is about 127°. Going back is a back bearing.",
+    "explain": "The finish is on about 127° from the start, so the start is on 127 + 180 ≈ 307° from the finish. 127° is the outward bearing."
+   }
+  ]
+ }
+}
