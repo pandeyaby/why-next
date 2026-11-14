@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_JbsNfWnYQT",
+ "title": "Disagreeing respectfully",
+ "audience": "learner",
+ "keyIdea": "You can disagree strongly and still respect the person. Argue with the idea, not the person. Before you answer, steelman their view: say their best reason the way they would say it. Back your point with something others can check, not one story or a louder voice. Online, slow down: questions, shared ground and a pause cool a thread, while capitals, pile-ons and sarcasm heat it up. A calm talk can end with you still disagreeing, and that is fine.",
+ "familyTip": "Pick a light topic you disagree on at home, like pineapple on pizza or the best film. Before either of you argues, each must sum up the other's best reason until the other says 'yes, that's it'. Notice how the talk feels different. Then look at a comment section together and spot replies that attack the idea and replies that attack the person.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each reply challenge the idea or attack the person? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "challenges the idea",
+    "attacks the person"
+   ],
+   "items": [
+    [
+     "What evidence is that based on?",
+     0
+    ],
+    [
+     "Typical of someone your age.",
+     1
+    ],
+    [
+     "I see your point, but the cost is too high.",
+     0
+    ],
+    [
+     "Nobody cares what you think.",
+     1
+    ],
+    [
+     "Could that work in a small school too?",
+     0
+    ],
+    [
+     "You are just jealous.",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdisag",
+  "caption": "Flagship lab: sort idea from person, steelman three views, back a point with evidence, cool a heated thread and find common ground.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Disagreeing is normal. Respect means you argue with the idea, not the person. A reply about the idea gives a reason or asks a question. A reply that calls someone lazy, stupid or too old says nothing about the idea at all.",
+   "Before you answer, steelman their view. That means saying their best reason the way they would say it. If they reply, yes, that is what I mean, you have it right. The opposite is a straw man: a silly, weak version that is easy to knock down. It feels good but it does not convince anyone.",
+   "Back your point with something others can check, such as a named survey or study. One story about a cousin is not a pattern. Capitals make a reply louder, not truer. And it is fair to ask who did the survey.",
+   "Online, things heat up fast. Questions, saying what you agree with, and taking a break all cool a thread down. Capitals, sarcasm and tagging friends to pile on heat it up. You may still disagree at the end. That is fine, if you both listened."
+  ],
+  "adult": [
+   "Ages 14 to 16. The PSHE Association Programme of Study (KS4) covers how to talk with respect and handle conflict, online too. The DfE guidance on Relationships, Sex and Health Education says pupils should know how to disagree with respect and how what they post affects others. This lesson turns that into skills teens can practise.",
+   "Steelmanning comes from what are often called Rapoport's rules, made well known by Daniel Dennett. First restate the other view so well that they wish they had put it that way. Then say where you agree. Only then argue. Studies of online talk find that rude comments make readers more hostile and less open, while questions and shared values lower the heat. The thread meter in the lab is a model of that pattern, not a real scale.",
+   "Common mistakes: thinking respect means never disagreeing, or that a calm talk must end with a winner. Attacking a straw man. Treating one vivid story as proof. Taking volume (capitals, pile-ons, sarcasm) for strength. Assuming the other side has bad motives. Finding shared goals first does not mean giving in. It just shrinks what you really disagree about."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Someone says school should start later. Which reply challenges the idea?",
+   "choices": [
+    "Buses and parents' work times would need to change too.",
+    "Only lazy people want a lie-in.",
+    "You always say stupid things."
+   ],
+   "answer": 0,
+   "hint": "Which one is about school start times at all?",
+   "explain": "The first reply raises a real problem with the idea. The other two attack the person and say nothing about start times."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which is a steelman of 'phones should be banned in school'?",
+   "choices": [
+    "Phones split attention, and lessons go better without them.",
+    "You just hate people having fun.",
+    "Some teachers do not like phones."
+   ],
+   "answer": 0,
+   "hint": "Which summary would the other person agree is their real reason?",
+   "explain": "A steelman states their best reason fairly. 'You hate fun' is a straw man, and 'some teachers' misses the point."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A thread is at a temperature of {t}. Asking a real question lowers it by 16. What is it now?",
+   "answer": "t-16",
+   "hint": "A question lowers the heat. Take 16 away from {t}.",
+   "explain": "{t} − 16 = {=t-16}. Questions show you are listening, so the heat drops.",
+   "params": {
+    "t": [
+     50,
+     90
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In a thread of {n} replies, 3 attack the person. How many replies are left that could deal with the idea?",
+   "answer": "n-3",
+   "hint": "Take the 3 attacks away from all {n} replies.",
+   "explain": "{n} − 3 = {=n-3} replies could be about the idea. The 3 personal attacks add nothing to the argument.",
+   "params": {
+    "n": [
+     6,
+     15
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which gives the strongest support for a point?",
+   "choices": [
+    "A named survey of thousands of people",
+    "A story about your best friend",
+    "Writing the point in capitals"
+   ],
+   "answer": 0,
+   "hint": "Which one could a doubter check for themselves?",
+   "explain": "A named survey can be checked. One story is not a pattern, and capitals add volume, not evidence."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does it mean to argue with the idea, not the person?",
+    "choices": [
+     "Give reasons about the view, not insults about who holds it",
+     "Never disagree with anyone",
+     "Agree in public and complain in private"
+    ],
+    "answer": 0,
+    "hint": "Where does your reply aim: at their reasons, or at them?",
+    "explain": "Respectful disagreement deals with reasons and evidence. Insults, labels and jokes about the person do not."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is a straw man?",
+    "choices": [
+     "A weak, twisted version of someone's view that is easy to knock down",
+     "Their best reason, stated fairly",
+     "A question to check what they mean"
+    ],
+    "answer": 0,
+    "hint": "A man made of straw is easy to knock over.",
+    "explain": "A straw man replaces their real view with a silly one. Beating it proves nothing about what they actually think."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why steelman someone's view before you answer?",
+    "choices": [
+     "They feel heard and you answer what they really think",
+     "It makes your side look weak",
+     "It ends the argument at once"
+    ],
+    "answer": 0,
+    "hint": "How do people react when they feel understood?",
+    "explain": "People listen more when they feel understood, and your answer is then about their real reasons, not a guess."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Someone replies to you in capitals: 'YOU ARE SO WRONG.' What is the best next move?",
+    "choices": [
+     "Ask what part they think is wrong",
+     "Reply in bigger capitals",
+     "Tag friends to back you up"
+    ],
+    "answer": 0,
+    "hint": "Which move adds a reason, not more heat?",
+    "explain": "A real question turns the heat down and gets to their reason. Shouting back or a pile-on heats it up."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "'Everyone knows nobody reads any more.' What is wrong with this as evidence?",
+    "choices": [
+     "'Everyone knows' cannot be checked",
+     "Nothing, it is a fact",
+     "It is too polite"
+    ],
+    "answer": 0,
+    "hint": "Who measured it, and how?",
+    "explain": "'Everyone knows' is a claim, not evidence. A survey with numbers would let people check it."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Two friends talk calmly but still disagree. What does that show?",
+    "choices": [
+     "You can disagree and still respect each other",
+     "The talk failed",
+     "One of them must be lying"
+    ],
+    "answer": 0,
+    "hint": "Must every talk have a winner?",
+    "explain": "Understanding each other is a good result even without agreement. Respect does not need a winner."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why look for common ground in a disagreement?",
+    "choices": [
+     "It shows what you agree on, so you argue about less",
+     "It means you give up your view",
+     "It is a trick to win"
+    ],
+    "answer": 0,
+    "hint": "What happens to the size of the disagreement?",
+    "explain": "Shared goals, like both wanting students to learn, narrow the argument to the real difference. You still keep your view."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A thread is at a temperature of {t}. Someone posts a sarcastic meme, which adds 14. What is the temperature now?",
+    "answer": "t+14",
+    "hint": "Sarcasm adds heat. Add 14 to {t}.",
+    "explain": "{t} + 14 = {=t+14}. Mockery adds heat and no reason.",
+    "params": {
+     "t": [
+      30,
+      80
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "A thread is at {t}. You ask a real question (it drops 16), then say what you agree with (it drops 18). What is it now?",
+    "answer": "t-34",
+    "hint": "Both moves lower the heat. Take away 16, then 18.",
+    "explain": "{t} − 16 − 18 = {=t-34}. Questions and shared ground both cool a thread.",
+    "params": {
+     "t": [
+      50,
+      90
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which reply to 'uniform should be scrapped' is respectful disagreement?",
+    "choices": [
+     "I get the cost point, but uniform stops pressure over brands.",
+     "Only show-offs want that.",
+     "lol no"
+    ],
+    "answer": 0,
+    "hint": "Which reply notes their point and gives a reason?",
+    "explain": "It accepts their real point (cost) and gives a reason against. The other two attack or dismiss the person."
+   }
+  ]
+ }
+}
