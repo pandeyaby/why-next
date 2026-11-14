@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions follow the standard ecology usage (symbiosis = close, long-term association between different species; mutualism + +, commensalism + 0, parasitism + −) as in Campbell Biology and the Encyclopaedia Britannica entry on symbiosis. Examples checked: clownfish–anemone mutualism (clownfish defend against butterflyfish and supply nutrients, Britannica / NOAA); remora–shark as the textbook commensal, with the caveat that remoras may eat parasites stated in the adult text; ticks on deer and fleas on dogs as ectoparasites; tapeworms as endoparasites; cattle egret–cattle commensalism; cleaner shrimp mutualism; ruminant gut microbes mutualism; mistletoe described as a hemiparasite. Parameterised items 7w, 60−3d, 2n, 7s are positive at every corner."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: symbiosis always means both gain (step 1 prediction 'only the clownfish gains', challenge tags onlyone/both), parasite = predator (step 3 prediction and three-week tick vs fox comparison, tag pred), host harm scored as 'no change' (removal test: deer improves without ticks, tags notice/same), same-species groups counted as symbiosis (step 5 wolves and robins, tags packyes/packmut), and 'a parasite gives something back' (tag giveback)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagsymb is built on one mechanism unique to this topic: scoring each partner +, 0 or − and letting the pair of signs name the relationship, then testing a sign with a removal experiment where the other partner's health bar moves down, stays, or rises. No other flagship lab scores two-species outcomes; it differs from flagfoodweb/flagchain (energy flow) and flagadapt (traits). The gate reports under 30% shingle overlap with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the classification before naming it: in step 1 the sign pairs are scored per partner and the lab states the name the signs imply; step 2 applies it to six new pairs; the weeks run shows a living host feeding the tick 21 times versus one fatal meal for the fox; the removal test shows worse/same/better mapping back to + / 0 / −. The text then confirms each idea."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions each with a tempting wrong option the lab disproves: 'only the clownfish gains' (scoring shows the anemone is protected), 'a parasite kills quickly like a predator' (the deer is still alive after three weeks), and 'the shark gets sick without remoras' (its health bar does not move). Each completion message echoes the locked-in choice via A.reveal."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with two wrong options each, every one with its own message naming the slip, e.g. 'The shark gains nothing from the remora, so it scores 0, not +', 'A predator kills its prey to eat it. The tick feeds for weeks and the deer lives', 'Symbiosis needs two different species. Wolves in a pack are one species'. In-lab wrong taps also explain, e.g. 'Not no change for the deer. The deer loses blood and can catch diseases from the tick.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons.py passes; kid paragraphs score about grade 3.1 and adult about 6.5. Canvas text is one short line per goal ('Pair 1 of 3: what does each one get?', 'Week 2 of 3'), and the three terms are always shown beside their sign pair so the vocabulary is anchored."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step has one job (score, sort, compare over time, test by removal, define the boundary), and every feedback line carries a reason or a fact about the organisms rather than generic praise."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on 360 px screenshots before and after Show me for every step. After the first pass the week labels ('Meals for the tick') were clipped, so they were shortened and right-aligned on the row title line and the health bars widened; removal-test titles were shortened to 'No clownfish' etc. Partner cards, bins and rows are large tap targets, and buttons below the canvas repeat every move."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every action has a button: '<partner>: + / 0 / −', the three kind names, 'Next week', 'Take the ticks away', 'Symbiosis / Not symbiosis'. After each move the canvas aria-label states the scene, e.g. 'Clownfish and Sea anemone. Clownfish: gains. Sea anemone: not scored.' Challenge feedback is aria-live. walk.cjs reports axe (WCAG 2.1 AA) clean in both themes on desktop and iPhone 13 with no console errors; the canvas keeps a light card in dark mode."
+  }
+ },
+ "sources": [
+  "Encyclopaedia Britannica, 'Symbiosis' and 'Commensalism'",
+  "Campbell Biology (Urry et al.), community interactions chapter",
+  "NGSS 5-LS2-1 and MS-LS2-2",
+  "DfE National Curriculum in England: science, Year 6 Living things and their habitats",
+  "NOAA Ocean Service, 'Clownfish and sea anemones'"
+ ]
+}
