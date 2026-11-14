@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_VKW8lOcFaw",
+ "title": "Multiplication as scaling",
+ "audience": "learner",
+ "keyIdea": "Multiplying can be read as scaling: resizing a number by a factor. Compare the factor with 1 and you know the size of the answer without working it out. A factor more than 1 makes the product bigger than the number you started with (8 × 3/2 = 12). A factor less than 1 makes it smaller (8 × 3/4 = 6). A factor of exactly 1 keeps it the same, and any fraction n/n is 1, so 3/5 × 4/4 = 12/20 is the same amount as 3/5. For the same starting number, the bigger factor gives the bigger product.",
+ "familyTip": "Take a recipe for 4 people and scale it together: what happens to 300 g of flour for 2 people (× 1/2) or for 6 people (× 3/2)? Before working it out, say whether the new amount will be more or less than 300 g, and why.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Will the product be less than 20, exactly 20 or more than 20? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "less than 20",
+    "exactly 20",
+    "more than 20"
+   ],
+   "items": [
+    [
+     "20 × 3/4",
+     0
+    ],
+    [
+     "20 × 5/5",
+     1
+    ],
+    [
+     "20 × 1 1/3",
+     2
+    ],
+    [
+     "20 × 9/10",
+     0
+    ],
+    [
+     "20 × 2",
+     2
+    ],
+    [
+     "20 × 1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagxscale",
+  "caption": "Flagship lab: stretch and shrink a ribbon by a scale factor, sort products against 9 without multiplying, pick the larger product, and multiply 3/5 by 4/4.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Times can mean scale, or resize. 8 × 2 makes 8 twice as big. 8 × 3/2 makes it one and a half times as big: 12. You can tell the size of an answer before you work it out. Look at the number you multiply by, called the factor. Is it more than 1, less than 1, or just 1?",
+   "If the factor is more than 1, the answer is bigger than the start. If it is less than 1, the answer is smaller, because you only take part of the start. 8 × 3/4 is 6, less than 8.",
+   "If the factor is 1, the answer stays the same. 4/4 is 1 whole, so 3/5 × 4/4 is still 3/5. It is just written as 12/20, with more, smaller parts.",
+   "To compare 12 × 2/3 and 12 × 3/4, you do not need to multiply. Both start at 12, and 3/4 is the bigger factor, so 12 × 3/4 is bigger."
+  ],
+  "adult": [
+   "This is Common Core 5.NF.B.5: interpret multiplication as scaling, comparing the size of a product to one factor from the size of the other factor (5a), and explaining why a fraction greater than 1 gives a product greater than the given number, a fraction less than 1 gives a smaller product, and multiplying by n/n gives an equivalent fraction (5b). In England, Year 5 and Year 6 pupils solve problems that involve scaling by simple fractions.",
+   "The key move is reasoning about size without calculating: for a positive number b, a × b is greater than a when b > 1, less than a when 0 < b < 1, and equal to a when b = 1. The ribbon in the lab is a length model of this. The n/n step links scaling to equivalent fractions: 3/5 × 4/4 = 12/20, because each fifth is cut into four equal parts.",
+   "Common mistakes: believing that multiplication always makes bigger (and division always makes smaller), which comes from whole-number work; thinking that any fraction shrinks, even 5/2; reading 12/20 as more than 3/5 because the numbers are bigger; multiplying only the top of n/n (7/7 × 15 = 105); and confusing scaling with adding, as in 10 scaled by 2/5 becoming 12.",
+   "Ask children to say 'more than, less than or equal to the start' before they calculate, then check. Contexts such as recipes, map scales and resizing a photo make the factor's meaning concrete."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Without working it out: is 36 × 5/9 more than 36, less than 36 or equal to 36?",
+   "choices": [
+    "less than 36",
+    "more than 36",
+    "equal to 36"
+   ],
+   "answer": 0,
+   "hint": "Compare the factor 5/9 with 1 whole.",
+   "explain": "5/9 is less than 1, so you take only part of 36. The product is less than 36 (it is 20)."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A ribbon is {a} cm long. It is scaled by 3/2. How long is it now, in cm?",
+   "answer": "a*3/2",
+   "hint": "Find half of the length, then take 3 halves.",
+   "explain": "{a} ÷ 2 × 3 = {=a*3/2} cm. The factor 3/2 is more than 1, so the ribbon got longer.",
+   "params": {
+    "a": [
+     4,
+     40
+    ]
+   },
+   "where": "a%2==0"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A ribbon is {a} cm long. It is scaled by 3/4. How long is it now, in cm?",
+   "answer": "a*3/4",
+   "hint": "Find a quarter of the length, then take 3 quarters.",
+   "explain": "{a} ÷ 4 × 3 = {=a*3/4} cm. The factor 3/4 is less than 1, so the ribbon got shorter.",
+   "params": {
+    "a": [
+     4,
+     48
+    ]
+   },
+   "where": "a%4==0"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which is larger: 15 × 4/5 or 15 × 6/5?",
+   "choices": [
+    "15 × 6/5",
+    "15 × 4/5",
+    "They are equal"
+   ],
+   "answer": 0,
+   "hint": "Both start at 15. Which factor is bigger?",
+   "explain": "6/5 is more than 1 and 4/5 is less than 1, so 15 × 6/5 (18) is larger than 15 × 4/5 (12)."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "2/3 × 5/5 = 10/15. How does 10/15 compare with 2/3?",
+   "choices": [
+    "It is the same amount",
+    "It is more",
+    "It is less"
+   ],
+   "answer": 0,
+   "hint": "What is 5/5 as a whole number?",
+   "explain": "5/5 is 1 whole, and multiplying by 1 changes nothing. 10/15 is the same amount as 2/3, cut into smaller parts."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Without multiplying, which product is less than 50?",
+    "choices": [
+     "50 × 7/8",
+     "50 × 9/8",
+     "50 × 8/8"
+    ],
+    "answer": 0,
+    "hint": "Only a factor less than 1 gives a product less than 50.",
+    "explain": "7/8 is less than 1, so 50 × 7/8 is less than 50. 9/8 is more than 1 and 8/8 is exactly 1."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Ava says, 'Multiplying always makes a number bigger.' Which example proves her wrong?",
+    "choices": [
+     "10 × 1/2 = 5",
+     "10 × 2 = 20",
+     "10 × 3/2 = 15"
+    ],
+    "answer": 0,
+    "hint": "Look for a factor less than 1.",
+    "explain": "10 × 1/2 = 5, which is less than 10. Multiplying by a factor less than 1 makes the number smaller."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A map distance of {a} cm is scaled by 5/2 for a poster. How many cm is it on the poster?",
+    "answer": "a*5/2",
+    "hint": "Half of the distance, times 5.",
+    "explain": "{a} ÷ 2 × 5 = {=a*5/2} cm. The factor 5/2 is more than 1, so the poster distance is longer.",
+    "params": {
+     "a": [
+      2,
+      20
+     ]
+    },
+    "where": "a%2==0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is greatest?",
+    "choices": [
+     "24 × 5/4",
+     "24 × 1",
+     "24 × 3/4"
+    ],
+    "answer": 0,
+    "hint": "Same 24 each time. Find the biggest factor.",
+    "explain": "5/4 is the biggest factor, and the only one more than 1, so 24 × 5/4 (30) is the greatest."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is 6/6 × 13?",
+    "choices": [
+     "13",
+     "78",
+     "more than 13"
+    ],
+    "answer": 0,
+    "hint": "What is 6/6 as a whole number?",
+    "explain": "6/6 = 1, so 6/6 × 13 = 13. 78 comes from multiplying by the top 6 and ignoring the bottom 6."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A photo 12 cm wide is scaled by 2/3. How wide is it now?",
+    "choices": [
+     "8 cm",
+     "18 cm",
+     "14 cm"
+    ],
+    "answer": 0,
+    "hint": "Find a third of 12, then take 2 of them.",
+    "explain": "12 ÷ 3 × 2 = 8 cm. 18 cm is 12 ÷ 2/3, and 14 cm is 12 + 2: neither is scaling by 2/3."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which multiplier turns 3/4 into an equal fraction with 12 parts?",
+    "choices": [
+     "3/3",
+     "4/4",
+     "12/12"
+    ],
+    "answer": 0,
+    "hint": "How many times 4 makes 12?",
+    "explain": "4 × 3 = 12, so 3/4 × 3/3 = 9/12. 4/4 gives sixteenths and 12/12 gives 48ths."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "{a} people share a recipe that uses 300 g of rice for 4 people. How many grams do {a} people need?",
+    "answer": "300*a/4",
+    "hint": "Scale 300 g by the factor {a}/4.",
+    "explain": "300 × {a}/4 = {=300*a/4} g. The factor is more than 1 when there are more than 4 people and less than 1 when there are fewer.",
+    "params": {
+     "a": [
+      2,
+      10
+     ]
+    },
+    "where": "a%2==0"
+   }
+  ]
+ }
+}
