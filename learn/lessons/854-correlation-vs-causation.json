@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_X0Tr8IYaEd",
+ "title": "Correlation vs Causation",
+ "audience": "learner",
+ "keyIdea": "Two things that go up and down together have a correlation. That does not prove one causes the other. A hidden third thing can cause both (hot sun brings more ice creams and more sunburn), the cause can run the other way (rain makes people open umbrellas, not the reverse), or the pattern can be luck from too few tries (two wins in lucky socks). To show a cause, run a fair test: change one thing, keep everything else the same, repeat it, and see whether the result changes.",
+ "familyTip": "Spot 'go-together' claims at home: 'I always lose my keys when I'm late' or 'our team wins when Gran watches'. Ask three questions: could something else cause both, could it be the other way round, and have we tried it enough times? Then plan a fair test you could really do.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Was the cause shown by a fair test, or are the two things only seen together? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "fair test showed it",
+    "only seen together"
+   ],
+   "items": [
+    [
+     "Same seeds and soil: only the plant in the light grew",
+     0
+    ],
+    [
+     "Kids with bigger feet read better",
+     1
+    ],
+    [
+     "Same ball, dropped from higher: it bounced higher each time",
+     0
+    ],
+    [
+     "Busy beaches sell more ice creams and have more sunburn",
+     1
+    ],
+    [
+     "Hats and freckles: people with sun hats have more freckles",
+     1
+    ],
+    [
+     "Same paper plane, bigger wings: it flew further in 5 throws",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtogeth",
+  "caption": "Flagship lab: reveal a beach week, close the van or hide the sun, pick which way the cause runs, test lucky socks, and sort claims.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some things go together. On hot days, a beach sells lots of ice creams. Lots of people get sunburn too. When one goes up, so does the other. Scientists call this a correlation.",
+   "But ice cream does not cause sunburn. The hot sun causes both. A hidden cause like this can make two things go together. So going together does not prove that one thing causes the other.",
+   "Sometimes one thing does cause the other, but the other way round. Rain makes people open umbrellas. Umbrellas do not make it rain. Ask which thing happens first.",
+   "And sometimes it is just luck. Two wins in lucky socks is too few to tell. To find a cause, do a fair test. Change one thing. Keep the rest the same. Try it lots of times."
+  ],
+  "adult": [
+   "Ages 8 to 10. The National Curriculum in England asks pupils in Years 3 to 6 to use results to draw simple conclusions and, by Year 6, to identify scientific evidence that has been used to support or refute ideas. NGSS for grades 3 to 5 lists Patterns and Cause and effect as crosscutting concepts: a pattern can be evidence, but cause and effect has to be tested. Correlation means two measures change together; causation means changing one makes the other change.",
+   "The lesson teaches three reasons a correlation may not be causal. A confounder (a third variable) drives both, as the sun drives ice creams and sunburn and age drives foot size and reading. Reverse causation runs the arrow backwards, as with umbrellas and rain. Chance makes small samples look meaningful, as with two wins in lucky socks. The remedy is a fair test that changes one variable, controls the others and repeats the trial.",
+   "Common mistakes: reading any pattern as proof ('ice cream gives you sunburn'); spotting a link but getting the direction wrong; trusting one or two results; and calling a test fair when it has nothing to compare with, such as watering one plant and never leaving a second plant dry. Children also over-correct and say a pattern is 'just luck' when the cause is clear and comes first, so the lab includes pairs where one thing really does cause the other."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "On sunny days a beach sells more ice creams and more people get sunburn. What causes the sunburn?",
+   "choices": [
+    "the strong sun",
+    "eating ice cream",
+    "the ice cream van"
+   ],
+   "answer": 0,
+   "hint": "Close the van in your head. Would people still burn?",
+   "explain": "The sun causes both. Ice creams and sunburn only go together because sunny days bring more of each."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Lots of open umbrellas go with rain. Which causes which?",
+   "choices": [
+    "Rain makes people open umbrellas",
+    "Umbrellas make it rain",
+    "Neither: it is luck"
+   ],
+   "answer": 0,
+   "hint": "Ask which one happens first, the rain or the umbrellas.",
+   "explain": "The rain comes first and people open umbrellas because of it. The cause runs from rain to umbrellas."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "On a hot day the beach had {s} sunburns. The next hot day the ice cream van stayed shut, and there were {s} sunburns again. How many sunburns did shutting the van stop?",
+   "answer": "s-s",
+   "hint": "Compare the two numbers of sunburns.",
+   "explain": "{s} before and {s} after means 0 were stopped. Shutting the van changed nothing, so ice cream was not the cause.",
+   "params": {
+    "s": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "To test her lucky socks fairly, Mia plays {n} games wearing them and the same number without. How many games does she play in all?",
+   "answer": "2*n",
+   "hint": "She needs one group with socks and an equal group without.",
+   "explain": "{n} with socks and {n} without makes {=2*n} games. Only then can she compare the wins.",
+   "params": {
+    "n": [
+     5,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is a fair test of whether light helps cress grow?",
+   "choices": [
+    "Two trays the same, one in light and one in a dark cupboard",
+    "One tray on a sunny windowsill",
+    "A tray in light watered more than a tray in the dark"
+   ],
+   "answer": 0,
+   "hint": "Change one thing only and keep a second tray to compare.",
+   "explain": "Two matching trays with only the light changed is fair. One tray has nothing to compare with, and changing water too mixes up two causes."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Children with bigger feet tend to read better. Why?",
+    "choices": [
+     "Older children have bigger feet and read better",
+     "Big feet help you read",
+     "Reading makes your feet grow"
+    ],
+    "answer": 0,
+    "hint": "Is there a hidden third thing that causes both?",
+    "explain": "Age causes both. Older children have bigger feet and have had more years of reading."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Big fires have lots of fire engines. Which is true?",
+    "choices": [
+     "A big fire makes them send more engines",
+     "More engines make the fire bigger",
+     "Fire engines and fires are not linked"
+    ],
+    "answer": 0,
+    "hint": "Which comes first, the big fire or the engines?",
+    "explain": "The fire comes first and its size decides how many engines are sent. The arrow points from fire to engines."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Tom scored 2 goals the first time he wore new boots. What can he say?",
+    "choices": [
+     "It could be luck: test many games with and without",
+     "The boots make him score",
+     "The boots make him worse"
+    ],
+    "answer": 0,
+    "hint": "Is one game enough to tell?",
+    "explain": "One game is too few. He needs lots of games in each pair of boots before comparing."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "With lucky socks Mia won {w} of 10 games. Without them she won {w} of 10. How many more wins did the socks give her?",
+    "answer": "w-w",
+    "hint": "Take the wins without socks from the wins with socks.",
+    "explain": "{w} − {w} = 0. The socks made no difference, so they do not cause wins.",
+    "params": {
+     "w": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Towns with more shops also have more dogs. What is the best explanation?",
+    "choices": [
+     "Bigger towns have more people, so more of both",
+     "Shops make people buy dogs",
+     "Dogs make shops open"
+    ],
+    "answer": 0,
+    "hint": "What could cause both shops and dogs?",
+    "explain": "Town size is the hidden cause. More people means more shops and more dogs."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which word means 'two things go up and down together'?",
+    "choices": [
+     "correlation",
+     "cause",
+     "fair test"
+    ],
+    "answer": 0,
+    "hint": "It is the pattern, not the reason.",
+    "explain": "A correlation is the pattern of two things changing together. It does not say which, if either, is the cause."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Sam tests a toy car on a ramp. He changes the height of the ramp and keeps the car, the ramp and the floor the same. If he tests {h} heights 3 times each, how many runs is that?",
+    "answer": "3*h",
+    "hint": "Repeating each height makes the test more reliable.",
+    "explain": "{h} heights × 3 runs = {=3*h} runs. Repeating each one helps show the pattern is not luck.",
+    "params": {
+     "h": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Children who eat breakfast tend to do better at school. What is the best thing to say?",
+    "choices": [
+     "Breakfast might help, but something else could cause both",
+     "Breakfast is sure to make you do better",
+     "Doing well at school makes you eat breakfast"
+    ],
+    "answer": 0,
+    "hint": "Going together is not proof. Could a third thing cause both?",
+    "explain": "Homes with time for breakfast may also help in other ways, like early bedtimes. Only a fair test could show breakfast itself is the cause."
+   }
+  ]
+ }
+}
