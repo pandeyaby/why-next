@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE National Curriculum in England, Year 5 science, properties and changes of materials ('use knowledge of solids, liquids and gases to decide how mixtures might be separated, including through filtering, sieving and evaporating'; 'know that some materials will dissolve in liquid to form a solution, and describe how to recover a substance from a solution'), and the AQA KS3 syllabus terms residue, filtrate, solute and solvent used in the adult text. Each method is tied to the property it uses (particle size; insoluble solid in a liquid; dissolved solid with a liquid that evaporates). The two lab plans are the standard sequences: sand, salt and water → filter → evaporate; dry gravel, sand and salt → sieve → add water and stir → filter → evaporate. Numeric items s, 10*h, s+t and b keep mass and volume consistent at every parameter corner (salt is conserved through filtering and evaporating)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented separation misconceptions (Driver et al. 1994 'Making Sense of Secondary Science' on dissolving: the solute 'disappears'; Ofsted/ASE primary science reports on filtering salt water): filtering removes dissolved salt (step 2 prediction 'Pure water', challenge tags stays/through, m1), salt evaporating or vanishing with the water (step 3 prediction options 'into the air' and 'gone for ever', tags gone/half, m2), using a sieve for fine sand (tag holes, the pick-the-method feedback 'Bits this small slip through a sieve'), evaporating first so salt and sand stay mixed (plan feedback, m5), filtering a dry mixture (tag wet) and 'sand stays because it is heavy' (tag heavy, m3)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagsepar is a sequence of separation apparatus driven by the learner: a sieve shaken by dragging that lets sand through and keeps gravel, a filter funnel where the sand-water pour leaves residue but the salt-water pour leaves none and the filtrate is labelled still salty, a heated beaker whose water level drops while crystals grow, a method picker, and an ordered plan builder whose 'still mixed' line updates as each part is removed. It differs from flagevap (evaporation and the water cycle) and flagstir (mixing things together, ages 3–4), and from lesson 100's vocabulary visual, because the learner must choose and order methods by property. The gate reports under 30% shingle overlap with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea is seen before it is stated: shaking shows small grains leave and big ones stay; the two pours show that filter paper catches the undissolved sand but lets the dissolved salt through, which is what makes evaporation necessary; heating shows the water level fall to 0% while salt crystals appear; picking methods for six mixtures forces the size/dissolved question; and building the gravel-sand-salt plan shows why sieving comes first and evaporating comes last, with the feedback explaining what goes wrong in any other order."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option the lab disproves. 'The sand' or 'Nothing' staying in the sieve fails when shaking leaves the gravel behind. 'Pure water: the salt stays on the paper' fails when the salt-water pour leaves an empty paper and the beaker is labelled 'still salty water'. 'Gone into the air with the water' fails when the heated beaker ends with only salt crystals and the label 'only salt crystals left'. Task completion echoes the locked-in prediction."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with two wrong options each, every one with its own message: heat (evaporating sandy water wastes heat; the sand has not dissolved so filter it), holes (sand grains fall through a sieve's holes), through (dissolved salt passes through filter paper), tiny (dissolved bits are far too small for a sieve), stays (the filtrate is still salty), only (water goes through too), gone (only the water becomes a gas), half (once all the water has gone only salt is left), dry (no water to evaporate yet), wet (filtering needs a liquid), heavy (weight is not the reason, hole size is) and sol (sand does not dissolve). The method picker and plan builder also name the specific slip for each wrong choice."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/validate_lessons.py passes the learner limits (kid ≤ 6.5, adult ≤ 9.5). The adult text was rewritten after a first draft read at FK grade 11.6. Kid paragraphs use concrete kitchen materials (gravel, sand, salt water) and define dissolved in plain words ('broken into bits far too tiny to catch'). Lab step texts are one or two short sentences and canvas labels are short ('gravel', 'sand stays on the paper', 'still salty water', 'water left: 50%')."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each lab step has one job (size, undissolved vs dissolved, recovering a solute, choosing, ordering). Every feedback line gives the physical reason (hole size, dissolving, evaporating) and item explanations state what happens to each part rather than repeating the prompt."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px (Android profile) in light and dark, before and after Show me for every step. The first pass clipped the side labels 'gravel stays', 'sand left on the paper' and 'water vapour' at the right edge on phones; they were moved to centred lines above or below the apparatus and re-checked. The three method boxes and four plan cards fit across the canvas, long card names wrap to two lines, and the feedback banner sits below the apparatus. Buttons below the canvas wrap into rows."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button with an aria-label: 'Shake the sieve', 'Pour the salt water into the filter', 'Heat the salt water', 'Use sieve/filter/evaporate' and 'Next step: Filter'. The sieve can be shaken by a tap as well as a drag. After each action the canvas aria-label reads the result and state, e.g. 'Nothing stays on the paper. Dissolved salt … goes through too. Both poured.' Challenge feedback is an aria-live status. walk.cjs reports axe (WCAG 2.1 AA) clean in light and dark on desktop and iPhone 13 with no console errors; a scripted run that pressed every wrong button and tapped the canvas on each step raised no errors."
+  }
+ },
+ "sources": [
+  "Department for Education, National Curriculum in England: science programmes of study, Year 5 Properties and changes of materials",
+  "Driver, R., Squires, A., Rushworth, P. & Wood-Robinson, V. (1994) Making Sense of Secondary Science: research into children's ideas (dissolving and separating)",
+  "Association for Science Education / Primary Science Teaching Trust guidance on separating mixtures in Year 5",
+  "NGSS 5-PS1-3 and 5-PS1-4 (properties of matter, mixing substances) for background"
+ ]
+}
