@@ -1,0 +1,52 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Rates checked on gov.uk 'National Minimum Wage and National Living Wage rates' and the National Minimum Wage (Amendment) Regulations 2026 (SI 2026/357), in force 1 April 2026: £12.71 at 21+, £10.85 at 18 to 20, £8.00 under 18 and £8.00 for apprentices under 19 or in their first year; the old 21+ rate £12.21 is used only as the out-of-date payslip error. Rest breaks from gov.uk 'Rest breaks at work' (Working Time Regulations 1998): 20 minutes when working more than 6 hours (18+), 30 minutes when working more than 4.5 hours (young workers); breaks need not be paid. Itemised payslips and day-one written statements from gov.uk; 5.6 weeks statutory holiday; uniform deductions counting against minimum wage pay from gov.uk 'Deductions that reduce minimum wage pay'. Sums recomputed: 18 × 10.85 = 195.30, 30 × 12.21 = 366.30, 16 × 10.85 = 173.60, 143.60 ÷ 16 = 8.975 ≈ £8.98. Parameterised items are in whole pence so answers are exact integers at every corner."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Distractors target real mistakes: no minimum under 18, using last year's rate after 1 April, a deduction being fine if signed for, the under-18 break rule applied to adults, a break owed on any adult shift, payslips as a favour or only for full-time staff, and walking out or posting online before a grievance. The wrong-path script clicked them and got, e.g., '30 minutes is the under-18 rule. Ravi is an adult: 20 minutes, and only over 6 hours' and '£12.71 is the rate for 21 and over. At 18 to 20 the minimum is £10.85'."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed under the 30% shingle limit. No other lab checks pay offers against age bands, finds the wrong line on payslips against a rota, sets legal rest breaks on a shift timeline with the 4½ h and 6 h thresholds, or orders an escalation plan ending in Acas and HMRC. Money basics (206) is budgeting, and Credit, debt and interest is borrowing."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Six steps: sort five pay offers by age rate; find the error on three payslips (missing hours, old rate, a uniform deduction below the minimum); set the break for three shifts; sort seven rights and responsibilities; order the four steps to fix a problem; then the challenge. Each step ends with a stated rule, and the payslip step makes the learner compute the effective hourly rate."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked-in predictions: the minimum for a 17-year-old (£8.00 vs £12.71 vs none), whether a uniform deduction can take pay below the minimum (no vs his cost vs signed for it), and the break for a 17-year-old on a 5-hour shift (30 minutes vs none until 6 hours vs only if she asks). Each tempting option is disproved by the step."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions (18 to 20 rate, an 18-year-old's break, who gets payslips, gross pay, responsibilities, next step after a manager chat). Every wrong option has its own message, e.g. 'The decimal point moved too far: 10 × £12.71 is £127.10' and 'Walking out can cost you your job and your claim'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation FK grade 3.1 overall (1.1, 3.2, 3.1, 5.0), under 6.5. Adult notes FK 5.8, under 9.5, after the mistakes sentence was split. Grievance, Acas and HMRC are each explained in plain words where they first appear."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with explanation overlap under 12%. Every kid paragraph carries a rule later items test (the three rates, the payslip checks, the break thresholds, the escalation order). Adult notes cite the regulation, the Working Time Regulations and the named mistakes."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshot QA at 360 × 640 in light and dark, before and after Show me: the offer card, bins, payslip rows, shift bar with 4½ h and 6 h markers, break boxes and plan rows all fit with no clipping. Every canvas action also has a full-size HTML button (Legal, Below the minimum, each payslip line, each break option, each plan step). '1 cards' was fixed to '1 card' after the QA pass."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "gate_browser runs axe WCAG 2.1 AA in both themes on desktop and iPhone 13; the screenshot and wrong-path runs had no console or page errors. The canvas sits on a light card in dark mode with a live aria-label that reads the whole payslip or shift aloud, and buttons mirror every canvas action for keyboard users."
+  }
+ },
+ "sources": [
+  "GOV.UK, National Minimum Wage and National Living Wage rates (April 2026)",
+  "The National Minimum Wage (Amendment) Regulations 2026, SI 2026/357",
+  "GOV.UK, Rest breaks at work; The Working Time Regulations 1998",
+  "GOV.UK, Payslips; Employment contracts and conditions (written statement of employment particulars)",
+  "Acas, Code of Practice on disciplinary and grievance procedures",
+  "PSHE Association, Programme of Study for PSHE Education (key stages 1 to 5)"
+ ]
+}
