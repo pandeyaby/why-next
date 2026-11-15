@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_d8al9JcajP",
+ "title": "Converting measurement units",
+ "audience": "learner",
+ "keyIdea": "To convert, find the link between the two units: 1 km = 1000 m, 1 m = 100 cm, 1 cm = 10 mm, 1 kg = 1000 g and 1 l = 1000 ml. Going from a big unit to a small unit, you need more of them, so multiply: 3 km = 3 × 1000 = 3000 m. Going from a small unit to a big unit, divide: 700 cm = 700 ÷ 100 = 7 m. Half a kilometre is 500 m, so 3.5 km = 3500 m. Time is not in tens: 1 hour = 60 minutes, 1 week = 7 days and 1 year = 12 months.",
+ "familyTip": "Read the label on a drink bottle together: 1.5 l or 500 ml? Change one into the other out loud. On a walk or a car trip, turn a sign like 'Park 2 km' into metres, and turn the time the trip takes into minutes.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Multiply or divide to change the unit? Drag each card to a box, or tap the card and then a box.",
+  "opts": {
+   "bins": [
+    "Multiply (big unit to small unit)",
+    "Divide (small unit to big unit)"
+   ],
+   "items": [
+    [
+     "3 km into metres",
+     0
+    ],
+    [
+     "600 cm into metres",
+     1
+    ],
+    [
+     "2 kg into grams",
+     0
+    ],
+    [
+     "4000 ml into litres",
+     1
+    ],
+    [
+     "5 hours into minutes",
+     0
+    ],
+    [
+     "90 mm into centimetres",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagconv",
+  "caption": "Flagship lab: build 1 km from 100 m pieces, run a unit machine both ways, pin half kilometres and sort time conversions.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Kilo means a thousand. So 1 km is 1000 m, 1 kg is 1000 g and 1 l is 1000 ml. A metre is 100 cm, and a centimetre is 10 mm.",
+   "Big unit to small unit? You need more of the small ones, so multiply. 3 km is 3 × 1000 = 3000 m.",
+   "Small unit to big unit? You need fewer of the big ones, so divide. 700 cm is 700 ÷ 100 = 7 m.",
+   "Half a km is 500 m. So 2.5 km is 2000 m and 500 m more: 2500 m. Time is not in tens. An hour is 60 minutes, a week is 7 days and a year is 12 months."
+  ],
+  "adult": [
+   "Ages 8 to 9. The National Curriculum in England asks for conversion between units of measure in Year 4 (for example kilometre to metre, hour to minute) and between metric units in Year 5 (km and m, m and cm, cm and mm, kg and g, l and ml), including years to months and weeks to days. It builds on Year 3, where children used mm, cm and m and added and subtracted measures in the same unit.",
+   "The rule: find the conversion factor (1000, 100 or 10 for metric; 60, 7 or 12 for time). Multiply to go to a smaller unit, because the same amount needs more of them; divide to go to a larger unit. With decimals the digits move, not the point: 3.5 × 1000 = 3500, and 650 ÷ 100 = 6.5.",
+   "Common mistakes: using 100 for every metric link (1 km is 1000 m, not 100 m); dividing when you should multiply; reading 3.5 km as 3005 m because half was taken as 5 m; 'adding zeros' to a decimal, which gives 3.5000; and converting time in hundreds, so 2 hours becomes 200 minutes. The lab answers each one with a road piece, a machine card, a pin on the line or a time card."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "How many metres are in {k} km?",
+   "answer": "1000*k",
+   "hint": "1 km is 1000 m. A metre is the smaller unit, so multiply by 1000.",
+   "explain": "{k} km × 1000 = {=1000*k} m.",
+   "params": {
+    "k": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A ribbon is {c}00 cm long. How long is it in metres?",
+   "answer": "c",
+   "hint": "1 m is 100 cm. A metre is the bigger unit, so divide by 100.",
+   "explain": "Metres are the bigger unit, so divide by 100: {c}00 cm ÷ 100 = {=c} m.",
+   "params": {
+    "c": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How many metres is 3.5 km?",
+   "choices": [
+    "3500 m",
+    "3005 m",
+    "350 m"
+   ],
+   "answer": 0,
+   "hint": "3.5 km is 3 km and half a km. What is half of 1000 m?",
+   "explain": "3 km is 3000 m and half a km is 500 m, so 3.5 km = 3500 m."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many minutes are in {h} hours?",
+   "answer": "60*h",
+   "hint": "Time is not in hundreds. Each hour is 60 minutes.",
+   "explain": "{h} hours × 60 = {=60*h} minutes.",
+   "params": {
+    "h": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "To change grams into kilograms, what do you do?",
+   "choices": [
+    "Divide by 1000",
+    "Multiply by 1000",
+    "Divide by 100"
+   ],
+   "answer": 0,
+   "hint": "A kilogram is the bigger unit. Will you need more of them or fewer?",
+   "explain": "1 kg = 1000 g. Kilograms are bigger, so you need fewer of them: divide by 1000."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A jug holds {l} litres. How many millilitres is that?",
+    "answer": "1000*l",
+    "hint": "1 l is 1000 ml. Millilitres are smaller, so there are more of them.",
+    "explain": "{l} l × 1000 = {=1000*l} ml.",
+    "params": {
+     "l": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How many days are in {w} weeks?",
+    "answer": "7*w",
+    "hint": "A week is 7 days, not 10. Multiply the weeks by 7.",
+    "explain": "{w} weeks × 7 = {=7*w} days.",
+    "params": {
+     "w": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A pencil is {n}0 mm long. How long is it in centimetres?",
+    "answer": "n",
+    "hint": "1 cm is 10 mm. Centimetres are bigger, so divide by 10.",
+    "explain": "Centimetres are the bigger unit, so divide by 10: {n}0 mm ÷ 10 = {=n} cm.",
+    "params": {
+     "n": [
+      6,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How many grams is 2.5 kg?",
+    "choices": [
+     "2500 g",
+     "2005 g",
+     "250 g"
+    ],
+    "answer": 0,
+    "hint": "2.5 kg is 2 kg and half a kilogram. Half of 1000 g is how much?",
+    "explain": "2 kg is 2000 g and half a kilogram is 500 g, so 2.5 kg = 2500 g."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Sam says 3 hours is 300 minutes. What went wrong?",
+    "choices": [
+     "He used 100 minutes in an hour, but an hour is 60 minutes",
+     "He should have divided by 100",
+     "Nothing: 3 hours is 300 minutes"
+    ],
+    "answer": 0,
+    "hint": "How many minutes are in one hour?",
+    "explain": "Time is not in hundreds. 1 hour = 60 minutes, so 3 hours = 3 × 60 = 180 minutes."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is longer: 1500 m or 2 km?",
+    "choices": [
+     "2 km",
+     "1500 m",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Put both in the same unit first. How many metres is 2 km?",
+    "explain": "2 km = 2000 m, and 2000 m is more than 1500 m, so 2 km is longer."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "How many months are in 2 years?",
+    "choices": [
+     "24",
+     "20",
+     "200"
+    ],
+    "answer": 0,
+    "hint": "A year has 12 months. Multiply by 12.",
+    "explain": "2 years × 12 = 24 months."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "650 cm is how many metres?",
+    "choices": [
+     "6.5 m",
+     "65 m",
+     "65,000 m"
+    ],
+    "answer": 0,
+    "hint": "1 m is 100 cm. Divide 650 by 100.",
+    "explain": "650 ÷ 100 = 6.5, so 650 cm = 6.5 m. Dividing by 10 instead would give 65, which is the slip."
+   }
+  ]
+ }
+}
