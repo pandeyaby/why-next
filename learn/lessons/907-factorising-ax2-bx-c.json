@@ -1,0 +1,227 @@
+{
+ "topicId": "mt_fgFn7Yw6n_",
+ "title": "Factorising ax² + bx + c",
+ "audience": "learner",
+ "keyIdea": "When the x² term has a number in front (a ≠ 1), first take out any common factor. Then find two numbers that multiply to a × c and add to b. Use them to split the middle term, and factorise each half: 2x² + 7x + 3 has a × c = 6, and 1 + 6 = 7, so 2x² + x + 6x + 3 = x(2x + 1) + 3(2x + 1) = (2x + 1)(x + 3). In the brackets, position matters, because the x-coefficient multiplies the number in the other bracket: (3x + 4)(x + 2) gives 10x, but (3x + 2)(x + 4) gives 14x. If a × c is negative, the two numbers have opposite signs. Each bracket set to zero gives a root: (2x + 1)(x + 3) = 0 when x = −1/2 or x = −3. Expand to check.",
+ "familyTip": "One person writes two brackets in secret, such as (2x + 5)(x − 1), and expands them to 2x² + 3x − 5. The other person factorises it using a × c = −10 and b = 3. Swap roles, and always expand to check.",
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "Drag x along the graph of 2x² − x − 6 = (2x + 3)(x − 2). It is zero at x = 2 and at x = −3/2, where one bracket is zero.",
+  "opts": {
+   "mode": "eval",
+   "f": "2*x*x-x-6",
+   "a": 0,
+   "xr": [
+    -3,
+    3
+   ],
+   "yr": [
+    -8,
+    10
+   ],
+   "step": 0.5
+  }
+ },
+ "lab": {
+  "type": "flagacfac",
+  "caption": "Flagship lab: find the pair for a × c and b, split the middle in a grid, test brackets, handle negatives and common factors, find the roots.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some quadratics have a number in front of x², like 2x² + 7x + 3. The quick trick for x² + bx + c does not work here. You need one more step.",
+   "Multiply the first and last numbers: 2 × 3 = 6. Now find two numbers that multiply to 6 and add to 7. That is 1 and 6. Use them to split 7x into x + 6x.",
+   "Now group in pairs. 2x² + x is x(2x + 1). And 6x + 3 is 3(2x + 1). Both have (2x + 1). So the answer is (2x + 1)(x + 3). Expand it to check.",
+   "Watch where each number sits. In (3x + 4)(x + 2), the 3x meets the 2, giving 6x, and the 4 meets x, giving 4x. Swap the 4 and the 2 and you get 14x, not 10x. If every term shares a factor, take it out first and keep it at the front."
+  ],
+  "adult": [
+   "Ages 15 to 16. The GCSE Mathematics (9–1) subject content for England lists factorising quadratic expressions of the form ax² + bx + c as higher-tier content (A4), and uses it to solve quadratic equations (A18). CCSS HSA-SSE.A.2 and HSA-SSE.B.3a ask students to see structure in expressions and to factor a quadratic to reveal its zeros. This builds on the a = 1 case: expanding (px + q)(rx + s) gives pr x² + (ps + qr)x + qs, so ps × qr = (pr)(qs) = a × c and ps + qr = b. That is why the splitting numbers multiply to a × c.",
+   "The lab works through one idea per step. Learners test factor pairs of a × c against the sum b. They place the two split terms in a 2 × 2 area grid, whose rows and columns then show the brackets. They try bracket placements for 3x² + 10x + 8 and see the middle term change. Then they handle a negative a × c, take out a common factor before factorising, and link each bracket to an x-intercept on the graph.",
+   "Common mistakes. The most common slip is using c instead of a × c, or dropping a altogether to give (x + 3)(x + 1) for 2x² + 5x + 3. Many swap the numbers between brackets, which changes the middle term. Others get the signs wrong when a × c is negative, or stop at (6x + 3)(x + 2), which is correct but not fully factorised. When solving, students often write x = 2 instead of x = 2/3 for 3x − 2 = 0. Expanding the answer catches every one of these."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Factorise 2x² + 7x + 3.",
+   "choices": [
+    "(2x + 1)(x + 3)",
+    "(2x + 3)(x + 1)",
+    "(x + 1)(x + 3)"
+   ],
+   "answer": 0,
+   "hint": "a × c = 6. Which pair multiplies to 6 and adds to 7? Then split 7x.",
+   "explain": "1 × 6 = 6 and 1 + 6 = 7, so 2x² + x + 6x + 3 = x(2x + 1) + 3(2x + 1) = (2x + 1)(x + 3). (2x + 3)(x + 1) expands to 2x² + 5x + 3."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "For 2x² + bx + {a}, what is a × c?",
+   "answer": "2*a",
+   "hint": "a is the number in front of x², and c is the last number.",
+   "explain": "a × c = 2 × {a} = {=2*a}. The two numbers that split the middle term must multiply to {=2*a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Factorise 3x² − 5x − 2.",
+   "choices": [
+    "(3x + 1)(x − 2)",
+    "(3x − 1)(x + 2)",
+    "(3x − 2)(x + 1)"
+   ],
+   "answer": 0,
+   "hint": "a × c = −6. Find numbers that multiply to −6 and add to −5.",
+   "explain": "−6 and 1 work: 3x² − 6x + x − 2 = 3x(x − 2) + 1(x − 2) = (3x + 1)(x − 2)."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "(2x + 1)(x + {a}) is expanded to 2x² + bx + {a}. What is b?",
+   "answer": "2*a+1",
+   "hint": "Outer: 2x times {a}. Inner: 1 times x. Add them.",
+   "explain": "2x × {a} = {=2*a}x and 1 × x = x, so b = {=2*a} + 1 = {=2*a+1}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Factorise 4x² + 6x + 2 fully.",
+   "choices": [
+    "2(2x + 1)(x + 1)",
+    "(4x + 2)(x + 1)",
+    "(2x + 1)(x + 1)"
+   ],
+   "answer": 0,
+   "hint": "First look for a number that divides 4, 6 and 2.",
+   "explain": "Take out 2: 2(2x² + 3x + 1) = 2(2x + 1)(x + 1). (4x + 2)(x + 1) is equal but 4x + 2 still has a factor 2."
+  }
+ ],
+ "mastery": {
+  "passMark": 5,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Factorise 2x² + 5x + 3.",
+    "choices": [
+     "(2x + 3)(x + 1)",
+     "(2x + 1)(x + 3)",
+     "(x + 3)(x + 1)"
+    ],
+    "answer": 0,
+    "hint": "a × c = 6. Which pair adds to 5?",
+    "explain": "2 and 3 add to 5: 2x² + 2x + 3x + 3 = 2x(x + 1) + 3(x + 1) = (2x + 3)(x + 1). (2x + 1)(x + 3) gives 7x."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Factorise 5x² + 13x − 6.",
+    "choices": [
+     "(5x − 2)(x + 3)",
+     "(5x + 3)(x − 2)",
+     "(5x + 2)(x − 3)"
+    ],
+    "answer": 0,
+    "hint": "a × c = −30. Find two numbers that multiply to −30 and add to 13.",
+    "explain": "15 and −2: 5x² + 15x − 2x − 6 = 5x(x + 3) − 2(x + 3) = (5x − 2)(x + 3)."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Solve (2x − {a})(x + 5) = 0. Give the positive solution as a decimal.",
+    "answer": "a/2",
+    "hint": "Set 2x − {a} = 0, then divide by 2.",
+    "explain": "2x − {a} = 0 gives 2x = {a}, so x = {a} ÷ 2 = {=a/2}. The other bracket gives x = −5.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why do the splitting numbers multiply to a × c and not just c?",
+    "choices": [
+     "The outer and inner terms multiply to the same thing as a × c",
+     "Because c is always 1",
+     "It is just a rule to learn"
+    ],
+    "answer": 0,
+    "hint": "Expand (px + q)(rx + s). Multiply the outer term by the inner term.",
+    "explain": "The middle terms are ps x and qr x. Their numbers multiply to ps × qr = pr × qs, which is a × c."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Tom writes 6x² + 9x + 3 = (6x + 3)(x + 1). What is wrong?",
+    "choices": [
+     "It is not fully factorised: take out 3 first",
+     "It does not expand to 6x² + 9x + 3",
+     "Nothing is wrong"
+    ],
+    "answer": 0,
+    "hint": "Does every term in a bracket share a factor?",
+    "explain": "It expands correctly, but 6x + 3 = 3(2x + 1). Fully factorised: 3(2x + 1)(x + 1)."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "For 3x² − 10x + 8, which two numbers split the middle term?",
+    "choices": [
+     "−6 and −4",
+     "6 and 4",
+     "−8 and −2"
+    ],
+    "answer": 0,
+    "hint": "a × c = 24 and b = −10. Both numbers have the same sign as b.",
+    "explain": "−6 × −4 = 24 and −6 + −4 = −10. So 3x² − 6x − 4x + 8 = 3x(x − 2) − 4(x − 2) = (3x − 4)(x − 2)."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "3x² + bx + {a} = (3x + 1)(x + {a}). What is b?",
+    "answer": "3*a+1",
+    "hint": "Outer: 3x times {a}. Inner: 1 times x.",
+    "explain": "3x × {a} = {=3*a}x and 1 × x = x, so b = {=3*a+1}.",
+    "params": {
+     "a": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which quadratic has roots x = −1/3 and x = 2?",
+    "choices": [
+     "(3x + 1)(x − 2) = 0",
+     "(x + 3)(x − 2) = 0",
+     "(3x − 1)(x + 2) = 0"
+    ],
+    "answer": 0,
+    "hint": "Set each bracket to zero and solve.",
+    "explain": "3x + 1 = 0 gives x = −1/3, and x − 2 = 0 gives x = 2. The others give −3 and 2, or 1/3 and −2."
+   }
+  ]
+ }
+}

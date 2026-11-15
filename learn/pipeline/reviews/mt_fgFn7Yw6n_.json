@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE GCSE Mathematics (9–1) subject content (A4 higher: factorising ax² + bx + c; A18 solving quadratics by factorising) and CCSS HSA-SSE.A.2 / HSA-SSE.B.3a. Every expansion recomputed: (2x + 1)(x + 3) = 2x² + 7x + 3; (3x + 4)(x + 2) = 3x² + 10x + 8 while (3x + 2)(x + 4) = 3x² + 14x + 8; (2x + 3)(x − 2) = 2x² − x − 6; 6x² + 15x + 6 = 3(2x + 1)(x + 2); (3x + 1)(x − 2) = 3x² − 5x − 2; (5x − 2)(x + 3) = 5x² + 13x − 6; (3x − 4)(x − 2) = 3x² − 10x + 8; roots of 2x² + 7x + 3 at −3 and −1/2 (f(−1) = −2). The adult text derives ps × qr = a × c from (px + q)(rx + s)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented errors (Kotsopoulos 2007 on quadratic factorising; AQA and Edexcel examiner reports on A4/A18): using c instead of a × c, dropping a ((x + 3)(x + 1)), swapping numbers between brackets, sign errors when a × c < 0, stopping at (6x + 3)(x + 2) (not fully factorised), losing the common factor, and solving 3x − 2 = 0 as x = 2 or the wrong sign. The grid step rejects 2x + 3x because the product is right but the sum is not."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed under 30% against every flagship lab, including the x² + bx + c lab (115) and the difference-of-squares and completing-the-square labs. Only this lab tests factor pairs of a × c against b, places split x-terms into a 2 × 2 area grid that reveals row and column factors, cycles bracket placements with a ≠ 1, divides out an HCF before factorising, and links each bracket to an x-intercept by dragging a marker."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Six tasks and a challenge, one idea each: a × c and b; splitting and grouping in the grid; placement matters when a ≠ 1; negative a × c; common factor first; brackets give roots. Each banner gives the full worked line (e.g. 2x² + x + 6x + 3 = x(2x + 1) + 3(2x + 1)) only after the learner has found it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions with tempting wrong options the lab disproves: what the pair multiplies to (c = 3 is the a = 1 habit), whether (3x + 2)(x + 4) and (3x + 4)(x + 2) match ('same numbers, same answer'), signs for 2x² − x − 6 ('both negative because the middle is negative'), and the root of 2x + 1 = 0 (x = −1 and x = 1/2 tempting)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with nine distinct wrong-answer messages: swapped positions, dropped a, product c only, wrong sign on the bigger number, not fully factorised, lost HCF, forgot to divide by a when solving, root sign flip, and one-sign brackets. Each names the slip and shows the corrected expansion."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 0.6 and adult 5.2 (limits 6.5 and 9.5). Kid paragraphs use short sentences and walk one worked example; algebra is written with proper minus signs and superscripts."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed: no filler patterns and explanation overlap under 12% with 115 (x² + bx + c), 392 (solving by factorising) and 615 (difference of squares). Each kid paragraph does one job: why the a = 1 trick fails, a × c and the split, grouping, and placement plus common factor."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark, every step before and after Show me. Fixes from the first sheets: the graph curve was missing (a beginPath for the clip rectangle cleared it) and now draws inside the clip; the '−4' axis label was clipped at the left edge and is omitted; pair cards now read 'product 6, sum 5' instead of '× 6 + −7'; the plot shrinks to sit above the measured feedback box."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap or drag has a button twin (each factor pair; each chip and both empty cells; Next pair and Expand; ÷ 2/3/5/6 and the three answers; marker left/right a half and Check). The canvas aria-label is rewritten after every action with the pairs, grid contents, current brackets and middle term, or marker x and y. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) Mathematics GCSE subject content and assessment objectives, A4 and A18",
+  "Common Core State Standards for Mathematics HSA-SSE.A.2 and HSA-SSE.B.3a, corestandards.org",
+  "Kotsopoulos, D. (2007) Unravelling student challenges with quadratics: a cognitive approach, Australian Mathematics Teacher 63(2)",
+  "AQA GCSE Mathematics 8300 examiner reports (higher tier), factorising and solving quadratics"
+ ]
+}
