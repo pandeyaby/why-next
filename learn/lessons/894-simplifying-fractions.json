@@ -1,0 +1,269 @@
+{
+ "topicId": "mt_b7T-CjOYUR",
+ "title": "Simplifying Fractions",
+ "audience": "learner",
+ "keyIdea": "To simplify a fraction, divide the numerator and the denominator by the same common factor. The amount stays the same; the pieces just get bigger. Dividing by the highest common factor (HCF) gives the simplest form in one move: the HCF of 18 and 24 is 6, so 18/24 = 3/4. A fraction is in simplest form when only 1 goes into both numbers. Taking the same number off the top and bottom, or dividing only one of them, changes the amount. To compare or add fractions, use a common multiple of the denominators: 2/3 = 16/24 and 5/8 = 15/24.",
+ "familyTip": "Cut a pizza or a pancake into 8 equal slices and eat (or cover) 6. Push the remaining slices into pairs: 6/8 becomes 3/4 of the same pizza. Then ask: could you group them in threes? Why not? (3 does not go into 8.)",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the fraction in simplest form? Drag each one to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Simplest form",
+    "Can be simplified"
+   ],
+   "items": [
+    [
+     "3/4",
+     0
+    ],
+    [
+     "5/9",
+     0
+    ],
+    [
+     "7/10",
+     0
+    ],
+    [
+     "9/15",
+     1
+    ],
+    [
+     "14/21",
+     1
+    ],
+    [
+     "16/40",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsimpfrac",
+  "caption": "Flagship lab: group bar pieces, find the HCF, test moves that break a fraction, find a common denominator, then simplify in one move.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "18/24 of a bar is shaded. Put the 24 small pieces into groups of 6. Now there are 4 big pieces, and 3 of them are shaded. The shaded part has not changed, so 18/24 = 3/4. This is called simplifying.",
+   "To simplify, divide the top and the bottom by the same number. That number must go into both. It is a common factor. The highest common factor, or HCF, does it in one move. The factors of 18 are 1, 2, 3, 6, 9 and 18. The factors of 24 are 1, 2, 3, 4, 6, 8, 12 and 24. The HCF is 6.",
+   "A fraction is in its simplest form when only 1 goes into both numbers. 9/12 is not done yet, because 3 goes into 9 and 12. Never take the same number off the top and bottom: 18/24 is not 3/9. That makes it much smaller.",
+   "To compare 2/3 and 5/8, cut both into the same number of pieces. The number must be a multiple of 3 and of 8. The lowest is 24. Then 2/3 = 16/24 and 5/8 = 15/24, so 2/3 is a bit bigger."
+  ],
+  "adult": [
+   "Ages 10 to 11. The National Curriculum for England (Year 6) asks pupils to use common factors to simplify fractions and common multiples to write fractions with the same denominator. CCSS 4.NF.A.1 explains why: multiplying or dividing the top and bottom by the same number gives an equal fraction. CCSS 5.NF.A.1 uses common denominators to add fractions.",
+   "The lab first shows the idea with a bar: grouping equal pieces keeps the shaded length. Then it moves to numbers with factor lists and the HCF. A common denominator is any common multiple; the lowest common multiple keeps numbers small. All figures were checked: HCF(18, 24) = 6, HCF(12, 16) = 4, HCF(15, 25) = 5, HCF(14, 21) = 7, LCM(3, 8) = 24.",
+   "Common mistakes. Pupils stop too early, with 9/12 instead of 3/4. They take the same number off the top and bottom. They divide only the top. They think odd numbers cannot simplify, but 9/15 = 3/5. They mix up factors and multiples. They think a simpler fraction is a smaller one. Each slip gets its own message in the lab."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Simplify 18/24 fully.",
+   "choices": [
+    "3/4",
+    "9/12",
+    "6/12"
+   ],
+   "answer": 0,
+   "hint": "Find the highest number that goes into 18 and 24.",
+   "explain": "The HCF of 18 and 24 is 6. 18 ÷ 6 = 3 and 24 ÷ 6 = 4, so 18/24 = 3/4. 9/12 can still be divided by 3."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Simplify {=a*k}/{=b*k}. The simplest form has denominator {b}. What is its numerator?",
+   "answer": "a*1",
+   "hint": "Divide the top and bottom by {k}.",
+   "explain": "{=a*k} ÷ {k} = {a} and {=b*k} ÷ {k} = {b}, so the fraction is {a}/{b}.",
+   "params": {
+    "a": [
+     1,
+     2
+    ],
+    "b": [
+     3,
+     3
+    ],
+    "k": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Write 1/{b} with a denominator of {=b*k}. What is the numerator?",
+   "answer": "k*1",
+   "hint": "What do you multiply {b} by to get {=b*k}? Do the same to the top.",
+   "explain": "{b} × {k} = {=b*k}, so multiply the top by {k} too: 1/{b} = {k}/{=b*k}.",
+   "params": {
+    "b": [
+     2,
+     6
+    ],
+    "k": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which fraction is in its simplest form?",
+   "choices": [
+    "7/12",
+    "9/15",
+    "14/21"
+   ],
+   "answer": 0,
+   "hint": "Check if any number except 1 goes into both.",
+   "explain": "7 and 12 share only the factor 1. 9/15 = 3/5 and 14/21 = 2/3 can be simplified."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Leo says 18/24 = 3/9, because he took 15 off the top and bottom. Is he right?",
+   "choices": [
+    "No: taking away changes the amount",
+    "Yes: he did the same to both",
+    "Yes: 3/9 is simpler"
+   ],
+   "answer": 0,
+   "hint": "Draw both on a bar. Is 3/9 the same length as 18/24?",
+   "explain": "3/9 is one third, but 18/24 is three quarters. Subtracting changes the amount; you must divide by a common factor."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the highest common factor of 12 and 18?",
+    "choices": [
+     "6",
+     "3",
+     "36"
+    ],
+    "answer": 0,
+    "hint": "List the factors of each and find the biggest one in both lists.",
+    "explain": "Factors of 12: 1, 2, 3, 4, 6, 12. Factors of 18: 1, 2, 3, 6, 9, 18. The highest in both is 6."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Simplify 16/40 fully.",
+    "choices": [
+     "2/5",
+     "4/10",
+     "8/20"
+    ],
+    "answer": 0,
+    "hint": "The HCF of 16 and 40 is 8.",
+    "explain": "16 ÷ 8 = 2 and 40 ÷ 8 = 5, so 16/40 = 2/5. 4/10 and 8/20 can still be halved."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Simplify {=a*k}/{=b*k} fully. The numerator is {a}. What is the denominator?",
+    "answer": "b*1",
+    "hint": "Divide the bottom by the same number you divided the top by.",
+    "explain": "The top was divided by {k} to give {a}, so the bottom is {=b*k} ÷ {k} = {b}. The answer is {a}/{b}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      5,
+      5
+     ],
+     "k": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Write 2/{b} with a denominator of {=b*k}. What is the numerator?",
+    "answer": "2*k",
+    "hint": "Find what {b} was multiplied by, and multiply the top by the same.",
+    "explain": "{b} × {k} = {=b*k}, so 2 × {k} = {=2*k}. 2/{b} = {=2*k}/{=b*k}.",
+    "params": {
+     "b": [
+      3,
+      7
+     ],
+     "k": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Is 9/15 in simplest form?",
+    "choices": [
+     "No: 3 goes into both",
+     "Yes: 9 and 15 are odd",
+     "Yes: you cannot halve it"
+    ],
+    "answer": 0,
+    "hint": "Odd numbers can still share a factor. Try 3.",
+    "explain": "9 ÷ 3 = 3 and 15 ÷ 3 = 5, so 9/15 = 3/5. Halving is only one test."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the lowest common denominator for 3/4 and 1/6?",
+    "choices": [
+     "12",
+     "24",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "Find the smallest number in the 4 times table and the 6 times table.",
+    "explain": "12 is the lowest common multiple of 4 and 6: 3/4 = 9/12 and 1/6 = 2/12. 24 works but is not the lowest. 10 is 4 + 6, not a multiple."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is bigger, 2/3 or 5/8?",
+    "choices": [
+     "2/3",
+     "5/8",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "Write both with a denominator of 24.",
+    "explain": "2/3 = 16/24 and 5/8 = 15/24. 16 > 15, so 2/3 is bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Mia simplifies 12/16 to 3/4. Is 3/4 smaller than 12/16?",
+    "choices": [
+     "No, they are the same amount",
+     "Yes, the numbers are smaller",
+     "Yes, there are fewer pieces"
+    ],
+    "answer": 0,
+    "hint": "Picture both on the same bar.",
+    "explain": "Dividing the top and bottom by 4 makes bigger pieces. The shaded part stays the same, so 12/16 = 3/4."
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum for England Year 6 fractions statement (use common factors to simplify fractions; use common multiples to express fractions in the same denomination), CCSS 4.NF.A.1 and 5.NF.A.1. Every figure recomputed: factors of 18 (1, 2, 3, 6, 9, 18) and 24 (1, 2, 3, 4, 6, 8, 12, 24), HCF 6, 18/24 = 3/4; HCF(12,16) = 4, HCF(15,25) = 5, HCF(14,21) = 7; LCM(3,8) = 24 with 2/3 = 16/24 > 5/8 = 15/24; 3/4 = 9/12 and 1/6 = 2/12; 16/40 = 2/5; 20/30 = 2/3. The m3 range was changed from denominator 4 (where a = 2 gave 2/4, not simplest) to denominator 5 so every combination is truly in simplest form."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented simplifying errors (NCETM fractions guidance; Hart, Children's Understanding of Mathematics 11–16, fractions chapter): stopping early at 9/12, the additive move (take 15 off both to get 3/9), dividing only the numerator, believing odd pairs cannot simplify, confusing factors with multiples (36 for the HCF of 12 and 18), adding denominators for a common denominator, and thinking the simpler fraction is smaller. The wrong-path run produced '4 goes into 24 but not 18' style messages and '12 works for thirds (12 ÷ 3 = 4) but not eighths'."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed under the 30% shingle limit, including against flag_frac.js (re-slicing equivalent fractions), flag_fcmp.js and flag_fpair.js (factor pairs with tile rectangles). No other lab regroups a bar only by sizes that divide both numbers, picks common factors from two factor rows, tests subtract/one-sided moves against the original bar, or re-cuts two bars into a chosen common denominator."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Six steps: regroup 18/24 by tapping group sizes until only 1 fits both (3/4), tap the four common factors of 18 and 24 and see the HCF give 3/4 in one move, test three moves (÷ 6 both, − 15 both, ÷ 6 top only) against the original bar, pick 6, 12, 16 or 24 pieces to compare 2/3 and 5/8, simplify 12/16, 15/25 and 14/21 in one move with the HCF, then the challenge. The learner discovers which group sizes and denominators work; the banner then states the rule."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions, each with a tempting wrong option the lab disproves: whether regrouping 18/24 changes the shaded amount (same vs less vs more), whether 9/12 is simplest after halving (no vs yes vs 'cannot halve again'), and whether 18/24 − 15 on both = 3/9 is the same amount (no, less vs same vs more). The reveal repeats the learner's own choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions (simplify 20/30, HCF of 12 and 18, is 9/15 simplest, common denominator for 3/4 and 1/6, simplify 16/40, equal to 4/6) with answer order rotated. Nine distinct wrong-answer messages name the slip, e.g. '36 is a common multiple, not a factor' and 'Adding 4 and 6 does not give a common denominator. Use a multiple of both: 12'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation FK grade 2.0 overall (−0.1, 2.3, 3.3, 2.3 by paragraph), under 6.5, with HCF defined in words before the abbreviation. Adult notes FK 4.3, under 9.5, after the mistakes paragraph was split into short sentences (it was 12.4). Lab banners use one instruction each."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with explanation overlap under 12% against every lesson, including Equivalent fractions and Comparing Fractions. Each kid paragraph carries one method the items test: regroup, common factors and HCF, simplest-form check and the subtract trap, common denominator. Adult notes give the standards, checked numbers and named mistakes."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 in light and dark: the 'Factors of 18' label first ran into the banner and the 'Group size' and 'Cut both bars into' labels touched the bar above, so the factor rows and chip rows were moved down. The eight factor chips of 24 fit at about 34 × 40 px each, every chip also has a full-size button below the canvas, and bars stay legible with 24 pieces."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "gate_browser runs axe WCAG 2.1 AA in both themes on desktop and iPhone 13, every Show me ends with a tick, and the screenshot and wrong-path runs logged no console or page errors. The canvas sits on a light card in dark mode, its aria-label reads the state (e.g. 'Top bar: 18 of 24 pieces shaded. Lower bar: 3 of 4 bigger pieces shaded, the same length'), and every tap has a labelled button."
+  }
+ },
+ "sources": [
+  "Department for Education, Mathematics programmes of study: key stages 1 and 2 (Year 6 fractions)",
+  "Common Core State Standards for Mathematics, 4.NF.A.1 and 5.NF.A.1",
+  "NCETM, Fractions: equivalence and simplifying (primary mastery professional development materials)",
+  "K. Hart (ed.), Children's Understanding of Mathematics: 11–16, fractions chapter"
+ ]
+}
