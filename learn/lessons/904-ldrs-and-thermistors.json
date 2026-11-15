@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_GHtAwst9_J",
+ "title": "LDRs and thermistors",
+ "audience": "learner",
+ "keyIdea": "An LDR (light-dependent resistor) and a thermistor are sensors whose resistance changes with their surroundings. The resistance of an LDR decreases as light intensity increases: a typical LDR is about 30 kΩ in the dark and a few hundred ohms in daylight. The resistance of a thermistor decreases as temperature increases: a typical one is 10 kΩ at 25 °C and under 1 kΩ at 100 °C, the opposite of a metal wire. Both graphs fall steeply at first and then level off. In a sensing circuit the sensor sits in series with a fixed resistor across a supply. The total pd is shared in proportion to resistance, so as the sensor's resistance changes, the pd across each part changes. LDRs switch street lights on at dusk; thermistors run thermostats and fire alarms.",
+ "familyTip": "Look for an automatic night light or a street lamp that turns on at dusk; both use an LDR. Ask your teenager to explain why covering the sensor with a thumb in daylight turns the light on, and what is inside the house that needs a thermistor (a boiler, fridge, oven or kettle).",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What happens to the resistance? Drag each change to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Resistance goes down",
+    "Resistance goes up"
+   ],
+   "items": [
+    [
+     "An LDR in brighter light",
+     0
+    ],
+    [
+     "A thermistor is heated",
+     0
+    ],
+    [
+     "An LDR is covered up",
+     1
+    ],
+    [
+     "A thermistor is put in iced water",
+     1
+    ],
+    [
+     "A metal wire gets hotter",
+     1
+    ],
+    [
+     "An LDR goes from shade into sunshine",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsensor",
+  "caption": "Flagship lab: plot an LDR against light and a thermistor against temperature, wire a night light, set a 50 °C fire alarm, sort sensor devices.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Most resistors keep the same resistance. An LDR and a thermistor do not. An LDR is a light-dependent resistor. Shine more light on it and its resistance goes down. In the dark it can be about 30 kΩ. In daylight it can drop to a few hundred ohms.",
+   "A thermistor changes with temperature. Heat it and its resistance goes down. A typical one is 10 kΩ at 25 °C and under 1 kΩ in boiling water. A metal wire does the opposite: it gets more resistance when it gets hot. For both sensors the graph drops steeply at first, then levels off.",
+   "To use a sensor, put it in series with a fixed resistor across a battery. The voltage is shared, and the part with more resistance gets a bigger share. When an LDR goes dark, its resistance rises, so it takes more of the voltage. A switch that reads the voltage across the LDR can turn a lamp on at night.",
+   "A fire alarm works the other way round. As the thermistor heats up, its resistance falls, so the fixed resistor gets more of the voltage. Pick the fixed resistor so its share reaches the switch-on voltage at the right temperature. A smaller fixed resistor makes the alarm wait until it is hotter."
+  ],
+  "adult": [
+   "Ages 14 to 16. AQA GCSE Physics 4.2.1.4 states that the resistance of a thermistor decreases as the temperature increases and the resistance of an LDR decreases as light intensity increases. Pupils must know uses such as thermostats and lights that switch on when it gets dark, and sketch both resistance graphs. OCR Gateway and Edexcel have matching statements. Sharing pd in series (AQA 4.2.2) is what makes a sensor useful. The pd across each part is in the same ratio as the resistances.",
+   "The lab uses model parts with typical datasheet values. The LDR follows R = 20 kΩ × (10 lux ÷ E)^0.7, which gives about 32 kΩ at 5 lux and 260 Ω at 5000 lux. The thermistor is a 10 kΩ NTC type with B = 3950 K, about 34 kΩ at 0 °C and 0.7 kΩ at 100 °C. Pupils plot both graphs. They then decide which part a switch should read for a night light on 6 V with a 10 kΩ resistor. Last, they find the fixed resistor (3.6 kΩ) that makes a fire alarm reach 3 V at 50 °C, and sort six real devices.",
+   "Common mistakes. Pupils often reverse the LDR, thinking more light means more resistance. Many assume a thermistor behaves like a metal wire, whose resistance rises with temperature. In sensing circuits they read the wrong part of the divider. Some think the sensor takes all the supply pd, or that the voltage across the LDR falls in the dark. When tuning an alarm, many choose a bigger fixed resistor to make it ring later, which does the opposite."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "An LDR moves from a dark cupboard into sunlight. What happens to its resistance?",
+   "choices": [
+    "It falls",
+    "It rises",
+    "It stays the same"
+   ],
+   "answer": 0,
+   "hint": "LDR stands for light-dependent resistor. Which way does light push it?",
+   "explain": "More light, less resistance. It might drop from about 30 kΩ to a few hundred ohms."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A thermistor (in series with a fixed resistor) has {r} kΩ and the fixed resistor has {r} kΩ, on a 6 V supply. What is the pd across the thermistor, in volts?",
+   "answer": "3",
+   "hint": "Equal resistances in series share the pd equally.",
+   "explain": "The resistances are equal, so each part gets half of 6 V: 3 V, whatever {r} kΩ is.",
+   "params": {
+    "r": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which device most likely uses a thermistor?",
+   "choices": [
+    "A kettle that switches off at boiling",
+    "A street lamp that turns on at dusk",
+    "A phone screen that dims in the dark"
+   ],
+   "answer": 0,
+   "hint": "Which one is sensing temperature, not light?",
+   "explain": "A kettle senses temperature, so it uses a thermistor. The other two sense light, so they use LDRs."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "On a 12 V supply, an LDR of {a} kΩ is in series with a fixed resistor of {=12-a} kΩ, so the total is 12 kΩ. What is the pd across the LDR, in volts?",
+   "answer": "a",
+   "hint": "Each part gets the same fraction of the 12 V as its fraction of the 12 kΩ total.",
+   "explain": "The LDR has {a} of the 12 kΩ, so it gets {a} of the 12 V: {a} V. The fixed resistor gets {=12-a} V.",
+   "params": {
+    "a": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A thermistor is in series with a fixed resistor. It gets hotter. What happens to the pd across the fixed resistor?",
+   "choices": [
+    "It rises",
+    "It falls",
+    "It stays the same"
+   ],
+   "answer": 0,
+   "hint": "The thermistor's resistance falls. Which part now has a bigger share?",
+   "explain": "The thermistor loses resistance, so the fixed resistor has a bigger share of the total and its pd rises."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which graph shape shows an LDR's resistance against light intensity?",
+    "choices": [
+     "Falls steeply, then levels off",
+     "A straight line going up",
+     "Flat"
+    ],
+    "answer": 0,
+    "hint": "Think about dark (very high) and bright (low).",
+    "explain": "Resistance drops a lot as it first gets lighter, then changes little in bright light."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How is a thermistor different from a metal wire when both get hotter?",
+    "choices": [
+     "The thermistor's resistance falls; the wire's rises",
+     "Both rise",
+     "Both fall"
+    ],
+    "answer": 0,
+    "hint": "Picture both graphs as the temperature goes up: does each line climb or fall?",
+    "explain": "A (negative temperature coefficient) thermistor loses resistance when hot. A metal wire gains resistance."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "On a 10 V supply, a thermistor of {t} kΩ is in series with a fixed resistor of {=10-t} kΩ. What is the pd across the fixed resistor, in volts?",
+    "answer": "10-t",
+    "hint": "The total is 10 kΩ, so each kΩ gets 1 V of the 10 V.",
+    "explain": "The fixed resistor has {=10-t} of the 10 kΩ, so it gets {=10-t} V. The thermistor gets {t} V.",
+    "params": {
+     "t": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A night light reads the pd across the LDR. It turns on at 3 V. Why does it come on in the dark?",
+    "choices": [
+     "The LDR's resistance rises, so its share of the pd rises",
+     "The LDR makes its own voltage in the dark",
+     "The battery voltage goes up at night"
+    ],
+    "answer": 0,
+    "hint": "What happens to the LDR's resistance in the dark?",
+    "explain": "In the dark the LDR has more resistance, so it takes a bigger share of the supply pd and passes 3 V."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A fire alarm reads the pd across a fixed resistor in series with a thermistor. It rings at room temperature. What should you change?",
+    "choices": [
+     "Use a smaller fixed resistor",
+     "Use a bigger fixed resistor",
+     "Use a bigger battery"
+    ],
+    "answer": 0,
+    "hint": "With a smaller fixed resistor, does the thermistor need to fall further before 3 V?",
+    "explain": "A smaller fixed resistor needs the thermistor's resistance to fall further, so the alarm waits for a higher temperature."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A thermistor has {n} times the resistance of the fixed resistor in series with it. The supply is {=3*(n+1)} V. What is the pd across the thermistor, in volts?",
+    "answer": "3*n",
+    "hint": "Split the supply into {=n+1} equal shares: {n} for the thermistor, 1 for the fixed resistor.",
+    "explain": "{=3*(n+1)} V ÷ {=n+1} shares = 3 V per share. The thermistor has {n} shares: {=3*n} V.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which pair is matched correctly?",
+    "choices": [
+     "Automatic street light: LDR",
+     "Oven thermostat: LDR",
+     "Burglar alarm light beam: thermistor"
+    ],
+    "answer": 0,
+    "hint": "Match light to LDR and temperature to thermistor.",
+    "explain": "A street light senses dusk, so it uses an LDR. An oven senses temperature (thermistor) and a light beam senses light (LDR)."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In a sensing circuit, why is the sensor put in series with a fixed resistor?",
+    "choices": [
+     "So the changing resistance becomes a changing pd",
+     "So the sensor does not get hot",
+     "So the current stays the same"
+    ],
+    "answer": 0,
+    "hint": "What does sharing the supply pd do?",
+    "explain": "As the sensor's resistance changes, its share of the supply pd changes, giving a voltage that a switch can read."
+   }
+  ]
+ }
+}
