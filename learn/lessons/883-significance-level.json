@@ -1,0 +1,225 @@
+{
+ "topicId": "mt_570TU_m3z5",
+ "title": "Significance level",
+ "audience": "learner",
+ "keyIdea": "The significance level α is the threshold probability for rejecting the null hypothesis, often 5% or 1%, and it is fixed before the data are collected. If H₀ is true, the chance of wrongly rejecting it (a Type I error) is at most α. The critical region is the set of most extreme results whose total probability under H₀ is at or below α; for X ~ B(20, 0.5) with H₁: p > 0.5 at 5% it is X ≥ 15, and because X is discrete the actual significance level is P(X ≥ 15) ≈ 2.07%. A smaller α, such as 1%, means fewer false rejections but makes a real effect harder to detect. Not rejecting H₀ is not proof that H₀ is true.",
+ "familyTip": "Ask your teenager: if a friend claims a coin is biased, how many heads out of 20 would it take before they believed it? Then ask whether they would want the bar set at 5% or at 1%, and what each choice risks.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "X ~ B(20, 0.5), H₁: p > 0.5, α = 5%, critical region X ≥ 15. Reject H₀? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Reject H₀", "Do not reject H₀"],
+   "items": [
+    ["16 heads in 20", 0],
+    ["14 heads in 20", 1],
+    ["p-value = 2%", 0],
+    ["p-value = 8%", 1],
+    ["15 heads in 20", 0],
+    ["10 heads in 20", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsiglev",
+  "caption": "Flagship lab: fix α before the data, find critical regions for 10%, 5% and 1%, simulate Type I errors, compare 5% with 1% on a biased coin, and decide.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A test needs a rule for when to reject H₀. The rule is the significance level, called α. It is a probability, often 5% or 1%. You choose it before you see any data. If you chose it after, the result could tempt you to move the line.",
+   "Say H₀ is true, but you reject it anyway. That is a Type I error. With α = 5%, this happens in at most 5% of tests. Run many tests on a fair coin and only a few reject H₀.",
+   "The critical region is the set of results that make you reject H₀. Take X ~ B(20, 0.5) and H₁: p > 0.5. P(X ≥ 15) is about 2.07%, but P(X ≥ 14) is about 5.77%. So at 5% the region is X ≥ 15. Its true size, 2.07%, is the actual significance level.",
+   "A smaller α, like 1%, needs stronger evidence. Fewer true H₀s are thrown out. But a real bias is missed more often. If you do not reject H₀, you have not proved it. There is just not enough evidence against it."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is A level Mathematics statistics. Students must know the words of a hypothesis test: significance level, critical value, critical region, acceptance region and p-value. They carry out one-tailed and two-tailed binomial tests. The significance level α is a threshold set in advance. The actual significance level is the probability of the critical region if H₀ is true. For a discrete variable it is usually less than α.",
+   "The trade-off. α is the maximum probability of a Type I error, rejecting H₀ when it is true. Lowering α shrinks the critical region, so the test makes fewer false rejections but more Type II errors, failing to reject a false H₀. In the lab, with p really 0.7 and n = 20, the test rejects about 42% of the time at 5% (X ≥ 15) but only about 24% at 1% (X ≥ 16). Choosing α after seeing the data, or changing it to get a result, invalidates the test.",
+   "Common mistakes. Students read 5% as the chance that H₀ is true. They include a value whose tail is just over α, such as X ≥ 14 with a tail of 5.77%. They quote α when asked for the actual level, or compare the p-value with the wrong level. They write 'accept H₀' or 'H₀ is true'. The right wording is 'there is not enough evidence to reject H₀', followed by a conclusion in context."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What does a 5% significance level mean?",
+   "choices": [
+    "If H₀ is true, there is at most a 5% chance of rejecting it",
+    "There is a 5% chance that H₀ is true",
+    "The data are 95% accurate"
+   ],
+   "answer": 0,
+   "hint": "α is a probability worked out assuming H₀ is true. What event is it the probability of?",
+   "explain": "α is the largest probability you accept of rejecting H₀ when H₀ is actually true, a Type I error. It is not the probability that H₀ is true."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A test at α = 5% is run {=n*100} times, and H₀ is true every time. At most about how many times would you expect H₀ to be rejected?",
+   "answer": "n*5",
+   "hint": "If H₀ is true, each test rejects with probability at most 0.05.",
+   "explain": "0.05 × {=n*100} = {=n*5}. Each of those rejections would be a Type I error.",
+   "params": {
+    "n": [2, 20]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A test at α = 1% is run {=n*100} times, and H₀ is true every time. At most about how many false rejections would you expect?",
+   "answer": "n",
+   "hint": "1% of the tests, at most. What is 1% of {=n*100}?",
+   "explain": "0.01 × {=n*100} = {n}. A smaller α means fewer Type I errors.",
+   "params": {
+    "n": [2, 20]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "X ~ B(20, 0.5) under H₀, H₁: p > 0.5. P(X ≥ 14) = 5.77% and P(X ≥ 15) = 2.07%. What is the critical region at the 5% level?",
+   "choices": [
+    "X ≥ 15",
+    "X ≥ 14",
+    "X ≥ 16"
+   ],
+   "answer": 0,
+   "hint": "Find the biggest upper tail whose probability is at or below 5%.",
+   "explain": "P(X ≥ 14) = 5.77% is over 5%, so 14 is not included. P(X ≥ 15) = 2.07% fits, so the critical region is X ≥ 15."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why must the significance level be chosen before the data are collected?",
+   "choices": [
+    "So the result cannot sway where the line is drawn",
+    "Because the data cannot be collected without it",
+    "So that the test is sure to reject H₀"
+   ],
+   "answer": 0,
+   "hint": "What could happen if you saw a p-value of 3% and then had to pick α?",
+   "explain": "If α were chosen after seeing the data, you could pick a level that gives the answer you want. Fixing it first keeps the Type I error rate at α."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "The p-value is 3% and the test is at the 1% level. What should you conclude?",
+    "choices": [
+     "Do not reject H₀: there is not enough evidence at the 1% level",
+     "Reject H₀, because 3% is small",
+     "H₀ is proved true"
+    ],
+    "answer": 0,
+    "hint": "Compare the p-value with α. Is 3% below 1%?",
+    "explain": "3% is not below 1%, so the result is not significant at the 1% level. Do not reject H₀, but this does not prove H₀ true."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A scientist switches a test from 5% to 1%. What is the effect?",
+    "choices": [
+     "Fewer false rejections, but a real effect is harder to detect",
+     "The test becomes more accurate in every way",
+     "H₀ becomes easier to reject"
+    ],
+    "answer": 0,
+    "hint": "A smaller α needs a more extreme result before you reject H₀.",
+    "explain": "A 1% level cuts the chance of a Type I error, but the critical region shrinks, so a real effect is missed more often (more Type II errors)."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "For X ~ B(20, 0.5), the 5% critical region is X ≥ 15. What is the actual significance level?",
+    "choices": [
+     "P(X ≥ 15) ≈ 2.07%",
+     "Exactly 5%",
+     "P(X ≥ 14) ≈ 5.77%"
+    ],
+    "answer": 0,
+    "hint": "The actual level is the probability of landing in the critical region if H₀ is true.",
+    "explain": "X is discrete, so the tail cannot hit 5% exactly. The actual significance level is P(X ≥ 15) ≈ 2.07%."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is a Type I error?",
+    "choices": [
+     "Rejecting H₀ when H₀ is actually true",
+     "Not rejecting H₀ when H₀ is false",
+     "Using the wrong distribution for X"
+    ],
+    "answer": 0,
+    "hint": "Which mistake does the significance level control?",
+    "explain": "A Type I error is rejecting a true H₀. Its probability is at most α. Missing a false H₀ is a Type II error."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{=n*20} schools each run a fair test at the 5% level, and H₀ is true at every school. At most about how many schools would wrongly reject H₀?",
+    "answer": "n",
+    "hint": "Each test has at most a 5% chance of a Type I error. What is 5% of {=n*20}?",
+    "explain": "0.05 × {=n*20} = {n}. Those schools would reject a true H₀ just by chance.",
+    "params": {
+     "n": [1, 10]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A medical trial is run at the 1% level at {=n*100} hospitals, and the drug has no effect (H₀ is true) at every hospital. At most about how many hospitals would wrongly conclude that the drug works?",
+    "answer": "n",
+    "hint": "Each hospital has at most a 1% chance of a Type I error. What is 1% of {=n*100}?",
+    "explain": "0.01 × {=n*100} = {n}. Those hospitals would reject a true H₀ just by chance.",
+    "params": {
+     "n": [2, 20]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "X ~ B(20, 0.5), H₁: p > 0.5, α = 5%. You observe 14 heads. Conclusion?",
+    "choices": [
+     "Do not reject H₀: P(X ≥ 14) = 5.77% is over 5%",
+     "Reject H₀: 14 is well above 10",
+     "Reject H₀: 14 is in the critical region"
+    ],
+    "answer": 0,
+    "hint": "Is 14 in the critical region X ≥ 15?",
+    "explain": "14 is outside the critical region X ≥ 15, and P(X ≥ 14) = 5.77% is more than 5%. There is not enough evidence to reject H₀."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Sam sees a p-value of 4%, then decides to use a 5% level so the result counts. What is wrong?",
+    "choices": [
+     "α must be fixed before the data, not chosen to fit the result",
+     "Nothing, 4% is below 5%",
+     "The p-value should have been 5% exactly"
+    ],
+    "answer": 0,
+    "hint": "When should the significance level be set?",
+    "explain": "Picking α after seeing the p-value lets the data choose the rule, so the real Type I error rate is no longer α."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "X ~ B(20, 0.5), H₁: p > 0.5. P(X ≥ 16) = 0.59% and P(X ≥ 15) = 2.07%. What is the critical region at the 1% level?",
+    "choices": [
+     "X ≥ 16",
+     "X ≥ 15",
+     "X ≥ 17"
+    ],
+    "answer": 0,
+    "hint": "Find the biggest upper tail with probability at or below 1%.",
+    "explain": "P(X ≥ 15) = 2.07% is over 1%. P(X ≥ 16) = 0.59% fits, so the 1% critical region is X ≥ 16."
+   }
+  ]
+ }
+}
