@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_fSeaB6hESr",
+ "title": "Cumulative frequency graphs",
+ "audience": "learner",
+ "keyIdea": "A cumulative frequency is a running total of a grouped frequency table: 8, 8 + 18 = 26, 26 + 26 = 52 and so on, ending at the total n. Plot each running total at the upper class boundary, because only by the end of a class has everyone in it been counted, start at the lowest boundary with 0, and join the points with a smooth curve or straight lines. To estimate the median, read across from n/2 to the graph and then down; the lower and upper quartiles come from n/4 and 3n/4, and the interquartile range is UQ − LQ, a difference of values, not of frequencies. Read up from a value to count how many are at or below it; subtract from n for how many are above it. Grouped data hides the exact values, so every reading is an estimate.",
+ "familyTip": "Time how long everyone in the family takes to get ready over a week and group the times into 5-minute classes. Build the running totals together, sketch the graph on squared paper, and see whose usual time is above the median.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which reading uses which value? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Read across from n/2",
+    "Read across from n/4 or 3n/4",
+    "Read up from a value"
+   ],
+   "items": [
+    [
+     "Estimate the median",
+     0
+    ],
+    [
+     "Middle travel time",
+     0
+    ],
+    [
+     "Lower quartile",
+     1
+    ],
+    [
+     "Upper quartile",
+     1
+    ],
+    [
+     "How many took 45 min or less",
+     2
+    ],
+    [
+     "How many scored over 70",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcumfreq",
+  "caption": "Flagship lab: fill running totals, plot at upper class boundaries, read the median, quartiles and IQR, count how many took over 45 minutes.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Eighty students record how long their trip to school takes, grouped in 10-minute classes. A cumulative frequency is a running total. The first class has 8 students. Add the next 18 to get 26, then 26 more to get 52, and so on. The last total is 80, because by then everyone is counted.",
+   "Plot each total at the end of its class, the upper class boundary. By 10 minutes, all 8 of the first group have arrived, so the point goes at (10, 8), not at the midpoint 5. Start at (0, 0), then join the points. The graph always climbs, or stays flat.",
+   "To estimate the median, find half of 80, which is 40. Read across from 40 to the graph, then down: about 25.4 minutes. A quarter of 80 is 20, giving the lower quartile, about 16.7 minutes. Three quarters is 60, giving the upper quartile, 35 minutes. The interquartile range is 35 − 16.7, about 18.3 minutes.",
+   "The graph also counts. Read up from 45 minutes and across: about 72 students took 45 minutes or less. So 80 − 72 = 8 took longer. These answers are estimates, because we only know each time to within its class."
+  ],
+  "adult": [
+   "Ages 14 to 16. The GCSE Mathematics subject content for England asks students to construct and interpret cumulative frequency graphs. From them they estimate the median, quartiles, interquartile range and how many values lie above or below a given value. Box plots are often drawn from the same readings. This builds on quartiles of raw data and on grouped frequency tables.",
+   "The lab uses one data set: 80 travel times, frequencies 8, 18, 26, 16, 8 and 4 in classes of 10 minutes up to 60. The running totals are 8, 26, 52, 68, 76 and 80. Points are joined with straight lines, so the readings are linear interpolation within a class: median 20 + 10 × 14/26 ≈ 25.4, LQ 10 + 10 × 12/18 ≈ 16.7, UQ 30 + 10 × 8/16 = 35. At 45 minutes the line gives 72, so 8 took longer. A smooth curve gives slightly different estimates, and exam mark schemes accept a range.",
+   "Common mistakes. Students plot at the class midpoint or the lower boundary. They write the frequencies instead of running totals, or forget to start at zero. They read the median from n rather than n/2, or from half of the time axis. They subtract the cumulative frequencies (60 − 20) for the IQR. They give the 'at or below' count when asked for 'more than'. Each one gets its own message in the lab or challenge."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The frequencies for four classes are 6, 14, 20, 10. What are the cumulative frequencies?",
+   "choices": [
+    "6, 20, 40, 50",
+    "6, 14, 20, 10",
+    "6, 20, 34, 30"
+   ],
+   "answer": 0,
+   "hint": "Add each frequency to the running total so far.",
+   "explain": "6; 6 + 14 = 20; 20 + 20 = 40; 40 + 10 = 50. The last total is the number of values."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A cumulative frequency graph shows {n} people. Across from which cumulative frequency do you read the median?",
+   "answer": "n/2",
+   "hint": "The median is the middle: half of the total.",
+   "explain": "Half of {n} is {=n/2}. Read across from {=n/2} to the graph, then down.",
+   "params": {
+    "n": [
+     40,
+     120
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "For the class 30 < t ≤ 40, where should its cumulative frequency be plotted?",
+   "choices": [
+    "At t = 40",
+    "At t = 35",
+    "At t = 30"
+   ],
+   "answer": 0,
+   "hint": "When has everyone in this class been counted?",
+   "explain": "Only by t = 40 have all values in 30 < t ≤ 40 been included, so plot at the upper class boundary."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "From a cumulative frequency graph, the lower quartile is {a} and the upper quartile is {=a+b}. What is the interquartile range?",
+   "answer": "b",
+   "hint": "IQR = upper quartile − lower quartile.",
+   "explain": "{=a+b} − {a} = {b}. Subtract the values read off the horizontal axis, not the cumulative frequencies.",
+   "params": {
+    "a": [
+     10,
+     30
+    ],
+    "b": [
+     5,
+     25
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A graph of 60 test scores reads 48 up from a score of 70. How many scored more than 70?",
+   "choices": [
+    "12",
+    "48",
+    "70"
+   ],
+   "answer": 0,
+   "hint": "The graph counts scores of 70 or less.",
+   "explain": "48 scored 70 or less, so 60 − 48 = 12 scored more."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Where does a cumulative frequency graph of travel times begin?",
+    "choices": [
+     "At 0 on the lowest class boundary",
+     "At the first class midpoint",
+     "At the first frequency"
+    ],
+    "answer": 0,
+    "hint": "How many values are below the very first boundary?",
+    "explain": "No values are below the lowest boundary, so the graph starts at cumulative frequency 0 there: (0, 0) in the lab."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "There are {n} values. Across from which cumulative frequency is the upper quartile?",
+    "answer": "3*n/4",
+    "hint": "The upper quartile is three quarters of the way through.",
+    "explain": "Three quarters of {n} is 3 × {n} ÷ 4 = {=3*n/4}. Read across from {=3*n/4} to the graph, then down to the value axis.",
+    "params": {
+     "n": [
+      40,
+      200
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A student says the IQR is 60 − 20 = 40 from a graph with 80 values. What went wrong?",
+    "choices": [
+     "They subtracted cumulative frequencies instead of the times",
+     "They used the wrong quartile values",
+     "Nothing, that is right"
+    ],
+    "answer": 0,
+    "hint": "The IQR is a spread of what is measured.",
+    "explain": "Read across from 20 and 60 to get the LQ and UQ times, then subtract those times."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why is a median from a cumulative frequency graph an estimate?",
+    "choices": [
+     "The exact values inside each class are unknown",
+     "The graph is drawn by hand",
+     "The median is always a guess"
+    ],
+    "answer": 0,
+    "hint": "What does putting values into classes hide from us?",
+    "explain": "A class tells us only that a value lies between its boundaries. Joining the points assumes values are spread evenly inside each class."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A graph of {n} people reads 30 up from 20 minutes. How many took more than 20 minutes?",
+    "answer": "n-30",
+    "hint": "The graph counts 20 minutes or less.",
+    "explain": "{n} − 30 = {=n-30} took more than 20 minutes.",
+    "params": {
+     "n": [
+      50,
+      90
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The running totals are 4, 15, 31, 40. What is the frequency of the third class?",
+    "choices": [
+     "16",
+     "31",
+     "15"
+    ],
+    "answer": 0,
+    "hint": "Undo the running total: subtract the one before.",
+    "explain": "31 − 15 = 16 values are in the third class."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "On a cumulative frequency graph, the line between two points is flat. What does that mean?",
+    "choices": [
+     "No values lie in that class",
+     "Every value is in that class",
+     "The graph is wrong"
+    ],
+    "answer": 0,
+    "hint": "A flat line means the running total did not grow.",
+    "explain": "The total stayed the same, so that class has frequency 0."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In the lab, across from 40 reaches the graph between (20, 26) and (30, 52). About where is the median?",
+    "choices": [
+     "About 25 minutes",
+     "About 40 minutes",
+     "About 30 minutes"
+    ],
+    "answer": 0,
+    "hint": "40 is just over half way from 26 to 52.",
+    "explain": "40 is 14 of the 26 steps from 26 to 52, so the median ≈ 20 + 10 × 14/26 ≈ 25.4 minutes."
+   }
+  ]
+ }
+}

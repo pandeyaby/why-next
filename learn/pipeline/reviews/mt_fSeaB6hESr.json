@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE GCSE Mathematics subject content (S3/S4: construct and interpret cumulative frequency graphs; estimate median, quartiles and IQR) and the AQA/Edexcel convention of plotting at upper class boundaries and reading the median from n/2 for grouped data. Running totals 8, 26, 52, 68, 76, 80 recomputed; straight-line interpolation gives median 20 + 10 × 14/26 = 25.38, LQ 10 + 10 × 12/18 = 16.67, UQ 30 + 10 × 8/16 = 35, IQR 18.3, and cf(45) = 68 + 8 × 0.5 = 72 so 8 took longer. The adult text notes that a smooth curve gives slightly different estimates."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors listed in GCSE examiner reports for cumulative frequency questions (AQA and Pearson Edexcel principal examiner reports): plotting at midpoints or lower boundaries, writing frequencies instead of running totals or adding the class width, reading the median from n or from half of the horizontal axis, subtracting cumulative frequencies for the IQR (60 − 20), and giving the 'at or below' count when asked 'more than'. Each has its own lab or challenge message."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed under 30% against all flagship labs, including flag_iqr.js (quartiles of raw data), flag_outlr.js and flag_pdist.js. No other lab builds a running-total table, plots totals at chosen class boundaries on a graph, and reads values across from n/2, n/4 and 3n/4 or up from a time with a draggable line."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Six steps: fill the six running totals (distractors are the frequency, the boundary, the previous total and prev + 10), plot each total by tapping a time on the graph with a dotted guide at its height, drag a reading line to the height that halves 80, read both quartiles and get the IQR, drag a time line to 45 and choose how many took longer, then the challenge. The learner finds n/2 by dragging before the banner states it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options the lab disproves: the last running total (60, the end of the last class, is tempting), where to plot 8 for 0 < t ≤ 10 (the midpoint 5 is tempting), which value to read across from for the median (30 on the time axis is tempting), and how to get the IQR (60 − 20 is tempting). Each reveal repeats the learner's choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions (plotting position, median height for n = 120, IQR from LQ and UQ, more than 45 min, running totals of 5, 12, 9, why the median is an estimate) with twelve distinct wrong-answer messages: midpoint, lower end, whole n, quarter, subtracting cumulative frequencies, averaging the quartiles, no subtraction, axis mix-up, no running total, skipped addition, blaming the drawing, even n."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons readability passed: kid text about grade 3.6 and adult about 5.4 on learn/readability.py, inside the limits. The terms cumulative frequency, upper class boundary, median, lower and upper quartile and interquartile range are each explained in plain words where first used, with the lab's own numbers."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content found no filler patterns and the explanation is under 12% shingle overlap with 850 (Quartiles and IQR) and 781 (choosing an average). Each kid paragraph does one job: running totals, plotting at upper boundaries, reading the median and quartiles, counting above a value and why it is an estimate."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for all six steps: the six-row table fits with three columns, the graph axes and labels stay inside the card, the reading-line value tag sits at the right edge without clipping, and choice chips are 40 px tall. The first sheet showed a repeated 'Total 18' choice in row 2; the distractor list was rebuilt to always give three different totals."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap or drag has a button twin (one Total button per choice, Plot at t = lower/middle/upper, Line up/down 5 and Read from buttons, Time line ← 5 / → 5 and answer buttons). The canvas aria-label is rewritten after each action with the totals, the plotted points, the reading line height and readings, or the time line and answer. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations; the wrong-path click sweep raised no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) Mathematics GCSE subject content and assessment objectives, Statistics S3 and S4",
+  "Pearson Edexcel GCSE (9–1) Mathematics principal examiner reports, cumulative frequency questions (plotting at midpoints, reading n/2, 'more than' counts)",
+  "AQA GCSE Mathematics (8300) specification, section S: cumulative frequency graphs and box plots",
+  "OpenStax Introductory Statistics, section 2.3 Measures of the location of the data (quartiles and IQR)"
+ ]
+}
