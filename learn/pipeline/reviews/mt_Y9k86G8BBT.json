@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England Year 5 forces statements (air resistance, water resistance and friction act between moving surfaces) and standard drag physics, F = ½ρCdAv². Lab figures recomputed by numerical integration in Python: 50 g toy from 2 m with canopy 0/0.03/0.12/0.3 m² (Cd 1.5) falls in 0.64/0.76/1.09/1.58 s; cyclist CdA 0.4 m² gives 1.9/7.4/16.7/29.6 N at 10–40 km/h and 18.5 N tucked (0.25 m²); a 16 mm glass marble falls 30 cm in 0.25 s in air and 0.46 s in water with buoyancy; d = v² ÷ 2μg from 15 km/h gives 1.5/3.0/4.4/8.9 m for μ 0.6/0.3/0.2/0.1. The text calls these estimates from a simple model."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented primary forces misconceptions (Driver et al., Making Sense of Secondary Science; AAAS Project 2061 forces items; Osborne and Freyberg): resisting forces act in the direction of motion, confusing air resistance with gravity, bigger parachutes fall faster because heavier, speed makes no difference, water has no resistance or 'pulls you down', friction is always bad or only on rough surfaces. Each has a lab message (pickDir) or a challenge reply."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed under 30% against all flagship labs, including flag_frict.js (toy car on rough and smooth floors), flag_drop.js (gravity and falling objects), flag_freefall.js and flag_structad.js. No other lab sets the direction of three different resisting forces, times four canopy sizes, links cyclist speed and posture to newtons, races a marble through air and water, and compares brake pad and rim conditions by stopping distance."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Six steps: place the force for a cyclist, swimmer, skydiver and sledge; drop the toy with four canopies and watch the times grow; step the cyclist from 10 to 40 km/h and tuck down while the red arrow grows and shrinks; drop a marble in air and water tubes; brake with four pad and rim conditions and see the stop marks spread along a metre scale; then the challenge. Each factor (direction, area, speed, fluid, grip) is discovered by doing before the banner states it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options the lab disproves: which way air resistance pushes on a falling skydiver (down is tempting), whether a bigger parachute lands sooner because it is heavier, whether air resistance stays the same when the cyclist doubles her speed, and whether a wet rim changes the stopping point. The reveal repeats the learner's choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions (car's air resistance direction, slower parachute, wading in a pool, cyclist speeding up, why rubber brake pads, true statement about friction) with twelve distinct wrong-answer messages: with the motion, gravity confusion, small canopy fast, same speed, sinking idea, no force in water, fixed force, less at speed, wrong job for pads, mass idea, friction always bad, rough surfaces only."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons readability passed: kid text about grade 3.6 and adult about 5.0 on learn/readability.py, inside 6.5 and 9.5. Kid paragraphs use short sentences and concrete numbers (0.64 s against 1.58 s, 4 times the push, almost twice as long). The terms air resistance, water resistance and friction are named with an example where first used."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content found no filler patterns and the explanation is under 12% shingle overlap with 620 (Friction & Surfaces), 629 (Gravity & Falling Objects) and 589 (Forces Vocabulary). Each kid paragraph does one job: direction of resisting forces, parachute area, speed and water, friction and brakes."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for all six steps. The first sheet showed the 'moving' and speed labels clipped at the right edge and the posture and brake chips hidden behind the footer; arrow labels were moved to the arrow midpoints, the canvas made taller on phones (1.25) and the chips moved up. The second sheet shows every label, chip and tube inside the card with chips at least 42 px tall."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap has a button twin (four direction buttons with spoken names, one button per canopy, speed and posture buttons, Drop in air/water, one button per brake). The canvas aria-label is rewritten after each action with the mover and chosen direction, the canopy times, the speed and force, the tube times or the stopping distances. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations; the wrong-path click sweep raised no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) National Curriculum in England: science programmes of study, Year 5 forces",
+  "Driver, R., Squires, A., Rushworth, P. and Wood-Robinson, V. (1994) Making Sense of Secondary Science: research into children's ideas, Routledge (forces and motion chapters)",
+  "OpenStax College Physics 2e, section 5.2 Drag forces (F = ½ρCdAv²) and 5.1 Friction (coefficients of friction)",
+  "Wilson, D. G. (2004) Bicycling Science, 3rd ed., MIT Press (cyclist drag areas of about 0.4 m² upright and 0.25 m² crouched; rim brake friction wet and dry)"
+ ]
+}
