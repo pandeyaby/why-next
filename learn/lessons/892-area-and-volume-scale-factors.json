@@ -1,0 +1,241 @@
+{
+  "topicId": "mt_ydLauXLS6G",
+  "title": "Area and volume scale factors",
+  "audience": "learner",
+  "keyIdea": "When a shape or solid is enlarged by length scale factor k, every length is multiplied by k, every area by k² and every volume by k³. Doubling the sides of a square makes 2 × 2 = 4 copies of it; doubling the edges of a cube makes 2 × 2 × 2 = 8. This holds for any pair of similar shapes, not just squares and cubes, and for surface area as well as flat area. To go backwards, undo the power: an area factor of 25 means k = √25 = 5, and a volume factor of 27 means k = ∛27 = 3.",
+  "familyTip": "Build a cube from 8 dice or sugar cubes (2 by 2 by 2). It is twice as long, wide and tall as one die but uses 8 of them, and each side shows 4 die faces: lengths × 2, area × 4, volume × 8.",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Lengths are multiplied by 3. Which factor applies? Drag each card to a box, or tap it and then a box.",
+    "opts": {
+      "bins": [
+        "× 3 (length)",
+        "× 9 (area)",
+        "× 27 (volume)"
+      ],
+      "items": [
+        [
+          "Height of a statue",
+          0
+        ],
+        [
+          "Perimeter of a field",
+          0
+        ],
+        [
+          "Paint to cover a wall",
+          1
+        ],
+        [
+          "Surface area of a box",
+          1
+        ],
+        [
+          "Water a tank holds",
+          2
+        ],
+        [
+          "Mass of a solid metal model",
+          2
+        ]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagareavol",
+    "caption": "Flagship lab: enlarge a square, a cube and a triangle, fill a jug twice as tall with small jugfuls, then find k from an area or volume factor.",
+    "opts": {
+      "step": 0
+    }
+  },
+  "explain": {
+    "kid": [
+      "Enlarge a shape by scale factor k and every length is multiplied by k. Area is not. A 1 cm square enlarged by 3 becomes 3 cm by 3 cm, which holds 3 × 3 = 9 unit squares. So areas are multiplied by k².",
+      "Volume grows in three directions. A 1 cm cube enlarged by 3 becomes 3 layers of 3 by 3, which is 27 unit cubes. So volumes are multiplied by k³. Two similar jugs, one twice as tall, hold 1 and 8 jugfuls, not 1 and 2.",
+      "This works for any similar shapes, not just squares and cubes. A triangle with sides × 3 fits 9 copies of the small one. Surface area is an area, so it also goes up by k².",
+      "To work backwards, undo the power. An area factor of 25 means lengths × √25 = 5. A volume factor of 64 means lengths × ∛64 = 4. To go from areas to volumes, find k first: areas 4 : 9 give k = 3/2, so volumes are 8 : 27."
+    ],
+    "adult": [
+      "Ages 15 to 17. GCSE Mathematics (DfE subject content, Higher tier G19) asks students to apply the relationships between lengths, areas and volumes in similar figures. Common Core HSG-GMD.A.3 and the Cambridge IGCSE similarity topic cover the same idea.",
+      "The reason is that area is a product of two lengths and volume of three. Scaling each length by k scales a product of two lengths by k × k and of three by k × k × k. Any area can be approximated by unit squares, and any volume by unit cubes, so the rule holds for every similar pair. Mass of a solid made of the same material scales with volume.",
+      "Common mistakes: using k for areas or volumes (a jug twice as tall holds twice as much). Using 2k instead of k² (scale factor 3 gives area × 6). Using k² for volumes. Going backwards without the root, so areas 9 : 25 are taken as lengths. Jumping from areas straight to volumes by cubing the area ratio. In the lab each slip gets a message that names it."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "A square is enlarged by scale factor 2. Its area is multiplied by…",
+      "choices": [
+        "4",
+        "2",
+        "8"
+      ],
+      "answer": 0,
+      "hint": "Count the unit squares in a 2 by 2 square.",
+      "explain": "2 × 2 = 4 unit squares fill the enlarged square, so the area is multiplied by 2² = 4."
+    },
+    {
+      "type": "numeric",
+      "id": "p2",
+      "prompt": "A shape has area 5 cm². It is enlarged by scale factor {k}. What is the new area in cm²?",
+      "answer": "5*k*k",
+      "hint": "Area factor = k², so multiply by {k} × {k}.",
+      "explain": "Area factor {k}² = {=k*k}, so 5 × {=k*k} = {=5*k*k} cm².",
+      "params": {
+        "k": [
+          2,
+          6
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "A solid has volume 3 cm³. It is enlarged by scale factor {k}. What is the new volume in cm³?",
+      "answer": "3*k*k*k",
+      "hint": "Volume grows in three directions, so the volume factor is k³ (k × k × k).",
+      "explain": "Volume factor {k}³ = {=k*k*k}, so 3 × {=k*k*k} = {=3*k*k*k} cm³.",
+      "params": {
+        "k": [
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "type": "mc",
+      "id": "p4",
+      "prompt": "Two similar solids have volumes in the ratio 1 : 27. What is the ratio of their lengths?",
+      "choices": [
+        "1 : 3",
+        "1 : 9",
+        "1 : 27"
+      ],
+      "answer": 0,
+      "hint": "Volume factor = k³. Undo the cube.",
+      "explain": "∛27 = 3, so the lengths are in the ratio 1 : 3. 1 : 9 would be the area ratio."
+    },
+    {
+      "type": "mc",
+      "id": "p5",
+      "prompt": "Two similar jugs: the big one is twice as tall. How many small jugfuls fill it?",
+      "choices": [
+        "8",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "hint": "Every length doubles, including width and depth.",
+      "explain": "Volume factor 2³ = 8, so 8 small jugfuls fill it. 2 uses only the height, and 4 forgets the depth."
+    }
+  ],
+  "mastery": {
+    "passMark": 4,
+    "draw": 5,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "A photo is enlarged by scale factor 3. Its area is multiplied by…",
+        "choices": [
+          "9",
+          "3",
+          "6"
+        ],
+        "answer": 0,
+        "hint": "Width × 3 and height × 3.",
+        "explain": "3 × 3 = 9. Using 6 doubles the factor instead of squaring it."
+      },
+      {
+        "type": "numeric",
+        "id": "m2",
+        "prompt": "Similar cylinders: the big one is {k} times as tall as the small one. The small one holds 10 cm³. How many cm³ does the big one hold?",
+        "answer": "10*k*k*k",
+        "hint": "Volume factor = k³ = {k} × {k} × {k}.",
+        "explain": "Volume factor {k}³ = {=k*k*k}, so 10 × {=k*k*k} = {=10*k*k*k} cm³.",
+        "params": {
+          "k": [
+            2,
+            5
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m3",
+        "prompt": "Two similar shapes have areas in the ratio 1 : {=k*k}. The small one has a side of 4 cm. How long is the matching side of the big one, in cm?",
+        "answer": "4*k",
+        "hint": "Undo the square: length factor = √{=k*k}.",
+        "explain": "√{=k*k} = {k}, so the side is 4 × {k} = {=4*k} cm.",
+        "params": {
+          "k": [
+            2,
+            7
+          ]
+        }
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Similar solids have surface areas 9 cm² and 25 cm². What is the ratio of their lengths?",
+        "choices": [
+          "3 : 5",
+          "9 : 25",
+          "27 : 125"
+        ],
+        "answer": 0,
+        "hint": "Surface area is an area. Undo the square.",
+        "explain": "√9 : √25 = 3 : 5. 9 : 25 is still the area ratio."
+      },
+      {
+        "type": "mc",
+        "id": "m5",
+        "prompt": "Similar cones have volumes in the ratio 8 : 125. What is the ratio of their surface areas?",
+        "choices": [
+          "4 : 25",
+          "8 : 125",
+          "2 : 5"
+        ],
+        "answer": 0,
+        "hint": "Find the length ratio first, then square it.",
+        "explain": "∛8 : ∛125 = 2 : 5 for lengths, so areas are 2² : 5² = 4 : 25."
+      },
+      {
+        "type": "mc",
+        "id": "m6",
+        "prompt": "A model car is 1/20 of full size. How many times as much paint does the real car need?",
+        "choices": [
+          "400",
+          "20",
+          "8000"
+        ],
+        "answer": 0,
+        "hint": "Paint covers a surface. Is that a length, an area or a volume?",
+        "explain": "Paint covers an area, so the factor is 20² = 400. 8000 = 20³ would be for volume."
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "A cube's edges are halved. What happens to its volume?",
+        "choices": [
+          "It becomes 1/8 of the original",
+          "It halves",
+          "It becomes 1/4 of the original"
+        ],
+        "answer": 0,
+        "hint": "Half the height means k = 1/2. Volume uses k³, so cube the half.",
+        "explain": "(1/2)³ = 1/8, so the volume becomes one eighth. 1/4 is what happens to each face's area."
+      },
+      {
+        "type": "numeric",
+        "id": "m8",
+        "prompt": "A solid metal statue is enlarged by scale factor 2, using the same metal. The small one has a mass of 3 kg. What is the mass of the big one in kg?",
+        "answer": 24,
+        "hint": "Mass depends on volume when the material is the same.",
+        "explain": "Volume factor 2³ = 8, so the mass is 3 × 8 = 24 kg."
+      }
+    ]
+  }
+}

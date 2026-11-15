@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against DfE GCSE Mathematics subject content (Higher G19: relationships between lengths, areas and volumes in similar figures) and CCSS HSG-GMD.A.3. Every number recomputed: 3² = 9, 3³ = 27, 2³ = 8 jugfuls, ∛64 = 4, √25 = 5, √2.25 = 1.5 (1.5³ = 3.375, shown rounded as 3.38), 40 × 8 = 320 cm³, √9 : √25 = 3 : 5, ∛8 : ∛125 = 2 : 5 → 4 : 25, 20² = 400, (1/2)³ = 1/8, 3 kg × 8 = 24 kg. The triangle grid draws k² congruent small triangles (lines parallel to all three sides). Parameterised answers 5k², 3k³, 10k³ and 4k are whole numbers over every range, each with 4 or more combinations."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented similarity errors (Ofqual/AQA GCSE examiner reports on area and volume scale factors; Hart, Children's Understanding of Mathematics 11–16): applying k to area or volume (the jug twice as tall holds twice as much), 2k instead of k² (scale factor 3 → area × 6), k² for volume, forgetting to root when working back (areas 9 : 25 taken as lengths), and cubing an area ratio. The jug step pauses at 2 and 4 jugfuls to name the first two; the wrong-path run printed 'That uses k itself. Only lengths scale by k'."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed under the 30% shingle limit, including against flag_sim.js (lengths in similar shapes) and flag_scale.js. No other lab enlarges an isometric unit-grid cube, tiles a triangle with k² copies, pours similar jugs, or runs k back from a stated area or volume factor."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Six steps build the rule from counting: a square at k = 3 shows 9 unit squares; a cube at k = 3 shows 27 unit cubes; a triangle shows k² copies, so the rule is not about squares; 8 small jugfuls fill a jug twice as tall; then three factors (volume 64, area 25, area 2.25) are undone with roots; then the challenge. The banner states the rule after each step."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options the lab disproves: area factor for doubled sides (4 vs 2 vs 8), volume factor for doubled edges (8 vs 2 vs 4), and the length ratio for volumes 1 : 27 (1 : 3 vs 1 : 9 vs 1 : 27). The reveal names the learner's choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with rotated answer order and eight distinct wrong-answer messages, e.g. '3 × 2 is not 3². The photo is 3 times as wide and 3 times as tall', '8 : 125 is the volume ratio. Cube root gives lengths 2 : 5, then square for areas: 4 : 25' and 'Paint covers a surface, which is an area: 20² = 400, not 20³'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation FK grade 3.7 overall (4.4, 3.7, 3.3, 3.4), under 6.5. Adult notes FK 5.6. Notation k² and k³ is always read alongside a count (3 × 3 = 9 unit squares) before it is used alone."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with explanation overlap under 12% against every lesson, including 139 (lengths in similar shapes). Each kid paragraph carries one fact the items test (k² for area, k³ for volume, any similar shape and surface area, roots to go back)."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 in light and dark: the facts card first collided with the feedback box and the '1 cm³' label sat on the slider's k label, so the drawing zone was shortened, the slider moved down and the label moved beside the unit cube; re-shot clean. The slider knob has a 52 px tall hit band; Smaller k / Bigger k and Pour one jugful buttons do the same jobs."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "gate_browser runs axe WCAG 2.1 AA in both themes on desktop and iPhone 13, every Show me ends with a tick, and screenshot and wrong-path runs logged no console or page errors. The canvas sits on a light card in dark mode with a live aria-label such as 'Cube with edges 3 cm: 27 unit cubes, volume factor 27', and every drag or tap has a button."
+  }
+ },
+ "sources": [
+  "Department for Education, GCSE Mathematics subject content (2013), G19",
+  "Common Core State Standards for Mathematics, HSG-GMD.A.3",
+  "AQA GCSE Mathematics examiner reports (8300), similarity and scale factor questions",
+  "K. Hart (ed.), Children's Understanding of Mathematics: 11–16 (1981)",
+  "NCETM Secondary Mastery Professional Development: similarity and enlargement"
+ ]
+}
