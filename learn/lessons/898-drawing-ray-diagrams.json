@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_-2VNlwAR5z",
+ "title": "Drawing Ray Diagrams",
+ "audience": "learner",
+ "keyIdea": "A ray diagram shows the path of light as straight lines with arrows. Always draw the normal, a dashed line at 90° to the surface where the ray hits, and measure every angle from it. At a plane mirror the angle of incidence equals the angle of reflection. The image is found by tracing the reflected rays back with dashed lines: it is as far behind the mirror as the object is in front, the same size and the right way up. When light goes into glass it slows down and bends towards the normal; coming out into air it bends away. A ray along the normal does not bend. A convex lens bends parallel rays so they meet at the principal focus; a fatter lens has a shorter focal length.",
+ "familyTip": "Stand a small mirror on a table and shine a phone torch at it along a ruler. Mark where the beam hits a wall. Then put a pencil at 90° to the mirror as the normal and check that the two angles match. Next, look at a straw in a glass of water and spot where it seems to bend.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which way does the light bend? Drag each case to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Towards the normal",
+    "Away from the normal or not at all"
+   ],
+   "items": [
+    [
+     "Air into glass at 40°",
+     0
+    ],
+    [
+     "Air into water at 30°",
+     0
+    ],
+    [
+     "Air into a glass block at 60°",
+     0
+    ],
+    [
+     "Glass into air at 25°",
+     1
+    ],
+    [
+     "Water into air at 20°",
+     1
+    ],
+    [
+     "Air into glass along the normal",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagraydiag",
+  "caption": "Flagship lab: aim a torch at a star from the normal, place a mirror image, choose refracted paths, fire rays through a glass block, focus two lenses.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "In a ray diagram, light is drawn as straight lines with arrows. Where a ray hits a surface, draw the normal. This is a dashed line at 90° to the surface. Measure every angle from the normal, not from the surface.",
+   "When light hits a mirror, the angle of incidence equals the angle of reflection. If a ray meets the mirror at 30° to the surface, its angle of incidence is 60°. So it reflects at 60° too.",
+   "To find an image in a flat mirror, draw two rays from the object to the eye. Then trace the reflected rays back behind the mirror with dashed lines. They meet at the image. It is as far behind the mirror as the object is in front. It is the same size and the right way up.",
+   "Light slows down in glass. So a ray going from air into glass bends towards the normal. When it comes out into air, it bends away. A ray along the normal goes straight on. A convex lens is fatter in the middle. It bends parallel rays to meet at one point, called the principal focus. A fatter lens focuses closer."
+  ],
+  "adult": [
+   "Ages 12 to 13. The National Curriculum for England (KS3 physics, light waves) asks pupils to use the ray model to explain mirror images, refraction and how a convex lens focuses light. The lab draws the normal every time and measures all angles from it, as exam ray diagrams do.",
+   "The figures use glass with a refractive index of 1.5 (crown glass is about 1.52). 40° in air becomes about 25° in glass, and 25° in glass leaves at about 39° in air. A ray through a parallel-sided block comes out parallel to the ray that went in, shifted sideways. The plane-mirror image is virtual, so lines behind the mirror are dashed.",
+   "Common mistakes. Pupils measure angles from the surface, not the normal. They think the angle of reflection is the angle between the two rays. They put the image on the mirror or at twice the distance. They mix up towards and away from the normal, or think a ray along the normal bends. They draw solid rays behind a mirror. Each slip gets its own message in the lab."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A ray hits a plane mirror at an angle of incidence of {i}°. What is the angle of reflection, in degrees?",
+   "answer": "i*1",
+   "hint": "The angle of reflection equals the angle of incidence.",
+   "explain": "Both are measured from the normal, so the angle of reflection is also {i}°.",
+   "params": {
+    "i": [
+     10,
+     80
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A ray meets a mirror at {a}° to the mirror surface. What is the angle of incidence, in degrees?",
+   "answer": "90-a",
+   "hint": "The normal is at 90° to the surface. Take the angle to the surface away from 90°.",
+   "explain": "90° − {a}° = {=90-a}°. Angles in ray diagrams are measured from the normal, not the surface.",
+   "params": {
+    "a": [
+     10,
+     80
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "An object is {d} cm in front of a plane mirror. How far is the object from its image, in cm?",
+   "answer": "2*d",
+   "hint": "The image is as far behind the mirror as the object is in front.",
+   "explain": "{d} cm in front plus {d} cm behind is {=2*d} cm from object to image.",
+   "params": {
+    "d": [
+     5,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Light goes from air into glass at an angle. Which way does it bend?",
+   "choices": [
+    "Towards the normal",
+    "Away from the normal",
+    "It does not bend"
+   ],
+   "answer": 0,
+   "hint": "Light slows down when it goes into glass.",
+   "explain": "Slowing down at an angle bends light towards the normal. It bends away when it speeds up into air."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A ray goes into a glass block along the normal. What happens?",
+   "choices": [
+    "It goes straight on",
+    "It bends towards the normal",
+    "It bends away from the normal"
+   ],
+   "answer": 0,
+   "hint": "Along the normal means it hits the surface square on.",
+   "explain": "It slows down but meets the surface at 0°, so it does not change direction."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Where do you measure the angle of incidence from?",
+    "choices": [
+     "The normal",
+     "The mirror surface",
+     "The reflected ray"
+    ],
+    "answer": 0,
+    "hint": "Which line is drawn at 90° to the surface?",
+    "explain": "All angles in ray diagrams are measured from the normal, a dashed line at 90° to the surface."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A ray hits a mirror at {a}° to the surface. What is the angle of reflection, measured from the normal?",
+    "answer": "90-a",
+    "hint": "First find the angle of incidence from the normal.",
+    "explain": "Angle of incidence = 90° − {a}° = {=90-a}°, so the angle of reflection is {=90-a}° as well.",
+    "params": {
+     "a": [
+      15,
+      75
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "You stand {d} m in front of a plane mirror and step {s} m closer. How far are you from your image now, in metres?",
+    "answer": "2*(d-s)",
+    "hint": "Find your new distance to the mirror first. The image is that far behind.",
+    "explain": "You are {=d-s} m from the mirror, and the image is {=d-s} m behind it, so 2 × {=d-s} = {=2*(d-s)} m.",
+    "params": {
+     "d": [
+      4,
+      8
+     ],
+     "s": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Light comes out of a glass block into air at an angle. Which way does it bend?",
+    "choices": [
+     "Away from the normal",
+     "Towards the normal",
+     "Straight on"
+    ],
+    "answer": 0,
+    "hint": "Light speeds up when it leaves glass.",
+    "explain": "Speeding up at an angle bends light away from the normal."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How is the ray that leaves a rectangular glass block related to the ray that went in?",
+    "choices": [
+     "Parallel to it, shifted sideways",
+     "At 90° to it",
+     "Straight back the way it came"
+    ],
+    "answer": 0,
+    "hint": "It bends one way going in and back again coming out.",
+    "explain": "It bends towards the normal going in and away by the same amount coming out, so it leaves parallel to the ray that went in."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is the principal focus of a convex lens?",
+    "choices": [
+     "The point where parallel rays meet after the lens",
+     "The middle of the lens",
+     "The point where the object is placed"
+    ],
+    "answer": 0,
+    "hint": "Trace three parallel rays through the lens.",
+    "explain": "A convex lens bends parallel rays so they cross at one point, the principal focus. Its distance from the lens is the focal length."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Two convex lenses, one fatter than the other. Which has the shorter focal length?",
+    "choices": [
+     "The fatter lens",
+     "The thinner lens",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Which lens bends light more?",
+    "explain": "A fatter, more curved lens bends rays more, so they meet closer to the lens: a shorter focal length."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In a plane-mirror ray diagram, why are the lines behind the mirror dashed?",
+    "choices": [
+     "No light really goes behind the mirror",
+     "The rays are weaker there",
+     "Dashed lines show the normal"
+    ],
+    "answer": 0,
+    "hint": "Can light pass through a mirror?",
+    "explain": "The image is virtual. Dashed lines show where the reflected rays seem to come from; no light travels there."
+   }
+  ]
+ }
+}
