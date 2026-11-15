@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_GUIvXgneUh",
+ "title": "Force–extension graphs and spring constant",
+ "audience": "learner",
+ "keyIdea": "When you hang a force on a spring, its extension is how much longer it gets: new length minus original length. Up to the limit of proportionality, extension is directly proportional to force, so F = k e, where F is the force in newtons, e is the extension in metres and k is the spring constant in N/m. A graph of force against extension is then a straight line through the origin, and its gradient is k. A bigger k means a stiffer spring. Past the limit of proportionality the graph curves, and past the elastic limit the spring does not go back to its original length when the force is removed.",
+ "familyTip": "Hang a bag on a rubber band or a spring and measure how much longer it gets as you add tins one at a time. Measure the stretch from where it started, not the total length.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which spring constant goes with each spring? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "k = 20 N/m",
+    "k = 50 N/m",
+    "k = 200 N/m"
+   ],
+   "items": [
+    [
+     "2 N stretches it 10 cm",
+     0
+    ],
+    [
+     "1 N stretches it 5 cm",
+     0
+    ],
+    [
+     "5 N stretches it 10 cm",
+     1
+    ],
+    [
+     "1 N stretches it 2 cm",
+     1
+    ],
+    [
+     "10 N stretches it 5 cm",
+     2
+    ],
+    [
+     "4 N stretches it 2 cm",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghooke",
+  "caption": "Flagship lab: measure extension not length, plot force against extension, find k from two gradients, load past the limit, and pick the load for 5 cm.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A spring is 10 cm long. You hang 3 N on it and it is now 22 cm long. The extension is how much longer it got: 22 − 10 = 12 cm. Always take away the starting length.",
+   "Add the force 1 N at a time and write down each extension. Plot force up the side and extension along the bottom. You get a straight line that starts at zero. Double the force and you double the extension.",
+   "This rule is F = k e. F is the force in newtons and e is the extension in metres. The spring constant k is in newtons per metre. It is the gradient of the line. A steeper line means a stiffer spring.",
+   "Put e in metres. For a spring with k = 40 N/m, 5 cm is 0.05 m, so F = 40 × 0.05 = 2 N. The rule only works up to a limit. Past it, the line bends. Stretch it too far and it stays longer for good."
+  ],
+  "adult": [
+   "Ages 14 to 16. AQA GCSE Physics 4.5.3 (forces and elasticity) states that 'the extension of an elastic object, such as a spring, is directly proportional to the force applied, provided that the limit of proportionality is not exceeded', with F = k e, and it includes a required practical on the relationship between force and extension. Edexcel and OCR cover the same ideas; the work done in stretching (E = ½ k e²) is a separate lesson.",
+   "In the lab, students measure extension from a dotted unloaded line, plot six points of a 25 N/m spring, read the gradient of two springs (25 N/m and 50 N/m) with a triangle they drag, load a spring to 10 N to find a limit of proportionality at 6 N, and choose a load for a 5 cm stretch with k = 40 N/m. The curved part and the 2 cm permanent stretch are a simple model, not data for a real spring.",
+   "Common mistakes. Students plot total length instead of extension, so the line misses the origin. They keep extension in centimetres and get k a hundred times too small (or F a hundred times too big). Some read the gradient as extension ÷ force, mix up the limit of proportionality with the elastic limit, or think a steeper line means a weaker spring. If the axes are swapped (extension up the side), the gradient is 1/k, so check which way round a graph is drawn."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A 12 cm spring is 18 cm long with a load. What is the extension?",
+   "choices": [
+    "6 cm",
+    "18 cm",
+    "30 cm"
+   ],
+   "answer": 0,
+   "hint": "Extension = new length − original length.",
+   "explain": "18 − 12 = 6 cm. 18 cm is the new length, and 30 cm adds the lengths together."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A spring has k = {k} N/m. What force (in N) stretches it by 0.1 m?",
+   "answer": "k/10",
+   "hint": "F = k × e, and the extension is already in metres.",
+   "explain": "F = {k} × 0.1 = {=k/10} N.",
+   "params": {
+    "k": [
+     20,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A force–extension graph (force up the side) goes through (0.05 m, 2 N). What is k?",
+   "choices": [
+    "40 N/m",
+    "0.025 N/m",
+    "2.5 N/m"
+   ],
+   "answer": 0,
+   "hint": "Gradient = force ÷ extension, with extension in metres.",
+   "explain": "k = 2 ÷ 0.05 = 40 N/m. 0.025 is extension ÷ force, and 2.5 forgets to change cm to m in the other direction."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A spring has k = 50 N/m. How many centimetres does a {f} N force stretch it?",
+   "answer": "f*2",
+   "hint": "e = F ÷ k gives metres. Multiply by 100 for centimetres.",
+   "explain": "e = {f} ÷ 50 = {=f/50} m = {=f*2} cm.",
+   "params": {
+    "f": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What happens past the limit of proportionality?",
+   "choices": [
+    "The extension is no longer proportional to the force",
+    "The spring stops stretching",
+    "k doubles"
+   ],
+   "answer": 0,
+   "hint": "Look at the shape of the graph after the limit.",
+   "explain": "Past the limit the extension grows faster than the force, so the graph curves. F = k e no longer applies."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Spring X has k = 30 N/m and spring Y has k = 120 N/m. Which is stiffer?",
+    "choices": [
+     "Y",
+     "X",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "A bigger k means more force is needed for each metre of stretch.",
+    "explain": "Y needs 120 N for each metre of extension, four times as much as X, so Y is stiffer."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A force of {f} N stretches a spring by 0.05 m. What is k in N/m?",
+    "answer": "f*20",
+    "hint": "k = F ÷ e, with e in metres.",
+    "explain": "k = {f} ÷ 0.05 = {=f*20} N/m.",
+    "params": {
+     "f": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A student plots total length against force. Why does the line not go through the origin?",
+    "choices": [
+     "With no force the spring still has its original length",
+     "The spring is broken",
+     "Force must go on the bottom axis"
+    ],
+    "answer": 0,
+    "hint": "What is the length when the force is zero?",
+    "explain": "At zero force the length is the original length, not zero. Plot extension instead and the line starts at the origin."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A spring has k = 25 N/m. What force stretches it 8 cm?",
+    "choices": [
+     "2 N",
+     "200 N",
+     "0.32 N"
+    ],
+    "answer": 0,
+    "hint": "Change 8 cm to metres first.",
+    "explain": "8 cm = 0.08 m, so F = 25 × 0.08 = 2 N. 200 N uses 8 instead of 0.08."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "3 N stretches a spring 6 cm, below the limit. What does 5 N stretch it?",
+    "choices": [
+     "10 cm",
+     "8 cm",
+     "11 cm"
+    ],
+    "answer": 0,
+    "hint": "Extension is proportional to force. How many cm per newton?",
+    "explain": "6 ÷ 3 = 2 cm per newton, so 5 N gives 10 cm. 8 cm just adds 2 to 6."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "After a big load is removed, a spring stays 1 cm longer than at the start. What has happened?",
+    "choices": [
+     "It went past its elastic limit",
+     "It obeyed Hooke's law",
+     "Its spring constant became zero"
+    ],
+    "answer": 0,
+    "hint": "Which limit is about going back to the original length?",
+    "explain": "Past the elastic limit a spring is stretched for good. The limit of proportionality is where the graph stops being straight."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "On a graph with extension up the side and force along the bottom, what is the gradient?",
+    "choices": [
+     "1 ÷ k",
+     "k",
+     "k × e"
+    ],
+    "answer": 0,
+    "hint": "Gradient = rise ÷ run. Which quantity is the rise now?",
+    "explain": "Rise ÷ run = extension ÷ force = 1/k. With force up the side the gradient is k."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A spring with k = 40 N/m is stretched by {c} cm. What is the force in N?",
+    "answer": "40*c/100",
+    "hint": "Change {c} cm to metres, then use F = k e.",
+    "explain": "{c} cm = {=c/100} m, so F = 40 × {=c/100} = {=40*c/100} N.",
+    "params": {
+     "c": [
+      2,
+      10
+     ]
+    }
+   }
+  ]
+ }
+}

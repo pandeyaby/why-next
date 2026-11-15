@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against AQA GCSE Physics (8463) 4.5.3 Forces and elasticity: extension directly proportional to force up to the limit of proportionality, F = k e with F in N, k in N/m and e in m, the force–extension required practical, and the distinction between the limit of proportionality and the elastic limit (inelastic deformation). Every number recomputed: 22 − 10 = 12 cm at 3 N for k = 25 N/m (4 cm per N); gradient triangles give 2.0 N ÷ 0.08 m = 25 N/m and 4.0 N ÷ 0.08 m = 50 N/m; 40 N/m × 0.05 m = 2 N; 50 × 0.1 = 5 N; 2 N ÷ 0.04 m = 50 N/m; 25 × 0.08 = 2 N. The curved region (31, 40, 51, 64 cm at 7–10 N) and the 2 cm permanent stretch are stated as a model, not data."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors named in AQA examiner reports for 8463 (plotting length not extension, unit conversion cm→m, reading the gradient upside down) and in the IOP 'Supporting Physics Teaching' notes on elasticity: total length used as extension, centimetres left in F = k e (×100 errors), gradient as e ÷ F, steeper line read as weaker, Hooke's law assumed for any load, and the limit of proportionality confused with the elastic limit. Each is a prediction option, a refused action in the lab, or a tagged challenge distractor."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest Jaccard against any flagship lab is 3.2%. The constant of proportionality lab (flagkx) works with y = kx tables in maths, and free fall (flagfreefall) uses a = W/m. Only this lab drags an extension bracket from an unloaded line beside a hanging spring, plots F against e by tapping and refuses length plots, drags a gradient triangle along two spring lines with N/cm and e/F traps, loads to 10 N to find the last proportional point, and adds 0.5 N weights to hit a 5 cm stretch."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge: extension versus length; proportionality gives a straight line through the origin; gradient is k and a steeper line is stiffer, the triangle size not mattering; the limit of proportionality and permanent stretch past the elastic limit; using F = k e in SI units. Each banner gives the rule only after the learner's own reading or plot matches it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions with tempting wrong options: the extension of a 10 cm spring at 22 cm ('22 cm', '3 cm'), how far 5 N stretches if 1 N gives 4 cm ('14 cm', '9 cm' from adding), which spring is stiffer ('A, the shallower line'), and whether the graph stays straight ('Yes: F = k e always works', 'It gets steeper'). A.reveal names the learner's pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with nine distinct wrong-answer messages: cm not converted to m, dividing instead of multiplying, new length taken as extension, force taken as extension, gradient upside down, assuming linearity forever, thinking the spring stops stretching, stiffness backwards and adding instead of scaling. Each names the slip and shows the corrected working."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 1.5 and adult 8.7 (limits 6.5 and 9.5). Kid paragraphs walk one spring from 10 cm to 22 cm, the graph, F = k e and the metre conversion in short sentences; the adult text keeps specification wording for the limits."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed: no filler patterns and explanation overlap under 12% with 895 Free fall, Mass vs Weight and the y = kx lesson. Each kid paragraph does one job: extension, the straight-line graph, F = k e and k as gradient, and units plus the limits."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. Fixes from the first sheets: the 'unloaded end' label ran off the right edge and now sits as 'unloaded' between the ruler and the spring; the 'unloaded: 2 cm left' note overlapped the first plotted points and was moved right along the axis; graph boxes shrink to sit above the measured feedback box, and the tall ratio (1.35) keeps the spring and ruler readable."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag or tap has a button twin (Add/Remove 1 N, Bracket ±0.5 cm and Check; Plot extension / Plot length; Triangle bigger/smaller and each k choice; Add 1 N and Limit at 4–8 N; Add/Remove 0.5 N). The canvas aria-label is rewritten after every action with the load, length, bracket, plotted points, triangle sides or extensions. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "AQA (2018) GCSE Physics 8463 specification, 4.5.3 Forces and elasticity and required practical 6 (force and extension)",
+  "AQA GCSE Physics 8463 examiner reports (June 2019, November 2020) on force–extension graphs and spring constant calculations",
+  "Institute of Physics, Supporting Physics Teaching: forces and elasticity (stretching springs) teaching notes",
+  "Pearson Edexcel GCSE (9–1) Physics 1PH0 specification, topic 15 forces and matter"
+ ]
+}
