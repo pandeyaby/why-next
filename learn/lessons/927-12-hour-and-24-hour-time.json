@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_WfrE_4r-kY",
+ "title": "12-hour and 24-hour time",
+ "audience": "learner",
+ "keyIdea": "A clock face shows only 12 hours, so each time happens twice a day: once in the morning (am) and once after midday (pm). The 24-hour clock gives every hour its own number from 00 to 23 and always uses four digits. To change a pm time to 24-hour time, add 12 to the hour: 3:45 pm is 15:45. Morning hours keep their number with a zero in front: 9:10 am is 09:10. To go back, take 12 away from hours 13 to 23: 19:30 is 7:30 pm. Midnight is 00:00 and midday is 12:00.",
+ "familyTip": "Look at a train or bus timetable, a TV guide or the clock on a cooker or phone set to 24-hour time. Take turns saying each time in 12-hour time with am or pm, and check by asking: is that before or after lunch?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each time am (before midday) or pm (after midday)? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "am (midnight to midday)",
+    "pm (midday to midnight)"
+   ],
+   "items": [
+    [
+     "07:45",
+     0
+    ],
+    [
+     "19:10",
+     1
+    ],
+    [
+     "00:30",
+     0
+    ],
+    [
+     "12:30",
+     1
+    ],
+    [
+     "11:59",
+     0
+    ],
+    [
+     "23:05",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flag24h",
+  "caption": "Flagship lab: drag a marker through one day, write pm times in 24-hour form, match cards, sort midnight and midday, and read a train timetable.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A clock face has the numbers 1 to 12. The short hand goes round twice every day. So 3 o’clock comes once in the night and once in the afternoon. We write am for times from midnight to midday, and pm for times from midday to midnight.",
+   "The 24-hour clock does not start again after midday. It keeps counting: 13, 14, 15, all the way to 23. Then midnight is 00:00 and a new day starts. A 24-hour time always has four digits, like 07:30 or 18:05.",
+   "To change a pm time into 24-hour time, add 12 to the hour. 4:20 pm is 4 + 12 = 16, so it is 16:20. Morning times keep the same hour, with a zero in front if needed: 9:05 am is 09:05. The minutes never change.",
+   "To go back, take 12 away from any hour from 13 to 23 and write pm. 19:30 is 19 − 12 = 7, so 7:30 pm. Be careful with 12 and 00: 12:15 is just after midday (12:15 pm), but 00:15 is just after midnight (12:15 am)."
+  ],
+  "adult": [
+   "Ages 8 to 9. The National Curriculum in England asks Year 4 pupils to read, write and convert time between analogue and digital 12- and 24-hour clocks. Year 5 and 6 pupils use the skill to read timetables and work out durations. Conventions follow the NCETM Year 4 guidance and the UK government style guide: 24-hour times use four digits with a colon (09:10, 15:45), midnight is 00:00 at the start of a day and midday is 12:00.",
+   "The lab has five tasks. Learners drag a marker along a day strip while an analogue clock, a 12-hour time and a 24-hour time all follow it. They write three 12-hour times in 24-hour form, using +12 only for pm. They match 24-hour cards to 12-hour cards, avoiding two decoys. They sort the 00 and 12 hours, then answer two train timetable questions.",
+   "Common mistakes. Many children drop the first digit instead of taking away 12, so 19:30 becomes 9:30 pm. Others add 10 instead of 12, add 12 to morning times, or forget the leading zero (writing 9:10 for 09:10). The 00 and 12 hours are the hardest: 12:20 is after midday but 00:20 is after midnight. In timetables, a 17 can be misread as 7 pm."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Write {h}:30 pm in 24-hour time. What number is the hour?",
+   "answer": "h+12",
+   "hint": "It is after midday, so add 12 to the hour. The minutes stay the same.",
+   "explain": "{h} + 12 = {=h+12}, so {h}:30 pm is {=h+12}:30.",
+   "params": {
+    "h": [
+     1,
+     11
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A 24-hour clock shows {h}:00. What is the hour on a 12-hour clock?",
+   "answer": "h-12",
+   "hint": "Hours from 13 to 23 are pm. Take away 12.",
+   "explain": "{h} − 12 = {=h-12}, so {h}:00 is {=h-12} pm.",
+   "params": {
+    "h": [
+     13,
+     23
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is 8:15 am in 24-hour time?",
+   "choices": [
+    "08:15",
+    "20:15",
+    "18:15"
+   ],
+   "answer": 0,
+   "hint": "Morning hours keep their number. Use four digits.",
+   "explain": "8:15 am is in the morning, so the hour stays 8, written 08:15. 20:15 would be 8:15 pm."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is 00:40 in 12-hour time?",
+   "choices": [
+    "12:40 am",
+    "12:40 pm",
+    "0:40 pm"
+   ],
+   "answer": 0,
+   "hint": "The 00 hour is the first hour after midnight.",
+   "explain": "00:40 is 40 minutes after midnight, which is 12:40 am. 12:40 pm is 40 minutes after midday."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Leo says 18:00 is 8 pm. What is right?",
+   "choices": [
+    "18:00 is 6 pm, because 18 − 12 = 6",
+    "Leo is right",
+    "18:00 is 6 am"
+   ],
+   "answer": 0,
+   "hint": "Do not just drop the 1. Take away 12.",
+   "explain": "18 − 12 = 6, so 18:00 is 6 pm. Dropping the first digit gives the wrong hour."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is 3:45 pm in 24-hour time?",
+    "choices": [
+     "15:45",
+     "03:45",
+     "13:45"
+    ],
+    "answer": 0,
+    "hint": "pm means add 12 to the hour.",
+    "explain": "3 + 12 = 15, so 3:45 pm is 15:45. 03:45 is in the night and 13:45 is 1:45 pm."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is 19:30 in 12-hour time?",
+    "choices": [
+     "7:30 pm",
+     "9:30 pm",
+     "7:30 am"
+    ],
+    "answer": 0,
+    "hint": "Take 12 away from the hour.",
+    "explain": "19 − 12 = 7, and hours after 12 are pm, so 19:30 is 7:30 pm."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A film starts at {h}:00 pm and lasts 2 hours. What hour does it end, in 24-hour time?",
+    "answer": "h+14",
+    "hint": "Change the start to 24-hour time by adding 12, then add the 2 hours.",
+    "explain": "{h} + 12 = {=h+12}, and {=h+12} + 2 = {=h+14}, so it ends at {=h+14}:00.",
+    "params": {
+     "h": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "How many hours is it from 09:00 to {h}:00?",
+    "answer": "h-9",
+    "hint": "Both times are in 24-hour time, so you can take away the hours.",
+    "explain": "Both are 24-hour times, so {h} − 9 = {=h-9} hours have passed.",
+    "params": {
+     "h": [
+      13,
+      21
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which 24-hour time is midday?",
+    "choices": [
+     "12:00",
+     "00:00",
+     "24:00"
+    ],
+    "answer": 0,
+    "hint": "Midnight starts the day at 00:00.",
+    "explain": "Midday is 12:00. Midnight is 00:00 at the start of a day."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A train leaves at 17:15. Is that before or after 6 pm?",
+    "choices": [
+     "Before: 17:15 is 5:15 pm",
+     "After: 17:15 is 7:15 pm",
+     "After: 17:15 is 7:15 am"
+    ],
+    "answer": 0,
+    "hint": "Take 12 away from 17, then compare with 6 pm.",
+    "explain": "17 − 12 = 5, so 17:15 is 5:15 pm, which is before 6 pm (18:00)."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is 12:20 in 12-hour time?",
+    "choices": [
+     "12:20 pm",
+     "12:20 am",
+     "0:20 pm"
+    ],
+    "answer": 0,
+    "hint": "Is the 12 hour just after midnight or just after midday?",
+    "explain": "12:20 is 20 minutes after midday, so it is 12:20 pm. 00:20 would be 12:20 am."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which time is written correctly in 24-hour time?",
+    "choices": [
+     "06:05",
+     "6:5",
+     "6:05 am"
+    ],
+    "answer": 0,
+    "hint": "24-hour times use four digits and no am or pm.",
+    "explain": "06:05 has four digits and no am or pm. 6:5 is missing digits and 6:05 am is 12-hour time."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "What is 11:10 am in 24-hour time?",
+    "choices": [
+     "11:10",
+     "23:10",
+     "13:10"
+    ],
+    "answer": 0,
+    "hint": "It is still the morning, so the hour does not change.",
+    "explain": "11:10 am is before midday, so the hour stays 11: 11:10. 23:10 is 11:10 pm."
+   }
+  ]
+ }
+}
