@@ -1,0 +1,270 @@
+{
+ "topicId": "mt_xSgAgg9Ej_",
+ "title": "Equally likely outcomes",
+ "audience": "learner",
+ "keyIdea": "Outcomes are equally likely when nothing favours any one of them. A fair coin gives heads and tails the same chance, and a fair dice gives each number a 1 in 6 chance. A spinner is fair only when its sections are the same size. Having a certain number of outcomes does not make them equally likely: a bag of 3 red and 1 blue has two colours, but red is three times as likely. Two dice can total anything from 2 to 12, but 7 can be made 6 ways out of 36 and 2 only 1 way. When you cannot see why an object might be unfair, test it many times: fair results wobble around equal, while an unfair one keeps favouring one outcome.",
+ "familyTip": "Draw a spinner with one big section and two small ones, spin a pencil on a paper clip 30 times and tally the results. Then draw three equal sections and do it again. Which tally looks more even?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Are the outcomes equally likely? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Equally likely",
+    "Not equally likely"
+   ],
+   "items": [
+    [
+     "Heads or tails on a fair coin",
+     0
+    ],
+    [
+     "A 1 or a 6 on a fair dice",
+     0
+    ],
+    [
+     "Any one of 4 same-sized sections",
+     0
+    ],
+    [
+     "Picking any card from a shuffled pack",
+     0
+    ],
+    [
+     "Red or blue from 5 red and 1 blue",
+     1
+    ],
+    [
+     "A big section or a tiny section",
+     1
+    ],
+    [
+     "Total 2 or total 7 with two dice",
+     1
+    ],
+    [
+     "A piece of toast lands butter up or down",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flageqlik",
+  "caption": "Flagship lab: drag a spinner's edges, recolour equal sections, sort fair and unfair situations, find the two-dice pairs for 7, and test a loaded dice.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Two outcomes are equally likely when they have the same chance. A fair coin is the same on both sides, so heads and tails are equally likely. A fair dice has six faces of the same size, so a 6 is just as likely as a 1. It only feels rare because some games make you wait for it.",
+   "A spinner lands in a section as often as that section's share of the circle. Three colours do not give each colour a 1 in 3 chance unless the three sections are the same size. With 6 equal sections, a colour on 4 of them is twice as likely as a colour on 2.",
+   "The number of outcomes does not tell you the chance. A bag with 3 red counters and 1 blue counter has two colours, but red is three times as likely. Your team can win or lose, but that is not a 50-50 chance if it is a strong team.",
+   "Roll two dice and add them. There are 36 pairs, and each pair is equally likely. A total of 7 can be made 6 ways, but a total of 2 only 1 way, so the totals are not equally likely. If you cannot tell whether a dice is fair, roll it many times. A fair dice gives roughly equal counts. An unfair one keeps favouring one number."
+  ],
+  "adult": [
+   "Ages 9 to 10. The National Curriculum in England leaves formal probability to Key Stage 3, which asks pupils to use the language of equally likely outcomes, and to record and describe the outcomes of experiments. In the US, CCSS 7.SP.C.7a builds a uniform probability model, giving equal probability to every outcome, and compares it with observed frequencies. This lesson builds the idea first: deciding whether outcomes are equally likely before giving each one a fraction.",
+   "The lab works through the main sources of equal chance. Learners drag a spinner's edges until three slices are the same size, then recolour six equal sections so three colours get two each. They sort six situations, tap the six red and blue dice pairs that make 7 out of the 36, and roll a fair dice and a loaded one 60 times each from a seeded generator to see what fair and unfair results look like.",
+   "Common mistakes. The best known is the equiprobability bias (Lecoutre, 1992): believing that outcomes are equally likely just because there are a certain number of them, such as win or lose, or the totals 2 to 12. Children also count colour names instead of sections, believe a 6 is harder to roll, expect a dice to remember past rolls, and expect exactly 10 of each number in 60 rolls. Ask: what could favour one outcome, and how many equal parts does each one get?"
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A spinner has three sections: red is half the circle, blue and green are a quarter each. Which is true?",
+   "choices": [
+    "Red is twice as likely as blue",
+    "All three colours are equally likely",
+    "Blue is most likely"
+   ],
+   "answer": 0,
+   "hint": "Compare the size of each section, not the number of colours.",
+   "explain": "Red covers half the circle and blue covers a quarter, so red comes up about twice as often. Three colours do not make three equal chances."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A bag has {r} red and {b} blue counters. How many more blue counters do you need to make red and blue equally likely?",
+   "answer": "r-b",
+   "hint": "Equally likely colours need the same number of counters.",
+   "explain": "Red has {r} and blue has {b}, so blue needs {r} − {b} = {=r-b} more counters. Then there are {r} of each.",
+   "params": {
+    "r": [
+     6,
+     9
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Two dice are rolled and added. How many of the 36 pairs make a total of 7?",
+   "choices": [
+    "6",
+    "1",
+    "11"
+   ],
+   "answer": 0,
+   "hint": "List them: red 1 and blue 6, red 2 and blue 5, and so on.",
+   "explain": "1+6, 2+5, 3+4, 4+3, 5+2 and 6+1: 6 pairs out of 36. 11 counts the possible totals, 2 to 12, not the pairs."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A fair dice is rolled {=6*n} times. About how many sixes would you expect?",
+   "answer": "n",
+   "hint": "Each of the 6 numbers is equally likely, so each gets about one sixth of the rolls.",
+   "explain": "{=6*n} ÷ 6 = {n}. Real results wobble around this, so a few more or fewer is normal.",
+   "params": {
+    "n": [
+     2,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Sam says: 'Tomorrow it will either snow or not snow, so it is a 50-50 chance.' What is wrong?",
+   "choices": [
+    "Two outcomes do not have to be equally likely",
+    "Nothing: two outcomes are always 50-50",
+    "Snow is impossible"
+   ],
+   "answer": 0,
+   "hint": "Does anything favour one of the two outcomes?",
+   "explain": "Most days it does not snow, so 'no snow' is far more likely. Having two outcomes does not make them equally likely."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which of these has equally likely outcomes?",
+    "choices": [
+     "A fair coin: heads or tails",
+     "A bag with 4 green and 1 yellow: green or yellow",
+     "A drawing pin: point up or point down"
+    ],
+    "answer": 0,
+    "hint": "Look for one where nothing favours either outcome.",
+    "explain": "A fair coin is the same on both sides, so heads and tails are equally likely. The bag favours green, and a drawing pin is a different shape on each side."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A spinner has 6 equal sections: 3 red, 2 blue, 1 gold. Which colour is least likely?",
+    "choices": [
+     "Gold",
+     "Red",
+     "They are all equally likely"
+    ],
+    "answer": 0,
+    "hint": "Count the equal sections for each colour.",
+    "explain": "Gold has 1 of the 6 equal sections, blue 2 and red 3. Equal sections only make colours equally likely when each colour gets the same number of them."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Aisha says a 6 is harder to roll than a 1 on a fair dice. Is she right?",
+    "choices": [
+     "No: each face has a 1 in 6 chance",
+     "Yes: 6 is the biggest number",
+     "Yes, unless you roll gently"
+    ],
+    "answer": 0,
+    "hint": "What is different about the 6 face?",
+    "explain": "Nothing. Each face of a fair dice is the same size and shape, so every number has the same 1 in 6 chance."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A coin has landed heads 5 times in a row. What is the chance of heads next time?",
+    "choices": [
+     "Still 1 in 2",
+     "Less than 1 in 2: tails is due",
+     "More than 1 in 2: heads is on a streak"
+    ],
+    "answer": 0,
+    "hint": "Does the coin remember what happened before?",
+    "explain": "A fair coin has no memory, so each flip is still 1 in 2. A streak happens by chance and does not change the next flip."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A spinner is split into {n} equal sections. What fraction of the turn is each section? Give the denominator.",
+    "answer": "n",
+    "hint": "Equal sections share the whole turn equally.",
+    "explain": "{n} equal sections each take 1/{n} of the turn, so the denominator is {n}.",
+    "params": {
+     "n": [
+      3,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Two dice are rolled and added. Which total is least likely?",
+    "choices": [
+     "12",
+     "7",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Which totals can only be made one way?",
+    "explain": "12 needs 6 + 6, only 1 of the 36 pairs. (2 needs 1 + 1, also 1 pair.) 7 has the most pairs, 6 of them."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A dice is rolled 60 times and gives 31 sixes. What does that suggest?",
+    "choices": [
+     "The dice probably favours 6",
+     "It is fair: anything can happen",
+     "It is fair because it has six faces"
+    ],
+    "answer": 0,
+    "hint": "A fair dice gives about 10 sixes in 60 rolls.",
+    "explain": "31 is about three times the 10 a fair dice gives. Small wobbles are normal, but this far above the rest suggests the dice is unfair."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A bag has 2 red, 2 blue and 2 green counters. Which is true?",
+    "choices": [
+     "Each colour has a 1 in 3 chance",
+     "Red is most likely because it was put in first",
+     "You cannot know until you pick one"
+    ],
+    "answer": 0,
+    "hint": "Count the counters of each colour.",
+    "explain": "2 of the 6 counters are each colour, so each colour has 2/6 = 1/3. The order they went in does not matter after mixing."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A spinner has 12 equal sections. {k} are red and the rest are blue. How many red sections must be repainted blue so red and blue are equally likely?",
+    "answer": "k-6",
+    "hint": "Equally likely needs 6 red and 6 blue sections.",
+    "explain": "Red and blue need 6 of the 12 sections each. Red has {k}, so {k} − 6 = {=k-6} must be repainted.",
+    "params": {
+     "k": [
+      7,
+      12
+     ]
+    }
+   }
+  ]
+ }
+}
