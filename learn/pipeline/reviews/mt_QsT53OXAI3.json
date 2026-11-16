@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against AQA GCSE Statistics 8382 (standard deviation as a measure of spread), Pearson Edexcel A level Mathematics 9MA0 Statistics 2.3 (variance and standard deviation, σ² = Σ(x − x̄)²/n) and CCSS HSS-ID.A.2/A.4. Every value recomputed: 2, 4, 4, 4, 5, 5, 7, 9 has mean 5, signed distances −3 −1 −1 −1 0 0 2 4 summing to 0, squares 9 1 1 1 0 0 4 16 = 32, variance 4, SD 2; √32 = 5.66; 3, 4, 5, 6, 7 has SD √2 = 1.41; with 15: mean 6.6, Σd² = 93.2, SD √18.64 = 4.32 (with 14 it is 3.93, so 15 is the first value over 4); +10 keeps SD 2, ×2 gives 4; 1, 3, 5 → √(8/3) = 1.63; 50/8 = 6.25 → 2.5 and √50/8 = 0.88; 72/8 = 9 → 3. Parameterised items (a ± b data, variance a², SD × b) are exact at every combination. The n − 1 sample form is named in the adult notes."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors reported by delMas and Liu (2005, SERJ 4(1)) and in AQA Statistics examiner reports: reporting the variance (no root), rooting before dividing, dividing before adding, thinking a shift changes the SD, scaling the SD by k² instead of k, reading a large SD as tightly packed data, and thinking SD needs the mean to compare spread. Each is a prediction distractor, a refused step in the Add/÷ n/√/Stop sequence, or a tagged challenge answer."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 12.4% (shared feedback and challenge scaffolding), under 30%. flag_mad.js (mean absolute deviation) averages absolute distances and flag_outlr.js compares mean and median; only this lab balances a draggable mean against signed-distance arrows, draws a square for each distance, enforces add → ÷ n → √ with the variance stop refused, drags one value out while a mean ± 1 SD band updates, and applies +10 and ×2 to the whole set."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge: signed distances cancel at the mean; squaring removes the signs and weights far values; the order add, divide, root gives a typical distance in the data's units; one outlier can triple the SD; a shift leaves the SD alone and a stretch by k multiplies it by k. Each banner gives the rule after the learner's own dragging or tapping shows it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions with tempting wrong options: the sum of signed distances ('7, the range', '5, the mean'), why we square ('to make the numbers bigger'), the effect of moving 7 to 15 ('stays the same: only one score moved', 'goes up by 8') and the SD after adding 10 ('12', '20'). A.reveal names the learner's pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with eight distinct wrong-answer messages: variance given instead of SD, signed distances summed, root taken before dividing, scaling ignored, SD scaled by k², shift thought to change the SD, SD confused with the mean, and a large SD read as tight data. Each names the slip and shows the corrected working (e.g. 'Divide first: 50 ÷ 8 = 6.25, then √6.25 = 2.5')."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 1.1 and adult 5.2 (limits 6.5 and 9.5). Kid paragraphs work one data set from distances to squares, variance and root in short sentences, then shift and stretch; 'variance' and 'standard deviation' are defined where they first appear."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed (the familyTip's 'journey' was reworded to 'travel times' after the filler check flagged it); explanation overlap is 0.0% with every lesson, including 601 Mean absolute deviation and 781 Choosing an average. Each kid paragraph does one job: what SD tells you, distances and squaring, add-divide-root, and shift, stretch and outliers."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. The signed-distance arrows sit in their own rows under the axis so no labels collide at 360 px; the eight square rows keep 30 px tap targets; the shift step's dots were shrunk because neighbouring values on the 0–40 axis overlapped; the mean ± 1 SD band and readout stay above the buttons."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag or tap has a button twin (◀ 0.5 / 0.5 ▶ for the balance point; Square each score; Add the squares / Divide by n / Square root / Stop here; Last score −1/+1; Add 10 to all / Double all). The canvas aria-label is rewritten after every action with the balance point and signed total, squared values, the current stage, the moved score with mean and SD, or the transformed data. The browser gate runs axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "AQA (2017) GCSE Statistics 8382 specification, measures of spread including standard deviation",
+  "Pearson Edexcel (2017) A level Mathematics 9MA0 specification, Statistics topic 2: measures of central tendency and variation",
+  "Common Core State Standards for Mathematics (2010), High School Statistics HSS-ID.A.2 and HSS-ID.A.4",
+  "delMas, R. and Liu, Y. (2005) Exploring students' conceptions of the standard deviation, Statistics Education Research Journal 4(1)"
+ ]
+}

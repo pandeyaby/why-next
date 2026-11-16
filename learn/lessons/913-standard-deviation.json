@@ -1,0 +1,279 @@
+{
+ "topicId": "mt_QsT53OXAI3",
+ "title": "Standard deviation",
+ "audience": "learner",
+ "keyIdea": "The standard deviation (SD) measures spread: roughly, the typical distance of the values from their mean. To find it, work out each value's distance from the mean, square each distance, add the squares, divide by the number of values n, and take the square root. Squaring stops the + and − distances cancelling, which they always do at the mean; the square root at the end brings the units back to those of the data. Before the root, the result is the variance, which is the SD squared. Adding the same number to every value leaves the SD unchanged, and multiplying every value by k multiplies the SD by k. One far-out value can raise the SD a lot.",
+ "familyTip": "Compare two weeks of bus travel times, or two players' scores. Which set has the same average but bigger swings? That one has the larger standard deviation.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What happens to the standard deviation? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "SD stays the same",
+    "SD doubles",
+    "SD is 0"
+   ],
+   "items": [
+    [
+     "Add 10 to every value",
+     0
+    ],
+    [
+     "Take 3 off every value",
+     0
+    ],
+    [
+     "Write the values in a new order",
+     0
+    ],
+    [
+     "Double every value",
+     1
+    ],
+    [
+     "Multiply every value by −2",
+     1
+    ],
+    [
+     "Every distance from the mean doubles",
+     1
+    ],
+    [
+     "Every value equals the mean",
+     2
+    ],
+    [
+     "Data 4, 4, 4, 4",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsdev",
+  "caption": "Flagship lab: balance the mean, square each distance, add then divide then root, drag out an outlier, add 10 and double every score.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The standard deviation, or SD, tells you how spread out some numbers are. A small SD means the numbers sit close to the mean. A big SD means they are spread far apart.",
+   "Take the scores 2, 4, 4, 4, 5, 5, 7, 9. The mean is 5. Find how far each score is from 5: −3, −1, −1, −1, 0, 0, 2, 4. If you add these, you get 0. That is always true at the mean. So we square each one: 9, 1, 1, 1, 0, 0, 4, 16.",
+   "Add the squares to get 32. Divide by how many scores there are: 32 ÷ 8 = 4. This is called the variance. Last, take the square root: √4 = 2. So the SD is 2 marks. A common slip is to stop at 4, or to take the root before you divide.",
+   "Add 10 to every score and the SD stays the same, because the gaps do not change. Double every score and the SD doubles too. One score far from the rest makes the SD jump, because its big distance gets squared."
+  ],
+  "adult": [
+   "Ages 15 to 17. Standard deviation is taught in AQA GCSE Statistics (8382) and in A-level Mathematics statistics, and the Common Core high school standards (HSS-ID.A.2 and A.4) ask students to use it to compare the spread of data sets. This lesson uses the population formula: the square root of the sum of (x − mean)² divided by n. Calculators also show s, which divides by n − 1 to estimate a population's spread from a sample.",
+   "The lab builds the formula from its reasons. Students slide a balance point to the mean of 2, 4, 4, 4, 5, 5, 7, 9 and see the signed distances add to 0. They square each distance (total 32), then add, divide by 8 and take the root in order, with the wrong orders refused. They drag one value of 3, 4, 5, 6, 7 out to 15 and watch the SD rise from 1.41 to 4.32, then add 10 and double every value to see the SD stay at 2 and then become 4.",
+   "Common mistakes. Students often forget the square root and give the variance, take the root before dividing, or divide before adding. Some think adding a constant raises the SD, or multiply the SD by k² when the data are scaled by k, which is what happens to the variance. Others read a large SD as data that are close together. Ask what the units are at each stage: squared marks before the root, marks after it."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What does a small standard deviation tell you?",
+   "choices": [
+    "The values sit close to the mean",
+    "The values are all small numbers",
+    "The mean is small"
+   ],
+   "answer": 0,
+   "hint": "SD measures spread, not size.",
+   "explain": "A small SD means a small typical distance from the mean, so the values are packed close together. It says nothing about how big the values are."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Data: {=a-b} and {=a+b}. What is the standard deviation (divide by n)?",
+   "answer": "b",
+   "hint": "Find the mean first, then each value's distance from it.",
+   "explain": "The mean is {a}. Both values are {b} away, so the squares are {=b*b} and {=b*b}. Their total ÷ 2 = {=b*b}, and √{=b*b} = {b}.",
+   "params": {
+    "a": [
+     5,
+     9
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A data set has SD {a}. Every value is multiplied by {b}. What is the new SD?",
+   "answer": "a*b",
+   "hint": "Every distance from the mean is stretched by the same factor.",
+   "explain": "Multiplying every value by {b} multiplies every distance by {b}, so the SD becomes {a} × {b} = {=a*b}.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "The squared distances from the mean add to 72 for 8 values. What is the SD?",
+   "choices": [
+    "3",
+    "9",
+    "1.06"
+   ],
+   "answer": 0,
+   "hint": "Divide by n first, then take the square root.",
+   "explain": "72 ÷ 8 = 9 is the variance, and √9 = 3. 9 forgets the root; 1.06 roots before dividing (√72 ÷ 8)."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Every value in a data set has 4 added. The SD was 3. What is it now?",
+   "choices": [
+    "3",
+    "7",
+    "12"
+   ],
+   "answer": 0,
+   "hint": "Does adding 4 change any distance from the mean?",
+   "explain": "Adding 4 moves every value and the mean by 4, so every distance is unchanged and the SD stays 3."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Data: {=a-b}, {=a-b}, {=a+b}, {=a+b}. What is the standard deviation (divide by n)?",
+    "answer": "b",
+    "hint": "The mean is halfway between the two values.",
+    "explain": "The mean is {a}. Every value is {b} away, so every square is {=b*b}. The mean square is {=b*b}, and √{=b*b} = {b}.",
+    "params": {
+     "a": [
+      6,
+      12
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "The variance of a data set is {=a*a}. What is the standard deviation?",
+    "answer": "a",
+    "hint": "The variance is the SD squared.",
+    "explain": "SD = √variance = √{=a*a} = {a}.",
+    "params": {
+     "a": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why do we square the distances from the mean?",
+    "choices": [
+     "Signed distances always add to 0",
+     "To make the answer bigger",
+     "Squares are quicker to add"
+    ],
+    "answer": 0,
+    "hint": "Try adding −3, −1, −1, −1, 0, 0, 2, 4.",
+    "explain": "At the mean the + and − distances always cancel to 0, so they cannot measure spread. Squares are never negative."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which order gives the standard deviation?",
+    "choices": [
+     "Square the distances, add, divide by n, square root",
+     "Add the distances, divide by n, square root",
+     "Square root the distances, add, divide by n"
+    ],
+    "answer": 0,
+    "hint": "The square root comes last, after you divide by n.",
+    "explain": "Square each distance, add the squares, divide by n to get the variance, then take the square root to get the SD."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Set A: 10, 10, 10, 10. Set B: 1, 5, 15, 19. Both have mean 10. Which has the bigger SD?",
+    "choices": [
+     "Set B",
+     "Set A",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "Which set has values further from 10?",
+    "explain": "Set A's values are all 10, so its SD is 0. Set B's values are 5 to 9 away from 10, so its SD is much bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Every value in a data set is doubled. The SD was 5. What is it now?",
+    "choices": [
+     "10",
+     "5",
+     "20"
+    ],
+    "answer": 0,
+    "hint": "Doubling every value doubles every distance from the mean.",
+    "explain": "Every distance doubles, so the SD doubles: 5 × 2 = 10. 20 would be the variance rule (× 4 = 2²) applied to the SD by mistake."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Scores 3, 4, 5, 6, 7 have SD 1.41. The 7 is changed to 15. What happens to the SD?",
+    "choices": [
+     "It rises to about 4.3",
+     "It stays at 1.41",
+     "It rises to 9.41"
+    ],
+    "answer": 0,
+    "hint": "One far value has a big squared distance.",
+    "explain": "The new mean is 6.6, and 15 is 8.4 away, which squares to 70.56. The SD becomes √(93.2 ÷ 5) ≈ 4.32, about three times bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Priya works out √(total of squares), then divides by n. What went wrong?",
+    "choices": [
+     "She took the root before dividing",
+     "Nothing: it is the same",
+     "She should have subtracted n"
+    ],
+    "answer": 0,
+    "hint": "Is √(32) ÷ 8 the same as √(32 ÷ 8)?",
+    "explain": "Divide first, then root: √(32 ÷ 8) = 2, but √32 ÷ 8 ≈ 0.71. The root must come last."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Two classes have the same mean. Class A has SD 4 marks and class B has SD 12 marks. Which is true?",
+    "choices": [
+     "Class B's marks are more spread out",
+     "Class B did better",
+     "Class A's marks are more spread out"
+    ],
+    "answer": 0,
+    "hint": "SD measures spread, not how high the marks are.",
+    "explain": "A bigger SD means marks sit further from the mean, so class B's marks are more spread out. With equal means, neither class did better on average."
+   }
+  ]
+ }
+}
