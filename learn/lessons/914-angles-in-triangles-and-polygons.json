@@ -1,0 +1,279 @@
+{
+ "topicId": "mt_cdMlC7EpTJ",
+ "title": "Angles in triangles and polygons",
+ "audience": "learner",
+ "keyIdea": "The three angles inside any triangle add up to 180°, the angle on a straight line. Tear off the corners of a paper triangle and they fit together on a line, whatever its size or shape. So a missing angle is 180° minus the two you know: 50° and 60° leave 70°. In an isosceles triangle the two base angles are equal, and in a right-angled triangle the other two angles add up to 90°. A diagonal cuts any quadrilateral into two triangles, so its four angles add up to 360°. A shape with n sides splits into n − 2 triangles from one corner, so its angles add up to (n − 2) × 180°. In a regular polygon every angle is equal: a hexagon has 720° ÷ 6 = 120° in each corner.",
+ "familyTip": "Cut a triangle from scrap paper, tear off its three corners and line them up along the edge of a table. Then try a long thin triangle. Do the corners still make a straight line?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What do the angles of each shape add up to? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "180°",
+    "360°",
+    "540° or more"
+   ],
+   "items": [
+    [
+     "A right-angled triangle",
+     0
+    ],
+    [
+     "A tiny equilateral triangle",
+     0
+    ],
+    [
+     "A long thin triangle",
+     0
+    ],
+    [
+     "A square",
+     1
+    ],
+    [
+     "A kite",
+     1
+    ],
+    [
+     "Any shape with 4 sides",
+     1
+    ],
+    [
+     "A pentagon",
+     2
+    ],
+    [
+     "A regular hexagon",
+     2
+    ],
+    [
+     "A shape with 8 sides",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtriang",
+  "caption": "Flagship lab: drag a triangle's corner as its corners fill a straight line, find missing angles, split a quadrilateral, fan polygons into triangles.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Draw any triangle. Tear off its three corners and put them side by side. They make a straight line, every time. A straight line is 180°, so the three angles of a triangle add up to 180°. A big triangle and a tiny one both make 180°.",
+   "To find a missing angle, add the two you know and take that from 180°. If two angles are 50° and 60°, they make 110°. So the third is 180° − 110° = 70°. Check: 50 + 60 + 70 = 180.",
+   "Some triangles give you a free fact. In an isosceles triangle, two sides are equal and so are the two angles at the bottom. If the top is 40°, the other two share 140°, so each is 70°. In a right-angled triangle, one angle is 90°, so the other two make 90°.",
+   "A shape with 4 sides is a quadrilateral. Draw a line from one corner to the opposite corner. You get two triangles, so the angles add up to 360°. A pentagon makes 3 triangles (540°) and a hexagon makes 4 (720°). In a regular hexagon all six angles are equal: 720° ÷ 6 = 120°."
+  ],
+  "adult": [
+   "Ages 10 to 11. The National Curriculum in England asks Year 6 pupils to find unknown angles in any triangles, quadrilaterals and regular polygons, building on the Year 5 facts about angles at a point and on a straight line. In the US, CCSS 8.G.A.5 asks for an informal argument for the angle sum of a triangle, and 7.G.B.5 uses angle facts to solve for unknown angles.",
+   "The lab moves from seeing the fact to using it. Children drag a triangle's corner while copies of its three angles stay joined on a straight line below, then find missing angles in three triangles. They use the equal base angles of isosceles triangles and the right angle, split a quadrilateral with a diagonal while dragging its corner, and fan a pentagon, hexagon and octagon into triangles from one vertex.",
+   "Common mistakes. Children often add the two known angles and stop (giving 110° instead of 70°), or take them from 360° instead of 180°. With isosceles triangles they copy the top angle onto the base, or forget to halve. Many think bigger triangles have bigger angle sums, or that a quadrilateral's total depends on its shape. For polygons they count n triangles instead of n − 2, or give the exterior angle (360° ÷ n) as the interior angle. Ask for a check that the angles add up to the right total."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Two angles of a triangle are {a}° and {b}°. What is the third angle, in degrees?",
+   "answer": "180-a-b",
+   "hint": "Add the two angles you know, then take the total away from 180.",
+   "explain": "{a} + {b} = {=a+b}, and 180 − {=a+b} = {=180-a-b}. The third angle is {=180-a-b}°.",
+   "params": {
+    "a": [
+     30,
+     80
+    ],
+    "b": [
+     40,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "An isosceles triangle has a top angle of 40°. What is each base angle?",
+   "choices": [
+    "70°",
+    "140°",
+    "40°"
+   ],
+   "answer": 0,
+   "hint": "The two base angles are equal. What do they share?",
+   "explain": "180° − 40° = 140°, shared between two equal base angles: 140 ÷ 2 = 70°. 140° forgets to halve, and 40° copies the top angle."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "An isosceles triangle has a top angle of {=2*a}°. What is each base angle, in degrees?",
+   "answer": "90-a",
+   "hint": "Take the top angle from 180, then halve what is left.",
+   "explain": "180 − {=2*a} = {=180-2*a}. Halve it: each base angle is {=90-a}°.",
+   "params": {
+    "a": [
+     10,
+     40
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A right-angled triangle has an angle of 35°. What is the third angle?",
+   "choices": [
+    "55°",
+    "145°",
+    "35°"
+   ],
+   "answer": 0,
+   "hint": "The right angle is 90°. What do the other two angles make together?",
+   "explain": "90° + 35° = 125°, and 180° − 125° = 55°. 145° forgets the right angle. The two small angles are only equal when the triangle is isosceles."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What do the four angles of a kite add up to?",
+   "choices": [
+    "360°",
+    "180°",
+    "It depends on the kite"
+   ],
+   "answer": 0,
+   "hint": "Draw a diagonal. How many triangles do you get?",
+   "explain": "A diagonal cuts any quadrilateral into two triangles, so the angles add up to 2 × 180° = 360°, whatever its shape."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Three angles of a quadrilateral are {a}°, {b}° and 90°. What is the fourth angle, in degrees?",
+    "answer": "270-a-b",
+    "hint": "The four angles add up to 360°.",
+    "explain": "{a} + {b} + 90 = {=a+b+90}, and 360 − {=a+b+90} = {=270-a-b}. The fourth angle is {=270-a-b}°.",
+    "params": {
+     "a": [
+      60,
+      100
+     ],
+     "b": [
+      70,
+      110
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Two angles of a triangle are 110° and 25°. What is the third?",
+    "choices": [
+     "45°",
+     "135°",
+     "225°"
+    ],
+    "answer": 0,
+    "hint": "Add them, then take the total from 180°.",
+    "explain": "110° + 25° = 135°, and 180° − 135° = 45°. 135° is the two angles added, and 225° is taken from 360°."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Lily says a bigger triangle has bigger angles that add up to more than 180°. Is she right?",
+    "choices": [
+     "No: every triangle's angles add up to 180°",
+     "Yes: big triangles add up to more",
+     "Only if it has a right angle"
+    ],
+    "answer": 0,
+    "hint": "Tear the corners off a big triangle and a small one. What do they make?",
+    "explain": "The corners of any triangle make a straight line, 180°. Making a triangle bigger makes its sides longer but keeps its angles the same."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is each angle of a regular hexagon?",
+    "choices": [
+     "120°",
+     "60°",
+     "180°"
+    ],
+    "answer": 0,
+    "hint": "Split it into triangles from one corner. How many triangles, and how many equal angles?",
+    "explain": "A hexagon splits into 4 triangles: 4 × 180° = 720°. Shared between 6 equal angles: 120°. 60° is the turn at each corner, the outside angle."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What do the angles of a pentagon add up to?",
+    "choices": [
+     "540°",
+     "900°",
+     "360°"
+    ],
+    "answer": 0,
+    "hint": "From one corner, a shape with n sides makes n − 2 triangles.",
+    "explain": "A pentagon makes 5 − 2 = 3 triangles, and 3 × 180° = 540°. 900° counts 5 triangles, and 360° is the total for four sides."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "An isosceles triangle has base angles of 65°. What is the top angle?",
+    "choices": [
+     "50°",
+     "115°",
+     "65°"
+    ],
+    "answer": 0,
+    "hint": "Both base angles are 65°. Take both away from 180°.",
+    "explain": "180° − 65° − 65° = 50°. 115° only takes one base angle away. Only an equilateral triangle has three equal angles."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Each angle of an equilateral triangle is…",
+    "choices": [
+     "60°",
+     "90°",
+     "180°"
+    ],
+    "answer": 0,
+    "hint": "All three angles are equal and they add up to 180°.",
+    "explain": "180° ÷ 3 = 60°, so each angle of an equilateral triangle is 60°."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is each angle of a regular octagon?",
+    "choices": [
+     "135°",
+     "45°",
+     "1080°"
+    ],
+    "answer": 0,
+    "hint": "8 sides make 6 triangles. Find the total, then share it between 8 angles.",
+    "explain": "6 × 180° = 1080° in total, and 1080° ÷ 8 = 135°. 1080° is the total, not each angle, and 45° is the turn at each corner."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A right-angled triangle has an angle of {a}°. What is the third angle, in degrees?",
+    "answer": "90-a",
+    "hint": "The right angle uses 90° of the 180°.",
+    "explain": "180 − 90 − {a} = {=90-a}. The third angle is {=90-a}°.",
+    "params": {
+     "a": [
+      15,
+      75
+     ]
+    }
+   }
+  ]
+ }
+}
