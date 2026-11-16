@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the AQA A-level Further Mathematics (7367) and OCR A Further Mathematics (Y532) specifications for discrete random variables, which define Var(X) = E(X²) − [E(X)]² and Var(aX + b) = a² Var(X). Every number was recomputed in Node with VXART.stats: X = 1, 2, 3 with P = 0.2, 0.5, 0.3 gives E(X) = 2.1, E(X²) = 4.9, Var(X) = 0.49, σ = 0.7; squared deviations 0.242 + 0.005 + 0.243 = 0.49; Y = 2X + 5 gives E = 9.2 and Var = 1.96; a fair dice gives E = 3.5, E(D²) = 91/6 ≈ 15.17, Var = 35/12 ≈ 2.92, σ ≈ 1.71; on 0–4 with mean 2 the targets are Var 0 (all at 2), Var 4 (half at 0, half at 4, the maximum) and Var 1 (half at 1, half at 3). Probabilities are whole tenths so the targets are exact. Parameterised answers (a²v, d², v) were enumerated by the validator."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the slips reported in AQA and OCR examiner reports on discrete random variables: using [E(X)]² for E(X²), subtracting E(X) instead of its square, reversing the subtraction (a negative variance), forgetting the probability weights, adding unsquared deviations (getting 0), quoting the variance as the standard deviation or rooting too early, and treating variance like a mean under a linear change (Var(3X + 5) = 3Var(X) + 5). Each wrong tile and challenge answer carries a tag with its own message."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 11.8% (shared scaffolding with flag_qhier.js), far under 30%. 877 Expected value balances a beam at E(X) and 913 Standard deviation works with a data set; only this lab drags probability mass on 0–4 while E(X) is held and the variance read off live, contrasts E(X²) with [E(X)]² on a table and a fair dice, checks the deviation form against it, and shows X and 2X + 5 as two bar charts with their variances."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Four tasks, a summary and a challenge: holding E(X) = 2 while making the variance 0, 4 and 1 shows that variance is spread about the mean, not the mean; the tables build E(X), then E(X²), then Var(X) in the order the formula needs; the deviation column shows the same 0.49 and why squaring matters; the two charts show a shift moving the bars and a ×2 stretching them, so Var(2X + 5) = 4 × 0.49. Banners give each rule only after the learner reaches it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options: Var(X) when P(X = 2) = 1 ('2', the value itself, or '4'), whether E(X²) equals [E(X)]² ('Always', 'Never') and Var(2X + 5) when Var(X) = 0.49 ('0.98' doubling, '5.98' treating variance like a mean). The tasks disprove each wrong option and A.reveal names the learner's pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating challenge questions with distinct wrong-answer tags (sdNotVar, noSubtract, noSquare, order, linearVar, scaleOnly, squaredAgain, halved, eqAlways, shiftVar, meanIsSpread), plus plainMean, sumP, squareMean, noProb, middleValue, varNotSd, rootFirst, noSquareDev, noWeight, shiftOnly, timesThen, sLinear and sScale in the lab steps. Each names the slip and gives the fix, e.g. 'Doubling every value doubles each deviation, so each squared deviation is 4 times as big: Var(2X) = 4 × 0.49 = 1.96, not 2 × 0.49.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 4.1 and adult 5.4 (limits 6.5 and 9.5). The learner text introduces each formula with one worked example (2.1, 4.9, 0.49) and keeps sentences short; symbols E(X), E(X²), μ and σ are defined where first used. Canvas text is short headings, table cells and readouts."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with no filler patterns; the highest explanation overlap with any lesson is 0.2% (913 Standard deviation). Each kid paragraph does one job (what variance measures, the deviation form, the quick formula with a worked example, transformations) and every lab message confirms a result or names a slip."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step. Bars on 0–4 are about 50 px wide at 360 px and a press anywhere in a bar's column (plus 20 px above) grabs it; after the first screenshots overlapped the readout and tick labels, the μ label moved below the axis and the readout below it; the two transformation charts were shortened so both fit with the answer tiles; the six-column dice table fits at 360 px."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag and tap has a button twin: '+' and '−' a tenth for each of the five values, and a button per answer tile in the table, deviation and transformation steps. The canvas aria-label is rewritten after every action with the mass in tenths on each value, E(X), Var(X) and the total probability, or the table values, the question and the choices. The browser gate runs axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes."
+  }
+ },
+ "sources": [
+  "AQA (2017) A-level Further Mathematics 7367 specification, discrete random variables",
+  "OCR (2017) A Level Further Mathematics A H245 specification, Y532 Statistics: discrete random variables",
+  "AQA and OCR examiner reports on discrete random variable questions (2019–2023)",
+  "Common Core State Standards for Mathematics (2010), HSS-MD.A.1 and HSS-MD.A.2"
+ ]
+}
