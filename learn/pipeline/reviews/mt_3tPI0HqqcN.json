@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 10,
+   "evidence": "Uses the exact international mile, 1.609344 km (1959 yard and pound agreement, NIST SP 811), for every scale position, so 5 mi reads 8.05 km and the rule is shown as an estimate. Race distances in the order task are computed from the exact factor (3 mi 4.83 km, 6 mi 9.66 km, 15 mi 24.14 km). The marathon item uses 42.2 km / 26.2 miles."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: thinking a km is longer (step 0 prediction), converting the wrong way so 40 miles becomes 25 km (step 1 prediction, Sam item, 'flip' challenge tag), additive reasoning 5→8 means +3 (Mia item, 'addfive' tag), 1.6 km read as 1 km 6 m (m8), assuming 6 miles beats 10 km (race prediction)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Built on a double number line with a mile scale and km scale at true proportion, 5-mile/8-km paired blocks, a one-mile bar against a 0–2 km ruler in tenths, operation chains whose wrong choice shows the absurd result, and a shared km track for mixed-unit races. Lab gate similarity under 30%; nothing here could be relabelled for another unit pair without changing the 5 : 8 logic."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner finds 5 mi ≈ 8 km themselves by sliding until ticks align, then builds 40 → 64 by stacking, then derives 1.6 by pinning one mile. The chain step shows what a wrong-way conversion would produce, and the race step forces conversion to a common unit before ordering."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions, each with a tempting wrong answer the lab disproves: 'a kilometre is longer', '40 miles is about 25 km', 'one mile is about 0.6 km', 'km to miles makes the number bigger', 'the 6-mile run is longer'. The step texts were rewritten so they no longer give the prediction answer away."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with tagged distractors and their own messages: flip (wrong way round), addfive (adding instead of scaling), sixmi and same (6 miles is 9.6–9.7 km), exact (a mile is 1,609 m not 1,600), half (where 1.6 comes from), bigger (fewer miles for the same distance)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text FK grade 2.0 and adult 4.7 (limits 6.5 and 9.5). Plain sentences; the rule is stated once and then reused with the same words (× 8 then ÷ 5, ÷ 8 then × 5)."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler gate passed. Each kid paragraph carries one idea: which is longer, scaling the rule, where 1.6 comes from, which way round with the race comparison. No repeated template text."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked iPhone 13 and desktop screenshots of every step after Show me (/workspace/wn-run-1116-1146/.tmp_run/shots, mi-*). The double scale labels 0–10 miles and 0–16 km stay readable at 390 px; the drag handles are 32 × 30 px with the whole scale as a hit area; chain cards are half-width, 90 px tall; race cards 2 per row at 52 px. Every action has a button (± 0.5 mile, add block, ± 0.1 km / Check, chains, each race)."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: all five tasks complete with Show me, challenge shown, axe WCAG 2.1 AA clean in light and dark themes, no console errors. The canvas aria-label reads the marker miles and km, blocks and totals, pin position, the current problem and chains, or the races placed after every action."
+  }
+ },
+ "sources": [
+  "NIST SP 811 (2008) Guide for the Use of the International System of Units, Appendix B: 1 mile (international) = 1.609344 km",
+  "National Bureau of Standards (1959) Refinement of values for the yard and the pound",
+  "Department for Education (2013) Mathematics programmes of study, Year 6 measurement: convert between miles and kilometres",
+  "World Athletics: marathon distance 42.195 km"
+ ]
+}
