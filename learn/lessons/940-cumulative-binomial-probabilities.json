@@ -1,0 +1,64 @@
+{
+ "topicId": "mt_kzSXAYw5e9",
+ "title": "Cumulative binomial probabilities",
+ "audience": "learner",
+ "keyIdea": "For X ~ B(n, p), a cumulative probability P(X ≤ k) adds up every bar from 0 to k, and it is what tables and calculators give you. Because X takes only whole numbers, translate the words into the exact values first: 'fewer than 6' is X ≤ 5, 'more than 3' is X ≥ 4. Then use the complement for an upper tail, P(X ≥ k) = 1 − P(X ≤ k − 1), and a difference for a range, P(a ≤ X ≤ b) = P(X ≤ b) − P(X ≤ a − 1).",
+ "familyTip": "Ask your teenager to explain the difference between 'at least 4' and 'more than 4' using a dice game or a number of goals scored. Then ask which they would subtract from 1 to get each one. Saying the values out loud, 4, 5, 6 and so on, catches most mistakes.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "X ~ B(12, 0.3). Which expression gives each event? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": ["P(X ≤ 4)", "1 − P(X ≤ 4)", "P(X ≤ 4) − P(X ≤ 1)"],
+   "items": [["at most 4", 0], ["fewer than 5", 0], ["at least 5", 1], ["more than 4", 1], ["from 2 to 4 inclusive", 2], ["more than 1 but fewer than 5", 2]]
+  }
+ },
+ "lab": {
+  "type": "flagbcum",
+  "caption": "Flagship lab: turn words into whole-number values, find tails and ranges from a cumulative chart, drag p and translate real situations.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "A binomial count X can only be a whole number: 0, 1, 2 and so on up to n. So the words in a question matter. 'At least 4' keeps 4. 'More than 4' does not. 'Fewer than 6' means up to 5. Write the values out before you do anything else.",
+   "A cumulative probability, P(X ≤ k), adds every bar from 0 up to k. Your calculator and the tables give this one. For X ~ B(12, 0.3), P(X ≤ 3) = 0.4925.",
+   "For an upper tail, use the complement. Everything adds to 1, so P(X ≥ 4) = 1 − P(X ≤ 3) = 0.5075. Take away only the values you do not want, which stop at 3, not 4.",
+   "For a range, subtract two cumulative values. P(3 ≤ X ≤ 7) keeps 3 to 7, so it is P(X ≤ 7) − P(X ≤ 2). You take away up to 2, because 3 is in the range and must stay."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is in the A level Mathematics content for England (Statistics: calculate probabilities using the binomial distribution, including cumulative probabilities, using a calculator or tables) and supports later work on hypothesis tests, where critical regions are found from these tails.",
+   "Key terms: binomial distribution, X ~ B(n, p), cumulative distribution function P(X ≤ k), complement, upper and lower tail, inclusive and strict inequality, discrete random variable. The lab uses B(12, 0.3), with P(X ≤ 2) = 0.2528, P(X ≤ 3) = 0.4925, P(X ≤ 5) = 0.8822 and P(X ≤ 7) = 0.9905 to 4 decimal places.",
+   "Common mistakes, all at the boundaries. Writing P(X ≥ 4) as 1 − P(X ≤ 4). Treating 'fewer than 6' as X ≤ 6. Subtracting P(X ≤ a) instead of P(X ≤ a − 1) for a range, which drops the lowest value. Taking the lower tail when the question asks for the upper one. Students should list the values in words before choosing a calculator function, and check that the answer is between 0 and 1."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "X ~ B(15, 0.4). Which expression gives P(X ≥ 6)?", "choices": ["1 − P(X ≤ 5)", "1 − P(X ≤ 6)", "P(X ≤ 6)"], "answer": 0,
+   "hint": "At least 6 keeps 6. Which values do you not want?", "explain": "You do not want 0 to 5, so P(X ≥ 6) = 1 − P(X ≤ 5). 1 − P(X ≤ 6) would also remove 6."},
+  {"type": "numeric", "id": "p2", "prompt": "X ~ B(20, p). 'Fewer than {k} successes' is P(X ≤ c). What is c?", "answer": "k-1", "hint": "Fewer than {k} leaves {k} out. What is the largest whole number kept?", "explain": "Fewer than {k} means 0 up to {=k-1}, so c = {=k-1}.", "params": {"k": [3, 15]}},
+  {"type": "numeric", "id": "p3", "prompt": "X ~ B(20, p). P(X ≥ {k}) = 1 − P(X ≤ c). What is c?", "answer": "k-1", "hint": "At least {k} keeps {k}. Take away only the values below it.", "explain": "The unwanted values are 0 to {=k-1}, so P(X ≥ {k}) = 1 − P(X ≤ {=k-1}).", "params": {"k": [2, 16]}},
+  {"type": "mc", "id": "p4", "prompt": "X ~ B(12, 0.3), P(X ≤ 7) = 0.9905 and P(X ≤ 2) = 0.2528. Find P(3 ≤ X ≤ 7).", "choices": ["0.7377", "0.7432", "1.2433"], "answer": 0,
+   "hint": "Keep 3 to 7: subtract the cumulative value just below 3.", "explain": "P(X ≤ 7) − P(X ≤ 2) = 0.9905 − 0.2528 = 0.7377. A probability over 1 is a sign of adding instead of subtracting."},
+  {"type": "mc", "id": "p5", "prompt": "X ~ B(10, 0.5). Which expression gives P(2 < X < 7)?", "choices": ["P(X ≤ 6) − P(X ≤ 2)", "P(X ≤ 7) − P(X ≤ 2)", "P(X ≤ 6) − P(X ≤ 3)"], "answer": 0,
+   "hint": "Strict on both sides: list the values kept.", "explain": "2 < X < 7 keeps 3, 4, 5, 6, so it is P(X ≤ 6) − P(X ≤ 2)."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "X ~ B(12, 0.3) and P(X ≤ 5) = 0.8822. Find P(X > 5).", "choices": ["0.1178", "0.8822", "0.0792"], "answer": 0,
+    "hint": "More than 5 leaves 5 out. It is the complement of X ≤ 5.", "explain": "P(X > 5) = 1 − P(X ≤ 5) = 1 − 0.8822 = 0.1178."},
+   {"type": "numeric", "id": "m2", "prompt": "P({a} ≤ X ≤ {b}) = P(X ≤ {b}) − P(X ≤ c). What is c?", "answer": "a-1", "hint": "The value {a} is in the range. Take away only what is below it.", "explain": "Values below the range are 0 to {=a-1}, so c = {=a-1}.", "params": {"a": [2, 6], "b": [8, 12]}},
+   {"type": "mc", "id": "m3", "prompt": "'No more than 3 faulty' when X counts faulty items is…", "choices": ["P(X ≤ 3)", "P(X < 3)", "1 − P(X ≤ 3)"], "answer": 0,
+    "hint": "No more than 3 means 3 or fewer.", "explain": "No more than 3 is 0, 1, 2 or 3, so P(X ≤ 3). P(X < 3) leaves 3 out."},
+   {"type": "numeric", "id": "m4", "prompt": "X ~ B(n, p) with n = {n}. 'More than {k}' is X ≥ c. What is c?", "answer": "k+1", "hint": "More than {k} leaves {k} out, and X is a whole number.", "explain": "More than {k} means {=k+1} or more, so c = {=k+1}.", "params": {"n": [15, 25], "k": [3, 10]}},
+   {"type": "mc", "id": "m5", "prompt": "With n = 12 fixed, p rises from 0.3 to 0.5. What happens to P(X ≤ 3)?", "choices": ["It falls", "It rises", "It stays the same"], "answer": 0,
+    "hint": "A bigger p moves the distribution towards larger counts.", "explain": "The bars move right, so the lower tail shrinks: P(X ≤ 3) falls from 0.4925 to about 0.0730."},
+   {"type": "mc", "id": "m6", "prompt": "A student writes P(X ≥ 4) = 1 − P(X ≤ 4). What is the slip?", "choices": ["They have removed 4, which should be kept", "They should have added instead", "Nothing, it is right"], "answer": 0,
+    "hint": "List the values in X ≥ 4 and in X ≤ 4. Which value is in both?", "explain": "4 is in 'at least 4', so subtract only P(X ≤ 3): P(X ≥ 4) = 1 − P(X ≤ 3)."},
+   {"type": "mc", "id": "m7", "prompt": "X ~ B(12, 0.3), P(X ≤ 0) = 0.0138. Find P(at least one success).", "choices": ["0.9862", "0.0138", "0.9138"], "answer": 0,
+    "hint": "At least one is everything except zero.", "explain": "P(X ≥ 1) = 1 − P(X = 0) = 1 − 0.0138 = 0.9862."},
+   {"type": "mc", "id": "m8", "prompt": "Which is the same as P(X < 9) for a binomial X?", "choices": ["P(X ≤ 8)", "P(X ≤ 9)", "1 − P(X ≤ 8)"], "answer": 0,
+    "hint": "X is a whole number. What is the largest value below 9?", "explain": "X < 9 means 8 or fewer, so P(X < 9) = P(X ≤ 8)."}
+  ]
+ }
+}
