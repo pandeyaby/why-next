@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the USGS Earthquake Hazards Program pages 'Earthquake Magnitude, Energy Release, and Shaking Intensity' (each whole-number step ≈ 10× ground-motion amplitude and ≈ 32× energy; magnitude is one value per quake, intensity varies by place), 'The Modified Mercalli Intensity Scale' (IV dishes and windows disturbed, VI felt by all with objects off shelves, VII difficult to stand and poorly built structures damaged, VIII chimneys fall and ordinary buildings considerably damaged) and USGS yearly counts (M4–4.9 ≈ 13,000 est., M5–5.9 ≈ 1,319, M6–6.9 ≈ 134, M7–7.9 ≈ 15). Richter (1935) defined local magnitude so that 1 µm at 100 km is 0, giving 1 mm = 3, 10 mm = 4, 100 mm = 5. 10^1.5 = 31.6 ≈ 32; two steps = 1000; three steps ≈ 32,000. The town intensities round a magnitude 6.5 quake are flagged as a simple model in the adult notes."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the misconceptions catalogued by Francek (2013, 500+ geoscience misconceptions) and USGS teaching notes: the magnitude scale read as linear ('magnitude 6 is twice magnitude 3'), the ×10 amplitude confused with the energy step, magnitude thought to fall with distance, the Richter scale thought to measure damage, and the seismometer imagined as moving with the ground. Each is a prediction distractor, a refused action (wrong M for a trace, 6.5 refused as 'about 3' in a far town, counts in the wrong band) or a tagged challenge answer."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 12.4% (shared panel and challenge scaffolding), under 30%. 583 What is an earthquake (flagearthq) covers plates, shaking and Drop-Cover-Hold; this lab instead shakes a seismometer frame under a still heavy pen, matches 1/10/100 mm seismograms to magnitudes 3/4/5, fills a 1000-square energy grid from a magnitude dial, visits four towns (one on soft mud) around one quake, and places USGS yearly counts on magnitude bands."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge: why the heavy pen records the shaking; ×10 wiggle = +1 magnitude; ×32 energy per step so two steps ≈ 1000; one magnitude but many intensities, weaker with distance and stronger on soft ground; small quakes common, big ones rare. The banner states each rule only after the learner's own recording, matching, dialling or visiting shows it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked predictions with tempting wrong options: which part of the seismometer stays still ('the frame', 'the paper'), magnitude for a 10× taller wiggle ('10 more', '10 times the number'), energy from 5 to 6 ('2 times', '1.2 times'), what differs between near and far towns ('the magnitude'), and which sizes are more common ('magnitude 7', 'about the same'). A.reveal names the learner's pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with eight distinct wrong-answer messages: linear reading of magnitude, ratio reading, energy confused with wiggle height or 'one more unit', magnitude changing with place, intensity versus magnitude, three ×10 steps miscounted as one, the 1000-for-1000 linear slip, and big quakes thought common. Each names the slip and gives the correct reasoning (e.g. '1000 mm is 1 mm × 10 × 10 × 10: three steps, so 3 + 3 = magnitude 6')."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 3.6 and adult 7.5 (limits 6.5 and 9.5). Kid paragraphs walk the seismometer, magnitude, energy and intensity in short sentences; Roman numerals and 'epicentre' are explained in place. Canvas labels are one to four words."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed: no filler patterns and explanation overlap is 0.0% with every lesson, including 583 What is an earthquake and the volcano and Ring of Fire lessons. Each kid paragraph does one job: the recorder, magnitude from wiggles, energy steps, intensity and frequency."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. Fixes from the first sheets: the shake chips were hidden under the feedback box and now sit straight under the ground line; 'paper' and 'frame' labels collided with the ground and the frame bar and were moved; the distance rings ran outside the map and are now clipped; intensity numerals overlapped the town houses and now sit above-right; the magnitude 4 bar ran into its count label and is shorter; the dial's magnitude readout moved into a middle chip."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap has a button twin (Gentle/Strong shake and Trace 1/2; Seismogram A–C and M 3–6; Magnitude −1/+1 and the three answers; Town A–D and D: 6.5 / about 3 / about 8; each count card and Band M 4–7). The canvas aria-label is rewritten after every action with the recorded traces, each seismogram's height and magnitude, the dial and energy, each town's intensity or each card's band. The browser gate runs axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "USGS Earthquake Hazards Program: Earthquake Magnitude, Energy Release, and Shaking Intensity; The Modified Mercalli Intensity Scale; Earthquake Facts & Statistics (usgs.gov)",
+  "Richter, C. F. (1935) An instrumental earthquake magnitude scale, Bulletin of the Seismological Society of America 25(1)",
+  "NGSS Lead States (2013) Next Generation Science Standards 4-ESS2-2, 4-ESS3-2 and MS-ESS3-2, nextgenscience.org",
+  "Francek, M. (2013) A compilation and review of over 500 geoscience misconceptions, International Journal of Science Education 35(1)"
+ ]
+}
