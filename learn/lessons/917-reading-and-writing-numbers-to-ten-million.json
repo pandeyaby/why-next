@@ -1,0 +1,274 @@
+{
+ "topicId": "mt_Gag_h98jWP",
+ "title": "Reading and writing numbers to 10,000,000",
+ "audience": "learner",
+ "keyIdea": "Big numbers are read in groups of three digits, counted from the right: the ones group, the thousands group and the millions group. Commas mark the groups, so 4302561 is written 4,302,561. Read each group as a number from 0 to 999 and then say its name: four million, three hundred and two thousand, five hundred and sixty-one. To write a number from words, give every group three digits and hold empty places with 0: six million, fifty thousand and nine is 6,050,009. A digit's value is the digit times its place, so the 7 in 7,045,200 is worth 7,000,000. To compare, a number with more digits is bigger; with the same number of digits, the first place from the left that differs decides.",
+ "familyTip": "Find big numbers in the news, on a football stadium or in a country's population. Take turns reading them aloud in groups of three, then cover one digit and ask what it is worth.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What is the 5 worth in each number? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "5,000,000",
+    "50,000",
+    "500"
+   ],
+   "items": [
+    [
+     "5,210,000",
+     0
+    ],
+    [
+     "5,000,001",
+     0
+    ],
+    [
+     "5,999,999",
+     0
+    ],
+    [
+     "1,250,000",
+     1
+    ],
+    [
+     "9,056,300",
+     1
+    ],
+    [
+     "3,452,000",
+     1
+    ],
+    [
+     "2,100,500",
+     2
+    ],
+    [
+     "8,000,501",
+     2
+    ],
+    [
+     "6,743,598",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmil",
+  "caption": "Flagship lab: comma groups of three, say each group, build numbers from words with zeros, find a digit's value, order seven-digit numbers.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A long number like 4302561 is hard to read in one go. So we split it into groups of three digits. Start at the right, at the ones, and count three digits. Put a comma. Count three more and put another comma. Now it is 4,302,561.",
+   "Each group has a name. The group on the right is the ones. The middle group is the thousands. The group on the left is the millions. To say the number, read each group as a number up to 999, then say its name: four million, three hundred and two thousand, five hundred and sixty-one.",
+   "To write a number from words, fill each group with three digits. Fifty thousand is the group 050. If a place has nothing in it, write a 0 there. So six million, fifty thousand and nine is 6,050,009. Without the zeros, the 5 and the 9 slide into the wrong places.",
+   "Each place is worth ten times the place to its right. In 3,333,333 every digit is a 3, but they are worth different amounts. The 3 in the ten-thousands place is worth 30,000. The 3 on the left is worth 3,000,000. To compare two numbers, count the digits first. 999,999 has six digits and no millions, so it is smaller than 1,000,000. If two numbers have the same number of digits, compare from the left. The first place that is different decides."
+  ],
+  "adult": [
+   "Ages 10 to 11. The National Curriculum in England asks Year 6 pupils to read, write, order and compare numbers up to 10,000,000 and to determine the value of each digit. In the US, CCSS 4.NBT.A.2 covers, for numbers up to 1,000,000, reading and writing multi-digit numbers with base-ten numerals, number names and expanded form, and comparing them with >, = and <.",
+   "The lab works with the three groups (often called periods): ones, thousands and millions. Children tap commas into 4302561, 10000000 and 7045200, choose the words for each group of three numbers, build 6,050,009 and 3,400,070 from words on a seven-column chart, find a digit by its value in 3,333,333 and 5,050,505, and order 456,000, 4,506,000, 4,560,000 and 4,605,000.",
+   "Common mistakes. Children often count digits from the left when they place commas, or read each digit on its own instead of reading a group as one number. When writing from words they leave out zeros (writing 6,509 for six million, fifty thousand and nine) or put a zero in the wrong place. Many judge the size of a number by its first digit or by how many large digits it has, rather than by its number of digits and then by place. British English says 'and' inside a group (three hundred and two thousand); American English usually leaves it out. Both are correct."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where do the commas go in 5208416?",
+   "choices": [
+    "5,208,416",
+    "520,841,6",
+    "52,08,416"
+   ],
+   "answer": 0,
+   "hint": "Start at the ones, on the right, and count three digits for each comma.",
+   "explain": "From the right: 416 is the ones group, 208 is the thousands group and 5 is the millions group, so it is 5,208,416."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is {a} million, {b} thousand and {c} written as a number? Type it without commas.",
+   "answer": "a*1000000+b*1000+c",
+   "hint": "Give each group three digits: {a} million, then the thousands group, then the ones group.",
+   "explain": "{a} million is {a}, then {b} thousand fills the thousands group and {c} fills the ones group. Together that is {=a*1000000+b*1000+c}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     10,
+     99
+    ],
+    "c": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the value of the 8 in 2,830,415?",
+   "choices": [
+    "800,000",
+    "8",
+    "80,000"
+   ],
+   "answer": 0,
+   "hint": "Which place is the 8 in? Count from the ones on the right.",
+   "explain": "The 8 is in the hundred-thousands place, so it is worth 8 × 100,000 = 800,000."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many thousands are in {a},000,000?",
+   "answer": "a*1000",
+   "hint": "One million is 1,000 thousands.",
+   "explain": "1,000,000 is 1,000 thousands, so {a},000,000 is {a} × 1,000 = {=a*1000} thousands.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which number is the largest?",
+   "choices": [
+    "3,100,000",
+    "999,999",
+    "3,099,999"
+   ],
+   "answer": 0,
+   "hint": "Count the digits first, then compare from the left.",
+   "explain": "999,999 has no millions, so it is the smallest. 3,100,000 and 3,099,999 both have 3 millions; then 1 hundred-thousand beats 0, so 3,100,000 is the largest."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is 7,045,200 in words?",
+    "choices": [
+     "seven million, forty-five thousand, two hundred",
+     "seven million, four hundred and fifty thousand, two hundred",
+     "seventy million, forty-five thousand, two hundred"
+    ],
+    "answer": 0,
+    "hint": "Read the middle group, 045, as one number.",
+    "explain": "7 is the millions group, 045 is forty-five thousand and 200 is two hundred: seven million, forty-five thousand, two hundred."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Mia writes four million and sixty as 4,60. What should it be?",
+    "choices": [
+     "4,000,060",
+     "4,060",
+     "4,600,000"
+    ],
+    "answer": 0,
+    "hint": "Every group needs three digits, and the thousands group is empty.",
+    "explain": "The thousands group is empty, so it is 000, and sixty is 060 in the ones group: 4,000,060."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "What is the value of the {a} in {a},300,000? Type it without commas.",
+    "answer": "a*1000000",
+    "hint": "The first group of a seven-digit number is the millions.",
+    "explain": "The {a} is in the millions place, so it is worth {a} × 1,000,000 = {=a*1000000}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which list is in order from smallest to largest?",
+    "choices": [
+     "456,000 < 4,506,000 < 4,560,000",
+     "4,560,000 < 4,506,000 < 456,000",
+     "4,506,000 < 456,000 < 4,560,000"
+    ],
+    "answer": 0,
+    "hint": "456,000 has fewer digits than the others.",
+    "explain": "456,000 has no millions, so it is smallest. 4,506,000 and 4,560,000 have the same millions and hundred-thousands; 0 ten-thousands is less than 6, so 4,506,000 comes next."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Write {a} million, {b} hundred thousand and {c} as a number. Type it without commas.",
+    "answer": "a*1000000+b*100000+c",
+    "hint": "{b} hundred thousand is {b} in the hundred-thousands place.",
+    "explain": "{a} million, then {b} in the hundred-thousands place, zeros in the empty places, and {c} in the ones: {=a*1000000+b*100000+c}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Leo says 999,999 is bigger than 1,000,000 because it has more nines. Is he right?",
+    "choices": [
+     "No: 1,000,000 has more digits, so it is bigger",
+     "Yes: 9 is bigger than 1",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "Count the digits in each number.",
+    "explain": "1,000,000 has seven digits and 999,999 has six. A number with more digits is bigger, so 1,000,000 is larger by 1."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In 3,333,333, what is the 3 in the ten-thousands place worth?",
+    "choices": [
+     "30,000",
+     "3,000",
+     "300,000"
+    ],
+    "answer": 0,
+    "hint": "Count from the right: ones, tens, hundreds, thousands, ten-thousands.",
+    "explain": "The ten-thousands place is the fifth from the right, so that 3 is worth 3 × 10,000 = 30,000."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is six million, fifty thousand and nine?",
+    "choices": [
+     "6,050,009",
+     "6,509",
+     "6,500,009"
+    ],
+    "answer": 0,
+    "hint": "Fifty thousand fills the thousands group as 050.",
+    "explain": "6 millions, then 050 thousands, then 009 ones: 6,050,009. Leaving out zeros gives 6,509, which is far too small."
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England Year 6 number and place value statement (read, write, order and compare numbers up to 10,000,000 and determine the value of each digit) and CCSS 4.NBT.A.2. Every lab number was recomputed: commas 4,302,561, 10,000,000 and 7,045,200 (groups of three from the ones); words for 4,302,561, 7,045,200 and 2,000,060 (an empty thousands group is not spoken); 6,050,009 and 3,400,070 from words; the 3 worth 30,000 is the fifth digit from the right of 3,333,333, the 5 worth 500 is the third from the right of 5,050,505, the 7 in 7,045,200 is 7,000,000; order 456,000 < 4,506,000 < 4,560,000 < 4,605,000. The adult text notes British 'and' inside a group versus American usage. Parameterised answers (a·10⁶ + b·10³ + c, a·1000, a·10⁶, a·10⁶ + b·10⁵ + c) were enumerated by the validator."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the place-value errors documented by Ryan and Williams (2007) and the NCETM Year 6 place-value guidance: grouping digits from the left, reading digits one by one, dropping placeholder zeros (6,509 for six million, fifty thousand and nine), shifting a zero (four hundred and fifty thousand for 045 thousand), saying 'zero thousand', confusing a digit with its value, and judging size by the leading digit or number of nines (999,999 vs 1,000,000). Wrong comma taps, wrong word tiles, wrong digit taps, wrong builds and wrong ordering taps each get a message for that slip."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 9.2% (shared scaffolding with flag_quad4.js), far under 30%. 881 Numbers to 10,000 uses a 0–10,000 number line, 610 Place value of each digit and 899 Comparing Large Numbers stop at four digits. Only this lab has the learner tap commas into gaps counted from the ones, read a number period by period with a word tile per group, build seven-digit numbers in a column chart that names the failing group, and find a digit by value in 3,333,333 where every digit is the same."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge, in the order the topic is built: commas make groups of three from the right; each group is read as a number to 999 and then named; writing from words fills every group with three digits and zeros; a digit's value is the digit times its place; more digits means bigger, then compare from the left. The banner states each rule only after the learner's own taps reach it, and the groups take their colours only once the commas are right."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions with tempting wrong options: comma placement for 4302561 ('430,256,1' grouping from the left, '43,02,561'), the middle group of 4,302,561 ('thirty-two thousand', 'three hundred and twenty thousand'), six million, fifty thousand and nine ('6,509', '6,500,009'), and 456,000 vs 4,056,000 ('4,056,000' because 456 looks bigger). A.reveal names the learner's pick when the task completes."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating challenge questions with twelve distinct wrong-answer tags (grpLeft, bigPlace, dropZero, zeroShift, digitRead, periodName, sayZero, noZeros, faceValue, placeSlip, moreDigits, nextPlace, biggerDigits). Each names the slip and gives the fix, e.g. 'Zeros were left out, so the digits slid into the wrong places. Write every group with three digits: 2 million, then 040 thousand, then 008.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 2.2 and adult 6.2 (limits 6.5 and 9.5). Kid paragraphs use short sentences and one idea each (groups, names, zeros, value, comparing); 'group', 'place' and 'value' are shown on the chart before they are used in words. Canvas text is short: digits, group names and one-line instructions."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with no filler patterns; the highest explanation overlap with any lesson is 0.8% (915 Coordinates in four quadrants). Each kid paragraph does one job and each lab message either confirms a rule or names a slip; there is no intro or summary text."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step. Seven digit boxes fit at 360 px with extra space and a comma between groups; the comma step uses even spacing and neutral boxes so the grouping is not given away; comma hit zones span half a digit on each side of every gap; word tiles are full width; the canvas height was cut from 1.25 to 1.08 of its width after the first screenshots showed unused space."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every tap has a button twin: one button per comma gap, one per word tile, a +1 button for each of the seven columns plus Check, one per digit, and one per number card when ordering. The canvas aria-label is rewritten after every action with the digits, commas placed, words said so far, the column reading, the question and the order so far. The browser gate runs axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) National Curriculum in England: mathematics programmes of study, Year 6 number and place value",
+  "Common Core State Standards for Mathematics (2010), 4.NBT.A.1 and 4.NBT.A.2",
+  "NCETM (2017) Teaching for Mastery: Year 6 place value guidance (reading numbers in periods)",
+  "Ryan, J. and Williams, J. (2007) Children's Mathematics 4–15: Learning from Errors and Misconceptions, Open University Press"
+ ]
+}
