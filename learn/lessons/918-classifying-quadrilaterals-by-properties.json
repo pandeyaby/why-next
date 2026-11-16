@@ -1,0 +1,175 @@
+{
+ "topicId": "mt_liIW336odh",
+ "title": "Classifying shapes by properties",
+ "audience": "learner",
+ "keyIdea": "Quadrilaterals are named by their properties: how many pairs of sides are parallel, how many right angles they have, and which sides are equal. A parallelogram has two pairs of parallel sides. A rectangle is a parallelogram with four right angles. A rhombus is a parallelogram with four equal sides. A square has four right angles and four equal sides, so it is a rectangle and a rhombus at the same time. Every property of a family belongs to the shapes below it: all squares are rectangles, but not all rectangles are squares. Turning a shape round does not change its properties, so a square on its corner is still a square.",
+ "familyTip": "Cut a square, a long rectangle, a leaning rhombus and a parallelogram from card. Play 'I have a shape with…': one person gives one property at a time, and the other removes every shape that does not fit.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What is the most exact name for each shape? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Square",
+    "Rectangle (not a square)",
+    "Rhombus (not a square)"
+   ],
+   "items": [
+    ["4 equal sides, 4 right angles", 0],
+    ["A square turned on its corner", 0],
+    ["A rhombus with a right angle", 0],
+    ["4 right angles, sides 6 cm and 2 cm", 1],
+    ["A parallelogram with a right angle and unequal sides", 1],
+    ["A door shape: 4 right angles, long and thin", 1],
+    ["4 equal sides, angles 60° and 120°", 2],
+    ["A diamond shape with no right angles and equal sides", 2],
+    ["A parallelogram with all sides 5 cm and no right angle", 2]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagqhier",
+  "caption": "Flagship lab: drag corners while sides are tested, fill the quadrilateral family tree, judge always or sometimes, name marked shapes.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A quadrilateral is any flat shape with four straight sides. We sort them by three kinds of facts. Are opposite sides parallel? Are the corners right angles? Are the sides equal? These facts are called properties.",
+   "A parallelogram has two pairs of parallel sides. A rectangle is a parallelogram with four right angles. A rhombus is a parallelogram with four equal sides. On a drawing, arrows show parallel sides, little ticks show equal sides and small squares show right angles.",
+   "A square has four right angles, so it is a rectangle. It also has four equal sides, so it is a rhombus too. A shape keeps every property of the families above it. So all squares are rectangles, but not all rectangles are squares, because most rectangles have two long sides and two short ones.",
+   "Turning a shape does not change its sides or its corners. A square standing on one corner still has four equal sides and four right angles, so it is still a square. Name a shape by checking its properties, not by how it looks or how it sits."
+  ],
+  "adult": [
+   "Ages 10 to 11. The National Curriculum in England asks Year 6 pupils to compare and classify geometric shapes based on their properties and sizes. In the US, CCSS 5.G.B.3 says attributes of a category belong to all its subcategories (all rectangles have four right angles and squares are rectangles), and 5.G.B.4 asks pupils to classify figures in a hierarchy.",
+   "The lab uses inclusive definitions throughout: a square is a rectangle and a rhombus, and both are parallelograms. Children drag the corners of a quadrilateral on a dot grid while every side is tested exactly (parallel sides, right angles, equal lengths) and marked, build a parallelogram, a rectangle and a rhombus, fill the family tree, judge always / sometimes / never statements, and name marked shapes, including a square turned on its corner.",
+   "Common mistakes. Many children treat the names as separate boxes, so they say a square is not a rectangle because it has equal sides. Others name shapes by their look or position: a square on its corner is called a diamond or a rhombus only, and a long thin rectangle is not seen as a parallelogram. Some reverse the hierarchy (every rectangle is a square). Some books define a trapezium as exactly one pair of parallel sides and others as at least one pair, so this lesson keeps trapeziums out of the tree."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Is every square a rectangle?",
+   "choices": ["Yes: it has four right angles and two pairs of parallel sides", "No: its sides are all equal", "Only when it sits flat on one side"],
+   "answer": 0,
+   "hint": "List what a rectangle needs. Does a square have all of it?",
+   "explain": "A rectangle needs two pairs of parallel sides and four right angles. A square has all of these, plus equal sides, so every square is a rectangle."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A rectangle has one side {a} cm long and the next side {b} cm long. What is its perimeter in cm?",
+   "answer": "2*(a+b)",
+   "hint": "Opposite sides of a rectangle are equal, so there are two sides of each length.",
+   "explain": "Opposite sides are equal: {a} + {b} + {a} + {b} = 2 × ({a} + {b}) = {=2*(a+b)} cm.",
+   "params": {"a": [2, 9], "b": [10, 15]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A shape has four equal sides but no right angles. What is its most exact name?",
+   "choices": ["Rhombus", "Square", "Rectangle"],
+   "answer": 0,
+   "hint": "A square needs right angles. Which family has four equal sides?",
+   "explain": "Four equal sides make a rhombus. With no right angles it cannot be a square or a rectangle."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A rhombus has one side {a} cm long. What is its perimeter in cm?",
+   "answer": "4*a",
+   "hint": "All four sides of a rhombus are equal.",
+   "explain": "Four equal sides of {a} cm: 4 × {a} = {=4*a} cm.",
+   "params": {"a": [3, 12]}
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A parallelogram is a rectangle. Is that always, sometimes or never true?",
+   "choices": ["Sometimes", "Always", "Never"],
+   "answer": 0,
+   "hint": "Can a parallelogram have four right angles? Must it?",
+   "explain": "A parallelogram with four right angles is a rectangle, but most parallelograms lean and have no right angles. So it is only sometimes true."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Ava says a square turned on its corner is a rhombus, not a square. Is she right?",
+    "choices": ["No: turning it does not change its sides or angles, so it is still a square", "Yes: it is a diamond now", "Yes: squares must sit flat"],
+    "answer": 0,
+    "hint": "Does turning a shape change any side length or angle?",
+    "explain": "Turning keeps four equal sides and four right angles, so it is still a square. It is a rhombus too, but square is the most exact name."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which property do all parallelograms have?",
+    "choices": ["Opposite sides are parallel", "Four right angles", "Four equal sides"],
+    "answer": 0,
+    "hint": "Think of a parallelogram that leans and has two long and two short sides.",
+    "explain": "Every parallelogram has two pairs of parallel sides. Right angles belong only to rectangles, and four equal sides only to rhombuses."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which shape is both a rectangle and a rhombus?",
+    "choices": ["Square", "Parallelogram", "No shape can be both"],
+    "answer": 0,
+    "hint": "You need four right angles and four equal sides.",
+    "explain": "A square has four right angles (a rectangle) and four equal sides (a rhombus), so it is both."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A square has a perimeter of {=4*a} cm. How long is one side in cm?",
+    "answer": "a",
+    "hint": "A square has four equal sides.",
+    "explain": "Share the perimeter between four equal sides: {=4*a} ÷ 4 = {a} cm.",
+    "params": {"a": [2, 15]}
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Is every rectangle a square?",
+    "choices": ["No: its four sides need not be equal", "Yes: both have four right angles", "Yes: both are parallelograms"],
+    "answer": 0,
+    "hint": "What does a square have that most rectangles do not?",
+    "explain": "A square also needs four equal sides. A rectangle with sides 6 cm and 2 cm is not a square."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A rhombus has four right angles. What else can you call it?",
+    "choices": ["A square", "A trapezium only", "Nothing else"],
+    "answer": 0,
+    "hint": "Four equal sides and four right angles…",
+    "explain": "Four equal sides with four right angles is a square. A rhombus with right angles is the special rhombus that is also a rectangle."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A parallelogram has sides {a} cm and {b} cm. What is its perimeter in cm?",
+    "answer": "2*(a+b)",
+    "hint": "Opposite sides of every parallelogram are equal.",
+    "explain": "Two sides of {a} cm and two of {b} cm: 2 × ({a} + {b}) = {=2*(a+b)} cm.",
+    "params": {"a": [3, 9], "b": [10, 14]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "True or false: a parallelogram is always a rhombus.",
+    "choices": ["False: only some parallelograms have four equal sides", "True: both lean over", "True: both have parallel sides"],
+    "answer": 0,
+    "hint": "A parallelogram can have two long sides and two short ones.",
+    "explain": "A rhombus needs four equal sides. A parallelogram with sides 7 cm and 3 cm is not a rhombus, so the statement is false."
+   }
+  ]
+ }
+}
