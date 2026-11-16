@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England Year 6 position and direction statement (describe positions on the full coordinate grid, all four quadrants) and CCSS 6.NS.C.6 and 6.NS.C.8. Every point and answer recomputed on the −5..5 grid: (−3, 2) top left, (4, −1) bottom right, (−2, −4) bottom left; reading (−4, 3), (2, −5), (−1, −3); rectangle (−3, 2), (2, 2), (2, −1) → (−3, −1); square (−2, 1), (1, 1), (1, −2) → (−2, −2) with sides of 3; lengths −3→4 = 7, −4→1 = 5, −5→−1 = 4; points with a 0 are reported as on an axis, not in a quadrant. Parameterised lengths (a + b, b + c, a − b, 2a) were enumerated by the validator."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors in Kerslake's CSMS graphs chapter (Hart 1981) and Ryan and Williams (2007): swapping x and y, dropping or reversing a minus sign, treating an axis point as inside a quadrant, subtracting end coordinates across zero (4 − 3 = 1 for a length of 7), adding when both ends are negative, and ordering negatives by size of digit. Wrong taps on the plotting grid are classified (swapped, sign-flipped) and answered with a message for that slip; tiles and challenge answers carry tags."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 9.1% (shared scaffolding with flag_triang.js), far under 30%. 66 Coordinates on a grid uses the generic geolab in the first quadrant and flag_slide.js (transformations) moves a flag; only this lab shades the four quadrants and counts which have been found, snaps taps to integer points from −5 to 5, classifies swapped and sign errors when plotting, completes shapes across the axes and measures lines that cross zero."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge: one point in every quadrant (signs give the quadrant); plot three points with 'across, then up or down'; read three points against swapped and sign-flipped answers; a missing corner shares x with one corner and y with another; count squares across zero. Each banner gives the rule after the learner's own taps reach it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked predictions with tempting wrong options: where (−2, 3) is ('2 right and 3 up', '3 left and 2 up'), the first move for (4, −1) ('1 down', '4 left'), which point is further left ('(−1, 4)', 'the same'), the fourth rectangle corner ('(3, −1)', '(−1, −3)') and the length from (−3, 1) to (4, 1) ('1', '4'). The correct option moves position and A.reveal names the learner's pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating questions with ten distinct wrong-answer messages (signIgnored, xSign, swap, signFlip, dropNeg, subNeg, endOnly, addNeg, axisMix, negOrder). Each names the slip and gives the fix, e.g. 'Subtracting the numbers ignores the minus sign. Count the squares: from −3 to 0 is 3, then 0 to 4 is 4, so 7.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 2.0 and adult 5.5 (limits 6.5 and 9.5). Kid paragraphs use 'across first, then up or down' and short sentences; origin, quadrant and axis are defined where they first appear. Canvas labels are short coordinate pairs with true minus signs."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with no filler patterns; the highest explanation overlap with any lesson is 1.0% (66 Coordinates on a grid). Each kid paragraph does one job: the grid and quadrants, reading a pair, signs and quadrants, and lengths across zero with the missing corner."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. The grid keeps about 29 px between integer points at 360 px so taps snap reliably; steps with answer tiles shrink the grid so the tiles and the feedback box never overlap it; point labels flip to the left of dots near the right edge; a duplicated '(−1, −3)' in the finish message was removed."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every tap has a button twin (five ready-made points in the first step; the target, swapped and sign-flipped points when plotting; each answer tile; three candidate corners for each shape). The canvas aria-label is rewritten after every action with the points placed and quadrants found, the target, the red point's position in words, or the shape corners and choices. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) National Curriculum in England: mathematics programmes of study, Year 6 geometry (position and direction)",
+  "Common Core State Standards for Mathematics (2010), 5.G.A.1, 6.NS.C.6 and 6.NS.C.8",
+  "Hart, K. M. (ed.) (1981) Children's Understanding of Mathematics: 11–16 (CSMS), graphs chapter (Kerslake)",
+  "Ryan, J. and Williams, J. (2007) Children's Mathematics 4–15: Learning from Errors and Misconceptions, Open University Press"
+ ]
+}
