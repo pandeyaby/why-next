@@ -1,0 +1,68 @@
+{
+ "topicId": "mt_99G6Msdzw-",
+ "title": "Transferring Skills",
+ "audience": "learner",
+ "keyIdea": "Transfer means using a skill or strategy you learned in one place to solve a problem somewhere new. To transfer well, look under the surface. Two problems about the same topic can need different tricks, and two problems about different things can need the same trick. Ask: what is this problem really asking? Have I seen one like it? What worked then? Does that trick fit here? Then try it and check.",
+ "familyTip": "When your child solves something, ask 'Where else could that trick help?' and find one example together in a different subject or at home. When a new problem looks hard, ask 'Have you solved anything like this before?' and let them name the earlier problem. Point out look-alikes too: two questions about the same thing that need different methods.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which trick does each problem need? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": ["Table of every pair", "Timeline in order"],
+   "items": [["Hats: 3 colours, 2 sizes. How many hats?", 0], ["Juice: 4 fruits, 2 cup sizes. How many drinks?", 0], ["Bean plant: seed, shoot, plant, flower", 1], ["Your morning: wake, wash, dress, eat", 1], ["Kites: 2 shapes, 5 tails. How many kites?", 0], ["Which king came first?", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagxfer",
+  "caption": "Flagship lab: spot problems with the same trick, fill a table, sort look-alikes by trick, carry skills to new subjects, check a trick fits.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Transfer means taking a skill you learned in one place and using it somewhere new. You learned to make a table of every pair for outfits. The same trick works for ice creams or sandwiches.",
+   "Look under the surface. The surface is what a problem is about, like pizza or frogs. Underneath is what it asks you to do. Two pizza problems can need different tricks. An outfit problem and an ice cream problem can need the same one.",
+   "Skills are not stuck in one subject. Sorting by a rule helps in science, and it helps you sort spelling words too. Drawing a diagram helps in maths and in science. Ask: where else could I use this?",
+   "Check the trick fits before you use it. Adding works for 'how many altogether'. It does not work for 'how much older'. That needs the difference. So ask what the problem is really asking."
+  ],
+  "adult": [
+   "Ages 8 to 9. Transfer is a core idea in learning to learn: Perkins and Salomon describe near and far transfer and two teaching moves, hugging (practise in varied, realistic contexts) and bridging (ask where else a skill applies). Gick and Holyoak showed that learners rarely use an earlier solution unless prompted to compare structures. The EEF guidance on metacognition recommends making this thinking explicit.",
+   "The lab has five tasks. Children pick the two problems that share the outfits table trick and fill a 3 × 2 ice cream table; sort six look-alike problems (two about pizza, two about frogs) by trick rather than topic; find where two skills help in other subjects; decide whether 'add' fits four problems; and order five transfer questions.",
+   "Common mistakes. Children match problems by surface features, the topic or the words, instead of deep structure (Chi and colleagues found novices sort physics problems this way). Many treat a skill as belonging to the subject where they learned it. Others over-apply a trick: adding whenever two numbers appear. Praise the question 'Have I seen something like this?' as much as the answer."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Which problem needs the same trick as 'Outfits: 2 tops and 3 shorts. How many outfits?'", "choices": ["Drinks: 3 juices and 2 cup sizes. How many drinks?", "A story about a girl choosing a top", "Put the months of the year in order"], "answer": 0,
+   "hint": "Ignore what each problem is about. Which one asks you to pair everything with everything?", "explain": "Drinks needs every juice with every cup size, the same as tops with shorts: 3 × 2 = 6. The story is about clothes but asks nothing to pair."},
+  {"type": "numeric", "id": "p2", "prompt": "Use the table trick. Sandwiches: {a} kinds of bread and {b} fillings. How many different sandwiches?", "answer": "a*b",
+   "hint": "Make a table: one row for each bread, one column for each filling. Count the boxes.", "explain": "Every bread with every filling: {a} rows × {b} columns = {=a*b} sandwiches.", "params": {"a": [2, 4], "b": [2, 5]}},
+  {"type": "mc", "id": "p3", "prompt": "You learned to sort animals by a rule in science. Where else could that help?", "choices": ["Sorting spelling words by their ending", "Nowhere, it is a science skill", "Only with other animals"], "answer": 0,
+   "hint": "What is the trick? Make a rule, then put each thing in a group. What else could you sort?", "explain": "Sorting by a rule works anywhere: words by ending, shapes by sides. Skills are not stuck in one subject."},
+  {"type": "numeric", "id": "p4", "prompt": "Tom is {a}. Ana is {b}. How much older is Tom?", "answer": "a-b",
+   "hint": "Does the adding trick fit? 'How much older' compares two numbers.", "explain": "Find the difference, not the total: {a} − {b} = {=a-b}. Tom is {=a-b} years older.", "params": {"a": [9, 12], "b": [5, 8]}},
+  {"type": "mc", "id": "p5", "prompt": "'Making a pizza: first, next, last' and 'Pizza: 3 toppings, 2 crusts.' Do they need the same trick?", "choices": ["No: one needs an order, one needs every pair", "Yes, they are both about pizza", "Yes, both need adding"], "answer": 0,
+   "hint": "Look under the surface. What does each one ask you to do?", "explain": "The first asks for an order, so a timeline. The second asks for every topping with every crust, so a table. Same topic, different tricks."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "What does 'transfer' mean in learning?", "choices": ["Using a skill from one place in a new place", "Moving to a new school", "Copying a friend's answer"], "answer": 0,
+    "hint": "Think of the outfits trick working on ice creams.", "explain": "Transfer means taking a skill or strategy you learned for one problem and using it on a new one."},
+   {"type": "numeric", "id": "m2", "prompt": "Ice creams: {a} flavours and {b} kinds of cone. How many different ice creams?", "answer": "a*b",
+    "hint": "This is the outfits trick: every flavour with every cone. Make a table.", "explain": "{a} flavours × {b} cones = {=a*b} different ice creams.", "params": {"a": [2, 5], "b": [2, 3]}},
+   {"type": "mc", "id": "m3", "prompt": "Two problems are both about frogs. What should you check first?", "choices": ["What each one asks you to do", "That they are both about frogs", "Which one is shorter"], "answer": 0,
+    "hint": "Is the topic the same as the trick?", "explain": "Same topic does not mean same trick. Check what each problem is really asking."},
+   {"type": "numeric", "id": "m4", "prompt": "Sam had {a} stickers. He gave {b} away. How many are left?", "answer": "a-b",
+    "hint": "Does 'altogether, add' fit here? Some are taken away.", "explain": "Taking away needs subtraction: {a} − {b} = {=a-b} stickers left.", "params": {"a": [10, 15], "b": [2, 9]}},
+   {"type": "mc", "id": "m5", "prompt": "Mia used a timeline in history. Which new task could a timeline help with?", "choices": ["The stages of a butterfly's life cycle", "Counting all the sandwich choices", "Spelling a long word"], "answer": 0,
+    "hint": "A timeline puts things in order. Which task is about order?", "explain": "A life cycle happens in order: egg, caterpillar, chrysalis, butterfly. A timeline shows that order."},
+   {"type": "mc", "id": "m6", "prompt": "Which is the best question to ask when a new problem looks hard?", "choices": ["Have I solved anything like this before?", "Can I skip it?", "Which subject is this?"], "answer": 0,
+    "hint": "Transfer starts by remembering a problem with the same trick.", "explain": "Asking 'Have I solved anything like this?' helps you find a trick that worked before."},
+   {"type": "mc", "id": "m7", "prompt": "Leo always adds the two numbers in a word problem. What is his slip?", "choices": ["He uses a trick without checking it fits", "He is right, always add", "He forgets to add"], "answer": 0,
+    "hint": "Does adding fit 'how much older' or 'how many left'?", "explain": "Adding only fits some problems. Leo should check what the problem asks before using the trick."},
+   {"type": "mc", "id": "m8", "prompt": "Drawing a bar model helped you in maths. Where else could drawing a diagram help?", "choices": ["Showing the water cycle in science", "Remembering 6 × 7", "Spelling 'because'"], "answer": 0,
+    "hint": "A diagram helps you see how parts fit together.", "explain": "A diagram with arrows shows how water moves in the water cycle. Recalling facts and spelling need other tricks."}
+  ]
+ }
+}
