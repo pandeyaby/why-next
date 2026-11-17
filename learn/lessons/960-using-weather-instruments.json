@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_sA0RvWXSYY",
+ "title": "Using Weather Instruments",
+ "audience": "learner",
+ "keyIdea": "Weather watchers use a different tool for each thing they measure. A thermometer measures temperature in °C. A rain gauge measures rainfall as a depth in millimetres (mm). A wind vane shows wind direction: its arrow points to where the wind comes from, so a west wind blows from the west. An anemometer measures wind speed: its cups spin faster when the wind is stronger. Good readings need good spots: the rain gauge in the open, the thermometer in the shade and the anemometer up high.",
+ "familyTip": "Make a rain gauge from a straight-sided jar with a ruler taped to the side, zero at the bottom. Stand it on open ground away from trees and read it at the same time each day, then empty it. On a windy day, watch which way a flag or washing points: the wind is coming from the other side.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which tool measures it? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Thermometer",
+    "Rain gauge",
+    "Wind vane",
+    "Anemometer"
+   ],
+   "items": [
+    [
+     "How hot the air is",
+     0
+    ],
+    [
+     "How much rain fell",
+     1
+    ],
+    [
+     "Where the wind comes from",
+     2
+    ],
+    [
+     "How fast the wind blows",
+     3
+    ],
+    [
+     "Degrees Celsius (°C)",
+     0
+    ],
+    [
+     "Millimetres of rain (mm)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwxinst",
+  "caption": "Flagship lab: match weather tools, turn a wind vane, match wind speeds, compare rain pots, read rain gauges and pick good spots.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A thermometer measures how hot or cold the air is, in degrees Celsius (°C). Keep it in the shade, because sunshine heats the thermometer itself.",
+   "A rain gauge catches rain. Read how deep the water is in millimetres (mm). Look straight across at the top of the water, then empty it for the next day.",
+   "A wind vane shows which way the wind blows. Its arrow points to where the wind comes from. If it points west, the wind is a west wind.",
+   "An anemometer has cups that spin in the wind. The stronger the wind, the faster they spin. It shows wind speed in km/h."
+  ],
+  "adult": [
+   "Ages 7 to 9. This supports the National Curriculum in England (Year 2 and Year 4 working scientifically: take measurements with a range of equipment, including thermometers; Year 3–4 geography fieldwork) and NGSS 3-ESS2-1 (represent data to describe typical weather). Facts follow the Met Office: thermometers are read in the shade inside a white louvred Stevenson screen about 1.25 m above short grass; rain gauges stand in the open; wind direction is given as the direction the wind blows from; anemometers are mounted high (10 m at weather stations).",
+   "The lab has six tasks. Children match each tool to what it measures, turn a wind vane to face three winds, match anemometer readings (3, 15 and 45 km/h) to Beaufort-scale signs, rain on a wide and a thin pot, read three rain gauges in millimetres, place three tools in a garden and judge three classmates.",
+   "Common mistakes. Many children think a wind vane points where the wind is going; it points into the wind. Others mix up the wind vane (direction) and the anemometer (speed), or think a wider container collects deeper rain: the depth is the same, which is why rain is reported in millimetres. Watch for readings from the wrong mark, gauges left under trees, and thermometers in direct sun."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which tool shows where the wind comes from?",
+   "choices": [
+    "Wind vane",
+    "Anemometer",
+    "Thermometer"
+   ],
+   "answer": 0,
+   "hint": "One tool spins its cups, one turns its arrow. Which one turns to face the wind?",
+   "explain": "A wind vane turns its arrow to face the wind, so it shows where the wind comes from. An anemometer measures speed."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The rain gauge showed {a} mm on Monday. It was not emptied. On Tuesday it shows {b} mm more water on top. How much rain fell on Tuesday, in mm?",
+   "answer": "b",
+   "params": {
+    "a": [
+     4,
+     12
+    ],
+    "b": [
+     2,
+     9
+    ]
+   },
+   "hint": "Only the new water on top fell on Tuesday. The Monday water was already there.",
+   "explain": "Tuesday's rain is only the new water: {b} mm. The gauge now holds {a} + {b} = {=a+b} mm in total, which is why it should be emptied each day."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The wind vane points east. What kind of wind is it?",
+   "choices": [
+    "An east wind, coming from the east",
+    "A west wind, going to the west",
+    "A strong wind"
+   ],
+   "answer": 0,
+   "hint": "The arrow points into the wind. Winds are named for where they come from.",
+   "explain": "The arrow points to where the wind comes from, so it is an east wind. A wind vane does not show speed."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Each hour, {r} mm of rain falls. How deep is the water in the gauge after {h} hours, in mm?",
+   "answer": "r*h",
+   "params": {
+    "r": [
+     1,
+     5
+    ],
+    "h": [
+     2,
+     4
+    ]
+   },
+   "hint": "Add {r} mm for every hour of rain.",
+   "explain": "{r} mm × {h} hours = {=r*h} mm. A wide pot in the same rain would be {=r*h} mm deep too."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Where should you put a thermometer to measure the air temperature?",
+   "choices": [
+    "In the shade, in a white box",
+    "In full sun on a wall",
+    "In a puddle"
+   ],
+   "answer": 0,
+   "hint": "What happens to a thermometer if the sun shines straight on it?",
+   "explain": "In the sun the thermometer itself heats up and reads too high. Weather stations keep it in the shade in a white box."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does an anemometer measure?",
+    "choices": [
+     "Wind speed",
+     "Wind direction",
+     "Rainfall"
+    ],
+    "answer": 0,
+    "hint": "Its cups spin faster in a stronger wind.",
+    "explain": "An anemometer measures wind speed. A wind vane shows the direction."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A wind vane points north. Where is the wind coming from?",
+    "choices": [
+     "From the north",
+     "From the south",
+     "It is going north"
+    ],
+    "answer": 0,
+    "hint": "The arrow points into the wind, to where it comes from.",
+    "explain": "The wind comes from the north: it is a north wind. It is going towards the south."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A wide bowl and a thin jar stand in the same rain. Which has deeper water?",
+    "choices": [
+     "Both the same",
+     "The wide bowl",
+     "The thin jar"
+    ],
+    "answer": 0,
+    "hint": "Rain falls evenly. The wide bowl catches more drops, but over a bigger floor.",
+    "explain": "Both have the same depth. That is why rain is measured as a depth in mm."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What unit does a rain gauge use?",
+    "choices": [
+     "Millimetres (mm)",
+     "Degrees (°C)",
+     "Kilometres per hour (km/h)"
+    ],
+    "answer": 0,
+    "hint": "A rain gauge measures how deep the water is.",
+    "explain": "Rain is measured as a depth in millimetres. °C is for temperature and km/h is for wind speed."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why should a rain gauge not go under a tree?",
+    "choices": [
+     "Leaves catch or drip the rain",
+     "It is too cold there",
+     "The wind is too strong"
+    ],
+    "answer": 0,
+    "hint": "What is between the sky and the gauge under a tree?",
+    "explain": "Leaves catch some rain and drip some later, so the reading is wrong. Put the gauge in the open."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The anemometer shows 45 km/h. What would you see?",
+    "choices": [
+     "Big branches sway",
+     "Smoke drifts straight up",
+     "Nothing moves at all"
+    ],
+    "answer": 0,
+    "hint": "45 km/h is a strong breeze on the Beaufort scale.",
+    "explain": "At about 45 km/h big branches sway. Smoke drifts slowly only when the wind is under about 6 km/h."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which tool would you use to find how hot it is?",
+    "choices": [
+     "Thermometer",
+     "Rain gauge",
+     "Wind vane"
+    ],
+    "answer": 0,
+    "hint": "Which tool reads in degrees Celsius?",
+    "explain": "A thermometer measures temperature in °C."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Lily reads {a} mm on the gauge in the morning. By night it reads {b} mm more. What is the total now, in mm?",
+    "answer": "a+b",
+    "params": {
+     "a": [
+      3,
+      10
+     ],
+     "b": [
+      2,
+      8
+     ]
+    },
+    "hint": "Add the new rain to what was already there.",
+    "explain": "{a} + {b} = {=a+b} mm in the gauge. The rain that fell since the morning is {b} mm."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "It rains {r} mm every day. Nobody empties the gauge for {h} days. What does it show, in mm?",
+    "answer": "r*h",
+    "params": {
+     "r": [
+      2,
+      6
+     ],
+     "h": [
+      2,
+      5
+     ]
+    },
+    "hint": "Each day adds {r} mm on top of the water already there.",
+    "explain": "{r} mm × {h} days = {=r*h} mm. Empty the gauge each day to know each day's rain."
+   }
+  ]
+ }
+}
