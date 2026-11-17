@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_uoTBeyMhGm",
+ "title": "Asteroids, Comets & Dwarf Planets",
+ "audience": "learner",
+ "keyIdea": "Besides the Sun, eight planets and their moons, the solar system holds many smaller bodies. Asteroids are rocky or metal lumps, and most orbit the Sun in the main asteroid belt between Mars and Jupiter. Comets are icy bodies of ice, dust and rock; near the Sun their ice turns to gas, making a glowing coma and a tail that always points away from the Sun. A meteoroid is a small rock in space, a meteor is the streak of light as it burns up in Earth's atmosphere, and a meteorite is a piece that reaches the ground. A dwarf planet, such as Pluto or Ceres, orbits the Sun and is round, but has not cleared its orbit of other objects.",
+ "familyTip": "Check a sky calendar for the next meteor shower, such as the Perseids each August or the Geminids each December. On a clear night, lie back somewhere dark for twenty minutes and count the shooting stars together. Each one is a grain of dust or rock, often smaller than a pea, burning up high in the air.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each thing an asteroid or a comet? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Asteroid",
+    "Comet"
+   ],
+   "items": [
+    [
+     "A lump of rock and metal",
+     0
+    ],
+    [
+     "A ball of ice, dust and rock",
+     1
+    ],
+    [
+     "Grows a glowing tail near the Sun",
+     1
+    ],
+    [
+     "Most live between Mars and Jupiter",
+     0
+    ],
+    [
+     "Halley's, seen every 76 years or so",
+     1
+    ],
+    [
+     "Ceres, the biggest in the belt",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcomet",
+  "caption": "Flagship lab: drop asteroids into the belt, drag a comet round its path, name three space rocks, and run the planet test on six bodies.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The Sun has eight planets, but lots of smaller things go round it too. Asteroids are lumps of rock and metal. Most of them are in a wide ring between Mars and Jupiter, called the asteroid belt. Most are lumpy, not round.",
+   "A comet is a ball of ice, dust and rock. It goes round the Sun on a long, stretched path. Far from the Sun it is frozen. Near the Sun its ice turns to gas, and a glowing tail streams out. The tail always points away from the Sun.",
+   "A meteoroid is a small rock in space. If it falls into our air, it gets so hot that it glows. That streak of light is a meteor, or shooting star. Most burn up. A piece that lands on the ground is a meteorite.",
+   "Pluto and Ceres are dwarf planets. They go round the Sun and they are round, like planets. But they share their paths with lots of other objects. A full planet has cleared its path."
+  ],
+  "adult": [
+   "Ages 7 to 9. This supports 'Earth and space' in the National Curriculum in England (Year 5) and the NGSS core idea ESS1.B (Earth and the solar system). Facts were checked against NASA Science pages on asteroids, comets, meteors and dwarf planets, and the IAU vote of 24 August 2006. Key words: asteroid, asteroid belt, comet, nucleus, coma, tail, meteoroid, meteor, meteorite, dwarf planet, orbit, Kuiper Belt.",
+   "The lab has five tasks. First, children drop asteroids onto a row of planets. They find that most belong between Mars and Jupiter, and that the Kuiper Belt past Neptune is icy. Next they drag a comet round a stretched orbit. The tail grows near the Sun and leads the comet as it leaves. Then they put the words meteoroid, meteor and meteorite on a rock in space, in the air and on the ground. Last, they test six bodies against the three planet rules and judge three classmates.",
+   "Common mistakes. Children often think a comet's tail trails behind it like smoke. In fact it points away from the Sun, pushed by sunlight and the solar wind. Other slips: comets are on fire, a shooting star is a falling star, meteor and meteorite mean the same, and Pluto was demoted because it shrank. Be careful with 'cleared its orbit'. Pluto shares the Kuiper Belt with many icy bodies, and Ceres shares the main belt with other asteroids."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where do most asteroids go round the Sun?",
+   "choices": [
+    "Between Mars and Jupiter",
+    "Between Earth and the Moon",
+    "Past Neptune"
+   ],
+   "answer": 0,
+   "hint": "In the lab, where was the dashed belt on the row of planets?",
+   "explain": "Most asteroids are in the main asteroid belt, between Mars and Jupiter. Past Neptune is the icy Kuiper Belt."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "A comet is going away from the Sun. Which way does its tail point?",
+   "choices": [
+    "Away from the Sun, so the tail goes first",
+    "Behind it, the way it came",
+    "Towards the Sun"
+   ],
+   "answer": 0,
+   "hint": "Think about the 'going' ring in the lab. Where was the tail?",
+   "explain": "Sunlight and the solar wind push the tail outwards, so it always points away from the Sun, even ahead of a comet that is leaving."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Halley's Comet comes back about every 76 years. It was last seen in 1986. If it comes back every 76 years, in which year is it seen {n} visits after 1986?",
+   "answer": "1986+76*n",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   },
+   "hint": "Each visit adds 76 years. Work out 76 × {n}, then add it to 1986.",
+   "explain": "76 × {n} = {=76*n}, and 1986 + {=76*n} = {=1986+76*n}. Its next visit is in 2061."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A rock from space lands in a field. What do we call it?",
+   "choices": [
+    "A meteorite",
+    "A meteor",
+    "A meteoroid"
+   ],
+   "answer": 0,
+   "hint": "Which name went on the rock on the ground?",
+   "explain": "A meteoroid is in space, a meteor is the glowing streak in the air, and a meteorite is the piece that lands."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Pluto takes about 248 years to go round the Sun once. How many years do {n} trips take?",
+   "answer": "248*n",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   },
+   "hint": "One trip round the Sun takes 248 years, so multiply 248 by {n}.",
+   "explain": "248 × {n} = {=248*n} years. Pluto is so far out that one of its years is longer than any person lives."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is a comet made of?",
+    "choices": [
+     "Ice, dust and rock",
+     "Burning rock, like a small sun",
+     "Only gas, like a cloud"
+    ],
+    "answer": 0,
+    "hint": "Think about the comet far from the Sun, with no tail.",
+    "explain": "A comet's solid middle, the nucleus, is ice, dust and rock. The glowing cloud and tail form only near the Sun."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "When does a comet grow a tail?",
+    "choices": [
+     "When it comes close to the Sun",
+     "All the time",
+     "When it is far from the Sun"
+    ],
+    "answer": 0,
+    "hint": "What happened at the 'far' ring in the lab?",
+    "explain": "Near the Sun the ice heats up and turns to gas, which streams out as a tail. Far away it is frozen and has no tail."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is a shooting star?",
+    "choices": [
+     "A space rock burning up in the air",
+     "A star falling to Earth",
+     "A comet passing by"
+    ],
+    "answer": 0,
+    "hint": "Which rock in the lab was glowing?",
+    "explain": "A shooting star is a meteor: a small rock from space that gets so hot in our air that it glows. Stars do not fall."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which of these is a dwarf planet?",
+    "choices": [
+     "Ceres",
+     "Mars",
+     "The Moon"
+    ],
+    "answer": 0,
+    "hint": "Which round body shares its path with the asteroids?",
+    "explain": "Ceres is round and goes round the Sun, but shares the asteroid belt with other objects. Mars is a planet; the Moon goes round Earth."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why is Pluto called a dwarf planet?",
+    "choices": [
+     "It shares its path with many other icy objects",
+     "It stopped going round the Sun",
+     "It shrank"
+    ],
+    "answer": 0,
+    "hint": "Which of the 3 planet tests did Pluto fail in the lab?",
+    "explain": "Pluto goes round the Sun and is round, but it has not cleared its path in the Kuiper Belt. In 2006 scientists agreed this rule."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is the Moon not a dwarf planet?",
+    "choices": [
+     "It goes round Earth, not the Sun",
+     "It is not round",
+     "It is too bright"
+    ],
+    "answer": 0,
+    "hint": "Look at the first planet test.",
+    "explain": "A dwarf planet must go round the Sun. The Moon goes round Earth, so it is a moon."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What do most asteroids look like?",
+    "choices": [
+     "Lumpy rocks of many shapes",
+     "Perfect round balls",
+     "Glowing balls of gas"
+    ],
+    "answer": 0,
+    "hint": "Most are too small for their gravity to pull them round.",
+    "explain": "Most asteroids are small, so their gravity is too weak to pull them into a ball. They are lumpy rock or metal."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A comet comes back every {p} years. It was seen in 2000. In which year will it next be seen?",
+    "answer": "2000+p",
+    "params": {
+     "p": [
+      5,
+      90
+     ]
+    },
+    "hint": "Add one trip of {p} years to 2000.",
+    "explain": "One trip takes {p} years, so it comes back {p} years after 2000: 2000 + {p} = {=2000+p}."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Ana sees a bright streak cross the sky in one second. Ben says it was a comet. What was it most likely?",
+    "choices": [
+     "A meteor burning up in the air",
+     "A comet flying past",
+     "A star moving fast"
+    ],
+    "answer": 0,
+    "hint": "A comet stays in the same part of the sky for days or weeks.",
+    "explain": "A streak that lasts a second is a meteor. Comets are far out in space and seem to move only slowly, night by night."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "Halley's Comet comes back about every 76 years. Someone saw it when they were {a} years old. About how old will they be when it comes back?",
+    "answer": "a+76",
+    "params": {
+     "a": [
+      3,
+      20
+     ]
+    },
+    "hint": "Each return of the comet is 76 years later, so add 76 to {a}.",
+    "explain": "{a} + 76 = {=a+76}. Very few people see Halley's Comet twice, because it is away for so long."
+   }
+  ]
+ }
+}
