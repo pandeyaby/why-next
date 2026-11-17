@@ -1,0 +1,68 @@
+{
+ "topicId": "mt_HJTuIGHvcR",
+ "title": "Subtracting multiples of 10",
+ "audience": "learner",
+ "keyIdea": "A multiple of 10, like 70, is a number of tens: 70 is 7 tens. To work out 70 − 30, take away 3 tens from 7 tens. That leaves 4 tens, and 4 tens is 40. A fact you already know helps: 7 − 3 = 4, so 70 − 30 = 40. On a number line, jump back one ten at a time: 3 jumps back from 70 lands on 40. The answer is still tens, so it ends in 0. It is 40, not 4. Taking away makes the number smaller, so the answer is never 100.",
+ "familyTip": "Make bundles of ten with straws, pencils or pasta and a hair band. Put out 8 bundles and ask: how many is that? Take 5 bundles away. How many tens are left? How many is that? Then say the small fact together: 8 − 5 = 3, so 80 − 50 = 30.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the answer right? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": ["Right", "Not right"],
+   "items": [["70 − 30 = 40", 0], ["70 − 30 = 4", 1], ["90 − 50 = 40", 0], ["60 − 20 = 80", 1], ["80 − 60 = 20", 0], ["50 − 10 = 49", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagsubten",
+  "caption": "Flagship lab: take bundles of ten away, turn a small fact into a tens fact, jump back in tens on a number line, find the missing tens, and check three answers.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "A bundle has ten sticks. 70 is 7 bundles. We say 70 is 7 tens. Numbers like 10, 20, 30 and 70 are called multiples of 10.",
+   "To work out 70 − 30, take away 3 bundles. You have 4 bundles left. That is 4 tens. 4 tens is 40. So 70 − 30 = 40.",
+   "A fact you know can help. 7 − 3 = 4. So 7 tens − 3 tens = 4 tens. That is 40. The answer is tens, so it ends in 0. It is 40, not 4.",
+   "You can use a number line too. Jump back ten at a time. For 90 − 60, jump back 6 times from 90. You land on 30. Taking away makes the number smaller."
+  ],
+  "adult": [
+   "Ages 6 to 7. This is CCSS 1.NBT.C.6: subtract multiples of 10 in the range 10–90 from multiples of 10 in the range 10–90 (positive or zero differences), using concrete models or drawings and strategies based on place value. It matches the National Curriculum in England expectation that Year 1 and Year 2 pupils use place value and number facts, for example deriving 70 − 30 = 40 from 7 − 3 = 4.",
+   "The lab has five tasks. Children take bundles of ten away and choose the answer from 40, 4 and 100, so they must name the tens that are left as a number. They pick the ones fact that matches a tens sum, jump back in tens on a 0–100 number line and stop after the right number of jumps, find a missing number of tens (80 − ? = 30), and check three children's answers.",
+   "Common mistakes. Children work out the ones fact and write it as the answer, so 70 − 30 becomes 4. Some add instead of taking away and give 100. Others take away ones, not tens, and write 70 − 30 = 67, or jump back 30 single steps on the number line. Watch for children who count the starting number as the first jump. Say the tens aloud: seven tens take away three tens is four tens."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "80 − 50 = ?", "choices": ["30", "3", "130"], "answer": 0,
+   "hint": "80 is 8 tens. Take away 5 tens. How many tens are left?", "explain": "8 tens − 5 tens = 3 tens. 3 tens is 30, so 80 − 50 = 30."},
+  {"type": "numeric", "id": "p2", "prompt": "{=10*a} − {=10*b} = ?", "answer": "10*(a-b)",
+   "hint": "Use the small fact {a} − {b}. Then remember the answer is tens.", "explain": "{a} − {b} = {=a-b}. So {a} tens − {b} tens = {=a-b} tens, which is {=10*(a-b)}.", "params": {"a": [6, 9], "b": [1, 5]}},
+  {"type": "mc", "id": "p3", "prompt": "Which fact helps you work out 60 − 40?", "choices": ["6 − 4 = 2", "6 + 4 = 10", "60 − 4 = 56"], "answer": 0,
+   "hint": "Look for a take-away fact with the number of tens.", "explain": "60 is 6 tens and 40 is 4 tens. 6 − 4 = 2, so 60 − 40 = 20."},
+  {"type": "numeric", "id": "p4", "prompt": "Sam has {a} bundles of ten straws. He gives away {b} bundles. How many straws are left?", "answer": "10*(a-b)",
+   "hint": "Find how many bundles are left. Each bundle is ten straws.", "explain": "{a} − {b} = {=a-b} bundles left. {=a-b} bundles of ten is {=10*(a-b)} straws.", "params": {"a": [5, 9], "b": [1, 4]}},
+  {"type": "mc", "id": "p5", "prompt": "Mia says 90 − 30 = 6. What went wrong?", "choices": ["She forgot the answer is tens", "She added", "Nothing, she is right"], "answer": 0,
+   "hint": "9 − 3 = 6. But are these ones or tens?", "explain": "9 tens − 3 tens = 6 tens. 6 tens is 60, so 90 − 30 = 60, not 6."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "70 − 40 = ?", "choices": ["30", "3", "110"], "answer": 0,
+    "hint": "7 tens take away 4 tens. How many tens are left?", "explain": "7 − 4 = 3, so 7 tens − 4 tens = 3 tens. That is 30."},
+   {"type": "numeric", "id": "m2", "prompt": "What is {=10*a} take away {=10*b}?", "answer": "10*(a-b)",
+    "hint": "Take away {b} tens from {a} tens.", "explain": "{a} tens − {b} tens = {=a-b} tens, which is {=10*(a-b)}.", "params": {"a": [5, 9], "b": [1, 4]}},
+   {"type": "mc", "id": "m3", "prompt": "On a number line, how many jumps of ten back do you make for 80 − 20?", "choices": ["2", "20", "6"], "answer": 0,
+    "hint": "Each jump back is one ten. How many tens is 20?", "explain": "20 is 2 tens, so jump back 2 times: 80, 70, 60. So 80 − 20 = 60."},
+   {"type": "mc", "id": "m4", "prompt": "90 − ? = 50", "choices": ["40", "4", "140"], "answer": 0,
+    "hint": "Take away tens from 90 until 5 tens are left. How many tens did you take?", "explain": "9 tens − 4 tens = 5 tens. So 90 − 40 = 50. The missing number is 40."},
+   {"type": "mc", "id": "m5", "prompt": "Leo says 60 − 30 = 90. What went wrong?", "choices": ["He added", "He forgot the 0", "Nothing, he is right"], "answer": 0,
+    "hint": "Is 90 bigger or smaller than 60? What does take away do?", "explain": "60 + 30 = 90. Leo added. Taking away makes it smaller: 60 − 30 = 30."},
+   {"type": "mc", "id": "m6", "prompt": "Ava works out 50 − 20 as 48. What did she do?", "choices": ["She took away 2 ones, not 2 tens", "She added", "Nothing, she is right"], "answer": 0,
+    "hint": "50 − 2 = 48. Is 20 two ones or two tens?", "explain": "20 is 2 tens. 5 tens − 2 tens = 3 tens, so 50 − 20 = 30."},
+   {"type": "mc", "id": "m7", "prompt": "Which is the same as 80 − 60?", "choices": ["8 tens − 6 tens", "8 − 6", "80 − 6"], "answer": 0,
+    "hint": "80 and 60 are both tens. Write each one as a number of tens.", "explain": "80 is 8 tens and 60 is 6 tens. 8 tens − 6 tens = 2 tens = 20."},
+   {"type": "numeric", "id": "m8", "prompt": "A box holds {=10*a} pens. {=10*b} pens are taken out. How many pens are left?", "answer": "10*(a-b)",
+    "hint": "Both numbers are tens. Use the fact {a} − {b}.", "explain": "{a} − {b} = {=a-b}, so {=10*a} − {=10*b} = {=10*(a-b)} pens.", "params": {"a": [6, 9], "b": [2, 5]}}
+  ]
+ }
+}
