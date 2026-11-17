@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Symbol values and rules checked against the National Curriculum in England (Year 4: read Roman numerals to 100, I to C; Year 3 clock faces I to XII) and Encyclopaedia Britannica 'Roman numeral': I 1, V 5, X 10, L 50, C 100; symbols added from largest to smallest; subtraction only in IV, IX, XL, XC (CD, CM above 100); no symbol more than three times in a row; V and L never repeated; no zero. The lab's value() and roman() functions were tested on every target (7, 15, 32, 4, 9, 40, 49, 64, 99) and reading round (XIV 14, XLIX 49, XCIV 94). The family tip notes that IIII on clocks is an older custom, so the 'never four' rule is presented as today's rule, not a universal law."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips (NCETM Year 4 ready-to-progress notes on Roman numerals; teacher misconception lists): adding every symbol (IX read as 11, XCIV as 116: step 3 options 16/116, challenge tag add), four in a row (XXXX, VIIII: Ada, Finn, tag four, builder slip message), invented pairs IL, IC, VX (Dee, p5, m5, m9, builder message 'I cannot go before L'), order reversal LX vs XL and XI vs IX (Cy, tag flip), treating letters as digits (XIV as 114, tag digits) and expecting a zero symbol (tag zero)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed (under 30% similar to every flagship lab). No other lesson teaches Roman numerals; place-value labs (e.g. 3-digit numbers, 10 or 100 more) use columns and base-ten blocks. This lab's core is a tile tray whose live value and pair-by-pair breakdown come from additive/subtractive Roman rules, with rule-specific rejection of IIII, VV and IL; it cannot be relabelled for another topic."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner builds 7, 15 and 32 and sees the running total, so 'biggest first and add' is discovered. Building 4 by tapping I four times is rejected with the three-in-a-row rule and IV then shows as (5−1), so take-away pairs are found by doing. The read step splits a numeral into parts on tap, and the tens-then-ones step makes 49 as XL + IX, which disproves IL. Text only confirms what the tiles showed."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions, each with a tempting wrong option that the task disproves: VI as 4 (order confusion), IX as 11 (adding every symbol), XIV as 16 or 114 (adding / reading as digits), and 49 as IL or XXXXVIIII. The done message reports the learner's prediction against the answer via A.reveal."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Eight challenge questions; every wrong option carries a tag with its own message: add, digits, sub, sub3, four ('never four of the same symbol in a row'), flip ('the order changes the number'), pair ('V is never taken away'), zero and order. Builder errors name the slip too, e.g. building IIII for 4 gives 'Only three of the same symbol go in a row. Write 4 as IV.' and 'XV is 15, more than 9. Try a small symbol before a big one.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons readability passed (kid under 6.5, adult under 9.5). Kid paragraphs use short sentences and the precise terms symbol, numeral, add, take away, tens and ones. Canvas text is one instruction per step ('Make 15', 'Tap the numeral to split it') and buttons say what they do (+ X, Undo, Split it, Ben is right)."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content found no filler phrases and explanation similarity under 12% to all lessons. Each kid paragraph carries one rule (symbol values; biggest first and add; never four, so take away; the four pairs and tens-then-ones). The adult text gives the curriculum reference, the full modern rules, the lab sequence and named slips."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked iPhone 13 screenshots of every step before and after Show me (/workspace/wn-run-1116-2352/shots/rom-*). After the first pass the won state of the build and read steps was blank, so a summary of the three numerals (e.g. 'XLIX = 49', 'XCIV = XC + IV = 94') was added. Symbol tiles are about 58 px tall and over 44 px wide, answer cards span the width, and nothing is clipped."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: all five tasks complete with Show me, challenge shown, axe WCAG 2.1 AA clean in both themes, no console errors. Every drag has a button (+ I, + V, + X, + L, + C with aria-labels giving the value, Undo, Split it, the three number choices, '<name> is right'), and the canvas aria-label states the target, tiles so far and their value after each action."
+  }
+ },
+ "sources": [
+  "National Curriculum in England: Mathematics programmes of study, Year 3 (clock faces) and Year 4 (read Roman numerals to 100)",
+  "Encyclopaedia Britannica: Roman numeral",
+  "NCETM: Primary mastery professional development materials, Number and place value (Roman numerals)",
+  "Royal Museums Greenwich: why some clocks use IIII instead of IV"
+ ]
+}
