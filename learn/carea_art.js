@@ -1,0 +1,42 @@
+/* Data for the area of compound shapes flagship (flagcarea). The grid L-shape is 8 wide and 6 tall with a 3 by 4 corner
+   missing at the top right (area 36). The measured shape is 10 cm by 7 cm with a 6 cm by 3 cm corner missing (area 52). */
+const CAREA={
+ GRID:{w:8,h:6,gapW:3,gapH:4},
+ /* the two cuts that leave two rectangles: down at x = 5, or across at y = 4 (counted from the top) */
+ GOOD:{v:5,h:4},
+ CM:{w:10,h:7,top:4,right:4},
+ /* missing sides: label, answer, choices, feedback for each wrong choice */
+ MISS:[['inside step across',6,[14,6,4],{14:'14 is 10 + 4. The top edge and the step together make the 10 cm bottom edge, so take away: 10 − 4 = 6.',4:'4 cm is the top edge. The step is the rest of the 10 cm width: 10 − 4 = 6.'}],
+  ['inside step down',3,[11,4,3],{11:'11 is 7 + 4. The right edge and this step together make the 7 cm height, so take away: 7 − 4 = 3.',4:'4 cm is the right edge. This step is the rest of the 7 cm height: 7 − 4 = 3.'}]],
+ STEPP:['This L-shape is drawn on a grid of centimetre squares. Area is how many squares it covers. Paint every square to count them.',
+  'Counting is slow. Instead, cut the L into two rectangles, find each area with length × width, and add. Drag a cut line, then let go.',
+  'There is more than one way to cut. Try the other direction and compare the total.',
+  'Real shapes often have sides with no length marked. Use the opposite sides to work them out. Tap each ? and pick its length.',
+  'You can also take away. Fill in the whole big rectangle, then remove the missing corner.'],
+ DONE:['36 squares, so the area is 36 cm². Not 8 × 6 = 48: a corner is missing.','5 × 6 = 30 and 3 × 2 = 6, so 30 + 6 = 36 cm².',
+  'Either cut gives 36 cm². The pieces change, the total does not.','The missing sides are 6 cm and 3 cm.','70 − 18 = 52 cm², the same as 4 × 7 + 6 × 4 = 28 + 24.'],
+ QZ:[['An L-shape fits in an 8 cm by 6 cm box with a corner missing. Is its area 48 cm²?',[['No, less than 48: the corner is missing','ok'],['Yes, 8 × 6 = 48','box'],['No, it is 8 + 6 = 14','addsides']]],
+  ['You split an L-shape into rectangles of 20 cm² and 16 cm². What is its area?',[['36 cm²','ok'],['320 cm²','times'],['20 cm², the bigger part','bigger']]],
+  ['Two ways of cutting the same L-shape give different totals. What does that mean?',[['A mistake: every cut gives the same area','ok'],['The shape has two areas','two'],['The bigger answer is right','biggest']]],
+  ['A shape is 12 cm wide. Its top edge is 5 cm. How long is the step next to it?',[['7 cm','ok'],['17 cm','addmiss'],['5 cm','copy']]],
+  ['A 10 cm by 7 cm rectangle has a 6 cm by 3 cm corner cut out. What is the area left?',[['52 cm²','ok'],['88 cm²','addcut'],['70 cm²','nocut']]],
+  ['Which unit is right for the area of an L-shape?',[['cm²','ok'],['cm','unit'],['cm³','cube']]],
+  ['Which cut splits an L-shape into two rectangles?',[['A cut from the inside corner','ok'],['Any straight cut','anycut'],['A cut from corner to corner','diag']]],
+  ['You add the areas of two rectangles that overlap. What goes wrong?',[['The overlap is counted twice','ok'],['Nothing, overlaps are fine','overlap'],['The area comes out too small','small']]]],
+ WHY:{box:'8 × 6 is the area of the whole box. A corner is missing, so the L-shape covers fewer squares.',
+  addsides:'Adding side lengths gives part of the perimeter, not the area. Area counts squares inside.',
+  times:'Multiply length by width inside each rectangle, then add the two areas: 20 + 16 = 36.',
+  bigger:'The shape is both parts together, so add them: 20 + 16 = 36 cm².',
+  two:'A shape covers one number of squares. Different totals mean a length or a sum went wrong.',
+  biggest:'Neither is trusted until they agree. Check the missing sides and each length × width.',
+  addmiss:'5 + 12 = 17 is longer than the whole width. The step is the rest: 12 − 5 = 7.',
+  copy:'The step is not the same as the top edge. It is what is left of the 12 cm: 12 − 5 = 7.',
+  addcut:'The corner is missing, so take its area away: 70 − 18 = 52, not 70 + 18.',
+  nocut:'70 is the full rectangle. Take away the missing corner, 6 × 3 = 18, to get 52.',
+  unit:'cm measures a length. Area counts squares, so it is in square centimetres, cm².',
+  cube:'cm³ is for volume, how much space a solid takes up. A flat shape uses cm².',
+  anycut:'Most cuts leave one piece still shaped like an L. Cut along a line from the inside corner.',
+  diag:'A slanted cut makes triangles and odd shapes. Cut straight along a grid line from the inside corner.',
+  overlap:'Squares in both rectangles get counted twice, so the total is too big. Use pieces that do not overlap.',
+  small:'An overlap makes the total too big, not too small, because shared squares are counted twice.'}
+};
