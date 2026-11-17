@@ -3871,8 +3871,8 @@ const info=t=>{st.no=false;st.say=t;voice(t);A.redraw()};
 /* the cliff: six bands, the clay band thin; returns the band boxes */
 function cliff(top,x0,w){const k=C(),room=A.H-top-sz(84),unit=room/(NL-.55),bands=[];let y=top;
  L.forEach((l,i)=>{const h=l.thin?unit*.45:unit,open=i<st.dug;g.fillStyle=open?l.fill:k.cover;g.fillRect(x0,y,w,h);g.strokeStyle=k.rock;g.lineWidth=1.5;g.strokeRect(x0,y,w,h);
-  if(open){if(l.dino){g.fillStyle='#f8fafc';g.strokeStyle=k.ink;g.lineWidth=1.5;g.beginPath();g.ellipse(x0+w*.82,y+h/2,sz(14),sz(5),.3,0,7);g.fill();g.stroke()}
-   put(l.name+(st.ages?' · '+l.age:''),x0+8,y+h*(l.thin||st.brief?.5:.33),l.thin?10:11,k.ink,800,'left',w-16);if(!l.thin&&!st.brief)split(l.find,w-16,10).slice(0,2).forEach((r,j)=>put(r,x0+8,y+h*.6+j*sz(12),10,k.ink,600,'left'))}
+  if(open){if(l.dino){g.fillStyle='#f8fafc';g.strokeStyle=k.ink;g.lineWidth=1.5;g.beginPath();g.ellipse(x0+w-sz(22),y+h-sz(10),sz(13),sz(4),.3,0,7);g.fill();g.stroke()}
+   put(l.name+(st.ages?' · '+l.age:''),x0+8,y+h*(l.thin||st.brief?.5:.33),l.thin?10:11,k.ink,800,'left',w-(l.dino?sz(44):16));if(!l.thin&&!st.brief)split(l.find,w-sz(44),10).slice(0,2).forEach((r,j)=>put(r,x0+8,y+h*.6+j*sz(12),10,k.ink,600,'left'))}
   else{g.strokeStyle=k.hatch;g.lineWidth=1;for(let q=x0+6;q<x0+w;q+=14){g.beginPath();g.moveTo(q,y+h-2);g.lineTo(q+8,y+2);g.stroke()}put('?',x0+w/2,y+h/2,12,k.fg,900)}
   if(st.mark===i){g.strokeStyle='#7c3aed';g.lineWidth=4;g.strokeRect(x0+2,y+2,w-4,h-4)}
   bands.push({x:x0,y,w,h,i});y+=h});return bands}
