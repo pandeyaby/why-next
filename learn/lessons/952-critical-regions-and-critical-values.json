@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_MQFf-_R_c-",
+ "title": "Critical regions and critical values",
+ "audience": "learner",
+ "keyIdea": "In a hypothesis test, the critical region is the set of values of the test statistic that lead you to reject H₀, and the critical value is its boundary, the first value inside it. For a binomial test, take the most extreme values in the direction of H₁ and make the region as large as possible while its probability under H₀ stays at or below α; for a two-tailed test each tail may hold at most α/2. For X ~ B(20, 0.3) at 5%, H₁: p > 0.3 gives X ≥ 10, because P(X ≥ 10) = 4.80% but P(X ≥ 9) = 11.33%. If the observed value lies in the region, reject H₀. The actual significance level is the probability of the region under H₀.",
+ "familyTip": "Toss a coin 20 times together and count heads. Before you start, agree which counts would make you doubt the coin is fair, such as 15 or more heads or 5 or fewer. That list is a critical region; see whether your count lands in it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "H₀: p = 0.3. Where does the critical region go? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Upper tail: X ≥ c",
+    "Lower tail: X ≤ c",
+    "Both tails"
+   ],
+   "items": [
+    [
+     "H₁: p > 0.3",
+     0
+    ],
+    [
+     "H₁: p < 0.3",
+     1
+    ],
+    [
+     "H₁: p ≠ 0.3",
+     2
+    ],
+    [
+     "Claim: the new seed germinates more often",
+     0
+    ],
+    [
+     "Claim: fewer customers now complain",
+     1
+    ],
+    [
+     "Claim: the spinner is biased",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcritr",
+  "caption": "Flagship lab: drag the boundary of a binomial critical region, read critical values from a table, split α over two tails, decide tests.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Before a test, you decide which results would make you reject H₀. That set of results is the critical region. The first value inside it is the critical value.",
+   "The region sits at the end that H₁ points to. If H₁ says p > 0.3, big counts are evidence, so the region is X ≥ c. If H₁ says p < 0.3, it is X ≤ c.",
+   "Make the region as big as you can while its chance under H₀ stays at or below α. For X ~ B(20, 0.3) at 5%, P(X ≥ 10) = 4.80% but P(X ≥ 9) = 11.33%. So the region is X ≥ 10.",
+   "For a two-tailed test, split α. At 5%, each tail may hold at most 2.5%. Then check your result. If it is in the region, even right on the critical value, reject H₀. If not, do not reject H₀."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is A level Mathematics statistics for England: conduct a statistical hypothesis test for the proportion in the binomial distribution, and know the terms critical value, critical region, acceptance region, significance level and actual significance level. One-tailed and two-tailed tests are both required.",
+   "The lab uses H₀: p = 0.3 with n = 20. To 4 decimal places P(X ≤ 1) = 0.0076, P(X ≤ 2) = 0.0355, P(X ≤ 3) = 0.1071, P(X ≤ 9) = 0.9520 and P(X ≤ 10) = 0.9829. So at 5% the upper region is X ≥ 10 (4.80%), the lower region is X ≤ 2 (3.55%), and the two-tailed region is X ≤ 1 or X ≥ 11, with actual level 0.764% + 1.714% ≈ 2.48%.",
+   "Common mistakes. Taking the table row as the upper critical value (9 instead of 10, since P(X ≥ 10) = 1 − P(X ≤ 9)). Choosing the tail probability closest to α even when it is above α. Putting the whole of α in each tail of a two-tailed test. Not rejecting H₀ when the observed value equals the critical value. Quoting α as the actual significance level, and saying H₁ is proved."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "X ~ B(20, 0.3) under H₀, H₁: p > 0.3, 5% level. Which is the critical region?",
+   "choices": [
+    "X ≥ 10",
+    "X ≥ 9",
+    "X ≥ 11"
+   ],
+   "answer": 0,
+   "hint": "P(X ≥ 9) = 11.33%, P(X ≥ 10) = 4.80%, P(X ≥ 11) = 1.71%.",
+   "explain": "X ≥ 10 holds 4.80%, within 5%. Adding 9 would make it 11.33%, too much, and X ≥ 11 leaves out 10, which is allowed."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "For an upper-tail test, the first table row with P(X ≤ x) ≥ 0.95 is x = {r}. What is the critical value?",
+   "answer": "r+1",
+   "hint": "P(X ≥ c) = 1 − P(X ≤ c − 1). Which c uses row {r}?",
+   "explain": "1 − P(X ≤ {r}) is P(X ≥ {=r+1}), so the region is X ≥ {=r+1} and the critical value is {=r+1}.",
+   "params": {
+    "r": [
+     5,
+     15
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A two-tailed test at the 10% level. How much probability may each tail hold?",
+   "choices": [
+    "At most 5%",
+    "At most 10%",
+    "Exactly 5%"
+   ],
+   "answer": 0,
+   "hint": "The two tails share α between them.",
+   "explain": "Each tail gets half of α: at most 5% in each. X is discrete, so a tail is rarely exactly 5%."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The critical region is X ≥ {c}. Under H₀, P(X ≤ {=c-1}) = 0.9{k}. What is the actual significance level, as a percentage?",
+   "answer": "10-k",
+   "hint": "The region X ≥ {c} is everything except X ≤ {=c-1}.",
+   "explain": "P(X ≥ {c}) = 1 − 0.9{k} = 0.0{=10-k}, so the actual significance level is {=10-k}%.",
+   "params": {
+    "c": [
+     8,
+     14
+    ],
+    "k": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "The critical region is X ≤ 2. You observe X = 2. What do you conclude?",
+   "choices": [
+    "Reject H₀",
+    "Do not reject H₀",
+    "The test cannot decide"
+   ],
+   "answer": 0,
+   "hint": "Is 2 inside X ≤ 2? The critical value belongs to the region.",
+   "explain": "2 is the critical value and lies inside the region, so reject H₀."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "X ~ B(20, 0.3) under H₀, H₁: p < 0.3, 5%. P(X ≤ 2) = 0.0355, P(X ≤ 3) = 0.1071. Critical region?",
+    "choices": [
+     "X ≤ 2",
+     "X ≤ 3",
+     "X ≥ 10"
+    ],
+    "answer": 0,
+    "hint": "Lower tail, and stay at or below 0.05.",
+    "explain": "P(X ≤ 2) = 0.0355 ≤ 0.05 and P(X ≤ 3) = 0.1071 is not, so the region is X ≤ 2."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the critical value?",
+    "choices": [
+     "The first value inside the critical region",
+     "The significance level α",
+     "The observed value"
+    ],
+    "answer": 0,
+    "hint": "It marks a boundary on the X scale.",
+    "explain": "The critical value is the boundary value of X that is in the critical region, such as 10 in X ≥ 10."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A student picks X ≥ 9 because P(X ≥ 9) = 5.4% is closer to 5% than P(X ≥ 10) = 2.1%. What is wrong?",
+    "choices": [
+     "The region must not hold more than α",
+     "Nothing, closest is best",
+     "They should use 10%"
+    ],
+    "answer": 0,
+    "hint": "Is 5.4% allowed at the 5% level?",
+    "explain": "The probability of the region must be at or below α. 5.4% is too much, so the region is X ≥ 10."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Two-tailed, 5%, X ~ B(20, 0.3). P(X ≤ 1) = 0.76%, P(X ≤ 2) = 3.55%, P(X ≥ 11) = 1.71%, P(X ≥ 10) = 4.80%. Critical region?",
+    "choices": [
+     "X ≤ 1 or X ≥ 11",
+     "X ≤ 2 or X ≥ 10",
+     "X ≤ 2 or X ≥ 11"
+    ],
+    "answer": 0,
+    "hint": "Each tail may hold at most 2.5%.",
+    "explain": "0.76% and 1.71% are both within 2.5%; 3.55% and 4.80% are not. So X ≤ 1 or X ≥ 11."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "The critical region is X ≥ 10 and you observe X = 8. What do you conclude?",
+    "choices": [
+     "Do not reject H₀: not enough evidence that p > 0.3",
+     "Reject H₀",
+     "H₀ is proved true"
+    ],
+    "answer": 0,
+    "hint": "Is 8 in the region? And does a test ever prove H₀?",
+    "explain": "8 is outside X ≥ 10, so do not reject H₀. That is not proof that H₀ is true."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The region X ≤ 1 or X ≥ 11 has tails 0.764% and 1.714%. What is the actual significance level?",
+    "choices": [
+     "2.48%",
+     "5%",
+     "1.71%"
+    ],
+    "answer": 0,
+    "hint": "Add the probabilities of both tails.",
+    "explain": "0.764% + 1.714% ≈ 2.48%. That is the chance of rejecting H₀ when it is true."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why is the actual significance level usually less than α in a binomial test?",
+    "choices": [
+     "X takes whole numbers, so tail sums jump",
+     "α is always rounded",
+     "The sample is too small"
+    ],
+    "answer": 0,
+    "hint": "Can you add half a bar to a tail?",
+    "explain": "X is discrete, so the tail grows in jumps (4.80% to 11.33%). The largest region within α usually holds less than α."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "For a lower-tail test, the last table row with P(X ≤ x) ≤ α is x = {r}. What is the critical value?",
+    "answer": "r",
+    "hint": "For a lower tail, P(X ≤ c) is read straight from the table.",
+    "explain": "The region is X ≤ {r}, so the critical value is {r} itself.",
+    "params": {
+     "r": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "An upper-tail critical region is X ≥ {c} for n = 20. How many values of X are in the critical region?",
+    "answer": "21-c",
+    "hint": "X can be any whole number from 0 to 20.",
+    "explain": "The values {c}, …, 20 make 20 − {c} + 1 = {=21-c} values.",
+    "params": {
+     "c": [
+      8,
+      17
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "P(X ≤ 9) = 0.9520 under H₀. A student says the critical value is 9. What is the slip?",
+    "choices": [
+     "P(X ≥ 10) = 1 − P(X ≤ 9), so it is 10",
+     "It should be 0.952",
+     "It should be 8"
+    ],
+    "answer": 0,
+    "hint": "Which values does 1 − P(X ≤ 9) cover?",
+    "explain": "1 − P(X ≤ 9) is the probability of 10 or more, so the region is X ≥ 10 and the critical value is 10."
+   }
+  ]
+ }
+}
