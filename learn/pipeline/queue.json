@@ -5972,14 +5972,6 @@
    "reels": false
   },
   {
-   "topic": "mt_LCJNRaRXtW",
-   "name": "Different viewpoints in texts",
-   "subject": "English",
-   "ages": "10-11",
-   "downstream": 0,
-   "reels": false
-  },
-  {
    "topic": "mt_LDMz8E0J-B",
    "name": "p-values",
    "subject": "Mathematics",
@@ -6034,14 +6026,6 @@
    "ages": "16-18",
    "downstream": 14,
    "reels": true
-  },
-  {
-   "topic": "mt_on7FHCDmi-",
-   "name": "Evaluating a Speaker's Argument",
-   "subject": "English",
-   "ages": "10-11",
-   "downstream": 0,
-   "reels": false
   },
   {
    "topic": "mt_VtqvUORa8K",
@@ -7250,8 +7234,26 @@
    "name": "Consistent verb tense",
    "reason": "Overlaps 'Choosing Tenses for Precise Meaning' (939, flagtseq), whose 'Fix the tense slip' step already finds and fixes unwanted tense shifts in a past-tense story (keeping speech in the present) and whose timeline step covers justified shifts such as flashbacks.",
    "date": "2026-11-16"
+  },
+  {
+   "topic": "mt_on7FHCDmi-",
+   "name": "Evaluating a Speaker's Argument",
+   "reason": "Overlaps 273 'Identifying Reasons Behind a Speaker's Points' (flagreason), which already sorts a talk into point, reasons and evidence and tests whether claims support the point.",
+   "date": "2026-11-16"
+  },
+  {
+   "topic": "mt_LCJNRaRXtW",
+   "name": "Different viewpoints in texts",
+   "reason": "Overlaps 943 'Narrator's Point of View' (flagperson: sort by narrator, switch narrators, retell in third person) and 212 'Narrative perspective and unreliable narrators' (flagnarr: one event told three ways, what a narrator doesn't know).",
+   "date": "2026-11-16"
+  },
+  {
+   "topic": "mt_UEe3MC5RZc",
+   "name": "Root Words & Inflections",
+   "reason": "Overlaps 825 'Reading inflectional endings' (flagendread: find the root, -s/-ed/-ing endings) and 843 'Word families and root words' (flagwfam), with -ful/-ness/-er covered by 779 'Suffixes'.",
+   "date": "2026-11-16"
   }
  ],
- "_note_age_mix": "2026-11-16 ~5:53 PM run: 2 of 3 lessons for ages 2–11 and 1 for 16–18. Open young topics on the viewer graph are now all English 8–11 (Learning to Learn, Personal & Social, Maths and Science 2–11 are done or skipped as overlaps), so the run took the ranker's top open young topics that do not overlap. Text & Media Connections (English 9–10, mt_t06dHX2ZYw, CCSS RL.4.7, flagscreen: match 4 film shots to the sentence they show, sort 6 film moments into kept/changed, link 4 stage moments to bracketed stage directions, voice 4 audiobook lines from text clues, pick the shot that shows a told feeling; data in learn/screen_art.js). Suffixes (age 9+) (English 9–10, mt_2X9Cd38eSJ, NC English Appendix 1 Y5–6, flagcious: -cious/-tious from a clue word, -cial/-tial from the letter before the ending incl. financial, a/e into -ant/-ent gaps from -ation words, soft c/g, qu, word families, fix a café sign; data in learn/cious_art.js). Critical regions and critical values (Maths 16–18, mt_MQFf-_R_c-, A level statistics, flagcritr: drag the upper boundary on B(20, 0.3) to X ≥ 10, read upper/lower critical values from a cumulative table, two-tailed X ≤ 1 or X ≥ 11 with α/2 per tail, decide 6 tests incl. the critical value itself, actual significance levels; data in learn/critr_art.js). Consistent verb tense (mt_npRaYRhU2V) marked skipped as an overlap with 939 flagtseq. Spelling Word Lists (age 9+) left queued but likely overlaps 804 flagstatw (same tricks, Y5–6 list).",
+ "_note_age_mix": "2026-11-16 ~7:48 PM run: 2 of 3 lessons for ages 2–11 and 1 for 16–18. Open young topics on the viewer graph are still all English 8–11, so the run took the two most foundational non-overlapping ones: Agreement in sentences (English 8–10, mt_2NfIKEYdbm, CCSS L.3.1f, flagconcord: tap the head noun so the phrase is crossed out, drag the verb that agrees, each/every/neither … nor/there is rules, drag pronouns that match their antecedent with a link drawn back across sentences, fix a note with 3 errors; data in learn/concord_art.js) and Combining information from texts (English 9–10, mt_8FwtdJzeDh, CCSS RI.4.9, flagtwotext: two hedgehog texts side by side, drag 7 facts into Only A/Both/Only B, match 5 questions to the text that answers them, settle 5,000 vs 7,000 spines with a third source, build a 5-sentence summary, join pairs with Both texts say/Text B adds/However; data in learn/twotext_art.js). 16–18: How chromatography separates mixtures (Science, mt_9Pl5rGIg7i, AQA/OCR A level, flagchrom: place 3 dyes by paper vs solvent pull, slide a line to spot centres for Rf 0.25/0.55/0.75, identify U = A + B by Rf with a red decoy, fix 3 tank faults, second solvent separates two Rf 0.50 substances; data in learn/chrom_art.js). It failed once on 2-d.p. exactness of two numeric items (logged), was fixed and passed on retry. Skipped as overlaps: Evaluating a Speaker's Argument (273 flagreason), Different viewpoints in texts (943 flagperson, 212 flagnarr), Root Words & Inflections (825 flagendread, 843 flagwfam). Spelling Word Lists (age 9+) still left queued; likely overlaps 804 flagstatw.",
  "_note_queue_policy": "2026-11-11: Classification Keys (mt_brgde1Vx0P) already used its approved one-more-retry and is in done (learn/lessons/740-classification-keys.json, flagkey, 2026-11-10). Do not re-queue it. scripts/lesson_pipeline.py now marks a topic skipped permanently if it fails a second time (attempts >= 2). The under-11 ranker decision is dropped: it is resolved by hand-queuing young topics onto visual-draft, not by a ranker code change."
 }
