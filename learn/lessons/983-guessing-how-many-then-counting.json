@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_Auhb0IEFGd",
+ "title": "Guessing how many, then counting",
+ "audience": "family",
+ "keyIdea": "First, look and guess how many. A good guess is close to the real number. Then count to check: touch each one once and say one number for each. The last number you say is how many. Then say if there were more than, fewer than, or the same as your guess. Big things and long rows can trick your eyes, so count to be sure.",
+ "familyTip": "Before your child counts grapes, cars or stairs, ask: how many do you think? Then count together, touching each one. Ask: was it more than your guess, or fewer? Praise close guesses. Keep groups under 10 at first.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "There are 6 grapes on a plate. Is each guess sensible or silly? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Sensible guess",
+    "Silly guess"
+   ],
+   "items": [
+    [
+     "5 grapes",
+     0
+    ],
+    [
+     "100 grapes",
+     1
+    ],
+    [
+     "7 grapes",
+     0
+    ],
+    [
+     "0 grapes",
+     1
+    ],
+    [
+     "6 grapes",
+     0
+    ],
+    [
+     "1000 grapes",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagguess",
+  "caption": "Flagship lab: touch and count, guess a jar then check, pick sensible guesses, compare big and small things, spread a row out.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "How many sweets in the jar? Look, then guess. Maybe 5? A guess does not have to be right. It just has to be close.",
+   "Now count to check. Touch each sweet once. Say one number for each: 1, 2, 3, 4, 5, 6. The last number is how many. There are 6!",
+   "You guessed 5. You counted 6. 6 is more than your guess. Just 1 more. That was a good guess!",
+   "Watch out for tricks. Big apples fill a jar, but 7 little grapes are more than 4 apples. Spread cars out in a long row: still the same number. Count to be sure."
+  ],
+  "adult": [
+   "Ages 3 to 4. Development Matters (2021) for 3 to 4 year olds asks children to say one number for each item in order, to know that the last number counted tells you how many (the cardinal principle), and to compare amounts using 'more than' and 'fewer than'. Estimating before counting builds number sense. It leads into the ELG for Number. Key words: estimate, count, one-to-one correspondence, cardinal principle, more than, fewer than, the same as.",
+   "Make it a game with real things. Ask 'How many do you think?' before counting snacks, toys or steps. Then count together, touching or moving each one. Talk about the gap: 'You said 4, there are 5. That is 1 more than your guess.' Keep it under 10, and praise a close guess as much as an exact one.",
+   "Common mistakes: thinking a guess is wrong unless it is exact; picking a huge or random number; touching one item twice or skipping one; saying the whole number list again when asked how many, instead of the last number; and thinking bigger things or a longer row means more. Be careful to say 'fewer than' for things you count, and to recount after spreading items out.",
+   "In the lab your child touches each item on three plates to count them. They guess how many are in three jars, count to check, then tap more than, fewer than, or same as my guess. They pick the sensible guess for four groups, compare big things with small things, and drag a row of cars apart to see that the number stays the same."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You guess {g} sweets. You count {g} and 1 more. Was it more than, fewer than, or the same as your guess?",
+   "choices": [
+    "More than my guess",
+    "Fewer than my guess",
+    "The same as my guess"
+   ],
+   "answer": 0,
+   "hint": "You counted 1 more than you guessed. Is that more or fewer?",
+   "explain": "You counted 1 more than {g}, so there were more than your guess. Only 1 away: a close guess.",
+   "params": {
+    "g": [
+     3,
+     7
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You touch each duck and say 1, 2, 3 and so on. The last number you say is {n}. How many ducks are there?",
+   "answer": "n",
+   "hint": "The last number you say when you count tells you how many there are.",
+   "explain": "The last number was {n}, so there are {n} ducks. That is the cardinal principle.",
+   "params": {
+    "n": [
+     3,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "There are about 6 cars on the mat. Which guess is sensible?",
+   "choices": [
+    "5",
+    "60",
+    "1"
+   ],
+   "answer": 0,
+   "hint": "A good guess is close to what you can see. Is 60 close to 6?",
+   "explain": "5 is close to 6, so it is a sensible guess. 60 is far too many and 1 is far too few."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A jar has 3 big balls. A cup has 7 small beads. Which has more?",
+   "choices": [
+    "The cup of beads",
+    "The jar of balls",
+    "They are the same"
+   ],
+   "answer": 0,
+   "hint": "Do not look at how full they are. Count them: 3 and 7.",
+   "explain": "7 is more than 3, so the cup of beads has more. Big balls fill more space, but there are fewer."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Bear guesses {g} cars and was close. Is his guess good?",
+   "choices": [
+    "Yes, close is good",
+    "No, it must be exact",
+    "No, guesses are silly"
+   ],
+   "answer": 0,
+   "hint": "Does a guess have to be exactly right?",
+   "explain": "A guess of {g} that is close is a good guess. Then you count to find the real number.",
+   "params": {
+    "g": [
+     4,
+     8
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You count the bees: 1, 2, 3, 4. How many bees are there?",
+    "choices": [
+     "4",
+     "1",
+     "1, 2, 3, 4"
+    ],
+    "answer": 0,
+    "hint": "Which number did you say last?",
+    "explain": "The last number you said was 4, so there are 4 bees."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You guess 8 buttons. You count 6. Was it more than, fewer than, or the same as your guess?",
+    "choices": [
+     "Fewer than my guess",
+     "More than my guess",
+     "The same as my guess"
+    ],
+    "answer": 0,
+    "hint": "Is 6 bigger or smaller than 8?",
+    "explain": "6 is fewer than 8, so there were fewer than your guess. Only 2 away."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "There are about 4 apples in the bowl. Which guess is silly?",
+    "choices": [
+     "400",
+     "4",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Which number is far, far away from 4?",
+    "explain": "400 is far too many for a bowl of 4 apples. 4 and 5 are sensible."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Sam counts the frogs but touches one frog twice. What happens to his number?",
+    "choices": [
+     "It is too big",
+     "It is too small",
+     "It is still right"
+    ],
+    "answer": 0,
+    "hint": "One frog got two numbers. Does that add one or take one away?",
+    "explain": "Touching one frog twice gives it two numbers, so the count is 1 too big."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "{n} cars in a row. You spread them out so the row is longer. How many now?",
+    "choices": [
+     "Still {n}",
+     "More than {n}",
+     "Fewer than {n}"
+    ],
+    "answer": 0,
+    "hint": "Did you add any cars or take any away?",
+    "explain": "No cars were added or taken away, so there are still {n}. A longer row is not more.",
+    "params": {
+     "n": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You guess 5 shells. You count 5. What do you say?",
+    "choices": [
+     "The same as my guess",
+     "More than my guess",
+     "Fewer than my guess"
+    ],
+    "answer": 0,
+    "hint": "Is the number you counted the same as your guess?",
+    "explain": "You counted 5 and guessed 5, so it is the same as your guess. Spot on!"
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "5 big melons or 5 small cherries. Which has more?",
+    "choices": [
+     "They are the same",
+     "The melons, they are big",
+     "The cherries"
+    ],
+    "answer": 0,
+    "hint": "Count each group. Is 5 more than 5?",
+    "explain": "5 and 5 are the same number. Melons are bigger, but there are not more of them."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Before you count {n} grapes, what should you do first?",
+    "choices": [
+     "Look and guess how many",
+     "Eat one",
+     "Say 100"
+    ],
+    "answer": 0,
+    "hint": "Guess first, then count to check.",
+    "explain": "Look and make a sensible guess, then count all {n} grapes to check.",
+    "params": {
+     "n": [
+      4,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why do you count after you guess?",
+    "choices": [
+     "To check how many there really are",
+     "Because the guess was silly",
+     "To make more"
+    ],
+    "answer": 0,
+    "hint": "A guess is close. A count tells you for sure.",
+    "explain": "Counting checks your guess and tells you the real number."
+   }
+  ]
+ }
+}
