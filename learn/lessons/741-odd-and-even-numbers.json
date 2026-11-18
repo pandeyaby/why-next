@@ -1,0 +1,71 @@
+{
+ "topicId": "mt_0u4KLbvBa1",
+ "title": "Odd and even numbers",
+ "audience": "family",
+ "keyIdea": "A number is even if you can put that many things into pairs with none left over, or share them into 2 equal groups. It is odd if one is always left on its own. To tell for any whole number, look at the ones digit, the last one: even numbers end in 0, 2, 4, 6 or 8, and odd numbers end in 1, 3, 5, 7 or 9. The tens do not matter, because every ten is 5 pairs.",
+ "familyTip": "Pair up socks from the wash, shoes by the door or spoons in the drawer. Is there one without a partner? Then play odd or even with house numbers, bus numbers and page numbers: say the last digit first, then the answer.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Odd or even? Drag each number, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Even", "Odd"],
+   "items": [["12", 0], ["7", 1], ["20", 0], ["15", 1], ["34", 0], ["41", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagoddn",
+  "caption": "Flagship lab: pair up cubes, share sweets fairly between two plates, sort numbers by their last digit, build numbers from tens and ones, and join two groups.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Put some socks into pairs. If every sock has a partner, the number is even. If one sock is left on its own, the number is odd. 6 socks make 3 pairs, so 6 is even. 7 socks make 3 pairs and 1 more, so 7 is odd.",
+   "Even numbers also share fairly. 10 sweets give 5 to you and 5 to me. 7 sweets give 3 each, and 1 is left over. You cannot cut it, so 7 is odd.",
+   "Count in 2s from 0 and you say the even numbers: 0, 2, 4, 6, 8, 10. The numbers you skip are odd: 1, 3, 5, 7, 9. Odd and even take turns.",
+   "For a big number, look at the last digit. 58 ends in 8, so 58 is even. It does not matter that 5 is odd. A ten is 5 pairs, so tens always pair up. Only the ones can leave one out."
+  ],
+  "adult": [
+   "Ages 6 to 7. The National Curriculum in England puts this in Year 2 multiplication and division: recall and use facts for the 2, 5 and 10 multiplication tables, including recognising odd and even numbers. An even number is a multiple of 2: it can be split into 2 equal groups, or into groups of 2 with none left over. An odd number leaves a remainder of 1 when divided by 2. Key words: odd, even, pair, equal groups, multiple of 2, ones digit.",
+   "The ones digit test works because 10 is even. A 2-digit number is some tens and some ones, and every ten is 5 pairs, so whether the whole number is odd or even depends only on the ones. Zero is even: 0 shares into 2 equal groups of 0, and it sits between the odd numbers 1 and -1. Adding follows a pattern too: odd + odd = even, even + odd = odd, even + even = even.",
+   "Common mistakes: judging a 2-digit number by its first digit (58 is called odd because of the 5); saying 0 is neither odd nor even; thinking odd + odd must be odd; and counting the number of pairs instead of the leftover (9 is 4 pairs, but 9 is odd). A slip to watch for is sharing 7 as 4 and 3 and calling it fair. The lab, practice and challenge target each of these.",
+   "In the lab your child joins 6, 9 and 8 cubes into pairs and spots the cube with no partner, shares 10 and then 7 sweets between Mia and Leo, sorts 37, 84, 50, 73, 26 and 58 by the ones digit, builds numbers from tens and ones to hit odd and even targets, and joins 3 and 5 cubes to see two odd numbers make an even one."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Is 14 odd or even?", "choices": ["Even", "Odd", "Neither"], "answer": 0,
+   "hint": "Look at the last digit. Is it 0, 2, 4, 6 or 8?", "explain": "14 ends in 4, and 4 is even, so 14 is even. 14 things make 7 pairs with none left over."},
+  {"type": "numeric", "id": "p2", "prompt": "Ben has {n} pairs of socks. How many socks is that?", "answer": "2*n",
+   "hint": "Each pair is 2 socks. Count in 2s, once for each pair.", "explain": "{n} pairs of 2 is {=2*n} socks. Every sock has a partner, so {=2*n} is even.", "params": {"n": [2, 9]}},
+  {"type": "numeric", "id": "p3", "prompt": "{n} pairs of children hold hands. 1 more child joins. How many children are there?", "answer": "2*n+1",
+   "hint": "Count the children in the pairs first, then add the one on their own.", "explain": "{n} pairs is {=2*n} children, and 1 more makes {=2*n+1}. One child has no partner, so {=2*n+1} is odd.", "params": {"n": [2, 9]}},
+  {"type": "mc", "id": "p4", "prompt": "Which number is odd?", "choices": ["35", "42", "60"], "answer": 0,
+   "hint": "Check the last digit of each number.", "explain": "35 ends in 5, so it is odd. 42 ends in 2 and 60 ends in 0, so they are even."},
+  {"type": "mc", "id": "p5", "prompt": "Share 8 sweets fairly between 2 friends. What happens?", "choices": ["4 each, none left over", "4 each, 1 left over", "3 each, 2 left over"], "answer": 0,
+   "hint": "Give one each, again and again, until the sweets run out.", "explain": "8 shares into 4 and 4 with none left over, so 8 is even. 2 left over could still be shared, one more each."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Is 63 odd or even?", "choices": ["Odd", "Even", "It is too big to tell"], "answer": 0,
+    "hint": "Only the ones digit matters. What is the last digit of 63?", "explain": "63 ends in 3, and 3 is odd, so 63 is odd. The 6 tens all pair up."},
+   {"type": "mc", "id": "m2", "prompt": "Which number is even?", "choices": ["78", "51", "95"], "answer": 0,
+    "hint": "Even numbers end in 0, 2, 4, 6 or 8.", "explain": "78 ends in 8, so it is even. 51 ends in 1 and 95 ends in 5, so they are odd."},
+   {"type": "numeric", "id": "m3", "prompt": "What is the next even number after {=2*n}?", "answer": "2*n+2",
+    "hint": "Even numbers go up in 2s. Add 2.", "explain": "{=2*n} is even, so the next even number is 2 more: {=2*n+2}. The odd number {=2*n+1} sits in between.", "params": {"n": [5, 45]}},
+   {"type": "numeric", "id": "m4", "prompt": "{=2*n+1} cubes are put into pairs. How many cubes have no partner?", "answer": "1",
+    "hint": "Is {=2*n+1} odd or even? Look at the last digit.", "explain": "{=2*n+1} is odd. {=2*n} cubes make {n} pairs, and 1 cube is left with no partner.", "params": {"n": [3, 20]}},
+   {"type": "mc", "id": "m5", "prompt": "58 has 5 tens. Is 58 odd or even?", "choices": ["Even, it ends in 8", "Odd, because 5 is odd", "Both, because 5 is odd and 8 is even"], "answer": 0,
+    "hint": "Tens always make pairs. Which digit decides?", "explain": "Every ten is 5 pairs, so the tens never leave one over. 58 ends in 8, so 58 is even."},
+   {"type": "mc", "id": "m6", "prompt": "3 is odd and 5 is odd. What is 3 + 5?", "choices": ["8, even", "8, odd", "9, odd"], "answer": 0,
+    "hint": "Each odd number has one cube with no partner. What happens when the two lonely cubes meet?", "explain": "3 + 5 = 8. The lonely cube from 3 and the lonely cube from 5 make a new pair, so 8 is even."},
+   {"type": "mc", "id": "m7", "prompt": "Is 0 odd or even?", "choices": ["Even", "Odd", "Neither"], "answer": 0,
+    "hint": "Count in 2s from 0: 0, 2, 4. Where does 0 belong?", "explain": "0 is even. It ends in 0, it comes before 2 when you count in 2s, and nothing is left over."},
+   {"type": "mc", "id": "m8", "prompt": "Mia shares 9 grapes fairly with Leo. How many does each get?", "choices": ["4 each, and 1 is left", "5 each", "4 each, and none are left"], "answer": 0,
+    "hint": "Share them one at a time. Is 9 odd or even?", "explain": "9 is odd, so it will not split into 2 equal groups. 4 and 4 makes 8, and 1 grape is left over."},
+   {"type": "mc", "id": "m9", "prompt": "Which list counts in odd numbers?", "choices": ["11, 13, 15, 17", "10, 12, 14, 16", "11, 12, 13, 14"], "answer": 0,
+    "hint": "Look at the last digit of each number in the list.", "explain": "11, 13, 15 and 17 end in 1, 3, 5 and 7, so they are all odd. They go up in 2s."}
+  ]
+ }
+}

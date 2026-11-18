@@ -1,0 +1,261 @@
+{
+ "topicId": "mt_2XDGT5tei1",
+ "title": "Minutes in an hour, hours in a day",
+ "audience": "family",
+ "keyIdea": "There are 60 minutes in 1 hour: the long hand goes once round the clock. There are 24 hours in 1 day: the short hand goes round twice, once for the 12 hours from midnight to midday and once more for the 12 hours back to midnight. Each number on the clock stands for 5 minutes on the long hand, so counting in fives round all 12 numbers makes 60. Use the facts to work out times: 2 hours is 60 + 60 = 120 minutes, and 90 minutes is more than an hour.",
+ "familyTip": "Set a kitchen timer for 60 minutes when your child starts a film or a game, and look at the clock together: where is the long hand now, and where will it be when the timer rings? At bedtime, count back on your fingers how many hours ago they woke up.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Would you time it in minutes or in hours? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Minutes",
+    "Hours"
+   ],
+   "items": [
+    [
+     "Brushing your teeth",
+     0
+    ],
+    [
+     "A night's sleep",
+     1
+    ],
+    [
+     "Putting on your shoes",
+     0
+    ],
+    [
+     "A school day",
+     1
+    ],
+    [
+     "Eating a snack",
+     0
+    ],
+    [
+     "A long car trip",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghr60",
+  "caption": "Flagship lab: wind the long hand round as 60 beads fill, count in fives, run a 24-hour day, lay hour bars on a minute line and sort times.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The long hand on a clock counts minutes. When it goes all the way round once, 60 minutes have passed. That is 1 hour.",
+   "There are only 12 numbers on the clock. Each number is 5 minutes for the long hand. Count in fives: 5, 10, 15 … all the way to 60.",
+   "The short hand counts hours. It goes round once from night to midday. Then it goes round again to night. Twice round is 24 hours. That is 1 whole day.",
+   "Now you can work things out. 2 hours is 60 and 60 more. That makes 120 minutes. Half an hour is 30 minutes."
+  ],
+  "adult": [
+   "Ages 6 to 7. This is the Year 2 statutory aim in the National Curriculum in England: know the number of minutes in an hour and the number of hours in a day. It sits alongside telling the time to five minutes, which is US Common Core 2.MD.7. Key words: minute, hour, day, minute hand, hour hand, half an hour, o'clock, midday, midnight.",
+   "Two facts carry the topic: 1 hour = 60 minutes and 1 day = 24 hours. Children meet them through the clock face. The minute hand makes one turn per hour, and the hour hand makes two turns per day, which is why a 12-hour face still shows a 24-hour day.",
+   "Common mistakes: saying an hour has 100 minutes, as if time were metric; saying an hour has 12 minutes because there are 12 numbers; saying a day has 12 hours because the clock shows 12; and reading the long hand on 3 as 3 minutes rather than 15. Watch also for adding 2 hours as 62 minutes.",
+   "In the lab your child winds the long hand once round while 60 beads fill. They count round the 12 numbers in fives, move the short hand through 24 hours of day and night, put 1-hour bars on a minute line and sort six times as less than, exactly or more than 1 hour."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "How many minutes are in 1 hour?",
+   "choices": [
+    "60",
+    "12",
+    "100"
+   ],
+   "answer": 0,
+   "hint": "Think of the long hand going once round, 5 minutes for each of the 12 numbers.",
+   "explain": "The long hand goes once round in 1 hour. 12 numbers × 5 minutes = 60 minutes."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "How many minutes are in {h} hours?",
+   "answer": "60*h",
+   "hint": "Each hour is 60 minutes. Add 60 for every hour.",
+   "explain": "{h} hours × 60 minutes = {=60*h} minutes.",
+   "params": {
+    "h": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How many hours are in 1 whole day and night?",
+   "choices": [
+    "24",
+    "12",
+    "60"
+   ],
+   "answer": 0,
+   "hint": "The short hand goes round the clock twice in one day.",
+   "explain": "The short hand goes round twice: 12 hours and 12 more hours make 24 hours."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A film lasts 1 hour and {m} minutes. How many minutes is that?",
+   "answer": "60+m",
+   "hint": "Change the hour into 60 minutes, then add the extra minutes.",
+   "explain": "1 hour is 60 minutes. 60 + {m} = {=60+m} minutes.",
+   "params": {
+    "m": [
+     5,
+     50
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "The long hand points at {n}. How many minutes past the hour is it?",
+   "answer": "5*n",
+   "hint": "Count in fives from 12: 1 is 5, 2 is 10, 3 is 15.",
+   "explain": "Each number is 5 minutes, so {n} × 5 = {=5*n} minutes past.",
+   "params": {
+    "n": [
+     1,
+     11
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "The long hand goes once all the way round the clock. How much time has passed?",
+    "choices": [
+     "1 hour",
+     "1 minute",
+     "12 minutes"
+    ],
+    "answer": 0,
+    "hint": "How many minutes does the long hand count in one turn?",
+    "explain": "One turn of the long hand is 60 minutes, which is 1 hour."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why does a day have 24 hours when the clock only shows 12?",
+    "choices": [
+     "The short hand goes round twice",
+     "The clock is broken",
+     "Some hours are skipped at night"
+    ],
+    "answer": 0,
+    "hint": "Think of morning and then afternoon and evening.",
+    "explain": "The short hand goes round once from midnight to midday and once more to midnight: 12 + 12 = 24 hours."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "How many hours are in {d} days?",
+    "answer": "24*d",
+    "hint": "Each day is 24 hours. Add 24 for every day.",
+    "explain": "{d} × 24 = {=24*d} hours.",
+    "params": {
+     "d": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is longer?",
+    "choices": [
+     "70 minutes",
+     "1 hour",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Change 1 hour into minutes first.",
+    "explain": "1 hour is 60 minutes, so 70 minutes is 10 minutes longer."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Half an hour is how many minutes?",
+    "choices": [
+     "30",
+     "50",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "Half of 60 minutes. Where is the long hand after half a turn?",
+    "explain": "An hour is 60 minutes, and half of 60 is 30. The long hand goes half way round, from 12 to 6."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "You read for {m} minutes. How many more minutes until you have read for 1 hour?",
+    "answer": "60-m",
+    "hint": "1 hour is 60 minutes. How many more to get to 60?",
+    "explain": "60 − {m} = {=60-m}. Read for {=60-m} more minutes to make 1 hour.",
+    "params": {
+     "m": [
+      10,
+      50
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Leo says there are 100 minutes in an hour. What is wrong?",
+    "choices": [
+     "An hour is 60 minutes",
+     "He should say 12 minutes",
+     "Nothing, he is right"
+    ],
+    "answer": 0,
+    "hint": "Count round the clock in fives.",
+    "explain": "Time does not go in hundreds. Counting round the 12 numbers in fives reaches 60, so an hour is 60 minutes."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "It is {h} o'clock in the morning. How many hours until midday, 12 o'clock?",
+    "answer": "12-h",
+    "hint": "Count on hour by hour from {h} to 12.",
+    "explain": "12 − {h} = {=12-h}. Midday is {=12-h} hours away.",
+    "params": {
+     "h": [
+      1,
+      11
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which takes about 1 hour?",
+    "choices": [
+     "A swimming lesson",
+     "Clapping your hands once",
+     "A whole night's sleep"
+    ],
+    "answer": 0,
+    "hint": "One clap takes a second, and a night's sleep takes many hours.",
+    "explain": "A swimming lesson is often about an hour. A clap takes a second, and sleep takes about 10 hours for a child."
+   }
+  ]
+ }
+}

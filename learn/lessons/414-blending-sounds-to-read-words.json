@@ -1,0 +1,82 @@
+{
+ "topicId": "mt__KHQttMde3",
+ "title": "Blending Sounds to Read Words",
+ "audience": "family",
+ "keyIdea": "To read a new word, say the sound for each letter from left to right, then push the sounds together: m-a-p, map. This is called blending. Keep each sound short and pure, mmm not muh. Two letters can make one sound, like sh in ship, so ship has 4 letters but 3 sounds. When two consonants sit side by side, as in frog, say both. Read every sound, not just the first, so you can tell bag from big.",
+ "explain": {
+  "kid": [
+   "You can read a word you have never seen. Look at the letters. Say the sound for each one, from left to right. Then push the sounds together. m, a, p. Map!",
+   "Keep each sound short. Say mmm, not muh. Say t, not tuh. Extra uh sounds get in the way. Muh-a-puh does not sound like map.",
+   "Some letters team up. s and h make one sound: sh. So ship is sh, i, p. It has 4 letters but 3 sounds. c and h make ch, and c and k make one k sound, like in chick.",
+   "Look at every letter, not just the first one. Big and bag both start with b. The middle sound tells them apart. In frog, say f and r. Do not skip one."
+  ],
+  "adult": [
+   "Blending is the core decoding skill in systematic synthetic phonics. The child says the phoneme for each grapheme in order, left to right, then merges the phonemes into a spoken word. The English national curriculum asks Year 1 pupils to respond speedily with the correct sound to graphemes for all 40+ phonemes and to read unfamiliar words by blending the sounds of taught grapheme-phoneme correspondences (GPCs). Common Core RF.K.3 and RF.1.3b ask children to decode regularly spelled one-syllable words, and RF.1.2b asks them to blend sounds orally, including consonant blends.",
+   "Key words: phoneme (one speech sound), grapheme (the letter or letters for one sound), digraph (two letters, one sound: sh, ch, th, ck), sound buttons (a dot under a one-letter grapheme and a line under a digraph), CVC word (consonant, vowel, consonant, like map), and adjacent consonants, often called a consonant blend: the f and r in frog make a CCVC word.",
+   "Common mistakes: adding uh to each sound (muh-a-puh), which hides the word; saying the sounds but never merging them; reading the two letters of a digraph apart (s-h-i-p); dropping one of two adjacent consonants, so frog is read as fog; and guessing from the first letter or the picture, so bag is read as big. Be careful to hold stretchy sounds (mmm, sss, fff) and clip bouncy ones (p, t, b) short. If blending is hard, practise it out loud first with no print at all.",
+   "In the lab your child picks the pure way to say each sound, drags a car under the sound buttons so each sound lights up and then merges into the word, taps letters to join the digraph teams, matches a picture to one of three words that differ by one sound, and blends four-sound words with adjacent consonants. Every drag has a big button twin."
+  ]
+ },
+ "familyTip": "Play robot talk. Say a word in sounds, like c-u-p, and let your child shout the word. Then swap: point at a cup and let them say it in robot sounds. Keep each sound short, with no uh on the end.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Count the sounds, not the letters. Drag each word, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["3 sounds", "4 sounds"],
+   "items": [["ship", 0], ["frog", 1], ["chick", 0], ["stop", 1], ["fish", 0], ["crab", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagblend",
+  "caption": "Flagship lab: say pure sounds, drive the blending car, join digraph teams, read every sound and blend longer words.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Blend the sounds c-u-p. Which word do they make?", "choices": ["cup", "cap", "cut"], "answer": 0,
+   "hint": "Say each sound in order, then push them together. Listen to the middle and the last sound.",
+   "explain": "c-u-p blends to cup. Cap has a in the middle, and cut ends with t."},
+  {"type": "numeric", "id": "p2", "prompt": "A word has {n} letters. Two of them team up to make one sound, like sh. How many sounds does the word have?", "answer": "n-1",
+   "hint": "Each letter makes one sound, but the team of two makes only one sound. So take 1 away.",
+   "explain": "The two team letters share one sound, so {n} letters make {=n-1} sounds. Ship has 4 letters and 3 sounds.", "params": {"n": [3, 6]}},
+  {"type": "mc", "id": "p3", "prompt": "Which is the best way to say the sounds to read map?", "choices": ["mmm-a-p", "muh-a-puh", "em-ay-pee"], "answer": 0,
+   "hint": "Keep each sound short and pure. Do not use the letter names.",
+   "explain": "mmm-a-p blends easily into map. Muh-a-puh adds extra uh sounds, and em-ay-pee are the letter names."},
+  {"type": "numeric", "id": "p4", "prompt": "Frog has 4 sounds: f-r-o-g. You blend {n} words like frog. How many sounds do you say in all?", "answer": "4*n",
+   "hint": "Each word like frog has 4 sounds. Count 4 for each word.",
+   "explain": "{n} words with 4 sounds each make {=4*n} sounds. Remember to say both f and r in frog.", "params": {"n": [1, 4]}}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Blend the sounds s-u-n. Which word do they make?", "choices": ["sun", "nus", "sit"], "answer": 0,
+    "hint": "Start with the first sound on the left. Say s, then u, then n, and push them together.",
+    "explain": "s-u-n makes sun. Nus reads the sounds backwards, and sit has different sounds."},
+   {"type": "mc", "id": "m2", "prompt": "How many sounds are in fish?", "choices": ["3: f-i-sh", "4: f-i-s-h", "2: f-sh"], "answer": 0,
+    "hint": "s and h team up. Count sounds, not letters.",
+    "explain": "Fish has 3 sounds: f, i, sh. The s and h make one sound, and the i must not be skipped."},
+   {"type": "mc", "id": "m3", "prompt": "Tom sees a picture of a pen. Which word should he pick?", "choices": ["pen", "pin", "pan"], "answer": 0,
+    "hint": "All three words start with p and end with n. Read the middle sound.",
+    "explain": "Pen has e in the middle, like egg. Pin has i and pan has a, so read every sound."},
+   {"type": "mc", "id": "m4", "prompt": "Blend the sounds f-r-o-g. Which word do they make?", "choices": ["frog", "fog", "for"], "answer": 0,
+    "hint": "f and r sit side by side. Say both of them.",
+    "explain": "f-r-o-g makes frog. Fog drops the r, and for has different sounds."},
+   {"type": "mc", "id": "m5", "prompt": "Ava says c, a, t and then stops. What should she do next?", "choices": ["Push the sounds together: cat", "Say the letter names", "Guess from the picture"], "answer": 0,
+    "hint": "Saying the sounds is the first half of reading the word.",
+    "explain": "After saying the sounds, she blends them: c-a-t, cat. Letter names and guessing will not read the word."},
+   {"type": "mc", "id": "m6", "prompt": "Which two letters make one sound in chop?", "choices": ["ch", "op", "co"], "answer": 0,
+    "hint": "Look for a letter team at the start, like sh in ship.",
+    "explain": "c and h team up to make ch. So chop has 3 sounds: ch, o, p."},
+   {"type": "numeric", "id": "m7", "prompt": "{n} words each have 3 sounds, like map. Each sound gets one sound button. How many sound buttons do you draw in all?", "answer": "3*n",
+    "hint": "One sound button for each sound. Each word has 3 sounds.",
+    "explain": "{n} words with 3 sounds each need {=3*n} sound buttons: one dot for each sound.", "params": {"n": [2, 5]}},
+   {"type": "mc", "id": "m8", "prompt": "In stop, which two consonants sit side by side at the start?", "choices": ["s and t", "s and o", "t and p"], "answer": 0,
+    "hint": "Consonants are the letters that are not a, e, i, o or u. Look at the first two letters.",
+    "explain": "s and t sit side by side, so you say both: s-t-o-p. o is a vowel, and t and p are not next to each other."},
+   {"type": "numeric", "id": "m9", "prompt": "Chick has 5 letters but only 3 sounds, because ch and ck are letter teams. A word has {n} letters and two letter teams. How many sounds does it have?", "answer": "n-2",
+    "hint": "Each team of two letters makes one sound. Two teams means take 2 away.",
+    "explain": "Two letter teams save 2 sounds, so {n} letters make {=n-2} sounds. Chick: ch, i, ck.", "params": {"n": [4, 7]}}
+  ]
+ }
+}

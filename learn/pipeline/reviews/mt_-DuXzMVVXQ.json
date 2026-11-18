@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against CCSS ELA SL.4.2 (paraphrase portions of a text read aloud or information presented in diverse media and formats) and SL.5.2 (summarise), and the national curriculum in England spoken language statements (listen and respond appropriately; articulate answers) plus Years 3–4 reading (identify main ideas drawn from more than one paragraph and summarise these). Every SORT card is classified by whether wording and meaning both change; every SWAP decoy is a real shift in degree, quantity or polarity (damaged < destroyed, delayed ≠ cancelled, never > rarely, exactly/over ≠ about); SPOT changes are single facts (opens→shuts, some→every, 400→40, agent swaps)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented paraphrasing errors: verbatim repetition passed off as a paraphrase (SORT copy cards, challenge q1, m1), quantifier drift most→all and some→every (prediction 1, SORT 4, SPOT 2, m4), intensity drift rarely→never and destroyed→damaged (prediction 3, SWAP, p5), picking a vivid detail as the main idea (prediction 2, GIST detail options), adding facts never said (GIST 'not said' options, challenge q3/q5), agent reversal (SPOT 3 and 5, m5) and changed numbers (SPOT 4)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagrestate is built around comparing a heard source with a retelling: a speech bubble of what was heard, retelling cards sorted three ways, a synonym tile dragged into a gap where decoys shift meaning, retelling word tiles where one word changes a fact, and a heard paragraph whose events must be tapped in order from reworded cards. flagaloud (168) and flaglisten cover listening for who/where/what; flaggist covers summarising text; the lab_distinct gate was under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each wrong move explains why: sorting a copy as a paraphrase says 'some words are new' or 'every word is the same'; a detail picked as main idea returns 'true, but it is one small detail'; a decoy swap says 'never is stronger. Rarely means sometimes, but not often'; tapping an unchanged word in SPOT reminds that order changes are fine and lists who, what, how many, when; a point tapped too early asks what had to happen just after the last one."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options disproved in the task: 'yes, close enough' for All owls vs Most owls (SORT 4 lands in meaning changed), 'the most interesting fact' as the main idea (GIST 1 treats 'Hedgehogs eat beetles' as a detail), and 'yes' never = rarely (SWAP 3 rejects never). A.reveal names the locked-in pick when the task completes."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with twelve wrong-answer messages naming the slip: word-for-word copy, everywhere instead of the north, all and few for many, a detail or an invented fact for the main idea, ends vs starts, swapped helper and helped, an added 'a bit', and the ideas that a paraphrase must be longer or may change facts."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 2.6 (family limit 5.0), adult 8.1 (limit 10.0) after splitting the curriculum paragraph. Kid paragraphs use one example each (Bees go to flowers for nectar; most is not all; rarely is not never); canvas prompts are short lines and every heard text is under 40 words. The lab file was trimmed under the 20 KB pre-commit limit by shortening feedback strings, not by removing feedback."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Kid paragraphs cover definition, main idea first, safe swaps and what is not a paraphrase; adult text gives curriculum codes, why listening is harder than reading, a routine, the named mistakes and what the lab does. The content gate found no filler and the explanation is under 12% similar to every other lesson, including 168 listening to texts read aloud and 160 listening and responding."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for all six steps and wrong-answer states (copy sorted as paraphrase, detail tapped as main idea, built dragged for destroyed, Saturdays tapped, a point tapped out of order). Moved the sort bins to 67%, put feedback below the last option or card and made the phone canvas taller (1.32) so nothing overlaps; tiles are at least 42 px tall. Walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag and tap has a button under the canvas ('Put the retelling in paraphrase', 'Main idea: ...', 'Swap in wrecked', 'shuts changes the meaning', 'Next point: ...') plus a Hear it button that reads the source aloud where speech synthesis exists. The canvas aria-label is rewritten after every action, challenge feedback is a role=status live region, warnings switch to #fda4af on dark, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Common Core State Standards, ELA Speaking & Listening SL.4.2 (paraphrase portions of a text read aloud) and SL.5.2 (summarise a written text read aloud)",
+  "Department for Education (2013) National curriculum in England: English, spoken language (years 1 to 6) and Years 3–4 reading comprehension (identify main ideas drawn from more than one paragraph and summarise these)",
+  "Topic evidence mt_-DuXzMVVXQ (restate main idea and key details without looking at the original; distinguish paraphrasing from repeating)"
+ ]
+}

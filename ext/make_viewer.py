@@ -1,4 +1,7 @@
-"""Generate the Why Next? viewer (new topics plus their upstream v1 ancestors).
+"""Generate the Why Next? viewer (new topics plus their upstream v1 ancestors,
+and a seed set of young v1 topics that are not already in that ancestor set:
+every v1 English, Mathematics, Science, Personal & Social Development and
+Learning to Learn topic for ages 4–11).
 
 out/viewer.html + out/wn/*.js: fast split build for the web (map first, detail chunks on demand).
 out/viewer-offline.html: the same app in one file that works with no network.
@@ -17,8 +20,39 @@ D = json.load(open("out/merged/data/dependencies.json"))["dependencies"]
 pre = {}
 for e in D:
     pre.setdefault(e["topicId"], []).append(e)
-# include all ancestors of new topics (so chains run back to primary)
-keep, stack = set(new), list(new)
+# Upstream v1 topics kept even when they are not ancestors of a Why Next? topic.
+# These are young (ages 2–11) curriculum topics the lesson builder is approved to
+# write flagship lessons for. Names are the exact v1 / curriculum terms. Their
+# prerequisite ancestors are pulled in by the walk below.
+# 10 Nov 2026: six explicit seeds (Compound Words, Combining Simple Shapes,
+# Friendships change over time, Bones & Muscles, Odd and even numbers,
+# Classification Keys).
+# 11 Nov 2026: every v1 English and Personal & Social Development topic with
+# ages 4–11 (ageRangeStart >= 4, ageRangeEnd <= 11) from data/topics.json.
+# 15 Nov 2026: every v1 Mathematics, Science, Personal & Social Development
+# and Learning to Learn topic with the same age rule, so the lesson builder
+# can pick a mix of young subjects. Personal & Social was already included
+# on 11 Nov; the four already-built Maths and Science seeds are included by
+# the computed list below.
+_v1_ids = {t["id"] for t in json.load(open("data/topics.json"))["topics"]}
+SEED_V1_YOUNG_SUBJECTS = (
+    "English",
+    "Personal & Social Development",
+    "Mathematics",
+    "Science",
+    "Learning to Learn",
+)
+SEED_V1 = [
+    t["id"] for t in T
+    if t["id"] in _v1_ids
+    and t["subject"] in SEED_V1_YOUNG_SUBJECTS
+    and t["ageRangeStart"] >= 4 and t["ageRangeEnd"] <= 11
+]
+SEED_V1.sort(key=lambda i: (by[i]["subject"], by[i]["ageRangeStart"], by[i]["name"], i))
+missing_seed = [i for i in SEED_V1 if i not in by]
+assert not missing_seed, f"SEED_V1 ids not in merged topics: {missing_seed}"
+# include all ancestors of new topics and of the seeded v1 topics (chains back to primary)
+keep, stack = set(new) | set(SEED_V1), list(dict.fromkeys(list(new) + SEED_V1))
 while stack:
     u = stack.pop()
     for e in pre.get(u, []):
@@ -50,7 +84,7 @@ assert not missing, f"lesson topics not in the viewer: {missing}"
 res = json.load(open("learn/resources.json"))
 learn = json.dumps({"lessons": lessons, "goals": json.load(open("learn/goals.json")), "resources": res["resources"],
                     "resourcesVerified": res["verifiedOn"]}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-LEARN_JS = ("learn_gen.js", "learn_core.js", "vis_core.js", "vis_number.js", "vis_algebra.js", "vis_calc.js", "vis_integ.js", "vis_chem.js", "vis_sci.js", "vis_num2.js", "vis_alg2.js", "vis_models.js", "vis_models2.js", "vis_world.js", "vis_lab1.js", "vis_lab2.js", "vis_lab3.js", "vis_lab4.js", "vis_lab5.js", "flag_kit.js", "flag_redox.js", "flag_adapt.js", "flag_moral.js", "flag_layout.js", "flag_whyfeel.js", "flag_mmul.js", "flag_madd.js", "flag_define.js", "flag_team.js", "flag_mtx.js", "flag_swap.js", "flag_curio.js", "flag_lift.js", "flag_huh.js", "flag_entry.js", "flag_sqroot.js", "flag_comma.js", "flag_sky.js", "flag_dtype.js", "flag_think.js", "flag_melt.js", "flag_isot.js", "flag_mask.js", "flag_trick.js", "flag_temp.js", "flag_rime.js", "flag_abab.js", "flag_bexp.js", "flag_sight.js", "flag_share.js", "flag_cbp.js", "flag_advl.js", "flag_upst.js", "flag_cult.js", "flag_tstr.js", "flag_binp.js", "flag_sum.js", "flag_kinds.js", "flag_stick.js", "flag_arith.js", "flag_care.js", "flag_abc.js", "flag_clause.js", "flag_shadow.js", "flag_numer.js", "flag_cohe.js", "flag_join.js", "flag_find.js", "flag_clunk.js", "flag_bfit.js", "flag_sort.js", "flag_pasc.js", "flag_oops.js", "flag_bully.js", "flag_pic.js", "flag_sprout.js", "flag_fing.js", "flag_imf.js", "flag_parts.js", "flag_alike.js", "flag_perm.js", "flag_stage.js", "flag_wait.js", "flag_desc.js", "flag_bias.js", "flag_texts.js", "flag_pdist.js", "flag_publish.js", "flag_right.js", "flag_diff.js", "flag_para.js", "flag_wear.js", "flag_more.js", "flag_prej.js", "flag_simol.js", "flag_link.js", "flag_shove.js", "flag_shape.js", "flag_nuadd.js", "flag_proj.js", "flag_and.js", "flag_caten.js", "flag_tower.js", "flag_opine.js", "flag_hgraph.js", "flag_front.js", "flag_rehearse.js", "flag_amino.js", "flag_inform.js", "flag_tidy.js", "flag_hyper.js", "flag_others.js", "flag_lives.js", "flag_tale.js", "flag_touch.js", "flag_amine.js", "flag_pace.js", "flag_brave.js", "flag_heavy.js", "flag_time.js", "flag_oral.js", "flag_count.js", "flag_method.js", "flag_research.js", "flag_sent.js", "flag_dex.js", "flag_reflect.js", "flag_when.js", "flag_goal.js", "flag_reason.js", "flag_avgval.js", "flag_arclen.js", "flag_why.js", "flag_fback.js", "flag_engage.js", "flag_steps.js", "flag_match.js", "flag_nucphile.js", "flag_gentle.js", "flag_plural.js", "flag_comp.js", "flag_decide.js", "flag_fvo.js", "flag_ctx.js", "flag_shade.js", "flag_pov.js", "flag_quot.js", "flag_rvw.js", "flag_epat.js", "flag_curly.js", "flag_prep.js", "flag_purp.js", "flag_routine.js", "flag_change.js", "flag_glance.js", "flag_like.js", "flag_nv.js", "flag_fit.js", "flag_approx.js", "flag_book.js", "flag_cope.js", "flag_recall.js", "flag_body.js", "flag_calm.js", "flag_prod.js", "flag_pron.js", "flag_auth.js", "flag_topic.js", "flag_copy.js", "flag_size.js", "flag_chiral.js", "flag_cool.js", "flag_dial.js", "flag_param.js", "flag_caps.js", "flag_soma.js", "flag_rexp.js", "flag_cause.js", "flag_say.js", "flag_kin.js", "flag_domain.js", "flag_sortw.js", "flag_deriv.js", "flag_place.js", "flag_frac.js", "flag_neg.js", "flag_eq.js", "flag_line.js", "flag_pyth.js", "flag_prob.js", "flag_state.js", "flag_acid.js", "flag_atom.js", "flag_area.js", "flag_energy.js", "flag_circ.js", "flag_wave.js", "flag_nuc.js", "flag_shell.js", "flag_cov.js", "flag_unit.js", "flag_wread.js", "flag_sub.js", "flag_fact.js", "flag_exp.js", "flag_equiv.js", "flag_carbon.js", "flag_hydro.js", "flag_formula.js", "flag_alkane.js", "flag_homo.js", "flag_ptab.js", "flag_alkene.js", "flag_afrac.js", "flag_tangent.js", "flag_fgroup.js", "flag_noble.js", "flag_ion.js", "flag_chord.js", "flag_reveal.js", "flag_arc.js", "flag_rad.js", "flag_surd.js", "flag_grow.js", "flag_expg.js", "flag_name.js", "flag_alc.js", "flag_sim.js", "flag_trig.js", "flag_lmod.js", "flag_brw.js", "flag_exact.js", "flag_sqr.js", "flag_iso.js", "flag_hion.js", "flag_hal.js", "flag_cooh.js", "flag_gp1.js", "flag_print.js", "flag_feel.js", "flag_digit.js", "flag_help.js", "flag_grip.js", "flag_craft.js", "flag_pat.js", "flag_try.js", "flag_qw.js", "flag_mood.js", "flag_rule.js", "flag_trend.js", "flag_listen.js", "flag_check.js", "flag_wonder.js", "flag_skel.js", "flag_infer.js", "flag_ask.js", "flag_aloud.js", "flag_big.js", "flag_teach.js", "flag_sense.js", "flag_focus.js", "flag_mem.js", "flag_ai.js", "flag_exam.js", "flag_emo.js", "flag_fam.js", "flag_baby.js", "flag_evid.js", "flag_habit.js", "flag_tof.js", "flag_polar.js", "flag_reg.js", "flag_plot.js", "flag_bounce.js", "flag_carb.js", "flag_play.js", "flag_aware.js", "flag_two.js", "flag_syl.js", "flag_two.js", "flag_syl.js", "flag_syl.js", "flag_halo.js", "flag_gradf.js", "flag_mentor.js", "flag_bard.js", "flag_wproc.js", "flag_cit.js", "flag_sigma.js", "flag_pyid.js", "flag_chlor.js", "flag_benz.js", "flag_orb.js", "flag_stress.js", "flag_ez.js", "flag_lens.js", "flag_well.js", "flag_pal.js", "flag_budget.js", "flag_calib.js", "flag_float.js", "flag_alive.js", "flag_safe.js", "flag_narr.js", "flag_oddev.js", "flag_quote.js", "flag_vsepr.js", "flag_remth.js", "flag_buildon.js", "flag_pfrac.js", "flag_meaning.js", "flag_assert.js", "flag_newword.js", "flag_stop.js", "flag_stereo.js", "flag_debt.js", "learn_fx.js", "reels_ui.js", "learn_panel.js", "ux.js", "guide.js", "guide_copy.js", "guide_mood.js", "guide_kb.js", "guide_live.js", "guide_dock.js")
+from learn_js import LEARN_JS  # the bundled file list lives in ext/learn_js.py
 learn_js = "".join(open(f"learn/{f}").read() for f in LEARN_JS)
 # Flagship labs are big; the split build lazy-loads each one (plus the shared kit) the first time its lesson opens.
 FLAGS = [f for f in LEARN_JS if f.startswith("flag_") and f != "flag_kit.js"]
@@ -84,7 +118,7 @@ for _f in glob.glob("learn/reels/*"):
 REEL_HOST = "https://etzqrmcwnxpbysnltdxt.supabase.co/storage/v1/object/public/why-next-reels/"
 _reels = "window.WN_REELS=" + json.dumps(_rm, separators=(",", ":")) + ";window.WN_RHOST=" + json.dumps(REEL_HOST) + ";window.WN_RPARTS=" + json.dumps({k: f"https://cdn.jsdelivr.net/gh/pandeyaby/why-next@{v['sha']}/" for k, v in _parts.items()}, separators=(",", ":")) + ";\n"
 learn_js = _reels + learn_js
-css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css", "guide.css", "ux.css"))
+css = "".join(open(f"learn/{f}").read() for f in ("learn.css", "vis.css", "fx.css", "theme.css", "touch.css", "guide.css", "ux.css", "paper.css"))
 
 # Split build: the page shell plus small cacheable scripts; per-domain detail chunks load on demand.
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
@@ -154,5 +188,10 @@ open(f"{outdir}/viewer.html", "w").write(shell.replace("/*__SCRIPTS__*/", tags))
 _reels_off = "window.WN_REELS=" + json.dumps({t: L for t, L in ((t, [r for r in L if not r.get('x')]) for t, L in _rm.items()) if L}, separators=(",", ":")) + ";\n"
 # Offline build: the same scripts inlined into one file that works with no network.
 inline = "".join(f"<script>{t}</script>" for t in ["window.WN_OFFLINE=1;" + files["core.js"], "".join(chunk_js), "".join(les_js), "const LEARN_DATA=" + learn + ";\n" + _reels_off + learn_js[len(_reels):], files["app.js"]])
-open(f"{outdir}/viewer-offline.html", "w").write(shell.replace("/*__SCRIPTS__*/", inline))
+# offline file: no network at all, so inline the heading font and tell the app to skip image slots
+import base64 as _b64
+_font = 'url(data:font/woff2;base64,' + _b64.b64encode(open("site/assets/fonts/fraunces-latin-wght.woff2", "rb").read()).decode() + ')'
+_nun = 'url(data:font/woff2;base64,' + _b64.b64encode(open("site/assets/fonts/nunito-latin-wght.woff2", "rb").read()).decode() + ')'
+offline = shell.replace('url("../site/assets/fonts/fraunces-latin-wght.woff2")', _font).replace('url("../site/assets/fonts/nunito-latin-wght.woff2")', _nun).replace("<head>", "<head><script>window.WN_OFFLINE=1</script>", 1)
+open(f"{outdir}/viewer-offline.html", "w").write(offline.replace("/*__SCRIPTS__*/", inline))
 print("viewer:", len(nodes), "nodes (", len(newset), "new )", len(edges), "edges,", len(clusters), "cluster summaries,", len(lessons), "lessons +", len(starters), "starter lessons,", len(chunks), "detail chunks")

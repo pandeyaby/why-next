@@ -1,0 +1,153 @@
+{
+ "topicId": "mt_iWGnyUyN2j",
+ "title": "Resolving Disagreements with Friends",
+ "audience": "family",
+ "keyIdea": "Friends fall out sometimes, and you can sort most of it out yourselves in four steps. Calm down first. Say how you feel and why, without blaming: \"I feel cross because I wanted a turn.\" Listen to your friend's side to the end, then say back what you heard. Then find a fix that gives you both enough, such as taking turns. If someone is hitting or hurt, or you are stuck, get a grown-up.",
+ "explain": {
+  "kid": [
+   "Ava wants football. Leo wants tag. They both get cross and start to shout. Shouting will not fix it. First they need to calm down. Take some slow breaths, count to five, or step back for a minute.",
+   "Next, Ava says how she feels and why. She starts with I: \"I feel cross because we never play my game.\" That is called an I-statement. It does not blame Leo, so he does not need to fight back.",
+   "Then Ava listens to Leo all the way to the end. He says, \"We played football yesterday.\" Ava says it back: \"So you want tag because we had football yesterday?\" Now Leo knows she heard him.",
+   "Last, they look for a fix that works for both. Football all break is good for Ava but bad for Leo. Nobody playing is bad for both. Tag first, then football, gives them both enough. That is a compromise. If someone hits, gets hurt, or you are stuck, get a grown-up."
+  ],
+  "adult": [
+   "This topic sits in DfE Relationships Education (2019), 'Caring friendships': most friendships have ups and downs that can be worked through, violence is never right, and pupils learn to manage conflict and seek help when needed. The PSHE Association Programme of Study covers it at Key Stage 2 under Relationships (friendships and safe relationships). In CASEL's framework it is the relationship skill 'resolving conflicts constructively'.",
+   "The lab follows a common school conflict-resolution routine. First calm down, because a child flooded with anger cannot problem-solve. Then use an I-statement (feeling plus reason, no blame), and active or reflective listening (letting the other child finish, then saying back their reason). Last, negotiate a compromise in which each side gives a little so both get enough. That is a 'win-win' rather than 'win-lose' or 'lose-lose'.",
+   "Common mistakes: trying to sort it out while still shouting; 'you' statements that blame ('You always ruin it'); planning a reply instead of listening; thinking the fair fix is whoever asked first or shouts loudest; and the quiet child who always gives in to keep the peace. That is not a fair fix, and it is worth gently noticing. Be careful, too, that children know some things are not theirs to sort out: hitting, someone being hurt or scared, or being stuck after trying. Those need a trusted adult.",
+   "In the lab your child brings Ava's cross-o-meter down with calm-down moves, picks the I-statement, picks the reply that says back Leo's reason, drags fixes onto a table and watches both friends' star meters, and sorts fall-outs friends can fix from ones that need a grown-up."
+  ]
+ },
+ "familyTip": "Next time siblings or friends fall out, try the four steps out loud: \"Calm first. Now each of you say I feel ... because ... . Say back what you heard. What fix gives you both enough?\" Praise the fix they find, not just the quiet.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it help sort out a fall-out? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Helps sort it out", "Makes it worse"],
+   "items": [["Take slow breaths first", 0], ["Shout until they give in", 1], ["I feel sad because I was left out", 0], ["You always ruin it!", 1], ["Take turns", 0], ["Walk off for ever", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagagree",
+  "caption": "Flagship lab: calm the cross-o-meter, say an I-statement, listen and say back, find a fix that fills both star meters, and know when to get a grown-up.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ava and Leo are shouting about which game to play. What should they do first?",
+   "choices": ["Calm down, with slow breaths or a short break", "Keep shouting until one gives in", "Ask everyone to pick a side"],
+   "answer": 0,
+   "hint": "Can you think of a good fix while you are very cross?",
+   "explain": "When you are very cross it is hard to think. Calming down first makes it possible to talk and listen."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Ava takes {b} slow breaths. Each breath brings her cross-o-meter down 2 points. How many points does it go down?",
+   "answer": "2*b",
+   "hint": "Each breath is 2 points. Add 2 for every breath, or multiply.",
+   "explain": "{b} breaths times 2 points is {=2*b} points. Slow breaths really do help your body calm down.",
+   "params": {"b": [2, 5]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is an I-statement that does not blame?",
+   "choices": ["I feel left out because I did not get the ball.", "You never pass to me!", "You are the worst player ever."],
+   "answer": 0,
+   "hint": "Look for the one that starts with how I feel and gives a reason.",
+   "explain": "I feel left out because ... says your feeling and the reason. It does not blame, so your friend can listen."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Break is {n} minutes. Ava and Leo agree to split it fairly: tag for half, then football for half. How many minutes of tag do they play?",
+   "answer": "n/2",
+   "where": "n%2==0",
+   "hint": "Half of the break is tag. Halve {n}.",
+   "explain": "Half of {n} is {=n/2}, so they play tag for {=n/2} minutes, then football for {=n/2}. Both get enough.",
+   "params": {"n": [10, 30]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Leo says: I want tag because we played football yesterday. Which reply shows you listened?",
+    "choices": ["So you want tag because we had football yesterday?", "But I want football!", "That is a silly reason."],
+    "answer": 0,
+    "hint": "Which reply says back Leo's reason?",
+    "explain": "Saying back his reason shows Leo you heard him. Then he is more ready to hear you too."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Mo and Jen both want to be the goalie. Which fix can they both accept?",
+    "choices": ["Swap at half time", "Mo is goalie because he asked first", "Nobody is goalie"],
+    "answer": 0,
+    "hint": "Find the fix where both get some of what they want.",
+    "explain": "Swapping at half time gives both a turn. Mo always winning leaves Jen with nothing, and nobody being goalie is bad for both."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Sam always lets Ali choose, so they never argue. Is that a fair fix?",
+    "choices": ["No: Sam should get a say too", "Yes: not arguing is all that matters", "Yes: Ali is louder"],
+    "answer": 0,
+    "hint": "Does Sam get anything he wants?",
+    "explain": "Always giving in keeps the peace but is not fair to Sam. A good fix gives both friends a say."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which one needs a grown-up straight away?",
+    "choices": ["Someone is hitting", "Both want the blue pen", "You want different games"],
+    "answer": 0,
+    "hint": "Is anyone getting hurt, or could they be?",
+    "explain": "Hitting is never OK and someone could get hurt, so get a grown-up. Pens and games you can usually sort out together."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Ava and Leo take turns on the swing: {k} pushes each. Ava has had her {k} pushes. How many pushes does Leo get now?",
+    "answer": "k",
+    "hint": "Taking turns fairly means the same number each.",
+    "explain": "Fair turns mean the same each, so Leo gets {k} pushes too. Then it is Ava's turn again.",
+    "params": {"k": [3, 10]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ava says: You always ruin everything! What would be a better way to say it?",
+    "choices": ["I feel cross because I wanted a turn to choose.", "You ruin everything, and I mean it.", "Say nothing and sulk."],
+    "answer": 0,
+    "hint": "Start with I feel, then give the reason.",
+    "explain": "An I-statement tells Leo how you feel and why, without blaming him, so he does not need to fight back."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "While Leo explains his side, what should Ava do?",
+    "choices": ["Listen to the end, then say back what he said", "Plan what she will say next", "Talk over him so she is heard"],
+    "answer": 0,
+    "hint": "How can Ava show she really heard him?",
+    "explain": "Listening to the end and saying back his reason shows Leo she heard him. Planning your reply means you miss what he says."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Ava and Leo try {t} fixes. {w} of them give one friend everything and the other nothing. The rest give both enough. How many fixes can they both accept?",
+    "answer": "t-w",
+    "where": "w<t",
+    "hint": "A fix that gives one friend nothing will not be accepted. Take those away.",
+    "explain": "{t} take away {w} is {=t-w}. Only the {=t-w} fixes that give both friends enough are ones they can both accept.",
+    "params": {"t": [3, 6], "w": [1, 2]}
+   }
+  ]
+ }
+}

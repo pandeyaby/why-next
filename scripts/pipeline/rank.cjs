@@ -12,12 +12,15 @@
 const path = require('path'), fs = require('fs'), { chromium } = require('playwright');
 const QUEUE = path.resolve(__dirname, '../../learn/pipeline/queue.json');
 const SKIP = (() => { try { return (JSON.parse(fs.readFileSync(QUEUE, 'utf8')).skipped || []).map(s => s.topic) } catch (e) { return [] } })();
+// Topics already in the queue's "next" list stay in the pool even when they are not "new" (e.g. v1 Maths/Science topics
+// queued by hand on Nov 2 2026 for ages 2-11), so a full re-rank keeps them instead of silently dropping them.
+const QUEUED = (() => { try { return (JSON.parse(fs.readFileSync(QUEUE, 'utf8')).next || []).map(s => s.topic) } catch (e) { return [] } })();
 const VIEWER = 'file://' + path.resolve(__dirname, '../../out/viewer.html');
 (async () => {
   const limit = +(process.argv[2] || 40), browser = await chromium.launch(), page = await browser.newPage();
   await page.goto(VIEWER); await page.waitForFunction('window.WN_WARM');
-  const ranked = await page.evaluate(([limit, skipIds]) => {
-    const skip = new Set(skipIds);
+  const ranked = await page.evaluate(([limit, skipIds, queuedIds]) => {
+    const skip = new Set(skipIds), queued = new Set(queuedIds);
     const downstreamCount = id => { const seen = new Set(), stack = [id];
       while (stack.length) for (const e of POST.get(stack.pop()) || []) if (!seen.has(e.t)) { seen.add(e.t); stack.push(e.t) }
       return seen.size };
@@ -29,7 +32,7 @@ const VIEWER = 'file://' + path.resolve(__dirname, '../../out/viewer.html');
     // favour the cell with the smallest share of its topics covered, so big and small cells fill at the same rate
     const share = k => (have[k] || 0) / (size[k] || 1);
     // maths/science candidates are the empty ("new") topics; the other subjects have no flagship lessons yet at all
-    const pool = DATA.nodes.filter(n => !LEARN.has(n.id) && !skip.has(n.id) && (n.new || !/math|science/i.test(n.s || ''))).map(n => {
+    const pool = DATA.nodes.filter(n => !LEARN.has(n.id) && !skip.has(n.id) && (n.new || queued.has(n.id) || !/math|science/i.test(n.s || ''))).map(n => {
       const unmet = (PRE.get(n.id) || []).filter(e => e.h && !LEARN.has(e.p)).length;
       return { n, unmet, down: downstreamCount(n.id) } });
     const out = [], young = x => (x.n.a || [18])[0] < 11, senior = x => (x.n.a || [18])[0] >= 16;
@@ -45,5 +48,5 @@ const VIEWER = 'file://' + path.resolve(__dirname, '../../out/viewer.html');
       out.push({ id: n.id, name: n.n, subject: n.s, ages: (n.a || []).join('-'), downstream: down, reels: reelIds.has(n.id),
         score: -Math.round(share(k) * 1000) / 1000, cell: k, unmet });
       have[k] = (have[k] || 0) + 1 }
-    return out }, [limit, SKIP]);
+    return out }, [limit, SKIP, QUEUED]);
   console.log(JSON.stringify(ranked, null, 1)); await browser.close() })();

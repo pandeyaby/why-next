@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_A-FyLLLLzy",
+ "title": "Shape patterns",
+ "audience": "learner",
+ "keyIdea": "A rule tells you how to make each term from the one before, such as 'start at 1, add 3': 1, 4, 7, 10, 13. A pattern can show features the rule never mentions. Here the terms switch odd, even, odd, even, because adding an odd number always flips odd and even. Adding an even number never does. 'Start at 2, add 4' gives last digits 2, 6, 0, 4, 8 again and again, and no term is ever odd. In a row of matchstick squares, each new square shares a side, so it adds 3 sticks, not 4: 10 squares need 4 + 9 × 3 = 31. Always check a feature on many terms and explain why it must carry on.",
+ "familyTip": "Take turns to make up a rule, like 'start at 5, add 4'. Write ten terms each, then hunt for something the rule does not say: Do they switch odd and even? Do the last digits repeat? The first to explain why wins the round.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Will the terms switch odd, even, odd…? Drag each rule to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Switches odd and even",
+    "Stays odd or stays even"
+   ],
+   "items": [
+    [
+     "Start at 1, add 3",
+     0
+    ],
+    [
+     "Start at 2, add 5",
+     0
+    ],
+    [
+     "Start at 4, add 7",
+     0
+    ],
+    [
+     "Start at 1, add 2",
+     1
+    ],
+    [
+     "Start at 3, add 4",
+     1
+    ],
+    [
+     "Start at 6, add 10",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpatfeat",
+  "caption": "Flagship lab: build 'add 3' from 1, label odd and even, test steps with dot pairs, find digits 'add 4' never reaches, grow a matchstick row.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A rule tells you how to get the next term. Start at 1 and add 3. You get 1, 4, 7, 10, 13, 16. Each term is 3 more than the last one. Is 100 in it? 100 take away 1 is 99. That is 33 jumps of 3, so yes.",
+   "Now look at the terms in a new way. 1 is odd, 4 is even, 7 is odd, 10 is even. They switch every time! The rule never said that. Why? Think of dots in pairs. An odd number has one dot left over. 3 is one pair and one more dot. That extra dot pairs up with the spare one. So odd turns into even. Next time, even turns into odd.",
+   "Add 2 or add 4 and the switching stops. Those steps are whole pairs, so the spare dot stays alone. Start at 2 and add 4: 2, 6, 10, 14, 18, 22. The last digits go 2, 6, 0, 4, 8, then start again. No term ever ends in 5.",
+   "Shapes can follow rules too. Make a row of squares from sticks. One square needs 4 sticks. Each new square shares a side, so it needs just 3 more. You get 4, 7, 10, 13. For 10 squares, that is 4 plus 9 lots of 3, which is 31. It is not 40."
+  ],
+  "adult": [
+   "Ages 9 to 10. CCSS 4.OA.C.5 asks pupils to make a number or shape pattern from a rule and spot features the rule does not state. Its own example is 'add 3' from 1, where the terms switch odd and even. Pupils explain why it carries on. The National Curriculum for England (Years 4 to 6) asks for sequences, and Year 6 asks pupils to describe linear number sequences.",
+   "The lab moves from making terms to giving a reason. Pupils label parity, then compare steps of 2, 3, 4 and 5 using dot pairs. An odd step flips parity; an even step keeps it. 'Add 4' from 2 gives a cycle of five last digits. The matchstick row gives 3n + 1 sticks, the shape version of a linear rule. All figures were checked: 1 + 33 × 3 = 100, 49 is not a multiple of 3, and 3 × 10 + 1 = 31.",
+   "Common mistakes. Pupils multiply when the rule says add. They count one jump too many for the nth term (the 4th term of 'add 5' from 2 is 17, not 22). They judge a feature from two terms. They think every rule switches odd and even. For sticks they use n × 4 and count shared sides twice. Each slip gets its own message in the lab."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Rule: start at 1, add 3. Which list follows the rule?",
+   "choices": [
+    "1, 4, 7, 10",
+    "1, 3, 9, 27",
+    "3, 6, 9, 12"
+   ],
+   "answer": 0,
+   "hint": "Start at 1 and add 3 each time.",
+   "explain": "1 + 3 = 4, 4 + 3 = 7, 7 + 3 = 10. Multiplying by 3 gives 1, 3, 9, 27, and 3, 6, 9 starts at the wrong number."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Rule: start at {a}, add {s}. What is the 4th term?",
+   "answer": "a+3*s",
+   "hint": "The 4th term is 3 jumps after the first term.",
+   "explain": "Add {s} three times to {a}: {a} + 3 × {s} = {=a+3*s}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "s": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Matchstick squares in a row use 4 sticks for 1 square and 3 more for each new square. How many sticks for {n} squares?",
+   "answer": "3*n+1",
+   "hint": "The first square takes 4. The other squares add 3 each.",
+   "explain": "4 + ({n} − 1) × 3 = 3 × {n} + 1 = {=3*n+1} sticks.",
+   "params": {
+    "n": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Rule: start at 2, add 5. What do you notice about the terms 2, 7, 12, 17, 22?",
+   "choices": [
+    "They switch even, odd, even, odd",
+    "They are all even",
+    "They all end in 2"
+   ],
+   "answer": 0,
+   "hint": "Look at each term. Is it odd or even?",
+   "explain": "5 is odd, so each jump flips odd and even: 2 even, 7 odd, 12 even, 17 odd. The last digits go 2, 7, 2, 7."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Rule: start at 1, add 3. Is 50 a term?",
+   "choices": [
+    "No",
+    "Yes",
+    "Only if you go past 100"
+   ],
+   "answer": 0,
+   "hint": "Terms are 1 more than a multiple of 3. Is 49 a multiple of 3?",
+   "explain": "49 ÷ 3 leaves 1, so 50 is skipped: 46, 49, 52. 100 is a term because 99 = 33 × 3."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which rule gives terms that switch odd and even?",
+    "choices": [
+     "Start at 1, add 5",
+     "Start at 1, add 4",
+     "Start at 2, add 2"
+    ],
+    "answer": 0,
+    "hint": "Is the step odd or even? Try the first three terms.",
+    "explain": "Only an odd step flips odd and even. 5 is odd. Adding 4 or 2 keeps odd as odd and even as even."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Rule: start at 2, add 4. Which number can never be a term?",
+    "choices": [
+     "35",
+     "34",
+     "42"
+    ],
+    "answer": 0,
+    "hint": "Every term is even. Which number is odd?",
+    "explain": "2 + 4 + 4 … stays even, so 35 can never appear. 34 and 42 are both 2 more than a multiple of 4, so both are terms."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Rule: start at {a}, add 10. What is the last digit of every term?",
+    "answer": "a*1",
+    "hint": "Adding 10 only changes the tens.",
+    "explain": "{a}, {=a+10}, {=a+20}: each ends in {a}, because adding 10 leaves the ones digit alone.",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Rule: start at {a}, add {s}. What is the 6th term?",
+    "answer": "a+5*s",
+    "hint": "The 6th term is 5 jumps after the first term.",
+    "explain": "{a} + 5 × {s} = {=a+5*s}.",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "s": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Sam says, 'Start at 1, add 2 gives odd, even, odd, even.' Is he right?",
+    "choices": [
+     "No: 1, 3, 5, 7 are all odd",
+     "Yes: every rule switches",
+     "Yes: adding makes even numbers"
+    ],
+    "answer": 0,
+    "hint": "Write the first four terms.",
+    "explain": "1, 3, 5, 7. Adding 2 adds a whole pair, so the spare dot of an odd number is never paired."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A row of 10 matchstick squares. Mia says it needs 40 sticks. Why is she wrong?",
+    "choices": [
+     "Next-door squares share a side",
+     "Squares need 5 sticks",
+     "The last square needs 4 more"
+    ],
+    "answer": 0,
+    "hint": "Build 2 squares. Do you need 8 sticks?",
+    "explain": "2 squares need 7 sticks, because they share one side. 10 squares need 4 + 9 × 3 = 31."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Rule: start at 2, add 4. Which list shows the last digits?",
+    "choices": [
+     "2, 6, 0, 4, 8, then repeat",
+     "2, 4, 6, 8, then repeat",
+     "2, 6, 10, 14"
+    ],
+    "answer": 0,
+    "hint": "Write the terms 2, 6, 10, 14, 18, 22 and look only at the ones digit.",
+    "explain": "2, 6, 10, 14, 18 end in 2, 6, 0, 4, 8. Then 22 ends in 2 again, so the cycle repeats."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why does 'start at 1, add 3' keep switching odd and even for ever?",
+    "choices": [
+     "3 is odd, so each jump flips odd and even",
+     "3 is a small number",
+     "The first term is 1"
+    ],
+    "answer": 0,
+    "hint": "Try 'start at 2, add 3' and 'start at 1, add 2'.",
+    "explain": "An odd step is pairs plus one extra dot, so it flips odd and even every time. The size of the step and the start do not matter."
+   }
+  ]
+ }
+}

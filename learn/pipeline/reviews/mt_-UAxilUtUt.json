@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the Met Office 'What is wind?' and 'What is a sea breeze?' pages and NOAA/NWS JetStream 'The Sea Breeze': wind is air moving from higher to lower pressure; uneven solar heating of land and sea drives sea breezes by day and land breezes at night; land heats and cools faster than water (lower heat capacity, heat kept in the top layer, sea mixes heat down). The lab's beach values (sand 15 to 27 °C over 4 hours, sea 15 to 17 °C; night sand 12 °C, sea 16 °C) are labelled illustrative and sit within typical summer coastal ranges. 'Warm air is lighter' is always phrased as 'lighter than the same amount (space) of cool air', i.e. less dense, and the adult text names convection and pressure. The balloon shows fewer air particles inside as it warms, matching expansion. No claim that temperature gap is the only cause of wind: the m6 item says 'with no other weather nearby'."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets ideas documented in Henriques (2002) 'Children's ideas about weather: a review of the literature' (School Science and Mathematics 102(5)) and Saçkes, Flevares and Trundle (2010) on children's weather ideas: trees or waves making wind ('trees', 'waves', m1, m2), warm air sinking or staying put ('sink', 'still', prediction 2, m7), the space left by rising air staying empty ('empty', p5), the sea warming fastest because it is big ('bigsea', prediction 1, p1), and wind blowing from the warm place along the ground ('backwards', prediction 3 and 4)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagwind is about the cause of wind: timed sunshine on sand versus sea with thermometers, a hot-air balloon whose air spreads out and lifts it, a convection loop of air parcels with a draggable windsock, a day/night switch that reverses the breeze, and a temperature-gap control where 0 °C gives no wind. flagair is about air existing, flagwxtype about naming weather, flagcloud about condensation. Max 6-shingle similarity 3.6% (flag_balf.js); explanation overlap 0.3% (Floating and sinking)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea appears from the learner's action before the text confirms it: the sand thermometer climbs 3 °C an hour while the sea barely moves, the balloon only lifts once the air is hot and lands as it cools, blue cool-air parcels visibly slide along the ground to the beach while orange warm parcels rise, the windsock and arrow flip at night, and the breeze speeds up with the gap and stops dead when sand equals sea."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options disproved on screen: 'the sea, it is bigger' (the sand reaches 27 °C, the sea 17 °C), 'it sinks, hot air is heavy' (the balloon rises), and 'from the sea onto the land, always' at night (the windsock swings out to sea). The day-breeze prediction offers 'from the land out to sea', the common warm-to-cool reversal."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "slip() has 11 distinct messages (waves, trees, sink, still, empty, fromsky, bigsea, same, strong, backwards, uponly), each naming the specific slip, e.g. 'Trees wave because the wind pushes them. They do not make the wind.' and 'That is the night-time land breeze. By day the land is warmer, so cool sea air moves in.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid paragraphs FK 1.2 with short sentences and everyday words (warm, cool, floats up, rushes in); adult FK 6.9 after splitting the convection paragraph into short sentences; validate_lessons passes for the family audience. Terms such as convection, density and pressure are kept for the adult panel."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passes (no banned phrases; explanation overlap 0.3% at most). Kid text: what wind is, uneven warming, warm air rising, cool air rushing in and gap size. Adult text: key words, physics with numbers of the process, named mistakes, what the lab does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px Android after Show me on every step and mid-animation (balloon heating, breeze running): status tags, sand and sea labels, thermometers, balloon, parcels and windsock all fit and stay readable; the gap-step thermometer was moved to the left edge after the first screenshots so it no longer covered the rising air; buttons wrap under the canvas at full width."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button twin ('Shine for 1 hour', 'Heat the air', 'Let it cool', 'Start the sunshine', 'Windsock nearer the sea', 'Make it night', 'Warmer sand' with a full aria-label). The canvas aria-label and narration update after each action and each air-parcel milestone. walk.cjs: desktop and iPhone 13 complete all 5 tasks with Show me, the challenge shows, axe WCAG 2.1 AA clean in both themes, no console errors."
+  }
+ },
+ "sources": [
+  "Met Office, 'What is wind?' and 'What is a sea breeze?' (weather explained pages)",
+  "NOAA National Weather Service JetStream, 'The Sea Breeze' and 'Land and Sea Breezes'",
+  "Henriques, L. (2002), Children's ideas about weather: a review of the literature, School Science and Mathematics 102(5)",
+  "Department for Education, National Curriculum in England: science and geography programmes of study, KS2 (weather and climate)",
+  "Topic mt_-UAxilUtUt evidence lines in out/merged/data/topics.json"
+ ]
+}

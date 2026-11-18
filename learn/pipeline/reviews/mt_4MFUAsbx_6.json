@@ -1,0 +1,52 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against NC 2013 Year 5 Geometry: properties of shapes ('know angles are measured in degrees: estimate and compare acute, obtuse and reflex angles'; 'draw given angles, and measure them in degrees (°)') and NCETM Year 5 guidance on protractor use. The lab's protractor is drawn to scale: inner scale 0 to 180 anticlockwise from the right, outer scale 0 to 180 from the left, so the two readings on any arm sum to 180 (47/133, 132/48, 65/115). Reflex answers recomputed: 360 − 110 = 250, 360 − 60 = 300; the distractors 290 and 240 are 180 + the inside angle (360 minus the wrong-scale reading). Drawn angles snap to whole degrees and the join test requires the exact target (135, 70). Acute < 90°, obtuse between 90° and 180°, reflex > 180° match the standard definitions."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented angle-measurement errors from Close (1982) 'Children's understanding of angle at the primary/secondary transfer stage' and Mitchelmore and White (2000) 'Development of angle concepts by progressive abstraction and generalisation' (Educational Studies in Mathematics 41), plus the CSMS findings (Hart 1981): reading the wrong scale (prediction 2, 'scale', p1, m2, m3, the sorter), misplacing the centre (prediction 1, 'end', 'mid', p3), choosing a scale by habit or nearest number ('always', 'closest', prediction 3, m7), arm length affecting size ('long', m4), and reflex angles taken from 180 or read as the inside angle ('minus', 'inside')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagprot is about using a protractor: a draggable protractor that snaps its centre to the vertex, a zoom strip that shows single-degree ticks on both scales at the arm, an estimate slider checked against the measured angle, a dot dragged round the rim then joined to draw 135° and 70°, and reflex angles found from the inside angle. flagangle names and sorts angle types and reads diagram marks; flagturn is about quarter and half turns. Max 6-shingle similarity 3.6% (flag_wind.js); explanation overlap 0.3%."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner finds the rules by doing: the status flips to 'Now the reading is fair' only when the centre sits on the vertex; picking 133° for an acute angle gets feedback that it is the scale starting at 180 on that arm; the estimate step shows how far a guess was off; marking 135 on the wrong scale makes a 45° arm and is named as such; the red reflex arc and the 360 − inside sum appear together."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options disproved on screen: 'at the end of an arm' for the centre mark (the reading only becomes fair on the vertex), '133°, the bigger number' for an acute angle (the lab reads 47° from the 0 on the arm), and '135 on the other scale' when drawing (joining that mark makes 45°)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "slip() has 10 distinct messages (scale, line, end, mid, long, always, closest, inside, minus, reflex), each naming the slip, e.g. 'Both scales have a 120. Count from the 0 on your arm, or you draw 60°.' and 'Take it from 360°, a full turn, not from 180°.' In-lab feedback also names the wrong-scale reading for reading, drawing and reflex tasks."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid paragraphs FK 1.7 with short sentences (small cross on the vertex, two rows of numbers, guess first); adult FK 6.5 after splitting long sentences; validate_lessons passes for the family audience. Terms such as baseline, inner and outer scale and reflex are kept for the adult panel."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passes (no banned phrases; explanation overlap 0.3% at most). Kid text: unit and tool, placing the protractor, choosing the scale, estimating to check. Adult text: Year 5 objective and key words, why the scales sum to 180 and how to draw and do reflex angles, named mistakes, what the lab does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px Android in light and dark, and desktop in dark, after Show me on every step: the protractor labels every 20° on phones (every 10° on desktop) with single-degree ticks, the zoom strip, the estimate slider and the reflex arc fit. After the first screenshots the arms were drawn above the protractor in a theme-aware colour, the protractor fill made near-opaque, and the slider and vertex use the theme text colour, because the arms and slider were hard to see in dark mode."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag or tap has a button twin ('Put the centre on the vertex', reading buttons labelled 'The angle is 47 degrees', '+10°' labelled 'Make my estimate 10 degrees bigger', '+1' labelled 'Move the dot 1 degree up the blue scale', 'Join to the vertex', reflex answer buttons). The canvas aria-label and narration update after each action. walk.cjs: desktop and iPhone 13 complete all 5 tasks with Show me, the challenge shows, axe WCAG 2.1 AA clean in both themes, no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education, National Curriculum in England: mathematics programmes of study, Year 5 Geometry: properties of shapes (2013), statutory requirements and non-statutory guidance",
+  "NCETM, Year 5 Geometry: measuring and drawing angles with a protractor (mastery guidance)",
+  "Mitchelmore, M. and White, P. (2000), Development of angle concepts by progressive abstraction and generalisation, Educational Studies in Mathematics 41",
+  "Close, G. S. (1982), Children's understanding of angle at the primary/secondary transfer stage, Polytechnic of the South Bank",
+  "Hart, K. (ed.) (1981), Children's Understanding of Mathematics: 11-16 (CSMS)",
+  "Topic mt_4MFUAsbx_6 evidence lines in out/merged/data/topics.json"
+ ]
+}

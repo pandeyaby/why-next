@@ -1,0 +1,291 @@
+{
+ "topicId": "mt_9Pl5rGIg7i",
+ "title": "How chromatography separates mixtures",
+ "audience": "learner",
+ "keyIdea": "Chromatography has a stationary phase that stays still (water held in paper fibres, or a silica coating on a TLC plate) and a mobile phase, the solvent, that moves through it. Each substance is shared between the two phases. The more strongly it is attracted to the mobile phase, the further it travels, so the substances in a mixture separate into spots. Rf = how far the spot moved ÷ how far the solvent front moved, both measured from the start line, so Rf is between 0 and 1. A pure substance gives one spot in every solvent.",
+ "familyTip": "Draw a thick felt-tip dot on a strip of kitchen roll, 2 cm from the bottom, and stand it in a glass with 1 cm of water. Watch the colours split as the water climbs. Ask: which colour moved furthest, and was it held less by the paper or carried more by the water?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Stationary phase or mobile phase? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Stationary phase",
+    "Mobile phase"
+   ],
+   "items": [
+    [
+     "Water held in the paper fibres",
+     0
+    ],
+    [
+     "The solvent climbing the paper",
+     1
+    ],
+    [
+     "Silica coating on a TLC plate",
+     0
+    ],
+    [
+     "Ethanol moving up the plate",
+     1
+    ],
+    [
+     "Substances here stay still",
+     0
+    ],
+    [
+     "Substances here are carried along",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagchrom",
+  "caption": "Flagship lab: place dyes by their pull between phases, slide a line to measure Rf, match an unknown by Rf, fix a tank set-up, try a second solvent.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Chromatography has two phases. The stationary phase stays still: on paper it is water held in the fibres. The mobile phase is the solvent, which soaks up through the paper and carries substances with it.",
+   "Each substance in the mixture is shared between the two phases. A substance strongly held by the stationary phase moves slowly and stays low. One that dissolves well in the solvent spends more time moving, so it goes further. That difference is what separates the mixture.",
+   "We compare spots with Rf. Rf = how far the spot moved ÷ how far the solvent front moved. Measure both from the start line, to the centre of the spot. A spot that moved 2.0 cm when the front moved 8.0 cm has Rf 0.25.",
+   "Rf is always between 0 and 1, and it changes with the solvent. A pure substance gives one spot. A mixture gives more. To identify a spot, match its Rf to a reference on the same paper, then check in a second solvent."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is the A level (and GCSE higher) account of chromatography: separation depends on the relative affinity of each substance for the stationary and mobile phases. In paper chromatography the main mechanism is partition between the water bound in cellulose and the solvent; in thin-layer chromatography it is mainly adsorption onto silica or alumina. Both are summarised by Rf.",
+   "Rf = how far the substance travelled ÷ how far the solvent front travelled, both from the start (origin) line. Rf depends on the solvent, the stationary phase and the temperature, so comparisons with references must be made on the same plate. Colourless spots are shown with a locating agent such as ninhydrin, or with UV light on plates containing a fluorescent indicator.",
+   "The lab has five tasks: drag three dyes to the height their paper and solvent pulls predict, slide a measuring line to three spot centres (front 8.0 cm; Rf 0.25, 0.55, 0.75), identify an unknown as a mixture of A and B by Rf rather than colour, fix three faults in a tank set-up, and use a second solvent to show that two substances with Rf 0.50 in water differ (0.32 and 0.61 in ethanol).",
+   "Common mistakes. Students say substances move further because they are lighter or smaller, rather than less attracted to the stationary phase. They measure from the paper's edge or to the top of a spot, divide the wrong way (Rf above 1), draw the start line in ink, set the solvent above the start line, match spots by colour, or take one matching Rf as proof of identity."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In paper chromatography, what is the stationary phase?",
+   "choices": [
+    "Water held in the paper fibres",
+    "The solvent moving up the paper",
+    "The dye spots"
+   ],
+   "answer": 0,
+   "hint": "Which part stays still while the solvent moves?",
+   "explain": "The stationary phase stays still. In paper chromatography it is water held in the cellulose fibres; the solvent is the mobile phase."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The solvent front moved {f} cm from the start line. A spot moved {=r*f/100} cm. What is its Rf, to 2 decimal places?",
+   "answer": "r/100",
+   "tolerance": 0.01,
+   "hint": "Rf = spot distance ÷ solvent distance, both from the start line.",
+   "explain": "Rf = {=r*f/100} ÷ {f} = {=r/100}, which is between 0 and 1 as it must be.",
+   "params": {
+    "r": [
+     15,
+     85
+    ],
+    "f": [
+     5,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Dye X has Rf 0.80 and dye Y has Rf 0.20 in the same solvent. Which is more strongly attracted to the stationary phase?",
+   "choices": [
+    "Y",
+    "X",
+    "They are equally attracted"
+   ],
+   "answer": 0,
+   "hint": "Does a strongly held dye travel far or a short way?",
+   "explain": "Y moves only a fifth as far as the solvent, so it spends more time held by the stationary phase."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A substance has Rf 0.{r} in a solvent. In a run where the solvent front moves {f} cm, how far does its spot move, in cm?",
+   "answer": "r*f/100",
+   "tolerance": 0.05,
+   "hint": "Rearrange Rf = spot ÷ front, so spot = Rf × front.",
+   "explain": "Spot distance = Rf × front = 0.{r} × {f} = {=r*f/100} cm.",
+   "params": {
+    "r": [
+     20,
+     80
+    ],
+    "f": [
+     6,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why must the solvent level be below the start line?",
+   "choices": [
+    "Otherwise the samples dissolve into the solvent pool",
+    "So the solvent moves faster",
+    "So the Rf values are bigger"
+   ],
+   "answer": 0,
+   "hint": "What would happen to spots sitting under the solvent?",
+   "explain": "Spots below the surface dissolve straight into the solvent pool instead of being carried up the paper."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why do the dyes in an ink separate?",
+    "choices": [
+     "They are attracted to the stationary and mobile phases to different extents",
+     "Lighter dyes float higher",
+     "Bigger spots move further"
+    ],
+    "answer": 0,
+    "hint": "What decides how much time a dye spends moving?",
+    "explain": "Each dye shares itself between the two phases in its own ratio, so each travels a different fraction of the way the solvent goes."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A sample gives one spot in three different solvents. What does this suggest?",
+    "choices": [
+     "It is probably a pure substance",
+     "It is a mixture of three substances",
+     "Its Rf is the same in every solvent"
+    ],
+    "answer": 0,
+    "hint": "How many substances give one spot?",
+    "explain": "A pure substance gives a single spot in every solvent, though its Rf changes from solvent to solvent."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why is the start line drawn in pencil, not pen?",
+    "choices": [
+     "Graphite is insoluble, but ink would dissolve and run",
+     "Pencil lines are easier to see",
+     "Pen makes the spots move faster"
+    ],
+    "answer": 0,
+    "hint": "Would the line itself move if it dissolved?",
+    "explain": "Ink is a mixture of soluble dyes that would separate along with the sample. Graphite does not dissolve."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A student reports Rf = 1.25. What went wrong?",
+    "choices": [
+     "The distances were divided the wrong way or mis-measured",
+     "The dye moved faster than the solvent",
+     "Nothing: Rf can be above 1"
+    ],
+    "answer": 0,
+    "hint": "Can a spot move further than the solvent that carries it?",
+    "explain": "No spot outruns the solvent front, so Rf is at most 1. The student most likely divided front by spot."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "An unknown spot is red, like reference D, but has a different Rf. What can you say?",
+    "choices": [
+     "It is not D",
+     "It is D, because the colour matches",
+     "It is D, but the run went wrong"
+    ],
+    "answer": 0,
+    "hint": "What identifies a substance on a chromatogram: colour or Rf?",
+    "explain": "Different substances can share a colour. On the same plate, a different Rf means a different substance."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Two substances both have Rf 0.50 in water. What should you do before saying they are the same?",
+    "choices": [
+     "Run them in a different solvent",
+     "Nothing: equal Rf proves it",
+     "Use a longer piece of paper"
+    ],
+    "answer": 0,
+    "hint": "Could two different substances match in one solvent by chance?",
+    "explain": "A match in one solvent can be a coincidence. Matching Rf values in a second solvent is much stronger evidence."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "On one chromatogram the solvent front is {f} cm from the start line. Spot A moved {=k*f/10} cm. What is its Rf?",
+    "answer": "k/10",
+    "tolerance": 0.01,
+    "hint": "Divide how far the spot moved by how far the solvent moved.",
+    "explain": "Rf = spot distance ÷ front distance = {=k*f/10} ÷ {f} = {=k/10}, between 0 and 1 as it must be.",
+    "params": {
+     "k": [
+      1,
+      9
+     ],
+     "f": [
+      6,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "An unknown gives {n} spots, and {k} of them match references on the plate. How many of its substances are still unidentified?",
+    "answer": "n-k",
+    "hint": "Each spot is one substance. Take away the ones you matched.",
+    "explain": "{n} spots mean {n} substances; {k} matched, so {n} − {k} = {=n-k} are still unidentified.",
+    "params": {
+     "n": [
+      3,
+      6
+     ],
+     "k": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Amino acids give colourless spots. How can you see them on paper?",
+    "choices": [
+     "Spray with a locating agent such as ninhydrin",
+     "Use more solvent",
+     "Leave the paper in the tank for longer"
+    ],
+    "answer": 0,
+    "hint": "How do you make an invisible spot show up?",
+    "explain": "Ninhydrin reacts with amino acids to give coloured spots. On TLC plates with a fluorescent indicator, UV light also works."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "Why is a lid put on the chromatography tank?",
+    "choices": [
+     "To keep the air saturated with solvent vapour so the front moves evenly",
+     "To stop the dyes escaping",
+     "To make the solvent hotter"
+    ],
+    "answer": 0,
+    "hint": "What happens to solvent on the paper if the air is dry?",
+    "explain": "With a lid the air stays full of solvent vapour, so solvent does not evaporate from the paper and the front rises evenly."
+   }
+  ]
+ }
+}

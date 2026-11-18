@@ -1,0 +1,242 @@
+{
+ "topicId": "mt_aC9XYVSvET",
+ "title": "Plan, monitor, evaluate",
+ "audience": "learner",
+ "keyIdea": "Good learners steer their own work. Before a task, plan: set a goal you can check, pick a strategy and choose a checkpoint. During the task, monitor: compare how it is going with the plan, and change the strategy if it is not working. After the task, evaluate: find what went wrong and one thing to do next time.",
+ "explain": {
+  "kid": [
+   "Think of a task like a trip. Before you set off, you plan the route. On the way, you check the map. At the end, you think about what to do better next time. Learning works the same way.",
+   "Plan before you start. Set a goal you can check, like all 20 sums in 30 minutes. Pick a strategy, like doing the easy ones first. Then pick a checkpoint: by 15 minutes, I should have about 10 done.",
+   "Monitor while you work. At the checkpoint, look at what you have done, not how you feel. If you are behind, change something now. Skip the hard one, move the phone, or slow down and check.",
+   "Evaluate when you finish. Find where the time went or where the mistakes came from. Then say one clear thing you will do next time. That goes into your next plan."
+  ],
+  "adult": [
+   "The Education Endowment Foundation has a guide on metacognition. It describes a cycle: plan, monitor, evaluate. Its second tip is to teach pupils clear strategies for each of the three steps. This is called metacognitive regulation. It is how a learner steers their thinking during a task, not just what they know.",
+   "Monitoring is the hardest part at nine or ten. Many children check only at the end, when it is too late to change. A checkpoint in the plan, such as half done by halfway, gives them a clear test to use while there is still time to act.",
+   "Common mistakes: goals that cannot be checked, like do some maths; trusting a feeling instead of evidence; keeping a strategy that is not working; seeing a change as giving up; and next steps like try harder, which name no action. Be careful to praise a well-timed change of plan, not only a high score.",
+   "In the lab your child sorts questions into before, during and after. They build a plan for a homework sheet and check three runs against the plan line at 15 minutes. Then they pick the change each graph calls for, find the lost minutes, and choose a clear next step."
+  ]
+ },
+ "familyTip": "Before homework, ask three quick questions: what is your goal, how will you do it, and what should you have done by halfway? Set a timer for the halfway check. When it rings, compare the work with the plan, not with how it feels. At the end, ask for one thing to do differently next time, and use it in the next plan.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Revising for a spelling test: does each step belong before, during or after? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Plan (before)",
+    "Monitor (during)",
+    "Evaluate (after)"
+   ],
+   "items": [
+    [
+     "Pick the 10 words to learn by Friday",
+     0
+    ],
+    [
+     "Choose look, cover, write, check",
+     0
+    ],
+    [
+     "Test yourself on Wednesday",
+     1
+    ],
+    [
+     "Notice 4 words are still wrong and spend more time on them",
+     1
+    ],
+    [
+     "See which words you got wrong on Friday",
+     2
+    ],
+    [
+     "Decide to start on Monday next week",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpme",
+  "caption": "Flagship lab: sort plan, monitor and evaluate questions, plan a homework sheet, check three runs at halfway, change course, and find the lost minutes.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which question belongs to monitoring?",
+   "choices": [
+    "Is my strategy working?",
+    "What is my goal?",
+    "What will I do next time?"
+   ],
+   "answer": 0,
+   "hint": "Monitoring happens during the task, while you can still change things.",
+   "explain": "Is my strategy working? is asked while you work. The goal comes before you start, and next time comes after."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Your plan is {=2*h} questions in 30 minutes. How many should be done at the 15-minute check?",
+   "answer": "h",
+   "hint": "15 minutes is half of 30, so about half of the questions should be done.",
+   "explain": "Half of {=2*h} is {h}, so at 15 minutes you should have about {h} done. Fewer than that means change something.",
+   "params": {
+    "h": [
+     6,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Your checkpoint says {a} done by halfway. You have done {b}. How many are you behind?",
+   "answer": "a-b",
+   "hint": "Take what you have done away from what the plan says.",
+   "explain": "{a} − {b} = {=a-b}, so you are {=a-b} behind the plan. Now is the time to change your strategy.",
+   "params": {
+    "a": [
+     8,
+     12
+    ],
+    "b": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which goal can you check?",
+   "choices": [
+    "Read 3 chapters by Sunday",
+    "Get better at reading",
+    "Read some stuff"
+   ],
+   "answer": 0,
+   "hint": "A goal you can check says how much and by when.",
+   "explain": "Read 3 chapters by Sunday says how much and when, so on Sunday you can tell if you did it. The others cannot be checked."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What are the three parts of the cycle, in order?",
+    "choices": [
+     "Plan, monitor, evaluate",
+     "Evaluate, plan, monitor",
+     "Monitor, plan, evaluate"
+    ],
+    "answer": 0,
+    "hint": "Think before the task, during it, and after it.",
+    "explain": "Plan comes before the task, monitor during it, and evaluate after it. The evaluation then feeds the next plan."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Kai has been stuck on one question for 9 minutes. What is the best move?",
+    "choices": [
+     "Mark it, skip it and come back at the end",
+     "Keep trying the same way",
+     "Give up on the sheet"
+    ],
+    "answer": 0,
+    "hint": "The same way gives the same result. Which change keeps him going?",
+    "explain": "Skipping and coming back changes the strategy, so Kai keeps working and still tries the hard one later."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Ana plans {=2*h} spellings in 20 minutes. How many should she know at the 10-minute check?",
+    "answer": "h",
+    "hint": "10 minutes is half of 20, so take half of the spellings.",
+    "explain": "Half of {=2*h} is {h}, so Ana should know about {h} spellings by 10 minutes.",
+    "params": {
+     "h": [
+      4,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Leo planned {a} minutes for his homework. A buzzing phone took {b} minutes of it. How many minutes did he really work?",
+    "answer": "a-b",
+    "hint": "Take the lost minutes away from all the minutes.",
+    "explain": "{a} − {b} = {=a-b} minutes of real work. Next time the phone goes in another room.",
+    "params": {
+     "a": [
+      30,
+      40
+     ],
+     "b": [
+      5,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Sam feels sure he knows his notes. What is the best way to monitor?",
+    "choices": [
+     "Test himself without the notes",
+     "Trust the feeling",
+     "Read them again"
+    ],
+    "answer": 0,
+    "hint": "A feeling is not evidence. What would show what he really knows?",
+    "explain": "A self-test gives evidence. Feeling sure after reading is often wrong, so testing shows what still needs work."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the best evaluation?",
+    "choices": [
+     "Next time I will draw a picture for word problems",
+     "It went OK",
+     "Next time I will try harder"
+    ],
+    "answer": 0,
+    "hint": "A good evaluation names one clear action for next time.",
+    "explain": "Drawing a picture for word problems is a specific action you can do. It went OK and try harder name nothing to do."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Mia checks how her story is going only after she hands it in. What is missing?",
+    "choices": [
+     "Monitoring while she can still change it",
+     "Nothing, the end is the time to check",
+     "A longer story"
+    ],
+    "answer": 0,
+    "hint": "When can a check still change the result?",
+    "explain": "Mia needs to check during the task. After she hands it in, it is too late to fix this story."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Zoe finished early but did not check, and 4 answers were wrong. What should her next plan say?",
+    "choices": [
+     "Use spare time to check each answer",
+     "Go even faster",
+     "Do nothing different"
+    ],
+    "answer": 0,
+    "hint": "Speed was not the problem. What were the spare minutes for?",
+    "explain": "The spare minutes were there to check. Using them to check would have caught the 4 wrong answers."
+   }
+  ]
+ }
+}

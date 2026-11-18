@@ -1,0 +1,175 @@
+{
+ "topicId": "mt_3yCwj6_jIA",
+ "title": "Variance of a discrete random variable",
+ "audience": "learner",
+ "keyIdea": "The variance of a discrete random variable X measures how far its values sit from the expected value μ = E(X), weighted by their probabilities: Var(X) = Σ (x − μ)² P(X = x). The quicker formula is Var(X) = E(X²) − [E(X)]², where E(X²) = Σ x² P(X = x): square each value, then weight and add, then subtract the square of the mean. Variance is never negative, and it is 0 only when X always takes the same value. The standard deviation is σ = √Var(X), in the units of X. Two variables can share a mean and still have very different variances. Adding a constant does not change the spread, and multiplying by a multiplies the variance by a²: Var(aX + b) = a² Var(X).",
+ "familyTip": "Pick two games with the same average prize, such as £5 for certain and a coin flip for £0 or £10. Ask which feels riskier, then work out each variance (0 and 25) to put a number on it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What is the variance of each random variable? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Var = 0",
+    "Var = 1",
+    "Var = 4"
+   ],
+   "items": [
+    ["X = 3 for certain", 0],
+    ["X = 7 for certain", 0],
+    ["Y = X + 5, where Var(X) = 0", 0],
+    ["X = 1 or 3, each with probability 0.5", 1],
+    ["X = 9 or 11, each with probability 0.5", 1],
+    ["Y = X − 2, where Var(X) = 1", 1],
+    ["X = 0 or 4, each with probability 0.5", 2],
+    ["Y = 2X, where Var(X) = 1", 2],
+    ["E(X) = 1 and E(X²) = 5", 2]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagvarx",
+  "caption": "Flagship lab: drag probability to keep E(X) = 2 while Var changes, use E(X²) − [E(X)]², check squared deviations, scale and shift.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The expected value E(X) is the balance point of a distribution. The variance tells you how spread out the values are around it. Two games can have the same mean and very different variances: £5 for certain has variance 0, but £0 or £10 on a coin flip has variance 25.",
+   "One way to find the variance is to take each distance from the mean, x − μ, square it, multiply by its probability and add: Var(X) = Σ (x − μ)² P(X = x). Squaring matters. The plain distances, weighted by probability, always add to 0.",
+   "The quicker way is Var(X) = E(X²) − [E(X)]². Square every value, weight the squares by their probabilities and add to get E(X²). Then subtract the square of the mean. For X = 1, 2, 3 with P = 0.2, 0.5, 0.3, E(X) = 2.1, E(X²) = 4.9 and Var(X) = 4.9 − 4.41 = 0.49. The standard deviation is √0.49 = 0.7.",
+   "Adding the same number to every value moves the distribution along but does not spread it out, so Var(X + b) = Var(X). Multiplying every value by a multiplies each distance by a, so the squared distances grow by a². That gives Var(aX + b) = a² Var(X)."
+  ],
+  "adult": [
+   "Ages 16 to 18. Variance of a discrete random variable, Var(X) = E(X²) − [E(X)]², and the results E(aX + b) = aE(X) + b and Var(aX + b) = a² Var(X) are in A-level Further Mathematics statistics (for example AQA 7367 and OCR A Y532) and in the MEI and Edexcel options; in the US the expected value and spread of a random variable are part of CCSS HSS-MD.A.",
+   "The lab keeps ten tenths of probability on the values 0 to 4. Learners drag bars to hold E(X) = 2 while making the variance 0, then 4 (all the mass at the two ends) and then 1, work through a table to E(X) = 2.1, E(X²) = 4.9 and Var(X) = 0.49 and through a fair dice to σ ≈ 1.71, check the same 0.49 with squared deviations, and find E(2X + 5), Var(2X + 5) and Var(X − 4).",
+   "Common mistakes. The most frequent slip is computing E(X²) as [E(X)]² or subtracting E(X) instead of its square. Others forget to weight by probabilities, add the unsquared deviations (getting 0), take the square root first, or quote the variance as the standard deviation. With transformations, many write Var(2X + 5) = 2Var(X) + 5. A negative variance is always a sign of an error in the order of subtraction."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "E(X) = 3 and E(X²) = 13. What is Var(X)?",
+   "choices": ["4", "10", "−4"],
+   "answer": 0,
+   "hint": "Var(X) = E(X²) − [E(X)]². Square the mean first.",
+   "explain": "[E(X)]² = 3² = 9, so Var(X) = 13 − 9 = 4. Subtracting E(X) itself gives 10, which is wrong."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Var(X) = {v}. What is Var({a}X + {b})?",
+   "answer": "a*a*v",
+   "hint": "Adding {b} does not change the spread. Multiplying by {a} multiplies the variance by {a}².",
+   "explain": "Var({a}X + {b}) = {a}² × Var(X) = {=a*a} × {v} = {=a*a*v}.",
+   "params": {"v": [1, 6], "a": [2, 5], "b": [1, 9]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "X is 0 or 10, each with probability 0.5. What is Var(X)?",
+   "choices": ["25", "5", "50"],
+   "answer": 0,
+   "hint": "Find E(X), then E(X²) = 0² × 0.5 + 10² × 0.5.",
+   "explain": "E(X) = 5 and E(X²) = 50, so Var(X) = 50 − 25 = 25. The standard deviation is 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "X takes the values {m} − {d} and {m} + {d}, each with probability 0.5. What is Var(X)?",
+   "answer": "d*d",
+   "hint": "The mean is {m}, and each value is {d} away from it.",
+   "explain": "E(X) = {m}. Each value is {d} from the mean, so Var(X) = {d}² × 0.5 + {d}² × 0.5 = {=d*d}.",
+   "params": {"m": [5, 20], "d": [1, 6]}
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Var(X) = 9. What is the standard deviation of X?",
+   "choices": ["3", "81", "4.5"],
+   "answer": 0,
+   "hint": "σ is the square root of the variance.",
+   "explain": "σ = √9 = 3. 81 squares the variance again and 4.5 halves it."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "X = 1, 2, 3 with P = 0.2, 0.5, 0.3. E(X) = 2.1. What is E(X²)?",
+    "choices": ["4.9", "4.41", "14"],
+    "answer": 0,
+    "hint": "Square each value, multiply by its probability, then add.",
+    "explain": "1 × 0.2 + 4 × 0.5 + 9 × 0.3 = 0.2 + 2 + 2.7 = 4.9. 4.41 is [E(X)]², and 14 forgets the probabilities."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sam finds Var(X) = −0.49. What has he most likely done?",
+    "choices": ["Worked out [E(X)]² − E(X²)", "Forgotten to square the values", "Nothing: variances can be negative"],
+    "answer": 0,
+    "hint": "Which way round is the subtraction?",
+    "explain": "Var(X) = E(X²) − [E(X)]², and E(X²) is never smaller than [E(X)]², so a variance is never negative. A negative answer means the subtraction was reversed."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Var(X) = {v}. What is Var(X + {b})?",
+    "answer": "v",
+    "hint": "Adding the same number to every value moves the distribution without spreading it.",
+    "explain": "A shift does not change the spread, so Var(X + {b}) = Var(X) = {v}.",
+    "params": {"v": [1, 9], "b": [2, 20]}
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Two random variables both have E(X) = 5. Must they have the same variance?",
+    "choices": ["No: the same mean can have very different spreads", "Yes: the same mean means the same spread", "Yes, if both are fair"],
+    "answer": 0,
+    "hint": "Compare 5 for certain with 0 or 10 on a coin flip.",
+    "explain": "5 for certain has variance 0 and 0 or 10 with equal chance has variance 25, yet both have mean 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "E(X) = {m} and E(X²) = {=m*m+v}. What is Var(X)?",
+    "answer": "v",
+    "hint": "Subtract the square of the mean from E(X²).",
+    "explain": "Var(X) = {=m*m+v} − {m}² = {=m*m+v} − {=m*m} = {v}.",
+    "params": {"m": [2, 9], "v": [1, 12]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Var(X) = 2. Which is Var(3X + 5)?",
+    "choices": ["18", "11", "6"],
+    "answer": 0,
+    "hint": "The +5 does nothing to the spread; the ×3 multiplies the variance by 3².",
+    "explain": "Var(3X + 5) = 3² × 2 = 18. 11 treats variance like a mean (3 × 2 + 5), and 6 forgets to square the 3."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "For a fair dice D, E(D) = 3.5 and E(D²) = 91/6 ≈ 15.17. What is the standard deviation of D, to 2 decimal places?",
+    "choices": ["1.71", "2.92", "3.89"],
+    "answer": 0,
+    "hint": "Find the variance first, then take its square root.",
+    "explain": "Var(D) = 91/6 − 12.25 = 35/12 ≈ 2.92, so σ = √2.92 ≈ 1.71. 2.92 is the variance, and 3.89 is √15.17, the root taken too early."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The deviations x − μ are −1.1, −0.1 and 0.9, with probabilities 0.2, 0.5 and 0.3. Why must they be squared before adding?",
+    "choices": ["Weighted by probability, the plain deviations always add to 0", "To make the numbers bigger", "Squaring is only needed for negative numbers"],
+    "answer": 0,
+    "hint": "Work out −1.1 × 0.2 + −0.1 × 0.5 + 0.9 × 0.3.",
+    "explain": "−0.22 − 0.05 + 0.27 = 0: the signed deviations balance at the mean. Squaring makes every distance count: 0.242 + 0.005 + 0.243 = 0.49."
+   }
+  ]
+ }
+}

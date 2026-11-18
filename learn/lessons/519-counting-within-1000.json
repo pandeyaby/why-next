@@ -1,0 +1,139 @@
+{
+ "topicId": "mt_M2v1A9OEuM",
+ "title": "Counting Within 1,000",
+ "audience": "family",
+ "keyIdea": "Every three-digit number is made of hundreds, tens and ones, and where a digit sits gives its value: in 305 the 3 is worth 300 and the 0 shows there are no tens. When counting fills a place, ten of it make one of the next place, so 199 + 1 = 200 and 690 + 10 = 700. Skip-counting in fives, tens or hundreds follows the same rule, and counting back undoes it: 300 − 1 = 299.",
+ "explain": {
+  "kid": [
+   "Big numbers can have three digits, like 345. Each digit has a place. The 3 is 3 hundreds. The 4 is 4 tens. The 5 is 5 ones. This is called place value.",
+   "Count on in ones: 197, 198, 199. What comes next? Ten ones make a new ten. Ten tens make a new hundred. So after 199 comes 200, not 1910.",
+   "You can skip-count, too. In tens: 650, 660, 670. Only the tens digit moves. After 690 comes 700. In hundreds: 150, 250, 350. Only the hundreds digit moves.",
+   "You can count back. 302, 301, 300, then 299. In fives, the ones digit goes 5, 0, 5, 0. Keep going: 990, 995, then 1000. That is one thousand."
+  ],
+  "adult": [
+   "The US Grade 2 standard 2.NBT.A.2 asks children to 'count within 1000; skip-count by 5s, 10s, and 100s'. England's Year 2 programme asks for counting in tens from any number, forwards and backwards, and Year 3 asks pupils to find 10 or 100 more or less than a given number and to recognise the place value of each digit in a three-digit number (hundreds, tens, ones).",
+   "Counting is easy until a boundary. Going from 199 to 200 needs two exchanges at once: ten ones make a ten, and ten tens make a hundred. Counting back across a hundred, as in 300 to 299, needs the exchange the other way. Counting in hundreds from a number that is not a multiple of 100, such as 150, keeps the tens and ones digits the same.",
+   "Common mistakes: writing 1910 or saying 'one hundred and ninety-ten' after 199, writing 'three hundred and five' as 3005 or 35, jumping from 150 to 200 when counting in hundreds, and saying 290 instead of 299 when counting back from 300. Watch the zero: it holds an empty place, so 305 is not 35.",
+   "In the lab your child builds 305 and 460 from hundred flats, ten rods and single cubes, counts on from 196 to 203, hops in tens from 650 to 720 and in hundreds from 150 to 950, counts back from 303 to 297, and skip-counts in fives from 960 to 1000."
+  ]
+ },
+ "familyTip": "Count together on a walk or in the car, starting from an odd number like 186 or 640. Stop just before a hundred (197, 198, 199 …) or a ten-hop that crosses one (670, 680, 690 …) and let your child say what comes next. Then count back from 302 together.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the count going up in tens or in hundreds? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Up in tens", "Up in hundreds"],
+   "items": [["450, 460, 470", 0], ["690, 700, 710", 0], ["195, 205, 215", 0], ["980, 990, 1000", 0], ["150, 250, 350", 1], ["300, 400, 500", 1], ["605, 705, 805", 1], ["720, 820, 920", 1]]
+  }
+ },
+ "lab": {
+  "type": "flaghund",
+  "caption": "Flagship lab: build 305 and 460, count on past 200, hop in tens past 700 and in hundreds from 150, count back past 300 and in fives to 1000.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "numeric", "id": "p1",
+   "prompt": "Count on in tens: {=a*100+70}, {=a*100+80}, {=a*100+90}, … What comes next?",
+   "answer": "a*100+100",
+   "hint": "Ten tens make a new hundred. What happens to the hundreds digit?",
+   "explain": "{=a*100+90} + 10 = {=a*100+100}. The tens were full, so they make a new hundred and the tens digit goes back to 0.",
+   "params": {"a": [1, 8]}
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "What number is {a} hundreds, {b} tens and {c} ones?",
+   "answer": "a*100+b*10+c",
+   "hint": "Write the hundreds digit, then the tens digit, then the ones digit. A 0 holds an empty place.",
+   "explain": "{a} hundreds is {=a*100}, {b} tens is {=b*10}, and there are {c} ones, so the number is {=a*100+b*10+c}.",
+   "params": {"a": [1, 9], "b": [0, 9], "c": [0, 9]}
+  },
+  {
+   "type": "numeric", "id": "p3",
+   "prompt": "Count back in ones: {=a*100+2}, {=a*100+1}, {=a*100}, … What comes next?",
+   "answer": "a*100-1",
+   "hint": "There are no ones or tens left. Break a hundred into tens and ones, so the ones and tens go to 9.",
+   "explain": "{=a*100} − 1 = {=a*100-1}. The hundreds digit drops by 1 and the tens and ones become 9.",
+   "params": {"a": [2, 9]}
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "Count in hundreds from 160. Which list is right?",
+   "choices": ["160, 260, 360", "160, 200, 300", "160, 170, 180"],
+   "answer": 0,
+   "hint": "Counting in hundreds changes only the hundreds digit.",
+   "explain": "Add 100 each time and the 6 tens stay put: 160, 260, 360. Jumping to 200 adds only 40."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric", "id": "m1",
+    "prompt": "Count in hundreds: {=a*10+b}, {=a*10+b+100}, {=a*10+b+200}, … What comes next?",
+    "answer": "a*10+b+300",
+    "hint": "Only the hundreds digit changes. The tens and ones stay the same.",
+    "explain": "Add one more hundred: {=a*10+b+200} + 100 = {=a*10+b+300}. The last two digits never change.",
+    "params": {"a": [1, 6], "b": [1, 9]}
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "Count in fives: {=a*100+85}, {=a*100+90}, {=a*100+95}, … What comes next?",
+    "answer": "a*100+100",
+    "hint": "The ones digit goes 5, 0, 5, 0. What happens when the tens are full?",
+    "explain": "{=a*100+95} + 5 = {=a*100+100}. The ones make a new ten, which fills the tens, so they make a new hundred.",
+    "params": {"a": [1, 8]}
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "A frog hops in tens from {=a*100+50} to {=a*100+50+b*10}. How many hops is that?",
+    "answer": "b",
+    "hint": "Count on in tens and keep track of each hop on your fingers.",
+    "explain": "From {=a*100+50} to {=a*100+50+b*10} is {=b*10} more, which is {b} hops of ten.",
+    "params": {"a": [1, 8], "b": [2, 6]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Which number is 6 hundreds, 0 tens and 3 ones?",
+    "choices": ["603", "63", "6003"],
+    "answer": 0,
+    "hint": "Write a digit for each place: hundreds, tens, ones.",
+    "explain": "6 hundreds, 0 tens and 3 ones is 603. The 0 holds the tens place. 63 is only 6 tens and 3 ones."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "What comes after 599?",
+    "choices": ["600", "5910", "590"],
+    "answer": 0,
+    "hint": "Ten ones make a ten. Ten tens make a hundred.",
+    "explain": "599 + 1 = 600. The ones and the tens are both full, so you make a new hundred."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Count back in tens: 820, 810, 800, … What comes next?",
+    "choices": ["790", "700", "799"],
+    "answer": 0,
+    "hint": "Take away one ten. With no tens left, break a hundred into ten tens.",
+    "explain": "800 − 10 = 790. The hundreds digit drops to 7 and the tens digit becomes 9. 700 takes away a whole hundred."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "In 472, what is the 7 worth?",
+    "choices": ["70", "7", "700"],
+    "answer": 0,
+    "hint": "Which place is the 7 in: hundreds, tens or ones?",
+    "explain": "The 7 is in the tens place, so it is worth 7 tens, which is 70. That is place value."
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "Count in fives: 985, 990, 995, … What comes next?",
+    "choices": ["1000", "9100", "996"],
+    "answer": 0,
+    "hint": "Add 5 to 995. What happens when every place is full?",
+    "explain": "995 + 5 = 1000. Ten hundreds make one thousand. 996 only adds 1, and 9100 joins digits on the end."
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Conventions checked against the National Curriculum Year 4 measurement statement and non-statutory guidance, NCETM Year 4 time materials and the GOV.UK style guide (24-hour times written with four digits and a colon, midnight 00:00, midday 12:00). Every time in the lab is generated from minutes after midnight by one t24/t12 pair of functions, so 16:20 = 4:20 pm, 21:05 = 9:05 pm, 11:45 stays 11:45, 19:30 = 7:30 pm, 08:15 = 8:15 am, 13:05 = 1:05 pm, 21:50 = 9:50 pm, 00:15 = 12:15 am, 12:40 = 12:40 pm. Timetable answers were checked by hand: latest arrival by 17:30 is 17:20 (train B); first departure after 19:00 is 19:10 (train C). Parameterised answers (h + 12, h − 12, h + 14, h − 9) were enumerated by the validator."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors NCETM and teacher assessment reports list for 24-hour time: dropping the first digit (19:30 → 9:30 pm) with a decoy card, a prediction option and the drop1 tag; adding 10 instead of 12 (14:20 option, check() feedback, add10 tag); adding 12 to morning times (11:45 trap item, pmadd tag); the 00 versus 12 hour (midnight/midday sort with its own feedback, midday, zero, midnight and noon24 tags); misreading 17 as 7 pm in a timetable (17:15 row in the 'after 7 pm' question); missing leading zero (m8)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed. 711 Minutes in an hour, hours in a day (flaghr60) counts 60 minutes and 24 hours, 594/541/478 (flagtomin, flagmins, flagclock) read analogue clocks, and 734 (flagivl) sequences intervals; none converts between 12- and 24-hour notation. Only this lab links a draggable whole-day strip to an analogue clock and both digital forms, has a 24-hour hour setter with a +12 key, a 24↔12 matching game with digit-dropping decoys, a 00/12 hour sort, and a timetable."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Dragging the marker past midday shows the 24-hour reading carry on to 13, 14, 15 while the clock face starts again, so 'keep counting' is discovered before the rule is given. Setting hours with ▲ ▼ and +12 makes the learner choose when to add 12, and the 11:45 am item shows when not to. Matching against decoys forces subtraction rather than digit dropping, and the timetable makes them convert before comparing. Banners give each rule only after the task is won."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions with tempting wrong options: 'There is no such time' and '5 o’clock in the morning' for 15:00; 04:20 and 14:20 for 4:20 pm; 9:30 pm and 7:30 am for 19:30; '15 minutes after midday' and 'Not a real time' for 00:15. Each following task shows the right answer on the clock or cards and the done message reports whether the prediction was right."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with tagged wrong answers and their own messages: am (03:45 is the night), add10, drop1, ampm (00–11 am, 12–23 pm), midday and zero (00:20 is 12:20 am; a 12-hour clock never shows 0), pmadd (morning hours do not change, write 09), midnight and noon24 (00:00 and 24:00 are midnight, midday is 12:00). Correct answers build a streak."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text reads at Flesch-Kincaid grade 2.2 (limit 6.5) and adult text at 5.9 (limit 9.5). Precise terms am, pm, midday, midnight, 24-hour clock and four digits are each defined in a plain sentence with an example, and on-canvas wording is short ('Write 4:20 pm in 24-hour time. Use ▲ ▼ or +12, then Check.')."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content found no filler and the explanation is under 12% similar to every other lesson. Kid paragraphs each add one idea (times happen twice; the 24-hour clock keeps counting; add 12 for pm; take away 12 and watch 12 and 00). The adult text gives curriculum and style conventions, the task order and specific mistakes."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on 360 px screenshots in light and dark themes for every step before and after Show me (/workspace/wn-run-20261116-0151/shots/t24). The day strip labels every 6 hours on phones so no labels collide; the hour setter keys are 44 px tall; the matching columns fit six right-hand cards; the midnight bin keeps light text on navy; timetable rows are 46 px tall with the column that matters in bold blue."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: every task completes with Show me, axe WCAG 2.1 AA clean in both themes, no console errors. Every canvas action has a button (Earlier or Later by 1 hour, Hour up, Add 12 hours, Check, Pick 19:30 then '19:30 = 7:30 pm', '00:15: after midnight', Train B), the canvas aria-label states the marker time in both forms, the current task and what is left, and feedback is spoken with c.say."
+  }
+ },
+ "sources": [
+  "National Curriculum in England, Mathematics programmes of study: Year 4 measurement (12- and 24-hour clocks) and Years 5–6 timetables",
+  "NCETM Mastery Professional Development, Year 4 measures: time",
+  "GOV.UK style guide: times (24-hour clock, midnight and midday)",
+  "BBC Bitesize KS2 Maths: 12-hour and 24-hour clock"
+ ]
+}

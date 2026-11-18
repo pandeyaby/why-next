@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_0Vza3H42G0",
+ "title": "Judging binomial assumptions in context",
+ "audience": "learner",
+ "keyIdea": "A binomial model X ~ B(n, p) rests on four assumptions: a fixed number of trials, two outcomes, independent trials and the same p every time. To judge a model, test each one against the story, and say in context why it might fail: seeds in one tray share soil and warmth, so they are not independent; a tiring player's chance of scoring falls, so p is not constant. A broken assumption often keeps the mean looking right but changes the spread, so compare the observed variance with np(1 − p). Then refine the plan so the assumption holds again, and do not invent problems when the model fits.",
+ "familyTip": "Pick something you could count, such as how many of 10 penalties a friend scores, or how many of 12 eggs in a box are cracked. Ask together: is n fixed, are there two outcomes, could one trial affect the next, and would p stay the same? Say one reason the model could fail in that story, and one change that would fix it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is a binomial model reasonable? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Reasonable",
+    "An assumption fails"
+   ],
+   "items": [
+    [
+     "Sixes in 30 rolls of a fair dice",
+     0
+    ],
+    [
+     "Goals in 10 penalties as the keeper learns the taker's habits",
+     1
+    ],
+    [
+     "Faulty chips in 50 picked at random from a huge batch",
+     0
+    ],
+    [
+     "Wins in 12 chess games against players who get stronger each round",
+     1
+    ],
+    [
+     "Correct answers when guessing 20 four-option questions",
+     0
+    ],
+    [
+     "Family members in one house who catch a cold",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbcrit",
+  "caption": "Flagship lab: plant trays with and without a tray effect, tire a shooter, check variance against np(1 − p), critique in context, refine.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "B(n, p) needs four things: a fixed number of trials, two outcomes, independent trials and the same p each time. To judge a model, test each one against the story.",
+   "A critique must say why, in context. 'Not independent' earns little on its own. 'Seeds in one tray share soil and warmth, so if one grows, the others are more likely to' earns the mark.",
+   "A broken assumption can leave the mean looking fine. The spread gives it away. If trials are linked, the variance is often much bigger than np(1 − p). If each trial holds the next back, as when drawing without replacement from a small bag, it is smaller.",
+   "Then fix the plan. Give each tray its own p, split shots into fresh and tired blocks, or sample units that cannot affect each other. And if all four hold, as with a fair coin, say the model is reasonable."
+  ],
+  "adult": [
+   "A-level Mathematics statistics (AQA, Edexcel and OCR) asks students to criticise a binomial model in context. They state which of the four conditions may fail, say why using the scenario, and suggest a refinement. Mark schemes usually give no credit for a bare 'trials may not be independent' with no reason from the context.",
+   "Why the variance is a test: if p varies between groups (trays, classes, batches), the counts are a mixture. Then Var(X) = E[np(1 − p)] + Var(np), which is more than np̄(1 − p̄) for the mean p̄. This is called overdispersion. Linked trials, such as shared conditions or contagion, have the same effect. Sampling without replacement from a small population gives a smaller variance, np(1 − p)(N − n)/(N − 1). If p drifts across the trials, as with a tiring player, the mean becomes the sum of the p values.",
+   "Common mistakes: a critique with no context; attacking a condition that holds, such as a fixed n or two outcomes; treating an unknown p as a broken assumption; saying a fair coin is not independent because it is reused; and taking a matching mean as proof that the model fits.",
+   "In the lab learners plant 120 trays of 10 seeds with and without a tray effect and compare the bars with B(10, 0.7) and np(1 − p) = 2.1. They drag a fatigue slider for a 20-shot player and watch the expected score and P(X ≥ 18) fall below the B(20, 0.8) values. Then they judge three data sets by their variance, pick the critique written in context for four models (one of which fits), and choose a refinement."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "X is the number of 10 seeds in one tray that germinate. Which critique of B(10, 0.7) is best?",
+   "choices": [
+    "Seeds in one tray share soil and warmth, so their germination is linked: not independent",
+    "The trials may not be independent",
+    "n = 10 is too small for a binomial model"
+   ],
+   "answer": 0,
+   "hint": "A good critique names the condition and gives a reason from the context.",
+   "explain": "The first names independence and says why it fails here. The second has no context, and the third is not a condition: any fixed n is allowed."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A player's chance of scoring starts at 0.8 and falls by 0.01 after every shot. What is the expected number scored in {n} shots? (Use 0.8n − 0.01 × n(n − 1)/2.)",
+   "answer": "0.8*n - 0.01*n*(n-1)/2",
+   "hint": "Add the probabilities 0.8, 0.79, 0.78, … for each shot; the formula does this sum.",
+   "explain": "Expected = 0.8 × {n} − 0.01 × {n}({n} − 1)/2 = {=0.8*n - 0.01*n*(n-1)/2}, below the B({n}, 0.8) mean of {=0.8*n} because p is not constant.",
+   "params": {
+    "n": [
+     10,
+     30
+    ]
+   },
+   "tolerance": 0.01
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Counts of pupils off with flu in classes of 30 have mean 6 and variance 21. What does this suggest about B(30, 0.2)?",
+   "choices": [
+    "Variance is far above np(1 − p) = 4.8, so cases are linked and the model is doubtful",
+    "The means match, so B(30, 0.2) fits",
+    "The variance is too small for a binomial"
+   ],
+   "answer": 0,
+   "hint": "Compare 21 with np(1 − p).",
+   "explain": "np(1 − p) = 30 × 0.2 × 0.8 = 4.8. A variance of 21 is overdispersion: flu spreads within a class, so the pupils are not independent."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "For B({n}, 0.5), what variance would you expect if the model fits?",
+   "answer": "n*0.25",
+   "hint": "Use np(1 − p) with p = 0.5, so multiply n by 0.25.",
+   "explain": "np(1 − p) = {n} × 0.5 × 0.5 = {=n*0.25}. Observed variances well above or below this point to a broken assumption.",
+   "params": {
+    "n": [
+     8,
+     40
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "X is the number of heads in 10 flips of a fair coin. Which verdict is right?",
+   "choices": [
+    "B(10, 0.5) is reasonable: all four conditions hold",
+    "Not binomial, because the same coin is reused",
+    "Not binomial, because a coin could land on its edge"
+   ],
+   "answer": 0,
+   "hint": "Does one flip change the chance of the next?",
+   "explain": "A coin has no memory and edge landings are negligible, so n is fixed, there are two outcomes, flips are independent and p = 0.5 throughout."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which critique of B(20, 0.8) for a player's free throws would earn the mark?",
+    "choices": [
+     "As the player tires, the chance of scoring falls, so p is not constant",
+     "The probability might not be exactly 0.8",
+     "A throw can hit the rim, so there are more than two outcomes"
+    ],
+    "answer": 0,
+    "hint": "Which one names a condition and a reason from the context?",
+    "explain": "Tiring changes p from shot to shot. Not knowing p exactly is an estimation issue, and each throw is still scored or missed."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "10 counters are drawn without replacement from a bag of 20, of which 10 are red. Why is B(10, 0.5) a poor model?",
+    "choices": [
+     "Each draw changes the chance of red on the next, so p is not constant and trials are not independent",
+     "There are two colours, so there are more than two outcomes",
+     "10 draws are too few"
+    ],
+    "answer": 0,
+    "hint": "What happens to the bag after a red is taken out?",
+    "explain": "After a red is drawn, 9 of the 19 left are red, so the chance changes. With a population this small, B(n, p) does not fit."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A bag holds 26 counters, 13 of them red. You draw {n} without replacement. The variance of the number of reds is np(1 − p)(26 − n)/25 with p = 0.5. Find it.",
+    "answer": "n*0.25*(26-n)/25",
+    "hint": "Work out n × 0.25, then multiply by (26 − n)/25.",
+    "explain": "{n} × 0.25 × (26 − {n})/25 = {=n*0.25*(26-n)/25}, smaller than the binomial {=n*0.25}: each draw holds the next back.",
+    "params": {
+     "n": [
+      4,
+      12
+     ]
+    },
+    "tolerance": 0.01
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Trays differ in warmth, so germination rates vary from tray to tray around 0.7. What is the best refinement?",
+    "choices": [
+     "Model each tray with its own p",
+     "Pool all trays into one B(n, 0.7) with a bigger n",
+     "Round p to one decimal place"
+    ],
+    "answer": 0,
+    "hint": "The refinement should remove the cause of the broken assumption.",
+    "explain": "A separate p per tray removes the varying p. Pooling keeps the clustering, and rounding changes nothing."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which result most suggests that the trials in a binomial model are positively linked?",
+    "choices": [
+     "Observed variance much bigger than np(1 − p)",
+     "Observed mean equal to np",
+     "Observed variance equal to np(1 − p)"
+    ],
+    "answer": 0,
+    "hint": "Linked trials push counts towards all-or-nothing.",
+    "explain": "Positive dependence or varying p spreads the counts out, giving variance above np(1 − p). A matching mean says nothing about independence."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "People in a cinema queue are asked if they liked the film. Why might B(15, p) fail?",
+    "choices": [
+     "People queue with friends they saw it with, who may share a view, so answers are not independent",
+     "There are only two answers, so it must be binomial",
+     "p is unknown, so no model is possible"
+    ],
+    "answer": 0,
+    "hint": "Could one person's answer be linked to the next person's?",
+    "explain": "Groups of friends give linked answers. Two outcomes is only one condition, and an unknown p can be estimated."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Eggs come in boxes of 12 with a crack rate p = 0.05. For {n} boxes, n = 12 × {n} eggs. Find np(1 − p), to 2 decimal places.",
+    "answer": "12*n*0.05*0.95",
+    "hint": "Work out n = 12 × the number of boxes first, then n × 0.05 × 0.95.",
+    "explain": "12 × {n} × 0.05 × 0.95 = {=12*n*0.05*0.95}. If the observed variance is close to this, B(n, 0.05) is a reasonable model.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    },
+    "tolerance": 0.01
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A model's observed mean matches np. What can you conclude?",
+    "choices": [
+     "Not enough: check the variance and each condition in context",
+     "The model fits",
+     "The trials are independent"
+    ],
+    "answer": 0,
+    "hint": "In the tray simulation, what stayed the same when the trays differed?",
+    "explain": "Varying p and linked trials can leave the mean unchanged. Only the spread and the context reveal them."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which change would best restore independence when counting pupils with flu?",
+    "choices": [
+     "Sample one pupil from each of many different schools",
+     "Count each class twice",
+     "Use a smaller value of p"
+    ],
+    "answer": 0,
+    "hint": "Which plan stops one case from causing another in the sample?",
+    "explain": "Pupils from different schools cannot pass flu to each other in class, so their outcomes are close to independent."
+   }
+  ]
+ }
+}

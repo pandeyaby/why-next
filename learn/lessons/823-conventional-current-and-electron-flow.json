@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_eTv7W6osCa",
+ "title": "Conventional current and electron flow",
+ "audience": "learner",
+ "keyIdea": "Conventional current is drawn from the positive terminal of a cell, round the circuit, to the negative terminal. In a metal wire the charges that actually move are electrons, which are negative, so they drift the opposite way: out of the negative terminal and round to the positive. Both descriptions give the same current, because negative charge moving one way has the same effect as positive charge moving the other way. The convention stays because it was set in the 1700s and 1800s, long before the electron was discovered in 1897, and circuit rules and symbols such as the diode arrow were built on it.",
+ "familyTip": "Draw a simple loop with a cell on the back of an envelope and ask your teen to add a current arrow and an electron arrow. Then turn the cell round and ask what changes. Ask why an LED only lights one way round, and which arrow its symbol follows.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which statements describe conventional current, and which describe electron flow? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "conventional current",
+    "electron flow"
+   ],
+   "items": [
+    [
+     "leaves the + terminal",
+     0
+    ],
+    [
+     "leaves the − terminal",
+     1
+    ],
+    [
+     "what diode arrows follow",
+     0
+    ],
+    [
+     "negative charges drifting",
+     1
+    ],
+    [
+     "set before 1897",
+     0
+    ],
+    [
+     "drift under 1 mm/s",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcurdir",
+  "caption": "Flagship lab: drag current and electron arrows round a circuit, flip the cell, judge if an LED lights, order the history, and test that both give one current.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "On a circuit diagram, the current arrow starts at the + end of the cell. That is the long line. It goes round the loop and back to the − end, the short line. We call this conventional current.",
+   "In a metal wire, the things that move are electrons. Electrons are negative. The − end pushes them away and the + end pulls them in. So they drift from − to +. That is the other way to the arrows.",
+   "Both pictures give the same current. A negative charge moving left does the same job as a positive charge moving right. So the ammeter reads the same, and the sums do not change.",
+   "The two ways come from history. In the 1740s, Benjamin Franklin named charges + and −. He guessed that + charge moves. In the 1820s, André-Marie Ampère set current to flow from + to −. The electron was found in 1897 by J. J. Thomson. It was negative. By then, all the rules and symbols used the old way, and they still work."
+  ],
+  "adult": [
+   "Ages 13 to 15. GCSE Physics (for example AQA 8463, section 4.2.1) defines current as the rate of flow of charge, Q = It. The diode symbol points the way conventional current can pass. OpenStax College Physics 2e (section 20.1) defines conventional current as the way positive charge would flow. It notes that in metals the moving charges are electrons, which go the other way.",
+   "The history: Franklin's letters of 1747 brought in the labels positive and negative. Volta's pile of 1800 gave the first steady current. Ampère, in the 1820s, set the direction of current as the way positive charge moves. Thomson found the electron, and its negative charge, in 1897. In other conductors the carriers differ. In salt water, both positive and negative ions move. In p-type semiconductors, the carriers act like positive holes. So the convention is not simply wrong.",
+   "Common mistakes: thinking electrons leave the + terminal; thinking the two pictures give different currents or opposite meter readings; thinking electrons race round at near light speed (their drift is often well under 1 mm per second, while the push along the wire sets up almost at once); reading a diode symbol by electron flow; and thinking the + to − rule was chosen after the electron was found.",
+   "In the lab you drag along each wire to mark the current, then turn the cell round and do it again. You mark the electron drift against the current arrows and watch electrons move. You judge whether an LED lights in four circuits, put four events in order, and answer four questions that show both pictures give the same current."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A current arrow I points to the right along a wire. Which way do the electrons drift?",
+   "choices": [
+    "left",
+    "right",
+    "they do not move"
+   ],
+   "answer": 0,
+   "hint": "Electrons are negative. Conventional current is the way positive charge would go.",
+   "explain": "Electrons drift opposite to conventional current, so they go left."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A charge of {=i*t} C passes a point in a wire in {t} s. What is the current in amps? (I = Q ÷ t)",
+   "answer": "i",
+   "hint": "Divide the charge by the time. The direction you picture does not change the size.",
+   "explain": "I = {=i*t} ÷ {t} = {i} A, whether you picture + charge one way or electrons the other way.",
+   "params": {
+    "i": [
+     1,
+     6
+    ],
+    "t": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Why is conventional current drawn from + to −?",
+   "choices": [
+    "The direction was chosen before the electron was discovered.",
+    "Electrons flow from + to −.",
+    "Positive charges always move in metal wires."
+   ],
+   "answer": 0,
+   "hint": "Think about the dates: the 1740s and 1820s, and 1897.",
+   "explain": "Franklin's and Ampère's choices came long before Thomson found the negative electron in 1897."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "An electron drifts about 0.1 mm along a wire each second. How many seconds does it take to drift {d} mm?",
+   "answer": "d*10",
+   "hint": "Each second it moves 0.1 mm, so 1 mm takes 10 seconds.",
+   "explain": "{d} mm × 10 s per mm = {=d*10} s. Electrons drift slowly, even though the lamp lights almost at once.",
+   "params": {
+    "d": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "An LED's triangle points left. Conventional current reaches it flowing right. What happens?",
+   "choices": [
+    "No current flows, so it stays off.",
+    "It lights, because electrons go left.",
+    "The current turns round."
+   ],
+   "answer": 0,
+   "hint": "Diode symbols are drawn for conventional current.",
+   "explain": "The current is against the triangle, so the diode blocks it and the LED stays off."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Conventional current leaves a cell from which terminal?",
+    "choices": [
+     "the positive terminal (long line)",
+     "the negative terminal (short line)",
+     "both terminals"
+    ],
+    "answer": 0,
+    "hint": "Conventional means the agreed direction: + to −.",
+    "explain": "It is drawn leaving + and returning to −. Electrons do the opposite."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why do electrons drift towards the positive terminal?",
+    "choices": [
+     "They are negative, and opposite charges attract.",
+     "They are positive.",
+     "The current arrow pushes them."
+    ],
+    "answer": 0,
+    "hint": "What is the charge on an electron?",
+    "explain": "Electrons are negative, so the + terminal attracts them and the − terminal repels them."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You redraw a circuit using electron flow instead of conventional current. What happens to the ammeter reading?",
+    "choices": [
+     "It stays the same.",
+     "It becomes negative.",
+     "It doubles."
+    ],
+    "answer": 0,
+    "hint": "Is it the same flow of charge?",
+    "explain": "The same charge flows each second, so the current is the same size."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "When was the electron discovered?",
+    "choices": [
+     "1897",
+     "1747",
+     "1820"
+    ],
+    "answer": 0,
+    "hint": "It was the last of these events.",
+    "explain": "Thomson found it in 1897. Franklin named + and − in 1747; Ampère set the current direction in the 1820s."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "About 6.25 × 10¹⁸ electrons carry 1 coulomb. Each second, {n} × 6.25 × 10¹⁸ electrons pass a point. What is the current in amps?",
+    "answer": "n",
+    "hint": "Count the coulombs passing each second: that is the current in amps.",
+    "explain": "{n} × 6.25 × 10¹⁸ electrons is {n} C each second, so the current is {n} A.",
+    "params": {
+     "n": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The cell in a loop is turned round. What happens to the arrows?",
+    "choices": [
+     "Both the current and electron arrows reverse.",
+     "Only the current arrows reverse.",
+     "Nothing changes."
+    ],
+    "answer": 0,
+    "hint": "Which terminal is now on each side?",
+    "explain": "+ and − swap sides, so the current reverses, and the electrons, always opposite, reverse too."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which statement about conventional current is true?",
+    "choices": [
+     "It is the direction positive charge would move.",
+     "It is the direction electrons move in a wire.",
+     "It was chosen after the electron was found."
+    ],
+    "answer": 0,
+    "hint": "Conventional current is defined by positive charge.",
+    "explain": "It is the way positive charge would move. In metals the electrons go the other way, and the rule came first."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A current of {i} A flows for {t} s. How much charge passes, in coulombs? (Q = I × t)",
+    "answer": "i*t",
+    "hint": "Multiply the current by the time.",
+    "explain": "Q = {i} × {t} = {=i*t} C, whichever direction picture you use.",
+    "params": {
+     "i": [
+      1,
+      5
+     ],
+     "t": [
+      2,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "In salt water, which charges carry the current?",
+    "choices": [
+     "Positive and negative ions, moving opposite ways",
+     "Only electrons",
+     "Only positive ions"
+    ],
+    "answer": 0,
+    "hint": "Salt water has no free electrons; it has ions.",
+    "explain": "Positive ions move with conventional current and negative ions against it, so neither picture is the whole story there."
+   }
+  ]
+ }
+}

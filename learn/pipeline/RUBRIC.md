@@ -7,7 +7,7 @@ Cheap or templated lessons fail by design: Abhinav rejected duplicate auto-gener
 ## Automatic gates
 | Gate | What fails it |
 |---|---|
-| lab_registered | No `flag…` lab of its own, not registered (LEARN_JS, validate_visuals OPTS, both schema enums), or a lab type another lesson already uses |
+| lab_registered | No `flag…` lab of its own, not registered (LEARN_JS, learn/flag_labs.json, both schema enums), or a lab type another lesson already uses |
 | lab_distinct | Lab source more than 30% the same as any other flagship lab (6-token shingles, Jaccard) |
 | lab_structure | Fewer than 6 steps, 2 predictions, 3 tasks with Show me; no Challenge; under 3 misconception feedback messages; no drag/tap on the canvas; no live aria-label |
 | content | Filler phrases ("in this lesson", "let's explore", "delve", "plays a crucial role", "journey", TODO, placeholder…); explanation more than 12% the same as any other lesson; under 3 kid and 3 adult paragraphs; adult text names no common mistake; status not self-checked |

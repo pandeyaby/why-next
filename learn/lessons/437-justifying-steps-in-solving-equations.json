@@ -1,0 +1,273 @@
+{
+ "topicId": "mt_RHmPNyEH19",
+ "title": "Justifying steps in solving equations",
+ "audience": "learner",
+ "keyIdea": "Each line of a solution must follow from the line above, and you should be able to name the reason: the distributive property, combining like terms, or a property of equality (add, subtract, multiply or divide both sides by the same thing). A step is safe when it can be undone, so the new equation has exactly the same solutions. Dividing by an expression that could be zero, multiplying by zero and squaring both sides can lose or add solutions.",
+ "explain": {
+  "kid": [
+   "Solving an equation is a chain of lines. Each line must say the same thing as the line above it, just in a simpler way. A reason tells the reader why the next line is true.",
+   "Some reasons tidy up one side. You can multiply out a bracket, or put like terms together. Other reasons change both sides in the same way. You can add, take away, multiply or divide both sides by the same thing.",
+   "A good step can be undone. If you took 2x from both sides, you can add 2x back. So the new line has the same answers as the old one.",
+   "Some steps can't be undone. Never divide by something that could be zero. Times both sides by zero and every x seems to work. Square both sides and an extra answer can creep in. So check your answer in the first equation."
+  ],
+  "adult": [
+   "The reasons are named properties. The distributive property and collecting like terms rewrite one side. The properties of equality act on both sides: if a = b, then a + c = b + c and a − c = b − c. Also ac = bc, and a/c = b/c when c ≠ 0.",
+   "Two equations are equivalent when they have the same solution set. Adding or subtracting any expression keeps the solutions. So does multiplying or dividing by a non-zero constant. Each of these moves can be undone. That is why the final line, such as x = 4, solves the first equation. This is the reasoning asked for in the US Common Core standard A-REI.1 and in GCSE maths when students show that a statement is true.",
+   "Common mistakes: dividing both sides by x, which loses x = 0. Another is dividing by an expression that equals zero, as in the classic proof that 2 = 1. Some multiply both sides by zero. Others square both sides and keep an extraneous root. Many write a line with no reason, or change one side only, so 3x = 12 becomes x = 36. Factorising instead of dividing by x keeps every solution.",
+   "In the lab, learners tag each line of a solution with its property. They find the invalid step in three broken chains and sort moves by whether they keep the solution set. Then they rebuild a shuffled solution and run a chain backwards to see why the method works."
+  ]
+ },
+ "familyTip": "When your teenager solves an equation, ask them to say the reason for each line out loud, like 'subtract 2x from both sides'. Then ask: can that step be undone? If not, check the answer in the first equation.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Valid or invalid step? Drag each card to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Valid step",
+    "Invalid step"
+   ],
+   "items": [
+    [
+     "Add 4 to both sides of x − 4 = 7",
+     0
+    ],
+    [
+     "Divide both sides of x² = 5x by x",
+     1
+    ],
+    [
+     "Subtract 3x from both sides",
+     0
+    ],
+    [
+     "Multiply both sides by 0",
+     1
+    ],
+    [
+     "Divide both sides of 2x = 8 by 2",
+     0
+    ],
+    [
+     "Divide by (x − 1) when x could be 1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagjustify",
+  "caption": "Flagship lab: tag each line with its property, find the invalid step in broken chains, sort safe moves and run a solution backwards.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Going from 3x + 4 = 19 to 3x = 15. Which reason justifies the step?",
+   "choices": [
+    "Subtraction property of equality",
+    "Division property of equality",
+    "Distributive property"
+   ],
+   "answer": 0,
+   "hint": "What changed? Something was taken away from both sides.",
+   "explain": "4 was subtracted from both sides, so it is the subtraction property of equality."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Solve {a}x + {b} = {c}. Justify each step: subtract {b}, then divide by {a}. What is x?",
+   "answer": "(c-b)/a",
+   "where": "(c-b)%a==0&&c>b",
+   "hint": "Subtract {b} from both sides first, then divide both sides by {a}.",
+   "explain": "{a}x = {=c-b} by the subtraction property, then x = {=(c-b)/a} by the division property.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     12,
+     40
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Sam solves x² = 4x by dividing both sides by x and gets x = 4. What is wrong?",
+   "choices": [
+    "He lost the solution x = 0",
+    "Nothing, x = 4 is the only solution",
+    "He should have added x"
+   ],
+   "answer": 0,
+   "hint": "Could x be 0? Try it in x² = 4x.",
+   "explain": "0² = 4 × 0, so x = 0 works too. Dividing by x is not allowed when x could be 0. Factorise: x(x − 4) = 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Solve {k}(x − {m}) = {n}. Use the distributive property or divide by {k} first. What is x?",
+   "answer": "n/k+m",
+   "where": "n%k==0",
+   "hint": "Divide both sides by {k} to get x − {m} = {=n/k}, then add {m}.",
+   "explain": "x − {m} = {=n/k} by the division property, so x = {=n/k+m} by the addition property.",
+   "params": {
+    "k": [
+     2,
+     5
+    ],
+    "m": [
+     1,
+     6
+    ],
+    "n": [
+     10,
+     40
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "From 5(x − 2) = 15 to 5x − 10 = 15. Which reason?",
+    "choices": [
+     "Distributive property",
+     "Subtraction property of equality",
+     "Combine like terms"
+    ],
+    "answer": 0,
+    "hint": "Look at the bracket on the left side.",
+    "explain": "The bracket was multiplied out: 5 × x and 5 × (−2). That is the distributive property."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which step keeps exactly the same solutions?",
+    "choices": [
+     "Add 2x to both sides",
+     "Square both sides",
+     "Multiply both sides by 0"
+    ],
+    "answer": 0,
+    "hint": "Which step can be undone?",
+    "explain": "Adding 2x is undone by subtracting 2x. Squaring can add a root and multiplying by 0 cannot be undone."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "In a proof that 2 = 1, a = b and the next step divides both sides by (a − b). Why is it invalid?",
+    "choices": [
+     "a − b is zero, and you cannot divide by zero",
+     "You must divide by a number, not letters",
+     "Nothing is wrong, so 2 = 1"
+    ],
+    "answer": 0,
+    "hint": "If a = b, then a − b is 0. What happens when you divide by 0?",
+    "explain": "a − b = 0, and division by zero is undefined, so the chain breaks there."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why does x = 4, found by balancing, really solve 5x − 3 = 2x + 9?",
+    "choices": [
+     "Every step can be undone, so each line has the same solutions",
+     "Because 4 is a whole number",
+     "Because the last line is short"
+    ],
+    "answer": 0,
+    "hint": "Think about running the steps backwards.",
+    "explain": "Each step is reversible, so the equations are equivalent. Check: 17 = 17."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Mo writes 4x = 20, then x = 80. Which reason did he break?",
+    "choices": [
+     "The division property: divide both sides by 4",
+     "The distributive property",
+     "Nothing, x = 80"
+    ],
+    "answer": 0,
+    "hint": "4x means 4 times x. How do you undo times 4?",
+    "explain": "He multiplied instead of dividing. Dividing both sides by 4 gives x = 5. Check: 4 × 5 = 20."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Squaring both sides of √x = −2 gives x = 4. Is x = 4 a solution?",
+    "choices": [
+     "No, √4 is 2, not −2, so it is extraneous",
+     "Yes, squaring is always safe",
+     "Yes, because 4 is positive"
+    ],
+    "answer": 0,
+    "hint": "Put x = 4 back into the first equation.",
+    "explain": "√4 = 2, not −2. Squaring added a solution, so always check in the first equation."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Solve {a}x − {b} = {c}x + {d}. First subtract {c}x, then add {b}, then divide. What is x?",
+    "answer": "(d+b)/(a-c)",
+    "where": "a>c&&(d+b)%(a-c)==0",
+    "hint": "After subtracting {c}x you get {=a-c}x − {b} = {d}.",
+    "explain": "{=a-c}x − {b} = {d}, then {=a-c}x = {=d+b}, so x = {=(d+b)/(a-c)}.",
+    "params": {
+     "a": [
+      4,
+      9
+     ],
+     "b": [
+      1,
+      8
+     ],
+     "c": [
+      1,
+      3
+     ],
+     "d": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Solve x/{k} + {m} = {n}. Name the two properties you use. What is x?",
+    "answer": "k*(n-m)",
+    "where": "n>m",
+    "hint": "Subtract {m} from both sides, then multiply both sides by {k}.",
+    "explain": "x/{k} = {=n-m} by the subtraction property, then x = {=k*(n-m)} by the multiplication property.",
+    "params": {
+     "k": [
+      2,
+      6
+     ],
+     "m": [
+      1,
+      5
+     ],
+     "n": [
+      6,
+      12
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England Year 6 geometry statement (find unknown angles in any triangles, quadrilaterals and regular polygons) and CCSS 8.G.A.5 / 7.G.B.5. Every value recomputed: 50 + 60 + 70, 110 + 25 + 45, 24 + 121 + 35 = 180; isosceles 40° apex gives (180 − 40) ÷ 2 = 70°, base 65° gives apex 50°; right-angled with 35° gives 55°; quadrilateral totals 360° for every dragged shape (angles rounded with the last one fixed so the shown sum is exact); pentagon 3 × 180 = 540, 540 ÷ 5 = 108; hexagon 720 ÷ 6 = 120; octagon 1080 ÷ 8 = 135. The right-angle square is drawn only when the shown angle is exactly 90°. Parameterised items (180 − a − b, 90 − a, 270 − a − b) were enumerated by the validator at every combination."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors catalogued in Ryan and Williams (2007, angle chapter) and the DfE 2020 KS2 guidance notes: adding the two known angles and stopping (110° for 70°), subtracting from 360° for a triangle, copying the apex onto the base or not halving in an isosceles triangle, ignoring the right angle, believing bigger triangles have bigger angle sums, a quadrilateral total that 'depends on the shape', n triangles instead of n − 2, and giving the exterior angle 360° ÷ n as the interior angle. Each is a prediction distractor, an answer tile with its own message, or a tagged challenge answer."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 9.1% (shared banner and challenge scaffolding with flag_quad4.js), far under 30%. flag_angle.js (types of angles) and flag_regpol.js (drawing regular polygons) do not do this: only this lab drags a triangle's apex while copies of its three corners stay joined on a straight-line semicircle, snaps the apex onto the Thales circle for a right angle, splits a draggable convex quadrilateral by a diagonal and fans a regular polygon into n − 2 triangles."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge, one idea each: corners of any triangle fill 180° (three kinds must be made); missing angle = 180 − the two known; isosceles and right-angle facts; diagonal gives 2 × 180 = 360 for any quadrilateral while the corner is dragged; (n − 2) × 180 ÷ n for regular polygons. The green banner states each rule only after the learner's own dragging or answers reach it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked predictions with tempting wrong options the lab then disproves: whose angles add to more ('the huge one', 'the tiny one'), the third angle of 50° and 60° ('110°', '250°'), the isosceles base angle ('140°', '40°'), the quadrilateral total ('180°', 'it depends on the shape') and the regular hexagon angle ('60°', '180°'). The correct option is in a different position each time and A.reveal names the learner's pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating questions with ten distinct wrong-answer messages (added, used360, isoSub, isoCopy, rightForgot, copyAngle, quad180, dependsShape, nTri, extAngle, sizeMatters). Each names the slip and gives the corrected working, e.g. 'From one corner a shape with n sides splits into n − 2 triangles, not n. A hexagon makes 4 triangles: 720°.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 2.3 and adult 5.7 (limits 6.5 and 9.5). Kid paragraphs use tearing corners, 'add the two you know and take that from 180°' and short sentences; isosceles, quadrilateral and regular are defined where they first appear. Canvas banners stay within three lines at 360 px."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with no filler patterns; the highest explanation overlap with any lesson is 0.9% (800 Drawing 2-D shapes accurately). Each kid paragraph does one job: the 180° fact, finding a missing angle, special triangles, and quadrilaterals and polygons."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. Fixes from the first sheet: the wide preset made an 8° sliver whose label vanished, so it now gives a 112° triangle; the semicircle radius is capped so it never meets the base; the done list became one line because three rows touched the feedback box; the quadrilateral total moved under the banner; and the drag handle is drawn under the corner labels."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag or tap has a button twin (Pointy triangle / Right-angled / Wide triangle; each answer tile as a button; Draw a diagonal / Make a kite / Make a trapezium). The canvas aria-label is rewritten after every action with the three or four angles and their total, the triangle kind, kinds made so far, or the current question with its choices and answers done. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) National Curriculum in England: mathematics programmes of study, Year 5 and Year 6 geometry (properties of shapes)",
+  "Common Core State Standards for Mathematics (2010), 7.G.B.5 and 8.G.A.5",
+  "Department for Education (2020) Mathematics guidance: key stages 1 and 2 (non-statutory), geometry ready-to-progress criteria",
+  "Ryan, J. and Williams, J. (2007) Children's Mathematics 4–15: Learning from Errors and Misconceptions, Open University Press"
+ ]
+}

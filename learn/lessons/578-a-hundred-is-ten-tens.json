@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_8gy7uxRlF6",
+ "title": "A Hundred Is Ten Tens",
+ "audience": "family",
+ "keyIdea": "One hundred is ten tens. In place value, the hundreds digit counts groups of 100 — ten rods of ten make one hundred flat.",
+ "familyTip": "Build 100 with ten ten-rods, then swap for one flat. Ask: 'Still 100 ones?' Try reading 130 as 1 hundred and 3 tens.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Hundred = ten tens — fair idea or myth? Drag each clue, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "10 tens make 1 hundred",
+     0
+    ],
+    [
+     "1 hundred and 3 tens = 130",
+     0
+    ],
+    [
+     "swapping 10 tens for 1 hundred keeps the total",
+     0
+    ],
+    [
+     "a hundred is ten ones",
+     1
+    ],
+    [
+     "1 hundred and 1 ten = 11",
+     1
+    ],
+    [
+     "12 tens = 120 ones",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtenten",
+  "caption": "Flagship lab: bundle 10 tens into a hundred, read 110, swap without changing total, build 100, compare flats vs tens, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A hundred is ten tens stuck together.",
+   "One tall ten-rod is 10. Ten of those rods make 100 — a hundred flat.",
+   "When you swap 10 tens for 1 hundred, you still have the same number of ones.",
+   "Read hundreds first, then tens: 1 hundred and 3 tens is 130."
+  ],
+  "adult": [
+   "NC Y2 / CCSS 2.NBT.A.1: 100 is a bundle of ten tens; the hundreds place counts units of 100. Words: hundred, ten, flat, rod, regroup, place value.",
+   "Common mistakes: treating a hundred as ten ones; reading 1 hundred and 1 ten as 11; thinking regrouping changes the total; saying more pieces always means more value.",
+   "In the lab your child bundles 10 tens into a flat, reads 110, swaps tens for a hundred (total stays 100), builds 100, and sees 12 tens beat 1 hundred."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "10 tens make…",
+   "choices": [
+    "1 hundred",
+    "10 ones",
+    "1 ten"
+   ],
+   "answer": 0,
+   "hint": "Ten rods of ten join into one hundred.",
+   "explain": "Ten tens = one hundred. That is the hundreds place."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "1 hundred and 1 ten is…",
+   "choices": [
+    "110",
+    "11",
+    "101"
+   ],
+   "answer": 0,
+   "hint": "Hundreds first, then tens.",
+   "explain": "1×100 + 1×10 = 110, not 11 or 101."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "How many tens make {h} hundred?",
+   "answer": "h*10",
+   "hint": "Each hundred is made of exactly 10 tens.",
+   "explain": "{h} hundred = {=h*10} tens.",
+   "params": {
+    "h": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{h} hundred and {t} tens = ?",
+   "answer": "h*100+t*10",
+   "hint": "Hundreds ×100, tens ×10, then add.",
+   "explain": "{h}×100 + {t}×10 = {=h*100+t*10}.",
+   "params": {
+    "h": [
+     1,
+     2
+    ],
+    "t": [
+     0,
+     4
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order the steps to regroup tens into a hundred.",
+   "items": [
+    "gather 10 tens",
+    "swap them for 1 hundred flat",
+    "check the total is still the same"
+   ],
+   "hint": "Collect tens first, then swap, then check.",
+   "explain": "Ten tens regroup into one hundred without changing how many ones you have."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Swap 10 tens for 1 hundred. Ones now?",
+    "choices": [
+     "The same",
+     "10 fewer",
+     "10 more"
+    ],
+    "answer": 0,
+    "hint": "Regrouping does not add or remove ones.",
+    "explain": "Same 100 ones — just shown as one flat."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "130 is…",
+    "choices": [
+     "1 hundred and 3 tens",
+     "13 ones",
+     "3 hundreds and 1 ten"
+    ],
+    "answer": 0,
+    "hint": "Split into hundreds and tens.",
+    "explain": "130 means 1 hundred and 3 tens: 1×100 + 3×10."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "1 hundred vs 12 tens — more is…",
+    "choices": [
+     "12 tens",
+     "1 hundred",
+     "equal"
+    ],
+    "answer": 0,
+    "hint": "12×10 = 120; 1×100 = 100.",
+    "explain": "12 tens are 120 ones, which beats 1 hundred (100 ones)."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A hundred is…",
+    "choices": [
+     "ten tens",
+     "ten ones",
+     "one ten"
+    ],
+    "answer": 0,
+    "hint": "Think of ten rods joined into one flat.",
+    "explain": "A hundred equals ten tens — that is the hundreds place."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{t} tens = how many ones?",
+    "answer": "t*10",
+    "hint": "Each ten-rod holds exactly 10 ones.",
+    "explain": "{t} tens make {=t*10} ones in all.",
+    "params": {
+     "t": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{h} hundreds = how many tens?",
+    "answer": "h*10",
+    "hint": "Each hundred holds 10 tens.",
+    "explain": "{h} hundreds = {=h*10} tens.",
+    "params": {
+     "h": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why regroup tens into a hundred?",
+    "choices": [
+     "same total, clearer place value",
+     "to make the number smaller",
+     "because tens disappear"
+    ],
+    "answer": 0,
+    "hint": "Place value shows groups without changing amount.",
+    "explain": "Regrouping clarifies hundreds/tens; the total stays."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: read a hundreds-and-tens number.",
+    "items": [
+     "count the hundred flats",
+     "count the ten rods",
+     "say hundreds then tens as one number"
+    ],
+    "hint": "Always read the hundreds digit first.",
+    "explain": "Read hundreds, then tens, as one number (e.g. 130)."
+   }
+  ]
+ }
+}

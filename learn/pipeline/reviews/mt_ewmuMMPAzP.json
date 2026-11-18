@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every sum was worked by hand and re-checked in the lab's own state model: 247+136=383, 365+271=636, 458+367=825, 352−127=225, 425−162=263, 503−148=355. Each wrong challenge option is the exact output of the named bug (3713 writes 13 in a column, 373/536/715 drop carries, 725 drops the second carry, 235/343/445 smaller-from-larger, 365 forgets the 10 tens become 9, 363 forgets to reduce the hundreds). Parameterised items are built as (10a+8) + (10b+5), (10a+2) − (10b+7) and (100a+3) − (10b+7), so the ones always need a swap or a break, and every answer at the range corners stays between 216 and 914. Terms follow CCSS 2.NBT.7 (compose/decompose) and NC Year 3 (columnar addition and subtraction)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented column-arithmetic bugs from Brown and Burton's BUGGY studies and VanLehn's subtraction bug catalogue: smaller-from-larger, borrow-across-zero (forgetting 10 tens become 9), forgetting to decrement the lent column, writing a two-digit column total, and dropping a carried digit. Each one appears as a prediction option, a refusal message on the mat (e.g. 'Do not swap it to 7 − 2') or a tagged challenge answer."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagregroup is a three-column base-ten mat with a live written column sum: blocks only move by a legal exchange (10 → 1 left) or break (1 → 10 right), unnecessary breaks are refused, and each move writes the carried or renamed digit with a strike-through. flag3digit shows what each digit is worth and flagw20 drills facts within 20; neither composes or decomposes inside a sum. The 30% shingle gate passed."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner sees 13 ones overflow a dashed group of ten before swapping, then sees the small 1 appear in the tens of the written sum at the same moment; in subtraction the mat refuses 2 − 7 and tells them to break a ten, and the crossed-out 5 with a green 4 and 12 above it is the record of the break they just made. The zero step forces two breaks in order, so 9 tens is discovered, not told."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Six predictions with tempting wrong options: '13' in the ones column, '1 ten and 3 ones' for 13 tens, 'one' swap for 458 + 367, '7 − 2 = 5 instead', 'break 1 ten' when the tens are short, and 'the answer must be below zero' for 503 − 148. Each is disproved when the task is done on the mat."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating questions with tags write13, nocarry, onecarry, swap, op, zero, nored and place; each wrong answer gets a message naming that slip, e.g. 'After breaking the hundred there were 10 tens, then one ten went to the ones, so 9 tens are left, not 10.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text FK grade 1.0 (family target ≤ 5, lowered by the worked numbers), key idea 4.5, adult 7.2 (≤ 10). Regrouping, carrying, exchanging, composing and decomposing are each tied to a picture of blocks the first time they appear; sentences in the kid text average under 10 words."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passed with no filler phrases and under 12% overlap with any lesson, including the place-value lessons 598, 599 and 610. Kid paragraphs: columns, carrying with one example, breaking a ten with one example, the zero case. Adult: standards, why the method works, five named mistakes, what the lab does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 screenshots in dark and light at every step and after Show me: three columns fit at 390 px with flats, rods and cubes at readable sizes even at 13 ones or 12 tens; the written sum sits under the mat with renamed digits (4, 9, 13) clear of the struck digits; control buttons wrap below the canvas; the feedback line fits on one row."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has a labelled button twin (10 ones → 1 ten, 10 tens → 1 hundred, 1 hundred → 10 tens, 1 ten → 10 ones, Take away N ones/tens/hundreds), so the lab is fully usable without dragging. The canvas aria-label repeats each move ('1 ten → 10 ones. Now there are 4 tens and 12 ones.'). walk.cjs: axe WCAG 2.1 AA clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics, 2.NBT.7 (add and subtract within 1000 using concrete models or drawings and strategies based on place value)",
+  "Department for Education (2013), National Curriculum in England: mathematics programmes of study, Year 3 Addition and subtraction",
+  "Brown, J. S. and Burton, R. R. (1978) Diagnostic models for procedural bugs in basic mathematical skills, Cognitive Science 2(2)",
+  "VanLehn, K. (1990) Mind Bugs: The Origins of Procedural Misconceptions, MIT Press (subtraction bugs incl. borrow across zero)"
+ ]
+}

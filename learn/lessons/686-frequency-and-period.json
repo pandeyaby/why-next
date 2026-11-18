@@ -1,0 +1,244 @@
+{
+ "topicId": "mt_zbF_WgVhgj",
+ "title": "Frequency and period (f = 1/T)",
+ "audience": "learner",
+ "keyIdea": "Frequency f is the number of waves passing a point each second, measured in hertz (Hz): 1 Hz is one wave per second. The time period T is the time for one whole wave, in seconds. They are reciprocals: f = 1 ÷ T and T = 1 ÷ f, so f × T = 1. A period of 0.02 s gives 1 ÷ 0.02 = 50 Hz. A 440 Hz sound has T = 1 ÷ 440 ≈ 0.0023 s. Double the frequency and the period halves. Always put T in seconds before using f = 1/T: 20 ms is 0.02 s.",
+ "familyTip": "Time 10 swings of a pendulum or a child on a swing with a phone stopwatch. Divide by 10 to get the period of one swing, then work out 1 ÷ T for the frequency. Try a shorter string or a smaller push and compare.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each card describe frequency or period? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Frequency (Hz)",
+    "Period (s)"
+   ],
+   "items": [
+    [
+     "Waves passing each second",
+     0
+    ],
+    [
+     "Measured in hertz",
+     0
+    ],
+    [
+     "Goes up when the waves come faster",
+     0
+    ],
+    [
+     "Time for one whole wave",
+     1
+    ],
+    [
+     "Gap between crests on a time graph",
+     1
+    ],
+    [
+     "0.02 s for a mains wave",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghz",
+  "caption": "Flagship lab: set waves per second, fill an f and T table, drag one wave to 0.02 s, tune 440 Hz and match periods to frequencies.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Frequency f is how many waves pass a point each second. Its unit is the hertz, Hz. 1 Hz means one wave each second, and 50 Hz means fifty.",
+   "The time period T is the time for one whole wave, crest to crest, in seconds. If 4 waves pass each second, each one takes a quarter of a second: T = 0.25 s.",
+   "So f and T are reciprocals: f = 1 ÷ T and T = 1 ÷ f. Multiply them and you always get 1. When the frequency doubles, the period halves.",
+   "Put T in seconds first. A period of 20 ms is 0.02 s, so f = 1 ÷ 0.02 = 50 Hz. A 440 Hz note has T = 1 ÷ 440, about 0.0023 s or 2.3 ms."
+  ],
+  "adult": [
+   "Ages 13 to 15. GCSE physics (AQA 4.6.1.2) defines frequency as the number of waves passing a point each second, in hertz, and requires period = 1 / frequency, T = 1/f. The KS3 programme introduces frequency in hertz for sound and other waves. Key words: frequency, hertz (Hz), time period, oscillation, cycle, reciprocal, millisecond.",
+   "Common mistakes: treating frequency and period as the same number (T = 0.25 s so f = 0.25 Hz); thinking frequency and period rise together; reading 1 Hz as a length or a height; using milliseconds in f = 1/T (1 ÷ 20 = 0.05 Hz instead of 1 ÷ 0.02 = 50 Hz); decimal slips such as 1 ÷ 50 = 0.5; and multiplying instead of dividing (T = 440 s).",
+   "A quick check: f × T must equal 1 when T is in seconds. Estimating first helps too: many waves each second means each wave lasts well under a second. Frequency sets the pitch of a sound and the colour of light, and the period is what an oscilloscope trace shows from crest to crest.",
+   "In the lab students set a wave to 4 waves per second and see each wave last 0.25 s, fill a table for 1, 2, 4, 5 and 10 Hz, drag the end of one wave on a 0.1 s axis to T = 0.02 s and read 50 Hz, tune a 10 ms trace to 440 Hz, then match periods (including 20 ms) to frequencies with decoys for the usual slips."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What does a frequency of 1 Hz mean?",
+   "choices": [
+    "One wave passes each second",
+    "Each wave is 1 m long",
+    "Each wave is 1 m high"
+   ],
+   "answer": 0,
+   "hint": "The hertz is a unit of 'per second'.",
+   "explain": "1 Hz is one wave, or one cycle, each second. Length is wavelength and height is amplitude."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{=k*s} waves pass a point in {s} seconds. What is the frequency in Hz?",
+   "answer": "k",
+   "hint": "Frequency is waves per second. Divide the number of waves by the time.",
+   "explain": "{=k*s} waves ÷ {s} s = {k} waves each second, so f = {k} Hz.",
+   "params": {
+    "k": [
+     2,
+     9
+    ],
+    "s": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A wave has a frequency of {=((a*a+a+2)/2)*(8*b*b-4*b+1)} Hz. What is its period in seconds?",
+   "answer": "1/(((a*a+a+2)/2)*(8*b*b-4*b+1))",
+   "hint": "T = 1 ÷ f. Check that f × T comes to 1.",
+   "explain": "T = 1 ÷ {=((a*a+a+2)/2)*(8*b*b-4*b+1)} = {=1/(((a*a+a+2)/2)*(8*b*b-4*b+1))} s. Check: {=((a*a+a+2)/2)*(8*b*b-4*b+1)} × {=1/(((a*a+a+2)/2)*(8*b*b-4*b+1))} = 1.",
+   "params": {
+    "a": [
+     0,
+     2
+    ],
+    "b": [
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A wave has a period of 0.02 s. What is its frequency in Hz?",
+   "answer": 50,
+   "hint": "Use f = 1 ÷ T with T in seconds.",
+   "explain": "f = 1 ÷ 0.02 = 50 Hz. Check: 50 × 0.02 = 1."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A wave's frequency doubles. What happens to its period?",
+   "choices": [
+    "It halves",
+    "It doubles",
+    "It stays the same"
+   ],
+   "answer": 0,
+   "hint": "f × T = 1. If f gets twice as big, what must T do?",
+   "explain": "T = 1 ÷ f, so twice the frequency means half the period: 5 Hz to 10 Hz takes T from 0.2 s to 0.1 s."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A wave has a period of 0.25 s. What is its frequency in Hz?",
+    "answer": 4,
+    "hint": "How many quarter-seconds fit in one second?",
+    "explain": "f = 1 ÷ 0.25 = 4 Hz: four waves each second."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Calculate the period of a 440 Hz sound, in seconds. Give 2 significant figures.",
+    "answer": 0.0023,
+    "tolerance": 6e-05,
+    "hint": "Use T = 1 ÷ f, then round to 2 significant figures.",
+    "explain": "T = 1 ÷ 440 = 0.00227… s, which is 0.0023 s to 2 significant figures, about 2.3 ms."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A wave has a period of 20 ms. What is its frequency?",
+    "choices": [
+     "50 Hz",
+     "0.05 Hz",
+     "20 Hz"
+    ],
+    "answer": 0,
+    "hint": "Change 20 ms into seconds before using f = 1 ÷ T.",
+    "explain": "20 ms = 0.02 s, and 1 ÷ 0.02 = 50 Hz. Using 20 instead of 0.02 gives the wrong 0.05 Hz."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A wave has a frequency of {f} Hz. How many waves pass a point in {t} seconds?",
+    "answer": "f*t",
+    "hint": "{f} Hz means {f} waves pass each second. Multiply by the number of seconds.",
+    "explain": "{f} waves each second × {t} s = {=f*t} waves.",
+    "params": {
+     "f": [
+      2,
+      20
+     ],
+     "t": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "UK mains electricity has a frequency of 50 Hz. What is its period?",
+    "choices": [
+     "0.02 s",
+     "50 s",
+     "0.5 s"
+    ],
+    "answer": 0,
+    "hint": "T = 1 ÷ 50. Check your answer by multiplying it by 50.",
+    "explain": "T = 1 ÷ 50 = 0.02 s, and 50 × 0.02 = 1. 0.5 s is a decimal slip; 50 s multiplies instead of divides."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "On a displacement-time graph, the time from one crest to the next crest is…",
+    "choices": [
+     "the period",
+     "the frequency",
+     "the wavelength"
+    ],
+    "answer": 0,
+    "hint": "The horizontal axis is time. One crest to the next is one whole wave.",
+    "explain": "The time for one whole wave is the period. Frequency is 1 ÷ that time; wavelength is a distance, read from a distance graph."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A buoy bobs up and down {n} times in {=2*n} seconds. What is the frequency in Hz?",
+    "answer": "n/(2*n)",
+    "hint": "Frequency is waves per second: number of waves ÷ time.",
+    "explain": "{n} ÷ {=2*n} = 0.5, so f = 0.5 Hz. Each bob takes 2 s, and 1 ÷ 2 = 0.5.",
+    "params": {
+     "n": [
+      3,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Wave A is 100 Hz and wave B is 200 Hz. Which has the longer period?",
+    "choices": [
+     "A, 0.01 s",
+     "B, 0.005 s",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Fewer waves each second means each wave lasts longer.",
+    "explain": "T = 1 ÷ 100 = 0.01 s for A and 1 ÷ 200 = 0.005 s for B. The lower frequency has the longer period."
+   }
+  ]
+ }
+}

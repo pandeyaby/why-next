@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the AQA GCSE Chemistry 8462 specification (4.2.1.3 ionic compounds; 4.1.1.1 and 4.2.1.5 on formulae from ion charges), the RSC 'Formulae of ionic compounds' teacher resource and standard ion charge tables (Na⁺, K⁺, Mg²⁺, Ca²⁺, Al³⁺, Fe³⁺ for iron(III), Cu²⁺ for copper(II), NH₄⁺, Cl⁻, O²⁻, S²⁻, OH⁻, NO₃⁻, SO₄²⁻). The lab computes every formula from need() = lowest common multiple ÷ each charge, so MgCl₂, Al₂O₃, Ca(OH)₂, K₂SO₄, FeCl₃ and (NH₄)₂SO₄ follow from the charges rather than being typed in; brackets are added only for compound ions with a subscript above 1. Items were recomputed: Na₂O, K₂S, Fe₂O₃, CuO, Ca(NO₃)₂, Mg(NO₃)₂, 12 oxygen atoms in Al₂(SO₄)₃, and 3n, 2n and 2n numeric answers at every parameter value. The adult text notes that the formula gives the simplest ratio in a giant lattice, not a molecule."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented formula-writing errors (Taber, Chemical Misconceptions (RSC 2002); Barker 'Beyond appearances' review; AQA examiner reports on ionic formulae): one-to-one formulae regardless of charge (step 1 prediction MgCl, tag unbal, m5), subscripts on the wrong ion (step 2 prediction '3 Al and 2 O', Al₃O₂, tag swap), missing brackets so CaOH₂ is read as one O and two H (step 3 prediction, tag bracket, CaNO₃₂ in step 5, p4, m3, m8), not simplifying (the lab's 'balanced, but not the lowest ratio' check, Mg₂O₂, tag lowest), ignoring Roman numerals (FeCl₂ for iron(III), tag roman, m2, m6) and misreading a subscript after a bracket (p5)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagionform is about building a neutral formula from ion charges: tapping cation and anion trays adds ions, two 12-unit charge bars with dividers at each ion's charge make the lowest common multiple visible (6 for Al³⁺ and O²⁻), the formula only appears when the totals match at the lowest ratio, compound ions gain brackets, named compounds are decoded (Roman numerals), and written formulae are judged. It differs from flagionlat (Ionic bonding and lattices: electron transfer and lattice structure), flagion (Forming ions: electrons lost or gained to reach a full shell) and the Counting atoms in formulae lesson (46), which has no compound-building lab. The gate reports under 30% shingle overlap with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the rule from the bars: one Mg²⁺ leaves 'total charge +2, too much positive: add a negative ion' until two Cl⁻ even it out; for Al³⁺ and O²⁻ the bars only line up at 6 units, which makes the lowest common multiple concrete; over-building (e.g. 2 Mg²⁺ and 4 Cl⁻) is caught with 'Balanced, but 2:4 is not the lowest ratio. Divide both by 2'; the Ca(OH)₂ step shows two whole OH⁻ tiles before the bracketed formula appears; and in step 5 each verdict comes with the specific rule the formula keeps or breaks."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions each have a tempting wrong option that the lab then disproves. 'MgCl' fails when one Cl⁻ leaves the + bar longer than the − bar (total +1). '1 Al and 1 O' and '3 Al and 2 O' fail when the bars show +3/−2 and +9/−4, and only two Al³⁺ and three O²⁻ make 6 and 6. 'CaOH₂' fails when the built compound shows two separate OH⁻ tiles and the formula appears as Ca(OH)₂ with the note that CaOH₂ would mean one O and two H."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions; every wrong option carries a tag with its own message: unbal (the charges do not make zero, add ions until + and − match), swap (the numbers went on the wrong ions; the ion with the smaller charge needs more copies), bracket (without brackets the 2 applies only to the last atom), lowest (charges cancel but formulae use the lowest whole ratio, Mg₂O₂ → MgO) and roman ((III) means Fe³⁺, FeCl₂ would be iron(II) chloride)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/validate_lessons.py passes the learner limits (kid ≤ 6.5, adult ≤ 9.5). Kid paragraphs use short sentences with one worked pair each (MgCl₂, Al₂O₃, Ca(OH)₂), and name only the terms students need (ion, charge, compound ion, Roman numeral). Lab step texts are one or two sentences; canvas labels are ion symbols, 'tap to add', '+6 / −6' and the formula."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step has one job (cancel charges, lowest common multiple, brackets, decode names, check formulae). Every feedback line is computed from the current ions (e.g. '2 × (+3) + 3 × (−2) = 0. Formula: Al₂O₃.'), and item explanations show the charge sum that makes each wrong choice fail."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px in light and dark were taken for every step before and after Show me. The two trays are about 160 × 60 px tap targets, placed ions are at least 37 px wide even with five on screen, the charge bars and their +/− totals fit inside the canvas, and the feedback banner sits under the formula without covering it. After the first pass the empty bar label was changed from '−0' to '0'. Four buttons below the canvas (Add and Remove for each ion) wrap into two rows on a phone."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Everything on the canvas has a button: 'Add Mg²⁺' / 'Add Cl⁻' (aria-labels 'Add a magnesium ion', 'Add a chloride ion'), matching Remove buttons, and 'correct' / 'wrong' with aria-labels naming the formula. After each move the canvas aria-label reads the compound name, the number of each ion, the total charge and the formula once made. Challenge feedback is an aria-live status. walk.cjs reports axe (WCAG 2.1 AA) clean in light and dark on desktop and iPhone 13 with no console errors; the canvas keeps a light card in dark mode so the orange and blue ions keep their contrast."
+  }
+ },
+ "sources": [
+  "AQA GCSE Chemistry (8462) specification, sections 4.1.1 and 4.2.1 (ionic bonding, ionic compounds, formulae)",
+  "Royal Society of Chemistry: Formulae of ionic compounds (Education in Chemistry / RSC teacher resources)",
+  "Taber, K. S. (2002) Chemical Misconceptions: Prevention, Diagnosis and Cure, Royal Society of Chemistry",
+  "Department for Education, National Curriculum in England: Science KS3 chemistry (atoms, elements and compounds)"
+ ]
+}

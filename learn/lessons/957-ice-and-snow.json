@@ -1,0 +1,68 @@
+{
+ "topicId": "mt_SrmHaJXKrX",
+ "title": "Ice & Snow",
+ "audience": "learner",
+ "keyIdea": "Ice and snow are water that has frozen. Frozen water is a solid: it is hard and keeps its shape. Rain, puddles and the sea are liquid water: they flow. Snow is made of tiny crystals of ice, and every snow crystal has six arms. Ice floats, because ice is lighter than the same amount of water. It floats low, with most of it under the water. An iceberg is a huge piece of ice floating in the sea. You see only its tip; most of it is hidden under the water, so ships keep well away.",
+ "familyTip": "Put an ice cube in a clear glass of water and look from the side. Does it float or sink? How much of it is under the water? On a snowy day, catch snow on a dark glove and look with a magnifying glass. Count the arms on one snow crystal.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it frozen water? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": ["Frozen water", "Not frozen water"],
+   "items": [["A snowball", 0], ["A glass of milk", 1], ["An ice lolly", 0], ["A river", 1], ["Frost on a car", 0], ["A stone", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagberg",
+  "caption": "Flagship lab: find the six-armed snow crystal, sort solid and liquid water, float ice in a tank, steer ships past hidden ice, and check facts.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Ice is water that has frozen. Snow is frozen water too. Frozen water is solid. It is hard and keeps its shape. Rain and puddles are liquid water. They flow and splash.",
+   "Snow falls from clouds when it is very cold. Look at one bit of snow with a magnifying glass. It is a tiny crystal of ice. Every snow crystal has six arms.",
+   "Drop ice in water and it floats. Even a big block of ice floats. Ice is lighter than the same amount of water. It floats low, with most of it under the water.",
+   "An iceberg is a huge piece of ice in the sea. You can see only the top, called the tip. Most of the iceberg is hidden under the water. Ships must keep far away from it."
+  ],
+  "adult": [
+   "Ages 5 to 7. This supports the National Curriculum in England (Year 1–2 everyday materials and seasonal change; Year 4 states of matter names ice as solid water) and NGSS K-PS3 and 2-PS1-4, where children see that water can be solid or liquid. Snow is ice: a snow crystal grows with six-fold symmetry because water molecules lock into a hexagonal lattice. Icebergs are fresh water ice that broke off glaciers and ice sheets.",
+   "The lab has five tasks. Children pick the six-armed snow crystal from four-, five-, seven- and eight-armed decoys, sort nine cards into solid water, liquid water and not water, drop an ice cube, a big ice block, a pebble and a coin into a tank, steer three ships past icebergs whose hidden parts spread out under the sea, and check three children's statements.",
+   "Common mistakes. Many children think snow and ice are not water, or that a big piece of ice must sink because it is heavy. Others think floating ice sits on top of the water, all dry. Ice is about nine tenths as dense as water, so about nine tenths of floating ice is under the surface. Be careful with 'ice floats because of air inside it': bubbles help a little, but clear ice floats too."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "What is snow made of?", "choices": ["Tiny crystals of ice", "White powder", "Bits of cloud"], "answer": 0,
+   "hint": "Think of the snow crystals you looked at in the lab. What were they made of?", "explain": "Snow is made of tiny crystals of ice. Snow is frozen water."},
+  {"type": "numeric", "id": "p2", "prompt": "You look at {n} snow crystals. Each one has six arms. How many arms is that?", "answer": "6*n",
+   "hint": "Every snow crystal has 6 arms. Count in sixes, {n} times.", "explain": "{n} crystals × 6 arms = {=6*n} arms. Every snow crystal has six arms.", "params": {"n": [1, 4]}},
+  {"type": "mc", "id": "p3", "prompt": "You drop a big block of ice into a bath of water. What happens?", "choices": ["It floats", "It sinks to the bottom", "It sits on top, all dry"], "answer": 0,
+   "hint": "In the tank, did the big ice block float or sink?", "explain": "It floats. Big or small, ice is lighter than the same amount of water. Most of it stays under the water."},
+  {"type": "numeric", "id": "p4", "prompt": "A tray holds {a} ice cubes. {b} of them melt. How many are still solid ice?", "answer": "a-b",
+   "hint": "The melted ones are liquid water now. Take them away.", "explain": "{a} − {b} = {=a-b} ice cubes are still solid. The other {b} are now liquid water.", "params": {"a": [6, 10], "b": [1, 5]}},
+  {"type": "mc", "id": "p5", "prompt": "A ship sees the tip of an iceberg. Where is most of the ice?", "choices": ["Under the water", "In the tip it can see", "Up in the sky"], "answer": 0,
+   "hint": "Remember the hidden ice in the lab. Was it bigger or smaller than the tip?", "explain": "Most of an iceberg is hidden under the water. The tip is only a small part."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Which one is solid water?", "choices": ["An icicle", "A puddle", "A pebble"], "answer": 0,
+    "hint": "Solid water is frozen hard. Which one is frozen?", "explain": "An icicle is frozen water, so it is solid water. A puddle is liquid water. A pebble is not water."},
+   {"type": "mc", "id": "m2", "prompt": "How many arms does a snow crystal have?", "choices": ["6", "4", "8"], "answer": 0,
+    "hint": "Count the arms on the real snow crystals in the lab.", "explain": "Every snow crystal has six arms, because ice crystals grow in six directions."},
+   {"type": "mc", "id": "m3", "prompt": "You drop an ice cube into a glass of water. What do you see?", "choices": ["It floats, mostly under the water", "It sinks to the bottom", "It floats on top, all dry"], "answer": 0,
+    "hint": "Look at how low the ice sat in the tank.", "explain": "Ice floats low. Most of the ice cube is under the water. Only a little sticks out."},
+   {"type": "numeric", "id": "m4", "prompt": "{n} icebergs float in the sea. Each one has one tip above the water. How many tips can a ship see?", "answer": "n",
+    "hint": "Each iceberg shows one tip. The rest is hidden.", "explain": "The ship sees {n} tips. Under each tip is a much bigger hidden part.", "params": {"n": [2, 6]}},
+   {"type": "mc", "id": "m5", "prompt": "Mo says snow is not water. Is he right?", "choices": ["No, snow is frozen water", "Yes, snow is a white powder", "Yes, snow is cloud"], "answer": 0,
+    "hint": "What happens to snow when it gets warm?", "explain": "Snow melts into water, because snow is frozen water. Mo is not right."},
+   {"type": "mc", "id": "m6", "prompt": "Why does a ship keep far away from an iceberg?", "choices": ["Most of the ice is hidden under the water", "The tip is very hot", "Icebergs move very fast"], "answer": 0,
+    "hint": "In the lab, where did the ships crunch into ice?", "explain": "The hidden part of an iceberg spreads out under the water. A ship close to the tip can hit it."},
+   {"type": "mc", "id": "m7", "prompt": "Which one will sink in water?", "choices": ["A pebble", "An ice cube", "A big block of ice"], "answer": 0,
+    "hint": "Ice floats, big or small. Which one is not ice?", "explain": "The pebble sinks. Ice cubes and big blocks of ice both float."},
+   {"type": "numeric", "id": "m8", "prompt": "You make {a} snowballs and {b} ice cubes. How many things made of frozen water is that?", "answer": "a+b",
+    "hint": "Snowballs and ice cubes are both frozen water. Add them.", "explain": "{a} + {b} = {=a+b}. Snow and ice are both frozen water.", "params": {"a": [1, 6], "b": [1, 6]}}
+  ]
+ }
+}

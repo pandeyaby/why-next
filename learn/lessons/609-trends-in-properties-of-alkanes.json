@@ -1,0 +1,144 @@
+{
+ "topicId": "mt_YkIXOjozRr",
+ "title": "Trends in properties of alkanes",
+ "audience": "learner",
+ "keyIdea": "As alkane chains get longer, the intermolecular forces between molecules get stronger because there is more surface contact. More energy is needed to separate the molecules, so boiling point and viscosity increase while flammability (and volatility) decrease. Boiling only overcomes forces between molecules; the covalent C–C and C–H bonds do not break.",
+ "familyTip": "Compare a lighter refill (butane, a gas), petrol (mostly C5–C10, runny and very flammable) and candle wax or lubricating oil (long chains, thick or solid, hard to light). Ask why the longest chains are the hardest to set alight.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each change make the alkane chain longer or shorter? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": ["Longer chain", "Shorter chain"],
+   "items": [["higher boiling point", 0], ["runs more easily (less viscous)", 1], ["catches fire more easily", 1], ["thicker, more viscous oil", 0], ["is a gas at 20 °C", 1], ["stronger forces between molecules", 0]]
+  }
+ },
+ "lab": {
+  "type": "flagalktr",
+  "caption": "Flagship lab: grow a chain and plot boiling points, boil C5 vs C10, find gases at 20 °C, race two liquids, light three fuels, explain.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Alkanes form a series. Each one has one more CH₂ than the last: methane CH₄, ethane C₂H₆, propane C₃H₈ and so on.",
+   "As the chain gets longer, the boiling point rises. Methane boils at −162 °C. Octane boils at 126 °C. So C1 to C4 are gases at room temperature, and the next ones are liquids.",
+   "The reason is the forces between molecules. A long chain touches its neighbours along more of its length, so the forces are stronger. More energy is needed to pull the molecules apart.",
+   "The same forces explain the other trends. Long chains are more viscous: they flow slowly. They are less volatile, so they are harder to light and burn with a smokier flame."
+  ],
+  "adult": [
+   "Ages 14 to 16. AQA GCSE Chemistry 4.7.1.2 (and OCR and Edexcel equivalents): describe how boiling point, viscosity and flammability change with chain length, and explain the trends using intermolecular forces. This lesson follows on from the alkane general formula CₙH₂ₙ₊₂.",
+   "Boiling separates whole molecules, so it overcomes the weak intermolecular forces (London forces), not the strong covalent bonds. Longer chains have more electrons and more surface contact, so these forces are stronger.",
+   "Common mistakes: saying covalent C–C or C–H bonds break on boiling; mixing up viscosity with density; reversing the flammability trend; and stating the trend without the cause (more contact, stronger forces, more energy needed).",
+   "In the lab the learner plots real boiling points for C1 to C8, boils pentane and decane, finds which alkanes are gases at 20 °C, races two liquids, lights three fuels, and orders the cause-and-effect chain."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "Why does decane have a higher boiling point than pentane?",
+   "choices": ["Its molecules have stronger forces between them", "Its C–C bonds are stronger", "It has fewer atoms"], "answer": 0,
+   "hint": "Boiling pulls whole molecules apart. Which forces must be overcome?",
+   "explain": "Decane's longer chains have more contact, so the intermolecular forces are stronger and need more energy to overcome. No covalent bonds break on boiling."
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "An alkane has {a} carbon atoms. How many hydrogen atoms does it have?",
+   "answer": "2*a+2",
+   "hint": "Use the general formula CₙH₂ₙ₊₂.",
+   "explain": "With n = {a}, the number of hydrogens is 2 × {a} + 2 = {=2*a+2}. Longer chains in the series have higher boiling points.",
+   "params": {"a": [3, 12]}
+  },
+  {
+   "type": "numeric", "id": "p3",
+   "prompt": "Butane boils at −1 °C. A camping gas can sits at {a} °C. How many degrees above butane's boiling point is that?",
+   "answer": "a+1",
+   "hint": "Find the gap from −1 up to the temperature: subtract a negative.",
+   "explain": "{a} − (−1) = {=a+1} degrees above its boiling point, so the butane in the open air is a gas.",
+   "params": {"a": [5, 30]}
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "Which of these alkanes is the most viscous?",
+   "choices": ["C₁₆H₃₄", "C₈H₁₈", "C₅H₁₂"], "answer": 0,
+   "hint": "Viscosity rises with chain length.",
+   "explain": "Hexadecane has the longest chain, so its molecules attract each other most strongly and it flows most slowly."
+  },
+  {
+   "type": "order", "id": "p5",
+   "prompt": "Order the explanation for the boiling point trend, cause first.",
+   "items": ["Longer chain", "More contact between molecules", "Stronger intermolecular forces", "More energy needed to separate molecules", "Higher boiling point"],
+   "hint": "Start with the structure and end with the property you can measure.",
+   "explain": "Chain length sets the contact, contact sets the force, the force sets the energy needed, and that sets the boiling point."
+  }
+ ],
+ "mastery": {
+  "passMark": 4, "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "What is overcome when octane boils?",
+    "choices": ["The forces between octane molecules", "The C–H bonds", "The C–C bonds"], "answer": 0,
+    "hint": "Is the octane vapour still octane?",
+    "explain": "The vapour is still C₈H₁₈ molecules, so no covalent bonds broke. Only the intermolecular forces were overcome."
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "What is the relative formula mass of the alkane with {a} carbons? (C = 12, H = 1)",
+    "answer": "14*a+2",
+    "hint": "The formula is CₙH₂ₙ₊₂, so add 12n and 2n + 2.",
+    "explain": "12 × {a} + (2 × {a} + 2) = {=14*a+2}. Each extra CH₂ adds 14, and the boiling point rises along with it.",
+    "params": {"a": [2, 12]}
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "Pentane boils at 36 °C. A lab is at {a} °C. How many degrees below pentane's boiling point is the lab?",
+    "answer": "36-a",
+    "hint": "Subtract the room temperature from 36.",
+    "explain": "36 − {a} = {=36-a} degrees below, so pentane is a liquid in the lab, though a very volatile one.",
+    "params": {"a": [10, 30]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Which alkane catches fire most easily?",
+    "choices": ["C₆H₁₄", "C₁₂H₂₆", "C₂₀H₄₂"], "answer": 0,
+    "hint": "Short chains evaporate easily, and it is the vapour that burns.",
+    "explain": "Hexane is the shortest and most volatile, so it is the most flammable. Flammability falls as chains get longer."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "At 20 °C, which alkanes are gases?",
+    "choices": ["Methane to butane (C1–C4)", "Methane to decane (C1–C10)", "Only methane"], "answer": 0,
+    "hint": "A gas at 20 °C must boil below 20 °C. Butane boils at −1 °C and pentane at 36 °C.",
+    "explain": "C1 to C4 boil below 20 °C, so they are gases. Pentane boils at 36 °C, so from C5 the alkanes are liquids."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Asha says, 'Long alkanes are viscous because they are heavy.' What is the better explanation?",
+    "choices": ["Long chains have stronger forces between molecules", "Heavy liquids always flow slowly", "Long chains have weaker C–C bonds"], "answer": 0,
+    "hint": "Viscosity is about molecules sliding past each other.",
+    "explain": "Long chains touch along more of their length and attract each other more strongly, so they slide past each other slowly."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "Hexane boils at 69 °C and octane at 126 °C. Heptane, C₇H₁₆, boils at about…",
+    "choices": ["98 °C", "50 °C", "140 °C"], "answer": 0,
+    "hint": "Heptane sits between hexane and octane in the series.",
+    "explain": "Each extra CH₂ raises the boiling point, so heptane is between 69 °C and 126 °C. Its real value is 98 °C."
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "Which statement about longer alkane chains is correct?",
+    "choices": ["Higher boiling point, lower flammability", "Lower boiling point, higher flammability", "Higher boiling point, higher flammability"], "answer": 0,
+    "hint": "Strong forces between molecules hold them in the liquid.",
+    "explain": "Stronger intermolecular forces raise the boiling point and make the liquid less volatile, so it is less flammable."
+   },
+   {
+    "type": "mc", "id": "m9",
+    "prompt": "Why does a long-chain alkane burn with a smokier flame?",
+    "choices": ["It burns less completely, giving soot", "It contains oxygen", "It has double bonds"], "answer": 0,
+    "hint": "Smoke is unburnt carbon. Think about how well the fuel mixes with oxygen.",
+    "explain": "Long chains are harder to vaporise and mix with air, so combustion is less complete and soot (carbon) forms."
+   }
+  ]
+ }
+}

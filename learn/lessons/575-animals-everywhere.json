@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_v3Vz_Pgjjv",
+ "title": "Animals Everywhere",
+ "audience": "family",
+ "keyIdea": "Animals live all over the world — on land, in water and in the air — and every continent, even icy Antarctica, is home to animals suited to the conditions where they live.",
+ "familyTip": "Look at a globe or world map. Point to a forest, an ocean, a desert and Antarctica. Name one animal for each (parrot, whale, camel, penguin) and say land, water or air.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Animals everywhere — fair idea or myth? Drag each clue, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "animals live on land, in water and in the air",
+     0
+    ],
+    [
+     "penguins live in icy Antarctica",
+     0
+    ],
+    [
+     "animals live only on my street",
+     1
+    ],
+    [
+     "a camel suits the hot desert",
+     0
+    ],
+    [
+     "a polar bear belongs in a hot desert",
+     1
+    ],
+    [
+     "every continent has animals",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaganwhere",
+  "caption": "Flagship lab: place fish in water, confirm Antarctica has penguins, match camel to desert, reject polar-bear-in-desert and only-near-me myths, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Animals live on land. They also live in water. Some fly in the air.",
+   "Every big land has animals. Even cold Antarctica has penguins.",
+   "A camel fits a hot dry desert. A whale fits the ocean. A parrot fits the trees.",
+   "Animals are not only near your house. They are not only in zoos. They live all over the world."
+  ],
+  "adult": [
+   "This is early science about living things and where they live. Animals use land, water and air. They live on every continent. Key words: continent, habitat, suit, desert, ocean, forest, Antarctica. A child should name animals from different places and say if each uses land, water or air.",
+   "Common mistakes: thinking Antarctica has no animals; putting a polar bear in a desert; thinking animals live only near home or only in zoos; forgetting that birds use the air.",
+   "In the lab, your child puts a fish in water, says yes to penguins in Antarctica, matches a camel to desert, says no to a polar bear in a desert, and rejects the only-near-me idea. The challenge traps those slips."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A fish lives…",
+   "choices": [
+    "in water",
+    "only on dry land",
+    "only high in the clouds"
+   ],
+   "answer": 0,
+   "hint": "Think of fins and gills — what kind of place fits?",
+   "explain": "Fish live in water. Fins and gills fit wet places, not dry land or clouds."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Antarctica…",
+   "choices": [
+    "has animals like penguins",
+    "has no animals at all",
+    "only has animals in zoos far away"
+   ],
+   "answer": 0,
+   "hint": "Picture black-and-white birds on ice.",
+   "explain": "Antarctica is icy and still home to animals such as penguins — it is not empty."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You name {n} animals from different places. {k} of them live in water. How many do not live in water?",
+   "answer": "n-k",
+   "hint": "Start with all the animals you named, then take away the water ones.",
+   "explain": "You named {n} animals and {k} live in water, so {=n-k} do not.",
+   "params": {
+    "n": [
+     5,
+     8
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A map shows {a} habitats on land and {b} habitats in water. How many habitats is that altogether?",
+   "answer": "a+b",
+   "hint": "Add the land habitats and the water habitats.",
+   "explain": "{a} land habitats and {b} water habitats make {=a+b} habitats altogether.",
+   "params": {
+    "a": [
+     2,
+     4
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order the ideas: animals live…",
+   "items": [
+    "on land, in water and in the air",
+    "on every continent",
+    "suited to each place"
+   ],
+   "hint": "Start with land/water/air, then continents, then suited homes.",
+   "explain": "Animals use land, water and air on every continent, each suited to its place."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A parrot that flies belongs in…",
+    "choices": [
+     "the air (and trees)",
+     "deep underground only",
+     "icy ocean water only"
+    ],
+    "answer": 0,
+    "hint": "Wings take animals through which space?",
+    "explain": "Flying animals use the air, often near trees."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Polar bear in a desert is…",
+    "choices": [
+     "the wrong place — too hot and dry",
+     "a perfect desert home",
+     "needed because deserts are icy"
+    ],
+    "answer": 0,
+    "hint": "Polar bears need cold ice.",
+    "explain": "Deserts are too hot and dry for polar bears."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Animals live…",
+    "choices": [
+     "on land, water and air across the world",
+     "only on my street",
+     "only inside zoo cages"
+    ],
+    "answer": 0,
+    "hint": "Think bigger than one street or one zoo.",
+    "explain": "Animals live worldwide — not only near you or in zoos."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Every continent…",
+    "choices": [
+     "has animals suited to its places",
+     "has no living animals",
+     "only has pets in houses"
+    ],
+    "answer": 0,
+    "hint": "Even icy Antarctica has wildlife.",
+    "explain": "Every continent is home to animals suited to local conditions."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You visit {n} continents. On {k} of them you see ocean animals. How many continents did not show ocean animals on that trip?",
+    "answer": "n-k",
+    "hint": "Take the ocean ones away from the total continents.",
+    "explain": "{n} continents minus {k} with ocean animals leaves {=n-k}.",
+    "params": {
+     "n": [
+      4,
+      7
+     ],
+     "k": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A poster shows {a} forest animals and {b} desert animals. How many animals are on the poster?",
+    "answer": "a+b",
+    "hint": "Add forest and desert animals.",
+    "explain": "{a} forest animals and {b} desert animals make {=a+b} animals.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why match animals to habitats?",
+    "choices": [
+     "each animal is suited to where it lives",
+     "all animals need the same place",
+     "habitats do not matter"
+    ],
+    "answer": 0,
+    "hint": "Camel and polar bear need different places.",
+    "explain": "Animals are suited to different habitats."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Saying animals live only in zoos is…",
+    "choices": [
+     "a mistake — wild places worldwide have animals",
+     "always true",
+     "required"
+    ],
+    "answer": 0,
+    "hint": "Wild forests, oceans and ice also have animals.",
+    "explain": "Zoos are not the only places animals live."
+   }
+  ]
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England 2013, Year 5 Geometry: properties of shapes ('distinguish between regular and irregular polygons based on reasoning about equal sides and angles') and the NCETM Year 5 spine guidance. Interior angles recomputed: regular pentagon (5-2)*180/5 = 108, hexagon 120, octagon 135, equilateral triangle 60, square 90; the lab measures them from the drawn vertices and rounds to whole degrees. A regular hexagon's side equals its circumradius, so the 'turn it' message quotes r cm correctly. Verdict needs sides within 3% and angles within 2 degrees AND the angle sum (n-2)*180, so a concave drag cannot read as regular. Circle is correctly called not a polygon (no straight sides)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented primary-geometry errors (Clements and Battista 1992 on prototype shapes; NCETM Year 5 'Properties of shapes' common misconceptions): rectangle called regular because its angles match (prediction 3, 'angles', p1, m4, sorter), rhombus called regular because its sides match (prediction 2, 'sides', p3), a tilted square thought not regular (prediction 4, 'tilt', p5, sorter item), size affecting regularity ('size', m5), side count treated as the test ('count', m8), two equal sides taken as enough in a triangle ('some', m3), circle taken as a regular polygon ('curve', m7)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagregpol measures any polygon live: side lengths in cm outside each edge and interior angles inside each vertex, coloured green only when all match, with a verdict that names which test failed. It drags a pentagon corner, squashes a rhombus by its top vertex, stretches a rectangle by its right edge, sorts 8 shapes and rotates/scales a hexagon. flagshape names basic shapes for ages 3-4 and flagperim adds side lengths; neither tests equal angles. Max 6-shingle similarity 3.7% (flag_wind.js); explanation overlap 1.7% (703)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers both conditions by doing: pulling the corner home makes the side numbers AND the angle numbers turn green together; in the rhombus every side stays 2.6 cm while the angles read 60/120, so the badge stays 'Irregular' until 90; in the rectangle the angles all read 90 while 6 and 3.5 differ, so it stays irregular until 3.5 by 3.5. The text then confirms the rule. Turning and resizing the hexagon leaves all numbers equal, which shows position and size do not matter."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions, each with a tempting wrong option the lab disproves: 'all its sides are equal' (the rhombus step shows equal sides with unequal angles), 'yes, the sides all match' for the rhombus (the badge stays Irregular), 'yes, always' for the rectangle (the side numbers differ), and 'no, now it is tilted' for the turned hexagon (all six numbers stay equal while it turns)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions with eleven distinct feedback messages, each naming the slip: 'Equal angles are only half of it...' for the rectangle, 'Equal sides are only half of it. Its angles are 70 and 110' for the rhombus, 'Turning a shape does not change its sides or angles' for tilt, 'The number of sides tells you the name, not whether it is regular', 'Size does not matter', 'Two equal sides is not enough', and 'A polygon is made of straight sides' for the circle."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text uses short sentences and the target terms polygon, regular, irregular, side, angle, rhombus, rectangle, square; it passes validate_lessons (kid grade at or below 6.5, adult at or below 9.5). Lab step text is two sentences each; canvas labels are numbers plus one short badge. Adult text lists the Year 5 key vocabulary: equilateral, quadrilateral, pentagon, hexagon, octagon, vertex."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler matches in the gate. Every kid paragraph states one fact (polygon definition; both conditions; rhombus and rectangle counterexamples; orientation and size). Every item has a hint that points to the test and an explanation that states the reason, e.g. p4 '{=n*a} cm divided by {n} sides = {a} cm. Every side of a regular polygon is the same length'."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on iPhone 13 screenshots in light and dark: polygon fills the canvas after raising the unit size (U = min(W/8.5, H/6.6)), side and angle numbers at 10 px bold remain readable and do not collide on the pentagon, rhombus, square and hexagon; the rectangle drag knob sits below the side label with a 'drag' hint to its right; buttons wrap to two rows; drag knobs are 11 px radius with a 30-40 px hit area. Desktop 1200 px also checked."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has a button route (Move the corner closer / Put it back home, Narrower/Wider 10 degrees, Shorter/Longer half a cm, Regular/Irregular, Turn/Bigger/Smaller), each with an aria-label; the canvas aria-label is updated with every verdict (e.g. 'All 4 sides are still equal, but the angles are 60 and 120...'); challenge feedback is a polite live region. walk.cjs axe WCAG 2.1 AA is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "National Curriculum in England: mathematics programmes of study, Year 5 Geometry: properties of shapes (DfE 2013)",
+  "NCETM primary mastery professional development, Year 5 Geometry: properties of shapes, regular and irregular polygons",
+  "Clements, D. H. and Battista, M. T. (1992) Geometry and spatial reasoning, in Handbook of Research on Mathematics Teaching and Learning"
+ ]
+}

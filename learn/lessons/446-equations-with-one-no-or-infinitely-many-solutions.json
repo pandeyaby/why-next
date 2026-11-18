@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_NlOfobgnYG",
+ "title": "Equations with one, no or infinitely many solutions",
+ "audience": "learner",
+ "keyIdea": "Simplify both sides of a linear equation, then subtract the x terms. If x is left over, there is exactly one solution (4x − 2 = 2x + 6 gives x = 4). If the x terms cancel and a false statement is left, like 1 = 5, there is no solution. If a true statement is left, like 6 = 6, the equation is an identity and every value of x is a solution. On a graph: lines that cross once, parallel lines, or the same line.",
+ "explain": {
+  "kid": [
+   "Most equations you solve have one answer. 4x − 2 = 2x + 6 becomes 2x = 8, so x = 4. Only that one number makes both sides equal.",
+   "Sometimes the x terms cancel out. Try 3x + 1 = 3x + 5. Take 3x from both sides and you get 1 = 5. That is false, and no x can fix it. So there is no solution.",
+   "Other times what is left is true. 2(x + 3) = 2x + 6 becomes 2x + 6 = 2x + 6, then 6 = 6. That is true for every x. The two sides are the same expression, so the equation is called an identity. It has infinitely many solutions.",
+   "You can tell before you finish. After you simplify, look at the x terms on each side. If they are different, there is one solution. If they are the same, compare the numbers: different numbers mean no solution, and the same numbers mean every x works. Picture each side as a line: they cross once, run side by side, or sit on top of each other."
+  ],
+  "adult": [
+   "This is US Common Core 8.EE.C.7a: give examples of linear equations in one variable with one solution, infinitely many solutions, or no solutions, and show which is the case by transforming the equation until it reads x = a, a = a, or a = b. In England it sits in Key Stage 3 algebra and GCSE, where pupils must know the difference between an equation and an identity (written with ≡).",
+   "The deciding step is to compare coefficients after simplifying. With ax + b = cx + d, if a ≠ c there is exactly one solution, x = (d − b)/(a − c). If a = c and b ≠ d, the result is a contradiction such as 1 = 5, and the solution set is empty. If a = c and b = d, the two sides are equivalent expressions and every real number is a solution. Graphing y = left side and y = right side shows the same three cases as crossing, parallel or identical lines.",
+   "Common mistakes: reading 6 = 6 as x = 6, or 1 = 5 as x = 5; writing x = 0 because x has disappeared; sign slips when expanding brackets, such as 3(x − 2) = 3x − 2 or −(x − 7) = −x − 7, which change the classification; and stopping as soon as the x terms cancel without checking whether the leftover statement is true or false.",
+   "In the lab your teenager classifies equations and sees each pair of lines, moves the right-hand line to build all three kinds, tests values of x in a contradiction and an identity, and then sorts harder equations with brackets and negatives."
+  ]
+ },
+ "familyTip": "Ask your teenager to invent one equation of each kind for you to classify, starting from 2x + 5 = ... on the left. Swap roles. Making the no-solution and identity examples is harder than spotting them, and it shows real understanding.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "How many solutions? Drag each equation to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "One solution",
+    "No solution",
+    "Infinitely many"
+   ],
+   "items": [
+    [
+     "x + 4 = 2x + 1",
+     0
+    ],
+    [
+     "5x − 1 = 5x + 2",
+     1
+    ],
+    [
+     "3(x + 2) = 3x + 6",
+     2
+    ],
+    [
+     "6x = 2x + 8",
+     0
+    ],
+    [
+     "2x + 7 = 2(x + 3)",
+     1
+    ],
+    [
+     "4x − 4 = 4(x − 1)",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnsol",
+  "caption": "Flagship lab: classify equations after simplifying, move a line to build each kind, test values in an identity and a contradiction, then sort harder equations.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "How many solutions does 7x + 2 = 7x − 3 have?",
+   "choices": [
+    "None",
+    "One",
+    "Infinitely many"
+   ],
+   "answer": 0,
+   "hint": "Subtract 7x from both sides. Is what is left true or false?",
+   "explain": "The 7x terms cancel and leave 2 = −3, which is false for every x. No solution."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{a}x + {b} = {a}x + □. Which number in the box gives infinitely many solutions?",
+   "answer": "b",
+   "hint": "For every x to work, the two sides must be exactly the same expression.",
+   "explain": "The x terms already match, so the constants must match too: □ = {b}. Any other number gives no solution.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Solving an equation gives 0 = 0. What does that mean?",
+   "choices": [
+    "Every value of x is a solution",
+    "x = 0",
+    "There is no solution"
+   ],
+   "answer": 0,
+   "hint": "Is 0 = 0 true for some x or for all x?",
+   "explain": "0 = 0 is always true, so the equation is an identity: every x works."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{a}(x + {b}) = {a}x + □ is an identity. What number is in the box?",
+   "answer": "a*b",
+   "hint": "Expand the bracket: multiply {a} by both terms inside.",
+   "explain": "{a}(x + {b}) = {a}x + {=a*b}, so □ = {=a*b} makes both sides identical.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many solutions does 3(x − 2) = 3x − 6 have?",
+    "choices": [
+     "Infinitely many",
+     "None",
+     "One"
+    ],
+    "answer": 0,
+    "hint": "Expand 3(x − 2) carefully, including the sign.",
+    "explain": "3(x − 2) = 3x − 6, so both sides are identical. Every x works."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How many solutions does 5x − 3 = 2(x + 3) have?",
+    "choices": [
+     "One",
+     "None",
+     "Infinitely many"
+    ],
+    "answer": 0,
+    "hint": "Expand the right side, then compare the x terms.",
+    "explain": "5x − 3 = 2x + 6. The x terms differ, so 3x = 9 and x = 3. One solution."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which equation has no solution?",
+    "choices": [
+     "2(2x + 1) = 4x + 1",
+     "2(2x + 1) = 4x + 2",
+     "2(2x + 1) = 3x + 2"
+    ],
+    "answer": 0,
+    "hint": "Expand 2(2x + 1) first, then compare each right side.",
+    "explain": "2(2x + 1) = 4x + 2. Against 4x + 1 the constants differ: 2 = 1 is false, so no solution."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The two sides of an equation are drawn as parallel lines. How many solutions?",
+    "choices": [
+     "None",
+     "One",
+     "Infinitely many"
+    ],
+    "answer": 0,
+    "hint": "Where do parallel lines meet?",
+    "explain": "Parallel lines never meet, so no x makes the sides equal."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ali solves 4x + 1 = 4x + 9 and writes x = 0 because the x terms disappeared. What is wrong?",
+    "choices": [
+     "1 = 9 is false, so there is no solution",
+     "Nothing, x = 0 is right",
+     "It should be x = 9"
+    ],
+    "answer": 0,
+    "hint": "Check: does x = 0 make both sides equal?",
+    "explain": "At x = 0 the sides are 1 and 9. The leftover 1 = 9 is false for every x, so there is no solution."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which right side makes 6x − 5 = □ have exactly one solution?",
+    "choices": [
+     "2x + 3",
+     "6x + 1",
+     "6x − 5"
+    ],
+    "answer": 0,
+    "hint": "For one solution the x terms must be different.",
+    "explain": "2x differs from 6x, so the lines cross once. 6x + 1 gives none and 6x − 5 gives an identity."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Solve {a}x − {b} = {c}x + {d}. What is x?",
+    "answer": "(d+b)/(a-c)",
+    "where": "(d+b)%(a-c)==0",
+    "hint": "Subtract {c}x from both sides, then add {b}.",
+    "explain": "{=a-c}x = {=d+b}, so x = {=(d+b)/(a-c)}. Different x terms give exactly one solution.",
+    "params": {
+     "a": [
+      5,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      4
+     ],
+     "d": [
+      2,
+      20
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "{a}x + {b} = {a}x + {c}. After you subtract {a}x, what number is on the right side?",
+    "answer": "c",
+    "hint": "The x terms cancel completely. What is left on the right?",
+    "explain": "Subtracting {a}x leaves {b} = {c}. Since {b} and {c} are different, the statement is false and there is no solution.",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "b": [
+      1,
+      5
+     ],
+     "c": [
+      6,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which is an identity?",
+    "choices": [
+     "7 − x = −(x − 7)",
+     "7 − x = −(x + 7)",
+     "7 − x = x − 7"
+    ],
+    "answer": 0,
+    "hint": "Expand −(x − 7): the minus changes both signs.",
+    "explain": "−(x − 7) = −x + 7, which is the same as 7 − x. Every x works."
+   }
+  ]
+ }
+}

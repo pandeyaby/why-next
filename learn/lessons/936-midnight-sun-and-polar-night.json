@@ -1,0 +1,68 @@
+{
+ "topicId": "mt_3duNkf6Qmr",
+ "title": "Midnight Sun & Polar Night",
+ "audience": "learner",
+ "keyIdea": "At home, every day has some light and some dark: the Sun comes up over the horizon in the morning and goes down at night. At the North and South Poles it is very different. In polar summer the Sun never sets: it goes round the sky, low down, even at midnight. This is the midnight sun. In polar winter the Sun never comes up, even at lunchtime, for months. This is the polar night. It happens because Earth leans as it spins, so a pole stays in the sunlight, or stays in the dark, all the way round.",
+ "familyTip": "Shine a torch at a ball with a dot near the top, and tip the top of the ball toward the torch. Spin the ball slowly: the dot stays in the light. Now walk the ball to the other side of the torch, keeping the same lean, and spin again: the dot stays in the dark. Talk about what time the Sun sets where you live, and how that changes between June and December.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Where would you see this? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": ["At home", "Polar summer", "Polar winter"],
+   "items": [["Sunset every evening", 0], ["Sunrise every morning", 0], ["Sun in the sky at midnight", 1], ["Sun goes round the sky all day", 1], ["Dark at lunchtime", 2], ["Stars out all day", 2]]
+  }
+ },
+ "lab": {
+  "type": "flagmidsun",
+  "caption": "Flagship lab: drag the Sun through a June day at home and at the North Pole, a December day there, spin a leaning Earth, then sort.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "At home, the Sun comes up in the morning. That is sunrise. It goes down below the horizon in the evening. That is sunset. So every day has some light and some dark.",
+   "At the North Pole in summer, the Sun does not set. It goes round and round the sky, low down. At midnight it is still up. We call this the midnight sun.",
+   "In winter at the North Pole, the Sun does not come up at all. It is dark at breakfast, at lunch and at bedtime, for months. We call this the polar night. You can see the stars and the Moon.",
+   "Why? Earth spins once a day, and it leans. In June the top of the Earth leans toward the Sun, so the North Pole stays in the light. In December it leans away, so the pole stays dark. The South Pole has the opposite."
+  ],
+  "adult": [
+   "Ages 5 to 7. This supports the Year 1 National Curriculum statement on observing how day length varies across the seasons, KS1 geography on the North and South Poles and hot and cold areas, and NGSS 1-ESS1-1 and 1-ESS1-2 (patterns of the Sun and the amount of daylight at different times of year). Key terms: horizon, sunrise, sunset, day length, season, axis, tilt.",
+   "The lab has four tasks. Children drag the Sun along a 24-hour clock on 21 June at home (51.5° N, about 16 hours of light), then on the same day at the North Pole, where it circles at about 23° and never sets, and on 21 December, when it stays about 23° below the horizon. They spin a tilted Earth in June and December to see the pole stay lit or dark, and sort six cards. Times are sun time, so midday is when the Sun is highest.",
+   "Common mistakes. Children often think the Sun is high or 'right overhead' at the poles in summer; it stays low. Many believe seasons happen because the Sun comes closer, or that both poles have summer at once. Some think polar night is a single long night, or pitch black: at the pole it lasts about six months, with weeks of twilight at each end."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "It is summer at the North Pole. Where is the Sun at midnight?", "choices": ["Still in the sky, low down", "Below the snow", "Right overhead"], "answer": 0,
+   "hint": "Think of the lab. In June at the pole, did the Sun ever go below the snow?", "explain": "In polar summer the Sun never sets. At midnight it is still in the sky, low down. This is the midnight sun."},
+  {"type": "numeric", "id": "p2", "prompt": "On a summer day at home, the Sun is up for {a} hours. A day has 24 hours. How many hours are dark?", "answer": "24-a",
+   "hint": "Light hours and dark hours make 24 together. Take the light hours away from 24.", "explain": "24 − {a} = {=24-a}, so there are {=24-a} hours of dark. Home always has some dark.", "params": {"a": [14, 17]}},
+  {"type": "mc", "id": "p3", "prompt": "It is winter at the North Pole. What is the sky like at lunchtime?", "choices": ["Dark, with stars", "Bright and sunny", "Red, with a sunset"], "answer": 0,
+   "hint": "In polar winter, does the Sun come up at all?", "explain": "In polar night the Sun stays below the horizon all day, so the sky is dark and you can see stars, even at lunchtime."},
+  {"type": "numeric", "id": "p4", "prompt": "At home, the Sun sets once every day. How many sunsets will you see in {d} days?", "answer": "d",
+   "hint": "One sunset each day. Count one for each day.", "explain": "One sunset a day for {d} days is {d} sunsets. At the North Pole in summer you would see no sunsets at all.", "params": {"d": [2, 7]}},
+  {"type": "mc", "id": "p5", "prompt": "In June, the North Pole has the midnight sun. What does the South Pole have?", "choices": ["Polar night: dark all day", "The midnight sun too", "Day and night, like home"], "answer": 0,
+   "hint": "In June the North Pole leans toward the Sun. Which way does the South Pole lean?", "explain": "The South Pole leans away from the Sun in June, so it has the polar night. The poles are opposite."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "What is the midnight sun?", "choices": ["The Sun still up at midnight", "The Moon at midnight", "A sunset at midnight"], "answer": 0,
+    "hint": "Think of the North Pole in summer. Where was the Sun at midnight?", "explain": "The midnight sun is the Sun still in the sky at midnight. It happens near the poles in summer."},
+   {"type": "numeric", "id": "m2", "prompt": "On a winter day at home, the Sun is up for {a} hours. How many hours of the 24 are dark?", "answer": "24-a",
+    "hint": "A day has 24 hours. Take away the hours of light.", "explain": "24 − {a} = {=24-a} hours of dark. Winter days at home are short, but they still have some light.", "params": {"a": [7, 10]}},
+   {"type": "mc", "id": "m3", "prompt": "Why does the North Pole stay light all day in June?", "choices": ["Earth leans the pole toward the Sun", "The Sun comes closer", "The Sun gets hotter"], "answer": 0,
+    "hint": "Remember spinning the Earth in the lab. What did the leaning do?", "explain": "Earth leans. In June the North Pole leans toward the Sun, so it stays in the light as Earth spins."},
+   {"type": "numeric", "id": "m4", "prompt": "At home, the Sun rises once each day. How many sunrises in {d} days?", "answer": "d",
+    "hint": "Count one sunrise for each day.", "explain": "One sunrise a day for {d} days is {d} sunrises. In polar winter there would be none.", "params": {"d": [3, 9]}},
+   {"type": "mc", "id": "m5", "prompt": "How long does the polar night last at the North Pole?", "choices": ["Months", "One night", "Forever"], "answer": 0,
+    "hint": "Is it one dark night, or a long time of dark?", "explain": "At the pole the polar night lasts for months, about half the year. Then the Sun comes back."},
+   {"type": "mc", "id": "m6", "prompt": "Mia says, 'At home the Sun is up all night in summer.' Is she right?", "choices": ["No, home still gets dark", "Yes, always", "Only on Mondays"], "answer": 0,
+    "hint": "In the lab, did the Sun go down at home in June?", "explain": "No. Summer nights at home are short, but the Sun still sets. The midnight sun happens near the poles."},
+   {"type": "mc", "id": "m7", "prompt": "Where does the Sun go in polar summer?", "choices": ["Round the sky, low down", "Up high, then down", "Nowhere, it stays still"], "answer": 0,
+    "hint": "At the North Pole in June, the Sun moved, but did it go up and down?", "explain": "It goes round the sky at about the same low height, all day and all night."},
+   {"type": "mc", "id": "m8", "prompt": "What is the horizon?", "choices": ["Where the land meets the sky", "The top of the sky", "The middle of the Sun"], "answer": 0,
+    "hint": "The Sun goes below it at sunset.", "explain": "The horizon is the line where the land or sea seems to meet the sky. The Sun sets below it."}
+  ]
+ }
+}

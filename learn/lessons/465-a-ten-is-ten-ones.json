@@ -1,0 +1,151 @@
+{
+ "topicId": "mt_r0VXbfAmsH",
+ "title": "A Ten Is Ten Ones",
+ "audience": "family",
+ "keyIdea": "Ten ones can be bundled into one group called a ten. A ten rod is 10 cubes stuck together, so 1 ten and 10 ones are the same amount. In a two-digit number the left digit counts tens and the right digit counts ones: 13 is 1 ten and 3 ones, and the 0 in 10 means no ones are left over. Swapping 10 ones for a ten never changes how many there are.",
+ "explain": {
+  "kid": [
+   "Count out 10 cubes. Snap them into one tall stick. Now it is one ten. It is still 10 cubes. We just put them in a bundle.",
+   "Look at 13. The 1 is for one ten. The 3 is for three ones. So 13 is a ten stick and 3 loose cubes.",
+   "Got lots of loose ones? Count 10 of them and snap them into a stick. You swap 10 ones for 1 ten. You still have just as many cubes.",
+   "A ten stick is one thing, but it is worth 10. So 1 ten is more than 9 ones, even though 9 ones are more bits."
+  ],
+  "adult": [
+   "This is the start of place value. US Common Core 1.NBT.B.2a says first graders should understand that 10 can be thought of as a bundle of ten ones, called a ten, and 1.NBT.B.2b and 2c extend that to the teen numbers (a ten and some ones) and the decades (some tens and 0 ones). In England, the Year 1 and Year 2 programmes of study ask children to count in tens and to recognise the place value of each digit in a two-digit number.",
+   "The big step is unitising: seeing ten things as one unit while still knowing it is ten. Base-ten blocks (a rod of 10 and single unit cubes), bundles of straws and a tens-and-ones chart all show it. Exchanging, sometimes called regrouping, is swapping 10 ones for 1 ten or back again; the amount never changes, only how it is grouped. That idea later carries all of column addition and subtraction.",
+   "Common mistakes to watch for: counting a ten rod as 1, so 2 rods and 4 cubes becomes 6; writing the digits the wrong way round, so 1 ten and 7 ones becomes 71; thinking that more pieces means more, so 15 ones looks bigger than 2 tens; thinking that cubes vanish in a swap; and reading the 0 in 10 or 30 as nothing at all rather than as a zero that holds the ones place and says no extra ones.",
+   "In the lab your child bundles 10 loose cubes into a ten, reads three numbers built from rods and cubes, circles 10 ones to swap them for a ten and sees the total stay the same, builds 17, 30 and 10 on a tens-and-ones chart (10 ones swap themselves for a ten), and compares a ten with piles of ones."
+  ]
+ },
+ "familyTip": "Bundle drinking straws or lolly sticks into tens with a hair band, and keep the rest loose. Grab a handful, bundle what you can, then say the number: 2 bundles and 6 loose is 26. Ask: did we lose any straws when we bundled them?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it worth exactly 10? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Worth 10", "Not 10"],
+   "items": [["10 ones", 0], ["1 ten", 0], ["9 ones", 1], ["1 ten and 1 one", 1], ["5 ones and 5 ones", 0], ["2 tens", 1], ["1 ten and 0 ones", 0], ["100 ones", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagbundle",
+  "caption": "Flagship lab: bundle 10 ones into a ten, read tens and ones, swap 10 ones for a ten, build numbers on a chart and compare a ten with ones.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "How many ones are in 1 ten?",
+   "choices": ["10", "1", "100"],
+   "answer": 0,
+   "hint": "Picture a ten stick. Count the cubes in it one by one.",
+   "explain": "A ten is 10 ones stuck together, so 1 ten is the same as 10 ones."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{t} tens and {o} ones. What number is that?",
+   "answer": "t*10+o",
+   "hint": "Count the tens in tens: 10, 20, 30 and so on. Then count on {o} ones.",
+   "explain": "{t} tens is {=t*10}. Count on {o} ones to get {=t*10+o}.",
+   "params": {"t": [1, 9], "o": [1, 9]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You have {n} loose cubes. You snap 10 into a ten stick. How many loose cubes are left?",
+   "answer": "n-10",
+   "hint": "The ten stick uses 10 cubes. Take 10 away from {n}.",
+   "explain": "{n} is 1 ten and {=n-10} ones, so {=n-10} cubes are still loose.",
+   "params": {"n": [11, 19]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which is more: 2 tens or 15 ones?",
+   "choices": ["2 tens", "15 ones", "They are the same"],
+   "answer": 0,
+   "hint": "Turn the tens into ones. How many ones are in 2 tens?",
+   "explain": "2 tens is 20 ones, and 20 is more than 15. More bits does not mean more."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "How many ones are the same as {t} tens?",
+    "answer": "t*10",
+    "hint": "Each ten is 10 ones. Count in tens {t} times.",
+    "explain": "{t} tens is {t} lots of 10, which is {=t*10} ones.",
+    "params": {"t": [1, 9]}
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "What number is 1 ten and {o} ones?",
+    "answer": "10+o",
+    "hint": "Start at 10 for the ten. Count on {o} more.",
+    "explain": "1 ten is 10. Count on {o} ones to get {=10+o}.",
+    "params": {"o": [0, 9]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mia sees 2 ten sticks and 4 cubes. She says it is 6. What went wrong?",
+    "choices": ["She counted each ten stick as 1", "Nothing went wrong", "She forgot the 4 cubes"],
+    "answer": 0,
+    "hint": "How many cubes are in one ten stick?",
+    "explain": "Each stick is 10 cubes, so 2 sticks is 20. With 4 more it is 24, not 6."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How do you write 1 ten and 7 ones?",
+    "choices": ["17", "71", "8"],
+    "answer": 0,
+    "hint": "The tens digit goes on the left, then the ones digit.",
+    "explain": "Tens go first, so 1 ten and 7 ones is written 17. 71 would be 7 tens and 1 one."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You swap 10 loose ones for 1 ten. What happens to how many cubes you have?",
+    "choices": ["It stays the same", "It gets 10 fewer", "It gets 10 more"],
+    "answer": 0,
+    "hint": "Did any cubes go in the bin, or did they just get snapped together?",
+    "explain": "Swapping only groups the cubes. 10 ones and 1 ten are the same amount, so the total stays the same."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What does the 0 in 30 tell you?",
+    "choices": ["There are no ones left over", "There is nothing at all", "There are 0 tens"],
+    "answer": 0,
+    "hint": "Which place is the 0 in: the tens or the ones?",
+    "explain": "30 is 3 tens and 0 ones. The 0 holds the ones place and says there are no extra ones."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "How many tens are in 46?",
+    "choices": ["4", "6", "46"],
+    "answer": 0,
+    "hint": "The left digit counts the tens.",
+    "explain": "46 is 4 tens and 6 ones, so there are 4 tens. 46 is the whole number."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is worth exactly 10?",
+    "choices": ["5 ones and 5 ones", "9 ones", "1 ten and 1 one"],
+    "answer": 0,
+    "hint": "Add up the ones in each card. Which makes 10?",
+    "explain": "5 ones and 5 ones is 10 ones, which is 1 ten. 9 ones is one short and 1 ten and 1 one is 11."
+   }
+  ]
+ }
+}

@@ -1,0 +1,183 @@
+{
+ "topicId": "mt_3fwYu7imd4",
+ "title": "Probabilities Sum to One",
+ "audience": "learner",
+ "keyIdea": "When you list every outcome of one go, and only one of them can happen, their probabilities add up to exactly 1, because something on the list is certain to happen. So the chance that an event does NOT happen is the rest of the 1: P(not A) = 1 − P(A). If the chance of rain is 0.3, the chance of no rain is 0.7. A list that adds to less than 1 is missing an outcome, and a list that adds to more than 1 has a mistake.",
+ "familyTip": "Next time the weather app says '30% chance of rain', ask: so what is the chance of a dry day? Then play spot-the-mistake with made-up lists, like 'win 60%, lose 50%', and ask what has gone wrong.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Could this be the full list of chances for one go? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "adds to 1: possible",
+    "does not add to 1"
+   ],
+   "items": [
+    ["heads 0.5, tails 0.5", 0],
+    ["win 0.6, lose 0.5", 1],
+    ["red 1/2, blue 1/4, green 1/4", 0],
+    ["rain 0.3, no rain 0.3", 1],
+    ["late 0.08, not late 0.92", 0],
+    ["red 0.2, blue 0.2, green 0.2", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsumone",
+  "caption": "Flagship lab: add up a spinner's chances, drag one colour bigger, find NOT with a dice, answer forecasts and spot broken tables.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Spin a spinner and it must land on some colour. So if you add the chances of all the colours, you get 1. One whole means certain.",
+   "A spinner cut into eighths has red 4/8, blue 2/8, yellow 1/8 and green 1/8. Add them: 8/8, which is 1. Make red bigger and another colour has to get smaller. The total stays 1.",
+   "This gives a shortcut for NOT. The chance of rolling a 3 on a dice is 1/6. The chance of not rolling a 3 is the rest: 1 − 1/6 = 5/6. You do not have to count the other faces.",
+   "Use it as a check too. If a list of chances adds to less than 1, an outcome is missing. If it adds to more than 1, a number is wrong."
+  ],
+  "adult": [
+   "Ages 10 to 11, as a bridge into Key Stage 3. The National Curriculum in England (KS3) asks pupils to record outcomes in a systematic way and to use the fact that the probabilities of an exhaustive set of mutually exclusive events sum to one. CCSS 7.SP.C.5 and 7.SP.C.7 set the same groundwork: probabilities run from 0 to 1, and a model gives a probability to each outcome.",
+   "The rule needs two conditions. The outcomes must be exhaustive (the list covers everything that can happen on one go) and mutually exclusive (only one can happen at once). Then P(A) + P(not A) = 1, so P(not A) = 1 − P(A). This complement rule is often quicker than counting the outcomes that are not A, and it later underpins 'at least one' questions in GCSE probability.",
+   "Common mistakes: giving P(A) when P(not A) was asked; slips with decimals such as 1 − 0.85 = 0.25; keeping the wrong denominator (P(not a 4) = 1/5 instead of 5/6); taking only one known chance away from 1 when there are several; and the 'two outcomes so it must be 1/2' belief, which ignores that outcomes need not be equally likely. Children also accept tables that add to 1.1 because each number looks sensible on its own, so the lab makes them add every table."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The chance of rain tomorrow is 0.3. What is the chance it does not rain?",
+   "choices": ["0.7", "0.3", "0.5"],
+   "answer": 0,
+   "hint": "Rain and no rain cover everything, so together they make 1.",
+   "explain": "1 − 0.3 = 0.7. Check: 0.3 + 0.7 = 1. It is not 0.5 because rain and no rain are not equally likely."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A spinner has 8 equal parts. {k} of them are red. How many eighths of the spinner are not red?",
+   "answer": "8-k",
+   "hint": "All 8 eighths make 1 whole. Take away the red parts.",
+   "explain": "8/8 − {k}/8 = {=8-k}/8. So P(not red) = {=8-k}/8 = 1 − P(red).",
+   "params": {"k": [1, 7]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "The app says there is a {r}% chance of snow. What is the chance, in %, of no snow?",
+   "answer": "100-r",
+   "hint": "As a percentage, certain is 100%. Snow and no snow share it.",
+   "explain": "100% − {r}% = {=100-r}%. Snow and no snow add to 100%, which is 1.",
+   "params": {"r": [5, 95]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A spinner is red, blue or green. P(red) = 0.25, P(blue) = 0.25 and P(green) = 0.25. What is wrong?",
+   "choices": [
+    "They add to 0.75, so a chance is wrong or a colour is missing",
+    "Nothing: the colours are equally likely",
+    "Each chance should be 0.5"
+   ],
+   "answer": 0,
+   "hint": "Add the three chances. Do you get 1?",
+   "explain": "0.25 + 0.25 + 0.25 = 0.75, not 1. With only these three colours, the chances must make 1, so the list is wrong."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A bag has {n} counters. {r} are red. How many counters are not red? (Then P(not red) is that number over {n}.)",
+   "answer": "n-r",
+   "hint": "Take the red counters from the total.",
+   "explain": "{n} − {r} = {=n-r}, so P(not red) = {=n-r}/{n}. That is the same as 1 − {r}/{n}.",
+   "params": {"n": [10, 20], "r": [1, 9]}
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "P(rolling a 4 on a fair dice) = 1/6. What is P(not rolling a 4)?",
+    "choices": ["5/6", "1/5", "1/6"],
+    "answer": 0,
+    "hint": "There are still 6 equal faces. How many are not a 4?",
+    "explain": "5 of the 6 faces are not a 4, so 5/6. The shortcut agrees: 1 − 1/6 = 5/6."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The chance a bus is late is 0.08. What is the chance it is not late?",
+    "choices": ["0.92", "0.02", "0.08"],
+    "answer": 0,
+    "hint": "Line up the places: 1.00 − 0.08.",
+    "explain": "1.00 − 0.08 = 0.92. Check: 0.92 + 0.08 = 1.00."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A bag has only red, blue and green sweets. P(red) = 0.2 and P(blue) = 0.5. What is P(green)?",
+    "choices": ["0.3", "0.7", "0.8"],
+    "answer": 0,
+    "hint": "Add the chances you know, then take them from 1.",
+    "explain": "0.2 + 0.5 = 0.7, and 1 − 0.7 = 0.3. Taking away only red gives 0.8, which forgets blue."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which list could be the chances of all the outcomes of one spin?",
+    "choices": ["0.1, 0.6, 0.3", "0.4, 0.4, 0.4", "0.2, 0.3, 0.1"],
+    "answer": 0,
+    "hint": "Add each list. Only one makes exactly 1.",
+    "explain": "0.1 + 0.6 + 0.3 = 1. The others make 1.2 (too much) and 0.6 (an outcome missing)."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A game can only end in a win or a loss. Sam says P(win) must be 1/2. Is he right?",
+    "choices": [
+     "No: it is only 1/2 if win and loss are equally likely",
+     "Yes: there are 2 outcomes",
+     "Yes: every game is fair"
+    ],
+    "answer": 0,
+    "hint": "Two outcomes do not have to be the same size.",
+    "explain": "P(win) + P(loss) = 1, but the split can be 0.8 and 0.2. Counting outcomes only works when they are equally likely."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A spinner has 10 equal parts. {g} are green. How many tenths are not green?",
+    "answer": "10-g",
+    "hint": "10 tenths make 1. Take away the green ones.",
+    "explain": "10/10 − {g}/10 = {=10-g}/10. That is P(not green).",
+    "params": {"g": [1, 9]}
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "The chance Ana's team wins is {w}%. A draw is {d}%. Otherwise they lose. What is the chance, in %, that they lose?",
+    "answer": "100-w-d",
+    "hint": "Win, draw and lose cover every result. They add to 100%.",
+    "explain": "100% − {w}% − {d}% = {=100-w-d}%. Take away both known chances, not just one.",
+    "params": {"w": [30, 60], "d": [10, 30]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A table says P(red) = 0.45, P(blue) = 0.35, P(yellow) = 0.3 for a spinner with only those colours. What is wrong?",
+    "choices": [
+     "They add to 1.1, which is more than 1",
+     "Nothing: each chance is less than 1",
+     "Yellow should be the biggest"
+    ],
+    "answer": 0,
+    "hint": "Each number can look fine. Add them all.",
+    "explain": "0.45 + 0.35 + 0.3 = 1.1. Chances for one spin cannot add to more than 1, so at least one number is wrong."
+   }
+  ]
+ }
+}

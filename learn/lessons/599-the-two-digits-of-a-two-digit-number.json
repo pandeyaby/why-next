@@ -1,0 +1,266 @@
+{
+ "topicId": "mt_THl9GLxwoL",
+ "title": "The two digits of a two-digit number",
+ "audience": "family",
+ "keyIdea": "In a two-digit number the left digit counts tens and the right digit counts ones — so 47 means 4 tens + 7 ones (forty-seven), not 4+7 and not 7 tens.",
+ "familyTip": "Point at 47 on a door or bus. Ask: how many tens rods? How many ones? Build it with sticks of ten and loose cubes.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Place-value idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True place-value idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "left digit counts tens",
+     0
+    ],
+    [
+     "right digit counts ones",
+     0
+    ],
+    [
+     "47 means 4 + 7 = 11",
+     1
+    ],
+    [
+     "14 is 1 ten + 4 ones",
+     0
+    ],
+    [
+     "47 means 7 tens + 4 ones",
+     1
+    ],
+    [
+     "the tens digit is worth that many tens",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flag2digit",
+  "caption": "Flagship lab: build 35 on a tens/ones chart, expand 47, name the tens digit’s worth, expand a teen, catch digit-sum myth, build 52.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A two-digit number has a tens place and an ones place.",
+   "The left digit tells how many tens. The right digit tells how many ones.",
+   "47 means 4 tens and 7 ones — forty-seven — not 4 plus 7.",
+   "A teen like 14 still follows the rule: 1 ten and 4 ones."
+  ],
+  "adult": [
+   "CCSS 1.NBT.2: understand that the two digits of a two-digit number represent amounts of tens and ones; 10 can be thought of as a bundle of ten ones; teens are 1 ten + some ones; decades are that many tens and 0 ones. Distinct from A Ten Is Ten Ones (bundling action) and A Hundred Is Ten Tens.",
+   "Words: tens, ones, place value, expand, digit. Common mistakes: adding the digits (47 as 11); reversing places (47 as 74’s places); reading the tens digit as that many ones.",
+   "In the lab your child builds 35 on a place chart, expands 47, names what the tens digit is worth, expands 14, spots the digit-sum mix-up, and builds 52."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "3 tens + 5 ones equals…",
+   "choices": [
+    "35",
+    "8",
+    "53"
+   ],
+   "answer": 0,
+   "hint": "Tens are worth ten each. Do not add the digits as ones.",
+   "explain": "3×10 + 5 = 35. Adding digits to 8 or reversing to 53 are mix-ups."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "47 expands to…",
+   "choices": [
+    "4 tens + 7 ones",
+    "4 + 7 = 11",
+    "7 tens + 4 ones"
+   ],
+   "answer": 0,
+   "hint": "Left digit = tens; right digit = ones.",
+   "explain": "47 = 4 tens + 7 ones. Do not sum or reverse the digits."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The 2 in 29 means…",
+   "choices": [
+    "2 tens (twenty)",
+    "2 ones",
+    "2 + 9"
+   ],
+   "answer": 0,
+   "hint": "Which place is the 2 sitting in?",
+   "explain": "The 2 is in the tens place, so it means two tens — twenty."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{t} tens + {o} ones = ?",
+   "answer": "t*10+o",
+   "hint": "Each ten is worth 10. Multiply tens by 10, then add ones.",
+   "explain": "{t}×10 + {o} = {=t*10+o}.",
+   "params": {
+    "t": [
+     1,
+     6
+    ],
+    "o": [
+     0,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "How many tens in {n}?",
+   "answer": "(n-n%10)/10",
+   "hint": "The left digit of a two-digit number.",
+   "explain": "{n} has {=(n-n%10)/10} tens (and {=n%10} ones).",
+   "params": {
+    "n": [
+     12,
+     89
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "14 is…",
+    "choices": [
+     "1 ten + 4 ones",
+     "1 + 4 = 5",
+     "4 tens + 1 one"
+    ],
+    "answer": 0,
+    "hint": "Teens still use tens and ones places.",
+    "explain": "14 = 1 ten + 4 ones. Teens still use the tens place."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "52 needs…",
+    "choices": [
+     "5 tens + 2 ones",
+     "2 tens + 5 ones",
+     "5 + 2 ones only"
+    ],
+    "answer": 0,
+    "hint": "Left digit tens; right digit ones.",
+    "explain": "52 = 5 tens + 2 ones on the place chart."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "60 is…",
+    "choices": [
+     "6 tens + 0 ones",
+     "6 ones",
+     "0 tens + 6 ones"
+    ],
+    "answer": 0,
+    "hint": "A decade is that many tens and zero ones.",
+    "explain": "60 = 6 tens + 0 ones — a decade with empty ones."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is the mix-up?",
+    "choices": [
+     "47 means 4 + 7 = 11",
+     "Left digit counts tens",
+     "Right digit counts ones"
+    ],
+    "answer": 0,
+    "hint": "Spot the digit-summing mix-up in the choices.",
+    "explain": "Digits name place values; summing them as ones is the mix-up."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "81 expands to…",
+    "choices": [
+     "8 tens + 1 one",
+     "8 + 1 = 9",
+     "1 ten + 8 ones"
+    ],
+    "answer": 0,
+    "hint": "Do not reverse or sum the digits.",
+    "explain": "81 = 8 tens + 1 one; do not reverse the digits."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Compose: {t} tens and {o} ones make…",
+    "answer": "t*10+o",
+    "hint": "Multiply tens by 10, then add the ones digit.",
+    "explain": "{t}×10 + {o} = {=t*10+o}.",
+    "params": {
+     "t": [
+      2,
+      8
+     ],
+     "o": [
+      1,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The ones digit of 56 is…",
+    "choices": [
+     "6",
+     "5",
+     "11"
+    ],
+    "answer": 0,
+    "hint": "Ones sit on the right of a two-digit number.",
+    "explain": "In 56 the ones digit is 6; the tens digit is 5."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Place value means…",
+    "choices": [
+     "a digit’s worth depends on its place",
+     "add the two digits",
+     "swap left and right always"
+    ],
+    "answer": 0,
+    "hint": "Think tens place vs ones place.",
+    "explain": "The same digit means tens or ones depending on place."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "How many ones in {n} (the ones digit)?",
+    "answer": "n%10",
+    "hint": "Rightmost digit of a two-digit number.",
+    "explain": "{n} has ones digit {=n%10}.",
+    "params": {
+     "n": [
+      23,
+      78
+     ]
+    }
+   }
+  ]
+ }
+}

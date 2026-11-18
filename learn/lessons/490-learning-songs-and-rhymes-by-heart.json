@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_kZTn6KOIJ8",
+ "title": "Learning songs and rhymes by heart",
+ "audience": "family",
+ "keyIdea": "Young children learn songs and rhymes by heart by hearing and saying them again and again. Rhymes help, because the end word sounds like the line before (dock, clock). Actions, learning one line at a time, and hiding words so memory fills the gaps all help. Singing the same song again the next day makes it stick, because some of it fades overnight.",
+ "explain": {
+  "kid": [
+   "Do you know Twinkle, Twinkle? You know it because you sang it lots of times. Say it again and again. Then it stays in your head.",
+   "Rhymes help you. Hickory, dickory, dock. The mouse ran up the clock. Dock and clock sound the same at the end. So you can guess the word!",
+   "Do the actions. Climb your fingers up for Incy Wincy. Wiggle them down for the rain. Your hands help the words come back.",
+   "Learn one line. Then sing it from the start and add one more. Sing it again tomorrow too. A bit fades when you sleep, so sing it again!"
+  ],
+  "adult": [
+   "In England, Development Matters (2021) says 3 and 4 year olds should remember and sing entire songs and sing a large repertoire of songs. In Reception, children learn rhymes, poems and songs. The Early Learning Goals ask them to sing a range of well-known nursery rhymes and songs. In the US, the Head Start framework links rhyme to phonological awareness. Knowing nursery rhymes at 3 is linked to better rhyme and sound skills later.",
+   "Why these tricks work: saying a line many times makes it easier to recall. Rhyme gives a clue to the last word, so a child can guess it from the sound. Actions add a second way in, so the hands can prompt the words. Learning one line, then singing from the start, builds the song in small joined pieces. Hiding words one by one makes the child pull them from memory, which is stronger than only listening. Sleep after learning helps memory, and naps help preschoolers too.",
+   "Common mistakes to watch for: singing a new song once and moving on; teaching the whole song at once; always singing for the child, so they never have to recall a word; and stopping the actions too soon. Another is thinking that a song known today will still be known next week. Some of it fades each night, so come back to it the next day and the day after.",
+   "In the lab your child says a line three times as a star fills up, finishes three rhymes by sound, hides the words of Twinkle, Twinkle two at a time, matches actions to Incy Wincy Spider, learns a song line by line and sings it on three days. Every step works with big buttons or by tapping the picture. Read the words aloud together."
+  ]
+ },
+ "familyTip": "Pick one rhyme this week, such as Humpty Dumpty. Say it together at bath time each night. On day two, stop before the last word of each line and let your child say it. On day four, let them say it to a toy.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it help you learn a song by heart? Drag each one, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Helps me remember",
+    "Does not help"
+   ],
+   "items": [
+    [
+     "Sing it again and again",
+     0
+    ],
+    [
+     "Hear it only once",
+     1
+    ],
+    [
+     "Do the actions",
+     0
+    ],
+    [
+     "Sit very still",
+     1
+    ],
+    [
+     "Learn one line at a time",
+     0
+    ],
+    [
+     "Learn it all at once",
+     1
+    ],
+    [
+     "Sing it again tomorrow",
+     0
+    ],
+    [
+     "Never sing it again",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbyheart",
+  "caption": "Flagship lab: say it again, finish rhymes by sound, hide the words, do the actions, learn line by line and sing it again tomorrow.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Dock and clock. Do they rhyme?",
+   "choices": [
+    "Yes, they sound the same at the end",
+    "No, they are not the same",
+    "Only if you sing them"
+   ],
+   "answer": 0,
+   "hint": "Say them both out loud. Listen to the end.",
+   "explain": "Dock and clock end with the same sound, ock. So they rhyme."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You sing a song {n} times today and 1 time tomorrow. How many times is that?",
+   "answer": "n+1",
+   "hint": "Start at {n} and count on 1 more.",
+   "explain": "{n} times and 1 more time make {=n+1} times. Lots of singing helps it stick.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A song has {n} lines. You know {k} of them. How many lines are left to learn?",
+   "answer": "n-k",
+   "hint": "Start at {n} and take away the {k} you know.",
+   "explain": "{n} lines take away {k} you know leaves {=n-k} to learn, one at a time.",
+   "params": {
+    "n": [
+     4,
+     6
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Humpty Dumpty sat on a wall. Humpty Dumpty had a great …",
+   "choices": [
+    "Fall",
+    "Cake",
+    "Sock"
+   ],
+   "answer": 0,
+   "hint": "Which word sounds like wall at the end?",
+   "explain": "Wall and fall rhyme. The rhyme helps you remember the word."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What helps you learn a new song?",
+    "choices": [
+     "Singing it lots of times",
+     "Hearing it only once",
+     "Never singing it"
+    ],
+    "answer": 0,
+    "hint": "Think about how you learned Twinkle, Twinkle.",
+    "explain": "Singing it again and again puts it in your memory."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The cow jumped over the moon. The dish ran away with the …",
+    "choices": [
+     "Spoon",
+     "Cup",
+     "Fork"
+    ],
+    "answer": 0,
+    "hint": "Which word sounds like moon at the end?",
+    "explain": "Moon and spoon rhyme, so spoon is the word that fits."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A song is too long to learn. What can you do?",
+    "choices": [
+     "Learn one line at a time",
+     "Learn it all at once",
+     "Give up"
+    ],
+    "answer": 0,
+    "hint": "Is a small bit easier than a big bit?",
+    "explain": "Learn one line, sing from the start, then add the next line."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which helps you remember Incy Wincy Spider?",
+    "choices": [
+     "Doing the actions",
+     "Sitting very still",
+     "Covering your ears"
+    ],
+    "answer": 0,
+    "hint": "What do your fingers do in the song?",
+    "explain": "The actions help. Your hands help the words come back."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A grown-up hides 2 words, then {k} more words. How many words are hidden?",
+    "answer": "2+k",
+    "hint": "Start at 2 and count on {k}.",
+    "explain": "2 words and {k} more make {=2+k} hidden words. You fill the gaps from memory.",
+    "params": {
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You learned a song today. What should you do tomorrow?",
+    "choices": [
+     "Sing it again",
+     "Nothing, I know it",
+     "Learn a new one instead"
+    ],
+    "answer": 0,
+    "hint": "Does some of a song fade when you sleep?",
+    "explain": "Some of it fades in the night. Sing it again tomorrow to keep it."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "You know {t} rhymes. You learn {u} more. How many rhymes do you know now?",
+    "answer": "t+u",
+    "hint": "Start at {t} and count on {u}.",
+    "explain": "{t} rhymes and {u} more make {=t+u} rhymes you know by heart.",
+    "params": {
+     "t": [
+      1,
+      4
+     ],
+     "u": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Hickory, dickory, dock. The mouse ran up the …",
+    "choices": [
+     "Clock",
+     "Shoe",
+     "Bed"
+    ],
+    "answer": 0,
+    "hint": "Which word sounds like dock at the end?",
+    "explain": "Dock and clock rhyme, so the mouse ran up the clock."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Words are hidden from the line. Can you still say it?",
+    "choices": [
+     "Yes, my memory fills the gaps",
+     "No, I need to see every word",
+     "Only the first word"
+    ],
+    "answer": 0,
+    "hint": "Did you say it lots of times before?",
+    "explain": "Yes. When you know a line well, your memory fills the gaps."
+   }
+  ]
+ }
+}

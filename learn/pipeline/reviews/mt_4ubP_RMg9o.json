@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England Year 5 number – fractions (including decimals and percentages) statement 'solve problems which require knowing percentage and decimal equivalents of 1/2, 1/4, 1/5, 2/5, 4/5 and those fractions with a denominator of a multiple of 10 or 25' and the NCETM Year 5 ready-to-progress materials. Every value recomputed: 1/5 = 20/100 = 0.2, 2/5 = 0.4, 4/5 = 0.8, 1/4 = 0.25, 3/4 = 0.75; 3/20 × 5/5 = 15%, 7/25 × 4/4 = 28%, 9/50 × 2/2 = 18%, 9/25 = 36%; 40% of 60 = 2/5 × 60 = 24 (= 4 tenths × 6); 25% off £40 = £30; 20% off £60 = £48; 40% of 30 = 12; order 1/4 < 28% < 0.3. Parameterised items ({a}/25 → 4a, {a}/20 → 5a, {a}/50 → 2a, 20% of 5a, 25% of 4a) are exact at every corner."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented errors (Hart 1981 CSMS fractions and decimals; Steinle and Stacey on decimal digit-copying; NCETM Y5 misconception notes): copying digits (1/4 = 0.4, 1/5 = 0.5 or 5%), scaling only the denominator (7/25 = 7%), 0.4 vs 4% place value, subtracting the per cent from the amount (40% of 60 = 20), dividing by the per cent (80 ÷ 25), and giving the discount instead of the sale price. The number-line step answers digit-copy placements with a message that names the denominator-as-digit slip."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 3.8% (flag_unlike.js) and 3.5% (flag_simpfrac.js), far under 30%, and flag_pcent.js (lesson 860, hundred-square per cent meaning) is lower still. Only this lab shades fifths as two-row bands of a hundred square, offers ×2/×4/×5/×10 or 'bottom only' to scale twentieths, twenty-fifths and fiftieths, places six fraction cards on a 0–1 line labelled in decimals and per cents, cuts 60 into 2/4/5/10 parts to make 40%, and takes 25% and 20% off two price bars."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge, one idea each: a fifth is 20 hundredths; scaling both numbers keeps the amount and reaches hundredths; fraction, decimal and per cent share one point on the line; per cent of an amount via its fraction (fifths and tenths both accepted, quarters and halves refused because they cannot make 40%); discount versus price paid. The banner states each rule only after the learner reaches it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions, each with a tempting wrong option the step then disproves: 1/5 as a per cent ('5%'), 7/25 as a per cent ('7%', '25%'), 40% of 60 ('20' by subtraction, '36' the remainder) and the price after 25% off £40 ('£15' by 40 − 25, '£10' the discount). A.reveal names the learner's pick in the completion message."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with seven distinct wrong-answer messages: digit copying, bottom-only scaling, discount not price, subtracting the per cent, dividing by the per cent, tenths/hundredths place value and over-scaling 3/20 by 20. Each message names the slip and gives the corrected working (e.g. '9/25 × 4/4 = 36/100 = 36%')."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 0.9 and adult 7.1 (limits 6.5 and 9.5). Kid paragraphs use the 100-square strip, sweets and a sale; sentences are short and the terms per cent, fifth and hundredths are explained where they first appear. Canvas banners stay within three lines at 360 px."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed: no filler patterns, and explanation overlap is under 12% with 860 Understanding Percentages, 894 Simplifying Fractions and 13 Equivalent fractions. Each kid paragraph does one job: fifths as hundredths, the digit-copy trap, scaling 20/25/50 denominators, per cent of an amount and sale prices."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. Fixes from the first sheet: the fifths strip was a thin 2-row line and is now a full hundred square with fifths as labelled two-row bands; the long 0/5 = 0/100 = 0% = 0.0 readout spilled and is now one centred line with 0 shown as '0'; sale-step cut buttons were too tight for '10 parts' and now stack the number over 'parts'."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap has a button twin (Part 1–5; × 2/4/5/10 and Bottom only; each fraction card and each line spot by decimal and per cent; 2/4/5/10 parts, Shade/Take off n, Pay). The canvas aria-label is rewritten after every action with the shaded parts, current fraction, card positions or cut and shaded parts. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) National Curriculum in England: mathematics programmes of study, Year 5 number – fractions (including decimals and percentages)",
+  "NCETM (2020) Primary mathematics ready-to-progress criteria and Year 5 fractions, decimals and percentages guidance",
+  "Hart, K. M. (ed.) (1981) Children's Understanding of Mathematics: 11–16 (CSMS), fractions and decimals chapters",
+  "Steinle, V. and Stacey, K. (2004) A longitudinal study of students' understanding of decimal notation, PME 28"
+ ]
+}

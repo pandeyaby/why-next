@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_tiPyEkm4cU",
+ "title": "How Breathing Works",
+ "audience": "family",
+ "keyIdea": "Air goes in through the nose or mouth, down the windpipe, into the lungs. Lungs take oxygen the body needs. We breathe out carbon dioxide waste. The chest rises on breathe-in and falls on breathe-out.",
+ "explain": {
+  "kid": [
+   "When you breathe in, air goes through your nose or mouth, down your windpipe, into your lungs.",
+   "Your lungs take oxygen from the air. Your body needs oxygen to stay alive.",
+   "When you breathe out, you send out carbon dioxide. That is waste gas.",
+   "Feel your chest: it rises when you breathe in and falls when you breathe out."
+  ],
+  "adult": [
+   "Ages 5\u20137 human body: nose/mouth \u2192 windpipe \u2192 lungs; oxygen in, carbon dioxide out; chest movement. KS1 animals including humans \u2014 basic needs include air. Words: windpipe, lungs, oxygen, carbon dioxide.",
+   "Common mistakes: thinking we breathe out oxygen; thinking air stops at the mouth; mixing the windpipe with the food tube; ignoring chest movement.",
+   "In the lab your child builds the air path, chooses oxygen in and carbon dioxide out, moves the chest in and out, matches gas jobs, and ticks the full breath story."
+  ]
+ },
+ "familyTip": "Put a hand on the ribs and take three slow breaths together. Ask 'what is going in?' and 'what is going out?'",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "In-breath or out-breath? Drag each idea, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Breathe in",
+    "Breathe out"
+   ],
+   "items": [
+    [
+     "oxygen into the body",
+     0
+    ],
+    [
+     "carbon dioxide waste leaves",
+     1
+    ],
+    [
+     "chest rises",
+     0
+    ],
+    [
+     "chest falls",
+     1
+    ],
+    [
+     "air down the windpipe",
+     0
+    ],
+    [
+     "waste gas leaves the lungs",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbreath",
+  "caption": "Flagship lab: build the air path, choose oxygen in and carbon dioxide out, move the chest, match gas jobs, and complete the breath story.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Air enters through the\u2026",
+   "choices": [
+    "nose or mouth",
+    "ankles",
+    "fingertips"
+   ],
+   "answer": 0,
+   "hint": "Think about where you smell and taste air.",
+   "explain": "Air goes in through the nose or mouth, not the ankles or fingertips."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Lungs take\u2026",
+   "choices": [
+    "oxygen",
+    "only carbon dioxide",
+    "gravel"
+   ],
+   "answer": 0,
+   "hint": "Which gas does the body need from air?",
+   "explain": "Lungs take oxygen. Carbon dioxide is what we breathe out."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A class lists {n} true breath facts and {k} mistakes. How many true facts?",
+   "answer": "n",
+   "hint": "Count only the true breath facts.",
+   "explain": "They listed {n} true facts. The {k} mistakes are separate.",
+   "params": {
+    "n": [
+     2,
+     4
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A breath path has {n} stops. You already marked {k}. How many stops left?",
+   "answer": "n-k",
+   "hint": "Subtract marked stops from the full path count.",
+   "explain": "{n} \u2212 {k} = {=n-k} path stops still to mark.",
+   "params": {
+    "n": [
+     3,
+     5
+    ],
+    "k": [
+     0,
+     2
+    ]
+   },
+   "where": "n>k"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "We breathe out\u2026",
+   "choices": [
+    "carbon dioxide waste",
+    "only fresh oxygen",
+    "liquid metal"
+   ],
+   "answer": 0,
+   "hint": "What waste gas leaves the lungs?",
+   "explain": "We breathe out carbon dioxide waste, not a store of fresh oxygen."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "The tube to the lungs is the\u2026",
+    "choices": [
+     "windpipe",
+     "ear canal",
+     "ankle bone"
+    ],
+    "answer": 0,
+    "hint": "Name the air tube in the throat.",
+    "explain": "The windpipe carries air from the mouth or nose to the lungs."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "On breathe-in the chest\u2026",
+    "choices": [
+     "rises",
+     "falls and stays empty",
+     "locks shut"
+    ],
+    "answer": 0,
+    "hint": "What happens as lungs fill with air?",
+    "explain": "Breathe-in fills the lungs so the chest rises."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Oxygen is\u2026",
+    "choices": [
+     "needed by the body",
+     "always the waste gas",
+     "never in air"
+    ],
+    "answer": 0,
+    "hint": "Which gas from air does the body need to stay alive?",
+    "explain": "Oxygen is needed by the body. Carbon dioxide is the waste out-breath."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Carbon dioxide here is\u2026",
+    "choices": [
+     "waste we breathe out",
+     "the only gas lungs keep",
+     "a type of food"
+    ],
+    "answer": 0,
+    "hint": "What leaves on the out-breath?",
+    "explain": "Carbon dioxide is waste gas we breathe out."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A breath story has {n} parts. You already ticked {k}. How many left?",
+    "answer": "n-k",
+    "hint": "Subtract ticked parts from the full story count.",
+    "explain": "{n} \u2212 {k} = {=n-k} story parts still to tick.",
+    "params": {
+     "n": [
+      3,
+      5
+     ],
+     "k": [
+      0,
+      2
+     ]
+    },
+    "where": "n>k"
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{n} children each take {k} slow breaths. How many breaths in total?",
+    "answer": "n*k",
+    "hint": "Multiply children by breaths each.",
+    "explain": "{n} \u00d7 {k} = {=n*k} breaths in total.",
+    "params": {
+     "n": [
+      2,
+      5
+     ],
+     "k": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Air stops at the mouth only?",
+    "choices": [
+     "No \u2014 it goes to the lungs",
+     "Yes \u2014 lungs are empty forever",
+     "Yes \u2014 windpipes are closed"
+    ],
+    "answer": 0,
+    "hint": "Follow the path past the mouth.",
+    "explain": "Air continues down the windpipe into the lungs."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which list is the air path in order?",
+    "choices": [
+     "nose/mouth, windpipe, lungs",
+     "lungs, ankles, ears",
+     "food tube only, then toes"
+    ],
+    "answer": 0,
+    "hint": "Start where air enters, then the tube, then the lungs.",
+    "explain": "Air path order: nose or mouth, windpipe, lungs."
+   }
+  ]
+ }
+}

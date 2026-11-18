@@ -1,0 +1,300 @@
+{
+ "topicId": "mt_MewIRdzpzz",
+ "title": "Roman numerals to 100",
+ "audience": "learner",
+ "keyIdea": "Roman numerals use letters for numbers: I is 1, V is 5, X is 10, L is 50 and C is 100. Write the biggest symbols first and add them up, so XXVI is 10 + 10 + 5 + 1 = 26. The same symbol never goes more than three times in a row. Instead, a small symbol just before a bigger one is taken away. Only four of these pairs are needed up to 100: IV is 4, IX is 9, XL is 40 and XC is 90. There is no Roman numeral for zero.",
+ "familyTip": "Look for Roman numerals on clock faces, book chapters, film credits and the names of kings and queens, such as Henry VIII. Read each one together by splitting it into tens and ones: XLIX is XL and IX, so 40 + 9 = 49. Some clocks show 4 as IIII: ask why that breaks today's rule.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it more or less than 50? Drag each numeral, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Less than 50",
+    "More than 50"
+   ],
+   "items": [
+    [
+     "XL",
+     0
+    ],
+    [
+     "LX",
+     1
+    ],
+    [
+     "XLIX",
+     0
+    ],
+    [
+     "LI",
+     1
+    ],
+    [
+     "XXXIX",
+     0
+    ],
+    [
+     "XC",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagroman",
+  "caption": "Flagship lab: build numbers from I, V, X, L and C tiles, take away with IV, IX, XL and XC, read numerals by splitting them, and check children's numerals.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Romans wrote numbers with letters. I is 1, V is 5, X is 10, L is 50 and C is 100.",
+   "Put the biggest symbols first, then add them up. XVII is 10 + 5 + 1 + 1, which is 17.",
+   "You may write the same symbol three times in a row, but not four. So 4 is not IIII. Put a small I before the V: IV means 5 take away 1, which is 4.",
+   "Only four take-away pairs are needed up to 100: IV is 4, IX is 9, XL is 40 and XC is 90. Write the tens first, then the ones. So 49 is XL and IX: XLIX."
+  ],
+  "adult": [
+   "Ages 8 to 9. The National Curriculum in England asks Year 4 pupils to read Roman numerals to 100 (I to C) and to know that over time the numeral system changed to include zero and place value. Year 3 starts with clock faces (I to XII). Values: I 1, V 5, X 10, L 50, C 100.",
+   "The modern rules: symbols are written from largest to smallest and added; a smaller symbol directly before a larger one is subtracted, using only the pairs IV, IX, XL, XC (and CD, CM beyond 100); no symbol is repeated more than three times in a row; V and L are never repeated. The lab builds numbers with tiles, reads numerals by splitting them into tens and ones, and asks children to judge three classmates' answers.",
+   "Common mistakes. Children add every symbol (reading IX as 11), write four in a row (XXXX for 40), invent pairs such as IL for 49 or VX for 5, or treat the letters like digits in columns. Encourage them to write the tens and the ones separately: 99 is XC and IX, never IC. Clock faces that use IIII are an old tradition, not today's rule."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What number is XVI?",
+   "choices": [
+    "16",
+    "14",
+    "61"
+   ],
+   "answer": 0,
+   "hint": "Small after big means add. Add 10, 5 and 1.",
+   "explain": "XVI is 10 + 5 + 1 = 16. The I comes after the V, so it is added."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A numeral is L, then {a} X's, then {b} I's. What number is it?",
+   "answer": "50+10*a+b",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     1,
+     3
+    ]
+   },
+   "hint": "L is 50, each X is 10 and each I is 1. Add them all.",
+   "explain": "50 + {a} × 10 + {b} = {=50+10*a+b}. Every symbol after the L is smaller, so they are all added."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How do you write 4?",
+   "choices": [
+    "IV",
+    "IIII",
+    "VI"
+   ],
+   "answer": 0,
+   "hint": "You may not write four I's. Which pair takes 1 away from 5?",
+   "explain": "4 is IV: the small I before the V takes 1 away from 5. VI is 6."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "One numeral is XL, then {a} I's. Another is XC, then {b} I's. What is the bigger number?",
+   "answer": "90+b",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     1,
+     3
+    ]
+   },
+   "hint": "XL is 50 take away 10. XC is 100 take away 10. Which is bigger?",
+   "explain": "XL is 40 and XC is 90, so the XC numeral is bigger: 90 + {b} = {=90+b}."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Sam writes 49 as IL. What should it be?",
+   "choices": [
+    "XLIX",
+    "XXXXIX",
+    "LIX"
+   ],
+   "answer": 0,
+   "hint": "Write the tens, then the ones. What is 40? What is 9?",
+   "explain": "I can only go before V or X. 49 is 40 + 9, so XL then IX: XLIX."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What number is L?",
+    "choices": [
+     "50",
+     "100",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Think of the five tiles: I, V, X, L and C.",
+    "explain": "L is 50. C is 100 and V is 5."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What number is IX?",
+    "choices": [
+     "9",
+     "11",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "The small I is before the big X. Is it added or taken away?",
+    "explain": "IX is 10 take away 1, which is 9. XI, with the I after, is 11."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "How do you write 40?",
+    "choices": [
+     "XL",
+     "XXXX",
+     "LX"
+    ],
+    "answer": 0,
+    "hint": "Four X's in a row is not allowed. Take 10 away from 50.",
+    "explain": "40 is XL: the X before the L takes 10 away from 50. LX is 60."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What number is XCIV?",
+    "choices": [
+     "94",
+     "116",
+     "96"
+    ],
+    "answer": 0,
+    "hint": "Split it into two pairs: XC and IV. Work out each one.",
+    "explain": "XC is 90 and IV is 4, so XCIV is 94. Adding every symbol gives 116, which is wrong."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How do you write 99?",
+    "choices": [
+     "XCIX",
+     "IC",
+     "LXXXXVIIII"
+    ],
+    "answer": 0,
+    "hint": "Write 90 first, then 9. Which pairs make 90 and 9?",
+    "explain": "99 is 90 + 9, so XC then IX: XCIX. IC is not allowed, because I only goes before V or X."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which number has no Roman numeral?",
+    "choices": [
+     "0",
+     "50",
+     "100"
+    ],
+    "answer": 0,
+    "hint": "Which number did the Romans never need to write?",
+    "explain": "There is no Roman numeral for zero. L is 50 and C is 100."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What number is LXXVIII?",
+    "choices": [
+     "78",
+     "73",
+     "58"
+    ],
+    "answer": 0,
+    "hint": "L, then X's, then V, then I's. Add them all.",
+    "explain": "50 + 10 + 10 + 5 + 1 + 1 + 1 = 78. Nothing is taken away, because each symbol is the same size or smaller than the one before."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which numeral is written the right way?",
+    "choices": [
+     "XIX",
+     "XVIIII",
+     "IXX"
+    ],
+    "answer": 0,
+    "hint": "Tens first, then ones. 19 is 10 and 9.",
+    "explain": "19 is X and IX: XIX. XVIIII has four I's in a row, and IXX puts the ones before the tens."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "How do you write 5?",
+    "choices": [
+     "V",
+     "VX",
+     "IIIII"
+    ],
+    "answer": 0,
+    "hint": "There is a symbol of its own for 5.",
+    "explain": "5 is V. VX is not allowed: a V is never taken away."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "A numeral is {a} X's, then {b} I's. What number is it?",
+    "answer": "10*a+b",
+    "params": {
+     "a": [
+      1,
+      3
+     ],
+     "b": [
+      1,
+      3
+     ]
+    },
+    "hint": "Each X is 10 and each I is 1. Count the tens, then the ones.",
+    "explain": "{a} tens and {b} ones: {=10*a+b}."
+   },
+   {
+    "type": "numeric",
+    "id": "m11",
+    "prompt": "A numeral is L, then {a} X's, then V, then {b} I's. What number is it?",
+    "answer": "55+10*a+b",
+    "params": {
+     "a": [
+      1,
+      3
+     ],
+     "b": [
+      1,
+      3
+     ]
+    },
+    "hint": "Add 50, then 10 for each X, then 5, then 1 for each I.",
+    "explain": "50 + {a} × 10 + 5 + {b} = {=55+10*a+b}."
+   }
+  ]
+ }
+}

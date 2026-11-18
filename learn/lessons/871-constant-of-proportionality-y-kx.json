@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_2H410DuoW8",
+ "title": "Constant of proportionality (y = kx)",
+ "audience": "learner",
+ "keyIdea": "Two quantities are directly proportional when y ÷ x is the same number every time. That number is the constant of proportionality, k, and the relationship is y = kx. Find k by dividing any matching pair: if 4 kg of apples cost £10, k = 10 ÷ 4 = 2.5, so y = 2.5x and each kg costs £2.50. The graph of y = kx is a straight line through (0, 0), and k is its gradient: go right 1 and the line rises by k. A straight line that misses the origin, such as a taxi fare with a fixed start charge, is not direct proportion.",
+ "familyTip": "At the shops, pick a loose item priced per kg and ask: what is k here, and what would 3 kg cost? Then look at a phone tariff or taxi fare with a fixed charge and ask whether the cost is proportional. If 0 of the thing would still cost something, it is not.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is y proportional to x? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "proportional (y = kx)",
+    "not proportional"
+   ],
+   "items": [
+    [
+     "y = 7x",
+     0
+    ],
+    [
+     "y = 2x + 1",
+     1
+    ],
+    [
+     "x 2, 4, 6 and y 3, 6, 9",
+     0
+    ],
+    [
+     "x 1, 2, 3 and y 5, 6, 7",
+     1
+    ],
+    [
+     "£12 per hour",
+     0
+    ],
+    [
+     "£5 entry plus £2 a ride",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagkx",
+  "caption": "Flagship lab: divide y by x down a table, sort proportional from not, drag a line through (0, 0) to targets, predict with k and say what k means.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Two amounts are directly proportional when one is always the same multiple of the other. Then y ÷ x gives the same number every time. That number is called the constant of proportionality. We call it k and write y = kx.",
+   "To find k, divide y by x for a pair you know. If 4 kg of apples cost £10, then k = 10 ÷ 4 = 2.5. So y = 2.5x, and each kg costs £2.50. Check a second pair to be sure: 6 kg should cost 2.5 × 6 = £15.",
+   "The graph of y = kx is a straight line that goes through (0, 0). Zero kg costs zero pounds. Move 1 to the right and the line goes up by k, so k is the gradient.",
+   "A straight line is not enough on its own. A taxi that charges £3 to start plus £2 per km gives a straight line, but 0 km still costs £3. The line misses (0, 0) and y ÷ x keeps changing, so the cost is not proportional to the distance."
+  ],
+  "adult": [
+   "Ages 13 to 15. US Common Core 7.RP.A.2 asks students to decide whether two quantities are proportional, to identify the constant of proportionality (the unit rate) in tables, graphs, equations and descriptions, and to write equations such as t = pn. In England, GCSE Mathematics content R10 covers solving direct proportion problems, including graphical and algebraic forms, and R14 links the gradient of a line to a rate of change.",
+   "k always has units, because it is y per 1 of x: pounds per kilogram, kilograms per metre, kilometres per litre. Stating these units is the best check that the division was done the right way round. Reading k from a graph means choosing any point (x, y) on the line other than the origin and working out y ÷ x, or reading the rise for a run of 1.",
+   "Common mistakes: using y − x (additive thinking) instead of y ÷ x; dividing the wrong way round (x ÷ y); calling any straight line proportional, even when it has a non-zero intercept; checking only one pair from a table; and, when predicting, adding the difference between x values rather than multiplying by k."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "y is proportional to x. When x = 4, y = {=4*k}. Find k.",
+   "answer": "k",
+   "hint": "k is y ÷ x. Divide the y value by 4.",
+   "explain": "k = {=4*k} ÷ 4 = {k}, so y = {k}x.",
+   "params": {
+    "k": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "y = {k}x. Find y when x = {x}.",
+   "answer": "k*x",
+   "hint": "Replace x with its value and multiply by k.",
+   "explain": "y = kx means k times x, so y = {k} × {x} = {=k*x}.",
+   "params": {
+    "k": [
+     2,
+     8
+    ],
+    "x": [
+     3,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A gym charges £20 to join plus £15 a month. Is the total cost proportional to the number of months?",
+   "choices": [
+    "No: 0 months still costs £20",
+    "Yes: it goes up by £15 each month",
+    "Yes: the graph is a straight line"
+   ],
+   "answer": 0,
+   "hint": "What does it cost for 0 months?",
+   "explain": "At 0 months it costs £20, so the line misses (0, 0) and cost ÷ months changes. It is a straight line, but it is not direct proportion."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which table shows y proportional to x?",
+   "choices": [
+    "x 2, 5, 8 and y 6, 15, 24",
+    "x 2, 5, 8 and y 4, 7, 10",
+    "x 2, 5, 8 and y 1, 4, 7"
+   ],
+   "answer": 0,
+   "hint": "Work out y ÷ x for each pair. Is it the same every time?",
+   "explain": "6 ÷ 2 = 15 ÷ 5 = 24 ÷ 8 = 3, so y = 3x. In the second table y ÷ x is 2, 1.4 and 1.25, which changes, even though y goes up by 3 each time."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "{n} pens cost £{=n*3}. How much do 10 pens cost, in £?",
+   "answer": "30",
+   "hint": "Find k, the cost of one pen, first: divide the cost by the number of pens.",
+   "explain": "k = {=n*3} ÷ {n} = £3 per pen, so 10 pens cost 3 × 10 = £30.",
+   "params": {
+    "n": [
+     2,
+     7
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "y is proportional to x, and y = 18 when x = 6. What is k?",
+    "choices": [
+     "3",
+     "12",
+     "1/3"
+    ],
+    "answer": 0,
+    "hint": "k = y ÷ x: how much y for each 1 of x.",
+    "explain": "k = 18 ÷ 6 = 3. 12 is y − x, and 1/3 is x ÷ y, the wrong way round."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which equation shows direct proportion?",
+    "choices": [
+     "y = 5x",
+     "y = 5x + 2",
+     "y = x + 5"
+    ],
+    "answer": 0,
+    "hint": "Which line goes through (0, 0)?",
+    "explain": "y = 5x gives y = 0 when x = 0, and y ÷ x is always 5. The other two have a start value, so they miss the origin."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "The graph of y = kx passes through (3, 12). What is k?",
+    "choices": [
+     "4",
+     "9",
+     "0.25"
+    ],
+    "answer": 0,
+    "hint": "Any point on the line gives k = y ÷ x.",
+    "explain": "k = 12 ÷ 3 = 4, so the line is y = 4x. It also passes through (1, 4): right 1, up 4."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A recipe uses y grams of flour for x biscuits, and y = 12.5x. What does 12.5 mean?",
+    "choices": [
+     "12.5 g of flour for each biscuit",
+     "12.5 biscuits for each gram",
+     "12.5 g of flour to start with"
+    ],
+    "answer": 0,
+    "hint": "k is the amount of y for each 1 of x.",
+    "explain": "k is y per 1 of x: 12.5 grams of flour per biscuit. There is no start amount in y = kx."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which graph shows y directly proportional to x?",
+    "choices": [
+     "A straight line through (0, 0)",
+     "A straight line crossing the y-axis at 3",
+     "A curve through (0, 0)"
+    ],
+    "answer": 0,
+    "hint": "Two things must be true: straight, and through the origin.",
+    "explain": "y = kx is straight (each extra 1 of x adds k) and passes through (0, 0). A line crossing at 3 has a start value, and a curve has a changing rate."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "5 litres of paint cover 40 m². How much wall do 8 litres cover?",
+    "choices": [
+     "64 m²",
+     "43 m²",
+     "25 m²"
+    ],
+    "answer": 0,
+    "hint": "Find k in m² per litre first.",
+    "explain": "k = 40 ÷ 5 = 8 m² per litre, so 8 litres cover 8 × 8 = 64 m². 43 adds the 3 extra litres instead of multiplying."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A table has x 1, 2, 3 and y 7, 14, 21. Write the equation.",
+    "choices": [
+     "y = 7x",
+     "y = x + 7",
+     "x = 7y"
+    ],
+    "answer": 0,
+    "hint": "Divide each y by its x. Is the answer the same each time?",
+    "explain": "7 ÷ 1 = 14 ÷ 2 = 21 ÷ 3 = 7, so y = 7x. y = x + 7 would give 8 when x = 1."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "y is proportional to x. When x = 5, y = {=5*k}. Find y when x = 9.",
+    "answer": "9*k",
+    "hint": "Find k from the first pair (y ÷ 5), then multiply by 9.",
+    "explain": "k = {=5*k} ÷ 5 = {k}, so y = {k} × 9 = {=9*k}.",
+    "params": {
+     "k": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A car travels {=k*3} km on 3 litres of fuel, at a steady rate. Find k in km per litre.",
+    "answer": "k",
+    "hint": "km per litre means km ÷ litres.",
+    "explain": "k = {=k*3} ÷ 3 = {k} km per litre, so distance = {k} × litres.",
+    "params": {
+     "k": [
+      11,
+      18
+     ]
+    }
+   }
+  ]
+ }
+}

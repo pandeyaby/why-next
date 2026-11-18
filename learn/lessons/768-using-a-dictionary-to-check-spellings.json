@@ -1,0 +1,184 @@
+{
+ "topicId": "mt_6W5zzDIGZH",
+ "title": "Using a Dictionary to Check Spellings",
+ "audience": "family",
+ "keyIdea": "A dictionary lists words in alphabetical order, so you can find a word by its first two or three letters. When the first letters match, the next letter decides the order: bag comes before bed. The two guide words at the top of each page show the first and last word on it, so any word that comes between them is on that page. To check a spelling, look up the first letters, then compare every letter with the entry: freind is wrong, the entry says friend. If the word is not there, the first sound may be spelt another way, such as sch in school, kn in knife, ph in phone or wr in write.",
+ "familyTip": "Keep a children's dictionary next to homework. When your child is unsure of a spelling, ask 'what are the first two letters?' and let them find the page using the guide words rather than flicking from the front. Race each other: one of you calls out a word, the other says 'earlier' or 'later' at each page until it is found. If a word seems to be missing, talk about other ways to write the first sound.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which page is each word on? Use the guide words. Drag each card, or tap it and then tap a page.",
+  "opts": {
+   "bins": [
+    "Page: sad to shy",
+    "Page: sit to sun",
+    "Page: swan to syrup"
+   ],
+   "items": [
+    ["seed", 0],
+    ["sock", 1],
+    ["sweet", 2],
+    ["shell", 0],
+    ["star", 1],
+    ["swim", 2],
+    ["sand", 0],
+    ["stop", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdict",
+  "caption": "Flagship lab: order words by the second letter, file words between guide words, turn pages to a word, check a spelling, and try new first letters.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A dictionary puts words in ABC order. That means you can find any word fast. Look at its first letter, then its second, then its third. bag comes before bed, because a comes before e.",
+   "At the top of each page are two guide words. They are the first and last words on that page. If your word comes between them, it is on that page. If it comes before, turn back. If it comes after, turn on.",
+   "Not sure how to spell a word? Look up its first two or three letters. Find the word, then check every letter. You might write freind, but the dictionary shows friend.",
+   "Can't find it at all? The first sound might be spelt another way. skool is not there, but school is, with sch. Try kn for knife, ph for phone and wr for write."
+  ],
+  "adult": [
+   "Ages 7 to 11. The National Curriculum in England asks pupils in Years 3 and 4 to 'use the first two or three letters of a word to check its spelling in a dictionary'. In the US, Common Core L.2.2e and L.3.2g ask children to consult reference materials, including beginning dictionaries, to check and correct spellings. Key terms: alphabetical order, guide words (also called catchwords) and entry (the headword and its meaning).",
+   "The skill has three parts. First, alphabetical order beyond the first letter: when first letters match, compare the second, then the third. Second, guide words: a word belongs on a page if it falls between the two guide words, so a child can decide to turn earlier or later instead of reading every page. Third, checking: compare the written word with the entry letter by letter.",
+   "Common mistakes: ordering by the first letter only, so bus is placed before bag; thinking a word must be a guide word to be on the page; flicking through from the front; stopping when an entry starts the same, such as picking fright for friend; and deciding a word does not exist when the first sound is spelt another way (skool, nife, fone, rite). Be careful with that last one, as the fix is to try another spelling of the sound.",
+   "In the lab your child taps three lists of words into order using the second letter, files six words onto pages by their guide words, turns pages earlier or later to find five words, picks the right entry for four misspellings, and tries sch, kn, ph or wr when a word seems to be missing. Each wrong move says why, for example 'egg comes before fan, so it is on an earlier page'."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which word comes first in a dictionary?",
+   "choices": ["cake", "city", "crab"],
+   "answer": 0,
+   "hint": "All start with c. Compare the second letters: a, i and r.",
+   "explain": "a comes before i and r, so cake comes first, then city, then crab."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A dictionary page has {n} words. The two guide words are the first and last. How many words are between them?",
+   "answer": "n-2",
+   "hint": "Take away the first word and the last word.",
+   "explain": "{n} words take away the 2 guide words leaves {=n-2} words between them.",
+   "params": {"n": [8, 20]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The guide words are frog and fun. Which word is on this page?",
+   "choices": ["fruit", "fan", "gate"],
+   "answer": 0,
+   "hint": "Is the word after frog and before fun?",
+   "explain": "fruit comes after frog (u after o) and before fun (r before u). fan is earlier and gate is later."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Kim is on page {a}. The word she wants is on page {b}. How many pages does she turn forward?",
+   "answer": "b-a",
+   "hint": "Count on from page {a} to page {b}.",
+   "explain": "From page {a} to page {b} is {=b-a} pages.",
+   "params": {"a": [10, 30], "b": [40, 60]}
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You look up nife and it is not there. What should you try next?",
+   "choices": ["kn, as in know", "give up", "look under ni again"],
+   "answer": 0,
+   "hint": "Some words start with a silent letter.",
+   "explain": "knife starts with a silent k, so look under kn."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which list is in alphabetical order?",
+    "choices": ["shark, shed, ship", "ship, shed, shark", "shed, shark, ship"],
+    "answer": 0,
+    "hint": "All start with sh. Look at the third letter.",
+    "explain": "The third letters are a, e and i, so shark, shed, ship."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What do the guide words on a page show?",
+    "choices": ["The first and last words on the page", "The hardest words on the page", "The only words on the page"],
+    "answer": 0,
+    "hint": "Look at the two words at the top of a dictionary page.",
+    "explain": "Guide words are the first and last words on the page. Every word between them is there too."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Guide words: bad and bell. Your word is bus. Which way do you turn?",
+    "choices": ["Later", "Earlier", "Stay on this page"],
+    "answer": 0,
+    "hint": "Does bus come before bad or after bell?",
+    "explain": "bus comes after bell because u comes after e, so turn later."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "You wrote beutiful. Which letters do you look up first?",
+    "choices": ["be", "ul", "ful"],
+    "answer": 0,
+    "hint": "A dictionary is ordered by the start of the word.",
+    "explain": "Look up be, then check each letter: the entry is beautiful."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Raj checks {n} words in the dictionary. {k} were spelt wrong. How many were spelt right?",
+    "answer": "n-k",
+    "hint": "Take the wrong ones away from all the words he checked.",
+    "explain": "{n} words take away {k} wrong leaves {=n-k} spelt right.",
+    "params": {"n": [6, 12], "k": [1, 5]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the dictionary spelling?",
+    "choices": ["friend", "freind", "frend"],
+    "answer": 0,
+    "hint": "Check every letter: f, r, i, e, n, d.",
+    "explain": "The entry is friend: i comes before e. freind swaps them and frend misses the i."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A dictionary has {n} pages. You open it in the middle. About which page is that?",
+    "answer": "n/2",
+    "hint": "The middle is half of all the pages.",
+    "explain": "Half of {n} pages is {=n/2}, so the middle is about page {=n/2}.",
+    "params": {"n": [100, 300]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "fone is not in the dictionary. Which spelling should you try?",
+    "choices": ["phone", "foan", "fhone"],
+    "answer": 0,
+    "hint": "The f sound can be spelt with two letters.",
+    "explain": "The f sound in phone is spelt ph, so look under ph."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "The entry starts the same as your word. What must you do?",
+    "choices": ["Check every letter matches", "Copy the first word you see", "Look only at the last letter"],
+    "answer": 0,
+    "hint": "fright and friend both start with fri.",
+    "explain": "Words can start the same and still be different, so check every letter."
+   }
+  ]
+ }
+}

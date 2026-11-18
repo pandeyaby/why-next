@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_C9ZfT-4cgn",
+ "title": "Commutative Multiplication",
+ "audience": "family",
+ "keyIdea": "Multiplication is commutative: a×b = b×a. Flipping an array changes its shape, not how many dots you have.",
+ "familyTip": "Build a 3×4 array with counters, then rotate the tray. Ask: 'Still 12?' Write 3×4 and 4×3 side by side.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Same product or mix-up? Drag each clue, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "3×4 equals 4×3",
+     0
+    ],
+    [
+     "2×5 and 5×2 both make 10",
+     0
+    ],
+    [
+     "flipping an array keeps the same dots",
+     0
+    ],
+    [
+     "swapping factors always changes the total",
+     1
+    ],
+    [
+     "3×4 equals 3+4",
+     1
+    ],
+    [
+     "6×2 equals 2×6",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcommul",
+  "caption": "Flagship lab: build a 3×4 array, flip to 4×3, confirm 2×5=5×2, match equal products, reject order myths, make 12 two ways, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An array is rows and columns of dots.",
+   "3 rows of 4 is 3×4. Flip it and you see 4×3.",
+   "Both show the same number of dots.",
+   "You can swap the factors and the product stays the same."
+  ],
+  "adult": [
+   "NC Y2 / CCSS 3.OA.B.5: apply commutative property of multiplication; relate to rectangular arrays. Words: array, factor, product, commute, rows, columns.",
+   "Common mistakes: thinking order changes the product; confusing × with + (3×4 vs 3+4); reading 3×4 as thirty-four; believing you must multiply the larger factor first.",
+   "In the lab your child builds 3×4, flips to 4×3, checks 2×5 vs 5×2, matches equal products, rejects order myths, and makes 12 as different arrays."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "3×4 equals…",
+   "choices": [
+    "4×3",
+    "3+4",
+    "4−3"
+   ],
+   "answer": 0,
+   "hint": "Swapping the two factors keeps the same product value.",
+   "explain": "3×4 = 4×3 = 12 by the commutative property."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "2×5 and 5×2…",
+   "choices": [
+    "both equal 10",
+    "one is bigger",
+    "only 2×5 works"
+   ],
+   "answer": 0,
+   "hint": "Count the dots in either array orientation carefully.",
+   "explain": "Both factor orders make 10 — multiplication commutes."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Array product: {a} rows of {b} = ?",
+   "answer": "a*b",
+   "hint": "Multiply the row count by the column count for the product.",
+   "explain": "{a}×{b} = {=a*b}. Flipping to {b}×{a} gives the same product.",
+   "params": {
+    "a": [
+     2,
+     4
+    ],
+    "b": [
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Commuted product: {b}×{a} (same dots as {a}×{b}) = ?",
+   "answer": "a*b",
+   "hint": "Order of factors does not change the product for whole numbers.",
+   "explain": "{b}×{a} = {a}×{b} = {=a*b}.",
+   "params": {
+    "a": [
+     2,
+     3
+    ],
+    "b": [
+     4,
+     6
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order: show that multiplication commutes.",
+   "items": [
+    "build an a×b array",
+    "flip to b×a",
+    "check the dot count matches"
+   ],
+   "hint": "First build the array, then flip it, then count the dots.",
+   "explain": "Flipping the array shows a×b and b×a share the same product."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Flip 3×4 — product?",
+    "choices": [
+     "stays 12",
+     "becomes 7",
+     "becomes 34"
+    ],
+    "answer": 0,
+    "hint": "Flipping changes shape only — recount the same twelve dots.",
+    "explain": "Flipping keeps 12 dots — commutative property."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Matching pair?",
+    "choices": [
+     "3×4 and 4×3",
+     "3×4 and 3+4",
+     "3×4 and 4−3"
+    ],
+    "answer": 0,
+    "hint": "Look for the pair that only swaps the two factors.",
+    "explain": "3×4 and 4×3 are equal products."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Does swapping factors change the product?",
+    "choices": [
+     "No — it stays",
+     "Yes — always bigger",
+     "Yes — always smaller"
+    ],
+    "answer": 0,
+    "hint": "Commutative means the product stays when factors swap.",
+    "explain": "For whole numbers, a×b equals b×a."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Another way to make 12?",
+    "choices": [
+     "4×3",
+     "3+4",
+     "12×0"
+    ],
+    "answer": 0,
+    "hint": "Use a factor pair of twelve, not a sum or a zero product.",
+    "explain": "4×3 = 12; 3+4 is 7; 12×0 is 0."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Compute {a}×{b} as an array product.",
+    "answer": "a*b",
+    "hint": "Multiply the two factors to get the array product.",
+    "explain": "{a}×{b} = {=a*b}. That shows a×b equals b×a.",
+    "params": {
+     "a": [
+      3,
+      5
+     ],
+     "b": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "After swapping factors, {b}×{a} equals?",
+    "answer": "a*b",
+    "hint": "Swapping factor order must leave the product unchanged.",
+    "explain": "{b}×{a} = {=a*b}. That shows a×b equals b×a.",
+    "params": {
+     "a": [
+      2,
+      4
+     ],
+     "b": [
+      3,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "6×2 equals…",
+    "choices": [
+     "2×6",
+     "6+2",
+     "6−2"
+    ],
+    "answer": 0,
+    "hint": "Commute the factors: six twos is the same as two sixes.",
+    "explain": "6×2 = 2×6 = 12. That shows a×b equals b×a."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: explain a×b = b×a to a friend.",
+    "items": [
+     "show the first array",
+     "rotate or flip it",
+     "count that dots match"
+    ],
+    "hint": "Show the array, flip it, then prove the counts match.",
+    "explain": "A concrete flip proves the products match."
+   }
+  ]
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "topicId": "mt_YzM5goBctT",
+ "title": "Tenths",
+ "audience": "family",
+ "keyIdea": "Cut one whole into 10 equal parts and each part is one tenth, written 1/10. Ten tenths make 1 whole, so 10/10 = 1. You can count up and down in tenths on a number line, and sharing 3 things between 10 people gives each person 3/10.",
+ "explain": {
+  "kid": [
+   "Take a bar of chocolate. Cut it into 10 parts that are all the same size. Each part is one tenth. We write it 1/10.",
+   "The bottom number tells you how many equal parts the whole has. Here it is 10. The top number tells you how many parts you have. 3/10 means 3 of the 10 parts.",
+   "Parts must be the same size. If some are big and some are small, they are not tenths, even if there are 10 of them.",
+   "You can count in tenths: 1/10, 2/10, 3/10, and on. When you get to 10/10, you have the whole bar. So 10 tenths make 1 whole."
+  ],
+  "adult": [
+   "The English national curriculum for Year 3 asks pupils to 'count up and down in tenths' and to 'recognise that tenths arise from dividing an object into 10 equal parts and in dividing one-digit numbers or quantities by 10'. Year 4 then writes tenths as decimals, so 3/10 becomes 0.3. In the US, tenths appear in Grade 3 fractions and again in Grade 4, where 4.NF.C.6 links them to decimal notation.",
+   "A tenth is one of ten equal parts of a whole. The denominator, 10, names the size of each part. The numerator counts how many parts you have. On a number line from 0 to 1 there are ten equal steps of 1/10, so 10/10 lands on 1. Dividing by 10 makes tenths: 3 ÷ 10 = 3/10, because each of the 3 wholes gives every person one tenth.",
+   "Common mistakes: adding the bottoms as well as the tops, so 4/10 + 1/10 becomes 5/20; calling parts tenths just because there are 10, even when they are unequal; mixing up a tenth with ten or with a hundredth; and writing 9/11 for the step after 9/10. Be careful with 12 tenths: it is more than 1 whole. Swap 10 tenths for 1 whole to get 1 and 2/10.",
+   "In the lab your child shades a bar one tenth at a time up to 10/10, judges which bars are fairly cut into tenths, hops a frog along a 0 to 1 line in tenths, shares 1, 3 and 7 bars between 10 children, and builds numbers from wholes and tenths, swapping 10 tenths for 1 whole."
+  ]
+ },
+ "familyTip": "Line up 10 coins or pasta pieces as one whole. Take some away and say the tenth out loud: 'seven tenths left'. Then add them back one by one: 'eight tenths, nine tenths, ten tenths, one whole'.",
+ "status": "self-checked",
+ "visual": {
+  "type": "fracbar",
+  "caption": "The bar is cut into 10 equal parts. Shade some and read the fraction in tenths.",
+  "opts": {"d": 10, "shade": 3}
+ },
+ "lab": {
+  "type": "flagtenth",
+  "caption": "Flagship lab: shade tenths up to 1 whole, judge fair tenths, hop on a 0-1 line, share bars between 10, and swap 10 tenths for 1 whole.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "numeric","id": "p1","prompt": "A bar is cut into 10 equal parts. {a} parts are shaded. How many tenths are not shaded?","answer": "10-a",
+   "hint": "The whole bar is 10 tenths. Take away the shaded parts.","explain": "The whole is 10/10. {a}/10 are shaded, so 10 − {a} = {=10-a} tenths are not shaded: {=10-a}/10.","params": {"a": [1, 9]}},
+  {"type": "numeric","id": "p2","prompt": "How many tenths are there in {a} wholes?","answer": "a*10",
+   "hint": "Each whole is 10 tenths. Count in tens.","explain": "Each whole is 10 tenths, so {a} wholes are {a} × 10 = {=a*10} tenths.","params": {"a": [1, 6]}},
+  {"type": "numeric","id": "p3","prompt": "{a}/10 + {b}/10 = ?/10. What is the missing top number?","answer": "a+b",
+   "hint": "The parts are all tenths, so the bottom stays 10. Add the tops.","explain": "{a} tenths and {b} tenths make {=a+b} tenths, so the answer is {=a+b}/10. The bottom stays 10 because the parts are still tenths.","params": {"a": [1, 4],"b": [1, 5]}},
+  {"type": "mc","id": "p4","prompt": "Which one is the same as 1 whole?","choices": ["10/10","1/10","10/100"],"answer": 0,
+   "hint": "How many tenths fill the whole bar?","explain": "10/10 means all 10 of the 10 equal parts, which is the whole bar. 1/10 is just one part, and 10/100 is also one tenth."}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "numeric","id": "m1","prompt": "A frog is on {a}/10 on a number line. It hops on {b} more tenths. It lands on ?/10. What is the top number?","answer": "a+b",
+    "hint": "Each hop adds 1 tenth. Count on from {a}.","explain": "Start at {a}/10 and count on {b} tenths: {a} + {b} = {=a+b}, so the frog lands on {=a+b}/10.","params": {"a": [1, 4],"b": [1, 5]}},
+   {"type": "numeric","id": "m2","prompt": "{a} bars are shared fairly between 10 children. Each child gets ?/10 of a bar. What is the top number?","answer": "a",
+    "hint": "Cut each bar into 10. Each child gets 1 part from each bar.","explain": "Each bar is cut into 10 tenths and every child takes one tenth from each of the {a} bars, so each child gets {a}/10. That is {a} ÷ 10.","params": {"a": [2, 9]}},
+   {"type": "mc","id": "m3","prompt": "A bar is cut into 10 parts. When is each part one tenth?","choices": ["When all 10 parts are the same size","Always, if there are 10 parts","When the parts are small"],"answer": 0,
+    "hint": "Think about fair shares. Do the parts need to match?","explain": "Tenths are 10 equal parts. If the parts are different sizes they are not tenths, even when there are 10 of them."},
+   {"type": "mc","id": "m4","prompt": "What is 9/10 + 1/10?","choices": ["1 whole","10/20","9/11"],"answer": 0,
+    "hint": "Add the tops. The parts are still tenths.","explain": "9 tenths and 1 tenth make 10 tenths, and 10/10 is 1 whole. Adding the bottoms to get 10/20 is a common slip."},
+   {"type": "mc","id": "m5","prompt": "17 tenths is the same as…","choices": ["1 whole and 7 tenths","17 wholes","7 wholes and 1 tenth"],"answer": 0,
+    "hint": "Swap 10 tenths for 1 whole. How many tenths are left?","explain": "10 of the tenths make 1 whole, and 7 tenths are left, so 17 tenths is 1 whole and 7/10."},
+   {"type": "mc","id": "m6","prompt": "Count back in tenths: 6/10, 5/10, … What comes next?","choices": ["4/10","5/9","4/9"],"answer": 0,
+    "hint": "Counting back changes the top number. What happens to the bottom?","explain": "Each step takes away 1 tenth, so the top goes down by 1 and the bottom stays 10: 4/10."},
+   {"type": "mc","id": "m7","prompt": "Which is more of the same bar: 3/10 or 7/10?","choices": ["7/10","3/10","They are the same"],"answer": 0,
+    "hint": "The parts are the same size. Which has more parts?","explain": "Both are tenths, so the parts are the same size. 7 parts is more than 3 parts, so 7/10 is more."}
+  ]
+ }
+}

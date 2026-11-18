@@ -1,0 +1,267 @@
+{
+ "topicId": "mt__CMXZiPfTV",
+ "title": "Reading Inflectional Endings",
+ "audience": "family",
+ "keyIdea": "To read a long word, find the root first and then add the ending: jump + ing, cold + est, box + es, and un + lock + ed for a word with a part at the front too. Split at the root, not where the sounds seem to break (cold + est, not col + dest). Some endings add a beat: -es (box-es), and -ed after a root that ends in t or d (want-ed, land-ed); after other sounds -ed adds only a t or d sound (jumpt, playd). A double letter before the ending means the root has a short vowel (hopping from hop), and one letter can mean the root lost an e (hoping from hope). Cover the ending to check: if no word you know is left, it is not an ending (king, sister).",
+ "familyTip": "Pick a word with an ending from a book page. Put your finger over the ending so only the root shows, read the root together, then lift your finger and read the whole word. Clap it: does the ending add a beat? Try hopping and hoping side by side and ask which one a rabbit does.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the ending add a beat? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "one beat",
+    "two beats"
+   ],
+   "items": [
+    [
+     "jumped",
+     0
+    ],
+    [
+     "wanted",
+     1
+    ],
+    [
+     "played",
+     0
+    ],
+    [
+     "landed",
+     1
+    ],
+    [
+     "cats",
+     0
+    ],
+    [
+     "boxes",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagendread",
+  "caption": "Flagship lab: find where the ending starts, drum the beats, find the root of doubled words, sort look-alikes, and spot endings in sentences.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A long word is often a root with an ending on the back. Cover the ending with your finger. Read the root. Then add the ending: jump, jumping.",
+   "Some endings add a beat. Clap box, then boxes: box-es. ed adds a beat only when the root ends in t or d: want-ed, land-ed. jumped has one beat. It sounds like jumpt.",
+   "Look for a double letter. hopping has two p's, so it comes from hop. hoping has one p, so it comes from hope. The e dropped off.",
+   "Not every word that ends in ing or er has an ending. Cover ing in king: k is not a word. So king is just king."
+  ],
+  "adult": [
+   "Ages 5 to 7. The National Curriculum in England (Year 1 word reading) asks children to read words containing taught GPCs and -s, -es, -ing, -ed, -er and -est endings, and other words of more than one syllable. Year 2 adds reading and spelling words where the root changes: doubling the consonant after a short vowel (hopping, patted) and dropping e (hoping, liked). In the US this is Common Core RF.1.3f and RF.1.3g (read two-syllable words, read inflectional endings) and RF.2.3d (common prefixes and suffixes).",
+   "The terms: the root (base word) carries the meaning and an inflectional ending (an inflection, or inflectional suffix) adds number, tense or comparison without changing the word class. The past tense -ed has three pronunciations: /ɪd/ after t or d (wanted, landed), /t/ after other voiceless sounds (jumped, looked) and /d/ after voiced sounds (played, hugged). Plural -es is /ɪz/ after s, x, z, sh and ch, so it adds a syllable; plain -s does not.",
+   "Common mistakes: splitting by syllable instead of by root (col-dest, jum-ping), saying jump-ed with an extra beat, reading every final ing or er as an ending (king, sister, letter), and reading hoping as hopping because the root e is gone. The fix is the same each time: cover the ending and check that a real root is left.",
+   "In the lab your child taps the first letter of the ending in six words, taps a drum once for each beat in seven words, picks the root of seven doubled or e-dropped words (hopping, hoping, tapping, taped), sorts eight words into a real ending or just ends that way, and taps every word with an ending in four sentences, including traps like sister and king."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the root in jumping?",
+   "choices": [
+    "jump",
+    "jum",
+    "ping"
+   ],
+   "answer": 0,
+   "hint": "Cover ing. What word is left?",
+   "explain": "Cover ing and jump is left, a word you know. jum-ping splits by sound, not by root."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A root has {n} letters and does not change when you add ing, like jump and jumping. How many letters does the new word have?",
+   "answer": "n+3",
+   "hint": "ing has three letters, and the root keeps all of its letters.",
+   "explain": "{n} letters in the root plus 3 for ing gives {=n+3}. jump has 4 and jumping has 7.",
+   "params": {
+    "n": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How many beats does landed have?",
+   "choices": [
+    "2",
+    "1",
+    "3"
+   ],
+   "answer": 0,
+   "hint": "Does land end in t or d? Then ed adds a beat.",
+   "explain": "land ends in d, so ed adds a beat: land-ed has two beats."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You read {a} words ending in ed. {b} of them have a root ending in t or d, like wanted. How many of the words have just one beat, like jumped?",
+   "answer": "a-b",
+   "hint": "Only roots ending in t or d get an extra beat from ed.",
+   "explain": "{b} words get the extra beat, so {a} − {b} = {=a-b} words have one beat, like jumped.",
+   "params": {
+    "a": [
+     6,
+     9
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What is the root in hoping?",
+   "choices": [
+    "hope",
+    "hop",
+    "hoppe"
+   ],
+   "answer": 0,
+   "hint": "Is there one p or two before the ending?",
+   "explain": "hoping has one p, so the root lost its e: hope. hop would make hopping, with two p's."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which word has a real ending added?",
+    "choices": [
+     "taller",
+     "sister",
+     "letter"
+    ],
+    "answer": 0,
+    "hint": "Cover er. Is a word you know left?",
+    "explain": "Cover er in taller and tall is left. sist and lett are not words, so sister and letter just end in er."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "running comes from which root?",
+    "choices": [
+     "run",
+     "rune",
+     "runn"
+    ],
+    "answer": 0,
+    "hint": "Two n's before ing mean a short vowel.",
+    "explain": "The n was doubled before ing, so the root is run, with a short u."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "How many beats does jumped have?",
+    "choices": [
+     "1",
+     "2",
+     "3"
+    ],
+    "answer": 0,
+    "hint": "jump does not end in t or d.",
+    "explain": "jumped sounds like jumpt. ed adds a t sound, not a beat, so it has one beat."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How do you split coldest to read it?",
+    "choices": [
+     "cold + est",
+     "col + dest",
+     "co + ldest"
+    ],
+    "answer": 0,
+    "hint": "Find the root first, then the ending after it.",
+    "explain": "Cover est and cold is left. Read the root, then the ending: cold + est."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which word has an ending that adds a beat?",
+    "choices": [
+     "wishes",
+     "cats",
+     "helps"
+    ],
+    "answer": 0,
+    "hint": "Clap each word. Listen for an extra beat at the end.",
+    "explain": "wish ends in sh, so es adds a beat: wish-es. cats and helps have one beat."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Read the word unlocked. Which chunks are in it?",
+    "choices": [
+     "un + lock + ed",
+     "unl + ock + ed",
+     "un + locked + ed"
+    ],
+    "answer": 0,
+    "hint": "Find the root in the middle, then the parts on each side.",
+    "explain": "lock is the root, un is at the front and ed is at the end: un + lock + ed."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A root has {n} letters and ends in a short vowel and one letter, like hop. You double the last letter and add ing. How many letters now?",
+    "answer": "n+4",
+    "hint": "One extra letter for the double, three for ing.",
+    "explain": "{n} letters, plus 1 for the doubled letter, plus 3 for ing, gives {=n+4}. hop has 3 and hopping has 7.",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A sentence has {a} words. {b} of them have an ending added. How many words have no ending?",
+    "answer": "a-b",
+    "hint": "Take the words with endings away from all the words.",
+    "explain": "{a} words take away the {b} with endings leaves {=a-b} without an ending.",
+    "params": {
+     "a": [
+      6,
+      9
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which word is a root on its own, with no ending?",
+    "choices": [
+     "king",
+     "singing",
+     "rings"
+    ],
+    "answer": 0,
+    "hint": "Cover ing in each one. Is a word you know left?",
+    "explain": "Cover ing in king and only k is left, so king has no ending. singing is sing + ing, and rings is ring + s."
+   }
+  ]
+ }
+}

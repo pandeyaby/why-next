@@ -1,0 +1,284 @@
+{
+ "topicId": "mt_n0AlyLQwC9",
+ "title": "Perimeter of Compound Shapes",
+ "audience": "learner",
+ "keyIdea": "A compound (composite) rectilinear shape, such as an L-shape, is made of rectangles joined together, with every corner a right angle. Its perimeter is the total length of all its sides, so walk round it and add every side exactly once: an L-shape has 6 sides. When a side has no length marked, use the sides opposite: the horizontal pieces on the top add up to the bottom, and the vertical pieces on the left add up to the right, so subtract to find the gap. Cutting a rectangle from a corner makes the area smaller but leaves the perimeter the same; cutting a slot into the middle of a side adds twice the slot's depth.",
+ "familyTip": "Draw an L-shaped room or garden on squared paper, one square for each metre, and mark some side lengths. Ask your child to find the missing sides and the length of skirting board or fence needed to go all the way round. Then cut a corner off a paper rectangle and measure round both: is the perimeter really the same?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What happens to the perimeter of a rectangle? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Stays the same",
+    "Gets bigger"
+   ],
+   "items": [
+    [
+     "Cut a small rectangle from one corner",
+     0
+    ],
+    [
+     "Cut a slot into the middle of a side",
+     1
+    ],
+    [
+     "Cut a square from a corner",
+     0
+    ],
+    [
+     "Cut a deeper slot",
+     1
+    ],
+    [
+     "Cut a step from a corner",
+     0
+    ],
+    [
+     "Add a slot to each side",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcper",
+  "caption": "Flagship lab: count every side of an L-shape once, find missing sides by subtracting, cut a corner and a slot, and check classmates' answers.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A compound shape is made of rectangles joined together, like a letter L. Its perimeter is the distance all the way round its edge. Start at one corner, walk round, and add every side once. An L-shape has 6 sides, not 4.",
+   "Sometimes a side has no length on it. Look at the side opposite. The two short pieces on the top add up to the long side on the bottom. So if the bottom is 12 cm and one top piece is 7 cm, the other piece is 12 − 7 = 5 cm.",
+   "Here is a surprise. Cut a piece out of the corner of a rectangle and the area gets smaller, but the perimeter stays the same. The two new sides are just as long as the two bits you cut away.",
+   "Cutting a slot into the middle of a side is different. The slot has two new walls, one down and one back up. A slot 3 cm deep adds 3 + 3 = 6 cm to the perimeter."
+  ],
+  "adult": [
+   "Ages 9 to 10. This matches the National Curriculum in England, Year 5 measurement (measure and calculate the perimeter of composite rectilinear shapes in centimetres and metres), building on Year 4 perimeter of rectilinear figures and the NCETM Year 5 spine on perimeter. It also supports Common Core 3.MD.D.8 (perimeter problems, including unknown side lengths).",
+   "The lab has five tasks. Children tap each side of an L-shape to build the sum, find four missing sides on two shapes (one in cm, one in m) by subtracting from the opposite side, drag a corner cut to three places and see the area change while the perimeter stays 36 cm, deepen a slot until the perimeter is 44 cm, and judge three classmates.",
+   "Common mistakes. Children often add only the marked sides and forget one, count a side twice, add the two pieces when they should subtract, assume the two unknown pieces are equal, confuse perimeter with area, or believe that a smaller area always means a smaller perimeter. Be careful with units: keep cm and m apart and write the unit in the answer."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "An L-shape has sides of 10 cm, 4 cm, 6 cm, 4 cm, 4 cm and 8 cm. What is its perimeter in cm?",
+   "answer": 36,
+   "hint": "Add all six sides. Tick each one as you add it so you do not miss or repeat one.",
+   "explain": "10 + 4 + 6 + 4 + 4 + 8 = 36 cm."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The bottom of an L-shape is {w} cm. One top piece is {a} cm. How long is the other top piece, in cm?",
+   "answer": "w-a",
+   "params": {
+    "w": [
+     11,
+     16
+    ],
+    "a": [
+     3,
+     9
+    ]
+   },
+   "hint": "The two top pieces together are as long as the bottom. Subtract the piece you know.",
+   "explain": "The two top pieces make the whole bottom, so {w} − {a} = {=w-a} cm. Check: {a} + {=w-a} = {w}."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A {w} cm by {h} cm rectangle has a smaller rectangle cut from one corner. What is the perimeter of the L-shape, in cm?",
+   "answer": "2*(w+h)",
+   "params": {
+    "w": [
+     8,
+     14
+    ],
+    "h": [
+     5,
+     9
+    ]
+   },
+   "hint": "A corner cut does not change the perimeter. Find the perimeter of the whole rectangle.",
+   "explain": "The perimeter stays the same as the rectangle: 2 × ({w} + {h}) = {=2*(w+h)} cm."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A slot {d} cm deep is cut into the middle of one side of a rectangle with perimeter {p} cm. What is the new perimeter, in cm?",
+   "answer": "p+2*d",
+   "params": {
+    "d": [
+     1,
+     5
+    ],
+    "p": [
+     30,
+     48
+    ]
+   },
+   "hint": "The slot adds two new walls, each as long as its depth.",
+   "explain": "{p} + 2 × {d} = {=p+2*d} cm. The slot's bottom replaces the piece of edge that was cut away."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A square is cut from the corner of a rectangle. What happens?",
+   "choices": [
+    "Area smaller, perimeter the same",
+    "Area smaller, perimeter smaller",
+    "Area the same, perimeter bigger"
+   ],
+   "answer": 0,
+   "hint": "In the lab, what happened to each number as you dragged the corner?",
+   "explain": "Less area is left, but the two new sides are as long as the two pieces cut away, so the perimeter stays the same."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many sides does an L-shape have?",
+    "choices": [
+     "6",
+     "4",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Trace an L with your finger and count each straight edge.",
+    "explain": "An L-shape has 6 sides: 4 long or short sides round the outside and 2 more where the corner goes in."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "An L-shape has sides of {a} m, 3 m, 5 m, 4 m, {b} m and 7 m. What is its perimeter, in m?",
+    "answer": "a+b+19",
+    "params": {
+     "a": [
+      8,
+      12
+     ],
+     "b": [
+      3,
+      7
+     ]
+    },
+    "hint": "Add all six sides once each.",
+    "explain": "{a} + 3 + 5 + 4 + {b} + 7 = {=a+b+19} m."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "The left side of a shape is {h} cm. The right side is made of two pieces: {a} cm and ?. How long is the ? piece, in cm?",
+    "answer": "h-a",
+    "params": {
+     "h": [
+      9,
+      15
+     ],
+     "a": [
+      2,
+      8
+     ]
+    },
+    "hint": "The two right pieces add up to the left side.",
+    "explain": "The two right pieces make the whole left side, so {h} − {a} = {=h-a} cm. Check: {a} + {=h-a} = {h}."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The bottom is 15 m. The top pieces are 6 m and ?. Kim says ? = 21 m. What did Kim do wrong?",
+    "choices": [
+     "She added instead of subtracting",
+     "She forgot the units",
+     "Nothing, 21 m is right"
+    ],
+    "answer": 0,
+    "hint": "Can a piece of the top be longer than the whole bottom?",
+    "explain": "The two pieces make 15 m together, so ? = 15 − 6 = 9 m. Adding gives a piece longer than the whole side."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which shape has the larger perimeter: a 10 cm by 8 cm rectangle, or the same rectangle with a 3 cm deep slot cut into one side?",
+    "choices": [
+     "The one with the slot",
+     "The plain rectangle",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "How many new walls does the slot add?",
+    "explain": "The slot adds 3 cm down and 3 cm back up: 36 + 6 = 42 cm, against 36 cm for the rectangle."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ravi says, 'The L-shape has less area than the rectangle it came from, so its perimeter must be smaller.' Is he right?",
+    "choices": [
+     "No, a corner cut keeps the perimeter the same",
+     "Yes, less area always means less perimeter",
+     "Yes, but only in metres"
+    ],
+    "answer": 0,
+    "hint": "Think about the corner cut in the lab.",
+    "explain": "Area and perimeter do not always change together. A corner cut lowers the area but keeps the perimeter."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A garden is an L-shape that fits in a {w} m by {h} m rectangle with one corner cut out. How many metres of fence go all the way round?",
+    "answer": "2*(w+h)",
+    "params": {
+     "w": [
+      10,
+      20
+     ],
+     "h": [
+      6,
+      12
+     ]
+    },
+    "hint": "Push the cut corner back out in your head. Is the fence any longer or shorter?",
+    "explain": "The fence is the same as for the full rectangle: 2 × ({w} + {h}) = {=2*(w+h)} m."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A rectangle has a perimeter of {p} cm. After a slot is cut into the middle of one side, the perimeter is {=p+2*d} cm. How deep is the slot, in cm?",
+    "answer": "d",
+    "params": {
+     "p": [
+      30,
+      40
+     ],
+     "d": [
+      1,
+      6
+     ]
+    },
+    "hint": "Find how much the perimeter grew, then halve it: the slot adds 2 × its depth.",
+    "explain": "It grew by {=p+2*d} − {p} = {=2*d} cm, and {=2*d} ÷ 2 = {d} cm deep, because both walls of the slot add the depth."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "What is the perimeter of a shape?",
+    "choices": [
+     "The total length of all its sides",
+     "The space inside it",
+     "The number of corners"
+    ],
+    "answer": 0,
+    "hint": "Think of walking all the way round the edge.",
+    "explain": "The perimeter is the distance round the edge: the sum of all the side lengths, with a unit like cm or m."
+   }
+  ]
+ }
+}

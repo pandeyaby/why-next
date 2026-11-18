@@ -1,0 +1,160 @@
+{
+ "topicId": "mt_cU3LcEVkBQ",
+ "title": "Expanded noun phrases",
+ "audience": "family",
+ "keyIdea": "A noun phrase is a noun with the words that go with it. To expand it, add describing words (adjectives) before the noun: \"the cat\" becomes \"the small ginger cat\". The order is: the or a, then the describing words, then the noun. Describing words do two jobs: they help the reader picture it, and they pick out which one you mean. If two describing words could have \"and\" between them, put a comma there: \"the old, creaky door\".",
+ "explain": {
+  "kid": [
+   "A noun is a naming word, like cat, hat or door. \"The cat\" is a noun phrase. It is a small one.",
+   "We can make it bigger. Add describing words before the noun: the small ginger cat. Now you can see it in your head. And if there are four cats, you know which one I mean.",
+   "The order matters. Start with the or a. Then put the describing words. The noun goes last. We say \"the fluffy cat\", not \"the cat fluffy\".",
+   "Two describing words? You can put a comma between them: the old, creaky door. Pick words that tell us a lot. \"Nice\" does not tell us much. \"Enormous\" does."
+  ],
+  "adult": [
+   "This is a Year 2 objective in the English National Curriculum (2014), Appendix 2: 'expanded noun phrases for description and specification', with examples such as 'the blue butterfly' and 'the man in the moon'. Year 2 terms for pupils are noun, noun phrase and adjective. The word determiner (the, a, my, those) comes in Year 4. The US Common Core asks for the same skill in L.1.1f and L.2.1f: use frequently occurring adjectives and produce expanded sentences.",
+   "An expanded noun phrase has a head noun plus modifiers. At this age they are mostly adjectives before the noun, sometimes a phrase after it ('the man in the moon'). The modifiers do two jobs. Description helps the reader picture the thing. Specification picks out which one: 'the small ginger cat' rules out the other cats. Commas separate two adjectives that each describe the noun, as in 'the old, creaky door'. A quick test: if you could put 'and' between them, use a comma.",
+   "Common mistakes: putting the adjective after the noun ('the cat fluffy'), adding a verb and calling it a noun phrase ('the rabbit hops' is a clause), a comma after 'the' or just before the noun, and piling up vague words ('a nice, good, lovely dog'). Be careful with stacks of colour and size words such as 'big black dog': English puts size before colour and needs no comma there. Two or three precise words beat five vague ones.",
+   "In the lab your child drags describing words onto 'the cat' and watches a line-up of four cats shrink until only the starred one fits. Then they build phrases in order, place the comma, swap a vague word for a precise one, and tap every word of the noun phrase in a sentence."
+  ]
+ },
+ "familyTip": "Play \"Which one?\": put four similar things on the table (cups, socks, toy cars). Take turns describing one in a noun phrase, like \"the small striped sock\", until the other person can point to it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it an expanded noun phrase? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Expanded noun phrase", "Not one"],
+   "items": [
+    ["the blue butterfly", 0],
+    ["the dog barks", 1],
+    ["a tiny, shivering kitten", 0],
+    ["cat fluffy the", 1],
+    ["the old, creaky door", 0],
+    ["runs fast", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnph",
+  "caption": "Flagship lab: add describing words until only one cat fits, build phrases in order, place the comma, pick precise words and find the noun phrase.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is an expanded noun phrase?",
+   "choices": ["the shiny red bike", "the bike goes", "bike red the"],
+   "answer": 0,
+   "hint": "Look for the or a, then describing words, then the noun.",
+   "explain": "\"The shiny red bike\" has describing words before the noun bike. \"The bike goes\" has a doing word, so it is a sentence."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You write \"the\", then {a} describing words, then the noun \"dog\". How many words are in your noun phrase?",
+   "answer": "a+2",
+   "hint": "Count \"the\", the {a} describing words, and \"dog\".",
+   "explain": "1 word (the) + {a} describing words + 1 noun (dog) = {=a+2} words in the noun phrase.",
+   "params": {"a": [1, 4]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Where does the comma go?",
+   "choices": ["a tiny, shivering kitten", "a, tiny shivering kitten", "a tiny shivering, kitten"],
+   "answer": 0,
+   "hint": "Could you say \"tiny and shivering\"? Put the comma where the and would go.",
+   "explain": "The comma goes between the two describing words: a tiny, shivering kitten. There is no comma after a or before the noun."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "There are {n} balls. {k} of them are red. You say \"the red ball\". How many balls could you mean?",
+   "answer": "k",
+   "where": "k<n",
+   "hint": "Which balls fit the word red?",
+   "explain": "Only the red balls fit, so you could mean {k} balls. Add another describing word to pick out just one.",
+   "params": {"n": [3, 6], "k": [2, 4]}
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which word is the noun in \"the old green bus\"?",
+    "choices": ["bus", "green", "old"],
+    "answer": 0,
+    "hint": "The noun is the thing. Old and green describe it.",
+    "explain": "Bus is the noun, the naming word. Old and green are describing words (adjectives) that tell us about the bus."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which tells you most about the box?",
+    "choices": ["the heavy, wooden box", "the nice box", "the box"],
+    "answer": 0,
+    "hint": "Which one helps you picture the box?",
+    "explain": "Heavy and wooden tell you what the box is like. Nice does not say what it looks like, and \"the box\" has no describing words."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is in the right order?",
+    "choices": ["the fluffy white rabbit", "the rabbit fluffy white", "fluffy the white rabbit"],
+    "answer": 0,
+    "hint": "Start with the. Put the noun last.",
+    "explain": "The order is: the, then describing words, then the noun. So: the fluffy white rabbit."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which describing word fits a mouse best?",
+    "choices": ["tiny", "giant", "good"],
+    "answer": 0,
+    "hint": "Think about what a mouse looks like.",
+    "explain": "Mice are small, so tiny fits. Giant is wrong, and good does not tell us what it looks like."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Sam wrote {a} noun phrases. Each one has two describing words and one comma, like \"the cold, wet grass\". How many commas did Sam use?",
+    "answer": "a",
+    "hint": "Each noun phrase has one comma.",
+    "explain": "One comma in each of {a} noun phrases is {a} commas.",
+    "params": {"a": [2, 6]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which one is the noun phrase in \"The tiny kitten hid\"?",
+    "choices": ["The tiny kitten", "kitten hid", "tiny hid"],
+    "answer": 0,
+    "hint": "Find the noun and all of its describing words. Leave out the doing word.",
+    "explain": "\"The tiny kitten\" is the noun phrase. Hid is a doing word (a verb), so it is not part of it."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A line has {n} cats. You say \"the black cat\" and {k} cats still fit. How many cats did the word black rule out?",
+    "answer": "n-k",
+    "where": "k<n",
+    "hint": "Start with all {n} cats. Take away the {k} that are black.",
+    "explain": "{n} take away {k} is {=n-k}, so black ruled out {=n-k} cats. That is how a describing word picks out which one.",
+    "params": {"n": [4, 7], "k": [1, 3]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is the best way to make \"the dog\" bigger?",
+    "choices": ["the scruffy brown dog", "the nice good lovely dog", "the dog runs"],
+    "answer": 0,
+    "hint": "Choose words that help you see the dog. A doing word does not count.",
+    "explain": "Scruffy and brown help you picture the dog. Nice, good and lovely do not say what it looks like."
+   }
+  ]
+ }
+}

@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_sQpIV0-qY7",
+ "title": "Ocean Depth Zones",
+ "audience": "family",
+ "keyIdea": "Sunlight fades as it goes down into the sea, so the open ocean has three zones. The sunlight zone is the top 200 m, where there is plenty of light. The twilight zone, from 200 m to 1000 m, has only dim light. The midnight zone, below 1000 m, is dark all the time. Plants need light to make food, so they only grow in the sunlight zone, and that is where most sea life lives.",
+ "familyTip": "Fill a tall glass or a clear bottle with water and add a few drops of milk. Shine a torch down from the top in a dark room and look at the side: the light is bright at the top and gets dimmer lower down. Ask which part would be the sunlight, twilight and midnight zone.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which zone is it? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "☀️ Sunlight zone",
+    "🌆 Twilight zone",
+    "🌑 Midnight zone"
+   ],
+   "items": [
+    [
+     "Seaweed and tiny plants grow here",
+     0
+    ],
+    [
+     "Sea turtles swim up here to breathe",
+     0
+    ],
+    [
+     "Dim blue light, too little for plants",
+     1
+    ],
+    [
+     "Lanternfish hide here in the day",
+     1
+    ],
+    [
+     "No sunlight at all, day or night",
+     2
+    ],
+    [
+     "Anglerfish hunt with a glowing lure",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdepth",
+  "caption": "Flagship lab: dive a submarine and watch the light fade, name the three zones, plant sea plants, find each animal its home, and drop food down to the deep.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Sunlight shines down into the sea. But water soaks it up. The deeper you go, the less light there is. Far down, there is no light at all.",
+   "So the sea has three zones. The sunlight zone is the top part, down to 200 m. It is bright. The twilight zone goes from 200 m to 1000 m. It is dim, like the sky in the evening. The midnight zone is below 1000 m. It is dark all day and all night.",
+   "Sea plants need light to make their food. So they only grow in the sunlight zone. Lots of animals eat the plants, so most sea life lives near the top.",
+   "Deep animals still find food. Bits of dead plants and animals sink down from above, like snow. Some deep fish, like the anglerfish, make their own light to catch prey."
+  ],
+  "adult": [
+   "Ages 7 to 9. Ocean scientists divide the open ocean into layers by how much sunlight reaches them: the sunlight (epipelagic) zone from the surface to about 200 m, the twilight (mesopelagic) zone from 200 m to 1000 m, and the midnight (bathypelagic) zone below 1000 m. Deeper layers exist, but these three are the ones children meet first.",
+   "Light drops quickly because water absorbs it. In clear water only about 1% of surface light is left at 200 m, which is too little for plants to make food. Below about 1000 m no sunlight is left at all. The only light there is made by animals themselves (bioluminescence).",
+   "Common mistakes: thinking light stays the same all the way down; thinking the midnight zone is dark only at night; putting plants in every zone; and thinking nothing can live where nothing grows. Deep animals eat 'marine snow', bits of dead plants and animals and droppings that sink from above, or they eat each other.",
+   "In the lab your child dives a submarine to 1000 m while a light meter falls to zero. They name the zones in order and plant sea plants that only grow near the top. They put a turtle, a lanternfish and an anglerfish in their zones, then drop food that sinks down to the anglerfish."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What happens to sunlight as you go deeper into the sea?",
+   "choices": [
+    "It fades until there is none",
+    "It stays the same",
+    "It gets brighter near the sea floor"
+   ],
+   "answer": 0,
+   "hint": "Think about the light meter on the submarine.",
+   "explain": "Water soaks up sunlight. By 200 m almost all of it is gone, and below 1000 m there is none."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The midnight zone starts at 1000 m. A submarine is at {=d*100} m. How many more metres must it dive to reach the midnight zone?",
+   "answer": "1000-d*100",
+   "hint": "Take the depth it is at away from 1000.",
+   "explain": "1000 − {=d*100} = {=1000-d*100}. It must dive {=1000-d*100} m more.",
+   "params": {
+    "d": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which list puts the zones in order from the top to the bottom?",
+   "choices": [
+    "Sunlight, twilight, midnight",
+    "Midnight, twilight, sunlight",
+    "Twilight, sunlight, midnight"
+   ],
+   "answer": 0,
+   "hint": "The top gets the most light.",
+   "explain": "From most light to least: sunlight on top, twilight in the middle, midnight at the bottom."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A fish swims {=s*10} m below the surface. The sunlight zone goes down to 200 m. How many metres deeper could the fish go and still be in the sunlight zone?",
+   "answer": "200-s*10",
+   "hint": "Take the fish's depth away from 200.",
+   "explain": "200 − {=s*10} = {=200-s*10}. It can go {=200-s*10} m deeper before it reaches the twilight zone.",
+   "params": {
+    "s": [
+     1,
+     19
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why do sea plants only grow in the sunlight zone?",
+   "choices": [
+    "They need light to make their food",
+    "The water is too cold for them lower down",
+    "Fish eat all the plants lower down"
+   ],
+   "answer": 0,
+   "hint": "What does the sunlight zone have that the others do not?",
+   "explain": "Plants use light to make food. Below 200 m there is too little light for them."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which zone is dark all day and all night?",
+    "choices": [
+     "The midnight zone",
+     "The twilight zone",
+     "The sunlight zone"
+    ],
+    "answer": 0,
+    "hint": "Its name sounds like the darkest time of night.",
+    "explain": "No sunlight reaches the midnight zone, so it is always dark there, even at midday."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Is the midnight zone dark at midday?",
+    "choices": [
+     "Yes, sunlight never reaches it",
+     "No, it is only dark at night",
+     "No, the Sun lights it at midday"
+    ],
+    "answer": 0,
+    "hint": "Midnight is just its name. Think about how deep it is.",
+    "explain": "It is below 1000 m. Sunlight never gets that deep, so it is dark all the time."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Where does most sea life live?",
+    "choices": [
+     "In the sunlight zone",
+     "In the midnight zone",
+     "The same amount in every zone"
+    ],
+    "answer": 0,
+    "hint": "Where do the plants grow?",
+    "explain": "Plants grow in the sunlight zone, and lots of animals eat them, so most sea life is near the top."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "An anglerfish has a glowing lure to catch food in the dark. Which zone is it from?",
+    "choices": [
+     "Midnight zone",
+     "Sunlight zone",
+     "A rock pool"
+    ],
+    "answer": 0,
+    "hint": "A glowing light only helps where it is dark.",
+    "explain": "Its lure works in total darkness, so it lives deep in the midnight zone."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Nothing grows in the midnight zone. What do animals there eat?",
+    "choices": [
+     "Bits of food that sink down from above",
+     "Plants that grow in the dark",
+     "They do not eat"
+    ],
+    "answer": 0,
+    "hint": "Think about what happened when you dropped food in the lab.",
+    "explain": "Bits of dead plants and animals sink from the sunlit zone. This 'marine snow' feeds the deep, and some deep animals eat each other."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A diver is at {=d*10} m. The twilight zone starts at 200 m. How many more metres down is the twilight zone?",
+    "answer": "200-d*10",
+    "hint": "Take the diver's depth away from 200.",
+    "explain": "200 − {=d*10} = {=200-d*10}. The twilight zone starts {=200-d*10} m further down.",
+    "params": {
+     "d": [
+      2,
+      18
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is the twilight zone like?",
+    "choices": [
+     "Dim, with too little light for plants",
+     "Bright, with lots of seaweed",
+     "Totally dark, with no light at all"
+    ],
+    "answer": 0,
+    "hint": "Twilight is the time of evening when it is getting dark.",
+    "explain": "Some dim blue light reaches it, but not enough for plants to make food."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A sea turtle has to swim up to breathe air. Which zone does it live in?",
+    "choices": [
+     "Sunlight zone",
+     "Twilight zone",
+     "Midnight zone"
+    ],
+    "answer": 0,
+    "hint": "Air is at the top of the sea.",
+    "explain": "It stays near the surface to breathe and eats sea grass and jellyfish there, in the sunlight zone."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "The twilight zone starts at 200 m. A lanternfish is resting {=d*100} m deep. How many metres below the top of the twilight zone is it?",
+    "answer": "d*100-200",
+    "hint": "Take 200, where the twilight zone starts, away from the fish's depth.",
+    "explain": "{=d*100} − 200 = {=d*100-200}. The lanternfish is {=d*100-200} m below the top of the twilight zone.",
+    "params": {
+     "d": [
+      3,
+      9
+     ]
+    }
+   }
+  ]
+ }
+}

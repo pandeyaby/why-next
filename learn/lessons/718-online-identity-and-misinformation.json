@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_WtO50EZQkf",
+ "title": "Online Identity and Misinformation",
+ "audience": "learner",
+ "keyIdea": "Apps learn from what you like and show you more of it, so your feed can shrink into a filter bubble. False posts often spread further and faster than true ones, because shock, anger and surprise make people share before they check. Anyone can be fooled, so use habits, not gut feeling: pause, read sideways by opening new tabs to see what others say about a source, and look for tricks like rush, fear and one-person stories. Be the same person online as off, and ask before posting anyone else's photo or details.",
+ "familyTip": "Pick a viral post together this week. Ask: who made this, and what do other sites say about them? Open a new tab and check. Then swap feeds for five minutes and compare: what does each of your apps think you like?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each habit a real check or a false comfort? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Real check",
+    "False comfort"
+   ],
+   "items": [
+    [
+     "Search what other sites say about the source",
+     0
+    ],
+    [
+     "It has thousands of likes",
+     1
+    ],
+    [
+     "Look for the original study or report",
+     0
+    ],
+    [
+     "It feels true to me",
+     1
+    ],
+    [
+     "Check a fact-checking site",
+     0
+    ],
+    [
+     "The site's About page says it is trusted",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfeed",
+  "caption": "Flagship lab: watch a feed narrow into a filter bubble, see shocking posts spread, read sideways, spot tricks and ask before posting.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Apps watch what you tap and like. Then they show you more of the same. Like four gaming posts and your feed fills up with games. You see less of everything else. This is called a filter bubble. Searching for new things on purpose helps you break out.",
+   "False posts often spread faster than true ones. A big study of Twitter found that false news was 70% more likely to be shared. Why? It is often new, shocking or scary. Strong feelings make us share before we think.",
+   "Clever people get fooled too. A claim we see again and again starts to feel true. So do not trust a gut feeling. Use a habit. Leave the page and open a new tab. Search for who runs the site and what others say about the claim. This is called reading sideways, or lateral reading.",
+   "Your online self is still you. If you would not say it to a face, do not post it. Photos and details of other people belong to them too. Ask before you post a photo of a friend. Never share someone's address or private chats."
+  ],
+  "adult": [
+   "Ages 12 to 13. This fits the PSHE Association programme for Key Stage 3. It covers media literacy and digital resilience: how apps choose what we see, and how to judge a source. It also fits the statutory RSE and Health Education guidance on online and media. Key terms: digital footprint, recommendation algorithm, filter bubble, misinformation, disinformation, lateral reading, source evaluation, consent.",
+   "The evidence is strong. Vosoughi, Roy and Aral studied Twitter in 2018. False stories were 70% more likely to be retweeted than true ones, and spread faster. Novelty and emotion drove it. The Stanford History Education Group found that fact-checkers judge an unknown site by leaving it. They read what others say about it. Students and even professors stayed on the page. Seeing a claim again and again also makes it feel truer. This is the illusory truth effect.",
+   "Common mistakes: trusting a site's own About page; treating likes or shares as evidence; and thinking only foolish people are misled, which makes people overconfident. Children may also think a feed shows a fair picture of the world, or that a photo they took is theirs alone to post. Another slip is thinking that deleting a post removes it. Others may already have copied it.",
+   "In the lab your child likes posts and watches six feed slots narrow. Then they search for something new to widen it. They raise a post's shock level and see its reach over four rounds grow from 5 people to 781. They pick which checks of a scary health claim help. They tap four tricks in a viral post, and decide to post, ask first or not post in six cases."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A shocking post is shared by 1 person. Each person who sees it shares it with {s} more. How many new people see it in round 2?",
+   "answer": "s*s",
+   "hint": "Round 1 reaches {s} people. Each of them shares with {s} more.",
+   "explain": "Round 2 is {s} × {s} = {=s*s} new people. Shares multiply each round, which is why shocking posts spread so fast.",
+   "params": {
+    "s": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "You find a scary claim on a site you have never heard of. What do fact-checkers do first?",
+   "choices": [
+    "Open new tabs to see what others say about the site",
+    "Read the site's About page",
+    "Check how many likes it has"
+   ],
+   "answer": 0,
+   "hint": "Can a site be trusted to describe itself?",
+   "explain": "Fact-checkers leave the page and read sideways. A site's own About page only says what it wants you to believe."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Your feed shows 10 posts. {g} are about gaming. How many posts are about other things?",
+   "answer": "10-g",
+   "hint": "Take the gaming posts away from all 10.",
+   "explain": "10 − {g} = {=10-g} posts about anything else. The more you like one thing, the smaller that number gets.",
+   "params": {
+    "g": [
+     4,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which part of a post is a trick, not evidence?",
+   "choices": [
+    "SHARE before they delete this!",
+    "Published by the NHS on 3 May",
+    "A link to the full study"
+   ],
+   "answer": 0,
+   "hint": "Which part tries to make you act before you think?",
+   "explain": "Rushing you to share is a manipulation trick. A named source, a date and a link are things you can check."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You took a funny photo of three friends. What should you do before posting it?",
+   "choices": [
+    "Ask them if they are happy for it to go online",
+    "Nothing, you took it",
+    "Post it and delete it if anyone complains"
+   ],
+   "answer": 0,
+   "hint": "Whose faces are in the photo?",
+   "explain": "Their faces are theirs. Ask first. Once it is online, others can copy it, so deleting later may be too late."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is a filter bubble?",
+    "choices": [
+     "When an app shows you more and more of what you already like",
+     "A spam filter for email",
+     "A setting that blocks all news"
+    ],
+    "answer": 0,
+    "hint": "Think about what happened to the feed after four likes.",
+    "explain": "Recommendation apps show more of what you click, so you see fewer other views and topics."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why can very clever people believe false posts?",
+    "choices": [
+     "Seeing a claim many times and strong feelings make it feel true",
+     "Clever people never believe false posts",
+     "False posts are always easy to spot"
+    ],
+    "answer": 0,
+    "hint": "Does feeling sure mean you checked?",
+    "explain": "Repeats make claims feel familiar and true, and emotion cuts checking short. Everyone needs checking habits."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A post is shared by 1 person, and each person shares with {s} others for 3 rounds. How many people see it in round 3?",
+    "answer": "s*s*s",
+    "hint": "Multiply by {s} for each round: {s}, then {s} × {s}, then once more.",
+    "explain": "{s} × {s} × {s} = {=s*s*s} people in round 3 alone.",
+    "params": {
+     "s": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A post has 80,000 shares. What does that tell you?",
+    "choices": [
+     "That it is popular, not that it is true",
+     "That it must be true",
+     "That experts checked it"
+    ],
+    "answer": 0,
+    "hint": "Do false posts get shared too?",
+    "explain": "Shares measure attention. False, shocking posts are often shared more than true ones."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ella posts a mean comment she would never say to someone's face. What is the problem?",
+    "choices": [
+     "Her online self should match her real self",
+     "Nothing, online does not count",
+     "Only that she used capitals"
+    ],
+    "answer": 0,
+    "hint": "Is the person reading it real?",
+    "explain": "The person reading it is real and so is Ella. Be the same person online as offline."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the best way to widen your feed?",
+    "choices": [
+     "Search for and follow new topics on purpose",
+     "Like only the posts you already agree with",
+     "Scroll faster"
+    ],
+    "answer": 0,
+    "hint": "The app learns from what you choose.",
+    "explain": "Choosing new things teaches the app to show a wider mix."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Out of {n} posts in a feed, 3 are about something new to you. How many are more of what you already like?",
+    "answer": "n-3",
+    "hint": "Take the 3 new posts away from all {n}.",
+    "explain": "{n} − 3 = {=n-3} posts repeat what you already like.",
+    "params": {
+     "n": [
+      8,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which of these is reading sideways?",
+    "choices": [
+     "Searching the name of the site to see what others say",
+     "Reading every word of the post twice",
+     "Looking at the site's logo"
+    ],
+    "answer": 0,
+    "hint": "Do you stay on the page or leave it?",
+    "explain": "Lateral reading means leaving the page and checking other sources about it."
+   }
+  ]
+ }
+}

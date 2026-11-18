@@ -1,0 +1,266 @@
+{
+ "topicId": "mt_B8_RugzU3b",
+ "title": "The complex number system",
+ "audience": "learner",
+ "keyIdea": "A complex number is z = a + bi, where a and b are real numbers and i² = −1. The real part is Re(z) = a and the imaginary part is Im(z) = b; note that b is real and has no i. Every real number is a complex number with b = 0, and the purely imaginary numbers have a = 0 and b ≠ 0, so both sets sit inside the complex numbers ℂ. Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal, so one complex equation gives two real equations.",
+ "familyTip": "Ask your teenager to explain why 3 + 2i and 2 + 3i are different numbers, and whether 7 counts as a complex number. Then give them a puzzle like 5 + yi = x − 4i and ask for x and y. If they can say why one equation finds two unknowns, they have the key idea.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Real, purely imaginary or neither? Drag each number, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Real",
+    "Purely imaginary",
+    "Neither"
+   ],
+   "items": [
+    [
+     "−12",
+     0
+    ],
+    [
+     "6i",
+     1
+    ],
+    [
+     "3 − 2i",
+     2
+    ],
+    [
+     "i²",
+     0
+    ],
+    [
+     "√(−4)",
+     1
+    ],
+    [
+     "−1 + i",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcplx",
+  "caption": "Flagship lab: drag a point on the complex plane, sort numbers into ℂ, equate real and imaginary parts, write expressions as a + bi and test equality.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "No real number squares to give a negative answer. So mathematicians added a new number, i, with i² = −1. Mixing i with real numbers gives complex numbers. Every complex number can be written as z = a + bi, where a and b are both real.",
+   "The two parts have names. a is the real part, written Re(z). b is the imaginary part, written Im(z). For z = 4 − 7i, Re(z) = 4 and Im(z) = −7. The imaginary part is the real number in front of i, not −7i. Order matters too: 3 + 2i and 2 + 3i are different numbers.",
+   "The complex numbers, ℂ, contain the numbers you already know. Any real number a is a + 0i, so the reals are the complex numbers with b = 0. Numbers like 5i have a = 0 and b ≠ 0, so they are purely imaginary. Most complex numbers, such as 2 + i, have both parts. On the complex plane, a goes across and b goes up.",
+   "Two complex numbers are equal only if both parts match. So 3 + yi = x − 2i means x = 3 and y = −2. One complex equation gives two real equations, which is why it can find two unknowns."
+  ],
+  "adult": [
+   "Ages 16 to 18. This matches CCSS N-CN.1: know there is a complex number i such that i² = −1, and every complex number has the form a + bi with a and b real. In England it is the starting point of complex numbers in AS Further Mathematics (AQA, Edexcel and OCR), including Re(z), Im(z) and equating real and imaginary parts.",
+   "Useful terms. ℂ is the set of complex numbers. ℝ is a subset of ℂ, the numbers with Im(z) = 0. A purely imaginary number has Re(z) = 0 and Im(z) ≠ 0; whether 0 counts as purely imaginary varies by textbook, so it is left out here. The complex plane, or Argand diagram, plots Re(z) across and Im(z) up. Equating parts works because 1 and i are independent: if a + bi = c + di with a, b, c, d real, then a = c and b = d.",
+   "Common mistakes to watch for. The most common slip is writing Im(4 − 7i) = −7i instead of −7. Students also swap the parts of a + bi, think real numbers are not complex, or treat i² as 1. When equating parts, some add everything into one equation, or forget that the unknowns must be real for the method to work. Another error is to say i is larger or smaller than 1: complex numbers have no ordering like real numbers do."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is Im(5 − 3i)?",
+   "choices": [
+    "−3",
+    "−3i",
+    "5"
+   ],
+   "answer": 0,
+   "hint": "The imaginary part is the real number multiplying i.",
+   "explain": "z = 5 + (−3)i, so Im(z) = −3. It is a real number, written without the i."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{a} + yi = x − {b}i, where x and y are real. What is x?",
+   "answer": "a",
+   "hint": "Equate the real parts: the real part on the left must equal the real part on the right.",
+   "explain": "The real parts must match, so x = {a}. The imaginary parts give y = −{b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     8
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "2x + (y − {k})i = {=2*h} + {m}i, where x and y are real. What is y?",
+   "answer": "m + k",
+   "hint": "Equate the imaginary parts: y − {k} = {m}.",
+   "explain": "y − {k} = {m}, so y = {=m+k}. The real parts give 2x = {=2*h}, so x = {h}.",
+   "params": {
+    "k": [
+     1,
+     5
+    ],
+    "h": [
+     1,
+     6
+    ],
+    "m": [
+     2,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which of these is a real number?",
+   "choices": [
+    "i²",
+    "3i",
+    "1 + i"
+   ],
+   "answer": 0,
+   "hint": "Use the definition of i: what is i² equal to?",
+   "explain": "i² = −1, which is real. 3i is purely imaginary and 1 + i has both parts."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Write √(−36) + 2 in the form a + bi.",
+   "choices": [
+    "2 + 6i",
+    "2 − 6i",
+    "8"
+   ],
+   "answer": 0,
+   "hint": "Split it: √(−36) = √36 × √(−1), then add the real part.",
+   "explain": "√(−36) = 6i, so the number is 2 + 6i: real part 2, imaginary part 6."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Is 9 a complex number?",
+    "choices": [
+     "Yes, it is 9 + 0i",
+     "No, it has no i",
+     "Only if it is written with i"
+    ],
+    "answer": 0,
+    "hint": "Can you write 9 in the form a + bi?",
+    "explain": "9 = 9 + 0i. Every real number is a complex number with imaginary part 0."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Are 2 + 5i and 5 + 2i equal?",
+    "choices": [
+     "No, the real parts differ",
+     "Yes, they use the same digits",
+     "Yes, both are complex"
+    ],
+    "answer": 0,
+    "hint": "Compare Re and Im separately.",
+    "explain": "Re is 2 for one and 5 for the other. Equal complex numbers need equal real and imaginary parts."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "(x + y) + (x − y)i = {=2*p} + {=2*q}i, where x and y are real. What is x?",
+    "answer": "p + q",
+    "hint": "Equate parts: x + y = {=2*p} and x − y = {=2*q}. Add the two equations.",
+    "explain": "Adding gives 2x = {=2*p+2*q}, so x = {=p+q}. Then y = {=p-q}.",
+    "params": {
+     "p": [
+      2,
+      6
+     ],
+     "q": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which number is purely imaginary?",
+    "choices": [
+     "−4i",
+     "−4",
+     "4 − 4i"
+    ],
+    "answer": 0,
+    "hint": "Purely imaginary means a = 0 and b ≠ 0.",
+    "explain": "−4i = 0 − 4i. −4 is real, and 4 − 4i has a non-zero real part."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "z = {a} − {b}i. What is Re(z) + Im(z)?",
+    "answer": "a - b",
+    "hint": "Re(z) = {a} and Im(z) = −{b}, both real numbers.",
+    "explain": "{a} + (−{b}) = {=a-b}. Im(z) is −{b}, not −{b}i, so you can add it to a real number.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Write 3 + 2i² in the form a + bi.",
+    "choices": [
+     "1",
+     "3 + 2i",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Replace i² with −1 first.",
+    "explain": "2i² = 2 × (−1) = −2, so 3 + 2i² = 1, which is 1 + 0i."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why can a + 3i = 7 + bi (a and b real) find two unknowns?",
+    "choices": [
+     "Real parts and imaginary parts give two equations",
+     "You can guess a and b",
+     "a + b must equal 10"
+    ],
+    "answer": 0,
+    "hint": "What must match when two complex numbers are equal?",
+    "explain": "Equal complex numbers have equal real parts (a = 7) and equal imaginary parts (b = 3): two real equations."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "On the complex plane, where are the real numbers?",
+    "choices": [
+     "On the horizontal axis",
+     "On the vertical axis",
+     "Nowhere on it"
+    ],
+    "answer": 0,
+    "hint": "A real number has Im(z) = 0.",
+    "explain": "Re(z) goes across and Im(z) goes up. With Im(z) = 0, real numbers lie on the horizontal axis."
+   }
+  ]
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against NGSS HS-PS2-1, the AQA GCSE Physics specification (W = mg, F = ma, g ≈ 9.8 N/kg) and NASA's Apollo 15 hammer–feather record (David Scott, 2 August 1971, 1.32 kg hammer and 0.03 kg falcon feather). Recomputed: landing time from 2 m is √(2 × 2 ÷ 9.8) = 0.64 s on Earth and √(2 × 2 ÷ 1.6) = 1.58 s on the Moon; v after 1–4 s is 9.8, 19.6, 29.4, 39.2 m/s and distance ½gt² is 4.9, 19.6, 44.1, 78.4 m; Moon data 1.6, 3.2, 4.8 m/s at 1, 2, 3 s. Drag on the two balls over 2 m is under 1% of the fall time, stated in the adult notes. The Moon item uses 8t/5 so answers print exactly (1.6 × 3 is 4.800000000000001 in floating point)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented free-fall misconceptions (Halloun and Hestenes, common-sense concepts about motion; the Force Concept Inventory items on dropped balls): heavier falls faster, gravity gives every object the same force, a feather is slow because it is light, 9.8 m/s² read as 9.8 m each second, v = g × t² for speed, and constant speed in a fall. The wrong-path run produced 'g = 9.8: the line is too steep. After 3 s it predicts 29.4 m/s, but the data say 4.8' and the heavier-ball message."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed under the 30% shingle limit, including against flag_mvw.js (Mass vs Weight, newtonmeter and planets) and the forces labs. No other lab animates a timed drop from 2 m on Earth and the airless Moon, shows a = W ÷ m staying at g as the mass slider changes the weight bar, steps a strobe of a falling stone second by second, or fits g as the slope of a speed–time graph to Moon data."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Six steps: drop a 7 kg and a 58 g ball together and see them land together at 0.64 s, drop a hammer and feather in air (feather drifts) and on the Moon (together at 1.58 s), drag mass 1–10 kg and watch weight grow while a stays 9.8, step a falling stone through 4 seconds with a speed and distance table, drag g until the line fits the Moon data (1.6), then the challenge. Each step ends with the rule in the banner."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions with tempting wrong options the lab disproves: which ball lands first (together vs bowling ball clearly first vs tennis ball), the Moon hammer and feather (together vs hammer first vs feather floats away), doubling mass (a stays 9.8 vs doubles vs halves), and speed after 3 s (29.4 vs 9.8 constant vs 88.2 from squaring). The reveal repeats the learner's own choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions (5 kg vs 1 kg, speed after 2 s, why heavy does not win, feather on Earth, Moon rock after 5 s, meaning of 9.8 m/s²) with answer order rotated. Twelve distinct wrong-answer messages name the slip, e.g. 'Speed is g × t, not g × t². 9.8 × 2 = 19.6 m/s. The t² belongs to the distance' and '49 m/s uses Earth's 9.8. On the Moon use 1.6'. A duplicated tag that made the feather message replace the steel-ball one was found in review and renamed."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation FK grade 2.4 overall (4.5, 0.5, 2.9, 3.0 by paragraph), under 6.5, with free fall defined in words before g and the mass-cancelling step written out. Adult notes FK 3.9, under 9.5, naming the standards, the model's limits and Aristotle's view. Banners were cut to two lines at 360 px."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with explanation overlap under 12% against every lesson, including Mass vs Weight and Gravity & Falling Objects. Each kid paragraph carries one idea the items test: same fall, why mass cancels, v = g × t, air resistance and the Moon. Adult notes give the standards, the checked facts, the modelling choices (g = 10 in items, feather at 0.4 m/s) and the named mistakes."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 in light and dark: the scene title, timer and ball labels first collided at the top of the drop scene, so the title and timer moved into the ground strip and the labels were shortened; three-line banners overflowed and were cut to two; the strobe labels for 0 s and 1 s overlapped, so the 1 s label is left to the table. The slider has a 52 px hit band and every control has a button."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "gate_browser runs axe WCAG 2.1 AA in both themes on desktop and iPhone 13, every Show me ends with a tick, and the screenshot and wrong-path runs logged no console or page errors. The canvas sits on a light card in dark mode (the Moon scene is dark with white labels), its aria-label reads the state (e.g. 'Moon, no air. Time 1.58 s. Hammer has fallen 2.00 of 2 m; Feather has fallen 2.00 of 2 m'), and reduced motion runs the drops 20 times faster."
+  }
+ },
+ "sources": [
+  "NGSS HS-PS2-1 (Forces and Motion)",
+  "AQA GCSE Physics (8463) specification, 4.5.1.3 weight and 4.5.6.2.2 Newton's second law",
+  "NASA, Apollo 15 Lunar Surface Journal: the hammer and the feather (1971)",
+  "I. A. Halloun and D. Hestenes, Common sense concepts about motion, American Journal of Physics 53 (1985)",
+  "NIST CODATA, standard acceleration of gravity 9.80665 m/s²"
+ ]
+}

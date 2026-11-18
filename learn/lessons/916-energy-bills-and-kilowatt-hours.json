@@ -1,0 +1,274 @@
+{
+ "topicId": "mt_QyFRTXTEV5",
+ "title": "Energy bills and kilowatt-hours",
+ "audience": "learner",
+ "keyIdea": "Power is how fast energy is transferred: 1 watt is 1 joule every second. So energy transferred = power × time, E = P × t, with P in watts and t in seconds giving joules. A 1000 W microwave transfers 60 000 J in a minute. Joules are tiny for a home, so bills use the kilowatt-hour: the energy a 1 kW appliance transfers in 1 hour, which is 1000 W × 3600 s = 3 600 000 J. To get kWh, put the power in kilowatts and the time in hours: a 100 W TV on for 5 hours uses 0.1 × 5 = 0.5 kWh. The cost is the energy in kWh × the price per kWh. A meter counts kWh, so the energy used is the new reading minus the old one. A low-power device left on all day can cost more than a powerful one used for a few minutes.",
+ "familyTip": "Find the power rating (in W or kW) on the label of a kettle, a phone charger and a TV. Guess how long each is used in a day, work out the kWh, and use the unit price on your own bill to find the daily cost.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "How much energy does each one use? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "0.5 kWh",
+    "1 kWh",
+    "2 kWh"
+   ],
+   "items": [
+    [
+     "100 W for 5 hours",
+     0
+    ],
+    [
+     "2 kW for 15 minutes",
+     0
+    ],
+    [
+     "500 W for 1 hour",
+     0
+    ],
+    [
+     "1 kW for 1 hour",
+     1
+    ],
+    [
+     "2 kW for 30 minutes",
+     1
+    ],
+    [
+     "250 W for 4 hours",
+     1
+    ],
+    [
+     "2 kW for 1 hour",
+     2
+    ],
+    [
+     "500 W for 4 hours",
+     2
+    ],
+    [
+     "4 kW for 30 minutes",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagkwh",
+  "caption": "Flagship lab: run appliances on a joule meter, drag a power × time rectangle to make 1 kWh, convert units, rank daily costs, turn meter readings into a bill.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Power tells you how fast energy is moved. One watt is one joule every second. So a 1000 W microwave moves 1000 J each second, and 60 000 J in a minute. The rule is E = P × t: energy in joules is power in watts times time in seconds.",
+   "Joules are small, so bills use a bigger unit, the kilowatt-hour (kWh). It is the energy a 1 kW device uses in 1 hour. That is 1000 W × 3600 s = 3 600 000 J. A 2 kW heater for half an hour and a 100 W lamp for 10 hours each use 1 kWh too.",
+   "To find kWh, change the power to kilowatts and the time to hours first. A 100 W TV for 5 hours is 0.1 kW × 5 h = 0.5 kWh, not 500. A 3 kW kettle for 6 minutes is 3 × 0.1 = 0.3 kWh, because 6 minutes is a tenth of an hour.",
+   "The cost is kWh × the price of one kWh. At 25p per kWh, 6 kWh costs 150p, which is £1.50. A meter counts up in kWh, so take the old reading from the new one to find what you used. A small device left on all day can cost more than a big one used for a few minutes."
+  ],
+  "adult": [
+   "Ages 14 to 16. The Key Stage 3 programme of study in England lists comparing amounts of energy transferred (J, kJ, kW hour), power ratings in W and kW, and domestic fuel bills, fuel use and costs. GCSE Physics (for example AQA 8463, section 4.2.4) uses E = P t with energy in joules, power in watts and time in seconds, and asks students to compare everyday appliances by power and energy transferred.",
+   "The lab works from the definition of a watt to a real bill. Students run four appliances for 60 s on a joule meter and find the one giving 60 000 J, drag the corner of a power × time rectangle to make 1 kWh three ways along a 1 kWh curve, convert W and minutes before multiplying, rank four appliances by daily cost, and turn two meter readings into a bill. The 25p per kWh unit price is a round example, not a current tariff.",
+   "Common mistakes. Students often multiply watts by hours and call it kWh (100 W × 5 h = 500 kWh), use minutes as hours or write 6 minutes as 0.6 h, and mix seconds and hours in E = P t. Many think 1 kWh is 1000 J or 3600 J. Others assume the highest-power appliance always costs most, add or quote meter readings instead of subtracting, and write 1950p as £1950. Ask students to write the units at every step."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A {=p*100} W lamp is on for {t} hours. How many kWh does it use?",
+   "answer": "p*t/10",
+   "hint": "Change watts to kilowatts (divide by 1000), then multiply by the hours.",
+   "explain": "{=p*100} W = {=p/10} kW, and {=p/10} kW × {t} h = {=p*t/10} kWh.",
+   "params": {
+    "p": [
+     1,
+     9
+    ],
+    "t": [
+     1,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "How many joules are in 1 kWh?",
+   "choices": [
+    "3 600 000 J",
+    "1000 J",
+    "3600 J"
+   ],
+   "answer": 0,
+   "hint": "1 kWh is 1000 W for one hour. How many seconds are in an hour?",
+   "explain": "1 kWh = 1000 W × 3600 s = 3 600 000 J. 3600 is only the number of seconds, and 1000 J is a kilojoule."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A {k} kW heater runs for {h} hours. Electricity costs 25p per kWh. What does it cost, in pence?",
+   "answer": "k*h*25",
+   "hint": "Find the kWh first (kW × hours), then multiply by the price.",
+   "explain": "{k} kW × {h} h = {=k*h} kWh, and {=k*h} × 25p = {=k*h*25}p.",
+   "params": {
+    "k": [
+     1,
+     3
+    ],
+    "h": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A 3 kW kettle boils for 6 minutes. How much energy is that in kWh?",
+   "choices": [
+    "0.3 kWh",
+    "18 kWh",
+    "1.8 kWh"
+   ],
+   "answer": 0,
+   "hint": "6 minutes is what fraction of an hour?",
+   "explain": "6 minutes = 6 ÷ 60 = 0.1 h, so 3 kW × 0.1 h = 0.3 kWh. 18 uses minutes as hours, and 1.8 treats 6 minutes as 0.6 h."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which costs more to run each day at the same price per kWh?",
+   "choices": [
+    "20 W lights left on for 24 hours",
+    "A 3 kW kettle used for 6 minutes",
+    "They cost the same"
+   ],
+   "answer": 0,
+   "hint": "Work out the kWh for each: kW × hours.",
+   "explain": "The lights use 0.02 kW × 24 h = 0.48 kWh and the kettle 3 kW × 0.1 h = 0.3 kWh, so the lights cost more even though their power is far lower."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A {=p*100} W device runs for {s} seconds. How much energy does it transfer, in joules?",
+    "answer": "p*100*s",
+    "hint": "E = P × t, with P in watts and t in seconds.",
+    "explain": "{=p*100} W × {s} s = {=p*100*s} J.",
+    "params": {
+     "p": [
+      1,
+      20
+     ],
+     "s": [
+      10,
+      60
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A 100 W TV is on for 5 hours. How much energy does it use?",
+    "choices": [
+     "0.5 kWh",
+     "500 kWh",
+     "20 kWh"
+    ],
+    "answer": 0,
+    "hint": "Divide the watts by 1000 first.",
+    "explain": "100 W = 0.1 kW, and 0.1 kW × 5 h = 0.5 kWh. 500 kWh multiplies watts by hours, and 20 divides instead of multiplying."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A meter read {=a*100} kWh last month and {=a*100+d} kWh this month. How many kWh were used?",
+    "answer": "d",
+    "hint": "The meter only counts up. Take the old reading from the new one.",
+    "explain": "{=a*100+d} − {=a*100} = {d} kWh were used.",
+    "params": {
+     "a": [
+      12,
+      48
+     ],
+     "d": [
+      60,
+      250
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A meter went from 4512 kWh to 4590 kWh. At 25p per kWh, what is the bill?",
+    "choices": [
+     "£19.50",
+     "£1950",
+     "£3.12"
+    ],
+    "answer": 0,
+    "hint": "Find the kWh used, then multiply by 25p. Change pence to pounds at the end.",
+    "explain": "4590 − 4512 = 78 kWh, and 78 × 25p = 1950p = £19.50. £1950 forgets to change pence to pounds, and £3.12 divides by the price."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A 2 kW heater runs for 30 minutes. How much energy is that?",
+    "choices": [
+     "1 kWh",
+     "60 kWh",
+     "15 kWh"
+    ],
+    "answer": 0,
+    "hint": "30 minutes is half an hour.",
+    "explain": "2 kW × 0.5 h = 1 kWh. 60 uses minutes as hours, and 15 divides 30 by 2."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why do electricity bills use kWh instead of joules?",
+    "choices": [
+     "A joule is tiny: one kWh is 3 600 000 J",
+     "A kWh is smaller and more precise",
+     "Joules only measure heat"
+    ],
+    "answer": 0,
+    "hint": "How many joules would a home use in a day?",
+    "explain": "A home uses millions of joules a day, so the kWh (3.6 million joules) gives sensible numbers. Joules measure every kind of energy, not just heat."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Ali says the kettle must cost the most to run because it has the highest power. What has he forgotten?",
+    "choices": [
+     "How long each appliance is on",
+     "The voltage of the socket",
+     "The colour of the kettle"
+    ],
+    "answer": 0,
+    "hint": "Energy depends on the power and on how long it is switched on.",
+    "explain": "Cost depends on energy, which is power × time. A kettle is on for a few minutes a day, so a low-power device left on all day can use more kWh."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A 1500 W hair dryer runs for 2 minutes. How much energy does it transfer?",
+    "choices": [
+     "180 000 J",
+     "3000 J",
+     "3 J"
+    ],
+    "answer": 0,
+    "hint": "For joules, use watts and seconds.",
+    "explain": "2 minutes = 120 s, and 1500 W × 120 s = 180 000 J. 3000 J uses minutes, and 3 J uses kilowatts and minutes."
+   }
+  ]
+ }
+}

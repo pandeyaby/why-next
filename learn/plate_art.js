@@ -1,0 +1,66 @@
+/* Data for the tectonic plates flagship (flagplate): layers, speeds, boundary places, the two shapes for the jigsaw,
+   challenge questions and the feedback for each slip. Drawing and interaction are in flag_plate.js. */
+const PLART={
+ /* the story text for each lab step */
+ STEPP:[
+  'Earth has layers. The outer one, the crust, is thin and hard, and it is cracked into huge pieces called tectonic plates. Tap the crust, then the layer the plates sit on.',
+  'Plates move all the time, but very slowly. Under the Atlantic they spread about 2.5 cm a year. Drag the dot to add years and watch the gap.',
+  'Where two plates pull apart, hot rock from the mantle rises into the crack, cools and makes new crust. Most of these places are under the ocean.',
+  'When plates push together, something has to give. Push an ocean plate into a continent, then push two continents together.',
+  'Some plates grind past each other sideways. Their edges are rough, so they stick. Push the plate and watch the road and the strain bar.',
+  'Long ago, Alfred Wegener saw that South America and Africa fit like jigsaw pieces. Drag South America back to Africa and look at the fossils.',
+  'Read each real place and its clue. Is it pulling apart, pushing together or sliding past?'],
+ /* cross-section rings from the outside in: name, outer radius as a share of Earth's radius, fill, what it is */
+ /* the confirmation shown when each step's task is done */
+ DONE:[
+  'The plates are the crust and the top of the mantle, which is solid rock that flows very slowly.',
+  'A few centimetres a year adds up to 25 km in a million years.',
+  'Pulling apart makes new sea floor, as at the Mid-Atlantic Ridge and Iceland.',
+  'Ocean plates sink under continents; two continents crumple into mountains.',
+  'Sliding plates stick and jolt: each jolt is an earthquake, as on the San Andreas Fault.',
+  'Matching coasts, fossils and rocks show the continents were once joined.',
+  'Every place is on a plate edge.'],
+ LAYERS:[['crust',1,'#a16207','the thin, hard, rocky outer skin, broken into plates'],
+  ['mantle',.96,'#ea580c','hot, solid rock that can flow very slowly, like stiff putty'],
+  ['outer core',.55,'#f59e0b','hot, runny metal'],
+  ['inner core',.19,'#fde047','a hot, solid ball of metal']],
+ /* plates spread at about 2.5 cm a year, the speed of the Atlantic widening */
+ YEARS:[1,100,10000,1000000],
+ GAP:['2.5 cm, about a fingernail grows in a year','2.5 m, about the height of a ceiling','250 m, about two football pitches','25 km, wider than most cities'],
+ /* boundary sort: place, clue, answer 0 apart, 1 together, 2 sliding past */
+ PLACES:[['Iceland','A crack where new rock wells up and the island slowly gets wider.',0],
+  ['Himalayas','India pushes into Asia. The land crumples into the highest mountains.',1],
+  ['San Andreas Fault','Two plates grind side by side in California. Roads and fences get offset.',2],
+  ['Japan','An ocean plate sinks under Japan. There are deep trenches and volcanoes.',1],
+  ['Mid-Atlantic Ridge','A long ridge under the ocean where the sea floor is made.',0]],
+ KINDS:['Pulling apart','Pushing together','Sliding past'],
+ /* jigsaw: a shared coast (x,y in 0–1 of a panel) so the two simplified shapes fit only one way */
+ SEAM:[[.50,.10],[.47,.20],[.40,.28],[.36,.34],[.42,.40],[.50,.44],[.52,.56],[.48,.70],[.44,.84],[.40,.94]],
+ AFRICA:[[.80,.12],[.86,.30],[.80,.58],[.66,.90],[.52,.98]],
+ SAMER:[[.30,.98],[.26,.70],[.16,.46],[.20,.24],[.34,.06]],
+ FOSSIL:[[.47,.32],[.49,.52],[.46,.66]],
+ QZ:[['What are tectonic plates?',[['huge pieces of Earth\u2019s rocky outer shell','ok'],['floating islands on a sea of lava','lava'],['layers of the core','core']]],
+  ['How fast do plates move?',[['a few centimetres a year','ok'],['a few metres a day','fast'],['they do not move at all','still']]],
+  ['Two plates pull apart under the ocean. What happens?',[['hot rock rises and makes new sea floor','ok'],['a gap of empty space opens','hole'],['the plates crumple into mountains','mount']]],
+  ['An ocean plate meets a continent plate. What happens?',[['the ocean plate sinks under the continent','ok'],['the continent plate sinks under the ocean','under'],['they bounce apart','bounce']]],
+  ['How were the Himalayas made?',[['two continent plates pushed together','ok'],['two plates pulled apart','apartm'],['a giant volcano erupted','volc']]],
+  ['Plates slide past each other at the San Andreas Fault. What does this cause?',[['earthquakes when they jolt','ok'],['new sea floor','newfloor'],['smooth, gentle movement only','smooth']]],
+  ['Why are the same fossils found in Brazil and southern Africa?',[['the two continents were once joined','ok'],['the animals swam across the Atlantic','swim'],['it is a coincidence','luck']]],
+  ['Where do most earthquakes and volcanoes happen?',[['along the edges of plates','ok'],['in the middle of plates','middle'],['anywhere, with no pattern','random']]]],
+ WHY:{lava:'The mantle under the plates is solid rock, not a sea of lava. It is so hot that it flows very slowly, like stiff putty.',
+  core:'The core is deep inside. Plates are pieces of the crust and the top of the mantle: the thin rocky shell.',
+  fast:'Too fast. Plates creep a few centimetres a year, about as fast as your fingernails grow.',
+  still:'They do move, just slowly: about 2.5 cm a year under the Atlantic, so it is 25 km wider after a million years.',
+  hole:'No empty gap opens. Hot rock from the mantle rises into the crack, cools and becomes new sea floor.',
+  mount:'Crumpling into mountains happens when plates push together, not when they pull apart.',
+  under:'Ocean plates are heavier for their size, so the ocean plate is the one that sinks.',
+  bounce:'Plates do not bounce. One slides under, or the land crumples up.',
+  apartm:'Pulling apart makes ridges and new sea floor. The Himalayas rose as India pushed into Asia.',
+  volc:'The Himalayas are not volcanoes. Two continents crumpled up as India pushed into Asia.',
+  newfloor:'New sea floor is made where plates pull apart. Sliding past makes earthquakes.',
+  smooth:'The plates stick, strain builds up, then they jolt. That sudden jolt is an earthquake.',
+  swim:'Mesosaurus lived in lakes and could not swim an ocean. The land itself was joined, then split.',
+  luck:'It is evidence, not luck. The coasts fit and the fossils and rocks match because the land was joined.',
+  middle:'The middle of a plate is quiet. The shaking and volcanoes cluster where plates meet.',
+  random:'There is a clear pattern: they line up along plate edges, like the Ring of Fire round the Pacific.'}
+};

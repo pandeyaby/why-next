@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_7ooqjw-QwG",
+ "title": "Hyperbolic identities",
+ "audience": "learner",
+ "keyIdea": "From cosh x = (eˣ + e⁻ˣ)/2 and sinh x = (eˣ − e⁻ˣ)/2, squaring and subtracting gives cosh²x − sinh²x = 1 for every x (minus, not plus, because eˣ·e⁻ˣ = 1 makes the cross terms +2 and −2). The double-argument identities are sinh 2x = 2 sinh x cosh x and cosh 2x = cosh²x + sinh²x = 2cosh²x − 1 = 1 + 2sinh²x. Osborn's rule turns a trig identity into its hyperbolic version: swap each function for its hyperbolic partner and flip the sign of every product of two sines, including the one hidden in tan²x = sin²x/cos²x (so 1 + tan²x = sec²x becomes 1 − tanh²x = sech²x). The rule suggests the identity; a proof from the exponentials confirms it. Because cosh x ≥ 1, cosh x = √(1 + sinh²x) has one value, while sinh x = ±√(cosh²x − 1) has two.",
+ "familyTip": "Ask them to explain, without notes, why the hyperbolic version of cos²x + sin²x = 1 has a minus sign. A full answer mentions eˣ·e⁻ˣ = 1 and the 2ab cross term. Then give a trig identity, such as cos 2x = 2cos²x − 1, and ask for its hyperbolic partner and a one-line check at x = 0.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each hyperbolic identity true or false? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "✓ True",
+    "✗ False"
+   ],
+   "items": [
+    [
+     "cosh²x − sinh²x = 1",
+     0
+    ],
+    [
+     "sinh 2x = 2 sinh x cosh x",
+     0
+    ],
+    [
+     "cosh 2x = 1 + 2 sinh²x",
+     0
+    ],
+    [
+     "1 − tanh²x = sech²x",
+     0
+    ],
+    [
+     "cosh²x + sinh²x = 1",
+     1
+    ],
+    [
+     "cosh 2x = 1 − 2 sinh²x",
+     1
+    ],
+    [
+     "1 + tanh²x = sech²x",
+     1
+    ],
+    [
+     "cosh 2x = 2 cosh²x + 1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagosb",
+  "caption": "Flagship lab: watch cosh²x − sinh²x stay 1, prove it from eˣ, apply Osborn's rule, sort the forms of cosh 2x, find sinh from cosh, simplify.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Start from the definitions. cosh x = (eˣ + e⁻ˣ)/2 and sinh x = (eˣ − e⁻ˣ)/2. Square both. cosh²x = (e²ˣ + 2 + e⁻²ˣ)/4 and sinh²x = (e²ˣ − 2 + e⁻²ˣ)/4. The middle terms are 2 and −2 because eˣ times e⁻ˣ is 1. Subtract and you get 4/4, so cosh²x − sinh²x = 1.",
+   "The same method gives the double rules. sinh 2x = 2 sinh x cosh x. cosh 2x = cosh²x + sinh²x. Swap in the first identity to get two more forms: cosh 2x = 2cosh²x − 1 and cosh 2x = 1 + 2sinh²x.",
+   "Osborn's rule is a quick way to guess these. Take a trig identity and swap each function for its hyperbolic partner. Then flip the sign of every product of two sines. A tan²x counts, since it is sin²x over cos²x. So 1 + tan²x = sec²x becomes 1 − tanh²x = sech²x. The rule is a guide. To be sure, prove the result from eˣ.",
+   "Use the identity to move between sinh and cosh. If sinh x = 3/4, then cosh²x = 25/16 and cosh x = 5/4. There is only one answer, since cosh x is never less than 1. If cosh x = 5/3, then sinh²x = 16/9 and sinh x = 4/3 or −4/3, since x and −x have the same cosh."
+  ],
+  "adult": [
+   "Ages 17 to 18 (A level Further Maths, Further Pure). Students must prove and use cosh²x − sinh²x = 1 and the double argument results from the exponential definitions. They also use Osborn's rule to write down hyperbolic identities from trig ones. A proof must start from the definitions; Osborn's rule only predicts the result.",
+   "Two facts carry the topic. First, eˣ·e⁻ˣ = 1, so the cross terms in the squares are +2 and −2. That is why the sign is minus. Second, cosh x ≥ 1 for all real x, and sinh is odd. So cosh x = √(1 + sinh²x) has one value, but sinh x = ±√(cosh²x − 1) has two unless the sign of x is given.",
+   "Common mistakes: writing cosh²x + sinh²x = 1 by analogy with trig; dropping the 2 in the cross term, or taking eˣ·e⁻ˣ as 0; using the trig form 1 − 2sin²x for cosh 2x; missing the hidden product in tan²x with Osborn's rule; giving ±5/4 for cosh x; and giving only the positive value for sinh x.",
+   "In the lab the learner drags x and sees cosh²x and sinh²x grow while their difference stays 1. They fill in the constants of the proof, flip signs in six trig identities by Osborn's rule, and sort eight expressions as equal or not to cosh 2x. Then they work from sinh to cosh and back, and simplify four expressions."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which identity holds for every real x?",
+   "choices": [
+    "cosh²x − sinh²x = 1",
+    "cosh²x + sinh²x = 1",
+    "sinh²x − cosh²x = 1"
+   ],
+   "answer": 0,
+   "hint": "Try x = 0, where cosh 0 = 1 and sinh 0 = 0. Then try a large x.",
+   "explain": "Squaring the definitions gives (e²ˣ + 2 + e⁻²ˣ)/4 − (e²ˣ − 2 + e⁻²ˣ)/4 = 4/4 = 1, so cosh²x − sinh²x = 1. The plus version is the trig identity."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "sinh x = {k}. Use cosh 2x = 1 + 2 sinh²x to find cosh 2x.",
+   "answer": "1+2*k*k",
+   "hint": "Square {k}, double it, then add 1.",
+   "explain": "cosh 2x = 1 + 2 × {k}² = {=1+2*k*k}.",
+   "params": {
+    "k": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "By Osborn's rule, cos 2x = 1 − 2 sin²x becomes:",
+   "choices": [
+    "cosh 2x = 1 + 2 sinh²x",
+    "cosh 2x = 1 − 2 sinh²x",
+    "cosh 2x = 2 sinh²x − 1"
+   ],
+   "answer": 0,
+   "hint": "sin²x is a product of two sines. What happens to its sign?",
+   "explain": "Swap to hyperbolic functions and flip the sign of the sin²x term: cosh 2x = 1 + 2 sinh²x. It checks at x = 0: cosh 0 = 1."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "cosh x = {k}. Use cosh 2x = 2 cosh²x − 1 to find cosh 2x.",
+   "answer": "2*k*k-1",
+   "hint": "Square {k}, double it, then subtract 1.",
+   "explain": "cosh 2x = 2 × {k}² − 1 = {=2*k*k-1}.",
+   "params": {
+    "k": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Given cosh x = 5/3, which is the full answer for sinh x?",
+   "choices": [
+    "sinh x = ± 4/3",
+    "sinh x = 4/3",
+    "sinh x = 16/9"
+   ],
+   "answer": 0,
+   "hint": "sinh²x = cosh²x − 1. Then think about x and −x.",
+   "explain": "sinh²x = 25/9 − 1 = 16/9, so sinh x = ± 4/3. Both fit, because x and −x have the same cosh but opposite sinh."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "In the proof, (eˣ + e⁻ˣ)² expands to:",
+    "choices": [
+     "e²ˣ + 2 + e⁻²ˣ",
+     "e²ˣ + e⁻²ˣ",
+     "e²ˣ + 1 + e⁻²ˣ"
+    ],
+    "answer": 0,
+    "hint": "(a + b)² = a² + 2ab + b², and eˣ · e⁻ˣ = e⁰.",
+    "explain": "The cross term is 2 · eˣ · e⁻ˣ = 2 · 1 = 2, so (eˣ + e⁻ˣ)² = e²ˣ + 2 + e⁻²ˣ."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "sinh x = 4/3. What is cosh x?",
+    "choices": [
+     "5/3",
+     "± 5/3",
+     "√7/3"
+    ],
+    "answer": 0,
+    "hint": "cosh²x = 1 + sinh²x, and cosh x is never below 1.",
+    "explain": "cosh²x = 1 + 16/9 = 25/9. Since cosh x ≥ 1, take only the positive root: cosh x = 5/3."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "By Osborn's rule, 1 + tan²x = sec²x becomes:",
+    "choices": [
+     "1 − tanh²x = sech²x",
+     "1 + tanh²x = sech²x",
+     "tanh²x − 1 = sech²x"
+    ],
+    "answer": 0,
+    "hint": "tan²x = sin²x / cos²x. Does it contain a product of two sines?",
+    "explain": "tan²x hides sin²x, so its sign flips: 1 − tanh²x = sech²x. Dividing cosh²x − sinh²x = 1 by cosh²x proves it."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "sinh x = {k}. Find cosh²x.",
+    "answer": "1+k*k",
+    "hint": "Rearrange cosh²x − sinh²x = 1 to cosh²x = 1 + sinh²x, then square {k}.",
+    "explain": "cosh²x = 1 + {k}² = {=1+k*k}.",
+    "params": {
+     "k": [
+      1,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Simplify cosh⁴x − sinh⁴x.",
+    "choices": [
+     "cosh 2x",
+     "1",
+     "sinh 2x"
+    ],
+    "answer": 0,
+    "hint": "It is a difference of two squares.",
+    "explain": "cosh⁴x − sinh⁴x = (cosh²x − sinh²x)(cosh²x + sinh²x) = 1 × cosh 2x = cosh 2x."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "cosh x = {k}. Find sinh²x.",
+    "answer": "k*k-1",
+    "hint": "Rearrange cosh²x − sinh²x = 1 to sinh²x = cosh²x − 1, then square {k}.",
+    "explain": "sinh²x = {k}² − 1 = {=k*k-1}.",
+    "params": {
+     "k": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which expression is equal to cosh 2x?",
+    "choices": [
+     "2 cosh²x − 1",
+     "2 cosh²x + 1",
+     "cosh²x − sinh²x"
+    ],
+    "answer": 0,
+    "hint": "Start from cosh²x + sinh²x and swap sinh²x for cosh²x − 1.",
+    "explain": "cosh 2x = cosh²x + (cosh²x − 1) = 2 cosh²x − 1. cosh²x − sinh²x equals 1."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Simplify sinh 2x ÷ (2 cosh x).",
+    "choices": [
+     "sinh x",
+     "tanh x",
+     "2 sinh x"
+    ],
+    "answer": 0,
+    "hint": "Write sinh 2x with the double argument identity first.",
+    "explain": "sinh 2x = 2 sinh x cosh x, so dividing by 2 cosh x leaves sinh x."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "By Osborn's rule, cos(A + B) = cos A cos B − sin A sin B becomes:",
+    "choices": [
+     "cosh(A + B) = cosh A cosh B + sinh A sinh B",
+     "cosh(A + B) = cosh A cosh B − sinh A sinh B",
+     "cosh(A + B) = sinh A sinh B − cosh A cosh B"
+    ],
+    "answer": 0,
+    "hint": "Only one term is a product of two sines.",
+    "explain": "sin A sin B is a product of two sines, so its sign flips: cosh(A + B) = cosh A cosh B + sinh A sinh B."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "Why is Osborn's rule not a proof?",
+    "choices": [
+     "It predicts the form; you still need to prove it from eˣ",
+     "It only works for sin and cos",
+     "It gives the wrong sign"
+    ],
+    "answer": 0,
+    "hint": "What does a proof of a hyperbolic identity have to start from?",
+    "explain": "Osborn's rule is a pattern that predicts the hyperbolic form. A proof must start from the exponential definitions of cosh and sinh."
+   }
+  ]
+ }
+}

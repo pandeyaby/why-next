@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_6wfjNuSDO4",
+ "title": "Calculating density",
+ "audience": "family",
+ "keyIdea": "Density is the mass packed into each unit of volume: density = mass ÷ volume (ρ = m/V), usually in g/cm³ or kg/m³, where 1 g/cm³ = 1000 kg/m³. It belongs to the material, not the size of the piece: every 10 cm³ of steel has a mass of about 79 g, so steel is about 7.9 g/cm³ whether it is a nut or a girder. For a regular solid, measure length, width and height and multiply to get the volume; for an irregular one, lower it into a measuring cylinder and subtract the starting reading from the new reading (displacement). An object less dense than water (1.0 g/cm³) floats and a denser one sinks. Particles explain the numbers: heavier particles packed more closely give a higher density, which is why solids and liquids are far denser than gases.",
+ "familyTip": "Fill a clear jug to a marked line with water. Drop in a handful of coins or a small stone and mark the new level: the gap between the lines is its volume. Weigh it on the kitchen scales, divide grams by millilitres (1 ml = 1 cm³), and check whether your answer is above or below 1, then test whether it sinks.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Float or sink in water (1.0 g/cm³)? Drag each material, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "floats (less than 1.0 g/cm³)",
+    "sinks (more than 1.0 g/cm³)"
+   ],
+   "items": [
+    [
+     "cork 0.24",
+     0
+    ],
+    [
+     "glass 2.5",
+     1
+    ],
+    [
+     "ice 0.92",
+     0
+    ],
+    [
+     "copper 9.0",
+     1
+    ],
+    [
+     "pine 0.5",
+     0
+    ],
+    [
+     "steel 7.9",
+     1
+    ],
+    [
+     "olive oil 0.92",
+     0
+    ],
+    [
+     "brick 1.9",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdens",
+  "caption": "Flagship lab: weigh equal cubes, divide mass by volume, measure a block, find volume by displacement, test float or sink, rank particle boxes.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Density tells you how much mass is packed into each cubic centimetre of a material. Work it out with density = mass ÷ volume. With mass in grams and volume in cm³, the answer is in g/cm³.",
+   "Density belongs to the material, not the size of the piece. A steel nut and a steel beam are both about 7.9 g/cm³. A big pine log is heavy, but each cm³ of it has less mass than water, so it floats.",
+   "To find the volume of a box shape, multiply length × width × height. For an odd shape such as a stone, lower it into a measuring cylinder of water. The water rises by the volume of the stone, so take the first reading away from the new one.",
+   "Particles explain it. Heavy particles packed tightly, as in lead, give a high density. In a gas the particles are far apart, so a gas has a tiny density."
+  ],
+  "adult": [
+   "Ages 12 to 14. The Key Stage 3 science curriculum for England lists the density of materials, with ρ = m/V, and links it to the particle model. GCSE specifications such as AQA 4.3.1.1 then expect pupils to calculate density, recall the units and measure it for regular and irregular solids. This lesson uses g/cm³ because school balances and measuring cylinders read in g and cm³; 1 g/cm³ equals 1000 kg/m³.",
+   "Density is an intensive property: cutting a block in half halves both mass and volume, so the ratio stays the same. Values in the lab come from standard tables: pine about 0.5, ice 0.92, water 1.00, aluminium 2.70, steel about 7.9, copper 8.96 and lead 11.3 g/cm³. Floating depends only on whether the object's average density is below that of the liquid, not on its size or weight.",
+   "Common mistakes: multiplying mass by volume or dividing volume by mass; adding the sides of a cuboid, or using one face's area, instead of l × w × h; taking the new cylinder reading as the object's volume instead of the difference; and believing heavy things sink and light things float, so a large log 'should' sink. Careful readers also check that units match before dividing.",
+   "In the lab your child weighs four 10 cm³ cubes of pine, aluminium, steel and copper and divides by 10. They pick m ÷ V for four blocks, find the volume of three cuboids, and measure three odd shapes by displacement. Then they test eight objects against water's 1.0 g/cm³ and rank four particle boxes from lead to steam."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A block has a mass of {m} g and a volume of 10 cm³. What is its density in g/cm³?",
+   "answer": "m/10",
+   "hint": "Density = mass ÷ volume. Divide the grams by the 10 cm³.",
+   "explain": "{m} ÷ 10 = {=m/10} g/cm³.",
+   "params": {
+    "m": [
+     20,
+     90
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The water in a measuring cylinder starts at 50 cm³. A stone goes in and the level rises to {r} cm³. What is the volume of the stone in cm³?",
+   "answer": "r-50",
+   "hint": "The rise is the volume of the stone. Take away the starting reading.",
+   "explain": "{r} − 50 = {=r-50} cm³. The new reading includes the water, so subtract the 50.",
+   "params": {
+    "r": [
+     56,
+     80
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A cuboid is 4 cm long, 3 cm wide and 2 cm high. What is its volume?",
+   "choices": [
+    "24 cm³",
+    "9 cm³",
+    "12 cm³"
+   ],
+   "answer": 0,
+   "hint": "Multiply length × width × height.",
+   "explain": "4 × 3 × 2 = 24 cm³. 9 adds the sides, and 12 is only one face (4 × 3)."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which object floats in water?",
+   "choices": [
+    "candle wax, 0.9 g/cm³",
+    "PVC brick, 1.4 g/cm³",
+    "glass marble, 2.5 g/cm³"
+   ],
+   "answer": 0,
+   "hint": "Compare each density with water, 1.0 g/cm³.",
+   "explain": "Wax at 0.9 g/cm³ is less dense than water, so it floats. PVC and glass are denser than 1.0, so they sink."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A stone has mass 60 g and volume 24 cm³. What is its density?",
+   "choices": [
+    "2.5 g/cm³",
+    "0.4 g/cm³",
+    "1440 g/cm³"
+   ],
+   "answer": 0,
+   "hint": "Mass goes on top: mass ÷ volume.",
+   "explain": "60 ÷ 24 = 2.5 g/cm³. 0.4 is volume ÷ mass, and 1440 is mass × volume."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is the formula for density?",
+    "choices": [
+     "mass ÷ volume",
+     "mass × volume",
+     "volume ÷ mass"
+    ],
+    "answer": 0,
+    "hint": "Density is mass in each cm³.",
+    "explain": "ρ = m ÷ V: the mass shared out over every cubic centimetre."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A steel bar is cut in half. What happens to the density of each half?",
+    "choices": [
+     "It stays the same.",
+     "It halves.",
+     "It doubles."
+    ],
+    "answer": 0,
+    "hint": "What happens to the mass and to the volume?",
+    "explain": "Mass and volume both halve, so mass ÷ volume is unchanged. Density belongs to the material."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A metal block is 2 cm long, 2 cm wide and 1 cm high, with a mass of {m} g. What is its density in g/cm³?",
+    "answer": "m/4",
+    "hint": "Volume = 2 × 2 × 1. Then divide the mass by it.",
+    "explain": "Volume = 4 cm³, so density = {m} ÷ 4 = {=m/4} g/cm³.",
+    "params": {
+     "m": [
+      8,
+      44
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A huge pine log (0.5 g/cm³) and a small pebble (2.5 g/cm³) go into a lake. What happens?",
+    "choices": [
+     "The log floats and the pebble sinks.",
+     "The log sinks because it is heavier.",
+     "Both float."
+    ],
+    "answer": 0,
+    "hint": "Compare each density with water, 1.0 g/cm³.",
+    "explain": "Pine is less dense than water, so the log floats however big it is. The pebble is denser, so it sinks."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Water rises from 40 cm³ to 55 cm³ when a toy is lowered in. What is the toy's volume?",
+    "choices": [
+     "15 cm³",
+     "55 cm³",
+     "95 cm³"
+    ],
+    "answer": 0,
+    "hint": "Subtract the first reading from the new one.",
+    "explain": "55 − 40 = 15 cm³. 55 is water plus toy, and 95 adds the readings."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why is a gas far less dense than a solid?",
+    "choices": [
+     "Its particles are much further apart.",
+     "Its particles are much smaller.",
+     "It has no mass."
+    ],
+    "answer": 0,
+    "hint": "Think about how many particles fit in each cm³.",
+    "explain": "Gas particles are spread far apart, so few fit in each cm³ and the mass per cm³ is tiny. Gases do have mass."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A stone has density 3 g/cm³ and volume {v} cm³. What is its mass in grams?",
+    "answer": "3*v",
+    "hint": "Rearrange: mass = density × volume.",
+    "explain": "mass = density × volume, so 3 × {v} = {=3*v} g. Each cm³ holds 3 g.",
+    "params": {
+     "v": [
+      4,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "1 g/cm³ is the same as:",
+    "choices": [
+     "1000 kg/m³",
+     "1 kg/m³",
+     "100 kg/m³"
+    ],
+    "answer": 0,
+    "hint": "A cubic metre holds a million cubic centimetres.",
+    "explain": "A million cm³ at 1 g each is a million grams, which is 1000 kg, in one m³."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Lead and aluminium are both solids with tightly packed particles. Why is lead denser?",
+    "choices": [
+     "Lead particles are heavier.",
+     "Lead particles are further apart.",
+     "Lead is a bigger lump."
+    ],
+    "answer": 0,
+    "hint": "Same packing. What else can change the mass in each cm³?",
+    "explain": "With the same tight packing, heavier particles put more mass in each cm³. Lump size does not change density."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "Olive oil (0.92 g/cm³) is poured onto water. What happens?",
+    "choices": [
+     "It floats on top.",
+     "It sinks to the bottom.",
+     "It mixes evenly."
+    ],
+    "answer": 0,
+    "hint": "Compare 0.92 with water at 1.0 g/cm³.",
+    "explain": "Oil is less dense than water and does not mix with it, so it forms a layer on top."
+   }
+  ]
+ }
+}

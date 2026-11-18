@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_ewmuMMPAzP",
+ "title": "Addition and subtraction within 1000",
+ "audience": "family",
+ "keyIdea": "To add or subtract three-digit numbers, work one column at a time, starting with the ones. Each column can hold at most 9. When adding gives 10 or more in a column, swap 10 of them for 1 in the next column to the left: 10 ones make a ten and 10 tens make a hundred. When subtracting and a column is too small, break 1 from the next column to the left into 10. Never swap the digits round.",
+ "familyTip": "Use coins: 1p, 10p and £1 (or cents, dimes and dollars). Pay for something costing 247 with 3 hundreds and see how the change needs a hundred broken into tens and a ten broken into ones. Then add two prices and swap ten 1p coins for a 10p.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does this sum need a swap? Drag each card into a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "needs a swap or a break",
+    "no swap needed"
+   ],
+   "items": [
+    [
+     "247 + 136",
+     0
+    ],
+    [
+     "321 + 456",
+     1
+    ],
+    [
+     "352 − 127",
+     0
+    ],
+    [
+     "586 − 234",
+     1
+    ],
+    [
+     "503 − 148",
+     0
+    ],
+    [
+     "612 + 175",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagregroup",
+  "caption": "Flagship lab: drag blocks to swap 10 ones for a ten or 10 tens for a hundred, break blocks to take away, and watch the written sum.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A three-digit number is made of hundreds, tens and ones. 247 is 2 hundreds, 4 tens and 7 ones. To add or take away, line the numbers up in columns and start with the ones.",
+   "Each column can hold up to 9. In 247 + 136, the ones make 7 + 6 = 13. That is too many for one column. So swap 10 ones for 1 ten. Write 3 in the ones and a small 1 in the tens. This swap is called regrouping, or carrying.",
+   "Taking away works the other way. In 352 − 127, you cannot take 7 ones from 2 ones. Do not work out 7 − 2 instead. Break 1 ten into 10 ones. Now there are 12 ones and 4 tens. 12 − 7 = 5, then 4 − 2 = 2 and 3 − 1 = 2. The answer is 225.",
+   "Sometimes there are no tens to break, as in 503 − 148. Break a hundred into 10 tens first. Then break one of those tens into 10 ones. You get 4 hundreds, 9 tens and 13 ones."
+  ],
+  "adult": [
+   "Ages 7 to 8. This matches CCSS 2.NBT.7 (add and subtract within 1000 using concrete models or drawings and strategies based on place value, composing or decomposing tens or hundreds when necessary) and Year 3 Number in the National Curriculum in England (add and subtract numbers with up to three digits, using formal written methods of columnar addition and subtraction). It builds on The three digits of a three-digit number.",
+   "The written column method works because of place value. Composing (regrouping or carrying) replaces 10 units of one place with 1 unit of the next place. Decomposing (exchanging or borrowing) does the reverse. The total value never changes, only how it is shown. Base-ten blocks make that visible before the small carried and renamed digits are written.",
+   "Common mistakes: writing 13 in the ones column, which gives 3713 for 247 + 136. Forgetting to add the carried digit. Subtracting the smaller digit from the larger whatever its place, so 352 − 127 becomes 235. Forgetting to reduce the column that was broken. And, with a zero, forgetting that 10 tens become 9 once a ten has gone to the ones, so 503 − 148 becomes 365 instead of 355.",
+   "In the lab your child adds by dragging 10 ones into the tens and 10 tens into the hundreds, including a sum that needs two swaps. They then take away, breaking a ten, then a hundred, then both across a zero. Each move updates the written column sum beside the blocks, so the small digits always match something they did."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Work out 247 + 136.",
+   "choices": [
+    "383",
+    "3713",
+    "373"
+   ],
+   "answer": 0,
+   "hint": "7 ones + 6 ones = 13 ones. Swap 10 ones for 1 ten.",
+   "explain": "Ones: 13 is 1 ten and 3 ones, so write 3 and carry 1. Tens: 4 + 3 + 1 = 8. Hundreds: 2 + 1 = 3. The answer is 383."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Work out 352 − 127.",
+   "choices": [
+    "225",
+    "235",
+    "479"
+   ],
+   "answer": 0,
+   "hint": "You cannot take 7 from 2. Break a ten into 10 ones first.",
+   "explain": "Break a ten: 4 tens and 12 ones. 12 − 7 = 5, 4 − 2 = 2, 3 − 1 = 2. The answer is 225. Swapping to 7 − 2 gives the wrong answer 235."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Add {=a*10+8} + {=b*10+5}.",
+   "answer": "a*10+8+b*10+5",
+   "hint": "Start with the ones. If a column reaches 10 or more, swap 10 for 1 in the next column.",
+   "explain": "Ones: 8 + 5 = 13, so write 3 and carry 1 ten. Then add the tens and the hundreds. {=a*10+8} + {=b*10+5} = {=a*10+b*10+13}.",
+   "params": {
+    "a": [
+     15,
+     47
+    ],
+    "b": [
+     12,
+     34
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Take away: {=a*10+2} − {=b*10+7}.",
+   "answer": "a*10+2-b*10-7",
+   "hint": "Start with the ones. If the top digit is too small, break 1 from the next column into 10.",
+   "explain": "2 − 7 will not go, so break a ten: 12 − 7 = 5. Then take away the tens and the hundreds. {=a*10+2} − {=b*10+7} = {=a*10-b*10-5}. Check by adding back.",
+   "params": {
+    "a": [
+     61,
+     93
+    ],
+    "b": [
+     14,
+     38
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "In 425 − 162, the tens are 2 − 6. What should you do?",
+   "choices": [
+    "break 1 hundred into 10 tens",
+    "work out 6 − 2",
+    "break 1 ten into 10 ones"
+   ],
+   "answer": 0,
+   "hint": "Which column is next to the tens on the left?",
+   "explain": "Break 1 hundred into 10 tens: now 3 hundreds and 12 tens. 12 − 6 = 6 tens and 3 − 1 = 2 hundreds, so 425 − 162 = 263."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "458 + 367 = ?",
+    "choices": [
+     "825",
+     "715",
+     "725"
+    ],
+    "answer": 0,
+    "hint": "There are two swaps: one in the ones and one in the tens.",
+    "explain": "8 + 7 = 15 ones: write 5, carry 1. 5 + 6 + 1 = 12 tens: write 2, carry 1. 4 + 3 + 1 = 8 hundreds. The answer is 825."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "503 − 148 = ?",
+    "choices": [
+     "355",
+     "365",
+     "445"
+    ],
+    "answer": 0,
+    "hint": "There are no tens. Break a hundred into 10 tens, then a ten into 10 ones.",
+    "explain": "503 becomes 4 hundreds, 9 tens and 13 ones. 13 − 8 = 5, 9 − 4 = 5, 4 − 1 = 3. The answer is 355."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "13 tens is the same as…",
+    "choices": [
+     "1 hundred and 3 tens",
+     "1 ten and 3 ones",
+     "13 hundreds"
+    ],
+    "answer": 0,
+    "hint": "How many tens make 1 hundred?",
+    "explain": "10 tens make 1 hundred, so 13 tens is 1 hundred and 3 tens, which is 130."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mia works out 352 − 127 and gets 235. What went wrong?",
+    "choices": [
+     "she did 7 − 2 instead of breaking a ten",
+     "she forgot to carry",
+     "nothing, 235 is right"
+    ],
+    "answer": 0,
+    "hint": "Look at the ones: the top digit is 2.",
+    "explain": "She took the smaller digit from the bigger one. She should break a ten so the ones are 12, and 12 − 7 = 5. The answer is 225."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A school has {=a*10+6} pupils. {=b*10+8} more join. How many pupils are there now?",
+    "answer": "a*10+6+b*10+8",
+    "hint": "Add the ones, then the tens, then the hundreds, carrying when a column reaches 10.",
+    "explain": "6 + 8 = 14 ones: write 4 and carry 1 ten. Then add the tens and hundreds: {=a*10+6} + {=b*10+8} = {=a*10+b*10+14} pupils.",
+    "params": {
+     "a": [
+      23,
+      54
+     ],
+     "b": [
+      17,
+      36
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A book has {=a*100+3} pages. Sam has read {=b*10+7}. How many pages are left?",
+    "answer": "a*100+3-b*10-7",
+    "hint": "There are no tens in the top number. Break a hundred into 10 tens, then a ten into 10 ones.",
+    "explain": "{=a*100+3} has 0 tens, so break a hundred into 10 tens, then a ten into 10 ones. {=a*100+3} − {=b*10+7} = {=a*100-b*10-4} pages left.",
+    "params": {
+     "a": [
+      6,
+      9
+     ],
+     "b": [
+      15,
+      38
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In 365 + 271, why is there a small 1 above the hundreds?",
+    "choices": [
+     "6 tens + 7 tens = 13 tens, and 10 tens make 1 hundred",
+     "6 + 7 = 13 ones",
+     "there is always a 1 there"
+    ],
+    "answer": 0,
+    "hint": "Which column added up to 10 or more?",
+    "explain": "The tens made 13 tens. 10 of them were swapped for 1 hundred, which is the small 1. The answer is 636."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which sum needs no swapping at all?",
+    "choices": [
+     "321 + 456",
+     "247 + 136",
+     "458 + 367"
+    ],
+    "answer": 0,
+    "hint": "Add each column. Does any reach 10?",
+    "explain": "1 + 6 = 7, 2 + 5 = 7 and 3 + 4 = 7, so 321 + 456 = 777 with no swaps. The other two have a column that reaches 10 or more."
+   }
+  ]
+ }
+}

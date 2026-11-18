@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_933BohS9BH",
+ "title": "Comparing Decimals",
+ "audience": "family",
+ "keyIdea": "To compare decimals, line up the decimal points and compare place by place from the left: ones, then tenths, then hundredths, then thousandths. The first place where the digits differ decides. More digits does not mean bigger: 0.45 > 0.405, because both have 4 tenths but 0.45 has 5 hundredths and 0.405 has none. Fewer digits does not mean bigger either: 0.3 > 0.25, but 0.3 < 0.31. Zeros on the end change nothing (0.7 = 0.70 = 0.700), so you can add them to give both numbers the same number of places and then compare them like whole numbers: 0.40 > 0.38. Record the result with <, = or >.",
+ "familyTip": "Use race times or prices. Ask which is faster, 9.85 seconds or 9.9 seconds, and how your child knows. Write the two numbers one above the other with the points lined up, and run a finger along from the left until the digits differ. Say decimals digit by digit (zero point four five, not zero point forty-five), because forty-five makes it sound like a whole number.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Less than a half or more than a half? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "less than 0.5",
+    "more than 0.5"
+   ],
+   "items": [
+    [
+     "0.45",
+     0
+    ],
+    [
+     "0.6",
+     1
+    ],
+    [
+     "0.405",
+     0
+    ],
+    [
+     "0.52",
+     1
+    ],
+    [
+     "0.499",
+     0
+    ],
+    [
+     "0.7",
+     1
+    ],
+    [
+     "0.09",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdeccmp",
+  "caption": "Flagship lab: zoom a number line, find the place that decides, add zeros to compare fairly, shade hundred squares, and put decimals in order.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "To compare two decimals, write one under the other with the points lined up. Start at the left. Look at the ones, then the tenths, then the hundredths. The first place where the digits are not the same tells you which number is bigger.",
+   "More digits does not make a number bigger. 0.405 has more digits than 0.45, but it is smaller. Both have 4 tenths. Then 0.45 has 5 hundredths, and 0.405 has none.",
+   "Fewer digits does not make it bigger either. 0.3 is more than 0.25, because 3 tenths beats 2 tenths. But 0.3 is less than 0.31.",
+   "A zero on the end changes nothing. 0.7, 0.70 and 0.700 are the same number. So you can add zeros to make both numbers the same length. Then 0.40 and 0.38 compare like 40 and 38."
+  ],
+  "adult": [
+   "Ages 9 to 10. In England, Year 4 pupils compare numbers with the same number of decimal places up to two decimal places, and Year 5 pupils read, write, order and compare numbers with up to three decimal places. In the US this is Common Core 5.NBT.A.3b: compare two decimals to thousandths based on the meanings of the digits in each place, using >, = and < symbols to record the results.",
+   "It works because of place value. Each place is worth ten times the place to its right, so one unit in an earlier place outweighs everything after it: 0.1 is more than 0.099. Trailing zeros are equivalent fractions: 0.7 = 7/10 = 70/100 = 700/1000. That is why padding with zeros is allowed, and why, once both numbers have the same number of places, they compare like whole numbers of hundredths or thousandths. A number line you can zoom into and a hundred square (one column is a tenth, one square a hundredth) make this visible.",
+   "Common mistakes, well documented in research on decimal misconceptions: longer is larger (whole-number thinking, so 0.405 looks bigger than 0.45), shorter is larger (believing tenths always beat hundredths, so 0.3 looks bigger than 0.31), thinking 0.70 is bigger than 0.7, and ignoring the whole-number part (1.99 looks bigger than 2.1 because 99 beats 1). Reading 0.45 as point forty-five feeds the first slip.",
+   "In the lab your child places 0.45, 0.405, 0.3 and 0.25 on a number line that zooms from tenths into thousandths, taps the first place that differs in five pairs on a place value chart, adds zeros before choosing <, = or >, shades 0.3, 0.25, 0.06 and 0.6 on hundred squares, and orders two sets such as 3.2, 3.14, 3.142 and 3.04."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is bigger: 0.45 or 0.405?",
+   "choices": [
+    "0.45",
+    "0.405",
+    "They are equal"
+   ],
+   "answer": 0,
+   "hint": "Line up the points. Both have 4 tenths. Look at the hundredths.",
+   "explain": "0.45 has 5 hundredths and 0.405 has 0 hundredths, so 0.45 is bigger, even though 0.405 has more digits."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{a} tenths is the same as how many hundredths?",
+   "answer": "10*a",
+   "hint": "Each tenth splits into 10 hundredths.",
+   "explain": "{a} tenths × 10 = {=10*a} hundredths, so 0.{a} is the same as 0.{a}0.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which sign makes this true? 0.3 ? 0.25",
+   "choices": [
+    ">",
+    "<",
+    "="
+   ],
+   "answer": 0,
+   "hint": "Compare the tenths first: 3 and 2.",
+   "explain": "0.3 has 3 tenths and 0.25 has 2 tenths, so 0.3 > 0.25. As hundredths it is 30 and 25."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Write 0.{a}{b} as a number of hundredths.",
+   "answer": "10*a+b",
+   "hint": "Each tenth is 10 hundredths. Add the hundredths digit.",
+   "explain": "0.{a}{b} is {a} tenths and {b} hundredths, which is {=10*a+b} hundredths.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which list is in order, smallest first?",
+   "choices": [
+    "3.04, 3.14, 3.142, 3.2",
+    "3.2, 3.04, 3.14, 3.142",
+    "3.142, 3.14, 3.04, 3.2"
+   ],
+   "answer": 0,
+   "hint": "All have 3 ones. Compare tenths, then hundredths, then thousandths.",
+   "explain": "3.04 has 0 tenths, 3.14 and 3.142 have 1 tenth, and 3.2 has 2 tenths. 3.14 = 3.140 is less than 3.142."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is bigger: 1.99 or 2.1?",
+    "choices": [
+     "2.1",
+     "1.99",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "Start with the ones before any digit after the point.",
+    "explain": "2.1 has 2 ones and 1.99 has 1 one. The ones decide, so 2.1 is bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Is 0.6 equal to 0.60?",
+    "choices": [
+     "Yes, both are 6 tenths",
+     "No, 0.60 is bigger",
+     "No, 0.6 is bigger"
+    ],
+    "answer": 0,
+    "hint": "Does the zero on the end add any hundredths?",
+    "explain": "0.60 is 6 tenths and 0 hundredths, the same as 0.6. A zero on the end changes nothing."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is smallest: 0.09, 0.1 or 0.089?",
+    "choices": [
+     "0.089",
+     "0.09",
+     "0.1"
+    ],
+    "answer": 0,
+    "hint": "Give them all three places: 0.090, 0.100, 0.089.",
+    "explain": "As thousandths they are 90, 100 and 89, so 0.089 is smallest and 0.1 is biggest."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "In 0.38 and 0.4, which place decides which is bigger?",
+    "choices": [
+     "the tenths",
+     "the hundredths",
+     "the ones"
+    ],
+    "answer": 0,
+    "hint": "Find the first place, from the left, where the digits differ.",
+    "explain": "Both have 0 ones. The tenths are 3 and 4, so the tenths decide: 0.4 > 0.38."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is bigger: 0.3 or 0.31?",
+    "choices": [
+     "0.31",
+     "0.3",
+     "They are equal"
+    ],
+    "answer": 0,
+    "hint": "Write 0.3 as 0.30 so both have two places.",
+    "explain": "0.30 and 0.31 have the same tenths, and 1 hundredth beats 0, so 0.31 is bigger."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "How many thousandths are in 0.{a}0{b}?",
+    "answer": "100*a+b",
+    "hint": "A tenth is 100 thousandths. There are no hundredths here.",
+    "explain": "0.{a}0{b} is {a} tenths, 0 hundredths and {b} thousandths: {=100*a+b} thousandths.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Write 0.{a} and 0.{b}{c} as hundredths. How many hundredths bigger is 0.{a}?",
+    "answer": "10*a-10*b-c",
+    "hint": "Add a zero to 0.{a} so both have two places.",
+    "explain": "0.{a} = {=10*a} hundredths and 0.{b}{c} = {=10*b+c} hundredths, so 0.{a} is bigger by {=10*a-10*b-c} hundredths.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      8
+     ],
+     "c": [
+      1,
+      9
+     ]
+    },
+    "where": "b<a"
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is 0.405 smaller than 0.45?",
+    "choices": [
+     "Both have 4 tenths, and 0 hundredths is less than 5 hundredths",
+     "It has more digits",
+     "405 is less than 45"
+    ],
+    "answer": 0,
+    "hint": "Line them up and compare from the left.",
+    "explain": "The tenths match, and the hundredths are 0 and 5. The number of digits does not decide, and 405 is more than 45 anyway."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A runner's times are 9.85 seconds and 9.9 seconds. Which time is shorter?",
+    "choices": [
+     "9.85 seconds",
+     "9.9 seconds",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Write 9.9 as 9.90 and compare the tenths.",
+    "explain": "9.85 has 8 tenths and 9.90 has 9 tenths, so 9.85 is the smaller number and the shorter time."
+   }
+  ]
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against Common Core HSN-VM.C.6 (use matrices to represent incidence relationships in a network) and HSN-VM.C.8 (multiply matrices of appropriate dimensions), the DfE (2016) AS and A level Further Mathematics subject content on matrix multiplication, and the standard result that (Aⁿ)ij counts walks of length n. Lab numbers were verified by hand: for edges A–B, A–C, B–C, B–D, C–D, (A²)AD = 2 (via B, C), (A²)BC = 2 (via A, D), (A²)CD = 1 (via B), and the diagonal gives degrees B 3, A 2, C 3. Saturday takings 4×2 + 2×3 + 3j give 23, 26, 29 at j = 3, 4, 5."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets specific errors: writing an undirected edge in one cell only (predict 1, the 'needs a 1 too' prompt, m5), swapping row and column on a directed graph (arrow-direction feedback in lap 2, back tag, m4), adding all the 1s instead of multiplying pairs (add and row tags, m1), reading (A²)ij as the edge squared (predict 3, m2), thinking the diagonal of A² is 0 (predict 4), wrong product sizes (inner and swap tags, m3) and totalling the quantities and prices before multiplying (sum tag, m6)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flag_route.js is new code built around a road map. Students toggle adjacency entries with a cursor, join vertices to draw edges, tap middle vertices to find walks and drag a price. It shares no mechanics with flag_mmul.js (row-by-column multiplication of number grids), flag_madd.js or flag_det.js. The highest 6-shingle Jaccard with any lab is 3.4% (flag_team.js), well under 30%."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The steps move from representation to computation. Map to matrix shows symmetry, and the one-way lap shows when symmetry fails. Matrix to map shows reading entries. Two-step routes has students find the walks before the row · column working is revealed, so A² gets a meaning. The diagonal step links A² to degree. Data matrices moves the same row · column idea into a real context with a size check."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions come before the action: what row B, column A is for a two-way road, what A = Aᵀ tells you, what (A²)ij counts, what (A²)BB is, and the size of a 2×3 times 3×1 product. Each wrong option is a known misconception, and the next interaction tests the guess."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Randomised questions in four types (entry of A² from a row and column, product size, one-way entries, takings). Each wrong option carries a tag with its own message, for example 'Adding every 1 counts roads, not routes. A route needs both roads, so multiply pairs.' and 'Rows come from the first matrix and columns from the second, so the order matters.' There are eight tags in all."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner audience. The kid explanation scores Flesch-Kincaid 2.7 with short sentences and a concrete worked case, under the 6.5 target. The adult text scores 6.6 and still uses the exact curriculum terms: adjacency matrix, vertex, edge, directed and undirected graph, degree, symmetric, transpose, conformable, walk."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every paragraph either defines a term, proves why A² counts walks, lists named mistakes or describes the lab. The family tip is a concrete friends-network task. Content gate filler and duplicate checks passed, and every item has a different prompt and context."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360x640 Android light and iPhone 13 dark show matrix cells about 46px, vertex circles at least 22px radius with an 8px tap margin, the price knob at least 15px radius over a 44px tall hit band, and no clipped text. Wide screens switch to a side-by-side layout. The file is 19.3 KB, under the hook limit."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a labelled button twin: Previous entry, Next entry, Flip row i column j, Join X and Y, Route via X, That's all the routes, Answer 0-4, Raise or Lower juice price. The probe confirmed that each one updates the canvas aria-label with the working, for example 'A→B→D works'. axe passed in light and dark themes in the browser gate."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics HSN-VM.C.6 and HSN-VM.C.8",
+  "DfE (2016) Further mathematics AS and A level subject content (matrices)",
+  "Wilson, R. J. Introduction to Graph Theory, 5th ed. (adjacency matrices, walks and powers of A)"
+ ]
+}

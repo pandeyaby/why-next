@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against OCR A-level Physics A (H556) 5.5.3, which uses Δλ/λ ≈ Δf/f ≈ v/c for v much less than c, and the AQA 7408 astrophysics option (red-shift z = v/c). The moving-source formula f' = f·v/(v ∓ vs) is derived in the adult text from v = fλ. All lab numbers were recomputed: 600 Hz at 68 m/s approaching gives 750 Hz and receding gives 500 Hz, 450 Hz receding at 85 m/s gives 360 Hz, Hα 656.3 nm at 3000 km/s gives 662.9 nm, and the siren model (700 Hz, 30 m/s, 60 m offset) gives 750.3 Hz at 70 m before you, which matches the screenshot. m5 gives 1000 Hz. Andromeda's blue-shift of about 300 km/s matches its measured radial velocity."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented A-level slips: thinking sound ahead of the source moves at v + vs (the formula prediction, the calc tile that uses (v+vs)/v, challenge q1, m1, m5), swapping the approaching and receding signs (the 'swapped' calc tile, p2/p4, challenge q1), confusing pitch with loudness (the siren prediction 'gets higher as it gets closer', challenge q2, p3), reading red-shift as motion towards us (the 'right size, wrong way' message, challenge q3, m6) and thinking the true pitch is heard before the source is level (challenge q4, m3)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagdopp combines moving-source wavefront rings whose spacing is set with a speed slider, a three-listener frequency picker with formula-based distractors, a draggable ambulance with a live heard-frequency curve using the line-of-sight component, a galaxy spectrum where a model Hα line is moved to match an observed line, and a wavefront diagram reader. No other flagship lab models the Doppler effect, and lab_distinct passed under 30% shingle overlap against every flag_*.js."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step shows the cause before naming the rule. At 0.45 v the readout prints 'ahead: λ = 0.55 λ₀' and the miss message says the source must catch up half a wavelength each period. Choosing the swapped tile returns 'That is the receding answer. Approaching squashes λ, so divide by v − vs'. Stopping the ambulance early gives '750.3 Hz is still above 700: part of its velocity is towards you'. The spectrum step prints both line positions and says which way to change the speed."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option that the next task disproves: 'behind it, on the left' for the bunched side (the ring drawing bunches ahead at once), 'faster: v + vs' for the speed of sound ahead (the step text and the calc distractor show v is unchanged), and 'gets higher as it gets closer' for a passing siren (the live curve stays nearly flat and then falls through 700 Hz at x = 0). A red-shift prediction asks which way lines move for a receding galaxy before any matching."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five challenge questions with three options each, rotated in order. Every wrong option has its own message: 'That is the receding value. Approaching uses v − vs: 500 × 340/300.', 'Loudness and pitch are different. Pitch depends on frequency.', 'Use Δλ/λ = v/c: 5/500 × 300 000 = 3000 km/s.', 'Before it is level, part of its velocity is still towards you.' and 'One centre means the source is still.' Each one gives the reason as well as saying it is wrong."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner audience. The kid text scores FK 5.1 against a target of 6.5 and the adult text scores 6.6 against 9.5, measured with learn/readability.py. Formulas are written once in words and once in symbols, and the step paragraphs are two or three sentences long. Step headings name the idea plainly: 'Bunched ahead, stretched behind', 'The formula', 'A passing siren', 'Red-shift' and 'Read the wavefronts'. Readout lines put the quantity first, for example 'heard: 750.3 Hz (siren 700 Hz, 30 m/s)'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The content gate passed: no filler patterns and explanation duplication under 12%. Every kid paragraph carries one physics step (wavefront spacing, v = fλ and the two formulas, the line-of-sight component, red-shift with Δλ/λ ≈ v/c). The adult paragraphs give the curriculum mapping, the one-period derivation, named common mistakes and an outline of the lab. The family tip is a single concrete listening task about a passing siren."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360×640 in light and dark show every step's canvas, buttons and readouts with no overlaps. All controls are button rows (slower/faster/Check, three frequency tiles, ±5 m and ±20 m, ±100 and ±1000 km/s, three diagram buttons) that wrap onto two lines. Slider and drag inputs go through A.gest, and walk.cjs passed on desktop and iPhone 13 with the challenge shown and no console errors."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe found no violations in either theme. The canvas aria-label updates every step with the current task, for example 'Drag the ambulance and watch the pitch graph.' Every button has a descriptive aria-label such as 'Move the ambulance back 5 metres' or 'Model speed plus 1000 km/s'. Feedback goes to a polite live region through c.say. Colours use the kit's OK/SRC tokens, and the listener is a drawn marker labelled 'you', not an emoji."
+  }
+ },
+ "sources": [
+  "OCR (2023) A Level Physics A H556 specification, 5.5.3 Doppler effect: Δλ/λ ≈ Δf/f ≈ v/c and red-shift",
+  "AQA A-level Physics 7408 specification, Astrophysics option: Doppler effect and red-shift z = v/c for v much less than c",
+  "NIST Atomic Spectra Database: hydrogen Balmer-alpha line 656.3 nm (air)",
+  "Topic evidence mt_KjrUFpwlgx (moving source bunches waves ahead; sirens and astronomy examples)"
+ ]
+}

@@ -115,3 +115,120 @@ T("ey_wait_listen", M, LL, "Listening carefully to learn", "3-4",
    "Waits until the speaker has finished"],
   "After you read {{name}} a short story, can they answer a simple question about it?",
   [], [("ey_paying_attention", "h", "Listening to learn is paying attention to speech")])
+
+
+# ---------------------------------------------------------------- wave 7: Learning to Learn for ages 2-11
+# EYFS Characteristics of Effective Learning (playing and exploring, active learning, creating and thinking critically)
+# and recognised primary metacognition / learning-skills terms (rehearsal, chunking, success criteria, dual coding,
+# mnemonics, thinking aloud, plan-monitor-evaluate).
+from dsl import U  # noqa: E402
+
+T("ey_play_what_know", M, LL, "Playing with what I know", "2-3",
+  "Use pretend play to act out things they have seen (cooking, shopping, going to the doctor), using one object to stand for another",
+  ["Acts out a familiar routine in pretend play",
+   "Uses an object as something else, such as a block as a phone",
+   "Copies words or actions from real life in play"],
+  "When {{name}} plays shops or kitchens, do they act out what they have seen you do?",
+  [], [("ey_copying", "s", "Pretend play replays what they have watched and copied")])
+
+T("ey_own_ideas", M, LL, "Having my own ideas", "3-4",
+  "Think of their own ideas in play and making (a new game, a different way to build a den) and try them out instead of only copying",
+  ["Suggests a new game or rule",
+   "Makes something in their own way",
+   "Explains their idea to someone else"],
+  "When {{name}} builds with blocks, do they come up with their own plan rather than copying one?",
+  [], [("ey_play_what_know", "s", "Their own ideas grow out of playing with what they know")])
+
+T("ey_choose_resources", M, LL, "Choosing resources for myself", "3-4",
+  "Choose and fetch the things they need for an activity (paper and crayons for drawing, a spade for digging) and say why they chose them",
+  ["Gets the right things for a task without being told",
+   "Says why they chose a tool",
+   "Puts things back after using them"],
+  "If {{name}} wants to paint, can they gather what they need by themselves?",
+  [], [("ey_two_steps", "s", "Fetching what they need is like following steps for themselves")])
+
+T("ey_by_heart", P, LL, "Learning songs and rhymes by heart", "3-4",
+  "Learn a nursery rhyme or song by heart by hearing and joining in with it many times, then say or sing it without help",
+  ["Joins in the repeated parts of a rhyme",
+   "Says a whole short rhyme without help",
+   "Fills in the missing word when you pause"],
+  "If you start 'Twinkle, Twinkle, Little Star' and stop, can {{name}} carry on by themselves?",
+  [], [("ey_wait_listen", "s", "Learning by heart starts with listening carefully")])
+
+T("pr_rehearsal", P, LL, "Saying it again to remember (rehearsal)", "5-6",
+  "Remember a short list or fact by saying it over and over (rehearsal), and notice that something said several times is easier to recall",
+  ["Repeats a short list to remember it",
+   "Recalls a fact after rehearsing it",
+   "Says that repeating helps them remember"],
+  "If {{name}} needs to remember three things to fetch, do they say them over to themselves?",
+  [], [("ey_by_heart", "h", "Rehearsal is the strategy behind learning rhymes by heart"),
+       ("mt_M5PPDJStGm", "s", "Rote counting is rehearsal: saying a sequence again and again until it sticks")])
+
+T("pr_chunking", P, LL, "Chunking to remember", "6-7",
+  "Group items into small chunks to remember them (a phone number as 3-3-4, spellings in syllables), so the memory has fewer pieces to hold",
+  ["Splits a long number into chunks to remember it",
+   "Groups a list of things into sets",
+   "Explains why chunks are easier to remember"],
+  "If {{name}} needs to remember 6 4 9 2 7 1, can they split it into chunks to help?",
+  [], [("pr_rehearsal", "h", "Chunking makes the rehearsed list shorter")])
+
+T("pr_success_criteria", M, LL, "Knowing what good looks like (success criteria)", "6-7",
+  "Use success criteria and a good example (WAGOLL: what a good one looks like) to know what they are aiming for and check their work against it",
+  ["Says what a good piece of work needs before starting",
+   "Points out features of a good example",
+   "Ticks off success criteria in their own work"],
+  "Before {{name}} writes a card, can they say what a good one needs and check theirs at the end?",
+  [], [("ey_talk_about_learning", "s", "Talking about what went well becomes checking against criteria"),
+       ("mt_8dstvf-KKb", "s", "Checking your own work is easier when you know what good looks like")])
+
+T("pr_dual_coding", P, LL, "Drawing to help me think (dual coding)", "6-7",
+  "Combine words and pictures (a quick sketch, a labelled diagram, a timeline) to understand and remember something better",
+  ["Draws a quick picture to explain an idea",
+   "Labels a simple diagram",
+   "Uses a picture to remember something"],
+  "After {{name}} learns how a seed grows, can they draw and label it to explain it to you?",
+  [], [("ey_draw_observe", "s", "Drawing from observation becomes drawing to think"),
+       ("mt_hi8cVycbwn", "s", "Sketching a simple model is a first use of drawing to explain")])
+
+T("pr_mnemonics", P, LL, "Memory tricks (mnemonics)", "8-9",
+  "Use mnemonics (a phrase, rhyme or acronym) to remember lists and spellings, such as 'Richard Of York Gave Battle In Vain' for the rainbow colours",
+  ["Uses a known mnemonic correctly",
+   "Makes up their own mnemonic for a list",
+   "Says when a mnemonic helps and when it doesn't"],
+  "Can {{name}} make up a silly sentence to remember the order of the planets?",
+  [], [("pr_chunking", "s", "Mnemonics turn a list into one memorable chunk"),
+       ("mt_32B7xjUPwF", "s", "A mnemonic links new items to words they already know")])
+
+T("pr_think_aloud", M, LL, "Thinking aloud", "8-9",
+  "Say their thinking out loud while solving a problem ('first I'll... that didn't work, so...') so they and others can spot where the thinking goes wrong",
+  ["Talks through the steps while working",
+   "Spots a mistake while thinking aloud",
+   "Listens to someone else think aloud and follows the steps"],
+  "When {{name}} is stuck on a puzzle, can they say out loud what they are trying and why?",
+  [], [("mt_6eTZUwKQZr", "s", "Teaching it back is explaining after; thinking aloud explains during")])
+
+T("pr_plan_monitor_evaluate", M, LL, "Plan, monitor, evaluate", "9-10",
+  "Use the metacognitive cycle on a task: plan (what's the goal, which strategy), monitor (is it working, should I change), evaluate (how did it go, what next time)",
+  ["Names the three stages and what each asks",
+   "Changes strategy partway through when monitoring shows a problem",
+   "Writes one thing to do differently next time"],
+  "Before a homework task, can {{name}} say their plan, check halfway, and tell you afterwards how it went?",
+  [], [("mt_QR3vxbN1o4", "h", "Planning a task is the first stage of the cycle"),
+       ("mt_q7zxOloj_L", "s", "Choosing a strategy happens at the planning stage")])
+
+T("pr_learning_styles_myth", C, LL, "Why 'learning styles' is a myth", "10-11",
+  "Know that research does not support teaching to a 'visual, auditory or kinaesthetic' learning style, and that methods like words-plus-pictures and self-testing help everyone",
+  ["Explains what the learning-styles claim says",
+   "Says what the evidence found",
+   "Names two methods that help all learners"],
+  "If a quiz tells {{name}} they are a 'visual learner', can they explain why that may not be the best guide to how to study?",
+  [], [("pr_dual_coding", "s", "Dual coding helps everyone, not only 'visual learners'"),
+       ("mt_v5yDTWEiyQ", "s", "Reflecting on what helped is the evidence that matters")])
+
+for _k, _id, _s, _r in [
+    ("ey_play_what_know", "mt_32B7xjUPwF", "s", "Connecting new and old ideas builds on playing with what they know"),
+    ("ey_own_ideas", "mt_LE7nFEwS12", "s", "Thinking before starting draws on having ideas of their own"),
+    ("ey_choose_resources", "mt_QR3vxbN1o4", "s", "Planning a task includes deciding what you need"),
+    ("ey_by_heart", "mt_wvcFlwOrDl", "s", "Rhymes and songs are early patterns to spot"),
+]:
+    U(_k, _id, _s, _r)

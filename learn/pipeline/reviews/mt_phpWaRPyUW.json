@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against Common Core 7.SP.C.6 (its own example: a number cube rolled 600 times gives about 200 rolls of 3 or 6), the NC England KS3 probability content and GCSE expected outcomes (E = p × n). All numbers were computed: 1/6 × 60, 120, 300 = 10, 20, 50; 1/4 × 200 = 50; 0.3 × 30 = 9; 3/10 × 50 = 15; P(HH) = 1/4 so 20 of 80; SD of sixes in 120 rolls = √(120·1/6·5/6) ≈ 4.1; SD in 600 rolls ≈ 9.1, so 171 is about 7.8 SD and 62 about 4.2 SD away, while 104 and 93 are within 1 SD; P(exactly 50 heads in 100) ≈ 0.080. Simulated rolls use a seeded generator so the runs shown are genuine but repeatable."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented probability misconceptions (Shaughnessy; Fischbein; Kahneman and Tversky's law of small numbers): expecting the exact value (step 1 prediction 'Exactly 10', step 3 prediction 'All 6', p3, m5), using the number of faces or parts as the answer (6 sixes, 4 parts), the equiprobability bias (two coins as three outcomes: the 27 and 20 options), probability read as a count (0.3 as 3 days, 0.2 as 2 wins), using the wrong denominator (3/7 instead of 3/10), and over-reading small samples or small gaps as bias."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagexpf combines a draggable expected-count line that rescales for 60, 120 and 300 rolls and then shows one seeded real run, a four-context p × n chooser with misconception distractors, a six-run dot plot of 4s round a dashed expected line, a 30/300/3000 relative-frequency bar chart against 1/6, and a drag-to-fair-or-biased judgement for four dice. flagchance, flagcoin and flagtstat deal with chance language, a coin sim and test statistics, not expected frequency. lab_distinct stayed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers each idea: locking in 30 for 60 rolls returns 'That is half the rolls, as for heads on a coin. A six is 1 face out of 6.'; after each correct lock a real run (8, 22, 49) appears beside the expected value; six runs of 120 land between 13 and 27 with none at 20; the 30/300/3000 bars show 2/30 = 0.067, 55/300 = 0.183, 495/3000 = 0.165 against 1/6, and the text points out the 3000-roll count is 5 off while the proportion is closest; judging Dice B (93) biased returns that 7 off is normal."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions hold the tempting wrong answer: 'Exactly 10' sixes in 60 rolls (the first real run gives 8), 'All 6: a fair dice gives what is expected' (the six runs scatter from 13 to 27), and 'jumps around just as much' for more rolls (the 3000-roll bar sits on the 1/6 line). The done line repeats the learner's prediction."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with twelve wrong-answer messages that each name the slip: face number as count, half instead of a sixth, probability read as a count, wrong probability (0.5), calling normal variation bias, doubting a correct sum, small samples (10 and 100 rolls), P = 1/2 for two tails, three outcomes treated as equally likely, dismissing a 72-sixes gap, and claiming certainty from probability evidence."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner kid paragraphs use short sentences with worked numbers (1/6 × 120 = 20 sixes) at grade 4.6 against the 6.5 limit; the adult text uses the precise terms expected frequency, relative frequency, independent trials, standard deviation and law of large numbers at grade 8.5, within 9.5."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The content gate found no banned phrases and the explanation stayed under 12% six-word overlap with every lesson, including Probability as a fraction, Simple chance experiments and Two-way tables and relative frequencies. Each feedback line names the learner's number and the exact calculation."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px (touch, 1.5x) in light and dark for every step before and after Show me: the 0–30/0–60/0–150 axis labels fit, the context card wraps to three lines above four 24 px answer tiles, the dot plot and the 'results: 27, 13, 19, 21, 16, 21' line fit, and the three bars carry count and proportion labels. The 'expected 20' label was moved below the Roll button and the 1/6 label moved off the 3000 bar after the first screenshots showed overlaps."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "The browser gate completed every task with Show me on desktop and iPhone 13, the challenge showed, and axe (WCAG 2.1 AA) found no violations in light or dark. Every canvas action has a labelled button: '− Fewer' and 'More +' with step sizes and 'Lock in 10 sixes', one button per answer ('Expect 50'), 'Roll 120 times', 'Roll 300 times' then '3000 rolls is the best estimate', and 'Dice A looks fair'. The canvas aria-label is rewritten with every message."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics 7.SP.C.6 and 7.SP.C.7",
+  "National Curriculum in England: mathematics programmes of study, Key Stage 3 probability (DfE 2013); GCSE mathematics subject content (DfE 2013), expected outcomes",
+  "Tversky, A. and Kahneman, D. (1971) Belief in the law of small numbers. Psychological Bulletin 76(2)",
+  "Lecoutre, M.-P. (1992) Cognitive models and problem spaces in purely random situations (equiprobability bias). Educational Studies in Mathematics 23",
+  "NCETM secondary materials: probability, expected outcomes and relative frequency"
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "topicId": "mt_IzQvs7k_sE",
+ "title": "Skip counting in 4s, 8s, 50s and 100s",
+ "audience": "family",
+ "keyIdea": "Skip counting adds the same jump every time. Counting in 4s goes 0, 4, 8, 12 … 48; two jumps of 2 make one jump of 4, so the 4s are every second number in the 2s count. Counting in 8s goes 0, 8, 16, 24 … 96; one jump of 8 is two jumps of 4, so every 8s number is also a 4s number and it takes half as many jumps. Counting in 50s goes 50, 100, 150, because two 50s make 100. Counting on in 100s from any number only changes the hundreds digit: 130, 230, 330.",
+ "explain": {
+  "kid": [
+   "Skip counting means you jump the same amount each time. In 4s you say 4, 8, 12, 16, 20. Each jump is 4.",
+   "Two jumps of 2 make one jump of 4. So the 4s count is every second number in the 2s count. You skip one, say one.",
+   "One jump of 8 is two jumps of 4. So 8, 16, 24 and 32 are all in the 4s count too. To get to 48 you need 12 fours, but only 6 eights.",
+   "In 50s you say 50, 100, 150, 200. Two 50s make 100. In 100s you can start from any number. From 130 you say 230, 330, 430. Only the first digit goes up."
+  ],
+  "adult": [
+   "In the National Curriculum for England, Year 3 pupils count from 0 in multiples of 4, 8, 50 and 100. They also find 10 or 100 more or less than a given number. This builds on Year 2 counting in 2s, 5s and 10s. It feeds the 4 and 8 times tables, which Year 3 pupils learn by heart.",
+   "The links matter more than reciting. Multiples of 4 are the doubles of multiples of 2, and multiples of 8 are the doubles of multiples of 4. So each 8s number is in the 4s count, but not the other way round (12 is 3 fours but not a whole number of eights). Counting in 50s alternates between numbers ending in 50 and 00. Counting on in 100s keeps the tens and ones digits, so it shows place value.",
+   "Common mistakes: losing the jump size and adding 2 or 10 by habit (16, 18, 20 instead of 16, 20, 24). Children also count the numbers said rather than the jumps, so they say 48 is 13 fours. Many expect the 8s count to need more jumps than the 4s count. Many round when adding 100, so 100 more than 350 becomes 400 or 360.",
+   "In the lab your child hops a frog in 4s to 48, taps the 4s numbers on a grid where the even numbers are marked, and races a 4s frog and an 8s frog to 48. They hop in 50s to 500 and count on in 100s from 130 to 930."
+  ]
+ },
+ "familyTip": "Count legs together. Each cat or chair has 4 legs, so count 4, 8, 12 as you point to them. A spider has 8 legs: count 8, 16, 24. On a walk, count in 50s or 100s from a house number or a bus number, and say only the hundreds digit changing aloud (130, 230, 330).",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which counts land on these numbers? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["In the 8s count (so in the 4s too)", "In the 4s count, not the 8s", "Not in the 4s count"],
+   "items": [["16", 0], ["40", 0], ["72", 0], ["12", 1], ["28", 1], ["44", 1], ["18", 2], ["30", 2], ["50", 2]]
+  }
+ },
+ "lab": {
+  "type": "flagfours",
+  "caption": "Flagship lab: hop a frog in 4s to 48, tap the 4s on a 1-to-40 grid, race a 4s frog and an 8s frog, hop in 50s to 500 and count on in 100s from 130.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "numeric", "id": "p1",
+   "prompt": "You count in 4s from 0. What number comes after {=4*a}?",
+   "answer": "4*a+4",
+   "hint": "Each jump in the 4s count is 4.",
+   "explain": "{=4*a} + 4 = {=4*a+4}. Every jump in the 4s count adds 4.",
+   "params": {"a": [2, 11]}
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "You count in 8s from 0. What number comes after {=8*a}?",
+   "answer": "8*a+8",
+   "hint": "Each jump is 8. You can also do two jumps of 4.",
+   "explain": "{=8*a} + 8 = {=8*a+8}. That is the same as two more jumps of 4.",
+   "params": {"a": [2, 11]}
+  },
+  {
+   "type": "mc", "id": "p3",
+   "prompt": "What is missing? 250, 300, __, 400",
+   "choices": ["350", "310", "500"],
+   "answer": 0,
+   "hint": "What is the jump from 250 to 300?",
+   "explain": "The jump is 50, so 300 + 50 = 350. Two 50s make 100, so 350 + 50 = 400."
+  },
+  {
+   "type": "numeric", "id": "p4",
+   "prompt": "What is 100 more than {=100*a+10*b+5}?",
+   "answer": "100*a+10*b+105",
+   "hint": "Add 1 to the hundreds digit. Keep the tens and ones.",
+   "explain": "{=100*a+10*b+5} + 100 = {=100*a+10*b+105}. Only the hundreds digit went up by 1.",
+   "params": {"a": [1, 8], "b": [1, 9]}
+  },
+  {
+   "type": "mc", "id": "p5",
+   "prompt": "How many jumps of 8 does it take to get from 0 to 40?",
+   "choices": ["5", "10", "8"],
+   "answer": 0,
+   "hint": "Say the 8s count and count the jumps: 8, 16, 24 …",
+   "explain": "8, 16, 24, 32, 40 is 5 jumps of 8. It would take 10 jumps of 4, twice as many."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "Which of these numbers is in the 4s count?",
+    "choices": ["24", "26", "30"],
+    "answer": 0,
+    "hint": "Count 4, 8, 12, 16, 20 … and see which one you say.",
+    "explain": "4, 8, 12, 16, 20, 24: you say 24. 26 and 30 are in the 2s count but not the 4s."
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "You count in 4s from 0. What number do you say just before {=4*a}?",
+    "answer": "4*a-4",
+    "hint": "Going back one jump means taking away 4.",
+    "explain": "{=4*a} − 4 = {=4*a-4}. One jump back in the 4s count is 4 less.",
+    "params": {"a": [3, 12]}
+   },
+   {
+    "type": "mc", "id": "m3",
+    "prompt": "Which number is in the 4s count but not in the 8s count?",
+    "choices": ["20", "16", "32"],
+    "answer": 0,
+    "hint": "8s numbers are every second 4s number: 8, 16, 24, 32.",
+    "explain": "20 is 5 fours, but 16 + 8 = 24, so the 8s count jumps over 20. 16 and 32 are in both counts."
+   },
+   {
+    "type": "numeric", "id": "m4",
+    "prompt": "You count in 50s from 0. What number comes after {=50*a}?",
+    "answer": "50*a+50",
+    "hint": "Each jump is 50. Two jumps make 100.",
+    "explain": "{=50*a} + 50 = {=50*a+50}. The numbers in the 50s count end in 50 or 00.",
+    "params": {"a": [1, 18]}
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "What is 100 more than 680?",
+    "choices": ["780", "690", "700"],
+    "answer": 0,
+    "hint": "Which digit changes when you add 100?",
+    "explain": "Add 1 to the hundreds digit: 680 + 100 = 780. The 8 tens and 0 ones stay the same."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "What comes next? 56, 64, 72, …",
+    "choices": ["80", "76", "82"],
+    "answer": 0,
+    "hint": "Find the jump between the numbers first.",
+    "explain": "The jump is 8, so 72 + 8 = 80. 76 would be a jump of 4."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "How many 50s make 400?",
+    "choices": ["8", "4", "40"],
+    "answer": 0,
+    "hint": "Two 50s make 100. How many hundreds are in 400?",
+    "explain": "There are 4 hundreds in 400 and two 50s in each, so 8 fifties make 400."
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "Count back in 100s: 920, 820, 720, …",
+    "choices": ["620", "710", "700"],
+    "answer": 0,
+    "hint": "Counting back in 100s makes the hundreds digit 1 less each time.",
+    "explain": "720 − 100 = 620. The tens and ones (20) stay the same."
+   }
+  ]
+ }
+}

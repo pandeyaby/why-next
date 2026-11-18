@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_EXlmTURK_o",
+ "title": "Time units and calendar facts",
+ "audience": "learner",
+ "keyIdea": "There are 60 seconds in 1 minute, so the second hand goes once round the clock every minute. Months are not all the same length. April, June, September and November have 30 days. February has 28 days, or 29 in a leap year. The other seven months have 31 days. A year has 365 days and a leap year has 366. Leap years come every 4 years: 2024, 2028, 2032.",
+ "familyTip": "Make two fists together and count the months on the knuckles and the dips between them. Knuckles are 31 days and dips are 30, with February the short dip. When you jump from July to August, start the second fist on a knuckle. Then check on a real calendar, and find 29 February on a calendar for 2028.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "How many days does each month have? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "31 days",
+    "30 days",
+    "28 or 29 days"
+   ],
+   "items": [
+    [
+     "January",
+     0
+    ],
+    [
+     "June",
+     1
+    ],
+    [
+     "February",
+     2
+    ],
+    [
+     "October",
+     0
+    ],
+    [
+     "November",
+     1
+    ],
+    [
+     "July",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmonths",
+  "caption": "Flagship lab: stop the second hand at a minute, count months on your knuckles, sort months by days, find leap years and build a year.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A minute is 60 seconds. The thin second hand goes all the way round the clock once each minute. So 2 minutes is 120 seconds.",
+   "Months are not all the same. April, June, September and November have 30 days. February is short. It has 28 days. The other months have 31 days.",
+   "Make two fists. Say the months in order on the bumps. A knuckle month has 31 days. A month in a dip has 30, and February has 28. July and August are both on knuckles.",
+   "A year has 365 days. Every 4 years we get a leap year. It has one more day, 29 February, so it has 366 days. 2024 and 2028 are leap years."
+  ],
+  "adult": [
+   "Ages 7 to 8. The National Curriculum in England (Year 3 measurement) asks children to know the number of seconds in a minute and the number of days in each month, year and leap year. Earlier lessons cover days, weeks and months in order and 60 minutes in an hour; this one adds the exact month lengths and the leap year.",
+   "The facts: 1 minute is 60 seconds. April, June, September and November have 30 days; February has 28, or 29 in a leap year; the other seven months have 31. A common year is 365 days and a leap year 366. In the Gregorian calendar a year divisible by 4 is a leap year, except century years, which must divide by 400: 2000 was a leap year and 2100 will not be. The knuckle method is a reliable memory aid.",
+   "Common mistakes: thinking a minute is 100 seconds, so 1 minute 30 seconds becomes 130; giving every month 30 or 31 days in turn, which breaks at July and August; thinking every even year, or every year ending in 0, is a leap year; and putting the leap day in December. The lab answers each one with a stop, a knuckle or a year to tap."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "How many seconds are in {n} minutes?",
+   "answer": "60*n",
+   "hint": "Each minute is 60 seconds. Add 60 once for each minute.",
+   "explain": "{n} minutes is {n} lots of 60 seconds: {=60*n} seconds.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A song lasts 1 minute and {s} seconds. How many seconds is that?",
+   "answer": "60+s",
+   "hint": "Change the 1 minute into 60 seconds first, then add the extra seconds.",
+   "explain": "1 minute is 60 seconds, so 60 + {s} = {=60+s} seconds.",
+   "params": {
+    "s": [
+     5,
+     55
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which month has 30 days?",
+   "choices": [
+    "June",
+    "July",
+    "March"
+   ],
+   "answer": 0,
+   "hint": "Think of the rhyme: thirty days has September, April, June and November.",
+   "explain": "June has 30 days. July and March land on knuckles, so they have 31."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "How many days are in a leap year?",
+   "choices": [
+    "366",
+    "365",
+    "364"
+   ],
+   "answer": 0,
+   "hint": "A leap year adds one extra day, 29 February, to a normal year.",
+   "explain": "A normal year has 365 days. A leap year adds 29 February, so 365 + 1 = 366."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "2024 was a leap year. Which of these is the next leap year?",
+   "choices": [
+    "2028",
+    "2026",
+    "2025"
+   ],
+   "answer": 0,
+   "hint": "Leap years come every 4 years. Count on 4 from 2024.",
+   "explain": "Count on 4 years: 2025, 2026, 2027, 2028. So 2028 is the next leap year."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many days has November?",
+    "choices": [
+     "30",
+     "31",
+     "28"
+    ],
+    "answer": 0,
+    "hint": "November is in the rhyme with September, April and June.",
+    "explain": "November has 30 days. It sits in a dip on the right fist."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A race takes {m} minutes. How many seconds is that?",
+    "answer": "60*m",
+    "hint": "One full turn of the second hand is 60 seconds. Count one turn for each minute.",
+    "explain": "{m} turns of the second hand is {m} × 60 = {=60*m} seconds.",
+    "params": {
+     "m": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "July has 31 days. How many days has August?",
+    "choices": [
+     "31",
+     "30",
+     "29"
+    ],
+    "answer": 0,
+    "hint": "On two fists, July is the last knuckle and August is the first knuckle of the next fist.",
+    "explain": "July and August are both knuckle months, so both have 31 days."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which month gets the extra day in a leap year?",
+    "choices": [
+     "February",
+     "December",
+     "January"
+    ],
+    "answer": 0,
+    "hint": "The extra day is the 29th of the shortest month.",
+    "explain": "In a leap year February has 29 days instead of 28. The extra day is 29 February."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Is 2030 a leap year?",
+    "choices": [
+     "No: leap years go 2024, 2028, 2032",
+     "Yes: it ends in 0",
+     "Yes: it is an even number"
+    ],
+    "answer": 0,
+    "hint": "Count on in 4s from 2024 and see if you land on 2030.",
+    "explain": "Counting in 4s from 2024 gives 2028 and then 2032, so 2030 is not a leap year. It has 365 days."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A song lasts {s} seconds. That is 1 minute and how many more seconds?",
+    "answer": "s-60",
+    "hint": "1 minute is 60 seconds. Take 60 away from the number of seconds.",
+    "explain": "1 minute is 60 seconds, so {s} − 60 = {=s-60}. The song lasts 1 minute and {=s-60} seconds.",
+    "params": {
+     "s": [
+      65,
+      110
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "How many days are in a year that is not a leap year?",
+    "choices": [
+     "365",
+     "366",
+     "360"
+    ],
+    "answer": 0,
+    "hint": "Add up the months, or remember the leap year number and take 1 away.",
+    "explain": "Seven months of 31, four of 30 and February with 28 make 365 days."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam says September has 31 days. What is the slip?",
+    "choices": [
+     "September has 30 days: it is in the rhyme",
+     "September has 28 days, like February",
+     "Sam is right: all months have 31 days"
+    ],
+    "answer": 0,
+    "hint": "Say the rhyme: thirty days has September …",
+    "explain": "Thirty days has September, April, June and November. September has 30 days."
+   }
+  ]
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Method checked against the AQA and Edexcel GCSE Mathematics specifications (quartiles and IQR, (n + 1)/4 and 3(n + 1)/4 positions for small discrete sets), BBC Bitesize GCSE quartiles pages and Common Core 6.SP.B.5c/S-ID.A.2. All lab data use 7 or 11 values, where the halves-excluding-median method and the (n + 1)/4 rule agree exactly; the adult text says other methods and calculator interpolation can differ for other n. Every figure was computed by hand: reading data 5,6,7,9,9,11,12,14,15,18,20 gives median 11, Q1 7, Q3 15, IQR 8 (range 15, midrange 12.5); goals 3,4,4,6,8,10,13 give Q1 4, median 6, Q3 10; Asha median 16 IQR 4, Ben median 17 IQR 15; the outlier step keeps Q1 7 and Q3 15 as the top value moves to 60; all challenge and mastery answers were re-checked."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented quartile errors: midrange taken as median (step 1 prediction, challenge tag midrange), Q1 as smallest + range ÷ 4 (step 2 prediction, challenge tag quarter, mastery m7), working from unsorted data (step 1 ordering feedback, challenge tag unsorted, practice p4), counting the median into a half and landing one place off (step 2 'That is the median' and 'Count again' feedback, challenge tag count), giving the range for the IQR (tags range and median, mastery m8), believing an outlier moves the IQR (step 4 prediction, tag iqr), and reading a bigger IQR as more consistent (tags bigger and same, mastery m6)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagiqr is about the quartile mechanism itself: values are tapped into order, the learner taps the median then the middle of each half on the ordered tiles (halves colour in as they appear), drags the two edges of a box over a dot plot until it spans Q1 to Q3, drags one outlier along a 0–65 axis while live range and IQR readouts update, and compares two players' median/IQR bars. The lab_distinct gate reports it under 30% similar to every flagship lab, including the averages and dot-plot labs."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Doing the tasks reveals the ideas: tapping 6 while ordering says 5 is smaller and quartiles only work on sorted data; tapping the median when asked for Q1 says the quartile is the middle of one half; the box readout shows the width and the count inside, settling at IQR 8; dragging the red value from 20 to 60 shows the range grow from 15 to 55 while the IQR stays 8; choosing Ben as more consistent explains 4 against 15."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options: the median is halfway between 5 and 20 (12.5) – ordering shows it is 11; Q1 is a quarter of the way along the range – the tile tapping only accepts the middle of the lower half; and the IQR grows with an outlier like the range – the drag shows it stays at 8."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge items whose wrong options each carry a tag and a message naming the slip: range instead of IQR, median instead of IQR, middle of the unsorted list, midrange, smallest plus a quarter of the range, one place off in counting, the IQR moving with an outlier, the median jumping, bigger IQR as more consistent, equal medians as equal spread, and the maximum given as Q3."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the readability limits. Kid paragraphs define each term once (median, lower quartile Q1, upper quartile Q3, interquartile range, range) in short sentences with what it tells you; lab step text is one or two sentences each."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step does one job, the readouts show the actual arithmetic (Range = 60 − 5 = 55, IQR = 15 − 7 = 8), and each item explanation shows the working."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px touch in light and dark for each step before and after Show me: the 11 value tiles fit one row, the dot plot axes label every 5 or 10 without overlap, the box handles stay on screen, the outlier slides to 60 inside the axis, the two player bars and their median/IQR labels are readable, and feedback sits above the button rows. A 'Q1 to Q3' label was added to the outlier box after the first screenshots."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: each unsorted value, each ordered tile ('Value 6: 11'), Q1 edge ← / → and Q3 edge ← / →, top value +10 / −10, and Asha / Ben. The canvas aria-label reads the data, the current ask and the live range/IQR after every move, challenge feedback is an aria-live status, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "AQA GCSE Mathematics (8300) specification, S4: median, quartiles, range and interquartile range",
+  "Pearson Edexcel GCSE Mathematics (1MA1) specification, statistics S4",
+  "BBC Bitesize GCSE Maths: Quartiles and interquartile range",
+  "Common Core State Standards for Mathematics 6.SP.B.5c, 7.SP.B.3–4 and S-ID.A.2"
+ ]
+}

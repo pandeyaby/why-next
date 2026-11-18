@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the national curriculum in England, Mathematics, Year 6 Geometry (properties of shapes: draw 2-D shapes using given dimensions and angles) and Year 5 (draw given angles and measure them in degrees). Regular polygon angles use exterior = 360° ÷ n and interior = 180° − exterior: pentagon 72°/108°, hexagon 60°/120°, and m2 only offers n that divide 360. The side-angle-side third sides were computed with the cosine rule and shown to 1 dp: √(7² + 5² − 2·7·5·cos 60°) = √39 ≈ 6.2 cm and √(6² + 5² − 60·cos 40°) ≈ 3.9 cm. The SAS name is given as the secondary-school term (KS3 congruence criteria), not taught as a Year 6 objective. The protractor draws two scales whose readings at any mark add to 180, as on a standard semicircular protractor."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented measuring slips for Years 5–6: starting a line at the ruler's end or at the 1 mark (step 1 prediction, ghost line from the ruler's edge, challenge q2), counting millimetres as centimetres (line feedback for whole-cm errors, challenge q1), reading the wrong protractor scale (dedicated scaleSlip message whenever the drawn angle is 180 − target, step 2 prediction, p3, m4, m8), putting the side on the wrong vertex (challenge q4, p5), a rectangle whose top does not match its bottom because a corner is not 90° (rectangle feedback, m6) and using the exterior turn 72° for a pentagon's inside angle (step 5 prediction and feedback, m1, m9)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagdraw is a construction lab: a millimetre ruler that can lie along any arm, a two-scale protractor whose arm label shows both readings, a three-stage side-angle-side build that joins C to B and reports BC, a set-square rectangle where the learner places corner C and sees DC, BC and angle B update, and a turtle-style polygon that only closes at the right inside angle. flagprot (measuring angles) and flagregpol (classifying polygons) have none of the drawing-from-a-recipe mechanics; lab_distinct passed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner finds each rule from the drawing before the text confirms it: dragging the arm to 120° for a 60° target returns 'You read 60 on the other scale. This angle is 120°, wider than a right angle'; the polygon visibly fails to close at 72° and the message names it as the exterior turn; the triangle reports BC ≈ 6.2 cm so the learner sees that three measurements fix the third side; moving C off the set-square line changes the angle B readout away from 90°."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions, each with a tempting wrong option that the lab then disproves: 'at the very end of the ruler' (a red ghost line from the ruler's edge is shown as too long), '120°, the bigger number' (the 180 − target check rejects it), 'no, it depends on luck' (the triangle's BC comes out the same fixed length), and '72°' (the pentagon does not close at 72°). The completion line names the learner's own pick via A.reveal."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five challenge questions; every wrong option carries its own message naming the slip: millimetres read as whole centimetres, 6.4 read as 'at the 4', the blank strip adding length, starting at 1 making the line 1 cm short, the obtuse reading on the other scale, a guessed 90°, the side started from B, BC confused with a measured side, the 60° turn used as the inside angle, and 720° being the sum not each angle."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 4.0 (family limit 5.0) and adult 10.1 (limit 10.0 + 0.5 tolerance used by validate_lessons). Kid sentences are short and concrete ('Count whole centimetres, then the small marks.'); the canvas prompts are three to six words ('Drag B', 'Drag the arm'). Technical words (exterior angle, included angle, SAS) are kept to the adult text."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each kid paragraph teaches one tool or shape with a worked example (4.5 cm = 4 cm and 5 small marks; pentagon 108°, hexagon 120°); the adult text gives the curriculum source, the unifying idea (a few measurements fix a shape), named mistakes and what the lab does. The content gate found no filler phrases and the explanation is under 12% the same as every other lesson."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for all six steps plus mid-task states (triangle arm and side stages, finished triangle, rectangle with a wrong corner, pentagon at 72° and 90°). The ruler fits 10 cm with readable cm numbers, the protractor's 0 labels were moved off the base line after the first screenshot, the B label was moved below the knob, and the angle arc is now drawn on top of the rotated ruler. Control buttons wrap into two rows; the browser walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has button equivalents under the canvas: −1 cm/−1 mm/+1 mm/+1 cm and Check for lengths, −10°/−1°/+1°/+10° and Check for angles, four 5 mm arrow buttons with labels such as 'Move C left 5 millimetres' for the rectangle corner, and 'Next triangle →'. The canvas aria-label is rewritten after every check with the feedback sentence, challenge feedback is a role=status live region, and axe (WCAG 2.1 AA) found no violations in either theme on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) The national curriculum in England: Mathematics programmes of study, Year 5 and Year 6 Geometry – properties of shapes (draw given angles and measure them in degrees; draw 2-D shapes using given dimensions and angles)",
+  "Department for Education (2013) Mathematics programmes of study: key stage 3 (congruence criteria SSS, SAS, ASA, RHS), used for the adult note on SAS",
+  "Interior and exterior angles of regular polygons (exterior = 360° ÷ n), checked with the cosine rule calculations above"
+ ]
+}

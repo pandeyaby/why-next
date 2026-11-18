@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England (Year 2–4 multiplication and division statements), NCETM primary mastery 'grouping and sharing' structures and CCSS 3.OA.A.2 (interpret 56 ÷ 8 as objects in each share or as a number of shares). Every fact recomputed: 12 ÷ 3 = 4 as 4 bags of 3 and as 4 per plate; 20 − 5 − 5 − 5 − 5 = 0 is 4 jumps; 28 ÷ 7 = 4; 30 ÷ 6 = 5; 3 pizzas cut into quarters give 12 slices, so 3 ÷ 12 = 1/4; 24 ÷ 4 = 6; 25 counted back in fives has 6 numbers but 5 jumps. Parameterised items ({=a*5} ÷ 5 = a etc.) always divide exactly by construction."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented division errors (NCETM; Squire and Bryant 2002 on partitive vs quotitive division; Fischbein et al. 1985 'primitive models' — division seen only as sharing): division only means sharing, confusing what the quotient counts (groups vs items per group), treating division as commutative (3 ÷ 12 = 12 ÷ 3), counting landing numbers instead of jumps, taking the divisor away only once (24 − 6 = 18) and multiplying instead (144). The pizza step and the 'Is 3 ÷ 12 the same as 12 ÷ 3?' prediction disprove commutativity concretely."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed (under 30% against every flagship lab, including flag_unlike.js and the remainder and unknown-factor labs). This lab alone runs grouping and sharing on the same 12 cookies, bags in threes from a pile, deals one at a time onto plates and rejects unfair finishes, jumps back on a 0–20 line in fives, sorts stories by which question they ask, and cuts 3 pizzas for 12 children. Lessons 08 (sharing only) and 671 (unknown factor) have no grouping structure or story classification."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five teaching steps plus a challenge: bagging shows the answer counts groups; dealing shows the same 4 now counts items per plate (an unfair finish is refused and must be restarted); jumping back links grouping to repeated subtraction; story sorting makes pupils read what the question asks; the pizza step shows 3 ÷ 12 < 1. Each banner states the meaning only after the learner has produced the result."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options: bags of 3 from 12 (3 = the group size, 36 = multiplying), jumps of 5 from 20 (5 = the divisor, 15 = one subtraction), and whether 3 ÷ 12 equals 12 ÷ 3 ('Yes, like 3 × 12 = 12 × 3'). The lab then shows 4 bags, 4 jumps and a quarter of a pizza each, and A.reveal names the learner's own pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with seven distinct wrong-answer messages: subtracting the group once, multiplying instead, swapping grouping and sharing, assuming division can be swapped, counting the start number as a jump, and reading the quotient as a remainder. Each message names the slip and gives the correct reasoning (e.g. '28, 24, … 0 is 8 numbers but only 7 jumps')."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 1.2 and adult 6.0 (limits 6.5 and 9.5). Kid paragraphs use cookies, plates and pizza with short sentences; the words grouping and sharing are defined where they first appear. Canvas banners wrap to at most three lines at 360 px."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed: no filler patterns and explanation overlap under 12% with 08 (sharing), 671 (unknown factor), 699 (remainders) and 65 (fractions as division). Each kid paragraph does one job: grouping, sharing, the two meanings of the same quotient, repeated subtraction plus order."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me: cookie pile, four bags, three plates and the 0–20 line fit; story cards reserve a right column so the 'groups'/'each' tags no longer overlap text (fixed after the first sheet); the bins now sit above the feedback box at its measured height (fixed after a long error message covered the bin subtitles); the canvas was made taller (1.25) for the story step."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap has a button twin (Fill a bag of 3; Plate 1/2/3 +1, One each, Start again; Jump back 5; Story 1–4 and both boxes; Cut smaller, Share out). The canvas aria-label is rewritten after every action with the pile, plates, dot position, story states or slice count. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) National Curriculum in England: mathematics programmes of study, Years 2–4 multiplication and division",
+  "NCETM primary mastery professional development materials: multiplication and division, grouping and sharing structures",
+  "Common Core State Standards for Mathematics 3.OA.A.2, corestandards.org",
+  "Squire, S. and Bryant, P. (2002) The influence of sharing on children's initial concept of division, Journal of Experimental Child Psychology 81(1)",
+  "Fischbein, E., Deri, M., Nello, M. S. and Marino, M. S. (1985) The role of implicit models in solving verbal problems in multiplication and division, Journal for Research in Mathematics Education 16(1)"
+ ]
+}

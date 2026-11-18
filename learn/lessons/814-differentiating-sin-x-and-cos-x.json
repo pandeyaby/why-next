@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_TFYv6VLecL",
+ "title": "Differentiating sin x and cos x",
+ "audience": "learner",
+ "keyIdea": "With x in radians, d/dx(sin x) = cos x and d/dx(cos x) = −sin x. You can see it from the graphs: where sin x rises most steeply (x = 0) its gradient is 1 = cos 0, and at its peaks the gradient is 0, just where cos x crosses zero. The proof rests on the limit sin h / h → 1 as h → 0, which is only true in radians; in degrees an extra factor π/180 appears. Differentiate term by term, keep constant multiples, and watch the sign: sin → cos → −sin → −cos → sin.",
+ "familyTip": "Ask your teenager to sketch y = sin x, then mark where the curve is flat, steepest up and steepest down. Plotting those gradients on a second graph should give them cos x without a formula.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each derivative right? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "correct",
+    "has a slip"
+   ],
+   "items": [
+    [
+     "d/dx(sin x) = cos x",
+     0
+    ],
+    [
+     "d/dx(cos x) = −sin x",
+     0
+    ],
+    [
+     "d/dx(4 sin x) = 4 cos x",
+     0
+    ],
+    [
+     "d/dx(3 sin x − cos x) = 3 cos x + sin x",
+     0
+    ],
+    [
+     "d/dx(cos x) = sin x",
+     1
+    ],
+    [
+     "d/dx(sin x) = −cos x",
+     1
+    ],
+    [
+     "d/dx(5 + sin x) = 5 + cos x",
+     1
+    ],
+    [
+     "d/dx(2 cos x) = −sin x",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdtrig",
+  "caption": "Flagship lab: drag a tangent along sin x, name gradient graphs, shrink h in radians and degrees, differentiate, fill the 4-cycle.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Slide a tangent along y = sin x. At x = 0 the curve climbs at its steepest, and the gradient is 1. At x = π/2 it is at a peak, so the gradient is 0. At x = π it falls at its steepest: gradient −1.",
+   "Plot those gradients and you get the graph of cos x. So the derivative of sin x is cos x. Do the same for cos x and the gradients trace out −sin x.",
+   "Why radians? The gradient of sin at 0 is the limit of sin h / h as h shrinks. In radians that limit is exactly 1. In degrees it is π/180, about 0.0175, so every answer gets an extra factor.",
+   "Go term by term. A number in front stays, and a lone number goes. So 3 sin x − cos x differentiates to 3 cos x + sin x. Each time you differentiate, you step round sin, cos, −sin, −cos."
+  ],
+  "adult": [
+   "Ages 16 to 18: A level Mathematics (Pure), which lists differentiation of sin kx and cos kx and asks students to understand the small-angle results behind them, and the IB Analysis and Approaches course. This lesson covers k = 1; the chain rule then gives d/dx(sin kx) = k cos kx.",
+   "From first principles, [sin(x + h) − sin x]/h = sin x (cos h − 1)/h + cos x (sin h)/h. As h → 0, (cos h − 1)/h → 0 and (sin h)/h → 1, so the derivative is cos x. Both limits hold only when h is in radians. With x in degrees, sin x° = sin(πx/180), so d/dx(sin x°) = (π/180) cos x°.",
+   "Common mistakes: writing d/dx(cos x) = sin x (the minus is lost); giving −cos x as the derivative of sin x, which mixes it up with integration; dropping the number in front; keeping a constant term; and working in degree mode on a calculator. A useful check is the graph: just after x = 0, cos x is falling, so its derivative must be negative there.",
+   "In the lab students drag a tangent to five marks on sin x and watch the gradient dots trace out cos x. They name the gradient graph of sin x, cos x, −sin x and −cos x, shrink h in sin h / h in radians and then in degrees, differentiate five combinations, and fill the four-step cycle to find higher derivatives."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Differentiate f(x) = 3 sin x − cos x.",
+   "choices": [
+    "3 cos x + sin x",
+    "3 cos x − sin x",
+    "−3 cos x + sin x"
+   ],
+   "answer": 0,
+   "hint": "Use d/dx(sin x) = cos x and d/dx(cos x) = −sin x, term by term.",
+   "explain": "3 sin x → 3 cos x, and −cos x → −(−sin x) = +sin x. So f′(x) = 3 cos x + sin x."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "f(x) = {a} sin x + {b} cos x. Find f′(0).",
+   "answer": "a",
+   "hint": "Differentiate first, then put x = 0. cos 0 = 1 and sin 0 = 0.",
+   "explain": "f′(x) = {a} cos x − {b} sin x, so f′(0) = {a} × 1 − {b} × 0 = {a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Why must x be in radians for d/dx(sin x) = cos x?",
+   "choices": [
+    "Because sin h / h → 1 only when h is in radians",
+    "Because cos x is only defined in radians",
+    "Because degrees cannot be differentiated"
+   ],
+   "answer": 0,
+   "hint": "Think about the limit that appears in the first-principles proof.",
+   "explain": "The proof needs sin h / h → 1. In degrees that limit is π/180, so d/dx(sin x°) = (π/180) cos x°."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "y = {a} cos x. Find the gradient of the curve at x = π/2.",
+   "answer": "-a",
+   "hint": "dy/dx = −{a} sin x. What is sin(π/2)?",
+   "explain": "dy/dx = −{a} sin x, and sin(π/2) = 1, so the gradient is −{a}.",
+   "params": {
+    "a": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What is the 4th derivative of cos x?",
+   "choices": [
+    "cos x",
+    "−cos x",
+    "sin x"
+   ],
+   "answer": 0,
+   "hint": "Step round cos → −sin → −cos → sin → ...",
+   "explain": "Four steps round the cycle bring you back to the start: cos x."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is d/dx(cos x)?",
+    "choices": [
+     "−sin x",
+     "sin x",
+     "−cos x"
+    ],
+    "answer": 0,
+    "hint": "Just after x = 0, is cos x rising or falling?",
+    "explain": "cos x falls just after 0, so its gradient is negative there: d/dx(cos x) = −sin x."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the gradient of y = sin x at x = π?",
+    "choices": [
+     "−1",
+     "0",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "The gradient is cos x. Put in x = π.",
+    "explain": "cos π = −1. The height sin π is 0, but the curve is falling at its steepest."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "f(x) = {a} sin x. Find f′(0).",
+    "answer": "a",
+    "hint": "f′(x) = {a} cos x, and cos 0 = 1.",
+    "explain": "f′(0) = {a} × cos 0 = {a} × 1 = {a}.",
+    "params": {
+     "a": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Differentiate 4 − 6 sin x.",
+    "choices": [
+     "−6 cos x",
+     "4 − 6 cos x",
+     "6 cos x"
+    ],
+    "answer": 0,
+    "hint": "A constant term has gradient 0. The −6 stays in front.",
+    "explain": "4 → 0 and −6 sin x → −6 cos x, so the derivative is −6 cos x."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "If x is measured in degrees, what is d/dx(sin x)?",
+    "choices": [
+     "(π/180) cos x",
+     "cos x",
+     "(180/π) cos x"
+    ],
+    "answer": 0,
+    "hint": "sin x° = sin(πx/180). Use the chain rule.",
+    "explain": "d/dx sin(πx/180) = (π/180) cos(πx/180), a factor of about 0.0175."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "y = {a} sin x + {b} x. Find dy/dx at x = 0.",
+    "answer": "a+b",
+    "hint": "dy/dx = {a} cos x + {b}. Put x = 0.",
+    "explain": "dy/dx = {a} cos 0 + {b} = {a} + {b} = {=a+b}.",
+    "params": {
+     "a": [
+      1,
+      6
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is the 3rd derivative of sin x?",
+    "choices": [
+     "−cos x",
+     "cos x",
+     "−sin x"
+    ],
+    "answer": 0,
+    "hint": "Step round sin → cos → −sin → ... three times.",
+    "explain": "sin → cos → −sin → −cos, so the 3rd derivative is −cos x."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "For 0 ≤ x < 2π, where does y = cos x have gradient 0?",
+    "choices": [
+     "x = 0 and x = π",
+     "x = π/2 and x = 3π/2",
+     "Nowhere"
+    ],
+    "answer": 0,
+    "hint": "Solve −sin x = 0 in the range.",
+    "explain": "−sin x = 0 at x = 0 and x = π, the peak and trough of cos x. π/2 and 3π/2 are where cos x itself is 0."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which limit makes d/dx(sin x) = cos x work?",
+    "choices": [
+     "sin h / h → 1 as h → 0",
+     "sin h → 1 as h → 0",
+     "cos h / h → 1 as h → 0"
+    ],
+    "answer": 0,
+    "hint": "It compares the sine of a small angle with the angle itself.",
+    "explain": "For small h in radians, sin h ≈ h, so sin h / h → 1. sin h → 0, and cos h / h grows without bound."
+   }
+  ]
+ }
+}

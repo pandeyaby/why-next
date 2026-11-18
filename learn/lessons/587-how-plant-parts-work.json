@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_6xsEXxKdUX",
+ "title": "How Plant Parts Work",
+ "audience": "family",
+ "keyIdea": "Each plant part has a job: roots take in water and minerals, the stem carries them up, leaves make food with light, and flowers help make seeds.",
+ "familyTip": "Point to a houseplant: 'Where does water go in? Where is food made? Where might seeds form?' Cover one leaf for a few days and compare colour.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Match each plant part to its job. Drag, or tap a card then a box.",
+  "opts": {
+   "bins": [
+    "Roots",
+    "Stem",
+    "Leaves",
+    "Flower"
+   ],
+   "items": [
+    [
+     "take in water and minerals",
+     0
+    ],
+    [
+     "carry water up the plant",
+     1
+    ],
+    [
+     "make food using light",
+     2
+    ],
+    [
+     "help make seeds",
+     3
+    ],
+    [
+     "hold the plant in the soil",
+     0
+    ],
+    [
+     "pathway for materials",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpfunc",
+  "caption": "Flagship lab: show roots absorbing, stem transport, leaves making food, flowers making seeds, then predict failure.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Roots grow under the soil. They take in water and minerals. They do not eat the soil.",
+   "The stem holds the plant up. It is also a path that carries water up to the leaves.",
+   "Leaves use light, air and water to make the plant’s food. That is why leaves need light.",
+   "Flowers help the plant make seeds. Seeds can grow into new plants."
+  ],
+  "adult": [
+   "Year 3 plants: roots take in water and minerals and hold the plant. The stem holds it up and carries water. Leaves make food with light. Flowers help make seeds. Words: absorb, transport, light-food, seeds.",
+   "Common mistakes: thinking plants eat soil; saying leaves are just pretty; thinking the stem only holds the plant up; treating flowers as only decoration.",
+   "In the lab your child shows water going in at the roots and up the stem, lets leaves make food, makes seeds at the flower, and predicts wilting when roots fail."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Roots mainly…",
+   "choices": [
+    "take in water and minerals",
+    "eat the soil",
+    "make all the seeds"
+   ],
+   "answer": 0,
+   "hint": "Think about what enters the plant underground.",
+   "explain": "Roots absorb water and minerals from the soil; they do not eat soil."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Leaves mainly…",
+   "choices": [
+    "make food using light",
+    "drink soil",
+    "only look pretty"
+   ],
+   "answer": 0,
+   "hint": "Food-making needs light on the green parts.",
+   "explain": "Leaves make food by photosynthesis using light, air and water."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A plant has {n} leaves making food. How many leaf jobs is that?",
+   "answer": "n",
+   "hint": "Each leaf still does the same food-making job.",
+   "explain": "All {n} leaves share the food-making job; the count of leaves is {=n}.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Water rises through {n} stem sections. How many transport paths is that?",
+   "answer": "n",
+   "hint": "Count the stem sections that carry water upward.",
+   "explain": "The stem’s job is transport; {n} sections still mean {=n} path pieces in this model.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order: water’s path in a healthy plant.",
+   "items": [
+    "roots take water in",
+    "stem carries water up",
+    "leaves use water to make food"
+   ],
+   "hint": "Start underground, then move upward to the leaves.",
+   "explain": "Absorption at roots, transport in the stem, then use in leaves."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "The stem’s main job is to…",
+    "choices": [
+     "carry materials up",
+     "eat minerals",
+     "make every seed"
+    ],
+    "answer": 0,
+    "hint": "Think of the stem as a pathway, not a mouth.",
+    "explain": "The stem supports the plant and transports water and minerals upward."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Flowers mainly…",
+    "choices": [
+     "help make seeds",
+     "absorb soil water",
+     "make all the food"
+    ],
+    "answer": 0,
+    "hint": "Link flowers to new plants and seeds.",
+    "explain": "Flowers enable reproduction so the plant can produce seeds."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Cut the roots. The plant…",
+    "choices": [
+     "wilts (no water in)",
+     "makes more seeds",
+     "grows without water"
+    ],
+    "answer": 0,
+    "hint": "Without roots, water cannot enter.",
+    "explain": "If roots fail, water and minerals cannot be absorbed, so the plant wilts."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Plants get their food by…",
+    "choices": [
+     "leaves making it with light",
+     "eating soil through roots",
+     "flowers drinking water"
+    ],
+    "answer": 0,
+    "hint": "Photosynthesis happens in the leaves.",
+    "explain": "Leaves make food using light; roots take in water and minerals, not food."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Cover {n} leaves. How many covered leaves make less food?",
+    "answer": "n",
+    "hint": "Covered leaves cannot use light well.",
+    "explain": "Each covered leaf makes less food; covering {n} leaves affects {=n} leaves.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A plant makes {n} seeds. How many new-plant starts is that?",
+    "answer": "n",
+    "hint": "Each seed can start a new plant.",
+    "explain": "{n} seeds means {=n} potential new plants from reproduction.",
+    "params": {
+     "n": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which part absorbs water?",
+    "choices": [
+     "roots",
+     "flower petals only",
+     "only the tips of leaves"
+    ],
+    "answer": 0,
+    "hint": "Go underground for absorption.",
+    "explain": "Roots absorb water and minerals from the soil."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: jobs from soil to seed.",
+    "items": [
+     "roots absorb",
+     "stem transports",
+     "flower helps seeds"
+    ],
+    "hint": "Start with intake, then carry, then reproduction.",
+    "explain": "Absorb, transport, then reproduction at the flower."
+   }
+  ]
+ }
+}

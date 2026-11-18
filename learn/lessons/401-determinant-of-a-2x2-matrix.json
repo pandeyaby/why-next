@@ -1,0 +1,296 @@
+{
+ "topicId": "mt_ots_PEHO0W",
+ "title": "Determinant of a 2×2 matrix",
+ "audience": "learner",
+ "keyIdea": "For a 2×2 matrix M = [a b; c d], the determinant is det M = |M| = ad − bc: the product of the leading diagonal minus the product of the other diagonal. It is a single number that can be positive, negative or zero. If det M = 0 the matrix is singular and has no inverse; if det M ≠ 0 it is non-singular and has an inverse. Multiplying every entry of a 2×2 matrix by k multiplies the determinant by k².",
+ "explain": {
+  "kid": [
+   "Every square matrix has a number called its determinant. For M = [a b; c d] we write det M or |M|, and det M = ad − bc. Multiply the two numbers on the leading diagonal, top left to bottom right. Then take away the product of the other two. For M = [3 1; 2 4], det M = 3 × 4 − 1 × 2 = 12 − 2 = 10.",
+   "Order matters. Work out ad first, then subtract bc. If you do bc − ad you get the same size but the wrong sign. Take care with negative entries: for [5 2; 3 −1], det = 5 × (−1) − 2 × 3 = −5 − 6 = −11. A determinant can be positive, negative or zero.",
+   "A matrix with det M = 0 is called singular. A singular matrix has no inverse. If det M is not zero, the matrix is non-singular and it has an inverse. You can spot many singular matrices by eye. If one row is a multiple of the other, as in [2 4; 1 2], or a row is all zeros, then det M = 0.",
+   "Questions often hide a letter in the matrix. To find when M = [k 3; 2 6] is singular, set det M = 0: 6k − 6 = 0, so k = 1. For [k 4; 4 k], det M = k² − 16 = 0, so k = 4 or k = −4. Last, if you multiply every entry by k, both ad and bc are multiplied by k², so det(kM) = k² det M."
+  ],
+  "adult": [
+   "This lesson covers the determinant of a 2×2 matrix for A level Further Maths (Core Pure) and CCSS N-VM.10 and N-VM.12. Students calculate ad − bc, use the notation det M and |M|, and decide whether a matrix is singular. They find the values of a constant that make a matrix singular. Key terms are determinant, leading diagonal, singular, non-singular and inverse.",
+   "The most common mistake is the order of the subtraction: bc − ad gives the right size but the wrong sign. Ask students to say the rule aloud and to draw the diagonals before they multiply. Sign slips with negative entries are next. Ask students to write each product in brackets, such as 5 × (−1), before they simplify.",
+   "Two misconceptions are worth testing. The first is that a determinant must be positive, as an area is. In fact ad − bc can be any real number, and its sign has a meaning met later with transformations. The second is that det(kM) = k det M. For a 2×2 matrix each row gains a factor of k, so the determinant gains k².",
+   "When a letter appears, students set det M = 0 and solve. A quadratic such as k² − 16 = 0 gives two values, and many students stop at the first one. The link between det M ≠ 0 and the inverse prepares them for the next topic, finding the inverse, and for area scale factors."
+  ]
+ },
+ "familyTip": "Ask your learner to make up a 2×2 matrix with det 0 that has no zero entries, and to explain how they built it. Then ask them to predict det(3M) for their own matrix before checking it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Singular or non-singular? Drag each matrix, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "det = 0: singular",
+    "det ≠ 0: non-singular"
+   ],
+   "items": [
+    [
+     "[2 4; 1 2]",
+     0
+    ],
+    [
+     "[3 −1; 6 −2]",
+     0
+    ],
+    [
+     "[0 0; 5 7]",
+     0
+    ],
+    [
+     "[1 2; 3 4]",
+     1
+    ],
+    [
+     "[2 1; 1 2]",
+     1
+    ],
+    [
+     "[5 0; 0 −1]",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdet",
+  "caption": "Flagship lab: build ad − bc by tapping the diagonals, steer an entry to a target determinant, slide k to make a matrix singular, classify matrices, and scale M.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "M = [4 3; 2 5]. What is det M?",
+   "choices": [
+    "14",
+    "−14",
+    "26"
+   ],
+   "answer": 0,
+   "hint": "Leading diagonal product minus the other diagonal product.",
+   "explain": "det M = 4 × 5 − 3 × 2 = 20 − 6 = 14. The answer −14 is bc − ad, and 26 adds the products."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "M = [{a} {b}; {c} {d}]. Find det M.",
+   "answer": "a*d-b*c",
+   "hint": "Work out a × d, then b × c, then subtract.",
+   "explain": "det M = {a} × {d} − {b} × {c} = {=a*d} − {=b*c} = {=a*d-b*c}.",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ],
+    "c": [
+     1,
+     9
+    ],
+    "d": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which matrix is singular?",
+   "choices": [
+    "[3 6; 1 2]",
+    "[3 6; 2 1]",
+    "[1 0; 0 1]"
+   ],
+   "answer": 0,
+   "hint": "Look for a row that is a multiple of the other row.",
+   "explain": "[3 6; 1 2] has det = 3 × 2 − 6 × 1 = 0, so it is singular. Row 1 is 3 times row 2."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "M = [k {p}; {q} 1] is singular. Find k.",
+   "answer": "p*q",
+   "hint": "Set det M = k × 1 − {p} × {q} equal to 0.",
+   "explain": "det M = k − {=p*q} = 0, so k = {=p*q}.",
+   "params": {
+    "p": [
+     2,
+     9
+    ],
+    "q": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "det M = 3. What is det(2M) for a 2×2 matrix M?",
+   "choices": [
+    "12",
+    "6",
+    "3"
+   ],
+   "answer": 0,
+   "hint": "Each of the two rows is multiplied by 2.",
+   "explain": "det(2M) = 2² × 3 = 12, because both rows gain a factor of 2."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "M = [5 2; 3 −1]. What is det M?",
+    "choices": [
+     "−11",
+     "11",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "Put the negative entry in brackets: 5 × (−1).",
+    "explain": "det M = 5 × (−1) − 2 × 3 = −5 − 6 = −11."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What does det M = 0 tell you about M?",
+    "choices": [
+     "M is singular and has no inverse",
+     "M is the zero matrix",
+     "M is the identity matrix"
+    ],
+    "answer": 0,
+    "hint": "Think about what a zero determinant means for the inverse.",
+    "explain": "det M = 0 means M is singular, so it has no inverse. M need not be the zero matrix, for example [2 4; 1 2]."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "M = [{a} {b}; {c} {d}]. Find |M|.",
+    "answer": "a*d-b*c",
+    "hint": "|M| means the determinant: ad − bc.",
+    "explain": "|M| = {a} × {d} − {b} × {c} = {=a*d} − {=b*c} = {=a*d-b*c}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ],
+     "c": [
+      1,
+      9
+     ],
+     "d": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "For which values of k is [k 9; 4 k] singular?",
+    "choices": [
+     "k = 6 or k = −6",
+     "k = 6 only",
+     "k = 36"
+    ],
+    "answer": 0,
+    "hint": "Set k² − 36 = 0 and find every solution.",
+    "explain": "det = k² − 36 = 0, so k² = 36 and k = 6 or k = −6. Both values make it singular."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "det M = {d} for a 2×2 matrix M. Find det({k}M).",
+    "answer": "k*k*d",
+    "hint": "Scaling a 2×2 matrix by k multiplies det by k².",
+    "explain": "det({k}M) = {k}² × {d} = {=k*k*d}.",
+    "params": {
+     "d": [
+      2,
+      9
+     ],
+     "k": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A student says det [2 1; 3 4] = 1 × 3 − 2 × 4 = −5. What went wrong?",
+    "choices": [
+     "They did bc − ad; the answer is 5",
+     "Nothing, −5 is right",
+     "They should add: 11"
+    ],
+    "answer": 0,
+    "hint": "Which diagonal comes first in ad − bc?",
+    "explain": "They found bc − ad. det = 2 × 4 − 1 × 3 = 8 − 3 = 5."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Can the determinant of a 2×2 matrix be negative?",
+    "choices": [
+     "Yes, ad − bc can be any real number",
+     "No, it is always positive",
+     "Only if an entry is negative"
+    ],
+    "answer": 0,
+    "hint": "Work out det [1 2; 3 4] = 1 × 4 − 2 × 3 and look at the sign.",
+    "explain": "Yes. For example det [1 2; 3 4] = 4 − 6 = −2, even though every entry is positive."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "M = [k {=2*p}; {q} 2] is singular. Find k.",
+    "answer": "p*q",
+    "hint": "Set 2k − {=2*p} × {q} = 0 and solve for k.",
+    "explain": "2k − {=2*p*q} = 0, so 2k = {=2*p*q} and k = {=p*q}.",
+    "params": {
+     "p": [
+      1,
+      5
+     ],
+     "q": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which matrix has an inverse?",
+    "choices": [
+     "[2 1; 1 2]",
+     "[4 6; 2 3]",
+     "[0 0; 1 5]"
+    ],
+    "answer": 0,
+    "hint": "A matrix has an inverse when det ≠ 0.",
+    "explain": "det [2 1; 1 2] = 4 − 1 = 3 ≠ 0, so it has an inverse. The other two have det 0."
+   }
+  ]
+ }
+}

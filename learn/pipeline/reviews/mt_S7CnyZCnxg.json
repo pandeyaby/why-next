@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against Common Core L.5.1e (use correlative conjunctions, e.g. either/or, neither/nor) and the five standard pairs in Merriam-Webster and Cambridge grammar guides. The proximity agreement rule for either … or and neither … nor (verb agrees with the nearer subject) and plural agreement for both … and were checked in Cambridge English Grammar Today and the Merriam-Webster usage note; all four verb items follow it (Neither the players nor the coach was; Either my sisters or my brother is; Either my brother or my sisters are; Both the cake and the biscuits were). Every balanced sentence pairs like with like (swimming/running, walk/take the bus, clever/kind, the rain/the cold)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: neither … or (step 1 prediction, MISS messages, challenge q1, p1), mixing pairs such as both … or and not only … and, unbalanced halves (either walk or by bus prediction, both swimming and to run, clever/has kindness), misplacing the first word (I either will phone you or text you, She both plays the piano and the violin), agreeing with the first or more prominent subject (players/coach prediction, twins/dad and aunts/uncle items), and treating both … and as singular."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagcorrel pairs a two-column partner matcher (five first words, four partners, since either and whether share or), a meaning-based pair chooser whose wrong picks are rendered into the sentence in red, a parallel-structure balancer, a nearer-subject verb picker, and a drag-the-first-word-into-a-gap placer that computes and quotes the two mismatched halves. No other flagship handles correlative pairs or proximity agreement; flagagree and flagsva handle ordinary subject-verb agreement. lab_distinct stayed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each rule is found by doing: placing either before will returns 'I either will phone you or text you. After either comes \"will phone you\", but after or comes \"text you\". They do not match.'; choosing both … and for the last-seat sentence shows 'Both Sam and Priya can have the last seat.' in red with 'Both … and means the two of them together. This sentence needs one of the two, not both.'; picking were for the coach sentence names the nearer subject. Finished sentences stay on screen at the end of each step."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions hold the tempting wrong answer: 'or' for neither (the matcher accepts only nor), 'Yes: it has either and or' for 'You can either walk or by bus.' (the balancer rejects by the bus and walking), and 'were: there are lots of players' for neither the players nor the coach (the verb step shows the coach is nearer). The done line repeats the learner's prediction."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with twelve wrong-answer messages that each name the slip: neither … or, agreement with the wrong subject (Ben, their dad), an unbalanced half, a misplaced both, plural or past verb for one person, both … and against 'not both', neither … nor ruling out both days, and wrong partners for not only, plus singular verbs after both … and."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid paragraphs use short sentences and concrete names (Either Sam or Priya can come: just one of them.) at family kid grade 1.1 against the 5.0 limit. The adult text uses the precise terms correlative conjunction, parallel structure, proximity rule and plural agreement at grade 9.9, within the 10.5 limit."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The content gate found no banned phrases and the explanation stayed under 12% six-word overlap with every lesson, including Grammar terms: clauses and conjunctions and Subject-verb agreement. Each feedback line quotes the sentence the learner built or names the exact pair or subject."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px (touch, 1.5x) in light and dark for every step before and after Show me: the two-column matcher fits 'not only … but also' on two lines once matched, the 2x2 pair tiles and the three balance options fit, the was/were tiles are 24 px, and the placer wraps 'He forgot his coat but also his hat.' onto two rows of chips with gap marks and the draggable chip below. No text clipped; the dark theme keeps ink on white tiles."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "The browser gate completed every task with Show me on desktop and iPhone 13, the challenge showed, and axe (WCAG 2.1 AA) found no violations in light or dark. Every canvas action has a labelled button: 'either pairs with or', 'Use either and or', 'End with: running', 'Fill the gap with was', and 'Put either before word 3, phone'. The canvas aria-label is rewritten with every message."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for English Language Arts, Language L.5.1e",
+  "Cambridge Dictionary, English Grammar Today: Either … or, Neither … nor, Both … and, Not only … but also",
+  "Merriam-Webster usage note: subject-verb agreement with either/or and neither/nor (proximity)",
+  "National Curriculum in England: English Appendix 2, Years 3–6 (conjunctions)"
+ ]
+}

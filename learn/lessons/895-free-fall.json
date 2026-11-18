@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_zgVX0CqbbV",
+ "title": "Free fall",
+ "audience": "learner",
+ "keyIdea": "An object in free fall has only its weight acting on it. With no air resistance, every object near Earth's surface falls with the same acceleration, g ≈ 9.8 m/s², whatever its mass. A heavier object has a bigger weight (W = m × g), but it also has more mass to speed up, so a = W ÷ m = g. From rest, the speed after t seconds is v = g × t: 9.8 m/s after 1 s, 19.6 m/s after 2 s. A feather falls slowly on Earth only because air resistance is large compared with its weight; on the airless Moon a hammer and a feather land together, with g ≈ 1.6 m/s².",
+ "familyTip": "Hold a book and a flat sheet of paper at the same height and let go: the book wins. Now lay the paper flat on top of the book and drop them together. The paper stays on, because the book clears the air out of its way. Air, not mass, slowed the paper.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it fall with an acceleration of about 9.8 m/s²? Drag each one to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Yes: air resistance is tiny",
+    "No: air resistance matters"
+   ],
+   "items": [
+    [
+     "A steel ball dropped 2 m",
+     0
+    ],
+    [
+     "A stone dropped down a well",
+     0
+    ],
+    [
+     "A hammer dropped on the Moon",
+     0
+    ],
+    [
+     "A feather dropped in a room",
+     1
+    ],
+    [
+     "A skydiver after a long fall",
+     1
+    ],
+    [
+     "An open parachute",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfreefall",
+  "caption": "Flagship lab: drop heavy and light balls, a hammer and a feather on Earth and the Moon, change the mass, track speed each second and fit g.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Let go of a heavy ball and a light ball together, and they hit the ground together. When only gravity acts on a falling object, it is in free fall. Near Earth's surface every object in free fall speeds up at the same rate: g, about 9.8 m/s².",
+   "Why doesn't the heavy one win? Its weight is bigger, since W = m × g. But it also has more mass to speed up. Newton's second law says a = F ÷ m. So a = (m × g) ÷ m = g. The mass cancels out.",
+   "An acceleration of 9.8 m/s² means the speed goes up by 9.8 m/s every second. From rest, v = g × t. After 1 s the speed is 9.8 m/s, after 2 s it is 19.6 m/s, and after 3 s it is 29.4 m/s. The distance fallen grows faster each second.",
+   "A feather falls slowly because of air resistance, not because it is light. Air pushes up on its large, light surface. On the Moon there is no air. In 1971 astronaut David Scott dropped a hammer and a feather there, and they landed together. The Moon's g is about 1.6 m/s²."
+  ],
+  "adult": [
+   "Ages 14 to 16. NGSS HS-PS2-1 asks students to use data to support Newton's second law, F = ma. In England, GCSE physics uses W = m × g and F = m × a with g ≈ 9.8 N/kg near Earth's surface. Free fall is the case where weight is the only force, so a = g for any mass.",
+   "Facts used: g ≈ 9.8 m/s² (9.81 at sea level), about 1.6 m/s² on the Moon. On Apollo 15 in 1971, David Scott dropped a 1.32 kg hammer and a 0.03 kg falcon feather; they landed together (NASA). The lab drops from 2 m. Air resistance on the bowling and tennis balls is ignored, which is fine over 2 m, where it changes the time by under 1%. The feather in air is shown at a steady 0.4 m/s. Practice items use g = 10 m/s² to keep the numbers whole, as many GCSE papers allow.",
+   "Common mistakes: believing heavier objects fall faster (Aristotle's view); saying gravity pulls every object with the same force rather than giving the same acceleration; reading 9.8 m/s² as 9.8 metres each second; using v = g × t² for speed; and blaming a feather's slow fall on its small mass instead of air resistance. Each slip gets its own message in the lab."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A 5 kg and a 1 kg steel ball are dropped together from 3 m. Ignore air resistance. Which lands first?",
+   "choices": [
+    "They land together",
+    "The 5 kg ball",
+    "The 1 kg ball"
+   ],
+   "answer": 0,
+   "hint": "Work out a = W ÷ m for each ball.",
+   "explain": "Each has a = (m × g) ÷ m = g. The 5 kg ball has 5 times the weight but also 5 times the mass, so both land together."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A stone is dropped from rest. Using g = 10 m/s², how fast is it falling after {t} s, in m/s?",
+   "answer": "10*t",
+   "hint": "From rest, the speed is v = g × t: multiply 10 by the time.",
+   "explain": "v = 10 × {t} = {=10*t} m/s. The speed rises by 10 m/s every second.",
+   "params": {
+    "t": [
+     1,
+     8
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A dropped ball is falling at {=10*t} m/s. Using g = 10 m/s², how many seconds has it been falling?",
+   "answer": "t*1",
+   "hint": "Rearrange v = g × t to t = v ÷ g.",
+   "explain": "t = {=10*t} ÷ 10 = {t} s.",
+   "params": {
+    "t": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why does a feather fall more slowly than a hammer on Earth?",
+   "choices": [
+    "Air resistance is large compared with its weight",
+    "It is lighter, so gravity speeds it up less",
+    "Gravity does not act on feathers"
+   ],
+   "answer": 0,
+   "hint": "Think about what changes on the Moon, where there is no air.",
+   "explain": "On the Moon the two land together, so mass is not the cause. On Earth, air pushes up on the feather's large, light surface."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What does an acceleration of 9.8 m/s² mean?",
+   "choices": [
+    "The speed rises by 9.8 m/s each second",
+    "It falls 9.8 m every second",
+    "Its speed is always 9.8 m/s"
+   ],
+   "answer": 0,
+   "hint": "The unit is metres per second, per second.",
+   "explain": "Acceleration is change of speed each second. In free fall the speed grows by 9.8 m/s every second, so the distance each second grows too."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Ignoring air, how fast is a dropped stone falling after 2 s? (g = 9.8 m/s²)",
+    "choices": [
+     "19.6 m/s",
+     "9.8 m/s",
+     "39.2 m/s"
+    ],
+    "answer": 0,
+    "hint": "From rest, speed v = g × t: multiply g by the time.",
+    "explain": "v = 9.8 × 2 = 19.6 m/s. 39.2 would be 9.8 × 2², which is not the speed formula."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why does a heavy ball not fall faster than a light one?",
+    "choices": [
+     "Its bigger weight has more mass to speed up",
+     "Gravity pulls every object with the same force",
+     "Heavy objects have no weight in free fall"
+    ],
+    "answer": 0,
+    "hint": "Write a = W ÷ m with W = m × g.",
+    "explain": "The pull on the heavy ball is bigger, but so is its mass. a = (m × g) ÷ m = g for both."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "On the Moon g = 1.6 m/s². How fast is a dropped rock falling after {t} s, in m/s?",
+    "answer": "8*t/5",
+    "hint": "Use v = g × t with the Moon's g.",
+    "explain": "v = 1.6 × {t} = {=8*t/5} m/s, far slower than on Earth.",
+    "params": {
+     "t": [
+      1,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A {m} kg ball is in free fall near Earth. Using g = 10 N/kg, what is its weight in N?",
+    "answer": "m*10",
+    "hint": "Weight is mass times g: W = m × g.",
+    "explain": "W = {m} × 10 = {=10*m} N. Its acceleration is still 10 m/s², because a = W ÷ m.",
+    "params": {
+     "m": [
+      1,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "In 1971 a hammer and a feather were dropped on the Moon. What happened?",
+    "choices": [
+     "They landed together",
+     "The hammer landed first",
+     "The feather floated up"
+    ],
+    "answer": 0,
+    "hint": "The Moon has no air, so nothing slows the feather.",
+    "explain": "With no air resistance, both fell with the Moon's g of about 1.6 m/s² and landed together."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A ball's speed is 10 m/s after 1 s, 20 m/s after 2 s and 30 m/s after 3 s. What is its acceleration?",
+    "choices": [
+     "10 m/s²",
+     "30 m/s²",
+     "60 m/s²"
+    ],
+    "answer": 0,
+    "hint": "How much does the speed go up each second?",
+    "explain": "The speed rises by 10 m/s every second, so the acceleration is 10 m/s²."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "An object is in free fall. Which forces act on it?",
+    "choices": [
+     "Only its weight",
+     "Its weight and a forward force",
+     "No forces at all"
+    ],
+    "answer": 0,
+    "hint": "Free fall means only gravity acts.",
+    "explain": "In free fall the only force is the object's weight, so it accelerates at g."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "On a speed–time graph for a dropped object, what does the slope show?",
+    "choices": [
+     "The acceleration, g",
+     "The distance fallen",
+     "The mass of the object"
+    ],
+    "answer": 0,
+    "hint": "Slope = change in speed ÷ time.",
+    "explain": "The slope is change in speed per second: the acceleration. For free fall on Earth it is 9.8 m/s²; the area under the line is the distance."
+   }
+  ]
+ }
+}

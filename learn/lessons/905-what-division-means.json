@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_iNdrM2-oJf",
+ "title": "What division means",
+ "audience": "learner",
+ "keyIdea": "Division splits a number into equal groups, and it can ask two different questions. Grouping: you know how big each group is, and you find how many groups. 12 cookies in bags of 3 makes 4 bags. Sharing: you know how many groups there are, and you find how many go in each. 12 cookies shared onto 3 plates puts 4 on each plate. Both are 12 ÷ 3 = 4. Division is also repeated subtraction: take 3 away from 12 again and again, and it takes 4 goes to reach 0. The order matters. 12 ÷ 3 is 4, but 3 ÷ 12 shares 3 things between 12, so each gets less than 1.",
+ "familyTip": "Grab 12 spoons or pasta shapes. First put them in piles of 3 and count the piles. Then share them between 3 people, one at a time, and count each share. Ask which way gave the answer 'how many piles' and which gave 'how many each'.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the story ask how many groups, or how many in each group? Drag each story to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "How many groups? (grouping)",
+    "How many in each? (sharing)"
+   ],
+   "items": [
+    [
+     "20 eggs, 4 in each box. How many boxes?",
+     0
+    ],
+    [
+     "35 children, teams of 5. How many teams?",
+     0
+    ],
+    [
+     "40 cm of ribbon cut into 8 cm bits. How many bits?",
+     0
+    ],
+    [
+     "20 eggs shared by 4 cooks. How many each?",
+     1
+    ],
+    [
+     "35 sweets shared by 5 friends. How many each?",
+     1
+    ],
+    [
+     "40 pens put into 8 pots equally. How many per pot?",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdivmean",
+  "caption": "Flagship lab: bag cookies in threes, share them onto plates, jump back in fives, sort division stories, and share 3 pizzas between 12 children.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "You have 12 cookies. You put 3 in each bag. How many bags do you fill? Count them: 4 bags. You knew how many go in a bag, and you found how many bags. This is called grouping.",
+   "Now share the same 12 cookies onto 3 plates. Give one to each plate, then go round again. Each plate ends up with 4. This time you knew how many plates, and you found how many on each. This is called sharing.",
+   "Both of these are 12 ÷ 3 = 4. The sum is the same, but the 4 means something different. In grouping, the 4 is how many bags. In sharing, the 4 is how many on each plate. Read the end of a story to see which one it asks for.",
+   "You can also take away 3 again and again: 12, 9, 6, 3, 0. That is 4 jumps. And watch the order. 12 ÷ 3 is 4, but 3 ÷ 12 means 3 pizzas for 12 children. Each child only gets a slice."
+  ],
+  "adult": [
+   "Ages 8 to 9. The National Curriculum in England builds division in Years 2 to 4 from two structures, and the NCETM mastery materials name them grouping (also called quotitive division, or measurement) and sharing (partitive division). CCSS 3.OA.A.2 asks pupils to interpret 56 ÷ 8 either as the number in each share or as the number of shares. Children who meet only sharing often cannot model 'how many 25p stickers can I buy with £2?', which is grouping.",
+   "The lab runs both structures on the same 12 cookies so pupils see one calculation with two meanings. Next they jump back in fives from 20, which links grouping to repeated subtraction and to the number line. Then they sort four stories by the question each asks. Last, they share 3 pizzas between 12 children, which shows that division, unlike multiplication, cannot be swapped round.",
+   "Common mistakes. Some pupils think division only means sharing, so they cannot picture grouping stories. Others mix up what the answer counts and write '6 sweets in each bag' when 6 is the number of bags. Many believe division is commutative, as multiplication is, and treat 3 ÷ 12 as 12 ÷ 3. On a number line some count the numbers they land on, not the jumps, and get one too many. Asking 'what does your answer count?' catches most of these."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "24 children get into teams of 4. How many teams are there?",
+   "choices": [
+    "6",
+    "20",
+    "96"
+   ],
+   "answer": 0,
+   "hint": "You know the size of each team. Take 4 away again and again and count the teams.",
+   "explain": "24 ÷ 4 = 6, because 6 teams of 4 make 24. 20 takes 4 away only once, and 96 is 24 × 4."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{=a*5} stickers are shared fairly by 5 friends. How many does each friend get?",
+   "answer": "a",
+   "hint": "You know there are 5 groups. What number goes 5 times into {=a*5}?",
+   "explain": "{=a*5} ÷ 5 = {a}, because 5 × {a} = {=a*5}. Each friend gets {a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which story asks 'how many groups?'",
+   "choices": [
+    "18 apples go in bags of 3. How many bags?",
+    "18 apples are shared by 3 girls. How many each?",
+    "3 bags hold 18 apples each. How many apples?"
+   ],
+   "answer": 0,
+   "hint": "Grouping tells you the size of each group. Which story tells you there are 3 in each bag?",
+   "explain": "Bags of 3 tells you the size of each group, so the answer counts bags. The second story is sharing. The third one is a times story: 3 × 18."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "How many jumps of 3 take you from {=a*3} back to 0?",
+   "answer": "a",
+   "hint": "Take 3 away again and again. Count the jumps, not the numbers you land on.",
+   "explain": "{=a*3} ÷ 3 = {a}. It takes {a} jumps of 3 to get from {=a*3} to 0.",
+   "params": {
+    "a": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Is 2 ÷ 8 the same as 8 ÷ 2?",
+   "choices": [
+    "No: 8 ÷ 2 = 4, but 2 ÷ 8 is less than 1",
+    "Yes, you can swap the numbers",
+    "Yes, both make 4"
+   ],
+   "answer": 0,
+   "hint": "Think of 2 pizzas shared by 8 people. Does each person get a whole pizza?",
+   "explain": "Division cannot be swapped round. 8 ÷ 2 = 4, but 2 pizzas shared by 8 people gives each one a quarter."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "32 chairs are put in rows of 8. 32 ÷ 8 = 4. What does the 4 mean?",
+    "choices": [
+     "4 rows",
+     "4 chairs in each row",
+     "4 chairs left over"
+    ],
+    "answer": 0,
+    "hint": "The story tells you each row has 8. So what are you counting?",
+    "explain": "Each row has 8 chairs, so the answer counts rows: 4 rows of 8 make 32. Nothing is left over."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "30 cards are dealt to 6 players. Is this grouping or sharing?",
+    "choices": [
+     "Sharing: you know the number of players",
+     "Grouping: you know the size of each group",
+     "Neither: it is a times story"
+    ],
+    "answer": 0,
+    "hint": "Do you know how many groups, or how big each group is?",
+    "explain": "You know there are 6 players, which is the number of groups. You find how many each gets, so it is sharing. 30 ÷ 6 = 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{=a*6} eggs are packed in boxes of 6. How many boxes?",
+    "answer": "a",
+    "hint": "Each box holds 6. How many sixes make {=a*6}?",
+    "explain": "{=a*6} ÷ 6 = {a}, because {a} boxes of 6 make {=a*6}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{=a*4} pencils are shared fairly into 4 pots. How many go in each pot?",
+    "answer": "a",
+    "hint": "Give one to each pot, then go round again. Or ask what times 4 makes {=a*4}.",
+    "explain": "{=a*4} ÷ 4 = {a}, because 4 × {a} = {=a*4}.",
+    "params": {
+     "a": [
+      3,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Mia counts back in 5s from 25: 25, 20, 15, 10, 5, 0. She says 25 ÷ 5 = 6. What went wrong?",
+    "choices": [
+     "She counted the numbers, not the jumps",
+     "She should count in 2s",
+     "Nothing: 25 ÷ 5 = 6"
+    ],
+    "answer": 0,
+    "hint": "Count the jumps between the numbers.",
+    "explain": "There are 6 numbers but only 5 jumps. 25 ÷ 5 = 5."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which picture shows 15 ÷ 3 as sharing?",
+    "choices": [
+     "15 counters dealt onto 3 plates",
+     "15 counters put in piles of 3",
+     "3 piles with 15 counters in each"
+    ],
+    "answer": 0,
+    "hint": "Sharing knows how many groups. Where are there 3 groups?",
+    "explain": "Dealing onto 3 plates fixes the number of groups at 3, so you find how many on each: 5. Piles of 3 is grouping."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is bigger: 12 ÷ 4 or 4 ÷ 12?",
+    "choices": [
+     "12 ÷ 4",
+     "4 ÷ 12",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Share 12 things between 4. Then share 4 things between 12.",
+    "explain": "12 ÷ 4 = 3. 4 ÷ 12 shares 4 things between 12, so each gets less than 1. Division is not the same when you swap the numbers."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is 20 ÷ 5 the same as taking 5 away again and again?",
+    "choices": [
+     "Each take-away makes one group of 5, and you count the groups",
+     "Because 20 − 5 = 15",
+     "Because 5 + 5 = 10"
+    ],
+    "answer": 0,
+    "hint": "What does each jump of 5 make?",
+    "explain": "Every time you take away 5, you make one group of 5. When nothing is left, the number of jumps is the number of groups: 4."
+   }
+  ]
+ }
+}

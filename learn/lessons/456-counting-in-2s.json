@@ -1,0 +1,151 @@
+{
+ "topicId": "mt_nvdpxAJTBG",
+ "title": "Counting in 2s",
+ "audience": "family",
+ "keyIdea": "Counting in 2s means jumping 2 each time: 2, 4, 6, 8, 10. Counting in 5s goes 5, 10, 15, 20, and counting in 10s goes 10, 20, 30. Keep the same jump every time. The last number you say tells how many things there are, not how many groups.",
+ "explain": {
+  "kid": [
+   "Socks come in pairs. A pair is 2 socks. Count the socks in 2s: 2, 4, 6, 8, 10. Say one number for each pair.",
+   "Think of a frog that hops 2 at a time. It hops over 1, 3 and 5. It lands on 2, 4, 6 and 8.",
+   "You can count in 5s too: 5, 10, 15, 20. A hand has 5 fingers. Count in 10s: 10, 20, 30. It is quick when there are lots!",
+   "Keep the same jump each time. After 15 comes 20, not 16. The last number you say is how many socks, not how many pairs."
+  ],
+  "adult": [
+   "This is skip counting. In England, the Year 1 national curriculum asks children to count in multiples of twos, fives and tens, and Year 2 asks them to count in steps of 2, 3 and 5 from 0, and in tens from any number, forward and backward. In the US, Common Core K.CC.A.1 has kindergarten children count to 100 by tens, and 2.NBT.A.2 adds skip-counting by 5s, 10s and 100s.",
+   "Skip counting is counting equal groups. The child treats a pair as one unit of 2 (unitising), which is the bridge from counting ones to multiplication: 6 pairs is 6 lots of 2, which is 12. The counts have patterns worth pointing out. Multiples of 2 are the even numbers and end in 0, 2, 4, 6 or 8. Multiples of 5 end in 5 or 0. Multiples of 10 end in 0 and sit in one column on a 100 square.",
+   "Common mistakes: slipping back into ones part way, as in 5, 10, 15, 16, 17, often where the count crosses a ten; chanting 2, 4, 6 without moving a group for each number, so the words and the objects drift apart; answering with the number of groups (6 pairs) when asked how many things (12 socks); and losing the step when counting back, as in 50, 40, 39.",
+   "In the lab your child moves pairs of socks and counts 2, 4, 6 up to 12, hops a frog along a 0 to 20 track in 2s, pays 30p and 45p with 5p coins, colours the tens on a 100 square, and fills gaps in counts of 2s, 5s and 10s, one of them counting back."
+  ]
+ },
+ "familyTip": "Count in 2s when you sort the washing: hold up each pair of socks and say 2, 4, 6. At the door, count the shoes in 2s. Then ask two questions: how many pairs, and how many shoes? Count coins in 5s or 10s at the shop.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which jump does each count use? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Jumps of 2", "Jumps of 5", "Jumps of 10"],
+   "items": [["2, 4, 6, 8", 0], ["5, 10, 15, 20", 1], ["10, 20, 30, 40", 2], ["12, 14, 16, 18", 0], ["25, 30, 35, 40", 1], ["60, 70, 80, 90", 2], ["20, 22, 24, 26", 0], ["45, 50, 55, 60", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagskip",
+  "caption": "Flagship lab: count pairs of socks in 2s, hop a frog to 20, pay with 5p coins, colour the tens on a 100 square and fill gaps in counts.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Count in 2s: 2, 4, 6, 8. What comes next?",
+   "choices": ["10", "9", "12"],
+   "answer": 0,
+   "hint": "Jump 2 from 8. Which number do you skip over?",
+   "explain": "8 and 2 more is 10. You skip over 9 and land on 10."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} pairs of socks. Count in 2s. How many socks?",
+   "answer": "2*n",
+   "hint": "Say one number for each pair: 2, 4, 6 … and stop at the last pair.",
+   "explain": "Each pair is 2 socks, so count in 2s for {n} pairs. The last number is {=2*n}, so there are {=2*n} socks.",
+   "params": {"n": [3, 10]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You have {n} coins. Each one is 5p. Count in 5s. How many pence is that?",
+   "answer": "5*n",
+   "hint": "Say 5, 10, 15 … one number for each coin.",
+   "explain": "Count in 5s, one number for each of the {n} coins. You stop at {=5*n}, so it is {=5*n}p.",
+   "params": {"n": [2, 10]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which number is not in the count of 10s?",
+   "choices": ["45", "30", "90"],
+   "answer": 0,
+   "hint": "Every number in the 10s count ends in the same digit. Which one?",
+   "explain": "The 10s count is 10, 20, 30 … and every number ends in 0. 45 ends in 5, so it is in the 5s count but not the 10s."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Each child has 10 fingers. Count in 10s. How many fingers do {n} children have?",
+    "answer": "10*n",
+    "hint": "Say 10, 20, 30 … one number for each child.",
+    "explain": "Count in 10s, one number for each of the {n} children. You stop at {=10*n}, so there are {=10*n} fingers.",
+    "params": {"n": [2, 9]}
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A frog starts at 0 and hops 2 each time. Where is it after {n} hops?",
+    "answer": "2*n",
+    "hint": "Count in 2s, one number for each hop: 2, 4, 6 …",
+    "explain": "Each hop adds 2. Counting in 2s for {n} hops lands on {=2*n}.",
+    "params": {"n": [3, 10]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Count in 5s: 20, 25, 30. What comes next?",
+    "choices": ["35", "31", "40"],
+    "answer": 0,
+    "hint": "Each number is 5 more than the one before. Jump 5 more from 30.",
+    "explain": "30 and 5 more is 35. 31 is a jump of 1 and 40 is a jump of 10."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mia counts 5, 10, 15, 16, 17. What went wrong?",
+    "choices": ["She went back to counting in 1s", "Nothing went wrong", "She should start at 1"],
+    "answer": 0,
+    "hint": "Look at the jump from 15 to 16.",
+    "explain": "From 15 she jumped 1, not 5. Counting in 5s goes 5, 10, 15, 20, 25."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which list counts in 2s?",
+    "choices": ["2, 4, 6, 8", "2, 3, 4, 5", "2, 4, 5, 6"],
+    "answer": 0,
+    "hint": "Check that each number is 2 more than the one before.",
+    "explain": "2, 4, 6, 8 jumps 2 every time. The other lists jump 1 somewhere."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Count back in 2s: 10, 8, 6. What comes next?",
+    "choices": ["4", "5", "7"],
+    "answer": 0,
+    "hint": "Going back, the numbers get smaller by 2.",
+    "explain": "6 take away 2 is 4. Counting back in 2s goes 10, 8, 6, 4, 2."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "There are 5 pairs of gloves. How many gloves?",
+    "choices": ["10", "5", "7"],
+    "answer": 0,
+    "hint": "5 is the number of pairs. Count in 2s, one number per pair.",
+    "explain": "2, 4, 6, 8, 10. Five pairs make 10 gloves."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "On a 100 square, where are 10, 20, 30 and all the tens?",
+    "choices": ["In one column at the end of the rows", "All in the top row", "All over the square"],
+    "answer": 0,
+    "hint": "Each row of a 100 square has 10 numbers. Where does each row end?",
+    "explain": "Each row ends on a ten, so 10, 20, 30 … 100 make one straight column."
+   }
+  ]
+ }
+}

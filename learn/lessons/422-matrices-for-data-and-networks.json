@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_yGhI4hAEEE",
+ "title": "Matrices for data and networks",
+ "audience": "learner",
+ "keyIdea": "A matrix can store a network. In an adjacency matrix A, the entry in row i and column j is 1 when an edge joins vertex i to vertex j, and 0 when it does not. Two-way (undirected) edges make A symmetric, so A = Aᵀ; one-way (directed) edges need not. Squaring the matrix counts routes: (A²)ij = row i · column j is the number of walks of length 2 from i to j, and on an undirected network the diagonal entry (A²)ii is the degree of i. Matrices also hold data: if Q holds quantities and P holds prices, QP gives the totals, and an m×n matrix times an n×p matrix is m×p.",
+ "explain": {
+  "kid": [
+   "A matrix can hold a map. Give each place a row and a column. Put a 1 where a road joins two places, and a 0 where it does not. This grid is called an adjacency matrix, A. The places are vertices and the roads are edges.",
+   "If a road is two-way, A to B and B to A are both 1. So the grid is a mirror image across its leading diagonal. We say A is symmetric: A equals its transpose Aᵀ. One-way roads break the mirror. Then the row tells you where a road starts and the column tells you where it ends.",
+   "Now square the matrix. The entry (A²)ij is row i times column j: multiply the matching pairs, then add. Each 1 × 1 pair is a middle place X with a road i to X and a road X to j. So (A²)ij counts the routes from i to j that use exactly two roads. On the diagonal, (A²)ii counts trips out and straight back, which is the number of roads at i, its degree.",
+   "Matrices hold data too. Say Q lists cups sold each day and P lists the price of each drink. Then QP gives the takings for each day. The sizes must fit: a 2×3 matrix times a 3×1 matrix gives a 2×1 matrix, one total per day."
+  ],
+  "adult": [
+   "This topic links matrix multiplication to two common uses: networks and data tables. It matches Common Core HSN-VM.C.6, which asks students to use matrices to show links in a network. It also fits the A level Further Maths matrix content and the graph work in decision maths. Key terms: adjacency matrix, vertex, edge, directed and undirected graph, degree, symmetric, transpose, conformable and walk.",
+   "Why does A² count walks? The entry (A²)ij is the sum over k of a(i,k) × a(k,j). Each term is 1 only when both edges i to k and k to j exist, so the sum counts the middle vertices. The same idea gives Aⁿ, which counts walks of length n. On an undirected simple graph, (A²)ii is the degree of i, because each edge gives one walk out and back.",
+   "Common mistakes: writing a two-way edge in only one cell, so A is not symmetric; swapping row and column on a directed graph; adding all the 1s in row i and column j instead of multiplying pairs; thinking (A²)ij is the edge entry squared; and multiplying matrices whose inner sizes do not match. Another slip is to total the quantities and the prices first and then multiply, instead of pairing each quantity with its own price.",
+   "In the lab the student fills an adjacency matrix from a two-way map, then a one-way map. They draw the roads a matrix describes and tap middle places to count two-step routes, then match the count to row · column. They read the diagonal of A² as a degree and drag a price so that QP hits a target. Every action has a button twin."
+  ]
+ },
+ "familyTip": "Draw four friends as dots and join the ones who message each other. Ask your teenager to write the adjacency matrix, then predict how many ways a message can pass from one friend to another through exactly one go-between, and check by squaring the matrix.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Could this be a two-way (undirected) network? Drag each adjacency matrix, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Symmetric: all roads two-way",
+    "Not symmetric: some one-way"
+   ],
+   "items": [
+    [
+     "[0 1; 1 0]",
+     0
+    ],
+    [
+     "[0 1 1; 1 0 0; 1 0 0]",
+     0
+    ],
+    [
+     "[0 1 0; 1 0 1; 0 1 0]",
+     0
+    ],
+    [
+     "[0 1; 0 0]",
+     1
+    ],
+    [
+     "[0 1 0; 0 0 1; 1 0 0]",
+     1
+    ],
+    [
+     "[0 0 1; 1 0 1; 1 0 0]",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagroute",
+  "caption": "Flagship lab: build adjacency matrices, count two-step routes with A², read degrees and hit revenue targets with QP.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In an adjacency matrix, what does a 1 in row C, column D mean?",
+   "choices": [
+    "An edge goes from C to D",
+    "C and D are the same vertex",
+    "C has one edge in total"
+   ],
+   "answer": 0,
+   "hint": "Each entry describes one pair: the row vertex and the column vertex.",
+   "explain": "Row C, column D is 1 when an edge joins C to D. On a directed graph it goes from C to D."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Q = ({a} {b}) cups sold, P = (2, 3) pounds per cup. What is QP in pounds?",
+   "answer": "2*a+3*b",
+   "hint": "Multiply each quantity by its own price, then add.",
+   "explain": "QP = {a} × 2 + {b} × 3 = {=2*a} + {=3*b} = {=2*a+3*b} pounds.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A network has an adjacency matrix with A ≠ Aᵀ. What must be true?",
+   "choices": [
+    "At least one edge is one-way",
+    "Every edge is two-way",
+    "The network has a loop"
+   ],
+   "answer": 0,
+   "hint": "Two-way edges make the matrix a mirror image across the leading diagonal.",
+   "explain": "If every edge were two-way, A would equal Aᵀ. Since it does not, at least one edge is directed."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In a two-way network, vertex X has {d} edges and no loops. What is (A²) XX?",
+   "answer": "d",
+   "hint": "Each edge at X gives one walk out along it and straight back.",
+   "explain": "(A²) XX counts walks of length 2 from X back to X. There is one for each edge, so it equals the degree: {d}.",
+   "params": {
+    "d": [
+     1,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Row P of A is (0, 1, 1, 0) and column Q is (1, 1, 1, 0). What is (A²) PQ?",
+    "choices": [
+     "2",
+     "3",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Multiply matching entries, then add.",
+    "explain": "0×1 + 1×1 + 1×1 + 0×0 = 2. Adding all the 1s (5) counts edges, not two-step walks."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What does (A²)ij count?",
+    "choices": [
+     "Walks of length 2 from i to j",
+     "The edge from i to j, squared",
+     "All edges at i and j"
+    ],
+    "answer": 0,
+    "hint": "Think about the middle vertex k in a(i,k) × a(k,j).",
+    "explain": "Each term a(i,k) × a(k,j) is 1 only when i–k and k–j are both edges, so the sum counts two-step walks."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A is 3×2 and B is 2×4. What size is AB?",
+    "choices": [
+     "3×4",
+     "2×2",
+     "4×3"
+    ],
+    "answer": 0,
+    "hint": "The inner sizes must match. The outer sizes give the answer.",
+    "explain": "(3×2)(2×4): the inner 2s match and the product is 3×4."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "On a one-way map, row R, column S is 1 and row S, column R is 0. What does this show?",
+    "choices": [
+     "A road from R to S only",
+     "A road from S to R only",
+     "A two-way road"
+    ],
+    "answer": 0,
+    "hint": "Row is the start, column is the end.",
+    "explain": "The road starts at R and ends at S. A two-way road would put a 1 in both cells."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ana writes the A–B road as a 1 in row A, column B only. The road is two-way. What is wrong?",
+    "choices": [
+     "Row B, column A also needs a 1",
+     "Nothing, one 1 per road is right",
+     "The diagonal should be 1"
+    ],
+    "answer": 0,
+    "hint": "A two-way road can be used from either end.",
+    "explain": "Undirected edges appear twice, so A is symmetric. Row B, column A must also be 1."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Q = (3 4) cups and P = (2, 5) pounds per cup. Ben says QP = (3 + 4) × (2 + 5) = 49. What is the right value?",
+    "choices": [
+     "£26",
+     "£49",
+     "£120"
+    ],
+    "answer": 0,
+    "hint": "Pair each quantity with its own price.",
+    "explain": "QP = 3 × 2 + 4 × 5 = 6 + 20 = 26. Totalling each list first mixes up the pairs."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A is {m}×3 and B is 3×4. How many entries does AB have?",
+    "answer": "4*m",
+    "hint": "Find the size of AB first, then multiply rows by columns.",
+    "explain": "AB is {m}×4, so it has {m} × 4 = {=4*m} entries.",
+    "params": {
+     "m": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A two-way network has {e} edges and no loops. How many 1s are in its adjacency matrix?",
+    "answer": "2*e",
+    "hint": "Each two-way edge is written in two cells.",
+    "explain": "Each edge gives two 1s, one above and one below the diagonal: 2 × {e} = {=2*e}.",
+    "params": {
+     "e": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "What is the degree of a vertex?",
+    "choices": [
+     "The number of edges that meet it",
+     "Its row number in the matrix",
+     "The largest entry in A²"
+    ],
+    "answer": 0,
+    "hint": "It is the same number as the diagonal entry of A² on a two-way network.",
+    "explain": "Degree is the number of edges at a vertex. On an undirected graph it equals (A²)ii and the row sum of A."
+   }
+  ]
+ }
+}

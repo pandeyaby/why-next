@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against NGSS K-2-ETS1-3 (analyse data from tests of two objects designed to solve the same problem to compare strengths and weaknesses) and NC 2013 KS1 Working Scientifically (perform simple tests; gather and record data; use observations to suggest answers). The lab data are internally consistent: Boat A holds 12 and Boat B 7 (the 13th and 8th marble sink them), repeat tries A 12/12/11 and B 7/3/7 with the 3 explained as tipping marbles in at once, race B 4 s vs A 9 s, sail retest 5 s. Parameterised items checked at range corners: p2 a-b 2..11, p4 a+b 5..17, m5 a-b 2..13, m7 2a+b 14..26."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented early-years design and testing errors (ASE-King's AKSIS project on investigative skills, Goldsworthy, Watson and Wood-Robinson 2000: single readings trusted, several variables changed at once, conclusions not drawn from the data): taller or bigger looks better (prediction 'tall cup', CQ tall), a single test is trusted (step 3 odd result, CQ once/quit, m3), irrelevant variables like colour (fair-step colour row refuses to count, CQ colour, sorter visual), unequal conditions accepted if one boat wins (CQ fair/win), one design must win everything (strength/weakness sort, m2), choosing by preference not data (CQ like, m9), and changing several things at once (CQ many, m4)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagdesign is about comparing two designs with data: loading two different boats to their sinking point, equalising test conditions while a colour row is shown not to matter, three repeat tries per design with an outlier to spot, a race that reveals the trade-off, and a recommend-then-improve step with one change and a retest. flagfairvar and flagsimtest test one variable in a single object; flagfloat sorts floaters and sinkers. Max 6-shingle similarity 2.0% (flag_coin.js)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The child finds each idea before it is named: the wide tray keeps floating long after the tall cup sinks; the fair table lights each row green as conditions match and the narration states only the boat now differs; six bars show the lone 3 far from its neighbours; the race flips the winner, so neither boat is best at everything; choosing Boat B for 10 marbles is answered with 'it would sink'. Done messages then state the rule (fair test, repeat, strengths and weaknesses, change one thing)."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options disproved in the lab: the tall cup holds more (it sinks at 8 while the tray holds 12), an unfair test 'shows B is worse' (making water, marbles and pouring the same is the fix), and one low result should be trusted (two more tries give 7 and 7)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "slip() has ten distinct messages (tall, add, once, quit, colour, fair, win, fast, like, many), each naming the wrong idea and the fix, e.g. '\"How many more\" means find the gap: 12 take away 7 is 5. Do not add.' In-lab feedback is also specific: wrong odd-result tap says that value fits its neighbours; choosing Boat B explains it would sink with 10; painting or shrinking the boat explains why it does not fix the speed."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes for the family audience: kid FK 1.7, adult FK 6.4. Kid text has short sentences and defines design, fair test, strength and weakness on first use. Lab text uses the same words; the young class gives 56 px buttons and larger story text."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passes (no banned phrases; explanation overlap well under 12% with fair-test lessons). Kid paragraphs: what a design is; fair and repeated tests; strengths and weaknesses; choose and improve. Adult paragraphs: curriculum and key words; named mistakes; concrete measures to use at home; what the lab does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots after Show me on every step at 360 px Android (light), iPhone 13 (dark) and desktop (dark). First pass found the fair-test row text overflowing at 360 px and a sunk boat still looking afloat; fixed with a smaller row font, 'one by one' wording and a water overlay on sunk boats. The pick-step result line was green text on the dark canvas edge; moved into a pale card. Buttons wrap below the canvas."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a labelled button ('Put a marble in Boat A, the wide tray', 'Make the water the same for both boats', 'Boat B try 2, 3 marbles, does not fit', 'This card is a strength', 'Change Boat A: add a sail'). say() updates the canvas aria-label and narration after every action. walk.cjs: desktop and iPhone 13 complete all 5 tasks with Show me, the challenge shows, axe WCAG 2.1 AA clean in both themes, no console errors."
+  }
+ },
+ "sources": [
+  "NGSS K-2-ETS1-3: Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs",
+  "Department for Education, National Curriculum in England: science programmes of study, Key Stage 1 Working Scientifically (2013)",
+  "Goldsworthy, Watson and Wood-Robinson (2000), Developing Understanding (AKSIS project), Association for Science Education",
+  "NGSS Appendix I: Engineering Design in the NGSS (K-2 progression: define, develop, optimise)",
+  "Topic mt_nNYo5A-7Bl evidence lines in out/merged/data/topics.json"
+ ]
+}

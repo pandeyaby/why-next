@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_Cqm8iy48UI",
+ "title": "Reading tables",
+ "audience": "family",
+ "keyIdea": "A table sorts information into rows and columns. In a bus timetable each column is one bus and each row is one stop, so you go down the bus's column to the stop's row and read the time. A dash means the bus does not stop there. To find how long a trip takes, count on to the next o'clock and then add the rest, because an hour has 60 minutes, not 100. In a two-way table, each total adds up its own row or column, so you can work out a missing number.",
+ "familyTip": "Next time you take a bus or train, or look one up online, read the timetable together. Ask: which column is our bus? Which row is our stop? If we must be there by a set time, which is the latest one we can catch, and how long will the trip take?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does each question need one column (one bus) or one row (one stop)? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "read down one bus's column",
+    "read along one stop's row"
+   ],
+   "items": [
+    [
+     "every stop Bus 3 makes",
+     0
+    ],
+    [
+     "every bus that leaves Park Road",
+     1
+    ],
+    [
+     "when Bus 1 reaches each stop",
+     0
+    ],
+    [
+     "the first bus at the Library",
+     1
+    ],
+    [
+     "how long Bus 2 takes from start to end",
+     0
+    ],
+    [
+     "the last bus at the Station",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtimetab",
+  "caption": "Flagship lab: read a bus timetable by column and row, meet the dash, count on to time a trip, find the latest bus, and fill a two-way table.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A table puts facts in rows and columns. Rows go across. Columns go down. Each box, or cell, sits in one row and one column.",
+   "In a bus timetable, each column is one bus. Each row is one stop. To find when a bus gets to a stop, go down that bus's column. Stop at the row for your stop. Read the time in that cell. A dash (—) means the bus does not stop there.",
+   "To find how long a trip takes, count on. A bus leaves at 08:45 and gets in at 09:16. Count 15 minutes to 09:00. Then count 16 more. That is 31 minutes. Do not take 845 from 916. An hour has 60 minutes, not 100.",
+   "A two-way table sorts things two ways at once, like year group and favourite sport. Each total adds up its own row or column. If a cell is missing, take the other cells away from the total."
+  ],
+  "adult": [
+   "Ages 9 to 10. In the National Curriculum in England, Year 4 statistics asks children to interpret and present data in tables, and Year 5 asks them to complete, read and interpret information in tables, including timetables. Timetables also practise elapsed time across the hour (Year 4 measurement; CCSS 3.MD.1). This leads into pictograms and tally charts, using several sources, and two-way tables with relative frequencies.",
+   "The skill is locating a cell from two headings and then using it: reading a time, choosing a bus by its arrival time, or working out a duration. Timetables are usually written in the 24-hour clock (14:05 is 2:05 pm), and a dash or blank means a service does not call at that stop.",
+   "Common mistakes: reading the right column but the wrong row, such as the Library time for Market Square. Choosing a bus by when it leaves when the question gives a time to arrive by. Taking times away as if they were ordinary numbers: 09:16 − 08:45 gives 71, not 31. In two-way tables, children often add the total into the row instead of taking the other cells away from it.",
+   "In the lab your child taps cells in a bus timetable with four stops to answer questions. They work around the dash and drag a marker along a time line to count on past an o'clock. They find the latest bus that still arrives in time. Then they fill the gaps in a two-way table about favourite sports and check that the row and column totals agree."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In a bus timetable, each column is one bus and each row is one stop. How do you find when Bus 3 reaches the Station?",
+   "choices": [
+    "go down Bus 3's column to the Station row",
+    "go along the Station row and pick the first time",
+    "go down Bus 3's column and pick the last time you see"
+   ],
+   "answer": 0,
+   "hint": "You need the cell that is in both Bus 3's column and the Station row.",
+   "explain": "The answer is in the cell where Bus 3's column meets the Station row. The first time in the Station row is a different bus."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A bus leaves at 9:{a} and arrives at 10:{b}. How many minutes does the trip take?",
+   "answer": "60-a+b",
+   "hint": "Count on from 9:{a} to 10:00 first. Then count on to 10:{b}.",
+   "explain": "From 9:{a} to 10:00 is {=60-a} minutes. From 10:00 to 10:{b} is {b} minutes. {=60-a} + {b} = {=60-a+b} minutes.",
+   "params": {
+    "a": [
+     35,
+     55
+    ],
+    "b": [
+     10,
+     25
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "In a two-way table, the Year 6 row has {a} for football, {b} for swimming and a gap for netball. The row total is {t}. What number goes in the gap?",
+   "answer": "t-a-b",
+   "hint": "The row total is all the cells in the row added up. Take the cells you know away from it.",
+   "explain": "{t} − {a} − {b} = {=t-a-b}. Check: {a} + {b} + {=t-a-b} = {t}.",
+   "params": {
+    "a": [
+     5,
+     15
+    ],
+    "b": [
+     5,
+     15
+    ],
+    "t": [
+     40,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A timetable shows a dash (—) for Bus 2 at Market Square. What does it mean?",
+   "choices": [
+    "Bus 2 does not stop at Market Square",
+    "Bus 2 waits at Market Square",
+    "the time was left out by mistake"
+   ],
+   "answer": 0,
+   "hint": "Timetables use a dash on purpose.",
+   "explain": "A dash means the bus does not stop there. You need to find the next bus that has a time in that row."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You must be at the Station by 10:45. Bus 3 gets there at 10:36 and Bus 4 gets there at 12:14. Which bus should you catch?",
+   "choices": [
+    "Bus 3",
+    "Bus 4",
+    "either one"
+   ],
+   "answer": 0,
+   "hint": "Which bus arrives before 10:45?",
+   "explain": "Bus 3 arrives at 10:36, before 10:45. Bus 4 arrives at 12:14, which is too late."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A train leaves at 14:05. What is that in 12-hour time?",
+    "choices": [
+     "2:05 pm",
+     "4:05 pm",
+     "14:05 am"
+    ],
+    "answer": 0,
+    "hint": "For times after 12:00, take away 12 hours.",
+    "explain": "14 − 12 = 2, so 14:05 is 2:05 in the afternoon, written 2:05 pm."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A train leaves at 11:{a} and arrives at 12:{b}. How many minutes is the trip?",
+    "answer": "60-a+b",
+    "hint": "Jump to 12:00 first, then count on the rest.",
+    "explain": "11:{a} to 12:00 is {=60-a} minutes, and 12:00 to 12:{b} is {b} minutes, so the trip is {=60-a+b} minutes.",
+    "params": {
+     "a": [
+      40,
+      58
+     ],
+     "b": [
+      10,
+      30
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Bus 1 leaves at 08:45 and arrives at 09:16. Sam says the trip is 71 minutes because 916 − 845 = 71. What is wrong?",
+    "choices": [
+     "an hour has 60 minutes, so the trip is 31 minutes",
+     "nothing, it is 71 minutes",
+     "he should add the times"
+    ],
+    "answer": 0,
+    "hint": "Count on from 08:45 to 09:00, then to 09:16.",
+    "explain": "08:45 to 09:00 is 15 minutes and 09:00 to 09:16 is 16 minutes, so 31 minutes. Taking 845 from 916 treats an hour as 100 minutes."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "In a two-way table, the Netball column has {a} in Year 5 and {b} in Year 6. What is the Netball total?",
+    "answer": "a+b",
+    "hint": "A column total adds up all the cells above it.",
+    "explain": "{a} + {b} = {=a+b}. The total at the bottom of a column is the sum of that column.",
+    "params": {
+     "a": [
+      4,
+      15
+     ],
+     "b": [
+      4,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You reach the Library at 09:40. The Library row says 08:58, 09:33, 10:18, 11:52. When is the next bus?",
+    "choices": [
+     "10:18",
+     "09:33",
+     "11:52"
+    ],
+    "answer": 0,
+    "hint": "The next bus is the first time after 09:40.",
+    "explain": "08:58 and 09:33 have already gone. The first time after 09:40 is 10:18."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You must be at the Library by 09:40. Bus 1 gets there at 08:58, Bus 2 at 09:33 and Bus 3 at 10:18. Which is the latest bus you can catch?",
+    "choices": [
+     "Bus 2",
+     "Bus 1",
+     "Bus 3"
+    ],
+    "answer": 0,
+    "hint": "Latest means the last one that still gets there in time.",
+    "explain": "Bus 1 and Bus 2 both arrive before 09:40, but Bus 2 is later, so it is the latest one that works. Bus 3 arrives at 10:18, too late."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A two-way table has a Total column with {a} for Year 5 and {b} for Year 6. What is the grand total in the bottom corner?",
+    "answer": "a+b",
+    "hint": "The grand total adds up the Total column. The Total row gives the same number.",
+    "explain": "{a} + {b} = {=a+b}. Adding the Total row would give {=a+b} too, which is a good check.",
+    "params": {
+     "a": [
+      20,
+      40
+     ],
+     "b": [
+      20,
+      40
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In a timetable, Bus 3 reaches the Library at 10:18 and Market Square at 10:27. When does it reach Market Square?",
+    "choices": [
+     "10:27",
+     "10:18",
+     "10:05"
+    ],
+    "answer": 0,
+    "hint": "Find Bus 3's column, then the Market Square row.",
+    "explain": "10:27 is in the Market Square row. 10:18 is the Library row, and 10:05 is when it leaves the first stop."
+   }
+  ]
+ }
+}

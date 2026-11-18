@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_TGEzxumdYt",
+ "title": "Alternating and direct current",
+ "audience": "learner",
+ "keyIdea": "Direct current (d.c.) from cells and batteries keeps one direction; alternating current (a.c.) from the mains reverses each half-cycle. UK mains is about 230 V at 50 Hz. Read pd–time graphs: flat for d.c., waving through zero for a.c.",
+ "familyTip": "Ask: is a phone battery a.c. or d.c.? Then: what do the 230 V and 50 Hz on a UK appliance label mean?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "a.c./d.c. idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "battery → d.c.",
+     0
+    ],
+    [
+     "mains → a.c.",
+     0
+    ],
+    [
+     "battery → a.c.",
+     1
+    ],
+    [
+     "UK mains ≈ 230 V, 50 Hz",
+     0
+    ],
+    [
+     "a.c. never reverses",
+     1
+    ],
+    [
+     "pd–time wave means a.c.",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagacdc",
+  "caption": "Flagship lab: show d.c. and a.c. pd–time graphs, reveal UK 230 V / 50 Hz, name what reverses, catch mix-ups, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Direct current (d.c.) from a cell or battery pushes charge one way. On a potential-difference against time graph it looks like a flat line.",
+   "Alternating current (a.c.) from the mains reverses direction many times each second. Its pd–time graph is a wave that crosses zero.",
+   "In the UK, mains is about 230 volts at 50 hertz. Frequency in hertz is how many full cycles happen each second. In the US it is about 120 V at 60 Hz.",
+   "In a.c., the potential difference (and the current) reverse each half-cycle. The metal atoms in the wire stay put."
+  ],
+  "adult": [
+   "Ages 14 to 16. KS4 Electricity: distinguish a.c. and d.c., sketch pd–time graphs, and state local mains voltage and frequency. Separate from the circuit-quantity lesson on current and voltage.",
+   "Words: alternating current, direct current, potential difference, frequency, hertz, mains, half-cycle. Common mistakes: calling battery supply a.c.; swapping 230 V with 50 Hz; thinking frequency is a voltage; saying nothing reverses in a.c.",
+   "In the lab the learner reveals both graphs, recalls UK mains values, names what reverses, spots the battery-as-a.c. myth, and orders the check."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A battery supplies…",
+   "choices": [
+    "direct current (d.c.)",
+    "alternating current (a.c.)",
+    "no potential difference"
+   ],
+   "answer": 0,
+   "hint": "Cells keep charge flowing one way.",
+   "explain": "Batteries and cells supply direct current. Mains supplies alternating current."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A supply runs at {a} Hz. How many cycles in 2 seconds?",
+   "answer": "2*a",
+   "hint": "Frequency counts cycles each second; multiply by 2.",
+   "explain": "At {a} Hz there are {a} cycles per second, so 2 seconds give {=2*a} cycles.",
+   "params": {
+    "a": [
+     40,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "UK mains is about…",
+   "choices": [
+    "230 V at 50 Hz",
+    "50 V at 230 Hz",
+    "12 V d.c."
+   ],
+   "answer": 0,
+   "hint": "Voltage is hundreds of volts; frequency is tens of hertz.",
+   "explain": "UK mains is about 230 V at 50 Hz. Do not swap the numbers."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Frequency {a} Hz for {b} seconds. Total cycles?",
+   "answer": "a*b",
+   "hint": "Multiply frequency by time in seconds.",
+   "explain": "{a} cycles each second for {b} seconds is {=a*b} cycles.",
+   "params": {
+    "a": [
+     40,
+     60
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is the mix-up?",
+   "choices": [
+    "a battery supplies a.c.",
+    "a battery supplies d.c.",
+    "UK mains is about 50 Hz"
+   ],
+   "answer": 0,
+   "hint": "Spot the false claim about batteries.",
+   "explain": "Batteries supply d.c., not a.c. Mains frequency about 50 Hz is true for the UK."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A flat pd–time graph means…",
+    "choices": [
+     "d.c.",
+     "a.c.",
+     "zero frequency only"
+    ],
+    "answer": 0,
+    "hint": "Flat means the pd does not reverse.",
+    "explain": "A steady one-way pd is direct current."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A pd–time wave through zero means…",
+    "choices": [
+     "a.c.",
+     "d.c. from a cell",
+     "a broken meter only"
+    ],
+    "answer": 0,
+    "hint": "Crossing zero shows a reverse.",
+    "explain": "When pd swings both ways the supply is alternating current."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "At {a} Hz, cycles in 10 seconds?",
+    "answer": "10*a",
+    "hint": "Multiply frequency by ten seconds.",
+    "explain": "{a} × 10 = {=10*a} cycles in 10 seconds.",
+    "params": {
+     "a": [
+      45,
+      55
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "US mains is about…",
+    "choices": [
+     "120 V at 60 Hz",
+     "230 V at 50 Hz",
+     "12 V d.c."
+    ],
+    "answer": 0,
+    "hint": "US values differ from UK mains.",
+    "explain": "Typical US mains is about 120 V at 60 Hz."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Best first step to tell a.c. from d.c. is…",
+    "choices": [
+     "look at the pd–time graph shape",
+     "guess from the wire colour",
+     "ignore the time axis"
+    ],
+    "answer": 0,
+    "hint": "Use the graph shape carefully.",
+    "explain": "Graph shape shows whether pd stays flat or reverses."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{a} cycles happen in 1 second. Frequency in Hz?",
+    "answer": "a",
+    "hint": "Hertz means cycles per second.",
+    "explain": "{a} cycles in one second means frequency {=a} Hz.",
+    "params": {
+     "a": [
+      40,
+      70
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The key skill here vs current-and-voltage is…",
+    "choices": [
+     "telling a.c. from d.c. with graphs and mains values",
+     "only defining I = V/R in a series loop",
+     "drawing series and parallel symbols only"
+    ],
+    "answer": 0,
+    "hint": "Focus on a.c. versus d.c. here.",
+    "explain": "Here you compare a.c. and d.c. Circuit equations live in the current-and-voltage lesson."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In a.c. the wires…",
+    "choices": [
+     "keep their metal atoms; pd flips",
+     "physically swap ends each cycle",
+     "become d.c. after one second"
+    ],
+    "answer": 0,
+    "hint": "What moves electrically in the wire?",
+    "explain": "Atoms stay; the potential difference reverses direction."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A car battery is typically…",
+    "choices": [
+     "about 12 V d.c.",
+     "230 V a.c.",
+     "50 Hz only"
+    ],
+    "answer": 0,
+    "hint": "Vehicles use cells, not mains.",
+    "explain": "Car batteries supply roughly 12 V direct current."
+   }
+  ]
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "topicId": "mt_fGLmWTktGc",
+ "title": "Reversible reactions and dynamic equilibrium",
+ "audience": "learner",
+ "keyIdea": "A reversible reaction (⇌) can go both ways: reactants form products and products re-form reactants. In a closed system it reaches dynamic equilibrium: the forward and backward reactions keep going at equal rates, so the concentrations of reactants and products stay constant. Constant does not mean equal, and the reactions have not stopped.",
+ "familyTip": "In a school lab, with eye protection, heat a little blue hydrated copper sulfate until it turns white, let it cool, then add a few drops of water: it turns blue again and gets warm. Ask: is this reaction reversible, and why is the open tube not at equilibrium?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each statement true or false for a reaction at dynamic equilibrium? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": ["True at dynamic equilibrium", "False"],
+   "items": [["Forward and backward rates are equal", 0], ["Both reactions have stopped", 1], ["Amounts of reactants and products stay constant", 0], ["Reactant and product amounts must be equal", 1], ["It needs a closed system", 0], ["A product gas escaping keeps it at equilibrium", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagequil",
+  "caption": "Flagship lab: run A ⇌ B from all A, find where the rates meet, start from all B, tag one particle, open the flask, change kf and kb.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Some reactions go both ways. We show this with the ⇌ sign. For A ⇌ B, A turns into B, and B can turn back into A.",
+   "Start with only A. At first only the forward reaction can happen, so it is fast. As B builds up, the backward reaction speeds up, and as A is used up, the forward one slows down.",
+   "Soon the two rates are equal. B is made as fast as it is used up, so the amounts stop changing. This is dynamic equilibrium: both reactions still go on.",
+   "It only works in a closed system. If a product escapes, it cannot turn back, so the forward reaction runs until the reactant is used up."
+  ],
+  "adult": [
+   "Ages 16 to 18. AQA A-level Chemistry 3.1.6.1 and OCR A 3.2.3: in a reversible reaction at equilibrium the forward and reverse reactions proceed at equal rates and the concentrations of reactants and products remain constant; this needs a closed system. NGSS HS-PS1-6 asks students to refine a system to change the amount of product at equilibrium.",
+   "The lab uses A ⇌ B with first-order steps, so the forward rate is kf[A] and the backward rate is kb[B]. Setting them equal gives [B]/[A] = kf/kb, the same mix from either starting side at a fixed temperature. Hydrated copper sulfate losing water when heated in an open tube is reversible but not at equilibrium, because the water escapes.",
+   "Common mistakes: saying the reactions stop at equilibrium; thinking equal rates means equal concentrations (or 50:50); thinking the side you start from changes the mix; and forgetting the closed-system condition.",
+   "In the lab the learner runs A ⇌ B from all A, drags a time line to where the rates meet, runs from all B, tags one particle to watch it keep swapping, opens the flask so B escapes, and changes kf and kb."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "Why is the equilibrium called dynamic?",
+   "choices": ["Both reactions keep going at equal rates", "Both reactions have stopped", "The amounts keep changing"], "answer": 0,
+   "hint": "Think about the tagged particle in the lab once the totals were steady.",
+   "explain": "Particles keep reacting both ways, but at equal rates, so the totals stay constant. Dynamic means still moving, not stopped."
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "In A ⇌ B, kf is {a} times kb. At equilibrium, what is [B] ÷ [A]?",
+   "answer": "a",
+   "hint": "At equilibrium kf × [A] = kb × [B]. Rearrange for [B]/[A].",
+   "explain": "kf[A] = kb[B], so [B]/[A] = kf/kb = {a}. A faster forward step leaves more B at equilibrium.",
+   "params": {"a": [2, 9]}
+  },
+  {
+   "type": "numeric", "id": "p3",
+   "prompt": "A closed flask holds {=(a+1)*m} particles of A and B in total. At equilibrium there are {a} B particles for every A particle. How many B particles are there?",
+   "answer": "a*m",
+   "hint": "Split the total in the ratio B : A = {a} : 1.",
+   "explain": "There are {=a+1} parts in total, so one part is {m} particles. B has {a} parts: {a} × {m} = {=a*m} particles.",
+   "params": {"a": [1, 4], "m": [5, 20]}
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "Starting with only B instead of only A (same temperature, closed flask), the equilibrium mix is …",
+   "choices": ["The same as starting from A", "All B", "The reverse of starting from A"], "answer": 0,
+   "hint": "The mix is fixed by kf × [A] = kb × [B]. Does that depend on the start?",
+   "explain": "Both runs settle where kf[A] = kb[B], so they reach the same mix. The starting side does not set the position."
+  },
+  {
+   "type": "mc", "id": "p5",
+   "prompt": "Blue hydrated copper sulfate turns white when heated in an open tube. Why is this not an equilibrium?",
+   "choices": ["The water escapes, so the backward reaction cannot happen", "It is not a reversible reaction", "Heat stops all reactions"], "answer": 0,
+   "hint": "What does dynamic equilibrium need, and where does the steam go?",
+   "explain": "The reaction is reversible (add water and it turns blue again), but in an open tube the water leaves, so the system is not closed."
+  }
+ ],
+ "mastery": {
+  "passMark": 4, "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "At dynamic equilibrium, which statement is true?",
+    "choices": ["The concentrations stay constant", "The concentrations are equal", "The reactions have stopped"], "answer": 0,
+    "hint": "Constant and equal are not the same thing.",
+    "explain": "The rates are equal, so the concentrations stop changing. They are usually not equal to each other."
+   },
+   {
+    "type": "numeric", "id": "m2",
+    "prompt": "At equilibrium, A turns into B {a} times per second in a flask. How many times does B turn into A in {b} seconds?",
+    "answer": "a*b",
+    "hint": "At equilibrium the backward rate equals the forward rate.",
+    "explain": "The backward rate is also {a} per second, so in {b} seconds there are {a} × {b} = {=a*b} B → A events.",
+    "params": {"a": [20, 90], "b": [2, 9]}
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "At equilibrium in A ⇌ B, [B] is {k} times [A]. If kb = {b} s⁻¹, what is kf in s⁻¹?",
+    "answer": "k*b",
+    "hint": "Use kf × [A] = kb × [B], so kf = kb × [B]/[A].",
+    "explain": "kf = kb × [B]/[A] = {b} × {k} = {=k*b} s⁻¹.",
+    "params": {"k": [2, 5], "b": [1, 4]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "What does the ⇌ sign show?",
+    "choices": ["The reaction can go both forwards and backwards", "The reaction has finished", "The reactants and products are equal"], "answer": 0,
+    "hint": "Look at the two half-arrows.",
+    "explain": "⇌ marks a reversible reaction: products can re-form reactants as well as the other way round."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "Start with only A. What happens to the forward rate as time goes on?",
+    "choices": ["It falls, then stays steady", "It rises, then stays steady", "It stays the same from the start"], "answer": 0,
+    "hint": "The forward rate depends on how much A is left.",
+    "explain": "As A is used up the forward rate falls, while the backward rate rises with B, until the two are equal and steady."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Jo says the reaction has stopped because the colour no longer changes. What is wrong?",
+    "choices": ["Both reactions continue at equal rates, so the colour stays the same", "Nothing: no change means no reaction", "The colour only stops changing in an open flask"], "answer": 0,
+    "hint": "Steady totals can come from two equal, opposite changes.",
+    "explain": "At dynamic equilibrium, particles still react both ways at the same rate, so the amounts, and the colour, stay constant."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "In A ⇌ B a product gas B escapes from an open flask. What happens?",
+    "choices": ["The reaction goes on until A is used up", "A new equilibrium forms with the same mix", "The forward reaction stops at once"], "answer": 0,
+    "hint": "Can escaped B turn back into A?",
+    "explain": "Escaped B cannot react backwards, so the backward rate stays low and A keeps turning into B until it runs out."
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "kf = 0.6 s⁻¹ and kb = 0.4 s⁻¹ for A ⇌ B. What percentage is B at equilibrium?",
+    "choices": ["60%", "50%", "40%"], "answer": 0,
+    "hint": "[B]/[A] = kf/kb = 0.6/0.4. Turn the ratio 3 : 2 into a percentage.",
+    "explain": "[B] : [A] = 0.6 : 0.4 = 3 : 2, so B is 3/5 = 60%. 50% assumes equal amounts; 40% swaps A and B."
+   },
+   {
+    "type": "order", "id": "m9",
+    "prompt": "Put these in order for A ⇌ B starting with only A.",
+    "items": ["Only A is present", "A starts turning into B", "Some of the new B turns back into A", "The rates become equal and the amounts stay constant"],
+    "hint": "What can happen before there is any B?",
+    "explain": "With only A, nothing can go backwards. Once B forms, some turns back into A; the backward rate rises and the forward rate falls until they are equal: dynamic equilibrium."
+   }
+  ]
+ }
+}

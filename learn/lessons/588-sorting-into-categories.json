@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_xppl18avyY",
+ "title": "Sorting into categories",
+ "audience": "family",
+ "keyIdea": "Put objects into the given groups, count how many are in each group, then order the groups from most to least.",
+ "familyTip": "Give a mixed pile of toys with two labels (animals / vehicles). Sort, count each box, then say which has more.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Fair sorting idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "Fair idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "put each item in a given box",
+     0
+    ],
+    [
+     "count how many in each box",
+     0
+    ],
+    [
+     "order groups from most to least",
+     0
+    ],
+    [
+     "never count after sorting",
+     1
+    ],
+    [
+     "ignore the given labels",
+     1
+    ],
+    [
+     "compare category sizes",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcatct",
+  "caption": "Flagship lab: sort into Animals/Vehicles, count each, order by count, catch mix-ups.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Someone gives you the boxes. Put each thing in the right box.",
+   "Count how many are in each box. Say the number out loud.",
+   "Which box has more? Put the bigger group first when you order by count.",
+   "Sorting is not finished until you can say how many are in each category."
+  ],
+  "adult": [
+   "K.MD.3: put objects into given groups, count each group, then order the groups by count. Words: group, count, most, least.",
+   "Common mistakes: ignoring the given labels; sorting but never counting; comparing without counts; mixing this up with free colour sorting.",
+   "In the lab your child sorts animals and vehicles, sets counts 4 and 3, orders most to least, and spots sorting without counting."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A bus goes in…",
+   "choices": [
+    "Vehicles",
+    "Animals",
+    "Either box"
+   ],
+   "answer": 0,
+   "hint": "Use the given category name that fits a bus.",
+   "explain": "A bus is a vehicle, so it belongs in the Vehicles category."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "After sorting you should…",
+   "choices": [
+    "count each box",
+    "throw the boxes away",
+    "only look at colours"
+   ],
+   "answer": 0,
+   "hint": "K.MD.3 asks for counts in each category.",
+   "explain": "Classify first, then count the objects in each category."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A box holds {n} toys. What is the count for that category?",
+   "answer": "n",
+   "hint": "The count equals how many objects sit in the box.",
+   "explain": "If the category has {n} objects, its count is {=n}.",
+   "params": {
+    "n": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Category A has {a} and B has {b} (A is larger). How many more in A?",
+   "answer": "a-b",
+   "hint": "Subtract the smaller tally from the larger tally carefully.",
+   "explain": "When A has {a} and B has {b}, A has {=a-b} more.",
+   "params": {
+    "a": [
+     5,
+     9
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order the sorting steps.",
+   "items": [
+    "put items in given boxes",
+    "count each category",
+    "order categories by count"
+   ],
+   "hint": "Classify, then tally, then compare sizes.",
+   "explain": "Given categories first, then counts, then order by those counts."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "4 animals and 3 vehicles. Animals count is…",
+    "choices": [
+     "4",
+     "3",
+     "7"
+    ],
+    "answer": 0,
+    "hint": "Read the tally for the animals box only.",
+    "explain": "The animals category has 4 members, so its count is 4."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Most to least here is…",
+    "choices": [
+     "Animals then Vehicles",
+     "Vehicles then Animals",
+     "Same size"
+    ],
+    "answer": 0,
+    "hint": "Compare 4 with 3, then list bigger first.",
+    "explain": "Animals (4) outnumber vehicles (3), so animals come first."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is a mix-up?",
+    "choices": [
+     "Sort but never count the groups",
+     "Use the given boxes",
+     "Order groups by count"
+    ],
+    "answer": 0,
+    "hint": "Skipping the tally breaks K.MD.3.",
+    "explain": "Sorting without counting leaves out the required tallies."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Sorting into categories means…",
+    "choices": [
+     "use given groups, then count",
+     "only invent a colour rule",
+     "never compare group sizes"
+    ],
+    "answer": 0,
+    "hint": "Labels are given; counts come next.",
+    "explain": "Classify into given categories, then count and compare."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Category A has {n} items. What tally do you write?",
+    "answer": "n",
+    "hint": "Write the number of items you counted.",
+    "explain": "The tally for that category is {=n}.",
+    "params": {
+     "n": [
+      1,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Two categories have {a} and {b}. What is the total sorted?",
+    "answer": "a+b",
+    "hint": "Add both category counts together.",
+    "explain": "All sorted objects total {=a+b} when groups are {a} and {b}.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "3 red and 5 blue. Most is…",
+    "choices": [
+     "blue (5)",
+     "red (3)",
+     "neither"
+    ],
+    "answer": 0,
+    "hint": "Larger tally wins when ordering by count.",
+    "explain": "Blue’s count of 5 is greater than red’s 3."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: finish a category sort.",
+    "items": [
+     "read the given labels",
+     "sort every object",
+     "say which group has more"
+    ],
+    "hint": "Labels, then place, then compare counts.",
+    "explain": "Use given categories, classify all items, then compare tallies."
+   }
+  ]
+ }
+}

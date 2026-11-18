@@ -1,0 +1,248 @@
+{
+ "topicId": "mt_HNOPGJYiRK",
+ "title": "Telling Time to Five Minutes",
+ "audience": "family",
+ "keyIdea": "The long hand is the minute hand. From one number to the next is 5 minutes, so count the long hand in 5s from the 12: the 1 is 5 minutes past, the 3 is 15 (quarter past), the 6 is 30 (half past) and the 9 is 45 (quarter to the next hour). On the right of the clock we say minutes past the hour; on the left we say minutes to the next hour. The short hand moves slowly between the numbers, so at quarter to 4 it is nearly on the 4.",
+ "explain": {
+  "kid": [
+   "A clock has a long hand and a short hand. The long hand tells the minutes. The short hand tells the hour.",
+   "Count the long hand in 5s. Start at the 12 and say 5, 10, 15, 20 as you go round. If it points to the 4, it is 20 minutes past.",
+   "Long hand on the 3 is quarter past. Long hand on the 9 is quarter to. Quarter to 4 means 15 more minutes until 4 o'clock.",
+   "The short hand moves too, just slowly. At half past 7 it is in the middle, between the 7 and the 8."
+  ],
+  "adult": [
+   "Year 2 maths in England asks children to tell and write the time to five minutes, including quarter past and quarter to the hour, and to draw the hands on a clock face to show these times. Year 1 covered o'clock and half past. In the US, first grade covers hours and half hours and second grade (2.MD.7) covers the nearest five minutes.",
+   "Words to use: minute hand (long hand), hour hand (short hand), minutes past, minutes to, quarter past, half past, quarter to, o'clock, and the digital form such as 3:45. Counting in 5s is the bridge: each numeral on the face stands for 5 minutes, and 12 jumps of 5 make 60 minutes, one hour.",
+   "Common mistakes: reading the number the long hand points to as the minutes (the 4 read as 4 minutes, not 20); swapping the hands; giving the wrong hour for 'to' times (calling 3:45 'quarter to 3' instead of 'quarter to 4'); and expecting the hour hand to sit exactly on a number all hour. Show that the short hand creeps forward as the long hand goes round.",
+   "In the lab your child counts round the clock in 5s, drags the minute hand to quarter past and quarter to, sees which side of the clock says 'past' and which says 'to', and watches the hour hand move with it."
+  ]
+ },
+ "familyTip": "Use a real clock or a paper plate clock with a split pin. Ask 'Where will the long hand be at quarter past?' before you turn it. At home, say times aloud: 'It is twenty past 5, tea in ten minutes.' Point to where the long hand will be when tea is ready.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Past or to? Drag each time, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Minutes past",
+    "Minutes to"
+   ],
+   "items": [
+    [
+     "Long hand on 3",
+     0
+    ],
+    [
+     "Long hand on 9",
+     1
+    ],
+    [
+     "Long hand on 2",
+     0
+    ],
+    [
+     "Long hand on 8",
+     1
+    ],
+    [
+     "Quarter past 6",
+     0
+    ],
+    [
+     "Twenty to 4",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmins",
+  "caption": "Flagship lab: count the minute hand in 5s, drag it to quarter past and quarter to, and watch the hour hand creep to the next hour.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The long hand points to the 3. How many minutes past the hour?",
+   "choices": [
+    "15",
+    "3",
+    "30"
+   ],
+   "answer": 0,
+   "hint": "Count in 5s from the 12: 5, 10, …",
+   "explain": "5, 10, 15. The 3 means 3 jumps of 5, which is 15 minutes: quarter past."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "The long hand is on the 9 and the short hand is nearly on the 4. What time is it?",
+   "choices": [
+    "quarter to 4",
+    "quarter past 9",
+    "quarter to 3"
+   ],
+   "answer": 0,
+   "hint": "The long hand on the 9 means 15 minutes to go. Which hour is coming next?",
+   "explain": "Long hand on 9 is quarter to. The short hand is nearly on 4, so it is quarter to 4, which is 3:45."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How do you write quarter past 2 in numbers?",
+   "choices": [
+    "2:15",
+    "2:25",
+    "3:15"
+   ],
+   "answer": 0,
+   "hint": "Quarter past means 15 minutes after the hour.",
+   "explain": "Quarter past 2 is 15 minutes after 2 o'clock, so it is 2:15."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The long hand points to the {n}. How many minutes past the hour is that?",
+   "answer": "n*5",
+   "hint": "Each number is 5 minutes. Count in 5s from the 12 until you reach the number.",
+   "explain": "{n} jumps of 5 minutes is {=n*5} minutes past the hour.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "It is {m} minutes past 3. How many minutes until 4 o'clock?",
+   "answer": "60-m",
+   "hint": "An hour has 60 minutes. Take away the minutes that have gone.",
+   "explain": "60 − {m} = {=60-m}, so it is {=60-m} minutes to 4.",
+   "params": {
+    "m": [
+     5,
+     55
+    ]
+   },
+   "where": "m%5==0"
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many minutes from one number to the next on a clock?",
+    "choices": [
+     "5",
+     "1",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "Count the little marks between the 12 and the 1.",
+    "explain": "There are 5 small marks from one number to the next, so each number is 5 minutes more."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Long hand on the 6, short hand between the 7 and the 8. What time is it?",
+    "choices": [
+     "half past 7",
+     "half past 8",
+     "6 o'clock"
+    ],
+    "answer": 0,
+    "hint": "Use the hour the short hand has just passed.",
+    "explain": "The long hand on 6 is half past. The short hand has passed 7 but not reached 8, so it is half past 7."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Twenty to 3 in numbers is…",
+    "choices": [
+     "2:40",
+     "3:20",
+     "3:40"
+    ],
+    "answer": 0,
+    "hint": "Twenty to 3 is 20 minutes before 3 o'clock, so it is still in the 2 o'clock hour.",
+    "explain": "20 minutes before 3:00 is 2:40, because 40 + 20 = 60."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "At quarter past, the long hand points to the…",
+    "choices": [
+     "3",
+     "15",
+     "9"
+    ],
+    "answer": 0,
+    "hint": "There is no 15 on the clock face. Count in 5s to 15.",
+    "explain": "5, 10, 15 takes the long hand to the 3."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ella says the long hand on the 4 means 4 minutes past. What is her mistake?",
+    "choices": [
+     "each number is 5 minutes, so it is 20 past",
+     "nothing, it is 4 minutes past",
+     "it is 40 minutes past"
+    ],
+    "answer": 0,
+    "hint": "Count in 5s from the 12 to the 4.",
+    "explain": "5, 10, 15, 20. The 4 stands for 20 minutes, so it is 20 past."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "At quarter to 6, where is the short hand?",
+    "choices": [
+     "nearly on the 6",
+     "right on the 6",
+     "on the 9"
+    ],
+    "answer": 0,
+    "hint": "Quarter to 6 is not quite 6 o'clock yet.",
+    "explain": "The short hand moves slowly. At quarter to 6 it is three quarters of the way from 5 to 6."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "The long hand points to the {n}. How many minutes to the next hour?",
+    "answer": "60-n*5",
+    "hint": "Count in 5s from the long hand on round to the 12.",
+    "explain": "{n} is {=n*5} minutes past, and 60 − {=n*5} = {=60-n*5} minutes to the next hour.",
+    "params": {
+     "n": [
+      7,
+      11
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "School starts at 9:00. It is now {m} minutes past 8. How many minutes until school starts?",
+    "answer": "60-m",
+    "hint": "One hour is 60 minutes. Count on from the minutes now to 60.",
+    "explain": "60 − {m} = {=60-m} minutes until 9 o'clock.",
+    "params": {
+     "m": [
+      35,
+      55
+     ]
+    },
+    "where": "m%5==0"
+   }
+  ]
+ }
+}

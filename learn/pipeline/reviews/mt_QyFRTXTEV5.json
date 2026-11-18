@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the KS3 science programme of study for England (comparing power ratings in W and kW, amounts of energy transferred in J, kJ and kW hour, domestic fuel bills) and AQA GCSE Physics 8463 (power as rate of energy transfer; E = P t in everyday appliances). Every value recomputed: 3000/1000/100/10 W × 60 s = 180 000/60 000/6000/600 J; 2000 W × 10 s = 20 000 J; 1 kWh = 1000 W × 3600 s = 3 600 000 J; 1 kWh rectangles 2 × 0.5, 1 × 1, 0.1 × 10 (kept as integer tenths × halves so the check is exact); 0.1 kW × 5 h = 0.5, 2 × 0.5 = 1, 3 × 0.1 = 0.3 kWh; daily heater 6 kWh £1.50, lights 0.48 kWh 12p, kettle 0.3 kWh 7.5p, router 0.24 kWh 6p at 25p; meter 4590 − 4512 = 78 kWh, 78 × 25 = 1950p = £19.50; hair dryer 1500 × 120 = 180 000 J. 25p per kWh is labelled as an example price, not a tariff."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors described in the IOP Spark energy and power guidance and common in GCSE mark schemes: watts × hours called kWh (500 kWh), minutes used as hours or 6 min written as 0.6 h, minutes in E = P t for joules, 1 kWh taken as 1000 J or 3600 J, 'the most powerful appliance costs most', adding or quoting meter readings instead of subtracting, dividing by the price, and pence written as pounds. Each is a prediction distractor, an answer tile with its own message, a refused ranking, or a tagged challenge answer."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 9.0% (shared scaffolding with flag_quad4.js), far under 30%. flag_effic.js (efficiency) and the 537 What uses electricity at home lesson do not compute energy: only this lab runs appliances on an animated joule meter, drags the corner of a power × time rectangle against a dashed 1 kWh curve, ranks daily running costs with the bigger-kWh appliance named on a wrong pick, and reads two odometer meters into a bill."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge: watts are joules per second (find 60 000 J in a minute); 1 kWh is an area that can be made many ways (three rectangles on the curve); convert W and minutes before multiplying; cost depends on power and time (lights beat the kettle); meter difference × price. Each banner gives the rule after the learner's own runs, drags or picks show it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked predictions with tempting wrong options: 2000 W for 10 s ('200 J', '2010 J'), joules in a kWh ('1000 J', '3600 J'), 100 W for 5 h ('500 kWh', '20 kWh'), kettle against all-day lights ('the kettle: it has far more power') and meter use ('9102 kWh', '4590 kWh'). The correct option moves position and A.reveal names the learner's pick."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating questions with fifteen distinct wrong-answer messages (minNotSec, kWnotW, penceSlip, forgotTime, kwhIsKj, kwhNoThousand, usedW, zeroSlip, usedMin, minDecimal, powerOnly, meterAdd, meterNow, divided, divPrice). Each names the slip and shows the corrected working, e.g. '6 minutes is not 0.6 hours. An hour has 60 minutes, so 6 minutes = 6 ÷ 60 = 0.1 h, and 3 × 0.1 = 0.3 kWh.'"
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade 2.3 and adult 7.2 (limits 6.5 and 9.5). Kid paragraphs build from 'one watt is one joule every second' to bills in short sentences; kilowatt-hour is defined where it first appears and every number has its unit."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed with no filler patterns; the highest explanation overlap with any lesson is 0.4% (823 Conventional current). Each kid paragraph does one job: power and E = P × t, the kilowatt-hour, converting units, and cost and meter readings."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. Fixes from the first sheet: the chart's 'kW' label collided with the area readout, so the plot starts lower; the 3-line finish message covered the time axis, so the chart moved up; the four cost rows were shortened because the finish message covered the router row; 'tv' was lower-cased in the question and is now 'TV'."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag or tap has a button twin (one button per appliance; Power ±0.1 kW and Time ±½ h for the rectangle; each answer tile; one button per appliance still to rank). The canvas aria-label is rewritten after every action with the meter reading, the current power, time and kWh with ways found, the question and choices, the ranking so far or the two meter readings. The browser gate ran axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Department for Education (2013) Science programmes of study: key stage 3, Physics: energy (calculation of fuel uses and costs in the domestic context)",
+  "AQA (2016) GCSE Physics 8463 specification, 4.1.1.4 Power and 4.2.4.2 Energy transfers in everyday appliances",
+  "BIPM (2019) The International System of Units (SI Brochure, 9th edition): watt, joule and non-SI units (1 kWh = 3.6 MJ)",
+  "Institute of Physics, IOP Spark teaching guidance: energy and power (spark.iop.org)"
+ ]
+}

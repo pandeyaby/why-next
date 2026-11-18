@@ -1,0 +1,171 @@
+{
+ "topicId": "mt_Pau0aqLNgp",
+ "title": "Sound fading with distance",
+ "audience": "learner",
+ "keyIdea": "A sound gets fainter as you move further from its source. The source makes the air vibrate, and the vibration spreads out in every direction, so the further it travels, the less of it reaches your ear. A sound meter shows the reading dropping as the distance grows. Out in the open, the reading drops by about 6 decibels (dB) each time the distance doubles. A louder sound fades in the same way, but it starts higher, so it can be heard further away.",
+ "familyTip": "Stand still and ask your child to walk slowly away while you clap at the same strength. Have them stop where they can only just hear it. Then clap harder and see how much further they can go. A free sound meter app on a phone makes a good scientist's tool for this.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Louder or fainter for the listener? Drag each card to a box, or tap the card and then a box.",
+  "opts": {
+   "bins": [
+    "Sounds louder",
+    "Sounds fainter"
+   ],
+   "items": [
+    ["You walk towards a busy road", 0],
+    ["An ice-cream van drives away down the street", 1],
+    ["A friend calls you from across the field", 1],
+    ["You stand right next to the school bell", 0],
+    ["A plane flies higher and further away", 1],
+    ["You move from the back of the hall to the front, near the band", 0]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfade",
+  "caption": "Flagship lab: walk away from a drum with a sound meter, find the pattern, see the shake spread, compare hits and plan a fair test.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "When you walk away from a drum, it sounds fainter. Fainter means quieter. A sound meter shows a smaller number as you move away.",
+   "A drum skin shakes, or vibrates. It makes the air shake too. The shake spreads out in every direction, like ripples on a pond.",
+   "Far away, the shake is spread over a much bigger space. So less of it reaches your ear, and the sound is fainter. The sound does not get tired. It just spreads thin.",
+   "A loud sound fades too. It starts louder, so you can hear it further away. To test this fairly, change only the distance and keep the drum and the hit the same."
+  ],
+  "adult": [
+   "Ages 8 to 9. This is the Year 4 sound objective in the National Curriculum in England: recognise that sounds get fainter as the distance from the sound source increases. It follows 'sounds are made by vibrations' and 'vibrations travel through a medium to the ear'. Key words: source, vibration, fainter, louder, distance, volume, sound meter, decibel (dB), fair test.",
+   "Why it happens: the energy of the vibration spreads over a growing area as it travels away, so the energy reaching each square centimetre of an ear falls (the inverse square law for a small source in open air). That shows as a fall of about 6 dB each time the distance doubles; the air also absorbs a little, more for high notes. Walls, echoes and wind change real readings, so the lab assumes open ground.",
+   "Common mistakes: thinking sound 'runs out of energy' or slows down (its speed stays the same; it spreads out); thinking it stops suddenly at a set distance; thinking loud sounds do not fade; and running an unfair test, such as hitting harder at the far point. The lab's meter readings, ripple rings and fair-test sort tackle each one."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ali moves from 1 m to 6 m away from a ringing phone. What happens to the sound he hears?",
+   "choices": ["It gets fainter", "It gets louder", "It stays the same"],
+   "answer": 0,
+   "hint": "Think about the drum in the lab. What did the meter do as the listener walked away?",
+   "explain": "The further you are from the source, the fainter the sound. At 6 m less of the vibration reaches his ear than at 1 m."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A sound meter reads {a} dB at 1 m from a drum. Out in the open, the reading drops by 6 dB each time the distance doubles. What will it read at 2 m?",
+   "answer": "a-6",
+   "hint": "2 m is double 1 m. Take 6 away from the reading.",
+   "explain": "Doubling the distance takes off 6 dB: {a} − 6 = {=a-6} dB. Further away, so fainter.",
+   "params": {"a": [70, 90]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A speaker reads {a} dB at 1 m. It drops by 6 dB each time the distance doubles. What will it read at 4 m?",
+   "answer": "a-12",
+   "hint": "Go 1 m to 2 m, then 2 m to 4 m. That is two doublings.",
+   "explain": "Two doublings take off 6 + 6 = 12 dB: {a} − 12 = {=a-12} dB.",
+   "params": {"a": [70, 90]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why does a drum sound fainter from far away?",
+   "choices": ["Its vibration spreads out, so less reaches your ear", "The sound gets tired and slows down", "Sound stops after 10 metres"],
+   "answer": 0,
+   "hint": "Picture the ripples on a pond spreading out from where a stone lands.",
+   "explain": "The vibration spreads out in every direction, so it is spread thinner far away and less reaches your ear. Sound does not slow down or stop at a set distance."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Zara wants to test if distance changes how loud a bell sounds. What should she change?",
+   "choices": ["Only the distance", "The distance and the bell", "The distance and how hard she rings it"],
+   "answer": 0,
+   "hint": "In a fair test you change one thing and keep the rest the same.",
+   "explain": "She changes only the distance. If she also changed the bell or how hard she rang it, she could not tell which change made the difference."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A whistle reads {a} dB at 2 m. Each time the distance doubles, the reading drops by 6 dB. What will it read at 8 m?",
+    "answer": "a-12",
+    "hint": "From 2 m to 4 m is one doubling, and 4 m to 8 m is another.",
+    "explain": "Two doublings take off 12 dB: {a} − 12 = {=a-12} dB.",
+    "params": {"a": [66, 84]}
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "At 4 m a radio reads {a} dB. You walk closer, to 2 m. The reading changes by 6 dB each time the distance halves or doubles. What will it read now?",
+    "answer": "a+6",
+    "hint": "Closer means louder. Will the reading go up or down?",
+    "explain": "Halving the distance makes it 6 dB louder: {a} + 6 = {=a+6} dB.",
+    "params": {"a": [50, 70]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A dog barks in the same way all the time. Where will its bark sound faintest?",
+    "choices": ["40 m away", "10 m away", "2 m away"],
+    "answer": 0,
+    "hint": "Which listener is the furthest from the dog?",
+    "explain": "The further from the source, the fainter the sound, so 40 m away is the faintest."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Leo says, 'Loud sounds don't fade with distance.' Is he right?",
+    "choices": ["No: they fade too, but they can be heard further away", "Yes: only quiet sounds fade", "Yes: loud sounds get louder far away"],
+    "answer": 0,
+    "hint": "Remember the soft hit and the hard hit in the lab.",
+    "explain": "Every sound fades as it spreads out. A loud sound starts higher, so it is still loud enough to hear further away."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "In a test, what do you measure with the sound meter?",
+    "choices": ["How loud the sound is at each distance", "How far away you are", "How hard the drum was hit"],
+    "answer": 0,
+    "hint": "The meter shows a reading in decibels. What does that number tell you?",
+    "explain": "The meter measures how loud the sound is. You set the distance with a tape measure and keep the hit the same."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What carries the sound from the drum to your ear?",
+    "choices": ["Vibrations passing through the air", "Tiny bits of drum flying through the air", "Light from the drum"],
+    "answer": 0,
+    "hint": "What does the drum skin do when it is hit?",
+    "explain": "The drum skin vibrates and makes the air vibrate. The vibration passes through the air to your ear; nothing from the drum flies over."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A meter reads 70 dB at 1 m. Which reading could be at 4 m?",
+    "choices": ["58 dB", "70 dB", "82 dB"],
+    "answer": 0,
+    "hint": "Further away is fainter, so the number must go down.",
+    "explain": "Two doublings (1 m to 2 m, then to 4 m) take off 12 dB: 70 − 12 = 58 dB."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is the best reason a far-away thunderclap sounds quieter than a near one?",
+    "choices": ["The vibration has spread over a huge area", "The sound has run out of speed", "Thunder is only loud in the sky"],
+    "answer": 0,
+    "hint": "Sound keeps the same speed. What happens to the vibration as it travels?",
+    "explain": "The vibration spreads out over a bigger and bigger area, so less reaches you. Sound keeps the same speed in air."
+   }
+  ]
+ }
+}

@@ -1,0 +1,222 @@
+{
+ "topicId": "mt_J4j7d3iAfg",
+ "title": "Simple Chance Experiments",
+ "audience": "family",
+ "keyIdea": "A chance experiment repeats a trial, like a coin flip or a dice roll, and records each outcome in a tally. The expected number is trials × chance: 20 flips × ½ = 10 heads. Real results wobble around it, the coin has no memory of a streak, and more trials give a share closer to the expected one.",
+ "familyTip": "Flip a coin 20 times together and keep a tally. Before you start, each guess how many heads. Then pool everyone's flips: is the bigger total closer to half?",
+ "status": "self-checked",
+ "visual": {
+  "type": "problab",
+  "caption": "Flip a coin again and again. Watch the share of heads wobble, then settle near one half.",
+  "opts": {
+   "kind": "coin"
+  }
+ },
+ "lab": {
+  "type": "flagchance",
+  "caption": "Flagship lab: flip, roll and pull. Compare your results with what you expected, test a streak, and judge a suspicious dice.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An experiment is a test you repeat. Each go is called a trial, and what happens is the outcome. Flip a coin: the outcome is heads or tails. Keep a tally so you do not lose count.",
+   "To find the expected number, multiply the trials by the chance. A coin gives heads 1 time in 2, so 20 flips should give about 10 heads. A dice shows each number 1 time in 6, so 30 rolls should give about 5 sixes.",
+   "Real results wobble. You might get 8 heads or 12 heads, and that is normal. After four heads in a row, a tail is not due. The coin does not remember. The next flip is still 1 in 2.",
+   "More trials make the result steadier. Ten flips can give 7 heads. A thousand flips give close to half heads. So if a dice shows 20 sixes in 60 rolls, when about 10 were expected, it is probably not fair."
+  ],
+  "adult": [
+   "Ages 9 to 10. This is the hands-on side of chance. It fits beside Year 5 and 6 statistics in England and leads into KS3 work on comparing results from trials with what theory predicts. It builds on Likelihood Language and on tally charts.",
+   "Key words: trial, outcome, tally, expected frequency and relative frequency. Expected frequency is the number of trials times the chance, so 60 rolls give about 10 sixes. Relative frequency is the count divided by the trials. It is a fair estimate of the chance, and it gets better as the trials grow. Even so, a small sample can land far from what you expect.",
+   "Common mistakes: expecting exactly 10 heads in 20 flips; thinking a tail is due after a run of heads (the gambler's fallacy); thinking a streak will go on (the hot hand); saying two colours must mean 50-50; and judging a dice from a few rolls. Be careful to say about 10, not 10.",
+   "In the lab your child flips 20 times and compares with 10. They test 100 flips after four heads in a row, and roll 30 times against 5 per face. They watch the share of heads settle over 1000 flips, guess a hidden bag from 40 pulls, and judge a loaded dice from 60 rolls."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A fair coin is flipped {=2*a} times. About how many heads do you expect?",
+   "answer": "a",
+   "hint": "Heads is 1 of 2 equally likely outcomes. Multiply the number of flips by one half.",
+   "explain": "Expected heads = {=2*a} × ½ = {a}. The real count will usually be close to {a}, not always exactly {a}.",
+   "params": {
+    "a": [
+     5,
+     40
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A fair dice is rolled {=6*a} times. About how many times do you expect a 4?",
+   "answer": "a",
+   "hint": "A dice has 6 equally likely faces, so a 4 comes up 1 time in 6. Divide the rolls by 6.",
+   "explain": "Expected 4s = {=6*a} × 1/6 = {a}. Each of the six faces has the same expected count.",
+   "params": {
+    "a": [
+     2,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A coin lands on heads four times in a row. What is true about the next flip?",
+   "choices": [
+    "Tails is now more likely",
+    "Heads and tails are still equally likely",
+    "Heads is now more likely"
+   ],
+   "answer": 1,
+   "hint": "Ask yourself: can the coin remember what it did before?",
+   "explain": "Each flip is separate. The coin has no memory, so the chance of heads is still 1 in 2. Thinking a tail is 'due' is called the gambler's fallacy."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Mia flips a coin 10 times and gets 7 heads. What is the best conclusion?",
+   "choices": [
+    "The coin must be unfair",
+    "The coin could still be fair: 10 flips is a small sample",
+    "Heads will keep coming up more often"
+   ],
+   "answer": 1,
+   "hint": "How far can 10 flips wobble from 5 heads just by luck?",
+   "explain": "Small samples often land away from the expected count. 7 heads in 10 is quite common for a fair coin. Many more flips are needed to judge fairness."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A bag has {a} red and {b} blue counters. You pull one, note it, and put it back, {=10*(a+b)} times. About how many reds do you expect?",
+   "answer": "10*a",
+   "hint": "The chance of red is red counters ÷ all counters. Multiply that by the number of pulls.",
+   "explain": "Chance of red = {a}/{=a+b}. Expected reds = {=10*(a+b)} × {a}/{=a+b} = {=10*a}.",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A fair dice is rolled {=6*a} times. About how many even numbers do you expect?",
+    "answer": "3*a",
+    "hint": "Three of the six faces are even (2, 4 and 6), so the chance is 3 in 6, which is one half.",
+    "explain": "Expected evens = {=6*a} × 3/6 = {=3*a}.",
+    "params": {
+     "a": [
+      2,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which experiment gives a share of heads you can trust most?",
+    "choices": [
+     "10 flips",
+     "50 flips",
+     "1000 flips"
+    ],
+    "answer": 2,
+    "hint": "More trials make the share steadier.",
+    "explain": "With 1000 flips the share of heads settles close to one half. Small samples wobble a lot."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A spinner has 3 equal parts: red, blue and green. In 30 spins, about how many reds do you expect?",
+    "choices": [
+     "10",
+     "15",
+     "3"
+    ],
+    "answer": 0,
+    "hint": "Red is 1 of 3 equal parts. Multiply the spins by one third.",
+    "explain": "30 × 1/3 = 10. Choosing 15 treats it as 'red or not red, so 50-50', which uses outcomes, not chances."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A dice is rolled 60 times and shows a 6 twenty times. What is the best conclusion?",
+    "choices": [
+     "It is probably unfair: about 10 sixes were expected",
+     "It is surely fair: anything can happen",
+     "Sixes are always more common"
+    ],
+    "answer": 0,
+    "hint": "Work out the expected number of sixes in 60 rolls first.",
+    "explain": "A fair dice gives about 60 ÷ 6 = 10 sixes. Twenty is double, which is too far off to be luck in 60 rolls. More rolls would make the case stronger."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A fair coin is flipped 50 times and lands heads {a} times. How many more heads is that than the expected number?",
+    "answer": "a-25",
+    "hint": "First find the expected heads: 50 × ½ = 25. Then subtract 25 from {a}.",
+    "explain": "Expected heads = 25, so {a} is {=a-25} more. A gap like this is normal in 50 flips; as a share it shrinks when there are more trials.",
+    "params": {
+     "a": [
+      26,
+      34
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You pull from a bag 40 times, putting each counter back. 30 are red. The bag has 4 counters. How many are probably red?",
+    "choices": [
+     "3",
+     "2",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "Red came up 30 out of 40 times. Which fraction of 4 is the same?",
+    "explain": "30 out of 40 is 3 in 4, so about 3 of the 4 counters are red. All 4 would make every pull red."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why do we put the counter back after each pull?",
+    "choices": [
+     "So every pull has the same chances",
+     "So the bag gets heavier",
+     "So red comes up more"
+    ],
+    "answer": 0,
+    "hint": "Think about what happens to the chances if counters are taken out and kept.",
+    "explain": "Putting it back keeps the bag the same for every trial, so each pull has the same chance of red."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "After six tails in a row, Sam says, 'The next one has to be heads.' What is the slip?",
+    "choices": [
+     "The coin has no memory; it is still 1 in 2",
+     "Sam is right: heads is due",
+     "Tails will always win now"
+    ],
+    "answer": 0,
+    "hint": "Do past flips change the coin?",
+    "explain": "Each flip is a fresh trial with the same 1 in 2 chance. Believing heads is due is the gambler's fallacy."
+   }
+  ]
+ }
+}

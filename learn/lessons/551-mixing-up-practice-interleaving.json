@@ -1,0 +1,241 @@
+{
+ "topicId": "mt_TwyPlzy9Oe",
+ "title": "Mixing up practice: interleaving",
+ "audience": "learner",
+ "keyIdea": "Interleaving means mixing different types of problem in one practice session, so each question makes you decide which method to use. Blocked practice (one type at a time) feels smoother and scores higher during practice, but interleaved practice usually leaves far more a week later. Mix types that look alike but need different methods, and try a brand-new method on its own a few times before you mix it in.",
+ "explain": {
+  "kid": [
+   "Blocked practice means doing one type of question many times in a row. You do ten triangle area questions, then ten trapezium ones. Interleaved practice mixes the types up in one set. A triangle question might sit next to a trapezium one, then a parallelogram one.",
+   "Blocked practice feels smooth. You know which method to use before you even read the question. Mixed practice feels slower, and you get more wrong at first. That is why most people think blocks work better.",
+   "A test a week later tells a different story. In one study, students who practised in blocks got 89% right in practice but only 20% a week later. Students who mixed got 60% in practice and 63% a week later.",
+   "Mixing helps because each question makes you choose the method. Tests mix the types too, so that choice is a skill you need. Mix question types that look alike but need different methods. When a method is brand new, try a few on their own first, then mix it in."
+  ],
+  "adult": [
+   "Interleaving means mixing different kinds of problems within one practice session, so the learner has to decide which method each one needs. Blocked practice groups all problems of one kind together. Spacing is related but separate: spacing spreads practice over time, while interleaving changes the order within a session. Mixed sets usually add some spacing too, because each type comes back after a gap.",
+   "Rohrer and Taylor (2007) taught students to find the volumes of four solids. During practice the blocked group scored 89% and the mixed group 60%. A week later the mixed group scored 63% and the blocked group 20%. Taylor and Rohrer (2010) found a similar gap with nine- and ten-year-olds, 77% against 38%. Kornell and Bjork (2008) saw the same pattern when adults learned painters' styles, yet most of them believed blocked study had worked better.",
+   "Common mistakes: judging a method by how smooth practice feels; mixing topics that share nothing, which adds little because there is nothing to tell apart; mixing in a method before it has been learned at all; and treating extra wrong answers in mixed practice as failure. Be careful with the size of the effect. It is strongest for problem types that look alike but need different methods.",
+   "In the lab the learner runs a blocked and a mixed practice session, compares both scores a week later, builds a nine-question set with plenty of switches between types, picks the right area formula for mixed shapes, and sorts study plans into interleaving or not."
+  ]
+ },
+ "familyTip": "When your teenager sets their own revision questions, ask them to shuffle the question types instead of doing one exercise at a time. Old exam papers and mixed review sheets do this already. If they say it feels harder, explain that this is the point: they are practising how to choose the method.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Blocked or interleaved? Drag each practice set, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Interleaved practice",
+    "Blocked practice"
+   ],
+   "items": [
+    [
+     "Fractions, decimals and percentages questions shuffled together",
+     0
+    ],
+    [
+     "Twelve simultaneous equations in a row",
+     1
+    ],
+    [
+     "A French quiz mixing past, present and future tenses",
+     0
+    ],
+    [
+     "All of chapter 4's exercises, then all of chapter 5's",
+     1
+    ],
+    [
+     "Flashcards for three similar-looking chemistry tests, shuffled",
+     0
+    ],
+    [
+     "Thirty identical spelling drills of one word",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagshuffle",
+  "caption": "Flagship lab: run blocked and mixed sessions, test a week later, build a mixed set, pick area formulas and sort study plans.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is an interleaved practice set?",
+   "choices": [
+    "Triangle, trapezium, triangle, parallelogram, trapezium",
+    "Triangle, triangle, triangle, trapezium, trapezium",
+    "Five trapezium questions"
+   ],
+   "answer": 0,
+   "hint": "Interleaved means the type keeps changing from question to question.",
+   "explain": "The first set switches type almost every question. The others are blocks of one type."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A blocked set has {a} question types, each done in one block. How many switches between types are there?",
+   "answer": "a-1",
+   "hint": "A switch happens only where one block ends and the next begins.",
+   "explain": "{a} blocks have {=a-1} places where one block meets the next, so there are {=a-1} switches.",
+   "params": {
+    "a": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Mixed practice gives you more wrong answers during practice. What does that usually mean?",
+   "choices": [
+    "It can still be working: the extra effort helps later",
+    "It is not working, so stop",
+    "You should only do blocked sets"
+   ],
+   "answer": 0,
+   "hint": "Think about the scores a week later, not during practice.",
+   "explain": "This is a desirable difficulty: mixed practice scores lower at first but much higher on a later test."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A practice set mixes {a} question types with {b} questions of each type. How many questions are in the set?",
+   "answer": "a*b",
+   "hint": "Multiply the number of types by the questions of each type.",
+   "explain": "{a} × {b} = {=a*b} questions, in a mixed order.",
+   "params": {
+    "a": [
+     2,
+     4
+    ],
+    "b": [
+     3,
+     6
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is interleaved practice?",
+    "choices": [
+     "Mixing different problem types in one session",
+     "Doing one problem type at a time",
+     "Spreading study over several days"
+    ],
+    "answer": 0,
+    "hint": "Interleaving is about the order of questions inside one session.",
+    "explain": "Interleaving mixes types within a session. Spreading study over days is spacing, a different idea."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "In Rohrer and Taylor's study, which group scored higher a week later?",
+    "choices": [
+     "The mixed group",
+     "The blocked group",
+     "Neither, they were equal"
+    ],
+    "answer": 0,
+    "hint": "Blocked won during practice. The test a week later was different.",
+    "explain": "The mixed group scored 63% a week later and the blocked group 20%."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Why does interleaving help on a test?",
+    "choices": [
+     "You practise choosing the right method",
+     "The questions are easier",
+     "You do fewer questions"
+    ],
+    "answer": 0,
+    "hint": "What does a blocked set let you skip?",
+    "explain": "In a block you know the method before you read the question. Mixed sets, like tests, make you choose it."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which pair of topics gains most from being interleaved?",
+    "choices": [
+     "Area of a triangle and area of a parallelogram",
+     "Area of a triangle and French vocabulary",
+     "Area of a triangle and nothing else"
+    ],
+    "answer": 0,
+    "hint": "Mixing helps most when the types are easy to confuse.",
+    "explain": "Triangle and parallelogram questions look alike but need different formulas, so mixing them trains you to tell them apart."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You have just met a brand-new method. What is the best first step?",
+    "choices": [
+     "Try a few on their own, then mix it in",
+     "Mix it in from the first question",
+     "Never mix it with other types"
+    ],
+    "answer": 0,
+    "hint": "You need to know a method before you can practise choosing it.",
+    "explain": "A few blocked worked examples come first. After that, mixing it in teaches you when to use it."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A set of {n} questions changes type after every question. How many switches are there?",
+    "answer": "n-1",
+    "hint": "Count the gaps between questions.",
+    "explain": "{n} questions have {=n-1} gaps, and each gap is a switch, so there are {=n-1} switches.",
+    "params": {
+     "n": [
+      6,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "In practice a student scored {a}%. A week later they scored {b}%. How many percentage points did their score drop?",
+    "answer": "a-b",
+    "hint": "Take the later score away from the practice score.",
+    "explain": "{a} − {b} = {=a-b} percentage points lost in a week.",
+    "params": {
+     "a": [
+      80,
+      95
+     ],
+     "b": [
+      15,
+      40
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Blocked practice feels better than mixed practice. Why is that feeling misleading?",
+    "choices": [
+     "Smooth practice is not the same as lasting learning",
+     "Feelings are always wrong",
+     "Blocked practice is always better"
+    ],
+    "answer": 0,
+    "hint": "Compare the practice scores with the scores a week later.",
+    "explain": "Fluency during practice comes from knowing the method in advance. It fades fast, so it says little about what you will remember."
+   }
+  ]
+ }
+}

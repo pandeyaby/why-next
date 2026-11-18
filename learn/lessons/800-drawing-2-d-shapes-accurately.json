@@ -1,0 +1,269 @@
+{
+ "topicId": "mt_hdrMoiTgqu",
+ "title": "Drawing 2-D shapes accurately",
+ "audience": "family",
+ "keyIdea": "To draw a shape from given measurements you use a ruler for every length and a protractor or set square for every angle. Lengths start at the 0 mark and are counted in centimetres, then millimetres. Angles are read on the protractor scale that starts at 0 on your base line. Two sides and the angle between them fix one triangle, a rectangle needs a right angle at every corner and equal opposite sides, and a regular polygon only closes when every inside angle is 180° minus 360° ÷ the number of sides.",
+ "familyTip": "Give each other a drawing recipe on scrap paper, such as 'AB 8 cm, angle A 50°, AC 6 cm'. Each of you draws it, then lay one drawing on top of the other against a window. If both followed the recipe, the triangles match exactly.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which tool does each job? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "ruler",
+    "protractor",
+    "set square"
+   ],
+   "items": [
+    [
+     "draw a line 6.4 cm long",
+     0
+    ],
+    [
+     "draw a 35° angle",
+     1
+    ],
+    [
+     "make a right angle at a corner",
+     2
+    ],
+    [
+     "measure a side to the millimetre",
+     0
+    ],
+    [
+     "check a corner of a pentagon is 108°",
+     1
+    ],
+    [
+     "draw the side of a rectangle straight up",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdraw",
+  "caption": "Flagship lab: draw lines and angles, build triangles, place a rectangle's last corner and close regular polygons.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A drawing recipe gives you numbers, like a side 7 cm long or an angle of 60°. Your job is to make the shape match those numbers. For a side, put the 0 mark of the ruler at the start of the line, not the end of the ruler. Count whole centimetres, then the small marks. Each small mark is 1 millimetre, so 4.5 cm is 4 cm and 5 small marks.",
+   "For an angle, put the middle of the protractor on the corner and line up its 0 with the line you drew. A protractor has two rows of numbers. Count up from the 0 that sits on your line. If the angle looks sharp, the number must be less than 90.",
+   "For a triangle with two sides and the angle between them, draw one side, draw the angle at one end, then measure the other side along that arm. Join the ends. Every person who follows the same recipe gets the same triangle.",
+   "A rectangle needs a right angle at each corner, so use a set square. In a regular shape all sides and angles match. Each inside angle of a regular pentagon is 108°, and of a regular hexagon is 120°."
+  ],
+  "adult": [
+   "Ages 10 to 11. The national curriculum in England asks Year 6 pupils to draw 2-D shapes using given dimensions and angles, building on Year 5, where they draw and measure angles in degrees. Lengths are drawn to the nearest millimetre and angles to the nearest degree.",
+   "The key idea is that a few measurements can fix a whole shape. Two sides and the included angle (the angle between them) give exactly one triangle, which is why everyone's third side comes out the same. At secondary school this is called the SAS rule for congruent triangles. A regular polygon closes only when each turn at a corner, the exterior angle, is 360° ÷ the number of sides, so each inside angle is 180° minus that turn.",
+   "Common mistakes: starting a line at the end of the ruler or at the 1 mark instead of at 0; reading the wrong protractor scale, so a 60° angle is drawn as 120°; placing the given angle at the wrong end or not between the two given sides; drawing the top of a rectangle without a right angle, so it ends up shorter or longer than the bottom; and using the turn (72°) instead of the inside angle (108°) for a regular pentagon. A quick check is to ask whether the angle should look sharp or wide before reading the number.",
+   "In the lab your child draws three lines to the millimetre and three angles from a base line. They build two triangles from two sides and the angle between them, place the last corner of two rectangles, and adjust the inside angle until a regular pentagon and hexagon close."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where should a 7 cm line start on the ruler?",
+   "choices": [
+    "at the 0 mark",
+    "at the very end of the ruler",
+    "at the 1 mark"
+   ],
+   "answer": 0,
+   "hint": "Most rulers have a blank strip before the 0.",
+   "explain": "Start on the 0 mark. The blank strip at the end would make the line too long, and starting at 1 makes it 1 cm too short."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A line is {a} cm and {b} mm long. How many millimetres is that altogether?",
+   "answer": "a*10+b",
+   "hint": "There are 10 millimetres in every centimetre.",
+   "explain": "{a} cm is {=a*10} mm. Add the {b} mm to get {=a*10+b} mm.",
+   "params": {
+    "a": [
+     3,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The base line points right. The protractor arm crosses 40 and 140, and the angle looks sharp. What is the angle?",
+   "choices": [
+    "40°",
+    "140°",
+    "180°"
+   ],
+   "answer": 0,
+   "hint": "A sharp angle is less than a right angle, 90°.",
+   "explain": "The angle is 40°. 140° is the reading on the other scale, and it would be wider than a right angle."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The arm of a protractor crosses {a} on one scale. What number does it cross on the other scale?",
+   "answer": "180-a",
+   "hint": "The two numbers at any mark always add up to 180.",
+   "explain": "180 − {a} = {=180-a}. That is why you must choose the scale that starts at 0 on your base line.",
+   "params": {
+    "a": [
+     20,
+     80
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You draw a triangle with AB = 8 cm, angle A = 40° and AC = 5 cm. What do you draw first?",
+   "choices": [
+    "AB, 8 cm long",
+    "the 40° angle at B",
+    "BC, 5 cm long"
+   ],
+   "answer": 0,
+   "hint": "You need a line to put the protractor on.",
+   "explain": "Draw AB first. Then draw the 40° angle at A and measure AC 5 cm along that arm. BC comes from joining the ends."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Each inside angle of a regular pentagon is…",
+    "choices": [
+     "108°",
+     "72°",
+     "540°"
+    ],
+    "answer": 0,
+    "hint": "The turn at each corner is 360° ÷ 5. The inside angle and the turn add up to 180°.",
+    "explain": "The turn is 72°, so each inside angle is 180° − 72° = 108°. 540° is all five inside angles added together."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A regular polygon has {n} sides. What is each inside angle, in degrees?",
+    "answer": "180-360/n",
+    "hint": "Each turn at a corner is 360 ÷ the number of sides. Take that away from 180.",
+    "explain": "Each turn is 360 ÷ {n} = {=360/n}°, so each inside angle is 180 − {=360/n} = {=180-360/n}°.",
+    "params": {
+     "n": [
+      3,
+      12
+     ]
+    },
+    "where": "360%n==0"
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Two friends both draw a triangle with sides 6 cm and 4 cm and an angle of 50° between them. What happens?",
+    "choices": [
+     "Their triangles match exactly.",
+     "Their third sides are different.",
+     "One of them must get a right angle."
+    ],
+    "answer": 0,
+    "hint": "Do two sides and the angle between them leave any choice?",
+    "explain": "Two sides and the angle between them fix one triangle, so both third sides have the same length and the triangles match."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The protractor arm crosses 35 and 145. The angle is obtuse. Which is it?",
+    "choices": [
+     "145°",
+     "35°",
+     "90°"
+    ],
+    "answer": 0,
+    "hint": "An obtuse angle is bigger than 90°.",
+    "explain": "An obtuse angle is between 90° and 180°, so it is 145°. 35° is the reading on the other scale."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You need a line {a}.{b} cm long. You reach the {a} cm mark. How many more small marks do you count?",
+    "answer": "b",
+    "hint": "The digit after the point is millimetres, and each small mark is 1 mm.",
+    "explain": "{a}.{b} cm is {a} cm and {b} mm, so count {b} small marks past the {a}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Your rectangle's bottom side is 6 cm but the top side came out 5.7 cm. What went wrong?",
+    "choices": [
+     "A corner is not a right angle.",
+     "Rectangles always have a shorter top.",
+     "Nothing: that is close enough to a rectangle."
+    ],
+    "answer": 0,
+    "hint": "In a rectangle, opposite sides are equal and every corner is 90°.",
+    "explain": "Opposite sides of a rectangle are equal. If the top is shorter, a corner is not 90°, so use the set square at each end."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which tool should you use to draw a right angle at the corner of a rectangle?",
+    "choices": [
+     "a set square",
+     "a pair of compasses",
+     "a ruler on its own"
+    ],
+    "answer": 0,
+    "hint": "One tool has a right angle built into it.",
+    "explain": "A set square has a 90° corner. A ruler measures length, and compasses draw circles."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Mo draws a 60° angle, but it looks wider than a right angle. What is the most likely slip?",
+    "choices": [
+     "He read the other scale and drew 120°.",
+     "His protractor is broken.",
+     "60° angles are always wide."
+    ],
+    "answer": 0,
+    "hint": "60 and 120 sit at the same mark on a protractor.",
+    "explain": "60 and 120 share a mark. A 60° angle is sharp, so a wide one means he counted from the wrong 0 and drew 120°."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Each turn at the corner of a regular hexagon is 60°. What is each inside angle?",
+    "choices": [
+     "120°",
+     "60°",
+     "720°"
+    ],
+    "answer": 0,
+    "hint": "The turn and the inside angle make a straight line, 180°.",
+    "explain": "180° − 60° = 120°. 60° is the turn, and 720° is all six inside angles added."
+   }
+  ]
+ }
+}

@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_9L3NQqgqRd",
+ "title": "Representing Numbers",
+ "audience": "family",
+ "keyIdea": "One number can be shown in different ways: as a numeral (346), as base-ten blocks (3 hundreds, 4 tens and 6 ones) and as a point on a number line. When a place is empty, a 0 holds it: 2 hundreds and 5 ones is 205. To place a number on a line, use the start, the middle and the end: on a 0 to 100 line, 37 goes a bit before 50. To estimate how many things there are, look at a group of 10 and judge how many groups fit. An estimate is a sensible close number, not a wild guess.",
+ "familyTip": "Chalk a long line on the path, or draw one on paper. Write 0 at one end and 100 at the other, and ask where 50 goes. Then call out numbers and let your child stand or point where each one goes. To practise estimating, pour pasta into a bowl, make one pile of 10, and guess the total before you count.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "On a 0 to 100 line, is each number near 0, near the middle (50) or near 100? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Near 0",
+    "Near 50",
+    "Near 100"
+   ],
+   "items": [
+    [
+     "4",
+     0
+    ],
+    [
+     "9",
+     0
+    ],
+    [
+     "46",
+     1
+    ],
+    [
+     "53",
+     1
+    ],
+    [
+     "91",
+     2
+    ],
+    [
+     "97",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnline",
+  "caption": "Flagship lab: place 37 and 346 on number lines, estimate a jar of beads, build 346 with blocks and match blocks to numbers.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "You can show a number in lots of ways. You can write it: 346. You can build it with blocks: 3 hundreds, 4 tens and 6 ones. You can mark it on a number line. They all show the same number. If a place is empty, write 0 there. 2 hundreds and 5 ones is 205, not 25.",
+   "A number line has the numbers in order, with equal gaps. Look at the start, the middle and the end. On a line from 0 to 100, the middle is 50. 37 is a bit less than 50, so it goes a bit before the middle.",
+   "On a line from 0 to 1000, the middle is 500. 346 is between 300 and 400, so it goes a bit before the middle too. A number with three digits does not always go near the end.",
+   "To estimate means to make a good, close guess. Do not count every bead. Look at a group of 10. If about 4 groups like that fill the jar, there are about 40 beads."
+  ],
+  "adult": [
+   "Ages 6 to 8. NC Year 2 asks children to identify, represent and estimate numbers using different representations, including the number line. Year 3 takes this up to 1000. Key words: numeral, digit, place value, hundreds, tens, ones, base-ten blocks (flats, rods and cubes), number line, halfway and estimate.",
+   "Common mistakes: treating a number line as a row of labels, not a scale, so 37 goes near 0 because it feels small. Thinking any three-digit number goes near the end of a 0 to 1000 line. Writing 2 hundreds and 5 ones as 25, with no 0 to hold the empty tens place, or mixing up the tens and ones. Thinking an estimate is any guess, or that you must count to get it.",
+   "Placing numbers on a line is a good sign of number sense. Children who place numbers well on a line tend to do better at sums later (Siegler and Booth, 2004). Benchmarks help: find the middle first, then the tens or hundreds on either side. For amounts, a known group, here a ring of 10, is a benchmark too.",
+   "In the lab your child places 37 on a 0 to 100 line and 346 on a 0 to 1000 line, using the middle mark. They estimate a jar of 42 beads from a ring of 10, then count to check. They build 346 from flats, rods and cubes while a pointer moves along a 0 to 1000 line. Last, they match blocks to numbers like 205, 170 and 403."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where does 52 go on a number line from 0 to 100?",
+   "choices": [
+    "Just past the middle",
+    "Near 0",
+    "Near 100"
+   ],
+   "answer": 0,
+   "hint": "The middle of a 0 to 100 line is 50. Is 52 a bit more or a bit less?",
+   "explain": "52 is just more than 50, so it goes just past the middle."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{h} hundreds, {t} tens and {o} ones make what number?",
+   "answer": "100*h+10*t+o",
+   "hint": "Write the hundreds digit first, then the tens, then the ones. Use 0 for an empty place.",
+   "explain": "{h} hundreds is {=100*h}, {t} tens is {=10*t} and {o} ones is {o}. Together they make {=100*h+10*t+o}.",
+   "params": {
+    "h": [
+     1,
+     9
+    ],
+    "t": [
+     0,
+     9
+    ],
+    "o": [
+     0,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A number line goes from 0 to {=2*m}. What number is in the middle?",
+   "answer": "m",
+   "hint": "The middle is half way. What is half of the end number?",
+   "explain": "Half of {=2*m} is {m}, so {m} is in the middle of the line.",
+   "params": {
+    "m": [
+     5,
+     50
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A ring of 10 marbles fills about a third of a bag. What is the best estimate for the whole bag?",
+   "choices": [
+    "About 30",
+    "About 10",
+    "About 100"
+   ],
+   "answer": 0,
+   "hint": "How many rings of 10 would fill the bag?",
+   "explain": "About 3 groups of 10 fill the bag, so there are about 30 marbles."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "What is the tens digit in {=100*h+10*t+o} worth?",
+   "answer": "10*t",
+   "hint": "Find the middle digit of the three. It counts tens.",
+   "explain": "In {=100*h+10*t+o} the middle digit, {t}, is in the tens place, so it is worth {t} tens, which is {=10*t}.",
+   "params": {
+    "h": [
+     1,
+     9
+    ],
+    "t": [
+     1,
+     9
+    ],
+    "o": [
+     0,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "2 hundreds, no tens and 5 ones is…",
+    "choices": [
+     "205",
+     "25",
+     "250"
+    ],
+    "answer": 0,
+    "hint": "There are hundreds, so the number needs three digits. What goes in the empty tens place?",
+    "explain": "Write 2 for the hundreds, 0 for no tens and 5 for the ones: 205."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "{=100*h+10*t+o} is between two hundreds on a number line. What is the smaller one?",
+    "answer": "100*h",
+    "hint": "Look at the hundreds digit.",
+    "explain": "{=100*h+10*t+o} has {h} hundreds, so it is between {=100*h} and {=100*h+100}. The smaller one is {=100*h}.",
+    "params": {
+     "h": [
+      1,
+      8
+     ],
+     "t": [
+      1,
+      9
+     ],
+     "o": [
+      0,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "On a number line from 0 to 1000, where does 346 go?",
+    "choices": [
+     "A bit before the middle",
+     "Near the end",
+     "Next to 34"
+    ],
+    "answer": 0,
+    "hint": "The middle of the line is 500. Is 346 more or less?",
+    "explain": "346 is less than 500, between 300 and 400, so it goes a bit before the middle."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A number line goes from 0 to 100. A flag is half way between 0 and 50. What number is it at?",
+    "answer": 25,
+    "hint": "Half way between 0 and 50 is half of 50.",
+    "explain": "Half way between 0 and 50 is half of 50, which is 25."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{h} hundreds and {o} ones, with no tens. What number is that?",
+    "answer": "100*h+o",
+    "hint": "Put a 0 in the tens place.",
+    "explain": "{h} for the hundreds, 0 for no tens and {o} for the ones: {=100*h+o}.",
+    "params": {
+     "h": [
+      1,
+      9
+     ],
+     "o": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What does it mean to estimate how many beads are in a jar?",
+    "choices": [
+     "Make a sensible close guess",
+     "Count every bead",
+     "Say any number"
+    ],
+    "answer": 0,
+    "hint": "Think of the ring of 10 in the lab.",
+    "explain": "An estimate is a close, sensible number. You use a group you know, like 10, to judge the rest without counting them all."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which one is NOT the same as 46?",
+    "choices": [
+     "4 ones and 6 tens",
+     "4 tens and 6 ones",
+     "40 + 6"
+    ],
+    "answer": 0,
+    "hint": "Which digit is in the tens place in 46?",
+    "explain": "46 is 4 tens and 6 ones, which is 40 + 6. 4 ones and 6 tens is 64, a different number."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Where does 9 go on a number line from 0 to 100?",
+    "choices": [
+     "Near 0, just before 10",
+     "Near the middle",
+     "Near 100, because 9 is a big digit"
+    ],
+    "answer": 0,
+    "hint": "Is 9 more or less than 10?",
+    "explain": "9 is less than 10, so it goes near 0, just before the first ten. 9 is big for a digit but small on this line."
+   }
+  ]
+ }
+}

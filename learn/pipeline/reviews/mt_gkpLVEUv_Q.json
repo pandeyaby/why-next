@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE A-level Mathematics subject content (binomial expansion of (a + bx)ⁿ for positive integer n, notation ⁿCᵣ) and recomputed every value: (x + 2/x)⁶ constant term ⁶C₃ × 2³ = 160; (x + 2/x)⁸ r = 4, 70 × 16 = 1120; (x² + 1/x)⁶ power 12 − 3r, r = 4; (x² − 3/x)⁹ power 18 − 3r, r = 6, ⁹C₆ × (−3)⁶ = 84 × 729 = 61 236; (x + 3/x)⁴ gives 6 × 9 = 54; (3 − x)⁹ x⁵ term −⁹C₅ × 3⁴ = −10 206; (1 + kx)⁶ x² coefficient 15k² = 135 gives k = ±3; (2 + kx)⁵ x³ coefficient ⁵C₃ × 2² k³ = 40k³ = −320 gives k = −2; (1 + kx)⁵ 10k² = 40 gives k = ±2."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented exam slips: bʳ taken as b × r ((2/x)⁴ → 8, (−3)⁶ → −18, 3² → 6), forgetting the number inside b (answer 70 or 6), nPr or n × r instead of ⁿCᵣ, the constant term assumed to be the middle term when a = x² (r = 4.5, r = 3), the sign of a negative b lost (−729, −61 236, 'positive because 3 is positive'), aʳbʳ instead of aⁿ⁻ʳbʳ, and only k = 3 (or k = 9) from k² = 9."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagbterm works only on the general term: a slider along the terms showing the power of x falling by 2 or 3 per step, a power-rule check for r, a three-piece build of the constant term, a (−1)ʳ sign sort, and a k-hunt with a coefficient bar against a target. flagbexp (writing out expansions and tallying products) and flagbapx (approximations) use other mechanisms, and the shingle gate passed against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Sliding r shows x⁶, x⁴, x², x⁰ before the text explains why the power drops by 2. On (x² + 1/x)⁶ the learner sees the power drop by 3, so the middle-term guess is broken by the picture. The build step makes them choose 2⁴ over 2 × 4 and keep (−3)⁶ positive. In the hunt, marking k = 3 leaves a second solution to find, while 40k³ = −320 has only k = −2."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three locked predictions with tempting wrong options: which term of (x + 2/x)⁶ has no x (first term or none), the number part of (2/x)⁴ (2 × 4 = 8 is tempting), and how many k satisfy 15k² = 135 (one is tempting). The slider, the build step and the hunt settle each, and A.reveal quotes the prediction back."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five rotating challenge questions, each wrong answer with its own correction: 6 (only ⁴C₂), 18 (3 × 2 instead of 3²), r = 4.5 (power drops by 3 here, not 2), r = 3 (gives x⁹), k = 2 only (k² = 4 has two roots), k = 4 (forgot to square-root), 'positive because 3 is positive', 'must expand fully', aʳbʳ and n × r. The power check, build, sign and hunt steps also name the slip for each wrong tap."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons.py passed the learner readability limits (kid ≤ 6.5, adult ≤ 9.5). Kid paragraphs are short sentences around one worked example each: the x⁶, x⁴, x², x⁰ pattern, 12 − 3r = 0, 70 × 16 = 1120, and 15k² = 135. Precise terms are kept: general term, binomial coefficient, term independent of x, coefficient, (−1)ʳ."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "The filler gate passed and explanation overlap with the binomial expansion, Pascal's triangle and approximation lessons is under 12%. The adult text gives the curriculum link, the checked worked values and six named mistakes. The family tip counts the ⁴C₂ = 6 ways to get the constant term of (x + 1/x)⁴."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at iPhone 13 (390 px) in light and dark for every step before and after Show me. Ten term chips for n = 9 fit across with r and the power readable; the three build boxes, three option tiles, two sign bins and the k row from −5 to 5 all fit. The first screenshots showed the bar value overlapping the 'target 135' label, small chip text, and a −320 bar too short to see, so the target label moved left, chip text grew, and the second hunt's scale was tightened."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: every Show me finished, the challenge rendered, axe found no WCAG 2.1 AA violations in light or dark, and there were no console or page errors. A first walk found a stale build-step timer skipping a sign card; timers are now tied to the step. Every drag has button twins (r − 1, r + 1, Check this r, the three piece choices, Positive / Negative, k − 1, k + 1, Mark this k). The canvas aria-label states each result, for example 'k = 3 works. 15k² = 135 has another solution: k² is the same for k and −k.'"
+  }
+ },
+ "sources": [
+  "DfE (2014) GCE AS and A level subject content for mathematics: binomial expansion of (a + bx)ⁿ for positive integer n, notation n! and ⁿCᵣ",
+  "Pearson Edexcel A level Mathematics Pure 1 specification: binomial expansion, finding a coefficient and an unknown constant",
+  "Common Core State Standards for Mathematics HSA-APR.C.5"
+ ]
+}

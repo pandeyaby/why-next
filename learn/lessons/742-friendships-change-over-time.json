@@ -1,0 +1,264 @@
+{
+ "topicId": "mt_X7Tu94-a2m",
+ "title": "Friendships change over time",
+ "audience": "family",
+ "keyIdea": "Friendships change as people change class, join new clubs or find new things they like. A friend drifting away is normal and is usually nobody's fault, and it does not mean something is wrong with you. It is OK to feel sad, and the feeling gets smaller. You can keep old friends and make new ones by joining in, asking and inviting. Being left out on purpose or laughed at is not a normal change: that is unkind, and you should tell a trusted grown-up.",
+ "familyTip": "Draw your child's friendship rings together: you in the middle, close friends, friends, people you know. Talk about who has moved in or out since last year and why. Then plan one small step, like inviting someone from a club to the park, and share a time a friendship of yours changed too.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Normal change, or unkind? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Normal change",
+    "Unkind: tell a grown-up"
+   ],
+   "items": [
+    [
+     "Moved to a new school",
+     0
+    ],
+    [
+     "Told others not to play with you",
+     1
+    ],
+    [
+     "Likes a new game now",
+     0
+    ],
+    [
+     "Laughs at you every day",
+     1
+    ],
+    [
+     "Goes to a club at lunch",
+     0
+    ],
+    [
+     "Spreads mean stories about you",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfchg",
+  "caption": "Flagship lab: slide a school year on friendship rings, sort change from unkindness, swap unhelpful thoughts, make and keep friends.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Friends do not always stay the same. A friend may move class, join a new club or start to like new games. Then you may see them less, and you can drift apart. This happens to everyone.",
+   "When a friend drifts away, you might feel sad or left out. That is OK. It does not mean something is wrong with you. It is usually nobody's fault, and the sad feeling gets smaller.",
+   "You can make new friends. Join a club you like. Ask, 'Can I play too?' Invite someone to play, or ask what they like doing. You can keep old friends too, with a wave, a card or a play date.",
+   "Some things are not normal change. If someone leaves you out on purpose, tells others not to play with you or laughs at you every day, that is unkind. Tell a grown-up you trust."
+  ],
+  "adult": [
+   "Ages 7 to 9. This is the Caring friendships part of the DfE statutory guidance for Relationships Education in primary schools. Pupils should know how people choose and make friends. They should know that healthy friendships do not make others feel lonely or left out. And they should know that most friendships have ups and downs, which can often be worked through. Key words: friendship, drift apart, change, feelings, exclusion, unkind behaviour, bullying, trusted adult.",
+   "At this age many children have one best friend, so any change can feel like being dropped. In fact friendships in middle childhood shift often, as classes, clubs and interests change. Children who know how to join in and invite others cope better. The skills to practise are naming the feeling, keeping a kind inner voice and taking one small step.",
+   "Common mistakes: thinking a friend who plays with someone else hates you; blaming yourself or the other child when you drift apart; waiting alone for someone else to make the first move; trying to buy a friend with gifts; and making a friend choose between you and others. Be careful not to call leaving out on purpose or daily teasing a normal change. That is unkind, and if it keeps happening it is bullying, so a trusted adult needs to know.",
+   "In the lab your child slides a school year from Autumn to Summer on friendship rings and finds out why Sam, Ava and Jo moved. They sort six cases into normal change or unkind, swap three unhelpful thoughts for kinder ones, pick the four ideas that help make a new friend, and choose three ways to stay friends with Sam."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Your best friend joins a club and plays with new children. What does this most likely mean?",
+   "choices": [
+    "Friendships change, and that is normal",
+    "Your friend hates you now",
+    "Something is wrong with you"
+   ],
+   "answer": 0,
+   "hint": "Think about what changed: the club, not you.",
+   "explain": "A new club means new people to play with. Friendships change like this all the time, and nobody did anything wrong."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You have {a} friends in your class. You join a club and make {b} new friends. How many friends do you have now?",
+   "answer": "a+b",
+   "hint": "New friends add to the friends you already have. Add them together.",
+   "explain": "{a} friends and {b} new ones makes {=a+b}. Making new friends does not mean losing the old ones.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is a good way to make a new friend?",
+   "choices": [
+    "Ask, 'Can I play too?'",
+    "Wait alone until someone asks you",
+    "Give them sweets so they like you"
+   ],
+   "answer": 0,
+   "hint": "Which one is a small, friendly step you can take yourself?",
+   "explain": "Asking to join a game is a quick, friendly way to start. Waiting can take a long time, and sweets do not make a friend."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Last year {a} children were in your friendship ring. {b} moved away, and you made {c} new friends. How many are in your ring now?",
+   "answer": "a-b+c",
+   "where": "b<a",
+   "hint": "Take away the friends who moved away, then add the new ones.",
+   "explain": "{a} take away {b} is {=a-b}, and {c} new friends makes {=a-b+c}. Rings change, and they can grow again.",
+   "params": {
+    "a": [
+     3,
+     7
+    ],
+    "b": [
+     1,
+     2
+    ],
+    "c": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Someone tells everyone not to play with you, every day. What is this?",
+   "choices": [
+    "Unkind, so tell a trusted grown-up",
+    "A normal friendship change",
+    "Something to keep secret"
+   ],
+   "answer": 0,
+   "hint": "Is this people's likes changing, or someone leaving you out on purpose?",
+   "explain": "Leaving someone out on purpose, again and again, is unkind and can be bullying. A trusted grown-up can help."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Sam moved to another class, and now you play together less. Whose fault is it?",
+    "choices": [
+     "Nobody's: things changed",
+     "Yours",
+     "Sam's"
+    ],
+    "answer": 0,
+    "hint": "What changed: the class, or how kind you both are?",
+    "explain": "Sam moving class means you see each other less. Drifting apart like this is usually nobody's fault."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which thought helps when a friend drifts away?",
+    "choices": [
+     "I feel sad now. I can make new friends too.",
+     "Nobody will ever like me.",
+     "It is all my fault."
+    ],
+    "answer": 0,
+    "hint": "Which thought is kind to you and helps you try again?",
+    "explain": "It is OK to feel sad, and it helps to remember you can make new friends. The other two thoughts are not true and make you feel worse."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Priya moved to a new school. How can you stay friends?",
+    "choices": [
+     "Make her a card or call with a grown-up's help",
+     "Forget her straight away",
+     "Be cross with her for moving"
+    ],
+    "answer": 0,
+    "hint": "Which one shows Priya you still care?",
+    "explain": "A card or a call tells Priya you still care. She did nothing wrong by moving."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "At the start of the year you had {a} close friends. {b} of them moved class. How many close friends are still in your class?",
+    "answer": "a-b",
+    "where": "b<a",
+    "hint": "Take away the friends who moved class.",
+    "explain": "{a} take away {b} is {=a-b}. The friends who moved can still be your friends at playtime.",
+    "params": {
+     "a": [
+      3,
+      6
+     ],
+     "b": [
+      1,
+      2
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How many friends can you have at once?",
+    "choices": [
+     "Lots, old and new",
+     "Only one best friend",
+     "None, if one friend leaves"
+    ],
+    "answer": 0,
+    "hint": "Can your friend have other friends too?",
+    "explain": "You can have lots of friends at the same time. New friends do not push out old ones."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Zara's group laughs at you every day. What should you do?",
+    "choices": [
+     "Tell a grown-up you trust",
+     "Say it is a normal change",
+     "Keep it to yourself"
+    ],
+    "answer": 0,
+    "hint": "Is laughing at someone every day kind?",
+    "explain": "Laughing at someone every day is unkind, not a normal change. A trusted grown-up can help stop it."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Your friend wants to play with someone new today. What could you say?",
+    "choices": [
+     "'Can I play too?'",
+     "'Choose: me or them!'",
+     "'I am never playing with you again.'"
+    ],
+    "answer": 0,
+    "hint": "Which answer keeps the friendship and lets everyone play?",
+    "explain": "Asking to join keeps your friendship and makes a new one. Friends should not have to choose."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Jo goes to art club {n} times a week and you go too. How many times do you see Jo at art club in 2 weeks?",
+    "answer": "2*n",
+    "hint": "Count the times in one week, then double it for 2 weeks.",
+    "explain": "{n} times a week for 2 weeks is {=2*n} times. Spending time together on things you both like is how new friends grow close.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   }
+  ]
+ }
+}

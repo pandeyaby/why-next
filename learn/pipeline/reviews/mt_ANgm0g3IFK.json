@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions sech = 1/cosh, cosech = 1/sinh, coth = 1/tanh and the notation warning (cosh⁻¹ x = arcosh x) match the A-level Further Mathematics specifications. Ranges were derived and checked numerically in the lab code: sech has 0 < y ≤ 1 with maximum sech 0 = 1; cosech takes every value except 0; |coth x| > 1 with asymptotes x = 0, y = ±1; sech even, cosech and coth odd. Both identities follow from dividing cosh²x − sinh²x = 1 by cosh²x and by sinh²x. Exact values from cosh x = 5/4, x > 0: sinh 3/4, tanh 3/5, sech 4/5, cosech 4/3, coth 5/3; challenge sinh x = 5/12 gives cosh 13/12 and cosech 12/5. Plotted points use the live function (sech 1 = 0.65, sech 2.2 = 0.22)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented errors: reading cosh⁻¹ x as 1/cosh x (note step, prediction 2, m1, challenge q1), carrying the trig sign into 1 + tanh²x = sech²x (challenge q2, p5 distractor), pairing sech with sinh (challenge q1, build step messages naming what each tile equals), giving sech the range of cosh (plot step 'sech x is never above 1', challenge q3), plotting cosh x instead of its reciprocal (plot step message), thinking coth can lie between −1 and 1 (range step, m5) and taking the negative root for sinh when x > 0 (exact step)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagrecip works on the reciprocal relationship itself: a draggable dot on the vertical line at each x is placed at 1/cosh x and the sech curve grows through the placed points, a notation sort separates reciprocal from inverse function, three live-plotted thumbnails (sech, cosech, coth with dashed y = ±1) are matched by features, a range test, a gap-filling build of both identities and a chain of exact values. flaghyper (definitions from eˣ), flaghgraph (sinh, cosh, tanh graphs) and flagosb (Osborn's rule) do none of these; lab_distinct passed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner builds the sech graph point by point from cosh before the summary states its shape: placing the dot at cosh x returns 'That is cosh x itself. sech x is 1 ÷ 1.54', placing it above 1 returns 'cosh x ≥ 1, so 1 / cosh x ≤ 1'. The range step turns the parent facts into the reciprocal ranges, the build step makes each term's meaning explicit ('The gap is sinh²x / cosh²x'), and the exact step forces finding sinh x before flipping."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with a tempting wrong option that the lab then disproves: sech x 'grows, like cosh x' (the plotted points fall from 1 to 0.22), 'Yes: both mean 1 / cosh x' for sech vs cosh⁻¹ (the note step sorts cosh⁻¹ x into inverse function with an explanation), and 'yes' for coth x = 0.5 (the range step rejects it because |tanh x| < 1). A.reveal names the locked-in pick when the task completes."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Five challenge questions with ten specific wrong-answer messages: cosh⁻¹ x as the inverse, 1/sinh x being cosech, the trig plus sign, tanh²x − 1 making sech² negative, y ≥ 1 being cosh's range, 'all real y', sech 0 = 1 being defined, tanh 0 = 0 being defined, 5/12 being sinh not cosech and 13/12 being cosh. Every lab step's wrong tap also has its own named message."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 2.5 (learner limit 6.5) and adult 7.2 (limit 9.5). Each kid paragraph states one idea with a reason (flip the heights; cosh⁻¹ is an inverse; sinh 0 = 0 so cosech breaks). Canvas prompts are one line and every value has two decimals at most. Pronunciation of sech and cosech is given once."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Kid text covers definitions, the notation trap, the sech sketch and the other two graphs with the identity; adult text covers specification context and later use (d/dx tanh x = sech²x), each graph's parity, asymptotes and range, five named mistakes and the lab. The content gate found no filler phrases and overlap is under 12% with every other lesson, including 793 Hyperbolic identities and 293 Hyperbolic functions: definitions."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for all seven steps and wrong-answer states (plot after a too-low dot, note step after a wrong bin, graph match after tapping cosech, range after 'impossible' for 0.4, build after tanh²x in the first gap, exact after 5/4). The plot keeps its axis labels 1–3, the five identity tiles wrap into rows of three under 520 px so cosech²x is not clipped, and feedback stays inside the canvas. The walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Dragging the dot is optional: three value buttons ('Put the dot at y = 0.65') sit under the canvas, and every other step has buttons for its choices ('sech x is the reciprocal: 1 / cosh x', 'Graph 2', 'sech x = 1.2 is impossible', 'Fill the gap with tanh²x', 'sech x = 4/5'). The canvas aria-label is rewritten with each feedback message, challenge feedback is a role=status live region, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Pearson Edexcel AS and A level Further Mathematics specification (9FM0), Core Pure 2: hyperbolic functions, definitions including reciprocal functions and their graphs",
+  "OCR A Level Further Mathematics A (H245) specification, hyperbolic functions: sech, cosech, coth, graphs and identities such as 1 − tanh²x = sech²x",
+  "Topic evidence mt_ANgm0g3IFK (define sech, cosech and coth; sketch y = sech x; derive 1 − tanh²x = sech²x; cosh x = 5/4 exact values)"
+ ]
+}

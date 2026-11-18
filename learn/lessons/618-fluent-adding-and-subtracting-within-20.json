@@ -1,0 +1,137 @@
+{
+ "topicId": "mt__t4afSyZRm",
+ "title": "Fluent adding and subtracting within 20",
+ "audience": "family",
+ "keyIdea": "Fluent within 20 means you know from memory every sum of two one-digit numbers, and the related take-aways, using doubles and near-doubles as anchors — without recounting every counter each time.",
+ "familyTip": "Fire a quick round: 8+8, 7+8, 9+6, 16−7. Celebrate snap answers. If your child counts every finger, pause and ask: what double is close?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Fluent fact or recount trap? Drag each into its box, or tap then a box.",
+  "opts": {
+   "bins": ["known fact", "recount trap"],
+   "items": [["8 + 8 = 16", 0], ["count 9+6 on every finger", 1], ["7 + 8 from double 7", 0], ["stick 9 and 6 as 96", 1], ["16 − 7 from 9+7", 0], ["always start from 1", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagsum20",
+  "caption": "Flagship lab: doubles wall, near-doubles, snap recall, related take-aways, catch recount myth.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Fluent within 20 means you know the answer straight away for sums like 8+8 or 9+6.",
+   "A double is a number plus itself: 6+6=12, 7+7=14, 8+8=16, 9+9=18. These are anchor facts.",
+   "A near-double is one more than a double. 7+8 is double 7, then plus 1, which is 15.",
+   "If you know 9+7=16, you also know 16−7=9. Related facts share the same three numbers."
+  ],
+  "adult": [
+   "Ages 7 to 8. CCSS 2.OA.2: fluently add and subtract within 20 using mental strategies; by end of Grade 2, know from memory all sums of two one-digit numbers. Builds on addition and subtraction within 20 (strategies) and fluent within 10.",
+   "Doubles and near-doubles are the main memory anchors. Make-ten is still a strategy (taught in the within-20 strategies lesson); this lesson pushes the known-from-memory bar for one-digit + one-digit and related subtraction.",
+   "Common mistakes: sticking digits together (9+6 as 96); always recounting every counter; treating fluency as only make-10 pairs; and forgetting that related subtraction uses the same three numbers.",
+   "In the lab your child builds doubles, opens a near-double for 7+8, snaps 9+6, derives 16−7 from 9+7, and rejects the 'always recount' myth."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "8 + 8 equals…",
+   "choices": ["16", "88", "0"], "answer": 0,
+   "hint": "A double is a number added to itself. Twice eight.",
+   "explain": "8 + 8 is the double of 8, which is 16. Not eighty-eight."
+  },
+  {
+   "type": "mc", "id": "p2",
+   "prompt": "7 + 8 using double 7 is…",
+   "choices": ["15", "78", "1"], "answer": 0,
+   "hint": "Double 7 is 14. Near-double means add one more.",
+   "explain": "Double 7 is 14. 7 + 8 is one more than that double, so 15."
+  },
+  {
+   "type": "numeric", "id": "p3",
+   "prompt": "What is {a} + {a}?",
+   "answer": "a+a",
+   "hint": "This is a double. The same number plus itself.",
+   "explain": "{a} + {a} = {=a+a}. Doubles are anchor facts within 20.",
+   "params": {"a": [6, 9]}
+  },
+  {
+   "type": "mc", "id": "p4",
+   "prompt": "16 − 7 using 9 + 7 is…",
+   "choices": ["9", "7", "23"], "answer": 0,
+   "hint": "Related facts share the same three numbers: 9, 7 and 16.",
+   "explain": "If 9 + 7 = 16, then 16 − 7 = 9. Keep the same three numbers."
+  },
+  {
+   "type": "numeric", "id": "p5",
+   "prompt": "Near-double: what is {a} + {=a+1}?",
+   "answer": "a+a+1",
+   "hint": "Double {a}, then add one for the near-double.",
+   "explain": "Double {a} is {=a+a}. Plus one more is {=a+a+1}.",
+   "params": {"a": [6, 9]}
+  }
+ ],
+ "mastery": {
+  "passMark": 4, "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "9 + 6 equals…",
+    "choices": ["15", "96", "3"], "answer": 0,
+    "hint": "Snap the one-digit sum. Do not stick the digits together.",
+    "explain": "9 + 6 = 15. Sticking digits would wrongly make ninety-six."
+   },
+   {
+    "type": "mc", "id": "m2",
+    "prompt": "Fluent within 20 means…",
+    "choices": ["knowing one-digit sums from memory", "always counting every counter", "only doubles, never near-doubles"], "answer": 0,
+    "hint": "Fluency is quick known facts, not endless recounting.",
+    "explain": "By the end of this stage you know every sum of two one-digit numbers from memory."
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "What is {=a+a} − {a}?",
+    "answer": "a",
+    "hint": "A double take-away one of the parts leaves the other part.",
+    "explain": "{=a+a} − {a} = {a}. Related fact from the double.",
+    "params": {"a": [6, 9]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Which is a within-20 one-digit sum?",
+    "choices": ["9 + 8 = 17", "9 + 12 = 21", "15 + 6 = 21"], "answer": 0,
+    "hint": "Both addends should be one-digit (0–9).",
+    "explain": "9 and 8 are one-digit; 17 is within 20. The others use a two-digit addend or go past."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "A mix-up says 9 + 6 = 96. What went wrong?",
+    "choices": ["Digits were stuck together", "The double was used", "Related subtraction was used"], "answer": 0,
+    "hint": "Joining digit glyphs is not adding their values.",
+    "explain": "Sticking 9 and 6 makes ninety-six. Adding values makes fifteen."
+   },
+   {
+    "type": "numeric", "id": "m6",
+    "prompt": "Double {a}, then add 1. What total?",
+    "answer": "a+a+1",
+    "hint": "Near-double: twice the number, plus one.",
+    "explain": "Double {a} is {=a+a}. Plus 1 is {=a+a+1}.",
+    "params": {"a": [5, 9]}
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "15 − 8 using 7 + 8 is…",
+    "choices": ["7", "8", "23"], "answer": 0,
+    "hint": "Same three numbers: 7, 8 and 15.",
+    "explain": "If 7 + 8 = 15, then 15 − 8 = 7."
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "Why are doubles useful within 20?",
+    "choices": ["They are known anchors for near-doubles", "They only work under 10", "They replace all subtraction"], "answer": 0,
+    "hint": "Near-doubles sit one away from a known double.",
+    "explain": "Knowing 7+7 unlocks 7+8. Doubles are memory anchors, not the only facts."
+   }
+  ]
+ }
+}

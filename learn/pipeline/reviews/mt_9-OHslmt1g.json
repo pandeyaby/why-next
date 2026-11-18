@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Matched to the DfE (2013) Year 1 spelling appendix, which lists the consonant digraphs ff, ll, ss, zz, ck, ng, nk, ch, sh, th, wh, ph and the tch rule after a single short vowel, and to the DfE Reading Framework (2023) definition of a digraph as two letters making one phoneme. Phoneme counts in the lab are correct: duck d-u-ck (3), ring r-i-ng (3), chick ch-i-ck (3), ship sh-i-p (3). ph says f in photo and dolphin, wh says w in wheel, and ck/k/tch endings follow the stated rule (duck, milk, match, rich)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the known Year 1 errors: counting letters instead of sounds (duck has 4 letters but 3 sounds; count tag and the 'Duck has 4 letters' prediction), splitting a digraph into two sounds (s-h, split tag), reading s alone as sh (snake versus sheep in the hunt step and the 'Snake starts with s' prediction), reading ph as p (photo prediction), spelling a final k sound as k after a short vowel (duk; ck tag) and ch versus tch after a short vowel (match)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Different from flag_blend.js (merging sounds left to right with a car) and flag_try.js: here the child drags a two-letter magnet into a gap, counts phonemes against letter tiles, sorts ph/wh words by the sound they make, chooses ck/k/tch endings and taps pictures that start with sh. The lab_distinct gate passed under the 30% shingle limit."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step practises one digraph skill in order: hear and place sh/ch/th, prove two letters can make one sound by counting phonemes, meet the less obvious digraphs ph and wh, apply the ck/tch spelling rule and then pick out sh by ear. Done messages show the build, for example d + u + ck = duck, so the child sees the grapheme-phoneme link."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions are asked before the answer is shown: how many sounds duck has given its 4 letters, what sound photo starts with, how the final k sound in duck is spelled and whether snake starts with sh. Each one is checked by the step that follows, so the child tests the guess themselves."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Each wrong Challenge answer gets a tagged message explaining that error, for example 's on its own says sss. sh needs s and h together' or 'After a short vowel, the k sound at the end is spelled ck'. The why() function has 8 separate tags, so feedback is never just 'try again'."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Family audience. The kid explanation scores Flesch-Kincaid -0.1 using one- and two-syllable words with picture words (ship, chip, bath), within the 5.0 target. The adult text scores 9.6 against the 10.0 target and uses the correct terms: digraph, phoneme, grapheme and the GPC rules."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every paragraph either teaches a digraph, names a rule or gives a family activity. No stock phrases; the content gate's filler and duplicate checks passed. Practice and mastery prompts are unique after m5 was reworded to a match-stick clue."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360x640 Android light and iPhone 13 dark show large letter tiles and number pads at least 48px, young mode with big targets, no clipped text and the canvas fully in view. Emoji draw at full opacity after the fill colour fix, and the count text no longer overlaps the tiles."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has a button twin (sh/ch/th, 2-5, ck/k), the canvas aria-label and the live c.say line update after every action, and the probe confirmed this on every step. axe passed in both themes on desktop and iPhone 13 in the browser gate, and colour is never the only cue because each bin also has a letter label."
+  }
+ },
+ "sources": [
+  "DfE (2013) National Curriculum in England: English programmes of study, Year 1 spelling appendix",
+  "DfE (2023) The reading framework",
+  "Common Core State Standards ELA RF.1.3a (common consonant digraphs)"
+ ]
+}

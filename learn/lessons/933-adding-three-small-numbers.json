@@ -1,0 +1,68 @@
+{
+ "topicId": "mt_Zx1xZM-RbX",
+ "title": "Adding Three Small Numbers",
+ "audience": "learner",
+ "keyIdea": "To add three numbers, you can add any two first and then add the last one. The order does not change the total: 5 + 7 + 3 is 15 whichever pair you start with. So pick the easy pair. Look for two numbers that make 10, like 7 and 3, then add the rest: 10 + 5 = 15. If no pair makes 10, look for a double, like 6 + 6 = 12, then add the last number. Always check that you added all three.",
+ "familyTip": "Roll three dice, or pick three cards from 1 to 9. Before adding, hunt together: do any two make 10? Is there a double? Add that pair first, then the last number. Then add them in a different order to check you get the same total.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does this pair make 10? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": ["Makes 10", "Does not make 10"],
+   "items": [["7 and 3", 0], ["4 and 5", 1], ["6 and 4", 0], ["8 and 3", 1], ["2 and 8", 0], ["5 and 6", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagadd3",
+  "caption": "Flagship lab: join number cards in any order, find the pair that makes 10, add the rest, use a double, and check three answers.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "You can add three numbers. Add two of them first. Then add the last one. You can pick any two to start. The total is the same. 5 + 7 + 3 is 15 every time.",
+   "So pick the easy pair. Look for two numbers that make 10. In 4 + 6 + 8, the 4 and the 6 make 10. Then 10 + 8 is 18. Ten and some more is quick.",
+   "Ten and 8 is eighteen. You write it 18. It is not 108. To add on from 10, count on from the next number: 11, 12, 13.",
+   "No pair makes 10? Look for a double. In 6 + 3 + 6, the two 6s make 12. Then 12 + 3 is 15. At the end, check you used all three numbers."
+  ],
+  "adult": [
+   "Ages 6 to 7. This is CCSS 1.OA.B.3 (apply properties of operations, e.g. 2 + 6 + 4 = 2 + 10 = 12) and 1.OA.A.2 (word problems with three whole numbers whose sum is within 20), and the Year 2 statutory requirement in the National Curriculum in England to add three one-digit numbers. The idea behind it is that addition is commutative and associative, so the addends can be grouped and reordered freely.",
+   "The lab has five tasks. Children add 5 + 7 + 3 by joining cards in two different orders and see the total stay at 15. They find the pair making 10 in three sums, then make 10 and pick the total from choices that include 107-style and off-by-one decoys. They use a double when no pair makes 10, even when the double is split, and finally check three children's answers to find who is right.",
+   "Common mistakes. Children add only the first two numbers and forget the third, or always work left to right and miss the pair that makes 10. When counting on from 10 they often count the 10 itself, so 10 + 4 becomes 13. Some write ten and six as 106 because they write the 10 and then the 6. Watch, too, for children who think a double must be next to each other."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "3 + 9 + 7. Which two numbers make 10?", "choices": ["3 and 7", "3 and 9", "9 and 7"], "answer": 0,
+   "hint": "Try each pair. Which two add up to exactly 10?", "explain": "3 + 7 = 10. Then add the 9: 10 + 9 = 19."},
+  {"type": "numeric", "id": "p2", "prompt": "{a} + {c} + {=10-a} = ?", "answer": "10+c",
+   "hint": "Look for the two numbers that make 10. They do not have to be next to each other.", "explain": "{a} and {=10-a} make 10. Then 10 + {c} = {=10+c}.", "params": {"a": [1, 9], "c": [1, 9]}},
+  {"type": "mc", "id": "p3", "prompt": "Is 2 + 6 + 8 the same as 8 + 2 + 6?", "choices": ["Yes, the total is the same", "No, the order changes it", "Only if you start with 2"], "answer": 0,
+   "hint": "Remember the lab: you joined the cards in a different order. Did the total change?", "explain": "Yes. You can add in any order. Both are 16, because 2 + 8 = 10 and 10 + 6 = 16."},
+  {"type": "numeric", "id": "p4", "prompt": "{d} + {d} + {e} = ?", "answer": "2*d+e",
+   "hint": "Two numbers are the same. Add the double first.", "explain": "Double {d} is {=2*d}. Then {=2*d} + {e} = {=2*d+e}.", "params": {"d": [2, 6], "e": [1, 5]}},
+  {"type": "mc", "id": "p5", "prompt": "Ben says 6 + 4 + 3 = 10. What did he do wrong?", "choices": ["He forgot the 3", "He forgot the 6", "Nothing, he is right"], "answer": 0,
+   "hint": "Did Ben add all three numbers?", "explain": "6 + 4 = 10, but Ben forgot the 3. 10 + 3 = 13."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "5 + 8 + 5. What is the easiest pair to add first?", "choices": ["5 and 5", "5 and 8", "8 and 5"], "answer": 0,
+    "hint": "Two of the numbers make 10. They are not next to each other.", "explain": "5 + 5 = 10. Then 10 + 8 = 18."},
+   {"type": "numeric", "id": "m2", "prompt": "{c} + {a} + {=10-a} = ?", "answer": "10+c",
+    "hint": "Find the pair that makes 10, then add the other number.", "explain": "{a} + {=10-a} = 10. Then 10 + {c} = {=10+c}.", "params": {"a": [1, 9], "c": [1, 9]}},
+   {"type": "mc", "id": "m3", "prompt": "10 + 9 = ?", "choices": ["19", "109", "18"], "answer": 0,
+    "hint": "Ten and nine more. Count on from 11.", "explain": "Ten and nine is nineteen, written 19. Count on: 11, 12, … 19."},
+   {"type": "numeric", "id": "m4", "prompt": "Mia has {a} red, {b} blue and {c} green beads. How many beads?", "answer": "a+b+c",
+    "hint": "Add any two colours first, then the last one.", "explain": "{a} + {b} + {c} = {=a+b+c} beads. Any order gives the same total.", "params": {"a": [1, 6], "b": [1, 6], "c": [1, 7]}},
+   {"type": "mc", "id": "m5", "prompt": "7 + 4 + 7. Which pair is a double?", "choices": ["7 and 7", "7 and 4", "There is no double"], "answer": 0,
+    "hint": "A double is two numbers that are the same.", "explain": "The two 7s are a double: 7 + 7 = 14. Then 14 + 4 = 18."},
+   {"type": "mc", "id": "m6", "prompt": "Zoe adds 9 + 1 + 5 and counts on from 10: 10, 11, 12, 13, 14. What went wrong?", "choices": ["She counted the 10 again", "Nothing, 14 is right", "She forgot the 9"], "answer": 0,
+    "hint": "When you count on 5 from 10, what is the first number you say?", "explain": "Start with 11: 11, 12, 13, 14, 15. So 9 + 1 + 5 = 15."},
+   {"type": "mc", "id": "m7", "prompt": "Which is the same as 4 + 3 + 6?", "choices": ["10 + 3", "7 + 7", "4 + 9"], "answer": 0,
+    "hint": "Join the two numbers that make 10 first.", "explain": "4 + 6 = 10, so 4 + 3 + 6 = 10 + 3 = 13."},
+   {"type": "mc", "id": "m8", "prompt": "Sam adds 2 + 7 + 8 from left to right. Ana adds 2 + 8 first. Who gets the bigger total?", "choices": ["They get the same total", "Sam", "Ana"], "answer": 0,
+    "hint": "Does the order you add in change the total?", "explain": "Both get 17. Ana's way is easier: 2 + 8 = 10, then 10 + 7 = 17."}
+  ]
+ }
+}

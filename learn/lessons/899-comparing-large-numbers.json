@@ -1,0 +1,249 @@
+{
+ "topicId": "mt_MHaiUd2FLA",
+ "title": "Comparing Large Numbers",
+ "audience": "learner",
+ "keyIdea": "To compare numbers beyond 1000, line them up so ones sit under ones, then compare place by place from the left. The first place value column where the digits differ decides, and the digits after it do not matter: 1,999 < 2,001 because 1 thousand < 2 thousands. A number with fewer digits has 0 in the bigger places, so 987 < 1,203. To order a set, find the smallest, then the next smallest. With digit cards, put the biggest digit in the thousands for the biggest number; for the smallest, 0 cannot go first, so 3, 0, 7, 5 makes 3,057. Write the answer with < (less than) or > (greater than); the open side faces the bigger number.",
+ "familyTip": "Read out two house numbers, prices or car mileages you see. Your child says which is bigger and which column decided it. Then swap roles: you make a pair that ties in the thousands and hundreds, and they find the place that breaks the tie.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the first number bigger or smaller? Drag each pair to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "First is bigger (>)",
+    "First is smaller (<)"
+   ],
+   "items": [
+    [
+     "3,410 and 3,401",
+     0
+    ],
+    [
+     "7,002 and 6,999",
+     0
+    ],
+    [
+     "5,120 and 512",
+     0
+    ],
+    [
+     "2,089 and 2,098",
+     1
+    ],
+    [
+     "999 and 1,000",
+     1
+    ],
+    [
+     "8,506 and 8,560",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbigcmp",
+  "caption": "Flagship lab: compare column by column, line up ones, order four numbers, build biggest and smallest, find a missing digit.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Which is bigger, 4,321 or 4,312? Write them one above the other so the ones are lined up. Start on the left. Both have 4 thousands. Both have 3 hundreds. The tens are 2 and 1. 2 tens beat 1 ten, so 4,321 is bigger. You can stop there. The ones do not matter now.",
+   "Lots of big digits do not win. 1,999 is smaller than 2,001, because 1 thousand is less than 2 thousands. A number with fewer digits has no thousands at all. So 987 is smaller than 1,203, even though 9 is more than 1.",
+   "To put numbers in order, find the smallest first. Then find the next smallest, and keep going. We write 4,312 < 4,321. The sign < means less than and > means greater than. The open side of the sign faces the bigger number.",
+   "Try this with the cards 3, 0, 7 and 5. For the biggest number, put the biggest digit first: 7,530. For the smallest, you might want 0 first. But 0,357 is just 357, which has only 3 digits. So put 3 first, then 0: 3,057."
+  ],
+  "adult": [
+   "Ages 8 to 9. The National Curriculum in England asks Year 4 pupils to order and compare numbers beyond 1000, and Year 5 extends this to 1,000,000. The method is the same at every size. Line up the place value columns and compare from the highest place. The first column that differs decides. CCSS 2.NBT.4 and 4.NBT.2 use the same reasoning with the symbols >, = and <.",
+   "The lab builds this step by step. Pupils decide pairs where only one column differs. They slide a 3-digit number so ones sit under ones. Then they order four numbers that tie in the thousands and hundreds. They build the biggest and smallest numbers from four digit cards, one of them 0. Last, they find every digit that makes 4,□52 > 4,751 true. With 7 the hundreds tie, so the tens and then the ones decide, which many pupils miss.",
+   "Common mistakes. Pupils compare the ones first or add up the digits. They line up numbers by their first digit, so 987 looks bigger than 1,203. They think more 9s make a bigger number, or put 0 first when making the smallest number. They reverse < and >, or think a tie in one column means the numbers are equal. Each of these slips gets its own message in the lab and the challenge."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is bigger: 6,048 or 6,084?",
+   "choices": [
+    "6,084",
+    "6,048",
+    "They are equal"
+   ],
+   "answer": 0,
+   "hint": "Line them up. The thousands tie, and the hundreds tie. Which place differs next?",
+   "explain": "Both have 6 thousands and 0 hundreds. Tens: 8 > 4, so 6,084 is bigger."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Which is bigger: {a}999 or {=a+1}000? Type the bigger number without commas.",
+   "answer": "(a+1)*1000",
+   "hint": "The thousands digits are different. Which one has more thousands?",
+   "explain": "{=a+1} thousands is more than {a} thousands, so {=a+1}000 is bigger, even with all those 9s in {a}999.",
+   "params": {
+    "a": [
+     1,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which sign makes 7,305 □ 7,350 true?",
+   "choices": [
+    "<",
+    ">",
+    "="
+   ],
+   "answer": 0,
+   "hint": "Thousands tie at 7, hundreds tie at 3. Look at the tens.",
+   "explain": "Tens: 0 < 5, so 7,305 < 7,350. The open side faces 7,350, the bigger number."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A number has {t} thousands, 4 hundreds, 0 tens and 9 ones. Another has {t} thousands, 3 hundreds, 9 tens and 9 ones. Type the bigger number.",
+   "answer": "t*1000+409",
+   "hint": "The thousands are the same. Compare the hundreds.",
+   "explain": "Both have {t} thousands. 4 hundreds > 3 hundreds, so {t}409 is bigger than {t}399.",
+   "params": {
+    "t": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Use each of 2, 9, 0 and 6 once. What is the smallest 4-digit number?",
+   "choices": [
+    "2,069",
+    "0,269",
+    "2,096"
+   ],
+   "answer": 0,
+   "hint": "0 cannot go first. Which is the smallest digit that is not 0?",
+   "explain": "2 goes first, because 0 first would give a 3-digit number. Then 0, 6 and 9 in order: 2,069."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which list is in order, smallest first?",
+    "choices": [
+     "3,099, 3,909, 3,990",
+     "3,990, 3,909, 3,099",
+     "3,909, 3,099, 3,990"
+    ],
+    "answer": 0,
+    "hint": "All have 3 thousands. Compare the hundreds next.",
+    "explain": "Hundreds: 0, 9, 9. So 3,099 is smallest. 3,909 and 3,990 tie in the hundreds; tens 0 < 9, so 3,909 comes next."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Ben says 999 is bigger than 1,001 because it has bigger digits. Is he right?",
+    "choices": [
+     "No: 999 has 0 thousands, 1,001 has 1",
+     "Yes: 9 is more than 1",
+     "Yes: 999 has more digits that are big"
+    ],
+    "answer": 0,
+    "hint": "Line up the ones. How many thousands does 999 have?",
+    "explain": "999 has no thousands digit, so it has 0 thousands. 1,001 has 1 thousand, so it is bigger."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Use each of the digits 1, {d}, 3 and 0 once. What is the biggest number you can make? Type it without commas.",
+    "answer": "d*1000+310",
+    "hint": "Put the biggest digit in the thousands, then the next biggest.",
+    "explain": "{d} is the biggest digit, then 3, 1 and 0: {d}310.",
+    "params": {
+     "d": [
+      4,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "5,2□8 > 5,268. Which digit could go in the box?",
+    "choices": [
+     "7",
+     "6",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "Thousands and hundreds tie. The tens must beat 6, or tie and win on the ones.",
+    "explain": "5,278 > 5,268 because tens 7 > 6. 6 gives 5,268, which is equal, not greater. 4 gives a smaller number."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is the largest?",
+    "choices": [
+     "8,010",
+     "7,999",
+     "8,001"
+    ],
+    "answer": 0,
+    "hint": "Compare the thousands first, then go right.",
+    "explain": "7,999 has only 7 thousands. 8,010 and 8,001 tie in thousands and hundreds; tens 1 > 0, so 8,010 is largest."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Which is bigger: {a}0{b}5 or {a}{b}05? Type the bigger number.",
+    "answer": "a*1000+b*100+5",
+    "hint": "The thousands tie. Look at the hundreds: 0 or {b}?",
+    "explain": "{a}{b}05 has {b} hundreds and {a}0{b}5 has 0 hundreds, so {a}{b}05 is bigger.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which sentence is true?",
+    "choices": [
+     "4,560 < 4,605",
+     "4,560 > 4,605",
+     "4,560 = 4,605"
+    ],
+    "answer": 0,
+    "hint": "Same digits, different places. Compare the hundreds.",
+    "explain": "Thousands tie. Hundreds: 5 < 6, so 4,560 < 4,605. The open side faces the bigger number."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is 2,001 bigger than 1,999?",
+    "choices": [
+     "It has more thousands",
+     "It ends in 1",
+     "Its digits add up to more"
+    ],
+    "answer": 0,
+    "hint": "Which column do you check first?",
+    "explain": "Compare from the left. 2 thousands > 1 thousand, so 2,001 is bigger. The other digits do not matter after that."
+   }
+  ]
+ }
+}

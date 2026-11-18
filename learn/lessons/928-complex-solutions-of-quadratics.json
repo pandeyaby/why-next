@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_LF4ZWP6Yr2",
+ "title": "Complex solutions of quadratics",
+ "audience": "learner",
+ "keyIdea": "When b² − 4ac is negative, a quadratic has no real roots, but it still has two complex roots. We extend the numbers with i, where i² = −1, so √(−n) = √n i: for example √(−16) = 4i. The quadratic formula then gives roots of the form p ± qi. For x² + 2x + 5 = 0, b² − 4ac = −16, so x = (−2 ± 4i) ÷ 2 = −1 ± 2i. When the coefficients are real, complex roots always come as a conjugate pair p + qi and p − qi, whose sum and product are real.",
+ "familyTip": "Ask someone to pick a quadratic like x² + 4x + 13 = 0. Work out b² − 4ac together first. If it is negative, use i to finish, then check your answer by adding the two roots: you should get −b.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Work out b² − 4ac, then drag each equation to the kind of roots it has, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Two real roots",
+    "A complex conjugate pair"
+   ],
+   "items": [
+    [
+     "x² − 6x + 8 = 0",
+     0
+    ],
+    [
+     "x² + 2x + 5 = 0",
+     1
+    ],
+    [
+     "x² + 9 = 0",
+     1
+    ],
+    [
+     "x² − 9 = 0",
+     0
+    ],
+    [
+     "x² − 4x + 13 = 0",
+     1
+    ],
+    [
+     "2x² + x − 3 = 0",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcxroot",
+  "caption": "Flagship lab: lift a parabola until its roots go complex, simplify √(−n), solve with the formula, drag conjugate roots, and read roots from a vertex.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some quadratics never cross the x-axis. Take x² + 4 = 0. That needs x² = −4. But any real number squared is zero or positive. So there is no real answer.",
+   "Mathematicians made a new number to fix this. It is called i, and i² = −1. Now √(−4) = √4 × √(−1) = 2i. So x² + 4 = 0 has two answers: x = 2i and x = −2i.",
+   "The quadratic formula still works. Find b² − 4ac first. If it is negative, its square root has an i in it. For x² + 2x + 5 = 0, b² − 4ac = 4 − 20 = −16, and √(−16) = 4i. So x = (−2 ± 4i) ÷ 2 = −1 ± 2i.",
+   "The two roots are a pair. One is p + qi and the other is p − qi. We call them conjugates. Add them and the i parts cancel. Multiply them and you get a real number too. That is why the equation has no i in it."
+  ],
+  "adult": [
+   "Ages 16 to 18. Solving quadratics with complex roots opens the complex numbers unit of A-level Further Mathematics (AQA 7367, Edexcel 9FM0 Core Pure, OCR A H245). It also matches CCSS HSN-CN.C.7, which asks students to solve quadratics with real coefficients that have complex solutions. Notation follows those specifications. The imaginary unit is i with i² = −1. A complex number is written p + qi. For n > 0, √(−n) means the principal root √n i. The Argand diagram plots real parts across and imaginary parts up.",
+   "The lab has five tasks. Students drag y = x² + 2x + c up through two real roots, a repeated root and complex roots. On an Argand diagram, the two real roots meet and then split up and down as −1 ± qi. They simplify √(−9), √(−16) and √(−36), and see that multiplying by i turns a point through 90°. They solve two quadratics line by line, then drag a root so its conjugate follows and the quadratic stays real. Last, they read roots from the vertex form (x − p)² + k.",
+   "Common mistakes. Students often write √(−16) = −4, or put a ± inside the root as well as in the formula. They may say a negative discriminant means no solutions at all. Many divide only one part of −b ± √(b² − 4ac) by 2a. Others give a second root that is not the conjugate, such as −3 + 2i for 3 + 2i. Some confuse the vertex height k with the imaginary part √k."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "√(−{=n*n}) = ki. What is k?",
+   "answer": "n",
+   "hint": "Split it as √{=n*n} × √(−1), and use √(−1) = i.",
+   "explain": "√(−{=n*n}) = √{=n*n} × i = {n}i, so k = {n}.",
+   "params": {
+    "n": [
+     2,
+     12
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "x² − {=2*p}x + {=p*p+q*q} = 0 has roots p ± qi. What is the real part p?",
+   "answer": "p",
+   "hint": "The real part of both roots is −b ÷ 2a.",
+   "explain": "−b ÷ 2a = {=2*p} ÷ 2 = {p}, so the roots have real part {p}.",
+   "params": {
+    "p": [
+     1,
+     5
+    ],
+    "q": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Solve x² + 2x + 5 = 0.",
+   "choices": [
+    "x = −1 ± 2i",
+    "x = −1 ± 4i",
+    "There are no solutions"
+   ],
+   "answer": 0,
+   "hint": "b² − 4ac = 4 − 20. Take its square root with i, then divide everything by 2.",
+   "explain": "b² − 4ac = −16 and √(−16) = 4i, so x = (−2 ± 4i) ÷ 2 = −1 ± 2i. There are no real solutions, but there are two complex ones."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "x² + {=2*p}x + {=p*p+q*q} = 0 has roots −{p} ± qi. Find q.",
+   "answer": "q",
+   "hint": "Work out b² − 4ac, take its square root using i, then divide by 2a = 2.",
+   "explain": "b² − 4ac = {=4*p*p} − {=4*(p*p+q*q)} = −{=4*q*q}. Its square root is {=2*q}i, and {=2*q}i ÷ 2 = {q}i, so q = {q}.",
+   "params": {
+    "p": [
+     1,
+     4
+    ],
+    "q": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "One root of a quadratic with real coefficients is 3 + 2i. What is the other root?",
+   "choices": [
+    "3 − 2i",
+    "−3 + 2i",
+    "−3 − 2i"
+   ],
+   "answer": 0,
+   "hint": "Complex roots of a real quadratic come as conjugates.",
+   "explain": "The conjugate of 3 + 2i is 3 − 2i: same real part, opposite imaginary part. Then the sum 6 and product 13 are real."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is √(−25)?",
+    "choices": [
+     "5i",
+     "−5",
+     "25i"
+    ],
+    "answer": 0,
+    "hint": "Split it as √25 × √(−1), then use √(−1) = i.",
+    "explain": "√25 = 5 and √(−1) = i, so √(−25) = 5i. −5 squares to +25, not −25."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "The roots of x² + bx + c = 0 are {p} ± {q}i. What is c?",
+    "answer": "p*p+q*q",
+    "hint": "c is the product of the roots: (p + qi)(p − qi) = p² + q².",
+    "explain": "(p + qi)(p − qi) = p² + q² = {=p*p} + {=q*q} = {=p*p+q*q}, so c = {=p*p+q*q}.",
+    "params": {
+     "p": [
+      1,
+      6
+     ],
+     "q": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "The roots of x² + bx + c = 0 are {p} ± {q}i. What is the sum of the roots?",
+    "answer": "2*p",
+    "hint": "Add them: the i parts cancel.",
+    "explain": "({p} + {q}i) + ({p} − {q}i) = {=2*p}. The sum is real, and it equals −b.",
+    "params": {
+     "p": [
+      1,
+      9
+     ],
+     "q": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "b² − 4ac = −20 for a quadratic with real coefficients. What are its roots like?",
+    "choices": [
+     "Two complex conjugate roots",
+     "No roots of any kind",
+     "Two real roots"
+    ],
+    "answer": 0,
+    "hint": "A negative discriminant means the curve never meets the x-axis.",
+    "explain": "There are no real roots, but the formula gives two complex roots p ± qi, a conjugate pair."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Solve x² − 4x + 13 = 0.",
+    "choices": [
+     "x = 2 ± 3i",
+     "x = −2 ± 3i",
+     "x = 2 ± 6i"
+    ],
+    "answer": 0,
+    "hint": "b² − 4ac = 16 − 52. Remember −b = +4, and divide both parts by 2.",
+    "explain": "b² − 4ac = −36, √(−36) = 6i, so x = (4 ± 6i) ÷ 2 = 2 ± 3i."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is i²?",
+    "choices": [
+     "−1",
+     "1",
+     "i"
+    ],
+    "answer": 0,
+    "hint": "i is defined by what its square is.",
+    "explain": "i is defined so that i² = −1. That is what lets √(−n) = √n i."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "y = (x − 3)² + 9 never meets the x-axis. What are the roots of (x − 3)² + 9 = 0?",
+    "choices": [
+     "3 ± 3i",
+     "3 ± 9i",
+     "−3 ± 3i"
+    ],
+    "answer": 0,
+    "hint": "Rearrange to (x − 3)² = −9, then take square roots with i.",
+    "explain": "(x − 3)² = −9, so x − 3 = ±3i and x = 3 ± 3i. The vertex height 9 gives √9 = 3, not 9."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam solves x² + 6x + 10 = 0 and writes x = −6 ± 2i ÷ 2. What is the slip?",
+    "choices": [
+     "Both −6 and 2i must be divided by 2: x = −3 ± i",
+     "Nothing: x = −6 ± i",
+     "The discriminant should be positive"
+    ],
+    "answer": 0,
+    "hint": "The whole top line, −b ± √(b² − 4ac), is divided by 2a.",
+    "explain": "(−6 ± 2i) ÷ 2 = −3 ± i. Dividing only the i part by 2 is a common slip."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which quadratic has roots 1 ± i?",
+    "choices": [
+     "x² − 2x + 2 = 0",
+     "x² + 2x + 2 = 0",
+     "x² − 2x + 1 = 0"
+    ],
+    "answer": 0,
+    "hint": "Sum of roots = −b and product = c.",
+    "explain": "Sum = 2 so b = −2. Product = 1² + 1² = 2 so c = 2. That gives x² − 2x + 2 = 0."
+   }
+  ]
+ }
+}

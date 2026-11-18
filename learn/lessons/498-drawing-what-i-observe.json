@@ -1,0 +1,255 @@
+{
+ "topicId": "mt_sjbKGJB9vz",
+ "title": "Drawing what I observe",
+ "audience": "family",
+ "keyIdea": "A scientist draws what is really there. First look at the real thing, then draw, then look again. Count the legs, copy the real colours, and leave out made-up things like smiley faces. A magnifying glass helps you see small parts you missed.",
+ "explain": {
+  "kid": [
+   "Scientists draw to show what they see. They look hard at a real bug or plant. Then they draw it.",
+   "Look, then draw. Count the legs on a ladybird. It has 6. So your drawing gets 6 legs too.",
+   "Draw only what is there. A real snail has no legs and no smiley mouth. It has a shell and feelers. So leave out the made-up bits.",
+   "Then look again. You may spot more, like stripes on a bee. A magnifying glass makes small things look big."
+  ],
+  "adult": [
+   "In England, one early years goal for The Natural World says children explore the world around them, make observations and draw pictures of animals and plants. In Key Stage 1, working scientifically includes observing closely and using simple equipment, such as a hand lens.",
+   "A science drawing is a record, not a decoration. The habit we want is a loop: look at the object, draw one part, look back to check it, and repeat. Counting parts, copying real colours and noticing shapes turn looking into evidence your child can talk about.",
+   "Common mistakes: drawing a symbol from memory, like a cartoon snail with a face, instead of the real one in front of them. Children also add legs, smiles or eyelashes that are not there, guess numbers and colours, and stop after one quick look. A gentle question helps: show me where you can see that on the real one.",
+   "In the lab your child counts the legs on a ladybird and gives their drawing the same number. They rub out made-up parts on a snail, colour a flower by looking back, and move a magnifier over a bee to find wings, stripes and feelers. Last, they pick which drawings show what is really there."
+  ]
+ },
+ "familyTip": "Pick up one leaf, shell or bug on a walk and draw it together, side by side. Before you start, count something: how many points, legs or lines? Halfway through, stop and say, let us look again. Then ask your child to show you one thing they saw on the real one that they had not drawn yet.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which parts are on a real snail, and which are made up? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "On a real snail",
+    "Made up"
+   ],
+   "items": [
+    [
+     "a shell",
+     0
+    ],
+    [
+     "feelers",
+     0
+    ],
+    [
+     "one big foot",
+     0
+    ],
+    [
+     "a slime trail",
+     0
+    ],
+    [
+     "legs",
+     1
+    ],
+    [
+     "a smiley mouth",
+     1
+    ],
+    [
+     "eyelashes",
+     1
+    ],
+    [
+     "shoes",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglook",
+  "caption": "Flagship lab: count legs and draw the same number, rub out made-up parts, colour by looking back and use a magnifier.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A real spider has 8 legs. Your spider drawing has {n} legs so far. How many more legs do you need to draw?",
+   "answer": "8-n",
+   "hint": "Count on from your number up to 8.",
+   "explain": "8 take away {n} is {=8-n}, so you need {=8-n} more legs to match the real spider.",
+   "params": {
+    "n": [
+     3,
+     7
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Mia looks at a real snail for {n} seconds. Then she draws legs on her snail. What should she do?",
+   "choices": [
+    "Look again and rub out the legs",
+    "Add more legs",
+    "Add a smiley face too"
+   ],
+   "answer": 0,
+   "hint": "Does a real snail have legs? Look back at it.",
+   "explain": "A real snail has no legs. It slides on one big foot. Mia should look again and rub the legs out.",
+   "params": {
+    "n": [
+     5,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The real leaf is green. What colour should your leaf drawing be?",
+   "choices": [
+    "Green",
+    "My favourite colour",
+    "Purple, to look pretty"
+   ],
+   "answer": 0,
+   "hint": "Look back at the real leaf. What colour do you see?",
+   "explain": "Green, because a looking drawing uses the colours of the real thing."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "You want to see the tiny hairs on a bee. What can help?",
+   "choices": [
+    "A magnifying glass",
+    "Closing my eyes",
+    "Standing far away"
+   ],
+   "answer": 0,
+   "hint": "Which one makes small things look bigger?",
+   "explain": "A magnifying glass makes small parts look bigger, so you can see them and draw them."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A ladybird has {a} spots on one wing and {b} spots on the other. How many spots should your drawing have?",
+    "answer": "a+b",
+    "hint": "Count the spots on both wings and add them.",
+    "explain": "{a} + {b} = {=a+b}, so your drawing should have {=a+b} spots, the same as the real one.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sam drew a flower in {n} minutes. What is a good thing to do next?",
+    "choices": [
+     "Look at the real flower again",
+     "Stop, it is finished",
+     "Add a face to the flower"
+    ],
+    "answer": 0,
+    "hint": "Scientists check their drawing against the real thing.",
+    "explain": "Look again. You may spot something new, like the lines on the petals, and add it.",
+    "params": {
+     "n": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You want to draw a worm. Where should you look?",
+    "choices": [
+     "At a real worm",
+     "At a cartoon worm",
+     "Nowhere, I know what worms look like"
+    ],
+    "answer": 0,
+    "hint": "Which one shows what is really there?",
+    "explain": "Look at a real worm. A cartoon worm may have a face, but a real worm has no eyes."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How many legs does a ladybird have?",
+    "choices": [
+     "6",
+     "4",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Count the legs on the real ladybird in the lab.",
+    "explain": "A ladybird has 6 legs, like every insect. So your drawing gets 6 legs."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which drawing shows what is really there?",
+    "choices": [
+     "A spider with 8 legs and no face",
+     "A spider with 6 legs and a smile",
+     "A spider with shoes"
+    ],
+    "answer": 0,
+    "hint": "Count the legs. Do real spiders smile?",
+    "explain": "A real spider has 8 legs and no smiley face, so that drawing shows what is really there."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ben forgets what colour the bee's stripes are. What should he do?",
+    "choices": [
+     "Look back at the real bee",
+     "Guess a colour",
+     "Leave the stripes out"
+    ],
+    "answer": 0,
+    "hint": "The real bee is right there. Can he check?",
+    "explain": "He should look back. The stripes are black, so he can copy them and not guess."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why do scientists draw what they see?",
+    "choices": [
+     "To show what is really there",
+     "To make it look funny",
+     "To fill the page"
+    ],
+    "answer": 0,
+    "hint": "Think about what a looking drawing is for.",
+    "explain": "A scientist's drawing shows what is really there, so other people can see what they found."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Lily's snail drawing has a shell, feelers and a smiley mouth. Which part should she rub out?",
+    "choices": [
+     "The smiley mouth",
+     "The shell",
+     "The feelers"
+    ],
+    "answer": 0,
+    "hint": "Which part is not on a real snail?",
+    "explain": "A real snail has a shell and feelers, but no smiley mouth, so she should rub out the mouth."
+   }
+  ]
+ }
+}

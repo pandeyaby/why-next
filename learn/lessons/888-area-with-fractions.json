@@ -1,0 +1,249 @@
+{
+ "topicId": "mt_gx6KQK5-Kx",
+ "title": "Area with Fractions",
+ "audience": "learner",
+ "keyIdea": "The area of a rectangle with fraction sides is the width times the height, just as it is for whole numbers. Cut a 1 by 1 square into thirds one way and quarters the other: you get 3 × 4 = 12 tiles, so each tile is 1/12 of the square. A rectangle 3/4 wide and 2/3 tall covers 3 × 2 = 6 of those tiles, so its area is 6/12 = 1/2. That is why you multiply the numerators and multiply the denominators: 3/4 × 2/3 = 6/12. When both sides are less than 1, the area is smaller than either side. A side longer than 1 works the same way: 1 1/2 × 2/3 = 3/2 × 2/3 = 6/6 = 1.",
+ "familyTip": "Fold a square of paper in half one way and into thirds the other way, then open it out. Count the six small rectangles, shade 1 by 2 of them, and say the area as a fraction of the whole sheet: 2/6, which is 1/2 × 2/3.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the area bigger or smaller than 1/2? Drag each product to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Less than 1/2",
+    "More than 1/2"
+   ],
+   "items": [
+    [
+     "3/4 × 2/3 = 6/12",
+     0
+    ],
+    [
+     "1/2 × 1/3",
+     0
+    ],
+    [
+     "2/5 × 3/4",
+     0
+    ],
+    [
+     "4/5 × 3/4",
+     1
+    ],
+    [
+     "1 1/2 × 2/3",
+     1
+    ],
+    [
+     "5/6 × 4/5",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfracarea",
+  "caption": "Flagship lab: cut a unit square into twelfths, drag a corner to build 3/4 × 2/3, count tiles, go past 1 and match rectangles to products.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Take a square that is 1 metre on each side. Its area is 1 square metre. Cut it into 3 strips one way and 4 strips the other. Now there are 3 × 4 = 12 small tiles. Each tile is 1/12 of the square.",
+   "Shade a rectangle 3/4 of the way across and 2/3 of the way down. It covers 3 columns and 2 rows, so 6 tiles. Its area is 6/12 of the square, which is the same as 1/2.",
+   "So 3/4 × 2/3 = 6/12. The tops multiply to give the tiles you shaded. The bottoms multiply to give the tiles in one whole square. Do not add them: 3/4 × 2/3 is not 5/7.",
+   "When both sides are less than 1, the area is smaller than both sides. A side can be more than 1 too. A rectangle 1 1/2 by 2/3 covers 6 sixths, which is exactly 1 square."
+  ],
+  "adult": [
+   "Ages 10 to 11. US Common Core 5.NF.B.4b asks pupils to find the area of a rectangle with fractional side lengths by tiling it with unit squares of the right unit fraction side lengths. They show that the area is the same as multiplying the side lengths. The National Curriculum for England asks Year 6 pupils to multiply simple pairs of proper fractions and write the answer in its simplest form.",
+   "The tiling model explains the rule. Cutting a unit square into b columns and d rows makes b × d tiles, each 1/(bd). A rectangle a/b wide and c/d tall covers a × c of them, so a/b × c/d = ac/bd. For a mixed number, change it to an improper fraction first and use two or more unit squares side by side. Tiles are always fractions of one unit square, not of the whole drawing.",
+   "Common mistakes: adding the tops and the bottoms, so 3/4 × 2/3 becomes 5/7. Adding the denominators for the tile size, so thirds and quarters make sevenths. Believing that multiplying always makes a number bigger. For 1 1/2 × 2/3, counting tiles against the whole two-square drawing (3/6, not 6/6). Multiplying the whole-number and fraction parts of a mixed number separately. In the lab each slip gets a message that names it."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A square is cut into thirds one way and quarters the other. What fraction of the square is each tile?",
+   "choices": [
+    "1/12",
+    "1/7",
+    "1/3"
+   ],
+   "answer": 0,
+   "hint": "Count the tiles: 3 rows of 4.",
+   "explain": "3 × 4 = 12 equal tiles fill the square, so each is 1/12. Adding 3 + 4 gives the wrong tile size."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A rectangle is {a}/5 of a unit wide and 1/2 of a unit tall. How many 1/10 tiles does it cover?",
+   "answer": "a*1",
+   "hint": "Fifths one way and halves the other make 10 tiles. The rectangle covers {a} columns and 1 row.",
+   "explain": "{a} columns × 1 row = {a} tiles, so the area is {a}/10 of the square: {a}/5 × 1/2 = {a}/10.",
+   "params": {
+    "a": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A rectangle is 2/3 wide and {c}/4 tall. Its area is how many twelfths?",
+   "answer": "2*c",
+   "hint": "Multiply the numerators: 2 × {c}. The square holds 3 × 4 = 12 tiles.",
+   "explain": "2/3 × {c}/4 = {=2*c}/12. The shaded part is 2 columns by {c} rows, which is {=2*c} tiles.",
+   "params": {
+    "c": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Is 1/2 × 1/3 bigger or smaller than 1/2?",
+   "choices": [
+    "Smaller: it is 1/6",
+    "Bigger: multiplying makes bigger",
+    "The same"
+   ],
+   "answer": 0,
+   "hint": "Take a third of a half-strip. Is that more or less than the strip?",
+   "explain": "1/2 × 1/3 = 1/6, which is smaller than 1/2. Multiplying by a fraction less than 1 takes only part."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What is 1 1/2 × 2/3?",
+   "choices": [
+    "1",
+    "1 2/3",
+    "2/6"
+   ],
+   "answer": 0,
+   "hint": "Write 1 1/2 as 3/2 first.",
+   "explain": "3/2 × 2/3 = 6/6 = 1. In the lab the rectangle covers 6 sixths, exactly one unit square."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is 2/3 × 1/4?",
+    "choices": [
+     "2/12",
+     "3/7",
+     "2/7"
+    ],
+    "answer": 0,
+    "hint": "Multiply the tops, then multiply the bottoms.",
+    "explain": "2 × 1 = 2 and 3 × 4 = 12, so 2/3 × 1/4 = 2/12 = 1/6."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A rug is 3/4 m long and 1/2 m wide. What is its area?",
+    "choices": [
+     "3/8 m²",
+     "4/6 m²",
+     "3/6 m²"
+    ],
+    "answer": 0,
+    "hint": "Area = length × width. Multiply the numerators and the denominators.",
+    "explain": "3/4 × 1/2 = 3/8 m². Adding gives 4/6, and adding only the bottoms gives 3/6."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A rectangle is {a}/6 wide and 1/2 tall. Its area is how many twelfths?",
+    "answer": "a*1",
+    "hint": "Sixths one way and halves the other make 12 tiles. Count the shaded ones.",
+    "explain": "{a} columns × 1 row = {a} tiles, so {a}/6 × 1/2 = {a}/12.",
+    "params": {
+     "a": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why does 3/4 × 2/3 have 12 on the bottom?",
+    "choices": [
+     "The unit square is cut into 4 × 3 = 12 tiles",
+     "Because 3 + 4 + 5 = 12",
+     "Because 12 is a big number"
+    ],
+    "answer": 0,
+    "hint": "Count all the tiles in one whole square.",
+    "explain": "Quarters one way and thirds the other cut the square into 4 × 3 = 12 equal tiles."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which product has an area less than 1/2?",
+    "choices": [
+     "1/2 × 3/4",
+     "3/4 × 4/5",
+     "1 1/2 × 2/3"
+    ],
+    "answer": 0,
+    "hint": "Multiplying 1/2 by a fraction less than 1 makes it smaller.",
+    "explain": "1/2 × 3/4 = 3/8, less than 1/2. 3/4 × 4/5 = 12/20 = 3/5 and 1 1/2 × 2/3 = 1 are both more."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A garden bed is 2 1/2 m by 1/2 m. What is its area?",
+    "choices": [
+     "1 1/4 m²",
+     "2 1/4 m²",
+     "1 m²"
+    ],
+    "answer": 0,
+    "hint": "Write 2 1/2 as the improper fraction 5/2, then multiply.",
+    "explain": "5/2 × 1/2 = 5/4 = 1 1/4 m². Multiplying only the 2 by 1/2 gives 1, which forgets the extra half."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A rectangle is {a}/3 wide and {c}/5 tall. How many fifteenths is its area?",
+    "answer": "a*c",
+    "hint": "Shaded tiles = {a} columns × {c} rows. One square holds 3 × 5 = 15 tiles.",
+    "explain": "{a}/3 × {c}/5 = {=a*c}/15, because the rectangle covers {a} × {c} = {=a*c} tiles.",
+    "params": {
+     "a": [
+      1,
+      2
+     ],
+     "c": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Mia says 1/3 × 1/3 = 2/6. What is the right answer?",
+    "choices": [
+     "1/9",
+     "2/6",
+     "1/6"
+    ],
+    "answer": 0,
+    "hint": "Thirds one way and thirds the other: how many tiles fill the square?",
+    "explain": "3 × 3 = 9 tiles, and the rectangle covers 1 of them, so 1/3 × 1/3 = 1/9. Mia added."
+   }
+  ]
+ }
+}

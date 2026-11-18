@@ -1,0 +1,172 @@
+{
+ "topicId": "mt_VhBH8wrFC6",
+ "title": "Picture & Bar Graphs",
+ "audience": "family",
+ "keyIdea": "A picture graph uses one picture for each thing counted. A bar graph uses bars instead. Each bar starts at 0 and stops on the line that matches its number, so you read a bar by the number at its top. Give the graph a title and label both axes: the side axis counts, the bottom axis names the groups. To put together, add bars. To take apart, take a bar from the total. To compare, find the gap between two bar tops: that is how many more or fewer.",
+ "familyTip": "Ask everyone at home to vote for a pudding. Draw a bar graph on squared paper with one square for each vote, then take turns asking questions: 'How many more chose ice cream than jelly?' 'How many chose fruit or yogurt?' Check each answer by counting squares.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which kind of question is it? Drag each to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Add the bars",
+    "Find the gap between bars"
+   ],
+   "items": [
+    ["How many chose cat or dog?", 0],
+    ["How many more chose cat than fish?", 1],
+    ["How many children voted in all?", 0],
+    ["How many fewer chose fish than dog?", 1],
+    ["How many chose red and blue together?", 0],
+    ["How much taller is the apple bar than the pear bar?", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbgraph",
+  "caption": "Flagship lab: build a picture graph, drag bars to a 0 to 8 scale, label the axes, then add, take apart and compare bars.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A picture graph shows a count with pictures. One picture stands for one vote. Count the pictures to read it.",
+   "A bar graph uses bars. Each bar starts at 0. It stops on the line with its number. Read the number at the top of the bar.",
+   "Every graph needs a title on top. The side axis shows the numbers. The bottom axis names the groups, like apple or pear.",
+   "To find how many in two groups, add the bars. To find how many more, look at the gap between the two tops. Grape 6 and pear 2: the gap is 4."
+  ],
+  "adult": [
+   "Ages 7 to 8. This is CCSS 2.MD.10: draw a picture graph and a bar graph with a single-unit scale for up to four categories, and solve put-together, take-apart and compare problems using a bar graph. In England, Year 2 statistics asks children to interpret and construct simple pictograms, tally charts, block diagrams and tables. Key words: data, category, picture graph, bar graph, scale, axis, title, label, total, difference.",
+   "Common mistakes: counting the 0 line as 1, so every bar ends one too high; reading the space under a line instead of the line; adding the two bars when the question asks how many more; and leaving off the title or axis labels, so nobody knows what was counted.",
+   "Single-unit scale means each step on the side axis is worth 1. Later, in Year 3 and grade 3, the scale goes up in 2s, 5s or 10s, which is why reading the number on the line, not counting squares, matters now.",
+   "In the lab your child adds one picture per vote, drags bars to the right line, places the title and axis labels, taps the bars a question needs, and slides a level line to see a difference."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A bar graph shows {a} votes for cats and {b} votes for dogs. How many more voted for cats?",
+   "answer": "a-b",
+   "hint": "How many more is the gap between the bar tops. Take the smaller from the bigger.",
+   "explain": "{a} − {b} = {=a-b}. The cat bar is {=a-b} squares taller.",
+   "params": {"a": [6, 9], "b": [1, 5]}
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A bar graph shows {a} children chose red and {b} chose blue. How many chose red or blue?",
+   "answer": "a+b",
+   "hint": "Red or blue puts the two groups together. Add the bars.",
+   "explain": "{a} + {b} = {=a+b} children chose red or blue.",
+   "params": {"a": [2, 8], "b": [1, 7]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The pear bar starts at 0 and stops on the line marked 4. How many votes for pear?",
+   "choices": ["4", "5", "3"],
+   "answer": 0,
+   "hint": "Read the number on the line at the top of the bar.",
+   "explain": "The bar stops on the line marked 4, so pear has 4 votes. Do not count the 0 line."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which label goes up the side axis of a bar graph about favourite fruit?",
+   "choices": ["Number of children", "Fruit", "Apple"],
+   "answer": 0,
+   "hint": "The side axis has the numbers on it.",
+   "explain": "The side axis counts, so its label is 'Number of children'. The fruit names go along the bottom."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "{t} children voted. {a} chose grape. How many did not choose grape?",
+   "answer": "t-a",
+   "hint": "Take apart: take the grape bar away from the total.",
+   "explain": "{t} − {a} = {=t-a} children did not choose grape.",
+   "params": {"t": [15, 20], "a": [3, 8]}
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "In a picture graph, one picture stands for one child. Banana has 3 pictures. How many children chose banana?",
+    "choices": ["3", "6", "1"],
+    "answer": 0,
+    "hint": "One picture is one child. Count the pictures.",
+    "explain": "3 pictures, one child each, so 3 children chose banana."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Bars show apple {a}, pear {b} and plum {c}. How many votes in all?",
+    "answer": "a+b+c",
+    "hint": "In all means add every bar.",
+    "explain": "{a} + {b} + {c} = {=a+b+c} votes in all.",
+    "params": {"a": [3, 7], "b": [1, 5], "c": [2, 6]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Sam draws a bar for 5 votes, but it stops on the line marked 6. What went wrong?",
+    "choices": ["He counted the 0 line as 1", "Nothing, it is right", "He used the wrong colour"],
+    "answer": 0,
+    "hint": "Where does every bar start?",
+    "explain": "Bars start at 0. If you count the 0 line as 1, the bar ends one line too high."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Cat has 7 votes and fish has 2. Mia says cat has 9 more. What did she do?",
+    "choices": ["She added instead of finding the gap", "She read the cat bar wrong", "Nothing, 9 is right"],
+    "answer": 0,
+    "hint": "How many more is a difference, not a total.",
+    "explain": "7 + 2 = 9 is the total. How many more is the gap: 7 − 2 = 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "The dog bar is at {a} and the rabbit bar is at {b}. How many fewer chose rabbit?",
+    "answer": "a-b",
+    "hint": "How many fewer is the gap between the tops too.",
+    "explain": "{a} − {b} = {=a-b} fewer chose rabbit.",
+    "params": {"a": [6, 8], "b": [1, 4]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What should a bar graph have at the top?",
+    "choices": ["a title saying what it shows", "the biggest number", "nothing"],
+    "answer": 0,
+    "hint": "How would someone know what the graph is about?",
+    "explain": "A title, like 'Our favourite fruit', tells the reader what was counted."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Cat 7, Dog 5, Fish 2, Rabbit 4. Which pet got 3 fewer votes than cat?",
+    "choices": ["Rabbit", "Dog", "Fish"],
+    "answer": 0,
+    "hint": "Take 3 from cat's 7, then find the bar at that number.",
+    "explain": "7 − 3 = 4, and the rabbit bar stops at 4."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which question needs you to add two bars?",
+    "choices": ["How many chose dog or rabbit?", "How many more chose dog than rabbit?", "Which pet has the tallest bar?"],
+    "answer": 0,
+    "hint": "'Or' and 'together' put groups together.",
+    "explain": "Dog or rabbit puts two groups together, so add the bars. How many more needs the gap."
+   }
+  ]
+ }
+}

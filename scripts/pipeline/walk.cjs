@@ -17,7 +17,7 @@ async function axeBothThemes(page) {
   for (let k = 0; k < 2; k++) {
     await page.evaluate(() => Promise.race([new Promise(r => setTimeout(r, 1500)), Promise.all(document.getAnimations().filter(a => a.playState === 'running' && a.effect && a.effect.getComputedTiming().iterations !== Infinity).map(a => a.finished.catch(() => 0)))]));
     const r = await page.evaluate(() => axe.run('.vis.flag', { runOnly: ['wcag2a', 'wcag2aa', 'wcag21aa'] }));
-    found.push(...r.violations.map(v => v.id)); await page.click('#themeBtn'); await page.waitForTimeout(200) }
+    found.push(...r.violations.map(v => v.id)); await page.evaluate(() => document.getElementById('themeBtn').click()); await page.waitForTimeout(200) }
   return found }
 async function checkOn(browser, contextOpts, id) {
   const ctx = await browser.newContext(contextOpts), page = await ctx.newPage(), errors = [];

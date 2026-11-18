@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against Common Core RF.1.3d (every syllable must have a vowel sound), RF.1.3e (decode two-syllable words by breaking them into syllables), RF.2.3c and RF.3.3c, and the standard syllable-division patterns (VC/CV, V/CV tried first then VC/V, consonant-le, vowel teams not split) as set out in Moats, Speech to Print, and Reading Rockets. Every word was split by hand: rab-bit, nap-kin, pic-nic, bas-ket, ti-ger, cab-in, mu-sic, lem-on, ro-bot, ta-ble, pud-dle, can-dle, bub-ble, pa-per, pi-lot, ze-ro, pup-pet, mag-net, sev-en, puz-zle, rain-coat, den-tist. The adult text says these are reading strategies, not dictionary hyphenation rules."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: counting vowel letters not vowel sounds (step 1 prediction on rain, teapot counted as 2, p2 and m2), a part with no vowel (p | ilot, seve | n in the challenge, m6, judgeCut's 'has no vowel' message), always cutting after the first vowel (step 3 prediction on camel, cabin and lemon cards, p5, m4), splitting consonant-le the wrong way (step 4 prediction tab | le, puzz | le in the challenge, m5), and cutting a vowel team apart (ra | incoat)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagsyldiv is about written syllable division: tapping vowel letters marks whole vowel teams, gap-tapping places a cut that is judged against the VC/CV and consonant-le patterns, an open/closed chooser shows how each cut would sound (ty-ger vs tig-er), and a sort judges whether the first syllable ends in a vowel. flagsyl (clapping beats) and flagendread (inflectional endings) do neither; the lab_distinct gate stayed under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The rules come out of the moves: tapping n in sunset returns 'n is a consonant. The vowels are a, e, i, o and u'; finishing rain shows 'rain: 1 vowel sound, so 1 syllable'; cutting na | pkin returns 'Find the two consonants in the middle, p and k. Cut between them'; choosing cay-bin returns 'is not a word. Now try closed: cab-in, with a short vowel'; and tab | le returns 'The le grabs the consonant before it: ble'. Text confirms after each step."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option the lab disproves: rain has 2 vowel letters so 2 syllables (the tap shows ai lights as one team), na | pkin (the cut check rejects it), ca | mel as cay-mel (the open/closed step shows the open try is not a word), and tab | le (the cut check rejects it)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge words, each wrong option tagged with its slip and its own message: two consonants in the middle (magnet, dentist), try open first (pilot), the open try is not a word so flex (seven), keep consonant-le together (puzzle), never split a vowel team (raincoat), and a part with no vowel (p | ilot, seve | n). Correct answers build a streak."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the kid (≤ 6.5) and adult (≤ 9.5) limits. Kid paragraphs use short sentences and words a 6 to 9 year old can read, with examples in every paragraph (nap-kin, ti-ger, cab-in, ta-ble). The lab text uses the same plain words: vowel, consonant, open, closed, long sound, short sound."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Every lab step has one instruction and one task; every practice and mastery explanation says why the right cut is right and why the wrong options fail (for example, 'Pudd-le breaks up the consonant-le'). There is no repeated template text across items."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px (touch, 1.5x) in light and dark for every step before and after Show me: letter tiles are about 50 px wide, the open/closed cards fit side by side, the sort bins hold three short lines each, and the wrapped feedback box sits below the tiles. The bin text was split into three lines and the sort card shortened after the first screenshots showed clipped labels and an overlapping feedback box."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: one per letter (labelled Letter 2: u), one per gap (Cut after nap), Check, Open/Closed choices and both sort bins. The canvas aria-label is updated with every move (for example 'Word: napkin. Cut: nap then kin.'), the challenge feedback is an aria-live status, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for English Language Arts, Reading Foundational Skills RF.1.3d, RF.1.3e, RF.2.3c, RF.3.3c",
+  "National Curriculum in England: English programmes of study, Year 1 word reading (words of more than one syllable) (DfE 2013)",
+  "Moats, L. C. Speech to Print: Language Essentials for Teachers (3rd ed., 2020), syllable types and division",
+  "Reading Rockets: Syllable division rules and the six syllable types"
+ ]
+}

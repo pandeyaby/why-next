@@ -1,0 +1,283 @@
+{
+ "topicId": "mt_EJSeZAe5md",
+ "title": "Organising homework and deadlines",
+ "audience": "learner",
+ "keyIdea": "Organising homework means writing every task down with its due date, estimating how long each needs, breaking big tasks into steps, and placing them into a planner so nothing relies on memory alone. Due-soon and high-stakes work gets protected time first; 'I'll remember' and 'easiest first always' are common traps.",
+ "familyTip": "Once a week, sit with a planner or shared calendar. Write each homework task, its due date, and a rough time estimate. Ask: which ones are due soon, and which need more than one sitting?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Homework plan idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True plan idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "write every task with its due date",
+     0
+    ],
+    [
+     "estimate time before you start",
+     0
+    ],
+    [
+     "I'll remember is a solid plan",
+     1
+    ],
+    [
+     "break a big project into steps",
+     0
+    ],
+    [
+     "always do the easiest task first",
+     1
+    ],
+    [
+     "protect time for due-soon work",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghworg",
+  "caption": "Flagship lab: capture tasks with due dates, estimate time, break a project, place work into planner slots, catch memory and easiest-first myths, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Start by writing every homework task down. Add the due date next to each one. A list in your head is not a plan — it is a hope.",
+   "Guess how many minutes each task needs. If a project is big, split it into steps you can finish in one sitting. Then put each step into a day on your planner.",
+   "Give protected time first to work that is due soon or counts for a lot. Fun or easy tasks can fill gaps after the must-do work has a slot.",
+   "Two traps: saying I'll remember instead of writing it down, and always doing the easiest task first so the hard due-soon work gets squeezed."
+  ],
+  "adult": [
+   "Ages 11–12 Learning to Learn: write homework with due dates, guess time needed, break projects, and use a planner. Nearby lessons cover sorting any jobs (flagtime) and steering one task (flagpme); this one is about a homework list and calendar.",
+   "Key words: due date, estimate, planner, steps, protected time. Common mistakes: trusting memory; always doing the easiest task first; skipping time guesses; leaving a whole project for one night.",
+   "In the lab the learner writes tasks with due dates, guesses minutes, breaks a project into steps, places work into planner slots, spots memory and easiest-first myths, and practises the plan."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A solid homework plan starts by…",
+   "choices": [
+    "writing every task with its due date",
+    "hoping you will remember later",
+    "doing only the easiest task"
+   ],
+   "answer": 0,
+   "hint": "What belongs on paper or in a planner before you start?",
+   "explain": "Capture every task and its due date. Memory alone is not a plan, and easiest-first can squeeze due-soon work."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You have {a} homework tasks and estimate {b} minutes each. How many minutes in total?",
+   "answer": "a*b",
+   "hint": "Multiply the number of tasks by minutes per task.",
+   "explain": "{a} tasks × {b} minutes = {=a*b} minutes to plan for.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     10,
+     30
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is the mix-up?",
+   "choices": [
+    "I'll remember is a solid plan",
+    "Break a big project into steps",
+    "Protect time for due-soon work"
+   ],
+   "answer": 0,
+   "hint": "Spot the trap that skips writing things down.",
+   "explain": "I'll remember is a hope, not a plan. Writing due dates and breaking projects are sound moves."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A project needs {a}*{b} minutes. You work {b} minutes per sitting. How many sittings?",
+   "answer": "a",
+   "hint": "Total minutes ÷ minutes per sitting.",
+   "explain": "({a}×{b}) ÷ {b} = {a} sittings.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     20,
+     30
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Due tomorrow: a 30-minute essay. Also: a fun 10-minute worksheet due next week. What first?",
+   "choices": [
+    "protect time for the essay due tomorrow",
+    "only the worksheet because it is easier",
+    "neither — wait until you remember"
+   ],
+   "answer": 0,
+   "hint": "Due-soon and high-stakes work gets protected time first.",
+   "explain": "The essay is due soon and needs more time. Slot it first; the easy worksheet can fill a later gap."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why estimate time before you start?",
+    "choices": [
+     "so the work fits into real planner slots",
+     "so you can skip writing due dates",
+     "so you always pick the easiest task"
+    ],
+    "answer": 0,
+    "hint": "Estimates turn a list into a schedule you can fit into a day.",
+    "explain": "Time estimates let you place tasks into planner slots that actually fit. They do not replace due dates or excuse easiest-first."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Breaking a big project into steps helps because…",
+    "choices": [
+     "each step can fit one sitting instead of one panic night",
+     "you can forget the due date",
+     "you should only do easy steps"
+    ],
+    "answer": 0,
+    "hint": "Think about fitting work across days, not one cram session.",
+    "explain": "Steps that fit one sitting spread the load. The due date still matters, and hard steps still need slots."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which belongs on a homework capture list?",
+    "choices": [
+     "task name and due date",
+     "only how fun the task feels",
+     "only the easiest task"
+    ],
+    "answer": 0,
+    "hint": "What two facts make a task schedulable?",
+    "explain": "Task name plus due date (and later a time estimate) make the work schedulable."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Three tasks need {a}, {b} and {c} minutes. Total minutes to plan?",
+    "answer": "a+b+c",
+    "hint": "Add the three time estimates to get a total.",
+    "explain": "{a}+{b}+{c} = {=a+b+c} minutes across the planner.",
+    "params": {
+     "a": [
+      10,
+      25
+     ],
+     "b": [
+      15,
+      30
+     ],
+     "c": [
+      5,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Always doing the easiest task first is a trap because…",
+    "choices": [
+     "due-soon hard work can get squeezed out",
+     "easy tasks never help",
+     "planners forbid easy tasks"
+    ],
+    "answer": 0,
+    "hint": "What happens to hard due-soon work if easy tasks always win?",
+    "explain": "Easiest-first can burn the evening on low-stakes work while the due-soon essay waits."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Correct order starts with…",
+    "choices": [
+     "capture tasks with due dates → estimate → place into planner",
+     "start the easiest task with no list",
+     "wait until you remember tonight"
+    ],
+    "answer": 0,
+    "hint": "List and date first, then time, then slots.",
+    "explain": "Capture with due dates, estimate minutes, then place into planner slots — especially due-soon work."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "You place {b} equal homework blocks into your planner. Total minutes available: {b}*{a}. Minutes per block?",
+    "answer": "a",
+    "hint": "Total minutes ÷ number of blocks equals minutes per block.",
+    "explain": "({b}×{a}) ÷ {b} = {a} minutes per block.",
+    "params": {
+     "a": [
+      15,
+      30
+     ],
+     "b": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Protected time means…",
+    "choices": [
+     "a planned slot kept for due-soon or high-stakes work",
+     "only free time after games",
+     "time you hope to remember later"
+    ],
+    "answer": 0,
+    "hint": "Think of a slot you refuse to give away lightly.",
+    "explain": "Protected time is a planned slot for must-do homework, not leftover hope after games."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "You need {d}*{n} sittings spread over {d} days. Sittings per day if spread evenly?",
+    "answer": "n",
+    "hint": "Divide total sittings by the number of days.",
+    "explain": "({d}×{n}) ÷ {d} = {n} sittings per day.",
+    "params": {
+     "d": [
+      2,
+      5
+     ],
+     "n": [
+      1,
+      3
+     ]
+    }
+   }
+  ]
+ }
+}

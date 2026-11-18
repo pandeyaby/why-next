@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_fxPtngwUfz",
+ "title": "Number pattern relationships",
+ "audience": "learner",
+ "keyIdea": "Two rules can make two patterns side by side. Start both at 0: rule A adds 3 (0, 3, 6, 9, 12) and rule B adds 6 (0, 6, 12, 18, 24). Terms in the same position are corresponding terms, and you can look for a rule that links them: here every B term is 2 × its A term, because B's step is double A's step and both start at 0. Test the link on every pair, not just the first: 'add 3' works for 3 and 6 but fails for 6 and 12. Each pair makes an ordered pair (A, B), such as (3, 6), and the plotted points lie on a straight line through (0, 0).",
+ "familyTip": "At the shops, make two patterns out loud: one apple costs 20p and one pear costs 40p. Count up the cost of 1, 2, 3 and 4 of each, then ask how the pear totals compare with the apple totals, and why.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Rule A adds 4 and rule B adds 8, both from 0. Is each statement true or false? Drag each card to a box, or tap the card and then a box.",
+  "opts": {
+   "bins": [
+    "True",
+    "False"
+   ],
+   "items": [
+    [
+     "Each B term is double its A term",
+     0
+    ],
+    [
+     "B is always 4 more than A",
+     1
+    ],
+    [
+     "(8, 16) is one of the pairs",
+     0
+    ],
+    [
+     "(16, 8) is one of the pairs",
+     1
+    ],
+    [
+     "The points line up through (0, 0)",
+     0
+    ],
+    [
+     "It still works if both start at 1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtwoseq",
+  "caption": "Flagship lab: grow two patterns, find the rule linking every pair, plot the pairs and make B a multiple of A.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Two rules can make two patterns. Both start at 0. Rule A adds 3: 0, 3, 6, 9, 12. Rule B adds 6: 0, 6, 12, 18, 24.",
+   "Put the patterns in two rows. Numbers in the same place are corresponding terms. Look down each column: 3 and 6, 6 and 12, 9 and 18.",
+   "Find the rule that links them. Each B number is 2 times its A number. Check every column. Add 3 works for 3 and 6, but not for 6 and 12.",
+   "Each column makes a pair, A first, then B: (3, 6), (6, 12), (9, 18). Plot them on a grid. They make a straight line that starts at (0, 0)."
+  ],
+  "adult": [
+   "Ages 10 to 11. US Common Core 5.OA.B.3 asks pupils to generate two numerical patterns from two given rules, identify relationships between corresponding terms, form ordered pairs and graph them on the coordinate plane. In England this sits with Year 6 algebra (generate and describe linear number sequences) and Year 6 geometry (plot points in all four quadrants). It prepares for proportional reasoning and y = kx.",
+   "Why it works: if both patterns start at 0 and B's step is k times A's step, then after n steps A = n × a and B = n × ka, so B = k × A every time. The plotted points (A, B) lie on a straight line through the origin. If the patterns start somewhere else, the link usually changes: 1, 3, 5 and 1, 5, 9 are not double.",
+   "Common mistakes: checking only the first pair, so 'add 3' seems to link 0, 3, 6 with 0, 6, 12; adding the steps instead of multiplying (B adds 3 + 4 = 7 to get 4 × A); swapping the order in an ordered pair, so (6, 3) is plotted for (3, 6); and ignoring the starting number. The lab meets each one with a column that breaks, a step that fails, a red ring on the grid or a false card."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Rule A starts at 0 and adds {a}. Rule B starts at 0 and adds {=2*a}. What is the 4th term of B (counting 0 as the 1st)?",
+   "answer": "6*a",
+   "hint": "Write out B: 0, then add the step three times.",
+   "explain": "B goes 0, {=2*a}, {=4*a}, {=6*a}. The 4th term is {=6*a}, which is double A's 4th term, {=3*a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Rule A adds 3 and rule B adds 6, both from 0. When A's term is {=3*m}, what is the corresponding B term?",
+   "answer": "6*m",
+   "hint": "Each B term is double its A term, because B's step is double A's step.",
+   "explain": "B = 2 × A, so the B term is 2 × {=3*m} = {=6*m}.",
+   "params": {
+    "m": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A: 0, 4, 8, 12. B: 0, 12, 24, 36. Which rule turns each A term into its B term?",
+   "choices": [
+    "B = A × 3",
+    "B = A + 8",
+    "B = A × 4"
+   ],
+   "answer": 0,
+   "hint": "Test your rule on every column, not just 4 and 12.",
+   "explain": "4 × 3 = 12, 8 × 3 = 24 and 12 × 3 = 36, so B = A × 3. Adding 8 works for 4 → 12 only."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A adds 2 and B adds 6, both from 0. Which ordered pair (A, B) fits?",
+   "choices": [
+    "(4, 12)",
+    "(12, 4)",
+    "(4, 8)"
+   ],
+   "answer": 0,
+   "hint": "In an ordered pair, the A term comes first. When A is 4, what is B?",
+   "explain": "A goes 0, 2, 4 and B goes 0, 6, 12, so A = 4 pairs with B = 12: (4, 12)."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A adds 3 from 0. What must B add, from 0, so that every B term is 4 times its A term?",
+   "choices": [
+    "12",
+    "7",
+    "4"
+   ],
+   "answer": 0,
+   "hint": "B's step must be 4 times A's step.",
+   "explain": "4 × 3 = 12. Then B goes 0, 12, 24, 36, which is 4 times 0, 3, 6, 9."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Rule A adds 5 and rule B adds 10, both from 0. What is B when A is {n}0?",
+    "answer": "20*n",
+    "hint": "B's step is double A's step, so each B term is double its A term.",
+    "explain": "B = 2 × A = 2 × {n}0 = {=20*n}.",
+    "params": {
+     "n": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Rule A adds 2 from 0. Rule B adds {=2*k} from 0. Each B term is how many times its A term?",
+    "answer": "k",
+    "hint": "Divide B's step by A's step.",
+    "explain": "B's step is {=2*k} and A's step is 2, so B = {=k} × A for every pair.",
+    "params": {
+     "k": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Lena says the rule from A: 0, 3, 6 to B: 0, 6, 12 is 'add 3', because 3 + 3 = 6. What went wrong?",
+    "choices": [
+     "She checked one pair only: 6 + 3 = 9, not 12",
+     "Nothing: add 3 is right",
+     "She should have added 6"
+    ],
+    "answer": 0,
+    "hint": "Try her rule on the next column.",
+    "explain": "Add 3 works for 3 → 6 but gives 6 + 3 = 9, not 12. The rule that fits every pair is B = A × 2."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The pairs (3, 6), (6, 12) and (9, 18) are plotted on a grid. What do they make?",
+    "choices": [
+     "A straight line through (0, 0)",
+     "A curve",
+     "Scattered points"
+    ],
+    "answer": 0,
+    "hint": "Each step goes 3 across and 6 up. What shape do equal steps make?",
+    "explain": "Each point is 3 across and 6 up from the last, so they line up, and the line passes through (0, 0)."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Both patterns start at 1. A adds 2 and B adds 4. Is each B term double its A term?",
+    "choices": [
+     "No: A is 1, 3, 5 and B is 1, 5, 9",
+     "Yes: 4 is double 2",
+     "Yes: both start at 1"
+    ],
+    "answer": 0,
+    "hint": "Write out both patterns and test the columns.",
+    "explain": "5 is not double 3 and 9 is not double 5. The doubling link needs both to start at 0."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which ordered pair is plotted correctly for A = 6, B = 18?",
+    "choices": [
+     "(6, 18): 6 across, 18 up",
+     "(18, 6): 18 across, 6 up",
+     "(6, 6): 6 across, 6 up"
+    ],
+    "answer": 0,
+    "hint": "The first number goes across, the second goes up.",
+    "explain": "(A, B) puts A first, so go 6 across and 18 up."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Rule A adds 4 and rule B adds 12, both from 0. Why is every B term 3 times its A term?",
+    "choices": [
+     "B's step is 3 times A's step, and both start at 0",
+     "12 is 8 more than 4",
+     "B has more terms"
+    ],
+    "answer": 0,
+    "hint": "Compare the two steps, and the starting numbers.",
+    "explain": "After the same number of steps, B has added 3 times as much as A, and both began at 0, so B = 3 × A."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "To make B = 5 × A when A adds 2 from 0, what should B add?",
+    "choices": [
+     "10",
+     "7",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Do not add the numbers. Multiply A's step by 5.",
+    "explain": "5 × 2 = 10, so B goes 0, 10, 20, 30, which is 5 times 0, 2, 4, 6."
+   }
+  ]
+ }
+}

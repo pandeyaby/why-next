@@ -1,0 +1,33 @@
+/* Data for the energy bills lab (flag_kwh.js; bundled in the main learn.js like decdiv_art.js so the lab file stays under
+   20 KB). Powers are in watts and times in seconds or minutes as stated; 25p per kWh is an example unit price, not a quote.
+   big(n) writes 180000 as "180 000"; money(p) writes pence as "7.5p" or "£1.50". */
+const KWART={
+big(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'\u2009')},
+money(p){return p<100?`${+p.toFixed(1)}p`:`£${(p/100).toFixed(2)}`},
+PRICE:25,
+RUN:[{name:'Kettle',w:3000,icon:'☕'},{name:'Microwave',w:1000,icon:'▦'},{name:'TV',w:100,icon:'▭'},{name:'LED bulb',w:10,icon:'○'}],
+UNITS:[{name:'TV',p:'100 W',t:'5 hours',opts:[['0.5 kWh','ok'],['500 kWh','usedW'],['20 kWh','divided']]},
+ {name:'heater',p:'2 kW',t:'30 minutes',opts:[['1 kWh','ok'],['60 kWh','usedMin'],['15 kWh','divided']]},
+ {name:'kettle',p:'3 kW',t:'6 minutes',opts:[['0.3 kWh','ok'],['18 kWh','usedMin'],['1.8 kWh','minDecimal']]}],
+COST:[{name:'Heater',use:'2 kW for 3 hours',kwh:6},{name:'Lights',use:'20 W for 24 hours',kwh:.48},{name:'Kettle',use:'3 kW for 6 minutes',kwh:.3},{name:'Wi-Fi router',use:'10 W for 24 hours',kwh:.24}],
+METER:{was:4512,now:4590,rounds:[{q:'How much energy was used?',opts:[['78 kWh','ok'],['9102 kWh','meterAdd'],['4590 kWh','meterNow']]},
+ {q:'At 25p per kWh, what is the bill?',opts:[['£19.50','ok'],['£1950','penceSlip'],['£3.12','divPrice']]}]},
+bank:[['A 1500 W hair dryer runs for 2 minutes. How much energy does it transfer, in joules?','180 000 J',[['3000 J','minNotSec'],['3 J','kWnotW']]],
+['A 2 kW heater runs for 4 hours. Electricity costs 25p per kWh. What does it cost?','£2',[['£200','penceSlip'],['50p','forgotTime']]],
+['How many joules are in 1 kWh?','3 600 000 J',[['1000 J','kwhIsKj'],['3600 J','kwhNoThousand']]],
+['A 60 W lamp is on for 10 hours. How much energy is that in kWh?','0.6 kWh',[['600 kWh','usedW'],['6 kWh','zeroSlip']]],
+['A 3 kW kettle boils for 6 minutes. How much energy is that in kWh?','0.3 kWh',[['18 kWh','usedMin'],['1.8 kWh','minDecimal']]],
+['Which costs more to run each day?','A 20 W light left on for 24 hours',[['A 3 kW kettle used for 6 minutes','powerOnly'],['They cost the same','powerOnly']]],
+['The meter read 1250 kWh, then 1330 kWh a week later. At 25p per kWh, what is the bill?','£20',[['£645','meterAdd'],['£332.50','meterNow']]]],
+WHY:{minNotSec:'E = P × t needs the time in seconds when you want joules: 2 minutes = 120 s, and 1500 × 120 = 180 000 J.',
+ kWnotW:'For joules, use watts and seconds: 1500 W × 120 s. Kilowatts and minutes give neither joules nor kWh.',
+ forgotTime:'That is the cost of 1 hour. The heater runs for 4 hours: 2 kW × 4 h = 8 kWh, and 8 × 25p = 200p = £2.',
+ kwhIsKj:'1 kWh is 1000 W for a whole hour, not for one second: 1000 × 3600 = 3 600 000 J.',
+ kwhNoThousand:'3600 is the number of seconds in an hour. A kilowatt is 1000 watts, so 1 kWh = 1000 × 3600 J.',
+ zeroSlip:'60 W = 0.06 kW (÷ 1000), and 0.06 kW × 10 h = 0.6 kWh. Check the decimal point.',
+ divided:'Energy is power multiplied by time, not divided. A bigger power or a longer time both mean more energy.',
+ minDecimal:'6 minutes is not 0.6 hours. An hour has 60 minutes, so 6 minutes = 6 ÷ 60 = 0.1 h, and 3 × 0.1 = 0.3 kWh.',
+ powerOnly:'Power is only half the story. The light: 0.02 kW × 24 h = 0.48 kWh. The kettle: 3 kW × 0.1 h = 0.3 kWh.',
+ meterAdd:'Do not add the readings. The meter keeps counting up, so the energy used is the new reading minus the old one.',
+ meterNow:'The new reading is the total since the meter was fitted. Subtract the old reading to get this week\u2019s energy.',
+ divPrice:'Multiply the energy by the price, do not divide: 78 kWh × 25p = 1950p = £19.50.'}};

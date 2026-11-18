@@ -1,0 +1,154 @@
+{
+ "topicId": "mt_sUVOS2jH3J",
+ "title": "Comparing Books",
+ "audience": "learner",
+ "keyIdea": "To compare two books, look at both together. Find what is the same and what is different: theme, characters, setting and how the story is told. Two books can share a theme but show it in different ways. A good comparison joins the books in one sentence with words like 'similarly', 'both' and 'whereas', and backs each point with evidence.",
+ "explain": {
+  "kid": [
+   "Comparing books means looking at two books side by side. You ask what is the same and what is different. A Venn diagram helps. Things only one book has go on its side. Things both books share go in the middle.",
+   "Look past the plot. Ask about the theme, which is the big idea, like courage or friendship. Ask about the setting and the main character. Then ask how the story is told. Is it told by the hero, using 'I'? Or by a narrator, using 'he' or 'she'?",
+   "Two books can share a theme but show it in different ways. In one book the hero tells us her scared thoughts. In another we only see what the hero does and says. They also may not say the same thing. One hero is brave alone. Another learns that asking for help is brave too.",
+   "When you write it up, join both books in one sentence. Use 'similarly' or 'both' for things that are alike. Use 'whereas' or 'however' for things that are different. Then add evidence, like a quote, so the reader can check your point."
+  ],
+  "adult": [
+   "The England National Curriculum asks Years 5 and 6 to make comparisons within and across books, and to identify and discuss themes and conventions across a wide range of writing. The US Common Core standard RL.5.9 asks pupils to compare and contrast stories in the same genre on their approaches to similar themes and topics.",
+   "The most common mistake is the 'two lists' answer: a paragraph about one book, then a paragraph about the other, with no link. A second mistake is thinking that a shared theme means a shared message. Two stories about courage can disagree about what courage is. Children also compare surface features such as length and covers instead of the writing.",
+   "Useful terms are theme, setting, narrator (first person and third person), character development and comparative connectives such as similarly, both, whereas, however and in contrast. Ask your child to back each point with a short quotation from each book.",
+   "The lab uses two made-up novels. Your child sorts facts into a Venn diagram and sorts extracts by how each author shows courage. They then track how each main character changes, sort what each setting does and choose 'similarly' or 'whereas' to join comparison sentences."
+  ]
+ },
+ "familyTip": "After you both watch a film or read a story that reminds you of another one, play 'Same and different'. Each person names one thing that is the same and one that is different, joined in one sentence with 'similarly' or 'whereas'.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Two books about courage. Is each point a similarity or a difference? Drag each line, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Similarity", "Difference"],
+   "items": [
+    ["Both heroes are ten years old", 0],
+    ["One is told with 'I', the other with 'he'", 1],
+    ["Both stories are about being brave", 0],
+    ["One is set on an island, the other in a city", 1],
+    ["In both, water is the danger", 0],
+    ["One hero acts alone, the other gets help", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbkcmp",
+  "caption": "Flagship lab: sort two books into a Venn diagram, compare how each shows courage, track the characters and settings, and join comparisons.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "In a Venn diagram of two books, where does something that both books share go?",
+   "choices": ["In the middle, where the circles overlap", "On the left side only", "Outside both circles"],
+   "answer": 0,
+   "hint": "The overlap is the part that belongs to both circles at once.",
+   "explain": "The overlap belongs to both circles, so shared features go in the middle. Each side is for one book only."
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "You list {a} features of Book A. {s} of them are also in Book B. How many features belong only to Book A?",
+   "answer": "a-s",
+   "hint": "Take the shared features (the middle of the Venn) away from Book A's total.",
+   "explain": "{a} - {s} = {=a-s}. Those go in Book A's own side. The {s} shared ones go in the middle.",
+   "params": {"a": [6, 10], "s": [1, 4]}
+  },
+  {
+   "type": "mc", "id": "p3",
+   "prompt": "Which word joins two things that are different?",
+   "choices": ["Whereas", "Similarly", "Both"],
+   "answer": 0,
+   "hint": "Which word signals a contrast between the two books?",
+   "explain": "'Whereas' links two different points, as in 'Nell is alone, whereas Mo has help.' 'Similarly' and 'both' link things that are alike."
+  },
+  {
+   "type": "numeric", "id": "p4",
+   "prompt": "Your comparison has {s} similarities and {d} differences. Each one needs a quote from each book. How many quotes do you need?",
+   "answer": "2*(s+d)",
+   "hint": "Add the points, then remember each point needs two quotes: one from each book.",
+   "explain": "{s} + {d} = {=s+d} points, and each needs 2 quotes, so 2 × {=s+d} = {=2*(s+d)}.",
+   "params": {"s": [1, 3], "d": [1, 3]}
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "Which sentence is a real comparison?",
+    "choices": ["Both heroes are scared of the dark, but only one faces it alone.", "Book A is about a girl. Book B is about a boy.", "I liked Book A more."],
+    "answer": 0,
+    "hint": "A comparison talks about both books in one sentence and links them.",
+    "explain": "The first joins both books and shows how they are alike and different. The second is two separate facts, and the third is just an opinion."
+   },
+   {
+    "type": "mc", "id": "m2",
+    "prompt": "Two books are both about friendship. What is the best thing to compare?",
+    "choices": ["How each author shows friendship", "Which book has more pages", "Which cover is brighter"],
+    "answer": 0,
+    "hint": "Compare the writing, not the object.",
+    "explain": "A shared theme is a starting point. Comparing how each author shows it is where the interesting differences are."
+   },
+   {
+    "type": "mc", "id": "m3",
+    "prompt": "'I froze. My heart banged like a drum.' How is the narrator's fear shown?",
+    "choices": ["Through her own thoughts and feelings, in first person", "Through what other characters say about her", "Through a description of the weather"],
+    "answer": 0,
+    "hint": "Look at the word 'I' and what it tells us.",
+    "explain": "The narrator says 'I' and tells us what she feels inside. That is first person, and it lets us into her head."
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Both heroes are brave by the end. Does that mean the books have the same message?",
+    "choices": ["Not always: they may show courage in different ways", "Yes: being brave is always the same", "Only if they have the same author"],
+    "answer": 0,
+    "hint": "Think about how each hero becomes brave.",
+    "explain": "One hero may learn to face fear alone, and another may learn that asking for help is brave. Same theme, different message."
+   },
+   {
+    "type": "numeric", "id": "m5",
+    "prompt": "A Venn diagram has {x} things only in Book A, {y} things only in Book B and {z} things in the middle. How many things are true of Book A?",
+    "answer": "x+z",
+    "hint": "Book A's circle includes its own side and the middle.",
+    "explain": "{x} + {z} = {=x+z}. The middle is part of Book A's circle too, because shared things are true of both books.",
+    "params": {"x": [2, 5], "y": [2, 5], "z": [1, 4]}
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Choose the word for the gap: 'Nell lives on an island, ___ Mo lives in a city.'",
+    "choices": ["whereas", "similarly", "also"],
+    "answer": 0,
+    "hint": "Are an island and a city alike or different?",
+    "explain": "An island and a city are different, so 'whereas' fits. 'Similarly' and 'also' would wrongly say they are alike."
+   },
+   {
+    "type": "mc", "id": "m7",
+    "prompt": "'The wind screamed round the house.' What is this setting line mainly doing?",
+    "choices": ["Setting a scary mood", "Telling us the hero's age", "Ending the story"],
+    "answer": 0,
+    "hint": "How does 'screamed' make you feel?",
+    "explain": "'Screamed' makes the wind sound alive and frightening, so the line builds mood."
+   },
+   {
+    "type": "numeric", "id": "m8",
+    "prompt": "You compare two books on {p} points. {s} are similarities. How many are differences?",
+    "answer": "p-s",
+    "hint": "Every point is either a similarity or a difference.",
+    "explain": "{p} - {s} = {=p-s} differences. Each one could start with 'whereas' or 'however'.",
+    "params": {"p": [5, 9], "s": [1, 4]}
+   },
+   {
+    "type": "mc", "id": "m9",
+    "prompt": "What makes a comparison point convincing?",
+    "choices": ["Evidence, such as a short quote, from each book", "Saying it very strongly", "Repeating it twice"],
+    "answer": 0,
+    "hint": "How can a reader check that your point is true?",
+    "explain": "A quote from each book lets the reader check your point. Saying it loudly or twice does not prove anything."
+   }
+  ]
+ }
+}

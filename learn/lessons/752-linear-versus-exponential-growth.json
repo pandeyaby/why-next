@@ -1,0 +1,242 @@
+{
+ "topicId": "mt_XHutpyW8Cr",
+ "title": "Linear versus exponential growth",
+ "audience": "learner",
+ "keyIdea": "Linear change adds the same amount each step, so a table has equal differences. Exponential change multiplies by the same factor each step, so a table has equal ratios. A fixed amount or a percentage of a fixed amount gives linear change; a percentage of the current value gives exponential change. Exponential growth always overtakes linear growth in the end, because what it adds each step keeps growing.",
+ "explain": {
+  "kid": [
+   "Some things grow by adding the same amount each time. Save £5 a week and you go 5, 10, 15, 20. The gaps are all the same: + 5. We call this linear growth. Its graph is a straight line.",
+   "Other things grow by multiplying by the same number each time. A colony of germs that doubles goes 3, 6, 12, 24. The gaps get bigger, but the ratio stays the same: × 2 every time. We call this exponential growth.",
+   "To tell them apart, look at a table. Take each value away from the next one. If the gaps match, it is linear. If they do not, divide each value by the one before. If those match, it is exponential. If neither match, it is something else, like square numbers.",
+   "Watch out for percents. Losing 4% of a full battery each hour takes the same amount each hour, so that is linear. Losing 15% of what a car is worth now takes less each year, so that is exponential. In a race, exponential growth always wins in the end. £100 a day gives £1,800 by day 18. A penny that doubles each day gives £2,621 by then. By day 30 it gives over £10 million."
+  ],
+  "adult": [
+   "This lesson matches the US Common Core standards F-LE.1a, F-LE.1b, F-LE.1c and F-LE.3, and growth and decay in GCSE Maths in England. Learners show that linear functions grow by equal differences over equal intervals and exponential functions grow by equal factors over equal intervals. They also explain why an exponential that is increasing will in the end exceed any linear function.",
+   "Key terms: linear function, exponential function, common difference, common ratio or growth factor, rate of change, percentage change, exponential decay and asymptote. In y = mx + c the difference per step is m. In y = abˣ the ratio per step is b, and a rise of r% gives b = 1 + r/100.",
+   "Common mistakes: calling any rising table exponential; thinking every percentage means exponential, when 4% of a fixed amount is linear; judging a pattern from one gap; and thinking a big coefficient protects a line. In fact 2ˣ passes 1000x at x = 14. Another slip is expecting repeated halving to reach zero.",
+   "In the lab the learner taps gaps in tables to see differences and ratios, and sorts real situations. They race £100 a day against a penny doubled daily (Plan B leads from day 18). They make a line 10 times steeper and see the overtaking point move only four steps, then step a halving model next to a minus-10 model."
+  ]
+ },
+ "familyTip": "Fold a sheet of paper in half again and again, counting the layers: 1, 2, 4, 8, 16. Next to it, stack one coin per fold: 1, 2, 3, 4, 5. Ask which pile would be taller after 20 goes (over a million layers against 20 coins).",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it change by the same amount (linear) or by the same factor (exponential)? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Linear: same difference",
+    "Exponential: same factor"
+   ],
+   "items": [
+    [
+     "A candle burns down 2 cm every hour",
+     0
+    ],
+    [
+     "A gym charges £20 a month",
+     0
+    ],
+    [
+     "A loan grows by 5% of the amount owed each year",
+     1
+    ],
+    [
+     "A rumour: everyone who hears it tells 3 more people",
+     1
+    ],
+    [
+     "4, 9, 14, 19, 24",
+     0
+    ],
+    [
+     "5, 10, 20, 40, 80",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglinexp",
+  "caption": "Flagship lab: compare differences and ratios, sort real situations, race £100 a day against 1p doubled, watch 2ˣ overtake steeper lines.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which table shows linear change?",
+   "choices": [
+    "6, 10, 14, 18",
+    "2, 4, 8, 16",
+    "1, 4, 9, 16"
+   ],
+   "answer": 0,
+   "hint": "Subtract each value from the next one. Are the gaps all the same?",
+   "explain": "6, 10, 14, 18 goes up by 4 every step: equal differences, so it is linear. 2, 4, 8, 16 doubles each step (exponential), and 1, 4, 9, 16 are square numbers (neither)."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A linear pattern starts at {a} and goes up by {d} each step. What is its value after 5 steps?",
+   "answer": "a+5*d",
+   "hint": "Linear means you add the same amount, {d}, every step.",
+   "explain": "Add {d} five times: {a} + 5 × {d} = {=a+5*d}.",
+   "params": {
+    "a": [
+     2,
+     10
+    ],
+    "d": [
+     3,
+     7
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "An exponential pattern starts at {a} and doubles each step. What is its value after 4 steps?",
+   "answer": "a*16",
+   "hint": "Doubling 4 times means multiplying by 2 × 2 × 2 × 2.",
+   "explain": "{a} × 2⁴ = {a} × 16 = {=a*16}. Adding 2 each time would be linear and give far less.",
+   "params": {
+    "a": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A phone loses 4% of a full charge every hour. What kind of change is this?",
+   "choices": [
+    "Linear: the same amount is lost each hour",
+    "Exponential: it is a percentage",
+    "Neither"
+   ],
+   "answer": 0,
+   "hint": "Is the 4% taken from a fixed amount or from what is left now?",
+   "explain": "4% of a full charge is the same amount every hour, so the charge falls by equal differences: linear. A percentage of the current value would be exponential."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You are offered £100 a day for 30 days, or 1p on day 1 doubled every day for 30 days. Which pays more in total?",
+    "choices": [
+     "1p doubled every day",
+     "£100 a day",
+     "They pay about the same"
+    ],
+    "answer": 0,
+    "hint": "£100 a day adds the same each day. Doubling multiplies by 2 each day.",
+    "explain": "£100 a day gives £3,000. The doubling plan passes it on day 18 and reaches about £10.7 million by day 30, because exponential growth overtakes any linear growth."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Each value in a table is 3 times the one before. The first value is {a}. What is the fourth value?",
+    "answer": "a*27",
+    "hint": "From the first value to the fourth there are three steps of × 3.",
+    "explain": "{a} × 3 × 3 × 3 = {a} × 27 = {=a*27}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A taxi fare starts at £{a} and goes up by £{d} for each mile. What is the fare for 10 miles, in pounds?",
+    "answer": "a+10*d",
+    "hint": "The fare goes up by the same amount each mile, so it is linear.",
+    "explain": "£{a} + 10 × £{d} = £{=a+10*d}. The start value is added once; the per-mile amount is added 10 times.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "d": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A car loses 15% of its value each year. What kind of change is this?",
+    "choices": [
+     "Exponential decay: × 0.85 each year",
+     "Linear: it loses the same amount each year",
+     "Linear: it loses 15 each year"
+    ],
+    "answer": 0,
+    "hint": "15% of a smaller value is a smaller amount.",
+    "explain": "Each year the car keeps 85% of its current value, so the value is multiplied by 0.85 each year. The amount lost shrinks every year: exponential decay."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why does an exponential that grows always overtake a linear function in the end?",
+    "choices": [
+     "The amount it adds each step keeps growing, while a linear function adds the same amount",
+     "It always starts with a bigger value",
+     "Its graph is steeper from the very start"
+    ],
+    "answer": 0,
+    "hint": "Compare what each one adds from one step to the next.",
+    "explain": "A linear function adds the same m each step. An exponential with factor b > 1 adds a fixed fraction of its current value, which keeps growing, so in time it adds more than any m."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What kind of change is 0, 1, 4, 9, 16?",
+    "choices": [
+     "Neither linear nor exponential",
+     "Linear",
+     "Exponential"
+    ],
+    "answer": 0,
+    "hint": "Check the differences, then the ratios.",
+    "explain": "The differences are 1, 3, 5, 7, which are not equal, and the ratios are not equal either. These are square numbers, so the change is neither linear nor exponential."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "For which whole number x does 2ˣ first become bigger than 100x (for x ≥ 1)?",
+    "choices": [
+     "x = 10",
+     "x = 100",
+     "It never does"
+    ],
+    "answer": 0,
+    "hint": "Work out both sides for x = 9 and for x = 10, then compare.",
+    "explain": "2⁹ = 512 is less than 900, but 2¹⁰ = 1024 is more than 1000. Even a line with slope 100 is overtaken by x = 10."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Each value in a table is half the one before. The fourth value is {a}. What was the first value?",
+    "answer": "a*8",
+    "hint": "Going back one step undoes a halving, so you double.",
+    "explain": "Three halvings took the first value to {a}, so double three times: {a} × 8 = {=a*8}.",
+    "params": {
+     "a": [
+      3,
+      12
+     ]
+    }
+   }
+  ]
+ }
+}

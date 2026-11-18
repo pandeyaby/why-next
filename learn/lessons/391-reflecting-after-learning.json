@@ -1,0 +1,236 @@
+{
+ "topicId": "mt_v5yDTWEiyQ",
+ "title": "Reflecting After Learning",
+ "audience": "learner",
+ "keyIdea": "Reflecting means looking back at how you learned, not just at the score. Ask three questions soon after you finish: what helped most, what was confusing, and what will I do differently next time? Keep the answers specific, so you can act on them. Then use the plan on the next task. Do, look back, work out why, plan, and go round again.",
+ "explain": {
+  "kid": [
+   "When you finish some learning, the score tells you how it went. It does not tell you why. Reflecting means you look back at how you learned. Then you know what to keep and what to change.",
+   "Ask three questions. What helped most? What was confusing? What will I do differently next time? Say each answer in exact words. 'Fractions are hard' is too vague to use. 'I could not find a common denominator' tells you just what to practise.",
+   "Look at what went well, too. If drawing a bar model helped, keep doing it. Dropping a strategy that worked can make the next try worse.",
+   "Reflection is part of a loop. You do the task, look back, work out why, and plan one change. Then you do the next task with that change. Do it soon after you finish, while you still remember the details."
+  ],
+  "adult": [
+   "This is metacognition: thinking about your own learning. The EEF guide on metacognition and self-regulated learning uses a cycle of plan, monitor and evaluate. Reflecting after learning is the evaluate stage, and it feeds the next plan. Kolb's learning cycle names the same loop: concrete experience, reflective observation, abstract conceptualisation and active experimentation.",
+   "Key words: reflection means looking back at the process. A strategy is a method, such as a bar model or testing yourself. Evaluation means judging whether a strategy worked. Feed forward is the next step, from Hattie and Timperley's three feedback questions. A useful reflection is specific. It is about the process, not the person, and it ends in an action.",
+   "Common mistakes: reflecting only on the score ('I got 8/10, good'). Writing vague lines ('try harder'). Blaming the teacher or the glue. Listing only what went wrong, then dropping what worked. Doing it all the same way again. Reflecting weeks later, when the details are gone. Be careful with a high score that came from luck; ask what made it work.",
+   "In the lab, learners replay Maya's fractions homework and tag six moments as helped or confusing. They sharpen a vague reflection until a meter is full. They put the four steps of the cycle in order. They pick the two changes that take session 2 to 10/10; dropping the bar model makes it worse. Then they place four pupils on a grid of score against next step."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Useful reflection or not? Drag each line, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Useful: specific, with a next step",
+    "Not useful yet"
+   ],
+   "items": [
+    [
+     "Saying the word in syllables helped me spell it",
+     0
+    ],
+    [
+     "I got 7/10",
+     1
+    ],
+    [
+     "I mixed up area and perimeter, so I will draw the shape first",
+     0
+    ],
+    [
+     "It was boring",
+     1
+    ],
+    [
+     "Testing myself with cards worked better than rereading",
+     0
+    ],
+    [
+     "Try harder next time",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglookback",
+  "caption": "Flagship lab: replay a homework session and tag what helped, sharpen a vague reflection, build the cycle, and pick changes for session 2.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is a reflection on the process, not just the result?",
+   "choices": [
+    "Drawing a diagram first helped me see the problem",
+    "I got 6 out of 10",
+    "My friend got more than me"
+   ],
+   "answer": 0,
+   "hint": "The process is how you learned. Which answer names a strategy?",
+   "explain": "Drawing a diagram is a strategy, so you can choose it again. A score or a comparison does not say how you learned."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Maya scored {n}/10. Both marks she lost were on 2 rushed questions. If she slows down and gets those right, what could she score?",
+   "answer": "n+2",
+   "hint": "Add back the 2 marks she lost by rushing to {n}.",
+   "explain": "{n} + 2 = {=n+2}. Her reflection found exactly where the marks went, so she knows the one change to make.",
+   "params": {
+    "n": [
+     5,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Your reflection says 'Try harder'. What would make it more useful?",
+   "choices": [
+    "Name the step and one action, like 'practise 3 long divisions'",
+    "Make it shorter",
+    "Add how many marks you got"
+   ],
+   "answer": 0,
+   "hint": "Could you act on 'try harder' tomorrow? What would you actually do?",
+   "explain": "A specific step and action tells you what to do. 'Try harder' is too vague to act on."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You look back at a task. {a} moments helped and {b} moments were confusing. How many moments did you look back at?",
+   "answer": "a+b",
+   "hint": "Add the moments that helped to the ones that were confusing.",
+   "explain": "{a} + {b} = {=a+b} moments. Keep the {a} that helped and plan changes for the {b} that were confusing.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What are the three reflection questions?",
+    "choices": [
+     "What helped, what was confusing, what will I change?",
+     "What did I get, what did they get, who won?",
+     "Was it long, was it hard, was it fun?"
+    ],
+    "answer": 0,
+    "hint": "One is about keeping, one is about problems, one is about next time.",
+    "explain": "Ask what helped, what was confusing, and what you will do differently. Together they give you a plan."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Leo scored 10/10 but says 'I just got lucky'. What is missing from his reflection?",
+    "choices": [
+     "Why it worked, so he can do it again",
+     "Nothing, the score is perfect",
+     "A harder test"
+    ],
+    "answer": 0,
+    "hint": "Can luck be repeated? What would help next time?",
+    "explain": "Luck will not repeat. He needs to know which strategy worked so he can use it again."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "When is the best time to reflect on a project?",
+    "choices": [
+     "Soon after you finish it",
+     "A month later",
+     "Only if it went badly"
+    ],
+    "answer": 0,
+    "hint": "When do you remember the details best?",
+    "explain": "Soon after you finish, while the details are fresh, and before the next similar task."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Your model bridge fell down. Which reflection blames instead of reflecting?",
+    "choices": [
+     "The glue was rubbish",
+     "The base was too narrow, so I will widen it",
+     "Adding a triangle made it stronger"
+    ],
+    "answer": 0,
+    "hint": "Which answer gives you nothing to change yourself?",
+    "explain": "Blaming the glue gives no action. Noticing the narrow base gives a change you can make."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A bar model helped you, but the last questions went wrong. What should you plan next time?",
+    "choices": [
+     "Keep the bar model and slow down at the end",
+     "Drop the bar model to save time",
+     "Do it all the same way"
+    ],
+    "answer": 0,
+    "hint": "Keep what helped. Change what went wrong.",
+    "explain": "Keep the strategy that worked and change only the part that went wrong."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "You reflect after every lesson. You have {n} lessons a week for 2 weeks. How many reflections is that?",
+    "answer": "n*2",
+    "hint": "Reflections per week times 2 weeks.",
+    "explain": "{n} × 2 = {=n*2} reflections. Short, regular reflections build the habit.",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Ava scored {n}/10. She found she mixed up the top and bottom of fractions on 3 questions. If she fixes that, what could she score?",
+    "answer": "n+3",
+    "hint": "Add back the 3 marks from the mix-up to {n}.",
+    "explain": "{n} + 3 = {=n+3}. A low score with a clear next step can improve a lot.",
+    "params": {
+     "n": [
+      4,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What comes straight after 'look back' in the reflection cycle?",
+    "choices": [
+     "Work out why",
+     "Do it again the same way",
+     "Forget about it"
+    ],
+    "answer": 0,
+    "hint": "Do it, look back, ..., plan next time.",
+    "explain": "After looking back, work out why it happened. Then you can plan a sensible change."
+   }
+  ]
+ }
+}

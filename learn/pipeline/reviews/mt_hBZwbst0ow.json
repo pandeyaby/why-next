@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the National Curriculum in England Year 6 Algebra statutory requirement (generate and describe linear number sequences) and NCETM / White Rose Year 6 guidance on term-to-term rules and finding later terms from a constant common difference, including negative and decimal steps. Every lab number was recomputed: 3,7,11,15 gaps +4 and 15−3=12; 10th term 3+9×4=39 (trap 3+10×4=43, next 19); 20,17,14,11 step −3 (trap 20−11=9); 1,1.5,2,2.5 step +0.5 (not +5); 2,7,12,17 step +5 (trap 17−2=15); next terms 17+4=21, 3−3=0, 2+0.5=2.5; 10th terms 10+9×(−2)=−8 (trap −10), 1+9×3=28 (trap 31); sort gaps +4 / +2,+4,+8 / −3 / +3,+5,+7. Challenge: 4+9×6=58 (trap 64); 5−9×2=−13 (trap −15); 2, 2.5, 3, 3.5 next 4; 7,7,7,7 step 0; 13−1=12 is first-to-last of 1,5,9,13. Parameter corners: p3 2+9×2=20 and 8+9×5=53; m4 20−4×2=12 and 30−4×4=14, all defined."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented primary errors (NCETM Year 6 algebra; Hansen, Children's Errors in Mathematics, sequences/algebra): using first-to-last as the rule (add 12 for 3,7,11,15; take away 9 for 20,17,14,11), adding n steps instead of n−1 to find the nth term (43 for 39), calling a doubling or square sequence linear because it 'goes up' or 'has a rule', reading 1.5 as 15 or adding 5 instead of 0.5, reversing a take-away step (add 3), and treating a constant list as having no rule. Each appears as a prediction option, a tagged pickRule/pickNext/pickTenth/drop message, or a challenge tag (span, nsteps, double, dec, sign, zero, off, next)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flaglinseq teaches from neighbouring gaps on a row of term tiles: tap to reveal each common difference, pick a term-to-term rule (including take away and +0.5), place the next term, and count nine jumps to a tile labelled 10th. A later step sorts constant-step lists from changing-step lists (2,4,8,16 and 1,4,9,16). It never plots (n, a(n)), never writes a(n)=dn+c, and never mentions slope or intercept, so it cannot be reused as the Key Stage 5 flagarith lab by renaming labels. Shingle gate compared against flagarith and the other flagship labs."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Revealing all three gaps on 3,7,11,15 shows +4, +4, +4 before the text says the rule is add 4, not add 12. The 10th-term step keeps a live jump counter ('3 of 9 jumps', 'now at …') so the child sees why first + 9×step is the 10th term before they pick 39 rather than 43. Sorting requires looking at the gaps of 2,4,8,16 (+2,+4,+8) vs 4,8,12,16 (+4,+4,+4). Wrong rule picks name the exact slip (first-to-last, decimal point, sign)."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions, each with a tempting wrong option the lab then disproves: the rule for 3,7,11,15 is 'add 12 because 15−3=12'; 20,17,14,11 is 'take away 9'; the next term after 5,9,13,17 is 25 or 4; the 10th term of 3,7,11,15 is '3+10×4=43' or just 19; and 1,4,9,16 is linear 'because it goes up' or 'because each term is a square'. The completion line names their pick and the right answer via reveal()."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating questions (10th term, take-away rule, decimal next term, doubling vs linear, constant list add 0, take-away 10th term, first-to-last add 12). Each wrong choice has its own tag and message: nsteps (9 jumps, not 10), span (first-to-last skips the gaps), sign (the list is going down), double (changing step is not linear), off (apply the rule once), next (that is a nearby term), zero (a constant list has step add 0), dec (0.5 not 5). Answer order rotates each turn."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation FK grades 1.5, 0.1, 0.4, 0.1 (combined 0.3), adult 8.2, 3.0, 7.4, 5.4 (combined 5.9), keyIdea 2.3; family limits are 5.0 kid and 10.0 adult. The curriculum words term, term-to-term rule, linear sequence, step and common difference are each used with their meaning. Sentences stay short, and the 10th-term count is written as '9 jumps after the first' before the × sign appears."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each kid paragraph teaches one move (what a term is; the constant term-to-term rule; take-away, decimal and non-linear lists; n−1 jumps to a later term). The adult text gives the Year 6 algebra link, the position-to-term view, three named mistakes and what each lab step does. No filler phrase matched and the explanation was written against this topic, not copied from the Key Stage 5 arithmetic-sequence lesson."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "The tile row sizes itself with tw=min(84,(W−24)/n−gap), so four or five terms fit at 390 px. Gap pills are 60×24 and sit above the tiles; bins at the bottom are half-width with 16 px corners; every answer is a button with min-height 48 px under the canvas. Feedback wraps to two lines. The 10th term is a separate tile labelled '10th', not a sixth ordinal, so it stays readable on a phone."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button twin: Gap 1/2/3, each rule and next-term choice, Add one jump, each 10th-term choice, and Same step / Step changes. Cards can be dragged into the sort bins or the bins can be tapped. The canvas aria-label and live region update on every piece of feedback. Challenge answers are buttons in a labelled group with a polite live region. Contrast uses theme tokens (C.tx on C.pn tiles, theme-mixed bins) so both light and dark stay readable."
+  }
+ },
+ "sources": [
+  "National Curriculum in England: mathematics programmes of study, Year 6 Algebra — generate and describe linear number sequences (DfE, 2013)",
+  "NCETM primary mastery professional development materials: Year 6 algebra (linear number sequences, term-to-term rules)",
+  "White Rose Maths Year 6, Autumn, Algebra: linear number sequences (including negative and decimal steps)",
+  "Hansen, A. (ed.) Children's Errors in Mathematics, 4th ed. (Learning Matters, 2020), chapter on algebra and sequences"
+ ]
+}

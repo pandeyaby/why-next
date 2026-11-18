@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_iFFKZd-Vgv",
+ "title": "Likelihood Language",
+ "audience": "family",
+ "keyIdea": "Chance words describe how likely an event is: impossible, unlikely, even chance, likely and certain. They sit in order on a likelihood scale from 0 (impossible) to 1 (certain), with even chance at ½ in the middle. To judge the chance, compare the outcomes you want with all the equally likely outcomes, not just count the ones you want. Likely means it will probably happen, not that it always will, and unlikely means it could still happen.",
+ "explain": {
+  "kid": [
+   "Some things will happen for sure. Some things can never happen. Most things are in between. We use chance words to say how likely they are.",
+   "Impossible means it can never happen, like a dice showing 7. Certain means it will happen for sure. Even chance is half and half, like heads on a coin.",
+   "Unlikely means it could happen, but probably not. Likely means it will probably happen. Be careful: likely is not always. A likely spinner can still land on blue.",
+   "We can put the words on a line. Impossible is at 0. Even chance is in the middle, at one half. Certain is at 1. Unlikely and likely go in between."
+  ],
+  "adult": [
+   "This topic builds the language of chance before probability is written as a number. Pupils order events on a likelihood scale using impossible, unlikely, even chance, likely and certain. At Key Stage 3 the same line becomes the probability scale from 0 to 1. Pupils then record outcomes and use fractions for the chance of each one.",
+   "The key move is to compare the outcomes you want with all the possible outcomes. A bag with 4 red counters out of 8 gives an even chance of red. A bag with 4 red out of 20 makes red unlikely, even though the number of red counters is the same. This only works when each outcome is equally likely, such as equal parts of a spinner or counters of the same size.",
+   "Common mistakes: many children count only the red counters, so they think 2 red out of 8 is the same chance as 2 red out of 4. Others treat likely as certain. They are then surprised when a mostly red spinner lands on blue. Some call any rare event impossible. Some think a result is due after a run of misses, such as heads after five tails.",
+   "In the lab your child places 'impossible' at 0 for a bag with no red. They paint counters red until red is an even chance, then until it is unlikely but still possible. They make red likely on a spinner and spin it 10 times. Last, they place two bags with the same number of red on the scale."
+  ]
+ },
+ "familyTip": "Put some coloured socks or bricks in a bag. Before each pick, agree on a chance word for 'we get a blue one' and point to it on a line drawn from impossible to certain. Pick, put it back, and repeat ten times. Then change what is in the bag and see if the word changes.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "How likely is it? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Impossible",
+    "Unlikely",
+    "Likely",
+    "Certain"
+   ],
+   "items": [
+    [
+     "Rolling a 7 on a normal dice",
+     0
+    ],
+    [
+     "A cat growing wings and flying",
+     0
+    ],
+    [
+     "Rolling a 6 on a normal dice",
+     1
+    ],
+    [
+     "Picking the one pink sweet from a bag of 10",
+     1
+    ],
+    [
+     "Rolling a number bigger than 1 on a dice",
+     2
+    ],
+    [
+     "Picking green from 9 green and 1 pink",
+     2
+    ],
+    [
+     "The day after Monday being Tuesday",
+     3
+    ],
+    [
+     "Rolling a number from 1 to 6 on a dice",
+     3
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglikely",
+  "caption": "Flagship lab: drag a pointer along the 0-to-1 likelihood scale, paint counters and spinner parts red, spin 10 times and compare two bags.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A normal dice is rolled. How likely is it to show a 0?",
+   "choices": [
+    "impossible",
+    "unlikely",
+    "even chance"
+   ],
+   "answer": 0,
+   "hint": "Which numbers are on a normal dice?",
+   "explain": "A dice shows 1 to 6 only, so 0 can never come up. That is impossible, at 0 on the scale."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A bag has {=a*2} counters. How many of them must be red for an even chance of picking red?",
+   "answer": "a",
+   "hint": "Even chance means half of the counters.",
+   "explain": "Half of {=a*2} is {a}, so {a} red counters give an even chance.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A spinner has {=a+b} equal parts. {a} are red and the rest are blue. How many parts are blue?",
+   "answer": "b",
+   "hint": "Take the red parts away from all the parts.",
+   "explain": "{=a+b} − {a} = {b} blue parts. Compare red with all {=a+b} parts to judge the chance.",
+   "params": {
+    "a": [
+     5,
+     9
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A spinner has 7 red parts and 1 blue part, all the same size. Landing on red is…",
+   "choices": [
+    "likely",
+    "certain",
+    "unlikely"
+   ],
+   "answer": 0,
+   "hint": "Is red more than half? Could it ever land on blue?",
+   "explain": "7 out of 8 is more than half, so red is likely. Blue can still come up, so red is not certain."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Where does 'certain' go on the likelihood scale?",
+    "choices": [
+     "at 1",
+     "at 0",
+     "at ½"
+    ],
+    "answer": 0,
+    "hint": "The scale runs from impossible to certain.",
+    "explain": "Certain is at 1, the end of the scale. Impossible is at 0 and even chance at ½."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A fair coin is tossed. How likely is tails?",
+    "choices": [
+     "even chance",
+     "likely",
+     "certain"
+    ],
+    "answer": 0,
+    "hint": "How many sides does a coin have, and are they equally likely?",
+    "explain": "Heads and tails are equally likely, so tails is 1 out of 2: an even chance."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Bag A has 2 red out of 4 counters. Bag B has 2 red out of 10. Which gives the better chance of red?",
+    "choices": [
+     "bag A",
+     "bag B",
+     "the same"
+    ],
+    "answer": 0,
+    "hint": "Compare the red with the total in each bag, not just the red.",
+    "explain": "2 out of 4 is half, an even chance. 2 out of 10 is unlikely. Bag A is better."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A bag has {a} red counters and no others. How many counters must you add to make red an even chance?",
+    "answer": "a",
+    "hint": "Even chance means as many other counters as red ones.",
+    "explain": "Add {a} blue counters: {a} red out of {=a*2} is half, an even chance.",
+    "params": {
+     "a": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A spinner is likely to land on red. Which of these could happen in 5 spins?",
+    "choices": [
+     "red 4 times, blue once",
+     "red every time is the only possible result",
+     "blue every time is impossible to see"
+    ],
+    "answer": 0,
+    "hint": "Likely means probably, not always.",
+    "explain": "Red should come up most often, but blue can still appear, so 4 red and 1 blue is quite possible."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which event is unlikely but possible?",
+    "choices": [
+     "rolling a 6 on a normal dice",
+     "rolling a 9 on a normal dice",
+     "rolling a number from 1 to 6"
+    ],
+    "answer": 0,
+    "hint": "Find the event that could happen but probably will not.",
+    "explain": "A 6 is 1 out of 6, so unlikely but possible. A 9 is impossible and 1 to 6 is certain."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A bag has {=a+b} counters: {a} green and {b} pink. How many more green counters than pink are there?",
+    "answer": "a-b",
+    "hint": "Take the pink away from the green.",
+    "explain": "{a} − {b} = {=a-b} more green. With more green than pink, picking green is likely.",
+    "params": {
+     "a": [
+      6,
+      9
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A coin lands on tails five times in a row. How likely is heads on the next toss?",
+    "choices": [
+     "even chance",
+     "certain",
+     "impossible"
+    ],
+    "answer": 0,
+    "hint": "Does the coin remember what happened before?",
+    "explain": "Each toss is fresh, so heads is still 1 out of 2: an even chance. A run of tails does not make heads due."
+   }
+  ]
+ }
+}

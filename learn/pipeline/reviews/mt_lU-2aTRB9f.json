@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against CCSS 5.NBT.B.7 (divide decimals to hundredths with concrete models and place value strategies) and the National Curriculum in England Year 6 statement on written division with answers to two decimal places. Every value recomputed: 7.2 ÷ 3 = 2.4 (2 ones each, 1 one exchanged for 10 tenths, 12 tenths ÷ 3 = 4); 3 ÷ 4 = 0.75 (30 tenths → 7 each, 2 left → 20 hundredths → 5 each); 5.4 ÷ 4 = 1.35; 12.6 ÷ 3 = 4.2, 25.5 ÷ 5 = 5.1, 0.84 ÷ 4 = 0.21; 4.8 ÷ 0.6 = 48 ÷ 6 = 8 jumps; 2 ÷ 0.4 = 5; 2.4 ÷ 0.08 = 240 ÷ 8 = 30; 0.9 ÷ 0.3 = 9 ÷ 3 = 3; sorter cards 2 ÷ 0.05 = 40, 12 ÷ 0.3 = 40, 4.8 ÷ 0.12 = 40. Parameterised items ({=a*3/10} ÷ 3, {=a*4/100} ÷ 4, {=a*b/10} ÷ 0.{a}) were enumerated by the validator and are exact to 2 dp at every combination."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented decimal-division errors: placing the point by digit count (12.6 ÷ 3 = 42; Hart 1981 CSMS decimals items), writing a remainder as a decimal (7 ÷ 4 = 1.3), stopping when the ones run out (3 ÷ 4 'cannot be done'), skipping the exchange (5.4 ÷ 4 = 1.1), 'division makes smaller' (Graeber and Tirosh 1990), and scaling only one number when the divisor is a decimal. Each is a prediction distractor, a refused action in the lab (dealing tenths before exchanging, × 10 first only / second only) or a tagged challenge answer."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed; the highest 6-token Jaccard is 11.9% (shared feedback-panel scaffolding with other new labs), well under 30%. flag_divmean.js (what division means) and flag_remd.js (remainders) work with whole numbers; only this lab shares ones, tenths and hundredths counters onto plates with an exchange chip, places a decimal point into a digit string by estimate, counts jumps of 0.6 and 0.4 on a decimal number line, and scales dividend and divisor by 10 with one-sided scaling refused."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Five tasks and a challenge, one idea each: share place by place with exchange; estimate to place the point; keep exchanging into hundredths so 3 ÷ 4 = 0.75; dividing by a number below 1 counts how many fit, so the answer grows; multiplying both numbers by 10 keeps the quotient. The banner states each rule only after the learner's own sharing, placing or scaling reaches it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four locked predictions with tempting wrong options the lab then disproves: 7.2 ÷ 3 ('2.04', '24'), the point in 12.6 ÷ 3 ('42', '0.42'), 3 ÷ 4 ('0.34', 'you cannot: 3 is less than 4') and whether 4.8 ÷ 0.6 is bigger or smaller than 4.8 ('Smaller: dividing makes things smaller'). A.reveal names the learner's pick in the completion message."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating questions with seven distinct wrong-answer messages: point placed by digits, an extra zero in the hundredths, no exchange of the leftover pound, remainder written as a decimal, 'division makes smaller', scaling only one number, and scaling 2.4 and 0.08 by different powers of 10. Each message names the slip and gives the corrected working (e.g. '14 tenths ÷ 4 = 3 tenths, 2 left, which make 20 hundredths ÷ 4 = 5')."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid text grade −0.2 and adult 5.6 (limits 6.5 and 9.5). Kid paragraphs use plates, swaps and 'how many 0.6s fit in?' in short sentences; place value words (ones, tenths, hundredths) are the curriculum terms. Canvas banners stay within three lines at 360 px."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content passed: no filler patterns, and the highest explanation overlap with any lesson is 0.4% (908 Percentage and decimal equivalents). Each kid paragraph does one job: sharing ones, exchanging into tenths and hundredths, estimating the point, and dividing by a decimal."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 × 640 (2x) in light and dark for every step before and after Show me. Fixes from the first sheet: ones counters on the plates overlapped each other ('1' labels touching) and now sit in their own row with tenths and hundredths below; 30 tenths in the bank column ran into the 'to share' label, so large counts use smaller rods; the plate caption was reworded to 'each plate gets 2.4'."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap has a button twin (Share ones/tenths/hundredths, Exchange ones/tenths; each decimal point position written as its answer; Jump 0.6; × 10 both / first only / second only). The canvas aria-label is rewritten after every action with what is left to share, each plate's value, the estimate and done answers, the jump count or the current scaled division. The browser gate runs axe (WCAG 2.1 AA) on desktop and iPhone 13 in both themes with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics (2010), Grade 5 Number and Operations in Base Ten, 5.NBT.B.7",
+  "Department for Education (2013) National Curriculum in England: mathematics programmes of study, Year 6 multiplication and division, and fractions (including decimals)",
+  "Graeber, A. O. and Tirosh, D. (1990) Insights fourth and fifth graders bring to multiplication and division with decimals, Educational Studies in Mathematics 21(6)",
+  "Hart, K. M. (ed.) (1981) Children's Understanding of Mathematics: 11–16 (CSMS), decimals chapter"
+ ]
+}

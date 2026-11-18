@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_QaYfeVL-0C",
+ "title": "Estimating by rounding",
+ "audience": "family",
+ "keyIdea": "Round each number to a nearby ten, then calculate. The result is an estimate — close and quick, not always exact.",
+ "familyTip": "At the shop, round prices to the nearest 10p or £1 and add. Compare with the till total: was your estimate a bit low or high?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Rounding & estimates — fair idea or myth? Drag each clue, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "27 rounds to 30",
+     0
+    ],
+    [
+     "25 rounds up to 30",
+     0
+    ],
+    [
+     "estimate 28+34 ≈ 60",
+     0
+    ],
+    [
+     "an estimate must equal the exact answer",
+     1
+    ],
+    [
+     "always round down to be safe",
+     1
+    ],
+    [
+     "ones digit 5 means round up",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagestm",
+  "caption": "Flagship lab: round on a number line, midpoint-5 rule, estimate a sum, judge low vs high, reject always-round-down, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Rounding finds a nearby ten that is easy to use.",
+   "If the ones digit is 5 or more, round up. If it is 4 or less, round down.",
+   "To estimate a sum, round each number, then add.",
+   "An estimate is close and quick. It does not have to match the exact answer."
+  ],
+  "adult": [
+   "NC Y3 / CCSS 3.NBT.A.1: round whole numbers to the nearest 10; use rounding to estimate sums. Words: round, nearest ten, estimate, midpoint, ones digit.",
+   "Common mistakes: always rounding down; thinking the estimate must equal the exact sum; leaving 5 as-is instead of rounding up; rounding only one addend.",
+   "In the lab your child rounds 27→30 and 25→30, estimates 28+34 as 60, sees that 60 is a bit low versus 62, and states the 5-up rule."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "27 to the nearest 10 is…",
+   "choices": [
+    "30",
+    "20",
+    "27"
+   ],
+   "answer": 0,
+   "hint": "Which multiple of ten sits closer to 27?",
+   "explain": "27 is closer to 30 than to 20."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "25 to the nearest 10 is…",
+   "choices": [
+    "30",
+    "20",
+    "15"
+   ],
+   "answer": 0,
+   "hint": "Ones digit 5 means you round up to the next ten.",
+   "explain": "At the midpoint, round up to 30."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Round {n} to the nearest 10.",
+   "answer": "30",
+   "hint": "Look at the ones digit — 6 to 9 means round up.",
+   "explain": "{n} is closer to 30 than to 20, so it rounds to 30.",
+   "params": {
+    "n": [
+     26,
+     29
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Estimate {a} + {b} by rounding each to the nearest 10, then adding.",
+   "answer": "60",
+   "hint": "Round both addends to a ten, then add those tens.",
+   "explain": "{a} rounds to 30 and {b} rounds to 30, so the estimate is 60.",
+   "params": {
+    "a": [
+     26,
+     28
+    ],
+    "b": [
+     32,
+     34
+    ]
+   }
+  },
+  {
+   "type": "order",
+   "id": "p5",
+   "prompt": "Order steps to estimate a sum.",
+   "items": [
+    "round each addend to the nearest 10",
+    "add the rounded numbers",
+    "compare with the exact sum if you need to"
+   ],
+   "hint": "Round each addend before you add them.",
+   "explain": "Round, add for an estimate, then optionally check against exact."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Estimate 28+34 by rounding…",
+    "choices": [
+     "60",
+     "62",
+     "50"
+    ],
+    "answer": 0,
+    "hint": "Round 28 to 30 and 34 to 30, then add.",
+    "explain": "30+30=60 is the estimate; 62 is exact."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Estimate 60 vs exact 62 means the estimate is…",
+    "choices": [
+     "a bit low",
+     "a bit high",
+     "useless"
+    ],
+    "answer": 0,
+    "hint": "Compare 60 with 62: which is smaller?",
+    "explain": "The estimate sits a little under the exact sum."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ones digit 5 means…",
+    "choices": [
+     "round up",
+     "always round down",
+     "leave it"
+    ],
+    "answer": 0,
+    "hint": "Use the midpoint rule when ones digit is 5.",
+    "explain": "5–9 round up to the next ten."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "An estimate…",
+    "choices": [
+     "is close, not always exact",
+     "must equal the exact answer",
+     "always makes numbers smaller"
+    ],
+    "answer": 0,
+    "hint": "An estimate is a sensible near answer only.",
+    "explain": "Estimates are for speed and sense-checks."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "What is {n} rounded to the nearest ten?",
+    "answer": "20",
+    "hint": "Ones digit 0–4 means round down to the ten below.",
+    "explain": "{n} is closer to 20 than to 30, so it rounds to 20.",
+    "params": {
+     "n": [
+      16,
+      19
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Estimate {a} + {b} (round each to 10, then add).",
+    "answer": "50",
+    "hint": "Round each addend first, then add the rounded values.",
+    "explain": "{a} rounds to 20 and {b} rounds to 30, so the estimate is 50.",
+    "params": {
+     "a": [
+      16,
+      19
+     ],
+     "b": [
+      26,
+      29
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why estimate?",
+    "choices": [
+     "for a quick sensible check",
+     "to avoid all maths",
+     "because exact is wrong"
+    ],
+    "answer": 0,
+    "hint": "Estimates give speed and a sense-check.",
+    "explain": "Estimates give a fast check before or instead of exact work."
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: round 25 to the nearest 10.",
+    "items": [
+     "look at the ones digit (5)",
+     "apply round-up at 5",
+     "write 30"
+    ],
+    "hint": "The ones digit decides up or down.",
+    "explain": "Ones digit 5 means round up, so 25 becomes 30."
+   }
+  ]
+ }
+}

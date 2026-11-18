@@ -1,0 +1,272 @@
+{
+ "topicId": "mt_Ubr42RkTx7",
+ "title": "High-resolution mass spectrometry",
+ "audience": "learner",
+ "keyIdea": "A high-resolution mass spectrometer measures the m/z of the molecular ion, M⁺, to four decimal places. Isotope masses are not whole numbers, apart from ¹²C, which is exactly 12 because it defines the atomic mass unit: ¹H is 1.007825, ¹⁴N is 14.003074 and ¹⁶O is 15.994915. So formulae with the same nominal mass have different accurate masses: CO is 27.9949, N₂ is 28.0061 and C₂H₄ is 28.0313. Add up the isotope masses for each candidate formula and choose the one that matches the measured M⁺. A low-resolution instrument rounds all three to 28 and cannot tell them apart.",
+ "familyTip": "Ask your teen to explain why 28 is not enough to name a gas. Then give them a measured mass like 44.0262 and let them work out, with a calculator, whether it is CO₂, C₃H₈ or C₂H₄O.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which accurate mass belongs to which formula? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "nominal mass 28",
+    "nominal mass 44"
+   ],
+   "items": [
+    [
+     "CO: 27.9949",
+     0
+    ],
+    [
+     "N₂: 28.0061",
+     0
+    ],
+    [
+     "C₂H₄: 28.0313",
+     0
+    ],
+    [
+     "CO₂: 43.9898",
+     1
+    ],
+    [
+     "C₂H₄O: 44.0262",
+     1
+    ],
+    [
+     "C₃H₈: 44.0626",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagaccm",
+  "caption": "Flagship lab: drag formulas to their accurate-mass peaks, build a formula to hit M⁺, find the decimal places that split a set, match spectra, spot the slip.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A normal mass spectrum gives the molecular ion, M⁺, as a whole number. CO, N₂ and C₂H₄ all show up at 28. So you cannot tell which gas you have.",
+   "A high-resolution machine reads m/z to four decimal places. It can do this because atoms do not weigh whole numbers. Only carbon-12 is exactly 12. It sets the unit.",
+   "Hydrogen-1 is 1.007825. Nitrogen-14 is 14.003074. Oxygen-16 is 15.994915. Add them up for each formula. CO is 27.9949, N₂ is 28.0061 and C₂H₄ is 28.0313.",
+   "To find a formula, list the ones that fit the whole number. Work out each accurate mass. The one that matches the measured M⁺ is your answer."
+  ],
+  "adult": [
+   "Ages 17 to 18: A-level Chemistry, for example AQA 7405 section 3.3.6.2, where a molecular formula is found from a precise M⁺ value. Students are given isotope masses and must sum them for each candidate. The lab uses the NIST values for ¹H, ¹⁴N and ¹⁶O, with ¹²C exactly 12 by definition. Exam papers often give 4 d.p. values (1.0078, 14.0031, 15.9949), which can move the last digit: C₃H₆O is 58.0417 with those, 58.0419 here.",
+   "Nominal mass uses whole numbers, so many formulae share one value. Accurate masses differ because of the mass defect: each ¹H adds 0.0078 above 1, and ¹⁶O is 0.0051 below 16. Swapping CH₄ for O therefore lowers the mass by 0.0364, which is why C₂H₄O (44.0262) sits 0.0364 below C₃H₈ (44.0626). The mass of the lost electron, 0.00055, is ignored at this level.",
+   "Common mistakes: using average relative atomic masses (H 1.008, C 12.011) instead of isotope masses; rounding the sum to a whole number; miscounting atoms; and reading the base peak or the small M+1 peak as M⁺. Some learners think ¹²C is 12 because it is rounded. It is exact by definition, while every other isotope mass has decimals. HRMS gives the formula, not the structure, so it cannot tell isomers apart.",
+   "In the lab you drag CO, N₂ and C₂H₄ onto their peaks and build three formulae with + and − to hit a measured M⁺. You drag a decimal-places dial to see when a set of formulae splits apart, match four spectra, and find the slip in four worked sums."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "M⁺ is measured at 44.0262. Which formula is it?",
+   "choices": [
+    "C₂H₄O",
+    "CO₂",
+    "C₃H₈"
+   ],
+   "answer": 0,
+   "hint": "Work out 2(12) + 4(1.007825) + 15.994915 and compare it with the other two.",
+   "explain": "C₂H₄O = 44.0262. CO₂ = 43.9898 and C₃H₈ = 44.0626, so only C₂H₄O matches."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Each ¹H atom is 1.0078 to 4 d.p., which is 0.0078 above 1. How many ten-thousandths (units of 0.0001) above {n} is the mass of {n} hydrogen atoms?",
+   "answer": "78*n",
+   "hint": "Each hydrogen adds 78 ten-thousandths. Multiply by the number of atoms.",
+   "explain": "{n} × 0.0078 = {n} × 78 ten-thousandths = {=78*n}. That is why formulae with many hydrogens sit above their nominal mass.",
+   "params": {
+    "n": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Why is the isotope mass of ¹²C exactly 12?",
+   "choices": [
+    "The atomic mass unit is defined as 1/12 of a ¹²C atom.",
+    "It is rounded to a whole number.",
+    "Carbon has no neutrons."
+   ],
+   "answer": 0,
+   "hint": "Think about how the unit is defined.",
+   "explain": "The unified atomic mass unit is 1/12 of the mass of a ¹²C atom, so ¹²C is 12 by definition. Other isotope masses have decimals."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "An alkane CₙH₂ₙ₊₂ has n = {n}. What is its nominal (whole-number) mass?",
+   "answer": "14*n+2",
+   "hint": "Use C = 12 and H = 1, then count 2n + 2 hydrogens.",
+   "explain": "12 × {n} + (2 × {n} + 2) × 1 = {=14*n+2}. Its accurate mass is a little higher, because each H is 1.007825.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A low-resolution spectrum shows M⁺ at 28. Why can it not tell CO from N₂?",
+   "choices": [
+    "Both round to 28.",
+    "N₂ does not ionise.",
+    "CO has no molecular ion."
+   ],
+   "answer": 0,
+   "hint": "What happens to 27.9949 and 28.0061 when they are rounded?",
+   "explain": "Rounded to a whole number, both are 28. Only a high-resolution reading shows 27.9949 against 28.0061."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is the accurate mass of N₂?",
+    "choices": [
+     "28.0061",
+     "28.0134",
+     "28.0000"
+    ],
+    "answer": 0,
+    "hint": "Use the ¹⁴N isotope mass, 14.003074, not the average Ar.",
+    "explain": "2 × 14.003074 = 28.0061. 28.0134 comes from the average Ar, 14.0067."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "M⁺ is at 58.0419. Which formula fits?",
+    "choices": [
+     "C₃H₆O",
+     "C₄H₁₀",
+     "C₂H₂O₂"
+    ],
+    "answer": 0,
+    "hint": "All three have nominal mass 58. Work out each accurate mass.",
+    "explain": "C₃H₆O = 58.0419. C₄H₁₀ = 58.0783 and C₂H₂O₂ = 58.0055."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which hydrogen mass should you use in a high-resolution calculation?",
+    "choices": [
+     "1.007825",
+     "1.008",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "HRMS measures single isotopes, not an average.",
+    "explain": "1.007825 is the ¹H isotope mass. 1.008 is the average Ar, which includes some ²H."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which peak is used to find the molecular formula?",
+    "choices": [
+     "The M⁺ peak",
+     "The base peak",
+     "The M+1 peak"
+    ],
+    "answer": 0,
+    "hint": "Which peak is the whole molecule minus an electron?",
+    "explain": "M⁺ is the molecular ion. The base peak is just the tallest, often a fragment, and M+1 comes from ¹³C."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Each ¹⁶O atom is 15.9949, which is 0.0051 below 16. A compound has {o} oxygen atoms. How many ten-thousandths (units of 0.0001) below {o} × 16 is their total mass?",
+    "answer": "51*o",
+    "hint": "Each oxygen is 51 ten-thousandths below 16. Multiply by the number of oxygens.",
+    "explain": "{o} × 51 = {=51*o} ten-thousandths below. That is why oxygen-rich formulae like CO₂ sit below their nominal mass.",
+    "params": {
+     "o": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A student writes C: 3 × 12.011 for propane. What is the slip?",
+    "choices": [
+     "12.011 is the average Ar, not the ¹²C isotope mass.",
+     "Propane has 4 carbons.",
+     "Carbon should be 12.5."
+    ],
+    "answer": 0,
+    "hint": "Which carbon mass is exact?",
+    "explain": "In HRMS use ¹²C = 12 exactly. 12.011 includes ¹³C, so it is the average Ar."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which pair can a low-resolution instrument tell apart?",
+    "choices": [
+     "C₂H₆O (46) and C₂H₄O (44)",
+     "CO and N₂",
+     "CO₂ and N₂O"
+    ],
+    "answer": 0,
+    "hint": "Which pair has different whole-number masses?",
+    "explain": "46 and 44 are different nominal masses. The other pairs both round to 28 or 44."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Swapping CH₄ for O in a formula changes the accurate mass by about how much?",
+    "choices": [
+     "0.0364 lower",
+     "0.0364 higher",
+     "no change"
+    ],
+    "answer": 0,
+    "hint": "CH₄ is 16.0313 and O is 15.9949.",
+    "explain": "16.0313 − 15.9949 = 0.0364, so the O version is 0.0364 lighter, as in C₂H₄O against C₃H₈."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A molecule has {c} carbon atoms and nothing else in its formula is carbon. What do the carbons add to its accurate mass?",
+    "answer": "12*c",
+    "hint": "¹²C is exactly 12, so multiply the number of carbons by 12.",
+    "explain": "{c} × 12 = {=12*c}, exactly, since ¹²C has no decimals.",
+    "params": {
+     "c": [
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "M⁺ is at 30.0106. Which formula is it?",
+    "choices": [
+     "CH₂O",
+     "C₂H₆",
+     "N₂H₂"
+    ],
+    "answer": 0,
+    "hint": "Add 12 + 2(1.007825) + 15.994915.",
+    "explain": "CH₂O = 30.0106. C₂H₆ = 30.0470 and N₂H₂ = 30.0218."
+   }
+  ]
+ }
+}

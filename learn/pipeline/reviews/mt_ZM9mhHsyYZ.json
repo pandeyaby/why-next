@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE National Curriculum in England, Year 5 fractions (including decimals and percentages): 'recognise the per cent symbol (%) and understand that per cent relates to number of parts per hundred, and write percentages as a fraction with denominator 100, and as a decimal', and CCSS 6.RP.A.3c (percent as a rate per 100). Every number in the lab was recomputed: 40 squares = 40/100 = 0.40; 0.35, 0.07 and 0.7 shade 35, 7 and 70 squares; half, a quarter, a tenth and the whole are 50, 25, 10 and 100 squares; the unshaded parts are 100 − 35 = 65, 100 − 8 = 92 and 100 − 72 = 28; the six cards split into 40/100, 0.4, 0.40 (40%) and 0.04, 4/100, 4 squares in 100 (4%). Items 100−k, 100−b and 10*r stay between 0 and 100 at every parameter corner."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the place-value and part-whole errors documented for early percentages (NCETM Year 5 spine 'Fractions, decimals and percentages' guidance; Parker & Leinhardt 1995 'Percent: a privileged proportion'): 0.07 read as 70% and 0.7 as 7% (step 2 prediction '70 squares', Check feedback for 70 or 7 squares, challenge tag tenth, sort cards 0.04 vs 0.4), 35% written as 3.5 or 0.035 (tags big and small), 60% = 60/10 and 6/100 (tags ten and drop), 'a quarter is 4%' (step 3 prediction option, Check feedback for 4 squares), a tenth shaded as 1 square, 100% taken as '100 marks' or 'nearly all' (tags count, most), comparing 0.5 and 45% by digits (tag digits) and giving the shaded part when the unshaded part was asked (tags same and borrow in step 4)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagpcent is built on one 10 × 10 hundred square that the learner paints by tapping or dragging in reading order, with a Check button, so every task is 'make this amount out of 100'. It differs from flaghundth (hundredths as decimals), flagtenth and flagdeccmp (comparing decimals) and from the percent-change visual of lesson 67, because the same shading is read three ways at once (n/100, 0.nn and n%), benchmarks are built as parts of the whole, the unshaded remainder is found as 100% minus the shaded part, and cards are sorted into 40% or 4%. The gate reports under 30% shingle overlap with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers each idea by doing it before the text states it: shading 40 squares shows 40 of 100 = 40/100 = 0.40 = 40% together; shading 0.07 forces the choice between 7 squares and 7 rows and the Check message explains which place counts rows; making a quarter shows 25 squares rather than 4; the unshaded remainder is read off the same square (35 shaded, 65 not); and sorting 0.4, 0.40 and 40/100 into the same box shows that trailing zeros do not change the amount."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option that the lab disproves. '40 out of 10' and '4 out of 100' fail when 40 of the 100 squares are shaded and the readout says 40/100. '70 squares' for 0.07 fails when Check accepts 7 squares and rejects 70 with 'ten times too big'. '4%' for a quarter fails when a quarter of the square needs 25 squares and 4 squares is rejected with 'Split 100 into 4 equal parts'. Each task completion echoes the locked-in choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions, two wrong options each, and every wrong option has its own message: big (3.5 is more than 1 whole, so 350%), small (0.035 is thousandths), tenth (the 7 in 0.07 is in the hundredths place), keep (0.07% keeps the decimal and adds a sign), ten (per cent is out of 100, not 10), drop (6/100 is 6%), count (100% is the whole test, not 100 marks), most (nearly all is about 90%), same (that is the shaded part), borrow (add back to check, count on to 100), digits (compare amounts, not digits) and equal (0.5 is 50 hundredths). In-lab Check and sort feedback also name the specific slip."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/validate_lessons.py passes the learner readability limits (kid ≤ 6.5, adult ≤ 9.5). Kid paragraphs use one picture each (cent as in century, the 100-square, the hundredths place, the whole). Lab step texts are one or two short sentences, and canvas labels are short ('Shade the decimal 0.07', '40 of 100 = 40/100 = 0.40 = 40%', 'shaded 35%'). The word hundredths is always tied to squares the learner can see."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each lab step has one job (meaning of %, decimals as hundredths, benchmark parts, whole minus part, 40% vs 4%), and every feedback line carries numbers or a reason. Item explanations show the conversion and a check (e.g. 100% − 35% = 65%, 0.5 = 0.50 = 50%) instead of repeating the prompt."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px (Android profile) in light and dark, before and after Show me for every step, and at desktop width. The hundred square is about 200 px wide on the phone, so each cell is about 20 px; that is why every cell action also has +10, +1, −1, −10 and Clear buttons, and dragging paints a run of cells at once. The readout line, the feedback banner and the 40%/4% boxes fit inside the canvas without overlapping; buttons wrap onto two rows. After the first pass the readout font was raised from 14 to 15 px and the end-of-step description was shortened to 'All done.' instead of reading out an empty square."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button with an aria-label: 'Shade 10 more', 'Shade 1 more', 'Shade 1 fewer', 'Shade 10 fewer', 'Clear the square', 'Check my shading', 'Not shaded 65%' and 'Put it in 40%'. After each move the canvas aria-label reads the live state, e.g. '35 of 100 squares shaded, which is 35/100 = 0.35 = 35%. Goal: the decimal 0.35.' Challenge feedback is an aria-live status. walk.cjs reports axe (WCAG 2.1 AA) clean in light and dark on desktop and iPhone 13 with no console errors; the canvas keeps a light card in dark mode so the blue shading keeps its contrast."
+  }
+ },
+ "sources": [
+  "Department for Education, National Curriculum in England: mathematics programmes of study, Year 5 Number – fractions (including decimals and percentages)",
+  "Common Core State Standards for Mathematics, Grade 6 Ratios and Proportional Relationships 6.RP.A.3c",
+  "NCETM primary mastery professional development materials, spine 3 (fractions, decimals and percentages)",
+  "Parker, M. & Leinhardt, G. (1995) Percent: a privileged proportion, Review of Educational Research 65(4)"
+ ]
+}

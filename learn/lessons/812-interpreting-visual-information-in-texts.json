@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_KbCCmLmxYN",
+ "title": "Interpreting visual information in texts",
+ "audience": "family",
+ "keyIdea": "Charts, timelines, diagrams and maps in a non-fiction text are part of what it tells you, not decoration. A chart can add facts the words leave out, such as exact numbers. Read a chart's title and labels, then check what each line on the scale is worth before you read a bar. A timeline puts events in time order even when the words mention them out of order. The best answers often join the two: a rule or total from the words with numbers from the chart.",
+ "familyTip": "Next time you read a non-fiction book or a news page together, stop at a chart or timeline. Ask: what does this show that the words don't? Then ask one question that needs both, such as how many in total or which came first.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which visual answers each question? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "bar chart",
+    "timeline",
+    "map"
+   ],
+   "items": [
+    [
+     "Which fruit sold the most?",
+     0
+    ],
+    [
+     "How tall was each plant?",
+     0
+    ],
+    [
+     "When was each bridge built?",
+     1
+    ],
+    [
+     "What happened first?",
+     1
+    ],
+    [
+     "Where is the nearest beach?",
+     2
+    ],
+    [
+     "Which way does the river flow?",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagvisinf",
+  "caption": "Flagship lab: sort facts by words or chart, read a bar scale, use a timeline, pick the right visual, join words and chart.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Fact books often have charts, timelines and maps. They are not just pictures. They can tell you things the words do not say, like exact numbers.",
+   "To read a bar chart, look at the title and the labels first. Then check the scale. If each line is worth 5, a bar that reaches the 6th line shows 30, not 6.",
+   "A timeline shows when things happened. Earlier is on the left and later is on the right. The words might talk about things in a different order, so check the dates.",
+   "Sometimes you need both. The words say each bag has 6 apples. The chart says 7 bags were sold. Together they tell you 42 apples were sold."
+  ],
+  "adult": [
+   "Ages 9 to 10. The US Common Core reading standard RI.4.7 asks pupils to interpret information presented visually, orally or quantitatively (charts, graphs, diagrams, timelines) and explain how it adds to the text. In England, the Years 3 to 4 reading programme asks pupils to retrieve and record information from non-fiction, and Year 4 maths covers interpreting bar charts and time graphs.",
+   "The key move is to treat a visual as evidence in its own right. Before reading values, check the title, the axis labels and the scale interval. Then ask what job the visual is doing: a bar chart compares amounts, a timeline shows order and gaps in time, a labelled diagram shows parts and how they fit, and a map shows where.",
+   "Common mistakes: skipping the visual because the words seem to say it all; counting scale lines as 1 each when each is worth 5 or 10; reading the bar next to the one asked about; treating the tallest bar as more than half; and assuming the order the words mention events is the order they happened. Another slip is answering from one source when the question needs both, such as giving 7 bags when the question asks for apples.",
+   "In the lab your child sorts six facts by whether the words, the chart or both give them, and answers four questions from a bar chart with a scale in 5s. They tap events on a timeline that the words describe out of order, drag six questions to the visual that answers them, and solve three puzzles that need the words and a chart together."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The words say the class grew sunflowers. The chart shows each sunflower's height. What does the chart add?",
+   "choices": [
+    "How tall each sunflower grew",
+    "That the class grew sunflowers",
+    "What colour the sunflowers were"
+   ],
+   "answer": 0,
+   "hint": "Which fact is in the chart but not in the words?",
+   "explain": "The heights are only in the chart. The words already say they grew sunflowers, and a height chart can't show colour."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "On a bar chart each line on the scale is worth {s}. A bar reaches line {n}. What number does the bar show?",
+   "answer": "s*n",
+   "hint": "Each line is worth the same amount. Multiply the lines by what each is worth.",
+   "explain": "{n} lines × {s} each = {=s*n}. Counting lines as 1 each would give {n}, which is a slip.",
+   "params": {
+    "s": [
+     2,
+     10
+    ],
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You want to show in what order the Romans, Vikings and Normans came to Britain. Which visual is best?",
+   "choices": [
+    "A timeline",
+    "A bar chart",
+    "A labelled diagram"
+   ],
+   "answer": 0,
+   "hint": "The question is about order in time.",
+   "explain": "A timeline shows when, in order. A bar chart compares amounts and a diagram shows parts."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The words say every box holds {b} pencils. The chart shows the shop sold {n} boxes on Monday. How many pencils were sold on Monday?",
+   "answer": "b*n",
+   "hint": "The words give pencils in one box. The chart gives how many boxes.",
+   "explain": "{n} boxes × {b} pencils = {=b*n} pencils. You need the words and the chart together.",
+   "params": {
+    "b": [
+     4,
+     12
+    ],
+    "n": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A timeline has 1666 on the left and 1805 on the right. The words mention 1805 first. Which happened first?",
+   "choices": [
+    "The 1666 event",
+    "The 1805 event",
+    "We can't tell"
+   ],
+   "answer": 0,
+   "hint": "On a timeline, is earlier on the left or the right?",
+   "explain": "1666 is earlier, and it is on the left. Words can mention events out of time order."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why should you read the chart in a fact book as well as the words?",
+    "choices": [
+     "It can add facts the words leave out.",
+     "It always says the same as the words.",
+     "It is only there to look nice."
+    ],
+    "answer": 0,
+    "hint": "Think about the numbers in a chart.",
+    "explain": "Charts often carry facts, such as exact numbers, that the words do not give."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What should you check first on a bar chart, before reading a bar?",
+    "choices": [
+     "What each line on the scale is worth",
+     "Which bar is the brightest colour",
+     "Which bar is furthest to the right"
+    ],
+    "answer": 0,
+    "hint": "Lines might go up in 1s, 2s, 5s or 10s.",
+    "explain": "If you don't check the scale, you may count lines as 1 each and get the wrong number."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A bar chart shows {a} children chose apples and {b} chose bananas. How many more chose apples?",
+    "answer": "a-b",
+    "hint": "How many more means take away.",
+    "explain": "{a} − {b} = {=a-b} more children chose apples.",
+    "params": {
+     "a": [
+      20,
+      35
+     ],
+     "b": [
+      5,
+      15
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which question does a map answer best?",
+    "choices": [
+     "Where is the castle?",
+     "When was the castle built?",
+     "How many visitors came each month?"
+    ],
+    "answer": 0,
+    "hint": "A map shows places and the way between them.",
+    "explain": "A map shows where. When needs a timeline, and how many each month needs a chart."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "30 children voted. The chart shows 14 chose the park. Did more than half choose the park?",
+    "choices": [
+     "No: half of 30 is 15.",
+     "Yes: the park bar is the tallest.",
+     "We can't tell."
+    ],
+    "answer": 0,
+    "hint": "Find half of the total from the words first.",
+    "explain": "Half of 30 is 15, and 14 is less. The tallest bar only means the most votes."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A timeline shows a bridge built in {y} and mended {g} years later. In what year was it mended?",
+    "answer": "y+g",
+    "hint": "Count on from the year it was built.",
+    "explain": "{y} + {g} = {=y+g}. A timeline helps you see the gap between events.",
+    "params": {
+     "y": [
+      1850,
+      1950
+     ],
+     "g": [
+      10,
+      60
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What does a labelled diagram of a plant show best?",
+    "choices": [
+     "The names of the parts and where they are",
+     "How many plants grew each week",
+     "When the plant was first found"
+    ],
+    "answer": 0,
+    "hint": "Labels name the parts and point to where they are.",
+    "explain": "A labelled diagram shows parts and how they fit. Amounts need a chart; dates need a timeline."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Words: \"The shop shuts if fewer than 10 people come.\" Chart: Mon 12, Tue 8, Wed 15. When did it shut?",
+    "choices": [
+     "Tuesday",
+     "Wednesday",
+     "Monday"
+    ],
+    "answer": 0,
+    "hint": "Take the rule from the words and the numbers from the chart.",
+    "explain": "Only Tuesday had fewer than 10. Wednesday was the busiest day, not the one that shut."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A scale goes 0, 20, 40 with a line every 10. A bar stops one line above 40. What does it show?",
+    "choices": [
+     "50",
+     "41",
+     "60"
+    ],
+    "answer": 0,
+    "hint": "Each line is worth 10, so count on in 10s from 40.",
+    "explain": "One line above 40 is 40 + 10 = 50. 41 counts the line as 1; 60 is two lines up."
+   }
+  ]
+ }
+}

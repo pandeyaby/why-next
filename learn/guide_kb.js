@@ -28,10 +28,13 @@ function index(L){if(cache&&cache.L===L)return cache;const docs=[],df=new Map();
 const idf=(I,w)=>Math.log(1+(I.N-(I.df.get(w)||0)+.5)/((I.df.get(w)||0)+.5));
 /* Ranker 1: how much of the question's rare vocabulary is in the lesson title. */
 function byTitle(I,q){return I.docs.map(d=>({d,s:q.reduce((a,w)=>a+(d.tt.has(w)?idf(I,w):0),0)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s)}
-/* Ranker 2: BM25 (k1 1.2, b 0.75) over title, key idea and explanation. */
-function byBody(I,q){return I.docs.map(d=>{let s=0;for(const w of q){const f=d.bt.filter(x=>x===w).length;if(f)s+=idf(I,w)*f*2.2/(f+1.2*(.25+.75*d.bt.length/I.avg))}return{d,s}}).filter(x=>x.s>0).sort((a,b)=>b.s-a.s)}
-/* Top lessons for a question. A lesson must match at least one fairly rare word (idf >= 1.5), so "help me" finds nothing. */
-function search(q,L,o={}){const I=index(L),k=o.k||2,qt=[...new Set(tokens(q))].filter(w=>idf(I,w)>=1.5);if(!qt.length)return[];
+/* Ranker 2: BM25 (k1 2, b 0.75) over title, key idea and explanation. k1 2 (not 1.2) lets a word the lesson repeats
+   count for more: lesson text is short and on-topic, so repetition is a real signal. */
+function byBody(I,q){return I.docs.map(d=>{let s=0;for(const w of q){const f=d.bt.filter(x=>x===w).length;if(f)s+=idf(I,w)*f*3/(f+2*(.25+.75*d.bt.length/I.avg))}return{d,s}}).filter(x=>x.s>0).sort((a,b)=>b.s-a.s)}
+/* Top lessons for a question. The question must contain at least one fairly rare word (idf >= 1.5), so "help me" finds
+   nothing; once it does, every non-stop word is scored (BM25's idf already discounts common ones). Dropping the common
+   words, as before, threw away words like "count" or "multiply" that separate sibling lessons. */
+function search(q,L,o={}){const I=index(L),k=o.k||2,qt=[...new Set(tokens(q))];if(!qt.some(w=>idf(I,w)>=1.5))return[];
  const fused=new Map();for(const list of [byBody(I,qt)])list.slice(0,20).forEach((x,r)=>{if(x.d.id===o.skip)return;const e=fused.get(x.d.id)||{d:x.d,s:0};e.s+=1/(60+r+1);fused.set(x.d.id,e)});
  return [...fused.values()].sort((a,b)=>b.s-a.s).slice(0,k).map(e=>({id:e.d.id,title:e.d.title,keyIdea:e.d.keyIdea.slice(0,300)}))}
 /* What to send with a question: nothing when the open lesson already fits (it is in the top 3), else the top 2 others.

@@ -1,0 +1,178 @@
+{
+ "topicId": "mt_p-nbe0w_lf",
+ "title": "Division with remainders",
+ "audience": "family",
+ "keyIdea": "A division can leave a remainder: 52 ÷ 9 = 5 r 7. What you do with the remainder depends on the question. Round up when everything must fit (52 children need 6 minibuses). Round down when only full groups count (52 eggs fill 8 boxes of 6). Give the remainder itself when the question asks what is left (7 stickers for the teacher). Turn it into a fraction when the leftover can be cut (7 pizzas for 2 is 3½ each). In a two-step problem, write an equation with a letter for the unknown, and check the answer with an estimate.",
+ "familyTip": "Next time you share something out, like 25 grapes between 4 people, ask: how many each, how many left, and what should we do with the leftovers? Then ask how many cars you would need if 4 people fit in each car. Same sum, different answer.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What should you do with the remainder? Drag each to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Round up",
+    "Round down",
+    "The remainder is the answer"
+   ],
+   "items": [
+    ["30 people, tables of 4: how many tables?", 0],
+    ["30 eggs, boxes of 4: how many full boxes?", 1],
+    ["30 cards dealt to 4 players: how many left over?", 2],
+    ["50 books, shelves hold 8: how many shelves?", 0],
+    ["£20, comics cost £3: how many can you buy?", 1],
+    ["50 sweets in bags of 8: how many sweets are spare?", 2]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagremd",
+  "caption": "Flagship lab: fill minibuses, pack egg boxes, deal stickers and cut pizzas, then solve a two-step problem and check it.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Sometimes a share does not come out even. 52 ÷ 9 = 5 r 7. That means 5 groups of 9, and 7 left over.",
+   "The leftover is the remainder. What you do with it depends on the question. 52 children need 6 minibuses, so nobody is left behind. That is rounding up.",
+   "52 eggs fill only 8 boxes of 6, because the 4 left cannot fill a box. That is rounding down. If the question asks what is left, the remainder is the answer.",
+   "If the leftover can be cut, like pizza, cut it into fair pieces. 7 pizzas for 2 friends is 3 and a half each. Always ask: does my answer make sense?"
+  ],
+  "adult": [
+   "Ages 9 to 10. This is CCSS 4.OA.A.3: solve multistep word problems with whole numbers, including problems where remainders must be interpreted; represent them with equations using a letter for the unknown; and check answers with mental computation and estimation, including rounding. In England, the Year 6 programme asks children to interpret remainders as whole-number remainders, fractions or by rounding, as appropriate for the context.",
+   "There are four ways to use a remainder: round the quotient up (everyone needs a seat), round it down (only full boxes count), give the remainder itself (how many are left), or write it as a fraction (sharing things that can be cut). Key words: dividend, divisor, quotient, remainder, interpret, estimate, unknown.",
+   "Common mistakes: always writing the answer as '5 r 7' even when the question needs a whole number; rounding the wrong way (5 minibuses, leaving 7 children behind); giving the quotient when the question asks for the leftover; and writing 5 r 7 as 5.7, which treats 7 left over as 7 tenths.",
+   "In the lab your child seats 52 children in minibuses, packs 52 eggs into boxes, deals 52 stickers to 9 children and cuts leftover pizzas: the same kind of sum gives four different answers. They then pick each step of a two-step problem, write it as p = 175 ÷ 8 and check it against an estimate of 160 ÷ 8 = 20."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "{a} children go on a trip. Each car holds {b} children. How many cars are needed?",
+   "answer": "(a-a%b)/b+1",
+   "hint": "Divide, then think about the children left over. Do they still need a car?",
+   "explain": "{a} ÷ {b} = {=(a-a%b)/b} r {=a%b}. The {=a%b} left over still need a seat, so round up to {=(a-a%b)/b+1} cars.",
+   "params": {"a": [21, 47], "b": [4, 6]},
+   "where": "a%b>0"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A baker has {a} cakes. A box holds {b}. How many full boxes can she make?",
+   "answer": "(a-a%b)/b",
+   "hint": "Only full boxes count. What happens to the cakes left over?",
+   "explain": "{a} ÷ {b} = {=(a-a%b)/b} r {=a%b}. The {=a%b} left over cannot fill a box, so round down: {=(a-a%b)/b} full boxes.",
+   "params": {"a": [25, 59], "b": [6, 8]},
+   "where": "a%b>0"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "{a} marbles are shared equally between {b} friends. How many marbles are left over?",
+   "answer": "a%b",
+   "hint": "Share them out, then count what is left. The question asks about the leftovers.",
+   "explain": "{a} ÷ {b} = {=(a-a%b)/b} r {=a%b}, so {=a%b} marbles are left over.",
+   "params": {"a": [20, 50], "b": [3, 7]},
+   "where": "a%b>0"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "5 pizzas are shared fairly by 2 friends. How much does each friend get?",
+   "choices": ["2½ pizzas", "2 r 1 pizzas", "3 pizzas"],
+   "answer": 0,
+   "hint": "5 ÷ 2 = 2 r 1. Pizza can be cut, so what can you do with the 1 left over?",
+   "explain": "Each gets 2 whole pizzas. The last one is cut in half, so each gets 2½."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A school buys 6 packs of 20 pencils and shares them equally between 7 classes. Which equation finds p, the pencils for each class?",
+   "choices": ["p = 6 × 20 ÷ 7", "p = 20 ÷ 7 × 6 + 7", "p = 6 + 20 ÷ 7"],
+   "answer": 0,
+   "hint": "First find all the pencils, then share them between the classes.",
+   "explain": "6 × 20 = 120 pencils, then 120 ÷ 7 = 17 r 1, so each class gets 17 and 1 is spare."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "52 children go on a trip in minibuses that hold 9. How many minibuses are needed?",
+    "choices": ["6", "5", "5 r 7"],
+    "answer": 0,
+    "hint": "52 ÷ 9 = 5 r 7. Can 7 children stay behind?",
+    "explain": "5 buses seat 45, and the other 7 still need a seat, so 6 minibuses."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Tickets cost £{b}. How many tickets can you buy with £{a}?",
+    "answer": "(a-a%b)/b",
+    "hint": "You cannot buy part of a ticket. What happens to the money left over?",
+    "explain": "{a} ÷ {b} = {=(a-a%b)/b} r {=a%b}. £{=a%b} is not enough for another ticket, so {=(a-a%b)/b} tickets.",
+    "params": {"a": [20, 50], "b": [3, 9]},
+    "where": "a%b>0"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{a} stickers are dealt equally to {b} children. The leftovers go to the teacher. How many does the teacher get?",
+    "answer": "a%b",
+    "hint": "Find how many each child gets, then what is left over.",
+    "explain": "{a} ÷ {b} = {=(a-a%b)/b} r {=a%b}, so the teacher gets {=a%b}.",
+    "params": {"a": [30, 60], "b": [7, 9]},
+    "where": "a%b>0"
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ali says 45 ÷ 6 = 7.3. What went wrong?",
+    "choices": ["He wrote the remainder 3 as tenths", "Nothing, 7.3 is right", "He should have rounded to 8"],
+    "answer": 0,
+    "hint": "45 ÷ 6 = 7 r 3. Is 3 left over the same as 3 tenths?",
+    "explain": "7 r 3 means 3 left over out of 6, which is a half: 7.5. Writing .3 treats the remainder as tenths."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "7 boxes of 24 pens are shared equally between 8 classes. How many pens does each class get?",
+    "choices": ["21", "168", "3"],
+    "answer": 0,
+    "hint": "First find all the pens, then share them.",
+    "explain": "7 × 24 = 168 pens, then 168 ÷ 8 = 21, so each class gets 21 with none left over."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which question needs you to round up?",
+    "choices": ["How many tents for 23 campers, 4 in each?", "How many full packs of 4 from 23 pens?", "How many sweets are left when 23 are shared by 4?"],
+    "answer": 0,
+    "hint": "In which question must every one of the 23 be fitted in?",
+    "explain": "All 23 campers need a tent: 23 ÷ 4 = 5 r 3, so 6 tents. The others round down or ask for the remainder."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "9 cookies are shared fairly by 4 friends, and you can cut cookies. How much does each friend get?",
+    "choices": ["2¼ cookies", "2 r 1 cookies", "3 cookies"],
+    "answer": 0,
+    "hint": "9 ÷ 4 = 2 r 1. Cut the last cookie into 4 fair pieces.",
+    "explain": "Each gets 2 whole cookies and a quarter of the last one: 2¼."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sara works out that 8 classes get 31 pens each from 175 pens. Which estimate shows her answer is wrong?",
+    "choices": ["160 ÷ 8 = 20, so it should be about 20", "175 + 8 = 183", "8 × 175 is very big"],
+    "answer": 0,
+    "hint": "Round 175 to a number that divides easily by 8.",
+    "explain": "175 is close to 160, and 160 ÷ 8 = 20. 31 is far from 20, so she should check. The answer is 21 r 7."
+   }
+  ]
+ }
+}

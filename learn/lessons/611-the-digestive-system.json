@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_Ruk2-lyGPZ",
+ "title": "The Digestive System",
+ "audience": "family",
+ "keyIdea": "Food passes through the digestive system in order: mouth, oesophagus, stomach, small intestine, large intestine. Teeth and saliva break food into small wet pieces; muscles in the oesophagus squeeze it down; the stomach churns it with acid into a thick soup; in the small intestine nutrients pass through the wall into the blood; the large intestine takes water back, and the waste (faeces) leaves through the anus.",
+ "familyTip": "At dinner, trace the trip of one bite with a finger on your child's body: mouth, down the oesophagus behind the windpipe, stomach under the ribs on the left, coiled small intestine in the middle, large intestine around the edge.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which part does each job? Drag each card to a part, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "Mouth",
+    "Stomach",
+    "Small intestine",
+    "Large intestine"
+   ],
+   "items": [
+    [
+     "Teeth grind food",
+     0
+    ],
+    [
+     "Saliva wets food",
+     0
+    ],
+    [
+     "Churns food with acid",
+     1
+    ],
+    [
+     "Goodness passes into the blood",
+     2
+    ],
+    [
+     "Takes water back",
+     3
+    ],
+    [
+     "Long, coiled tube in the middle",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggut",
+  "caption": "Flagship lab: label the five parts, chew, squeeze food down (even upside down), churn, sort what enters the blood, follow a meal.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Your food goes on a long trip: mouth, a tube, your stomach, then two long tubes called intestines. In your mouth, teeth bite and grind the food. Spit, called saliva, makes it wet and soft.",
+   "The food goes down a tube called the oesophagus. Rings of muscle squeeze it along. That is why you can swallow even upside down.",
+   "Your stomach is a stretchy bag. It churns the food with acid until it is like thick soup.",
+   "The small intestine is a long, coiled tube. Here the goodness from food passes into your blood. The large intestine takes back water. What is left leaves your body as poo."
+  ],
+  "adult": [
+   "Ages 8 to 9. National Curriculum Year 4, Animals including humans: describe the simple functions of the basic parts of the digestive system in humans. The order is mouth, oesophagus, stomach, small intestine, large intestine, then rectum and anus.",
+   "Teeth break food up and saliva wets it (and starts to digest starch). Waves of muscle, called peristalsis, push food down the oesophagus, so swallowing works lying down or upside down. The stomach mixes food with acid and enzymes into a thick liquid. The small intestine finishes digestion and takes in nutrients and most of the water through its lining; fats go first into the lymph, then the blood. The large intestine takes back much of the rest of the water and forms faeces.",
+   "Common mistakes: thinking food drops straight from the mouth into the stomach, or that gravity moves it; mixing up the oesophagus with the windpipe (trachea); believing the stomach absorbs most nutrients; and thinking fibre is absorbed, when it passes through and helps waste move.",
+   "In the lab your child labels the five parts in order, chews a lump into small wet pieces, squeezes food down the oesophagus (with an upside-down test), churns it in the stomach, sorts what passes into the blood, and follows a meal through the body."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the oesophagus?",
+   "choices": [
+    "The tube from your mouth to your stomach",
+    "The tube that carries air to your lungs",
+    "The bag that churns food"
+   ],
+   "answer": 0,
+   "hint": "It is the part food meets just after you swallow.",
+   "explain": "The oesophagus carries food from the mouth to the stomach. The windpipe carries air, and the stomach is the bag that churns."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A meal spends {a} hours in the stomach, then {b} hours in the small intestine. How many hours is that altogether?",
+   "answer": "a+b",
+   "hint": "Add the time in the stomach to the time in the small intestine.",
+   "explain": "{a} + {b} = {=a+b} hours. The trip down the oesophagus takes only seconds, so most of the time is spent churning and absorbing.",
+   "params": {
+    "a": [
+     2,
+     4
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "In the lab, each chew splits every piece of food in two. Starting with 1 lump, how many pieces are there after {a} chews?",
+   "answer": "2**a",
+   "hint": "Double the number of pieces once for each chew: 1, 2, 4 …",
+   "explain": "Doubling {a} times from 1 gives {=2**a} pieces. Smaller pieces are easier to swallow and quicker to break down.",
+   "params": {
+    "a": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Where does most of the goodness from food pass into the blood?",
+   "choices": [
+    "The small intestine",
+    "The stomach",
+    "The large intestine"
+   ],
+   "answer": 0,
+   "hint": "Think of the long, coiled tube after the stomach.",
+   "explain": "Nutrients pass through the wall of the small intestine into the blood. The stomach churns food, and the large intestine takes back water."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why can astronauts swallow food in space?",
+   "choices": [
+    "Muscles squeeze food down the oesophagus",
+    "Gravity pulls food down",
+    "Food floats to the stomach by itself"
+   ],
+   "answer": 0,
+   "hint": "What did the squeeze in the lab do, even upside down?",
+   "explain": "Rings of muscle in the oesophagus squeeze food along, so swallowing does not need gravity."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the right order for food?",
+    "choices": [
+     "Mouth, oesophagus, stomach, small intestine, large intestine",
+     "Mouth, stomach, oesophagus, large intestine, small intestine",
+     "Mouth, oesophagus, small intestine, stomach, large intestine"
+    ],
+    "answer": 0,
+    "hint": "The tube comes before the bag, and the small intestine comes before the large one.",
+    "explain": "Food goes mouth, oesophagus, stomach, small intestine, then large intestine, and waste leaves through the anus."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Ella's lunch spends {a} hours in her stomach and {b} hours in her small intestine. How many more hours in the small intestine?",
+    "answer": "b-a",
+    "hint": "Take the stomach time away from the small intestine time.",
+    "explain": "{b} − {a} = {=b-a} more hours. The small intestine is long, so absorbing goodness takes time.",
+    "params": {
+     "a": [
+      2,
+      3
+     ],
+     "b": [
+      3,
+      6
+     ]
+    },
+    "where": "b>a"
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Sam chews each bite of apple {a} times. He eats {b} bites. How many chews is that?",
+    "answer": "a*b",
+    "hint": "Multiply the chews for one bite by the number of bites.",
+    "explain": "{a} × {b} = {=a*b} chews. Each chew grinds the apple smaller and mixes in saliva, so it is easy to swallow.",
+    "params": {
+     "a": [
+      10,
+      20
+     ],
+     "b": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What does the stomach do?",
+    "choices": [
+     "Churns food with acid into a thick soup",
+     "Takes most goodness into the blood",
+     "Grinds food with teeth"
+    ],
+    "answer": 0,
+    "hint": "Think of the stretchy bag in the lab.",
+    "explain": "The stomach's muscles churn food with acid. Most goodness passes into the blood later, in the small intestine."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which part takes water back from what is left?",
+    "choices": [
+     "The large intestine",
+     "The oesophagus",
+     "The mouth"
+    ],
+    "answer": 0,
+    "hint": "It is the last long tube, the one that goes round the edge.",
+    "explain": "The large intestine takes back water, so the waste becomes firmer before it leaves through the anus."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Mo says food goes down the windpipe to the stomach. What should he say?",
+    "choices": [
+     "Food goes down the oesophagus; the windpipe takes air to the lungs",
+     "He is right",
+     "Food goes down the small intestine"
+    ],
+    "answer": 0,
+    "hint": "There are two tubes in your neck. One is for air.",
+    "explain": "The windpipe carries air to the lungs. Food goes down the oesophagus, which sits just behind it."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What happens to fibre from vegetables?",
+    "choices": [
+     "It moves on and helps push waste along",
+     "It passes into the blood in the stomach",
+     "It turns into saliva"
+    ],
+    "answer": 0,
+    "hint": "Fibre is too tough for your body to break down.",
+    "explain": "Fibre is not absorbed. It passes into the large intestine and helps waste move through."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why does saliva help?",
+    "choices": [
+     "It makes food wet and soft so it is easy to swallow",
+     "It takes goodness into the blood",
+     "It churns food with acid"
+    ],
+    "answer": 0,
+    "hint": "Try swallowing a dry cracker without chewing.",
+    "explain": "Saliva wets and softens chewed food so it slides down the oesophagus. It also starts to break down starch."
+   },
+   {
+    "type": "order",
+    "id": "m9",
+    "prompt": "Put the parts in the order food meets them.",
+    "items": [
+     "Mouth",
+     "Oesophagus",
+     "Stomach",
+     "Small intestine",
+     "Large intestine"
+    ],
+    "hint": "Start where you take a bite. The small intestine comes before the large one.",
+    "explain": "Mouth, oesophagus, stomach, small intestine, large intestine. The waste then leaves through the anus."
+   }
+  ]
+ }
+}

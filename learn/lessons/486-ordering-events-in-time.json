@@ -1,0 +1,163 @@
+{
+ "topicId": "mt_-vvVxpOHG2",
+ "title": "Ordering Events in Time",
+ "audience": "family",
+ "keyIdea": "Things happen in an order. Time words tell us that order. First, next and last say which thing comes when. Before means earlier and after means later. A day goes morning, then afternoon, then evening. Yesterday was the day before today, and tomorrow is the day after today.",
+ "explain": {
+  "kid": [
+   "Things happen in order. First you plant a seed. Next a shoot grows. Last you get a flower.",
+   "Before means it comes first. After means it comes next. Socks go on before shoes. Shoes go on after socks.",
+   "A day has parts. In the morning we eat breakfast. In the afternoon we play. In the evening we have a bath and go to bed.",
+   "Today is now. Yesterday is the day that has gone. Tomorrow is the day that has not come yet."
+  ],
+  "adult": [
+   "In England this is Year 1 measurement in the National Curriculum: pupils should be taught to sequence events in chronological order using language such as before and after, next, first, today, yesterday, tomorrow, morning, afternoon and evening. It grows out of the EYFS reception goal of describing a sequence of events using words like first and then, and it leads on to days of the week, months and telling the time.",
+   "The key point is that time words describe the order things really happen in, not the order you say them. 'Eat your lunch after you wash your hands' mentions eating first, but you wash first. Yesterday and tomorrow are both 'not today', but one is behind you and one is ahead.",
+   "Common mistakes to watch for: young children often follow the order they hear, so 'before' and 'after' sentences get done back to front; they jump from morning straight to evening and forget the afternoon; and they swap yesterday and tomorrow, or use 'yesterday' for any time in the past. Asking 'has it happened yet?' sorts yesterday from tomorrow better than explaining.",
+   "In the lab your child drags picture cards into slots: a seed growing (first, next, last), two jobs given with before and after, the parts of a day as the sun moves across the sky, a three-day strip with today in the middle, and a four-picture snowman story. Every card can also be placed with a big button. Read each sentence aloud together."
+  ]
+ },
+ "familyTip": "At bedtime, ask your child to tell you three things from today in order, using first, next and last. Then ask: what will happen tomorrow? Try a 'before and after' game while dressing: 'Before your coat, what goes on?'",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Morning or evening? Drag each one, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Morning",
+    "Evening"
+   ],
+   "items": [
+    ["Eat breakfast", 0],
+    ["Wake up", 0],
+    ["Get dressed", 0],
+    ["Have a bath", 1],
+    ["Read a bedtime story", 1],
+    ["Put on pyjamas", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagorder",
+  "caption": "Flagship lab: drag picture cards into order with first, next, last, before and after, morning to evening, and yesterday, today and tomorrow.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What comes straight after morning?",
+   "choices": ["Afternoon", "Evening", "Night"],
+   "answer": 0,
+   "hint": "Lunch is in the middle of the day. What part comes after lunch?",
+   "explain": "Morning, then afternoon, then evening. Afternoon comes straight after morning."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} pictures in a story. You have put {k} of them in order. How many are left to put in order?",
+   "answer": "n-k",
+   "hint": "Start at {n} and take away the {k} you have done.",
+   "explain": "{n} pictures take away {k} done leaves {=n-k} to put in order.",
+   "params": {"n": [4, 6], "k": [1, 3]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Today is day {d} of the holiday. What day of the holiday will tomorrow be?",
+   "answer": "d+1",
+   "hint": "Tomorrow is one day after today. Count on one.",
+   "explain": "Tomorrow is the day after today, so it is day {=d+1}.",
+   "params": {"d": [1, 8]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "\"Before you go out, put your coat on.\" What do you do first?",
+   "choices": ["Put my coat on", "Go out", "Take my coat off"],
+   "answer": 0,
+   "hint": "Before tells you which job is earlier. Which job is before going out?",
+   "explain": "You hear 'go out' first, but 'before' means the coat goes on first, then you go out."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Today is Monday. What day was yesterday?",
+    "choices": ["Sunday", "Tuesday", "Monday"],
+    "answer": 0,
+    "hint": "Yesterday is the day before today. What day comes before Monday?",
+    "explain": "Yesterday was the day before Monday: Sunday. Tuesday will be tomorrow."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which comes first?",
+    "choices": ["The seed", "The flower", "They come together"],
+    "answer": 0,
+    "hint": "What do you put in the soil to make a plant grow?",
+    "explain": "The seed comes first. Next a shoot grows, and last the flower opens."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "When do we usually have a bath and go to bed?",
+    "choices": ["In the evening", "In the morning", "After breakfast"],
+    "answer": 0,
+    "hint": "Is it at the start of the day or the end?",
+    "explain": "Bath and bed come in the evening, at the end of the day."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "\"Eat your lunch after you wash your hands.\" What do you do first?",
+    "choices": ["Wash my hands", "Eat my lunch", "Both at once"],
+    "answer": 0,
+    "hint": "After tells you which job is later. Which job is after washing?",
+    "explain": "You hear 'eat' first, but 'after you wash' means you wash first, then eat."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You made a snowman on day {d}. It melted {w} days later. On which day did it melt?",
+    "answer": "d+w",
+    "hint": "Start at day {d} and count on {w} more days.",
+    "explain": "Day {d} and {w} more days is day {=d+w}. It melted after you built it.",
+    "params": {"d": [1, 3], "w": [1, 3]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Your party is the day after today. When is it?",
+    "choices": ["Tomorrow", "Yesterday", "Today"],
+    "answer": 0,
+    "hint": "Has the party happened yet, or is it still to come?",
+    "explain": "The day after today is tomorrow. It has not happened yet."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Today is day {d} of the holiday. What day of the holiday was yesterday?",
+    "answer": "d-1",
+    "hint": "Yesterday is one day before today. Count back one.",
+    "explain": "Yesterday was the day before today, so it was day {=d-1}.",
+    "params": {"d": [2, 9]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is in the right order?",
+    "choices": ["Wake up, eat breakfast, go to bed", "Go to bed, wake up, eat breakfast", "Eat breakfast, go to bed, wake up"],
+    "answer": 0,
+    "hint": "What do you do at the very start of the day?",
+    "explain": "First you wake up, next you eat breakfast, and last, in the evening, you go to bed."
+   }
+  ]
+ }
+}

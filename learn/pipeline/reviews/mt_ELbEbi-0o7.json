@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the KS3 programme of study (geometry and measures: interpret maps and scale drawings and use bearings), GCSE subject content G15, and BBC Bitesize and Corbettmaths bearings notes: measured from North, clockwise, three figures from 000° to 359°; back bearing = bearing ± 180°. Every number was recomputed: 070→250, 130→310, 300→120, 045→225, 200→020, 315→135, 040→220, 250→070; the 4 km on 090° then 3 km on 180° trip gives 5 km and 90 + arctan(3/4) = 126.87°, about 127°, with the way back about 307°."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: measuring anticlockwise (step 2 prediction 050° for the north-west island, lock() detects 360 − bearing, challenge 030° for 330°, m3), measuring from East (lock() detects a 90° offset), two-figure bearings (step 1 text, challenge 5° and 050°, p4, m7), the same bearing for the way back (step 3 prediction 070°, the arm starts pointing away from A), 180° − bearing and 360° − bearing as back bearings (step 3 and 4 options, m8), values over 360° (380°, 495°, 430°) and negative bearings (−030°)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagbear swings a draggable arm about a North-up compass rose with a live three-figure readout and a wedge from North, judges locked bearings against anticlockwise and from-East errors, moves the pivot to B with parallel North lines for back bearings, and reads the bearing of a scale-drawn two-leg trip. flagprot (protractor) and flagturn (quarter turns) do not measure from North clockwise or handle back bearings; lab_distinct stayed under 30%."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The conventions emerge from the moves: locking at 315° for 045° returns 'You turned anticlockwise … Bearings go clockwise from North'; locking at 135° returns 'That is 90° out. Did you start from East?'; at B the arm starts on 070° and locking it returns 'That points away from A … Turn the arm round to face A'; choosing 135° for the back bearing of 045° returns 'is 180° − 45°, the angle on the other side'. The trip step reveals 127° and the 5 km line."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options the lab then disproves: due East as 270° (the arm shows 090°), the north-west island at 050° (measuring shows 310°), and the bearing of A from B as 070° or 110° (pointing back from B lands on 250°)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six questions, each wrong option tagged: missing leading zeros (5°) or misplaced zeros (050°), anticlockwise readings (090° for West, 030°), stopping at South (180°), giving the same bearing back (040°), 180° minus the bearing (140°), 360° minus the bearing (110°), going past 360° (430°), the wrong quadrant for south-east (045°, 225°) and a negative bearing (−030°), each with its own message."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the kid (≤ 6.5) and adult (≤ 9.5) limits. The kid text states the three rules as three short sentences, then gives the four compass bearings, a way to measure, and the back-bearing rule with one worked example (070° and 250°). Adult text names the angle facts and the trip calculation."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches (journey was replaced by trip and route after the content gate flagged it). Every step has one rule and one task, and every item explanation names the slip behind each wrong option, for example 'Her rule gives 290°, which flips East and West instead of turning round'."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px (touch, 1.5x) in light and dark for every step before and after Show me: the compass rose, its 090/180/270 labels and the readout pill fit above the feedback box; the back-bearing points and North arrows fit, and the three rule tiles sit below them. After the first screenshots the duplicate 000° label under the N arrow was removed, the rose and rule diagram were shrunk to clear the feedback box, the trip readout moved off the North arrow, and the 3 km label moved inside the canvas."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "The arm can be turned with four buttons (anticlockwise and clockwise by 10° and 1°, with spoken labels) and locked with a button, and the rule tiles are buttons too, so no drag is needed. The canvas aria-label gives the target and the current arm bearing after every move, challenge feedback is an aria-live status, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "National Curriculum in England: mathematics programmes of study, Key Stage 3 geometry and measures (DfE 2013)",
+  "GCSE (9–1) mathematics subject content G15 (DfE 2013)",
+  "BBC Bitesize GCSE Maths: Bearings",
+  "Corbettmaths: Bearings (video 26) and back bearings practice"
+ ]
+}

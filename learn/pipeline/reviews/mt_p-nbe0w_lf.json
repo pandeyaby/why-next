@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against CCSS 4.OA.A.3 (multistep problems, interpreting remainders, a letter for the unknown, estimation) and NC 2013 Year 6 ('interpret remainders as whole number remainders, fractions, or by rounding, as appropriate for the context'). Every number recomputed: 52 ÷ 9 = 5 r 7 (6 buses; 5 × 9 = 45); 52 ÷ 6 = 8 r 4; 7 ÷ 2 = 3½; 11 ÷ 4 = 2¾; 7 × 25 = 175, 175 ÷ 8 = 21 r 7 (8 × 21 = 168), 22 each would need 176; estimate 160 ÷ 8 = 20; challenge 40 ÷ 9 = 4 r 4 → 5, 45 ÷ 6 = 7 r 3, 50 ÷ 8 = 6 r 2, 9 ÷ 2 = 4½, 7 × 24 ÷ 8 = 21; m4 45 ÷ 6 = 7.5 not 7.3; p5 120 ÷ 7 = 17 r 1. Parameterised items use (a−a%b)/b with a%b>0 filters, checked at range corners."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented remainder errors (Silver, Shapiro and Deutsch 1993, JRME 24(2), 'Sense making and the solution of division problems involving remainders', the bus problem where many students answered '31 r 12' or 31; NCETM Y6 division guidance): leaving the remainder notation as the answer (prediction 1 '5 r 7 minibuses', 'rem'), rounding the wrong way ('down', 'up', predictions 1 and 2), giving the quotient when the leftover is asked ('quot', prediction 3), writing r 7 as .7 ('dec', 'tenth', m4), and stopping after step one of a two-step problem ('one')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagremd puts the same kind of division into four contexts that need four different answers (minibuses up, egg boxes down, stickers = remainder, pizzas = fraction) and then a two-step problem with p = 175 ÷ 8, a bar model and an estimate. Lesson 27 teaches the long division method; flagunkf is division as an unknown factor; flagwmd is written methods with chunking. Max 6-shingle similarity 2.9% (flag_design.js); explanation overlap 0.8% (lesson 27)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner sees the remainder physically: 7 children still waiting after 5 buses, 4 loose eggs that cannot fill a box, 7 stickers that cannot go round 9 children, a leftover pizza that must be cut into one piece per friend, and 7 grey pens left after 8 shares of 21 on the bar. The interpretation is felt before the text states it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions with tempting wrong options the lab disproves: '5, leave the 7 out' and '5 r 7 minibuses' (7 children are left standing), '9, round up' for egg boxes (the 9th box cannot be filled), and '5, the answer to 52 ÷ 9' for the teacher's stickers (the pile shows 7)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "slip() has 10 distinct messages (down, rem, up, dec, tenth, ctx, quot, op, frac, one), each naming the slip and the fix, e.g. '5 r 7 means 7 left over. 5.7 means 7 tenths, and 7 out of 9 is not 7 tenths.' In-lab wrong moves are specific: selling with 6+ eggs loose, cutting pizzas into the wrong number of pieces, and choosing 22 each ('22 each needs 176 pens')."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes for the family audience: kid FK 3.0, adult FK 9.1. Kid text uses share, left over, remainder, round up, round down with the 52 ÷ 9 example throughout; key words (dividend, divisor, quotient) are kept for the adult panel."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Content gate passes (no banned phrases; explanation overlap under 1% with every lesson). Kid paragraphs: what a remainder is; round up; round down and remainder as answer; fraction and sense check. Adult paragraphs: standards and key words; four interpretations; named mistakes; what the lab does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots after Show me on every step at 360 px Android in light and dark, plus a mid-step pizza view and desktop: bus seats, egg boxes, sticker counts, the pizza cut lines and the 8-part bar with '21' labels fit with no clipping after shortening the sticker title and the final pens line; buttons wrap below the canvas."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every tap target has a button twin ('Add a minibus', 'Pack 6 eggs into a box', 'Give the leftover stickers to the teacher', 'Cut each leftover pizza into one more piece', 'Choose 175 ÷ 8'). The canvas aria-label and narration update after every action. walk.cjs: desktop and iPhone 13 complete all 5 tasks with Show me, the challenge shows, axe WCAG 2.1 AA clean in both themes, no console errors."
+  }
+ },
+ "sources": [
+  "CCSS 4.OA.A.3 (Common Core State Standards for Mathematics, Grade 4 Operations and Algebraic Thinking)",
+  "Department for Education, National Curriculum in England: mathematics programmes of study, Year 6 multiplication and division (2013)",
+  "Silver, Shapiro and Deutsch (1993), Sense making and the solution of division problems involving remainders, JRME 24(2)",
+  "NCETM, Primary mastery professional development: multiplication and division, interpreting remainders",
+  "Topic mt_p-nbe0w_lf evidence lines in out/merged/data/topics.json"
+ ]
+}

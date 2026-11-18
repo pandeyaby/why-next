@@ -1,0 +1,212 @@
+{
+ "topicId": "mt_lC_Q5mSL_I",
+ "title": "Numbers to 10,000",
+ "audience": "learner",
+ "keyIdea": "Numbers up to 10,000 have four places: thousands, hundreds, tens and ones. On a 0 to 10,000 number line, each big tick is 1,000 more, so 5,000 is halfway. To place a number such as 6,400, find the thousands either side first, then go part of the way on. The same number can be shown as a numeral, in words, as a sum of its parts or with place value counters; a 0 holds an empty place, so three thousand and fifty is 3,050, not 3,500. Ten of one place make one of the next: 3,900 + 100 is 4,000, not 3,1000.",
+ "familyTip": "Ask your child to mark a house number or a price, such as 6,400, on a 0 to 10,000 number line you draw together. Then say the same number in words and as a sum of thousands, hundreds, tens and ones.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does this match 6,407? Drag each card to a box, or tap the card and then a box.",
+  "opts": {
+   "bins": ["Yes, it is 6,407", "No, a different number"],
+   "items": [
+    ["six thousand, four hundred and seven", 0],
+    ["6000 + 400 + 7", 0],
+    ["6 thousands, 4 hundreds, 7 ones", 0],
+    ["six thousand and forty-seven", 1],
+    ["6000 + 40 + 7", 1],
+    ["6,470", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flag10k",
+  "caption": "Flagship lab: put thousands on a 0–10,000 line, estimate 6,400, zoom into 4,000–5,000, match words, sums and counters, and count on past a thousand.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A number up to 10,000 can have four digits. From the left they are thousands, hundreds, tens and ones. 6,407 has 6 thousands, 4 hundreds, 0 tens and 7 ones.",
+   "Draw a line from 0 to 10,000. Each big tick is 1,000 more. Halfway is 5,000, not 500. To place 6,400, go past 6,000, then a bit less than halfway towards 7,000.",
+   "The same number can be written in more than one way. In words it is six thousand, four hundred and seven. As a sum it is 6000 + 400 + 7. A 0 holds a place that is empty, so three thousand and fifty is 3,050, not 3,500.",
+   "Ten of one place make one of the next. Ten 100s make 1,000, so 3,900 + 100 is 4,000, not 3,1000."
+  ],
+  "adult": [
+   "Ages 8 to 9. In England, Year 4 number and place value asks pupils to recognise the place value of each digit in a four-digit number, to identify, represent and estimate numbers using different representations, and to count in multiples of 6, 7, 9, 25 and 1,000, including finding 1,000 more or less. The statutory guidance also includes reading and writing numbers to at least 10,000, and the related objective of rounding. US Common Core 4.NBT.A.2 asks pupils to read and write multi-digit whole numbers in standard form, word form and expanded form, and to compare them.",
+   "The new idea, beyond knowing what each digit is worth, is to represent and estimate the same four-digit number in several ways: on a 0–10,000 number line (and on a zoomed 4,000–5,000 line whose ticks are 100), in words, in expanded form, and with place value counters. Halfway from 0 to 10,000 is 5,000. Ten hundreds make one thousand, so counting on can cross a thousands boundary.",
+   "Common mistakes: thinking 500 or 1,000 is halfway to 10,000; placing 6,400 near 640 because the digits look the same; writing three thousand and fifty as 3,500, or 3,1000 when adding 100 to 3,900; and treating 10 hundreds as 10,000. In the lab an arrow on the wrong tick, a wrong numeral card, or a count that will not carry shows the slip."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "On a number line from 0 to 10,000, which number sits about halfway?",
+   "choices": [
+    "5,000",
+    "500",
+    "1,000"
+   ],
+   "answer": 0,
+   "hint": "Each big tick is 1,000. How many ticks take you halfway from 0 to 10,000?",
+   "explain": "Halfway from 0 to 10,000 is 5,000. 500 and 1,000 are both near the start of the line."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A number has {n} thousands, 4 hundreds, 0 tens and 7 ones. What is the number?",
+   "answer": "n*1000+407",
+   "hint": "Put the thousands digit in the thousands place, then write 407 after it.",
+   "explain": "{n} thousands is {=n*1000}, then 4 hundreds, 0 tens and 7 ones make {=n*1000+407}.",
+   "params": {
+    "n": [2, 9]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You start at {=n*1000} and count on 100 three times. Where do you land?",
+   "answer": "n*1000+300",
+   "hint": "Each hop adds 100. Three hops add 300.",
+   "explain": "Three hops of 100 add 300, so {=n*1000} + 300 = {=n*1000+300}.",
+   "params": {
+    "n": [2, 9]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "How do you write three thousand and fifty as a numeral?",
+   "choices": [
+    "3,050",
+    "3,500",
+    "3,005"
+   ],
+   "answer": 0,
+   "hint": "Fifty is 5 tens. The hundreds place is empty, so a 0 holds it.",
+   "explain": "Three thousand and fifty is 3 thousands, 0 hundreds, 5 tens and 0 ones: 3,050. 3,500 is three thousand, five hundred."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Where does 6,400 sit on a 0 to 10,000 number line?",
+   "choices": [
+    "Between 6,000 and 7,000, a little less than halfway on",
+    "Near 640, close to the start",
+    "Past 7,000"
+   ],
+   "answer": 0,
+   "hint": "Find the thousands first. How many thousands does 6,400 have?",
+   "explain": "6,400 has 6 thousands, so it sits between 6,000 and 7,000. 400 is less than halfway to the next thousand."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is 3,900 + 100?",
+    "choices": [
+     "4,000",
+     "3,1000",
+     "3,910"
+    ],
+    "answer": 0,
+    "hint": "Ten 100s make 1,000. What happens when the hundreds place is already 9?",
+    "explain": "3,900 already has 9 hundreds. One more hundred makes 10 hundreds, which is 1,000, so the number becomes 4,000."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A card shows 8 thousands counters and 2 tens counters. What number is it?",
+    "choices": [
+     "8,020",
+     "8,200",
+     "820"
+    ],
+    "answer": 0,
+    "hint": "Read the labels on the counters. Are the 2 counters hundreds or tens?",
+    "explain": "8 thousands and 2 tens, with no hundreds and no ones, is 8,020. 8,200 would need 2 hundreds counters."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "How do you write {=n*1000} + 50 as a four-digit numeral?",
+    "answer": "n*1000+50",
+    "hint": "Fifty is 5 tens. The hundreds place is empty, so write a 0 there.",
+    "explain": "{=n*1000} + 50 is {n} thousands, 0 hundreds, 5 tens and 0 ones: {=n*1000+50}.",
+    "params": {
+     "n": [2, 9]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How many hundreds are there in 1,000?",
+    "choices": [
+     "10",
+     "100",
+     "1,000"
+    ],
+    "answer": 0,
+    "hint": "Each hundred is 100. How many lots of 100 make 1,000?",
+    "explain": "10 × 100 = 1,000, so ten hundreds make 1,000. 100 hundreds would be 10,000."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Kai says 4,090 is near the end of a line from 4,000 to 5,000. What is wrong?",
+    "choices": [
+     "4,090 has 0 hundreds, so it is just after 4,000",
+     "Nothing, 4,090 is nearly 5,000",
+     "4,090 is halfway, at 4,500"
+    ],
+    "answer": 0,
+    "hint": "Look at the hundreds digit. Is it 0 or 9?",
+    "explain": "4,090 has 0 hundreds and 9 tens, so it sits just before 4,100, near the start of a 4,000 to 5,000 line."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "{n} thousands counters and 3 hundreds counters show which number?",
+    "answer": "n*1000+300",
+    "hint": "Write the thousands, then the hundreds, then 0 tens and 0 ones.",
+    "explain": "{n} thousands and 3 hundreds is {=n*1000+300}.",
+    "params": {
+     "n": [1, 9]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which expanded form equals 6,407?",
+    "choices": [
+     "6000 + 400 + 7",
+     "6000 + 40 + 7",
+     "6000 + 400 + 70"
+    ],
+    "answer": 0,
+    "hint": "The 4 is in the hundreds place and the 7 is in the ones place.",
+    "explain": "6,407 is 6 thousands, 4 hundreds, 0 tens and 7 ones, so 6000 + 400 + 7."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is 7,990 + 10?",
+    "choices": [
+     "8,000",
+     "7,1000",
+     "8,090"
+    ],
+    "answer": 0,
+    "hint": "Ten tens make 100, and ten 100s make 1,000. Watch both places fill up.",
+    "explain": "7,990 + 10 makes 10 tens, which is 1 hundred, and that makes 10 hundreds, so the number becomes 8,000."
+   }
+  ]
+ }
+}

@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_Mnodea7mG_",
+ "title": "Edges, vertices, and faces",
+ "audience": "family",
+ "keyIdea": "We describe a 3-D shape by counting its parts. A face is a flat side. An edge is a straight line where two faces meet. A vertex is a corner where edges meet (more than one vertex are called vertices). A cube has 6 faces, 12 edges and 8 vertices. A square-based pyramid has 5 faces, 8 edges and 5 vertices. A triangular prism has 5 faces, 9 edges and 6 vertices. Some parts are round the back, so turn the shape or look for them.",
+ "familyTip": "Find a box, such as a cereal box or a dice. Put a small sticker or a blob of play dough on each corner and count them: these are the vertices. Run a finger along each edge, counting as you go. Then turn the box over and count the flat faces. Try the same with a Toblerone-style box (a triangular prism).",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it a vertex, an edge or a face? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "📍 Vertex",
+    "📏 Edge",
+    "⬜ Face"
+   ],
+   "items": [
+    [
+     "The pointy top of a pyramid",
+     0
+    ],
+    [
+     "A corner of a dice",
+     0
+    ],
+    [
+     "The line where two sides of a box meet",
+     1
+    ],
+    [
+     "A straight fold along a cereal box",
+     1
+    ],
+    [
+     "The flat top of a dice",
+     2
+    ],
+    [
+     "The flat bottom of a tin can",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagevf",
+  "caption": "Flagship lab: stick a sticker on each vertex, trace every edge, paint and turn a cube, then count a pyramid and a prism.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A 3-D shape is a solid shape you can hold, like a box or a dice. It has parts with special names. A face is a flat side. An edge is a straight line where two faces meet. A vertex is a corner. When there is more than one, we say vertices.",
+   "A cube is like a dice. It has 6 faces, and they are all squares. It has 12 edges. It has 8 vertices: 4 on top and 4 at the bottom.",
+   "You can not see all of a shape at once. Some faces, edges and corners are at the back. Turn the shape round, or put a sticker on each part as you count it. Then you will not miss one or count one twice.",
+   "Different shapes have different numbers. A pyramid with a square bottom has 5 faces, 8 edges and 5 vertices. A triangular prism, like a tent, has 5 faces, 9 edges and 6 vertices. A ball has no edges and no vertices at all."
+  ],
+  "adult": [
+   "Ages 6 to 7 (NC Year 2: identify and describe the properties of 3-D shapes, including the number of edges, vertices and faces). Children should use the words face, edge and vertex (plural vertices) correctly, and describe a shape by its numbers: a cube has 6 faces, 12 edges and 8 vertices.",
+   "Faces here means flat faces. A cylinder has 2 flat faces and a curved surface, and a sphere has only a curved surface, so it has no edges and no vertices. In the lab all the shapes have flat faces, so every edge is a straight line where two faces meet and every vertex is where edges meet.",
+   "Common mistakes: counting only what can be seen, which gives 3 faces for a cube; counting the corners of one face, which gives 4 vertices; counting edges twice or missing the hidden ones; forgetting the base of a pyramid; and mixing up the three words. Marking each part as it is counted stops double counting.",
+   "In the lab your child puts a sticker on every vertex of a cube (one is hidden at the back), traces all 12 edges, paints the faces and turns the cube to reach the hidden ones, then counts the vertices of a square-based pyramid and the edges of a triangular prism."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is a vertex?",
+   "choices": [
+    "A corner where edges meet",
+    "A flat side",
+    "A straight line"
+   ],
+   "answer": 0,
+   "hint": "Think of the stickers in the lab. Where did you put them?",
+   "explain": "A vertex is a corner. The stickers went on the corners of the cube, so a cube has 8 vertices."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A cube has 6 faces. You have painted {a} of them. How many faces are left to paint?",
+   "answer": "6-a",
+   "hint": "Start at 6 and take away the faces you have painted.",
+   "explain": "6 − {a} = {=6-a}. There are {=6-a} faces left to paint.",
+   "params": {
+    "a": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How many edges does a cube have?",
+   "choices": [
+    "12",
+    "8",
+    "6"
+   ],
+   "answer": 0,
+   "hint": "Count the edges on top, the edges on the bottom and the edges going up.",
+   "explain": "4 on top, 4 on the bottom and 4 going up makes 12 edges."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A triangular prism has 9 edges. You have traced {a} of them. How many more edges do you need to trace?",
+   "answer": "9-a",
+   "hint": "Start at 9 and take away the edges you have traced.",
+   "explain": "9 − {a} = {=9-a}. You need to trace {=9-a} more edges.",
+   "params": {
+    "a": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Tom looks at a cube and says it has 3 faces. Why is he wrong?",
+   "choices": [
+    "Some faces are at the back, so he can not see them",
+    "A cube has no faces",
+    "He counted the edges"
+   ],
+   "answer": 0,
+   "hint": "Can you see every side of a box at once?",
+   "explain": "You can only see 3 faces at once. Turn the cube and you find 3 more: 6 faces in all."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many vertices does a cube have?",
+    "choices": [
+     "8",
+     "4",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "Count the corners on top and the corners at the bottom.",
+    "explain": "4 corners on top and 4 at the bottom make 8 vertices."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How many faces does a square-based pyramid have?",
+    "choices": [
+     "5",
+     "4",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Count the triangles, then remember the square at the bottom.",
+    "explain": "4 triangle faces and 1 square face make 5 faces."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "How many edges does a triangular prism have?",
+    "choices": [
+     "9",
+     "6",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Count the edges on each triangle end, then the edges joining them.",
+    "explain": "3 edges on each triangle end makes 6, and 3 more join the ends: 9 edges."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is an edge?",
+    "choices": [
+     "A straight line where two faces meet",
+     "A corner",
+     "A flat side"
+    ],
+    "answer": 0,
+    "hint": "Think of tracing in the lab.",
+    "explain": "An edge is the straight line where two flat faces meet. You traced them in red."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A cube has 12 edges. {a} of them are painted red and the rest are blue. How many edges are blue?",
+    "answer": "12-a",
+    "hint": "Start at 12 and take away the red edges.",
+    "explain": "12 − {a} = {=12-a}. {=12-a} edges are blue.",
+    "params": {
+     "a": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which shape has 6 faces, 12 edges and 8 vertices?",
+    "choices": [
+     "A cube",
+     "A square-based pyramid",
+     "A triangular prism"
+    ],
+    "answer": 0,
+    "hint": "Which shape is like a dice?",
+    "explain": "A cube has 6 square faces, 12 edges and 8 vertices."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "How many vertices does a ball (a sphere) have?",
+    "choices": [
+     "0",
+     "1",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Does a ball have any corners?",
+    "explain": "A sphere is curved all over. It has no corners, so it has 0 vertices and 0 edges."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A square-based pyramid has 5 vertices. You have put stickers on {a} of them. How many stickers do you still need?",
+    "answer": "5-a",
+    "hint": "Start at 5 and take away the stickers you have already used.",
+    "explain": "5 − {a} = {=5-a}. You need {=5-a} more stickers.",
+    "params": {
+     "a": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "How can you make sure you count every vertex of a box, and none twice?",
+    "choices": [
+     "Put a sticker on each one as you count it",
+     "Only count the ones at the front",
+     "Guess"
+    ],
+    "answer": 0,
+    "hint": "What did you do in the lab?",
+    "explain": "Marking each vertex as you count it means you do not miss the ones at the back or count one twice."
+   }
+  ]
+ }
+}

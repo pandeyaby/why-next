@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_cmjGCYDHFw",
+ "title": "Modelling exponential growth",
+ "audience": "learner",
+ "keyIdea": "An exponential model y = a · bᵗ describes something that is multiplied by the same factor b in every equal time step, starting from a at t = 0. From a description, a is the starting amount, b = 1 + r/100 for growth of r% per step, and t counts the steps the rate is given for, measured from the start. From two data points, divide the later value by the earlier one to get bⁿ for n steps, take the nth root for b, then divide back to t = 0 to find a. Use the model to predict by substituting t, and then judge the answer: real growth runs into limits such as food, space or the number of people, so exponential models work only over limited ranges.",
+ "familyTip": "Pick a savings account or a phone game that boosts points by a percentage. Together, write its model as start × factorᵗ, predict the value after five steps, then check it on a calculator. Ask: could this keep going for fifty steps? What would stop it?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Match each description to its growth factor b. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "b = 1.05",
+    "b = 1.5",
+    "b = 0.95"
+   ],
+   "items": [
+    [
+     "grows 5% a year",
+     0
+    ],
+    [
+     "grows by half each month",
+     1
+    ],
+    [
+     "falls 5% a year",
+     2
+    ],
+    [
+     "is 105% of last year's value",
+     0
+    ],
+    [
+     "rises 50% every week",
+     1
+    ],
+    [
+     "keeps 95% of its value each year",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagexpmod",
+  "caption": "Flagship lab: fit b to data, build a · bᵗ from stories, predict with the model, judge whether a prediction is reasonable, and fit a model from two points.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An exponential model is y = a · bᵗ. The start value a is the amount when t = 0. The factor b is what you multiply by in one time step. The number t counts the steps.",
+   "Growth of r% in each step means b = 1 + r/100. So 4% a year gives b = 1.04, and tripling gives b = 3. If a town has 12,000 people in 2018, then t is the years since 2018. For 2030, t = 12, not 2030.",
+   "Two points can give the model. Say y is 450 when t = 2 and 1518.75 when t = 5. Divide: 1518.75 ÷ 450 = 3.375. That is b³, since the points are 3 steps apart. The cube root gives b = 1.5. Then go back 2 steps: 450 ÷ 1.5² = 200, so a = 200.",
+   "To predict, put the time into the model. £500 at 4% gives 500 · 1.04⁹ ≈ £712 after 9 years. Then ask if the answer makes sense. A virus can't grow by 25% a week for two years. There are not enough people."
+  ],
+  "adult": [
+   "Ages 15 to 17. The US Common Core asks students to build exponential functions from a description of a relationship or from two input–output pairs (F-LE.2). It also asks them to write a function that models a situation (F-BF.1a). In England, GCSE Maths covers compound interest and growth and decay, and A level uses exponential models and their limits.",
+   "The method has three parts. Set t = 0 at the start of the story and choose the step the rate is per. Turn a percentage into a factor, b = 1 + r/100. With two points n steps apart, the ratio of the values is bⁿ, so b is its nth root. Then a is a known value divided by b to the power of its t. After predicting, test the size against the context.",
+   "Common mistakes: using the rate as the factor (0.04 or 4 instead of 1.04); putting the calendar year in for t; using the ratio over several steps as the factor for one step, as in b = 4 when 200 becomes 800 over two hours; dividing a rise by the number of steps instead of taking a root; leaving a as a value that is not at t = 0; treating compound growth as simple interest, so £500 at 4% is thought to take 10 years to pass £700; and trusting a long-range prediction that breaks real limits.",
+   "In the lab, students drag b until a curve fits three data sets, then build four models from stories, slot by slot. Next they drag a time marker to the first step that reaches a target. They judge six predictions as reasonable or broken. Last, they find b and then a from three pairs of points, none at t = 0."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "£800 is invested at 3% compound interest a year. Which model gives the value after t years?",
+   "choices": [
+    "800 · 1.03ᵗ",
+    "800 · 0.03ᵗ",
+    "800 + 1.03t"
+   ],
+   "answer": 0,
+   "hint": "Growth of r% multiplies by 1 + r/100 each year.",
+   "explain": "3% growth is × 1.03 each year, so V = 800 · 1.03ᵗ. 0.03ᵗ would shrink the money, and adding gives a straight line."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A colony starts at {a} cells and doubles every hour. Using y = a · 2ᵗ, how many cells are there after 3 hours?",
+   "answer": "a*8",
+   "hint": "2³ = 8, so multiply the start by 8.",
+   "explain": "y = {a} · 2³ = {a} × 8 = {=a*8} cells.",
+   "params": {
+    "a": [
+     50,
+     400
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A value is 150 at t = 0 and 216 at t = 2. What is b?",
+   "choices": [
+    "1.2",
+    "1.44",
+    "1.22"
+   ],
+   "answer": 0,
+   "hint": "216 ÷ 150 is b², because the points are 2 steps apart.",
+   "explain": "216 ÷ 150 = 1.44 = b², so b = √1.44 = 1.2. 1.44 is the change over two steps, and 1.22 just halves the 44% rise."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A town had 4,000 people in 2015 and grows by a factor of 1.1 each year. Write the model with t = years since 2015. What is t for the year {y}?",
+   "answer": "y-2015",
+   "hint": "Count the years from the start, 2015.",
+   "explain": "t = {y} − 2015 = {=y-2015}. The model is P = 4000 · 1.1ᵗ, so you use t = {=y-2015}, not {y}.",
+   "params": {
+    "y": [
+     2018,
+     2030
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A model says a phone game will have 10¹² players in 3 years. What is the best comment?",
+   "choices": [
+    "Unreasonable: that is far more than the people on Earth.",
+    "Fine, if the arithmetic is right.",
+    "Exponential models are always wrong."
+   ],
+   "answer": 0,
+   "hint": "Compare the answer with a real limit.",
+   "explain": "About 8 × 10⁹ people are alive, so 10¹² players is impossible. The model may fit early data, but limits stop the growth."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Bacteria grow from 300 to 2700 in 2 hours. What is the hourly growth factor?",
+    "choices": [
+     "3",
+     "9",
+     "4.5"
+    ],
+    "answer": 0,
+    "hint": "2700 ÷ 300 is the change over 2 hours, which is b².",
+    "explain": "2700 ÷ 300 = 9 = b², so b = 3. 9 is the 2-hour factor, and 4.5 halves 9 instead of taking the root."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "£500 at 4% compound interest a year. After how many whole years does it first pass £700?",
+    "choices": [
+     "9",
+     "10",
+     "8"
+    ],
+    "answer": 0,
+    "hint": "Work out 500 · 1.04ᵗ for t = 8 and t = 9.",
+    "explain": "500 · 1.04⁸ ≈ £684 and 500 · 1.04⁹ ≈ £712, so 9 years. Thinking 40% ÷ 4% = 10 treats it as simple interest."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A value is 1100 at t = 1 and 1331 at t = 3. What is a?",
+    "choices": [
+     "1000",
+     "1100",
+     "909"
+    ],
+    "answer": 0,
+    "hint": "Find b first, then go back one step from t = 1.",
+    "explain": "1331 ÷ 1100 = 1.21 = b², so b = 1.1. Then a = 1100 ÷ 1.1 = 1000. 1100 is the value at t = 1, and 909 divides by b twice."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A video has {v} views and the views triple every day. Using y = {v} · 3ᵗ, how many views after 2 days?",
+    "answer": "v*9",
+    "hint": "Each day multiplies by 3, so 2 days multiply by 3² = 9.",
+    "explain": "y = {v} · 3² = {v} × 9 = {=v*9} views.",
+    "params": {
+     "v": [
+      100,
+      900
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Cases of a disease are 40 and rise 25% a week. Which model fits?",
+    "choices": [
+     "C = 40 · 1.25ᵗ, t in weeks",
+     "C = 40 · 25ᵗ, t in weeks",
+     "C = 1.25 · 40ᵗ, t in weeks"
+    ],
+    "answer": 0,
+    "hint": "a is the start, b = 1 + 25/100.",
+    "explain": "Start 40, factor 1.25 per week. Using 25 as the factor, or swapping a and b, gives a different function."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which prediction from C = 40 · 1.25ᵗ is most reasonable to trust?",
+    "choices": [
+     "about 78 cases after 3 weeks",
+     "about 2 × 10¹¹ cases after 100 weeks",
+     "about 3 × 10⁵ cases after 40 weeks"
+    ],
+    "answer": 0,
+    "hint": "Short ranges are safest. Check sizes against real limits.",
+    "explain": "40 · 1.25³ ≈ 78 is close to the data. After 100 weeks the model gives more cases than people alive, and 40 weeks is far outside the data too."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A model is y = {a} · 1.5ᵗ. What is y when t = 2?",
+    "answer": "a*2.25",
+    "hint": "Square the factor first: 1.5² = 2.25, then multiply by a.",
+    "explain": "y = {a} × 1.5² = {a} × 2.25 = {=a*2.25}.",
+    "params": {
+     "a": [
+      40,
+      400
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A population triples every 2 years. What is the yearly factor?",
+    "choices": [
+     "√3 ≈ 1.73",
+     "1.5",
+     "3"
+    ],
+    "answer": 0,
+    "hint": "Two years of growth is b², and that must equal 3.",
+    "explain": "b² = 3, so b = √3 ≈ 1.73. 1.5 shares the tripling out by dividing, and 3 is the factor for two years."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why does 2000 · 1.05ᵗ grow faster each year than 2000 + 100t?",
+    "choices": [
+     "Each year's 5% is taken of a bigger amount.",
+     "1.05 is bigger than 100.",
+     "It starts higher."
+    ],
+    "answer": 0,
+    "hint": "Ask what the 5% is taken of each year: the start, or the new amount?",
+    "explain": "Compound growth takes 5% of the new, larger amount, so the yearly rise grows. Both start at 2000, and 2000 + 100t adds the same 100 every year."
+   }
+  ]
+ }
+}

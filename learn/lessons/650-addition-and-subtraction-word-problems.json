@@ -1,0 +1,168 @@
+{
+ "topicId": "mt_yJmvUCCym7",
+ "title": "Addition and subtraction word problems",
+ "audience": "family",
+ "keyIdea": "A word problem is a little story with numbers. Act it out with objects or a quick drawing, then ask: do more come, or do some go away? More coming means add (5 ducks, 3 more come: 5 + 3 = 8). Some going away means take away (7 birds, 3 fly away: 7 − 3 = 4). Putting two groups together also means add (4 red and 2 green apples: 6 in all). Check the answer makes sense: if some went away, there must be fewer than at the start.",
+ "familyTip": "Turn snack time into number stories. 'You have 6 grapes. You eat 2. How many are left?' Let your child move the real grapes, then say the answer. Swap roles: your child tells you a story and you solve it. Sometimes give a silly answer and let them catch it: 'I ate 2, so now there are 8!'",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Do more come, or do some go? Drag each story, or tap it then a box.",
+  "opts": {
+   "bins": ["more come: add", "some go: take away"],
+   "items": [
+    ["3 more dogs run in", 0],
+    ["2 cookies are eaten", 1],
+    ["Dad brings 4 more cups", 0],
+    ["5 leaves blow away", 1],
+    ["1 more child sits down", 0],
+    ["3 bubbles pop", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagstory",
+  "caption": "Flagship lab: make birds fly away, bring ducks in, count apples, sort stories, build 6 − 2 = 4, and check Pip's answers.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "A word problem is a story with numbers. You can act it out with toys or draw it.",
+   "7 birds sit on a fence. 3 fly away. Now there are fewer birds. Count the birds that stay: 4. So 7 take away 3 is 4.",
+   "5 ducks swim. 3 more come. Now there are more ducks. Count them all: 8. So 5 add 3 is 8. 4 red apples and 2 green apples make 6 apples in all.",
+   "Ask: do more come, or do some go? Then check your answer. If some go away, the answer must be less than the start."
+  ],
+  "adult": [
+   "Ages 4 to 6. This is CCSS K.OA.2 (solve addition and subtraction word problems, and add and subtract within 10, by using objects or drawings to represent the problem) and NC Year 1 (solve one-step problems that involve addition and subtraction, using concrete objects and pictorial representations). Key words: add, take away, altogether, how many left, more, fewer, number sentence. The problem types are add to (result unknown), take from (result unknown) and put together (total unknown).",
+   "Young children solve these by modelling the action: they make the starting set, then join or remove objects, then count. That is why the lab has them move the birds and ducks themselves before naming the operation. The question 'do more come, or do some go?' links the story structure to + or −, and writing the number sentence in story order (start, change, result) builds the bridge to symbols.",
+   "Common mistakes: answering with the number that changed (3 flew away, so '3'); adding every pair of numbers whatever the story says (7 birds, 3 fly away, '10'); counting only one part of a put-together set; writing the numbers in the wrong order (2 − 6); and recounting an object twice. A quick 'more or fewer at the end?' check catches most of these.",
+   "In the lab your child taps birds to make 3 fly away and counts the 4 that stay, drags 3 ducks into a pond of 5, taps 6 apples to count them once each, sorts six stories into 'more' or 'fewer', builds 6 − 2 = 4 from cards, and checks whether Pip's answers make sense on a number track."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "7 birds sit on a fence. 3 fly away. How many birds are left?",
+   "choices": ["4", "3", "10"],
+   "answer": 0,
+   "hint": "Some birds go away. Will there be more or fewer? Count the ones that stay.",
+   "explain": "3 fly away, so there are fewer. 7 take away 3 is 4 birds left."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{a} ducks swim in a pond. {b} more ducks come. How many ducks now?",
+   "answer": "a+b",
+   "hint": "More ducks come, so there are more. Start at {a} and count on {b}.",
+   "explain": "{a} add {b} makes {=a+b}. More came, so the answer is more than {a}.",
+   "params": {"a": [2, 7], "b": [1, 3]},
+   "where": "a+b<=10"
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "There are {a} cakes. {b} are eaten. How many cakes are left?",
+   "answer": "a-b",
+   "hint": "Eaten means they go away. Take {b} away from {a}.",
+   "explain": "{a} take away {b} leaves {=a-b} cakes. Fewer are left than at the start.",
+   "params": {"a": [5, 10], "b": [1, 4]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "6 apples. 2 are eaten. Which number sentence tells the story?",
+   "choices": ["6 − 2 = 4", "6 + 2 = 8", "2 − 6"],
+   "answer": 0,
+   "hint": "Start with how many there were. Do apples come or go?",
+   "explain": "Start with 6. 2 go away, so take away: 6 − 2 = 4."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "8 birds. 2 fly away. Pip says there are 10 birds now. Is Pip right?",
+   "choices": ["No, there should be fewer than 8", "Yes, 10 is right", "No, there should be more than 10"],
+   "answer": 0,
+   "hint": "Birds flew away. Should there be more or fewer than 8?",
+   "explain": "Birds went away, so there must be fewer than 8. Pip added. 8 take away 2 is 6."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "{a} frogs sit on a log. {b} jump into the water. How many frogs are still on the log?",
+    "answer": "a-b",
+    "hint": "Some frogs go away. Take {b} away and count the frogs that stay.",
+    "explain": "{a} take away {b} is {=a-b}. Fewer frogs are left on the log.",
+    "params": {"a": [6, 9], "b": [2, 5]}
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "{a} red cars and {b} blue cars. How many cars in all?",
+    "answer": "a+b",
+    "hint": "Put the two groups together. Count every car once.",
+    "explain": "{a} and {b} make {=a+b} cars in all.",
+    "params": {"a": [3, 6], "b": [2, 4]}
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "5 kids play. 2 more kids come. How many kids now?",
+    "choices": ["7", "3", "2"],
+    "answer": 0,
+    "hint": "More kids come. Will there be more or fewer than 5?",
+    "explain": "More came, so add: 5 and 2 more make 7 kids."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which story is a take-away story?",
+    "choices": ["4 balloons. 1 pops.", "4 balloons. 1 more is blown up.", "4 red and 1 blue balloon"],
+    "answer": 0,
+    "hint": "In a take-away story, some go away.",
+    "explain": "A balloon that pops goes away, so there are fewer. 4 take away 1 is 3."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "7 birds. 3 fly away. Sam says the answer is 3. What did Sam count?",
+    "choices": ["the birds that flew away", "the birds that are left", "all the birds"],
+    "answer": 0,
+    "hint": "The question asks how many are left on the fence.",
+    "explain": "3 is how many flew away. The question asks how many are left: 4."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "3 cats. 4 more cats come. Which number sentence fits?",
+    "choices": ["3 + 4 = 7", "4 − 3 = 1", "3 − 4"],
+    "answer": 0,
+    "hint": "Do cats come or go? Start with 3.",
+    "explain": "More cats come, so add. Start with 3: 3 + 4 = 7."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "9 sweets. 1 is eaten. Is 10 a sensible answer?",
+    "choices": ["No, there must be fewer than 9", "Yes", "No, there must be more than 10"],
+    "answer": 0,
+    "hint": "A sweet was eaten. More or fewer than 9?",
+    "explain": "Eating takes a sweet away, so there are fewer than 9. 9 take away 1 is 8."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "How can you work out a word problem if you are stuck?",
+    "choices": ["act it out with toys or draw it", "add the two numbers every time", "guess a big number"],
+    "answer": 0,
+    "hint": "What did we do with the birds and ducks?",
+    "explain": "Acting it out or drawing it shows if things come or go. Then you can count the answer."
+   }
+  ]
+ }
+}

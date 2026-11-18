@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_9roOYvUvad",
+ "title": "Calculating wave speed (v = fλ)",
+ "audience": "learner",
+ "keyIdea": "Wave speed v equals frequency f times wavelength λ (v = f × λ). Rearrange to λ = v ÷ f or f = v ÷ λ. Convert to Hz and metres before calculating so the product is in m/s.",
+ "familyTip": "Ask: if a wave has frequency 5 Hz and wavelength 2 m, what is its speed? Then flip it: speed 340 m/s, frequency 680 Hz — what is λ?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Wave-equation idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "v = f × λ",
+     0
+    ],
+    [
+     "λ = v ÷ f",
+     0
+    ],
+    [
+     "v = f + λ",
+     1
+    ],
+    [
+     "convert kHz and cm first",
+     0
+    ],
+    [
+     "λ = v × f",
+     1
+    ],
+    [
+     "Hz × m gives m/s",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagvfl",
+  "caption": "Flagship lab: reveal v = f × λ, calculate speed, rearrange for λ, convert kHz/cm, catch sum/unit mix-ups, then challenge.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A wave has a speed v, a frequency f (how many waves per second) and a wavelength λ (the length of one wave). They link by v = f × λ.",
+   "If you know two of them, you can find the third. Speed is frequency times wavelength. Wavelength is speed divided by frequency. Frequency is speed divided by wavelength.",
+   "Units matter. Frequency in hertz (Hz) and wavelength in metres (m) give speed in metres per second (m/s). Change kilohertz to hertz and centimetres to metres before you multiply.",
+   "Do not add frequency and wavelength. Speed is a product, not a sum."
+  ],
+  "adult": [
+   "Ages 13 to 15. KS3 waves / NGSS HS-PS4-1: calculate and rearrange v = f × λ with coherent units. This is the calculation lesson, not the rope-properties lab.",
+   "Words: wave speed, frequency, wavelength, hertz, metres per second, rearrange. Common mistakes: v = f + λ; mixing kHz with cm; using λ = v × f; thinking Hz × m is not m/s.",
+   "In the lab the learner reveals the equation, multiplies for v, divides for λ, converts units, spots the sum myth, and orders the method."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Wave speed v equals…",
+   "choices": [
+    "f × λ",
+    "f + λ",
+    "f − λ"
+   ],
+   "answer": 0,
+   "hint": "Speed is a product of frequency and wavelength.",
+   "explain": "The wave equation is v = f × λ. Adding or subtracting mixes the quantities wrongly."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "f = {a} Hz and λ = {b} m. Speed v in m/s?",
+   "answer": "a*b",
+   "hint": "Multiply the frequency in hertz by the wavelength in metres.",
+   "explain": "v = {a} × {b} = {=a*b} m/s.",
+   "params": {
+    "a": [
+     2,
+     8
+    ],
+    "b": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is the mix-up?",
+   "choices": [
+    "v = f + λ",
+    "v = f × λ",
+    "λ = v ÷ f"
+   ],
+   "answer": 0,
+   "hint": "Spot the false link between v, f and λ.",
+   "explain": "Speed is not the sum of frequency and wavelength. The true links are v = f × λ and λ = v ÷ f."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "v = {a} m/s and f = {b} Hz. Wavelength λ in m?",
+   "answer": "a/b",
+   "hint": "Rearrange: wavelength equals speed divided by frequency (λ = v ÷ f).",
+   "explain": "λ = {a} ÷ {b} = {=a/b} m.",
+   "params": {
+    "a": [
+     200,
+     400
+    ],
+    "b": [
+     50,
+     100
+    ]
+   },
+   "where": "a%b==0"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Before calculating with 2 kHz and 15 cm you should…",
+   "choices": [
+    "convert to 2000 Hz and 0.15 m",
+    "keep kHz and cm mixed",
+    "add 2 and 15 for speed"
+   ],
+   "answer": 0,
+   "hint": "Put frequency in Hz and wavelength in metres.",
+   "explain": "2 kHz = 2000 Hz and 15 cm = 0.15 m. Then v = 2000 × 0.15 = 300 m/s."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Hz × m gives…",
+    "choices": [
+     "m/s",
+     "Hz only",
+     "no unit"
+    ],
+    "answer": 0,
+    "hint": "What unit does the product of frequency and wavelength carry?",
+    "explain": "Frequency in Hz (1/s) times length in m gives speed in m/s."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "To find frequency from v and λ use…",
+    "choices": [
+     "f = v ÷ λ",
+     "f = v × λ",
+     "f = v + λ"
+    ],
+    "answer": 0,
+    "hint": "Rearrange v = f × λ for f.",
+    "explain": "Divide both sides by λ: f = v ÷ λ."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "f = {a} Hz, λ = {b} m. v?",
+    "answer": "a*b",
+    "hint": "Multiply frequency by wavelength to get speed in metres per second.",
+    "explain": "v = {a} × {b} = {=a*b} m/s.",
+    "params": {
+     "a": [
+      3,
+      9
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "2 kHz equals…",
+    "choices": [
+     "2000 Hz",
+     "2 Hz",
+     "0.002 Hz"
+    ],
+    "answer": 0,
+    "hint": "Remember kilo means one thousand when converting kilohertz to hertz.",
+    "explain": "1 kHz = 1000 Hz, so 2 kHz = 2000 Hz."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Correct first step on mixed units is…",
+    "choices": [
+     "convert to Hz and m",
+     "add f and λ",
+     "skip units and guess"
+    ],
+    "answer": 0,
+    "hint": "Fix units before the product.",
+    "explain": "Convert first so v = f × λ uses Hz and metres."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "v = {a} m/s and f = {a} Hz. Wavelength λ in m?",
+    "answer": "1",
+    "hint": "Divide speed by frequency when both values match; λ becomes 1 m.",
+    "explain": "When v and f are the same number, λ = v ÷ f = {a} ÷ {a} = 1 m.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "This lesson’s key skill vs wave-properties lab is…",
+    "choices": [
+     "calculating and rearranging v = f × λ with units",
+     "only wiggling a rope with no numbers",
+     "drawing transverse vs longitudinal only"
+    ],
+    "answer": 0,
+    "hint": "Focus on the calculation and unit work.",
+    "explain": "Here you calculate and rearrange with coherent units. Rope and wave-type demos live in the properties lesson."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "λ = {a} m and f = {b} Hz. How much is v?",
+    "answer": "a*b",
+    "hint": "Multiply wavelength by frequency; the product is speed in m/s.",
+    "explain": "v = {a} × {b} = {=a*b} m/s.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      4,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Using λ = v × f instead of λ = v ÷ f…",
+    "choices": [
+     "gives a huge wrong wavelength",
+     "always still correct",
+     "converts units for free"
+    ],
+    "answer": 0,
+    "hint": "Check which operation the rearrange needs.",
+    "explain": "Wavelength is speed divided by frequency. Multiplying inflates the answer."
+   }
+  ]
+ }
+}

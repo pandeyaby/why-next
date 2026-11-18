@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_y6FdfXzHiq",
+ "title": "Test statistics and their null distribution",
+ "audience": "family",
+ "keyIdea": "A test statistic is a quantity calculated from the sample that is used to test H₀. In a binomial test it is X, the number of successes in n trials, not the parameter p. Its null distribution is the distribution X would have if H₀ were true: X ~ B(n, p₀), where n is the number of trials and p₀ is the value stated in H₀, never the sample proportion. The binomial model needs a fixed n, two outcomes, independent trials and a constant p. The null distribution depends only on H₀ and n, so it tells you which results are ordinary and which would be rare if H₀ were true.",
+ "familyTip": "Ask your teenager how they would test whether a dice rolls too many sixes. What would they count? What distribution would that count have if the dice were fair? Then ask why the distribution uses 1/6 and not the proportion of sixes they actually rolled.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which numbers go into the null distribution X ~ B(n, p₀)? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "goes into B(n, p₀)",
+    "does not"
+   ],
+   "items": [
+    [
+     "n = 60 rolls",
+     0
+    ],
+    [
+     "p₀ = 1/6 from H₀",
+     0
+    ],
+    [
+     "15 sixes observed",
+     1
+    ],
+    [
+     "sample proportion 15/60",
+     1
+    ],
+    [
+     "n = 20 tosses",
+     0
+    ],
+    [
+     "5% significance level",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtstat",
+  "caption": "Flagship lab: pick the test statistic, build X ~ B(n, p₀), simulate H₀, check binomial conditions, move H₀ under fixed data, and read tails.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A hypothesis test needs one number from the sample to judge the claim. That number is the test statistic. In a binomial test it is X, the count of successes: the sixes in 60 rolls, or the faulty bolts in 50. The parameter p is not the statistic. It belongs to the whole population, and H₀ makes a claim about it.",
+   "Next, write down how X would behave if H₀ were true. This is the null distribution. For 60 rolls of a dice with H₀: p = 1/6, it is X ~ B(60, 1/6). The n is the number of trials. The p is the value in H₀, not the share you saw. If you rolled 15 sixes, 15/60 is your evidence, so it cannot also be the model you test it against.",
+   "Why assume H₀? Because we need a fixed model to measure surprise. If you simulate a fair coin tossed 20 times, again and again, most head counts land near np = 10. A count of 17 hardly ever happens, so seeing 17 would be strong evidence against a fair coin.",
+   "Check that a binomial model fits: a fixed number of trials, two outcomes, independent trials and the same p every time. Counting rolls until the first six fails, because n is not fixed. Changing H₀ moves the null distribution, but your data stay exactly where they were."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is A level Mathematics statistics: students state the test statistic and its distribution under H₀ for a binomial test, for example X ~ B(20, 0.5). It follows from writing H₀ and H₁, and leads on to p-values and critical regions, which are both tail probabilities of this distribution.",
+   "The terms. A test statistic is calculated from sample data. The null distribution is its sampling distribution when H₀ is true. For a binomial test, X ~ B(n, p₀) with mean np₀ and variance np₀(1 − p₀). It needs fixed n, two outcomes, independence and constant p. Sampling without replacement from a small population breaks independence.",
+   "Common mistakes. Students give the parameter p, or the number of trials, as the test statistic. They put the sample proportion into B(n, p) instead of p₀, or swap the observed count and n (B(15, 1/6)). Some think H₀ is assumed because it is true. Others forget to define X in context, which mark schemes require.",
+   "In the lab students choose the test statistic for four contexts and build the null distribution for three by tapping n and p. They run 300 simulations of a fair coin and watch them match B(20, 0.5). They sort six situations by whether a binomial model fits. Then they drag H₀'s p while the observed 14 stays put, and read P(X ≥ x) for 13, 15 and 17 heads."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A dice is rolled 60 times to test whether it shows six too often. What is the test statistic?",
+   "choices": [
+    "X, the number of sixes in the 60 rolls",
+    "p, the probability of a six",
+    "60, the number of rolls"
+   ],
+   "answer": 0,
+   "hint": "The statistic is calculated from the sample. Which of these is counted?",
+   "explain": "X counts sixes in the sample. p is the parameter H₀ makes a claim about, and 60 is the fixed number of trials."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Under H₀, X ~ B({=2*m}, 0.5). What is the mean of the null distribution?",
+   "answer": "m",
+   "hint": "The mean of B(n, p) is np.",
+   "explain": "np = {=2*m} × 0.5 = {m}. If H₀ is true, counts near {m} are ordinary.",
+   "params": {
+    "m": [
+     5,
+     30
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "60 rolls give 15 sixes. H₀: p = 1/6. What is the distribution of X under H₀?",
+   "choices": [
+    "X ~ B(60, 1/6)",
+    "X ~ B(60, 1/4)",
+    "X ~ B(15, 1/6)"
+   ],
+   "answer": 0,
+   "hint": "n is the number of trials; p comes from H₀.",
+   "explain": "There are 60 trials and H₀ says p = 1/6, so X ~ B(60, 1/6). 1/4 is the sample proportion 15/60, and 15 is the observed count."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Under H₀, X ~ B({=4*m}, 0.5). What is the variance of X?",
+   "answer": "m",
+   "hint": "The variance of B(n, p) is np(1 − p).",
+   "explain": "np(1 − p) = {=4*m} × 0.5 × 0.5 = {m}.",
+   "params": {
+    "m": [
+     3,
+     15
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which count cannot be modelled by a binomial distribution?",
+   "choices": [
+    "The number of rolls needed to get the first six",
+    "The number of heads in 50 coin tosses",
+    "The number of 40 patients who recover, each independently with chance 0.7"
+   ],
+   "answer": 0,
+   "hint": "Check each condition: fixed n, two outcomes, independence, constant p.",
+   "explain": "Rolling until the first six has no fixed number of trials, so it is not binomial. The other two meet every condition."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Red comes up 9 times in 40 spins. H₀: p = 0.3. What is the null distribution?",
+    "choices": [
+     "X ~ B(40, 0.3)",
+     "X ~ B(40, 0.225)",
+     "X ~ B(9, 0.3)"
+    ],
+    "answer": 0,
+    "hint": "Use the number of spins and the p in H₀.",
+    "explain": "n = 40 spins and p₀ = 0.3 from H₀. 0.225 = 9/40 is the sample proportion, which is the evidence, not the model."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why is the null distribution worked out assuming H₀ is true?",
+    "choices": [
+     "To see how likely the observed result would be if H₀ held",
+     "Because H₀ has been proved true",
+     "Because the data always agree with H₀"
+    ],
+    "answer": 0,
+    "hint": "What does the test need a fixed model for?",
+    "explain": "H₀ is assumed, not known. The model shows which results would be ordinary or rare if H₀ held, so the data can be judged against it."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "In a test of whether over 2% of bolts are faulty, 50 bolts are checked. What is the test statistic?",
+    "choices": [
+     "X, the number of faulty bolts in the 50",
+     "p = 0.02",
+     "The time until the first faulty bolt"
+    ],
+    "answer": 0,
+    "hint": "A binomial test counts successes in a fixed number of trials.",
+    "explain": "X counts faulty bolts in the sample of 50. 0.02 is the H₀ value of the parameter, and a waiting time is not a binomial count."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The same data are tested against H₀: p = 0.3 instead of H₀: p = 0.5. What changes?",
+    "choices": [
+     "The null distribution",
+     "The observed value of X",
+     "The number of trials"
+    ],
+    "answer": 0,
+    "hint": "Which of these depends on H₀?",
+    "explain": "The null distribution is B(n, p₀), so a new p₀ moves it. The data and n were fixed by the experiment."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Under H₀, X ~ B({=10*m}, 0.1). What is the expected value of X?",
+    "answer": "m",
+    "hint": "For X ~ B(n, p), the expected value is E(X) = np.",
+    "explain": "np = {=10*m} × 0.1 = {m}.",
+    "params": {
+     "m": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A spinner should land on blue with probability 0.25. It is spun {=4*m} times to test this. What is the mean of X under H₀?",
+    "answer": "m",
+    "hint": "Write X ~ B(n, 0.25), then use np.",
+    "explain": "X ~ B({=4*m}, 0.25), so the mean is {=4*m} × 0.25 = {m}.",
+    "params": {
+     "m": [
+      5,
+      25
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Under H₀: p = 0.5, X ~ B(20, 0.5) and P(X ≥ 15) ≈ 0.021. What does this mean?",
+    "choices": [
+     "15 or more heads would be rare if the coin were fair",
+     "The coin has a 2.1% chance of being fair",
+     "H₀ is true 97.9% of the time"
+    ],
+    "answer": 0,
+    "hint": "The probability is worked out assuming H₀.",
+    "explain": "It is the chance of 15 or more heads if H₀ is true. It is not the probability that H₀ is true."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "5 cards are dealt from one pack without replacement and the hearts counted. Why is B(5, 1/4) not exact?",
+    "choices": [
+     "The chance of a heart changes after each card, so trials are not independent",
+     "There are more than two suits",
+     "5 is too few trials for any binomial"
+    ],
+    "answer": 0,
+    "hint": "Does each card have the same chance of being a heart?",
+    "explain": "Without replacement the chance of a heart changes as cards are dealt, so the trials are not independent with constant p."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which is the best definition of the null distribution?",
+    "choices": [
+     "The distribution of the test statistic if H₀ is true",
+     "The distribution of the sample data you collected",
+     "The distribution of p after the test"
+    ],
+    "answer": 0,
+    "hint": "Null refers to H₀. Which option describes the statistic under H₀?",
+    "explain": "It is how the test statistic would vary from sample to sample if H₀ were true, such as X ~ B(20, 0.5)."
+   }
+  ]
+ }
+}

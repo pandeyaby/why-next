@@ -1,0 +1,272 @@
+{
+ "topicId": "mt_yxL1v4LuqR",
+ "title": "The Ocean Floor",
+ "audience": "family",
+ "keyIdea": "The ocean floor is not flat. Near the land it is shallow, then it drops down to wide, flat plains far below. It has huge mountains, including the longest mountain range on Earth, and deep, narrow valleys called trenches. The deepest place on Earth is the Mariana Trench in the Pacific Ocean, about 11,000 m down. It is so deep that Mount Everest, 8,849 m tall, would fit inside with about 2,000 m of water above its top.",
+ "familyTip": "Fill a washing-up bowl with water and hide a few upside-down cups and a bunched-up tea towel at the bottom. Cover the top with a sheet of paper so nobody can see in. Take turns to poke a straw down through the paper at different spots and mark on a drawing how far it goes. Then lift the paper: did your map match what was hidden?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it a mountain, a deep valley or a flat part of the ocean floor? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "⛰️ Mountains",
+    "🕳️ Deep valleys",
+    "➖ Flat parts"
+   ],
+   "items": [
+    [
+     "Seamount",
+     0
+    ],
+    [
+     "Mid-ocean ridge",
+     0
+    ],
+    [
+     "Mariana Trench",
+     1
+    ],
+    [
+     "A trench",
+     1
+    ],
+    [
+     "Abyssal plain",
+     2
+    ],
+    [
+     "Continental shelf",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagseabed",
+  "caption": "Flagship lab: map the hidden floor with echoes, hunt for the deepest spot, name five features, sink Everest, grow an island.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The bottom of the sea is called the ocean floor. You cannot see it, because the water is so deep and dark. So ships send a sound down. The sound bounces off the floor and comes back up. A long wait for the echo means deep water.",
+   "The ocean floor is not flat. Near the land it is shallow. Then it drops down to wide, flat plains, about 4 km down. There are mountains under the sea too. Some are taller than mountains on land. A long chain of them, the mid-ocean ridge, goes all the way round the Earth.",
+   "Trenches are deep, narrow valleys in the ocean floor. The deepest of all is the Mariana Trench in the Pacific Ocean. It is about 11,000 m deep. Mount Everest is the tallest mountain on land, at 8,849 m. If you put Everest in the trench, its top would still be under about 2,000 m of water.",
+   "Some sea mountains are volcanoes. When they erupt, lava piles up. If one grows tall enough, its top comes out of the sea as an island. The islands of Hawaii were made this way."
+  ],
+  "adult": [
+   "Ages 7 to 9. The sea floor has the same kinds of landforms as dry land, only bigger. From the coast there is the continental shelf, usually less than about 200 m deep, then the continental slope down to the abyssal plains, which lie about 3,000 to 6,000 m down. The average depth of the ocean is about 3,700 m (NOAA gives 3,682 m).",
+   "Seamounts are underwater mountains, most of them old volcanoes. Mid-ocean ridges are mountain chains where new sea floor forms; joined up they run about 65,000 km round the globe, the longest mountain range on Earth. Trenches form where one plate of the Earth's crust sinks under another, so they lie near the edges of oceans. Challenger Deep in the Mariana Trench is about 10,935 m deep.",
+   "Common mistakes: thinking the sea floor is flat like the bottom of a swimming pool; thinking the deepest water is in the middle of the ocean; thinking Everest would poke out of the Mariana Trench; and thinking islands float. Ocean islands such as Hawaii are the tops of volcanoes: Mauna Kea rises over 10,000 m from its base on the sea floor.",
+   "Ships map the floor with echo sounders: sound travels through sea water at about 1,500 m per second, so the time for the echo gives the depth. Only about a quarter of the sea floor has been mapped in detail. In the lab your child pings to map a hidden floor, probes for the deepest spot, names five features, lowers Everest into the trench and grows a volcano into an island."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the ocean floor like?",
+   "choices": [
+    "It has mountains, flat plains and deep trenches",
+    "It is flat all over, like a bath",
+    "It is soft sand everywhere with no hills"
+   ],
+   "answer": 0,
+   "hint": "Think about the shape your pings showed in the lab.",
+   "explain": "The ocean floor has huge mountains, wide flat plains and deep, narrow trenches. It is not flat."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The flat plain is {=b*1000} m deep. The top of an underwater mountain is {=a*100} m deep. How tall is the mountain, in metres?",
+   "answer": "b*1000-a*100",
+   "hint": "The mountain goes from the plain up to its top. Take the top depth away from the plain depth.",
+   "explain": "{=b*1000} − {=a*100} = {=b*1000-a*100}. The mountain is {=b*1000-a*100} m tall.",
+   "params": {
+    "a": [
+     5,
+     9
+    ],
+    "b": [
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Where is the deepest place on Earth?",
+   "choices": [
+    "The Mariana Trench in the Pacific Ocean",
+    "The middle of the Atlantic Ocean",
+    "The top of Mount Everest"
+   ],
+   "answer": 0,
+   "hint": "It is a trench, not a plain or a mountain.",
+   "explain": "The Mariana Trench in the Pacific Ocean is about 11,000 m deep, the deepest place on Earth."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The sea floor is {a} km down. A trench goes {b} km deeper than that. How deep is the bottom of the trench, in km?",
+   "answer": "a+b",
+   "hint": "Add how much deeper the trench goes to the depth of the floor.",
+   "explain": "{a} + {b} = {=a+b}. The bottom of the trench is {=a+b} km down.",
+   "params": {
+    "a": [
+     3,
+     5
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A ship sends a ping down. The echo comes back very quickly. What does that tell you?",
+   "choices": [
+    "The water there is shallow",
+    "The water there is very deep",
+    "There are lots of fish"
+   ],
+   "answer": 0,
+   "hint": "The sound goes down to the floor and back up again.",
+   "explain": "A quick echo means the sound did not have far to go, so the floor is close and the water is shallow."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Mount Everest is 8,849 m tall. The Mariana Trench is about 10,900 m deep. If Everest stood at the bottom of the trench, what would happen?",
+    "choices": [
+     "Its top would still be under water",
+     "Its top would stick out of the sea",
+     "It would fill the trench right to the top"
+    ],
+    "answer": 0,
+    "hint": "Which number is bigger, the height of Everest or the depth of the trench?",
+    "explain": "The trench is deeper than Everest is tall, so about 2,000 m of water would still be over its top."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is a trench?",
+    "choices": [
+     "A deep, narrow valley in the ocean floor",
+     "A mountain under the sea",
+     "A flat part of the sea floor"
+    ],
+    "answer": 0,
+    "hint": "Trenches are the deepest parts.",
+    "explain": "A trench is a long, deep, narrow valley in the ocean floor. The deepest is the Mariana Trench."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is the mid-ocean ridge?",
+    "choices": [
+     "A long chain of mountains under the sea",
+     "A deep hole in the sea floor",
+     "A big wave in the middle of the ocean"
+    ],
+    "answer": 0,
+    "hint": "A ridge goes up, not down.",
+    "explain": "The mid-ocean ridge is a chain of underwater mountains. Joined up, it is the longest mountain range on Earth."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "An underwater mountain is {h} km tall. It stands on the bottom of a trench that is {d} km deep. How many km of water are above its top?",
+    "answer": "d-h",
+    "hint": "Take the height of the mountain away from the depth of the trench.",
+    "explain": "{d} − {h} = {=d-h}, so {=d-h} km of water are above the top.",
+    "params": {
+     "d": [
+      9,
+      11
+     ],
+     "h": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How did the islands of Hawaii form?",
+    "choices": [
+     "Volcanoes on the sea floor grew until their tops came out of the sea",
+     "They float on top of the water",
+     "Sand piled up in the sea"
+    ],
+    "answer": 0,
+    "hint": "Think about the volcano in the lab.",
+    "explain": "Lava from undersea volcanoes piled up until the tops rose above the sea. Islands do not float."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "How do ships find out how deep the sea is?",
+    "choices": [
+     "They send down a sound and time the echo",
+     "They look down through the water",
+     "They measure how big the waves are"
+    ],
+    "answer": 0,
+    "hint": "Remember the pings in the lab.",
+    "explain": "The ship sends a sound down. The longer the echo takes to come back, the deeper the water."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A volcano sits on the sea floor {d},000 m down. Each eruption makes it 1,000 m taller. How many eruptions until its top reaches the surface?",
+    "answer": "d",
+    "hint": "How many lots of 1,000 m make {d},000 m?",
+    "explain": "{d},000 ÷ 1,000 = {d}. After {d} eruptions the top reaches the surface.",
+    "params": {
+     "d": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Where is the ocean shallowest?",
+    "choices": [
+     "Near the land, on the continental shelf",
+     "In the middle of the ocean",
+     "In a trench"
+    ],
+    "answer": 0,
+    "hint": "Which part of the floor is closest to the coast?",
+    "explain": "The continental shelf is the shallow edge next to the land. Further out, the floor drops much deeper."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which of these is NOT found on the ocean floor?",
+    "choices": [
+     "Clouds",
+     "Mountains",
+     "Deep valleys"
+    ],
+    "answer": 0,
+    "hint": "Two of these are shapes of the floor.",
+    "explain": "The ocean floor has mountains and deep valleys (trenches). Clouds are in the sky."
+   }
+  ]
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every number recomputed: np(1 − p) is 0.57 for B(12, 0.05), 4.8 for B(30, 0.2), 2.1 for B(10, 0.7) and 2.5 for B(10, 0.5); the hypergeometric variance for 10 draws from 20 with 10 red is 10 × 0.25 × 10/19 = 1.32; the tray mixture with p in {0.45, 0.7, 0.95} has theoretical variance E[10p(1 − p)] + Var(10p) = 1.68 + 4.17 = 5.85 (simulation gives 6.24 from 120 seeded trays) against 2.1; the tiring shooter's mean is 16 − 190d, so d = 0.0175 is the first slider step at or below 13, and P(X ≥ 18) is computed exactly by a Poisson-binomial recursion (0.206 for constant p = 0.8, matching 1 − binomcdf(20, 0.8, 17)). The four conditions and the 'criticise in context' requirement were checked against the AQA, Edexcel and OCR A-level Mathematics specifications and mark schemes."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the errors named in A-level examiner reports on binomial criticism questions: a generic critique with no context (critique step option 2, challenge 'generic', p1), attacking a condition that holds such as fixed n or two outcomes (challenge 'n' and 'two', critique options on n and the rim), treating an unknown or estimated p as a broken assumption (challenge 'value', cinema option 3, m1), inventing problems for a fair coin (coin critique, challenge 'pedant' and 'memory', p5), and treating a matching mean as proof of fit (seeds step, challenge 'mean', m8). The refinement step targets pooling as a false fix (challenge 'pool', m4)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagbcrit simulates what a broken assumption does to the counts: a seeded 120-tray germination histogram with B(10, 0.7) outlines and a tray-effect switch, a per-shot probability chart with a fatigue slider and an exact Poisson-binomial P(X ≥ 18), a variance-ratio gauge for three real contexts, a context-critique picker in which one model fits, and a refinement picker. flagbfit (When a binomial model fits) lights the four conditions and finds which one is broken, flagbinp computes binomial probabilities and flagbshape shows distribution shape; none simulates overdispersion or drifting p. Gate similarity under 30% to every lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners discover that the mean stays near 7 while the variance roughly triples when trays differ, that a tiring player's expected score and P(X ≥ 18) fall well below the B(20, 0.8) values even with n fixed and two outcomes, that a variance far from np(1 − p) signals clustering or holding back, that a generic critique is refused for lacking context, and that pooling trays is refused as a fix. Completion messages state each conclusion."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Two predictions with a tempting wrong option that the lab disproves: 'About as spread out' when trays differ but average p is 0.7 (the histogram and variance 6.24 against 2.1 disprove it), and 'Yes: n is fixed and each throw is score or miss' for the tiring player (the chart shows the expected score dropping to 12.2 against 16)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating challenge questions with ten distinct wrong-answer messages from why(): fixed n is not in doubt, two outcomes still hold, matching means are not enough, n size is not a condition, a generic critique lacks context, doubting the value of p is not a broken assumption, edge landings are negligible, a coin has no memory, pooling keeps clustering, and rounding changes nothing. Each wrong card in the critique and refine steps has its own reason as well."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner explanation measures grade 4.3 on learn/readability.py fk_grade (learner limit 6.5) and adult 7.5 (limit 9.5) after splitting the long variance-formula sentences. Learner text keeps the symbols the course uses (B(n, p), np(1 − p)) with short sentences. Canvas labels are short: 'Bars: 120 trays. Outlines: B(10, 0.7)', 'Drop in p per shot: 0.020', 'Data set 1 of 3: fits B(n, p)?'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Filler gate clean. Each learner paragraph carries one idea: the four conditions, critique in context, the variance test (both directions), and refinement or accepting a fitting model. Items cover critique (p1, m1, m6), drifting p (p2), variance checks (p3, p4, m3, m5, m7, m8), a fitting model (p5), without replacement (m2) and refinements (m4, m9) with no repeated stems."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 x 640 Android screenshots in light and dark and 1200 px desktop at the start, during Show me and at the end of each step: the 11-bar histogram and its axis numbers fit, the stats were split onto two lines after one line shrank too small at 360 px, the 20 shot bars and slider fit with readable end labels, the variance gauge and three verdict buttons fit side by side, and the critique cards wrap their text to three lines inside the card. The B(10, 0.7) outline marks were switched to the theme text colour after they were too faint in dark mode."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button twin: Plant: same conditions and Plant: trays differ, Less tiring and More tiring for the slider, Fits, Too spread and Too tight, and Option 1 to 3 whose accessible names start with the visible label followed by the full card text. The canvas aria-label is rewritten after each action with the numbers and the conclusion. walk.cjs runs every task with Show me and axe WCAG 2.1 AA in light and dark on desktop and iPhone 13 with no console or page errors."
+  }
+ },
+ "sources": [
+  "AQA A-level Mathematics (7357) specification, section N: statistical distributions, binomial distribution conditions and evaluating models",
+  "Pearson Edexcel A level Mathematics (9MA0) Statistics, chapter on modelling with probability: binomial distribution and criticising models; examiner reports on 'comment on the suitability of the model' items",
+  "OCR A Level Mathematics A (H240) specification, 2.03: binomial distribution and model evaluation",
+  "Rice, J. A. (2007) Mathematical Statistics and Data Analysis, 3rd ed.: hypergeometric variance and the finite population correction",
+  "Agresti, A. (2013) Categorical Data Analysis, 3rd ed., section on overdispersion in binomial counts"
+ ]
+}

@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_phpWaRPyUW",
+ "title": "Expected frequency",
+ "audience": "learner",
+ "keyIdea": "Expected frequency = probability × number of trials. A fair dice rolled 300 times should give about 1/6 × 300 = 50 sixes. It is a long-run average, not a promise: real results scatter round it, so 47 or 55 sixes are normal and exactly 50 is not even likely. With more trials the relative frequency (count ÷ trials) settles closer to the probability, even though the count can drift further from the expected number. A result far from expected, like 171 sixes in 600 rolls, is strong evidence that the dice is biased.",
+ "familyTip": "Roll a real dice 60 times together and tally the sixes. Before you start, work out the expected number (10) and each write down a guess for what you will actually get. Then compare: being a few off is normal. Ask what you would think if you got 25.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Expected count for 120 rolls of a fair dice, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "matches 1/6 × 120 = 20",
+    "does not match"
+   ],
+   "items": [
+    [
+     "expected sixes: 20",
+     0
+    ],
+    [
+     "expected 4s: 20",
+     0
+    ],
+    [
+     "expected sixes: 6",
+     1
+    ],
+    [
+     "expected odd numbers: 20",
+     1
+    ],
+    [
+     "expected sixes: 60",
+     1
+    ],
+    [
+     "expected 1s: 20",
+     0
+    ],
+    [
+     "expected sixes: 120",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagexpf",
+  "caption": "Flagship lab: place expected sixes, work out P × trials, rerun 120 rolls, watch the proportion settle, and judge four dice.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Expected frequency tells you how many times an outcome should happen, on average. Multiply its probability by the number of trials. A fair dice has P(six) = 1/6, so in 120 rolls you expect 1/6 × 120 = 20 sixes.",
+   "Expected does not mean exact. Roll 120 times and you might get 17 sixes, or 23. Do it again and you get a different number. Results scatter round the expected value. Hitting it exactly is quite rare.",
+   "More trials help. The fraction of sixes, count ÷ rolls, gets closer to 1/6 as the rolls go up. That fraction is the relative frequency. It is how we estimate a probability from an experiment.",
+   "You can use expected frequency to test a dice. In 600 rolls you expect 100 sixes. Getting 93 is normal. Getting 171 would be very unlikely with a fair dice, so the dice is probably biased."
+  ],
+  "adult": [
+   "Ages 12 to 14. In England this is Key Stage 3 probability (relative frequency, and the expected results of experiments) and the GCSE content on expected outcomes. In the US it is Common Core 7.SP.C.6: approximate the probability of an event by collecting data and observing its long-run relative frequency, and predict the approximate relative frequency given the probability (for example, a number cube rolled 600 times gives about 200 rolls of 3 or 6).",
+   "The rule is E = p × n. It assumes independent trials with the same probability each time, which is why draws from a bag must be replaced. The probability comes first: for two coins, P(both heads) = 1/2 × 1/2 = 1/4, because HH, HT, TH and TT are equally likely; three outcomes (two heads, one of each, two tails) are not.",
+   "Observed counts vary. For 120 rolls the standard deviation of the number of sixes is about 4, so counts from roughly 12 to 28 are ordinary. As n grows the proportion settles (the law of large numbers), while the typical gap between the count and np grows like the square root of n. A gap of 71 in 600 rolls is nearly eight standard deviations, far beyond chance.",
+   "Common mistakes: expecting the exact value every time; using the number of faces or sections as the answer; using 1/2 for any two-way event; adding outcomes without checking they are equally likely; and calling a dice biased because one run was a few off. In the lab you place expected counts on a line, work out p × n in four contexts, repeat 120 rolls six times, compare 30, 300 and 3000 rolls, and judge four dice from 600 rolls each."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A fair dice is rolled 300 times. How many sixes do you expect?",
+   "choices": [
+    "50",
+    "6",
+    "150"
+   ],
+   "answer": 0,
+   "hint": "P(six) = 1/6. Multiply by the number of rolls.",
+   "explain": "Expected = 1/6 × 300 = 50. 6 is the number of faces, and 150 would be P = 1/2."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A fair dice is rolled {=6*n} times. How many 4s do you expect?",
+   "answer": "n",
+   "hint": "P(4) = 1/6. Divide the rolls by 6.",
+   "explain": "Expected = 1/6 × {=6*n} = {n}.",
+   "params": {
+    "n": [
+     5,
+     50
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You expect 20 sixes in 120 rolls but get 17. What does this show?",
+   "choices": [
+    "Normal variation: real results scatter round expected",
+    "The dice must be biased",
+    "The expected value was worked out wrong"
+   ],
+   "answer": 0,
+   "hint": "Do results have to equal the expected value?",
+   "explain": "1/6 × 120 = 20 is right, and a gap of 3 is very common with a fair dice. It is not evidence of bias."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A spinner has {k} equal parts, and 1 of them is blue. It is spun {=k*n} times. How many blues do you expect?",
+   "answer": "n",
+   "hint": "P(blue) = 1/{k}. Multiply by the number of spins.",
+   "explain": "Expected = 1/{k} × {=k*n} = {n}.",
+   "params": {
+    "k": [
+     2,
+     8
+    ],
+    "n": [
+     5,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Two coins are tossed 80 times. How often do you expect both to land heads?",
+   "choices": [
+    "20",
+    "40",
+    "27"
+   ],
+   "answer": 0,
+   "hint": "List the outcomes: HH, HT, TH, TT.",
+   "explain": "P(both heads) = 1/2 × 1/2 = 1/4, so expect 1/4 × 80 = 20. 40 uses P = 1/2, and 27 wrongly treats three outcomes as equally likely."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "P(rain) = 0.3 on any day. How many rainy days do you expect in 30 days?",
+    "choices": [
+     "9",
+     "3",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "Multiply the probability by the number of days.",
+    "explain": "0.3 × 30 = 9. 3 confuses the probability with a count, and 10 would be P = 1/3."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A bag has 3 red and 7 blue counters. You take one and put it back, 50 times. Expected reds?",
+    "choices": [
+     "15",
+     "3",
+     "21"
+    ],
+    "answer": 0,
+    "hint": "P(red) = 3 out of how many counters?",
+    "explain": "P(red) = 3/10, so expect 3/10 × 50 = 15. 21 uses 3/7, but there are 10 counters."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which gives the most reliable estimate of P(six) for a dice?",
+    "choices": [
+     "The proportion of sixes in 3000 rolls",
+     "The proportion in 30 rolls",
+     "The proportion in 300 rolls"
+    ],
+    "answer": 0,
+    "hint": "Which sample has the most trials? Bigger samples are steadier.",
+    "explain": "More trials make the relative frequency settle closer to the true probability, so 3000 rolls is most reliable."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A dice gives 171 sixes in 600 rolls. What is the best conclusion?",
+    "choices": [
+     "It is probably biased towards six",
+     "It is fair: results always vary",
+     "It is certainly biased"
+    ],
+    "answer": 0,
+    "hint": "Expected is 100. How far off is 171?",
+    "explain": "171 is 71 above the expected 100, far more than chance usually allows, so the dice is probably biased. Probability evidence never makes it certain."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Is it surprising to get exactly 50 heads in 100 fair tosses?",
+    "choices": [
+     "No, but it happens less than 1 time in 10",
+     "No, it happens almost every time",
+     "Yes, it is impossible"
+    ],
+    "answer": 0,
+    "hint": "Exactly 50 is the single most likely count, but there are many other counts.",
+    "explain": "Exactly 50 heads has probability about 0.08. It is the most likely single count, yet most runs land a little above or below."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "P(late) = 0.{d} on any school day. How many late days do you expect in 100 days?",
+    "answer": "10*d",
+    "hint": "Multiply the probability 0.{d} by the 100 days.",
+    "explain": "0.{d} × 100 = {=10*d} late days expected.",
+    "params": {
+     "d": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A fair coin is tossed {=2*n} times. You get {=n+h} heads. How many more than expected is that?",
+    "answer": "h",
+    "hint": "Expected heads = 1/2 × the tosses.",
+    "explain": "Expected = 1/2 × {=2*n} = {n}, so {=n+h} heads is {h} more than expected.",
+    "params": {
+     "n": [
+      20,
+      60
+     ],
+     "h": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Expected frequency for rolling an even number in 90 fair dice rolls?",
+    "choices": [
+     "45",
+     "15",
+     "30"
+    ],
+    "answer": 0,
+    "hint": "How many even faces are there on a dice?",
+    "explain": "Even faces are 2, 4 and 6, so P(even) = 3/6 = 1/2 and expect 1/2 × 90 = 45."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why must counters be put back before the next draw when finding an expected frequency?",
+    "choices": [
+     "So the probability stays the same each time",
+     "So the bag looks full",
+     "It does not matter"
+    ],
+    "answer": 0,
+    "hint": "E = p × n needs the same p for every trial.",
+    "explain": "Replacing the counter keeps P(red) the same on every draw, which is what the rule p × n assumes."
+   }
+  ]
+ }
+}

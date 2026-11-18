@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_e7-N3wCeZP",
+ "title": "Shifting equilibrium (Le Chatelier's principle)",
+ "audience": "learner",
+ "keyIdea": "Le Chatelier's principle: if a system at equilibrium is changed, the position of equilibrium shifts to oppose the change. Adding a reactant or removing a product shifts it to the right. Raising the pressure shifts it towards the side with fewer gas molecules. Raising the temperature shifts it in the endothermic direction, and temperature is the only change that alters K. A catalyst does not move the position; it only gets there sooner. The Haber process uses a compromise of about 450 °C and 200 atm with an iron catalyst.",
+ "familyTip": "Ask: 'Making ammonia gives out heat. So would cooling the reactor give more or less ammonia, and why don't factories just run it cold?' A good answer says more ammonia, but far too slowly, so they pick a middle temperature.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "For N₂ + 3H₂ ⇌ 2NH₃ (ΔH negative), does each change shift the position right, or not? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "Shifts right (more NH₃)",
+    "Shifts left or no shift"
+   ],
+   "items": [
+    [
+     "Add more N₂",
+     0
+    ],
+    [
+     "Raise the temperature",
+     1
+    ],
+    [
+     "Raise the pressure",
+     0
+    ],
+    [
+     "Add an iron catalyst",
+     1
+    ],
+    [
+     "Remove NH₃ as it forms",
+     0
+    ],
+    [
+     "Lower the pressure",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglechat",
+  "caption": "Flagship lab: change concentration, temperature and pressure on the Haber equilibrium, watch Q and K, race a catalyst, and choose compromise conditions.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A reversible reaction in a closed flask settles at equilibrium. Both reactions keep going at the same rate. The amounts stop changing. Le Chatelier's principle says what happens if you then change something. The position of equilibrium shifts to oppose the change.",
+   "Take N₂ + 3H₂ ⇌ 2NH₃. Add more N₂ and the system uses some of it up, so it shifts right and makes more NH₃. Take NH₃ away and it shifts right to replace it. In terms of Q and K: the change makes Q smaller than K, so the forward reaction runs until Q = K again.",
+   "Pressure only matters for gases. Count the gas molecules on each side: 4 on the left, 2 on the right. Higher pressure shifts it to the side with fewer gas molecules, so you get more NH₃. If both sides have the same number, pressure has no effect.",
+   "The forward reaction is exothermic. Heat it and it shifts the endothermic way, which is to the left, so you get less NH₃. Temperature is the only change that alters K. A catalyst speeds up both ways equally. It does not move the position. It just gets there sooner."
+  ],
+  "adult": [
+   "Ages 16 to 18. This matches AQA A-level Chemistry 3.1.6.1 (Le Chatelier's principle and the effect of concentration, pressure and temperature on the position of equilibrium; catalysts do not affect it), OCR A 3.2.3 and Edexcel Topic 6, and NGSS HS-PS1-6 (refine the design of a chemical system to increase the amount of product at equilibrium). It builds on dynamic equilibrium and reaction profiles and leads into Kc and Kp calculations.",
+   "For the Haber process, N₂ + 3H₂ ⇌ 2NH₃ with ΔH = −92 kJ/mol. Low temperature and high pressure favour ammonia, but a low temperature is too slow even with an iron catalyst, and very high pressure needs costly plant and energy. Plants therefore run at about 450 °C and 200 atm. Only about 15% converts on each pass, so the ammonia is condensed out and the unreacted gases are recycled.",
+   "Common mistakes: thinking that a higher temperature always gives more product because the rate rises; thinking a catalyst increases the yield; counting all molecules, including solids, when judging a pressure change; and thinking that changing a concentration or the pressure changes K. Be careful with wording, too: the position shifts, but K stays the same unless the temperature changes.",
+   "In the lab you run the Haber equilibrium in a sealed flask, solved from Kc at each temperature. You add N₂ and condense out NH₃ and watch Q fall below K. You drag a thermometer, the only control that moves K, and a piston. You race a catalysed and an uncatalysed start to the same plateau. Then you look for the compromise conditions on a temperature–pressure map."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "N₂ + 3H₂ ⇌ 2NH₃ is at equilibrium. More H₂ is pumped in at constant temperature. What happens?",
+   "choices": [
+    "the position shifts right and more NH₃ forms",
+    "the position shifts left",
+    "nothing, because K is unchanged"
+   ],
+   "answer": 0,
+   "hint": "Adding a reactant makes Q smaller than K. Which reaction then runs faster?",
+   "explain": "The extra H₂ lowers Q below K, so the forward reaction runs until Q = K again. The position shifts right and some of the added H₂ is used up. K itself does not change."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An equilibrium has Kc = {a} at 500 K. Extra reactant is added and the mixture settles again at 500 K. What is Kc now?",
+   "answer": "a",
+   "hint": "Which single change alters the value of an equilibrium constant?",
+   "explain": "Kc is still {a}. Adding reactant shifts the position, but at a fixed temperature the equilibrium constant stays the same.",
+   "params": {
+    "a": [
+     2,
+     40
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "In a Haber plant, {p}% of the gas turns into ammonia on each pass through the converter. What percentage of the gas is left unreacted after one pass?",
+   "answer": "100-p",
+   "hint": "Whatever does not react is left over.",
+   "explain": "100 − {p} = {=100-p}%. That gas is not wasted: the ammonia is condensed out and the unreacted N₂ and H₂ are recycled through the converter.",
+   "params": {
+    "p": [
+     12,
+     18
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "2SO₂(g) + O₂(g) ⇌ 2SO₃(g) has ΔH = −196 kJ/mol. What happens to the yield of SO₃ if the temperature is raised?",
+   "choices": [
+    "it falls",
+    "it rises",
+    "it stays the same"
+   ],
+   "answer": 0,
+   "hint": "The forward reaction is exothermic. Which direction does heating favour?",
+   "explain": "Heating favours the endothermic direction, which is backwards here, so the yield of SO₃ falls. The rate rises, but that is a different question."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "H₂(g) + I₂(g) ⇌ 2HI(g). What happens to the position of equilibrium if the pressure is increased?",
+   "choices": [
+    "it does not move",
+    "it shifts right",
+    "it shifts left"
+   ],
+   "answer": 0,
+   "hint": "Count the gas molecules on each side of the equation.",
+   "explain": "There are 2 gas molecules on each side, so neither direction lowers the pressure. The position does not move."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "An iron catalyst is added to the Haber equilibrium. What happens to the equilibrium yield of ammonia?",
+    "choices": [
+     "it stays the same, but equilibrium is reached sooner",
+     "it increases",
+     "it decreases"
+    ],
+    "answer": 0,
+    "hint": "A catalyst speeds up the forward and backward reactions equally.",
+    "explain": "Because both directions speed up by the same factor, the position does not move. The same yield is simply reached in less time."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "N₂O₄(g) ⇌ 2NO₂(g) is endothermic in the forward direction. N₂O₄ is colourless and NO₂ is brown. The mixture is heated. What do you see?",
+    "choices": [
+     "it goes darker brown",
+     "it goes paler",
+     "no change"
+    ],
+    "answer": 0,
+    "hint": "Heating favours the endothermic direction.",
+    "explain": "The forward reaction is endothermic, so heating shifts the position right. More brown NO₂ forms and the colour darkens."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "For A ⇌ B, Kc = [B] ÷ [A] = {k}. At equilibrium [A] = {a} mol/dm³. What is [B] in mol/dm³?",
+    "answer": "k*a",
+    "hint": "Rearrange Kc = [B]/[A] to find [B].",
+    "explain": "[B] = Kc × [A] = {k} × {a} = {=k*a} mol/dm³.",
+    "params": {
+     "k": [
+      2,
+      9
+     ],
+     "a": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A lower temperature gives a higher equilibrium yield of ammonia. Why is the Haber process run at about 450 °C?",
+    "choices": [
+     "at lower temperatures the rate is too slow",
+     "the yield is highest at 450 °C",
+     "there is no equilibrium below 450 °C"
+    ],
+    "answer": 0,
+    "hint": "Think about how fast equilibrium is reached, not only where it lies.",
+    "explain": "Cooler conditions give more ammonia at equilibrium but take far too long to get there, even with iron. 450 °C is a compromise between yield and rate."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "CaCO₃(s) ⇌ CaO(s) + CO₂(g) in a sealed container. The pressure is increased. Which way does the position shift?",
+    "choices": [
+     "to the left",
+     "to the right",
+     "it does not move, because solids are not affected"
+    ],
+    "answer": 0,
+    "hint": "Count only the gas molecules on each side.",
+    "explain": "There are no gas molecules on the left and one on the right. Higher pressure shifts towards fewer gas molecules, which is to the left."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A Haber plant feeds {=f*100} tonnes of N₂ and H₂ into the converter. If {p}% of it turns into ammonia on that pass, how many tonnes of ammonia form?",
+    "answer": "f*p",
+    "hint": "Find {p}% of {=f*100}. Mass is conserved, so the tonnes of gas that react become ammonia.",
+    "explain": "{p}% of {=f*100} tonnes is {=f*p} tonnes. The other {=f*100-f*p} tonnes are recycled.",
+    "params": {
+     "f": [
+      1,
+      5
+     ],
+     "p": [
+      12,
+      18
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "2NO₂ (brown) ⇌ N₂O₄ (colourless) has ΔH = −57 kJ/mol. The mixture is cooled in ice. What happens?",
+    "choices": [
+     "it goes paler, because the position shifts right",
+     "it goes darker brown",
+     "the colour does not change"
+    ],
+    "answer": 0,
+    "hint": "Cooling favours the exothermic direction. Which way is that here?",
+    "explain": "The forward reaction is exothermic, so cooling shifts the position right. More colourless N₂O₄ forms and the brown colour fades."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "After a change, the reaction quotient Q is smaller than K. Which way does the reaction go?",
+    "choices": [
+     "forwards, making more products, until Q = K",
+     "backwards, until Q = K",
+     "neither, because Q and K are not equal"
+    ],
+    "answer": 0,
+    "hint": "Q has products on top. How must the amounts change for Q to grow?",
+    "explain": "To make Q bigger, the amount of products must rise and reactants must fall. So the forward reaction runs faster until Q equals K again."
+   }
+  ]
+ }
+}

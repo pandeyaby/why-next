@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against CCSS F-TF.4 (use the unit circle to explain symmetry, odd and even, and periodicity of trigonometric functions), the topic evidence (sin(θ + 2π) = sin θ, cos(−θ) = cos θ, related angles) and the DfE A-level Mathematics subject content (knowledge of graphs of sin, cos, tan including symmetry and periodicity; solve trig equations in a given interval). Every exact value comes from one table (SIN, with cos k = sin(k + 3)) and every lab answer was checked by hand: −θ = (12 − k)·π/6, π − θ = (6 − k)·π/6, solutions of sin x = 1/2 on [0, 4π] are π/6, 5π/6, 13π/6, 17π/6; tan's period is π, with 2π explicitly a period but not the smallest."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips: cos(−θ) = −cos θ (prediction 2, IDS card 2, challenge q2/q4, p3), copying sin(π − θ) = sin θ to cosine (IDS card 4, challenge q6, m2), tan's period taken as 2π (prediction 1, PER round 3 feedback, challenge q3, p5), sin(θ + 2π) read as sin θ + 2π (challenge q5, m4), confusing the x-axis and y-axis mirrors (neg/supp feedback for π − θ and −θ), the sign slip in the wrong quadrant (solve feedback 'right size, wrong sign') and stopping at one solution (prediction 4, SOLVE round 4)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagtsym is built on symmetry operations themselves: a dashed copy of the graph dragged sideways until it coincides (period, with the half-period copy shown upside down), Q dragged round a 12-point unit circle to the image of P under a mirror, an identity sorter, and tapping intersection points with y = k over one and two turns. flagunit (112) reads coordinates for one angle and flagexact (143) builds exact values from triangles; lab_distinct was under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Wrong moves explain the mechanism: a shift of π shows the copy upside down with 'sin(x + π) = −sin x'; dropping Q at π − θ when −θ was asked says it is the mirror in the y-axis; a half-turn pick says it flips the height; an unchanged point is identified as θ itself; a wrong-quadrant tap on the solve graph names the value there and 'right size, wrong sign'. Each success restates the identity with the actual values (cos(−θ) = √3/2 = cos θ)."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions with tempting wrong options disproved by the task: tan period '2π, like sin and cos' (round 3 rejects 2π as not the smallest), cos(−θ) 'is −cos θ' (the mirrored point shows the same x), sin(5π/6) '−1/2' (the partner sits at the same height), and '2' solutions of sin x = 1/2 on [0, 4π] (round 4 needs four). A.reveal names the locked-in pick when each task completes."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with twelve wrong-answer messages naming the slip: sign flipped by the y-axis mirror, √3/2 vs 1/2 size slip, cosine treated as odd, sine/cosine swap, 2π as not the smallest period, π/2 where tan is undefined, sine treated as even, cosine treated as odd, 2π added outside the bracket, a full turn mistaken for a flip, missing sign change in cos(π − θ) and confusing it with sin(π − θ)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid FK grade 1.9 (learner limit 6.5), adult 9.5 (limit 9.5 + 0.5 tolerance in validate_lessons). Kid paragraphs each carry one picture (a full turn, the mirror in the x-axis, the mirror in the y-axis, solving with both); the formal definitions of periodic, even and odd stay in the adult text; canvas prompts are a single line."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Kid text: period, −θ, π − θ, solving. Adult text: standard and A-level context, formal definitions of period, even and odd with the half-turn argument for tan, named mistakes, what the lab does. The content gate found no filler and explanation overlap is under 12% with 112 (unit circle), 143 (exact values) and 194 (sin² + cos² = 1)."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px Android screenshots in light and dark for all six steps plus wrong states (shift by 3π/2 and π/2, Q at the wrong dot, a non-solution tapped, tan shifted by 2π, round 4 over two turns). Tick labels drop to multiples of π on narrow screens so they no longer collide; the circle radius scales to 27% of the canvas height, and the 12 dots each have a 34 px tap band plus a button. Walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has a button under the canvas: 'Slide the copy by π', 'Put Q at 5π/6' for all 12 angles, 'The identity is always true', and 'x = 13π/6 is a solution' for every candidate. The canvas aria-label is rewritten after every action with the feedback, challenge feedback is a role=status live region, curve and point colours switch to lighter tints on dark, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics, F-TF.4: use the unit circle to explain symmetry (odd and even) and periodicity of trigonometric functions",
+  "Department for Education (2016) Mathematics AS and A level subject content: sine, cosine and tangent functions, their graphs, symmetries and periodicity; solve trigonometric equations within a given interval",
+  "Topic evidence mt_PqH6rvJBbi (sin(θ + 2π) = sin θ; cos(−θ) = cos θ; use symmetry to find sin(5π/6) from sin(π/6) = 1/2)"
+ ]
+}

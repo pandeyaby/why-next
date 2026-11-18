@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_nUnowllzaN",
+ "title": "Measuring accurately",
+ "audience": "family",
+ "keyIdea": "Measuring accurately means getting a number you can trust, with its standard unit (cm, ml, g, °C). Start a ruler at 0, not at its end. Before you read a scale, work out what one small mark is worth: count the gaps between two numbers, not the marks. Read a measuring jug with your eye level with the water. Press Zero on the scales with the empty bowl on. Wait until a thermometer stops changing, then read it again to check.",
+ "familyTip": "Bake or make a drink together. Before each reading, ask your child what one small mark on the jug is worth. Put the jug on the table and crouch down so your eyes are level with the water. Press Zero on the kitchen scales with the empty bowl on before each new ingredient.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Careful or careless? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "✅ Careful",
+    "❌ Careless"
+   ],
+   "items": [
+    [
+     "Put the end of the pencil on 0",
+     0
+    ],
+    [
+     "Line the pencil up with the end of the ruler",
+     1
+    ],
+    [
+     "Crouch so your eye is level with the water",
+     0
+    ],
+    [
+     "Read the jug looking down from above",
+     1
+    ],
+    [
+     "Press Zero with the empty bowl on",
+     0
+    ],
+    [
+     "Read the thermometer the moment it goes in",
+     1
+    ],
+    [
+     "Read it again to check",
+     0
+    ],
+    [
+     "Count each small mark as 1 without checking",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagscale",
+  "caption": "Flagship lab: line a pencil up with 0, pour to a mark, move your eye level with the water, zero the scales, and watch a data logger until the readings match.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Scientists measure with tools. A ruler measures length in centimetres (cm). A measuring jug measures how much liquid there is, in millilitres (ml). Scales measure mass in grams (g). A thermometer measures how hot or cold it is, in degrees Celsius (°C). Always write the unit after the number.",
+   "Start at zero. Many rulers have a small gap before the 0. Put one end of the thing on the 0. Then read the number at the other end. If it starts at 2 cm and ends at 9 cm, it is 9 − 2 = 7 cm long.",
+   "Work out what one small mark is worth. A jug may have 4 small marks between 200 and 300. Four marks make 5 gaps. 100 ÷ 5 = 20, so each mark is 20 ml. Then crouch down so your eye is level with the water. If you look down from above, you read too much.",
+   "Put the empty bowl on the scales and press Zero. Now the scales show only what goes in the bowl. Give a thermometer time. Its red line goes up, then stops. Read it when it stops, then read it again. Readings that match are ones you can trust. A data logger is a machine that takes the readings for you and draws a graph."
+  ],
+  "adult": [
+   "Ages 7 to 9. This is NC Years 3 and 4 working scientifically. Children make careful observations and take accurate measurements in standard units. They use a range of equipment, including thermometers and data loggers. Key words: standard unit, scale, interval (what one gap on the scale is worth), reading, accurate, repeat reading and data logger.",
+   "Common mistakes: measuring from the end of the ruler, not the 0 mark. Counting each small mark as 1. Dividing by the number of marks, not the number of gaps: 4 marks between 200 and 300 make 5 gaps of 20 ml, not 4 of 25. Reading a jug from above, which gives a reading that is too high (parallax). Forgetting the mass of the bowl. Reading a thermometer before it settles. Leaving off the unit.",
+   "Accurate means close to the true value. A repeat reading catches slips. It cannot fix a method that is wrong every time: read from the same wrong angle twice and you get the same wrong number. Pressing Zero with the bowl on (taring) and taking the bowl's mass away later are both correct. Taring leaves less to go wrong. A data logger takes readings at set times, so its graph shows when a temperature has stopped changing.",
+   "In the lab your child slides a pencil until its end sits on 0. They pour to 260 ml by working out that each mark is 20 ml. They move an eye down until it is level with the water, and the reading drops from too high to 300 ml. They zero the scales with the empty bowl before adding an apple. Last, they wait for the data logger line to go flat, then take three readings that match."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Your ruler has a small gap before the 0. Where should the end of your pencil go?",
+   "choices": [
+    "On the 0 mark",
+    "At the very end of the ruler",
+    "On the 1 mark, so it is easy to see"
+   ],
+   "answer": 0,
+   "hint": "The numbers count up from the 0 mark, not from the edge of the ruler.",
+   "explain": "Put the end on 0. Then the number at the tip is the length. From the edge of the ruler, the tip reads less than the true length."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A ribbon starts at the {a} cm mark and ends at the {b} cm mark. How long is it in cm?",
+   "answer": "b-a",
+   "hint": "It does not start at 0, so take the start number away from the end number.",
+   "explain": "The ribbon covers the gap from {a} to {b}. {b} − {a} = {=b-a}, so it is {=b-a} cm long.",
+   "params": {
+    "a": [
+     2,
+     5
+    ],
+    "b": [
+     11,
+     15
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A jug has a number every 100 ml and 4 small marks between the numbers. The water is on small mark number {k} above the {=100*h} line. How many ml is that?",
+   "answer": "100*h+20*k",
+   "hint": "4 marks make 5 gaps. What is 100 shared into 5 gaps?",
+   "explain": "Each small mark is 100 ÷ 5 = 20 ml. {k} marks is {=20*k} ml, and {=100*h} + {=20*k} = {=100*h+20*k} ml.",
+   "params": {
+    "h": [
+     1,
+     4
+    ],
+    "k": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The empty bowl shows {b} g. With sugar in it, the scales show {t} g. How many grams of sugar are there?",
+   "answer": "t-b",
+   "hint": "The scales are showing the bowl and the sugar together.",
+   "explain": "Take away the bowl: {t} − {b} = {=t-b} g of sugar. Pressing Zero with the empty bowl on would have shown {=t-b} g straight away.",
+   "params": {
+    "b": [
+     120,
+     160
+    ],
+    "t": [
+     300,
+     400
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A thermometer goes into warm water. When should you read it?",
+   "choices": [
+    "When the red line has stopped moving",
+    "The moment it goes in",
+    "While the line is still going up"
+   ],
+   "answer": 0,
+   "hint": "The thermometer has to warm up to the water's temperature first.",
+   "explain": "The line rises while the thermometer warms up. Read it once it stops, then read again to check the readings match."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Ava reads a measuring jug while looking down at it from above. Her reading will be…",
+    "choices": [
+     "too high",
+     "too low",
+     "right"
+    ],
+    "answer": 0,
+    "hint": "Think of the dotted sight line in the lab. Where did it cross the scale when the eye was above the water?",
+    "explain": "From above, your sight line meets the scale above the water, so you read too much. Crouch so your eye is level with the water."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A thermometer has a number every 10 °C and 4 small marks between the numbers. The red line stops on small mark number {k} above {=10*h} °C. What is the temperature in °C?",
+    "answer": "10*h+2*k",
+    "hint": "4 marks make 5 gaps between two numbers 10 apart.",
+    "explain": "Each mark is 10 ÷ 5 = 2 °C. {k} marks is {=2*k} °C, so the temperature is {=10*h} + {=2*k} = {=10*h+2*k} °C.",
+    "params": {
+     "h": [
+      1,
+      3
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which tool and unit would you use to find the mass of an apple?",
+    "choices": [
+     "Scales, in grams (g)",
+     "A ruler, in centimetres (cm)",
+     "A measuring jug, in millilitres (ml)"
+    ],
+    "answer": 0,
+    "hint": "Mass is how heavy something is.",
+    "explain": "Scales measure mass in grams. A ruler measures length and a jug measures the volume of a liquid."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A thermometer reads 31, 36, 38, 39, 40 and 40 °C, ten seconds apart. What should you write down?",
+    "choices": [
+     "40 °C",
+     "31 °C",
+     "37 °C, the average of all six"
+    ],
+    "answer": 0,
+    "hint": "Which readings were taken after the line stopped rising?",
+    "explain": "The early readings were taken while it was still warming up. The two at the end match, so write 40 °C."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Jo puts an empty cup on the scales and presses Zero. Then she pours in juice. The scales show {j} g. How many grams of juice are there?",
+    "answer": "j",
+    "hint": "What did pressing Zero with the cup on do?",
+    "explain": "Zero made the cup count as nothing, so the scales show only the juice: {j} g.",
+    "params": {
+     "j": [
+      150,
+      260
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why should you read a measurement a second time?",
+    "choices": [
+     "To check you did not make a slip",
+     "To make the number bigger",
+     "Because the first reading is always wrong"
+    ],
+    "answer": 0,
+    "hint": "What does it tell you if the two readings match?",
+    "explain": "Matching readings show you did not slip. If they differ, something changed or went wrong, so read again."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "There are 4 small marks between 0 and 100 ml. Leo says each mark is 25 ml. What is his slip?",
+    "choices": [
+     "4 marks make 5 gaps, so each is 20 ml",
+     "Each mark is 1 ml",
+     "He is right, 100 ÷ 4 = 25"
+    ],
+    "answer": 0,
+    "hint": "Count the gaps between 0 and 100, not the marks.",
+    "explain": "The 4 marks split 0 to 100 into 5 equal gaps. 100 ÷ 5 = 20, so each mark is worth 20 ml."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What does a data logger do?",
+    "choices": [
+     "Takes readings by itself at set times and can draw a graph",
+     "Makes the water warm up faster",
+     "Picks the right answer for you"
+    ],
+    "answer": 0,
+    "hint": "Think about the graph in the lab that drew a point every 10 seconds.",
+    "explain": "A data logger records a reading at set times, such as every 10 seconds. The graph shows when the temperature has stopped changing."
+   }
+  ]
+ }
+}

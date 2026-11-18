@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_WNcC8PJiBX",
+ "title": "Angles of elevation and depression",
+ "audience": "learner",
+ "keyIdea": "An angle of elevation is the angle you look up through, measured from the horizontal at your eye to the line of sight. An angle of depression is the angle you look down through, also measured from the horizontal. From a cliff top to a boat, the angle of depression equals the boat's angle of elevation to the top, because the two horizontals are parallel and the angles are alternate. To solve a problem, draw the right-angled triangle, name the sides from the angle, and choose sin, cos or tan to link the side you know with the side you want. A tree 20 m away at 35° is 20 × tan 35° ≈ 14.0 m above your eye, so add your eye height of 1.6 m: about 15.6 m.",
+ "familyTip": "Make a clinometer from a protractor, a straw and a weighted thread. Stand a measured distance from a tree or lamp post, read the angle to the top, and work out its height with tan. Remember to add your eye height.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which ratio do you need? Drag each problem to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "tan (opposite and adjacent)",
+    "sin (opposite and hypotenuse)",
+    "cos (adjacent and hypotenuse)"
+   ],
+   "items": [
+    [
+     "Height of a tree from your distance to it",
+     0
+    ],
+    [
+     "Distance to a boat from a cliff's height",
+     0
+    ],
+    [
+     "Height of a kite from the string's length",
+     1
+    ],
+    [
+     "Angle of a ramp from its length and rise",
+     1
+    ],
+    [
+     "How far along the ground a ladder reaches",
+     2
+    ],
+    [
+     "Ground covered by a 3 km slope",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagelev",
+  "caption": "Flagship lab: aim at a tree top, drag a boat to a 20° depression, name the sides and pick tan, add eye height, find a boat's distance.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "When you look up at the top of a tree, the angle you lift your eyes through is the angle of elevation. It is measured from the horizontal, a flat line at your eye, up to your line of sight. If you look down from a cliff to a boat, the angle you lower your eyes through is the angle of depression. It is also measured from the horizontal.",
+   "From a cliff top, the angle of depression to a boat equals the angle of elevation from the boat to the top. The horizontal at the cliff top and the sea are parallel, and the sight line crosses both. So the two angles are alternate angles, and alternate angles are equal.",
+   "To find a height, draw the right triangle. Name the sides from the angle: the opposite side is the height, the adjacent side runs along the ground, and the hypotenuse is the sight line. If you know the ground distance and want the height, use tan. A tree 20 m away at 35° is 20 × tan 35° ≈ 14.0 m above your eye.",
+   "The sight line starts at your eye, not your feet, so add your eye height. With your eye 1.6 m up, the tree is 14.0 + 1.6 = 15.6 m tall. To find a distance instead, divide. A lighthouse is 50 m tall, and the angle of depression to a boat is 12°. The boat is 50 ÷ tan 12° ≈ 235 m away. The further away the boat, the smaller the angle."
+  ],
+  "adult": [
+   "Ages 14 to 16. GCSE Mathematics in England asks students to apply sin, cos and tan in right-angled triangles to problems in two dimensions, and angles of elevation and depression are the standard context. In the US, CCSS HSG-SRT.C.8 asks students to use trigonometric ratios and the Pythagorean Theorem to solve right triangles in applied problems. The lesson assumes SOHCAHTOA and focuses on turning a word problem into the right triangle.",
+   "The lab moves from the definition to full problems. Students drag a sight line up a tree and see the angle measured from the horizontal. They drag a boat until a cliff's angle of depression is 20° and see the boat's angle of elevation match. Next they name opposite, adjacent and hypotenuse from the angle and pick tan, add an eye height of 1.6 m, and drag a boat to 12° from a lighthouse before picking 50 ÷ tan 12°.",
+   "Common mistakes. Students measure the angle from the vertical (using 90° − θ), or put the angle of depression inside the triangle at the wrong corner. They name the sides from the right angle instead of from the given angle, pick sin when the hypotenuse is unknown, and multiply by tan when they should divide. Many forget the eye height. Others give the length of the sight line when the question asks for a distance along the ground. Ask for a labelled sketch before any calculation."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "From the top of a cliff, the angle of depression to a boat is {a}°. What is the angle of elevation from the boat to the top, in degrees?",
+   "answer": "a",
+   "hint": "The two horizontal lines are parallel. What kind of angles are these?",
+   "explain": "The angles of depression and elevation are alternate angles between parallel horizontals, so both are {a}°.",
+   "params": {
+    "a": [
+     10,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "You stand 30 m from a tower. The angle of elevation to the top is 40°. Ignoring eye height, which gives the height?",
+   "choices": [
+    "30 × tan 40°",
+    "30 × sin 40°",
+    "30 ÷ tan 40°"
+   ],
+   "answer": 0,
+   "hint": "You know the side along the ground (adjacent) and want the height (opposite).",
+   "explain": "tan 40° = height ÷ 30, so height = 30 × tan 40° ≈ 25.2 m. sin would need the sight line, and dividing turns the ratio upside down."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A triangle gives a tree's height above your eye as {h} m. Your eye is 1.5 m above the ground. How tall is the tree, in metres?",
+   "answer": "h+1.5",
+   "hint": "The sight line starts at your eye. What is below it?",
+   "explain": "The tree runs from the ground to the top: 1.5 m up to your eye, then {h} m above it. {h} + 1.5 = {=h+1.5} m.",
+   "params": {
+    "h": [
+     8,
+     30
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A sight line makes {a}° with the vertical. What is the angle of elevation, in degrees?",
+   "answer": "90-a",
+   "hint": "Elevation is measured from the horizontal, which is at 90° to the vertical.",
+   "explain": "The horizontal and vertical make 90°, so the elevation is 90 − {a} = {=90-a}°.",
+   "params": {
+    "a": [
+     20,
+     70
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "From a 50 m lighthouse, the angle of depression to a boat is 12°. How far is the boat from the foot of the lighthouse?",
+   "choices": [
+    "50 ÷ tan 12° ≈ 235 m",
+    "50 × tan 12° ≈ 10.6 m",
+    "50 ÷ sin 12° ≈ 240 m"
+   ],
+   "answer": 0,
+   "hint": "The height is opposite the angle at the boat, and the distance is adjacent.",
+   "explain": "tan 12° = 50 ÷ distance, so distance = 50 ÷ tan 12° ≈ 235 m. 50 ÷ sin 12° is the length of the sight line, not the distance along the sea."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "An angle of depression is measured…",
+    "choices": [
+     "down from the horizontal to the line of sight",
+     "down from the vertical to the line of sight",
+     "up from the ground to the line of sight"
+    ],
+    "answer": 0,
+    "hint": "Where do both elevation and depression start?",
+    "explain": "Both are measured from the horizontal at the observer's eye: elevation looks up, depression looks down."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A boat sails away from a cliff. What happens to the angle of depression from the cliff top?",
+    "choices": [
+     "It gets smaller",
+     "It gets bigger",
+     "It stays the same"
+    ],
+    "answer": 0,
+    "hint": "Picture the sight line as the boat moves out.",
+    "explain": "The further the boat, the flatter the sight line, so the angle from the horizontal gets smaller."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A kite string is 50 m long at 35° to the horizontal. Which gives the kite's height above your hand?",
+    "choices": [
+     "50 × sin 35°",
+     "50 × tan 35°",
+     "50 × cos 35°"
+    ],
+    "answer": 0,
+    "hint": "The string is the hypotenuse. You want the opposite side.",
+    "explain": "sin 35° = height ÷ 50, so height = 50 × sin 35° ≈ 28.7 m. cos gives the ground distance, and tan would need the adjacent side."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Your eye is 1.5 m up. You stand 25 m from a building and the angle of elevation to the top is 30°. How tall is the building?",
+    "choices": [
+     "About 15.9 m",
+     "About 14.4 m",
+     "About 12.9 m"
+    ],
+    "answer": 0,
+    "hint": "Find the part above your eye with tan, then add the eye height.",
+    "explain": "25 × tan 30° ≈ 14.4 m above the eye, plus 1.5 m: about 15.9 m. 14.4 m forgets the eye height, and 12.9 m subtracts it."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "From a tower, the angle of depression to a car is {a}°. What angle does the sight line make with the vertical side of the tower, in degrees?",
+    "answer": "90-a",
+    "hint": "The horizontal at the top and the tower make a right angle.",
+    "explain": "The horizontal and the tower make 90°, so the sight line makes 90 − {a} = {=90-a}° with the tower.",
+    "params": {
+     "a": [
+      15,
+      75
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "From the top of an 80 m tower, the angle of depression to a car is 15°. How far is the car from the foot of the tower?",
+    "choices": [
+     "About 299 m",
+     "About 21 m",
+     "About 309 m"
+    ],
+    "answer": 0,
+    "hint": "The tower is opposite the 15° angle at the car. Divide by tan.",
+    "explain": "distance = 80 ÷ tan 15° ≈ 298.6 m. 21 m comes from multiplying, and 309 m is the sight line (80 ÷ sin 15°)."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In the triangle for a tree's height, which side is the hypotenuse?",
+    "choices": [
+     "The line of sight from your eye to the top",
+     "The tree above eye level",
+     "The ground from you to the tree"
+    ],
+    "answer": 0,
+    "hint": "The hypotenuse is opposite the right angle.",
+    "explain": "The right angle is where the horizontal meets the tree, so the side across from it, the sight line, is the hypotenuse."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "From the top of a {h} m cliff, the angle of depression to a boat is 45°. How far is the boat from the foot of the cliff, in metres?",
+    "answer": "h",
+    "hint": "tan 45° = 1. What does that say about the opposite and adjacent sides?",
+    "explain": "tan 45° = {h} ÷ distance = 1, so the distance equals the height: {h} m. A 45° right triangle has two equal short sides.",
+    "params": {
+     "h": [
+      20,
+      120
+     ]
+    }
+   }
+  ]
+ }
+}

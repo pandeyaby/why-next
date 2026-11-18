@@ -1,0 +1,83 @@
+{
+ "topicId": "mt_dlm3NspUyy",
+ "title": "Mixed and Conflicting Emotions",
+ "audience": "learner",
+ "keyIdea": "You can feel two different emotions at the same time, even ones that seem to pull against each other: excited and nervous about a new school, or happy for a friend who won and disappointed for yourself. These are mixed (or conflicting) emotions. They are normal, they do not mean anything is wrong with you, and the mix can change over time. Naming both feelings helps you understand yourself and choose what to do.",
+ "explain": {
+  "kid": [
+   "Sometimes you feel two things at once. Your first day at a new school can feel exciting and scary. Both feelings are real. One does not cancel the other.",
+   "Mixed feelings often come when something has a good side and a hard side. Your friend wins a prize. You are glad for them, and you wish it was you. Both make sense.",
+   "The mix can move. Before a race you might be mostly nervous. Once you start, the nerves shrink and the excitement grows.",
+   "Mixed feelings are normal. Adults have them too. Try saying both: \"I feel happy and a bit jealous.\" Naming both helps you choose a kind thing to do."
+  ],
+  "adult": [
+   "This topic belongs to emotional literacy. It matches the IB PYP personal, social and physical education strand on identity, which expects pupils to describe how they feel. In England, the DfE Health Education guidance (2019) asks pupils by the end of primary to recognise the range of emotions and how to talk about them. Researchers call holding two emotions at once mixed emotions, or emotional ambivalence.",
+   "Understanding of mixed emotions grows through primary school. Children first grasp two feelings about different things, then two opposite feelings about the same event. Harter and Buddin (1987) found that children around 10 or 11 begin to describe opposite feelings about one event, such as happy and sad about moving house.",
+   "Common mistakes: thinking that a mixed feeling means you are confused, or that one feeling must be false. Many believe feeling jealous of a friend makes you a bad friend. Others hide the harder feeling, or think the mix is fixed. Be careful not to rush a child to the positive feeling (\"but you should be happy!\"), which teaches them to hide the other one.",
+   "In the lab, learners pick the two feelings in three scenes. They drag a slider to show how the mix of nervous and excited changes during a swimming gala. Then they sort true statements from myths and find the two clues in a short story that show a character's two feelings."
+  ]
+ },
+ "familyTip": "Share a time you felt two things at once, such as proud and sad at a leaving party. Then ask: can you think of a time you felt two things together? Which feeling was bigger, and did the mix change?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "One feeling or a mixed feeling? Drag each card to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["One feeling", "Mixed feeling"],
+   "items": [["I was so happy all day", 0], ["Proud of my medal but sad Dad missed it", 1], ["Really scared of the thunder", 0], ["Excited and nervous about the trip", 1], ["Glad to finish but sorry it ended", 1], ["Bored in the long queue", 0]]
+  }
+ },
+ "lab": {
+  "type": "flagmixed",
+  "caption": "Flagship lab: pick both feelings in a scene, slide the mix as a moment changes, sort myths, and find feeling clues in stories.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Mia's best friend is moving away, but Mia will get to visit her by the sea. Which pair of feelings fits?", "choices": ["Sad and excited", "Only sad", "Bored and calm"], "answer": 0,
+   "hint": "Find one feeling about what Mia loses and one about what she gains.",
+   "explain": "Mia is sad her friend is leaving and excited about the seaside visits. Both are true at once."},
+  {"type": "numeric", "id": "p2", "prompt": "Ade says he is {n}% nervous about the gala. The rest of him is excited. What percent excited is he?", "answer": "100-n",
+   "hint": "The two parts of the mix add up to 100%.",
+   "explain": "100 − {n} = {=100-n}, so Ade is {=100-n}% excited. Both feelings are there at the same time.",
+   "params": {"n": [10, 90]}},
+  {"type": "mc", "id": "p3", "prompt": "Which is a myth about mixed feelings?", "choices": ["Feeling two things at once means something is wrong with you", "Adults have mixed feelings too", "The mix of feelings can change"], "answer": 0,
+   "hint": "Two of these are true. Which one is a worry that is not true?",
+   "explain": "Mixed feelings are normal. Adults have them, and the mix often changes over time."},
+  {"type": "numeric", "id": "p4", "prompt": "Before a test, Zoe is {a}% worried and {=100-a}% hopeful. After the first question, her worry drops by {d} points. What percent worried is she now?", "answer": "a-d", "where": "d<a",
+   "hint": "Start from her worried number and take away the drop.",
+   "explain": "{a} − {d} = {=a-d}. Zoe is now {=a-d}% worried. The mix changed once she started.",
+   "params": {"a": [50, 90], "d": [10, 40]}}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "What is a mixed emotion?", "choices": ["Feeling two different emotions at the same time", "Changing your mind about what to eat", "Feeling one emotion very strongly"], "answer": 0,
+    "hint": "Mixed means more than one, all at once.",
+    "explain": "A mixed emotion is two feelings together, like happy and sad on the last day of term."},
+   {"type": "mc", "id": "m2", "prompt": "Sam feels happy for his sister and jealous of her new bike. What does that say about Sam?", "choices": ["He has a normal mixed feeling", "He is a bad brother", "The happy feeling must be fake"], "answer": 0,
+    "hint": "Can two feelings both be real?",
+    "explain": "Sam can be glad for her and wish he had one too. Feeling jealous does not make him bad."},
+   {"type": "mc", "id": "m3", "prompt": "In a story, Ola \"smiled as she waved goodbye, but her chin shook\". What does this show?", "choices": ["Ola feels happy and sad at once", "Ola feels only happy", "Ola is cold"], "answer": 0,
+    "hint": "Look at both clues: the smile and the shaking chin.",
+    "explain": "The smile shows one feeling and the shaking chin shows another. Ola feels two things at once."},
+   {"type": "mc", "id": "m4", "prompt": "Your friend wins and you feel happy and disappointed. What is a good thing to do?", "choices": ["Say well done, and tell a grown-up you feel a bit let down", "Pretend you feel nothing", "Tell your friend the judges were wrong"], "answer": 0,
+    "hint": "Find the choice that is honest about both feelings and kind to your friend.",
+    "explain": "You can celebrate your friend and still name your own disappointment to someone you trust."},
+   {"type": "mc", "id": "m5", "prompt": "Ben is nervous and excited before his first match. After ten minutes of play, what often happens?", "choices": ["The nerves shrink and the excitement grows", "The mix always stays the same", "Both feelings vanish for good"], "answer": 0,
+    "hint": "Think about the gala in the lab. Did the mix stay still?",
+    "explain": "The mix of feelings moves. Once something starts, nerves often fade."},
+   {"type": "numeric", "id": "m6", "prompt": "A class of {n} is going on a trip. {k} children say they feel excited and nervous at once. How many children do not say they have that mixed feeling?", "answer": "n-k", "where": "k<n",
+    "hint": "Take the children with the mixed feeling away from the whole class.",
+    "explain": "{n} − {k} = {=n-k}. Many people have mixed feelings before something new, and it is normal either way.",
+    "params": {"n": [20, 32], "k": [5, 18]}},
+   {"type": "mc", "id": "m7", "prompt": "Which sentence names a mixed feeling clearly?", "choices": ["I feel proud of my work and worried about the result", "I feel weird", "I feel fine, I guess"], "answer": 0,
+    "hint": "Look for a sentence that names two feelings.",
+    "explain": "It names two exact feelings, proud and worried. Naming both helps you understand yourself."},
+   {"type": "numeric", "id": "m8", "prompt": "On moving day, Leo is {s}% sad and the rest excited. A week later, he is {=s-20}% sad. How many points did his sadness drop?", "answer": "20", "where": "s>=30",
+    "hint": "Take the new sad number away from the old one.",
+    "explain": "{s} − {=s-20} = 20 points. The mix moved towards excited as Leo settled in.",
+    "params": {"s": [30, 90]}}
+  ]
+ }
+}

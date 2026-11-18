@@ -1,0 +1,274 @@
+{
+ "topicId": "mt_oq9Z83g2Ss",
+ "title": "Sigma notation",
+ "audience": "learner",
+ "keyIdea": "Σ (capital sigma) means add up. Σ from r = 1 to n of f(r) means f(1) + f(2) + … + f(n): r is the index, f(r) is the general term, and the numbers below and above Σ are the lower and upper limits. Both limits are included, so a sum from r = m to r = n has n − m + 1 terms. Sums split term by term and constants come out in front: Σ(k r + c) = kΣr + nc, where Σ c over n terms is nc, not c, and Σ r from 1 to n is n(n + 1)/2. To write an arithmetic series in Σ form, the coefficient of r is the common difference, r = 1 fixes the constant, and solving last term = aN + b gives the upper limit N. Lowering both limits by 1 gives the same sum only if every r in the term becomes r + 1.",
+ "familyTip": "Ask your teenager to read Σ from r = 1 to 5 of (3r − 1) aloud as a list of numbers, then add them. Next ask how many terms run from r = 4 to r = 12; the answer that comes first is often 8, and it is 9.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Match each sum to its value. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "= 24",
+    "= 30",
+    "= 55"
+   ],
+   "items": [
+    [
+     "Σ (2r + 1), r = 1 to 4",
+     0
+    ],
+    [
+     "Σ (2r + 3), r = 0 to 3",
+     0
+    ],
+    [
+     "Σ r², r = 1 to 4",
+     1
+    ],
+    [
+     "Σ (r + 1)², r = 0 to 3",
+     1
+    ],
+    [
+     "Σ r², r = 1 to 5",
+     2
+    ],
+    [
+     "Σ r, r = 1 to 10",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsignot",
+  "caption": "Flagship lab: plug in each r between the limits, drag the top limit to count terms, build a general term, split a sum, shift the index.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Σ is the Greek capital letter sigma, and it means add up. Under it you write where r starts, and on top where r stops. Next to it is the general term, a rule that turns each r into a number. Σ from r = 1 to 4 of (2r + 1) means put r = 1, 2, 3 and 4 into 2r + 1 and add: 3 + 5 + 7 + 9 = 24.",
+   "Both limits count. From r = 3 to r = 10 there are 10 − 3 + 1 = 8 terms, not 7. Subtracting the limits counts the gaps between them, so you add 1 to get the terms.",
+   "You can split a sum into parts. Σ (2r + 1) is 2 Σ r plus Σ 1. Take care with the constant: Σ 1 from r = 1 to 5 is 1 + 1 + 1 + 1 + 1 = 5, not 1. A constant c added up n times gives nc.",
+   "To write 3 + 7 + 11 + … + 43 in Σ form, look at the step. It goes up by 4, so the term starts 4r. Put r = 1 in: 4 − 1 = 3, so the term is 4r − 1. Then solve 4N − 1 = 43 to get N = 11. The same sum can start at r = 0 if you write r + 1 for every r: Σ from 0 to 10 of (4r + 3)."
+  ],
+  "adult": [
+   "Ages 16 to 18: A level Mathematics (Pure), sequences and series, which asks students to understand and use sigma notation for sums of series, and the IB Analysis and Approaches course. It is the language used later for arithmetic and geometric series, the binomial expansion, and the sums behind integration.",
+   "The index is a dummy variable: Σ r² and Σ k² over the same limits are equal. The number of terms is upper minus lower plus one. Sums are linear, so Σ(a f(r) + b g(r)) = aΣf(r) + bΣg(r), and a constant summed over n terms gives n times the constant. The standard result Σ r from 1 to n = n(n + 1)/2 then evaluates any linear term.",
+   "Common mistakes: counting terms as upper minus lower; treating Σ c as c; reading the last term of a series as the upper limit; building the general term from the first term (3r + 4 for 3, 7, 11) instead of the common difference; and shifting the limits without changing the term, which changes the sum.",
+   "In the lab your teenager taps the values of r that belong to three sums and sees the terms add up. They drag the top limit to give a sum an exact number of terms, and set a, b and N to write three series in Σ form. Then they split two sums on a bar chart into the r part and the constant, and pick the shifted sum that keeps every term."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "How many terms are in the sum from r = {m} to r = {n}?",
+   "answer": "n-m+1",
+   "hint": "Both limits are included. Upper minus lower counts the gaps.",
+   "explain": "{n} − {m} = {=n-m} gaps, so there are {=n-m+1} terms.",
+   "params": {
+    "m": [
+     1,
+     6
+    ],
+    "n": [
+     10,
+     20
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Work out Σ {c} for r = 1 to {n}.",
+   "answer": "n*c",
+   "hint": "The term does not change with r. How many times is it added?",
+   "explain": "{c} is added once for each of the {n} values of r, so the sum is {n} × {c} = {=n*c}.",
+   "params": {
+    "c": [
+     2,
+     9
+    ],
+    "n": [
+     4,
+     12
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is 3 + 7 + 11 + … + 43 in sigma notation?",
+   "choices": [
+    "Σ (4r − 1), r = 1 to 11",
+    "Σ (3r + 4), r = 1 to 11",
+    "Σ (4r − 1), r = 1 to 43"
+   ],
+   "answer": 0,
+   "hint": "The step between terms is the coefficient of r. Then solve for the last r.",
+   "explain": "The terms go up by 4, and r = 1 gives 4 − 1 = 3, so 4r − 1. Then 4N − 1 = 43 gives N = 11. 43 is the last term, not the last r."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Use Σ r = n(n + 1)/2 to work out Σ (2r + 1) for r = 1 to {n}.",
+   "answer": "n*(n+1)+n",
+   "hint": "Split it: 2 Σ r plus Σ 1.",
+   "explain": "2 × {n}({=n+1})/2 = {=n*(n+1)}, and Σ 1 over {n} terms is {n}, so the total is {=n*(n+1)+n}.",
+   "params": {
+    "n": [
+     4,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which sum equals Σ r² for r = 1 to 4?",
+   "choices": [
+    "Σ (r + 1)², r = 0 to 3",
+    "Σ r², r = 0 to 3",
+    "Σ (r + 1)², r = 0 to 4"
+   ],
+   "answer": 0,
+   "hint": "If the limits drop by 1, each r in the term must become r + 1.",
+   "explain": "Σ (r + 1)² from 0 to 3 is 1 + 4 + 9 + 16 = 30, the same terms. Σ r² from 0 to 3 is only 14, and 0 to 4 has a fifth term."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "In Σ from r = 2 to 7 of r³, what is 7?",
+    "choices": [
+     "The upper limit: the last value of r",
+     "The number of terms",
+     "The last term of the sum"
+    ],
+    "answer": 0,
+    "hint": "The number on top of Σ is a value of r, not a term.",
+    "explain": "7 is the upper limit, the last r. There are 6 terms and the last term is 7³ = 343."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How many terms does Σ from r = {m} to r = {n} have?",
+    "answer": "n-m+1",
+    "hint": "Count both ends: upper − lower + 1.",
+    "explain": "{n} − {m} + 1 = {=n-m+1} terms.",
+    "params": {
+     "m": [
+      0,
+      8
+     ],
+     "n": [
+      15,
+      30
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Work out Σ (3r + 2) for r = 1 to {n}.",
+    "answer": "3*n*(n+1)/2+2*n",
+    "hint": "3 Σ r plus Σ 2, and Σ 2 over n terms is 2n.",
+    "explain": "3 × {n}({=n+1})/2 = {=3*n*(n+1)/2}, plus 2 × {n} = {=2*n}, gives {=3*n*(n+1)/2+2*n}.",
+    "params": {
+     "n": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Σ 5 for r = 1 to 8 equals…",
+    "choices": [
+     "40",
+     "5",
+     "13"
+    ],
+    "answer": 0,
+    "hint": "The 5 is added once for every value of r.",
+    "explain": "There are 8 values of r, so 8 × 5 = 40. The constant does not stay as 5."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which general term gives 5, 8, 11, 14, … when r = 1, 2, 3, 4, …?",
+    "choices": [
+     "3r + 2",
+     "5r + 3",
+     "3r + 5"
+    ],
+    "answer": 0,
+    "hint": "The step is the coefficient of r. Check r = 1.",
+    "explain": "The terms go up by 3, so 3r. At r = 1, 3 + 2 = 5, so the term is 3r + 2."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "The series 4 + 7 + 10 + … has general term 3r + 1, starting at r = 1. If its last term is 3{k} + 1, what is the upper limit?",
+    "answer": "k",
+    "hint": "Solve 3r + 1 = last term for r.",
+    "explain": "3r + 1 = 3 × {k} + 1 when r = {k}, so the upper limit is {k}.",
+    "params": {
+     "k": [
+      5,
+      40
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Σ from r = 2 to 6 of r equals Σ from r = 1 to 5 of…",
+    "choices": [
+     "r + 1",
+     "r",
+     "r − 1"
+    ],
+    "answer": 0,
+    "hint": "The new r = 1 has to give the old first term, 2.",
+    "explain": "Each old r is the new r + 1, so the term becomes r + 1: 2 + 3 + 4 + 5 + 6 = 20 both ways."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Are Σ k² for k = 1 to 5 and Σ r² for r = 1 to 5 equal?",
+    "choices": [
+     "Yes: the index letter does not matter",
+     "No: k and r are different numbers",
+     "Only if k = r"
+    ],
+    "answer": 0,
+    "hint": "Write out both sums term by term.",
+    "explain": "Both are 1 + 4 + 9 + 16 + 25 = 55. The index is a dummy variable, so its letter does not change the sum."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Σ (2r − 1) for r = 1 to 5 equals…",
+    "choices": [
+     "25",
+     "9",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "Write the terms out, then add them all.",
+    "explain": "1 + 3 + 5 + 7 + 9 = 25. 9 is only the last term and 5 is the number of terms."
+   }
+  ]
+ }
+}

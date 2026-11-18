@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_O5eSOkRstY",
+ "title": "Relative formula mass",
+ "audience": "family",
+ "keyIdea": "Relative formula mass Mr is the sum of the relative atomic masses Ar of every atom in a formula. Count atoms carefully when brackets multiply a group (Ca(OH)\u2082 \u2192 Ca + 2O + 2H). Percentage by mass of an element = (total Ar of that element \u00f7 Mr) \u00d7 100.",
+ "explain": {
+  "kid": [
+   "Ar is the relative atomic mass of an element. Carbon is 12. Oxygen is 16.",
+   "Mr is the relative formula mass. Add the Ar of each atom. CO2 is 12 + 16 + 16 = 44.",
+   "A number after brackets multiplies the group. Ca(OH)2 has one Ca, two O and two H. Mr is 74.",
+   "Percent by mass is the element total divided by Mr, then times 100."
+  ],
+  "adult": [
+   "GCSE chemistry: Mr from Ar values; bracket multipliers; percentage by mass. AQA/OCR/Edexcel all require calculating Mr for compounds such as CO\u2082, H\u2082O, Ca(OH)\u2082 and H\u2082SO\u2084. Words: relative atomic mass Ar, relative formula mass Mr, percentage by mass.",
+   "Common mistakes: counting O\u2082 as one oxygen (Mr(CO\u2082)=28); ignoring the subscript after brackets; computing Ar/Mr without \u00d7100; mixing up which element total goes in the numerator.",
+   "In the lab your teenager adds each Ar for CO\u2082, picks Mr for water, expands Ca(OH)\u2082, computes % oxygen, spots a missing-oxygen trap, and builds Mr for H\u2082SO\u2084."
+  ]
+ },
+ "familyTip": "Pick a formula from a medicine or cleaning label (e.g. NaHCO\u2083). Ask them to find each Ar and total Mr, then the % of one element.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Correct Mr method or a common slip? Drag each idea, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Correct method",
+    "Common slip"
+   ],
+   "items": [
+    [
+     "Add Ar for every atom shown",
+     0
+    ],
+    [
+     "Count O\u2082 as a single oxygen",
+     1
+    ],
+    [
+     "Multiply everything inside brackets",
+     0
+    ],
+    [
+     "Ignore the subscript after brackets",
+     1
+    ],
+    [
+     "(element total \u00f7 Mr) \u00d7 100",
+     0
+    ],
+    [
+     "Use Ar/Mr and skip \u00d7100",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagrfm",
+  "caption": "Flagship lab: sum Ar for CO\u2082, pick Mr for H\u2082O, expand Ca(OH)\u2082, compute % by mass, catch a counting trap, and build Mr for H\u2082SO\u2084.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Mr(CO\u2082) with C=12 and O=16 is\u2026",
+   "choices": [
+    "44",
+    "28",
+    "12"
+   ],
+   "answer": 0,
+   "hint": "Add carbon once and oxygen twice.",
+   "explain": "Mr(CO\u2082)=12+16+16=44. Using oxygen once gives the common wrong answer 28."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "In Ca(OH)\u2082 the \u2082 multiplies\u2026",
+   "choices": [
+    "everything inside the brackets",
+    "only the calcium",
+    "nothing"
+   ],
+   "answer": 0,
+   "hint": "What does a subscript after brackets do?",
+   "explain": "Ca(OH)\u2082 means Ca + 2O + 2H. The \u2082 multiplies the whole hydroxide group."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Mr of a molecule with {n} carbon atoms (Ar=12) and {k} oxygen atoms (Ar=16)?",
+   "answer": "12*n+16*k",
+   "hint": "Multiply each Ar by how many atoms, then add.",
+   "explain": "12\u00d7{n} + 16\u00d7{k} = {=12*n+16*k}.",
+   "params": {
+    "n": [
+     1,
+     3
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Element total Ar is {n} and Mr is {k}. What is percent by mass (n*100)/k?",
+   "answer": "n*100/k",
+   "hint": "Multiply the element total by 100, then divide by Mr.",
+   "explain": "({n}\u00d7100)\u00f7{k} = {=n*100/k} % by mass.",
+   "params": {
+    "n": [
+     16,
+     32
+    ],
+    "k": [
+     32,
+     64
+    ]
+   },
+   "where": "k>n&&(n*100)%k==0"
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Mr(H\u2082O) with H=1 and O=16 is\u2026",
+   "choices": [
+    "18",
+    "17",
+    "16"
+   ],
+   "answer": 0,
+   "hint": "Two hydrogens contribute 2.",
+   "explain": "Mr(H\u2082O)=2\u00d71+16=18. Using only one hydrogen gives 17, a common slip."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Mr means\u2026",
+    "choices": [
+     "sum of every Ar in the formula",
+     "only the biggest Ar",
+     "number of bonds only"
+    ],
+    "answer": 0,
+    "hint": "What do you add to get relative formula mass?",
+    "explain": "Mr adds the Ar of every atom in the formula."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "% by mass of an element uses\u2026",
+    "choices": [
+     "(element Ar total / Mr)\u00d7100",
+     "Mr alone",
+     "Ar \u2212 Mr"
+    ],
+    "answer": 0,
+    "hint": "Remember divide then multiply by 100.",
+    "explain": "Percentage by mass = (element's total Ar \u00f7 Mr) \u00d7 100."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Someone writes Mr(CO\u2082)=12+16=28. The slip is\u2026",
+    "choices": [
+     "forgetting the second oxygen",
+     "using the wrong Ar for C",
+     "adding an extra calcium"
+    ],
+    "answer": 0,
+    "hint": "Look at how many oxygens CO\u2082 shows.",
+    "explain": "CO\u2082 has two oxygens, so Mr=12+16+16=44."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mr(H\u2082SO\u2084) with H=1, S=32, O=16 is\u2026",
+    "choices": [
+     "98",
+     "49",
+     "64"
+    ],
+    "answer": 0,
+    "hint": "Add two hydrogens, one sulfur and four oxygens using Ar 1, 32 and 16.",
+    "explain": "Mr(H\u2082SO\u2084)=2\u00d71+32+4\u00d716=2+32+64=98."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A compound has Mr={n}. One element contributes Ar total {k}. Percent by mass is (k*100)/n.",
+    "answer": "k*100/n",
+    "hint": "Multiply the element total by 100, then divide by Mr.",
+    "explain": "({k}\u00d7100)\u00f7{n} = {=k*100/n} % by mass.",
+    "params": {
+     "n": [
+      32,
+      64
+     ],
+     "k": [
+      16,
+      32
+     ]
+    },
+    "where": "n>k&&(k*100)%n==0"
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A hydroxide formula expands to Ca + {n} oxygen atoms (Ar 16) + {k} hydrogen atoms (Ar 1). Ca=40. What is Mr?",
+    "answer": "40+16*n+1*k",
+    "hint": "Add 40 to 16 times the oxygens and 1 times the hydrogens.",
+    "explain": "Mr=40+16\u00d7{n}+{k}={=40+16*n+1*k}.",
+    "params": {
+     "n": [
+      1,
+      3
+     ],
+     "k": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Forgetting a bracket multiplier\u2026",
+    "choices": [
+     "undercounts atoms and Mr",
+     "always raises Mr",
+     "has no effect"
+    ],
+    "answer": 0,
+    "hint": "What happens to the atom count?",
+    "explain": "Ignoring brackets undercounts atoms, so Mr comes out too small."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which working for % O in CO\u2082 is correct?",
+    "choices": [
+     "(32/44)\u00d7100",
+     "16/44 with no \u00d7100",
+     "12/44 \u00d7100"
+    ],
+    "answer": 0,
+    "hint": "Use both oxygens in the numerator.",
+    "explain": "Two oxygens give 32. Divide by Mr 44, then \u00d7100."
+   }
+  ]
+ }
+}

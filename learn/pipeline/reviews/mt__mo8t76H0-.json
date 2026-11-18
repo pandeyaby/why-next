@@ -1,0 +1,48 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the AQA A-level Chemistry specification 7405 (3.3.6 organic analysis, 3.3.15 NMR) and its data sheet: O–H alcohols 3230–3550, O–H acids 2500–3000, C=O 1680–1750, C–O 1000–1300, C–H 2850–3300 cm⁻¹; molecular ion as highest m/z; high-resolution masses C₃H₆O 58.0417 and C₄H₁₀ 58.0783 (C 12.0000, H 1.0078, O 15.9949); spectra in the lab use real base peaks (ethanol 31, propanone and butane 43) and correct environment counts."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets base peak taken as M⁺ (probe: tapping 31 says it is the base peak, look further right), mixing up alcohol and acid O–H ranges, counting H atoms instead of environments (propanone 1 peak, propan-2-ol 3), reading single bands in the fingerprint region, and thinking MS can separate isomers with the same Mr."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "New lab flaginstr with drawn mass spectra, a computed IR transmittance trace with a shaded fingerprint region, ¹H NMR stick spectra and a candidate elimination board. Shingle similarity is 8.9% vs flag_alcox.js and 6.0% vs flag_fgtest.js, well under the 30% gate; it differs from lesson 208, which covers how the spectrometer works."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each step makes the student use evidence: choose test v instrument for real jobs (breathalyser, Mr of a tiny sample), tap the furthest-right peak to read Mr, tap IR dips to read bonds before naming the group, predict NMR peak counts before seeing the spectrum, and rule out candidates citing the clue that eliminates them."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predict prompts before acting: why labs use instruments, which mass-spectrum peak gives the Mr (tallest v furthest right), what a 2500–3000 plus 1710 cm⁻¹ spectrum is, and how many ¹H NMR peaks propanone gives; each answer is revealed with the reason once the task is done."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions rotate with shuffled options; wrong answers get a targeted why() message, e.g. choosing 43 for the Mr gives 'The tallest peak is the base peak, a common fragment. The molecular ion M⁺ has the highest m/z.' Phone probes confirmed the step feedback for MS, IR, NMR and the elimination board."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner explanation measured at Flesch-Kincaid grade 3.5 (target 6.5) and the adult one 6.9 (target 9.5), with precise A-level terms (molecular ion, base peak, wavenumber, fingerprint region, chemical environment, chemical shift δ, TMS) each defined in context."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every paragraph gives data or a rule the student uses: wavenumber ranges, the M⁺ rule with a worked base-peak example, the high-resolution masses and the environment-counting rule with propanone and ethanol. Explanation overlap with every other lesson is 0.0% and the filler gate passed."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "iPhone 13 screenshots in light and dark show readable spectra with staggered peak labels (27/29, 45/46 fixed after a first pass), and every canvas action has a full-width button twin; walk.cjs completed all five Show-me tasks and the challenge on phone and desktop with no console errors."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "axe-core found no WCAG 2.1 AA violations in light or dark theme on desktop and phone. The canvas aria-label announces each result (for example the m/z tapped and whether it is M⁺), all controls are real buttons, and colour is never the only cue: ruled-out cards are struck through and labelled."
+  }
+ },
+ "sources": [
+  "https://www.aqa.org.uk/subjects/chemistry/a-level/chemistry-7405/specification (3.3.6 Organic analysis, 3.3.15 NMR spectroscopy, Chemistry data sheet)",
+  "https://www.aqa.org.uk/subjects/chemistry/gcse/chemistry-8462/specification (4.8.3.7 Instrumental methods)"
+ ]
+}

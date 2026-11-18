@@ -10,7 +10,7 @@ const pageWidth = p => p.evaluate(() => document.documentElement.scrollWidth - d
 (async () => {
   const browser = await chromium.launch();
   for (const theme of ['2052', 'classic']) {
-    const ctx = await browser.newContext(devices['iPhone 13']); await ctx.addInitScript(t => { try { localStorage.setItem('whynext.theme', t) } catch (e) {} }, theme);
+    const ctx = await browser.newContext(devices['iPhone 13']); await ctx.addInitScript(t => { try { localStorage.setItem('whynext.look', t) } catch (e) {} }, theme);
     const p = await ctx.newPage(); await p.goto(URL); await p.waitForFunction('window.WN_WARM');
     await test(`iPhone 13, ${theme}: every visible text input and select is at least 16px (no iOS zoom on focus)`, async () => {
       const small = await p.$$eval('input:not([type=checkbox]):not([type=radio]):not([type=range]),select,textarea', es => es.filter(e => e.offsetParent && parseFloat(getComputedStyle(e).fontSize) < 16).map(e => e.id || e.className));

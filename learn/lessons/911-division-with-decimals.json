@@ -1,0 +1,281 @@
+{
+ "topicId": "mt_lU-2aTRB9f",
+ "title": "Division with decimals",
+ "audience": "learner",
+ "keyIdea": "To divide a decimal by a whole number, share it place by place, starting with the biggest place. A leftover one is exchanged for 10 tenths, and a leftover tenth for 10 hundredths, then the sharing carries on: 7.2 ÷ 3 = 2.4 and 3 ÷ 4 = 0.75. An estimate shows where the decimal point goes: 12.6 ÷ 3 is about 12 ÷ 3 = 4, so the answer is 4.2. To divide by a decimal, multiply both numbers by 10 or 100 until you are dividing by a whole number. The answer does not change: 4.8 ÷ 0.6 = 48 ÷ 6 = 8. Dividing by a number less than 1 gives an answer bigger than the number you started with.",
+ "familyTip": "Share a bill or a bag of sweets with decimals. If £7.20 is split between 3, ask: how many whole pounds each, and what happens to the pound left over?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which answer does each division give? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Answer is 0.4",
+    "Answer is 4",
+    "Answer is 40"
+   ],
+   "items": [
+    [
+     "1.2 ÷ 3",
+     0
+    ],
+    [
+     "2 ÷ 5",
+     0
+    ],
+    [
+     "0.8 ÷ 2",
+     0
+    ],
+    [
+     "12 ÷ 3",
+     1
+    ],
+    [
+     "2.4 ÷ 0.6",
+     1
+    ],
+    [
+     "0.8 ÷ 0.2",
+     1
+    ],
+    [
+     "2 ÷ 0.05",
+     2
+    ],
+    [
+     "12 ÷ 0.3",
+     2
+    ],
+    [
+     "4.8 ÷ 0.12",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdecdiv",
+  "caption": "Flagship lab: share decimals onto plates, exchange leftovers, place the point by estimating, count jumps of 0.6, scale both numbers by 10.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Dividing is sharing. To work out 7.2 ÷ 3, share 7 ones and 2 tenths onto 3 plates. Start with the ones. Each plate gets 2 ones, and 1 one is left over.",
+   "Swap the spare one for 10 tenths. Now there are 12 tenths. Each plate gets 4 tenths. So each plate has 2 ones and 4 tenths: 7.2 ÷ 3 = 2.4. If some are still left, swap them for hundredths and go on. 3 ÷ 4 is 0.75. It can be done.",
+   "Use a rough guess to place the point. 12.6 ÷ 3 is close to 12 ÷ 3, which is 4. So the answer is 4.2, not 42 or 0.42. A remainder of 3 is not the same as 0.3.",
+   "To divide by a decimal like 0.6, ask: how many 0.6s fit in? Times both numbers by 10 to make it easy. 4.8 ÷ 0.6 is the same as 48 ÷ 6, which is 8. The answer is more than 4.8, because each 0.6 is less than 1. Times both numbers, not just one."
+  ],
+  "adult": [
+   "Ages 10 to 11. The Common Core State Standards (5.NBT.B.7) ask pupils to divide decimals to hundredths using concrete models, place value strategies and the link between multiplication and division. The National Curriculum in England for Year 6 asks pupils to use written division where the answer has up to two decimal places, and to use estimation to check answers. Dividing by a decimal is built on again in Key Stage 3.",
+   "The lab keeps one model in view: place value counters shared onto plates. Children share 7.2 between 3 and exchange the spare one for ten tenths. They place the point in 12.6 ÷ 3, 25.5 ÷ 5 and 0.84 ÷ 4 by estimating, carry 3 ÷ 4 and 5.4 ÷ 4 into hundredths, count jumps of 0.6 to see that 4.8 ÷ 0.6 is 8, and multiply both numbers by 10 until the divisor is whole.",
+   "Common mistakes. Children often place the point by counting digits (12.6 ÷ 3 = 42), write a remainder as a decimal (7 ÷ 4 = 1.3), stop when the ones run out (3 ÷ 4 cannot be done) or skip the exchange (5.4 ÷ 4 = 1.1). Many believe that division always makes a number smaller. When dividing by a decimal, some multiply only one number by 10, which changes the answer tenfold. Ask for an estimate before every calculation."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is 9.6 ÷ 3?",
+   "choices": [
+    "3.2",
+    "32",
+    "3.02"
+   ],
+   "answer": 0,
+   "hint": "Share 9 ones onto 3 plates, then share the 6 tenths.",
+   "explain": "9 ones ÷ 3 = 3 ones and 6 tenths ÷ 3 = 2 tenths, so 9.6 ÷ 3 = 3.2. 32 is ten times too big, and 3.02 puts the 2 in the hundredths place."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is {=a*3/10} ÷ 3?",
+   "answer": "a/10",
+   "hint": "Share the ones first, then the tenths. Check with an estimate.",
+   "explain": "{=a*3/10} ÷ 3 = {=a/10}. Check: {=a/10} × 3 = {=a*3/10}.",
+   "params": {
+    "a": [
+     11,
+     39
+    ]
+   },
+   "where": "a%10!=0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is 3 ÷ 4?",
+   "choices": [
+    "0.75",
+    "0.34",
+    "It cannot be done"
+   ],
+   "answer": 0,
+   "hint": "Swap the 3 ones for 30 tenths, then share them onto 4 plates.",
+   "explain": "30 tenths ÷ 4 = 7 tenths with 2 tenths left. 2 tenths = 20 hundredths, and 20 ÷ 4 = 5. So 3 ÷ 4 = 0.75."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "What is {=a*b/10} ÷ 0.{a}?",
+   "answer": "b",
+   "hint": "Multiply both numbers by 10 so you divide by a whole number.",
+   "explain": "Multiply both by 10: {=a*b} ÷ {a} = {b}. So {=a*b/10} ÷ 0.{a} = {b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is the same as 1.5 ÷ 0.03?",
+   "choices": [
+    "150 ÷ 3",
+    "15 ÷ 3",
+    "1.5 ÷ 3"
+   ],
+   "answer": 0,
+   "hint": "Multiply both numbers by the same amount until the second one is whole.",
+   "explain": "0.03 × 100 = 3, so multiply 1.5 by 100 too: 150 ÷ 3 = 50. 15 ÷ 3 scales the two numbers by different amounts, and 1.5 ÷ 3 scales only one."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "What is {=a*4/100} ÷ 4?",
+    "answer": "a/100",
+    "hint": "Share the ones, then the tenths, then the hundredths. Exchange anything left over.",
+    "explain": "{=a*4/100} ÷ 4 = {=a/100}. Check: {=a/100} × 4 = {=a*4/100}.",
+    "params": {
+     "a": [
+      11,
+      99
+     ]
+    },
+    "where": "a%10!=0"
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How many lots of 0.{a} are there in {=a*b/10}?",
+    "answer": "b",
+    "hint": "Count jumps of 0.{a}, or multiply both numbers by 10.",
+    "explain": "Multiply both by 10: {=a*b} ÷ {a} = {b}. So there are {b} lots of 0.{a}.",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      3,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is 0.84 ÷ 4?",
+    "choices": [
+     "0.21",
+     "2.1",
+     "0.021"
+    ],
+    "answer": 0,
+    "hint": "Estimate: 0.8 ÷ 4 = 0.2. Which answer is close to that?",
+    "explain": "8 tenths ÷ 4 = 2 tenths and 4 hundredths ÷ 4 = 1 hundredth, so 0.84 ÷ 4 = 0.21. 2.1 is ten times too big."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Sam says 7 ÷ 4 = 1.3 because the remainder is 3. What is 7 ÷ 4?",
+    "choices": [
+     "1.75",
+     "1.3",
+     "0.57"
+    ],
+    "answer": 0,
+    "hint": "Swap the 3 leftover ones for 30 tenths and keep sharing.",
+    "explain": "7 ÷ 4 = 1 with 3 ones left. 30 tenths ÷ 4 = 7 tenths, 2 left; 20 hundredths ÷ 4 = 5. So 7 ÷ 4 = 1.75. A remainder of 3 is not 0.3."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which answer is bigger than 6?",
+    "choices": [
+     "6 ÷ 0.5",
+     "6 ÷ 2",
+     "6 ÷ 1"
+    ],
+    "answer": 0,
+    "hint": "How many halves fit in 6?",
+    "explain": "There are 12 halves in 6, so 6 ÷ 0.5 = 12. Dividing by a number less than 1 makes the answer bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the same as 3.6 ÷ 0.04?",
+    "choices": [
+     "360 ÷ 4",
+     "36 ÷ 4",
+     "3.6 ÷ 4"
+    ],
+    "answer": 0,
+    "hint": "What do you multiply 0.04 by to make a whole number? Do the same to 3.6.",
+    "explain": "0.04 × 100 = 4 and 3.6 × 100 = 360, so 3.6 ÷ 0.04 = 360 ÷ 4 = 90."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Mia works out 4.8 ÷ 0.6 as 48 ÷ 0.6. What went wrong?",
+    "choices": [
+     "She multiplied only 4.8 by 10",
+     "She should have divided 0.6 by 10",
+     "Nothing: it is the same"
+    ],
+    "answer": 0,
+    "hint": "Does multiplying just one of the numbers keep the answer the same?",
+    "explain": "48 ÷ 0.6 = 80, ten times the real answer. Both numbers must be multiplied by 10: 48 ÷ 6 = 8."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Share 5.4 kg of flour equally into 4 bags. How much goes in each bag?",
+    "choices": [
+     "1.35 kg",
+     "1.1 kg",
+     "13.5 kg"
+    ],
+    "answer": 0,
+    "hint": "Share the ones, exchange the spare one for tenths, and keep going into hundredths.",
+    "explain": "5 ones ÷ 4 = 1, 1 left. 14 tenths ÷ 4 = 3, 2 left. 20 hundredths ÷ 4 = 5. So each bag has 1.35 kg. 1.1 kg forgets to exchange."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Estimate first. What is 25.5 ÷ 5?",
+    "choices": [
+     "5.1",
+     "51",
+     "0.51"
+    ],
+    "answer": 0,
+    "hint": "25 ÷ 5 = 5. Which answer is close to 5?",
+    "explain": "25.5 ÷ 5 is about 25 ÷ 5 = 5, so the digits 5 and 1 make 5.1. 51 and 0.51 are ten times too big and too small."
+   }
+  ]
+ }
+}

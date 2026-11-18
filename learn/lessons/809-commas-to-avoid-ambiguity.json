@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_VMS3kDQ8sA",
+ "title": "Commas to avoid ambiguity",
+ "audience": "family",
+ "keyIdea": "A comma can change what a sentence means. It sets apart the person you are talking to (Let's eat, Grandma), it closes an opening phrase or clause so the next words are not read as part of it (While Mum was cooking, the dog ran in), and it splits the things in a list (cream, cheese and bread is three things; cream cheese and bread is two). A comma is not just a breath: it never goes between the subject and its verb.",
+ "familyTip": "Write \"Let's eat Grandma\" and \"Let's eat, Grandma\" on two cards and ask which one is scary. Then take turns writing a sentence that is funny with no comma (After we ate the cat purred) and passing it over for the other person to fix.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What does each sentence mean? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "talking to someone",
+    "list of things",
+    "opener, then the main part"
+   ],
+   "items": [
+    [
+     "Stop, Dad!",
+     0
+    ],
+    [
+     "Help, Ella!",
+     0
+    ],
+    [
+     "cream, cheese and bread",
+     1
+    ],
+    [
+     "pens, paper and glue",
+     1
+    ],
+    [
+     "While Mum was cooking, the dog ran in.",
+     2
+    ],
+    [
+     "After we ate, the cat purred.",
+     2
+    ],
+    [
+     "Shall we eat, Max?",
+     0
+    ],
+    [
+     "Most of the time, travellers worry.",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagambig",
+  "caption": "Flagship lab: comma before a name, find the opener trap, count list items, match commas to meanings, remove stray commas.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A comma can change what a sentence means. Let's eat Grandma sounds like Grandma is dinner! Let's eat, Grandma asks her to come and eat. The comma sets her name apart.",
+   "Some sentences start with an opener, like While Mum was cooking. Put a comma when the opener ends. With no comma, you might read Mum was cooking the dog. With it, you get While Mum was cooking, the dog ran in.",
+   "In a list, a comma splits one thing from the next. Cream, cheese and bread is three things. Cream cheese and bread is two, because cream cheese is one food.",
+   "Do not put a comma just because you take a breath. A comma never goes between who does it and what they do. The dog, barked is wrong. The dog barked is right."
+  ],
+  "adult": [
+   "Ages 9 to 10. The national curriculum in England asks pupils in Years 5 and 6 to use commas to clarify meaning or avoid ambiguity, building on commas after fronted adverbials (Year 4) and in lists (Year 2). The US Common Core covers the same ground in L.4.2 and L.5.2 (commas in direct address, after introductory elements and in a series).",
+   "Three jobs come up again and again. A comma sets off a noun of direct address (Stop, Dad! versus Stop Dad!). A comma after an introductory phrase or subordinate clause stops the reader joining the next noun to it, the so-called garden-path sentence (While Mum was cooking, the dog ran in; Most of the time, travellers worry about their bags). In a list, the commas decide how many items there are (cream, cheese and bread versus cream cheese and bread). Reported-speech tags show the same effect: The teacher said Ben is late versus The teacher, said Ben, is late.",
+   "Common mistakes: treating the comma as a breath mark and putting it between a subject and its verb (The dog, barked); putting a comma straight after and in a list; splitting a phrase that belongs together (Most of the, time); leaving out the comma before a name at the end of a sentence; and reading a two-word item such as paper clips as two things. Careful: a comma before the final and (the serial or Oxford comma) is a style choice, so do not mark it wrong.",
+   "In the lab your child drags a comma in front of the person spoken to in five sentences and taps the first word that tricks the eye after an opener. They count the items in five lists, match six cards to their meanings, and take the stray comma out of five sentences."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which sentence asks Grandad to come and eat?",
+   "choices": [
+    "Let's eat, Grandad.",
+    "Let's eat Grandad.",
+    "Let's, eat Grandad."
+   ],
+   "answer": 0,
+   "hint": "Look for the comma that sets the name apart.",
+   "explain": "The comma before Grandad shows we are talking to him. With no comma, Grandad is the food."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A list has {n} things with and before the last one and no comma before and. How many commas does it need?",
+   "answer": "n-2",
+   "hint": "Try it with 3 things: apples, pears and plums. Then count for more.",
+   "explain": "The last two things are joined by and, so commas go between the others: {n} things need {=n-2} commas.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "\"While Dad was washing the car rolled away.\" Where does the comma go?",
+   "choices": [
+    "after washing",
+    "after car",
+    "after Dad"
+   ],
+   "answer": 0,
+   "hint": "Which words did you first read as what Dad was washing?",
+   "explain": "While Dad was washing, the car rolled away. Without the comma you read Dad was washing the car."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A sentence has a list with {c} commas, and the last two things are joined by and. How many things are in the list?",
+   "answer": "c+2",
+   "hint": "Each comma splits off one thing, and the and joins the last two.",
+   "explain": "{c} commas split off {c} things, then and joins the last two: {c} + 2 = {=c+2} things.",
+   "params": {
+    "c": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which sentence has a comma that should not be there?",
+   "choices": [
+    "The tall girl, won the race.",
+    "After lunch, we played chess.",
+    "Sam, can you help?"
+   ],
+   "answer": 0,
+   "hint": "Is there a comma between who did it and what they did?",
+   "explain": "The tall girl won: the subject (the tall girl) and the verb (won) never have a comma between them."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "\"I love painting, my dog and my gran.\" What does the writer love?",
+    "choices": [
+     "three things: painting, the dog and Gran",
+     "painting the dog and Gran",
+     "only painting"
+    ],
+    "answer": 0,
+    "hint": "Each comma splits off a new thing in the list.",
+    "explain": "painting | my dog | my gran: three things. With no comma, it would mean painting the dog and Gran."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which sentence is talking to Kim?",
+    "choices": [
+     "Kim, look at this.",
+     "Look at Kim.",
+     "Kim looked at this."
+    ],
+    "answer": 0,
+    "hint": "Who is being spoken to, not just spoken about?",
+    "explain": "The comma after Kim sets her apart as the person spoken to. The others are about Kim."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "\"Most of the time travellers worry.\" Where does the comma go?",
+    "choices": [
+     "after time",
+     "after travellers",
+     "after Most"
+    ],
+    "answer": 0,
+    "hint": "Most of the time is the opener.",
+    "explain": "Most of the time, travellers worry. With no comma, you read time travellers."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Jay writes {n} sentences that talk to someone by name at the end, and {k} lists of 3 things. Each name needs 1 comma and each list needs 1 comma. How many commas is that?",
+    "answer": "n+k",
+    "hint": "Count the commas for names, then the commas for lists, then add.",
+    "explain": "A list of 3 things needs 1 comma (a, b and c). {n} names + {k} lists = {=n+k} commas.",
+    "params": {
+     "n": [
+      2,
+      6
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "\"The coach, said Mia, was cross.\" Who was cross?",
+    "choices": [
+     "the coach",
+     "Mia",
+     "nobody"
+    ],
+    "answer": 0,
+    "hint": "The commas wrap said Mia.",
+    "explain": "said Mia is wrapped in commas, so Mia is speaking and the coach was cross."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "How many things? \"I need paper clips, tape and glue.\"",
+    "choices": [
+     "3",
+     "4",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Is paper clips one thing or two?",
+    "explain": "paper clips | tape | glue: 3 things. paper clips has no comma inside, so it is one thing."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Ava checks {s} sentences. {w} of them have a stray comma between who did it and the verb. How many are fine?",
+    "answer": "s-w",
+    "hint": "Take the ones with a slip away from all the sentences.",
+    "explain": "{s} − {w} = {=s-w} sentences are fine. A comma never goes between the subject and its verb.",
+    "params": {
+     "s": [
+      8,
+      12
+     ],
+     "w": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which one is right?",
+    "choices": [
+     "Inside, the house was cold.",
+     "Inside the house, was cold.",
+     "Inside the, house was cold."
+    ],
+    "answer": 0,
+    "hint": "Inside is the opener. What comes next?",
+    "explain": "Inside, the house was cold. The comma closes the opener, so the house is what was cold."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "\"Help Ella!\" What does it mean with no comma?",
+    "choices": [
+     "Go and help Ella.",
+     "Ella, help me.",
+     "Ella is helping."
+    ],
+    "answer": 0,
+    "hint": "With no comma, Ella is who gets the help.",
+    "explain": "With no comma, Ella is the one being helped. Help, Ella! would mean you are asking Ella for help."
+   }
+  ]
+ }
+}

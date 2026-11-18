@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_U7r90IZEVi",
+ "title": "Stationary points",
+ "audience": "learner",
+ "keyIdea": "A stationary point is where the gradient is zero: f′(x) = 0. To find one, differentiate, solve f′(x) = 0 for x, then substitute into f(x) for y. To classify it, check the sign of f′ either side: + 0 − is a local maximum, − 0 + is a local minimum, and the same sign on both sides is a stationary point of inflection. f″ < 0 means maximum and f″ > 0 means minimum, but f″ = 0 tells you nothing.",
+ "explain": {
+  "kid": [
+   "A stationary point is a point on a curve where the gradient is zero. The tangent there is flat. On y = x³ − 3x² + 2 there are two: the top of the hill at (0, 2) and the bottom of the valley at (2, −2). They are not where the curve crosses the x-axis. Those are the roots, where y = 0.",
+   "To find them, differentiate to get f′(x) = 3x² − 6x. Set f′(x) = 0 and solve: 3x(x − 2) = 0, so x = 0 or x = 2. Then substitute each x into f(x), the curve, to get y. A common slip is to put x into f′(x). That always gives 0, which is the gradient, not the height.",
+   "Next, decide what kind of point it is. Work out the sign of f′ just to the left and just to the right. If the gradient goes + then 0 then −, the curve goes up then down, so it is a local maximum. If it goes − then 0 then +, it is a local minimum.",
+   "If the sign is the same on both sides, the curve flattens out but keeps going the same way. This is a stationary point of inflection, like the origin on y = x³. A quicker test uses the second derivative: f″ < 0 means a maximum, f″ > 0 means a minimum. If f″ = 0, the test fails. Go back to the signs."
+  ],
+  "adult": [
+   "This topic is part of A level Mathematics (DfE 2016 subject content, section G). Students use differentiation to find stationary points. They use the second derivative to decide what kind each one is. It links to points of inflection and to convex and concave curves. In the Edexcel, AQA and OCR courses it comes just before optimisation.",
+   "Key terms: a stationary point has f′(x) = 0. A turning point is a local maximum or minimum. A stationary point of inflection has f′ = 0 with no change of sign. Students use the first derivative sign test and the second derivative test. Local means highest or lowest nearby, not on the whole curve. A cubic's local maximum is not its greatest value.",
+   "Common mistakes: solving f(x) = 0 instead of f′(x) = 0. Putting x into f′ instead of f to find y. Reading the sign table the wrong way round. Thinking every stationary point is a maximum or minimum. Thinking f″ = 0 proves a point of inflection. Use y = x⁴ to show it does not: f″(0) = 0, but it is a minimum.",
+   "In the lab, learners slide a tangent along y = x³ − 3x² + 2 and mark where it is flat. The roots are shown too, so they see that y = 0 is not the same. Then they pick each line of working and fill a sign table. They classify y = x³, y = −x³ and y = x⁴. Last, they use f″ until it fails."
+  ]
+ },
+ "status": "self-checked",
+ "visual": {
+  "type": "plot",
+  "caption": "y = x³ − 3x² + 2: drag the point. The tangent is flat at the stationary points x = 0 and x = 2.",
+  "opts": {
+   "mode": "tangent",
+   "f": "x*x*x-3*x*x+2",
+   "a": 1,
+   "xr": [
+    -1.5,
+    3.5
+   ],
+   "yr": [
+    -3,
+    3.5
+   ],
+   "step": 0.5
+  }
+ },
+ "lab": {
+  "type": "flagstatpt",
+  "caption": "Flagship lab: find flat tangents, solve f′(x) = 0, classify with a sign table, meet points of inflection, and use the second derivative.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Find the x-coordinate of the stationary point of y = x² − 8x + 3.",
+   "choices": [
+    "x = 4",
+    "x = 8",
+    "x = 3"
+   ],
+   "answer": 0,
+   "hint": "Differentiate, then set dy/dx equal to 0 and solve for x.",
+   "explain": "dy/dx = 2x − 8. Setting 2x − 8 = 0 gives x = 4."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "y = x² − {b}x + 1 has a stationary point. What is its x-coordinate? (Give a decimal if needed.)",
+   "answer": "b/2",
+   "hint": "dy/dx = 2x − {b}. Set this equal to 0 and solve.",
+   "explain": "2x − {b} = 0 gives x = {b} ÷ 2 = {=b/2}.",
+   "params": {
+    "b": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "f′ is + just left of x = 3 and − just right of x = 3. What is at x = 3?",
+   "choices": [
+    "A local maximum",
+    "A local minimum",
+    "A point of inflection"
+   ],
+   "answer": 0,
+   "hint": "+ means going up, − means going down. Draw the shape.",
+   "explain": "Up, flat, then down makes a hill, so x = 3 is a local maximum."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Find the y-coordinate of the stationary point of y = x² − {b}x.",
+   "answer": "-(b*b)/4",
+   "where": "b%2==0",
+   "hint": "Solve 2x − {b} = 0 first, then substitute that x into y, not into dy/dx.",
+   "explain": "y = ({=b/2})² − {b} × {=b/2} = {=-(b*b)/4}. Putting x into dy/dx would give 0, the gradient.",
+   "params": {
+    "b": [
+     2,
+     10
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is a stationary point?",
+    "choices": [
+     "A point where f′(x) = 0",
+     "A point where f(x) = 0",
+     "A point where f″(x) = 0"
+    ],
+    "answer": 0,
+    "hint": "Stationary means the gradient is not changing the height at that instant.",
+    "explain": "At a stationary point the gradient is 0, so f′(x) = 0. f(x) = 0 gives the roots."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Find the stationary points of y = x³ − 3x.",
+    "choices": [
+     "(1, −2) and (−1, 2)",
+     "(1, 0) and (−1, 0)",
+     "(0, 0) and (√3, 0)"
+    ],
+    "answer": 0,
+    "hint": "Solve 3x² − 3 = 0, then put each x into y.",
+    "explain": "dy/dx = 3x² − 3 = 0 gives x = ±1. y(1) = −2 and y(−1) = 2. The second choice uses the gradient for y; the third gives the roots."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "f″(a) = 4 at a stationary point x = a. What is it?",
+    "choices": [
+     "A local minimum",
+     "A local maximum",
+     "A point of inflection"
+    ],
+    "answer": 0,
+    "hint": "f″ > 0 means the gradient is increasing.",
+    "explain": "f″ > 0 means the gradient goes from negative to positive, so the curve is a valley: a local minimum."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "y = x⁴ has f′(0) = 0 and f″(0) = 0. What is at the origin?",
+    "choices": [
+     "A minimum: f′ goes − then +",
+     "A point of inflection, because f″ = 0",
+     "A maximum"
+    ],
+    "answer": 0,
+    "hint": "f″ = 0 does not decide it. Check the sign of f′ either side.",
+    "explain": "f′(−0.5) < 0 and f′(0.5) > 0, so it is a minimum. f″ = 0 alone never proves an inflection."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "f′(x) = (x − 2)². What is at x = 2?",
+    "choices": [
+     "A stationary point of inflection",
+     "A local minimum",
+     "A local maximum"
+    ],
+    "answer": 0,
+    "hint": "Can a square ever be negative? Check the sign either side.",
+    "explain": "f′ is positive on both sides of x = 2, so the curve keeps rising. It is a stationary point of inflection."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ali finds f′(5) = 0 and writes the stationary point as (5, 0). What did he do wrong?",
+    "choices": [
+     "He put x = 5 into f′, not f",
+     "Nothing, that is correct",
+     "He should have solved f(x) = 0"
+    ],
+    "answer": 0,
+    "hint": "f′(5) is the gradient. What gives the height of the curve?",
+    "explain": "The y-coordinate comes from f(5). f′(5) = 0 is the gradient, so it is 0 at every stationary point."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which statement is true for a local maximum?",
+    "choices": [
+     "f′ changes from + to −",
+     "f′ changes from − to +",
+     "f′ has the same sign both sides"
+    ],
+    "answer": 0,
+    "hint": "Think of walking over a hill.",
+    "explain": "Going up a hill f′ is +, at the top it is 0, and going down it is −."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "y = {a}x² − {=2*a*b}x + 7. Find the x-coordinate of the stationary point.",
+    "answer": "b",
+    "hint": "dy/dx = {=2*a}x − {=2*a*b}. Set it equal to 0.",
+    "explain": "{=2*a}x − {=2*a*b} = 0, so x = {=2*a*b} ÷ {=2*a} = {b}.",
+    "params": {
+     "a": [
+      1,
+      4
+     ],
+     "b": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "y = x³ − {a}x² has a stationary point at x = 0 and one more. Find the x-coordinate of the other one.",
+    "answer": "2*a/3",
+    "where": "a%3==0",
+    "hint": "dy/dx = 3x² − {=2*a}x = x(3x − {=2*a}). Set each factor to 0.",
+    "explain": "x(3x − {=2*a}) = 0 gives x = 0 or x = {=2*a} ÷ 3 = {=2*a/3}.",
+    "params": {
+     "a": [
+      3,
+      12
+     ]
+    }
+   }
+  ]
+ }
+}

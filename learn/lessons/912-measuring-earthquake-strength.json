@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_mdZ3nBWChW",
+ "title": "Measuring earthquake strength",
+ "audience": "learner",
+ "keyIdea": "A seismometer records how the ground shakes. Its heavy weight holds a pen almost still while the ground and the paper move, so the pen draws a wiggly line called a seismogram. Magnitude is one number for the size of a whole earthquake. Each step up the scale means the wiggle is 10 times taller and the quake lets out about 32 times as much energy, so a magnitude 7 lets out about 1000 times the energy of a magnitude 5. Intensity is different: it describes how hard the ground shook in one place. It gets weaker further away and stronger on soft ground. Small earthquakes are common; big ones are rare.",
+ "familyTip": "When an earthquake is in the news, find its magnitude and read how it felt in different towns. Ask each other: which number is the same everywhere, and which one changes from place to place?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each card about magnitude, intensity or the seismometer? Drag each card to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Magnitude: the whole quake",
+    "Intensity: one place",
+    "Seismometer: the recorder"
+   ],
+   "items": [
+    [
+     "One number for each quake",
+     0
+    ],
+    [
+     "Up 1 when wiggles are 10 times taller",
+     0
+    ],
+    [
+     "About 32 times the energy each step",
+     0
+    ],
+    [
+     "Dishes rattle in my town",
+     1
+    ],
+    [
+     "Weaker far from the epicentre",
+     1
+    ],
+    [
+     "Stronger on soft mud",
+     1
+    ],
+    [
+     "A heavy weight that stays still",
+     2
+    ],
+    [
+     "Draws a seismogram",
+     2
+    ],
+    [
+     "Paper that moves with the ground",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagquake",
+  "caption": "Flagship lab: shake a seismometer, turn wiggle heights into magnitudes, step up the energy, visit towns round one quake, rank how often quakes happen.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A seismometer records shaking. A heavy weight hangs from a frame, with a pen on it. When the ground shakes, the frame and the paper move, but the heavy weight hardly moves. So the pen draws a wiggly line. Big shaking makes tall wiggles.",
+   "Magnitude tells you how big a quake is. Scientists measure the tallest wiggle. At 100 km away, a 1 mm wiggle is magnitude 3. A wiggle 10 times taller is magnitude 4. So magnitude 6 is not twice magnitude 3. Its wiggle is 1000 times taller.",
+   "Each step up also lets out about 32 times as much energy. Two steps is about 32 × 32, close to 1000. So one magnitude 7 quake lets out about as much energy as 1000 magnitude 5 quakes.",
+   "Intensity is how hard the ground shakes where you are. It is written in Roman numerals, like IV or VIII. Near the quake, chimneys may fall. Far away, dishes just rattle. Soft mud shakes more than hard rock. One quake has one magnitude but many intensities. Small quakes happen every day. Big ones are rare."
+  ],
+  "adult": [
+   "Ages 9 to 11. NGSS 4-ESS2-2 uses maps of earthquake patterns and 4-ESS3-2 asks pupils to compare ways to reduce the effects of earthquakes; middle school MS-ESS3-2 adds forecasting from data. Measuring strength gives the words for both. A seismometer records ground motion, magnitude describes the size of the earthquake at its source, and intensity (the Modified Mercalli scale, I to XII) describes the effects at one place.",
+   "The lab moves from the instrument to the scales. Children shake a model seismometer and see the heavy pen stay still while the frame moves. They match wiggles of 1, 10 and 100 mm, all recorded 100 km away, to magnitudes 3, 4 and 5, which is how Richter first defined his scale. They turn a dial to see energy grow about 32 times a step, visit four towns round one magnitude 6.5 quake (the town intensities are a simple model), and place yearly USGS counts on magnitude bands.",
+   "Common mistakes. Children often treat magnitude as an ordinary number, so magnitude 6 seems twice magnitude 3. They mix up the ×10 wiggle with the ×32 energy step, or think the magnitude is lower in a far town. Many think the Richter scale measures damage, but damage is intensity and depends on distance, depth, ground and buildings. Scientists now use the moment magnitude scale for large quakes; its steps match, so these rules still hold. Ask: is this number about the whole quake, or about one place?"
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What does a seismometer record?",
+   "choices": [
+    "How the ground shakes",
+    "How hot the rocks are",
+    "Where the plates meet"
+   ],
+   "answer": 0,
+   "hint": "Think about the wiggly line it draws.",
+   "explain": "A seismometer records ground shaking as a wiggly line called a seismogram. Taller wiggles mean the ground moved further."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "At 100 km, magnitude 3 makes a 1 mm wiggle. What magnitude makes a {=10**a} mm wiggle at 100 km?",
+   "answer": "3+a",
+   "hint": "Count how many times you multiply 1 mm by 10 to get there.",
+   "explain": "{=10**a} mm is 1 mm multiplied by 10 a total of {a} times. Each ×10 adds 1, so the magnitude is 3 + {a} = {=3+a}.",
+   "params": {
+    "a": [
+     0,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Quake P is magnitude {=b+a} and quake Q is magnitude {b}. At the same distance, how many times taller is the wiggle from P?",
+   "answer": "10**a",
+   "hint": "Each step up the scale makes the wiggle 10 times taller.",
+   "explain": "P is {a} steps above Q. Each step is ×10, so the wiggle is {=10**a} times taller.",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A quake is magnitude 6.2. A town 300 km away barely feels it. What is the magnitude in that town?",
+   "choices": [
+    "6.2",
+    "About 2",
+    "0"
+   ],
+   "answer": 0,
+   "hint": "Is magnitude about the whole quake, or about one place?",
+   "explain": "Magnitude is one number for the whole quake, so it is 6.2 everywhere. The far town has a low intensity, not a low magnitude."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "How much more energy does a magnitude 6 quake let out than a magnitude 5?",
+   "choices": [
+    "About 32 times",
+    "About 1.2 times",
+    "Exactly 2 times"
+   ],
+   "answer": 0,
+   "hint": "One step up the scale. Is it the ×10 wiggle rule or the energy rule?",
+   "explain": "Each step up lets out about 32 times as much energy. 1.2 comes from 6 ÷ 5, which treats magnitude as an ordinary number."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "How many steps up the magnitude scale is a wiggle {=10**a} times taller?",
+    "answer": "a",
+    "hint": "Count the tens multiplied together to make that number.",
+    "explain": "{=10**a} is 10 multiplied together {a} times, and each ×10 is one step. So it is {a} steps up.",
+    "params": {
+     "a": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "At 100 km, a {=10**a} mm wiggle means magnitude {=3+a}. What magnitude makes a wiggle 10 times taller at the same place?",
+    "answer": "4+a",
+    "hint": "One ×10 in wiggle height is one step up the scale.",
+    "explain": "10 times taller is one step up: {=3+a} + 1 = {=4+a}.",
+    "params": {
+     "a": [
+      0,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which word means how hard the ground shook in one place?",
+    "choices": [
+     "Intensity",
+     "Magnitude",
+     "Epicentre"
+    ],
+    "answer": 0,
+    "hint": "One of these changes from town to town.",
+    "explain": "Intensity describes the shaking in one place, from IV (dishes rattle) to VIII (chimneys fall). Magnitude is one number for the whole quake."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why does the pen on a seismometer hang from a heavy weight?",
+    "choices": [
+     "The weight stays almost still while the ground moves",
+     "Heavy pens write darker lines",
+     "The weight makes the quake bigger"
+    ],
+    "answer": 0,
+    "hint": "Something has to stay still for the pen to draw the movement.",
+    "explain": "A heavy weight hardly moves when the ground shakes. The paper moves with the ground under the still pen, so the pen draws the shaking."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Town A is 10 km from a quake. Town B is 200 km away on the same kind of rock. Which shook harder?",
+    "choices": [
+     "Town A",
+     "Town B",
+     "They shook the same"
+    ],
+    "answer": 0,
+    "hint": "Shaking gets weaker as the waves spread out.",
+    "explain": "Town A, closer to the epicentre, shook harder. Both towns had the same quake and magnitude, but different intensities."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Two towns are both 60 km from a quake. One sits on soft mud and one on hard rock. Which shakes more?",
+    "choices": [
+     "The one on soft mud",
+     "The one on hard rock",
+     "They shake the same"
+    ],
+    "answer": 0,
+    "hint": "Think about a bowl of jelly and a brick.",
+    "explain": "Soft ground such as mud shakes more strongly than hard rock, so its intensity is higher even at the same distance."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A magnitude 7 quake lets out about how much more energy than a magnitude 5?",
+    "choices": [
+     "About 1000 times",
+     "2 times",
+     "About 100 times"
+    ],
+    "answer": 0,
+    "hint": "Each step is about 32 times the energy. There are two steps.",
+    "explain": "32 × 32 is about 1000, so a magnitude 7 lets out about 1000 times the energy. 100 times is the wiggle height for two steps, not the energy."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Each year there are about 1,300 magnitude 5 quakes in the world. About how many magnitude 6 quakes are there?",
+    "choices": [
+     "About 130",
+     "About 13,000",
+     "About 1,300"
+    ],
+    "answer": 0,
+    "hint": "Bigger quakes are rarer. How does the count change for each step up?",
+    "explain": "There are about 10 times fewer quakes for each step up, so about 130 magnitude 6 quakes a year (USGS counts about 134)."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Ali says a magnitude 6 quake is twice as strong as a magnitude 3. Is he right?",
+    "choices": [
+     "No: 3 steps make the wiggle 1000 times taller",
+     "Yes: 6 is double 3",
+     "No: it is 3 times as strong"
+    ],
+    "answer": 0,
+    "hint": "Each step up the scale is ×10 in wiggle height.",
+    "explain": "From 3 to 6 is three steps of ×10, so the wiggle is 10 × 10 × 10 = 1000 times taller, and the energy is about 32,000 times more."
+   }
+  ]
+ }
+}

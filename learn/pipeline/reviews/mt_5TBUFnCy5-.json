@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against Common Core 5.MD.C.5c (volume is additive: find volumes of solid figures made of two non-overlapping right rectangular prisms by adding the volumes of the non-overlapping parts) and 5.MD.C.5a–b (packing with unit cubes, V = l × w × h), and NC England Y6 measurement (volume of cubes and cuboids in cm³ and m³). Every number was recomputed by hand. The box is 4 × 3 × 3 = 36. The flat cut is 36 + 18 = 54 and the upright cut 30 + 24 = 54, and subtraction gives 90 − 36 = 54. The overlap case is 36 + 30 = 66 (12 too many) and the gap case 24 + 18 = 42 (12 too few). Build targets give 6L + 6H = 60 for L + H = 10. Parameterised answers a·6+24, l·5+40, b·2+6, 90−9c and p+3 were checked at all corners."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented errors for composite volume (NCTM and EEF KS2 maths guidance; Battista and Clements on spatial structuring of cube arrays). Using outer dimensions for both parts, which double-counts the corner, appears in the step 3 prediction (Ben's 6×3×2 + 2×3×5), the red overlap block, challenge tag twice, p4 and the 'up' total option 66. Leaving a part out appears in the dashed gap, tag miss, m6 and the flat total option 36. Area of one face for volume is tag area (18, 6, 12). Adding edges is tag sum (11, 8, 10). Multiplying the two volumes is tag mult (648, 720). Square units appear in tag unit and m5. The step 0 prediction targets 12 + 3 against 12 × 3 for layers."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagvadd is built around this topic's own mechanism. The learner cuts an oblique-drawn L-shaped solid of unit cubes into two cuboids in two different ways and adds the parts, judges proposed splits for overlap or gaps with the shared corner shown in red or dashed, and drags an L-shape's base and tower to make an exact total. It differs from Capacity and volume (flagcups, filling with cups), Area of triangles and parallelograms and Area by tiling (2-D), and Calculating density. The lab_distinct gate passes under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Stacking three 12-cube layers shows that volume is length × width × height. The flat cut shows each piece with its edge lengths, and picking 18 for the 6 × 3 × 2 block gets 'just one layer… multiply by the height 2'. Step 2 forces the other cut, and the matching 54 shows that the split does not matter. In step 3 the red corner makes the double count visible (66), and the dashed corner makes the gap visible (42). In step 4 the learner sees 6L + 6H update live while reaching 60."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions each have a tempting wrong option that the lab then disproves. '12 + 3 = 15' for three layers fails when the layer count reaches 36. 'Different: the pieces are new sizes' fails when the upright cut also totals 54. 'Yes: both pieces are in the L' for Ben's split fails when the overlap shows in red and the verdict 'counts twice' is the only one accepted (66 against 54)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions; every wrong option has a tagged message naming the slip. area: only the area of one layer, so multiply by the height. sum: adding edges gives a length. mult: parts join, so add, do not multiply. miss: a piece was left out. twice: both pieces include the 2 × 3 × 2 corner, so 12 cubes are counted twice. unit: volume is cm³, while cm² is area and cm is length."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the learner limits: kid text Flesch-Kincaid 1.1 (limit 6.5) and adult 6.3 (limit 9.5). Kid paragraphs use one worked shape (the 4 × 3 × 3 box, the L-shape) and short sentences. Lab step texts are two sentences. Canvas labels give each edge with its unit (6 cm, 3 cm, 2 cm)."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step does one job (layers, first cut, second cut, overlap and gap, build to a target), feedback states the exact numbers involved ('18 is just one layer: 6 × 3 = 18. Multiply by the height 2 too'), and every item explanation shows the two products and their sum."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px touch in light and dark were taken for each step before and after Show me. The volume chips are three 42 px tap targets in one row and the verdict chips fit their labels after the wording was shortened ('adds up', 'counts twice', 'leaves a gap'). The build step's drag works on the base end or tower top, with four buttons below as an alternative. After the first screenshots the edge labels were moved off the corners and given 'cm', the solid was scaled down so the labels clear the chip row, and the chips moved below the totals line. The canvas keeps a light card in dark mode."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: 'Add a layer', 'cut flat' and 'cut upright', each volume choice (aria-label names the piece and the cubic centimetres), the three verdicts, and Base longer/shorter and Tower taller/shorter (aria-label gives the new size). After each move the canvas aria-label reads the dimensions, totals and last feedback. Challenge feedback is an aria-live status. walk.cjs reports axe (WCAG 2.1 AA) clean in light and dark on desktop and iPhone 13, with no console errors."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics 5.MD.C.5a–c (volume, additive volume of composite rectangular prisms)",
+  "Department for Education, National Curriculum in England: Mathematics Year 6 measurement (volume of cubes and cuboids)",
+  "Illustrative Mathematics grade 5 unit 1 (volume of figures made of two prisms)",
+  "Battista & Clements (1996) on students' spatial structuring of 3-D cube arrays"
+ ]
+}

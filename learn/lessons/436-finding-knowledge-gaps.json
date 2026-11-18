@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_2uHYdoxD0H",
+ "title": "Finding Knowledge Gaps",
+ "audience": "learner",
+ "keyIdea": "To find your knowledge gaps, split a topic into its parts and test each part with your notes closed. Colour each part by the proof, not by how sure you feel: solid (right with no help), shaky (right only with help, or with slips) or gap (cannot do it yet). Re-reading makes notes feel familiar, which is not the same as knowing them. Fix the part the others are built on first, give each colour its own fix, and test again later.",
+ "explain": {
+  "kid": [
+   "A big topic, like fractions, has lots of parts. You might be great at some parts and stuck on others. A knowledge gap is a part you cannot do yet.",
+   "How sure you feel is not proof. If you read your notes again, they start to feel easy. But easy to read is not the same as easy to do. The proof is a question you answer with your notes closed.",
+   "Give each part a colour. Solid means you got it right with no help. Shaky means it only works with help, or you made slips. Gap means you cannot start it yet.",
+   "Then fix the base first. If one part is built on another, the lower part comes first. Solid parts need a quick check next week. Shaky parts need practice with notes shut. Gaps need learning again, with help."
+  ],
+  "adult": [
+   "This is metacognitive monitoring: judging your own understanding (Flavell's model of metacognition). The EEF guide to metacognition puts it in the evaluate stage of plan, monitor, evaluate. A common class tool is a red-amber-green (RAG) self-check of a topic list. A RAG rating only helps when it rests on evidence.",
+   "Pupils tend to rate themselves by feel. Re-reading and highlighting create a fluency illusion, also called an illusion of competence: the page looks familiar, so it feels known. Retrieval practice, which means answering without notes, gives a truer signal. It also makes memory stronger (the testing effect). Good proof of solid is getting new questions right, with no help, more than once.",
+   "Common mistakes: giving a whole topic one colour; counting 'I read it' or 'the teacher explained it' as proof; spending revision time on solid parts because it feels good; and attacking the hardest gap first when it is built on a shaky part. Be careful not to treat a gap as a fixed weakness. A gap means not yet.",
+   "In the lab, learners sort proof cards into solid, shaky and gap. They test each part of Kai's all-green fractions map and recolour it, pick which gap to fix first on three maps, and match each colour to its own fix."
+  ]
+ },
+ "familyTip": "Before a test, ask your child to list the parts of the topic, then pick one question per part to try with the book shut. Colour each part together and plan the shakiest base part first.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Solid, shaky or gap? Drag each piece of proof to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Solid",
+    "Shaky",
+    "Gap"
+   ],
+   "items": [
+    [
+     "Right 3 times, no notes",
+     0
+    ],
+    [
+     "Right only with notes open",
+     1
+    ],
+    [
+     "Cannot start it yet",
+     2
+    ],
+    [
+     "Taught it to a friend",
+     0
+    ],
+    [
+     "Right but with slips",
+     1
+    ],
+    [
+     "Never met the word",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggapmap",
+  "caption": "Flagship lab: sort proof into solid, shaky and gap, test and recolour a whole topic map, choose which gap to fix first, and match each colour to its fix.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Ivy re-read her notes on decimals and they felt easy. What should she do next?",
+   "choices": [
+    "Try some questions with her notes closed",
+    "Mark decimals as solid",
+    "Read them a third time"
+   ],
+   "answer": 0,
+   "hint": "Feeling easy is not proof. What would show what she can really do?",
+   "explain": "Only a test without notes shows what Ivy can do. Familiar notes can feel known when they are not."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A topic has {p} parts. Kai tests them all: {s} are solid and {h} are shaky. The rest are gaps. How many gaps?",
+   "answer": "p-s-h",
+   "where": "s+h<p",
+   "hint": "Every part is solid, shaky or a gap. Take the solid and shaky parts away from the total.",
+   "explain": "{p} parts take away {s} solid and {h} shaky leaves {=p-s-h} gaps.",
+   "params": {
+    "p": [
+     8,
+     12
+    ],
+    "s": [
+     2,
+     4
+    ],
+    "h": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Leo can only answer area questions with the formula sheet open. How should he colour area?",
+   "choices": [
+    "Shaky",
+    "Solid",
+    "Gap"
+   ],
+   "answer": 0,
+   "hint": "It works, but only with help.",
+   "explain": "Right only with help is shaky. Solid needs right answers with no help."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Mia tests {n} parts of a topic. She has tested {t} so far. How many parts are left to test?",
+   "answer": "n-t",
+   "where": "t<n",
+   "hint": "Take the parts she has tested away from all the parts.",
+   "explain": "{n} take away {t} is {=n-t}. Testing every part is what makes it a survey of the whole topic.",
+   "params": {
+    "n": [
+     6,
+     10
+    ],
+    "t": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is the best proof that a part is solid?",
+    "choices": [
+     "New questions right with no notes",
+     "You highlighted it all",
+     "The teacher explained it clearly"
+    ],
+    "answer": 0,
+    "hint": "Which one shows what you can do on your own?",
+    "explain": "Getting new questions right without help shows you can use it. Highlighting and listening do not."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Adding fractions with different denominators is a gap, and equivalent fractions is shaky. Which should you fix first?",
+    "choices": [
+     "Equivalent fractions",
+     "Adding with different denominators",
+     "The parts that are already solid"
+    ],
+    "answer": 0,
+    "hint": "Which part is the other one built on?",
+    "explain": "Adding with different denominators uses equivalent fractions, so fix the base first."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is the best fix for a shaky part?",
+    "choices": [
+     "Practice questions with notes closed, then mark them",
+     "Leave it, it is nearly done",
+     "Copy out the notes again"
+    ],
+    "answer": 0,
+    "hint": "Shaky works only with help. What removes the help?",
+    "explain": "Practice with notes closed, then marking, turns a shaky part solid."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why can re-reading trick you?",
+    "choices": [
+     "Familiar notes feel known even when you cannot use them",
+     "Re-reading makes you forget",
+     "Notes are always wrong"
+    ],
+    "answer": 0,
+    "hint": "Think about the difference between easy to read and easy to do.",
+    "explain": "Re-reading makes notes feel familiar. That feeling is not proof you can answer questions."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ben says, \"I'm rubbish at fractions.\" What is a better way to find his gaps?",
+    "choices": [
+     "Test each part of fractions and colour it",
+     "Give up on fractions",
+     "Only do the parts he likes"
+    ],
+    "answer": 0,
+    "hint": "One word for a whole topic hides the detail.",
+    "explain": "Splitting fractions into parts shows which are solid and which need work. Usually most parts are not gaps."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Your test is tomorrow on area. Volume is a gap but is not in the test. Area of triangles is shaky. What first?",
+    "choices": [
+     "Area of triangles",
+     "Volume",
+     "Re-read everything"
+    ],
+    "answer": 0,
+    "hint": "Which part do you need soonest?",
+    "explain": "Area of triangles is shaky and in tomorrow's test. Plan volume for later."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Kai felt sure about all {a} parts. Tests showed {b} were not solid. How many were really solid?",
+    "answer": "a-b",
+    "where": "b<a",
+    "hint": "Take the parts that were not solid away from all the parts.",
+    "explain": "{a} take away {b} is {=a-b}. Feeling sure about all {a} did not make them all solid.",
+    "params": {
+     "a": [
+      5,
+      9
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Ella has {g} gaps. She fixes one each week. How many weeks until all {g} are fixed?",
+    "answer": "g",
+    "hint": "She fixes one gap each week, so count one week per gap.",
+    "explain": "{g} gaps at one a week takes {g} weeks. Then test again to check they stayed fixed.",
+    "params": {
+     "g": [
+      2,
+      6
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,203 @@
+{
+ "topicId": "mt_gkpLVEUv_Q",
+ "title": "Finding a term or coefficient in a binomial expansion",
+ "audience": "learner",
+ "keyIdea": "In the expansion of (a + b)ⁿ the term with bʳ is ⁿCᵣ aⁿ⁻ʳ bʳ, so one term can be found without writing out the rest. Write the power of x in that general term, set it equal to the power you want (0 for the term independent of x) and solve for r. Then multiply ⁿCᵣ by the numbers from aⁿ⁻ʳ and bʳ, keeping the sign of b. Given a coefficient, the same general term gives an equation for an unknown constant.",
+ "explain": {
+  "kid": [
+   "You do not need the whole expansion to find one term. Every term of (a + b)ⁿ has the same shape: ⁿCᵣ times aⁿ⁻ʳ times bʳ. Here r counts how many b's you picked. It runs from 0 to n.",
+   "Take (x + 2/x)⁶. Each step up in r swaps one x for one 2/x. So the power of x drops by 2 each time: x⁶, x⁴, x², x⁰. The term with x⁰ has no x left. We call it the term independent of x. Here it is at r = 3.",
+   "To find r, write the power of x and set it to 0. In (x² + 1/x)⁶ the power is 2(6 − r) − r. That is 12 − 3r, so r = 4. Then multiply the parts. In (x + 2/x)⁸, r = 4 gives ⁸C₄ × 2⁴. That is 70 × 16 = 1120. Raise the 2 to the power 4. Do not multiply it by 4.",
+   "If b is negative, the sign is (−1)ʳ. Even r gives plus and odd r gives minus. Sometimes a constant k is unknown. Then the general term gives an equation. If 15k² = 135, then k² = 9. So k can be 3 or −3."
+  ],
+  "adult": [
+   "This lesson covers the A-level Mathematics content in England on the binomial expansion of (a + bx)ⁿ for positive integer n, using the notation ⁿCᵣ, and the common exam tasks built on it. Learners find a given coefficient, find the term independent of x, and find an unknown constant from a given coefficient. It also supports Common Core HSA-APR.C.5.",
+   "Key terms: general term Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ, binomial coefficient ⁿCᵣ = n!/(r!(n − r)!), coefficient, term independent of x (the constant term), index laws for xᵐ · x⁻ᵏ, and the sign factor (−1)ʳ. The worked cases are checked: (x + 2/x)⁶ gives 160, (x + 2/x)⁸ gives 1120, (x² − 3/x)⁹ gives 84 × 729 = 61 236.",
+   "Common mistakes: writing bʳ as b × r, so (2/x)⁴ gives 8 instead of 16; forgetting to raise the coefficient inside b at all; using nPr or n × r for ⁿCᵣ; assuming the constant term is the middle term even when a = x², where the power falls by 3 per step; losing the sign of a negative b; and giving only k = 3 when k² = 9. A cube, such as 40k³ = −320, has just one real root, k = −2.",
+   "In the lab the learner slides along the terms of (x + 2/x)⁶ to see the power fall by 2, then finds r for three expansions from the power rule. They build two constant terms piece by piece and sign four terms from (−1)ʳ. Last, they hunt for every k that makes a coefficient hit its target."
+  ]
+ },
+ "familyTip": "Write (x + 1/x)⁴ as four brackets and pick x or 1/x from each one, like choosing heads or tails. Count how many ways give two of each, which is ⁴C₂ = 6. Those six picks are exactly the constant term, so it is 6.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does this term have no x left (x⁰), or does an x remain? Work out the power of x in term r first. Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Independent of x",
+    "Still has an x"
+   ],
+   "items": [
+    ["r = 3 in (x + 2/x)⁶", 0],
+    ["r = 4 in (x + 1/x)⁸", 0],
+    ["r = 4 in (x² + 1/x)⁶", 0],
+    ["r = 2 in (x + 2/x)⁶", 1],
+    ["r = 3 in (x² + 1/x)⁶", 1],
+    ["r = 5 in (x + 1/x)⁸", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbterm",
+  "caption": "Flagship lab: slide along terms to x⁰, find r from the power rule, build constant terms, sign terms with (−1)ʳ, hunt every k that hits a coefficient.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is the general term of (a + b)ⁿ?",
+   "choices": [
+    "ⁿCᵣ aⁿ⁻ʳ bʳ",
+    "ⁿCᵣ aʳ bʳ",
+    "n × r × aⁿ⁻ʳ bʳ"
+   ],
+   "answer": 0,
+   "hint": "The two powers in each term must add up to n.",
+   "explain": "Each term is ⁿCᵣ aⁿ⁻ʳ bʳ: choose b from r of the n brackets and a from the other n − r. The powers add to n."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In (x + 2/x)⁸ the power of x in term r is 8 − 2r. What is the power when r = {r}?",
+   "answer": "8-2*r",
+   "hint": "Substitute r = {r} into 8 − 2r.",
+   "explain": "8 − 2 × {r} = {=8-2*r}. The power is 0 only when r = 4, the term independent of x.",
+   "params": {
+    "r": [0, 8]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "The term independent of x in (x + a/x)⁴ is ⁴C₂ × a² = 6a². Find it when a = {a}.",
+   "answer": "6*a*a",
+   "hint": "Square a first, then multiply by 6.",
+   "explain": "6 × {a}² = 6 × {=a*a} = {=6*a*a}.",
+   "params": {
+    "a": [1, 6]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which r gives the term independent of x in (x² + 1/x)⁶?",
+   "choices": [
+    "r = 4",
+    "r = 3",
+    "r = 2"
+   ],
+   "answer": 0,
+   "hint": "The power of x in term r is 2(6 − r) − r. Set it to 0.",
+   "explain": "2(6 − r) − r = 12 − 3r = 0, so r = 4. With x² in the first part, the power falls by 3 each step, so it is not the middle term."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the term independent of x in (x + 2/x)⁸?",
+    "choices": [
+     "1120",
+     "560",
+     "70"
+    ],
+    "answer": 0,
+    "hint": "r = 4. Multiply ⁸C₄ = 70 by 2⁴.",
+    "explain": "⁸C₄ × x⁴ × (2/x)⁴ = 70 × 16 = 1120. Using 2 × 4 = 8 instead of 2⁴ gives the wrong 560."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the sign of the x⁵ term in (3 − x)⁹?",
+    "choices": [
+     "Negative",
+     "Positive",
+     "You have to expand fully to tell"
+    ],
+    "answer": 0,
+    "hint": "The x⁵ term has r = 5. What is (−1)⁵?",
+    "explain": "The term is ⁹C₅ × 3⁴ × (−x)⁵, and (−1)⁵ = −1, so it is negative: −10 206x⁵."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "The coefficient of x² in (1 + kx)⁶ is 135. What are the possible values of k?",
+    "choices": [
+     "k = 3 or k = −3",
+     "k = 3 only",
+     "k = 9"
+    ],
+    "answer": 0,
+    "hint": "The x² term is ⁶C₂ (kx)² = 15k²x². Solve 15k² = 135.",
+    "explain": "15k² = 135 gives k² = 9, so k = 3 or k = −3. Both give the same k²."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "In (x² + 1/x)⁹ the power of x in term r is 18 − 3r. What is the power when r = {r}?",
+    "answer": "18-3*r",
+    "hint": "Substitute r = {r} into 18 − 3r.",
+    "explain": "18 − 3 × {r} = {=18-3*r}. The power is 0 when r = 6.",
+    "params": {
+     "r": [0, 9]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "The x² coefficient of (1 + kx)⁶ is 15k². Find it when k = {k}.",
+    "answer": "15*k*k",
+    "hint": "Square k, then multiply by 15. A negative k still gives a positive k².",
+    "explain": "15 × ({k})² = 15 × {=k*k} = {=15*k*k}.",
+    "params": {
+     "k": [-4, 4]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The coefficient of x³ in (2 + kx)⁵ is 40k³, and it equals −320. Find k.",
+    "choices": [
+     "k = −2",
+     "k = 2 or k = −2",
+     "k = −8"
+    ],
+    "answer": 0,
+    "hint": "Divide by 40 first, then take the cube root.",
+    "explain": "40k³ = −320 gives k³ = −8, so k = −2. A cube root has only one real value, unlike a square root."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is the term independent of x in (x + 3/x)⁴?",
+    "choices": [
+     "54",
+     "6",
+     "18"
+    ],
+    "answer": 0,
+    "hint": "r = 2. Multiply ⁴C₂ = 6 by 3².",
+    "explain": "⁴C₂ × x² × (3/x)² = 6 × 9 = 54. Stopping at 6 forgets the 3², and 18 uses 3 × 2."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is the constant term of (x² − 3/x)⁹ positive?",
+    "choices": [
+     "It has r = 6, and (−3)⁶ is positive",
+     "Because 9 is odd",
+     "Because x² is always positive"
+    ],
+    "answer": 0,
+    "hint": "Find r from 18 − 3r = 0, then look at (−1)ʳ.",
+    "explain": "18 − 3r = 0 gives r = 6. The sign is (−1)⁶ = +1, so the term is +84 × 729 = 61 236."
+   }
+  ]
+ }
+}

@@ -1,0 +1,233 @@
+{
+ "topicId": "mt_epCn6z-oCe",
+ "title": "Proving algebraic identities",
+ "audience": "learner",
+ "keyIdea": "An identity, written with ≡, is true for every value of its letters, such as (x + 3)² ≡ x² + 6x + 9. To prove one, start from one side and use valid algebra steps until it becomes the other side. Examples can never prove an identity, but one counterexample is enough to disprove a claim. The same method proves number facts: write a general odd number as 2n + 1, simplify, then rewrite the result so the fact shows, as in (2n + 1)(2n + 3) ≡ 4(n² + 2n + 1) − 1.",
+ "explain": {
+  "kid": [
+   "An equation such as 2x + 1 = 7 is true for one value: x = 3. An identity is true for every value. We write it with ≡, as in 2(x + 4) ≡ 2x + 8. Put in any x you like and both sides match.",
+   "Testing values helps, but it is not a proof. (x + 3)² = x² + 9 is true when x = 0. Try x = 1: the left is 16 and the right is 10. That one counterexample shows it is not an identity. Even a thousand values that agree still do not prove a claim, because there are always more x to try.",
+   "A proof starts from one side and rewrites it, line by line, into the other side. To prove (n + 1)² − n² ≡ 2n + 1, expand: n² + 2n + 1 − n². The n² terms cancel, leaving 2n + 1, which is the right side. Each line must follow from the one before. Do not write the whole identity down and work on both sides, because that assumes what you want to prove.",
+   "Number facts work the same way. Write an even number as 2n and an odd number as 2n + 1. For two consecutive odd numbers use 2n + 1 and 2n + 3. Their product expands to 4n² + 8n + 3. Rewrite 3 as 4 − 1 to get 4(n² + 2n + 1) − 1. That is one less than a multiple of 4, for every whole number n."
+  ],
+  "adult": [
+   "This topic matches the Common Core standard A-APR.4, which asks students to prove polynomial identities and use them to describe numerical relationships. It also matches the GCSE and A level Mathematics proof content in England, where students argue mathematically to show algebraic expressions are equivalent and use algebra to support and construct arguments and proofs. The symbol ≡ means identically equal: true for every value of the variable, not just a solution.",
+   "The most common mistake is treating examples as proof. Students check three values, see that both sides agree, and stop. Ask them how many values exist. The reverse also matters: one counterexample is a complete disproof, so they do not need to show a claim fails everywhere.",
+   "Be careful with layout. A sound proof starts with one side, usually the more complicated one, and rewrites it until it becomes the other. Working on both sides of the claim at once, or starting from the statement you want to prove, assumes the result. Typical algebra slips are (a + b)² written as a² + b², and a minus sign in front of a bracket changing only the first term.",
+   "For number proofs, the key moves are choosing a general form and finishing with a form that shows the fact. Using 2n + 1 and 2n + 1 for two different odd numbers proves the claim only when the numbers are equal, so use 2m + 1 and 2n + 1. Ending at 4n² + 8n + 3 is not enough; ask what form would make “one less than a multiple of 4” visible."
+  ]
+ },
+ "familyTip": "Pick a claim such as “the sum of three numbers in a row is always a multiple of 3”. Test it with a few numbers, then write the numbers as n, n + 1 and n + 2. Add them and ask: what form shows the 3?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Identity or not? Drag each card to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Identity (true for all x)",
+    "Not an identity"
+   ],
+   "items": [
+    [
+     "(x + 3)² and x² + 6x + 9",
+     0
+    ],
+    [
+     "(x + 3)² and x² + 9",
+     1
+    ],
+    [
+     "2(x + 4) and 2x + 8",
+     0
+    ],
+    [
+     "2(x + 4) and 2x + 4",
+     1
+    ],
+    [
+     "(x − 1)(x + 1) and x² − 1",
+     0
+    ],
+    [
+     "(a + b)² and a² + b²",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagproof",
+  "caption": "Flagship lab: drag x to test claims, build proofs line by line, write numbers in algebra, and finish number-fact proofs.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which statement is an identity?",
+   "choices": [
+    "(x − 2)² ≡ x² − 4x + 4",
+    "(x − 2)² ≡ x² − 4",
+    "(x − 2)² ≡ x² + 4"
+   ],
+   "answer": 0,
+   "hint": "Expand (x − 2)(x − 2) term by term.",
+   "explain": "(x − 2)(x − 2) = x² − 2x − 2x + 4 = x² − 4x + 4. The other two miss the middle term."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "(x + {a})² ≡ x² + bx + c. What is b?",
+   "answer": "2*a",
+   "hint": "The middle term comes from x × a twice.",
+   "explain": "(x + {a})(x + {a}) = x² + {a}x + {a}x + {=a*a}, so b = 2 × {a} = {=2*a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Leo checks a claim for x = 1, 2 and 3. It works each time. What can he say?",
+   "choices": [
+    "It holds for those three values only",
+    "It is an identity",
+    "It is false"
+   ],
+   "answer": 0,
+   "hint": "How many values of x are there?",
+   "explain": "Examples cannot cover every x. To prove it he needs algebra; to disprove it, one counterexample."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Three consecutive integers start at n = {n}. Their sum is 3(n + 1). What is the sum?",
+   "answer": "3*n+3",
+   "hint": "Work out n + 1, then multiply by 3.",
+   "explain": "3({n} + 1) = {=3*n+3}. Check: {n} + {=n+1} + {=n+2} = {=3*n+3}, a multiple of 3.",
+   "params": {
+    "n": [
+     4,
+     40
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does the symbol ≡ mean?",
+    "choices": [
+     "Equal for every value of the variable",
+     "Equal for at least one value",
+     "Approximately equal"
+    ],
+    "answer": 0,
+    "hint": "Think of the difference between an identity and an equation.",
+    "explain": "≡ means identically equal: true for every value, not just a solution."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How do you show x² + 1 ≡ (x + 1)² is false?",
+    "choices": [
+     "Give one counterexample, such as x = 1",
+     "Show the sides differ for every x",
+     "Check ten values that agree"
+    ],
+    "answer": 0,
+    "hint": "How many failures does it take to break a claim about every x?",
+    "explain": "At x = 1 the left is 2 and the right is 4. One counterexample is a full disproof."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is the best way to set out a proof that LHS ≡ RHS?",
+    "choices": [
+     "Start from one side and rewrite it until it becomes the other",
+     "Write LHS = RHS and change both sides",
+     "Start from the answer and work back to the question"
+    ],
+    "answer": 0,
+    "hint": "A proof must not assume what it sets out to show.",
+    "explain": "Rewriting one side into the other proves it without assuming the result."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which pair stands for two consecutive odd numbers?",
+    "choices": [
+     "2n + 1 and 2n + 3",
+     "n + 1 and n + 3",
+     "2n + 1 and 2n + 2"
+    ],
+    "answer": 0,
+    "hint": "Odd numbers go up in 2s and are one more than an even number.",
+    "explain": "2n + 1 is always odd, and the next odd number is 2 more: 2n + 3."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A proof shows (2n + 1)(2n + 3) ≡ 4n² + 8n + 3. What final step shows it is one less than a multiple of 4?",
+    "choices": [
+     "4(n² + 2n + 1) − 1",
+     "2(2n² + 4n + 1) + 1",
+     "Stop: 4n² + 8n + 3 already shows it"
+    ],
+    "answer": 0,
+    "hint": "Split the constant 3 into 4 − 1, then factor 4 out of the first part.",
+    "explain": "4n² + 8n + 4 − 1 = 4(n² + 2n + 1) − 1, a multiple of 4 minus 1."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "In a proof, Sam writes −(a² − 2ab + b²) as −a² − 2ab + b². What is wrong?",
+    "choices": [
+     "The minus must change every term: −a² + 2ab − b²",
+     "Nothing, it is correct",
+     "The a² should stay positive"
+    ],
+    "answer": 0,
+    "hint": "A minus in front of a bracket multiplies every term by −1.",
+    "explain": "−(a² − 2ab + b²) = −a² + 2ab − b². Each sign flips."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "(x + {a})(x − {a}) ≡ x² − k. What is k?",
+    "answer": "a*a",
+    "hint": "The middle terms cancel; multiply the last terms.",
+    "explain": "x² − {a}x + {a}x − {=a*a} = x² − {=a*a}, so k = {=a*a}.",
+    "params": {
+     "a": [
+      2,
+      12
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Take n = {n}. Work out (2n + 1)(2n + 3) + 1, then divide by 4. What do you get?",
+    "answer": "(n+1)*(n+1)",
+    "hint": "The proof says (2n + 1)(2n + 3) + 1 = 4(n + 1)².",
+    "explain": "({=2*n+1})({=2*n+3}) + 1 = {=(2*n+1)*(2*n+3)+1}, and ÷ 4 gives {=(n+1)*(n+1)}, which is (n + 1)².",
+    "params": {
+     "n": [
+      1,
+      9
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_KhFq2oqM55",
+ "title": "Expected value",
+ "audience": "learner",
+ "keyIdea": "The expected value of a random variable X is its probability-weighted mean: E(X) = Σ x·P(X = x). Multiply each value by its probability, then add. It is the balance point of the distribution and the long-run average of many trials, so it need not be a value X can take: a fair dice has E(X) = 3.5. A game is fair when the expected gain is 0. Scaling and shifting every value does the same to the mean: E(aX + b) = a·E(X) + b.",
+ "familyTip": "Next time you see a raffle or a scratch card, work out the expected gain together: list each prize with its chance, multiply, add, and take off the price. Ask: would you play 100 times at that price, and roughly how much would you be down?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is the statement about expected value true or false? Drag each card to a box, or tap the card and then a box.",
+  "opts": {
+   "bins": [
+    "True",
+    "False"
+   ],
+   "items": [
+    [
+     "E(X) for a fair dice is 3.5",
+     0
+    ],
+    [
+     "E(X) must be a value X can take",
+     1
+    ],
+    [
+     "E(X) weights each value by its probability",
+     0
+    ],
+    [
+     "E(X) is the most likely value",
+     1
+    ],
+    [
+     "A fair game has expected gain 0",
+     0
+    ],
+    [
+     "E(2X) = E(X) + 2",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagexpv",
+  "caption": "Flagship lab: balance a probability beam, build Σ x·P(X = x), roll 1000 times, price a fair game and scale and shift E(X).",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The expected value is the mean you get from a probability table. Times each value by its chance. Then add them up. That is E(X).",
+   "Say a game pays £10 one time in ten, and nothing the rest of the time. Then E(X) = 10 × 0.1 = £1. No single go pays £1. But over many goes you average about £1 a go.",
+   "So E(X) need not be a score you can get. A dice can never show 3.5, yet its mean in the long run is 3.5.",
+   "A game is fair if your expected gain is zero. Pay £1 for a 1 in 10 chance at £5, and you lose 50p a go on average. Add 10 to every value and E(X) goes up by 10. Double every value and E(X) doubles."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is A level Mathematics content on discrete random variables (expectation of a discrete distribution) and US Common Core S-MD.2: calculate the expected value of a random variable and interpret it as the mean of its distribution. It builds on probability distributions, where the probabilities sum to 1, and leads into variance, the binomial mean np, and decisions under risk.",
+   "Key facts: E(X) = Σ x·P(X = x) over every value x. It is the balance point (centre of mass) of the distribution and, by the law of large numbers, the value the mean of many trials settles near. Expected gain = expected prize − stake, so the fair stake equals the expected prize. Linearity: E(aX + b) = a·E(X) + b, for any constants a and b.",
+   "Common mistakes: averaging the values without weights, so (−2 + 3 + 18) ÷ 3 replaces Σ x·P; taking the mode or the middle value as E(X); expecting E(X) to be a possible outcome, or the result of one trial; forgetting to take off the stake, or subtracting it only when you lose; and writing E(2X + 1) as 2E(X) or E(X) + 1. The lab confronts each one with a beam, a table, a long run or a fair price."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A game pays £{w} with probability 0.1 and nothing otherwise. Find E(X), the expected prize, in pounds.",
+   "answer": "w/10",
+   "hint": "Multiply each value by its probability and add: £0 × 0.9 adds nothing.",
+   "explain": "E(X) = {w} × 0.1 + 0 × 0.9 = {=w/10}, so the expected prize is £{=w/10}.",
+   "params": {
+    "w": [
+     5,
+     30
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You pay £{s} to play. You win £{w} with probability 0.2. What is your expected gain in pounds?",
+   "answer": "w/5-s",
+   "hint": "Expected gain = expected prize − stake. Find the expected prize first.",
+   "explain": "Expected prize = {w} × 0.2 = {=w/5}. Expected gain = {=w/5} − {s} = {=w/5-s} pounds.",
+   "params": {
+    "w": [
+     5,
+     15
+    ],
+    "s": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "P(X = 1) = 0.5, P(X = 2) = 0.3 and P(X = 6) = 0.2. Find E(X).",
+   "choices": [
+    "2.3",
+    "3",
+    "1"
+   ],
+   "answer": 0,
+   "hint": "Work out 1 × 0.5, 2 × 0.3 and 6 × 0.2, then add.",
+   "explain": "E(X) = 0.5 + 0.6 + 1.2 = 2.3. Averaging 1, 2 and 6 gives 3, which ignores the probabilities."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A fair dice has E(X) = 3.5. Which statement is right?",
+   "choices": [
+    "The mean of many rolls will be close to 3.5",
+    "3.5 is the most likely roll",
+    "You can roll 3.5 if you roll enough times"
+   ],
+   "answer": 0,
+   "hint": "Can a dice ever land on 3.5? What does E(X) describe?",
+   "explain": "No roll shows 3.5. E(X) is the long-run mean: the average of many rolls settles near 3.5."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "E(X) = 4. Find E(2X + 3).",
+   "choices": [
+    "11",
+    "8",
+    "7"
+   ],
+   "answer": 0,
+   "hint": "Use E(aX + b) = a·E(X) + b.",
+   "explain": "E(2X + 3) = 2 × 4 + 3 = 11. 8 forgets the + 3, and 7 forgets to double."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "X is 0 or {a}, with P(X = {a}) = 0.25. Find E(X).",
+    "answer": "a/4",
+    "hint": "Only the non-zero value adds anything: multiply it by 0.25.",
+    "explain": "E(X) = 0 × 0.75 + {a} × 0.25 = {=a/4}.",
+    "params": {
+     "a": [
+      4,
+      40
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "E(X) = {e}. Find E(2X + {b}).",
+    "answer": "2*e+b",
+    "hint": "Scale the mean by 2, then add the constant.",
+    "explain": "E(2X + {b}) = 2 × {e} + {b} = {=2*e+b}.",
+    "params": {
+     "e": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A game pays £6 if a fair dice shows six, and nothing otherwise. What stake makes the game fair?",
+    "choices": [
+     "£1",
+     "£6",
+     "£3.50"
+    ],
+    "answer": 0,
+    "hint": "A fair game has expected gain 0, so the stake equals the expected prize.",
+    "explain": "Expected prize = 6 × 1/6 = £1, so a £1 stake gives an expected gain of 0."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A raffle ticket has an expected gain of −£0.30. About how much would you expect to lose on 100 tickets?",
+    "choices": [
+     "About £30",
+     "Exactly 30p",
+     "Nothing: it evens out"
+    ],
+    "answer": 0,
+    "hint": "E(gain) is per ticket. What happens over many tickets?",
+    "explain": "Each ticket loses 30p on average, so 100 tickets lose about 100 × £0.30 = £30. The exact loss varies."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "P(X = 1) = 0.2, P(X = 2) = 0.5, P(X = 3) = 0.3. Find E(X).",
+    "choices": [
+     "2.1",
+     "2",
+     "0.5"
+    ],
+    "answer": 0,
+    "hint": "1 × 0.2 + 2 × 0.5 + 3 × 0.3.",
+    "explain": "E(X) = 0.2 + 1.0 + 0.9 = 2.1. The mode is 2, but the 3s pull the mean up a little."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Pay £2 to win £10 with probability 0.15. What is the expected gain?",
+    "choices": [
+     "−£0.50",
+     "£1.50",
+     "£8.00"
+    ],
+    "answer": 0,
+    "hint": "Find the expected prize, then take off the stake you always pay.",
+    "explain": "Expected prize = 10 × 0.15 = £1.50. Expected gain = 1.50 − 2 = −£0.50."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "X takes the values 0 and 20, with P(X = 20) = 0.25. Ana says E(X) = 10, the middle. What is her mistake?",
+    "choices": [
+     "She treated 0 and 20 as equally likely",
+     "She forgot to divide by 2",
+     "Nothing: E(X) is 10"
+    ],
+    "answer": 0,
+    "hint": "Is P(X = 20) equal to P(X = 0)?",
+    "explain": "The middle value assumes equal weights. With P(X = 20) = 0.25, E(X) = 20 × 0.25 = 5."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Every prize in a game is raised by £2. What happens to the expected prize?",
+    "choices": [
+     "It goes up by £2",
+     "It doubles",
+     "It stays the same"
+    ],
+    "answer": 0,
+    "hint": "Adding the same amount to every value shifts the mean by that amount: E(X + b) = E(X) + b.",
+    "explain": "Adding £2 to every value adds £2 to the mean: E(X + 2) = E(X) + 2."
+   }
+  ]
+ }
+}

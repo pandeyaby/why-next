@@ -82,10 +82,10 @@ def gate_lab_registered(lesson, path):
     errs, src = [], lab_file(lab)
     if not src:
         return [f"lab: no learn/flag_*.js registers VIS.reg('{lab}')"]
-    if src.name not in (ROOT / "ext/make_viewer.py").read_text():
-        errs.append(f"lab: {src.name} is not in LEARN_JS (ext/make_viewer.py)")
-    if f'"{lab}"' not in (ROOT / "learn/validate_visuals.py").read_text():
-        errs.append(f"lab: {lab} missing from learn/validate_visuals.py OPTS")
+    if src.name not in (ROOT / "ext/learn_js.py").read_text():
+        errs.append(f"lab: {src.name} is not in LEARN_JS (ext/learn_js.py)")
+    if lab not in json.loads((ROOT / "learn/flag_labs.json").read_text()):
+        errs.append(f"lab: {lab} missing from learn/flag_labs.json (the flagship list read by validate_visuals.py)")
     if (ROOT / "learn/lesson.schema.json").read_text().count(f'"{lab}"') < 2:
         errs.append(f"lab: {lab} missing from both enums in learn/lesson.schema.json")
     reused = [p.name for p, other in lessons_except(path) if (other.get("lab") or {}).get("type") == lab]
@@ -254,14 +254,22 @@ def print_report(report):
 
 # ---------------- commands ----------------
 def cmd_next(n=12):
-    r = sh(["node", "scripts/pipeline/rank.cjs", "80"], timeout=300)
-    ranked = json.loads(r.stdout)
     q = load_queue()
+    prev = list(q["next"])
+    queued = {d["topic"] for d in prev}
+    # rank deep enough that every topic already queued is reached; the top n are unchanged by a larger limit
+    r = sh(["node", "scripts/pipeline/rank.cjs", str(max(80, 3 * len(queued) + n))], timeout=300)
+    ranked = json.loads(r.stdout)
     skip = {d["topic"] for d in q["done"]} | {d["topic"] for d in q.get("skipped", [])}
     first = [t for p in PRIORITY for t in ranked if t["id"] == p]
     rest = [t for t in ranked if t["id"] not in PRIORITY]
+    picks = [t for t in first + rest if t["id"] not in skip]
+    # keep the top n, plus any topic that was already queued (so a re-rank never drops queued topics)
     q["next"] = [{"topic": t["id"], "name": t["name"], "subject": t["subject"], "ages": t["ages"], "downstream": t["downstream"], "reels": t["reels"]}
-                 for t in first + rest if t["id"] not in skip][:n]
+                 for i, t in enumerate(picks) if i < n or t["id"] in queued]
+    # queued topics the ranker cannot see (not in the viewer graph) are carried over unchanged
+    kept = {e["topic"] for e in q["next"]}
+    q["next"] += [e for e in prev if e["topic"] not in kept and e["topic"] not in skip]
     save_queue(q); cmd_status()
 
 
@@ -271,7 +279,7 @@ def cmd_brief():
         print("queue empty: run `next` first"); return
     t = q["next"][0]
     print(f"Next topic: {t['name']} ({t['topic']}), {t['subject']}, ages {t['ages']}, unblocks {t['downstream']} topics, reels: {t['reels']}")
-    print("Write: learn/lessons/NNN-<slug>.json, a new learn/flag_<x>.js lab (register in LEARN_JS, validate_visuals OPTS, both schema enums),")
+    print("Write: learn/lessons/NNN-<slug>.json, a new learn/flag_<x>.js lab (register in LEARN_JS in ext/learn_js.py, learn/flag_labs.json, both schema enums),")
     print(f"and learn/pipeline/reviews/{t['topic']}.json. Then: python3 scripts/lesson_pipeline.py run <lesson.json> --push")
 
 
@@ -300,9 +308,16 @@ def cmd_run(path, push=False):
     q["next"] = [t for t in q["next"] if t["topic"] != tid]
     if any(report.values()):
         prev = next((f for f in q["failed"] if f["topic"] == tid), None)
-        entry = {"topic": tid, "lesson": str(Path(path).resolve().relative_to(ROOT)), "date": now, "attempts": (prev or {}).get("attempts", 0) + 1,
+        attempts = (prev or {}).get("attempts", 0) + 1
+        entry = {"topic": tid, "lesson": str(Path(path).resolve().relative_to(ROOT)), "date": now, "attempts": attempts,
                  "reasons": [e for errs in report.values() for e in errs][:12]}
-        q["failed"] = [f for f in q["failed"] if f["topic"] != tid] + [entry]
+        q["failed"] = [f for f in q["failed"] if f["topic"] != tid]
+        if attempts >= 2:
+            q.setdefault("skipped", [])
+            q["skipped"] = [s for s in q["skipped"] if s.get("topic") != tid] + [
+                {"topic": tid, "name": lesson.get("title") or tid, "reason": "Failed again after retry; skipped permanently", "date": now}]
+            save_queue(q); print(f"\nNOT committed. {tid} failed again after retry; marked skipped permanently."); sys.exit(1)
+        q["failed"] = q["failed"] + [entry]
         save_queue(q); print(f"\nNOT committed. Logged {tid} under failed for retry."); sys.exit(1)
     q["failed"] = [f for f in q["failed"] if f["topic"] != tid]
     q["done"] = [d for d in q["done"] if d["topic"] != tid] + [{"topic": tid, "title": lesson["title"], "lesson": str(Path(path).resolve().relative_to(ROOT)),

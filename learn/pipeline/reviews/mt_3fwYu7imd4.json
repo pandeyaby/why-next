@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE National Curriculum in England KS3 mathematics programme of study (probability: 'use the fact that the probabilities of an exhaustive set of mutually exclusive events sum to one') and CCSS 7.SP.C.5/7.SP.C.7. The adult text states both conditions (exhaustive and mutually exclusive) instead of a looser 'all outcomes'. Lab numbers were recomputed: the spinner is 4/8 + 2/8 + 1/8 + 1/8 = 8/8; with red dragged to 5/8 blue is 6 − 5 = 1/8; dice complements are 5/6 = 1 − 1/6 and 4/6 = 1 − 2/6; forecasts 1 − 0.3 = 0.7, 1 − 0.85 = 0.15, 1 − 0.6 = 0.4; the six tables total 1, 0.75, 1.1, 1 (six sixths, rounded to hundredths), 0.9 and 1.1. Numeric items 8−k, 100−r, n−r, 10−g and 100−w−d stay positive at every parameter corner (n−r ≥ 1, 100−60−30 = 10)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented complement-rule errors in the probability literature (Fischbein & Schnarch 1997 equiprobability bias; Lecoutre's 'two outcomes so 1/2'; NCETM KS3 probability misconceptions): answering P(A) when P(not A) is asked (tag same, rain option 0.3, m1/m2 distractors), the 50-50 belief for two outcomes (step 4 prediction '0.5: it rains or not', tag fifty, m5), decimal borrowing slips like 1 − 0.85 = 0.25 and 1 − 0.08 = 0.02 (tag borrow), the wrong denominator 1/5 for P(not a 4) (tag denom), taking only one known chance from 1 (tag skip, m3 0.8, m7), adding instead of subtracting (tag add, rain option 1.6, tag over) and accepting tables whose numbers each look fine but total 1.1 (step 5, m8)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagsumone is built around the whole-equals-1 constraint: chances are added onto a 0-to-1 bar until it fills, the red|blue divider can only trade area between two colours so the total is locked at 8/8, NOT faces are lit on a dice and matched to 1 − P(A), and tables are classified by their total. It differs from flagprob (Probability as a fraction: equal parts and favourable/total on one spinner), flagchance (tallies of repeated trials) and flagexpf (expected frequency = p × n). The gate reports under 30% shingle overlap with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner meets the rule before the text states it: adding the four colours fills the bar to exactly 1 and the banner says one colour must come up; dragging red to 5/8 makes blue shrink to 1/8 while 'total 8/8 = 1' never changes; lighting the five not-3 faces produces 5/6 and only then shows '= 1 − 1/6'; a wrong forecast pick triggers a specific fix (e.g. 'Count up from 0.85 to 1'); and every table is classified only after adding it, with the note saying what an under-1 or over-1 total means (missing outcome or wrong number)."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option that the lab then disproves. '4: one for each colour' fails when the four chances fill the bar to 8/8 = 1. 'It goes over 1' fails when dragging red bigger visibly shrinks blue and the total label stays 8/8 = 1. '0.5: it rains or not' fails when the forecast bar shows rain 0.3 taking only 30% of the strip, leaving 0.7. The feedback after each task echoes the learner's locked-in choice."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions; each wrong option carries a tag with its own message: same (that is the event itself, NOT is 1 minus it), borrow (add back to check and count up from the given chance, with that question's own number), denom (keep all 6 faces as the denominator: 5/6), add (0.7 is red and blue together, green is 1 − 0.7), skip (take away blue too: 1 − 0.2 − 0.5), over (no list can total more than 1), under (an outcome is missing) and fifty (two outcomes are only 1/2 each when equally likely). Forecast picks in step 4 reuse the same tags with the round's own numbers."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/validate_lessons.py passes the learner limits (kid ≤ 6.5, adult ≤ 9.5). Kid paragraphs use one concrete case each (the eighths spinner, the dice, the check), with sentences mostly under 15 words. Lab step text is one or two short sentences and canvas labels are short ('total 8/8 = 1', 'not A: 2 of 6 faces', 'rain 0.6', 'too little'). Notation P(not A) = 1 − P(A) is introduced only after the learner has done the counting."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step has one job (sum to 1, trade-off keeps the total, complement by counting then shortcut, decimal complements, checking a table by its total). Every feedback line gives a reason with numbers, and item explanations show the calculation plus a check (e.g. 0.92 + 0.08 = 1.00) instead of repeating the question."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px (Android profile) in light and dark were taken for every step before and after Show me. The spinner, the 0-to-1 bar, the 3×2 dice grid and the three table bins all fit inside the canvas, and the feedback banner sits below the bar without covering it. After the first pass the drag handle was moved from the middle of the bar to a tab below it, because at red 5/8 it covered blue's 1/8 label. A real pointer drag on an iPhone 13 profile moved red from 4/8 to 5/8 and completed the task. Buttons below the canvas wrap into two rows on phones."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: 'Add red/blue/yellow/green' (aria-label 'Add the red chance'), 'Red bigger' and 'Red smaller', one button per dice face (aria-label 'Face 3'), the three forecast answers (aria-label 'No rain 0.7') and 'adds to 1 / too little / too much'. After each move the canvas aria-label reads the current state and the last feedback, e.g. 'Red 5/8, blue 1/8, yellow 1/8, green 1/8. Total 8/8.' Challenge feedback is an aria-live status. walk.cjs reports axe (WCAG 2.1 AA) clean in light and dark on desktop and iPhone 13 with no console errors; the canvas keeps a light card in dark mode so the coloured sectors keep their contrast."
+  }
+ },
+ "sources": [
+  "Department for Education, National Curriculum in England: mathematics programmes of study, Key Stage 3 (Probability)",
+  "Common Core State Standards for Mathematics, Grade 7 Statistics and Probability 7.SP.C.5 and 7.SP.C.7",
+  "Fischbein, E. & Schnarch, D. (1997) The evolution with age of probabilistic, intuitively based misconceptions, JRME 28(1)",
+  "NCETM Key Stage 3 probability guidance on common misconceptions (equiprobability, complement)"
+ ]
+}

@@ -1,0 +1,254 @@
+{
+  "topicId": "mt_jc9k_HJQGd",
+  "title": "Types of Weather",
+  "audience": "family",
+  "keyIdea": "Weather types name what the sky and air are doing today: sunny, rainy, cloudy, windy or snowy. Watch for clues like bright sun, falling drops, thick cloud, pushing air or cold white flakes.",
+  "familyTip": "Each morning for a week, look out of the window together and pick one weather word. Snap a quick photo and sort the week into sunny / rainy / cloudy / windy / snowy piles.",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Weather words — fair idea or myth? Drag each clue, or tap it and then tap a box.",
+    "opts": {
+      "bins": [
+        "Fair idea",
+        "Myth / mix-up"
+      ],
+      "items": [
+        [
+          "sunny means bright sun and clear sky",
+          0
+        ],
+        [
+          "weather is the same word as season",
+          1
+        ],
+        [
+          "rainy means drops falling from clouds",
+          0
+        ],
+        [
+          "windy always means it must be winter",
+          1
+        ],
+        [
+          "snowy means cold white flakes",
+          0
+        ],
+        [
+          "cloudy means thick cloud covering the sky",
+          0
+        ]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagwxtype",
+    "caption": "Flagship lab: name sunny, rainy, cloudy and windy days; match a snowy card; then challenge.",
+    "opts": {
+      "step": 0
+    }
+  },
+  "explain": {
+    "kid": [
+      "Sunny means a bright sun and a clear sky.",
+      "Rainy means drops falling from clouds.",
+      "Cloudy means thick cloud. Windy means the air pushes hard.",
+      "Snowy means cold white flakes. Weather is about today — not a whole season."
+    ],
+    "adult": [
+      "KS1 science / geography: observe and describe weather types (sunny, rainy, cloudy, windy, snowy). Keep weather (today’s sky and air) separate from season (a longer stretch) and from clothing choices.",
+      "Common mistakes: using weather and season as the same word; thinking windy only happens in winter; naming clothes instead of sky clues; missing that cloudy can hide the sun without rain.",
+      "In the lab your child names four sky types, matches a snowy day card, rejects season/coat myths, then tries challenge traps for those slips."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "Sunny weather has…",
+      "choices": [
+        "a bright sun and clear sky",
+        "thick falling snow",
+        "only night-time stars"
+      ],
+      "answer": 0,
+      "hint": "Think of sharp shadows on the ground at midday.",
+      "explain": "Sunny days show a bright sun and a mostly clear sky."
+    },
+    {
+      "type": "mc",
+      "id": "p2",
+      "prompt": "Rainy weather means…",
+      "choices": [
+        "drops falling from clouds",
+        "hot dry sand only",
+        "snow without any cold"
+      ],
+      "answer": 0,
+      "hint": "Listen for taps on a window and look for puddles.",
+      "explain": "Rain is water drops falling from clouds."
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "You spot {n} different weather types this week. How many types did you spot?",
+      "answer": "n",
+      "hint": "The count of types you named is the answer.",
+      "explain": "You named {n} weather types across the week.",
+      "params": {
+        "n": [
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "A chart shows {n} days. {k} were rainy. How many days were not rainy?",
+      "answer": "n-k",
+      "hint": "Subtract the rainy days from the total.",
+      "explain": "{n} days minus {k} rainy leaves {=n-k} that were not rainy.",
+      "params": {
+        "n": [
+          5,
+          7
+        ],
+        "k": [
+          1,
+          3
+        ]
+      },
+      "where": "n>k"
+    },
+    {
+      "type": "order",
+      "id": "p5",
+      "prompt": "Order from brightest sun clue to coldest flake clue.",
+      "items": [
+        "sunny clear sky",
+        "cloudy thick cover",
+        "snowy cold flakes"
+      ],
+      "hint": "Start with the clear bright sky, end with snow.",
+      "explain": "Sunny first, then cloudy, then snowy."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "Cloudy weather means…",
+        "choices": [
+          "thick cloud covering the sky",
+          "no cloud at all",
+          "only strong wind"
+        ],
+        "answer": 0,
+        "hint": "The sun may be hidden behind grey cover.",
+        "explain": "Cloudy days have thick cloud across much of the sky."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "Windy weather means…",
+        "choices": [
+          "air pushing hard",
+          "still air with no movement",
+          "only frozen puddles"
+        ],
+        "answer": 0,
+        "hint": "Watch flags, trees or washing on a line.",
+        "explain": "Wind is air that pushes hard enough to move things."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "Cold white flakes mean…",
+        "choices": [
+          "snowy",
+          "sunny",
+          "just rainy and warm"
+        ],
+        "answer": 0,
+        "hint": "Think of winter playground frost and soft white falls.",
+        "explain": "Snowy weather brings cold white flakes."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Weather types name…",
+        "choices": [
+          "what the sky and air are doing today",
+          "which season lasts three months",
+          "only the coat you must wear"
+        ],
+        "answer": 0,
+        "hint": "Season is longer; coats are clothing.",
+        "explain": "Weather describes today’s sky and air conditions."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "You correctly named {n} weather cards. How many did you name?",
+        "answer": "n",
+        "hint": "The number of cards you named is the answer.",
+        "explain": "You named {n} weather cards correctly.",
+        "params": {
+          "n": [
+            3,
+            8
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "A week has {n} days. {k} were sunny. How many were not sunny?",
+        "answer": "n-k",
+        "hint": "Subtract sunny days from the week.",
+        "explain": "{n} minus {k} sunny leaves {=n-k} not sunny.",
+        "params": {
+          "n": [
+            7,
+            7
+          ],
+          "k": [
+            1,
+            4
+          ]
+        },
+        "where": "n>k"
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "Why watch the sky to name weather?",
+        "choices": [
+          "to see sun, cloud, rain, wind or snow clues",
+          "to choose a favourite colour",
+          "because seasons never change the sky"
+        ],
+        "answer": 0,
+        "hint": "Sky clues point to the weather type word.",
+        "explain": "Sun, cloud, rain, wind and snow are the clues for weather types."
+      },
+      {
+        "type": "mc",
+        "id": "m8",
+        "prompt": "Weather is different from season because…",
+        "choices": [
+          "weather is today’s sky and air; season is a longer stretch",
+          "they are always the same word",
+          "windy can only happen in one season"
+        ],
+        "answer": 0,
+        "hint": "You can have a rainy day in any season.",
+        "explain": "Weather is short-term; seasons last weeks or months."
+      }
+    ]
+  }
+}

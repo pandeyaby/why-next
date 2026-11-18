@@ -54,7 +54,7 @@ function completeness(expectLab) {
     await p.goto(VIEWER); await p.waitForFunction('window.WN_WARM'); await p.addInitScript('');
     for (const theme of ['dark', 'light']) {
       const cur = await p.evaluate(() => document.documentElement.dataset.theme || 'dark'), isLight = cur === 'classic' || cur === 'light';
-      if ((theme === 'light') !== isLight) await p.click('#themeBtn');
+      if ((theme === 'light') !== isLight) await p.evaluate(() => document.getElementById('themeBtn').click());
       for (const L of picks) {
         const tag = { vp, theme, id: L.topicId, file: L.file.replace('.json', '') }, add = (list, step) => list.forEach(f => { const key = [vp, theme, L.topicId, f.kind, f.where].join('|'); if (!seen.has(key)) { seen.add(key); res.push({ ...tag, step, ...f }) } });
         try {

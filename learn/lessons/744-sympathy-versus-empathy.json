@@ -1,0 +1,255 @@
+{
+ "topicId": "mt_VA126P6Wp5",
+ "title": "Sympathy Versus Empathy",
+ "audience": "family",
+ "keyIdea": "Sympathy is feeling sorry for someone from the outside. Empathy is trying to feel with them and understand what it is like from the inside. Empathy sounds like listening: naming how hard it is, asking open questions, and reflecting back the meaning and the feeling in your own words. It avoids “at least”, “don’t be sad” and rushing to fix. Caring a lot for a long time can wear you out, so empathetic people need limits, rest and a trusted adult to share heavy worries.",
+ "familyTip": "Next time your child tells you about a bad day, try reflecting before advising: “So that felt really unfair?” Then ask them how it felt to be heard that way. Agree on a phrase they can use with friends when they need a night off, such as “I want to hear this. Can we talk tomorrow?”",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Feeling with, or feeling sorry for? Drag each reply, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Empathy: feels with",
+    "Sympathy or shrinking"
+   ],
+   "items": [
+    [
+     "“That sounds so hard.”",
+     0
+    ],
+    [
+     "“Oh, poor you.”",
+     1
+    ],
+    [
+     "“What’s been the worst part?”",
+     0
+    ],
+    [
+     "“At least it’s Friday.”",
+     1
+    ],
+    [
+     "“So you feel left out?”",
+     0
+    ],
+    [
+     "“Don’t be sad.”",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagempa",
+  "caption": "Flagship lab: climb down to Jas, cross out shrink-and-fix lines, ask open questions, reflect, and spot compassion fatigue.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Sympathy means feeling sorry for someone. “Oh, poor you” is sympathy. It is kind, but it stays outside, like calling down into a hole. Empathy means trying to feel with someone. You climb down and say, “That sounds really hard. I’m here.”",
+   "Some replies shrink a feeling without meaning to. “At least…”, “Don’t be sad” and “You’ll get over it” tell the person their feeling is too big. Rushing to fix it says “stop talking”. Most people want to feel heard first.",
+   "Good listeners ask open questions that start with What or How. They let the other person lead. They reflect back: they say what the person means in their own words, and name the feeling. “So it’s starting to feel real, and that’s scary?” Then the person can say yes, or correct you.",
+   "Caring for others can wear you out if you do it all the time. Feeling numb, dreading messages, losing sleep or snapping at people are warning signs. It is fine to say “Can we talk tomorrow?” And if a friend’s safety is at risk, tell a trusted adult, even if you promised not to."
+  ],
+  "adult": [
+   "Ages 12 to 13. This is part of the Relationships theme of the PSHE Association KS3 programme. It also links to the DfE guidance on respectful relationships and getting help. Key terms: sympathy, empathy, perspective-taking, active listening, open question, reflecting, paraphrasing, minimising, compassion fatigue, boundary, trusted adult.",
+   "Sympathy is feeling for someone. Empathy is trying to understand and share what they feel. Brené Brown sums it up with Theresa Wiseman’s four parts: take their view, do not judge, spot the feeling, and say it back. Carl Rogers adds reflection: say back the facts and the feeling, then check. Empathy does not mean you agree, and you do not need to have had the same thing happen.",
+   "Common mistakes: the silver lining (“at least…”); telling someone how to feel (“don’t be sad”); giving advice too soon; turning the talk to your own story; echoing their exact words; and yes-or-no questions. Be careful of the opposite slip too: thinking a good friend must be there all the time. Compassion fatigue is a real cost of caring. Signs are feeling numb, dread, poor sleep and a short temper. Safety worries must go to an adult.",
+   "In the lab your child picks four replies that feel with Jas and climbs down to her. They cross out four lines that shrink or fix. They find the three open questions that get Jas talking. They choose three reflections over echoes, advice and their own story. Last, they spot four signs of compassion fatigue in Kai’s week."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Your friend’s cat has died. Which reply shows empathy?",
+   "choices": [
+    "“I’m so sorry. You must really miss her.”",
+    "“At least you can get a new one.”",
+    "“Oh, poor you.”"
+   ],
+   "answer": 0,
+   "hint": "Which reply names what it is like for your friend?",
+   "explain": "Naming the loss and the missing shows you are trying to feel with them. “At least” shrinks the feeling, and “poor you” feels sorry from a distance."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You want to listen at least twice as much as you talk. If you talk for {t} minutes, how many minutes should you listen, at least?",
+   "answer": "2*t",
+   "hint": "Twice as much means multiply by 2.",
+   "explain": "{t} minutes of talking times 2 is {=2*t} minutes of listening. Listening more lets your friend lead.",
+   "params": {
+    "t": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is an open question?",
+   "choices": [
+    "“What was the worst part?”",
+    "“Was it bad?”",
+    "“Did you cry?”"
+   ],
+   "answer": 0,
+   "hint": "Which one can’t be answered with yes or no?",
+   "explain": "“What was the worst part?” invites a full answer. The others can be answered yes or no."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Kai’s energy starts at {a} points. Each late-night chat about a friend’s problem uses {b} points. After 3 late-night chats, how many points are left?",
+   "answer": "a-3*b",
+   "where": "3*b<a",
+   "hint": "Work out 3 lots of {b}, then take it away from {a}.",
+   "explain": "3 chats use 3 × {b} = {=3*b} points. {a} take away {=3*b} leaves {=a-3*b}. Helping late every night drains you, so limits matter.",
+   "params": {
+    "a": [
+     20,
+     30
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Your friend says, “I’m so stressed about my exams.” Which is the best reflection?",
+   "choices": [
+    "“It sounds like a lot of pressure right now.”",
+    "“You’re so stressed about your exams?”",
+    "“Just make a revision timetable.”"
+   ],
+   "answer": 0,
+   "hint": "Which one says the meaning in new words and names the feeling?",
+   "explain": "It paraphrases and names the pressure. The second only echoes, and the third jumps to advice."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the difference between sympathy and empathy?",
+    "choices": [
+     "Sympathy feels sorry for; empathy feels with",
+     "They mean exactly the same",
+     "Empathy means agreeing with someone"
+    ],
+    "answer": 0,
+    "hint": "Think about calling down into the hole versus climbing down.",
+    "explain": "Sympathy feels sorry from the outside. Empathy tries to understand the feeling from the inside. You can do that without agreeing."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which reply minimises a feeling?",
+    "choices": [
+     "“You’ll get over it.”",
+     "“That sounds really hard.”",
+     "“Do you want to talk about it?”"
+    ],
+    "answer": 0,
+    "hint": "Which reply tells the person their feeling is too big?",
+    "explain": "“You’ll get over it” rushes and shrinks the feeling. The other two make room for it."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A friend tells you they are sad. You reply, “When my gran was ill, I was sad too, and…” What has happened?",
+    "choices": [
+     "The talk has turned to your story",
+     "You have reflected their feeling",
+     "You have asked an open question"
+    ],
+    "answer": 0,
+    "hint": "Who is the conversation about now?",
+    "explain": "Sharing can help later, but jumping to your own story moves the focus off your friend."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Jas answers each open question with about {w} words and each closed question with 1 word. You ask 3 open and 3 closed questions. About how many words does Jas say?",
+    "answer": "3*w+3",
+    "hint": "Work out the words from the open questions, then add the 3 one-word answers.",
+    "explain": "3 × {w} = {=3*w} words from open questions, plus 3 from closed ones, makes {=3*w+3}. Open questions do most of the work.",
+    "params": {
+     "w": [
+      8,
+      20
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which is a warning sign of compassion fatigue?",
+    "choices": [
+     "Feeling numb when friends share problems",
+     "Feeling sad for a friend, then carrying on",
+     "Telling a trusted adult about a worry"
+    ],
+    "answer": 0,
+    "hint": "Which one shows caring has worn someone out?",
+    "explain": "Numbness is a sign you are worn out. Feeling sad then carrying on is healthy, and telling an adult is protecting yourself."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A friend messages at midnight every night with problems. What is a kind boundary?",
+    "choices": [
+     "“I care about you. I need sleep, so can we talk after school?”",
+     "Block them without saying anything",
+     "Stay up every night, whatever it costs"
+    ],
+    "answer": 0,
+    "hint": "Which one keeps the friendship and protects you?",
+    "explain": "Saying when you can talk keeps you able to help. Staying up every night wears you out, and blocking without a word hurts."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A friend says they are thinking of hurting themselves and asks you to keep it secret. What should you do?",
+    "choices": [
+     "Listen, then tell a trusted adult",
+     "Keep the secret so they still trust you",
+     "Try to sort it out on your own"
+    ],
+    "answer": 0,
+    "hint": "Whose job is it to keep someone safe?",
+    "explain": "Safety worries must go to a trusted adult, even if you promised. You are not meant to carry it alone."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Kai helps {f} friends a week, and each chat takes {m} minutes. How many minutes a week is that?",
+    "answer": "f*m",
+    "hint": "Multiply the number of friends by the minutes for each chat.",
+    "explain": "{f} chats × {m} minutes is {=f*m} minutes a week. That is a lot to carry, which is why rest and support matter.",
+    "params": {
+     "f": [
+      2,
+      6
+     ],
+     "m": [
+      10,
+      30
+     ]
+    }
+   }
+  ]
+ }
+}

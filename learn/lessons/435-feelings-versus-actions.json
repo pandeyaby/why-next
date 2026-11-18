@@ -1,0 +1,83 @@
+{
+ "topicId": "mt_TU3BcLOgiV",
+ "title": "Feelings Versus Actions",
+ "audience": "family",
+ "keyIdea": "A feeling, like cross, scared or jealous, happens inside you. An action (a doing) is what your body does, like hitting, hiding or saying \"I feel cross\". Every feeling is OK, but not every action is OK. A big feeling does not make you do anything: there is a gap between the feeling and the doing. Stop and breathe in the gap, then choose a doing that does not hurt anyone.",
+ "explain": {
+  "kid": [
+   "A feeling happens inside you. Cross, scared, sad and jealous are feelings. You cannot always stop a feeling from coming.",
+   "A doing is what your body does. Stamping, hiding, hugging and shouting are doings. You get to choose your doings.",
+   "Every feeling is OK. Feeling jealous does not make you bad. But some doings are not OK, like hitting or breaking things.",
+   "A big feeling does not have to win. Stop. Take a big breath. Then pick a kind doing, like saying \"I feel cross!\" or asking a grown-up for help."
+  ],
+  "adult": [
+   "This topic sits in self-regulation. In England it links to the DfE Health Education guidance (2019) at Key Stage 1, which asks pupils to recognise and talk about feelings and to manage them in ways that are right for the situation. It also builds on the EYFS goal 'Managing Self'. Between about 6 and 8, children move from acting straight away on a feeling (impulse) to holding a short pause and choosing a response.",
+   "The key words are emotion (or feeling), action (or behaviour) and response. A trigger sets off the feeling. The feeling is not a choice and is never wrong. The action is the part a child can learn to choose. A short pause, such as stop and breathe, is the first self-regulation tool. It gives the thinking part of the brain time to catch up with a strong feeling.",
+   "Common mistakes: telling a child a feeling is bad (\"Don't be jealous!\"), which teaches them to hide feelings rather than manage actions. Saying \"he made me do it\" or \"I was too angry to stop\", as if the feeling chose the action. Mixing up a feeling with its action, for example calling shouting or crying a feeling. Be careful to praise the choice, such as \"You were really cross and you still kept your hands to yourself\".",
+   "In the lab your child sorts feelings from doings, finds three kind doings for one cross feeling, drags a STOP sign into the gap before choosing, and judges cards as OK or not OK. The rule they find is that feelings are always OK and doings are chosen."
+  ]
+ },
+ "familyTip": "When your child has a big feeling, name it and then the choice: \"You feel cross. Hitting is not OK. You can stamp your feet or tell me.\" Later, ask: what did you feel, and what did you choose to do?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Feeling or doing? Drag each card to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Feeling (inside me)", "Doing (my body does it)"],
+   "items": [["Sad", 0], ["Crying", 1], ["Worried", 0], ["Running away", 1], ["Happy", 0], ["Hugging", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagfeelact",
+  "caption": "Flagship lab: sort feelings from doings, find kind doings for one cross feeling, put a STOP in the gap, and judge what is OK.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Which one is a feeling?", "choices": ["Scared", "Shouting", "Hiding"], "answer": 0,
+   "hint": "A feeling happens inside you. A doing is what your body does.",
+   "explain": "Scared is a feeling inside you. Shouting and hiding are doings: things your body does."},
+  {"type": "numeric", "id": "p2", "prompt": "Ben feels cross. He stops and counts {n} slow breaths before he chooses. He has done {k} so far. How many more breaths?", "answer": "n-k", "where": "k<n",
+   "hint": "Start at {n} breaths and take away the {k} he has done.",
+   "explain": "{n} take away {k} is {=n-k}. Those slow breaths make a gap, so Ben can choose a kind doing.",
+   "params": {"n": [3, 6], "k": [1, 3]}},
+  {"type": "mc", "id": "p3", "prompt": "Ava feels jealous of her friend's new doll. What is a kind doing?", "choices": ["Say \"I like your doll. Can we play?\"", "Grab the doll", "Say the doll is ugly"], "answer": 0,
+   "hint": "Feeling jealous is OK. Which doing does not hurt her friend?",
+   "explain": "Ava can feel jealous and still choose a kind doing, like asking to play together."},
+  {"type": "numeric", "id": "p4", "prompt": "A box has {f} feeling cards and {d} doing cards. How many cards are there in all?", "answer": "f+d",
+   "hint": "Add the feeling cards and the doing cards.",
+   "explain": "{f} and {d} make {=f+d} cards. Each one is either a feeling inside you or a doing your body does.",
+   "params": {"f": [2, 6], "d": [2, 6]}}
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "Is it OK to feel angry?", "choices": ["Yes, every feeling is OK", "No, angry is a bad feeling", "Only for grown-ups"], "answer": 0,
+    "hint": "Think about feelings and doings. Which part can be not OK?",
+    "explain": "All feelings are OK, angry too. It is a doing, like hitting, that can be not OK."},
+   {"type": "mc", "id": "m2", "prompt": "Jo says, \"I was so cross, I had to kick him.\" What is wrong with this?", "choices": ["Being cross does not make you kick", "Nothing, the feeling made him do it", "Jo should not feel cross"], "answer": 0,
+    "hint": "Does a feeling choose your doing for you?",
+    "explain": "A feeling does not choose for you. Jo could stop, breathe and pick a doing that does not hurt."},
+   {"type": "mc", "id": "m3", "prompt": "Which one is a doing?", "choices": ["Stamping your feet", "Worried", "Jealous"], "answer": 0,
+    "hint": "A doing is something your body does.",
+    "explain": "Stamping is something your body does. Worried and jealous are feelings inside you."},
+   {"type": "mc", "id": "m4", "prompt": "A big dog barks and Kit feels scared. What should Kit do first?", "choices": ["Stop and hold a grown-up's hand", "Throw a stick at the dog", "Run into the road"], "answer": 0,
+    "hint": "Which choice keeps everyone safe?",
+    "explain": "Feeling scared is OK. Stopping and holding a grown-up's hand is a safe doing."},
+   {"type": "mc", "id": "m5", "prompt": "What is the gap?", "choices": ["The time between a feeling and a doing", "A feeling that goes away", "A doing that hurts"], "answer": 0,
+    "hint": "Think of STOP in the lab.",
+    "explain": "The gap is the time between the feeling and the doing. Stop and breathe in it, then choose."},
+   {"type": "mc", "id": "m6", "prompt": "Max lost a game and feels sad. Which is a kind doing?", "choices": ["Tell a friend \"I feel sad\"", "Throw the game on the floor", "Say the winner cheated"], "answer": 0,
+    "hint": "Which doing shows the feeling without hurting anyone?",
+    "explain": "Saying the feeling in words is a kind doing. Throwing things or blaming hurts."},
+   {"type": "numeric", "id": "m7", "prompt": "Lily feels {a} big feelings today. Each time, she stops and picks one kind doing. How many kind doings does she pick?", "answer": "a",
+    "hint": "One kind doing for each big feeling.",
+    "explain": "{a} feelings, one kind doing each, makes {a} kind doings.",
+    "params": {"a": [2, 5]}},
+   {"type": "numeric", "id": "m8", "prompt": "Sam feels jealous {j} times this week. How many of those times was Sam bad just for feeling jealous?", "answer": "0",
+    "hint": "Is a feeling ever bad on its own?",
+    "explain": "The answer is 0. Feeling jealous {j} times is OK. Only a doing can be not OK.",
+    "params": {"j": [2, 6]}}
+  ]
+ }
+}

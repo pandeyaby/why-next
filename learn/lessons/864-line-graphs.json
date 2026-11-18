@@ -1,0 +1,253 @@
+{
+ "topicId": "mt_bESTSBB0wK",
+ "title": "Line graphs",
+ "audience": "learner",
+ "keyIdea": "A line graph shows how something changes over time. Time goes along the bottom and the amount goes up the side. Plot each reading as a point, then join the points in time order, because the amount changes smoothly in between. That lets you read times nobody measured. A steep line means a fast change, a flat line means no change, and a line going down means it fell. Read the scale carefully: each grid line may be worth 2, 5 or 10, not 1. Only use a line graph for data that changes over time; separate groups need a bar chart.",
+ "familyTip": "Check the outdoor temperature on a phone or thermometer every two hours on a weekend day and plot it together on squared paper. Then ask: when did it warm up fastest, was it ever flat, and what was it at a time you did not check?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Line graph or bar chart? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "line graph",
+    "bar chart"
+   ],
+   "items": [
+    [
+     "A puppy's weight each month",
+     0
+    ],
+    [
+     "Favourite colours in Class 6",
+     1
+    ],
+    [
+     "Water in a bath as it fills",
+     0
+    ],
+    [
+     "Votes for each school trip",
+     1
+    ],
+    [
+     "Your height on each birthday",
+     0
+    ],
+    [
+     "Books read by each pupil",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglinegr",
+  "caption": "Flagship lab: plot a day of temperatures, read times nobody measured, find steep, flat and falling parts, find both 18 °C times and pick line or bar.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A line graph shows how something changes over time. Time goes along the bottom. The amount goes up the side. Each reading is a dot. Then you join the dots in time order.",
+   "We can join the dots because the temperature changes smoothly between readings. So the line lets you read a time that nobody measured. At 9 am, halfway between 10 °C and 16 °C, the line is at 13 °C.",
+   "The shape tells a story. A steep line means a fast change. A flat line means no change, even if it is high up. A line going down means the amount fell. One value can come up twice, once on the way up and once on the way down.",
+   "Check the scale before you read. Each grid line might be worth 2 or 5, not 1. And only join dots for data that changes over time. Separate groups, like favourite fruits, need a bar chart."
+  ],
+  "adult": [
+   "Ages 10 to 11. The National Curriculum in England asks Year 5 pupils to solve problems using information in tables and line graphs, and Year 6 pupils to interpret and construct line graphs and use them to solve problems. CCSS 5.G.A.2 and 6.SP.B.4 cover plotting points and displaying numerical data. The lab uses one day of temperatures, from 8 °C at 6 am up to 22 °C in the afternoon and down to 14 °C at 6 pm.",
+   "Key ideas: the horizontal axis carries time and the vertical axis the measure. Points are joined because the quantity is continuous, so values between readings can be estimated (interpolation). The gradient of each segment shows the rate of change: steep is fast, horizontal is no change, downward is a fall. Reading backwards from a value can give more than one time. Categorical data, such as favourite fruit, is shown with separate bars that are never joined.",
+   "Common mistakes: reading the vertical scale as one unit per grid line when each line is worth 2; thinking the highest part of the graph is where it rose fastest; reading a flat line as zero or as missing data; giving only the first time a value occurs; adding two readings instead of reading between them; and joining points for categories. Each one has its own feedback in the lab and the challenge."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "When should the points of a graph be joined with a line?",
+   "choices": [
+    "When the data changes over time",
+    "Whenever there are points",
+    "When the bars are tall"
+   ],
+   "answer": 0,
+   "hint": "Is there anything in between the readings?",
+   "explain": "Join points only when the data changes smoothly over time, like temperature. Separate groups get a bar chart."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Each grid line on a line graph is worth {s} °C. A point is 3 lines above 0. What temperature does it show? (Type the number.)",
+   "answer": "3*s",
+   "hint": "Count up in steps of {s}, not 1.",
+   "explain": "3 lines × {s} °C = {=3*s} °C. Always check what one grid line is worth.",
+   "params": {
+    "s": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "At 8 am it was {a} °C. At 10 am it was {=a+2*r} °C, and the line between is straight. What was the temperature at 9 am? (Type the number.)",
+   "answer": "a+r",
+   "hint": "9 am is halfway between 8 am and 10 am. Find the number halfway between the two readings.",
+   "explain": "The rise is {=2*r} °C, so halfway is {r} °C up: {a} + {r} = {=a+r} °C.",
+   "params": {
+    "a": [
+     4,
+     12
+    ],
+    "r": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Part of a temperature graph is flat and high up. What does it show?",
+   "choices": [
+    "The temperature stayed the same",
+    "It was 0 °C",
+    "It was getting hotter fast"
+   ],
+   "answer": 0,
+   "hint": "Flat means the line does not go up or down.",
+   "explain": "A flat line means no change. It can be high up and still flat: the temperature stayed where it was."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A line graph rises to 18 °C at 11 am and falls back through 18 °C at 5 pm. When was it 18 °C?",
+   "choices": [
+    "At 11 am and at 5 pm",
+    "Only at 11 am",
+    "Only at 5 pm"
+   ],
+   "answer": 0,
+   "hint": "Draw across from 18 °C. How many times does it meet the line?",
+   "explain": "The line crosses 18 °C twice: once warming up at 11 am and once cooling down at 5 pm."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "On a temperature line graph, how do you find when it warmed up fastest?",
+    "choices": [
+     "Find the steepest part going up",
+     "Find the highest point",
+     "Find the longest part of the line"
+    ],
+    "answer": 0,
+    "hint": "Fast change means a big rise in a short time.",
+    "explain": "The steepest upward part shows the biggest rise in the shortest time. The highest point only shows when it was warmest."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Each grid line is worth {s} °C. A point is 4 lines above 10 °C. What does it show? (Type the number.)",
+    "answer": "10+4*s",
+    "hint": "Start at 10 and count up 4 steps of {s}.",
+    "explain": "4 × {s} = {=4*s}, and 10 + {=4*s} = {=10+4*s} °C.",
+    "params": {
+     "s": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "At noon it was {n} °C. At 6 am it was {m} °C. How much warmer was it at noon? (Type the number.)",
+    "answer": "n-m",
+    "hint": "How much warmer means the difference. Subtract.",
+    "explain": "{n} − {m} = {=n-m} °C warmer.",
+    "params": {
+     "n": [
+      18,
+      24
+     ],
+     "m": [
+      4,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which data should go on a line graph?",
+    "choices": [
+     "A plant's height each week",
+     "Pets owned by each child",
+     "Favourite sports in a class"
+    ],
+    "answer": 0,
+    "hint": "Which one changes over time?",
+    "explain": "The plant grows between measurements, so its height suits a line graph. Pets and sports are groups, so they need a bar chart."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Between 2 pm and 4 pm the graph is flat at 22 °C. What was the temperature at 3 pm?",
+    "choices": [
+     "22 °C",
+     "44 °C",
+     "11 °C"
+    ],
+    "answer": 0,
+    "hint": "Flat means it stayed the same.",
+    "explain": "The line stays at 22 °C from 2 pm to 4 pm, so at 3 pm it was 22 °C. Do not add or halve the readings."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Nobody read the thermometer at 1 pm. It was 20 °C at noon and 22 °C at 2 pm. What can you say about 1 pm?",
+    "choices": [
+     "Read the line: about 21 °C",
+     "Nothing: it was not measured",
+     "It must be 20 °C"
+    ],
+    "answer": 0,
+    "hint": "The line fills the gap between readings.",
+    "explain": "Halfway between noon and 2 pm the line is halfway between 20 and 22, so about 21 °C."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "From 4 pm to 6 pm the line falls from 22 °C to 14 °C. What happened?",
+    "choices": [
+     "It cooled by 8 °C",
+     "It warmed by 8 °C",
+     "It cooled by 36 °C"
+    ],
+    "answer": 0,
+    "hint": "Going down means falling. Find the difference.",
+    "explain": "The line goes down, so it cooled. 22 − 14 = 8 °C."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is time put along the bottom of a temperature line graph?",
+    "choices": [
+     "Time goes on steadily and the temperature changes with it",
+     "Time is always the bigger number",
+     "It does not matter which way round"
+    ],
+    "answer": 0,
+    "hint": "Which one depends on the other?",
+    "explain": "Time moves on steadily, and the temperature changes as it does. Putting time along the bottom lets you read the change from left to right."
+   }
+  ]
+ }
+}

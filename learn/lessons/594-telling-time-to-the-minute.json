@@ -1,0 +1,244 @@
+{
+ "topicId": "mt_4m8BimI4G5",
+ "title": "Telling time to the minute (age 7+)",
+ "audience": "family",
+ "keyIdea": "Every small mark on the clock is one minute. Read times like 3:17 and 5:42 \u2014 minutes past before half past, and minutes to the next hour after half past \u2014 and match the digital form.",
+ "familyTip": "Point to a wall clock and ask for the exact minute, not only 'about quarter past'. Say a digital time like 4:23 and have your child set the long hand.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Minute-time idea or mix-up? Drag each clue, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "True minute idea",
+    "Myth / mix-up"
+   ],
+   "items": [
+    [
+     "each small mark is 1 minute",
+     0
+    ],
+    [
+     "3:17 is 17 minutes past 3",
+     0
+    ],
+    [
+     "every time must land on a big number",
+     1
+    ],
+    [
+     "5:42 is 18 minutes to 6",
+     0
+    ],
+    [
+     "2:09 is 9 minutes to 2",
+     1
+    ],
+    [
+     "digital and analogue show the same time",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtomin",
+  "caption": "Flagship lab: count minute marks, set 3:17 and 4:23, read minutes to (5:42), match digital 2:09, catch multiples-of-5-only myth.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Between the big numbers are small marks. Each small mark is one minute.",
+   "3:17 means 17 minutes past 3 \u2014 the long hand is not only on big numbers.",
+   "After half past you can say minutes to the next hour: 5:42 is 18 minutes to 6.",
+   "A digital clock and a clock face can show the same time in two ways."
+  ],
+  "adult": [
+   "NC Y3 Measurement: tell and write the time from an analogue clock to the nearest minute; compare with digital. Builds on Y2 five-minute intervals (flagmins) and hours/half hours (flagclock).",
+   "Words: minute mark, minutes past, minutes to, digital, nearest minute. Common mistakes: reading only multiples of 5; swapping past and to; treating :09 as minutes to the hour.",
+   "In the lab your child counts seven marks to 3:07, sets 3:17 and 4:23, makes 5:42 as minutes to 6, matches 2:09, and spots the big-number-only mix-up."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Three small marks past 12 means\u2026",
+   "choices": [
+    "3 minutes past",
+    "15 minutes past",
+    "3 o'clock"
+   ],
+   "answer": 0,
+   "hint": "Each small mark is one minute, not five.",
+   "explain": "Three single marks past 12 is 3 minutes past."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "3:17 in words is\u2026",
+   "choices": [
+    "17 minutes past 3",
+    "17 minutes to 3",
+    "quarter past 3"
+   ],
+   "answer": 0,
+   "hint": "Before half past, say minutes past.",
+   "explain": "3:17 is seventeen minutes past 3."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "5:42 as minutes to\u2026",
+   "choices": [
+    "18 minutes to 6",
+    "42 minutes to 6",
+    "18 minutes past 5"
+   ],
+   "answer": 0,
+   "hint": "Minutes to = 60 minus the minute reading.",
+   "explain": "60 \u2212 42 = 18, so 5:42 is 18 minutes to 6."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Minutes showing {a}. How many minutes to the next hour?",
+   "answer": "60-a",
+   "hint": "Subtract the minute reading from 60.",
+   "explain": "60 \u2212 {a} = {=60-a} minutes to the next hour.",
+   "params": {
+    "a": [
+     35,
+     55
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Long hand on minute mark {a}. Minutes past?",
+   "answer": "a",
+   "hint": "Count one minute per small mark from 12.",
+   "explain": "Mark {a} past 12 means {a} minutes past.",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "4:23 means\u2026",
+    "choices": [
+     "23 minutes past 4",
+     "23 minutes to 4",
+     "quarter to 5"
+    ],
+    "answer": 0,
+    "hint": "Before :30, use minutes past.",
+    "explain": "4:23 is 23 minutes past 4."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Digital 2:09 matches\u2026",
+    "choices": [
+     "9 minutes past 2",
+     "9 minutes to 2",
+     "half past 2"
+    ],
+    "answer": 0,
+    "hint": ":09 is still early in the hour.",
+    "explain": "2:09 is nine minutes past 2."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is the mix-up?",
+    "choices": [
+     "Every time must land on a big number",
+     "3:17 is 17 minutes past 3",
+     "5:42 is 18 minutes to 6"
+    ],
+    "answer": 0,
+    "hint": "Small marks let you read every minute.",
+    "explain": "Times can land between big numbers; each mark is one minute."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Minute marks between numbers\u2026",
+    "choices": [
+     "each mark is 1 minute",
+     "each mark is 5 minutes",
+     "only hours matter"
+    ],
+    "answer": 0,
+    "hint": "Big jumps are 5 minutes; small marks are 1.",
+    "explain": "Each small mark between numbers is one minute."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "6:51 as minutes to\u2026",
+    "choices": [
+     "9 minutes to 7",
+     "51 minutes to 7",
+     "9 minutes past 6"
+    ],
+    "answer": 0,
+    "hint": "60 \u2212 51 = 9, next hour is 7.",
+    "explain": "6:51 is 9 minutes to 7 because 60 \u2212 51 = 9, and the next hour is 7."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Minutes showing {a}. Minutes to next hour?",
+    "answer": "60-a",
+    "hint": "Subtract the minute reading from 60 to find minutes left.",
+    "explain": "60 \u2212 {a} = {=60-a} minutes to the next hour.",
+    "params": {
+     "a": [
+      40,
+      58
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Start at 10 minutes past. Add {a} minutes. New minute reading?",
+    "answer": "10+a",
+    "hint": "Add on from 10; if you pass 60, wrap.",
+    "explain": "10 + {a} = {=10+a} minutes past the hour.",
+    "params": {
+     "a": [
+      1,
+      20
+     ]
+    }
+   },
+   {
+    "type": "order",
+    "id": "m8",
+    "prompt": "Order: set 3:17 on a clock.",
+    "items": [
+     "put the short hand near 3",
+     "move the long hand 17 marks",
+     "check digital 3:17"
+    ],
+    "hint": "Hour hand near 3, minute hand on 17.",
+    "explain": "Set the hour area, count 17 minute marks, confirm digitally."
+   }
+  ]
+ }
+}

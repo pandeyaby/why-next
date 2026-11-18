@@ -1,0 +1,171 @@
+{
+ "topicId": "mt__mo8t76H0-",
+ "title": "Identifying compounds with instrumental analysis",
+ "audience": "learner",
+ "keyIdea": "Instruments are fast, accurate and sensitive, and need only tiny samples. Mass spectrometry gives the Mr from the molecular ion M⁺, the peak with the highest m/z (not the tallest, which is the base peak). Infrared shows bonds: broad O–H at 3230–3550 cm⁻¹ for alcohols, very broad O–H at 2500–3000 for acids, sharp C=O at 1680–1750; the fingerprint region below 1500 is matched with a database. ¹H NMR gives one peak per H environment, so symmetry merges groups. Together they identify a compound.",
+ "explain": {
+  "kid": [
+   "Chemical tests give quick yes-or-no answers. Bromine water shows a C=C. Limewater shows CO₂. Instruments do more. They are fast, accurate and sensitive, and need only a tiny sample. Three of them work as a team: mass spectrometry, infrared (IR) and ¹H NMR.",
+   "A mass spectrometer turns molecules into ions and sorts them by m/z. The peak with the highest m/z is the molecular ion, M⁺. Its m/z equals the Mr. The tallest peak is the base peak. It is a fragment, not the whole molecule. Gaps between peaks show the bits that broke off: a loss of 15 is a CH₃.",
+   "In IR, each bond absorbs at its own wavenumber. Read the dips from the data sheet. O–H in an alcohol is broad, at 3230–3550 cm⁻¹. O–H in an acid is very broad, at 2500–3000. C=O is sharp, at 1680–1750. Below 1500 is the fingerprint region. Its pattern is unique, so you match it with a database.",
+   "In ¹H NMR, each H environment gives one peak. H atoms in the same place count once. Propanone has two CH₃ groups, but they are mirror images, so it gives 1 peak. Ethanol gives 3: CH₃, CH₂ and OH. Then put the clues together. MS gives the Mr, IR the group, and NMR the skeleton."
+  ],
+  "adult": [
+   "This is A-level organic analysis: AQA 3.3.6 (test-tube tests, mass spectrometry and infrared spectroscopy) and 3.3.15 (NMR spectroscopy), with matching content in OCR A 4.2.4 and 6.3.2. It builds on AQA GCSE 4.8.3.7, which says instrumental methods are accurate, sensitive and rapid. Students get a data sheet of IR wavenumbers and NMR shifts, so the skill is reading evidence, not memorising numbers.",
+   "In a mass spectrum the molecular ion M⁺ is the peak with the highest m/z, ignoring the small M+1 peak from carbon-13. Its m/z gives the Mr. The base peak is just the most abundant ion, often a stable fragment such as CH₃CO⁺ at 43. High-resolution MS gives masses to four decimal places, so it separates formulas with the same whole-number Mr: C₃H₆O is 58.0417 and C₄H₁₀ is 58.0783. Gaps between peaks show neutral losses, such as 15 for CH₃.",
+   "IR identifies bonds: O–H in alcohols 3230–3550, O–H in acids 2500–3000, C=O 1680–1750 and C–O 1000–1300 cm⁻¹. The fingerprint region below 1500 cm⁻¹ is matched against a database. In ¹H NMR each set of equivalent protons gives one peak. The shift δ, measured from TMS at 0 ppm, shows the neighbourhood, and the peak area gives the ratio of H atoms. The lab draws one line per environment; splitting by the n+1 rule comes later.",
+   "Common mistakes: taking the base peak as M⁺; calling any band near 3000 an alcohol O–H, when an acid's O–H is lower and comes with C=O; counting H atoms instead of environments, so propanone gets 2 or 6 peaks; and trying to read single bands in the fingerprint region. Real labs use these tools for drug and doping tests (GC–MS), breathalysers (IR), quality control and, through MRI, in hospitals. In the lab you pick methods, find M⁺, read IR dips, count NMR environments and then rule out candidates."
+  ]
+ },
+ "familyTip": "Take an exam-style unknown, such as M⁺ at 60 with a broad IR band at 3230–3550 cm⁻¹ and 3 NMR peaks. Before naming it, list every candidate with that Mr and write which clue rules each one out.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which spectrum tells you this? Drag each card to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Mass spectrum", "Infrared spectrum"],
+   "items": [
+    ["The Mr, from the M⁺ peak", 0],
+    ["An O–H bond is present", 1],
+    ["A C=O bond is present", 1],
+    ["A CH₃ broke off (loss of 15)", 0],
+    ["A fingerprint to match with a database", 1],
+    ["The molecular formula, from an exact mass", 0]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaginstr",
+  "caption": "Flagship lab: choose a test or an instrument, find M⁺ in mass spectra, read IR dips, count NMR environments, then solve two unknowns.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "In a mass spectrum, which peak gives the Mr of the compound?",
+   "choices": ["The peak with the highest m/z (M⁺)", "The tallest peak", "The peak at m/z 15"],
+   "answer": 0,
+   "hint": "Which ion is the whole molecule with one electron removed?",
+   "explain": "The molecular ion M⁺ is the whole molecule, so it has the highest m/z, and that m/z equals the Mr. The tallest peak is the base peak, a fragment."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A mass spectrum has its base peak at m/z {b}. The peak with the highest m/z is at {m}. What is the Mr of the compound?",
+   "answer": "m",
+   "where": "b<m",
+   "hint": "The base peak is just the tallest. Which peak is the whole molecule?",
+   "explain": "The molecular ion M⁺ is the peak with the highest m/z, so the Mr is {m}. The base peak at {b} is a fragment.",
+   "params": {"m": [44, 90], "b": [15, 43]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "An IR spectrum shows a very broad band at 2500–3000 cm⁻¹ and a strong band at 1710 cm⁻¹. Which functional group is present?",
+   "choices": ["Carboxylic acid", "Alcohol", "Ketone"],
+   "answer": 0,
+   "hint": "Check the data sheet: there are two different O–H ranges.",
+   "explain": "O–H at 2500–3000 is the acid O–H, and 1710 is C=O, so it is a carboxylic acid. An alcohol's O–H is at 3230–3550 with no C=O."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The M⁺ peak is at m/z {m} and a fragment peak is at m/z {f}. What mass was lost as a neutral fragment?",
+   "answer": "m-f",
+   "where": "f<m",
+   "hint": "Subtract the fragment's m/z from the molecular ion's m/z.",
+   "explain": "{m} − {f} = {=m-f}, so a neutral piece of mass {=m-f} broke off. A loss of 15 would be CH₃ and 29 would be C₂H₅ or CHO.",
+   "params": {"m": [58, 88], "f": [29, 45]}
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Peaks at m/z 15, 43 and 58; the tallest is at 43. What does the peak at 43 show?",
+    "choices": ["The base peak, a common fragment", "The molecular ion M⁺", "The Mr of the compound"],
+    "answer": 0,
+    "hint": "Tallest means most abundant. Is it the furthest right?",
+    "explain": "The tallest peak is the base peak, the most abundant fragment ion. M⁺ is at 58, the highest m/z, so the Mr is 58."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which bond absorbs strongly at 1680–1750 cm⁻¹?",
+    "choices": ["C=O", "O–H", "C–H"],
+    "answer": 0,
+    "hint": "Look up 1680–1750 on the IR data sheet.",
+    "explain": "C=O absorbs at 1680–1750 cm⁻¹. O–H is at 2500–3550 and C–H at 2850–3300."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "How many peaks are in the ¹H NMR spectrum of propan-1-ol, CH₃CH₂CH₂OH?",
+    "choices": ["4", "3", "8"],
+    "answer": 0,
+    "hint": "Count H environments, not H atoms. Is the molecule symmetrical?",
+    "explain": "There is no symmetry: CH₃, the middle CH₂, the CH₂ next to O and the OH are all different, so 4 peaks."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ethanol and methoxymethane both give M⁺ at m/z 46. Which tells them apart most quickly?",
+    "choices": ["IR: only ethanol has a broad O–H band", "Low-resolution mass spectrometry", "Finding the Mr again"],
+    "answer": 0,
+    "hint": "They have the same formula, C₂H₆O. Which bond does only one of them have?",
+    "explain": "Same formula means the same Mr, so MS cannot separate them. Ethanol has an O–H bond, so its IR shows a broad band at 3230–3550."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is the fingerprint region of an IR spectrum used for?",
+    "choices": ["Matching the whole pattern to a database", "Finding the O–H band", "Finding the Mr"],
+    "answer": 0,
+    "hint": "Below 1500 cm⁻¹ many bands overlap. Can you read them one by one?",
+    "explain": "Below 1500 cm⁻¹ the bands overlap into a pattern unique to each compound, so the whole region is matched against a database."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "C₃H₆O and C₄H₁₀ both have M⁺ at 58. What can tell them apart?",
+    "choices": ["High-resolution MS: 58.0417 v 58.0783", "The base peak height", "The fingerprint region alone"],
+    "answer": 0,
+    "hint": "Atoms do not have exactly whole-number masses.",
+    "explain": "High-resolution MS measures M⁺ to four decimal places: C₃H₆O is 58.0417 and C₄H₁₀ is 58.0783, so each formula has its own exact mass."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is an advantage of instrumental methods over test-tube tests?",
+    "choices": ["Fast, accurate and sensitive on tiny samples", "They need no reference data", "Anyone can read them by eye"],
+    "answer": 0,
+    "hint": "Think about speed, accuracy and how much sample is needed.",
+    "explain": "Instruments are rapid, accurate and sensitive and need very little sample, but they still need reference data such as a database or data sheet."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "The tallest peak in a mass spectrum is at m/z {b}. The peak with the highest m/z is at {m}. What is the Mr?",
+    "answer": "m",
+    "where": "b<m",
+    "hint": "The molecular ion M⁺ has the highest m/z.",
+    "explain": "The Mr is {m}, the m/z of M⁺. The tallest peak at {b} is the base peak, a fragment.",
+    "params": {"m": [46, 100], "b": [15, 45]}
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A compound has M⁺ at m/z {m}. A fragment peak is at {f}. What is the mass of the neutral piece lost?",
+    "answer": "m-f",
+    "where": "f<m",
+    "hint": "Neutral pieces are not detected. Find the gap between the two peaks.",
+    "explain": "{m} − {f} = {=m-f}. The neutral piece of mass {=m-f} is not detected, which is why only the gap shows it.",
+    "params": {"m": [60, 102], "f": [29, 57]}
+   }
+  ]
+ }
+}

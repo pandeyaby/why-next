@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_4RTulNwsQj",
+ "title": "Specific heat capacity",
+ "audience": "family",
+ "keyIdea": "Specific heat capacity, c, is the energy needed to raise the temperature of 1 kg of a substance by 1 °C, measured in J/kg °C. Water's is high, about 4200 J/kg °C, while dry sand's is about 800 and copper's 385, so the same energy warms sand or copper far more than water. The energy needed is ΔE = m × c × Δθ, where Δθ is the change in temperature, not the final temperature, so double the mass or double the rise needs double the energy. Because water warms and cools slowly, the sea stays cool on a hot afternoon and mild at night, which gives coasts milder weather than inland areas.",
+ "familyTip": "On a sunny day at a beach or a paddling pool, feel the sand or paving and then the water at midday, and again in the evening. Ask which changed temperature more, and why the water is slow to warm up and slow to cool down.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "With the same energy into 1 kg, does it warm more than water or less? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "warms more than water",
+    "warms less than water"
+   ],
+   "items": [
+    [
+     "copper (385 J/kg °C)",
+     0
+    ],
+    [
+     "dry sand (about 800)",
+     0
+    ],
+    [
+     "aluminium (900)",
+     0
+    ],
+    [
+     "cooking oil (about 2000)",
+     0
+    ],
+    [
+     "ethanol (about 2400)",
+     0
+    ],
+    [
+     "liquid ammonia (about 4700)",
+     1
+    ],
+    [
+     "hydrogen gas (about 14 300)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagspheat",
+  "caption": "Flagship lab: give water, oil and sand equal energy, find c for two metals, scale energy with mass, solve with ΔE = mcΔθ, and run a beach day.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some things heat up fast and some heat up slowly. A metal spoon in hot tea gets hot quickly. The tea in a cup cools slowly. Specific heat capacity measures this. It is the energy needed to warm 1 kg of a substance by 1 °C.",
+   "Water needs a lot: about 4200 joules for each kilogram and each degree. Sand needs about 800. So if you give 1 kg of each the same energy, the sand gets about five times hotter. A high value means it warms slowly.",
+   "To work out the energy, multiply three numbers: mass, specific heat capacity and the change in temperature. Energy = m × c × Δθ. Use the change, not the end temperature. Warming tea from 20 °C to 70 °C is a change of 50 °C.",
+   "This is why the beach sand burns your feet at noon but the sea feels cool. At night the sand cools fast, but the sea stays mild. Water is slow to warm up and slow to cool down."
+  ],
+  "adult": [
+   "Ages 13 to 15. This is the Key Stage 3 and GCSE physics idea of specific heat capacity. It is the energy needed to raise the temperature of 1 kg of a substance by 1 °C. The equation is ΔE = m c Δθ, and it is on the AQA GCSE physics equation sheet. In the US it supports NGSS MS-PS3-4, which links energy, type of matter, mass and temperature change.",
+   "The unit is J/kg °C. You may also see J/kg K, which is the same, because a change of 1 °C is a change of 1 K. Typical values: water about 4200, ethanol about 2400, cooking oil about 2000, aluminium 900, dry sand about 800, iron 450 and copper 385. Water's value is unusually high. That is why it is used in heating and car cooling systems.",
+   "Coasts have milder weather partly for this reason. On a summer afternoon the land heats up more than the sea. At night the land cools faster. The sea also mixes warm surface water with cold deep water, and evaporation cools it, so specific heat capacity is one key reason but not the only one. The beach graph in the lab is a sketch of the pattern, not measured data.",
+   "Common mistakes: using the final temperature instead of the change; leaving out the mass, or using grams with a value per kilogram; thinking a high value means a substance heats up quickly, when it is the opposite; and mixing it up with how well a material conducts heat. Copper conducts well and has a low value, but these are two different properties."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "1 kg of water and 1 kg of copper each get 4000 J. Which warms more?",
+   "choices": [
+    "copper",
+    "water",
+    "they warm the same"
+   ],
+   "answer": 0,
+   "hint": "Which has the lower specific heat capacity?",
+   "explain": "Copper's c is 385 J/kg °C and water's is 4200, so copper needs far less energy per degree and warms about 10 °C while water warms about 1 °C."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "How much energy, in joules, warms {m} kg of water by 10 °C? (c = 4200 J/kg °C)",
+   "answer": "m*4200*10",
+   "hint": "Use ΔE = m × c × Δθ with Δθ = 10.",
+   "explain": "ΔE = {m} × 4200 × 10 = {=m*42000} J.",
+   "params": {
+    "m": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A {m} kg aluminium block warms from 20 °C to {t} °C. How many joules did it take? (c = 900 J/kg °C)",
+   "answer": "m*900*(t-20)",
+   "hint": "Find the change first: final minus start.",
+   "explain": "Δθ = {t} − 20 = {=t-20} °C, so ΔE = {m} × 900 × {=t-20} = {=m*900*(t-20)} J.",
+   "params": {
+    "m": [
+     1,
+     4
+    ],
+    "t": [
+     30,
+     80
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Why do many radiators and car cooling systems use water?",
+   "choices": [
+    "Water has a high specific heat capacity, so it carries a lot of energy per degree",
+    "Water has a low specific heat capacity, so it heats quickly",
+    "Water is a good insulator"
+   ],
+   "answer": 0,
+   "hint": "Think about how much energy 1 kg of water stores for each degree.",
+   "explain": "Water's high c means each kilogram carries a lot of energy for a small temperature change, which makes it good for moving energy around."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What does a specific heat capacity of 900 J/kg °C mean for aluminium?",
+   "choices": [
+    "900 J warms 1 kg of aluminium by 1 °C",
+    "900 J melts 1 kg of aluminium",
+    "1 kg of aluminium is at 900 °C"
+   ],
+   "answer": 0,
+   "hint": "Read the unit: joules per kilogram per degree.",
+   "explain": "The value is the energy to warm 1 kg by 1 °C. Melting needs a different quantity, latent heat, and 900 is not a temperature."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What are the units of specific heat capacity?",
+    "choices": [
+     "J/kg °C",
+     "J/°C",
+     "kg/J"
+    ],
+    "answer": 0,
+    "hint": "It is energy per kilogram per degree.",
+    "explain": "Specific heat capacity is joules for each kilogram and each degree, so J/kg °C. J/°C leaves out the mass."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How many joules warm {m} kg of water from 15 °C to 25 °C? (c = 4200 J/kg °C)",
+    "answer": "m*4200*10",
+    "hint": "Find the change first: 25 − 15 °C, then multiply m × c × Δθ.",
+    "explain": "Δθ = 10 °C, so ΔE = {m} × 4200 × 10 = {=m*42000} J.",
+    "params": {
+     "m": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "{=k*8400} J goes into 2 kg of water. How much does its temperature rise, in °C? (c = 4200 J/kg °C)",
+    "answer": "k",
+    "hint": "Rearrange: Δθ = ΔE ÷ (m × c).",
+    "explain": "Δθ = {=k*8400} ÷ (2 × 4200) = {k} °C.",
+    "params": {
+     "k": [
+      1,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ella uses 70 °C instead of the 50 °C change when warming water from 20 °C to 70 °C. Her answer will be…",
+    "choices": [
+     "too big",
+     "too small",
+     "correct"
+    ],
+    "answer": 0,
+    "hint": "Is 70 bigger or smaller than 50?",
+    "explain": "ΔE = m × c × Δθ uses the change. Using 70 instead of 50 makes her answer 40% too big."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "On a hot afternoon, why is the sand hotter than the sea?",
+    "choices": [
+     "Sand has a much lower specific heat capacity, so the same energy warms it more",
+     "The sun only shines on the sand",
+     "Sand has a higher specific heat capacity"
+    ],
+    "answer": 0,
+    "hint": "Both get sunshine. Which needs more energy per degree?",
+    "explain": "Sand's c is about 800 J/kg °C and water's about 4200, so the same energy raises the sand's temperature much more. Mixing in the sea also spreads its energy."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Sam says copper has a low specific heat capacity, so it must be a bad conductor. What is wrong?",
+    "choices": [
+     "Conducting heat and specific heat capacity are different properties",
+     "Copper has a high specific heat capacity",
+     "Nothing is wrong"
+    ],
+    "answer": 0,
+    "hint": "Does how fast energy moves through a material tell you how much energy it needs per degree?",
+    "explain": "Conductivity is how quickly energy flows through a material; specific heat capacity is how much energy 1 kg needs per degree. Copper is a good conductor with a low c."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Double the mass of water and double the temperature rise. The energy needed is…",
+    "choices": [
+     "four times as much",
+     "twice as much",
+     "the same"
+    ],
+    "answer": 0,
+    "hint": "ΔE = m × c × Δθ: what happens when two of the factors double?",
+    "explain": "Doubling m doubles ΔE, and doubling Δθ doubles it again, so the energy is 2 × 2 = 4 times as much."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A 500 g iron pan is warmed by 10 °C (c = 450 J/kg °C). Tom works out 500 × 450 × 10. What is his slip?",
+    "choices": [
+     "He used grams; the mass must be 0.5 kg",
+     "He used the wrong c",
+     "He should add, not multiply"
+    ],
+    "answer": 0,
+    "hint": "Check the unit of mass in J/kg °C.",
+    "explain": "The value is per kilogram, so 500 g must be 0.5 kg: ΔE = 0.5 × 450 × 10 = 2250 J, not 2 250 000 J."
+   }
+  ]
+ }
+}

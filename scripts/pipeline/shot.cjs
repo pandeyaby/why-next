@@ -8,7 +8,7 @@ const VP = { iphone: devices['iPhone 13'], android: { viewport: { width: 360, he
   const b = await chromium.launch(), ctx = await b.newContext(VP[vp]), p = await ctx.newPage();
   await p.goto(VIEWER); await p.waitForFunction('window.WN_WARM');
   const cur = await p.evaluate(() => document.documentElement.dataset.theme || 'dark');
-  if ((theme === 'light') !== (cur === 'classic' || cur === 'light')) await p.click('#themeBtn');
+  if ((theme === 'light') !== (cur === 'classic' || cur === 'light')) await p.evaluate(() => document.getElementById('themeBtn').click());
   await p.evaluate(id => select(id), id); await p.waitForSelector('.vis.flag .fl-cv', { timeout: 10000 }); await p.waitForTimeout(400);
   const n = await p.$$eval('.fl-dots button, .fl-dots > *', d => d.length);
   for (let s = 0; s < n; s++) {

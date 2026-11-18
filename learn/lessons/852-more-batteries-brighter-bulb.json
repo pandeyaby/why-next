@@ -1,0 +1,248 @@
+{
+ "topicId": "mt_vFT_GbkP9m",
+ "title": "More batteries, brighter bulb",
+ "audience": "learner",
+ "keyIdea": "A cell gives the circuit a push called voltage, measured in volts (V); a battery is two or more cells joined. Cells joined in a line, all facing the same way, add their voltages: two 1.5 V cells give 3 V. More voltage pushes more current round the circuit, so a bulb glows brighter, a buzzer sounds louder and a motor spins faster. A cell turned the wrong way pushes against the others and cancels its share. The size of a cell does not set its voltage: AA, C and D cells are all 1.5 V. Too much voltage for a part, more than the number stamped on it, can make a bulb blow. Bulbs in one loop share the voltage, so two bulbs need twice the cells to glow as brightly as one.",
+ "familyTip": "Look at the cells in a torch or a remote control together. Read the voltage printed on each one and count them. How many volts does the device get in total? Check that every cell faces the way the + sign in the holder shows, and talk about what would happen if one were turned round.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the bulb get brighter, dimmer or go out? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "brighter",
+    "dimmer",
+    "goes out"
+   ],
+   "items": [
+    [
+     "add a cell, same way round",
+     0
+    ],
+    [
+     "add a second bulb to the loop",
+     1
+    ],
+    [
+     "take one cell out of three",
+     1
+    ],
+    [
+     "turn one of two cells round",
+     2
+    ],
+    [
+     "open the switch",
+     2
+    ],
+    [
+     "add 2 cells to a 2-bulb loop",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcells",
+  "caption": "Flagship lab: add cells until a 3 V bulb glows (or blows), turn a cell round, test AA, C and D cells, power a buzzer, a motor and two bulbs.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A cell pushes electricity round a circuit. The push is called voltage, and we measure it in volts, V. One normal cell gives 1.5 V. A battery is two or more cells joined.",
+   "Put cells in a line, all facing the same way, and their pushes add up. Two cells give 3 V. A bigger push makes more current flow, so a bulb glows brighter, a buzzer is louder and a motor spins faster.",
+   "If one cell faces the wrong way, it pushes back. Two cells facing opposite ways give 0 V, so the bulb goes off. A big D cell is still 1.5 V, so it is no brighter than a small AA cell. It just lasts longer.",
+   "Parts have a number on them, like 3 V. Much more push than that can make a bulb blow. Two bulbs in one loop share the push, so you need more cells to make both bright."
+  ],
+  "adult": [
+   "This is the Year 6 Electricity unit in the National Curriculum in England: associate the brightness of a lamp or the volume of a buzzer with the number and voltage of cells used in the circuit, and compare and give reasons for variations in how components function, including the brightness of bulbs, the loudness of buzzers and the on/off position of switches. It builds on Year 4 work on simple series circuits.",
+   "Cells in series add their voltages when they face the same way (1.5 V + 1.5 V = 3 V); a reversed cell subtracts. A larger potential difference across a component drives a larger current through it, so a lamp is brighter, a buzzer louder and a motor faster. Identical lamps in series share the supply voltage equally, which is why two lamps on two cells are each dimmer than one lamp on two cells. Cell size (AA, C, D) sets how much charge a cell can deliver over time, not its voltage.",
+   "Common mistakes: thinking a bulb is simply on or off; thinking a bigger cell must give a bigger push; ignoring the direction of cells; believing more cells is always better, when a voltage well above a component's rating can burn out a lamp filament; and confusing a cell with a battery. In class, use lamps rated a little above the supply (for example 3.5 V lamps with 2 or 3 cells) so that nothing blows."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A torch has 2 cells and its bulb is dim. Which change makes it brighter?",
+   "choices": [
+    "Add a third cell, facing the same way",
+    "Turn one cell round",
+    "Swap an AA cell for a D cell"
+   ],
+   "answer": 0,
+   "hint": "Which change adds more push?",
+   "explain": "A third cell facing the same way adds 1.5 V of push, so more current flows. Turning a cell round takes push away, and a D cell is still 1.5 V."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{n} cells, each 1.5 V, are joined in a line, all facing the same way. What is the total voltage in volts?",
+   "answer": "n*1.5",
+   "hint": "Add 1.5 V for every cell.",
+   "explain": "{n} × 1.5 V = {=n*1.5} V. Cells facing the same way add their pushes.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Two identical bulbs share one loop with {n} cells of 1.5 V. How many volts does each bulb get?",
+   "answer": "n*1.5/2",
+   "hint": "Find the total voltage, then share it between 2 bulbs.",
+   "explain": "Total: {n} × 1.5 = {=n*1.5} V. Shared by 2 bulbs: {=n*1.5/2} V each.",
+   "params": {
+    "n": [
+     2,
+     10
+    ]
+   },
+   "where": "n%2==0"
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Two 1.5 V cells face opposite ways in a circuit with a bulb. What happens?",
+   "choices": [
+    "The bulb stays off: the pushes cancel",
+    "The bulb is bright: 3 V",
+    "The bulb is dim: 1.5 V"
+   ],
+   "answer": 0,
+   "hint": "Each cell pushes from its + end. Which way does each push?",
+   "explain": "The two pushes are equal and opposite: 1.5 V − 1.5 V = 0 V. No current flows, so the bulb is off."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A buzzer is quiet with 1 cell. What happens with 2 cells, facing the same way?",
+   "choices": [
+    "It is louder",
+    "It is quieter",
+    "It sounds the same"
+   ],
+   "answer": 0,
+   "hint": "Does a bigger push give more or less current?",
+   "explain": "2 cells give 3 V instead of 1.5 V. More current flows through the buzzer, so it is louder."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does the voltage of a cell tell you?",
+    "choices": [
+     "How hard it pushes current round a circuit",
+     "How big the cell is",
+     "How long the wires are"
+    ],
+    "answer": 0,
+    "hint": "Think about what volts measure.",
+    "explain": "Voltage is the push a cell gives. Size and wire length are different things: an AA and a D cell have the same voltage."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A bulb stamped 3 V is joined to four 1.5 V cells. What is most likely?",
+    "choices": [
+     "It blows: 6 V is twice its label",
+     "It glows normally",
+     "It stays off: it needs more cells"
+    ],
+    "answer": 0,
+    "hint": "Work out the total push, then compare it with the label.",
+    "explain": "4 × 1.5 V = 6 V, twice the 3 V the bulb is made for. The thin wire inside gets too hot and melts."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Zak says a D cell will make his bulb brighter than an AA cell because it is bigger. Is he right?",
+    "choices": [
+     "No: both are 1.5 V, so the glow is the same",
+     "Yes: bigger cells push harder",
+     "Yes: D comes after A"
+    ],
+    "answer": 0,
+    "hint": "Check the voltage printed on each cell.",
+    "explain": "AA, C and D cells are all 1.5 V. A D cell holds more energy, so it lasts longer, but it gives the same push."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A circuit has {n} cells of 1.5 V facing the same way and one more cell turned the wrong way. What is the total voltage in volts?",
+    "answer": "(n-1)*1.5",
+    "hint": "The turned cell cancels one of the others.",
+    "explain": "{n} × 1.5 V − 1.5 V = {=(n-1)*1.5} V. A cell facing the wrong way takes its push away.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "One bulb glows well on 2 cells. A second identical bulb is added to the same loop. What happens to the glow?",
+    "choices": [
+     "Both bulbs are dimmer",
+     "Both are just as bright",
+     "The first bulb is brighter"
+    ],
+    "answer": 0,
+    "hint": "Two bulbs in one loop share the push.",
+    "explain": "The 3 V is now shared, 1.5 V each, so less current flows and both bulbs are dimmer."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which circuit makes a motor spin fastest? All cells are 1.5 V and face the same way.",
+    "choices": [
+     "3 cells",
+     "2 cells",
+     "1 cell"
+    ],
+    "answer": 0,
+    "hint": "More push, more current, faster motor.",
+    "explain": "3 cells give 4.5 V, the biggest push, so the most current flows and the motor spins fastest."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is a battery?",
+    "choices": [
+     "Two or more cells joined together",
+     "Any single cell",
+     "The bulb in a circuit"
+    ],
+    "answer": 0,
+    "hint": "Scientists use 'cell' for one unit.",
+    "explain": "One unit is a cell. Two or more cells joined make a battery, even though we often call a single cell a battery."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "How many 1.5 V cells, facing the same way, are needed to give {v} V?",
+    "answer": "v/1.5",
+    "hint": "Divide the voltage you need by 1.5 V.",
+    "explain": "{v} ÷ 1.5 = {=v/1.5} cells.",
+    "params": {
+     "v": [
+      3,
+      15
+     ]
+    },
+    "where": "v%3==0"
+   }
+  ]
+ }
+}

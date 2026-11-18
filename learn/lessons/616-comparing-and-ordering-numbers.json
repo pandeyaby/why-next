@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_U0waNfD8PB",
+ "title": "Comparing and ordering numbers",
+ "audience": "family",
+ "keyIdea": "Compare two two-digit numbers by place value: look at the tens digit first, then the ones if the tens match. Write the result with >, = or <, and order a set from smallest to largest the same way.",
+ "familyTip": "Show two two-digit numbers (a door number and a bus number work well). Ask: which has more tens? If the tens match, which has more ones? Then write the comparison with > or <.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which symbol fits? Drag each pair into >, = or <, or tap the pair then a box.",
+  "opts": {
+   "bins": [
+    ">",
+    "=",
+    "<"
+   ],
+   "items": [
+    [
+     "47 ? 74",
+     2
+    ],
+    [
+     "81 ? 18",
+     0
+    ],
+    [
+     "55 ? 55",
+     1
+    ],
+    [
+     "36 ? 63",
+     2
+    ],
+    [
+     "70 ? 69",
+     0
+    ],
+    [
+     "22 ? 22",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcmp2d",
+  "caption": "Flagship lab: tens-first compare, ones when tens match, choose > = <, order three numbers, catch digit-sum myths.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A two-digit number has tens and ones. The left digit counts tens. The right digit counts ones.",
+   "To compare two numbers, look at the tens first. More tens means a greater number.",
+   "If the tens are the same, compare the ones. 58 is greater than 52 because 8 ones beat 2 ones.",
+   "Write >, = or <. The open side of > faces the greater number. Equal means the same tens and the same ones."
+  ],
+  "adult": [
+   "Ages 6 to 7. CCSS 1.NBT.3: compare two two-digit numbers based on meanings of the tens and ones digits, recording the results of comparisons with the symbols >, =, and <. National Curriculum Year 2 number and place value: compare and order numbers from 0 up to 100; use <, > and = signs.",
+   "The tens-first rule is place value, not digit size as a glyph and not the sum of the digits. 34 < 43 even though both digit-sums are 7, because 3 tens is less than 4 tens. When tens match, the ones digit decides: 58 > 52.",
+   "Common mistakes: adding the digits and calling the sums equal (3+4 = 4+3 so 34 and 43 'match'); reading a number backwards (34 as 43); choosing the number with the taller-looking digit; putting the open side of > toward the smaller number; and treating 40 as equal to 4.",
+   "In the lab your child compares with tens rods and ones cubes, picks > = < for a pair, drags three numbers into smallest-to-largest order, and catches the digit-sum myth."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which is greater: 34 or 43?",
+   "choices": [
+    "43",
+    "34",
+    "They are equal"
+   ],
+   "answer": 0,
+   "hint": "Look at the tens digit of each number first.",
+   "explain": "43 has 4 tens. 34 has only 3 tens. More tens wins, so 43 > 34."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Which symbol fits: 47 ? 74",
+   "choices": [
+    "<",
+    ">",
+    "="
+   ],
+   "answer": 0,
+   "hint": "Compare the tens: 4 tens versus 7 tens.",
+   "explain": "4 tens is less than 7 tens, so 47 < 74. The open side of < faces the greater number."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What number is {a} tens and {b} ones?",
+   "answer": "a*10+b",
+   "hint": "Tens are worth 10 each. Multiply the tens digit by 10, then add the ones.",
+   "explain": "{a} tens and {b} ones make {=a*10+b}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     0,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "58 and 52 have the same tens. Which is greater?",
+   "choices": [
+    "58",
+    "52",
+    "They match"
+   ],
+   "answer": 0,
+   "hint": "Same tens means compare the ones digits next.",
+   "explain": "Both have 5 tens. 8 ones beat 2 ones, so 58 > 52."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "How many tens does {=10*a+b} have?",
+   "answer": "a",
+   "hint": "The tens digit is the left digit of a two-digit number.",
+   "explain": "{=10*a+b} is {a} tens and {b} ones. The tens digit is {a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     0,
+     9
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which is less: 81 or 18?",
+    "choices": [
+     "18",
+     "81",
+     "They match"
+    ],
+    "answer": 0,
+    "hint": "Compare tens: 8 tens versus 1 ten.",
+    "explain": "18 has 1 ten. 81 has 8 tens. So 18 < 81."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which symbol fits: 55 ? 55",
+    "choices": [
+     "=",
+     ">",
+     "<"
+    ],
+    "answer": 0,
+    "hint": "Same tens and same ones means equal.",
+    "explain": "Both numbers are 5 tens and 5 ones, so 55 = 55."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "What is 10 more than {=a*10+b}?",
+    "answer": "a*10+b+10",
+    "hint": "10 more means the tens digit goes up by 1. Ones stay the same.",
+    "explain": "{=a*10+b} plus one ten is {=a*10+b+10}.",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "b": [
+      0,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why is 34 less than 43?",
+    "choices": [
+     "34 has fewer tens",
+     "The digits add to the same sum",
+     "3 is a taller digit than 4"
+    ],
+    "answer": 0,
+    "hint": "Place value: tens decide before ones or digit sums.",
+    "explain": "34 has 3 tens; 43 has 4 tens. Digit sums matching does not make the numbers equal."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "70 ? 69 — which symbol?",
+    "choices": [
+     ">",
+     "<",
+     "="
+    ],
+    "answer": 0,
+    "hint": "Compare the tens digits: 7 tens versus 6 tens. Ones do not override tens.",
+    "explain": "70 has 7 tens; 69 has 6 tens. So 70 > 69 even though 69 has more ones."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "What is the ones digit of {=10*a+b}?",
+    "answer": "b",
+    "hint": "The ones digit is the right digit.",
+    "explain": "{=10*a+b} has ones digit {b}.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Order 29, 58, 71. Which comes first (smallest)?",
+    "choices": [
+     "29",
+     "58",
+     "71"
+    ],
+    "answer": 0,
+    "hint": "The smallest has the fewest tens.",
+    "explain": "2 tens is fewer than 5 or 7, so 29 is smallest."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A mix-up says 34 > 43 because 3+4 = 4+3. What went wrong?",
+    "choices": [
+     "Digit sums do not decide size",
+     "The symbols were swapped",
+     "Ones should be compared first"
+    ],
+    "answer": 0,
+    "hint": "Place value, not digit sum, decides which number is greater.",
+    "explain": "Adding digits is not how we compare. Tens first: 3 < 4, so 34 < 43."
+   }
+  ]
+ }
+}

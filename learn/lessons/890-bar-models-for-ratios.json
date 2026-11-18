@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_ePXg_XyCKU",
+ "title": "Bar Models for Ratios",
+ "audience": "learner",
+ "keyIdea": "A bar model turns a ratio into equal boxes. Sam : Ali = 3 : 2 means 3 boxes for Sam and 2 for Ali, 5 boxes in all. Put the number you know where it belongs: a total goes round every box, one person's share goes round their bar, and a difference goes round the boxes that stick out. Divide to find one box, then multiply. Sharing £20 in the ratio 3 : 2 gives one box £20 ÷ 5 = £4, so Sam gets £12 and Ali £8. Sam's share is 3/5 of the total, not 3/2.",
+ "familyTip": "Share 20 raisins in the ratio 3 : 2. Deal them out in rounds: 3 to one person, 2 to the other, until they run out. Count the rounds (4) and the piles (12 and 8). Each round is one box of the bar model.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Where does the number in the story go? Drag each story to a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Round all the boxes (total)",
+    "Round one bar (one share)",
+    "Round the extra boxes (difference)"
+   ],
+   "items": [
+    [
+     "Share £30 in the ratio 2 : 3",
+     0
+    ],
+    [
+     "40 children in all, boys : girls = 3 : 5",
+     0
+    ],
+    [
+     "Ali gets £12; Sam : Ali = 3 : 2",
+     1
+    ],
+    [
+     "Jo has 15 cards; Tom : Jo = 2 : 3",
+     1
+    ],
+    [
+     "Red has 6 more beads than blue; 5 : 2",
+     2
+    ],
+    [
+     "Cats : dogs = 4 : 1; 9 more cats",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbarratio",
+  "caption": "Flagship lab: build the bars for 3 : 2, drag the box value to share £20, scale from one known share, use a difference, then pick the bar model for a story.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A ratio tells you how to share. Sam : Ali = 3 : 2 means Sam gets 3 parts for every 2 parts Ali gets. Draw a bar for each of them. Give Sam 3 equal boxes and Ali 2. That makes 5 boxes in all. Sam has 3 of the 5 boxes, so he gets 3/5 of the total, not 3/2.",
+   "Now share £20. The £20 fills all 5 boxes, so one box is £20 ÷ 5 = £4. Sam has 3 boxes, so he gets £12. Ali has 2 boxes, so she gets £8. Check: £12 + £8 = £20.",
+   "Sometimes you only know one share. Say Sam's 3 boxes hold £18. Then one box is £6, and Ali's 2 boxes hold £12. Do not just take away 1. Ali does not get £17.",
+   "Sometimes you know how many more. Red : blue = 5 : 2, so red has 3 extra boxes. If there are 15 more red beads, those 3 boxes hold 15. One box is 5."
+  ],
+  "adult": [
+   "Ages 9 to 12. The National Curriculum for England asks Year 6 pupils to solve problems involving unequal sharing and grouping using knowledge of fractions and multiples. US Common Core 6.RP.A.3 names tape diagrams as a tool for ratio reasoning. The bar model used in Singapore and in many UK schools is the same picture.",
+   "The method has three moves. Draw one equal box for each part of the ratio. Put the known quantity on the matching boxes: the total, one share, or the difference. Divide to find one box, then multiply for any share. Check that the shares add back to the total and keep the ratio.",
+   "Common mistakes: dividing the total by one number of the ratio instead of the sum of the parts (£20 ÷ 3). Treating a ratio by adding or taking away, so Sam on £18 leaves Ali on £17. Reading a part to part ratio as a fraction, so 3 : 2 becomes 3/2 instead of 3/5. Putting a total on one bar, or a difference on a whole bar. Swapping the order of the ratio. In the lab each slip gets a message that names it."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Sam and Ali share sweets in the ratio 3 : 2. How many equal boxes do you draw in all?",
+   "choices": [
+    "5",
+    "3",
+    "6"
+   ],
+   "answer": 0,
+   "hint": "One box for each part: count Sam's boxes and Ali's boxes.",
+   "explain": "3 boxes for Sam and 2 for Ali make 5 equal boxes. 6 would come from 3 × 2, but the parts are added."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Share £{=5*a} in the ratio 3 : 2. How much is the bigger share?",
+   "answer": "3*a",
+   "hint": "Draw 5 boxes. £{=5*a} ÷ 5 gives one box.",
+   "explain": "One box is £{=5*a} ÷ 5 = £{a}. The bigger share is 3 boxes: 3 × £{a} = £{=3*a}.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Juice : water = 2 : 5. You use {=2*a} ml of juice. How many ml of water do you need?",
+   "answer": "5*a",
+   "hint": "The juice is 2 boxes. Find one box first.",
+   "explain": "2 boxes hold {=2*a} ml, so one box is {a} ml. Water is 5 boxes: {=5*a} ml.",
+   "params": {
+    "a": [
+     10,
+     40
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Cats : dogs = 4 : 1. There are 9 more cats than dogs. How many dogs are there?",
+   "choices": [
+    "3",
+    "9",
+    "12"
+   ],
+   "answer": 0,
+   "hint": "Line up the bars. How many cat boxes stick out past the dog box?",
+   "explain": "3 cat boxes stick out and hold the 9 extra cats, so one box is 3. Dogs are 1 box: 3 dogs (and 12 cats)."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "In the ratio 3 : 2, what fraction of the total is Sam's share?",
+   "choices": [
+    "3/5",
+    "3/2",
+    "2/5"
+   ],
+   "answer": 0,
+   "hint": "The bottom of the fraction is all the boxes, not Ali's boxes.",
+   "explain": "Sam has 3 of the 5 boxes, so his share is 3/5. 3/2 compares Sam to Ali, not Sam to the whole."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Share £40 in the ratio 1 : 3. How much is the smaller share?",
+    "choices": [
+     "£10",
+     "£13.33",
+     "£30"
+    ],
+    "answer": 0,
+    "hint": "How many boxes are there in all?",
+    "explain": "1 + 3 = 4 boxes, so one box is £40 ÷ 4 = £10. £13.33 divides by 3 only, and £30 is the bigger share."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Red : blue = 5 : 3. There are {=2*a} more red beads than blue. How many beads are there in all?",
+    "answer": "8*a",
+    "hint": "Red sticks out by 2 boxes. Those boxes hold the {=2*a} extra beads.",
+    "explain": "2 boxes hold {=2*a}, so one box is {a}. There are 5 + 3 = 8 boxes: 8 × {a} = {=8*a} beads.",
+    "params": {
+     "a": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Boys : girls = 2 : 3. There are {=2*a} boys. How many girls are there?",
+    "answer": "3*a",
+    "hint": "The boys are 2 boxes. Find one box, then count the girls' boxes.",
+    "explain": "One box is {=2*a} ÷ 2 = {a}. The girls are 3 boxes: {=3*a}.",
+    "params": {
+     "a": [
+      3,
+      12
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which bar model fits: 'Tom : Jo = 2 : 3, and Jo has 12 cards'?",
+    "choices": [
+     "2 boxes and 3 boxes, bracket round Jo's 3 boxes",
+     "2 boxes and 3 boxes, bracket round all 5 boxes",
+     "3 boxes and 2 boxes, bracket round Jo's 2 boxes"
+    ],
+    "answer": 0,
+    "hint": "The 12 belongs to Jo only, and Tom comes first in the ratio.",
+    "explain": "Tom gets 2 boxes and Jo 3, and the 12 sits on Jo's bar. So one box is 4 and Tom has 8."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Mia says: 'Sam : Ali = 3 : 2 and Sam gets £18, so Ali gets £17.' What went wrong?",
+    "choices": [
+     "She took away 1 instead of finding one box = £6",
+     "Nothing, she is right",
+     "She should have added 1 to get £19"
+    ],
+    "answer": 0,
+    "hint": "Ratios multiply. What is one of Sam's boxes worth?",
+    "explain": "Sam's 3 boxes are £18, so one box is £6 and Ali's 2 boxes are £12. Taking away 1 treats the ratio as a gap, not a share."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Paint is blue : white = 1 : 4. You need 10 litres in all. How much white paint is that?",
+    "choices": [
+     "8 litres",
+     "2 litres",
+     "7.5 litres"
+    ],
+    "answer": 0,
+    "hint": "Count all the boxes, then find one box.",
+    "explain": "1 + 4 = 5 boxes, so one box is 2 litres. White is 4 boxes: 8 litres. 2 litres is the blue."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A whole is shared in the ratio 3 : 5. What fraction of the whole is the first part?",
+    "choices": [
+     "3/8",
+     "3/5",
+     "5/8"
+    ],
+    "answer": 0,
+    "hint": "Add the parts to get the whole.",
+    "explain": "3 + 5 = 8 boxes, and the first part is 3 of them: 3/8. 3/5 compares the parts to each other."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Share 48 sweets in the ratio 5 : 3. How many more sweets does the first person get?",
+    "choices": [
+     "12",
+     "2",
+     "18"
+    ],
+    "answer": 0,
+    "hint": "Find one box first, then count the extra boxes.",
+    "explain": "8 boxes share 48, so one box is 6. The first person has 2 extra boxes: 12 more (30 and 18)."
+   }
+  ]
+ }
+}

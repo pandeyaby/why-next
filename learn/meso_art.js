@@ -1,0 +1,45 @@
+/* Data for the Mesozoic Era flagship (flagmeso). Dates are millions of years ago (Mya), rounded from the International
+   Chronostratigraphic Chart; dinosaur spans are rounded from the Natural History Museum Dino Directory. */
+const MESOART={
+ /* name, start, end (Mya), fill, one-line note */
+ PERIODS:[['Triassic',252,201,'#f59e0b','first dinosaurs, small and fast; one big supercontinent, Pangaea'],
+  ['Jurassic',201,145,'#22c55e','giant long-necked plant-eaters; Pangaea splits apart'],
+  ['Cretaceous',145,66,'#38bdf8','T. rex, Triceratops and the first flowers; ends with the asteroid']],
+ /* name, period index, from, to (Mya) */
+ DINOS:[['Coelophysis',0,215,201],['Stegosaurus',1,155,150],['Brachiosaurus',1,154,150],['Triceratops',2,68,66],['Tyrannosaurus rex',2,68,66]],
+ MARKS:[['Stegosaurus',150],['T. rex',67],['today',0]],
+ /* pairs for "could they meet?": names, spans, answer */
+ PAIRS:[['Tyrannosaurus rex',[68,66],'Triceratops',[68,66],true],['Stegosaurus',[155,150],'Allosaurus',[155,145],true],
+  ['Stegosaurus',[155,150],'Tyrannosaurus rex',[68,66],false],['Coelophysis',[215,201],'Triceratops',[68,66],false],['a person',[0.3,0],'Brachiosaurus',[154,150],false]],
+ STEPP:['The Mesozoic Era is the age of dinosaurs. It has three periods, one after another. Put them in order, oldest on the left.',
+  'The periods were not the same length. Tap each one on the time line to measure it.',
+  'Different dinosaurs lived in different periods. Drag each dinosaur onto the time line, into the period when it lived.',
+  'Stegosaurus and T. rex are often drawn together. Tap two marks on the time line to measure the gaps between them, and between T. rex and today.',
+  'Two animals could only meet if their bars on the time line overlap. Look at the bars, then decide.'],
+ DONE:['Triassic, Jurassic, Cretaceous: oldest to youngest.','The Cretaceous was the longest, about 79 million years.','Each dinosaur belongs to one period, not to the whole era.',
+  'T. rex lived closer in time to us than to Stegosaurus.','Only animals whose times overlap could ever meet.'],
+ QZ:[['Which period of the Mesozoic came first?',[['Triassic','ok'],['Jurassic','jur'],['Cretaceous','cret']]],
+  ['Which order is right, from oldest to youngest?',[['Triassic, Jurassic, Cretaceous','ok'],['Jurassic, Triassic, Cretaceous','swap'],['Cretaceous, Jurassic, Triassic','back']]],
+  ['Which period was the longest?',[['Cretaceous, about 79 million years','ok'],['Jurassic, because it is the most famous','famous'],['They were all the same length','same']]],
+  ['When did Tyrannosaurus rex live?',[['Near the end of the Cretaceous','ok'],['In the Jurassic','trexjur'],['All through the Mesozoic','whole']]],
+  ['Could Stegosaurus and T. rex have met?',[['No, about 80 million years apart','ok'],['Yes, they lived at the same time','met'],['Yes, in the Triassic','tri']]],
+  ['Did people live at the same time as T. rex?',[['No, people came about 66 million years later','ok'],['Yes, cave people hunted them','cave'],['Only at the very end','end']]],
+  ['How did the Mesozoic Era end?',[['An asteroid hit, and most dinosaurs died out','ok'],['The dinosaurs slowly got too big','big'],['It has not ended yet','notyet']]],
+  ['When did the first dinosaurs appear?',[['In the Triassic','ok'],['In the Cretaceous','first'],['Before the Mesozoic began','before']]]],
+ WHY:{jur:'The Jurassic came second. The Triassic came first, from about 252 to 201 million years ago.',
+  cret:'The Cretaceous came last, ending 66 million years ago. Remember the order T, J, C.',
+  swap:'The Jurassic came after the Triassic. The first dinosaurs lived in the Triassic.',
+  back:'That is youngest to oldest. Oldest first is Triassic, Jurassic, Cretaceous.',
+  famous:'Being in a film title does not make it longest. The Jurassic lasted about 56 million years; the Cretaceous about 79.',
+  same:'Measure them: about 51, 56 and 79 million years. The Cretaceous was longest.',
+  trexjur:'T. rex lived about 68 to 66 million years ago, at the very end of the Cretaceous.',
+  whole:'No dinosaur lived for the whole era. Each kind lived for a few million years in one period.',
+  met:'Stegosaurus lived about 150 million years ago and T. rex about 67. That gap is bigger than the gap from T. rex to us.',
+  tri:'Neither lived in the Triassic. Stegosaurus was Jurassic and T. rex was late Cretaceous.',
+  cave:'Films show this, but it never happened. The first people lived about 300,000 years ago, long after the dinosaurs.',
+  end:'Even at the very end, 66 million years ago, there were no people. People came about 66 million years later.',
+  big:'The era ended suddenly. A huge asteroid hit Earth 66 million years ago, and most living things died out.',
+  notyet:'The Mesozoic ended 66 million years ago. Birds are the dinosaurs that survived, but the era is over.',
+  first:'By the Cretaceous, dinosaurs had been around for over 80 million years. The first ones were Triassic.',
+  before:'The first dinosaurs appeared in the Triassic, about 230 million years ago, inside the Mesozoic.'}
+};

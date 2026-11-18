@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_8H2kO4k2B9",
+ "title": "Regular and irregular polygons",
+ "audience": "family",
+ "keyIdea": "A polygon is a flat shape with straight sides. It is regular when all its sides are the same length and all its angles are the same size. If even one side or one angle is different, it is irregular. A rhombus has equal sides but unequal angles, and a rectangle has equal angles but unequal sides, so both are irregular unless they are squares. Turning a shape or changing its size does not change whether it is regular.",
+ "familyTip": "Go on a shape hunt: a stop sign, a floor tile, a honeycomb picture, a door, a slice of pizza. For each one ask two questions out loud: are all the sides the same length? Are all the corners the same? Only two yeses make it regular.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Regular or irregular? Drag each shape to a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Regular",
+    "Irregular"
+   ],
+   "items": [
+    [
+     "A stop sign: 8 equal sides, 8 equal angles",
+     0
+    ],
+    [
+     "A square standing on one corner",
+     0
+    ],
+    [
+     "A rhombus with angles of 60° and 120°",
+     1
+    ],
+    [
+     "A rectangle 6 cm by 3 cm",
+     1
+    ],
+    [
+     "A triangle with sides 5, 5 and 3 cm",
+     1
+    ],
+    [
+     "A honeycomb cell: 6 equal sides, 6 angles of 120°",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagregpol",
+  "caption": "Flagship lab: fix a pentagon, turn a rhombus and a rectangle into squares, sort shapes, then turn and grow a hexagon.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A polygon is a flat shape with straight sides, like a triangle or a hexagon.",
+   "A polygon is regular when every side is the same length and every angle is the same size. You need both.",
+   "A rhombus has equal sides, but its corners are not all the same. So it is irregular. A rectangle has equal corners, but its sides are not all the same. So it is irregular too.",
+   "A square is regular, even if you tip it onto a corner. Turning a shape or making it bigger does not change its sides or angles."
+  ],
+  "adult": [
+   "Ages 9 to 10. This is a Year 5 geometry aim in the National Curriculum in England. Children tell regular and irregular polygons apart. They reason about equal sides and equal angles. Key words: polygon, regular, irregular, side, angle, vertex, rhombus, rectangle, square, pentagon, hexagon, octagon.",
+   "A regular polygon has all sides equal and all angles equal. One rule alone is not enough. A rhombus has equal sides but not equal angles. A rectangle has equal angles but not equal sides. So the square is the only regular four-sided shape. The equilateral triangle is the only regular triangle. Turning or resizing a shape never changes this.",
+   "Common mistakes: calling a rectangle regular because its angles match; calling a rhombus regular because its sides match; thinking a tilted square is no longer regular; and using the number of sides as the test, when it only gives the name. A circle is not a polygon at all. It has no straight sides.",
+   "In the lab your child drags one corner of a pentagon until its numbers all match. Then they squash a rhombus into a square and stretch a rectangle into a square. They sort eight shapes using the numbers. Last, they turn and resize a regular hexagon and see that it stays regular."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A rectangle is 6 cm long and 3 cm wide. Is it regular?",
+   "choices": [
+    "No, its sides are not all equal",
+    "Yes, all its angles are 90°",
+    "Yes, it has 4 sides"
+   ],
+   "answer": 0,
+   "hint": "Check the sides as well as the angles.",
+   "explain": "All 4 angles are 90°, but the sides are 6 cm and 3 cm. Both sides and angles must be equal, so it is irregular."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A regular hexagon has sides of {a} cm. What is the total length of all its sides?",
+   "answer": "6*a",
+   "hint": "A regular hexagon has 6 sides, and they are all the same length.",
+   "explain": "6 sides × {a} cm = {=6*a} cm, because every side of a regular hexagon is equal.",
+   "params": {
+    "a": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A rhombus has 4 sides of 5 cm. Two angles are 60° and two are 120°. Is it regular?",
+   "choices": [
+    "No, its angles are not all equal",
+    "Yes, its sides are all equal",
+    "Yes, it has 4 corners"
+   ],
+   "answer": 0,
+   "hint": "Equal sides are only half of the test.",
+   "explain": "The sides match, but the angles are 60° and 120°. A regular polygon needs equal angles too, so this rhombus is irregular."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A regular polygon has {n} sides. They add up to {=n*a} cm. How long is each side?",
+   "answer": "a",
+   "hint": "In a regular polygon every side is the same. Share the total equally between the sides.",
+   "explain": "{=n*a} cm ÷ {n} sides = {a} cm. Every side of a regular polygon is the same length.",
+   "params": {
+    "n": [
+     3,
+     8
+    ],
+    "a": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A square is turned so that it stands on one corner. Is it still regular?",
+   "choices": [
+    "Yes, its sides and angles have not changed",
+    "No, it is tilted now",
+    "Only if you turn it back"
+   ],
+   "answer": 0,
+   "hint": "Does turning a shape change any side length or angle?",
+   "explain": "Turning moves the shape but does not change its sides or angles. It still has 4 equal sides and 4 right angles, so it is regular."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What must be true for a polygon to be regular?",
+    "choices": [
+     "All sides equal and all angles equal",
+     "All sides equal",
+     "It has a flat bottom"
+    ],
+    "answer": 0,
+    "hint": "There are two things to check, not one.",
+    "explain": "A regular polygon has every side the same length and every angle the same size. One without the other is not enough."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A stop sign has 8 equal sides and 8 equal angles. What is its shape?",
+    "choices": [
+     "A regular octagon",
+     "An irregular octagon",
+     "A regular hexagon"
+    ],
+    "answer": 0,
+    "hint": "Count the sides for the name, then check sides and angles.",
+    "explain": "8 sides makes it an octagon. All sides and angles are equal, so it is a regular octagon."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A triangle has sides of 5 cm, 5 cm and 3 cm. Is it regular?",
+    "choices": [
+     "No, one side is different",
+     "Yes, two sides match",
+     "Yes, all triangles are regular"
+    ],
+    "answer": 0,
+    "hint": "Every side must match, not just two of them.",
+    "explain": "One side is 3 cm, so the sides are not all equal. Only an equilateral triangle is a regular triangle."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which quadrilateral is regular?",
+    "choices": [
+     "A square",
+     "A rectangle",
+     "A rhombus"
+    ],
+    "answer": 0,
+    "hint": "Which one has equal sides and equal angles?",
+    "explain": "A square has 4 equal sides and 4 right angles. A rectangle has unequal sides; a rhombus has unequal angles."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Mia says a big regular pentagon is more regular than a small one. Is she right?",
+    "choices": [
+     "No, size does not matter",
+     "Yes, bigger is more regular",
+     "Yes, small shapes cannot be regular"
+    ],
+    "answer": 0,
+    "hint": "Does making a shape bigger change whether its sides and angles match?",
+    "explain": "Both pentagons have 5 equal sides and 5 equal angles. Size does not change regularity."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A regular octagon has sides of {a} cm. What is the total length of its sides?",
+    "answer": "8*a",
+    "hint": "An octagon has 8 sides, and in a regular one they are all equal.",
+    "explain": "8 sides × {a} cm = {=8*a} cm, because every side of a regular octagon is equal.",
+    "params": {
+     "a": [
+      2,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Is a circle a regular polygon?",
+    "choices": [
+     "No, it has no straight sides",
+     "Yes, it is perfectly even",
+     "Yes, it has one equal side"
+    ],
+    "answer": 0,
+    "hint": "What are polygons made of?",
+    "explain": "A polygon is made of straight sides. A circle has none, so it is not a polygon."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "An eight-sided shape has sides of 3 cm and 2 cm. What is it?",
+    "choices": [
+     "An irregular octagon",
+     "A regular octagon",
+     "Not an octagon"
+    ],
+    "answer": 0,
+    "hint": "The number of sides gives the name. The side lengths tell you regular or not.",
+    "explain": "It has 8 sides, so it is an octagon. Its sides are not all equal, so it is irregular."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "The sides of a regular pentagon add up to {=5*a} cm. How long is one side?",
+    "answer": "a",
+    "hint": "A regular pentagon has 5 sides that are all the same length.",
+    "explain": "{=5*a} cm ÷ 5 = {a} cm. Every side is the same because the pentagon is regular.",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "topicId": "mt_MUvhRF0OSW",
+ "title": "Reading an infrared spectrum",
+ "audience": "learner",
+ "keyIdea": "An infrared spectrum plots transmittance (the percentage of infrared that passes through the sample) against wavenumber in cm⁻¹, which runs from about 4000 on the left down to about 500 on the right. Where a bond absorbs, less infrared gets through, so absorptions are troughs, not peaks. Read a trough by its position (wavenumber at its lowest point), its shape (broad or sharp) and its depth. Bonds to hydrogen absorb above about 2500, triple bonds between 2500 and 2000 and double bonds between 2000 and 1500. Below about 1500 is the fingerprint region: its pattern is unique to each compound, so matching it to a database spectrum identifies the compound.",
+ "familyTip": "Find a free IR spectrum online, such as ethanol in the NIST Chemistry WebBook. Cover the labels and read it together: which way does the wavenumber axis run, where is the deepest trough, and is the trough near 3300 broad or sharp?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which region? Drag each absorption, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Above 1500 cm⁻¹",
+    "Fingerprint region, below 1500"
+   ],
+   "items": [
+    [
+     "Broad O–H at 3340",
+     0
+    ],
+    [
+     "C–O at 1050",
+     1
+    ],
+    [
+     "C=O at 1715",
+     0
+    ],
+    [
+     "C–Cl at 750",
+     1
+    ],
+    [
+     "C≡N at 2250",
+     0
+    ],
+    [
+     "C–C at 1200",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagirread",
+  "caption": "Flagship lab: read troughs with a cursor, place the four regions, name spectra by trough shape, match a fingerprint, test claims.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An IR spectrum is a graph. Up the side is transmittance: how much of the infrared gets through the sample, as a percentage. Along the bottom is wavenumber, in cm⁻¹. It is the number of waves in one centimetre, and a bigger wavenumber means more energy. The axis runs backwards, from 4000 on the left to 500 on the right.",
+   "When a bond takes in infrared, less of it gets through. So the line dips. Each absorption is a trough, not a peak. To read one, find its lowest point and read the wavenumber below it. A deep trough means a lot of the infrared was taken in there.",
+   "Where the trough sits tells you the bond. Bonds to hydrogen, like O–H, N–H and C–H, are above 2500. Triple bonds are near 2000 to 2500. Double bonds, like C=O, are near 1500 to 2000. The shape helps too. O–H is broad because of hydrogen bonds, and very broad in an acid. C=O is deep and sharp.",
+   "Below about 1500 is the fingerprint region. Lots of bonds absorb there at once, so the pattern is hard to read one trough at a time. But it is unique to each compound, just like a fingerprint. Match it to a known spectrum and you can name the compound, even when two compounds share the same bonds."
+  ],
+  "adult": [
+   "Ages 16 to 18. This matches AQA A-level Chemistry 3.3.6.3 and OCR A-level Chemistry A 4.2.4: learners interpret spectra of transmittance against wavenumber, use data-sheet ranges (for example AQA: O–H alcohols 3230–3550, O–H acids 2500–3000, C=O 1680–1750, C–H 2850–3300) and explain that the fingerprint region below about 1500 cm⁻¹ identifies a compound by comparison. It follows Bonds absorb infrared radiation by vibrating, which explains why bonds absorb.",
+   "The lab has five tasks. Learners drag a cursor over a propanone spectrum to read three troughs and their percentage transmittance, then place the four wavenumber regions. They name an alcohol, a ketone and a carboxylic acid from trough position and shape, match an unknown to propan-2-ol rather than propan-1-ol using only the fingerprint region, and judge four claims against spectra. The spectra are simplified with main absorptions at reference positions.",
+   "Common mistakes. Students read absorptions as peaks pointing up, or read the wavenumber axis left to right as if it increased. Many call the sharp C–H troughs near 3000 an O–H, or miss that an acid's O–H is very broad and overlaps the C–H. Others try to assign every trough in the fingerprint region, when it is used as a whole pattern for matching."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "On an IR spectrum, what does a trough show?",
+   "choices": [
+    "Infrared was absorbed at that wavenumber",
+    "Infrared was given out",
+    "The sample was too thin"
+   ],
+   "answer": 0,
+   "hint": "The y-axis is the percentage that gets through.",
+   "explain": "Less infrared got through at that wavenumber, so a bond absorbed it. Absorptions are troughs on a transmittance plot."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "At one trough, transmittance is {t}%. What percentage of the infrared was absorbed there?",
+   "answer": "100-t",
+   "hint": "Transmittance is what got through. The rest was absorbed.",
+   "explain": "100 − {t} = {=100-t}% was absorbed; only {t}% got through to the detector.",
+   "params": {
+    "t": [
+     5,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A spectrum has a strong, sharp trough at 1715 cm⁻¹ and no broad trough above 3000. Which compound fits?",
+   "choices": [
+    "Propanone",
+    "Ethanol",
+    "Ethanoic acid"
+   ],
+   "answer": 0,
+   "hint": "1715 is C=O. Is there an O–H?",
+   "explain": "C=O with no O–H fits a ketone such as propanone. Ethanol has no C=O; ethanoic acid would also show a very broad O–H."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "On a spectrum, the axis runs from 4000 cm⁻¹ at the left edge to 500 at the right, evenly spaced. A trough sits {f}% of the way across from the left. What is its wavenumber, in cm⁻¹?",
+   "answer": "4000-35*f",
+   "hint": "The axis covers 3500 cm⁻¹, so each 1% across is 35 cm⁻¹, falling as you go right.",
+   "explain": "4000 − 35 × {f} = {=4000-35*f} cm⁻¹. The wavenumber falls as you move right.",
+   "params": {
+    "f": [
+     10,
+     90
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Propan-1-ol and propan-2-ol both show a broad trough near 3340 cm⁻¹. How can you tell them apart?",
+   "choices": [
+    "Compare their fingerprint regions with known spectra",
+    "Look for a C=O trough",
+    "You cannot use IR at all"
+   ],
+   "answer": 0,
+   "hint": "Which region is unique to each compound?",
+   "explain": "Both have O–H and C–H, so above 1500 they look alike. The pattern below 1500, for example C–O near 1060 or 1130, identifies each one."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which way does the wavenumber axis of an IR spectrum usually run?",
+    "choices": [
+     "From about 4000 on the left to 500 on the right",
+     "From 0 on the left to 4000 on the right",
+     "From 500 on the left to 4000 on the right"
+    ],
+    "answer": 0,
+    "hint": "High wavenumbers are drawn first.",
+    "explain": "IR spectra are printed with wavenumber falling from left to right, about 4000 down to 500 cm⁻¹."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A very broad trough runs from about 2500 to 3300 cm⁻¹, with a strong sharp trough at 1710. What is the compound?",
+    "choices": [
+     "A carboxylic acid",
+     "An alcohol",
+     "An alkane"
+    ],
+    "answer": 0,
+    "hint": "Two groups: a very broad O–H and a C=O.",
+    "explain": "A very broad O–H plus C=O means a COOH group, a carboxylic acid such as ethanoic acid."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A trough has {t}% transmittance. What percentage of the infrared was absorbed there?",
+    "answer": "100-t",
+    "hint": "Take the transmitted part away from 100.",
+    "explain": "100 − {t} = {=100-t}%. The deeper the trough, the more was absorbed.",
+    "params": {
+     "t": [
+      8,
+      70
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Ali says the sharp trough at 2950 cm⁻¹ proves an O–H group. What is wrong?",
+    "choices": [
+     "That is C–H; O–H is broad and higher, 3230–3550",
+     "Nothing, 2950 is O–H",
+     "O–H only absorbs below 1500"
+    ],
+    "answer": 0,
+    "hint": "Think about the shape and range of O–H.",
+    "explain": "A sharp trough near 2950 is C–H, found in almost every organic compound. An alcohol O–H is broad and lies at 3230–3550."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is the fingerprint region used for?",
+    "choices": [
+     "Matching a spectrum to a known compound",
+     "Finding O–H groups",
+     "Measuring the mass of a molecule"
+    ],
+    "answer": 0,
+    "hint": "Its pattern is unique, like a fingerprint.",
+    "explain": "The pattern below about 1500 cm⁻¹ is unique to each compound, so it is compared with database spectra to identify it."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Where do triple bonds such as C≡N absorb?",
+    "choices": [
+     "About 2000–2500 cm⁻¹",
+     "Above 3000 cm⁻¹",
+     "Below 1000 cm⁻¹"
+    ],
+    "answer": 0,
+    "hint": "Triple bonds come between bonds to H and double bonds.",
+    "explain": "C≡N absorbs near 2220–2260 cm⁻¹, in the 2000–2500 region, where few other bonds absorb."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "An IR source gives {n} waves in every 1 cm. What is its wavenumber, in cm⁻¹?",
+    "answer": "n",
+    "hint": "Wavenumber is the number of waves per centimetre.",
+    "explain": "Wavenumber is waves per cm, so it is {n} cm⁻¹. That is where a bond vibrating at this frequency would absorb.",
+    "params": {
+     "n": [
+      600,
+      3600
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A spectrum shows a broad trough at 3350 cm⁻¹ and nothing between 1680 and 1750. Which compound fits?",
+    "choices": [
+     "Ethanol",
+     "Propanone",
+     "Ethanoic acid"
+    ],
+    "answer": 0,
+    "hint": "Is there an O–H trough? Is there a C=O trough near 1700?",
+    "explain": "Broad O–H with no C=O fits an alcohol such as ethanol. Propanone and ethanoic acid both have C=O."
+   }
+  ]
+ }
+}

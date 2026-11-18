@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_XjwUlmxdCT",
+ "title": "Combining Simple Shapes",
+ "audience": "family",
+ "keyIdea": "Small shapes can join to make bigger shapes. Two triangles, with their long sides touching, make a rectangle. Two squares side by side make a rectangle, and four squares make a bigger square. Shapes only join into one new shape when a full side touches a full side: touching at a corner, or leaving a gap, does not count. You may need to turn a shape to make it fit, and turning it does not change what shape it is. The same big shape can often be made in more than one way.",
+ "familyTip": "Cut a square of paper corner to corner to make two triangles. Ask your child to put them back into a square, then make a rectangle, then a big triangle. Talk about which sides touch. Toast, sandwiches and building blocks work too: how many ways can you make a bigger shape from two pieces?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Do the pieces make one new shape? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "One new shape",
+    "Still two shapes"
+   ],
+   "items": [
+    [
+     "Two squares, full sides touching",
+     0
+    ],
+    [
+     "Two squares touching at a corner",
+     1
+    ],
+    [
+     "Two triangles, long sides touching",
+     0
+    ],
+    [
+     "Two triangles with a gap",
+     1
+    ],
+    [
+     "Four squares in a 2 by 2 block",
+     0
+    ],
+    [
+     "A circle next to a square",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcompose",
+  "caption": "Flagship lab: turn two triangles to fill a rectangle, join and name new shapes, fill a hexagon two ways, build a picture, join full sides.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Small shapes can join to make a bigger shape. Two triangles can make a rectangle. Put their long sides together, and the rectangle is full.",
+   "Two squares side by side make a rectangle. It is not a bigger square, because two sides are long and two are short. Four squares in a block make a bigger square.",
+   "To join, a whole side must touch a whole side. If two shapes touch at just one corner, or have a gap, they are still two shapes.",
+   "Sometimes a shape will only fit if you turn it. A turned triangle is still a triangle. And you can fill the same big shape in lots of ways, like a hexagon made of 6 triangles or 2 trapezoids."
+  ],
+  "adult": [
+   "Ages 5 to 6. This is CCSS K.G.6: compose simple shapes to form larger shapes, for example joining two triangles with full sides touching to make a rectangle. It builds on naming 2-D shapes and leads to Grade 1 composing shapes (1.G.2) and later to area and fractions of shapes. Key words: compose, combine, join, side, corner (vertex), turn (rotate), triangle, square, rectangle, rhombus, trapezoid (trapezium in the UK), hexagon.",
+   "Pattern blocks make the relations exact: a hexagon equals 6 green triangles, 3 blue rhombuses or 2 red trapezoids, so it can be filled in several ways. A square never fits, as its right angles cannot match the hexagon's 120 degree corners. Children move from placing shapes one by one by trial and error to planning which pieces fit, and that shift is what the turning and filling tasks practise.",
+   "Common mistakes: thinking two squares make a bigger square; thinking a shape turned on its side has become a different shape; joining shapes at a corner or with a gap and calling it one shape; believing there is only one right way to fill a shape; and trying to force a piece in without turning it. The lab, the practice and the challenge target each of these.",
+   "In the lab your child turns two triangles and drags them into a rectangle; pushes together two squares, two triangles and then four squares and names each new shape; fills a hexagon with pattern blocks in two different ways; drags a square, a triangle, a rectangle and a circle into a house picture; and slides a blue piece until a full side touches, so the two pieces make a rectangle and then a square."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Two squares are put side by side. What shape do they make?",
+   "choices": [
+    "A rectangle",
+    "A bigger square",
+    "A triangle"
+   ],
+   "answer": 0,
+   "hint": "Look at the new shape. Are all its sides the same length?",
+   "explain": "Two sides are long and two are short, so it is a rectangle, not a bigger square."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "It takes 2 triangles to make one rectangle. How many triangles do you need to make {n} rectangles?",
+   "answer": "2*n",
+   "hint": "Count 2 triangles for each rectangle.",
+   "explain": "{n} rectangles with 2 triangles in each need {=2*n} triangles.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Two triangles touch at just one corner. Have they made one new shape?",
+   "choices": [
+    "No, a full side must touch",
+    "Yes",
+    "Yes, if they are close"
+   ],
+   "answer": 0,
+   "hint": "Shapes join when a whole side touches a whole side.",
+   "explain": "Touching at one corner is not joined. Slide them so a full side touches."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A hexagon is filled by 6 small triangles. You have put in {k}. How many more triangles do you need?",
+   "answer": "6-k",
+   "hint": "6 triangles fill the hexagon. Take away the ones you have put in.",
+   "explain": "6 take away {k} is {=6-k} more triangles to fill the hexagon with no gaps.",
+   "params": {
+    "k": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You turn a triangle so it points down. What shape is it now?",
+   "choices": [
+    "Still a triangle",
+    "A new shape",
+    "A square"
+   ],
+   "answer": 0,
+   "hint": "Count its sides and corners after you turn it.",
+   "explain": "Turning does not change a shape. It still has 3 sides and 3 corners, so it is a triangle."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What can two same triangles make, with their long sides touching?",
+    "choices": [
+     "A rectangle",
+     "A circle",
+     "Nothing"
+    ],
+    "answer": 0,
+    "hint": "Think of a sandwich cut corner to corner. Put it back together.",
+    "explain": "Two triangles with their long sides touching make a rectangle."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Four squares in a 2 by 2 block make…",
+    "choices": [
+     "A bigger square",
+     "A long rectangle",
+     "A triangle"
+    ],
+    "answer": 0,
+    "hint": "Is it as tall as it is wide?",
+    "explain": "It is 2 squares wide and 2 squares tall, so all 4 sides match: a bigger square."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which block will not fit in a hexagon with no gaps?",
+    "choices": [
+     "A square",
+     "A triangle",
+     "A trapezoid"
+    ],
+    "answer": 0,
+    "hint": "Think about the corners of each block.",
+    "explain": "A square has square corners that do not match the hexagon's corners, so it leaves gaps."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Each house picture uses 1 square and 1 triangle. How many shapes do you need for {n} houses?",
+    "answer": "2*n",
+    "hint": "Each house needs 2 shapes: a square and a triangle.",
+    "explain": "{n} houses with 2 shapes each need {=2*n} shapes.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Can a hexagon be filled in more than one way?",
+    "choices": [
+     "Yes, with different blocks",
+     "No, only one way",
+     "Only with squares"
+    ],
+    "answer": 0,
+    "hint": "Try 6 triangles, then 2 trapezoids.",
+    "explain": "6 triangles, 3 rhombuses or 2 trapezoids all fill the same hexagon."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Two triangles joined along a short side can make…",
+    "choices": [
+     "A bigger triangle",
+     "A circle",
+     "A hexagon"
+    ],
+    "answer": 0,
+    "hint": "Put two corner pieces back to back. Count the sides.",
+    "explain": "Joined along a short side, two right-angled triangles can make a bigger triangle."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A big shape is made of {n} squares and {k} triangles. How many small shapes is that?",
+    "answer": "n+k",
+    "hint": "Add the squares and the triangles.",
+    "explain": "{n} squares and {k} triangles make {=n+k} small shapes in one big shape.",
+    "params": {
+     "n": [
+      1,
+      4
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A triangle will not fit. What should you try first?",
+    "choices": [
+     "Turn it round",
+     "Get a circle",
+     "Push it in hard"
+    ],
+    "answer": 0,
+    "hint": "In the lab, what made the triangles fit the rectangle?",
+    "explain": "Turning the triangle can make its sides line up with the space, and it is still a triangle."
+   }
+  ]
+ }
+}

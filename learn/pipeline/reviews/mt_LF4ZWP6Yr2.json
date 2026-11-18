@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions and notation checked against the AQA 7367 and Edexcel 9FM0 Core Pure specifications (i² = −1, p + qi form, Argand diagram, conjugate pairs for real polynomials) and CCSS HSN-CN.C.7. Every worked line was checked by hand: x² + 2x + 5 → b² − 4ac = −16, √(−16) = 4i, (−2 ± 4i) ÷ 2 = −1 ± 2i; x² − 4x + 13 → −36, 6i, (4 ± 6i) ÷ 2 = 2 ± 3i; conjugate targets 3 ± 2i → x² − 6x + 13, −2 ± 2i → x² + 4x + 8, ±3i → x² + 9; vertex forms (x − 1)² + 4 → 1 ± 2i, (x + 2)² + 1 → −2 ± i, (x − 3)² + 9 → 3 ± 3i. The lift task computes roots −1 ± √(c − 1) i from b² − 4ac = 4 − 4c. √(−n) is the principal root √n i, as the specifications use. Parameterised answers were enumerated by the validator."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets errors listed in examiner reports for AQA and Edexcel Further Maths complex-number questions and in Mathematics in School articles on complex roots: 'negative discriminant means no solutions' (step 1 and 3 predictions, nosol and disc tags, m4), √(−16) = −4 or a stray ± inside the root (step 2 tiles, real tag), dividing only one part of −b ± √… by 2a (formula traps, m8), sign of −b (traps for b = 2 and b = −4), a non-conjugate partner like −3 + 2i (step 4 prediction, negall and negre tags), and the vertex height k mistaken for √k (step 5 tiles, m7)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "gate_lab_distinct passed. 763 The quadratic formula (flagqform) stops at 'no real roots', 371/392 (flagsqroot, flagzprod) solve real quadratics, and 207 Polar coordinates (flagpolar) has no quadratics. Only this lab couples a draggable parabola to an Argand diagram so the two real roots meet and split into a conjugate pair, drags a root while its conjugate follows and the quadratic's real coefficients update, and reads complex roots from a vertex."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The lift task lets students see the roots leave the real line as the curve leaves the axis before the rule is given. The i rotation picture (1 → i → −1) makes i² = −1 visible, not only a definition. Line-by-line working with plausible wrong lines makes them choose each step. Dragging a root shows that only a conjugate partner keeps b and c real (sum −b, product c), and the vertex task links the graph to p ± √k i. Banners state the rule after each win."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five locked predictions with tempting wrong options: 'no solutions of any kind' and 'one repeated root' when the curve lifts off; 1 for i²; 'There are none' and ±2 for x² + 4 = 0; −3 + 2i and −3 − 2i as partners of 3 + 2i; 1 ± 4i and −1 ± 2i for (x − 1)² + 4. Each task then shows the correct result on the graph or Argand diagram, and the done message reports the prediction."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with tagged wrong answers and their own messages: real (no real number squares to a negative), sqrt (root the number part too), negall and negre (only the imaginary sign flips), isq (i² = −1), nosol (no real but two complex solutions), sign and sumi (sum is −b and real), disc (negative discriminant means two complex conjugate roots). Correct answers build a streak."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text reads at Flesch-Kincaid grade 1.6 (limit 6.5) and adult text at 5.1 (limit 9.5), with short sentences around each formula. Precise terms (discriminant b² − 4ac, imaginary unit i, conjugate, Argand diagram, principal root, vertex form) are each introduced with an example, and every tile shows a full line of working rather than a fragment."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "gate_content found no filler and the explanation is under 12% similar to every other lesson. Kid paragraphs each add one idea (why no real root, i and √(−4) = 2i, the formula with a worked example, conjugate pairs). The adult text gives specification codes and notation, the task order and specific slips."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on 360 px screenshots in light and dark themes for every step before and after Show me (/workspace/wn-run-20261116-0151/shots/cx). On phones the parabola and Argand panes stack; root labels sit on the side away from the imaginary axis so they are not clipped; working tiles are full-width 42 px rows; the Argand plane for conjugate dragging is a full-width square with integer snapping; answer tiles are 50–54 px tall."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passed on desktop and iPhone 13: every task completes with Show me, axe WCAG 2.1 AA clean in both themes, no console errors. Every canvas action has a button (Raise or Lower the curve, Choose: 4i, Choose: a line of working, Root left/right/up/down), the canvas aria-label states the curve, the kind of roots, the root and partner and the target, and feedback is spoken with c.say."
+  }
+ },
+ "sources": [
+  "AQA A-level Further Mathematics 7367 specification: complex numbers",
+  "Pearson Edexcel A-level Further Mathematics 9FM0 Core Pure 1: complex numbers and roots of quadratics",
+  "Common Core State Standards HSN-CN.C.7 (solve quadratics with real coefficients that have complex solutions)",
+  "AQA and Edexcel examiner reports on complex roots of quadratics (common errors)"
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Definitions checked against UC Berkeley's Understanding Science ('Correlation and causation') and the NGSS Appendix G crosscutting concepts for grades 3–5 (Patterns; Cause and effect: cause-and-effect relationships are routinely identified, tested and used to explain change). The three non-causal explanations taught (a confounding third variable, reverse causation, chance in small samples) and the remedy (a fair test that changes one variable, controls the rest and repeats) match the NC England Y3–6 working scientifically statements. The beach numbers are internally consistent: the van toggle changes ice creams only (9 to 0) while sunburns stay 6, and hiding the sun cuts both (2 and 1). The sock games give exactly 3 of 5 wins in each group. Numeric items s−s = 0, 2n, w−w = 0 and 3h were checked at every parameter corner."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented reasoning errors in children's evaluation of evidence (Kuhn; Koerber et al.): reading any pattern as proof (step 1 prediction 'more ice cream, more sunburn', challenge tag together, p1, m1, m5, m8), reversing the direction (step 2 prediction about fire engines, tag backwards, p2, m2), trusting a tiny sample (step 3 prediction on 2 wins in lucky socks, tag few, m3), and a 'fair test' with no comparison group (tag nofair, p5). It also guards against over-correcting: step 2 pairs all have a real cause, and tag luck tells the learner that rain-and-umbrellas is not chance."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagtogeth is about this topic's own logic. It reveals a correlation in data, then intervenes on each suspected cause (close the van, hide the sun) to expose the confounder. It works out the direction of causation in four pairs, runs a with/without comparison for a superstition, and sorts claims into fair-test evidence or co-occurrence. It is distinct from Fair testing (668, which sorts change/measure/keep-same variables) and from Correlative Conjunctions (flagcorrel). The lab_distinct gate passes under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the idea before the text states it. Revealing the five days and answering 'go up too' produces the correlation. Closing the van shows 0 ice creams but still 6 sunburns, which rules ice cream out, and hiding the sun drops both, which names the cause. Picking 'Umbrellas make it rain' prompts 'Ask which happens first'. Ten games end 3/5 against 3/5, so the learner sees that the socks did nothing. Sorting 'Children with bigger feet read better' as a fair test gets the reply that age could cause both."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions each have a tempting wrong option that the lab then disproves. 'Yes: more ice cream, more sunburn' fails when the van closes and the sunburn bars stay at 6. 'Yes: more engines, bigger fire' fails when the fire-engine pair only accepts 'A big fire makes them send more engines'. 'Yes: 2 wins in a row' for the lucky socks fails when the 10 games give 3 wins out of 5 with and without them."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions; every wrong option carries a tag with its own message. together: a third thing such as the sun, age or size causes both. backwards: wrong way round, ask which happens first. luck: it happens every time it rains, so it is not chance. few: two goals is too few, so test lots of games with and without. nofair: one plant gives nothing to compare, so keep two the same and water one."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "validate_lessons passes the learner limits: kid text Flesch-Kincaid 1.6 (limit 6.5) and adult text 9.3 (limit 9.5). The kid paragraphs use one example per idea (beach, umbrellas, lucky socks). Lab step texts are two short sentences. Canvas labels are single words or short phrases ('van closed', 'sun hidden', '3 won of 5')."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler pattern matches. Each step does one job (see the pattern, find the hidden cause, choose the direction, test chance, sort claims by evidence). Every feedback line gives the specific reason with numbers where there are some, and each item's explanation states the rule in one or two sentences."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 360 px touch in light and dark were taken for every step before and after Show me. The five day columns and their 'tap' targets fill the width, the sun and van panels are about 130 px wide tap targets, and the cause options are full-width 58 px buttons. The young style gives large buttons below. The canvas keeps a light card in dark mode so the pink and orange bars keep their contrast. After the first screenshots the bar scale was reduced so Wednesday's '10' no longer touches the sun icon, and the hunt bars were moved down clear of the toggles."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas tap has a button: one per day (Show Mon…), 'go up too / go down / stay the same', 'Close the van' and 'Hide the sun' (relabelled with each state), both cause options, 'Put socks on / Take socks off' and 'Play a game', and 'fair test showed it / only seen together' with aria-labels. After every move the canvas aria-label reads the current counts and the last feedback. Challenge feedback is an aria-live status. walk.cjs reports axe (WCAG 2.1 AA) clean in light and dark on desktop and iPhone 13, with no console errors."
+  }
+ },
+ "sources": [
+  "UC Berkeley Understanding Science: Correlation and causation",
+  "NGSS Appendix G, Crosscutting Concepts (Patterns; Cause and effect), grades 3–5",
+  "Department for Education, National Curriculum in England: Science, working scientifically Years 3–6",
+  "Kuhn, D. (2002) and Koerber, Sodian et al. (2005) on children's evaluation of covariation evidence"
+ ]
+}

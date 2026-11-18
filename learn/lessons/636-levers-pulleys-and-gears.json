@@ -1,0 +1,251 @@
+{
+ "topicId": "mt_Q2k3fSwyzQ",
+ "title": "Levers, Pulleys & Gears",
+ "audience": "family",
+ "keyIdea": "Levers, pulleys and gears can let a smaller force have a greater effect. On a lever, push farther from the pivot than the load sits. A single flagpole pulley changes the direction of your pull but not its size. Extra pulleys that share the load cut the pull, but you pull more rope. A small gear turning a large gear gives a stronger, slower turn. A smaller force always acts over a longer distance.",
+ "familyTip": "On a see-saw, ask your child to sit close to the middle and then farther out: which way is it easier to lift you? Look at a flagpole: you pull down, the flag goes up. On a bicycle, try a low gear up a slope and notice that you pedal more times for an easier push.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each thing a lever, a pulley or a gear? Drag each card, or tap it then a box.",
+  "opts": {
+   "bins": [
+    "lever",
+    "pulley",
+    "gear"
+   ],
+   "items": [
+    [
+     "see-saw",
+     0
+    ],
+    [
+     "flagpole wheel and rope",
+     1
+    ],
+    [
+     "bicycle cogs",
+     2
+    ],
+    [
+     "crowbar",
+     0
+    ],
+    [
+     "well bucket over a wheel",
+     1
+    ],
+    [
+     "hand whisk cogs",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglever",
+  "caption": "Flagship lab: shift a see-saw rider, raise a flag with a fixed pulley, share a load on two ropes, turn gears, and see that a smaller force means more distance.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A lever is a bar that turns on a pivot. The load is what you want to move. The effort is your push. If you push farther from the pivot than the load sits, you need a smaller force.",
+   "A see-saw is a lever. Sit farther from the middle to lift a heavier friend with less push. Sit close to the middle and you have to push much harder.",
+   "A pulley is a wheel with a rope. A flagpole pulley lets you pull down to lift the flag up. That changes the direction. One wheel does not make the flag lighter. Extra pulleys that share the load mean you pull with less force, but you pull more rope.",
+   "Gears are wheels with teeth that slot together. A small gear turning a big gear gives a stronger turn, but the big gear turns more slowly. A low gear on a bike makes a hill easier, but you pedal more times. A smaller force always acts over a longer distance."
+  ],
+  "adult": [
+   "Ages 9 to 10. In the National Curriculum in England, Year 5 Forces asks children to recognise that some mechanisms, including levers, pulleys and gears, allow a smaller force to have a greater effect. The idea sits on moments (force × distance from the pivot) and on work (force × distance moved).",
+   "For a lever, effort × effort arm equals load × load arm. Moving the effort farther from the pivot reduces the effort. A single fixed pulley, as on a flagpole, changes direction: you pull down to lift up. Ignoring friction, the effort still matches the load. A movable pulley or block-and-tackle shares the load among the supporting ropes, so two strands mean about half the effort and twice the rope. Gears trade turns for turning force: teeth ratio 8 to 16 means the larger gear turns at half the rate, with about twice the turning force.",
+   "Common mistakes: sitting closer to the pivot to make a see-saw easier (that makes the effort larger). Thinking any pulley halves the force (a single fixed pulley does not). Believing a machine gives extra energy, so a smaller force can also act over a shorter distance. Mixing up bicycle gears: a low gear is easier up a hill because you pedal more turns.",
+   "In the lab your child drags a rider along a see-saw and watches the push fall as the effort arm grows. They pull down on a flagpole pulley and see the force stay about the same. They switch to two pulleys and see the pull halve while the rope doubles. They turn 8-tooth and 16-tooth gears both ways, then match force × distance on three machines."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "To lift a heavy friend on a see-saw with less push, you should sit…",
+   "choices": [
+    "farther from the middle (the pivot)",
+    "closer to the middle",
+    "exactly on the pivot"
+   ],
+   "answer": 0,
+   "hint": "Think about how far your push is from the turning point, compared with the load.",
+   "explain": "A lever needs less effort when that effort is farther from the pivot than the load. Sitting closer, or on the pivot, makes you push harder or not turn the bar at all."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "A single pulley on a flagpole lets you pull down to raise the flag. What else is true?",
+   "choices": [
+    "the size of the pull stays about the same as the flag’s weight",
+    "the flag becomes half as heavy",
+    "the pulley gives you extra energy"
+   ],
+   "answer": 0,
+   "hint": "A single fixed pulley is there to change direction.",
+   "explain": "You pull down and the flag goes up: direction changes. Ignoring friction, you still pull about as hard as the flag weighs. Sharing the load between two ropes is what cuts the force."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A load of {a} sits 2 spaces from the pivot. You push 4 spaces from the pivot. What push balances the load?",
+   "answer": "a/2",
+   "hint": "Effort × 4 = {a} × 2. The products match, so the push is half the load.",
+   "explain": "Effort × 4 = {a} × 2, so the push is {=a*2/4} = {=a/2}. Sitting twice as far from the pivot as the load halves the push.",
+   "params": {
+    "a": [
+     8,
+     16
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Two pulleys share a load of {w} equally on two ropes. Ignoring friction, what force do you pull with?",
+   "answer": "w/2",
+   "hint": "Each rope holds half of the load, so your pull matches one rope.",
+   "explain": "Two supporting ropes share {w}, so each holds {=w/2}. You pull with {=w/2}, but you pull twice as much rope.",
+   "params": {
+    "w": [
+     16,
+     32
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A small gear with 8 teeth turns a large gear with 16 teeth. The large gear…",
+   "choices": [
+    "turns more slowly, with a stronger turning force",
+    "turns faster, with a weaker turning force",
+    "turns at the same speed and gives extra force for free"
+   ],
+   "answer": 0,
+   "hint": "The large gear has twice as many teeth, so it turns half as far.",
+   "explain": "Two turns of the small gear make one turn of the large gear. The large gear turns more slowly and with a stronger turning force. You do not get extra force and extra speed together."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why is it harder to lift someone on a see-saw if you sit close to the middle?",
+    "choices": [
+     "your effort arm is shorter, so you must push harder",
+     "the other person gets heavier as you move in",
+     "the pivot stops working near the middle"
+    ],
+    "answer": 0,
+    "hint": "Compare how far you are from the pivot with how far the load is.",
+    "explain": "Effort × effort arm = load × load arm. A shorter effort arm means a larger effort. The load does not change; the pivot still works."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which sentence about a single flagpole pulley is right?",
+    "choices": [
+     "it changes the direction of the pull, not the weight of the flag",
+     "it always halves the force, like two pulleys would",
+     "it makes the flag lose mass as it goes over the wheel"
+    ],
+    "answer": 0,
+    "hint": "Think about what a single fixed wheel does to the rope.",
+    "explain": "A fixed pulley turns the rope over the wheel so you can pull down. The effort still matches the load (ignoring friction). Two supporting ropes are needed to share, and so to cut, the force."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A load of {a} sits 2 spaces from the pivot. You sit 4 spaces away. What push balances it?",
+    "answer": "a/2",
+    "hint": "You sit twice as far from the pivot as the load, so you push half as hard.",
+    "explain": "Effort × 4 = {a} × 2, so effort = {=a/2}.",
+    "params": {
+     "a": [
+      10,
+      20
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A small gear has {s} teeth and a large gear has {=2*s} teeth. The small gear turns {n} times. How many times does the large gear turn?",
+    "answer": "n/2",
+    "hint": "The large gear has twice as many teeth, so it turns half as many times.",
+    "explain": "Turns × teeth match: {n} × {s} = (large turns) × {=2*s}. So the large gear turns {=n/2} times.",
+    "params": {
+     "s": [
+      8,
+      12
+     ],
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "On a bicycle, a low gear makes a hill easier because…",
+    "choices": [
+     "you pedal more turns for each turn of the wheel",
+     "you pedal fewer turns and the bike leaps forward",
+     "the bike itself gets lighter on the hill"
+    ],
+    "answer": 0,
+    "hint": "A low gear trades speed for an easier push, like a small gear driving a large one.",
+    "explain": "More turns of the pedals, each with a smaller force, give the same work as fewer hard pushes. The bike’s mass does not change."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Two pulleys share a load, so you pull with half the force. What is the catch?",
+    "choices": [
+     "you have to pull twice as much rope",
+     "the load loses half its mass",
+     "the extra pulley removes the need to do work"
+    ],
+    "answer": 0,
+    "hint": "The smaller force has to act over a longer distance.",
+    "explain": "Two strands share the load, so you pull about half as hard and pull twice the rope. Work (force × distance) stays about the same."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A machine lets you push with a smaller force. What else must be true?",
+    "choices": [
+     "you push over a longer distance",
+     "you also push over a shorter distance and gain energy",
+     "the load itself becomes lighter"
+    ],
+    "answer": 0,
+    "hint": "Machines change force and distance together. They do not make energy.",
+    "explain": "Work is force × distance. If the force falls, the distance you act over rises. The load does not lose mass, and you do not gain energy."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which example is a lever?",
+    "choices": [
+     "a crowbar turning on its contact point with the floor",
+     "a flagpole wheel that a rope runs over",
+     "two toothed cogs that turn each other"
+    ],
+    "answer": 0,
+    "hint": "A lever is a bar that turns on a pivot.",
+    "explain": "A crowbar is a lever: the contact point is the pivot, the load is what you prize up, and your hands are the effort. The flagpole wheel is a pulley. Toothed cogs are gears."
+   }
+  ]
+ }
+}

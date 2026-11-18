@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the DfE A level Mathematics subject content (Pure, sequences and series: understand and use sigma notation for sums of series), the IB Mathematics Analysis and Approaches guide (sigma notation in sequences and series), and standard results in the Pearson Edexcel Pure Year 1/2 texts (Σ r = n(n + 1)/2, Σ c = nc, linearity, number of terms = upper − lower + 1). Every number in the lab was recomputed by hand: READ sums 24, 54, 45; CNT windows 3–10, 0–4, 5–10; FORM terms 4r − 1 (N = 11, last 43), 3r + 2 (N = 10, last 32), −2r + 12 (N = 6, last 0); SPL parts 5/30/35 and 24/36/60; SHIFT values 24 = Σ(2r + 3) from 0 to 3 (wrong options 16 and 35), 20 = Σ(r + 1) from 1 to 5 (15 and 10), 55 = Σ(r + 1)² from 0 to 4 (35 and 91); challenge 25, 17, 4r + 1 to N = 10, 70, 30 v 14, 38."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented sigma errors: counting terms as upper − lower (prediction 2, CNT 'counts the gaps' feedback, p1, m2, challenge q2), Σ c = c (prediction 4, SPL part 1 feedback 'the constant is added once for each of the n values of r', m4, challenge q4 and q6), using values of r outside the limits (READ feedback for r below or above a limit), reading the last term as the upper limit (challenge q3, p3, FORM N feedback), building the general term from the first term instead of the common difference (prediction 3: 3r + 4, m5), confusing the last term or the term count with the sum (challenge q1, m1, m9), and shifting the limits without changing the term (SHIFT wrong options with their actual sums, p5, m7)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagsignot is about the notation itself: r tiles 0–6 tapped into a Σ with visible limits (out-of-range r rejected), a draggable top-limit handle on an r number line that lights the included values and reports the count, a / b / N steppers that render the Σ form and its generated terms against a target series, stacked bars that separate Σ kr from Σ c for linearity, and a choice of shifted sums whose wrong options show their own totals. flagsum (350) pairs terms Gauss-style to derive Sₙ = n/2(a + l) and flagsigma (189) is sigma and pi bonds; neither reads or writes Σ notation. lab_distinct gate under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers each rule by acting: tapping r = 0 for a sum from 1 says it is below the bottom limit; dragging the top limit to 11 for 8 terms from 3 reports 9 terms and explains that both ends count; checking 3r + 4 says the terms change by 4 each time; tapping 1 for Σ 1 over 5 terms says the constant is added once per r; choosing Σ(2r + 1) from 0 to 3 shows it totals 16, not 24."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option the task disproves: '7, since 10 − 3 = 7' for the terms from 3 to 10 (CNT round 1 needs top = 10 for 8 dots), '3r + 4' for 3 + 7 + 11 + … + 43 (FORM round 1 rejects a = 3 and accepts 4r − 1), and '3' for Σ 3 from 1 to 5 (SPL part 1 lights five orange blocks). A.reveal names the locked-in pick at the end of each task."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions with twelve wrong-answer messages naming the slip: 9 is only the last term, 5 counts the terms, 16 counts gaps, the sum starts at r = 4 not 1, 4r + 5 gives 9 at r = 1, 41 is the last term not the last r, the constant is added once per r (×2 variants), limits moved but the term did not (14 not 30), 0 to 4 is one term too many, the 2 was added only once, and the constant was left out."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "learn/readability.py: kid (learner) FK grade 1.3 (limit 6.5) and adult 9.3 (limit 9.5). Kid paragraphs each work one example in full (3 + 5 + 7 + 9 = 24; 10 − 3 + 1 = 8; Σ 1 = 5; 4r − 1 with N = 11). Precise terms used throughout: index, general term, lower and upper limits, common difference, dummy variable."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Kid paragraphs cover reading Σ, counting terms, splitting with the constant, and writing a series in Σ form with an index shift. Adult text gives the A level and IB placement, linearity and the dummy index, five named mistakes and what the lab does. The content gate found no filler and the explanation is under 12% similar to every other lesson, including 350 sum of an arithmetic series and 751 binomial coefficients."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px screenshots in light and dark for all six steps and a wrong state per task (r = 0 tapped, top limit at 3, a/b/N at their start, 1 tapped for Σ 1, a wrong shift). The r tiles fit seven across at 46 px tall, the top-limit handle is 40 × 46 px with a 10 px hit margin, and the Σ limits stay legible. The term-count label now says '1 term' rather than '1 terms'. Walkthrough passed on iPhone 13."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button under the canvas: one per r value ('Put r = 3 into the term'), top − 1 / top + 1 / Check as an alternative to dragging the handle, − / + for a, b and N plus Check ('Raise b'), one per split value ('Σ 1 for r = 1 to 5 equals 5'), and one per shifted sum. The canvas aria-label is rewritten after every action, including each handle move ('Top limit 10: 8 terms'); challenge feedback is a role=status live region, warnings switch to #fda4af on dark, and axe (WCAG 2.1 AA) is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Department for Education (2016) Mathematics AS and A level subject content: Pure, sequences and series (understand and use sigma notation for sums of series)",
+  "IB Mathematics: Analysis and Approaches guide (2019), topic 1 number and algebra: sequences and series with sigma notation",
+  "Pearson Edexcel A level Mathematics Pure Year 1/2 textbooks: sigma notation, Σ r = n(n + 1)/2, linearity and changing the index",
+  "Topic evidence mt_oq9Z83g2Ss (write 3 + 7 + 11 + … + 43 in sigma notation; evaluate a short sum; explain the index and limits)"
+ ]
+}

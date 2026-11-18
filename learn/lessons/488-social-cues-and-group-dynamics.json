@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_nqM2OW0Qlm",
+ "title": "Social Cues and Group Dynamics",
+ "audience": "learner",
+ "keyIdea": "Groups talk in cues as well as words, but a cue is a clue, not proof, so check before you assume the worst. Being in a group, even one picked by a coin toss, pulls us to favour 'us' over 'them', and gossip spreads that pull while getting less true each time it is retold. Being assertive means saying what you need clearly and respectfully, so you can belong without giving up your values.",
+ "explain": {
+  "kid": [
+   "Groups send messages without words. Someone turns away, laughs at a joke you missed or moves a bag onto a seat. These are social cues. They are clues, not proof. If a cue is unclear, check it. Ask 'Is this seat free?' before you decide that people do not want you there.",
+   "Groups also change how we think. In a famous set of experiments, Henri Tajfel split teenagers into teams with tiny, random differences. Most still gave their own team more points than the other team. Just being an 'us' makes people favour their group. That same pull can make a group leave someone out.",
+   "Gossip is talk about people who are not there. It can make a group feel close, but every retelling changes the story. Details drop out and the drama grows. By the fifth person, 'Maya missed the party' can become 'Maya thinks she is too good for us.' The easiest place to stop a rumour is with you.",
+   "When something bothers you, there are three ways to respond. Passive means staying quiet or saying 'it's fine' when it is not. Aggressive means attacking the person. Assertive means saying how you feel and what you need, calmly and with respect. It is not about volume. A short, calm 'Not funny' can protect someone and keep your values."
+  ],
+  "adult": [
+   "The DfE guidance on Relationships, Sex and Health Education (2019) says secondary pupils should learn about respectful friendships, and how to manage conflict and peer pressure. The PSHE Association's Key Stage 3 plan covers peer influence, being assertive, gossip and how to deal with being left out.",
+   "The most common mistake at this age is to read one unclear cue as proof that others reject you. Psychologists call this a hostile attribution bias, and it leads to more fights. Children also think passing on gossip word for word does no harm, mix up assertive with loud or rude, and think groups only form for good reasons.",
+   "The lab draws on two classic studies. In Tajfel's 'minimal group' tests, even random teams made people favour their own side. In Allport and Postman's rumour studies, each retelling lost detail and made the drama bigger. Useful words are social cue, in-group and out-group, rumour, passive, assertive and aggressive.",
+   "The lab has five short scenes. Your child reads mixed cues at a lunch table and splits points between a coin-toss team and another. They then stop a rumour before it turns cruel, build an assertive reply on a gauge and choose a path through being left out."
+  ]
+ },
+ "familyTip": "When your child describes a confusing moment with friends, ask 'What did you actually see or hear?' and 'What else could it mean?' before talking about what to do. Then practise one calm, assertive sentence together.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Passive, assertive or aggressive? Drag each reply, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Passive",
+    "Assertive",
+    "Aggressive"
+   ],
+   "items": [
+    [
+     "\"It's fine, whatever.\" (it isn't)",
+     0
+    ],
+    [
+     "\"I felt left out. Can I come next time?\"",
+     1
+    ],
+    [
+     "\"You're all so fake.\"",
+     2
+    ],
+    [
+     "Staying silent and leaving the chat",
+     0
+    ],
+    [
+     "\"Please ask before you post my photo.\"",
+     1
+    ],
+    [
+     "\"Delete it or you'll be sorry.\"",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcues",
+  "caption": "Flagship lab: read mixed cues, feel the pull of a coin-toss team, stop a rumour, build an assertive reply and handle being left out.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Your friend does not reply to your message all evening. What is the best first step?",
+   "choices": [
+    "Wait, then ask kindly tomorrow if everything is OK",
+    "Decide they are angry with you",
+    "Tell the group they are ignoring you"
+   ],
+   "answer": 0,
+   "hint": "Is one missing reply proof of anything?",
+   "explain": "A missing reply is an unclear cue. They might be busy or have no phone. Checking kindly beats assuming the worst."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a points game you share {t} points between your team and the other team. You give your own team {b}. How many points does the other team get?",
+   "answer": "t-b",
+   "hint": "Both teams' points add up to the total.",
+   "explain": "{t} - {b} = {=t-b}. Most people in Tajfel's experiments gave their own team the bigger share, even when teams were random.",
+   "params": {
+    "t": [
+     10,
+     14
+    ],
+    "b": [
+     8,
+     10
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which reply is assertive?",
+   "choices": [
+    "\"I didn't like that joke about me. Please stop.\"",
+    "\"Say that again and see what happens.\"",
+    "Laughing along even though it hurt"
+   ],
+   "answer": 0,
+   "hint": "Assertive is clear about your feeling and respectful to the other person.",
+   "explain": "The first says how you feel and what you need, without attacking. The threat is aggressive; laughing along is passive."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You tell a rumour to {k} friends. Each of them tells {k} more people. How many people have heard it from those two rounds?",
+   "answer": "k+k*k",
+   "hint": "Count the first round, then each of those people tells {k} more.",
+   "explain": "{k} in the first round plus {k} × {k} = {=k*k} in the second makes {=k+k*k}. That is why stopping it at the start matters most.",
+   "params": {
+    "k": [
+     2,
+     5
+    ]
+   }
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is a social cue?",
+    "choices": [
+     "A message sent without words, like a look or where someone sits",
+     "A rule written down by the school",
+     "A message in a group chat only"
+    ],
+    "answer": 0,
+    "hint": "Think of what people show rather than say.",
+    "explain": "Social cues are signals such as facial expressions, body language and seating. They are clues, not proof."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "In Tajfel's experiments, teams were based on a tiny, random difference. What happened?",
+    "choices": [
+     "Most people still favoured their own team",
+     "People shared everything equally",
+     "People favoured the other team"
+    ],
+    "answer": 0,
+    "hint": "Does a group need a good reason to feel like 'us'?",
+    "explain": "Even meaningless groups made people favour 'us'. That pull helps explain why groups can leave others out."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What usually happens to a story as it is passed from person to person?",
+    "choices": [
+     "Details drop out and the drama grows",
+     "It stays exactly the same",
+     "It becomes more accurate"
+    ],
+    "answer": 0,
+    "hint": "Think of the gossip chain in the lab.",
+    "explain": "Retold stories lose details and sharpen the dramatic parts, so rumours become less true and more hurtful."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Someone says, 'Did you hear about Jo?' What stops the rumour?",
+    "choices": [
+     "\"I don't know if that's true. I'd rather not pass it on.\"",
+     "Listening, then telling one other person",
+     "Asking everyone if it is true"
+    ],
+    "answer": 0,
+    "hint": "Which choice means the story goes no further?",
+    "explain": "Refusing to pass it on stops the chain with you. Asking around or telling 'just one person' still spreads it."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A rumour starts with {s} people. Each one tells {k} others. How many new people hear it in that round?",
+    "answer": "s*k",
+    "hint": "Each of the {s} people tells {k} others.",
+    "explain": "{s} × {k} = {=s*k} new people, from just one round of retelling.",
+    "params": {
+     "s": [
+      2,
+      4
+     ],
+     "k": [
+      2,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which reply is passive?",
+    "choices": [
+     "\"It's fine…\" when it really is not",
+     "\"I'd like a turn too, please.\"",
+     "\"Give it here or else.\""
+    ],
+    "answer": 0,
+    "hint": "Passive hides what you really feel or need.",
+    "explain": "Saying 'it's fine' when it isn't hides your feelings, so nothing changes. The second is assertive and the third aggressive."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "You see photos of a hangout you weren't invited to. Which response is assertive?",
+    "choices": [
+     "Message a friend privately: 'Felt a bit left out. Can I come next time?'",
+     "Post an angry comment under the photos",
+     "Leave every group chat without saying why"
+    ],
+    "answer": 0,
+    "hint": "Calm, honest and private.",
+    "explain": "Saying how you felt and asking for what you want is assertive. Public anger is aggressive; silently leaving is passive."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "In a points game with {t} points, you give your own team {b} and the other team the rest. How many more points does your team get than the other team?",
+    "answer": "2*b-t",
+    "hint": "Work out the other team's points first, then find the difference.",
+    "explain": "The other team gets {t} - {b} = {=t-b}, so the gap is {b} - {=t-b} = {=2*b-t}. Tajfel found many people chose to make the gap big, even at a cost.",
+    "params": {
+     "t": [
+      10,
+      14
+     ],
+     "b": [
+      8,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Your group starts mocking a new student. What keeps both your values and your calm?",
+    "choices": [
+     "A short 'Not funny' and changing the subject",
+     "Laughing along to fit in",
+     "Shouting that they are all cruel"
+    ],
+    "answer": 0,
+    "hint": "Calm and short is easier for the group to accept.",
+    "explain": "A brief, calm comment protects the student without a fight. Laughing along drops your values; shouting makes the group defend the joke."
+   }
+  ]
+ }
+}

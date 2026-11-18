@@ -1,0 +1,255 @@
+{
+  "topicId": "mt_zd0YkB3xNj",
+  "title": "Measuring mass and weight",
+  "audience": "family",
+  "keyIdea": "Mass is how heavy something is. Measure it by balancing equal cubes until both sides level, then record a number with a unit (for example 4 cubes). Simple scales can also show grams. Bigger is not always heavier — measure, do not guess from size alone.",
+  "familyTip": "Put a book on one side of a kitchen scale or homemade balance and add identical building cubes on the other until it balances. Ask: 'How many cubes is the book?' Then try a big empty box versus a small tin of beans.",
+  "status": "self-checked",
+  "visual": {
+    "type": "sorter",
+    "caption": "Fair mass measure or not? Drag each clue, or tap it and then tap a box.",
+    "opts": {
+      "bins": [
+        "Fair measure",
+        "Unfair / myth"
+      ],
+      "items": [
+        [
+          "add equal cubes until it balances",
+          0
+        ],
+        [
+          "only guess from how big it looks",
+          1
+        ],
+        [
+          "write 4 cubes as the mass",
+          0
+        ],
+        [
+          "bigger always means heavier",
+          1
+        ],
+        [
+          "read grams on a simple scale",
+          0
+        ],
+        [
+          "use random different-sized cubes",
+          1
+        ]
+      ]
+    }
+  },
+  "lab": {
+    "type": "flagmass",
+    "caption": "Flagship lab: tip a balance, add cubes until level, record number+unit, reject bigger=heavier, read a scale, then challenge.",
+    "opts": {
+      "step": 0
+    }
+  },
+  "explain": {
+    "kid": [
+      "Mass means how heavy something is.",
+      "Put the thing on one side of a balance. Add the same size cubes on the other side until both sides are level.",
+      "Count the cubes. Write the number and the word cubes. That is the mass in cube units.",
+      "A big balloon can be lighter than a small stone. Measure — do not trust size alone."
+    ],
+    "adult": [
+      "Year 1 measure: mass/weight with non-standard units, then begin standard units (grams). Words: mass, weight, balance, heavier, lighter, cubes, grams, unit, scale.",
+      "Common mistakes: thinking bigger always means heavier; recording a number with no unit; using unequal cubes; reading the wrong mark on a scale; confusing how full something looks with how heavy it is.",
+      "In the lab your child tips a balance, adds cubes until level, records 4 cubes and grams, picks the heavier stone over a big balloon, reads a pointer at 6, then faces challenge traps for those slips."
+    ]
+  },
+  "practice": [
+    {
+      "type": "mc",
+      "id": "p1",
+      "prompt": "Mass means…",
+      "choices": [
+        "how heavy something is",
+        "how tall something is",
+        "how full a cup looks now"
+      ],
+      "answer": 0,
+      "hint": "Think about the pull of weight, not height.",
+      "explain": "Mass is how heavy an object is."
+    },
+    {
+      "type": "mc",
+      "id": "p2",
+      "prompt": "To measure mass with cubes…",
+      "choices": [
+        "add equal cubes until it balances",
+        "only look at how big it is",
+        "guess without a balance"
+      ],
+      "answer": 0,
+      "hint": "Equal units and a level balance give the measure.",
+      "explain": "Add same-size cubes until both sides level, then count them."
+    },
+    {
+      "type": "numeric",
+      "id": "p3",
+      "prompt": "A toy balances {n} equal cubes. What mass do you record in cubes?",
+      "answer": "n",
+      "hint": "The cube count at balance is the mass in cube units.",
+      "explain": "Balanced with {n} cubes means the mass is {n} cubes.",
+      "params": {
+        "n": [
+          3,
+          8
+        ]
+      }
+    },
+    {
+      "type": "numeric",
+      "id": "p4",
+      "prompt": "A bag balances {n} cubes. You add {k} more identical cubes by mistake so it tips. How many cubes were the true mass?",
+      "answer": "n",
+      "hint": "The true mass is the count that first made both sides level.",
+      "explain": "True mass was {n} cubes; the extra {k} tipped it past balance.",
+      "params": {
+        "n": [
+          4,
+          7
+        ],
+        "k": [
+          1,
+          2
+        ]
+      },
+      "where": "n>k"
+    },
+    {
+      "type": "order",
+      "id": "p5",
+      "prompt": "Put the mass-measuring steps in order.",
+      "items": [
+        "place the object on one pan",
+        "add equal cubes on the other pan",
+        "stop when both sides are level",
+        "write the number of cubes with the unit"
+      ],
+      "hint": "Object first, then cubes, then level, then record.",
+      "explain": "Balance first, then record number + unit."
+    }
+  ],
+  "mastery": {
+    "passMark": 3,
+    "draw": 4,
+    "pool": [
+      {
+        "type": "mc",
+        "id": "m1",
+        "prompt": "On a balance, the heavier side…",
+        "choices": [
+          "goes down",
+          "floats up",
+          "cannot be compared"
+        ],
+        "answer": 0,
+        "hint": "Gravity pulls the heavier pan lower.",
+        "explain": "The heavier pan goes down."
+      },
+      {
+        "type": "mc",
+        "id": "m2",
+        "prompt": "A mass record needs…",
+        "choices": [
+          "a number and a unit",
+          "only a doodle",
+          "the word empty alone"
+        ],
+        "answer": 0,
+        "hint": "Say how many and of what.",
+        "explain": "Write e.g. 4 cubes or 20 grams."
+      },
+      {
+        "type": "mc",
+        "id": "m3",
+        "prompt": "A big balloon compared with a small stone…",
+        "choices": [
+          "might be lighter — measure to check",
+          "is always heavier",
+          "cannot sit on a balance"
+        ],
+        "answer": 0,
+        "hint": "Size is not the same as mass — check on a balance.",
+        "explain": "A big light object can lose to a small heavy one; measure to be sure."
+      },
+      {
+        "type": "mc",
+        "id": "m4",
+        "prompt": "Using random different-sized cubes…",
+        "choices": [
+          "makes the measure unfair",
+          "is the best method",
+          "is required by every scale"
+        ],
+        "answer": 0,
+        "hint": "Every cube must be the same size so each unit means the same.",
+        "explain": "Unequal cubes break the unit; keep cubes identical."
+      },
+      {
+        "type": "numeric",
+        "id": "m5",
+        "prompt": "A pointer on a cube scale points at {n}. What mass reading is that?",
+        "answer": "n",
+        "hint": "Read the number the pointer aims at.",
+        "explain": "Pointer at {n} means mass {n} cubes.",
+        "params": {
+          "n": [
+            2,
+            10
+          ]
+        }
+      },
+      {
+        "type": "numeric",
+        "id": "m6",
+        "prompt": "Object A balances {a} cubes. Object B balances {b} cubes. How many more cubes is B than A?",
+        "answer": "b-a",
+        "hint": "Subtract the smaller cube count from the larger.",
+        "explain": "B is {=b-a} cubes heavier than A.",
+        "params": {
+          "a": [
+            2,
+            5
+          ],
+          "b": [
+            6,
+            9
+          ]
+        },
+        "where": "b>a"
+      },
+      {
+        "type": "mc",
+        "id": "m7",
+        "prompt": "Grams are…",
+        "choices": [
+          "standard units for mass",
+          "only used for length",
+          "the same as counting leaves"
+        ],
+        "answer": 0,
+        "hint": "Kitchen scales often mark mass in grams.",
+        "explain": "Grams are a standard unit for how heavy something is."
+      },
+      {
+        "type": "mc",
+        "id": "m8",
+        "prompt": "Why use a balance with cubes?",
+        "choices": [
+          "to measure mass in equal units",
+          "to make the object taller",
+          "to fill a cup with water"
+        ],
+        "answer": 0,
+        "hint": "Cubes are equal non-standard mass units.",
+        "explain": "Balancing equal cubes measures mass."
+      }
+    ]
+  }
+}

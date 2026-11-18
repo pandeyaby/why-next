@@ -1,0 +1,158 @@
+{
+ "topicId": "mt_R-CEmul2Ws",
+ "title": "Populations and samples",
+ "audience": "learner",
+ "keyIdea": "The population is the whole group you want to know about. A census asks all of it; a sample asks part of it and uses the answers to estimate the whole. A sample only works if it is representative. A random sample gives everyone the same chance and scatters around the truth. A biased sample, such as volunteers or one handy group, leans one way, and making it bigger does not fix that.",
+ "explain": {
+  "kid": [
+   "The population is everyone you want to know about. If you want to know what Hilltop students think, the population is all 240 of them. Asking all of them is called a census.",
+   "A census can take too long or cost too much, so we often ask a sample: a smaller group taken from the population. Then we use the sample to estimate the answer for everyone.",
+   "A sample only tells the truth if it is like the population. Asking only your friends, one class or people who choose to answer gives a biased sample. It leans one way.",
+   "In a random sample, every person has the same chance of being picked. Random samples still differ a bit from each other, but they scatter around the true answer. Bigger random samples land closer. A bigger biased sample is still biased."
+  ],
+  "adult": [
+   "This matches the US Common Core standard 7.SP.A.1: a sample can be used to generalise about a population only if it is representative, and random sampling tends to give representative samples. It also matches the GCSE Mathematics content in England, which asks pupils to infer properties of a population from a sample while knowing the limits of sampling.",
+   "Key terms are population, census, sample, random sample, representative and bias. Sampling variability is the natural spread between random samples of the same size. It shrinks as the sample grows, which is why larger random samples give steadier estimates.",
+   "Common mistakes: thinking a big sample is always a good one; trusting a voluntary response poll because many people answered; confusing the population with the sample; and expecting a random sample to give the exact true value. Be careful with the word random, which in daily speech means haphazard, not a fair chance for all.",
+   "In the lab your learner sorts groups into population and sample, drags a box to take handy samples from one corner of a school, draws random samples that scatter round the true 50 percent, compares sample sizes with a big but biased sample, and judges four ways of choosing students."
+  ]
+ },
+ "familyTip": "When you see a poll in the news or online, ask two questions together: who was the population, and how was the sample chosen? A phone-in or website poll lets people choose to answer, so it is biased. A good poll says how many were asked and that they were chosen at random.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "A survey of all the students in a school: is each sample random, or biased? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Random sample", "Biased sample"],
+   "items": [
+    ["30 names drawn by a computer from the full school list", 0],
+    ["Every 10th name on the full register", 0],
+    ["The first 30 students through the gate", 1],
+    ["Students who reply to an email asking for volunteers", 1],
+    ["Everyone in the chess club", 1],
+    ["Numbers picked from a hat with one number per student", 0]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsample",
+  "caption": "Flagship lab: sort population and sample, drag a handy sample box, take random samples of different sizes, and judge four ways of choosing.",
+  "opts": {"step": 0}
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A school asks 60 of its 900 students about lunch. What is the population?",
+   "choices": ["All 900 students", "The 60 students asked", "The lunch menu"],
+   "answer": 0,
+   "hint": "The population is the whole group you want to know about.",
+   "explain": "The school wants to know about all 900 students, so they are the population. The 60 asked are the sample."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a random sample of 20 students, {y} say yes. What percentage of the sample is that?",
+   "answer": "y*5",
+   "hint": "Each student is 1 out of 20, which is 5%.",
+   "explain": "{y} out of 20 is {y} × 5% = {=y*5}%, so the estimate for the whole population is about {=y*5}% yes.",
+   "params": {"y": [4, 16]}
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A random sample says {p}% of students walk to school. The school has 600 students. About how many walk?",
+   "answer": "p*6",
+   "hint": "1% of 600 is 6, so multiply the percentage by 6.",
+   "explain": "{p}% of 600 = {p} × 6 = {=p*6}, so about {=p*6} students walk. It is an estimate, because the sample can be a bit off.",
+   "params": {"p": [20, 80]}
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A website poll lets anyone vote, and 2,000 people do. Why could it be biased?",
+   "choices": ["People who care most choose to vote", "2,000 is too few", "Websites cannot count votes"],
+   "answer": 0,
+   "hint": "Think about who decides to answer a poll that anyone can join.",
+   "explain": "A voluntary poll is answered by people with strong views, so it leans one way however many vote."
+  }
+ ],
+ "mastery": {
+  "passMark": 3,
+  "draw": 4,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is a census?",
+    "choices": ["Collecting data from every member of the population", "Asking a random sample", "A kind of graph"],
+    "answer": 0,
+    "hint": "The UK holds one every ten years and asks every household.",
+    "explain": "A census collects data from the whole population. A sample collects data from part of it."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What makes a sample random?",
+    "choices": ["Every member has the same chance of being picked", "You pick whoever is nearby", "People choose to join"],
+    "answer": 0,
+    "hint": "Random in statistics means fair chance, not just any old way.",
+    "explain": "In a random sample every member of the population has the same chance of being chosen, so no group is left out on purpose."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "In a random sample of 50 people, {y} like a new park design. Estimate how many of 1,000 residents like it.",
+    "answer": "y*20",
+    "hint": "1,000 is 20 times 50, so scale the sample count up by 20.",
+    "explain": "{y} × 20 = {=y*20}, so about {=y*20} of the 1,000 residents like the design.",
+    "params": {"y": [10, 40]}
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Random samples of 10 students say {a}% and {b}% yes. What is the range of these two estimates, in percentage points?",
+    "answer": "a-b",
+    "hint": "Subtract the smaller estimate from the larger one.",
+    "explain": "{a} − {b} = {=a-b} percentage points. Small samples vary a lot, so a bigger sample would give a smaller spread.",
+    "params": {"a": [60, 80], "b": [20, 40]}
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "To find how much exercise teenagers in a town do, Ali asks people leaving the gym. What is the problem?",
+    "choices": ["People at the gym exercise more than most", "He should ask adults", "The sample is random"],
+    "answer": 0,
+    "hint": "Is the gym crowd like all the teenagers in the town?",
+    "explain": "Gym users are not representative of all teenagers: they exercise more, so the sample is biased upward."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which sample of a 1,200-student school is likely to be best?",
+    "choices": ["100 students picked at random from the full list", "400 students from Year 11", "The first 100 to arrive"],
+    "answer": 0,
+    "hint": "A bigger sample from one year group is still only one year group.",
+    "explain": "100 picked at random from the full list is representative. 400 from Year 11 is bigger but biased towards one year."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Two random samples of 40 students give 45% and 55%. What does this show?",
+    "choices": ["Random samples vary; the true value is probably near 50%", "One sample must be biased", "Sampling never works"],
+    "answer": 0,
+    "hint": "Do two fair samples have to give the same answer?",
+    "explain": "This is sampling variability. Fair samples differ a little, and both are close to the true value, which is probably near 50%."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why might a company test 50 light bulbs from a batch instead of all of them?",
+    "choices": ["Testing destroys the bulbs, so a census would leave none to sell", "Samples are always more accurate", "Bulbs cannot be counted"],
+    "answer": 0,
+    "hint": "What happens to a bulb when you test how long it lasts?",
+    "explain": "Testing until a bulb fails uses it up, so a census is impossible here. A random sample of 50 estimates the whole batch."
+   }
+  ]
+ }
+}

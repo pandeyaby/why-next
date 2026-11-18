@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against the NC Year 4 and Year 5 Statistics statutory requirements (interpret data in tables; complete, read and interpret information in tables, including timetables) and Year 4 Measurement (12- and 24-hour clock), CCSS 3.MD.1 (elapsed time), and NCETM Year 5 statistics guidance on timetables. Every lab number was re-computed: 08:45→09:16 = 15 + 16 = 31 min; 11:40→12:14 = 20 + 14 = 34 min; the 'ordinary number' slips 916 − 845 = 71 and 1214 − 1140 = 74; the 10:05 bus reaches the Station at 10:36 < 10:45 and the 11:40 bus at 12:14; the 09:20 bus reaches the Library at 09:33 < 09:40. Two-way table: 12+7+9 = 28, 14+10+6 = 30, 26/17/15 column totals, 28+30 = 26+17+15 = 58. 14:05 = 2:05 pm. Parameter ranges keep every answer positive (p3: 40 − 15 − 15 = 10 minimum)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented timetable and two-way-table errors (NCETM Year 5 statistics; Ofsted/STA KS2 maths test reports on timetable questions; Hansen, Children's Errors in Mathematics, ch. on measures): reading the right column but the wrong row, using a later bus in the wrong column, treating times as decimals (71 for 31), reading the departure row against an arrival deadline, reading a dash as a missing time, choosing a bus that has already gone, and adding instead of subtracting to find a missing cell from a total. Each one is a prediction option, a slip()/holeSlip() message or a tagged challenge answer."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagtimetab is built on a two-heading lookup: a canvas timetable whose tapped cell lights its row and column, a dash cell with its own meaning, a time line whose marker splits the duration at the o'clock, an arrival-deadline search that must start in the destination row, and a two-way table filled from its totals. No other flagship lab reads a timetable; flagtomin (telling time) has a clock face and no table, and the sorter/statlab labs have no two-way totals. Shingle gate passed."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Wrong taps are diagnosed by position: same column gives 'Right bus, wrong stop', same row 'Right stop, wrong bus', arrival row in the deadline task 'Go up its column'. Dragging the marker across 09:00 draws two arcs labelled 15 min and 16 min, so the child sees why the answer is 31 before the text says 'Not 71: an hour is 60 minutes'. Filling the grand total makes them notice both totals equal 58, the self-check."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions, each with a tempting wrong option the lab then disproves: a column is 'one stop', the dash means 'the time is missing by mistake', 08:45→09:16 is '71 minutes', to arrive by 10:45 you look first at 'the Park Road row', and a gap in 12, 7, ?, 28 is '47, because 28 + 12 + 7' or '16, because 28 − 12'. The completion line names their pick and the right answer."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven rotating timetable questions read from the table on the canvas. Each wrong answer has its own tag and message: row (another stop), col (another bus), dec (an hour is 60 minutes, not 100), count (two jumps), dash (find the column with a dash), early (latest means the last one still in time), late (read the Station row first), h24 (take away 12 hours), gone (that bus has already left). Answer order rotates each turn."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid explanation FK grade 0.9 (paragraphs −0.8 to 3.9), adult 7.5, keyIdea 5.7; family limits 5.0 kid and 10.0 adult. The curriculum words row, column, cell, timetable, 24-hour clock, two-way table and total are each used with their meaning. Long adult sentences were split during review (the mistakes paragraph went from 13.9 to 6.9)."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each kid paragraph teaches one move (row/column/cell; column-then-row lookup and the dash; counting on across the hour with a worked example; two-way totals). The adult text gives the curriculum link, what the skill is, three named mistakes and what each lab step does. No filler phrase matched and the 12% duplicate gate passed against the other data and time lessons."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked iPhone 13 screenshots of every step in both themes (shots/tt-phone-t0/t1, mid-tt-*): the 4 × 4 timetable fits at 390 px with 13 px times, tapped cells get a green or red outline, long questions wrap onto two lines (fixed during review: the deadline question was squashed into one line), the time line ticks and both arcs are readable, the two-way tiles are 52 px tall, and every answer has a 48 px button below the canvas."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "walk.cjs passes: axe WCAG 2.1 AA clean on desktop and iPhone 13 in light and dark, no console errors, all 5 tasks complete with Show me. Every cell tap has a button twin naming the time, stop and bus ('Tap 10:27 at Market Sq, bus 3'); the marker has −1/+1/+5/+10 minute buttons; the two-way gaps have number buttons; the canvas aria-label and live region read each feedback line and the marker time while dragging."
+  }
+ },
+ "sources": [
+  "National Curriculum in England: mathematics programmes of study, Year 4 and Year 5 Statistics and Year 4 Measurement (DfE, 2013)",
+  "NCETM primary mastery professional development materials: statistics (tables and timetables)",
+  "Common Core State Standards for Mathematics 3.MD.1 (time intervals in minutes)",
+  "Hansen, A. (ed.) Children's Errors in Mathematics, 4th ed. (Learning Matters, 2020), chapter on measures and data",
+  "Standards and Testing Agency, KS2 mathematics test framework and national curriculum test reports (timetable items)"
+ ]
+}

@@ -75,7 +75,7 @@ async function openGuide(p) {
       await openDetails(p, '.gm-you'); await p.fill('.gm-you input[name=goal]', 'Pass my physics mock'); await emit(p, { kind: 'hint', id: LESSON, hint: 'h', prompt: 'q' });
       await openDetails(p, '.gm-learned'); await p.evaluate(() => document.querySelector('.gm-learned').dispatchEvent(new Event('toggle'))); const t = await p.textContent('.gm-list'); assert.match(t, /Pass my physics mock/); assert.match(t, /Hints asked for: 1/); assert.match(await p.textContent('.gm-priv'), /stays on this device/);
       await axeOn(p, '#guide', vp + ' 2052 theme');
-      await p.click('#themeBtn'); await p.waitForTimeout(200); await axeOn(p, '#guide', vp + ' classic theme'); await p.click('#themeBtn');
+      await p.evaluate(() => document.getElementById('themeBtn').click()); await p.waitForTimeout(200); await axeOn(p, '#guide', vp + ' classic theme'); await p.evaluate(() => document.getElementById('themeBtn').click());
       await p.click('.gm-reset'); assert.strictEqual(await p.evaluate(() => (JSON.parse(localStorage.getItem('wn_learner') || '{"profile":{}}').profile.goal || '')), '');
       assert.strictEqual(await p.inputValue('.gm-you input[name=goal]'), '') });
     await test(`${vp}: "Adapt to how I'm doing" off stops tracking`, async () => {

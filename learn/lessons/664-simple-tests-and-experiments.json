@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_Wa44s-f8Ws",
+ "title": "Simple tests and experiments",
+ "audience": "family",
+ "keyIdea": "A simple test answers a question by trying it out. Change one thing, keep everything else the same, look closely at what happens and write it down. Then use what you saw to answer the question, even if it is not what you guessed.",
+ "familyTip": "Ask a question you can test at home, such as which cloth dries a wet plate best. Guess first. Use the same plate and the same amount of water for each cloth. Look, count or compare, and then ask: what did the test show? Praise a wrong guess that your child changes because of the result.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "In a simple test, what changes and what stays the same? Drag each card to a box, or tap the card then a box.",
+  "opts": {
+   "bins": [
+    "Change it",
+    "Keep it the same"
+   ],
+   "items": [
+    [
+     "Kind of paper (paper test)",
+     0
+    ],
+    [
+     "Amount of water (paper test)",
+     1
+    ],
+    [
+     "Size of the strip (paper test)",
+     1
+    ],
+    [
+     "Sun or shade (ice test)",
+     0
+    ],
+    [
+     "Size of the ice cube (ice test)",
+     1
+    ],
+    [
+     "Time we wait (ice test)",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsimtest",
+  "caption": "Flagship lab: guess, dip three papers, fix an unfair test, count wet squares, answer from the table, then run a sun-or-shade ice test.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Scientists find out by testing. First you ask a question, like: which paper soaks up the most water? You can make a guess. Then you try it and see.",
+   "Change just one thing. In the paper test, only the paper changes. Each strip gets the same water, the same size and the same time. That makes it a fair test.",
+   "Look closely. Count how far the water went up each strip. Write the numbers down so you do not forget them.",
+   "Now use the numbers to answer. The towel got 9 squares, the most. If you guessed shiny paper, that is fine. The test helps you change your idea."
+  ],
+  "adult": [
+   "Ages 5 to 7. In England, Key Stage 1 science asks children to do simple tests and to observe closely. They also gather and record data and use what they see to suggest answers to questions. The idea of changing one thing at a time grows into the fair tests of Years 3 and 4.",
+   "A test has four parts. Ask a question you can try out. Make a guess, which is a prediction. Change one thing and keep the rest the same. Then look, record and say what the results show. In the lab the paper is the one thing that changes. In the ice test it is the place, sun or shade.",
+   "Common mistakes: changing two things at once, such as a bigger strip and a different paper, so you cannot tell which one mattered. Keeping a guess when the result says something else. Saying what you expected to see, not what you saw. Thinking a wrong guess means you failed. A wrong guess plus a test is how science works.",
+   "In the lab your child guesses, then dips three papers and watches the water climb. They fix an unfair setup with too little water, a wider strip and a longer time. They count wet squares into a table and pick the best paper from the numbers. Last, they make two ice cubes the same size and watch which melts first."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You test which paper soaks up the most water. What should change?",
+   "choices": [
+    "Only the kind of paper",
+    "The paper and the amount of water",
+    "Nothing at all"
+   ],
+   "answer": 0,
+   "hint": "Change one thing only, the thing you want to find out about.",
+   "explain": "Only the paper changes. If the water changed too, you could not tell which one made the difference."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Paper A: the water went up {a} squares. Paper B: it went up {b} squares. How many more squares on paper B?",
+   "answer": "b-a",
+   "hint": "Count on from the smaller number to the bigger one.",
+   "explain": "{b} take away {a} is {=b-a}, so paper B got {=b-a} more squares. Paper B soaked up more.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     6,
+     10
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You drop a ball from {h} blocks high. For a fair test, how many blocks high do you drop the next ball?",
+   "answer": "h",
+   "hint": "In a fair test, everything except the ball stays the same.",
+   "explain": "Drop it from {h} blocks again. Then only the ball is different, so the test is fair.",
+   "params": {
+    "h": [
+     2,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Sam guessed the shiny paper would win. The towel soaked up most. What should Sam say?",
+   "choices": [
+    "The towel soaks up most, so I will change my idea",
+    "Shiny paper wins because I guessed it",
+    "The test went wrong"
+   ],
+   "answer": 0,
+   "hint": "Which tells you the answer: the guess or the test?",
+   "explain": "The test result is the answer. Changing your idea after a test is what scientists do."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which one is something you saw, not a guess?",
+   "choices": [
+    "The water went up 9 squares on the towel",
+    "I think the towel will win",
+    "Towels are always best"
+   ],
+   "answer": 0,
+   "hint": "What you saw has a number or a fact from the test.",
+   "explain": "9 squares is what you saw and counted. 'I think' is a guess, and 'always' was not tested."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Does ice melt faster in the sun or the shade? What should change?",
+    "choices": [
+     "Only the place: sun or shade",
+     "The place and the size of the ice",
+     "The size of the ice only"
+    ],
+    "answer": 0,
+    "hint": "Change only the thing in the question.",
+    "explain": "The question is about sun or shade, so only the place changes. The ice cubes stay the same size."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "One ice cube is big and one is small. Is the sun-or-shade test fair?",
+    "choices": [
+     "No, the ice cubes must be the same size",
+     "Yes, it is still a test",
+     "Yes, if we wait a long time"
+    ],
+    "answer": 0,
+    "hint": "Would the small cube melt first anyway?",
+    "explain": "A small cube melts faster, so you could not tell if the sun did it. Use the same size cubes."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Towel: 9 squares. Tissue: 6 squares. Shiny paper: 1 square. Which soaked up the least?",
+    "choices": [
+     "Shiny paper",
+     "Towel",
+     "Tissue"
+    ],
+    "answer": 0,
+    "hint": "The least is the smallest number.",
+    "explain": "1 is the smallest number, so shiny paper soaked up the least water."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Why do we write our results down?",
+    "choices": [
+     "So we do not forget what we saw",
+     "So the test is quicker",
+     "So the guess is right"
+    ],
+    "answer": 0,
+    "hint": "Think about answering the question later.",
+    "explain": "A table keeps what we saw, so we can look back and answer the question."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Each cup gets {w} spoons of water. How many spoons go in the third cup for a fair test?",
+    "answer": "w",
+    "hint": "Fair means the water is the same for every cup.",
+    "explain": "The third cup gets {w} spoons too. Only the paper should be different.",
+    "params": {
+     "w": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ali tests two balls. He drops one from a chair and one from a table. What is wrong?",
+    "choices": [
+     "The height changed as well as the ball",
+     "Nothing, it is fair",
+     "He used two balls"
+    ],
+    "answer": 0,
+    "hint": "Count how many things are different between the two drops.",
+    "explain": "Two things changed: the ball and the height. Drop both from the same height."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Your guess was wrong. What does that mean?",
+    "choices": [
+     "You learned something from the test",
+     "You are bad at science",
+     "The test must be wrong"
+    ],
+    "answer": 0,
+    "hint": "Scientists guess wrong a lot. What do they do next?",
+    "explain": "A wrong guess is fine. The test shows what really happens, so you change your idea."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "In the sun, the ice melted in {s} minutes. In the shade it took 10 minutes longer. How many minutes in the shade?",
+    "answer": "s+10",
+    "hint": "Add 10 to the time in the sun.",
+    "explain": "{s} + 10 = {=s+10} minutes. The ice in the shade took longer to melt.",
+    "params": {
+     "s": [
+      10,
+      30
+     ]
+    }
+   }
+  ]
+ }
+}
