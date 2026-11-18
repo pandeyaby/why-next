@@ -22,6 +22,7 @@ import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  
 import src_hyperbolic, src_conics, src_carbonyl, src_amino  # noqa: F401,E402  (wave 5)
 import src_early_sci, src_early_sci2, src_early_psd, src_early_l2l, src_early_maths, src_early_found  # noqa: F401,E402  (wave 6: ages 2-4)
 import src_teen_eng, src_teen_l2l, src_teen_psd  # noqa: F401,E402  (wave 6: secondary English, Learning to Learn, PSD)
+import src_young8  # noqa: F401,E402  (wave 8: young English, Maths, PSD, Learning to Learn)
 
 EXT_VERSION = "whynext-0.6"
 PROJECT_NAME = "Why Next?"

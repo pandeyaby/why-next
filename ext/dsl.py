@@ -43,6 +43,9 @@ SUBJECT_BY_DOMAIN = {
     "Earth's Systems": "Science",
     "The Human Body": "Science",
     "Ecosystems & Habitats": "Science",
+    # wave 8: young English phonics and Maths addition (ages 2-4)
+    "Phonics & Word Reading": "English",
+    "Addition & Subtraction": "Mathematics",
 }
 
 def std(code):
