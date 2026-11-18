@@ -24,6 +24,7 @@ import src_early_sci, src_early_sci2, src_early_psd, src_early_l2l, src_early_ma
 import src_teen_eng, src_teen_l2l, src_teen_psd  # noqa: F401,E402  (wave 6: secondary English, Learning to Learn, PSD)
 import src_young8  # noqa: F401,E402  (wave 8: young English, Maths, PSD, Learning to Learn)
 import src_young9  # noqa: F401,E402  (wave 9: young Maths, Science, PSD)
+import src_young10  # noqa: F401,E402  (wave 10: young Maths, PSD, Learning to Learn)
 
 EXT_VERSION = "whynext-0.6"
 PROJECT_NAME = "Why Next?"
