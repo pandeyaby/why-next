@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_LDMz8E0J-B",
+ "title": "p-values",
+ "audience": "family",
+ "keyIdea": "A p-value is the probability, assuming H₀ is true, of a result at least as extreme as the one observed, where extreme means further in the direction of H₁: P(X ≥ x) for H₁: p > p₀ and P(X ≤ x) for H₁: p < p₀. Reject H₀ if p ≤ α, fixed in advance; otherwise there is not enough evidence. For X ~ B(30, 1/6), 9 sixes gives p = P(X ≥ 9) = 5.06%, not significant at 5%, though P(X = 9) is only 3.09%. A p-value is not the probability that H₀ is true, and a small p does not mean a big effect.",
+ "familyTip": "Ask: if nothing special were going on, how surprising would this be? Try it with a coin: 8 heads in 10 tosses. With a fair coin, 8 or more heads happens about 5.5% of the time (56 of 1024 equally likely sequences). Talk about why that is not proof the coin is unfair, and why the answer is not just the chance of exactly 8.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Sam's test gives p = 0.04. Which statements read it correctly? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Correct reading",
+    "Misreading"
+   ],
+   "items": [
+    [
+     "If H₀ is true, a result this extreme or more has a 4% chance",
+     0
+    ],
+    [
+     "There is a 4% chance H₀ is true",
+     1
+    ],
+    [
+     "At the 5% level, reject H₀",
+     0
+    ],
+    [
+     "The effect must be large",
+     1
+    ],
+    [
+     "At the 1% level, do not reject H₀",
+     0
+    ],
+    [
+     "H₁ is 96% likely to be true",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpval",
+  "caption": "Flagship lab: shade the bars that make a p-value in both tails, compare p with α, sort readings of p, simulate H₀, find the critical value.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A test starts with H₀, the claim that nothing unusual is going on. Then you collect data. The p-value asks: if H₀ were true, how likely is a result at least as extreme as this one?",
+   "Extreme means far out in the direction of H₁. Sam thinks a die lands on six too often. He rolls it 30 times and gets 9 sixes. So the p-value is P(X ≥ 9), not P(X = 9). With X ~ B(30, 1/6), P(X ≥ 9) = 5.06%.",
+   "Then compare p with α, the level you set before the test. If p ≤ α, reject H₀. If p > α, do not reject it. At 5%, the value 5.06% is just too big. Sam has not shown that the die is biased.",
+   "Be careful what p means. You work it out by assuming H₀ is true. So it is not the chance that H₀ is true. A small p does not mean a big effect, either. It means the result would be rare if H₀ were true."
+  ],
+  "adult": [
+   "Ages 16 to 18. The DfE A level Mathematics content asks students to conduct a statistical hypothesis test for the proportion in the binomial distribution and interpret the results in context. Exam boards accept either a critical region or a p-value compared with the significance level.",
+   "The p-value is P(result at least as extreme as observed, given H₀). For H₁: p > p₀ it is P(X ≥ x); for H₁: p < p₀ it is P(X ≤ x). In a two-tailed test, compare the tail with α/2, or double it and compare with α. Reject H₀ if p ≤ α. This always agrees with the critical region: p ≤ α exactly when x lies in it.",
+   "Common mistakes: using P(X = x) instead of the tail; using the wrong tail; reading p as the probability that H₀ is true, which the American Statistical Association's 2016 statement warns against; treating 'do not reject' as proof of H₀; and reading a tiny p as a large effect. Be careful at the boundary: 5.06% is not significant at 5%.",
+   "In the lab your teenager shades the bars that make up the p-value for an upper-tail die test and a lower-tail machine test, decides four results against α, sorts true and false readings of p = 0.03, runs 1000 simulations under H₀ to see p as a long-run share, and slides X to find the critical value 10."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Under H₀, a result at least this extreme has probability p = {p}%. If the experiment were repeated 1000 times with H₀ true, about how many runs would give a result at least this extreme?",
+   "answer": "10*p",
+   "hint": "Find {p}% of 1000 runs: each 1% is 10 runs.",
+   "explain": "{p}% of 1000 is {=10*p} runs. That long-run share is what the p-value measures.",
+   "params": {
+    "p": [
+     1,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a two-tailed test, the tail probability on the side of the result is {t}%. Doubling it gives the p-value. What is the p-value, in %?",
+   "answer": "2*t",
+   "hint": "Extreme results in either direction count, so double the one tail.",
+   "explain": "2 × {t}% = {=2*t}%. Compare that with α, or compare {t}% with α/2.",
+   "params": {
+    "t": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "H₁: p > 1/6 and Sam sees X = 9. Which probability is the p-value?",
+   "choices": [
+    "P(X ≥ 9)",
+    "P(X = 9)",
+    "P(X ≤ 9)"
+   ],
+   "answer": 0,
+   "hint": "At least as extreme, in the direction of H₁.",
+   "explain": "H₁ points up, so the p-value is the upper tail from 9: P(X ≥ 9) = 5.06%. P(X = 9) misses the more extreme results."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A test gives p = 0.04, and α = 5%. What is the conclusion?",
+   "choices": [
+    "Reject H₀: there is evidence for H₁",
+    "Do not reject H₀",
+    "H₀ is definitely false"
+   ],
+   "answer": 0,
+   "hint": "Compare p with α: is 4% at most 5%?",
+   "explain": "4% ≤ 5%, so reject H₀. It is evidence for H₁, not certainty: a true H₀ gives this sometimes."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is a correct reading of p = 0.03?",
+   "choices": [
+    "If H₀ is true, results at least this extreme happen about 3% of the time",
+    "There is a 3% chance that H₀ is true",
+    "The effect is 3% in size"
+   ],
+   "answer": 0,
+   "hint": "What was assumed when p was worked out?",
+   "explain": "p is worked out assuming H₀, so it describes the data under H₀. It is not the chance H₀ is true and not an effect size."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "H₁: p < 0.2. In 25 parts, X = 1 is faulty. Which probability is the p-value?",
+    "choices": [
+     "P(X ≤ 1)",
+     "P(X ≥ 1)",
+     "P(X = 1)"
+    ],
+    "answer": 0,
+    "hint": "H₁ points down, so extreme means small X.",
+    "explain": "The p-value is the lower tail P(X ≤ 1) = 2.74% for X ~ B(25, 0.2). P(X ≥ 1) is the wrong tail, and P(X = 1) misses X = 0."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "P(X ≥ 9) = 5.06% and α = 5%. What do you conclude?",
+    "choices": [
+     "Do not reject H₀",
+     "Reject H₀",
+     "Accept that H₁ is true"
+    ],
+    "answer": 0,
+    "hint": "Reject only if p ≤ α. Compare 5.06% with 5%.",
+    "explain": "5.06% > 5%, so do not reject H₀. Close to α is still not significant."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Sam does not reject H₀. Which statement is right?",
+    "choices": [
+     "There is not enough evidence that the die favours six",
+     "The die is proved to be fair",
+     "H₀ has a 95% chance of being true"
+    ],
+    "answer": 0,
+    "hint": "Does a test that fails to reject prove H₀?",
+    "explain": "Not rejecting means the data are not unusual enough under H₀. It does not prove H₀, and it gives no probability for H₀."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Study A gives p = 0.001 and study B gives p = 0.04. Which is true?",
+    "choices": [
+     "Both are significant at 5%; p alone does not say which effect is bigger",
+     "A's effect is 40 times bigger than B's",
+     "Study B proves H₀ is true"
+    ],
+    "answer": 0,
+    "hint": "What does a p-value measure, and what does it not measure?",
+    "explain": "p measures how surprising data are under H₀. A big sample can give a tiny p for a tiny effect, so p is not an effect size."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "At 5% the critical region is X ≥ 10. Sam sees X = 12. What do you know about the p-value?",
+    "choices": [
+     "p ≤ 5%",
+     "p > 5%",
+     "p = P(X = 12)"
+    ],
+    "answer": 0,
+    "hint": "The two methods always agree.",
+    "explain": "X = 12 is in the critical region, so P(X ≥ 12) ≤ 5% (it is 0.20%). The p-value is a tail, not P(X = 12)."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Under H₀, a result at least as extreme has probability {p}%. In 500 repeats of the experiment with H₀ true, how many such results would you expect?",
+    "answer": "5*p",
+    "hint": "Find {p}% of 500: each 1% is 5 results.",
+    "explain": "{p}% of 500 is {=5*p} results.",
+    "params": {
+     "p": [
+      1,
+      10
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "The significance level is {a}% and the test is two-tailed. At most how many % can go in each tail?",
+    "answer": "a/2",
+    "hint": "Split α equally between the two tails.",
+    "explain": "{a}% ÷ 2 = {=a/2}% in each tail.",
+    "params": {
+     "a": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is a p-value not the probability that H₀ is true?",
+    "choices": [
+     "It is worked out by assuming H₀ is true",
+     "It is always above 50%",
+     "It only works for coins and dice"
+    ],
+    "answer": 0,
+    "hint": "What did you assume to find the distribution of X?",
+    "explain": "X ~ B(n, p₀) uses the H₀ value p₀. Having assumed H₀, the result cannot be the chance that H₀ holds."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "With a fair coin, P(X ≥ 8) = 5.47% for 10 tosses. You get 8 heads and test H₁: p > 0.5 at 5%. What do you conclude?",
+    "choices": [
+     "Do not reject H₀, because 5.47% > 5%",
+     "Reject H₀, because 8 heads is a lot",
+     "Reject H₀, because P(X = 8) = 4.39% < 5%"
+    ],
+    "answer": 0,
+    "hint": "Use the tail, then compare exactly with α.",
+    "explain": "The p-value is P(X ≥ 8) = 5.47%, which is above 5%, so do not reject H₀. Using P(X = 8) would give the wrong decision."
+   }
+  ]
+ }
+}
