@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_l4YkC-S5pk",
+ "title": "One-tailed and two-tailed tests",
+ "audience": "family",
+ "keyIdea": "The wording of the claim decides the tails, before any data are seen. A claim with a direction (more, fewer, increased) gives a one-tailed test, H₁: p > p₀ or H₁: p < p₀, with all of α in that tail. A claim with no direction (changed, biased, different) gives a two-tailed test, H₁: p ≠ p₀, with α split so that each tail holds at most α/2. The same data can be significant one-tailed but not two-tailed, and choosing the tail after looking at the data roughly doubles the real chance of a Type I error.",
+ "familyTip": "Read a headline together, such as 'Phone use among teenagers has changed' or 'More people cycle to work than last year'. Ask: does it say which way? If it says more or fewer, one tail; if it only says changed, two tails. Then ask why a scientist must decide this before collecting the data.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "One tail or two? Read the direction in each claim, then drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "One-tailed test",
+    "Two-tailed test"
+   ],
+   "items": [
+    [
+     "Heads come up more often than tails",
+     0
+    ],
+    [
+     "The coin is biased",
+     1
+    ],
+    [
+     "Fewer than 10% of parts are faulty",
+     0
+    ],
+    [
+     "The proportion has changed from 0.3",
+     1
+    ],
+    [
+     "The new drug cures more than 30%",
+     0
+    ],
+    [
+     "The die is not fair on sixes",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtails",
+  "caption": "Flagship lab: read each claim for its H₁, split 5% across two tails of B(30, 0.5), test 20 heads both ways, and simulate picking the tail after looking.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Before collecting data, read the claim. If it says which way, such as more heads or fewer faults, the test is one-tailed: H₁: p > p₀ or H₁: p < p₀. If it only says the value has changed, or a coin is biased, either way counts, so the test is two-tailed: H₁: p ≠ p₀.",
+   "In a two-tailed test the significance level is split. At 5%, each tail can hold at most 2.5%. For X ~ B(30, 0.5) the critical region is X ≤ 9 or X ≥ 21, because P(X ≤ 9) = P(X ≥ 21) = 2.14%, while P(X ≥ 20) = 4.94% is too big for one tail of a two-tailed test.",
+   "So the same data can give different verdicts. 20 heads in 30 tosses has P(X ≥ 20) = 4.94%. One-tailed at 5%, that is significant. Two-tailed, compare 4.94% with 2.5%, or double it to 9.87% and compare with 5%: not significant.",
+   "That is why the choice is made first. If you wait to see which way the data lean and then test that tail, both tails can trigger a rejection, and the real chance of a false alarm is about 9.87%, not 5%."
+  ],
+  "adult": [
+   "Ages 16 to 18. The DfE A level Mathematics content asks students to conduct a statistical hypothesis test for the proportion in the binomial distribution, understand one-tailed and two-tailed tests, and interpret results in context; every exam board's specification expects α to be split equally between the tails for a two-tailed test.",
+   "The decision belongs to the question, not the data. Ask your teenager to underline the word in the claim that carries the direction. 'Increased', 'reduced', 'more' and 'fewer' give one tail; 'changed', 'different', 'biased' and 'not fair' give two. Then ask what each tail would mean in context.",
+   "Common mistakes: comparing a single tail probability with the whole 5% in a two-tailed test; choosing the tail by looking at whether the sample was high or low; writing H₁: p > 0.5 for 'the coin is biased'; and thinking a bigger count is automatically significant. A careful method states H₀, H₁ and α first, then finds the critical region or the p-value for the stated tail.",
+   "In the lab your teenager sorts six claims into upper, lower or two-tailed alternatives, drags two cut-offs on B(30, 0.5) until each tail holds at most 2.5%, tests 20 heads one-tailed and two-tailed, runs a simulation where the tail is picked after looking (false alarms near 10%), and picks the tail for three claims at 5%, 10% and 1%."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A two-tailed test has significance level {a}%. What is the most probability, in %, that each tail can hold?",
+   "answer": "a/2",
+   "hint": "In a two-tailed test, α is shared equally between the two tails.",
+   "explain": "Each tail gets half of α: {a}% ÷ 2 = {=a/2}%.",
+   "params": {
+    "a": [
+     2,
+     10
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a two-tailed test the observed value is in the upper tail, and P(X ≥ x) = {q}%. If you double it to compare with α, what value in % do you compare?",
+   "answer": "2*q",
+   "hint": "Doubling the one-tail probability is the same as comparing the one-tail probability with α/2.",
+   "explain": "2 × {q}% = {=2*q}%, which is compared with the whole α.",
+   "params": {
+    "q": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "'The proportion of left-handed students has changed from 0.1.' Which alternative hypothesis?",
+   "choices": [
+    "H₁: p ≠ 0.1",
+    "H₁: p > 0.1",
+    "H₁: p < 0.1"
+   ],
+   "answer": 0,
+   "hint": "Does the claim say which way it changed?",
+   "explain": "Changed has no direction, so either way counts and the test is two-tailed: H₁: p ≠ 0.1."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "X ~ B(30, 0.5), H₁: p ≠ 0.5, α = 5%. You see 20 heads, and P(X ≥ 20) = 4.94%. What do you conclude?",
+   "choices": [
+    "Do not reject H₀: 4.94% is more than 2.5%",
+    "Reject H₀: 4.94% is less than 5%",
+    "Reject H₀: 20 is well above 15"
+   ],
+   "answer": 0,
+   "hint": "In a two-tailed test, what do you compare the tail probability with?",
+   "explain": "Each tail holds at most 2.5%, and 4.94% is bigger, so 20 is not in the critical region X ≤ 9 or X ≥ 21. There is not enough evidence that the coin is biased."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why must the number of tails be chosen before the data are collected?",
+   "choices": [
+    "Choosing after looking about doubles the chance of a Type I error",
+    "So that the arithmetic is easier",
+    "It does not matter when you choose"
+   ],
+   "answer": 0,
+   "hint": "If you could pick whichever tail the data point to, how many ways could a fair coin lead to a rejection?",
+   "explain": "Picking the tail after looking lets either tail cause a rejection, so the real significance level is about 2α, not α."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "'This coin lands heads more often than tails.' Which test?",
+    "choices": [
+     "One-tailed, H₁: p > 0.5",
+     "Two-tailed, H₁: p ≠ 0.5",
+     "One-tailed, H₁: p < 0.5"
+    ],
+    "answer": 0,
+    "hint": "Look for a word that gives a direction.",
+    "explain": "More often gives a direction, so all of α goes in the upper tail: H₁: p > 0.5."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "X ~ B(30, 0.5), two-tailed at 5%. Which is the critical region?",
+    "choices": [
+     "X ≤ 9 or X ≥ 21",
+     "X ≥ 20",
+     "X ≤ 10 or X ≥ 20"
+    ],
+    "answer": 0,
+    "hint": "Each tail must hold at most 2.5%. P(X ≤ 9) = P(X ≥ 21) = 2.14% and P(X ≥ 20) = 4.94%.",
+    "explain": "X ≤ 9 and X ≥ 21 each hold 2.14%, under 2.5%. Moving in to 10 or 20 would make each tail 4.94%. X ≥ 20 is the one-tailed region."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "After a fix, a firm claims fewer than 10% of phones are faulty. Which H₁?",
+    "choices": [
+     "H₁: p < 0.1",
+     "H₁: p ≠ 0.1",
+     "H₁: p > 0.1"
+    ],
+    "answer": 0,
+    "hint": "Which way does the claim say p has moved?",
+    "explain": "Fewer gives a direction downwards, so the test is one-tailed in the lower tail."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mia sees 9 heads in 30 and decides to test H₁: p < 0.5 because the result was low. What is wrong?",
+    "choices": [
+     "The tail must be chosen from the claim before seeing the data",
+     "Nothing, the data show which tail to use",
+     "She should have used H₁: p > 0.5"
+    ],
+    "answer": 0,
+    "hint": "When should H₁ be written down?",
+    "explain": "Choosing the tail from the data lets either tail cause a rejection, so her real α is about double the stated one."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A two-tailed test at 10% on X ~ B(30, 0.5). How much can each tail hold?",
+    "choices": [
+     "At most 5%",
+     "At most 10%",
+     "At most 2.5%"
+    ],
+    "answer": 0,
+    "hint": "Split α equally between the two tails.",
+    "explain": "10% ÷ 2 = 5% per tail, giving X ≤ 10 or X ≥ 20, each 4.94%."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A two-tailed test uses α = {a}%. The lower tail holds 1.2%. What is the most probability, in %, the upper tail may hold?",
+    "answer": "a/2",
+    "hint": "Each tail is limited to α/2 on its own, whatever the other tail holds.",
+    "explain": "Each tail may hold at most α/2 = {a}% ÷ 2 = {=a/2}%.",
+    "params": {
+     "a": [
+      4,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "One-tailed at 5%, 20 heads in 30 is significant. Two-tailed at 5%, it is not. Why?",
+    "choices": [
+     "P(X ≥ 20) = 4.94% is below 5% but above 2.5%",
+     "The two-tailed test uses more data",
+     "A two-tailed test always rejects less often by 5%"
+    ],
+    "answer": 0,
+    "hint": "Compare 4.94% with the probability allowed in one tail in each test.",
+    "explain": "A one-tailed test allows 5% in the upper tail; a two-tailed test allows only 2.5% there."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A researcher tests at α = {a}% but picks the tail after seeing the data. Roughly what is the real significance level, in %?",
+    "answer": "2*a",
+    "hint": "Either tail could now lead to a rejection, and each holds about α.",
+    "explain": "Two tails of about {a}% each give a real α of about {=2*a}%, double what was claimed.",
+    "params": {
+     "a": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "'A dice shows a six less often than 1 in 6.' Which test?",
+    "choices": [
+     "One-tailed, H₁: p < 1/6",
+     "Two-tailed, H₁: p ≠ 1/6",
+     "One-tailed, H₁: p > 1/6"
+    ],
+    "answer": 0,
+    "hint": "Less often gives a direction.",
+    "explain": "Less often points downwards, so all of α goes in the lower tail."
+   }
+  ]
+ }
+}
