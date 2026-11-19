@@ -1,0 +1,189 @@
+{
+ "topicId": "mt_9IzhGUZ30z",
+ "title": "Number words to twenty",
+ "audience": "family",
+ "keyIdea": "Every numeral from 1 to 20 has a number word. Read all the letters, because six and seven both start with s. Teen words say the ones first, but you write the ten first: seventeen is 17, not 71. Eleven, twelve and twenty have no teen in them, and words that end in -ty mean tens.",
+ "familyTip": "Write the number words one to twenty on cards and the numerals on sticky notes. Turn them all face down and play pairs. When your child turns over a teen word, ask them to say which digit they write first and why. Spot number words on signs, birthday cards and book pages.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Teen number or not? Drag each word, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Teen number (13 to 19)",
+    "Not a teen number"
+   ],
+   "items": [
+    ["thirteen", 0],
+    ["twelve", 1],
+    ["nineteen", 0],
+    ["twenty", 1],
+    ["fifteen", 0],
+    ["eleven", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnumword",
+  "caption": "Flagship lab: read words to numerals, build teen numbers in tens and ones boxes, pick teen spellings, drag words onto a track, spot a robot's slips.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A numeral is a number written with digits, like 6. A number word is the same number in letters, like six. Read every letter. Six and seven both start with s.",
+   "Teen words are tricky. In seventeen you say seven first. But you write the ten first. Teen means one ten. So seventeen is 1 ten and 7 ones: 17.",
+   "Some teen words change their start. Three turns into thir, so 13 is thirteen. Five turns into fif, so 15 is fifteen. Eight and teen share a t, so 18 is eighteen.",
+   "Eleven and twelve have their own words, with no teen. Twenty means 2 tens. Words that end in -ty are tens, so thirty is 30 and not 13."
+  ],
+  "adult": [
+   "Ages 5 to 6, Year 1. The National Curriculum asks children to read and write numbers from 1 to 20 in numerals and words. Key words: numeral, digit, number word, teen number, tens, ones. The teen words are the hard part, because English says the ones before the ten.",
+   "The most common mistake is writing the digits in the order they are heard: seventeen becomes 71. Show a teen number as one full ten frame and some more, and say it as one ten and seven, seventeen. Children also mix -teen and -ty (thirteen and thirty), so stress the ending when you say them.",
+   "Spelling slips are predictable: threeteen, fiveteen, eightteen and twoteen. Point out that three changes to thir, five to fif, eight and teen share one t, and that 11 and 12 have their own words. Children who read only the first letter confuse six with seven, so ask them to read each word letter by letter.",
+   "In the lab your child reads three words and taps the numerals, builds 17, 14 and 19 in a tens box and a ones box, picks the right spelling for 13, 15, 18 and 12, drags word cards onto an 11 to 20 track, and checks a robot that writes 61 for sixteen and 20 for twelve."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A teen number has 1 ten and {a} ones. Write it as a numeral.",
+   "answer": "10+a",
+   "hint": "Write the 1 for the ten first. Then write the ones.",
+   "explain": "One ten and {a} ones is {=10+a}. The 1 goes first even though you say the ones first.",
+   "params": {
+    "a": [3, 9]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Ten and {a} more. Write the numeral.",
+   "answer": "10+a",
+   "hint": "Ten and some more is a number from 11 to 20. Write 1 for the ten.",
+   "explain": "Ten and {a} more is {=10+a}: 1 ten and {a} ones.",
+   "params": {
+    "a": [1, 9]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which numeral is seventeen?",
+   "choices": ["17", "71", "70"],
+   "answer": 0,
+   "hint": "Teen means one ten. Which digit shows the ten?",
+   "explain": "Seventeen is 1 ten and 7 ones, so 17. 71 writes the ones first, and 70 is seventy."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "How do you spell 13?",
+   "choices": ["thirteen", "threeteen", "thirty"],
+   "answer": 0,
+   "hint": "Three changes its start in the teen word. The word ends in -teen.",
+   "explain": "13 is thirteen: three changes to thir. Thirty ends in -ty and means 30."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which word is 12?",
+   "choices": ["twelve", "twoteen", "twenty"],
+   "answer": 0,
+   "hint": "11 and 12 have their own words with no teen.",
+   "explain": "12 is twelve. There is no twoteen, and twenty is 20."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "1 ten and {a} ones. What is the numeral?",
+    "answer": "10+a",
+    "hint": "Write 1 for the ten, then {a} for the ones.",
+    "explain": "1 ten and {a} ones makes {=10+a}.",
+    "params": {
+     "a": [1, 9]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A teen word ends in -teen and its ones digit is {a}. What is the number?",
+    "answer": "10+a",
+    "hint": "Every teen number has 1 ten. Put 1 first, then the ones digit.",
+    "explain": "Teen numbers are 1 ten and some ones, so the number is {=10+a}.",
+    "params": {
+     "a": [3, 9]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which numeral is nineteen?",
+    "choices": ["19", "91", "90"],
+    "answer": 0,
+    "hint": "You say nine first, but which digit shows the one ten?",
+    "explain": "Nineteen is 1 ten and 9 ones: 19. 91 puts the ones first, and 90 is ninety."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How do you spell 15?",
+    "choices": ["fifteen", "fiveteen", "fifty"],
+    "answer": 0,
+    "hint": "Five changes its start in the teen word.",
+    "explain": "15 is fifteen: five changes to fif. Fifty ends in -ty and means 50."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which word is 6?",
+    "choices": ["six", "seven", "sixteen"],
+    "answer": 0,
+    "hint": "Read all the letters, not just the first one.",
+    "explain": "6 is six: s-i-x. Seven also starts with s but is 7, and sixteen is 16."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Mia hears 'fourteen' and writes 41. What went wrong?",
+    "choices": ["She wrote the ones first", "Nothing, 41 is right", "She wrote forty"],
+    "answer": 0,
+    "hint": "Which digit should show the one ten?",
+    "explain": "Fourteen is 1 ten and 4 ones, so 14. Mia wrote the digits in the order she heard them."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which word is 20?",
+    "choices": ["twenty", "twelve", "twoteen"],
+    "answer": 0,
+    "hint": "Words that end in -ty mean tens. 20 is 2 tens.",
+    "explain": "20 is twenty, 2 tens. Twelve is 12, and there is no twoteen."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "How do you spell 18?",
+    "choices": ["eighteen", "eightteen", "eighty"],
+    "answer": 0,
+    "hint": "Eight ends in t and teen starts with t. How many t letters?",
+    "explain": "18 is eighteen, with one t where eight and teen meet. Eighty is 80."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which number word does not end in -teen?",
+    "choices": ["eleven", "sixteen", "thirteen"],
+    "answer": 0,
+    "hint": "Look for the -teen ending.",
+    "explain": "Eleven has its own word with no teen. Sixteen and thirteen both end in -teen."
+   }
+  ]
+ }
+}
