@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_76SPWvdI7r",
+ "title": "Number words to 100",
+ "audience": "family",
+ "keyIdea": "A two-digit number is said and written as a tens word, a hyphen, then a ones word: 57 is fifty-seven, 5 tens and 7 ones. Words for whole tens end in -ty (twenty, thirty, forty, fifty … ninety); words ending in -teen are 13 to 19. Watch the spellings forty (no u), fifty and ninety. A tens number such as seventy has no ones word, and ten tens make one hundred.",
+ "familyTip": "Write a number from 21 to 99 on a sticky note and ask your child to write it in words, saying the tens word first. Then swap: you write a word such as forty-six and they write the numeral. Use pasta in cups of ten for the tens and single pieces for the ones. Ask: is fourteen or forty the bigger number?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it less than 50, or 50 or more? Drag each word, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Less than 50",
+    "50 or more"
+   ],
+   "items": [
+    [
+     "forty-nine",
+     0
+    ],
+    [
+     "fifty-one",
+     1
+    ],
+    [
+     "fourteen",
+     0
+    ],
+    [
+     "ninety",
+     1
+    ],
+    [
+     "thirty-five",
+     0
+    ],
+    [
+     "sixty-three",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagword100",
+  "caption": "Flagship lab: pick tens words for rods, join tens and ones words with a hyphen, build words from rods and cubes, order words, check a robot.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Big numbers have two parts. 57 is 5 tens and 7 ones. We say the tens part first: fifty. Then the ones part: seven.",
+   "We write it the same way: fifty-seven. The short line in the middle is a hyphen. It joins the two parts.",
+   "Tens words end in ty. Twenty is 2 tens. Forty is 4 tens. Teen words are not tens. Fourteen is just 14.",
+   "Forty has no u. We say fifty, not fivety. Seventy is 7 tens and no ones, so it has no ones word. Ten tens make one hundred."
+  ],
+  "adult": [
+   "Ages 6 to 7. England's Year 2 maths asks children to read and write numbers to at least 100 in numerals and in words, and to know the place value of each digit (tens and ones). Key words: tens, ones, digit, numeral, number word, hyphen.",
+   "Every number from 21 to 99 that is not a whole ten is written as a tens word, a hyphen and a ones word, so the word maps straight onto the two digits: eighty-three is 8 tens and 3 ones, 83. Whole tens end in -ty, and 100 is one hundred.",
+   "Common mistakes: confusing teen and tens words (fourteen for 40, seventeen for 70), the spellings fourty, fivety and ninty, writing sixty-two as 602 because sixty is written 60 first, swapping the digits (26 for sixty-two) and leaving out the hyphen. Ask your child to say how many tens the word has before they write the numeral.",
+   "In the lab your child picks the tens word for rods of ten, joins a tens word and a ones word to label a number, builds a word from rods and cubes, puts words in order of size, and checks a robot that writes fourty and eighteen for 80."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A number has {a} tens and {b} ones. What is the number?",
+   "answer": "10*a+b",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   },
+   "hint": "The tens digit goes first, then the ones digit.",
+   "explain": "{a} tens and {b} ones make {=10*a+b}. Say it as the tens word, then the ones word."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "How many tens are in {=10*a+b}?",
+   "answer": "a",
+   "params": {
+    "a": [
+     2,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   },
+   "hint": "Look at the first digit. It tells you the tens.",
+   "explain": "{=10*a+b} is {a} tens and {b} ones, so it has {a} tens. The tens word comes first when you say it."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which word is 40?",
+   "choices": [
+    "forty",
+    "fourteen",
+    "fourty"
+   ],
+   "answer": 0,
+   "hint": "Whole tens end in -ty. Check the spelling too.",
+   "explain": "40 is four tens: forty. Fourteen is 14, and forty has no u."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "How do you write seventy-six in numerals?",
+   "choices": [
+    "76",
+    "706",
+    "67"
+   ],
+   "answer": 0,
+   "hint": "Seventy is 7 tens. Six is 6 ones.",
+   "explain": "7 tens and 6 ones is 76. 706 is seven hundred and six, and 67 swaps the digits."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is 92 written in words?",
+   "choices": [
+    "ninety-two",
+    "ninty-two",
+    "twenty-nine"
+   ],
+   "answer": 0,
+   "hint": "Say the tens first: 9 tens. Then the ones.",
+   "explain": "92 is 9 tens and 2 ones: ninety-two. Ninety keeps the e, and twenty-nine is 29."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Write the number that is {a} tens and 0 ones.",
+    "answer": "10*a",
+    "params": {
+     "a": [
+      2,
+      9
+     ]
+    },
+    "hint": "No ones means the ones digit is 0.",
+    "explain": "{a} tens and no ones is {=10*a}. Its word ends in -ty and has no ones word."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "How many ones are in {=10*a+b}?",
+    "answer": "b",
+    "params": {
+     "a": [
+      2,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    },
+    "hint": "The last digit tells you the ones.",
+    "explain": "{=10*a+b} is {a} tens and {b} ones, so it has {b} ones. That is the word after the hyphen."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which is bigger: nineteen or ninety?",
+    "choices": [
+     "ninety",
+     "nineteen",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Which one is a tens word, ending in -ty?",
+    "explain": "Ninety is 90 and nineteen is 19, so ninety is bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which word is spelled correctly?",
+    "choices": [
+     "fifty",
+     "fivety",
+     "fiveteen"
+    ],
+    "answer": 0,
+    "hint": "Say it out loud: the five changes to fif.",
+    "explain": "Fifty is the right spelling for 50. Fivety and fiveteen are not words."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which shows sixty-four written the right way?",
+    "choices": [
+     "sixty-four",
+     "sixty four",
+     "sixtyfour"
+    ],
+    "answer": 0,
+    "hint": "A short line joins the tens word and the ones word.",
+    "explain": "We write a hyphen between the tens word and the ones word: sixty-four."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What number is thirty-eight?",
+    "choices": [
+     "38",
+     "83",
+     "308"
+    ],
+    "answer": 0,
+    "hint": "Thirty is 3 tens. Eight is 8 ones.",
+    "explain": "3 tens and 8 ones is 38. 83 swaps the digits and 308 has a hundreds digit."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is ten tens?",
+    "choices": [
+     "one hundred",
+     "ten",
+     "one thousand"
+    ],
+    "answer": 0,
+    "hint": "Count in tens: ten, twenty, thirty … ninety, and one more ten.",
+    "explain": "Ten tens make one hundred, written 100."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which list goes from smallest to biggest?",
+    "choices": [
+     "fourteen, forty, forty-one",
+     "forty, fourteen, forty-one",
+     "forty-one, forty, fourteen"
+    ],
+    "answer": 0,
+    "hint": "Turn each word into a number first.",
+    "explain": "Fourteen is 14, forty is 40 and forty-one is 41, so the order is 14, 40, 41."
+   }
+  ]
+ }
+}
