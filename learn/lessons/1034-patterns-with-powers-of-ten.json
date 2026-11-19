@@ -1,0 +1,214 @@
+{
+ "topicId": "mt_HLUqHJ9Y7n",
+ "title": "Patterns with powers of ten",
+ "audience": "learner",
+ "keyIdea": "A power of ten is tens multiplied together. The small raised number, the exponent, counts the tens: 10³ = 10 × 10 × 10 = 1000, so 10³ is a 1 followed by 3 zeros. Multiplying by 10ⁿ moves every digit n places to the left, and dividing by 10ⁿ moves every digit n places to the right. The decimal point stays where it is: 3.4 × 10² = 340 and 56 ÷ 10² = 0.56. Count the places moved, not the zeros: 2.56 × 10³ = 2560 has only one zero.",
+ "familyTip": "Write a number such as 4.7 on a strip of paper, one digit per square, and draw a place-value chart with a fixed decimal point. Slide the strip left to multiply by 10, 100 or 1000 and right to divide, saying the power of ten each time. Then spot big numbers in the news, like a city of 2 million, and write them with a power of ten.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Equal to 1000, or not? Drag each card, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Equal to 1000",
+    "Not 1000"
+   ],
+   "items": [
+    ["10³", 0],
+    ["10 × 3", 1],
+    ["10 × 10 × 10", 0],
+    ["1 × 10²", 1],
+    ["0.1 × 10⁴", 0],
+    ["10,000 ÷ 10", 0]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpow10",
+  "caption": "Flagship lab: build 10² to 10⁶ from tens, slide digits left and right across a place-value chart, find the power that links two numbers, check a robot.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A power of ten is tens multiplied together. We write 10 × 10 × 10 as 10³. The small 3 is the exponent. It counts the tens. So 10³ is 1000, not 30.",
+   "Each time you multiply by 10, the 1 moves one place left and a zero fills the gap. So 10² is 100 and 10⁶ is 1,000,000. The exponent tells you how many zeros come after the 1.",
+   "When you multiply any number by 10ⁿ, every digit moves n places left. The decimal point stays still. So 3.4 × 10² = 340. Putting two zeros on the end would give 3.400, which is still 3.4.",
+   "When you divide by 10ⁿ, every digit moves n places right. So 56 ÷ 10² = 0.56. To find a power, count the places the digits moved. 2.56 × 10³ = 2560 has one zero, but the digits moved 3 places."
+  ],
+  "adult": [
+   "Ages 10 to 11. This meets Common Core Grade 5 standard 5.NBT.A.2: explain patterns in the number of zeros and in the place of the decimal point when multiplying or dividing by a power of 10, and use whole-number exponents for powers of 10. In England, Year 5 asks pupils to multiply and divide whole numbers and decimals by 10, 100 and 1000, and to use the notation for squared and cubed.",
+   "The reason is place value: each place is worth ten times the place to its right. So × 10 moves every digit one place left and × 10ⁿ moves it n places. Teachers often say 'the digits move, the point stays'. That is more accurate than 'move the decimal point', and it works for whole numbers and decimals alike. Zeros fill empty places up to the ones, and a zero goes in the ones place for numbers below 1.",
+   "Common mistakes: reading 10³ as 10 × 3 = 30 or as 103, and adding zeros to a decimal (3.4 × 100 = 3.400). Children also move the digits the wrong way when dividing, or find the power by counting zeros in the answer. That only works when you start from a whole number with no zeros on the end. Ask your child how many places each digit moved.",
+   "In the lab your child builds 10², 10⁴ and 10⁶ by tapping × 10 and watching the 1 travel. They drag the digits of 3.4, 47, 2.56 and 0.8 left to multiply, and of 560, 7, 45.2 and 1200 right to divide. Then they find the power that links two numbers and check a robot's facts."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "What is {a} × 10³?",
+   "answer": "a*1000",
+   "params": {
+    "a": [2, 99]
+   },
+   "hint": "10³ is 1000. Every digit moves 3 places left.",
+   "explain": "{a} × 10³ = {a} × 1000 = {=a*1000}. Each digit moved 3 places left and zeros filled the empty places."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "How many zeros are there after the 1 when 10 to the power {a} is written out in full?",
+   "answer": "a",
+   "params": {
+    "a": [2, 9]
+   },
+   "hint": "Each 10 you multiply by moves the 1 one more place left.",
+   "explain": "10 to the power {a} is {a} tens multiplied together, so the 1 is followed by {a} zeros."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What is {a}00 ÷ 10²?",
+   "answer": "a",
+   "params": {
+    "a": [3, 9]
+   },
+   "hint": "10² is 100. Dividing moves every digit 2 places right.",
+   "explain": "{a}00 ÷ 10² = {a}00 ÷ 100 = {a}. The {a} moved from the hundreds place to the ones place."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is 3.4 × 10²?",
+   "choices": [
+    "340",
+    "3.400",
+    "34"
+   ],
+   "answer": 0,
+   "hint": "Move every digit 2 places left. The decimal point stays.",
+   "explain": "The 3 moves from ones to hundreds and the 4 from tenths to tens: 340. Writing 3.400 adds zeros but leaves the value at 3.4."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What is 10⁴?",
+   "choices": [
+    "10,000",
+    "40",
+    "104"
+   ],
+   "answer": 0,
+   "hint": "The 4 counts how many tens are multiplied together.",
+   "explain": "10⁴ = 10 × 10 × 10 × 10 = 10,000: a 1 followed by 4 zeros. It is not 10 × 4."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "What is {a} × 10²?",
+    "answer": "a*100",
+    "params": {
+     "a": [11, 95]
+    },
+    "hint": "10² is 100. Move every digit 2 places left.",
+    "explain": "{a} × 10² = {a} × 100 = {=a*100}. The digits moved 2 places left and two zeros hold the tens and ones places."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "{a} × 10ⁿ = {a}0000. What is n?",
+    "answer": "4",
+    "params": {
+     "a": [2, 9]
+    },
+    "hint": "Count how many places the {a} moved to the left.",
+    "explain": "The {a} moved from the ones place to the ten-thousands place, which is 4 places, so n = 4 and 10⁴ = 10,000."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What is 56 ÷ 10²?",
+    "choices": [
+     "0.56",
+     "5600",
+     "5.6"
+    ],
+    "answer": 0,
+    "hint": "Dividing makes it smaller. Move every digit 2 places right.",
+    "explain": "The 5 moves from tens to tenths and the 6 from ones to hundredths: 0.56. 5600 moved the wrong way, and 5.6 moved only 1 place."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "2.56 × 10ⁿ = 2560. What is n?",
+    "choices": [
+     "3",
+     "1",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Count how far the 2 moved, not how many zeros are in 2560.",
+    "explain": "The 2 moved from ones to thousands, which is 3 places, so n = 3. 2560 has only one zero because 5 and 6 fill two of the places."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is 7 ÷ 10³?",
+    "choices": [
+     "0.007",
+     "0.07",
+     "7000"
+    ],
+    "answer": 0,
+    "hint": "10³ is 1000. Move the 7 three places right.",
+    "explain": "The 7 moves from ones to thousandths: 0.007. Zeros hold the tenths and hundredths places."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is the same as 10 × 10 × 10 × 10 × 10?",
+    "choices": [
+     "10⁵",
+     "10 × 5",
+     "5¹⁰"
+    ],
+    "answer": 0,
+    "hint": "The exponent counts how many tens are multiplied.",
+    "explain": "Five tens multiplied together is 10⁵ = 100,000. 10 × 5 is only 50."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What is 0.3 × 10³?",
+    "choices": [
+     "300",
+     "0.3000",
+     "30"
+    ],
+    "answer": 0,
+    "hint": "Move the 3 three places left, starting from the tenths.",
+    "explain": "The 3 moves from tenths to ones, tens, then hundreds: 300. Adding zeros after a decimal, as in 0.3000, does not change its value."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A city has about 2 × 10⁶ people. About how many is that?",
+    "choices": [
+     "2,000,000",
+     "200,000",
+     "12"
+    ],
+    "answer": 0,
+    "hint": "10⁶ is a 1 followed by 6 zeros.",
+    "explain": "10⁶ is 1,000,000, so 2 × 10⁶ is 2,000,000, two million."
+   }
+  ]
+ }
+}
