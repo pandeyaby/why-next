@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_To9HdLy8vq",
+ "title": "Roman numerals to 1000",
+ "audience": "learner",
+ "keyIdea": "Two more symbols take Roman numerals past 100: D is 500 and M is 1000. The take-away rule now has two more pairs: CD is 400 and CM is 900. To read a long numeral, split it into thousands, hundreds, tens and ones, then add the chunks: MCMXCIX is M + CM + XC + IX = 1000 + 900 + 90 + 9 = 1999. To write a year, do one place at a time. A longer numeral is not always a bigger number.",
+ "familyTip": "Look for years in Roman numerals at the end of film credits, on foundation stones and on old clocks and coins. Read one together by drawing lines between the thousands, hundreds, tens and ones. Then write family birth years in Roman numerals and check each other's work.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Less than 500, or 500 or more? Drag each numeral, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Less than 500",
+    "500 or more"
+   ],
+   "items": [
+    [
+     "CD",
+     0
+    ],
+    [
+     "DC",
+     1
+    ],
+    [
+     "CDXCIX",
+     0
+    ],
+    [
+     "DI",
+     1
+    ],
+    [
+     "CCCXC",
+     0
+    ],
+    [
+     "M",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagromanm",
+  "caption": "Flagship lab: make hundreds from C, D and M, split long numerals into place-value chunks, dial a year column by column, compare numerals, check a robot.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "You already know I, V, X, L and C. Two more letters take you to 1000. D is 500 and M is 1000.",
+   "A smaller letter before a bigger one is taken away. CD is 500 take away 100, which is 400. CM is 1000 take away 100, which is 900. Only six pairs work this way: IV, IX, XL, XC, CD and CM.",
+   "Long numerals are easy if you cut them into chunks: thousands, then hundreds, then tens, then ones. MCMXCIX is M, CM, XC and IX. That is 1000 + 900 + 90 + 9, so it is 1999.",
+   "To write a year, do one place at a time. 2024 is MM for 2000, nothing for the hundreds, XX for 20 and IV for 4: MMXXIV. Count values, not letters. DCCCLXXXVIII is long, but it is only 888, less than M."
+  ],
+  "adult": [
+   "Ages 9 to 10. Year 5 of the National Curriculum in England asks pupils to read Roman numerals to 1000 (M) and to spot years written in them. Year 4 went up to C (100). The new symbols are D (500) and M (1000), and the new take-away pairs are CD (400) and CM (900).",
+   "The rules: write symbols from largest to smallest and add them. A smaller symbol just before a larger one is taken away, but only in IV, IX, XL, XC, CD and CM. No symbol goes more than three times in a row, and V, L and D are never doubled. Each digit of our number maps to one Roman chunk, so 1485 is M, CD, LXXX, V.",
+   "Common mistakes: adding every symbol (MCMXCIX read as 2221), writing CCCC for 400, and making up pairs such as IM for 999, XM for 990 or MIM for 1999. Children also split a pair across two chunks, treat the letters like digits, or think a longer numeral is bigger. Ask your child to draw lines between the chunks before adding.",
+   "In the lab your child builds 300 to 1000 from C, D and M tiles, taps the gaps that split a numeral into chunks, and sets four columns to write years. They also pick the bigger of two numerals when the longer one is smaller, and check a robot that says IM is 999."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "What number is M followed by {a} Cs and then {b} Xs (for example MCCX)?",
+   "answer": "1000+100*a+10*b",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     1,
+     3
+    ]
+   },
+   "hint": "A smaller letter after a bigger one is added.",
+   "explain": "M is 1000, each C adds 100 and each X adds 10: 1000 + {=100*a} + {=10*b} = {=1000+100*a+10*b}."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The thousands chunk of a year is M and the hundreds chunk is CM. The last two digits are {a}{b}. What is the year?",
+   "answer": "1900+10*a+b",
+   "params": {
+    "a": [
+     1,
+     9
+    ],
+    "b": [
+     1,
+     9
+    ]
+   },
+   "hint": "M is 1000 and CM is 900. Then add the tens and ones.",
+   "explain": "M + CM is 1000 + 900 = 1900. Adding {=10*a+b} gives {=1900+10*a+b}."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What number is MCMXCIX?",
+   "choices": [
+    "1999",
+    "2221",
+    "2199"
+   ],
+   "answer": 0,
+   "hint": "Split it into chunks: M, CM, XC, IX.",
+   "explain": "M is 1000, CM is 900, XC is 90 and IX is 9, so MCMXCIX is 1999. 2221 adds every letter."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "How is 400 written in Roman numerals?",
+   "choices": [
+    "CD",
+    "CCCC",
+    "DC"
+   ],
+   "answer": 0,
+   "hint": "Never four of the same letter in a row. Take away from D.",
+   "explain": "400 is 500 take away 100, written CD. CCCC breaks the three-in-a-row rule and DC is 600."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is the bigger number: DCCCLXXXVIII or M?",
+   "choices": [
+    "M",
+    "DCCCLXXXVIII",
+    "They are equal"
+   ],
+   "answer": 0,
+   "hint": "Work out each value. Do not count the letters.",
+   "explain": "DCCCLXXXVIII is 500 + 300 + 50 + 30 + 5 + 3 = 888, and M is 1000, so M is bigger."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "What number is D followed by {a} Cs and then {b} Is (for example DCCI)?",
+    "answer": "500+100*a+b",
+    "params": {
+     "a": [
+      1,
+      3
+     ],
+     "b": [
+      1,
+      3
+     ]
+    },
+    "hint": "D is 500. Each C after it adds 100 and each I adds 1.",
+    "explain": "D is 500, {a} Cs add {=100*a} and {b} Is add {b}, so the value is {=500+100*a+b}."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A year starts MM and ends with tens and ones worth {=10*a+b}. It has no hundreds. What is the year?",
+    "answer": "2000+10*a+b",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      0,
+      9
+     ]
+    },
+    "hint": "MM is 2000. Add the tens and ones.",
+    "explain": "MM is 2000, there are no hundreds, and the tens and ones add {=10*a+b}, so the year is {=2000+10*a+b}."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What number is CM?",
+    "choices": [
+     "900",
+     "1100",
+     "100"
+    ],
+    "answer": 0,
+    "hint": "C is before M, so it is taken away.",
+    "explain": "C before M takes away: 1000 − 100 = 900. 1100 would be MC."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How is 999 written in Roman numerals?",
+    "choices": [
+     "CMXCIX",
+     "IM",
+     "CMIC"
+    ],
+    "answer": 0,
+    "hint": "Do one place at a time: 900, then 90, then 9.",
+    "explain": "900 is CM, 90 is XC and 9 is IX, so 999 is CMXCIX. I can only go before V or X."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What year is MMXXIV?",
+    "choices": [
+     "2024",
+     "2026",
+     "20024"
+    ],
+    "answer": 0,
+    "hint": "Split it: MM, then XX, then IV. Add the chunks.",
+    "explain": "MM is 2000, XX is 20 and IV is 4: 2024. 2026 reads IV as 6."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Where should you split MCDLXXXV to read it?",
+    "choices": [
+     "M | CD | LXXX | V",
+     "MC | DL | XXX | V",
+     "M | C | DLXXXV"
+    ],
+    "answer": 0,
+    "hint": "Keep take-away pairs such as CD together.",
+    "explain": "The chunks are M (1000), CD (400), LXXX (80) and V (5), so MCDLXXXV is 1485."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "How is 1990 written in Roman numerals?",
+    "choices": [
+     "MCMXC",
+     "MXM",
+     "MDCCCCXC"
+    ],
+    "answer": 0,
+    "hint": "Write 1000, then 900, then 90, one place at a time.",
+    "explain": "1000 is M, 900 is CM and 90 is XC, so 1990 is MCMXC. XM is not an allowed pair."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What number is D?",
+    "choices": [
+     "500",
+     "50",
+     "1000"
+    ],
+    "answer": 0,
+    "hint": "L is 50 and M is 1000. D sits between them.",
+    "explain": "D stands for 500. It is half of M, which is 1000."
+   }
+  ]
+ }
+}
