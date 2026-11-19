@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_4emC463IyW",
+ "title": "Comparing Time Durations",
+ "audience": "family",
+ "keyIdea": "A duration is how long something takes, from its start time to its finish time. To find it, hop from the start to the next o'clock, then on to the finish, and add the hops: 10:40 to 11:15 is 20 + 15 = 35 minutes. An hour has 60 minutes, not 100, so do not subtract times like ordinary numbers. To compare two events, work out each duration: the one that ends later is not always the longer one.",
+ "familyTip": "Write down the start time of a TV programme, a bath or a car trip and look at the clock again when it ends. Sketch a time line and hop to the o'clock together to find how long it took. Then ask which of two things took longer, such as breakfast or getting dressed.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Longer than half an hour, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "30 minutes or less",
+    "More than 30 minutes"
+   ],
+   "items": [
+    [
+     "9:50 to 10:15",
+     0
+    ],
+    [
+     "10:15 to 11:00",
+     1
+    ],
+    [
+     "3:40 to 4:10",
+     0
+    ],
+    [
+     "2:30 to 3:05",
+     1
+    ],
+    [
+     "11:45 to 12:10",
+     0
+    ],
+    [
+     "6:20 to 7:00",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagelapse",
+  "caption": "Flagship lab: hop to the o'clock on a time line, wind a clock, compare two events, spot slips, find an end time.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A duration is how long something takes. You need the start time and the finish time.",
+   "Hop from the start to the next o'clock. Then hop on to the finish. Add the two hops. 10:40 to 11:00 is 20 minutes. 11:00 to 11:15 is 15 more. That is 35 minutes.",
+   "Watch out! An hour has 60 minutes, not 100. So 1115 take away 1040 does not work. That gives 75, and the real answer is 35.",
+   "Which takes longer? Work out the minutes for each one. A film that ends later can still be shorter, if it started later too."
+  ],
+  "adult": [
+   "Ages 7 to 8, Year 3. The National Curriculum asks children to compare durations of events, for example to calculate the time taken by particular tasks, and to read the time on an analogue clock. Key words: start time, finish time, duration, time taken, minutes, hour, o'clock, longer, shorter.",
+   "The most reliable method is counting on along an empty time line: hop from the start to the next o'clock, then to the finish, and add the hops. For an end time, do it the other way: hop to the o'clock, see how many minutes are used, then hop the rest. Keep both times in the same morning or afternoon at first.",
+   "The most common mistake is subtracting times as if they were ordinary numbers: 11:00 − 10:15 gives 85, or 3:45 + 40 minutes gives 3:85. Be careful with this slip, because an hour has 60 minutes. Another slip is looking only at the hours, so 3:40 to 4:10 becomes 1 hour. Children also often think the event that ends later lasted longer.",
+   "In the lab your child hops along a time line across the hour, winds a clock on 5 minutes at a time and stops at the finish time, measures two films and two clubs that overlap, checks a robot's time sums for slips, and hops forward to find when a show and a bath end."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A lesson starts at 9:{=m*5} and ends at 10:00. How many minutes long is it?",
+   "answer": "60-m*5",
+   "hint": "Count on from 9:{=m*5} to the o'clock, 10:00. An hour has 60 minutes.",
+   "explain": "From 9:{=m*5} to 10:00 is the rest of the hour: 60 − {=m*5} = {=60-m*5} minutes.",
+   "params": {
+    "m": [
+     2,
+     11
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A club starts at 2:{=a*5} and ends at 3:{=b*5}. How many minutes does it last?",
+   "answer": "60-a*5+b*5",
+   "hint": "Hop to 3:00 first, then on to 3:{=b*5}. Add the two hops.",
+   "explain": "2:{=a*5} to 3:00 is {=60-a*5} minutes, then 3:00 to 3:{=b*5} is {=b*5} more. {=60-a*5} + {=b*5} = {=60-a*5+b*5} minutes.",
+   "params": {
+    "a": [
+     7,
+     11
+    ],
+    "b": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How long is it from 3:40 to 4:10?",
+   "choices": [
+    "30 minutes",
+    "1 hour",
+    "70 minutes"
+   ],
+   "answer": 0,
+   "hint": "Hop to 4:00 first. How many minutes is that? Then hop to 4:10.",
+   "explain": "3:40 to 4:00 is 20 minutes, 4:00 to 4:10 is 10 more: 30 minutes. 1 hour looks only at the hours, and 70 treats an hour as 100 minutes."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Film A runs from 2:30 to 4:00. Film B runs from 3:15 to 4:30. Which film is longer?",
+   "choices": [
+    "Film A",
+    "Film B",
+    "They are the same"
+   ],
+   "answer": 0,
+   "hint": "Work out each film's minutes. Do not just look at which ends later.",
+   "explain": "Film A is 30 + 60 = 90 minutes. Film B is 45 + 30 = 75 minutes. Film B ends later but started later too, so Film A is longer."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A show starts at 3:45 and lasts 40 minutes. When does it end?",
+   "choices": [
+    "4:25",
+    "3:85",
+    "4:45"
+   ],
+   "answer": 0,
+   "hint": "Hop to 4:00 first. That uses 15 minutes. How many are left?",
+   "explain": "3:45 to 4:00 uses 15 minutes, leaving 25. 4:00 + 25 minutes is 4:25. There is no 3:85 on a clock."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A lesson starts at 10:15 and ends at 11:00. How long is it?",
+    "choices": [
+     "45 minutes",
+     "85 minutes",
+     "1 hour"
+    ],
+    "answer": 0,
+    "hint": "Count on from 10:15 to 11:00 in fives or in quarter hours.",
+    "explain": "10:15 to 11:00 is three quarters of an hour: 45 minutes. 85 comes from 1100 − 1015, as if an hour had 100 minutes."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is the best first hop to time 9:50 to 10:20?",
+    "choices": [
+     "Hop to 10:00",
+     "Hop to 10:50",
+     "Hop to 9:00"
+    ],
+    "answer": 0,
+    "hint": "Hop to an o'clock you can count from easily.",
+    "explain": "Hop from 9:50 to 10:00 (10 minutes), then to 10:20 (20 minutes): 30 minutes in all."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "How many minutes are in one hour?",
+    "choices": [
+     "60",
+     "100",
+     "30"
+    ],
+    "answer": 0,
+    "hint": "Think of the minute hand going once all the way round.",
+    "explain": "The minute hand goes once round the clock in 60 minutes. That is why times do not work like numbers out of 100."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Swimming is 10:50 to 11:35. Football is 11:00 to 11:40. Which lasts longer?",
+    "choices": [
+     "Swimming",
+     "Football",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Work out each one. Swimming crosses 11:00.",
+    "explain": "Swimming is 10 + 35 = 45 minutes. Football is 40 minutes. Football ends later, but swimming lasts longer."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Bath time starts at 6:50 and lasts 25 minutes. When does it end?",
+    "choices": [
+     "7:15",
+     "6:75",
+     "7:25"
+    ],
+    "answer": 0,
+    "hint": "Hop to 7:00 first. That uses 10 minutes.",
+    "explain": "6:50 to 7:00 uses 10 minutes, leaving 15. 7:00 + 15 minutes is 7:15."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A walk starts at 4:{=a*5} and ends at 5:{=b*5}. How many minutes long is it?",
+    "answer": "60-a*5+b*5",
+    "hint": "Hop from 4:{=a*5} to 5:00, then on to 5:{=b*5}.",
+    "explain": "4:{=a*5} to 5:00 is {=60-a*5} minutes and 5:00 to 5:{=b*5} is {=b*5}. Together that is {=60-a*5+b*5} minutes.",
+    "params": {
+     "a": [
+      8,
+      11
+     ],
+     "b": [
+      2,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Sam says 1:15 to 2:15 is 100 minutes. What is the right time taken?",
+    "choices": [
+     "60 minutes",
+     "100 minutes",
+     "15 minutes"
+    ],
+    "answer": 0,
+    "hint": "The minute hand goes from 3 all the way round to 3 again.",
+    "explain": "1:15 to 2:15 is exactly one hour, which is 60 minutes, not 100."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A bus leaves at 8:{=m*5} and arrives at 9:00. How many minutes is the trip?",
+    "answer": "60-m*5",
+    "hint": "Count on from 8:{=m*5} to 9:00. There are 60 minutes in the hour.",
+    "explain": "From 8:{=m*5} to 9:00 is what is left of the hour: 60 − {=m*5} = {=60-m*5} minutes.",
+    "params": {
+     "m": [
+      2,
+      11
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A cake goes in the oven at 11:40 and comes out at 12:15. How long did it bake?",
+    "choices": [
+     "35 minutes",
+     "75 minutes",
+     "25 minutes"
+    ],
+    "answer": 0,
+    "hint": "Hop to 12:00 first. Then on to 12:15.",
+    "explain": "11:40 to 12:00 is 20 minutes, then 15 more: 35 minutes. 75 comes from 1215 − 1140."
+   }
+  ]
+ }
+}
