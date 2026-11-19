@@ -1,0 +1,190 @@
+{
+ "topicId": "mt_19j_5AuuQI",
+ "title": "Numbers on a number line",
+ "audience": "family",
+ "keyIdea": "On a number line every space is the same size, and a number is a length from 0. To measure, count the spaces, not the tick marks. To add, start on the first number and jump right, tens first and then ones: 38 + 27 is 38, 48, 58, then 7 more to 65. To take away, jump left, back towards 0.",
+ "familyTip": "Lay a tape measure or a long strip of paper on the floor and mark 0 to 20 with equal gaps. Hop a toy along it to add and back to take away. Ask your child to point at the spaces as they count, so they count jumps and not marks.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which way do the jumps go? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Jump right (add)",
+    "Jump left (take away)"
+   ],
+   "items": [
+    ["38 + 27", 0],
+    ["72 − 35", 1],
+    ["15 more than 40", 0],
+    ["20 less than 61", 1],
+    ["46 + 10", 0],
+    ["90 − 9", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnumlen",
+  "caption": "Flagship lab: measure ribbons by counting spaces, drag an arrow to a number, jump a frog to add and take away, and check a robot's number lines.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A number line is like a ruler. Every space is the same size. A number tells you how far it is from 0.",
+   "To find how long something is, count the spaces, not the marks. A ribbon from 0 to 4 touches 5 marks. But it covers 4 spaces, so it is 4 long.",
+   "To add, start on the first number and jump right. Jump the tens first, then the ones. For 38 + 27, go 38, 48, 58. Then jump 7 more to 65.",
+   "To take away, jump left, back to 0. For 72 − 35, jump back 3 tens to 42. Then jump back 5 more to 37."
+  ],
+  "adult": [
+   "Ages 7 to 8, Year 2 to Year 3 (US grade 2, standard 2.MD.6). Children show whole numbers as lengths from 0 on a number line with equal spaces, and show sums and differences within 100 as jumps. Key words: number line, tick mark, interval, equal spaces, jump, add, subtract, difference.",
+   "The most common mistake is counting tick marks instead of spaces, which gives an answer one too big: a length from 0 to 4 is counted as 5. A related slip is starting the count at 1 on the 0 mark. Ask your child to touch each space, not each mark, and say the number at the end of the jump.",
+   "When only the tens are labelled, children often land in the wrong ten or one space off. Find the ten first, then count small spaces. For subtraction, some children still jump right; say 'take away goes back towards 0' and check the answer is smaller.",
+   "In the lab your child measures three ribbons, drags an arrow to 36, 43 and 48 on a line from 30 to 50, jumps a frog in tens and ones to add, jumps back to take away, and checks a robot that counts ticks, jumps the wrong way and draws unequal spaces."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A ribbon starts at 0 and ends at {a}. How many spaces long is it?",
+   "answer": "a",
+   "hint": "Count the spaces from 0, not the tick marks. The 0 mark is where you start.",
+   "explain": "From 0 to {a} there are {a} spaces, so the ribbon is {a} long. It touches {=a+1} tick marks.",
+   "params": {
+    "a": [3, 12]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The frog is on {a}. It jumps right 2 tens and then {b} ones. Where does it land?",
+   "answer": "a+20+b",
+   "hint": "Two jumps of 10 first: {a}, {=a+10}, {=a+20}. Then count on the ones.",
+   "explain": "{a} + 20 = {=a+20}, then {b} more makes {=a+20+b}.",
+   "params": {
+    "a": [21, 49],
+    "b": [1, 9]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Where is 46 on a line from 40 to 50?",
+   "choices": ["6 spaces after 40", "6 spaces after 50", "4 spaces after 40"],
+   "answer": 0,
+   "hint": "Find the ten first. 46 is 4 tens and 6 ones.",
+   "explain": "46 is between 40 and 50. Start on the 40 mark and count 6 spaces to the right."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "To work out 63 − 20 on a number line, which way do you jump?",
+   "choices": ["Left, 2 jumps of 10", "Right, 2 jumps of 10", "Left, 20 jumps of 10"],
+   "answer": 0,
+   "hint": "Take away makes the number smaller. Which way is towards 0?",
+   "explain": "Take away jumps go left, towards 0: 63, 53, 43. So 63 − 20 = 43."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Sam draws a number line with a big space from 0 to 1 and a small space from 1 to 2. What is wrong?",
+   "choices": ["The spaces must all be the same size", "Nothing, any size is fine", "It should start at 1"],
+   "answer": 0,
+   "hint": "A number line works like a ruler. Are the gaps on a ruler all the same?",
+   "explain": "Every space on a number line is the same size, like on a ruler. Unequal spaces make the lengths wrong."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "The frog is on {a}. It jumps back 3 tens. Where does it land?",
+    "answer": "a-30",
+    "hint": "Jump left 10 three times. Only the tens digit changes.",
+    "explain": "{a}, {=a-10}, {=a-20}, {=a-30}. So {a} − 30 = {=a-30}.",
+    "params": {
+     "a": [41, 99]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A line goes from 0 to {a}. A ribbon covers all of it. It touches {=a+1} tick marks. How long is the ribbon?",
+    "answer": "a",
+    "hint": "There is always one more tick mark than spaces. Count the spaces.",
+    "explain": "The ribbon covers {a} spaces, so it is {a} long. The extra tick is the 0 mark at the start.",
+    "params": {
+     "a": [4, 15]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ben counts the marks on a ribbon from 0 to 7 and says it is 8 long. What went wrong?",
+    "choices": ["He counted marks, not spaces", "Nothing, it is 8 long", "He should start at 1"],
+    "answer": 0,
+    "hint": "Touch each space from 0 to 7. How many are there?",
+    "explain": "From 0 to 7 there are 7 spaces and 8 marks. Ben counted the marks, so his answer is one too big."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "45 + 30 on a number line. Where does the frog land?",
+    "choices": ["75", "48", "55"],
+    "answer": 0,
+    "hint": "30 is 3 tens. Jump 10 three times.",
+    "explain": "45, 55, 65, 75. Three jumps of 10, so 45 + 30 = 75. 48 adds 3 ones, and 55 is only one jump."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which jumps show 54 + 23?",
+    "choices": ["54, 64, 74, then 3 more to 77", "54, 44, 34, then 3 less to 31", "54, 55, 56, then stop"],
+    "answer": 0,
+    "hint": "Add means jump right. 23 is 2 tens and 3 ones.",
+    "explain": "Jump right 2 tens to 74, then 3 ones to 77. So 54 + 23 = 77."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "On a line from 60 to 70, where is 68?",
+    "choices": ["2 spaces before 70", "8 spaces after 70", "2 spaces after 60"],
+    "answer": 0,
+    "hint": "68 is 8 spaces after 60. Is that closer to 60 or to 70?",
+    "explain": "68 is 8 spaces after 60, which is the same as 2 spaces before 70."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "What number is at the start of a number line that measures lengths?",
+    "choices": ["0", "1", "10"],
+    "answer": 0,
+    "hint": "A ruler starts with a mark before the first space.",
+    "explain": "Lengths are measured from 0. The first space ends at 1, so 1 is one space from the start."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A frog starts on 80 and jumps left 10, then left 6. Which sum is that?",
+    "choices": ["80 − 16 = 64", "80 + 16 = 96", "80 − 16 = 74"],
+    "answer": 0,
+    "hint": "Left jumps take away. Add up the jumps: 10 and 6.",
+    "explain": "Jumping left 10 and 6 takes away 16: 80, 70, then 6 back to 64."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Mia works out 52 − 30 by jumping right 3 tens. What is her mistake?",
+    "choices": ["Take away jumps go left", "She should jump 30 ones", "Nothing, 82 is right"],
+    "answer": 0,
+    "hint": "Should the answer be bigger or smaller than 52?",
+    "explain": "Take away jumps go left, towards 0: 52, 42, 32, 22. So 52 − 30 = 22, not 82."
+   }
+  ]
+ }
+}
