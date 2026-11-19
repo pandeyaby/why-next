@@ -1,0 +1,189 @@
+{
+ "topicId": "mt_OzRZ89GrQW",
+ "title": "Estimating lengths",
+ "audience": "family",
+ "keyIdea": "To estimate a length, start from a length you already know: a fingertip is about 1 cm wide, a school ruler is 30 cm, a door handle is about 1 m from the floor and a door is about 2 m tall. Picture that length laid again and again along the thing, count, and times by its size. Check that the unit makes sense. A good estimate is close, not exact, and measuring checks it.",
+ "familyTip": "Play 'guess then check' at home. Each of you estimates the length of a spoon, a table or a sofa, then measure it with a ruler or tape. Whoever is closest wins the round. Say which known length you used: 'it's about 3 rulers'.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it shorter or longer than 1 metre? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Shorter than 1 m",
+    "Longer than 1 m"
+   ],
+   "items": [
+    ["A pencil", 0],
+    ["A bed", 1],
+    ["A shoe", 0],
+    ["A car", 1],
+    ["A book", 0],
+    ["A bus", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagestlen",
+  "caption": "Flagship lab: match lengths you know, pick estimates with the right unit, lay rulers along things, estimate then measure, check a robot.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "To estimate means to work out about how long something is, without measuring. A good estimate starts from a length you know.",
+   "Learn some lengths by heart. A fingertip is about 1 cm wide. A school ruler is 30 cm long. From the floor to a door handle is about 1 m. A door is about 2 m tall.",
+   "Picture a ruler laid along a table, again and again. If 4 rulers fit, count in 30s: 30, 60, 90, 120. The table is about 120 cm long.",
+   "Check the unit. A pencil is about 15 cm, not 15 m. Then measure to see how close you were. Close is good. It does not need to be exact."
+  ],
+  "adult": [
+   "Ages 7 to 8. Children estimate lengths in centimetres and metres (in the US, also inches and feet: a ruler is 12 inches, or 1 foot). Key words: estimate, measure, benchmark, about, roughly, centimetre (cm), metre (m), close to.",
+   "The method is to iterate a known benchmark: picture the benchmark laid end to end along the object, count, then multiply by the benchmark's length. Children who practise estimating then checking build a sense of how long 1 cm, 30 cm and 1 m really are.",
+   "A common mistake is to give the count instead of the length: 4 rulers becomes '4 cm'. Another is choosing the wrong unit, such as a pencil 15 m long. Children also think an estimate is a wild guess, or that an estimate is wrong unless it is exact. Praise estimates that are close and ask which known length they used.",
+   "In the lab your child matches four benchmark lengths to things, picks the estimate with a sensible unit, taps to lay rulers, paper clips or metre sticks along an object and turns the count into a length, drags a marker to estimate on a tape and then measures, and checks a robot that says a door is 2 cm tall."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A table is about {a} rulers long. Each ruler is 30 cm. About how long is the table, in cm?",
+   "answer": "30*a",
+   "hint": "Count in 30s, once for each ruler.",
+   "explain": "{a} × 30 = {=30*a}. The table is about {=30*a} cm long.",
+   "params": {
+    "a": [2, 6]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Leo guessed a rope was {=10*a} cm long. He measured it: {=10*a+10} cm. How many cm off was his estimate?",
+   "answer": "10",
+   "hint": "Find the difference between the guess and the real length.",
+   "explain": "{=10*a+10} − {=10*a} = 10. He was only 10 cm off: a close estimate.",
+   "params": {
+    "a": [5, 15]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "About how long is a pencil?",
+   "choices": ["About 15 cm", "About 15 m", "About 1 cm"],
+   "answer": 0,
+   "hint": "A pencil is about half as long as a 30 cm ruler.",
+   "explain": "Half a 30 cm ruler is 15 cm, so a pencil is about 15 cm. 15 m is longer than a bus."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which is about 1 m?",
+   "choices": ["From the floor to a door handle", "The width of a fingertip", "A school ruler"],
+   "answer": 0,
+   "hint": "1 m is 100 cm. A ruler is only 30 cm.",
+   "explain": "A door handle is about 1 m up from the floor. A fingertip is about 1 cm and a ruler is 30 cm."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A bench is 3 metre sticks long. Ana says it is about 3 cm. What did she forget?",
+   "choices": ["Each stick is 1 m, so it is about 3 m", "Nothing, she is right", "She should count in 30s"],
+   "answer": 0,
+   "hint": "3 is how many sticks. How long is each stick?",
+   "explain": "Each metre stick is 1 m long, so 3 of them make about 3 m, not 3 cm."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A pencil case is about {a} paper clips long. Each paper clip is about 3 cm. About how long is it, in cm?",
+    "answer": "3*a",
+    "hint": "Count in 3s, once for each paper clip.",
+    "explain": "{a} × 3 = {=3*a}. The pencil case is about {=3*a} cm long.",
+    "params": {
+     "a": [3, 8]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A wall is about {a} doors wide. Each door is about 1 m wide. About how wide is the wall, in m?",
+    "answer": "a",
+    "hint": "Each door is 1 m, so count the doors.",
+    "explain": "{a} doors of 1 m each make about {a} m.",
+    "params": {
+     "a": [2, 9]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "About how tall is a classroom door?",
+    "choices": ["About 2 m", "About 2 cm", "About 20 m"],
+    "answer": 0,
+    "hint": "A tall grown-up can just walk through it.",
+    "explain": "A door is about 2 m tall. 2 cm is two fingertips and 20 m is ten doors high."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mia estimated a rug was 2 m. She measured 190 cm. Was it a good estimate?",
+    "choices": ["Yes, it was close", "No, it was not exact", "No, you should never estimate"],
+    "answer": 0,
+    "hint": "2 m is 200 cm. How far is 190 from 200?",
+    "explain": "200 − 190 = 10 cm. Only 10 cm off is a close, good estimate."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What is the best way to estimate how long a sofa is?",
+    "choices": ["Picture metre sticks along it and count", "Say any number", "Guess in cm without looking"],
+    "answer": 0,
+    "hint": "A good estimate starts from a length you know.",
+    "explain": "Picture a length you know, like a 1 m stick, along the sofa, count, and you get a close estimate."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is about 1 cm wide?",
+    "choices": ["A fingertip", "A door", "A table"],
+    "answer": 0,
+    "hint": "1 cm is very small: smaller than a coin.",
+    "explain": "A fingertip is about 1 cm wide, so it is a handy way to picture 1 cm."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which estimate for a teaspoon makes sense?",
+    "choices": ["About 13 cm", "About 13 m", "About 1 m"],
+    "answer": 0,
+    "hint": "A teaspoon fits in your hand. Is that cm or m?",
+    "explain": "A teaspoon is less than half a ruler: about 13 cm. 13 m is longer than a classroom."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A desk is 3 rulers long. Each ruler is 30 cm. Which estimate is right?",
+    "choices": ["About 90 cm", "About 3 cm", "About 30 cm"],
+    "answer": 0,
+    "hint": "Count in 30s three times.",
+    "explain": "30, 60, 90. Three rulers make about 90 cm. 3 is the count, and 30 cm is just one ruler."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why should you measure after you estimate?",
+    "choices": ["To check how close you were", "Because estimates are always wrong", "To make the thing longer"],
+    "answer": 0,
+    "hint": "Measuring tells you the real length.",
+    "explain": "Measuring checks your estimate, and each check helps you estimate better next time."
+   }
+  ]
+ }
+}
