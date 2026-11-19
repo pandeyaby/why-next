@@ -1,0 +1,252 @@
+{
+ "topicId": "mt_dSeFrAWE4v",
+ "title": "Active, Dormant & Extinct",
+ "audience": "family",
+ "keyIdea": "Volcanoes are sorted by how likely they are to erupt again. An active volcano is erupting now, erupted recently, or shows warning signs such as small earthquakes and new gas. A dormant volcano has not erupted for a long time but still has magma below and could wake up. An extinct volcano is not expected to erupt again because its magma supply has gone. A long quiet spell does not make a volcano extinct or safe.",
+ "familyTip": "Look up a volcano together, such as Mount Etna, Mount Pinatubo or Arthur's Seat in Edinburgh. Find when it last erupted and whether there is magma below, then decide: active, dormant or extinct? Talk about why people near a dormant volcano still listen to scientists.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Active, dormant or extinct? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Active",
+    "Dormant",
+    "Extinct"
+   ],
+   "items": [
+    [
+     "Lava flowing now",
+     0
+    ],
+    [
+     "Small earthquakes and new gas",
+     0
+    ],
+    [
+     "Quiet 800 years, magma below",
+     1
+    ],
+    [
+     "Asleep, but could wake",
+     1
+    ],
+    [
+     "No magma for millions of years",
+     2
+    ],
+    [
+     "Worn down to a grassy hill",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagvolcst",
+  "caption": "Flagship lab: sort volcano clues, watch Pinatubo wake in 1991, slide a plate off a hot spot, spot slips, look under hills.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Some volcanoes are awake, some are asleep, and some will never erupt again. Scientists use three words for this.",
+   "Active means it is erupting now, or it erupted not long ago, or it shows signs. Signs are small shakes and new gas.",
+   "Dormant means asleep. It has been quiet a long time, but there is still hot magma under it. It could wake up. Mount Pinatubo slept about 500 years, then erupted in 1991.",
+   "Extinct means the magma has gone for good. It will not erupt again. Arthur's Seat in Edinburgh is an extinct volcano."
+  ],
+  "adult": [
+   "Ages 7 to 9, Key Stage 2 Geography (physical geography: volcanoes and earthquakes). Children should define active, dormant and extinct, explain that a dormant volcano is not safe just because it has been quiet, and classify a volcano from its eruption history. Key words: active, dormant, extinct, magma, eruption, warning signs.",
+   "These are the school definitions used by BBC Bitesize. Volcanologists such as the USGS usually call any volcano that has erupted in roughly the last 10,000 years active, so many volcanoes that schools call dormant count as active to scientists. That is the real reason a dormant volcano is not safe: it still has a magma supply.",
+   "The most common mistake is thinking a volcano is extinct because nobody alive has seen it erupt. Be careful: Pinatubo had been quiet for about 500 years before 1991. Another slip is thinking dormant means safe, and a third is judging by looks, since an old cone covered in grass can still have magma below.",
+   "In the lab your child sorts clue cards, watches Pinatubo wake month by month in 1991 and logs the warning signs, slides a plate over the Hawaiian hot spot so volcanoes lose their magma, checks a robot's claims, and looks under three hills that look the same."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "A volcano last erupted {=a*100} years ago. Hot magma is still under it. Is it active, dormant or extinct?",
+   "choices": [
+    "Dormant",
+    "Extinct",
+    "Active"
+   ],
+   "answer": 0,
+   "hint": "It is quiet now, but is the magma still there?",
+   "explain": "Quiet for {=a*100} years but with magma below, it could still erupt: dormant. Extinct needs the magma to be gone.",
+   "params": {
+    "a": [
+     3,
+     9
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Pinatubo was quiet for about 500 years before it erupted in 1991. About what year did its quiet time begin?",
+   "answer": 1491,
+   "hint": "Count back 500 years from 1991: take 500 away from 1991.",
+   "explain": "1991 − 500 = 1491. It was asleep for about 500 years, so it was dormant, not extinct."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A volcano erupted in {y} and is still showing gas today, in 2026. How many years ago did it erupt?",
+   "answer": "2026-y",
+   "hint": "Take the eruption year away from 2026.",
+   "explain": "2026 − {y} = {=2026-y} years ago. A recent eruption with gas still coming out means active.",
+   "params": {
+    "y": [
+     1980,
+     2020
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A quiet volcano starts to shake with small earthquakes and gives off more gas. What does this tell you?",
+   "choices": [
+    "Magma may be rising: it could erupt",
+    "Nothing, it is quiet",
+    "It is now extinct"
+   ],
+   "answer": 0,
+   "hint": "Think about what was happening at Pinatubo in early 1991.",
+   "explain": "Small earthquakes and new gas are warning signs that magma is moving. Pinatubo showed both before its 1991 eruption."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which volcano is extinct?",
+   "choices": [
+    "One with no magma left for millions of years",
+    "One that has slept for 500 years",
+    "One giving off gas"
+   ],
+   "answer": 0,
+   "hint": "Extinct means it is not expected to erupt again.",
+   "explain": "Extinct means the magma supply has gone for good. A 500-year sleeper can wake, and gas is a sign of activity."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does dormant mean for a volcano?",
+    "choices": [
+     "Asleep: quiet a long time but could erupt",
+     "Dead: it will never erupt",
+     "Erupting right now"
+    ],
+    "answer": 0,
+    "hint": "Think of the word sleeping.",
+    "explain": "Dormant means sleeping. It has been quiet a long time but still has magma, so it could wake."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sam says: 'Nobody has seen it erupt in my whole life, so it is extinct.' What is wrong?",
+    "choices": [
+     "Volcanoes can be quiet for hundreds of years",
+     "Nothing, Sam is right",
+     "Only small volcanoes go extinct"
+    ],
+    "answer": 0,
+    "hint": "How long was Pinatubo quiet before 1991?",
+    "explain": "A human life is short. Pinatubo was quiet for about 500 years and still erupted. A long quiet time can mean dormant."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Is it safe to build a town right next to a dormant volcano?",
+    "choices": [
+     "No, it could erupt again",
+     "Yes, it is asleep",
+     "Yes, if it is green"
+    ],
+    "answer": 0,
+    "hint": "Dormant volcanoes still have magma.",
+    "explain": "A dormant volcano still has a magma supply and can wake up, so people near it need warnings and plans."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Lava is pouring out of a volcano today. What is it?",
+    "choices": [
+     "Active",
+     "Dormant",
+     "Extinct"
+    ],
+    "answer": 0,
+    "hint": "Is it erupting right now, or quiet?",
+    "explain": "A volcano that is erupting now is active."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Arthur's Seat in Edinburgh last erupted about 350 million years ago and has no magma. What is it?",
+    "choices": [
+     "Extinct",
+     "Dormant",
+     "Active"
+    ],
+    "answer": 0,
+    "hint": "Is the magma supply still there?",
+    "explain": "With no magma for about 350 million years, it is not expected to erupt again: extinct."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A volcano has been quiet for {=a*1000} years, but scientists find a big pool of magma under it. What is it?",
+    "choices": [
+     "Dormant",
+     "Extinct",
+     "Active"
+    ],
+    "answer": 0,
+    "hint": "Quiet now, but is the magma gone?",
+    "explain": "Quiet for {=a*1000} years with magma below means it could still wake up: dormant.",
+    "params": {
+     "a": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Volcano A last erupted about {=a*500} years ago and still has magma below. Volcano B erupted last year. How many years longer has Volcano A been quiet?",
+    "answer": "a*500-1",
+    "hint": "Take Volcano B's 1 year away from Volcano A's years.",
+    "explain": "{=a*500} − 1 = {=a*500-1} years. Volcano B is active. Volcano A has been quiet much longer but still has magma, so it is dormant.",
+    "params": {
+     "a": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Two grassy hills look the same. How can scientists tell if one is extinct?",
+    "choices": [
+     "Check for magma below and when it last erupted",
+     "By how green it is",
+     "By how tall it is"
+    ],
+    "answer": 0,
+    "hint": "Looks do not tell you what is underneath.",
+    "explain": "Scientists use the eruption record and measurements of what is below, not how the hill looks."
+   }
+  ]
+ }
+}
