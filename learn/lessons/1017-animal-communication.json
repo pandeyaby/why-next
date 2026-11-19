@@ -1,0 +1,190 @@
+{
+ "topicId": "mt_wHN14Unk7h",
+ "title": "Animal communication",
+ "audience": "family",
+ "keyIdea": "Animals send messages to each other with sound, light, movement and smell. A robin sings, a firefly flashes, a honeybee dances and an ant leaves a smell trail. Each message has a job: to find a mate, warn of danger, show where food is or bring the group together. Messages are not random noise, and some animals have a different call for each danger.",
+ "familyTip": "Go outside for five quiet minutes and list every animal message you notice: a bird singing, a dog barking, a cat flicking its tail. For each one, ask two questions: how was it sent, and what was it for? At night in summer, look for flashing fireflies or glow-worms.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Can you hear this message? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "You can hear it",
+    "You cannot hear it"
+   ],
+   "items": [
+    ["A robin's song", 0],
+    ["A firefly's flash", 1],
+    ["A wolf's howl", 0],
+    ["A honeybee's dance", 1],
+    ["A whale's song", 0],
+    ["An ant's smell trail", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcalls",
+  "caption": "Flagship lab: sort messages by how they travel, match each to its job, decode firefly flashes, answer vervet alarm calls, check a robot.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Animals talk to each other, but not always with sounds. A robin sings. A firefly flashes a light. A honeybee does a dance. An ant leaves a smell on the ground for the others to follow.",
+   "Every message has a job. It can help an animal find a mate, warn of danger, show where food is, or bring the group back together. Wolves howl so the pack can find each other.",
+   "Each kind of firefly has its own flash code. A female only flashes back to a male of her own kind. That is how they find each other in the dark.",
+   "Vervet monkeys have a different alarm call for each hunter. For a leopard, they climb a tree. For an eagle, they hide in a bush. For a snake, they stand up and look at the ground."
+  ],
+  "adult": [
+   "Ages 7 to 9. Children learn that animals communicate in many ways: sound (birdsong, howls, whale song), light (firefly flashes), movement and body language (the honeybee waggle dance, a cat arching its back) and chemical signals (ant trail pheromones). Key words: signal, communicate, alarm call, mate, territory, pheromone, waggle dance.",
+   "A common mistake is thinking communication needs a voice, so children leave out light, dance and smell. Another is believing a bee's buzz tells others where food is: the buzz is wing noise, and the direction and distance are coded in the waggle dance. Children also think animal sounds are random; ask what each signal makes the other animal do.",
+   "Some signals carry precise meaning. Vervet monkeys give different alarm calls for leopards, eagles and snakes, and the others respond in the way that suits each predator. Each firefly species has its own male flash pattern, so females answer only their own kind.",
+   "In the lab your child sorts six senders by sound, light, movement or smell, matches four messages to their jobs, counts firefly flashes to name a male's kind, chooses the vervet escape for each alarm call, and checks a robot that says bees buzz directions and that only animals with voices communicate."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Kind B fireflies flash {a} quick flashes as their code. A male flashes his code twice. How many flashes do you see?",
+   "answer": "2*a",
+   "hint": "He flashes the same code two times. Add the code to itself.",
+   "explain": "{a} + {a} = {=2*a}. He flashed {=2*a} times: his code twice.",
+   "params": {
+    "a": [2, 5]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A firefly flashed {=3*a} times. His code is 3 quick flashes. How many times did he flash his code?",
+   "answer": "a",
+   "hint": "Count in groups of 3 until you reach {=3*a}.",
+   "explain": "{=3*a} flashes in groups of 3 is {a} codes.",
+   "params": {
+    "a": [2, 6]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "How does a honeybee show other bees where food is?",
+   "choices": ["It does a waggle dance", "It buzzes the way", "It sings to them"],
+   "answer": 0,
+   "hint": "The buzz is just wing noise. What does the bee do with its body?",
+   "explain": "A honeybee does a waggle dance. The dance shows which way the flowers are and how far."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Ants find food that one ant found first. How?",
+   "choices": ["They follow its smell trail", "They hear it call them", "They find it by luck"],
+   "answer": 0,
+   "hint": "Ants leave something on the ground as they walk home.",
+   "explain": "The first ant leaves a smell trail on the way home. The others follow the smell to the food."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A vervet monkey hears the eagle alarm call. What should it do?",
+   "choices": ["Hide in a bush", "Climb to the top of a tree", "Stand up and look at the ground"],
+   "answer": 0,
+   "hint": "Where does an eagle attack from?",
+   "explain": "An eagle swoops from the sky and can grab a monkey from a treetop, so vervets hide in a bush."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "{a} wolves are apart from the pack. They howl, and {b} more wolves howl back. How many wolves are howling?",
+    "answer": "a+b",
+    "hint": "Add the wolves that howled first and the ones that answered.",
+    "explain": "{a} + {b} = {=a+b} wolves howling to bring the pack together.",
+    "params": {
+     "a": [2, 6],
+     "b": [2, 7]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Kind C fireflies flash 3 times as their code. A male flashes his code {a} times. How many flashes is that?",
+    "answer": "3*a",
+    "hint": "Count in 3s, once for each code.",
+    "explain": "{a} codes of 3 flashes is {=3*a} flashes.",
+    "params": {
+     "a": [2, 6]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which animal sends a message with no sound at all?",
+    "choices": ["A firefly", "A wolf", "A robin"],
+    "answer": 0,
+    "hint": "Two of these make a noise you can hear. Which one uses light instead?",
+    "explain": "A firefly flashes a light from its tail. Wolves howl and robins sing, which are both sounds."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A meerkat on guard sees a hawk and calls out. What job does the call do?",
+    "choices": ["Warn of danger", "Show where food is", "Find a mate"],
+    "answer": 0,
+    "hint": "A hawk hunts meerkats. What do the others need to know?",
+    "explain": "The call warns the group of danger, and the meerkats run to their burrows."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why does a female firefly flash back to one male but not another?",
+    "choices": ["His code matches her kind", "She answers any flash", "She picks one at random"],
+    "answer": 0,
+    "hint": "Each kind of firefly has its own pattern.",
+    "explain": "Each kind has its own flash code. She answers the male whose code matches her own kind."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Do vervet monkeys use one alarm call for every danger?",
+    "choices": ["No, a different call for each hunter", "Yes, one call means run", "They never warn each other"],
+    "answer": 0,
+    "hint": "Think about leopards, eagles and snakes.",
+    "explain": "Vervets have different calls for leopards, eagles and snakes, and each call needs a different escape."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A cat arches its back and puffs up its fur. What is it saying?",
+    "choices": ["Keep away from me", "Come and play", "Nothing, it is just stretching"],
+    "answer": 0,
+    "hint": "The cat is making itself look bigger.",
+    "explain": "Puffed fur and an arched back make the cat look big. It is a warning: keep away."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Ella says only animals with a voice can send messages. What is wrong?",
+    "choices": ["Light, dances and smells are messages too", "Nothing, she is right", "Only birds send messages"],
+    "answer": 0,
+    "hint": "Think of a firefly, a honeybee and an ant.",
+    "explain": "Fireflies use light, bees dance and ants leave smell trails. None of them needs a voice."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why can whales send songs a long way?",
+    "choices": ["Sound travels well in water", "Water carries light far", "Whales shout louder than all animals"],
+    "answer": 0,
+    "hint": "Is a whale song a sound or a light?",
+    "explain": "A whale song is a sound, and sound travels well in water, so it can be heard many kilometres away."
+   }
+  ]
+ }
+}
