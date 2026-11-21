@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_rud1CH5YqZ",
+ "title": "Borrowing and looking after other people's things",
+ "audience": "family",
+ "keyIdea": "Borrowing means using something that belongs to someone else and giving it back. Ask first, and if the owner says no or not now, that is their choice. Look after it with gentle hands, give it back when they ask or when you finish, and if it gets damaged, tell them, say sorry and help put it right.",
+ "familyTip": "Let your child lend you something of theirs, like a crayon, and model it: ask, say thank you, look after it and give it back. When something of theirs gets broken by a friend, talk about how it felt when the friend told them and said sorry.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Looks after it, or could spoil it? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Looks after it",
+    "Could spoil it"
+   ],
+   "items": [
+    [
+     "Keep it away from juice",
+     0
+    ],
+    [
+     "Leave it out in the rain",
+     1
+    ],
+    [
+     "Hold it with gentle hands",
+     0
+    ],
+    [
+     "Throw it across the room",
+     1
+    ],
+    [
+     "Give it back when asked",
+     0
+    ],
+    [
+     "Lend it to someone else without asking",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagborrow",
+  "caption": "Flagship lab: ask three friends and answer kindly, carry a borrowed book round spills, give things back to their owners, and fix a snapped crayon honestly.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "This is Mia's toy. You want a go. Ask first: can I borrow it, please?",
+   "Mia can say yes. She can say not now, or no. It is her toy, so it is her choice. Say OK.",
+   "Use gentle hands. Keep it away from juice and mud. Give it back when Mia asks, or when you finish.",
+   "If it breaks, do not hide it. Tell Mia. Say sorry. Help fix it, or ask a grown-up."
+  ],
+  "adult": [
+   "Ages 4 to 5. In the EYFS, Development Matters (2021) asks 3 and 4 year olds to find solutions to conflicts and to begin to understand how others might be feeling. The Early Learning Goals ask children to work and play with others and take turns (Building Relationships), and to know right from wrong and try to act on it (Managing Self). Key words: borrow, lend, owner, ask, give back, sorry.",
+   "Borrowing has four parts: ask first; accept the answer, because the owner decides; look after it; and give it back to the right person when asked or when finished. If it gets damaged, the owner should hear it from the borrower, with a sorry and an offer to help.",
+   "Common mistakes: taking without asking; thinking that saying please means the owner must say yes; keeping it until they have finished, even when the owner asks; careless use near water, paint or food; and hiding damage or saying nothing. Be careful not to punish honest telling. Thank your child for telling you, then help put it right.",
+   "In the lab your child asks three friends and gets a yes, a not now and a no, carries a borrowed book round juice, paint, a puppy and sand, gives a car, ball and book back to the owners on their stickers, picks what to do when a borrowed crayon snaps, and imagines lending their own truck."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You want to play with Sam's bucket. What do you do first?",
+   "choices": [
+    "Ask Sam",
+    "Take it while he is not looking",
+    "Hide it in your bag"
+   ],
+   "answer": 0,
+   "hint": "Whose bucket is it, and what do we say first?",
+   "explain": "It is Sam's bucket, so you ask first: can I borrow it, please?"
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You borrowed {n} crayons from Mia. You give {k} back. How many crayons do you still need to give back?",
+   "answer": "n-k",
+   "hint": "Start at {n} and take away the {k} you gave back.",
+   "explain": "{n} take away {k} leaves {=n-k} crayons still to give back to Mia.",
+   "params": {
+    "n": [
+     5,
+     9
+    ],
+    "k": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You asked nicely, but Leo says no. What do you do?",
+   "choices": [
+    "Say OK and find something else",
+    "Take it anyway",
+    "Shout at Leo"
+   ],
+   "answer": 0,
+   "hint": "Whose toy is it? Who gets to choose?",
+   "explain": "It is Leo's toy, so it is his choice. Say OK and play with something else."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} friends each lent you 2 stickers. How many stickers do you need to give back?",
+   "answer": "2*n",
+   "hint": "Count 2 stickers for each friend.",
+   "explain": "2 stickers for each of {n} friends makes {=2*n} stickers to give back.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You borrowed a book. Where should your drink go?",
+   "choices": [
+    "Away from the book",
+    "Next to the book",
+    "On top of the book"
+   ],
+   "answer": 0,
+   "hint": "What could happen if the drink spills?",
+   "explain": "A spill would make the pages wet and sticky, so keep drinks away from borrowed books."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Sam asks for his ball back, but you have not finished. What do you do?",
+    "choices": [
+     "Give it back now",
+     "Keep it until you finish",
+     "Hide it so he forgets"
+    ],
+    "answer": 0,
+    "hint": "Whose ball is it? He has asked for it.",
+    "explain": "It is Sam's ball. When the owner asks, give it back straight away."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The book you borrowed got a rip. What do you do?",
+    "choices": [
+     "Tell the owner and say sorry",
+     "Put it back and say nothing",
+     "Say it was like that before"
+    ],
+    "answer": 0,
+    "hint": "What would you want a friend to do with your book?",
+    "explain": "Tell the owner what happened, say sorry, and help fix it or ask a grown-up."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mia says: not now, I am using it. What does that mean?",
+    "choices": [
+     "Wait, and ask again later",
+     "She will never share",
+     "Take it now"
+    ],
+    "answer": 0,
+    "hint": "Not now is different from no.",
+    "explain": "Not now means Mia is still using it. Wait, and you may get a turn after her."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which is looking after a borrowed teddy?",
+    "choices": [
+     "Holding it with gentle hands",
+     "Throwing it up high",
+     "Leaving it in the garden"
+    ],
+    "answer": 0,
+    "hint": "Which one keeps teddy safe and clean?",
+    "explain": "Gentle hands keep teddy safe, so it goes back to the owner just as it came."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You borrowed {n} blocks. {k} are still on the floor. How many have you put back?",
+    "answer": "n-k",
+    "hint": "Take the blocks on the floor away from all the blocks.",
+    "explain": "{n} blocks take away the {k} on the floor means {=n-k} are back.",
+    "params": {
+     "n": [
+      6,
+      10
+     ],
+     "k": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You finished with Leo's car. Who do you give it to?",
+    "choices": [
+     "Leo",
+     "The next person who wants it",
+     "Nobody, keep it"
+    ],
+    "answer": 0,
+    "hint": "Who does the car belong to?",
+    "explain": "It belongs to Leo, so it goes back to Leo. He can choose who has it next."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "{n} friends lent you a pencil each. You gave back {k}. How many pencils are still to go back?",
+    "answer": "n-k",
+    "hint": "Start with {n} pencils and take away {k}.",
+    "explain": "{n} take away {k} leaves {=n-k} pencils to give back.",
+    "params": {
+     "n": [
+      4,
+      8
+     ],
+     "k": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Pip borrowed your truck, broke it, then told you and said sorry. How might you feel?",
+    "choices": [
+     "Sad about the truck, but glad Pip told me",
+     "Happy it broke",
+     "Nothing at all"
+    ],
+    "answer": 0,
+    "hint": "Think of the truck, and think of Pip telling you.",
+    "explain": "It is sad when a toy breaks, but being told the truth and hearing sorry helps you trust Pip."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Can you lend Mia's scooter to Leo?",
+    "choices": [
+     "No, ask Mia first",
+     "Yes, I am borrowing it",
+     "Yes, if Leo says please"
+    ],
+    "answer": 0,
+    "hint": "Who decides what happens to the scooter?",
+    "explain": "It is Mia's scooter, so only Mia can say who borrows it."
+   }
+  ]
+ }
+}
