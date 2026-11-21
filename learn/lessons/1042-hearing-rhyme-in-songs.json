@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_dJ2_mH80Lf",
+ "title": "Hearing rhyme in songs",
+ "audience": "family",
+ "keyIdea": "Some words in a song sound the same at the end, like star and are, or dock and clock. That is a rhyme. Rhymes often come at the end of a line, so you can wait for them and join in. A rhyme is about sound: moon and milk start the same, but they do not rhyme.",
+ "familyTip": "Sing a song your child knows well and stop just before the last rhyming word, like 'the mouse ran up the …'. Wait, smile and let them shout it out. Clap or bounce on the rhyming words together.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Same at the end, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Same at the end",
+    "Not the same"
+   ],
+   "items": [
+    [
+     "star and car",
+     0
+    ],
+    [
+     "moon and milk",
+     1
+    ],
+    [
+     "dock and clock",
+     0
+    ],
+    [
+     "bed and bell",
+     1
+    ],
+    [
+     "two and shoe",
+     0
+    ],
+    [
+     "cat and dog",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsongrhyme",
+  "caption": "Flagship lab: clap on the rhyme in Twinkle, twinkle, fill a paused song, judge same or not, and find the rhyming pair.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Sing Twinkle, twinkle. Star. Are. They sound the same at the end. That is a rhyme.",
+   "Rhymes come at the end of a line. Wait for it. Then sing it out, or clap!",
+   "Moon and milk start the same. But the ends are not the same. So they do not rhyme.",
+   "Dock, clock. Two, shoe. Moon, spoon. Say them. Can you hear the same end?"
+  ],
+  "adult": [
+   "Ages 2 to 3. In the EYFS, Development Matters (2021) lists enjoying singing, music and toys that make sounds, and singing songs and saying rhymes, for birth to three. Letters and Sounds Phase 1, Aspect 5 (rhythm and rhyme), starts here: first children hear and enjoy rhyme in songs, and only later, at about 3 to 4, do they spot and suggest rhymes themselves. Key words: rhyme, the same at the end, line, join in.",
+   "A rhyme is two words whose ending sounds match from the vowel onwards: st-ar and c-ar. Spelling does not matter, so are and star rhyme. In nursery rhymes the rhyming words usually sit at the end of a line, which is why a pause there works so well.",
+   "Common mistakes: choosing a word that fits the meaning instead of the sound (the dish ran away with the cup); thinking words that start the same rhyme (moon and milk); hearing close endings as the same (bed and bell); and joining in on every word. Be careful not to quiz a two-year-old with odd-one-out tasks yet. Pause, wait and enjoy the joining in.",
+   "In the lab your child taps Hop through Twinkle, twinkle and Clap on star and are, drags the right picture into the gap at the end of three songs, judges five word pairs as the same or not the same at the end, and taps the rhyming pair in Humpty Dumpty, Incy Wincy and Baa, Baa, Black Sheep."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Hickory, dickory, dock. The mouse ran up the …",
+   "choices": [
+    "clock",
+    "dog",
+    "cheese"
+   ],
+   "answer": 0,
+   "hint": "Say dock. Which word sounds the same at the end?",
+   "explain": "Dock and clock sound the same at the end, so clock is the rhyme. Dog only starts like dock."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You sing {n} songs. Each song has 2 rhyming words that you clap on. How many claps is that?",
+   "answer": "2*n",
+   "hint": "Count 2 claps for each song you sing.",
+   "explain": "2 claps in each of {n} songs makes {=2*n} claps.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Do moon and milk sound the same at the end?",
+   "choices": [
+    "No",
+    "Yes, they both start with m",
+    "Yes, they are both white"
+   ],
+   "answer": 0,
+   "hint": "Do not listen to the start. Listen to the very end.",
+   "explain": "Moon and milk start the same, but the ends sound different, so they do not rhyme. Moon rhymes with spoon."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In one song you clap on the rhyme {n} times. In the next song you clap {k} times. How many claps in all?",
+   "answer": "n+k",
+   "hint": "Start at {n} and count on {k} more claps.",
+   "explain": "{n} claps and then {k} more makes {=n+k} claps.",
+   "params": {
+    "n": [
+     1,
+     4
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "In Twinkle, twinkle, where do the rhyming words star and are come?",
+   "choices": [
+    "At the end of each line",
+    "At the start of each line",
+    "In the middle"
+   ],
+   "answer": 0,
+   "hint": "Sing it and listen to the last word of each line.",
+   "explain": "Star ends line 1 and are ends line 2. Rhymes in songs often come at the end of a line."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "One, two, buckle my …",
+    "choices": [
+     "shoe",
+     "coat",
+     "toes"
+    ],
+    "answer": 0,
+    "hint": "Say two. Which word has the same end sound?",
+    "explain": "Two and shoe sound the same at the end. A coat fits the meaning, and toes starts like two, but neither rhymes."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The cow jumped over the moon. The dish ran away with the …",
+    "choices": [
+     "spoon",
+     "cup",
+     "mouse"
+    ],
+    "answer": 0,
+    "hint": "Which word sounds like moon at the end?",
+    "explain": "Moon and spoon rhyme. A cup goes with a dish, but it does not sound like moon."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Do star and car sound the same at the end?",
+    "choices": [
+     "Yes",
+     "No, they start differently",
+     "No, a star is not a car"
+    ],
+    "answer": 0,
+    "hint": "Say them slowly and listen to the end: st-ar, c-ar.",
+    "explain": "Star and car have the same end sound, so they rhyme, even though they start differently."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Bed and bell: do they sound the same at the end?",
+    "choices": [
+     "No",
+     "Yes, they sound close",
+     "Yes, they both start with b"
+    ],
+    "answer": 0,
+    "hint": "Close is not the same. Listen to the very last sound.",
+    "explain": "Bed ends in a d sound and bell ends in an l sound, so they do not rhyme."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Humpty Dumpty sat on a wall. Which word rhymes with wall in the next line?",
+    "choices": [
+     "fall",
+     "Humpty",
+     "great"
+    ],
+    "answer": 0,
+    "hint": "Sing the next line and listen to its last word.",
+    "explain": "Humpty Dumpty had a great fall. Wall and fall sound the same at the end, both at the end of a line."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "When do you clap in the frog song?",
+    "choices": [
+     "On the rhyming words",
+     "On every word",
+     "On the first word"
+    ],
+    "answer": 0,
+    "hint": "Clap on the words that sound the same at the end.",
+    "explain": "You hop on most words and clap on star and are, the two words that rhyme."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A song has {n} pairs of rhyming words. How many rhyming words is that?",
+    "answer": "2*n",
+    "hint": "A pair is 2 words. Count 2 for each pair.",
+    "explain": "{n} pairs of 2 words makes {=2*n} rhyming words.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Incy Wincy spider climbed up the water spout. Down came the rain and washed the spider …",
+    "choices": [
+     "out",
+     "wet",
+     "down"
+    ],
+    "answer": 0,
+    "hint": "Which word sounds like spout at the end?",
+    "explain": "Spout and out rhyme. Wet fits the rain, but it does not sound like spout."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Your grown-up stops before the last word of a song. What can you do?",
+    "choices": [
+     "Sing the rhyming word",
+     "Stop singing too",
+     "Say any word"
+    ],
+    "answer": 0,
+    "hint": "Think of the word that sounds like the end of the last line.",
+    "explain": "The pause is your turn: sing the word that rhymes, like clock after dock."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "In a song, the frog hops on {n} words and claps on 2 rhyming words. How many words are in the song?",
+    "answer": "n+2",
+    "hint": "Count the hops, then count on 2 claps.",
+    "explain": "{n} hop words and 2 clap words makes {=n+2} words in the song.",
+    "params": {
+     "n": [
+      4,
+      10
+     ]
+    }
+   }
+  ]
+ }
+}
