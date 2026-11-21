@@ -1,0 +1,189 @@
+{
+ "topicId": "mt_Wpvuz3mvBq",
+ "title": "Reading dinosaur trackways",
+ "audience": "family",
+ "keyIdea": "A trackway is a line of fossil footprints left by one dinosaur as it moved. The shape of the toes shows what kind of dinosaur made it. The size of a print shows how big it was: the hip is about 4 footprints high. The gap between prints, counted in footprints, shows if it walked or ran. Trackways side by side going the same way show a group moving together.",
+ "familyTip": "Walk, then run, across damp sand or a wet path and look at your own trackway. Count how many of your footprints fit in each gap. Then measure your foot and your leg up to your hip: is your hip about 4 footprints high too?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "What can a trackway tell us? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "A trackway can show this",
+    "A trackway cannot show this"
+   ],
+   "items": [
+    ["How big the dinosaur was", 0],
+    ["What colour it was", 1],
+    ["If it walked or ran", 0],
+    ["What sound it made", 1],
+    ["If it walked in a group", 0],
+    ["Its name", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtrack",
+  "caption": "Flagship lab: sort prints by toe shape, find hip height, count footprints in a gap to tell walking from running, spot a herd, check a robot.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Long ago, dinosaurs walked on soft mud. Their feet left prints. The mud turned to rock, and the prints were kept. A line of prints made by one dinosaur is called a trackway.",
+   "Look at the toes first. Thin toes with sharp claw marks were made by a meat-eater. Fat, blunt toes were made by a plant-eater that walked on two legs. Big round prints were made by a long-necked giant.",
+   "A big print means a big dinosaur. Its hip was about 4 footprints high. So a print 30 cm long means a hip about 120 cm high.",
+   "Now count how many footprints fit in the gap between two prints. About 3 means it was walking. 6 or more means it was running. A giant takes big steps even when it walks, so always count in footprints."
+  ],
+  "adult": [
+   "Ages 7 to 9. Children use trace fossils as evidence. A trackway is a series of footprints from one animal. Key words: trace fossil, footprint, trackway, stride, theropod (meat-eater), ornithopod and sauropod (plant-eaters), evidence, infer.",
+   "The size rule comes from Alexander (1976): hip height is roughly 4 times footprint length (between 4 and 6, depending on the kind of dinosaur). A long stride compared with hip height means a faster gait, so scientists compare the gap with the size of the foot.",
+   "A common mistake is to say that prints far apart always mean running. A big dinosaur walking can leave wider gaps than a small one running, so the gap has to be counted in footprint lengths. Another slip is to read every crowded track site as a herd: trackways that cross and point different ways were probably made at different times. Parallel trackways going the same way, as at Davenport Ranch in Texas, suggest a group.",
+   "In the lab your child sorts six prints by toe shape, counts 10 cm squares to find each footprint's length and its hip height, fills the gap between prints with footprints to decide walking or running, judges three track sites seen from above, and checks a robot that says wide gaps always mean running and that prints show colour."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A fossil footprint is {a} cm long. The hip is about 4 footprints high. About how high was the hip, in cm?",
+   "answer": "4*a",
+   "hint": "Stack 4 footprints on top of each other. Work out 4 lots of {a}.",
+   "explain": "4 × {a} = {=4*a}. The hip was about {=4*a} cm high.",
+   "params": {
+    "a": [10, 50]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A footprint is 20 cm long. The gap between two prints is {=20*a} cm. How many footprints fit in the gap?",
+   "answer": "a",
+   "hint": "Count in 20s until you reach {=20*a}.",
+   "explain": "{=20*a} ÷ 20 = {a}. {a} footprints fit in the gap.",
+   "params": {
+    "a": [2, 9]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A print has three thin toes with sharp points at the ends. Who made it?",
+   "choices": ["A meat-eater", "A long-necked giant", "A plant-eater with blunt toes"],
+   "answer": 0,
+   "hint": "Sharp points at the toe tips are claw marks.",
+   "explain": "Thin toes with sharp claw marks were made by a meat-eater, such as Allosaurus."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "About 3 footprints fit in each gap of a trackway. What was the dinosaur doing?",
+   "choices": ["Walking", "Running fast", "Standing still"],
+   "answer": 0,
+   "hint": "About 2 to 4 footprints in a gap is a normal step. 6 or more is a long, fast step.",
+   "explain": "About 3 footprints in each gap is a walking step. Running steps are 6 or more footprints long."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Five trackways run side by side, all going the same way. What is the best idea?",
+   "choices": ["A group moved together", "One dinosaur walked five times", "They were made by rain"],
+   "answer": 0,
+   "hint": "Look at the direction and the spacing.",
+   "explain": "Trackways side by side, going the same way and evenly spaced, suggest a group moving together."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A dinosaur's hip was {=4*a} cm high. The hip is about 4 footprints high. About how long was its footprint, in cm?",
+    "answer": "a",
+    "hint": "Share the hip height into 4 equal footprints.",
+    "explain": "{=4*a} ÷ 4 = {a}. The footprint was about {a} cm long.",
+    "params": {
+     "a": [10, 40]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A footprint is 30 cm long. {a} footprints fit in the gap between prints. How long is the gap, in cm?",
+    "answer": "30*a",
+    "hint": "Count in 30s, once for each footprint.",
+    "explain": "{a} × 30 = {=30*a}. The gap is {=30*a} cm.",
+    "params": {
+     "a": [2, 8]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A giant's prints are 180 cm apart. Its footprint is 60 cm long. Was it running?",
+    "choices": ["No: only 3 footprints fit, so it walked", "Yes: 180 cm is a long way", "Yes: giants always run"],
+    "answer": 0,
+    "hint": "Count the gap in footprints, not in cm.",
+    "explain": "180 ÷ 60 = 3 footprints. A gap of about 3 footprints is a walking step, even for a giant."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Which print was made by a long-necked giant?",
+    "choices": ["A big round print with a small half-moon in front", "Three thin toes with claws", "Three fat, blunt toes"],
+    "answer": 0,
+    "hint": "Long-necked giants walked on four legs and their feet were round.",
+    "explain": "Long-necked giants left big round back-foot prints with small half-moon front-foot prints."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "What can a fossil trackway NOT tell us?",
+    "choices": ["What colour the dinosaur was", "How big it was", "If it walked or ran"],
+    "answer": 0,
+    "hint": "A footprint is only the shape of a foot pressed into mud.",
+    "explain": "A print shows size, toe shape, speed and direction. It cannot show colour."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Many trackways cross each other and point in every direction. What is the best idea?",
+    "choices": ["They walked by at different times", "A herd moved together", "One dinosaur went round in circles"],
+    "answer": 0,
+    "hint": "A herd moves the same way, side by side.",
+    "explain": "Crossing trackways that point different ways were probably made at different times, not by one group."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Two prints are the same shape. One is twice as long. What does that tell you?",
+    "choices": ["Its maker was about twice as tall at the hip", "Its maker was running", "Its maker was younger"],
+    "answer": 0,
+    "hint": "The hip is about 4 footprints high, whatever the size.",
+    "explain": "A footprint twice as long means a hip about twice as high, so a bigger dinosaur."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam says the prints are far apart, so the dinosaur must have been running. What should he check?",
+    "choices": ["How many footprints fit in the gap", "The colour of the rock", "How deep the rock is"],
+    "answer": 0,
+    "hint": "Big animals take big steps even when they walk.",
+    "explain": "He should count the gap in footprints. About 3 is walking; 6 or more is running."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "How did the footprints last for millions of years?",
+    "choices": ["The mud hardened into rock", "Dinosaurs pressed them into rock", "Rain filled them with ice"],
+    "answer": 0,
+    "hint": "The ground was soft when the dinosaur walked on it.",
+    "explain": "The prints were made in soft mud or sand. It was covered over and slowly hardened into rock."
+   }
+  ]
+ }
+}

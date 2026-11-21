@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_jNTZ9npRp3",
+ "title": "Complex conjugates and division",
+ "audience": "family",
+ "keyIdea": "The conjugate of z = a + bi is z* = a − bi: keep the real part, flip the sign of the imaginary part. On an Argand diagram z* is the reflection of z in the real axis. z + z* = 2a is real, z − z* = 2bi, and zz* = a² + b² = |z|² is real and never negative. To divide by c + di, multiply the top and bottom by its conjugate c − di, so the denominator becomes the real number c² + d². In modulus–argument terms, dividing divides the moduli and subtracts the arguments.",
+ "familyTip": "Ask your teenager to explain why multiplying by the conjugate 'clears' the i from a denominator, using (a + bi)(a − bi) = a² + b². Then pick two small complex numbers, have them divide one by the other by hand, and check the answer by multiplying it back.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Real or not real? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Always real",
+    "Not always real"
+   ],
+   "items": [
+    [
+     "z + z*",
+     0
+    ],
+    [
+     "z − z*",
+     1
+    ],
+    [
+     "zz*",
+     0
+    ],
+    [
+     "z²",
+     1
+    ],
+    [
+     "|z|²",
+     0
+    ],
+    [
+     "z ÷ z*",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagcxdiv",
+  "caption": "Flagship lab: mirror z to get z*, find z from z + z* and z − z*, hunt zz* = 25, realise a denominator, and divide on the Argand diagram.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The conjugate of z = a + bi is z* = a − bi. Keep the real part and flip the sign of the imaginary part. The conjugate of 3 + 4i is 3 − 4i, not −3 − 4i. On an Argand diagram, z* is z reflected in the real axis.",
+   "Add them and the imaginary parts cancel: z + z* = 2a, a real number. Subtract them and the real parts cancel: z − z* = 2bi. So if you know both, you can find z.",
+   "Multiply them: (a + bi)(a − bi) = a² − b²i² = a² + b². Since i² = −1, the answer is real and equals |z|². So (3 + 4i)(3 − 4i) = 25.",
+   "To divide, multiply the top and bottom by the conjugate of the bottom. For (5 + 5i) ÷ (1 + 2i), use 1 − 2i: the bottom becomes 1 + 4 = 5 and the top becomes 15 − 5i, so the answer is 3 − i. Check by multiplying back: (3 − i)(1 + 2i) = 5 + 5i."
+  ],
+  "adult": [
+   "Ages 16 to 18. This is A level Further Mathematics Core Pure (Edexcel 9FM0 2.1 to 2.3, AQA 7367 B, OCR Y540 1.04): find the conjugate, use zz* = |z|², divide complex numbers, and know that |z ÷ w| = |z| ÷ |w| and arg(z ÷ w) = arg z − arg w. Key words: conjugate, modulus, argument, Argand diagram, realising the denominator.",
+   "The method mirrors rationalising a surd denominator. Multiplying by c − di is multiplying by 1 in disguise, (c − di) ÷ (c − di), and it turns the denominator into c² + d². The result is (a + bi) ÷ (c + di) = [(ac + bd) + (bc − ad)i] ÷ (c² + d²). Conjugates also explain why real-coefficient polynomials have complex roots in conjugate pairs, and why z + z* and zz* are the sum and product used to rebuild a quadratic from one complex root.",
+   "Common mistakes: writing the conjugate as −a − bi or −a + bi; losing the sign through i² so that zz* comes out as a² − b²; multiplying by the conjugate of the numerator, or by the denominator itself; multiplying only the denominator by the conjugate; forgetting to divide both parts by the new real denominator; and adding the arguments when dividing. A quick check is to multiply the answer back by the divisor.",
+   "In the lab your student drags z and watches z* mirror it, uses z + z* = 6 and z − z* = 4i to pin down z = 3 + 2i, finds three lattice points with zz* = 25 on the circle |z| = 5, divides (5 + 5i) by (1 + 2i) in four checked steps, then drags w until (2 + 4i) ÷ w = i while the modulus ratio and the argument difference are shown live."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Let z = {a} + {b}i. Work out zz*.",
+   "answer": "a*a+b*b",
+   "hint": "zz* = (a + bi)(a − bi) = a² + b², because i² = −1.",
+   "explain": "zz* = {a}² + {b}² = {=a*a+b*b}. It is real and equals |z|².",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "z + z* = {a} and z − z* = {b}i, where z = x + yi. What is x + y?",
+   "answer": "a/2+b/2",
+   "hint": "z + z* = 2x and z − z* = 2yi.",
+   "explain": "x = {a} ÷ 2 and y = {b} ÷ 2, so x + y = {=a/2+b/2}.",
+   "params": {
+    "a": [
+     2,
+     10
+    ],
+    "b": [
+     2,
+     10
+    ]
+   },
+   "where": "a%2==0 && b%2==0"
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "What is the conjugate of −2 + 5i?",
+   "choices": [
+    "−2 − 5i",
+    "2 − 5i",
+    "2 + 5i"
+   ],
+   "answer": 0,
+   "hint": "Keep the real part; flip only the sign of the imaginary part.",
+   "explain": "(−2 + 5i)* = −2 − 5i. The real part −2 stays the same."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "To work out (3 + i) ÷ (4 − 3i), multiply top and bottom by…",
+   "choices": [
+    "4 + 3i",
+    "3 − i",
+    "4 − 3i"
+   ],
+   "answer": 0,
+   "hint": "Use the conjugate of the denominator.",
+   "explain": "The conjugate of 4 − 3i is 4 + 3i. Then the denominator becomes 16 + 9 = 25."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "(10 + 5i) ÷ (2 − i) = ?",
+   "choices": [
+    "3 + 4i",
+    "5 − 5i",
+    "15 + 20i"
+   ],
+   "answer": 0,
+   "hint": "Multiply top and bottom by 2 + i. The denominator becomes 5.",
+   "explain": "(10 + 5i)(2 + i) = 20 + 10i + 10i + 5i² = 15 + 20i, and dividing by 5 gives 3 + 4i. Check: (3 + 4i)(2 − i) = 10 + 5i."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Where is z* on an Argand diagram?",
+    "choices": [
+     "The reflection of z in the real axis",
+     "The reflection of z in the imaginary axis",
+     "Opposite z through the origin"
+    ],
+    "answer": 0,
+    "hint": "Only the sign of the imaginary part changes.",
+    "explain": "z* = a − bi has the same real part and the opposite imaginary part, so it is the mirror image in the real axis."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which of these is always real for every complex z?",
+    "choices": [
+     "zz*",
+     "z − z*",
+     "z²"
+    ],
+    "answer": 0,
+    "hint": "Multiply (a + bi)(a − bi).",
+    "explain": "zz* = a² + b², which is real. z − z* = 2bi is imaginary, and z² is usually complex."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "(2 + 3i)(2 − 3i) = ?",
+    "choices": [
+     "13",
+     "−5",
+     "4 − 9i"
+    ],
+    "answer": 0,
+    "hint": "Expand all four terms, then use i² = −1 on the last one.",
+    "explain": "4 − 6i + 6i − 9i² = 4 + 9 = 13. Getting −5 means i² was taken as +1."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Find (1 + 7i) ÷ (1 + i).",
+    "choices": [
+     "4 + 3i",
+     "1 + 7i",
+     "4 + 6i"
+    ],
+    "answer": 0,
+    "hint": "Multiply top and bottom by 1 − i; the denominator becomes 2.",
+    "explain": "(1 + 7i)(1 − i) = 1 − i + 7i − 7i² = 8 + 6i, and 8 + 6i over 2 is 4 + 3i. Check: (4 + 3i)(1 + i) = 1 + 7i."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "|z| = 6 and |w| = 2. What is |z ÷ w|?",
+    "choices": [
+     "3",
+     "12",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "Moduli divide when you divide.",
+    "explain": "|z ÷ w| = |z| ÷ |w| = 6 ÷ 2 = 3."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "arg z = 2π/3 and arg w = π/6. What is arg(z ÷ w)?",
+    "choices": [
+     "π/2",
+     "5π/6",
+     "4"
+    ],
+    "answer": 0,
+    "hint": "Arguments subtract when you divide.",
+    "explain": "arg(z ÷ w) = 2π/3 − π/6 = 4π/6 − π/6 = π/2."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "w = {a} − {b}i. What is the real denominator after multiplying (1 + i) ÷ w top and bottom by w*?",
+    "answer": "a*a+b*b",
+    "hint": "Multiply w by its conjugate: (a − bi)(a + bi) = a² + b².",
+    "explain": "ww* = {a}² + {b}² = {=a*a+b*b}.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "z = {a} + {b}i. What is the real part of z + z*?",
+    "answer": "2*a",
+    "hint": "The imaginary parts cancel; the real parts double.",
+    "explain": "z + z* = 2 × {a} = {=2*a}, a real number.",
+    "params": {
+     "a": [
+      1,
+      9
+     ],
+     "b": [
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A student writes 1 ÷ i = i. What is the correct value?",
+    "choices": [
+     "−i",
+     "i",
+     "1"
+    ],
+    "answer": 0,
+    "hint": "Multiply top and bottom by −i, the conjugate of i.",
+    "explain": "1 ÷ i = (1 × −i) ÷ (i × −i) = −i ÷ 1 = −i. Check: −i × i = −i² = 1."
+   }
+  ]
+ }
+}

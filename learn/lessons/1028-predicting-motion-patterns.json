@@ -1,0 +1,63 @@
+{
+ "topicId": "mt_AlLYwCm92a",
+ "title": "Predicting motion patterns",
+ "audience": "learner",
+ "keyIdea": "Some motions repeat. A pendulum, a playground swing and a ball rolling in a bowl go back and forth in a regular pattern. Measure the motion, find the pattern, and you can predict what happens next. A bob on a 1 metre string takes 2 seconds for each swing there and back, every time, so after 4 seconds it is back where it started. A longer string makes each swing take longer; a heavier bob or a bigger pull does not change the time much at all. Patterns in other motions work the same way: if a toy car rolls 50 cm from 10 cm high and 100 cm from 20 cm high, you can predict about 150 cm from 30 cm high.",
+ "familyTip": "Tie a key or a small bag of rice to a piece of string about a metre long and hold the top still. Count how many swings there and back it makes in 20 seconds. Guess first: what will happen if you shorten the string to half? Try it and count again. Does a heavier key change the count?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which change makes each swing of a pendulum take a different time? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Changes the swing time", "About the same time"],
+   "items": [
+    ["A longer string", 0],
+    ["A shorter string", 0],
+    ["A heavier bob", 1],
+    ["A lighter bob", 1],
+    ["Pulling it out further", 1],
+    ["Pulling it out only a little", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagswing",
+  "caption": "Flagship lab: time a pendulum, predict where it will be, test heavy and light bobs, change the string, compare pulls, predict a car's roll.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Some things move back and forth again and again. A swing in the park does. So does a ball rolling in a bowl. When a motion repeats, it has a pattern.",
+   "Hang a weight on a string and let it go. This is a pendulum. On a 1 metre string, each swing there and back takes 2 seconds. Then the next one takes 2 seconds too. So after 4 seconds it is back where it started, and after 3 seconds it is on the far side.",
+   "Make the string longer and each swing takes longer. A heavy weight swings in the same time as a light one. Pull it out further and it goes faster, but it has further to go, so the time stays about the same.",
+   "Patterns help you predict other motions too. A toy car rolls 50 cm from 10 cm high and 100 cm from 20 cm high. Twice as high, twice as far. So from 30 cm high it should roll about 150 cm. Test it to check."
+  ],
+  "adult": [
+   "Ages 8 to 9. NGSS 3-PS2-2 asks children to make observations and measurements of an object's motion to provide evidence that a pattern can be used to predict future motion, with examples such as a child on a swing or a ball rolling back and forth in a bowl. The standard leaves out technical terms such as period and frequency. Key words: motion, pattern, pendulum, bob, swing, measure, predict, evidence, fair test.",
+   "For a simple pendulum the time for one swing there and back is about 2π√(L ÷ g), with g = 9.81 m/s². A 99.4 cm string takes 2.0 s (the 'seconds pendulum' of old clocks), 25 cm takes 1.0 s and 2.25 m takes 3.0 s. The bob's mass is not in the formula, and a 30° pull adds less than 2% to the time. On one ramp and floor, a car's roll-out distance grows in step with its release height.",
+   "A common mistake is to think a heavier bob swings faster, or that pulling the bob further makes each swing take much longer. Many children also think a longer string swings faster, or that a moving object cannot be predicted. Another slip is to add a time once instead of multiplying it by the number of swings.",
+   "In the lab your child pulls a bob aside and times three swings, predicts where the bob will be after 3, 6.5 and 9 seconds and watches to check, times a cork, an apple and a steel ball, drags the string length to make a 1-second and a 3-second swing, compares a small and a big pull, and uses a ramp table to predict a toy car's roll."
+  ]
+ },
+ "practice": [
+  {"type": "numeric", "id": "p1", "prompt": "A playground swing takes 3 seconds for each swing there and back. How many seconds do {a} swings take?", "answer": "3*a", "params": {"a": [2, 10]}, "hint": "Every swing takes the same 3 seconds. Add 3 for each swing, or multiply.", "explain": "The pattern repeats: {a} swings × 3 seconds = {=3*a} seconds."},
+  {"type": "numeric", "id": "p2", "prompt": "A toy car rolls 40 cm from 10 cm high and 80 cm from 20 cm high. Using that pattern, how far will it roll from {a}0 cm high?", "answer": "40*a", "params": {"a": [3, 6]}, "hint": "Every 10 cm of height gives 40 cm of roll.", "explain": "The roll grows by 40 cm for every 10 cm of height. {a} lots of 10 cm gives {a} × 40 = {=40*a} cm."},
+  {"type": "mc", "id": "p3", "prompt": "A bob starts on the left and takes 2 seconds for each swing there and back. Where is it after 6 seconds?", "choices": ["Back on the left", "On the right", "In the middle"], "answer": 0, "hint": "How many whole swings fit in 6 seconds?", "explain": "6 seconds is 3 whole swings of 2 seconds. Each whole swing ends back where it started, on the left."},
+  {"type": "mc", "id": "p4", "prompt": "Kim swaps a cork for a steel ball on the same string. What happens to the time for each swing?", "choices": ["It stays about the same", "It gets much shorter", "It gets much longer"], "answer": 0, "hint": "What did the lab show for the cork, the apple and the steel ball?", "explain": "The weight of the bob does not change the swing time. All three bobs took 2 seconds on the same string."},
+  {"type": "mc", "id": "p5", "prompt": "Which change makes each swing of a pendulum take longer?", "choices": ["A longer string", "A heavier bob", "A smaller pull"], "answer": 0, "hint": "Only one of these changes the swing time.", "explain": "A longer string makes the bob travel a longer, gentler arc, so each swing takes longer. The bob's weight and the size of the pull hardly matter."}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "numeric", "id": "m1", "prompt": "A pendulum makes 1 swing there and back every 2 seconds. How many swings does it make in {a}0 seconds?", "answer": "5*a", "params": {"a": [1, 6]}, "hint": "How many lots of 2 seconds fit in the time?", "explain": "{a}0 seconds ÷ 2 seconds a swing = {=5*a} swings."},
+   {"type": "numeric", "id": "m2", "prompt": "A ball in a bowl rolls from one side to the other and back every {a} seconds. How long do 4 of these trips take, in seconds?", "answer": "4*a", "params": {"a": [2, 5]}, "hint": "Each trip takes the same time. Count it 4 times.", "explain": "4 trips × {a} seconds = {=4*a} seconds. The pattern lets you predict without timing all four."},
+   {"type": "mc", "id": "m3", "prompt": "Ravi pulls a bob out a little and then a lot. What does he find?", "choices": ["Each swing takes about the same time", "The big pull takes twice as long", "The big pull stops the pattern"], "answer": 0, "hint": "The bob goes faster from a big pull, but it has further to go.", "explain": "Further to go, but faster: each swing takes about the same time. The lab showed 2.00 s and 2.03 s."},
+   {"type": "mc", "id": "m4", "prompt": "Which pendulum swings back and forth the fastest?", "choices": ["The one with the shortest string", "The one with the longest string", "The one with the heaviest bob"], "answer": 0, "hint": "Think about the 1-second and the 3-second swings in the lab.", "explain": "The 25 cm string took 1 second a swing and the 2.25 m string took 3 seconds. The shortest string is fastest."},
+   {"type": "mc", "id": "m5", "prompt": "Why can you predict where a swing will be in 10 seconds?", "choices": ["Its motion repeats in a pattern", "It always stops after 10 seconds", "Heavy swings are easy to guess"], "answer": 0, "hint": "What stays the same every time it goes back and forth?", "explain": "Each swing there and back takes the same time, so you can count forward and say where it will be."},
+   {"type": "mc", "id": "m6", "prompt": "A car rolls 30 cm from 10 cm high and 60 cm from 20 cm high. About how far from 40 cm high?", "choices": ["120 cm", "90 cm", "70 cm"], "answer": 0, "hint": "Every 10 cm of height adds the same roll.", "explain": "Each 10 cm of height gives 30 cm of roll, so 40 cm high gives 4 × 30 = 120 cm."},
+   {"type": "mc", "id": "m7", "prompt": "Jess says, 'A heavier child on the swing will make it go back and forth quicker.' Is she right?", "choices": ["No, the time stays about the same", "Yes, heavier is quicker", "Yes, heavier is slower"], "answer": 0, "hint": "What did the cork and the steel ball show?", "explain": "The weight on a swing or pendulum hardly changes the time for each swing. The length of the chain matters."},
+   {"type": "mc", "id": "m8", "prompt": "How can you make a fair test of string length?", "choices": ["Change only the length; keep the bob and the pull the same", "Change the length and the bob together", "Use a new bob every time"], "answer": 0, "hint": "If two things change, which one caused the difference?", "explain": "Change one thing and keep the rest the same. Then any change in the swing time must come from the string length."}
+  ]
+ }
+}

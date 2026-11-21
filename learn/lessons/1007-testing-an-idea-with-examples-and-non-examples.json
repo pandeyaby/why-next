@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_uDuA5yVjqQ",
+ "title": "Testing an idea with examples and non-examples",
+ "audience": "family",
+ "keyIdea": "To pin down a new idea, collect examples (things that are it), non-examples (things that are not) and near misses (things that nearly are, but miss one feature that matters). Comparing them shows the must-have features. Then test a rule on new cases: one that lets a non-example in, or shuts an example out, needs fixing.",
+ "familyTip": "Next time your child learns a new word, play 'Is it or isn't it?'. Take turns giving one example, one non-example and one near miss: for 'fruit', an apple, a carrot, and a tomato to argue about. Ask what makes the difference. For a rule like 'birds fly', ask them to find a card that breaks it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it a mammal? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Mammal",
+    "Not a mammal"
+   ],
+   "items": [
+    [
+     "Cat",
+     0
+    ],
+    [
+     "Dolphin",
+     0
+    ],
+    [
+     "Shark",
+     1
+    ],
+    [
+     "Bat",
+     0
+    ],
+    [
+     "Penguin",
+     1
+    ],
+    [
+     "Snake",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnonex",
+  "caption": "Flagship lab: sort triangles from near misses, name what each near miss lacks, find the must-haves, sort mammals, and break then fix a rule.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "When you learn a new word, one example is not enough. Look at things that are it, things that are not, and things that nearly are.",
+   "A near miss is nearly an example but misses one thing. A shape with 3 sides and a gap is not a triangle, because a triangle must be closed. Near misses show you what really matters.",
+   "Some things do not matter at all. A triangle can point down, be long and thin, or have sides of different lengths. It is still a triangle.",
+   "Test your idea. If someone says 'a bird is an animal that flies', find a card that breaks it. A bat flies but is not a bird, and a penguin is a bird that cannot fly. So the rule needs fixing: birds are the animals with feathers."
+  ],
+  "adult": [
+   "Ages 7 to 9. This is a Learning to Learn strategy for concept learning. The EEF guidance on metacognition recommends teaching pupils explicit strategies for understanding new ideas, and the Frayer model, used in many UK primary classrooms, puts examples and non-examples next to a definition. Key words: example, non-example, near miss, must-have feature, definition, counter-example.",
+   "Choose non-examples that are close to the idea, not silly ones. 'Is a car a mammal?' teaches little; 'Is a whale a mammal?' and 'Is a penguin?' make your child look for the feature that matters. Change things that do not matter, such as size, colour or which way a shape points, so your child stops relying on one typical picture.",
+   "Common mistakes: judging by the usual picture, so an upside-down or long thin triangle is rejected; judging by looks or habitat, so a whale is called a fish and a bat a bird; counting a near miss as an example; trusting one example to prove a rule; and keeping a definition that lets a non-example in. Be careful with everyday words: in maths and science they often have stricter meanings.",
+   "In the lab your child sorts six shapes into triangles and not, names what each near miss is missing, sorts features into must-have and does not matter, sorts six animals into mammals and not, and finds the two cards that break the rule 'a bird is an animal that flies' before choosing a better rule."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "You have {a} examples of triangles and find 1 shape with 3 straight sides that is not closed. How many of all these shapes are triangles?",
+   "answer": "a",
+   "hint": "Is a shape with a gap a triangle? Count only the closed 3-sided shapes.",
+   "explain": "The shape with a gap is a near miss, not a triangle. So only the {a} examples are triangles.",
+   "params": {
+    "a": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A rule says 'a bird is an animal that flies'. You test it on {a} robins, 1 bat and 1 penguin. How many cards break the rule?",
+   "answer": "a*0+2",
+   "hint": "A card breaks the rule if it flies but is not a bird, or is a bird but cannot fly.",
+   "explain": "The robins fit. The bat flies but is not a bird, and the penguin is a bird that cannot fly, so 2 cards break the rule.",
+   "params": {
+    "a": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is a near miss for 'triangle'?",
+   "choices": [
+    "3 straight sides with a gap",
+    "A triangle pointing down",
+    "A square cake"
+   ],
+   "answer": 0,
+   "hint": "A near miss nearly fits but misses one must-have.",
+   "explain": "3 straight sides with a gap misses one must-have: it is not closed. The turned triangle is an example, and a square is a plain non-example."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A whale lives in the sea. Is it a mammal?",
+   "choices": [
+    "Yes, it feeds its baby milk",
+    "No, it lives in water",
+    "No, it has no legs"
+   ],
+   "answer": 0,
+   "hint": "What must every mammal do for its babies?",
+   "explain": "A whale feeds its baby milk and breathes air, so it is a mammal. Living in water is a looks feature, not the must-have."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why are non-examples useful?",
+   "choices": [
+    "They show where the idea stops",
+    "They are just wrong answers",
+    "They are not useful"
+   ],
+   "answer": 0,
+   "hint": "Think about how a gap in a shape helped you find a must-have.",
+   "explain": "Non-examples, especially near misses, show the edge of an idea, so you can see which features it must have."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "A long, thin triangle with one square corner. Is it a triangle?",
+    "choices": [
+     "Yes, it has 3 straight sides and is closed",
+     "No, triangles are not thin",
+     "No, it has a square corner"
+    ],
+    "answer": 0,
+    "hint": "Check the must-haves, not the usual picture.",
+    "explain": "It has 3 straight sides and is closed, so it is a triangle. Thin shapes and square corners do not matter."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which feature must every triangle have?",
+    "choices": [
+     "3 straight sides",
+     "Pointing upwards",
+     "Sides the same length"
+    ],
+    "answer": 0,
+    "hint": "Which feature, when taken away, gives a near miss?",
+    "explain": "3 straight sides is a must-have. Which way it points and equal sides do not matter."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A bat flies. Is it a bird?",
+    "choices": [
+     "No, it has fur and feeds its babies milk",
+     "Yes, it flies",
+     "Yes, it has wings"
+    ],
+    "answer": 0,
+    "hint": "Flying is a looks feature. What does a bird always have?",
+    "explain": "A bat is a mammal: fur, and milk for its babies. Birds have feathers."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Sam says: 'A dog has fur, so anything with fur is a dog.' What is wrong?",
+    "choices": [
+     "One example is not enough: a cat has fur too",
+     "Nothing, he is right",
+     "Dogs do not have fur"
+    ],
+    "answer": 0,
+    "hint": "Can you think of a non-example that also has fur?",
+    "explain": "A cat has fur and is not a dog, so the rule lets a non-example in. One example cannot prove a rule."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which card breaks the rule 'a bird is an animal that flies'?",
+    "choices": [
+     "A penguin",
+     "A robin",
+     "An eagle"
+    ],
+    "answer": 0,
+    "hint": "Look for a bird that does not fit, or an animal that fits but is not a bird.",
+    "explain": "A penguin is a bird that cannot fly, so the rule shuts out an example. A robin and an eagle fit the rule."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "You sort {a} triangles, {b} squares and 1 three-sided shape with a curved side. How many go in 'Triangle'?",
+    "answer": "a",
+    "hint": "A curved side is a near miss. Squares have 4 sides.",
+    "explain": "Only the {a} triangles. The squares have 4 sides, and the curved shape is a near miss.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which pair helps most to learn what a mammal is?",
+    "choices": [
+     "A whale and a shark",
+     "A dog and a car",
+     "A cat and a cat"
+    ],
+    "answer": 0,
+    "hint": "Pick a non-example that is close to the example.",
+    "explain": "A whale and a shark look alike, but only the whale feeds its baby milk. Close pairs show the must-have feature."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A rule lets in something it should not. What should you do?",
+    "choices": [
+     "Fix the rule so the non-example is out",
+     "Keep the rule anyway",
+     "Ignore that card"
+    ],
+    "answer": 0,
+    "hint": "A rule must fit every example and no non-example.",
+    "explain": "A non-example getting in shows the rule is too loose, so change it until only examples fit."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "A rule says 'a mammal is an animal that lives on land'. You test it on {a} dogs, 1 whale and 1 lizard. How many cards break the rule?",
+    "answer": "a*0+2",
+    "hint": "Look for a mammal that is left out, or an animal let in that is not a mammal.",
+    "explain": "The dogs fit. The whale is a mammal that lives in the sea, and the lizard lives on land but is not a mammal, so 2 cards break the rule.",
+    "params": {
+     "a": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which is a better rule for 'bird'?",
+    "choices": [
+     "An animal with feathers",
+     "An animal that flies",
+     "An animal with wings"
+    ],
+    "answer": 0,
+    "hint": "Test each rule on a bat and a penguin.",
+    "explain": "Feathers fits every bird, including the penguin, and keeps the bat out. Flying and wings both let the bat in."
+   }
+  ]
+ }
+}

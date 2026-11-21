@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every plotted value was recomputed by hand with the median-of-halves rule used in lesson 850: school times 4,6,7,9,10,11,13,14,16,22,30,41 give Q1 = 8, median = 12, Q3 = 19, and quiz marks 3,12,20,26,28,30,32,33,35,37,39,42 give Q1 = 23, median = 31, Q3 = 36, so each of the four parts holds exactly 3 values. Read answers: [12,20,26,31,44] gives median 26, IQR 11, range 32; [6,15,18,30,41] gives 18, 15, 35. Class A IQR 66 − 52 = 14, Class B 72 − 45 = 27. Parameterised answers b, r and n are whole numbers at every corner."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented box-plot errors (Bakker, Biehler and Konold 2005; GCSE examiner reports): a longer part holds more data (split-scene prediction, robot claim 3, challenge 'long', p3, m7), the median is the centre of the box (read options 25.5 and 22.5, robot claim 1, challenge 'centre', p4), IQR read as Q3 (options 31 and 30, challenge 'q3', m5), range read as the maximum (options 44 and 41, challenge 'max', m8) and judging a group by its top value (compare prediction, compare option 'B did better: its top score is higher', robot claim 5, m6)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The lab works on the plot itself: dragging five markers on a number line builds the whiskers, box and median line live; tapping each part of a plot under its dot plot lights the 3 dots inside it; values are read off a drawn plot; two plots are compared. flagiqr (850) orders a list and taps quartile positions in it, and flaghist and flagcumfreq draw histograms and cumulative curves; none builds or reads a box plot. The lab_distinct gate keeps flag_boxplot.js under 30% similar to every lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the key idea by counting: in 'A quarter in each part' the right whisker of the school-times plot is 22 wide and the left 4 wide, yet tapping each lights exactly 3 dots and says '3 of 12 values: a quarter'; the second plot is skewed the other way. Drawing the plot shows the box appear only when markers are in order, with an out-of-order warning otherwise. Wrong reads get the reason at once ('That is the middle of the box. The median is the line inside the box')."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Two predictions with tempting wrong options the lab disproves: 'The right whisker is five times as long as the left one. Which holds more of the 12 values?' (tempting: the right whisker; the dot count shows 3 and 3), and 'Class B has the highest score of anyone. Does that mean Class B usually scored higher?' (tempting: yes; the medians 60 and 55 show A is higher). The step completion message reveals the learner's own prediction."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six rotating challenge questions with two tagged wrong answers each. why() has seven distinct messages: q3 (Q3 alone is not the IQR), add (subtract, do not add), max (the maximum alone is not the range), long (length shows spread, not count), centre (the median is the line, not the box centre), spread (same median, so compare IQRs) and five (a box plot never shows the mean or mode)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid paragraphs use short sentences, define each term once (lower quartile Q1, whisker, IQR) and pass the family kid limit; the adult text names the five-number summary, cites CCSS 6.SP.B.4, S-ID.A.1-2 and GCSE S4, and passes the adult limit. Canvas text is dark on white pills or pale paper in both themes."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each kid paragraph does one job: the five numbers and how they are drawn, a quarter per part, how to read median, IQR and range, and how to compare two groups. The adult text gives standards and key words, why length shows spread, four named mistakes with the mark-scheme expectation, and what the lab does. The content gate found no filler and under 12% overlap with every other lesson, including 850."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked iPhone 13 screenshots in dark theme and desktop in light theme, at rest and part-way through each Show me: the five summary chips fit in one row, marker labels sit in three staggered rows so close values (20, 24, 27) do not collide, axis numbers thin to every 10 on narrow screens, the dot plot and box plot share one scale, and answer cards are full-width rows. After the fix the 'Class B' label is dark ink, not the box fill colour."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a labelled button twin: 'Pick the Q1 marker' with aria-pressed, 'Move Q1 down by 1' and 'up by 1', 'Count the values in the right whisker', 'Answer: 11', 'The robot made a slip'. Every change is spoken through c.say and set as the canvas aria-label ('Q1 is at 12, which matches. 2 of 5 markers placed.'); challenge feedback is a polite live region. Right and wrong use ticks, crosses and words, not colour alone. The walk gate's axe run is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics, 6.SP.B.4 and S-ID.A.1, S-ID.A.2 (box plots; compare centre and spread)",
+  "Department for Education (2013) GCSE mathematics subject content, S4 (construct and interpret box plots; compare distributions using median and interquartile range)",
+  "Bakker, Biehler and Konold (2005), Should young students learn about box plots? (students read longer parts as holding more data)",
+  "AQA GCSE Mathematics examiner reports and mark schemes on comparing box plots (one average and one spread, in context)"
+ ]
+}

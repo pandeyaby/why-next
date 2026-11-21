@@ -1,0 +1,272 @@
+{
+ "topicId": "mt_up_Umo86Rn",
+ "title": "Medicines and household products: ask first",
+ "audience": "family",
+ "keyIdea": "Medicine can help when you are poorly, but the wrong medicine, or too much, can make you very ill. So only a trusted grown-up who looks after you gives you medicine, and only your own. Tablets can look like sweets and cleaners can look like juice, so never taste something you find. Leave it where it is and tell a grown-up.",
+ "familyTip": "Play 'Ask first' at home. Point to things in the kitchen and bathroom and ask: food, or ask a grown-up first? Show your child the red diamond on a cleaning bottle. Keep medicines, vitamins, washing pods and cleaners up high or locked away, and put them back straight after use.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Food I know, or ask a grown-up first? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Food or drink I know",
+    "Ask a grown-up first"
+   ],
+   "items": [
+    [
+     "An apple from the fruit bowl",
+     0
+    ],
+    [
+     "Pink things in a tub",
+     1
+    ],
+    [
+     "A cup of milk from Mum",
+     0
+    ],
+    [
+     "A purple drink under the sink",
+     1
+    ],
+    [
+     "A squishy coloured pod",
+     1
+    ],
+    [
+     "My tea on my plate",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmeds",
+  "caption": "Flagship lab: flip look-alike pairs, pick who gives medicine, sort bottles by the red diamond, choose what to do with a find, sort safe or not.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Medicine can help you feel better when you are poorly. But the wrong medicine, or too much, can make you very ill.",
+   "Only a grown-up who looks after you can give you medicine. That could be Mum, Dad, Grandma or a nurse. Your friend's medicine is only for your friend.",
+   "Some tablets look like sweets. Some cleaners look like juice. You cannot always tell by looking. A red diamond on a bottle means it can hurt you.",
+   "If you find tablets or a bottle, do not touch it and do not taste it. Leave it where it is and tell a grown-up."
+  ],
+  "adult": [
+   "Ages 4 to 5. The PSHE Association programme of study for Key Stage 1 covers how medicines help people stay healthy and keeping safe with household products, and the EYFS early learning goal for Managing Self includes making healthy choices. Children under 5 are the age group most often admitted to hospital after swallowing medicines or household chemicals. Key words: medicine, tablet, poorly, trusted grown-up, warning sign, ask first.",
+   "Children cannot reliably tell sweets from tablets, or juice from coloured cleaner, by looking. Washing capsules look like squishy sweets and are a known danger to young children. Teach the habit rather than the details: if it is not food you were given, ask a grown-up first. Show your child the red-bordered diamond on bottles as a warning sign, but be careful: many unsafe things have no sign at all.",
+   "Common mistakes: thinking medicine that helped a friend or sibling will help them too; thinking more medicine works faster; picking up a found tablet or bottle to be helpful; and thinking a bottle with no warning sign is safe to drink. Vitamins and gummies count as medicine. If a child has swallowed something, call NHS 111, or 999 if they are drowsy, struggling to breathe or fitting, and keep the packet.",
+   "In the lab your child flips look-alike pairs (sweets and tablets, juice and cleaner, a jelly sweet and a washing pod), chooses who can give medicine in three places, sorts bottles into drinks and not drinks using the red diamond, picks what to do with three found items, and sorts six medicine cards into safe and not safe."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "There are {n} bottles under the sink and none of them are drinks. How many could you drink?",
+   "answer": "n*0",
+   "hint": "Things under the sink are cleaners, not drinks. How many are drinks?",
+   "explain": "None of the {n} bottles are drinks, so you could drink 0 of them. Cleaners can hurt you.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Dad gives you 1 spoon of medicine. The medicine tastes nice and there are {n} spoons left in the bottle. How many more spoons should you take?",
+   "answer": "n*0",
+   "hint": "Who decides how much medicine you have? Is more better?",
+   "explain": "You take 0 more spoons. Only the amount a grown-up gives you, because too much can make you poorly, even with {n} spoons left.",
+   "params": {
+    "n": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You find tablets on the floor. What do you do?",
+   "choices": [
+    "Leave them and tell a grown-up",
+    "Pick them up for Mum",
+    "Taste one to see"
+   ],
+   "answer": 0,
+   "hint": "Should you touch or taste something you find?",
+   "explain": "Leave them where they are and tell a grown-up. Do not touch them or taste them."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Who can give you medicine?",
+   "choices": [
+    "A grown-up who looks after you",
+    "A friend at nursery",
+    "You, from the cupboard"
+   ],
+   "answer": 0,
+   "hint": "Think about who keeps you safe.",
+   "explain": "Only a trusted grown-up who looks after you, like Mum, Dad, Grandma or a nurse, gives you medicine."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A bottle has a red diamond on it. What does that mean?",
+   "choices": [
+    "It can hurt you",
+    "It is a drink",
+    "It is a toy"
+   ],
+   "answer": 0,
+   "hint": "A red diamond is a warning sign.",
+   "explain": "A red diamond means the bottle can hurt you. It is for grown-ups only."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Two little pink things look the same. One is a sweet and one is a tablet. What do you do?",
+    "choices": [
+     "Ask a grown-up first",
+     "Eat the pinker one",
+     "Eat both"
+    ],
+    "answer": 0,
+    "hint": "Can you always tell by looking?",
+    "explain": "You cannot always tell sweets from tablets by looking, so ask a grown-up first."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Your sister's medicine helped her cough. You have a cough too. Can you have some?",
+    "choices": [
+     "No, it is only for her",
+     "Yes, it will help me",
+     "Yes, just a little"
+    ],
+    "answer": 0,
+    "hint": "Who was the medicine given to, you or her?",
+    "explain": "Medicine is only for the person it was given to. Ask a grown-up about your cough."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Is more medicine better?",
+    "choices": [
+     "No, too much can make you poorly",
+     "Yes, it works faster",
+     "Yes, if it tastes nice"
+    ],
+    "answer": 0,
+    "hint": "Who decides how much you take?",
+    "explain": "Too much medicine can make you very poorly. Only take the amount a grown-up gives you."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A bottle of shampoo has no red diamond. Can you drink it?",
+    "choices": [
+     "No, it is not a drink",
+     "Yes, no sign means safe",
+     "Yes, if it smells nice"
+    ],
+    "answer": 0,
+    "hint": "Is shampoo a drink, or is it for washing hair?",
+    "explain": "No sign does not mean safe. Shampoo is for hair, not for drinking."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You find {n} washing pods on the table. How many should you touch?",
+    "answer": "n*0",
+    "hint": "Washing pods can look like sweets. Should you touch them?",
+    "explain": "Touch 0 of the {n} pods. Leave them and tell a grown-up.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which is food you know?",
+    "choices": [
+     "An apple from the fruit bowl",
+     "A purple drink under the sink",
+     "Little pills in a tub"
+    ],
+    "answer": 0,
+    "hint": "Which one did a grown-up give you to eat?",
+    "explain": "The apple is food. A drink under the sink and pills in a tub could hurt you, so ask first."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Vitamins look like sweets. Can you eat them from the cupboard?",
+    "choices": [
+     "No, they are medicine too",
+     "Yes, they are sweets",
+     "Yes, if you only eat one"
+    ],
+    "answer": 0,
+    "hint": "Are vitamins food or medicine?",
+    "explain": "Vitamins count as medicine. Only a grown-up gives them to you."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Who can give you medicine at the doctor?",
+    "choices": [
+     "The nurse, with Mum there",
+     "A boy in the waiting room",
+     "Nobody, take it yourself"
+    ],
+    "answer": 0,
+    "hint": "Who is a grown-up looking after you?",
+    "explain": "The nurse, with Mum there, is a trusted grown-up. Never take medicine from another child."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "A tub on the shelf has {n} pink tablets that look like sweets. How many can you eat without asking a grown-up?",
+    "answer": "n*0",
+    "hint": "Tablets can look like sweets. Who do you ask first?",
+    "explain": "You can eat 0 of the {n} tablets without asking. They could be medicine, so ask a grown-up first.",
+    "params": {
+     "n": [
+      3,
+      9
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Your friend finds a bottle of cleaner. What do you say?",
+    "choices": [
+     "Leave it, let's tell a grown-up",
+     "Let's taste it",
+     "Let's carry it to the park"
+    ],
+    "answer": 0,
+    "hint": "What do we do with something that could hurt us?",
+    "explain": "Leave it where it is and tell a grown-up. Do not taste it or carry it."
+   }
+  ]
+ }
+}

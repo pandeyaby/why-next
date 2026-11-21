@@ -1,0 +1,278 @@
+{
+ "topicId": "mt_2jX437x_Ck",
+ "title": "Personal space",
+ "audience": "family",
+ "keyIdea": "Everyone has a bubble of space around them. About an arm away is just right. When a friend steps back, says stop or turns away, they want more space. Ask before you hug or touch, and if the answer is no, say okay and stop. Your bubble belongs to you too.",
+ "familyTip": "Hold out an arm and say: this is about how close we stand to friends. Before hugs, model asking: Can I have a hug? Accept a no from your child with a smile, and offer a wave or a high five instead.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is each one too close or just right? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Too close",
+    "Just right"
+   ],
+   "items": [
+    [
+     "Nose to nose",
+     0
+    ],
+    [
+     "An arm away",
+     1
+    ],
+    [
+     "Face right in a face",
+     0
+    ],
+    [
+     "A gap on the carpet",
+     1
+    ],
+    [
+     "Leaning on a back in the line",
+     0
+    ],
+    [
+     "Waving from a step away",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbubble",
+  "caption": "Flagship lab: sort too close from just right, drag children apart in a line, spot space signs, ask before a hug, hug or wave.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Hold your arm out. That is your bubble. It is a space all around you. Your friends have a bubble too.",
+   "Nose to nose is too close. Leaning on a back is too close. About an arm away is just right.",
+   "Watch your friend. If they step back, say stop or turn away, they want more space. Step back too.",
+   "Want a hug? Ask first: Can I have a hug? Yes means hug. No means say okay and stop. Your bubble is yours too. You can say: Please give me some space."
+  ],
+  "adult": [
+   "Ages 4 to 5. In the EYFS this sits in Personal, Social and Emotional Development (PSED): Development Matters (2021) for Reception asks children to build respectful relationships and to think about the feelings of others. It leads into the Early Learning Goals Building Relationships and Managing Self. The NSPCC PANTS rule teaches that their body belongs to them and that they can say no. Key words: personal space, body language, consent, asking first.",
+   "Make the bubble something you can see. Hold out an arm, or put a hoop round your child, and say: about this far is comfy for most people. In a queue or on the carpet, notice out loud when everyone has room. Before you hug or tickle your child, ask, and respect a no. They learn asking by seeing it.",
+   "Common mistakes: thinking best friends or family never need space; reading only words, so a friend who steps back or turns away is missed; hugging first and asking after; asking again and again after a no; and thinking a child must let anyone hug them. Be careful not to make your child hug relatives for politeness; offer a wave or high five instead.",
+   "In the lab your child sorts too close from just right, then drags four squashed children apart until every bubble turns green. They tap the three signs that mean give me space, ask three friends for a hug and do what each one says, and sort people into hug if we both want or wave and say hi."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "You ask {n} friends: Can I have a hug? {k} friends say yes. The rest say no. How many friends do you hug?",
+   "answer": "k",
+   "hint": "Only hug the friends who said yes. Do not count the ones who said no.",
+   "explain": "{k} friends said yes, so you hug {k}. The friends who said no get an okay and some space.",
+   "params": {
+    "n": [
+     5,
+     8
+    ],
+    "k": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "There are {n} children in the line. How close should each one stand to the next?",
+   "choices": [
+    "About an arm away",
+    "Right up on their back",
+    "Leaning on them"
+   ],
+   "answer": 0,
+   "hint": "Hold your arm out. Is that space comfy for everyone?",
+   "explain": "About an arm away gives each of the {n} children their own bubble. Nobody is squashed.",
+   "params": {
+    "n": [
+     4,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Your friend turns away and steps back from you. What should you do?",
+   "choices": [
+    "Step back and give space",
+    "Step closer",
+    "Give a big hug"
+   ],
+   "answer": 0,
+   "hint": "Turning away and stepping back are signs. What do they say?",
+   "explain": "Stepping back and turning away mean give me space, even with no words. So you step back too."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "You want to hug your friend. What do you do first?",
+   "choices": [
+    "Ask: Can I have a hug?",
+    "Hug, then ask",
+    "Just hug them"
+   ],
+   "answer": 0,
+   "hint": "Hugs are for when both people want one. How do you find out?",
+   "explain": "You ask first. If your friend says yes, you hug. If they say no, you say okay."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Someone stands very close to you and you do not like it. What can you say?",
+   "choices": [
+    "Please give me some space",
+    "Nothing, I must not say",
+    "Push them away hard"
+   ],
+   "answer": 0,
+   "hint": "Your bubble is yours. Kind, clear words help.",
+   "explain": "You can say: Please give me some space. If they do not stop, tell a grown-up."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Bea is your best friend. Does she need space too?",
+    "choices": [
+     "Yes, everyone has a bubble",
+     "No, best friends do not",
+     "Only if she is cross"
+    ],
+    "answer": 0,
+    "hint": "Does everyone have a bubble, or just some people?",
+    "explain": "Everyone has a bubble, even best friends. So you still ask and give space."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You ask Cat for a hug. Cat says no thank you. What now?",
+    "choices": [
+     "Say okay and step back",
+     "Hug Cat anyway",
+     "Ask again and again"
+    ],
+    "answer": 0,
+    "hint": "What does no mean? Does asking again change it?",
+    "explain": "No means no. Say okay and step back. You can still play together."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "{n} children are playing. Which one is too close?",
+    "choices": [
+     "Talking nose to nose",
+     "Sitting with a gap",
+     "Waving from a step away"
+    ],
+    "answer": 0,
+    "hint": "Which one is inside a friend's bubble?",
+    "explain": "Nose to nose is inside the bubble, so it is too close, whichever of the {n} children does it. Step back to about an arm away.",
+    "params": {
+     "n": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Dog says: A high five instead? What do you do?",
+    "choices": [
+     "Give Dog a high five",
+     "Hug Dog anyway",
+     "Walk off cross"
+    ],
+    "answer": 0,
+    "hint": "Do what your friend asked for.",
+    "explain": "Dog wants a high five, not a hug. So a high five is the kind thing to do."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A new child at the park says hi. How do you say hello?",
+    "choices": [
+     "Wave and say hi",
+     "Hug them tight",
+     "Stand nose to nose"
+    ],
+    "answer": 0,
+    "hint": "You do not know them yet. Big bubble or small bubble?",
+    "explain": "You do not know them yet, so keep a big bubble. A wave and a hi is friendly."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which one is a sign that your friend wants space?",
+    "choices": [
+     "They step back",
+     "They smile and wave you in",
+     "They hold up a high five"
+    ],
+    "answer": 0,
+    "hint": "Which body move takes your friend further away?",
+    "explain": "Stepping back means give me space. The smile and the high five invite you in."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Grandad wants a hug but you do not want one. What can you do?",
+    "choices": [
+     "Say no thank you, and wave or high five",
+     "You must hug him",
+     "Hide and say nothing"
+    ],
+    "answer": 0,
+    "hint": "Your body belongs to you. Is there a kind way to say no?",
+    "explain": "You can say no thank you and give a wave or a high five instead. That is kind and it is your choice."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "On the carpet, {n} children are squashed together. What helps?",
+    "choices": [
+     "Shuffle back so there is a gap",
+     "Squash in more",
+     "Lean on the next child"
+    ],
+    "answer": 0,
+    "hint": "How can each child get their own bubble?",
+    "explain": "A gap between all {n} children gives everyone room to sit and wiggle.",
+    "params": {
+     "n": [
+      4,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Someone will not stop hugging you after you said stop. What should you do?",
+    "choices": [
+     "Tell a grown-up",
+     "Keep it a secret",
+     "It is fine, say nothing"
+    ],
+    "answer": 0,
+    "hint": "Who can help when someone does not listen to stop?",
+    "explain": "Tell a grown-up you trust. Stop means stop, and a grown-up will help."
+   }
+  ]
+ }
+}

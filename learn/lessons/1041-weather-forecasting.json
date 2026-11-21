@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_AghN5YcCHX",
+ "title": "Weather forecasting",
+ "audience": "learner",
+ "keyIdea": "A weather forecast is a prediction of the weather to come, made by scientists called meteorologists. They gather measurements from many tools: satellites photograph clouds from space, radar finds where rain is falling now, weather balloons carry sensors high into the air and weather stations measure on the ground. Supercomputers use these measurements to work out what the air will do next. Forecasts for the next few days are usually right, but small errors grow, so forecasts further ahead are less sure. A chance of rain, such as 70%, tells you how likely rain is, and weather warnings help people plan and stay safe.",
+ "familyTip": "Look at the forecast for tomorrow and for five days ahead, and write both down. Each evening, check what the weather really did and give each forecast a tick or a cross. After a week, talk about which forecasts were right more often, and what you would do with a 30% or a 70% chance of rain.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Was it seen from far away or measured right there? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Seen from far away (satellite or radar)",
+    "Measured right there (balloon or station)"
+   ],
+   "items": [
+    [
+     "Cloud swirls over a whole ocean",
+     0
+    ],
+    [
+     "Where rain is falling 100 km away",
+     0
+    ],
+    [
+     "Air temperature 20 km up",
+     1
+    ],
+    [
+     "Rain caught in a gauge in the park",
+     1
+    ],
+    [
+     "The spiral shape of a hurricane",
+     0
+    ],
+    [
+     "Wind speed on a hilltop",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfcast",
+  "caption": "Flagship lab: match forecasting tools to their jobs, time rain on a radar map, run a computer model five times, show a 70% chance of rain, plan with a warning.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A forecast tells you what the weather will do next. It is made by scientists called meteorologists. They do not guess. They use lots of measurements. Each tool has a job. A satellite takes photos of clouds from space. Radar sends out radio waves that bounce off rain, so it shows where rain is falling now. A weather balloon carries sensors high up into the air. A weather station on the ground measures heat, rain and wind.",
+   "Rain clouds are carried by the wind. A west wind blows from the west, so the rain comes from the west. If the rain moves one square on the map each hour, you can count the squares to see when it will reach you.",
+   "A big computer works out what the air will do next. Forecasters run it many times. The runs agree about tomorrow but drift apart for next week. So a forecast for tomorrow is surer than one for next week.",
+   "A 70% chance of rain means that on 7 out of 10 days like this one, it rains where you are. Rain is likely, but not certain. Warnings go from yellow to amber to red as the danger grows."
+  ],
+  "adult": [
+   "Ages 7 to 9. It supports England's Key Stage 2 working scientifically: gather, record and present data, then use results to make predictions. It also supports NGSS 3-ESS2-1 (use data to describe typical weather expected in a season) and 3-ESS3-1 (design solutions that reduce the impact of a weather-related hazard). Key words: meteorologist, forecast, satellite, radar, weather balloon (radiosonde), weather station, computer model, probability, weather warning.",
+   "Forecasting starts with observations. Weather balloons are launched twice a day from about 900 sites worldwide and rise for about 2 hours to over 30 km before bursting. Radar maps precipitation within about 200 km. Satellites watch clouds over whole oceans. Supercomputers use these data and the laws of physics to step the atmosphere forward in time. Running the model many times from slightly different starting values (an ensemble) shows how sure a forecast is.",
+   "A common mistake is to read a 70% chance of rain as rain for 70% of the day, or over 70% of the area. It means a 7 in 10 chance of rain at that place. Other slips are thinking a west wind blows towards the west, and expecting a ten-day forecast to be as reliable as tomorrow's. NOAA reports that a five-day forecast is right about 90% of the time, but a ten-day forecast only about half the time.",
+   "In the lab you match four tools to their jobs, drag radar rain east to time its arrival at a town, run a model five times and find the day the runs agree, build 70% as 7 rainy days out of 10, and plan three days around a forecast with a yellow wind warning."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "Rain is {d} km west of a town. A west wind moves it 10 km each hour. How many hours until it reaches the town?",
+   "answer": "d/10",
+   "params": {
+    "d": [
+     20,
+     60
+    ]
+   },
+   "where": "d % 10 == 0",
+   "hint": "Each hour the rain moves 10 km closer. How many tens are there in {d}?",
+   "explain": "{d} km at 10 km each hour takes {=d/10} hours."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The forecast says a {a}0% chance of rain. Out of 10 days like this one, how many would you expect to stay dry?",
+   "answer": "10-a",
+   "params": {
+    "a": [
+     1,
+     9
+    ]
+   },
+   "hint": "{a}0% means {a} rainy days out of 10. The rest stay dry.",
+   "explain": "{a} days in 10 are rainy, so 10 − {a} = {=10-a} days stay dry."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which tool shows where rain is falling right now?",
+   "choices": [
+    "Radar",
+    "A weather balloon",
+    "A rain gauge in your garden"
+   ],
+   "answer": 0,
+   "hint": "Which tool sends out radio waves that bounce off raindrops?",
+   "explain": "Radar sends out radio waves. They bounce back off rain, so radar can map rain across a wide area right now."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A west wind is blowing. Which way is it pushing the clouds?",
+   "choices": [
+    "Towards the east",
+    "Towards the west",
+    "Up and down only"
+   ],
+   "answer": 0,
+   "hint": "A wind is named after the direction it comes from.",
+   "explain": "A west wind blows from the west, so it pushes clouds towards the east."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which forecast is most likely to be right?",
+   "choices": [
+    "The forecast for tomorrow",
+    "The forecast for 10 days away",
+    "They are all just as sure"
+   ],
+   "answer": 0,
+   "hint": "Think about the computer runs. When do they agree best?",
+   "explain": "Small errors grow over time, so forecasts are surest for the next day or two. A 10-day forecast is right only about half the time."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A weather station launches a weather balloon twice every day. How many balloons does it launch in {n} days?",
+    "answer": "2*n",
+    "params": {
+     "n": [
+      2,
+      7
+     ]
+    },
+    "hint": "Two balloons each day. Count in twos for {n} days.",
+    "explain": "2 balloons × {n} days = {=2*n} balloons."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "It is 8 am. Rain is {s} squares west of your house and moves 1 square east each hour. At what hour will it reach you? Type just the hour number.",
+    "answer": "8+s",
+    "params": {
+     "s": [
+      1,
+      4
+     ]
+    },
+    "hint": "Add one hour for each square: 8 + {s}.",
+    "explain": "{s} squares at 1 square an hour is {s} hours, so the rain arrives at 8 + {s} = {=8+s} o'clock."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What does a meteorologist do?",
+    "choices": [
+     "Studies the weather and forecasts it",
+     "Studies rocks and volcanoes",
+     "Measures how tall mountains are"
+    ],
+    "answer": 0,
+    "hint": "Meteorology is the science of the weather and the air.",
+    "explain": "A meteorologist is a scientist who studies the weather and uses measurements to forecast it."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What does a 70% chance of rain mean?",
+    "choices": [
+     "On 7 out of 10 days like this, it rains here",
+     "It will rain for 70% of the day",
+     "Rain will fall on 70% of the town"
+    ],
+    "answer": 0,
+    "hint": "It tells you how likely rain is at your place, not how long it lasts.",
+    "explain": "70% is a 7 in 10 chance of rain at that place. It does not say how long the rain lasts or how much of the area gets wet."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which tool takes photos of clouds from space?",
+    "choices": [
+     "A satellite",
+     "A wind vane",
+     "A weather balloon"
+    ],
+    "answer": 0,
+    "hint": "Which tool is out in space, circling the Earth?",
+    "explain": "Weather satellites circle high above Earth and photograph clouds over whole oceans and continents."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Five computer runs of a forecast give 14, 15, 14, 14 and 15 °C for tomorrow, but 12, 20, 15, 19 and 13 °C for next week. What does this show?",
+    "choices": [
+     "Tomorrow's forecast is surer than next week's",
+     "Next week's forecast is surer",
+     "The computer is broken"
+    ],
+    "answer": 0,
+    "hint": "Where do the runs agree with each other?",
+    "explain": "The runs agree closely for tomorrow but spread from 12 to 20 °C for next week, so the forecast for next week is much less sure."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which weather warning colour means the most danger?",
+    "choices": [
+     "Red",
+     "Yellow",
+     "Amber"
+    ],
+    "answer": 0,
+    "hint": "Think of the colour used for stop and danger signs.",
+    "explain": "Yellow means be aware, amber means be prepared and red means take action now: red is the most dangerous."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A yellow warning for strong wind is forecast for Sunday. Which plan is best?",
+    "choices": [
+     "Tie down the trampoline on Saturday",
+     "Have a picnic under the trees on Sunday",
+     "Ignore it, because yellow is the mildest"
+    ],
+    "answer": 0,
+    "hint": "A warning gives you time to get ready before the weather arrives.",
+    "explain": "Forecasts give time to prepare: tying things down before the wind arrives stops them blowing away. Yellow still means be aware."
+   }
+  ]
+ }
+}

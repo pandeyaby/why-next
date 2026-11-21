@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_TA9svKR9Yn",
+ "title": "Box plots",
+ "audience": "family",
+ "keyIdea": "A box plot draws the five-number summary on a number line: whiskers out to the minimum and maximum, a box from the lower quartile (Q1) to the upper quartile (Q3), and a line at the median. Each whisker and each half of the box holds about a quarter of the data, so a longer part means the values are more spread out, not that there are more of them. Read the median from the line (it need not be the centre of the box), the interquartile range as IQR = Q3 − Q1 (the width of the box) and the range as max − min. To compare two groups, compare a median (a typical value) and an IQR (consistency), not the single highest value.",
+ "familyTip": "Time how long each person at home takes to get ready in the morning for a week, or use a sports team's scores. Find the min, Q1, median, Q3 and max, then draw the box plot on squared paper together. Ask: which part is longest, and does it hold more days? Draw a second plot for another person and compare medians and IQRs in a sentence.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which part of the box plot shows it? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "the box",
+    "the whiskers"
+   ],
+   "items": [
+    [
+     "Q1 to Q3",
+     0
+    ],
+    [
+     "min to Q1",
+     1
+    ],
+    [
+     "the middle half of the data",
+     0
+    ],
+    [
+     "the lowest quarter of the data",
+     1
+    ],
+    [
+     "the line at the median",
+     0
+    ],
+    [
+     "the ends at min and max",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagboxplot",
+  "caption": "Flagship lab: drag five markers to draw a box plot, count a quarter of the dots in every part, read median, IQR and range, compare two classes, check a robot.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A box plot shows five numbers on a number line: the smallest value, the lower quartile (Q1), the median, the upper quartile (Q3) and the largest value. The box goes from Q1 to Q3, with a line at the median. Two whiskers go out to the smallest and largest values.",
+   "Each whisker holds about a quarter of the data. So does each half of the box. A long part does not hold more values. It means those values are more spread out.",
+   "To read it, the median is the line, not the centre of the box. The IQR is Q3 minus Q1, the width of the box. The range is the largest minus the smallest.",
+   "To compare two groups, give the median for a typical value and the IQR for how spread out they are. One very high value tells you little about the rest."
+  ],
+  "adult": [
+   "Ages 13 to 15. US Common Core 6.SP.B.4 asks students to display data in box plots, and S-ID.A.1 and A.2 to compare the centre and spread of data sets. In England, GCSE subject content S4 asks students to construct and interpret box plots and to compare distributions using a median and the interquartile range. Key words: five-number summary, minimum, lower quartile, median, upper quartile, maximum, interquartile range, range, whisker, distribution, consistent.",
+   "The quartiles split ordered data into four groups of equal count. A box plot draws those groups as four parts of unequal length, so length shows spread, not frequency. That is why a long whisker or a long half-box means the values there are spread thinly, and why the median line often sits off-centre in a skewed data set.",
+   "Common mistakes: thinking a longer part of the plot holds more values; reading the median as the centre of the box; giving Q3 alone as the IQR, or the maximum as the range; and comparing groups by their top value. Exam mark schemes expect one comparison of an average and one of spread, each in the context of the data.",
+   "In the lab your learner drags five markers to draw three box plots from their summaries, taps the four parts of two plots under a dot plot and finds 3 of the 12 values in each, reads median, IQR and range from two plots, compares two classes, and checks a robot's claims."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A box plot has Q1 = {a} and Q3 = {=a+b}. What is the interquartile range?",
+   "answer": "b",
+   "params": {
+    "a": [
+     10,
+     30
+    ],
+    "b": [
+     6,
+     20
+    ]
+   },
+   "hint": "The IQR is the width of the box: Q3 minus Q1.",
+   "explain": "IQR = Q3 − Q1 = {=a+b} − {a} = {b}."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A box plot's whiskers run from {a} to {=a+r}. What is the range?",
+   "answer": "r",
+   "params": {
+    "a": [
+     2,
+     15
+    ],
+    "r": [
+     20,
+     60
+    ]
+   },
+   "hint": "The range is the largest value minus the smallest.",
+   "explain": "Range = max − min = {=a+r} − {a} = {r}."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "On a box plot, the right whisker is much longer than the left one. Which holds more of the values?",
+   "choices": [
+    "They hold about the same number",
+    "The right whisker",
+    "The left whisker"
+   ],
+   "answer": 0,
+   "hint": "Each whisker runs from an end of the data to a quartile.",
+   "explain": "Each whisker holds about a quarter of the values. The longer one just has them more spread out."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A box goes from 20 to 40 and the line inside it is at 26. What is the median?",
+   "choices": [
+    "26",
+    "30",
+    "20"
+   ],
+   "answer": 0,
+   "hint": "The median is marked by the line inside the box.",
+   "explain": "The line marks the median, 26. It does not have to be in the centre of the box (30)."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Group X has median 50 and IQR 8. Group Y has median 50 and IQR 20. Which is more consistent?",
+   "choices": [
+    "Group X",
+    "Group Y",
+    "Neither, the medians are equal"
+   ],
+   "answer": 0,
+   "hint": "Consistency is about spread. Which IQR is smaller?",
+   "explain": "Group X has the smaller IQR, so its middle half is closer together: it is more consistent."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "The box of a box plot starts at {a} and ends at {=a+b}. What is the IQR?",
+    "answer": "b",
+    "params": {
+     "a": [
+      5,
+      25
+     ],
+     "b": [
+      4,
+      18
+     ]
+    },
+    "hint": "The box runs from Q1 to Q3. Subtract to find its width.",
+    "explain": "The box spans Q1 = {a} to Q3 = {=a+b}, so IQR = {b}."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A data set has {=4*n} values. About how many of them lie between Q1 and the median?",
+    "answer": "n",
+    "params": {
+     "n": [
+      3,
+      10
+     ]
+    },
+    "hint": "The quartiles and median split the data into four groups of equal size.",
+    "explain": "Each quarter holds {=4*n} ÷ 4 = {n} values, so about {n} lie between Q1 and the median."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which five values does a box plot show?",
+    "choices": [
+     "min, Q1, median, Q3, max",
+     "mean, mode, median, range, IQR",
+     "min, mean, median, mode, max"
+    ],
+    "answer": 0,
+    "hint": "It is called the five-number summary.",
+    "explain": "A box plot shows the minimum, lower quartile, median, upper quartile and maximum."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What does the width of the box show?",
+    "choices": [
+     "The interquartile range",
+     "The range",
+     "The median"
+    ],
+    "answer": 0,
+    "hint": "The box starts at Q1 and ends at Q3.",
+    "explain": "The box runs from Q1 to Q3, so its width is Q3 − Q1, the interquartile range."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A student says the IQR is 31 because Q3 is at 31. Q1 is at 20. What is the IQR?",
+    "choices": [
+     "11",
+     "31",
+     "51"
+    ],
+    "answer": 0,
+    "hint": "The IQR is a difference between two quartiles.",
+    "explain": "IQR = Q3 − Q1 = 31 − 20 = 11. Q3 on its own is not the IQR."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Class A: median 60, IQR 14. Class B: median 55, IQR 27, top score 95. Which comparison is fair?",
+    "choices": [
+     "A scored higher on average and more consistently",
+     "B did better because its top score is higher",
+     "B is more consistent because its box is longer"
+    ],
+    "answer": 0,
+    "hint": "Compare one average and one spread.",
+    "explain": "A's median is higher and its IQR is smaller. One top score says little about a whole class."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In a box plot, the median line is close to Q1. What does that tell you?",
+    "choices": [
+     "The lower half of the middle values is bunched up",
+     "Most of the data is below Q1",
+     "The plot was drawn wrongly"
+    ],
+    "answer": 0,
+    "hint": "Each half of the box still holds a quarter of the data.",
+    "explain": "A quarter of the data sits between Q1 and the median, so if that gap is short, those values are close together."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A box plot has min 3 and max 50. What is the range?",
+    "choices": [
+     "47",
+     "50",
+     "53"
+    ],
+    "answer": 0,
+    "hint": "Range = largest value − smallest value.",
+    "explain": "Range = 50 − 3 = 47. The maximum alone is not the range."
+   }
+  ]
+ }
+}

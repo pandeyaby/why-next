@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_HNB0EjYQNF",
+ "title": "Telling a story from picture cards",
+ "audience": "family",
+ "keyIdea": "A story happens in an order. Put the picture cards in order and tell what happens in each one, using story words: first for the start, next and then for the middle, and last for the end. If you swap the cards, the story changes, and it can stop making sense, so ask: what has to happen before this?",
+ "familyTip": "Draw or print three pictures of something you did today, like getting dressed, eating breakfast and going to the park. Mix them up. Ask your child to put them in order and tell you the story with first, next and last. Then swap two and ask: does that work?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does this card come at the start or the end of the story? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Start of the story",
+    "End of the story"
+   ],
+   "items": [
+    [
+     "Ben gets a balloon",
+     0
+    ],
+    [
+     "Ben is sad",
+     1
+    ],
+    [
+     "An egg sits in a nest",
+     0
+    ],
+    [
+     "A chick comes out",
+     1
+    ],
+    [
+     "Mix the cake",
+     0
+    ],
+    [
+     "Eat the cake",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpicstory",
+  "caption": "Flagship lab: order Ben's balloon story, tell a puddle story with first, next, then, last, swap cards, fix mix-ups and pick an ending.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Picture cards can tell a story. Each card shows one thing that happens.",
+   "Put the cards in order. Then tell the story with story words. Say first for the start. Say next or then for the middle. Say last for the end.",
+   "The order matters. An egg cracks, and then a chick comes out. If you swap the cards, the chick comes before the egg. That is silly!",
+   "To find the right order, ask: what has to happen before this? Socks go on before shoes."
+  ],
+  "adult": [
+   "Ages 3 to 4. Development Matters (2021) asks children of this age to tell a long story and use a wider range of words, and in Reception to retell stories and describe events in some detail. Sequencing picture cards is a classic early step: the child links pictures in time order and joins them with sequence words (first, next, then, last), the start of narrative language that later supports reading comprehension and writing.",
+   "Start with three cards and a story your child knows well, then move to four. Ask them to tell each card, not just point. Model the words yourself: First, Ben gets a balloon. Next, the wind blows it. Last, Ben is sad. Praise the telling as much as the order.",
+   "Common mistakes: putting the most exciting picture first; thinking any order tells the same story; using last for the middle or first at the end; and naming the pictures (a balloon, the wind) without saying what happens. Be careful to accept next and then for any middle card: both are correct sequence words.",
+   "In the lab your child drags Ben's story into first, next and last, labels a four-card puddle story with time words, swaps two egg cards to hear the story go wrong, fixes three mixed-up stories, and picks an ending that follows from what happened."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A story has {n} picture cards. Card 1 gets first and the last card gets last. How many middle cards get next or then?",
+   "answer": "n-2",
+   "hint": "Take away the first card and the last card. The rest are in the middle.",
+   "explain": "{n} cards take away the first and the last leaves {=n-2} middle cards for next or then.",
+   "params": {
+    "n": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A story has 5 cards. You have told {n} of them. How many cards are left to tell?",
+   "answer": "5-n",
+   "hint": "Count on from {n} to 5, or take {n} away from 5.",
+   "explain": "5 cards take away the {n} you told leaves {=5-n} cards to tell before the end.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which word do you say for the first card of a story?",
+   "choices": [
+    "First",
+    "Last",
+    "Then"
+   ],
+   "answer": 0,
+   "hint": "Which word means the very start?",
+   "explain": "First is for the start. Last is for the end, and then is for the middle."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "An egg, it cracks, a chick. What if you swap the egg and the chick?",
+   "choices": [
+    "The story changes and is silly",
+    "It is the same story",
+    "Nothing, the pictures are the same"
+   ],
+   "answer": 0,
+   "hint": "Can a chick come out before the egg cracks?",
+   "explain": "A new order tells a new story. The chick cannot come before the egg."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Socks on, shoes on, go out. Which card is last?",
+   "choices": [
+    "Go out",
+    "Socks on",
+    "Shoes on"
+   ],
+   "answer": 0,
+   "hint": "What do you do when you are ready?",
+   "explain": "You put on socks, then shoes, and last you go out."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Build a tower, tidy up, it falls. What is wrong?",
+    "choices": [
+     "It falls before you tidy up",
+     "Nothing is wrong",
+     "You build the tower last"
+    ],
+    "answer": 0,
+    "hint": "What must happen before you can tidy up the bricks?",
+    "explain": "The tower falls first, then you tidy up the bricks."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Grey clouds, it rains, big puddles. What comes last?",
+    "choices": [
+     "Kim jumps in a puddle",
+     "Grey clouds come",
+     "A rocket flies"
+    ],
+    "answer": 0,
+    "hint": "What can Kim do now that there are puddles?",
+    "explain": "The end comes from what happened before: puddles, so Kim jumps in."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which words can you say for a middle card?",
+    "choices": [
+     "Next or then",
+     "First",
+     "Last"
+    ],
+    "answer": 0,
+    "hint": "First and last are taken by the start and the end.",
+    "explain": "Next and then both work for the middle of a story."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mix the cake, bake it, eat it. Which card goes first?",
+    "choices": [
+     "Mix the cake",
+     "Eat it",
+     "Bake it"
+    ],
+    "answer": 0,
+    "hint": "What must you do before the cake goes in the oven?",
+    "explain": "You mix first, then bake, and last you eat the cake."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Mo puts the most fun picture first. Is that right?",
+    "choices": [
+     "No, the card that happens first goes first",
+     "Yes, fun cards go first",
+     "Yes, any order is fine"
+    ],
+    "answer": 0,
+    "hint": "Is the story about what is fun or about what happens when?",
+    "explain": "A story goes in time order. The fun part often comes at the end."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A story has {n} cards in a row. Which card number is the last one?",
+    "answer": "n",
+    "hint": "Count the cards. The last one is the biggest number.",
+    "explain": "With {n} cards, card {n} is the last one, at the end of the row.",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Ben gets a balloon, the wind blows it, Ben is sad. Why is Ben sad?",
+    "choices": [
+     "The wind blew his balloon away",
+     "He got a balloon",
+     "It was raining"
+    ],
+    "answer": 0,
+    "hint": "Look at the card just before Ben is sad.",
+    "explain": "The card before tells us why: the wind took the balloon."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Pip finds mud, rolls in it, has a bath. What comes last?",
+    "choices": [
+     "Pip is clean",
+     "Pip finds mud",
+     "A red car"
+    ],
+    "answer": 0,
+    "hint": "What happens after a bath?",
+    "explain": "After the bath Pip is clean. That is new, and it comes from what happened."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "You have put {n} cards in order, and 2 cards are still mixed up. How many cards are in the story?",
+    "answer": "n+2",
+    "hint": "Add the cards in order and the cards still mixed up.",
+    "explain": "{n} cards in order and 2 mixed up make {=n+2} cards in the whole story.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   }
+  ]
+ }
+}

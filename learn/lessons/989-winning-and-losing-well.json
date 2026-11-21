@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_UHFt-e2DnI",
+ "title": "Winning and losing well",
+ "audience": "family",
+ "keyIdea": "Games are fun because anyone can win. Play by the rules, the same rules for everyone. If you lose, it is OK to feel cross or sad: calm down with slow breaths, finish the game and say good game. If you win, be kind: say well played, not I'm the best.",
+ "familyTip": "Play a short board game where luck decides the winner. Before you start, agree what you will both say at the end: good game. When you lose, show it out loud: I feel a bit cross, I'll take a slow breath. Good game! Then play again.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it playing fair or not fair? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Fair play",
+    "Not fair"
+   ],
+   "items": [
+    [
+     "Saying good game when you lose",
+     0
+    ],
+    [
+     "Moving more squares than you rolled",
+     1
+    ],
+    [
+     "Waiting for your turn",
+     0
+    ],
+    [
+     "Quitting because you are behind",
+     1
+    ],
+    [
+     "Saying well played when you win",
+     0
+    ],
+    [
+     "Making a new rule because you are losing",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggoodgame",
+  "caption": "Flagship lab: lose a dice race and say good game, calm down, sort kind words from boasting, judge fair moves, and come back from 0–2.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "In a game, sometimes you win and sometimes you lose. The dice or the cards decide a lot of it.",
+   "When you lose, you might feel cross or sad. That is OK. Take slow breaths until the feeling goes down. Then say: Good game!",
+   "Keep playing to the end, even when you are behind. Games can change.",
+   "When you win, be kind. Say: Well played! Want another go? Do not say: I'm the best. And the rules are the same for everyone, all the time."
+  ],
+  "adult": [
+   "Ages 6 to 7. The DfE statutory guidance for Relationships and Health Education (2019) asks primary pupils to learn that there is a normal range of emotions, including anger, and simple self-care techniques, and to show courtesy, manners and fairness with others. It builds on the EYFS Early Learning Goals Managing Self (show resilience and perseverance) and Building Relationships (work and play cooperatively and take turns). Key words: fair play, rules, turn-taking, resilience, good loser, good winner.",
+   "Children of this age are still learning to cope with losing, and many will cry, quit or blame. Name the feeling, show a calming strategy such as slow breaths, and praise finishing the game more than winning it. Short games of luck, such as snakes and ladders, give lots of safe practice at losing.",
+   "Common mistakes: blaming the winner (you cheated!) when it was the dice; quitting or spoiling the game when behind; changing the rules mid-game; boasting after a win; and hitting or sulking when cross. A common adult slip is letting the child always win, which removes the practice they need. Be careful not to say losing should not upset them: the feeling is fine, the action is what you guide.",
+   "In the lab your child loses a dice race and chooses what to say, calms a cross feeling with five slow breaths, sorts kind winner words from boasting, judges five moves as fair or not fair, and keeps playing from 0–2 down in a card match."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "You roll a {n} on the dice. How many squares do you move to play fair?",
+   "answer": "n",
+   "hint": "Fair play means you move the number you rolled.",
+   "explain": "You rolled {n}, so you move {n} squares. Moving more would be cheating.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a race game the flag is on square 10. Kai is nearly there, and you are on square {n}. How many squares are left for you to reach the flag?",
+   "answer": "10-n",
+   "hint": "Count on from {n} to 10. Do not stop playing because Kai is ahead.",
+   "explain": "From {n} to 10 is {=10-n} squares. Keep playing: games can change.",
+   "params": {
+    "n": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You lose a game. What do you say?",
+   "choices": [
+    "Good game!",
+    "You cheated!",
+    "I'm never playing again!"
+   ],
+   "answer": 0,
+   "hint": "What would make the other player want to play with you again?",
+   "explain": "Good game is kind. Blaming or quitting spoils it for everyone."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "You feel cross after losing. What helps?",
+   "choices": [
+    "Taking slow breaths",
+    "Hitting the table",
+    "Throwing the pieces"
+   ],
+   "answer": 0,
+   "hint": "What calms your body down?",
+   "explain": "Slow breaths calm your body. Hitting and throwing can hurt and do not help."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You win. Which is a kind thing to say?",
+   "choices": [
+    "Well played. Want another go?",
+    "Ha, I'm the best!",
+    "You're rubbish!"
+   ],
+   "answer": 0,
+   "hint": "Think about how the other player feels.",
+   "explain": "Well played is kind to the loser. Boasting makes them feel worse."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Kai rolls a 6 and wins. Did he cheat?",
+    "choices": [
+     "No, it was the dice",
+     "Yes, he must have",
+     "Yes, winners always cheat"
+    ],
+    "answer": 0,
+    "hint": "Who decides the number on the dice?",
+    "explain": "The dice decided. Losing does not mean someone cheated."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You are losing. Can you make a new rule?",
+    "choices": [
+     "No, the rules stay the same for everyone",
+     "Yes, when I am losing",
+     "Yes, if nobody sees"
+    ],
+    "answer": 0,
+    "hint": "Is it fair if one player changes the rules?",
+    "explain": "Rules are agreed at the start and stay the same, for everyone."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Is it OK to feel sad when you lose?",
+    "choices": [
+     "Yes, and then I calm down",
+     "No, never",
+     "Only if I cry"
+    ],
+    "answer": 0,
+    "hint": "Are feelings good or bad, or is it what you do that matters?",
+    "explain": "Feeling sad is normal. What matters is calming down and staying kind."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A card match has 5 rounds. You have played {n} rounds and you are behind. How many rounds are left to play?",
+    "answer": "5-n",
+    "hint": "The match is 5 rounds long. Take away the rounds you have played.",
+    "explain": "5 rounds take away {n} played leaves {=5-n} rounds. That is time to catch up, so keep going.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You take {n} slow breaths to calm down, and blow out one candle with each breath. How many candles are out?",
+    "answer": "n",
+    "hint": "One breath blows out one candle.",
+    "explain": "Each breath blows out one candle, so {n} breaths blow out {n} candles.",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Zoe rolls 2 but moves 4. Is that fair?",
+    "choices": [
+     "No, she should move 2",
+     "Yes, if she is losing",
+     "Yes, 4 is close to 2"
+    ],
+    "answer": 0,
+    "hint": "How many squares does the dice say?",
+    "explain": "She rolled 2, so she moves 2. Moving 4 breaks the rules."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Sam is losing and kicks the board. What could he do instead?",
+    "choices": [
+     "Take slow breaths and keep playing",
+     "Kick it harder",
+     "Hide the pieces"
+    ],
+    "answer": 0,
+    "hint": "What calms you down and lets the game finish?",
+    "explain": "Slow breaths help the cross feeling go down, and the game can finish."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Mo wins and shouts: You lost, ha ha! What was his slip?",
+    "choices": [
+     "He boasted; he should say good game",
+     "Nothing, he won",
+     "He should say sorry for winning"
+    ],
+    "answer": 0,
+    "hint": "How does the player who lost feel?",
+    "explain": "Boasting makes the loser feel worse. A kind winner says good game."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why should a grown-up not let a child win every game?",
+    "choices": [
+     "The child needs practice at losing",
+     "Winning is bad",
+     "So the grown-up wins"
+    ],
+    "answer": 0,
+    "hint": "How do you get better at something?",
+    "explain": "Losing safely, with a grown-up, is practice for losing well with friends."
+   }
+  ]
+ }
+}

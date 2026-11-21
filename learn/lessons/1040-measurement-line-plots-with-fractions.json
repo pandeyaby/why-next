@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_42QD6nYjiZ",
+ "title": "Measurement line plots with fractions",
+ "audience": "learner",
+ "keyIdea": "A measurement line plot is a number line marked in equal fractions of a unit, such as eighths of an inch, with one X above the length of each object measured. Equal lengths written in different ways, like 1½, 1 2/4 and 1 4/8, share one stack. You can answer questions from the plot by adding and subtracting fractions: the difference between two values is the number of equal jumps between them, and lengths laid end to end add up, whole numbers with whole numbers and fractions with fractions.",
+ "familyTip": "Measure 8 pencils, crayons or leaves to the nearest ⅛ inch with a ruler, write each length on a sticky note, and build a line plot on a strip of paper marked from the shortest to the longest. Ask: what is the most common length, how much longer is the longest than the shortest, and how long would they all be laid end to end?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it the same length as 1½ inches? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Same as 1½ in",
+    "Not the same as 1½ in"
+   ],
+   "items": [
+    [
+     "1 2/4 in",
+     0
+    ],
+    [
+     "1 4/8 in",
+     0
+    ],
+    [
+     "3/2 in",
+     0
+    ],
+    [
+     "1 5/8 in",
+     1
+    ],
+    [
+     "1¼ in",
+     1
+    ],
+    [
+     "1 1/8 in",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfplot",
+  "caption": "Flagship lab: find eighth marks on an inch scale, plot 8 seedling heights, read the plot, subtract tallest minus shortest, lay bars end to end.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A ruler splits each inch into 8 equal jumps. Each jump is one eighth of an inch. Two eighths make a quarter, and four eighths make a half. So ⅛ is shorter than ¼, even though 8 is bigger than 4.",
+   "A line plot is a number line with an X for each thing you measured. Put each X above its length. If two things are the same length, their Xs stack up. 1½ and 1 4/8 are the same length, so they share one stack.",
+   "To find how much longer one thing is, count the jumps between the two Xs. Count the gaps, not the marks. From 1¼ to 1⅞ is 5 jumps, so the difference is ⅝ inch.",
+   "To find a total, add the wholes and then add the fractions. Three halves make 1½, so 1½ + 1½ + 1½ is 3 + 1½, which is 4½ inches."
+  ],
+  "adult": [
+   "Ages 9 to 10. This meets Common Core 4.MD.B.4: make a line plot to show measurements in fractions of a unit (½, ¼, ⅛) and solve addition and subtraction problems from it; 5.MD.B.2 extends this to all four operations. In England, Years 4 and 5 ask pupils to interpret data and to add and subtract fractions whose denominators are multiples of the same number. Key words: line plot, data, scale, interval, eighth, equivalent fraction, mixed number, difference, total.",
+   "Method: choose a scale from the smallest to the largest value, mark it in the unit of measurement (here eighths), and place one X per object. Write every value in eighths before comparing: 1¼ = 1 2/8 and 1½ = 1 4/8. For a difference, subtract the eighths or count the jumps; for a total, add the whole numbers and the fractions separately, then regroup any fraction of 1 or more.",
+   "A common mistake is to think ⅛ is bigger than ¼ because 8 is bigger than 4. Others are counting the marks rather than the gaps between two values, adding or subtracting both the tops and the bottoms (½ + ½ + ½ = 3/6), plotting 1 4/8 somewhere other than 1½, and counting values equal to 1½ as taller than 1½.",
+   "In the lab you find quarter and eighth marks on a scale that names only 1, 1½ and 2, plot eight seedling heights written in mixed forms, read the most common height and count the taller ones, subtract the shortest from the tallest by counting jumps, and lay three 1½ inch bars end to end on a ruler."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "On a line plot in eighths, the tallest seedling is 1 and {a}/8 in and the shortest is 1 and {b}/8 in. How many eighths taller is the tallest?",
+   "answer": "a-b",
+   "params": {
+    "a": [
+     5,
+     7
+    ],
+    "b": [
+     1,
+     4
+    ]
+   },
+   "hint": "Both start with 1 whole, so take the eighths away: {a} − {b}.",
+   "explain": "1 {a}/8 − 1 {b}/8 = {=a-b}/8 inch. That is {=a-b} jumps of ⅛ between the two Xs."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{a} pencils are each ½ inch too short to fit a box. How many inches short are they in total?",
+   "answer": "a/2",
+   "params": {
+    "a": [
+     2,
+     8
+    ]
+   },
+   "where": "a % 2 == 0",
+   "hint": "Two halves make one whole inch. How many pairs of halves are there in {a}?",
+   "explain": "{a} halves = {=a/2} whole inches, because every 2 halves make 1 inch."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which is longer: ⅛ inch or ¼ inch?",
+   "choices": [
+    "¼ inch",
+    "⅛ inch, because 8 is bigger than 4",
+    "They are the same"
+   ],
+   "answer": 0,
+   "hint": "Cutting the same inch into more pieces makes each piece smaller.",
+   "explain": "¼ inch = 2/8 inch, so ¼ is twice as long as ⅛."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A leaf is 2 4/8 inches long. Which X stack on a line plot does it join?",
+   "choices": [
+    "The 2½ stack",
+    "A new stack at 2 4/8, away from 2½",
+    "The 2¼ stack"
+   ],
+   "answer": 0,
+   "hint": "Simplify 4/8. How many eighths make a half?",
+   "explain": "4/8 = ½, so 2 4/8 is exactly 2½ and joins that stack."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A line plot shows Xs at 1⅛, 1¼, 1¼, 1½ and 1¾ inches. How many values are greater than 1¼?",
+   "choices": [
+    "2",
+    "4",
+    "3"
+   ],
+   "answer": 0,
+   "hint": "Greater than 1¼ leaves out the Xs that are exactly 1¼.",
+   "explain": "Only 1½ and 1¾ are greater than 1¼, so the answer is 2. The two 1¼ values are equal, not greater."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "Two worms are 2 and {a}/8 in and 2 and {b}/8 in long. How many eighths of an inch longer is the first one?",
+    "answer": "a-b",
+    "params": {
+     "a": [
+      4,
+      7
+     ],
+     "b": [
+      1,
+      3
+     ]
+    },
+    "hint": "The wholes match, so subtract the eighths: {a} − {b}.",
+    "explain": "2 {a}/8 − 2 {b}/8 = {=a-b}/8 inch."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A line plot has {a} Xs at 1¼, {b} Xs at 1½ and 2 Xs at 2. How many objects were measured?",
+    "answer": "a+b+2",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      2,
+      6
+     ]
+    },
+    "hint": "Every X is one object. Add the Xs in all the stacks.",
+    "explain": "{a} + {b} + 2 = {=a+b+2} objects, one for each X."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "How far is it from 1⅜ to 1⅞ on an eighths line plot?",
+    "choices": [
+     "½ inch",
+     "⅝ inch",
+     "1½ inches"
+    ],
+    "answer": 0,
+    "hint": "Count the jumps between the marks, not the marks themselves.",
+    "explain": "There are 4 jumps of ⅛ from 1⅜ to 1⅞. 4/8 = ½ inch. Counting 5 marks would give the wrong answer ⅝."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is ¼ + ¼ + ¼?",
+    "choices": [
+     "¾",
+     "3/12",
+     "1¼"
+    ],
+    "answer": 0,
+    "hint": "Adding quarters gives more quarters. Keep the bottom number.",
+    "explain": "Three quarters is ¾. Adding the bottoms as well (3/12) would make the total smaller than one of the parts."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Three ribbons are each 1¼ inches. Laid end to end, how long are they?",
+    "choices": [
+     "3¾ inches",
+     "3 3/12 inches",
+     "3¼ inches"
+    ],
+    "answer": 0,
+    "hint": "Add the wholes (1 + 1 + 1), then add the quarters.",
+    "explain": "1 + 1 + 1 = 3 and ¼ + ¼ + ¼ = ¾, so the total is 3¾ inches."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is 1¾ − 1⅜?",
+    "choices": [
+     "⅜ inch",
+     "2/4 inch",
+     "3⅜ inches"
+    ],
+    "answer": 0,
+    "hint": "Write 1¾ in eighths first: 1¾ = 1 6/8.",
+    "explain": "1 6/8 − 1 3/8 = 3/8 inch."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A class plots shell lengths from 1 to 2 inches to the nearest ⅛ inch. How many equal jumps should the scale have?",
+    "choices": [
+     "8",
+     "4",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "Each inch is split into eighths.",
+    "explain": "Eighths split one inch into 8 equal jumps, so the scale from 1 to 2 needs 8 jumps and 9 marks."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A line plot of 6 leaves has 3 Xs at 2¼ in. Which statement must be true?",
+    "choices": [
+     "Half of the leaves are 2¼ inches long",
+     "All 6 leaves are longer than 2 inches",
+     "2¼ is the longest length"
+    ],
+    "answer": 0,
+    "hint": "3 out of 6 is what fraction of the leaves?",
+    "explain": "3 of the 6 leaves are 2¼ inches, which is half of them. The plot gives no proof about the other 3 leaves."
+   }
+  ]
+ }
+}
