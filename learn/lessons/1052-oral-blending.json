@@ -1,0 +1,272 @@
+{
+ "topicId": "mt_EBmOqpSdKw",
+ "title": "Oral blending",
+ "audience": "family",
+ "keyIdea": "Robot talk says a word in parts: c-a-t. Your ears push the parts together to hear the word: cat. This is oral blending, and you do it just by listening, with no letters to read. Start with big parts, like rain … bow, then beats, like ba-na-na, then single sounds, like h-e-n. Wait until you hear every sound, right to the end, then say the word.",
+ "familyTip": "Play robot talk in the day: \"Put on your s-o-ck\", \"Where is your h-a-t?\" Say each sound short and clear, then let your child say the word. If it is hard, go back to two words (foot … ball) or beats (ted-dy), and say the sounds a bit closer together.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Clap each word. One beat or two beats? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "1 beat (clap once)",
+    "2 beats (clap twice)"
+   ],
+   "items": [
+    [
+     "🐱 cat",
+     0
+    ],
+    [
+     "🐰 rabbit",
+     1
+    ],
+    [
+     "☀️ sun",
+     0
+    ],
+    [
+     "🌈 rainbow",
+     1
+    ],
+    [
+     "🐶 dog",
+     0
+    ],
+    [
+     "🧁 cupcake",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagoralblend",
+  "caption": "Flagship lab: push words together, match clapped beats, give Robot the toy it says, blend on head, tummy and toes, then play I spy.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Robot talks in bits. Robot says: rain … bow. Push the bits close. Now you hear one word: rainbow!",
+   "Some words have beats. Clap them: ba-na-na. Put the beats back together: banana.",
+   "Robot can say each sound: d-o-g. Wait for all of them. Then push them together: dog!",
+   "Listen right to the end. c-a-t is a cat. c-a-p is a cap. One sound makes a new word."
+  ],
+  "adult": [
+   "Ages 3 to 4. Oral blending means hearing a word said in parts and joining the parts to say the word. It is done by ear, before any reading. Letters and Sounds Phase One (Aspect 7) builds it with robot talk, sound-talk I spy and body actions. Development Matters (2021) asks 3 and 4 year olds to count or clap syllables, and Reception children to blend sounds into words to read short words. Oral blending is the listening half of that skill.",
+   "Children hear big parts before small ones. Two words joined (sun … flower) are easiest, then syllables (ba-na-na), then onset and rime (c … at), then each phoneme (c-a-t). This order matches research on how phonological awareness grows (Goswami and Bryant 1990; Anthony and Lonigan 2004). Blending phonemes by ear is a strong predictor of early reading (National Reading Panel, 2000).",
+   "Common mistakes: leaving long gaps between sounds, so the child hears three noises and not one word; guessing from the first part only (ba … guessed as balloon); missing the middle or last sound (cat and cap); guessing before every sound is said; and adding uh to sounds (cuh-a-tuh). Say sounds short and clear, with only a small gap. Be careful to use sounds, not letter names: c-a-t, not see-ay-tee.",
+   "In the lab your child slides two words together until they touch and hears a new word. Next they give Robot the picture that matches a word clapped in beats, then a toy said in sound talk. Then they tap one sound on head, tummy and toes and clap to blend. Last, they play I spy in robot talk, where a near miss such as bed for b-a-g is turned down with a reason."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Robot says: rain … bow. Push them together. What do you hear?",
+   "choices": [
+    "🌈 rainbow",
+    "🌧️ rain",
+    "🎀 bow"
+   ],
+   "answer": 0,
+   "hint": "Say rain, then bow, with no gap in between.",
+   "explain": "rain and bow pushed together make one new word: rainbow."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Robot says a word in {n} beats. You clap once for each beat. How many claps?",
+   "answer": "n",
+   "hint": "One clap for every beat Robot says.",
+   "explain": "{n} beats means {n} claps. ba-na-na has 3 beats, so 3 claps; wa-ter-mel-on has 4.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Robot says: c-a-t. Which one is it?",
+   "choices": [
+    "🐱 cat",
+    "🧢 cap",
+    "🎩 hat"
+   ],
+   "answer": 0,
+   "hint": "Listen to the first sound and the last sound.",
+   "explain": "c-a-t is cat. Cap ends in p, and hat starts with h."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You blended {n} words in robot talk. Robot says 1 more and you blend it too. How many words now?",
+   "answer": "n+1",
+   "hint": "Count the words you blended, then count one more.",
+   "explain": "{n} words and 1 more make {=n+1} words blended.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Robot says: d … Can you say the word yet?",
+   "choices": [
+    "No, wait for all the sounds",
+    "Yes, it is dog",
+    "Yes, it is duck"
+   ],
+   "answer": 0,
+   "hint": "Lots of words start with d. Has Robot finished?",
+   "explain": "Wait! d could be dog, duck or dig. Hear every sound, then blend."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Robot says: h-e-n. Which one is it?",
+    "choices": [
+     "🐔 hen",
+     "🖊️ pen",
+     "🎩 hat"
+    ],
+    "answer": 0,
+    "hint": "Listen to the first sound. Then listen to the end.",
+    "explain": "h-e-n is hen. Pen starts with p, and hat ends with t."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Robot says: ba-na-na. Which one is it?",
+    "choices": [
+     "🍌 banana",
+     "🎈 balloon",
+     "🐻 bear"
+    ],
+    "answer": 0,
+    "hint": "Clap the beats. How many did Robot say?",
+    "explain": "ba-na-na has 3 beats: banana. Balloon starts with ba too, but it ends with loon."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Robot says: b-a-g. Which one is it?",
+    "choices": [
+     "👜 bag",
+     "🛏️ bed",
+     "🐝 bee"
+    ],
+    "answer": 0,
+    "hint": "Bag and bed start the same. Listen to the middle sound.",
+    "explain": "b-a-g is bag. Bed has a different middle sound: b-e-d."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How should Robot say the sounds?",
+    "choices": [
+     "Short and close together",
+     "With big long gaps",
+     "With letter names"
+    ],
+    "answer": 0,
+    "hint": "Which way makes it easy to hear one word?",
+    "explain": "Short sounds with a small gap are easy to push together. Big gaps make 3 noises, not a word."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Robot says {n} sounds. You tap one sound on each part of you. Then Robot says 1 more sound. How many taps now?",
+    "answer": "n+1",
+    "hint": "One tap for every sound. Count the taps, then one more.",
+    "explain": "{n} sounds and 1 more make {=n+1} taps. d-o-g has 3: head, tummy, toes.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Robot says: s-u-n. Which one is it?",
+    "choices": [
+     "☀️ sun",
+     "🚌 bus",
+     "🧦 sock"
+    ],
+    "answer": 0,
+    "hint": "Which sound comes first? Which comes last?",
+    "explain": "s-u-n is sun. Bus has the same sounds but the other way round: b-u-s."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Do you need to read letters to play robot talk?",
+    "choices": [
+     "No, you just listen",
+     "Yes, you must read",
+     "Yes, you must write"
+    ],
+    "answer": 0,
+    "hint": "Can you play robot talk in the car, with no book?",
+    "explain": "Robot talk is all listening. You hear the sounds and push them together in your head."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Robot says: cup … cake. What do you hear?",
+    "choices": [
+     "🧁 cupcake",
+     "☕ cup",
+     "🎂 cake"
+    ],
+    "answer": 0,
+    "hint": "Push the two words close, with no gap.",
+    "explain": "cup and cake pushed together make one new word: cupcake."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Robot says: f-i-sh. How many sounds is that?",
+    "choices": [
+     "3 sounds",
+     "4 sounds",
+     "1 sound"
+    ],
+    "answer": 0,
+    "hint": "Tap them: head, tummy, toes. Is sh one sound?",
+    "explain": "f-i-sh has 3 sounds. sh is one sound, so it is head, tummy, toes: fish."
+   },
+   {
+    "type": "numeric",
+    "id": "m10",
+    "prompt": "In I spy you found {n} things in robot talk. You find 1 more. How many things have you found?",
+    "answer": "n+1",
+    "hint": "Count the things you found, then count one more.",
+    "explain": "{n} things and 1 more make {=n+1} things found in robot talk.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
