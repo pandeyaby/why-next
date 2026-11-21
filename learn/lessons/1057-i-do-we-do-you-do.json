@@ -1,0 +1,281 @@
+{
+ "topicId": "mt_aQlBZqPCEH",
+ "title": "I do, we do, you do",
+ "audience": "family",
+ "keyIdea": "A new skill is easier to learn in three rounds. I do: watch a grown-up do it and listen to each step. We do: do it together, taking turns on the steps. You do: try one on your own while the grown-up stays near. Have a go before asking for a hint, and ask if you are still stuck. Skipping a round means guessing.",
+ "familyTip": "Teach a new job, such as tying a lace or making a sandwich, in three rounds. First do it slowly and say each step. Then do one together, letting your child do every other step. Then let them try alone while you stay close. Wait for a real go before you help, and give a small hint, not the whole answer.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which round is it: watching, together, or on my own? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "I do",
+    "We do",
+    "You do"
+   ],
+   "items": [
+    [
+     "Dad shows how to fold a paper plane and says each fold",
+     0
+    ],
+    [
+     "You fold one wing, Dad folds the other",
+     1
+    ],
+    [
+     "You fold a plane alone, Dad sits near",
+     2
+    ],
+    [
+     "The coach kicks a ball slowly to show how",
+     0
+    ],
+    [
+     "You and the coach kick, taking turns",
+     1
+    ],
+    [
+     "You practise kicks on your own",
+     2
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagido",
+  "caption": "Flagship lab: watch a grown-up draw a cat, draw one together in turns, draw one alone, then sort and order the rounds.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "When you learn something new, you can learn it in three rounds. They are called I do, we do and you do.",
+   "I do: the grown-up does it and says each step out loud. You watch and listen. Can you name a step you saw?",
+   "We do: you do it together. The grown-up does one step, then you do the next one. Doing it yourself is how your hands learn.",
+   "You do: now try one on your own. The grown-up stays near. Have a go first. If you are still stuck, ask for a hint."
+  ],
+  "adult": [
+   "Ages 6 to 8. This is the gradual release of responsibility (Pearson and Gallagher, 1983), often called I do, we do, you do. Rosenshine's Principles of Instruction (2012) describe the same pattern: show a worked model, guide the learner's practice, then move to independent practice once they are getting most steps right. The EEF's guidance on metacognition and self-regulation names modelling as a key step.",
+   "In I do, the adult thinks aloud, saying each step and why. In we do, the child does more of the work each time while the adult prompts and checks: this support is called scaffolding (Wood, Bruner and Ross, 1976). In you do, the adult steps back but stays close, so help comes after a real attempt.",
+   "Common mistakes: expecting a child to work alone after one demonstration; doing every step for them in the we do round, so they only watch twice; stepping in before they have had a go; and the opposite, a child who never asks when truly stuck. Be careful not to give the whole answer as a hint. A small prompt, such as \"what comes after the head?\", keeps the thinking with the child.",
+   "In the lab your child watches a grown-up draw a cat in four steps and names the step after the head. Then they share the drawing turn by turn, then draw a cat alone, where the hint only opens after a go. Last they sort everyday scenes into the three rounds and put the rounds in order."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Mum ties her lace slowly and says each step. Which round is that?",
+   "choices": [
+    "I do",
+    "We do",
+    "You do"
+   ],
+   "answer": 0,
+   "hint": "Who is doing the job, and who is watching?",
+   "explain": "Mum does it and says each step while you watch. That is I do."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In we do, you and the grown-up take turns. Each of you does {n} steps. How many steps are done in all?",
+   "answer": "2*n",
+   "hint": "There are 2 of you. Add your steps and the grown-up's steps.",
+   "explain": "{n} steps each for 2 people makes {=2*n} steps, and half of them were yours.",
+   "params": {
+    "n": [
+     1,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "You are trying alone and a step looks hard. What should you do first?",
+   "choices": [
+    "Have a go, then ask for a hint",
+    "Ask the grown-up to do it",
+    "Give up"
+   ],
+   "answer": 0,
+   "hint": "Your try shows what you already remember.",
+   "explain": "Have a go first. If you are still stuck, ask for a hint."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You watched {n} steps in I do. You can name {k} of them. How many steps can you not name yet?",
+   "answer": "n-k",
+   "hint": "Take the steps you can name away from all the steps.",
+   "explain": "{n} steps take away {k} you can name leaves {=n-k} to learn in we do.",
+   "params": {
+    "n": [
+     5,
+     8
+    ],
+    "k": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which order helps you learn a new skill?",
+   "choices": [
+    "I do, we do, you do",
+    "You do, we do, I do",
+    "We do, you do, I do"
+   ],
+   "answer": 0,
+   "hint": "What do you need before you can try it alone?",
+   "explain": "Watch first, then do it together, then try alone: I do, we do, you do."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "In we do, who does the steps?",
+    "choices": [
+     "We take turns",
+     "The grown-up does them all",
+     "I do them all alone"
+    ],
+    "answer": 0,
+    "hint": "We do means doing it together.",
+    "explain": "In we do, you take turns with the grown-up. You do your share of the steps."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You watched Dad fold a paper plane once. What should come next?",
+    "choices": [
+     "Fold one together with Dad",
+     "Fold one alone straight away",
+     "Watch ten more times"
+    ],
+    "answer": 0,
+    "hint": "Which round comes after watching?",
+    "explain": "After I do comes we do: fold one together, then try alone."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You and your teacher do a sum, a step each. Which round is that?",
+    "choices": [
+     "We do",
+     "I do",
+     "You do"
+    ],
+    "answer": 0,
+    "hint": "Are you sharing the steps, watching, or working alone?",
+    "explain": "Sharing the steps with the teacher is we do."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "In you do, where is the grown-up?",
+    "choices": [
+     "Near, in case I get stuck",
+     "Doing it for me",
+     "Gone home"
+    ],
+    "answer": 0,
+    "hint": "You work alone, but help is close.",
+    "explain": "The grown-up stays near. You do the work, and ask if you are still stuck after a go."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A cat drawing has {n} steps. You have done {k}. How many steps are left?",
+    "answer": "n-k",
+    "hint": "Take the steps you have done away from all the steps.",
+    "explain": "{n} take away {k} leaves {=n-k} steps to go.",
+    "params": {
+     "n": [
+      5,
+      9
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why does the grown-up say each step out loud in I do?",
+    "choices": [
+     "So you hear how to do it",
+     "To fill the quiet",
+     "So you can stop watching"
+    ],
+    "answer": 0,
+    "hint": "What do you learn by listening to the steps?",
+    "explain": "Saying each step lets you hear the order and the reasons, not just see them."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "You tried hard on your own and you are still stuck. What now?",
+    "choices": [
+     "Ask the grown-up for a hint",
+     "Keep quiet and guess",
+     "Rub it all out"
+    ],
+    "answer": 0,
+    "hint": "You have had a real go. Help is near.",
+    "explain": "After a real go, ask for a hint. A small hint saves lots of guessing."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "You do {n} turns in we do. Then you do 3 more steps alone in you do. How many steps did you do?",
+    "answer": "n+3",
+    "hint": "Start at {n} and count on 3 more steps.",
+    "explain": "{n} steps and 3 more make {=n+3} steps you did yourself.",
+    "params": {
+     "n": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which is the you do round?",
+    "choices": [
+     "You tie your lace and Mum stays near",
+     "Mum ties it and says each step",
+     "You make the loop and Mum pulls it"
+    ],
+    "answer": 0,
+    "hint": "Who does all of the job in you do?",
+    "explain": "In you do, you do the whole job yourself while the grown-up stays near."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "What is a good hint from a grown-up?",
+    "choices": [
+     "\"What comes after the head?\"",
+     "\"Here, I will draw it all for you.\"",
+     "\"Just guess.\""
+    ],
+    "answer": 0,
+    "hint": "A good hint helps you think, not do it for you.",
+    "explain": "A small question keeps the thinking with you, so you still learn."
+   }
+  ]
+ }
+}
