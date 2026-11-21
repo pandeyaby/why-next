@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_8NQza8nD7_",
+ "title": "Hearing the beat in songs",
+ "audience": "family",
+ "keyIdea": "A song has a steady beat, like a clock going tick, tick, tick. We can clap, tap, stomp or march in time with it. The beat can get faster or slower, and it can stop: when it stops, we stop too. We can copy a short clap pattern, like 2 or 3 claps.",
+ "familyTip": "Sing a song your child knows, like The Grand Old Duke of York, and pat your knees on the beat. Speed up, slow down, then stop singing and freeze, and see if your child freezes with you. Then clap 2 or 3 times and let your child copy.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Fast beat or slow beat? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Slow beat",
+    "Fast beat"
+   ],
+   "items": [
+    [
+     "🐘 Elephant walking",
+     0
+    ],
+    [
+     "🐭 Mouse running",
+     1
+    ],
+    [
+     "🐢 Tortoise walking",
+     0
+    ],
+    [
+     "🐇 Rabbit hopping fast",
+     1
+    ],
+    [
+     "😴 Rock-a-bye lullaby",
+     0
+    ],
+    [
+     "🏃 Running race",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbeat",
+  "caption": "Flagship lab: tap a drum on the beat, keep up when it gets faster, freeze when the music stops, and copy Teddy's claps.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Songs have a beat. Tick, tick, tick, like a clock.",
+   "Clap with the beat. Tap your knees. Stomp your feet. March!",
+   "The beat can go fast. It can go slow. Go fast or slow with it.",
+   "When the music stops, you stop. Freeze!"
+  ],
+  "adult": [
+   "Ages 2 to 3. Development Matters (2021) asks children from birth to three to enjoy singing, music and toys that make sounds, and to move and dance to music. Letters and Sounds Phase 1 uses body percussion (Aspect 3) and rhythm and rhyme (Aspect 4) to tune children's listening before phonics. Key words: beat, steady, fast, slow, stop, clap, copy.",
+   "The beat (also called the pulse) is the steady tick under a song that you march or clap to. It is not the same as the rhythm of the words, which can be long and short. A steady beat has the same gap every time, and it can speed up, slow down or stop.",
+   "Common mistakes: clapping all the time instead of on the beat; keeping the old speed when the song gets faster or slower; carrying on when the music stops; and clapping too many or too few when copying a pattern. Be careful not to expect exact timing at this age: near the beat is a success, and joining in matters most.",
+   "In the lab your child taps a drum as the Duke marches across 8 hearts, keeps up when elephant steps turn into mouse steps, freezes on the stop signs, copies Teddy's 2 or 3 claps or stomps, and then plays along with clap, stomp or pat knees."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The music stops. What do you do?",
+   "choices": [
+    "Freeze",
+    "Keep clapping",
+    "Clap faster"
+   ],
+   "answer": 0,
+   "hint": "Listen: is there any music to clap to?",
+   "explain": "When the music stops, the beat stops too, so we stop and freeze."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Teddy claps {n} times. How many claps do you do?",
+   "answer": "n",
+   "hint": "Copy Teddy. Count each clap with your fingers.",
+   "explain": "Teddy did {n} claps, so you do {n} claps too, the same as Teddy.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "An elephant walks to the song. Which beat?",
+   "choices": [
+    "Slow: stomp … stomp",
+    "Fast: tap tap tap",
+    "No beat at all"
+   ],
+   "answer": 0,
+   "hint": "Big elephants take big, slow steps.",
+   "explain": "Elephants walk with big slow steps, so the beat is slow."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You stomp {n} times, then clap 1 time. How many sounds is that?",
+   "answer": "n+1",
+   "hint": "Count the stomps, then count one more for the clap.",
+   "explain": "{n} stomps and 1 clap make {=n+1} sounds.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "The song gets faster. What do your claps do?",
+   "choices": [
+    "Get faster too",
+    "Stay slow",
+    "Stop"
+   ],
+   "answer": 0,
+   "hint": "Listen to the song and keep your claps with its beat.",
+   "explain": "When the beat gets faster, your claps get faster too, so you keep with the song."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which one is like a steady beat?",
+    "choices": [
+     "A clock: tick, tick, tick",
+     "Rain: pitter-patter, all mixed up",
+     "A shout"
+    ],
+    "answer": 0,
+    "hint": "A steady beat has the same gap every time.",
+    "explain": "A clock ticks with the same gap every time, just like the beat of a song."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A mouse runs to the song. Which beat?",
+    "choices": [
+     "Fast: tap tap tap",
+     "Slow: stomp … stomp",
+     "No beat at all"
+    ],
+    "answer": 0,
+    "hint": "A little mouse takes quick little steps.",
+    "explain": "A mouse runs with quick little steps, so the beat is fast."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Teddy stomps {n} times. How many stomps do you do?",
+    "answer": "n",
+    "hint": "Watch Teddy and count the stomps.",
+    "explain": "Copy Teddy: {n} stomps, the same number.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "When do you clap?",
+    "choices": [
+     "On each beat",
+     "All the time",
+     "Only at the end"
+    ],
+    "answer": 0,
+    "hint": "Listen for the tick in the song.",
+    "explain": "We clap on each beat, the steady tick of the song."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Clap {n} times, then 1 more. How many claps?",
+    "answer": "n+1",
+    "hint": "Count the claps, then one more.",
+    "explain": "{n} claps and 1 more makes {=n+1} claps.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The music starts again after a freeze. What do you do?",
+    "choices": [
+     "Start clapping with the beat",
+     "Stay frozen for ever",
+     "Clap as fast as you can"
+    ],
+    "answer": 0,
+    "hint": "Listen: is the music going now? Then the beat is back.",
+    "explain": "When the music starts again, the beat is back, so we clap with it again."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Teddy claps: clap, clap. Which is a good copy?",
+    "choices": [
+     "Clap, clap",
+     "Clap, clap, clap",
+     "Stomp, stomp"
+    ],
+    "answer": 0,
+    "hint": "Copy the same number of claps and the same sound.",
+    "explain": "Teddy did 2 claps, so a good copy is 2 claps, not 3, and not stomps."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A rock-a-bye lullaby is…",
+    "choices": [
+     "Slow and gentle",
+     "Fast and loud",
+     "Not a song"
+    ],
+    "answer": 0,
+    "hint": "Lullabies help babies go to sleep.",
+    "explain": "A lullaby has a slow, gentle beat to help a baby sleep."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which can you do to the beat?",
+    "choices": [
+     "March, clap or pat your knees",
+     "Only sit very still",
+     "Only shout"
+    ],
+    "answer": 0,
+    "hint": "Think of ways to move with the song.",
+    "explain": "You can march, clap, stomp or pat your knees in time with the beat."
+   }
+  ]
+ }
+}
