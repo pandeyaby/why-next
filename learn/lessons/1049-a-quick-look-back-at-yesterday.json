@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_iq7HBHUDZa",
+ "title": "A quick look back at yesterday",
+ "audience": "family",
+ "keyIdea": "Start each practice with a quick look back: two or three questions on yesterday's work. Try them from memory first, then check and fix. Forgetting a bit overnight is normal, and pulling it back out of your memory makes it stronger. Keep the look back short, then go on to the new work, which often builds on yesterday.",
+ "familyTip": "Before homework or practice, ask two quick questions about what your child did yesterday, with the book shut. Let them try before you help, then check together. Keep it to a couple of minutes, and make it a routine, not a test.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it help a quick look back, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Helps",
+    "Does not help"
+   ],
+   "items": [
+    [
+     "Two questions from yesterday first",
+     0
+    ],
+    [
+     "Jump straight to new work",
+     1
+    ],
+    [
+     "Try from memory, then check",
+     0
+    ],
+    [
+     "Peek at the answers first",
+     1
+    ],
+    [
+     "Fix a wrong answer",
+     0
+    ],
+    [
+     "Redo all of yesterday",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwarmup",
+  "caption": "Flagship lab: watch memories fade overnight, put the look back first, recall from memory, keep it short, then use it today.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "After a night's sleep, some of what you learned yesterday gets hard to find. That is normal. It is still in your head.",
+   "So start with a quick look back. Answer two or three questions about yesterday. Try from memory first, with the book shut.",
+   "Then check. If you got one wrong, fix it. Trying and fixing makes the memory stronger. Just peeking at the answer does not help much.",
+   "Keep it short, then do the new work. Today's work often builds on yesterday, so it feels easier."
+  ],
+  "adult": [
+   "Ages 6 to 8. Rosenshine's Principles of Instruction (2012) put daily review first: start a lesson with a short review of past work. It works through retrieval practice. Pulling a fact out of memory makes it stronger than reading it again (Roediger and Karpicke, 2006). Dunlosky and others (2013) rated practice tests as one of the most useful ways to study. The EEF (2021) backs retrieval practice for primary pupils too.",
+   "Memory fades fastest soon after learning. This is the forgetting curve. By the next day, some of it is harder to bring back. A look back of two or three questions, done from memory, does two jobs. It makes yesterday stronger, and it wakes up the prior knowledge that today's work needs, such as 7 + 3 = 10 before 17 + 3.",
+   "Common mistakes: reading the answers or yesterday's page again instead of trying to recall them; going straight to new work; seeing a forgotten fact as failure, when it is normal fading; stopping after a wrong answer instead of checking and fixing it; and a look back so long that it pushes out the new work. Be careful to keep it low-stakes: no marks, and no comparing.",
+   "In the lab your child drags a moon across the night. Three memory bars sink to 60%, 50% and 65%, but none vanish. They drag blocks so the look back comes before new work. They lift each bar past 80% by answering from memory: a right answer adds 35, a wrong try that is checked adds 25, and a peek adds only 5. These numbers show the order, not real measures. Then they pick 2 or 3 questions for a 15-minute practice, and solve 17 + 3 using 7 + 3 = 10."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You sit down to practise maths. What do you do first?",
+   "choices": [
+    "Two or three questions from yesterday",
+    "The new work straight away",
+    "Read yesterday's page again"
+   ],
+   "answer": 0,
+   "hint": "What should get warmed up before the new work?",
+   "explain": "A quick look back comes first: two or three questions from yesterday, from memory, then the new work."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Your practice is {n} minutes. The look back takes {k} minutes. How many minutes are left for new work?",
+   "answer": "n-k",
+   "hint": "Take the look-back minutes away from the whole practice: {n} take away {k}.",
+   "explain": "{n} take away {k} is {=n-k}, so {=n-k} minutes are left for new work. A short look back leaves most of the time.",
+   "params": {
+    "n": [
+     10,
+     20
+    ],
+    "k": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Which makes yesterday's work stick better?",
+   "choices": [
+    "Trying to remember it, then checking",
+    "Looking at the answer",
+    "Reading it again"
+   ],
+   "answer": 0,
+   "hint": "Which one makes your brain do the work of finding it?",
+   "explain": "Pulling it out of your memory makes it stronger. Looking or rereading feels easy but helps less."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Yesterday you learned 7 + 3 = 10. Today the question is {n}7 + 3. What is the answer?",
+   "answer": "n*10+10",
+   "hint": "Use yesterday: 7 + 3 makes 10. Now there are {n} tens as well.",
+   "explain": "7 + 3 = 10, so {n}7 + 3 = {=n*10+10}. Yesterday's fact did most of the work.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You forgot one of yesterday's answers. What does that mean?",
+   "choices": [
+    "It is normal, and the look back brings it back",
+    "I am bad at this",
+    "It is gone for ever"
+   ],
+   "answer": 0,
+   "hint": "Does everyone forget a bit overnight?",
+   "explain": "Everyone forgets some things overnight. It is still in there, and looking back brings it back."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You got a look-back question wrong. What now?",
+    "choices": [
+     "Check the answer and fix it",
+     "Stop the look back",
+     "Hide it and move on"
+    ],
+    "answer": 0,
+    "hint": "Can a mistake help you learn if you fix it?",
+    "explain": "Check and fix it. Trying, then fixing, still makes the memory stronger."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "How long should the look back be?",
+    "choices": [
+     "Short: 2 or 3 questions",
+     "All of yesterday again",
+     "None at all"
+    ],
+    "answer": 0,
+    "hint": "You still need time for the new work.",
+    "explain": "Keep it short, two or three questions, so most of the time is for the new work."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "You do {n} look-back questions each day for {k} days. How many look-back questions is that?",
+    "answer": "n*k",
+    "hint": "{n} questions, {k} times: add {n} again and again, {k} times.",
+    "explain": "{n} questions for {k} days is {=n*k} questions, and each one is a little workout for your memory.",
+    "params": {
+     "n": [
+      2,
+      3
+     ],
+     "k": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Mia reads yesterday's answers. Leo shuts the book and tries to remember. Who will remember better next week?",
+    "choices": [
+     "Leo",
+     "Mia",
+     "Both the same"
+    ],
+    "answer": 0,
+    "hint": "Who made their brain find the answer?",
+    "explain": "Leo. Trying to remember is harder work, and that work makes the memory last."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why look back before new work?",
+    "choices": [
+     "New work builds on what I learned yesterday",
+     "To fill up time",
+     "There is no reason"
+    ],
+    "answer": 0,
+    "hint": "Think of 7 + 3 and 17 + 3.",
+    "explain": "Today's work often uses yesterday's. A look back gets it ready, like 7 + 3 = 10 before 17 + 3."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A memory bar is at {n}%. Trying from memory adds 30. What is it now?",
+    "answer": "n+30",
+    "hint": "Start at {n} and count on 30, in tens: three jumps of 10.",
+    "explain": "{n} and 30 more is {=n+30}%. Trying from memory gives a big jump.",
+    "params": {
+     "n": [
+      40,
+      60
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "When is the best time for the look back?",
+    "choices": [
+     "At the start of practice",
+     "At the very end",
+     "Only before a test"
+    ],
+    "answer": 0,
+    "hint": "It warms up yesterday before the new work.",
+    "explain": "At the start, so yesterday is ready before the new work begins."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is the best look-back question?",
+    "choices": [
+     "What is 7 + 3? (book shut)",
+     "Copy out 7 + 3 = 10",
+     "Look at 7 + 3 = 10"
+    ],
+    "answer": 0,
+    "hint": "Which one makes you remember, not just look?",
+    "explain": "A question with the book shut makes you remember. Copying or looking does not."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Sam says: I forgot some of yesterday, so I am no good at maths. What do you tell Sam?",
+    "choices": [
+     "Everyone forgets a bit. Look back and it comes back",
+     "Yes, give up",
+     "Do not look back"
+    ],
+    "answer": 0,
+    "hint": "Is forgetting a bit overnight normal?",
+    "explain": "Forgetting overnight is normal for everyone. A quick look back brings it back and makes it stronger."
+   }
+  ]
+ }
+}
