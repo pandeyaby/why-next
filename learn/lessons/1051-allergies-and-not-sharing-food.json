@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_2le11aazim",
+ "title": "Allergies and not sharing food",
+ "audience": "family",
+ "keyIdea": "Some people are allergic to a food, such as peanuts, milk or egg. A food that is fine for you can make their body very ill, even from a tiny bit. So we eat our own lunch and do not share or swap food. Wash food off your hands with soap and water. When a friend says \"I can't eat that\", say OK and stop asking. If a friend gets itchy bumps, puffy lips, a cough or a bad tummy after eating, tell a grown-up straight away.",
+ "familyTip": "Practise the words together: \"No thanks, I can't eat that\" and \"OK! Want to play?\" If your child has an allergy, help them say what it is and who to tell. Wash hands with soap and water before and after eating, and remind them that sharing at lunch means sharing games, not food.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Safe with food allergies, or not safe? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Safe",
+    "Not safe"
+   ],
+   "items": [
+    [
+     "Eat your own lunch",
+     0
+    ],
+    [
+     "Swap a sandwich with a friend",
+     1
+    ],
+    [
+     "Wash hands with soap and water",
+     0
+    ],
+    [
+     "Pick the nuts out and share it",
+     1
+    ],
+    [
+     "Tell a grown-up if a friend feels ill",
+     0
+    ],
+    [
+     "Say \"just try a tiny bit\"",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagallergy",
+  "caption": "Flagship lab: see one food act differently in three friends, sort lunch rules, scrub peanut bits off, reply kindly and spot signs to get help.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Every body is different. Peanuts are fine for Ava. But Sam is allergic to peanuts. His body gets very ill, even from a tiny bit. So we eat our own lunch. We do not share or swap food. We share games and fun instead.",
+   "Tiny bits of food stay on hands. Wash them with soap and water. Hand gel does not take food bits off.",
+   "If a friend says \"I can't eat that\", say OK and stop asking. Do not say \"just try a bit\".",
+   "Does a friend get itchy bumps, puffy lips, a cough or a bad tummy after eating? Tell a grown-up straight away."
+  ],
+  "adult": [
+   "Ages 6 to 7. In England the statutory Health Education guidance (DfE, 2019) asks primary pupils to learn the facts and science relating to allergies, and how to get help in an emergency. A food allergy is the immune system reacting to a food protein as if it were harmful. The most common triggers in children are milk, egg, peanuts, tree nuts, sesame, fish and shellfish. UK labels must show 14 major allergens.",
+   "The NHS lists the signs: an itchy mouth, a raised itchy red rash (hives), swelling of the face, lips, tongue or around the eyes, tummy pain and being sick. A severe reaction (anaphylaxis) can cause trouble breathing, a wheeze or cough, or feeling faint, and can happen within minutes. It is treated with an adrenaline auto-injector and a 999 call. A child's job is simple: tell a grown-up straight away and do not wait.",
+   "Common mistakes: thinking a food that is safe for me is safe for everyone; thinking no badge or no visible sign means it is fine to share; believing a tiny bit, or a food with the nuts picked out, is safe; not knowing that milk hides in cheese and butter; cleaning hands with gel (Perry and colleagues, 2004, found soap and water or wipes removed peanut protein, but hand gel often did not); keeping quiet; and calling an allergy fussy eating. Be careful not to frighten: the rules are what keep friends safe.",
+   "In the lab your child drags a looking glass over Ava, Sam and Leo to see that peanuts are fine for two of them but not Sam, and that Leo has a milk allergy instead. They sort six lunch cards into Do and Don't, and scrub peanut bits off hands, finding that gel and trousers do not work. They reply kindly when three friends say no to food, then spot four signs on Sam and choose to tell a grown-up."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Peanuts are fine for you. Are they fine for everyone?",
+   "choices": [
+    "No, some people are allergic",
+    "Yes, food is food",
+    "Yes, if it is a tiny bit"
+   ],
+   "answer": 0,
+   "hint": "Think of Sam. What happens in his body?",
+   "explain": "Every body is different. A food that is fine for you can make someone with an allergy very ill."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "{n} children are at your lunch table. 1 child has a nut allergy. How many children have no nut allergy?",
+   "answer": "n-1",
+   "hint": "Count everyone at the table, then take away the 1 with the allergy.",
+   "explain": "{n} children, take away 1, leaves {=n-1} with no nut allergy. We still don't share food with any of them.",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Your friend has no allergy badge. Can you share your crisps?",
+   "choices": [
+    "No, we eat our own lunch",
+    "Yes, no badge means safe",
+    "Yes, if we swap"
+   ],
+   "answer": 0,
+   "hint": "Can you always tell who has an allergy just by looking?",
+   "explain": "No. Some allergies are not on a badge, so we eat our own lunch and share games instead."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You see {n} tiny bits of peanut on your hands. You wash off 2. How many are left to wash off?",
+   "answer": "n-2",
+   "hint": "Start with all the bits, then take away the 2 you washed off.",
+   "explain": "{n} bits, take away 2, leaves {=n-2}. Keep scrubbing with soap and water until there are none.",
+   "params": {
+    "n": [
+     4,
+     9
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You ate a peanut bar. How do you clean your hands?",
+   "choices": [
+    "Soap and water",
+    "Hand gel",
+    "Wipe them on my trousers"
+   ],
+   "answer": 0,
+   "hint": "Which one washes the food bits away, not just the germs?",
+   "explain": "Soap and water washes food bits off. Gel kills germs but leaves the peanut on your hands."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Sam says, \"I can't eat nuts.\" What do you say?",
+    "choices": [
+     "OK! Want to play?",
+     "Just try a tiny bit",
+     "I'll pick the nuts out"
+    ],
+    "answer": 0,
+    "hint": "When a friend says no to food, what should we do?",
+    "explain": "Say OK and stop asking. Even a tiny bit, or a cake with nuts picked out, can make Sam very ill."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "After lunch, Leo has puffy lips and itchy bumps. What do you do?",
+    "choices": [
+     "Tell a grown-up straight away",
+     "Wait and see",
+     "Keep it quiet"
+    ],
+    "answer": 0,
+    "hint": "Puffy lips and itchy bumps are signs. Who can help fast?",
+    "explain": "Tell a grown-up straight away. Allergy signs can get worse quickly, and grown-ups know what to do."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Leo can't have milk. Can he eat cheese?",
+    "choices": [
+     "No, cheese is made from milk",
+     "Yes, cheese is not milk",
+     "Yes, a little is fine"
+    ],
+    "answer": 0,
+    "hint": "What is cheese made from?",
+    "explain": "Cheese is made from milk, so it can make Leo ill. Milk hides in lots of foods."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "You have {n} grapes. Your friend asks for {k}. You keep your lunch and share a game instead. How many grapes do you still have?",
+    "answer": "n",
+    "hint": "Did you give any grapes away?",
+    "explain": "You still have {n} grapes. We don't share food, but we can share a game.",
+    "params": {
+     "n": [
+      3,
+      8
+     ],
+     "k": [
+      1,
+      2
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which one is a sign to get a grown-up?",
+    "choices": [
+     "A cough and hard to breathe",
+     "A big yawn",
+     "Laughing at a joke"
+    ],
+    "answer": 0,
+    "hint": "Which one shows a body is having trouble?",
+    "explain": "Coughing and trouble breathing can mean a bad allergy. Get a grown-up straight away."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Mia says she can't eat egg. Is she just being fussy?",
+    "choices": [
+     "No, egg can make her ill",
+     "Yes, she is fussy",
+     "Yes, she just doesn't like it"
+    ],
+    "answer": 0,
+    "hint": "Is an allergy about liking a food, or about the body?",
+    "explain": "An allergy is not being fussy. Egg can make Mia's body very ill, so we say OK."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "{n} friends at your table each eat their own lunch. How many lunch boxes are on the table?",
+    "answer": "n",
+    "hint": "Each friend has one lunch box. Count the friends.",
+    "explain": "{n} friends, one lunch box each, makes {n} lunch boxes. Everyone eats their own.",
+    "params": {
+     "n": [
+      2,
+      7
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A friend says, \"Go on, have my cake. Nobody will know.\" What do you do?",
+    "choices": [
+     "Say no thanks, and tell a grown-up if unsure",
+     "Eat it quickly",
+     "Hide it for later"
+    ],
+    "answer": 0,
+    "hint": "Is a food rule OK to break if nobody sees?",
+    "explain": "Food rules keep us safe even when nobody is looking. Say no thanks, and ask a grown-up if you are not sure."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "What can we share at lunch time?",
+    "choices": [
+     "A game or a chat",
+     "Our sandwiches",
+     "A bite of cake"
+    ],
+    "answer": 0,
+    "hint": "What can we share that is not food?",
+    "explain": "We share games, chats and fun, and keep our food to ourselves."
+   }
+  ]
+ }
+}
