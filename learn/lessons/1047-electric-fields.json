@@ -1,0 +1,176 @@
+{
+ "topicId": "mt_miBBuR-id4",
+ "title": "Electric fields",
+ "audience": "learner",
+ "keyIdea": "A charged object has an electric field around it: a region where another charge feels a force without touching. Field lines show the direction of the force on a small positive test charge, so they point away from positive charges and towards negative ones. The field is strongest close to the object, where the lines are closest together. If the field is strong enough, air conducts and a spark jumps.",
+ "familyTip": "Rub a balloon on a jumper and slowly bring it towards tiny bits of paper or a thin stream of tap water. Ask: at what distance does it start to pull? The pull starts without touching and gets stronger as the balloon gets closer, which is the field getting stronger.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "True of electric fields, or a myth? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["True", "Myth"],
+   "items": [
+    ["Lines point away from a positive charge", 0],
+    ["The field is strongest close to the charge", 0],
+    ["A charge feels the force without touching", 0],
+    ["Lines point away from a negative charge", 1],
+    ["There is no field between the drawn lines", 1],
+    ["Field lines can cross", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagefield",
+  "caption": "Flagship lab: probe a charged sphere, flip its sign, read the force on three rings, make a spark jump a gap, and trace field lines.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Every charged object has an electric field around it. The field is the space where another charge feels a push or a pull. It acts without touching.",
+   "We draw field lines to show the field. An arrow on a line shows which way a small positive charge would be pushed. So the lines point away from a positive charge and in towards a negative one.",
+   "The field is strongest close to the charge. There the lines are packed together. Further out they spread apart and the force gets weaker. Lines never cross, and there is still a field in the gaps between them.",
+   "A strong field can pull electrons off the molecules in air. Then the air conducts, and a spark jumps across the gap. More charge or a smaller gap makes a spark more likely."
+  ],
+  "adult": [
+   "Ages 14 to 16. AQA GCSE Physics 8463, section 4.2.5.2 (physics only), asks students to draw the field pattern for an isolated charged sphere, explain the force on a charge placed in the field, explain that the field is stronger closer to the object, and use the idea of a field to explain sparking. The direction of a field is defined as the direction of the force on a small positive test charge.",
+   "Around an isolated sphere the lines are radial, like spokes. Their spacing shows strength: close lines mean a strong field. For a point charge the force falls with the square of distance (Coulomb's law), so twice as far gives a quarter of the force. That inverse-square rule is an extension beyond the GCSE requirement, but it explains why the ring readings in the lab go 36, 9, 4.",
+   "Common mistakes: drawing lines outwards from a negative charge; thinking the field is the same strength everywhere; thinking there is no field between the drawn lines; drawing lines that cross or loop around a single charge; and thinking a bigger gap makes a spark easier. Be careful with negative test charges: they feel a force opposite to the field lines.",
+   "In the lab students drag a positive test charge to probe a sphere and reveal its field lines, flip the sphere to negative and watch the force reverse, drop the test charge on rings one, two and three steps out, charge a dome and move an earthed ball until the air in the gap breaks down, and place up to four charges to see traced field lines."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which way do the field lines point around an isolated positive sphere?",
+   "choices": ["Straight out, away from the sphere", "Straight in, towards the sphere", "In circles round the sphere"],
+   "answer": 0,
+   "hint": "Think of the force on a small positive test charge placed near it.",
+   "explain": "Like charges repel, so a positive test charge is pushed straight out. The lines are radial and point away from a positive sphere."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The force on a test charge is {=4*k} mN at 2 cm from a small charged sphere. Using the inverse-square rule, what is the force at 4 cm, in mN?",
+   "answer": "k",
+   "hint": "Twice as far means the force is divided by 2 squared.",
+   "explain": "Twice as far divides the force by 2² = 4, so {=4*k} ÷ 4 = {=k} mN.",
+   "params": {"k": [2, 9]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Where is the electric field around a charged sphere strongest?",
+   "choices": ["Right next to the sphere", "Far away from the sphere", "The same everywhere"],
+   "answer": 0,
+   "hint": "Where are the field lines packed closest together?",
+   "explain": "The lines are closest together next to the sphere, so the field, and the force on a charge, is strongest there."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You draw {n} field lines leaving a charged sphere. Its charge is then doubled. Keeping the same scale, how many lines should you draw?",
+   "answer": "2*n",
+   "hint": "The number of lines drawn is kept in proportion to the charge.",
+   "explain": "Double the charge means double the lines on the same scale: 2 × {n} = {=2*n} lines.",
+   "params": {"n": [4, 12]}
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A negative test charge is put in a field. Which way is the force on it?",
+   "choices": ["Opposite to the field lines", "Along the field lines", "There is no force on it"],
+   "answer": 0,
+   "hint": "Field lines are drawn for a positive test charge.",
+   "explain": "The lines show the force on a positive charge. A negative charge is pushed the opposite way."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which way do field lines point near an isolated negative sphere?",
+    "choices": ["Inwards, towards the sphere", "Outwards, away from the sphere", "Round the sphere in circles"],
+    "answer": 0,
+    "hint": "Would a positive test charge be pushed away or pulled in?",
+    "explain": "Unlike charges attract, so a positive test charge is pulled in. The lines point towards a negative sphere."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why can two electric field lines never cross?",
+    "choices": ["The field has only one direction at each point", "They would cancel each other out", "They can cross near large charges"],
+    "answer": 0,
+    "hint": "What would a crossing point say about the direction of the force?",
+    "explain": "A crossing would give two directions of force at one point, which cannot happen, so field lines never cross."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A charged dome sparks to an earthed ball. Why does the spark happen?",
+    "choices": ["The field in the gap is strong enough for the air to conduct", "The ball touches the dome", "The dome runs out of charge"],
+    "answer": 0,
+    "hint": "What does a very strong field do to the molecules in the air?",
+    "explain": "A strong field pulls electrons off air molecules. The ionised air conducts, so charge jumps the gap as a spark."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Is there an electric field at a point between two drawn field lines?",
+    "choices": ["Yes, the lines are only a sample of the field", "No, the field is only on the lines", "Only if a charge is moving there"],
+    "answer": 0,
+    "hint": "Could you draw another line through that point?",
+    "explain": "The field fills the space. We draw a few lines as a sample; another line could be drawn through any point."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A test charge feels {k} mN at 3 cm from a small charged sphere. Using the inverse-square rule, what force does it feel at 1 cm, in mN?",
+    "answer": "9*k",
+    "hint": "Three times closer multiplies the force by 3 squared.",
+    "explain": "Three times closer multiplies the force by 3² = 9, so {k} × 9 = {=9*k} mN.",
+    "params": {"k": [2, 8]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which change makes a spark from a charged dome to an earthed ball more likely?",
+    "choices": ["Moving the ball closer", "Moving the ball further away", "Removing charge from the dome"],
+    "answer": 0,
+    "hint": "Is the field in a small gap stronger or weaker?",
+    "explain": "A smaller gap makes the field in it stronger, so the air breaks down and a spark jumps more easily."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "The force on a test charge is {=9*k} mN at 1 cm from a small charged sphere. Using the inverse-square rule, what is it at 3 cm, in mN?",
+    "answer": "k",
+    "hint": "Three times as far divides the force by 3 squared.",
+    "explain": "Three times as far divides the force by 3² = 9, so {=9*k} ÷ 9 = {=k} mN.",
+    "params": {"k": [2, 7]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A small charged ball hangs near a charged dome without touching it, and swings away. What shows this?",
+    "choices": ["The ball is in the dome's field and feels a force", "Air pushes the ball away", "Forces need contact, so it is gravity"],
+    "answer": 0,
+    "hint": "Can an electric force act across a gap?",
+    "explain": "Electric forces act without contact. The ball is in the dome's field, so it feels a force and swings away from a like charge."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "In a field diagram, what shows that the field is stronger in one place?",
+    "choices": ["The lines are closer together there", "The lines are longer there", "The lines are curved there"],
+    "answer": 0,
+    "hint": "Compare the lines near a sphere with the lines far away.",
+    "explain": "Line spacing shows strength. Closer lines mean a stronger field, which is why lines bunch near a charged sphere."
+   }
+  ]
+ }
+}
