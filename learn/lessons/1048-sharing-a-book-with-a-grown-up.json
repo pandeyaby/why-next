@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_aoZq0pX5Vw",
+ "title": "Sharing a book with a grown-up",
+ "audience": "family",
+ "keyIdea": "Sharing a book means sitting with a grown-up and looking at it together. Start at the front cover, held the right way up, and turn one page at a time. Point to the pictures and say what you see, even when a page has no words. Ask for a book you love again and again, and join in more each time.",
+ "familyTip": "Let your child hold the book and turn the pages. Follow their pointing: when they say \"dog\", add a few words back (\"Yes, a big dog! He is running.\"). Read their favourite again whenever they ask, and pause so they can say the next word.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Good for sharing a book, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Good for sharing",
+    "Not yet"
+   ],
+   "items": [
+    [
+     "Start at the front cover",
+     0
+    ],
+    [
+     "Hold it upside down",
+     1
+    ],
+    [
+     "Turn one page at a time",
+     0
+    ],
+    [
+     "Flick lots of pages at once",
+     1
+    ],
+    [
+     "Point and say what you see",
+     0
+    ],
+    [
+     "Pull the pages hard",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsharebook",
+  "caption": "Flagship lab: turn the book to its front cover, turn one page at a time, point on a page with no words, match doing words, and ask for it again.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A book has a front and a back. The front has a big picture and the name of the book. We start at the front, the right way up.",
+   "Turn one page at a time, with soft hands. Then you see every page.",
+   "Point to a picture and say what you see. You can talk about a page with no words.",
+   "Do you love a book? Say: \"Again, please!\" Each time, you can say more of it."
+  ],
+  "adult": [
+   "Ages 2 to 3. Development Matters (2021) lists, for birth to three, that children enjoy sharing books with an adult, pay attention and respond to the pictures or the words, have favourite books and seek them out to share with an adult, and repeat words and phrases from familiar stories. Book handling (front cover, right way up, turning pages in order) comes before the 3 to 4 work on concepts of print such as reading left to right.",
+   "The talk matters more than the words on the page. Dialogic reading (Whitehurst and colleagues, 1988) turns the child into the teller: the grown-up prompts (\"What is that?\"), praises the answer, expands it with a few more words, and gets the child to repeat it. Pointing and naming builds vocabulary, and doing words such as running and sleeping help children move from single words to two-word phrases.",
+   "Common mistakes: starting at the back or holding the book upside down; flicking through many pages at once and missing parts of the story; skipping wordless pages or picture books as if they were not real reading; and thinking a book is finished once it has been read. Toddlers learn from repeats, so reading a favourite again is a strength, not a waste. Be careful not to turn sharing into a test: keep it warm, and let your child lead.",
+   "In the lab your child turns a book from its back to the front cover and the right way up, drags page corners to turn one page at a time to the cat page (a fast flick skips pages and starts again), points to the dog, duck and ball on a page with no words, drags running, sleeping and splashing to the animals, and asks \"Again, please!\" three times while the words they join in with grow."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Where do we start a book?",
+   "choices": [
+    "At the front cover",
+    "At the back",
+    "In the middle"
+   ],
+   "answer": 0,
+   "hint": "Which side has the big picture and the name?",
+   "explain": "We start at the front cover. It has the big picture and the name of the book."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You turn {n} pages, one at a time. How many pages did you turn?",
+   "answer": "n",
+   "hint": "Count each page as you turn it: 1, 2 …",
+   "explain": "One page at a time, {n} turns make {n} pages.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The duck on the cover is on its head. What do you do?",
+   "choices": [
+    "Turn the book round",
+    "Read it like that",
+    "Shut the book"
+   ],
+   "answer": 0,
+   "hint": "Which way up should the picture be?",
+   "explain": "Turn the book round so the duck is the right way up. Then the pictures make sense."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You see {n} ducks on a page, and then 1 more. How many ducks?",
+   "answer": "n+1",
+   "hint": "Point to each duck and count. Then count one more.",
+   "explain": "{n} ducks and 1 more make {=n+1} ducks.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A page has no words. What can we do?",
+   "choices": [
+    "Point and talk about the pictures",
+    "Skip it",
+    "Shut the book"
+   ],
+   "answer": 0,
+   "hint": "What is on the page, if not words?",
+   "explain": "Pictures are for talking about. Point and say what you see."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How do we turn the pages?",
+    "choices": [
+     "One page at a time",
+     "Lots at once, fast",
+     "Pull them hard"
+    ],
+    "answer": 0,
+    "hint": "Do we want to miss any pages?",
+    "explain": "One page at a time, with soft hands, so we see every page and the pages do not tear."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You love this book. You read it before. What can you say?",
+    "choices": [
+     "Again, please!",
+     "It is finished now",
+     "No more books"
+    ],
+    "answer": 0,
+    "hint": "Can we read a book we love more than once?",
+    "explain": "Ask for it again! Each time, you know more of it and can join in."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Your grown-up says: Where is the dog? What do you do?",
+    "choices": [
+     "Point to the dog",
+     "Turn the page",
+     "Point to the ball"
+    ],
+    "answer": 0,
+    "hint": "Listen to the question. Which picture did they say?",
+    "explain": "Point to the dog. You can say: dog! Woof!"
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "We read your book {n} times. Then we read it 1 more time. How many times is that?",
+    "answer": "n+1",
+    "hint": "Count the times, then one more.",
+    "explain": "{n} times and 1 more is {=n+1} times. Reading it again is good!",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which side is the front of the book?",
+    "choices": [
+     "The side with the big picture and name",
+     "The side with no picture",
+     "The inside"
+    ],
+    "answer": 0,
+    "hint": "What do you see on the front cover?",
+    "explain": "The front cover has the big picture and the name of the book."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The cat has its eyes shut. What is it doing?",
+    "choices": [
+     "Sleeping",
+     "Running",
+     "Splashing"
+    ],
+    "answer": 0,
+    "hint": "What do we do with our eyes shut at night?",
+    "explain": "Eyes shut means the cat is sleeping. Shh!"
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Point to the {n} birds in the picture. How many birds?",
+    "answer": "n",
+    "hint": "Touch each bird once and count.",
+    "explain": "One touch for each bird: there are {n} birds.",
+    "params": {
+     "n": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "You want to turn the page. How do your hands go?",
+    "choices": [
+     "Soft, from the corner",
+     "Grab and pull hard",
+     "Fold it up"
+    ],
+    "answer": 0,
+    "hint": "Paper is thin. What happens if you pull it hard?",
+    "explain": "Gentle hands. Hold the corner and turn softly, so the page does not tear."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "The dog's legs go fast. What is it doing?",
+    "choices": [
+     "Running",
+     "Sleeping",
+     "Eating"
+    ],
+    "answer": 0,
+    "hint": "Look at the legs. They go very fast. What is the dog doing?",
+    "explain": "Fast legs mean the dog is running."
+   }
+  ]
+ }
+}
