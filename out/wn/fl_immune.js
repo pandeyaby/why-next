@@ -73,8 +73,8 @@ const kidR=i=>R(kidP(i).x-A.W*.16,kidP(i).y-A.H*.15,A.W*.32,A.H*.31);
 function drawVax(){backdrop(C.ice);const g=A.ctx,u=U();
  ['Ava','Ben'].forEach((n,i)=>{const p=kidP(i),ill=G.germ&&i===1;g.save();body(g,R(p.x-u*.12,p.y-A.H*.14,u*.24,A.H*.26),ill);g.restore();
   say(n+(i===0&&G.vax?' 💉 ✓':'')+(G.germ?(i?' · ill':' · well'):''),p.x+A.W*.12,p.y-A.H*.1,11,{c:A.col.tx,b:800,al:'left'});
-  const r=miniR(i);axes(r,'antibodies, days 0 to 40');if(G.germ)mark(r,21,'germ');if(i===0&&G.vax)mark(r,1,'vaccine');if(i===0&&G.vax)curve(r,d=>bump(d,2,12,.28)+(G.germ?bump(d,21,25,.9):0),'#1d4ed8',G.germ?40:19);
-  if(i===1&&G.germ){band(r,21,31,'rgba(254,202,202,.9)','Ill',1);curve(r,d=>bump(d,23,33,.42),'#1d4ed8',40)}});
+  const r=miniR(i);axes(r,'antibodies, days 0 to 40');if(i===0&&G.vax)curve(r,d=>bump(d,2,12,.28)+(G.germ?bump(d,21,25,.9):0),'#1d4ed8',G.germ?40:19);
+  if(i===1&&G.germ){band(r,21,31,'rgba(254,202,202,.9)','Ill',1);curve(r,d=>bump(d,23,33,.42),'#1d4ed8',40)}if(G.germ)mark(r,21,'germ');if(i===0&&G.vax)mark(r,1,'vaccine')});
  if(!G.germ){const k=tokR();let t=k;if(G.drag)t=R(G.drag.x-k.w/2,G.drag.y-k.h/2,k.w,k.h);panel(t,G.vax?C.lemon:'#e0f2fe',G.drag?'hold':'');
   if(G.vax){germ(g,t.x+t.w*.16,t.y+t.h/2,u*.04,0);say('Day 21: germ',t.x+t.w*.6,t.y+t.h/2,12,{w:t.w*.66})}else{syringe(g,t.x+t.w*.2,t.y+t.h/2,Math.min(t.h*1.1,t.w*.4));say('Vaccine',t.x+t.w*.64,t.y+t.h/2,12,{w:t.w*.6})}}
  else{say('Why did Ava stay well?',A.W/2,A.H*.675,12,{c:A.col.tx,w:A.W-16});G.why.forEach((w,i)=>{const k=ansR(i),ok=G.ans&&!WHY[w][1];panel(k,C.paper,ok?'good':G.bad===i?'bad':'');say((ok?'✓ ':G.bad===i?'✗ ':'')+WHY[w][0],k.x+k.w/2,k.y+k.h/2,10,{w:k.w-8})})}

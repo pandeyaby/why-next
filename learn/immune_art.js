@@ -96,6 +96,6 @@ function curve(r,f,col,until){const g=A.ctx,X=d=>r.x+6+(r.w-10)*d/40,Y=v=>r.y+r.
  for(let d=0;d<=until;d+=.5)g[d?'lineTo':'moveTo'](X(d),Y(f(d)));g.stroke()}
 function band(r,a,b,col,t,mid){const g=A.ctx,X=d=>r.x+6+(r.w-10)*d/40;g.fillStyle=col;g.fillRect(X(a),r.y+sz(20),X(b)-X(a),r.h-sz(20)-6);say(t,(X(a)+X(b))/2,mid?r.y+r.h*.55:r.y+sz(30),10,{b:800})}
 function mark(r,d,t){const g=A.ctx,x=r.x+6+(r.w-10)*d/40;g.strokeStyle='#475569';g.lineWidth=1.5;g.setLineDash([4,3]);g.beginPath();g.moveTo(x,r.y+sz(20));g.lineTo(x,r.y+r.h-6);g.stroke();g.setLineDash([]);
- say(t,x+4,r.y+sz(28),9,{al:'left',b:700,c:'#334155'})}
+ g.font=`700 ${sz(9)}px system-ui,sans-serif`;const w=g.measureText(t).width+8;g.fillStyle='#ffffff';A.paint.rrect(x+2,r.y+sz(28)-sz(8),w,sz(16),4);g.fill();say(t,x+6,r.y+sz(28),9,{al:'left',b:700,c:'#334155'})}
 return{axes,curve,band,mark}}
 return{graph,kit,quiz,DOORS,CUT,GUARDS,KINDS,ABS,bump,DESC,DONE,QS,body,germ,rod,wbc,antibody,syringe,plaster}})();
