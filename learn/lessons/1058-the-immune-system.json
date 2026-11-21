@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_4JpMXUIxeD",
+ "title": "The immune system",
+ "audience": "learner",
+ "keyIdea": "Your immune system protects you from germs (bacteria and viruses) in layers. First, barriers keep most germs out: skin, sticky mucus in the nose, tears and stomach acid. Germs that get in can multiply fast, so white blood cells swallow them. Other white blood cells make antibodies, and each antibody fits only one kind of germ. The first time, this takes days and you may feel ill. Memory cells then remember the germ, so the next time the body fights it fast. A vaccine lets your body learn a germ safely, without the illness. Antibiotics kill bacteria, not viruses.",
+ "familyTip": "Next time someone has a cut, a cold or a jab, talk it through together. Why does a plaster help? Why does a sneeze go in a tissue? Look at a vaccination record if you have one and ask: which germs has your body already learned, and why do you not get chickenpox twice?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which defence is it: keeping germs out, or fighting germs inside? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Keeps germs out",
+    "Fights germs inside"
+   ],
+   "items": [
+    [
+     "Skin covers the body",
+     0
+    ],
+    [
+     "Mucus in the nose traps germs",
+     0
+    ],
+    [
+     "Stomach acid kills germs in food",
+     0
+    ],
+    [
+     "A white blood cell swallows a germ",
+     1
+    ],
+    [
+     "Antibodies stick to one kind of germ",
+     1
+    ],
+    [
+     "Memory cells remember a germ",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagimmune",
+  "caption": "Flagship lab: guard four ways in, let germs double and swallow them, fit antibodies to germs, meet a germ twice, then vaccinate Ava.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Your body has more than one way to stop you getting ill. First it keeps germs out. Skin is a wall, sticky mucus in the nose traps germs you breathe in, tears wash the eyes, and acid in the stomach kills germs you swallow.",
+   "A few germs can still get in, for example through a cut. Some split in two about every 20 minutes, so two can become eight in 40 minutes. White blood cells find them and swallow them.",
+   "Other white blood cells make antibodies. Each antibody fits only one kind of germ, like a key fits one lock. The first time, making enough takes days, and you may feel ill. Memory cells stay, so the next time is fast and you usually stay well.",
+   "A vaccine lets your body meet a weak, dead or part of a germ, so you do not get the illness. Your body still makes memory cells. Then, if the real germ comes, you are ready. Antibiotics are different: they kill bacteria, but they do not work on viruses like colds."
+  ],
+  "adult": [
+   "Ages 9 to 11. The first line of defence is barriers: intact skin, mucus and cilia in the airways, tears containing the enzyme lysozyme, and stomach acid. Pathogens that get past them can multiply quickly; some bacteria divide about every 20 minutes in good conditions. White blood cells called phagocytes engulf and digest them.",
+   "The second line is slower the first time. Lymphocytes make antibodies, and each antibody has a shape that binds one antigen on one kind of pathogen. Afterwards memory cells remain, so a later infection by the same pathogen produces a faster, larger antibody response, often before any symptoms. This is why most people get chickenpox only once.",
+   "A common mistake is to think a vaccine is a medicine that kills germs, or that it gives you the full disease. A vaccine contains a weakened, inactivated or partial form of a pathogen, or the instructions for one part, so the body builds memory cells safely. Be careful with another slip: antibiotics act on bacteria, not viruses, so they do not cure colds or flu.",
+   "In the lab your child guards four ways in and covers a cut, watches two germs become eight and has a white blood cell swallow them, fits antibodies to the matching germs, meets the same germ twice on an antibody graph, and vaccinates Ava but not Ben, then compares who stays well."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which part of the body traps germs you breathe in?",
+   "choices": [
+    "Sticky mucus in the nose",
+    "Acid in the stomach",
+    "Tears in the eyes"
+   ],
+   "answer": 0,
+   "hint": "Think about where the air goes in when you breathe.",
+   "explain": "Air goes in through the nose, where sticky mucus and tiny hairs trap germs."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A germ splits in two every 20 minutes. {n} germs get into a cut. How many germs are there after 40 minutes if nothing stops them?",
+   "answer": "n*4",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   },
+   "hint": "40 minutes is two lots of 20 minutes, so the number doubles twice.",
+   "explain": "{n} doubles to {=n*2} after 20 minutes, then to {=n*4} after 40 minutes."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Your body has antibodies for chickenpox. A cold germ gets in. What happens?",
+   "choices": [
+    "Your body must make new antibodies for the cold germ",
+    "The chickenpox antibodies stop it",
+    "Antibodies stop any germ"
+   ],
+   "answer": 0,
+   "hint": "Does one key open every lock?",
+   "explain": "Each antibody fits only one kind of germ, so the body has to make new antibodies for the cold germ."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The first time a germ gets in, the body takes about {a} days to make enough antibodies. The second time it takes {b} days. How many days faster is the second time?",
+   "answer": "a-b",
+   "params": {
+    "a": [
+     10,
+     14
+    ],
+    "b": [
+     2,
+     4
+    ]
+   },
+   "hint": "Take the second time away from the first time.",
+   "explain": "{a} − {b} = {=a-b} days faster, because memory cells remember the germ."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why does a vaccine protect you?",
+   "choices": [
+    "It lets your body learn a germ safely",
+    "It is a medicine that kills germs",
+    "It gives you the full illness"
+   ],
+   "answer": 0,
+   "hint": "What is inside a vaccine, and what does the body do with it?",
+   "explain": "A vaccine holds a weak, dead or part of a germ. The body makes memory cells without the illness, so it is ready for the real germ."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is the job of skin in fighting germs?",
+    "choices": [
+     "It is a wall that keeps germs out",
+     "It makes antibodies",
+     "It swallows germs"
+    ],
+    "answer": 0,
+    "hint": "Skin is on the outside of your whole body.",
+    "explain": "Unbroken skin is a tough barrier that germs cannot get through."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why should a cut be cleaned and covered?",
+    "choices": [
+     "Broken skin lets germs in",
+     "Plasters kill all germs",
+     "Cuts make antibodies"
+    ],
+    "answer": 0,
+    "hint": "What has happened to the skin wall?",
+    "explain": "A cut is a gap in the skin wall, so germs can get in. A plaster covers the gap until new skin grows."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A germ splits in two every 20 minutes. You start with {n} germs. How many are there after one hour?",
+    "answer": "n*8",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    },
+    "hint": "One hour is three lots of 20 minutes. Double three times.",
+    "explain": "{n} → {=n*2} → {=n*4} → {=n*8}, so there are {=n*8} germs after one hour."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What do some white blood cells do to germs?",
+    "choices": [
+     "Swallow them and break them down",
+     "Turn them into antibodies",
+     "Push them out through the skin"
+    ],
+    "answer": 0,
+    "hint": "Think of the white blood cell in the lab moving onto each germ.",
+    "explain": "Phagocytes are white blood cells that swallow germs and break them down."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You had chickenpox. Years later the same germ gets in. What usually happens?",
+    "choices": [
+     "Memory cells act fast, so you stay well",
+     "You get just as ill again",
+     "You get even more ill"
+    ],
+    "answer": 0,
+    "hint": "What do memory cells remember?",
+    "explain": "Memory cells remember the germ, so lots of antibodies come within days and you usually stay well."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "In a class of {n} children, {k} have had a vaccine for a germ. How many children have not had it?",
+    "answer": "n-k",
+    "params": {
+     "n": [
+      25,
+      32
+     ],
+     "k": [
+      18,
+      24
+     ]
+    },
+    "hint": "Take the vaccinated children away from the whole class.",
+    "explain": "{n} − {k} = {=n-k} children have not had the vaccine, so their bodies have not learned that germ yet."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A cold is caused by a virus. Will antibiotics cure it?",
+    "choices": [
+     "No, antibiotics work on bacteria, not viruses",
+     "Yes, antibiotics kill all germs",
+     "Yes, if you take extra"
+    ],
+    "answer": 0,
+    "hint": "Antibiotics only work on one kind of germ.",
+    "explain": "Antibiotics kill bacteria. Colds are caused by viruses, so antibiotics do not help; rest and drinks do."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is inside a vaccine?",
+    "choices": [
+     "A weak, dead or part of a germ",
+     "A strong live germ",
+     "Antibiotics"
+    ],
+    "answer": 0,
+    "hint": "It must be safe, but still look like the germ.",
+    "explain": "A vaccine holds a weak, dead or part of a germ, so the body can learn it without getting the illness."
+   }
+  ]
+ }
+}
