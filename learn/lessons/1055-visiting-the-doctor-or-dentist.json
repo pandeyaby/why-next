@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_mD1_BxIPz-",
+ "title": "Visiting the doctor or dentist",
+ "audience": "family",
+ "keyIdea": "Doctors, nurses and dentists are grown-ups whose job is to help us stay healthy. We go when we feel poorly, and we also go for check-ups when nothing hurts. A visit is never a punishment. Your grown-up stays with you, and you can ask what will happen. The tools only look or listen. If something hurts, put your hand up and tell them.",
+ "familyTip": "Before a visit, play doctors or dentists at home: count teeth with a spoon as the mirror, listen to a teddy's chest. Say what will happen in order. Agree a signal, such as a raised hand, for \"that hurts\" or \"I need a rest\". Never use the dentist or a jab as a threat, as it teaches that a visit is a punishment.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it help at a doctor or dentist visit? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "This helps",
+    "This does not help"
+   ],
+   "items": [
+    [
+     "Ask what will happen",
+     0
+    ],
+    [
+     "Keep quiet when it hurts",
+     1
+    ],
+    [
+     "Hold my grown-up's hand",
+     0
+    ],
+    [
+     "Run and hide",
+     1
+    ],
+    [
+     "Open wide for the mirror",
+     0
+    ],
+    [
+     "Keep a worry secret",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdocvisit",
+  "caption": "Flagship lab: sort why we go, put a visit in order, drag tools to what they check, tell the dentist when it hurts, and calm a worry.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A doctor, a nurse and a dentist help you stay well. You go when you feel ill. You go for a check when you feel fine too.",
+   "Your grown-up stays with you. The doctor tells you what they will do. You can ask: what will you do next?",
+   "The tools just look and listen. A stethoscope hears your heart. A little mirror helps the dentist see your teeth.",
+   "If it hurts, put your hand up and say so. That helps them help you. It is OK to feel a bit scared. Hold a hand and take slow breaths."
+  ],
+  "adult": [
+   "Ages 4 to 5. Development Matters (2021) asks Reception children to know and talk about what supports their health and wellbeing, including toothbrushing. The government's health education guidance for primary schools includes dental health and regular check-ups at the dentist. The NHS advises taking children to the dentist as soon as milk teeth appear, and NICE guidance sets check-ups every 3 to 12 months for under-18s, as the dentist advises.",
+   "Knowing what will happen lowers worry. A typical visit is: check in, wait, go in with a parent or carer, then the check. A stethoscope listens to the heart and breathing, an otoscope (ear light) looks inside the ear, and for children under 5 the NHS advises a digital thermometer under the armpit. A child has 20 milk teeth, and the dentist counts and checks them with a small mirror.",
+   "Common mistakes: thinking a visit is a punishment (often because the dentist or an injection was used as a threat); thinking you only go when something hurts; and staying quiet about pain to be brave. Be careful with body safety too: a parent or carer stays in the room, and a doctor or nurse should say what they will do and ask first. Teach a hand-up signal for pain or a rest.",
+   "In the lab your child sorts real reasons for a visit from worries, puts the parts of a visit in order, and drags each tool to the place it checks. Then they keep still while a dentist mirror moves tooth by tooth and put a hand up when one feels sore. Last, they bring a worry meter down by tapping things that help."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Why do we go to the dentist when nothing hurts?",
+   "choices": [
+    "For a check-up, to keep teeth healthy",
+    "Because we were naughty",
+    "We never go if nothing hurts"
+   ],
+   "answer": 0,
+   "hint": "Can the dentist spot a problem before it hurts?",
+   "explain": "A check-up lets the dentist spot a problem early, before it hurts. It is never a punishment."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "The dentist has counted {n} of your teeth. They count 1 more. How many teeth now?",
+   "answer": "n+1",
+   "hint": "Start at {n} and count on 1 more tooth.",
+   "explain": "{n} and 1 more is {=n+1}. A child has 20 milk teeth when they are all through.",
+   "params": {
+    "n": [
+     4,
+     19
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A tooth feels sore in the check. What do you do?",
+   "choices": [
+    "Put my hand up and say it hurts",
+    "Keep quiet and be brave",
+    "Shut my mouth tight"
+   ],
+   "answer": 0,
+   "hint": "How will the dentist know it hurts?",
+   "explain": "Put your hand up and tell them. Then the dentist knows which tooth to help."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You wait in the waiting room. {n} children go in before you. Then it is your turn. How many go in, with you?",
+   "answer": "n+1",
+   "hint": "Count the children before you, then add you.",
+   "explain": "{n} children and you make {=n+1}. Waiting your turn is part of the visit.",
+   "params": {
+    "n": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "What does a stethoscope do?",
+   "choices": [
+    "Listens to your heart and breathing",
+    "Looks inside your ears",
+    "Cleans your teeth"
+   ],
+   "answer": 0,
+   "hint": "It has ear pieces for the doctor, and a round end for your chest.",
+   "explain": "A stethoscope listens to your heart and breathing. It may feel cold, but it does not hurt."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Who are doctors, nurses and dentists?",
+    "choices": [
+     "Grown-ups whose job is to help us stay healthy",
+     "People who tell you off",
+     "People to keep secrets from"
+    ],
+    "answer": 0,
+    "hint": "Think about what their job is for.",
+    "explain": "Their job is to help us stay healthy and to help when we are ill."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Who stays with you at the visit?",
+    "choices": [
+     "My grown-up",
+     "Nobody",
+     "A stranger from the waiting room"
+    ],
+    "answer": 0,
+    "hint": "Who brings you to the visit?",
+    "explain": "Your parent or carer stays with you, and the doctor tells you what they will do."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "You feel worried before the visit. What helps?",
+    "choices": [
+     "Ask what will happen",
+     "Run and hide",
+     "Keep the worry a secret"
+    ],
+    "answer": 0,
+    "hint": "What makes a visit less of a surprise?",
+    "explain": "Asking what will happen helps. Hiding or keeping the worry secret makes it feel bigger."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The doctor uses a little light. What does it look at?",
+    "choices": [
+     "Inside your ears",
+     "Your feet",
+     "Your hair"
+    ],
+    "answer": 0,
+    "hint": "It has a thin cone on the end.",
+    "explain": "The ear light (an otoscope) shines inside your ear so the doctor can see. It does not hurt."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "You take {n} slow breaths, then {k} more. How many slow breaths is that?",
+    "answer": "n+k",
+    "hint": "Count all the breaths together.",
+    "explain": "{n} and {k} more make {=n+k} slow breaths. Slow breaths help a worry go down.",
+    "params": {
+     "n": [
+      1,
+      3
+     ],
+     "k": [
+      1,
+      3
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Where does the thermometer go for a check?",
+    "choices": [
+     "Under your arm",
+     "On your teeth",
+     "On your knee"
+    ],
+    "answer": 0,
+    "hint": "For young children, it goes in the armpit.",
+    "explain": "For children under 5 the thermometer goes under the arm. It checks how hot you are."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "How many milk teeth does a child have?",
+    "choices": [
+     "20",
+     "32",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "Grown-ups have more teeth than children.",
+    "explain": "A child has 20 milk teeth: 10 on top and 10 on the bottom. Grown-ups have up to 32."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "The dentist checked {n} top teeth and {k} bottom teeth. How many teeth is that?",
+    "answer": "n+k",
+    "hint": "Add the top teeth and the bottom teeth.",
+    "explain": "{n} top and {k} bottom teeth make {=n+k} teeth checked.",
+    "params": {
+     "n": [
+      2,
+      10
+     ],
+     "k": [
+      2,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Is going to the dentist a punishment?",
+    "choices": [
+     "No, it keeps us healthy",
+     "Yes, if you were naughty",
+     "Yes, if your teeth are messy"
+    ],
+    "answer": 0,
+    "hint": "Does everyone go, even children who were good?",
+    "explain": "Everyone goes to stay healthy. A visit is never a punishment."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "What happens first at a visit?",
+    "choices": [
+     "Say my name at the desk",
+     "Have the check",
+     "Go home"
+    ],
+    "answer": 0,
+    "hint": "What do you do as soon as you arrive?",
+    "explain": "First you say your name at the desk. Then you wait, go in with your grown-up, and have the check."
+   }
+  ]
+ }
+}
