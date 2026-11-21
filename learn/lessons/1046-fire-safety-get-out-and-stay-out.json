@@ -1,0 +1,181 @@
+{
+ "topicId": "mt_xvcHxCkvrp",
+ "title": "Fire safety: get out and stay out",
+ "audience": "family",
+ "keyIdea": "If there is fire or smoke, or the smoke alarm beeps, get out and stay out. Shout \"Fire!\", never hide under a bed or in a cupboard, get down low under smoke, and leave toys and pets. Go to your family's meeting place, never go back inside, and call 999 once you are out.",
+ "familyTip": "Agree a meeting place outside, like a tree or a neighbour's gate, and walk there together. Press the test button on your smoke alarm with your child so the beep is not scary, and practise saying your address and the number 999.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Safe in a fire, or not safe? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Safe in a fire",
+    "Not safe"
+   ],
+   "items": [
+    ["Get out when the alarm beeps", 0],
+    ["Hide in a cupboard", 1],
+    ["Crawl low under smoke", 0],
+    ["Go back in for teddy", 1],
+    ["Wait at the meeting place", 0],
+    ["Stop to find your shoes and toys", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggetout",
+  "caption": "Flagship lab: hear the alarm, crawl under smoke past the toys, go to the meeting place, stay out for the cat, and dial 999.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A smoke alarm makes a loud beep. The beep means: get out now. Shout \"Fire!\" so everyone hears.",
+   "Do not hide under the bed or in a cupboard. Smoke can get in there, and the firefighters will not find you.",
+   "Smoke goes up high. The clean air is low, near the floor. Get down low and go. Leave your toys.",
+   "Go to your meeting place outside and stay there. Never go back in, not for a toy or a pet. Tell a firefighter. A grown-up calls 999."
+  ],
+  "adult": [
+   "Ages 4 to 5. The PSHE Association Programme of Study (2020) asks KS1 pupils to learn how to keep safe at home and what to do in an emergency, including how to call 999. UK fire and rescue services give families the same short routine: get out, stay out, call 999. Key words: smoke alarm, smoke, get out, meeting place, firefighter, 999.",
+   "Smoke is the main danger in a house fire, more than flames. Hot smoke rises and fills a room from the ceiling down, so the air near the floor stays cleaner and cooler for longer. That is why children are taught to get down low. Toys and pets are left behind because seconds matter, and firefighters, not family members, go back in.",
+   "Common mistakes: hiding under a bed or in a wardrobe because they feel scared; stopping to find a toy or a pet; standing tall in smoke; waiting right next to the house; going back in; and not knowing the number. Be careful not to make the alarm frightening. Let your child press the test button and practise the plan as a calm game.",
+   "In the lab your child taps a smoke alarm and picks the first move, drags a child along the floor under the smoke and past a teddy to the door, takes the family to the meeting-place tree, picks what to do when Kitty the cat is still inside, and dials 9, 9, 9, asks for Fire and gives an address. In the USA and Canada the number is 911, and 112 works across Europe."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The smoke alarm beeps. What does it mean?",
+   "choices": ["Get out now", "Time to get up", "Go and find the fire"],
+   "answer": 0,
+   "hint": "A smoke alarm is a warning. What is it warning you about?",
+   "explain": "The beep warns that there may be smoke or fire, so it means get out now."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} people in your family. {k} are at the meeting place. How many more are you waiting for?",
+   "answer": "n-k",
+   "hint": "Start with all {n} people and take away the {k} who are already there.",
+   "explain": "{n} take away {k} is {=n-k}, so you wait for {=n-k} more and tell a firefighter if anyone is missing.",
+   "params": {"n": [4, 6], "k": [1, 3]}
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "There is smoke in the room. How do you move?",
+   "choices": ["Down low, near the floor", "Standing up tall", "Hiding under the bed"],
+   "answer": 0,
+   "hint": "Smoke goes up. Where is the clean air?",
+   "explain": "Smoke rises, so the cleaner air is near the floor. Get down low and get out."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You crawl {n} steps to the door, then walk {k} steps to the meeting place. How many steps is that?",
+   "answer": "n+k",
+   "hint": "Put the {n} crawling steps and the {k} walking steps together.",
+   "explain": "{n} and {k} more make {=n+k} steps to get to the meeting place.",
+   "params": {"n": [3, 6], "k": [2, 4]}
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You are out of the house. Where do you wait?",
+   "choices": ["At our meeting place", "Next to the front door", "In the shed"],
+   "answer": 0,
+   "hint": "Where will your family look for you?",
+   "explain": "Go to the meeting place your family picked, away from the house, so everyone knows you are safe."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You are outside. Your teddy is still inside. What do you do?",
+    "choices": ["Stay out and tell a grown-up", "Run back in for teddy", "Open the door to look"],
+    "answer": 0,
+    "hint": "Is a toy worth going back into a fire for?",
+    "explain": "Never go back in. A teddy can be bought again. Stay out and tell a grown-up or a firefighter."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You feel scared when the alarm beeps. Where should you go?",
+    "choices": ["Out of the house", "Under my bed", "In the cupboard"],
+    "answer": 0,
+    "hint": "Can firefighters find you under a bed?",
+    "explain": "Hiding feels safe but it is not. Smoke gets in, and nobody can find you. Get out of the house."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which number do you call for a fire in the UK?",
+    "choices": ["999", "123", "111"],
+    "answer": 0,
+    "hint": "It is the same number three times.",
+    "explain": "999 is the emergency number in the UK. Ask for Fire. 111 is for feeling unwell."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Kitty the cat is still inside. What is safe?",
+    "choices": ["Tell a firefighter Kitty is inside", "Go back in and call her", "Leave the meeting place to look"],
+    "answer": 0,
+    "hint": "Who has the special kit to go into a fire?",
+    "explain": "Firefighters have masks and kit to go in. Tell them Kitty is inside and stay out."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Your home has {n} smoke alarms. {k} are upstairs. How many are downstairs?",
+    "answer": "n-k",
+    "hint": "Take the {k} upstairs alarms away from all {n}.",
+    "explain": "{n} take away {k} leaves {=n-k} smoke alarms downstairs.",
+    "params": {"n": [4, 6], "k": [1, 3]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The operator asks which service you need. There is a fire. What do you say?",
+    "choices": ["Fire", "Police", "Ambulance"],
+    "answer": 0,
+    "hint": "Who comes with a fire engine?",
+    "explain": "Ask for Fire. Firefighters come in a fire engine to put out fires."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "{n} children are at the meeting place. {k} more come out. How many children are there now?",
+    "answer": "n+k",
+    "hint": "Start at {n} and count on {k} more children.",
+    "explain": "{n} and {k} more make {=n+k} children at the meeting place.",
+    "params": {"n": [2, 5], "k": [1, 3]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The alarm beeps and you want your shoes. What do you do?",
+    "choices": ["Leave them and get out", "Look for them first", "Wait in my room"],
+    "answer": 0,
+    "hint": "What matters most: shoes, or getting out?",
+    "explain": "Every second counts in a fire. Leave your shoes and things, and get out."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Why do we get down low in smoke?",
+    "choices": ["The clean air is near the floor", "So the fire cannot see us", "It is a game"],
+    "answer": 0,
+    "hint": "Which way does smoke go: up or down?",
+    "explain": "Smoke rises to the ceiling first, so the cleaner air is down near the floor."
+   }
+  ]
+ }
+}
