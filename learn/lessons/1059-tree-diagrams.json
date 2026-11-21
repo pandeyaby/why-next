@@ -1,0 +1,247 @@
+{
+ "topicId": "mt_GDtFU5fyUv",
+ "title": "Tree diagrams",
+ "audience": "learner",
+ "keyIdea": "A tree diagram maps a two-stage event as branches from a start. Each complete path is one outcome. The probabilities on the branches leaving any point add up to 1. For independent events, or when an item is put back, later branches stay the same; if an item is not put back, later fractions change because fewer items remain. To find a combined probability, multiply along a path, then add the end results of every path that fits.",
+ "familyTip": "Use a bag of 3 red and 2 blue counters or sweets. Draw a tree together for two picks, first with the first one put back and then without. For each version, write the six branch fractions, then find P(same colour) and P(one of each) by multiplying along paths and adding.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "When do you multiply, and when do you add? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Multiply along a path",
+    "Add the path ends"
+   ],
+   "items": [
+    [
+     "P(red, then red) along one path",
+     0
+    ],
+    [
+     "P(heads, then six) along one path",
+     0
+    ],
+    [
+     "P(one of each colour), from two paths",
+     1
+    ],
+    [
+     "P(red, then blue, or blue, then red)",
+     1
+    ],
+    [
+     "P(same colour), from the two same-colour paths",
+     1
+    ],
+    [
+     "P(heads, then red) along one path",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtree",
+  "caption": "Flagship lab: grow a coin-then-spinner tree, label branches, multiply along red-red, add mixed paths, then pick without putting back.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A tree diagram shows what can happen in two or more stages. From a start, each possible first result is a branch. From each of those, the second results branch out. One path from the start to an end is one outcome.",
+   "The numbers on the branches leaving any one point always add up to 1, because one of those results must happen. If you put the first item back, or the two events do not affect each other, the second branches stay the same as the first.",
+   "To find the chance of a whole path, such as red then red, multiply the numbers along that path. To find the chance of something that can happen in more than one way, such as one red and one blue, add the path ends that fit.",
+   "If you do not put the first item back, the second fractions change, because there is one fewer item left. Then red, then red from a bag of 3 red and 2 blue is 3/5 × 2/4, not 3/5 × 3/5."
+  ],
+  "adult": [
+   "Ages 12 to 14. This is the standard KS3 and GCSE method for combined events (AQA P8; CCSS 7.SP.8). From any node the outgoing probabilities sum to 1. Independent events, or sampling with replacement, keep the same branch probabilities at later stages. Sampling without replacement is a dependent event: after a red is taken from 3 red and 2 blue, four items remain, so P(red then red) = 3/5 × 2/4 = 3/10.",
+   "Along one path, multiply: P(A then B) = P(A) × P(B | A). Then add the ends of every path that matches the event (the law of total probability). The four path ends of a two-by-two tree always add to 1, which is a useful check.",
+   "Common mistakes: adding the number of first and second outcomes instead of multiplying (2 + 3 instead of 2 × 3); adding along a path, which can give a result greater than 1; using a part-to-part ratio such as 3/2 as a probability; counting only one of the two mixed-colour paths; and keeping the old denominator after not replacing. Be careful also with the slip that two colours means 50:50, which ignores the counts.",
+   "In the lab your child grows a coin-then-spinner tree and lists six outcomes, labels all six branches for 3 red and 2 blue with replacement, multiplies for P(red, red) = 9/25 and checks it against 200 seeded picks, adds the two mixed paths to get 12/25, and then relabels the second picks without replacement."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You flip a coin and then roll a dice. How many outcomes are there?",
+   "choices": [
+    "12",
+    "8",
+    "6"
+   ],
+   "answer": 0,
+   "hint": "Each of the first results splits into all of the second results.",
+   "explain": "A coin has 2 results and a dice has 6, so there are 2 × 6 = 12 outcomes."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A fair coin is flipped, then a spinner with {n} equal colours is spun. How many outcomes are there?",
+   "answer": "2*n",
+   "params": {
+    "n": [
+     3,
+     8
+    ]
+   },
+   "hint": "Multiply the number of first results by the number of second results.",
+   "explain": "2 coin results times {n} colours gives {=2*n} outcomes."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A bag has 3 red and 2 blue counters. You pick one, put it back, and pick again. What is P(red, then red)?",
+   "choices": [
+    "9/25",
+    "6/5",
+    "3/5"
+   ],
+   "answer": 0,
+   "hint": "Follow the red, then red path and combine the two branches.",
+   "explain": "Multiply along the path: 3/5 × 3/5 = 9/25."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Each day, P(rain) = 0.{n}. What is P(no rain) that day, as a decimal?",
+   "answer": "(10-n)/10",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   },
+   "hint": "The two branches from that day must add to 1.",
+   "explain": "P(no rain) = 1 − 0.{n} = {=(10-n)/10}."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A bag has 3 red and 2 blue sweets. You eat a red one. What is P(red) for the next sweet?",
+   "choices": [
+    "2/4",
+    "3/5",
+    "2/5"
+   ],
+   "answer": 0,
+   "hint": "Count what is left after you ate the red one.",
+   "explain": "Four sweets are left: 2 red and 2 blue, so P(red) = 2/4."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "P(heads) = 1/2 and P(six) = 1/6, and the events do not affect each other. What is P(heads and six)?",
+    "choices": [
+     "1/12",
+     "2/3",
+     "1/8"
+    ],
+    "answer": 0,
+    "hint": "Combine the two branches of the one path that fits.",
+    "explain": "Multiply along the path: 1/2 × 1/6 = 1/12."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A spinner is red with probability {=n}/10. What goes on the not-red branch, as a decimal?",
+    "answer": "(10-n)/10",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    },
+    "hint": "The branches from one spin add up to 1.",
+    "explain": "1 − {=n}/10 = {=(10-n)/10}."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A bag has 3 red and 2 blue. You pick, put it back, and pick again. What is P(one red and one blue)?",
+    "choices": [
+     "12/25",
+     "6/25",
+     "1/2"
+    ],
+    "answer": 0,
+    "hint": "Two paths fit: red then blue, and blue then red.",
+    "explain": "Add both mixed paths: 6/25 + 6/25 = 12/25."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A bag has {r} red and {=10-r} blue counters. You pick one, put it back and pick again, and you do this 100 times. About how many times would you expect red, then red?",
+    "answer": "r*r",
+    "params": {
+     "r": [
+      2,
+      8
+     ]
+    },
+    "hint": "Find P(red, then red) by multiplying along the path, then take that share of 100.",
+    "explain": "P(red, then red) = {r}/10 × {r}/10 = {=r*r}/100, so expect it about {=r*r} times in 100."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You eat the first of 3 red and 2 blue sweets. Are the second-pick chances still 3/5 and 2/5?",
+    "choices": [
+     "No, they change, because only 4 sweets are left",
+     "Yes, they stay the same",
+     "Only the first branch changes"
+    ],
+    "answer": 0,
+    "hint": "The first sweet is gone, so the total is smaller.",
+    "explain": "Without putting back, 4 sweets remain, so the second fractions are out of 4, not 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A bag has {n} red and 2 blue sweets. You eat a red one, then pick again. Write P(red, then red) as a fraction with bottom number {=(n+2)*(n+1)}. What is the top number?",
+    "answer": "n*(n-1)",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    },
+    "hint": "The first pick is out of n + 2. One red is gone, so the second is out of n + 1, with one fewer red.",
+    "explain": "P(red, then red) = {n}/{=n+2} × {=n-1}/{=n+1} = {=n*(n-1)}/{=(n+2)*(n+1)}, so the top number is {=n*(n-1)}."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "A bag has 4 red and 1 blue. You pick, put it back, and pick again. What is P(red, then red)?",
+    "choices": [
+     "16/25",
+     "8/5",
+     "8/10"
+    ],
+    "answer": 0,
+    "hint": "P(red) is 4/5 both times, because the first counter goes back.",
+    "explain": "Multiply along the path: 4/5 × 4/5 = 16/25."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is 3/2 not P(red) for a bag of 3 red and 2 blue?",
+    "choices": [
+     "A probability compares red with all 5, so it is 3/5",
+     "3/2 is bigger, so it is more likely",
+     "You should always use 1/2"
+    ],
+    "answer": 0,
+    "hint": "A probability is a part of a whole, not a part compared with another part.",
+    "explain": "3/2 is the ratio of red to blue. The probability of red compares 3 red with all 5 counters, so it is 3/5."
+   }
+  ]
+ }
+}
