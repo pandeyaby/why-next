@@ -1,0 +1,276 @@
+{
+ "topicId": "mt_v6eze9W0fk",
+ "title": "Talking about a story I know",
+ "audience": "family",
+ "keyIdea": "When you know a story well, you can talk about it with the book shut. Say who was in it: the characters, by name. Say one thing that really happened. Answer who, what and where questions: who wants a person, what wants a thing, where wants a place. Use names, not just she or it, so someone who never heard the story knows who you mean.",
+ "familyTip": "After a favourite story, shut the book and chat: \"Who was in it? What happened to Baby Bear's chair?\" Wait a few seconds for an answer. If your child says \"she did it\", ask \"Who is she?\" to bring out the name. Read the same book many times: knowing a story well is what lets a child talk about it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Was it in Goldilocks and the Three Bears? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "In the story",
+    "Not in this story"
+   ],
+   "items": [
+    [
+     "Goldilocks",
+     0
+    ],
+    [
+     "The big bad wolf",
+     1
+    ],
+    [
+     "Three bowls of porridge",
+     0
+    ],
+    [
+     "A magic beanstalk",
+     1
+    ],
+    [
+     "Baby Bear's broken chair",
+     0
+    ],
+    [
+     "A pumpkin coach",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtalkstory",
+  "caption": "Flagship lab: with the book shut, say who was in the story and what happened, answer who, what and where questions, and tell it so Grandpa understands.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "You know the story of Goldilocks. Shut the book. Can you say who was in it? Goldilocks, Daddy Bear, Mummy Bear and Baby Bear.",
+   "Now say what happened. Goldilocks ate up Baby Bear's porridge. Baby Bear's chair broke. Tell what really happened, not a made-up bit.",
+   "Listen for the question word. Who asks for a person or an animal. What asks for a thing. Where asks for a place.",
+   "Grandpa did not hear the story. If you say \"she ate it\", he will not know who. Say the name: Goldilocks ate the porridge."
+  ],
+  "adult": [
+   "Ages 3 to 4. Development Matters (2021) asks 3 and 4 year olds to engage in extended conversations about stories, learning new vocabulary. In Reception, children retell a story once they know it deeply, partly word for word and partly in their own words, and the Comprehension early learning goal asks them to show understanding by retelling. This lesson is the first step: recalling characters and main events with the book shut, without the pictures in front of them.",
+   "Questions about a story get harder in levels (Blank, Rose and Berlin's levels of questioning). Who, what and where questions about things that were seen come first; why and how questions come later. A child who answers \"who ate the porridge?\" with \"the bowl\" is matching a word from the story, not the kind of answer the question asks for.",
+   "Common mistakes: borrowing a character or event from another story (the wolf turns up in the bears' house); adding a made-up event and saying it was in the book; answering a who question with a thing or a place; and saying she, it or they to a listener who never heard the story. Young children often use pronouns before they have named anyone, so gently ask \"who is she?\".",
+   "In the lab the book stays shut. Your child sorts who was and was not in Goldilocks and the Three Bears, sorts real events from made-up or borrowed ones, drags the answer that fits each question word, chooses the telling Grandpa can follow, and builds true who-did-what sentences."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Who was in Goldilocks and the Three Bears?",
+   "choices": [
+    "Baby Bear",
+    "The big bad wolf",
+    "A dragon"
+   ],
+   "answer": 0,
+   "hint": "Think of the three bowls, chairs and beds. Whose were they?",
+   "explain": "Baby Bear was in it, with Daddy Bear, Mummy Bear and Goldilocks. The wolf is from another story."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Goldilocks ate {n} spoons of porridge, then 1 more spoon. How many spoons did she eat?",
+   "answer": "n+1",
+   "hint": "Start at {n} and count on 1 more spoon.",
+   "explain": "{n} spoons and 1 more make {=n+1} spoons. She ate Baby Bear's porridge all up.",
+   "params": {
+    "n": [
+     1,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "\"Where did the bears live?\" Which answer fits?",
+   "choices": [
+    "In a house in the wood",
+    "Baby Bear",
+    "Porridge"
+   ],
+   "answer": 0,
+   "hint": "Where asks for a place. Which answer is a place?",
+   "explain": "Where wants a place: in a house in the wood. Baby Bear is a person, and porridge is a thing."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You name {n} characters from the story. Then you name {k} more. How many characters did you name?",
+   "answer": "n+k",
+   "hint": "Count the first names, then count on the rest.",
+   "explain": "{n} and {k} more make {=n+k} characters named.",
+   "params": {
+    "n": [
+     1,
+     2
+    ],
+    "k": [
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Grandpa did not hear the story. What should you tell him?",
+   "choices": [
+    "Goldilocks broke Baby Bear's chair.",
+    "She broke it.",
+    "It broke."
+   ],
+   "answer": 0,
+   "hint": "Does Grandpa know who \"she\" is?",
+   "explain": "Say the names. \"Goldilocks broke Baby Bear's chair\" tells Grandpa who and what."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Who ate up Baby Bear's porridge?",
+    "choices": [
+     "Goldilocks",
+     "The porridge",
+     "In the kitchen"
+    ],
+    "answer": 0,
+    "hint": "Who asks for a person or an animal.",
+    "explain": "Goldilocks ate it. Who wants a person, not a thing or a place."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What broke in the story?",
+    "choices": [
+     "Baby Bear's chair",
+     "Goldilocks",
+     "In the wood"
+    ],
+    "answer": 0,
+    "hint": "What asks for a thing. Which answer is a thing?",
+    "explain": "Baby Bear's chair broke when Goldilocks sat on it."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which of these really happened in the book?",
+    "choices": [
+     "The bears came home",
+     "The wolf blew the house down",
+     "Goldilocks ate a big cake"
+    ],
+    "answer": 0,
+    "hint": "Which one is about the bears and their house?",
+    "explain": "The bears came home from their walk. The wolf is from The Three Little Pigs, and the cake is made up."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Where did Goldilocks go to sleep?",
+    "choices": [
+     "In Baby Bear's bed",
+     "Mummy Bear",
+     "A bowl"
+    ],
+    "answer": 0,
+    "hint": "Where asks for a place. Which answer is a place?",
+    "explain": "She went to sleep in Baby Bear's bed, because it was just right."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "There are {n} bowls on a table. Goldilocks eats from 1 bowl. How many bowls has she not eaten from?",
+    "answer": "n-1",
+    "hint": "Take the 1 bowl she ate from away from {n}.",
+    "explain": "{n} take away 1 is {=n-1}. In the book there were 3 bowls, and she ate all of Baby Bear's.",
+    "params": {
+     "n": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which one is not in Goldilocks and the Three Bears?",
+    "choices": [
+     "A dragon",
+     "Mummy Bear",
+     "Goldilocks"
+    ],
+    "answer": 0,
+    "hint": "Think of the people and bears in the book.",
+    "explain": "There is no dragon in this story. That would be made up."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Who found Goldilocks in his bed?",
+    "choices": [
+     "Baby Bear",
+     "Daddy Bear",
+     "The wolf"
+    ],
+    "answer": 0,
+    "hint": "Whose bed was just right for Goldilocks?",
+    "explain": "Baby Bear found her asleep in his little bed."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "You tell Grandpa {n} things that happened. Then you tell him 1 more. How many things did you tell?",
+    "answer": "n+1",
+    "hint": "Start at {n} and count on 1 more thing.",
+    "explain": "{n} things and 1 more make {=n+1} things told.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "You say, \"It broke.\" Grandpa looks puzzled. What do you say next?",
+    "choices": [
+     "Baby Bear's chair broke.",
+     "It broke, I said.",
+     "Never mind."
+    ],
+    "answer": 0,
+    "hint": "Grandpa needs to know what \"it\" is.",
+    "explain": "Say the name of the thing: Baby Bear's chair broke."
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "What did Goldilocks do at the end?",
+    "choices": [
+     "Ran away home",
+     "Went for a walk with the bears",
+     "Blew the house down"
+    ],
+    "answer": 0,
+    "hint": "What did she do when the bears found her?",
+    "explain": "When the bears found her, Goldilocks ran away home."
+   }
+  ]
+ }
+}
