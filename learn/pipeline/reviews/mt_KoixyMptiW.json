@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "The five steps follow the UK Department for Transport THINK! Green Cross Code (find the safest place to cross; stop just before the kerb; look all around for traffic and listen; if traffic is coming let it pass; when it is safe go straight across, do not run; keep looking and listening), merged here into 5 cards with 'let it pass' as 'Wait until no traffic'. 'Children under about 8 cross with a grown-up' matches THINK! and RoSPA advice; parked vehicles hiding child pedestrians and children's difficulty judging vehicle speed and distance are from RoSPA guidance and WHO 2008 (World report on child injury prevention, ch. 2). Zebra and green-figure crossings are described with the extra check that traffic has stopped. Lab geometry checked: the driver's sight line to a child behind the parked van crosses the van rectangle (hidden), and is clear about 0.2 of the width left of it; race 1 car A (far, 0.5 W/s, 1.7 s) beats car B (near, 0.14 W/s, 2.9 s), race 2 car B (near, fast) wins. Parameterised answers 3*a, a+b and 2*a stay 2 to 12 and 5-a stays 1 to 4 at every corner."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets documented child-pedestrian errors (RoSPA; WHO 2008): crossing between parked cars (spot A feedback, van scene, p5, challenge 'parked'), crossing on a bend (spot D, m8, challenge 'bend'), looking only one way (Look both ways refuses a decision until both sides are uncovered and stops 'Cross' when a car is coming from the other side; p4, m6, challenge 'oneway'), running across (challenge 'run'), stopping looking half-way (m2, challenge 'keep'), 'if I can see the road, the driver can see me' (van predict, m1, challenge 'see') and 'far away is always safe' (race 1 predict and animation, m3, challenge 'speed')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagroad is about road crossing itself: a top-down street with four tappable crossing places, a two-column order builder for the five Green Cross Code steps, a road hidden under fog until the child taps Look left and Look right before Wait or Cross, a draggable child whose sight line to an approaching driver turns red while a parked van blocks it, and an animated race between a far fast car and a near slow one. 211 'Rules that keep us safe' only sorts simple rules; flagwatersafe, flaggetout and flagemcall are about water, fire and calling for help. The lab_distinct gate measures it under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Each idea is found by doing: an unsafe spot answers with why (hidden by parked cars, cannot see round the bend), the code builder refuses 'Walk' until stop, look, listen and wait are placed, the fogged road makes 'look all around' a physical action and a car appears on the side not yet checked, the sight line changes colour live as the child is dragged out from behind the van, and the race shows the far fast car arriving first. Done messages state each rule after the task is complete."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions, each with a tempting wrong option the lab then disproves: 'Yes, it is close by' for a gap between parked cars (the spot is refused with its reason), 'Yes, it is clear' after looking left (road 2 has a car on the right), 'Yes, if I can hear the car' for being seen behind a van (the sight line is red until the child moves), and 'Car B, it is nearer' (car A, far but fast, gets there first)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions with each wrong option tagged to its slip and message: run ('Do not run: you could trip'), oneway ('Clear on one side is not enough'), parked, bend, see ('a big van still hides a small child'), speed ('A far car that is going fast can reach you sooner than you think'), keep and why. In-lab feedback also names the slip: which side has not been checked yet, which side a car is coming from, why a spot is unsafe, which step comes before walking, and why the near car lost or won."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid paragraphs use short sentences and everyday words (kerb, look, listen, wait, walk, parked van, grown-up); the adult text names the code, the sources and the slips plainly; validate_lessons readability passes for both. Canvas banners are short ('Where is it safer to cross? Tap a place', 'Hidden: the driver cannot see you. Drag the child') and every action is announced through the live region."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every kid sentence is a step, a reason or a rule; adult paragraphs give the code and the age advice, why parked cars and speed judgement matter, the common mistakes with a note not to frighten the child, and what each lab scene does. The content gate finds no filler phrases."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked 360 px screenshots in light and dark for every scene before and after Show me: the four crossing markers are 44 px circles with short names under them, the code cards wrap to two lines inside about 165 px columns, the Wait and Cross tiles are 160 px wide, the fog panels carry 'Tap to look left/right' prompts, the car labels sit on dark pills above each car so they stay readable over the zebra stripes, and the van scene's status pill fits. A Playwright drag on an iPhone 13 viewport moved the child out from behind the van and turned the sight line green; a tap on spot A gave the parked-cars feedback."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a labelled button twin: the four crossing places ('Cross at the zebra crossing'), each code step, Look left, Look right, Listen, Wait and Cross, Move left and Move right for the van scene, Car A first and Car B first. The canvas aria-label follows every message, including a live 'The driver can see the child here' while dragging, and the walk gate's axe run is clean in both themes on desktop and iPhone 13."
+  }
+ },
+ "sources": [
+  "UK Department for Transport, THINK! road safety: the Green Cross Code and advice for parents of children under 8",
+  "RoSPA (Royal Society for the Prevention of Accidents): child pedestrian safety guidance (parked cars, crossings)",
+  "WHO and UNICEF (2008) World report on child injury prevention, chapter 2: Road traffic injuries (children's judgement of vehicle speed and distance)",
+  "PSHE Association (2020) Programme of Study for PSHE education, Key Stage 1, Health and wellbeing: keeping safe (including road safety)"
+ ]
+}

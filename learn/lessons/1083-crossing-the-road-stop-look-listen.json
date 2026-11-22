@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_KoixyMptiW",
+ "title": "Crossing the road: stop, look, listen",
+ "audience": "family",
+ "keyIdea": "To cross the road, first find a safer place: a zebra crossing or a crossing with a green figure, not a gap between parked cars or a bend. Stop just before the kerb. Look all around and listen. Wait until no traffic is coming, then walk straight across and keep looking and listening. Children under about 8 cross with a grown-up, because car speed is hard to judge and a parked van can hide a small child from a driver.",
+ "familyTip": "On your next walk, let your child find a safer place to cross and say the steps out loud before you go: stop, look all around, listen, wait, then walk and keep looking. Talk about why you do not step out between parked cars, and hold their hand even on a quiet street.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Safer or not? Drag each place, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Safer place to cross",
+    "Not a safe place"
+   ],
+   "items": [
+    [
+     "Zebra crossing",
+     0
+    ],
+    [
+     "Between parked cars",
+     1
+    ],
+    [
+     "Green figure lights",
+     0
+    ],
+    [
+     "On a bend",
+     1
+    ],
+    [
+     "Crossing with a grown-up",
+     0
+    ],
+    [
+     "Running into the road",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagroad",
+  "caption": "Flagship lab: find safer places, put the Green Cross Code in order, look both ways, step out from behind a van, race a far fast car against a near slow one.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "First, find a safer place to cross. A zebra crossing or a crossing with a green figure is better than a gap between parked cars or a bend.",
+   "Stop just before the kerb. Look all around and listen. Clear on one side is not enough: a car may be coming the other way.",
+   "If a car is coming, wait for it to pass. Then walk straight across. Keep looking and listening as you go. Do not run.",
+   "A parked van can hide you from a driver. Step out to a clear place. Far-away cars can still come quickly if they are going fast, so hold a grown-up's hand."
+  ],
+  "adult": [
+   "Ages 6 to 7. This lesson teaches the UK Green Cross Code (Department for Transport THINK!): find the safest place to cross, stop just before the kerb, look all around and listen, wait until the road is clear, then walk straight across and keep looking and listening. THINK! and RoSPA advise that children under about 8 still cross with a grown-up. Key words: kerb, look, listen, wait, zebra crossing, green figure, grown-up.",
+   "Parked cars and vans hide a small child from a driver's line of sight, so stepping out between them is a common cause of child pedestrian injuries (RoSPA). Young children also find it hard to judge how fast a car is coming and how long it will take to arrive (WHO 2008, World report on child injury prevention). That is why 'far away' is not a reliable rule, and why holding a grown-up's hand is still needed at this age.",
+   "Common mistakes: crossing between parked cars or on a bend, looking only one way, running across, stopping looking half-way, thinking 'I can see the car so the driver can see me', and thinking a far-away car is always slower to arrive than a near one. Be careful not to scare the child: the aim is a clear plan they can practise with you, not a list of dangers.",
+   "In the lab your child finds two safer places on a street, puts the five steps of the Green Cross Code in order, looks left and right then waits or crosses on three roads, drags a child out from behind a parked van until the driver's line of sight is clear, and watches a far, fast car beat a near, slow one."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What is the first step of the Green Cross Code?",
+   "choices": [
+    "Find a safer place to cross",
+    "Run across quickly",
+    "Look one way"
+   ],
+   "answer": 0,
+   "hint": "Think about where you stand, before you look.",
+   "explain": "First find a safer place, such as a zebra crossing. Then stop, look, listen, wait, and walk."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "At each kerb you look left, then right, then left again. You stop at {a} kerbs. How many looks is that?",
+   "answer": "3*a",
+   "hint": "Each kerb needs 3 looks: left, right, left. Add 3 for every kerb.",
+   "explain": "3 looks at each of {a} kerbs makes {=3*a} looks. Looking all around means more than one way, every time.",
+   "params": {
+    "a": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You wait at the kerb. {a} cars pass from the left and {b} cars pass from the right. How many cars did you wait for?",
+   "answer": "a+b",
+   "hint": "Count the cars from both sides. You wait for every one.",
+   "explain": "{a} from the left and {b} from the right is {=a+b} cars. You cross only when nothing is coming either way.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "The road is clear on your left. A car is coming on your right. What do you do?",
+   "choices": [
+    "Wait for the car to pass",
+    "Cross now",
+    "Run fast"
+   ],
+   "answer": 0,
+   "hint": "Clear on one side is not enough.",
+   "explain": "Wait. A car is still coming from the right. Cross only when nothing is coming either way."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which is a safer place to cross?",
+   "choices": [
+    "A zebra crossing",
+    "A gap between two parked cars",
+    "A bend in the road"
+   ],
+   "answer": 0,
+   "hint": "Think about where drivers can see you, and where you can see them.",
+   "explain": "A zebra crossing is made for crossing. Parked cars hide you, and a bend hides cars coming round the corner."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You are behind a big parked van. Can the car driver see you?",
+    "choices": [
+     "No, the van hides me",
+     "Yes, I can see the road",
+     "Yes, if I wave"
+    ],
+    "answer": 0,
+    "hint": "Think about what is between you and the driver.",
+    "explain": "The van is in the way, so the driver cannot see a small child behind it. Step out to a clear place."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "While you walk across, what should you do?",
+    "choices": [
+     "Keep looking and listening",
+     "Look at your feet",
+     "Run to the other side"
+    ],
+    "answer": 0,
+    "hint": "A car could still come while you are walking.",
+    "explain": "Keep looking and listening all the way across, and walk, do not run."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "A car is far away but going very fast. Is it safe to cross?",
+    "choices": [
+     "Maybe not: a fast car comes quickly",
+     "Yes, far away is always safe",
+     "Yes, if you run"
+    ],
+    "answer": 0,
+    "hint": "Far away does not always mean lots of time.",
+    "explain": "A far, fast car can reach you sooner than you think. Speed is hard to judge, so wait or hold a grown-up's hand."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "The Green Cross Code has 5 steps. You have done {a} of them. How many steps are still to do?",
+    "answer": "5-a",
+    "hint": "There are 5 steps in all. Take away the ones already done.",
+    "explain": "5 steps minus {a} already done leaves {=5-a} still to do.",
+    "params": {
+     "a": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Why do children aged 6 and 7 still cross with a grown-up?",
+    "choices": [
+     "Car speed is hard to judge, and drivers may not see small children",
+     "Because roads are always empty",
+     "Only because it is a rule at night"
+    ],
+    "answer": 0,
+    "hint": "Think about judging how fast a car is coming.",
+    "explain": "Children find car speed hard to judge, and a parked van can hide a small child. So hold a grown-up's hand to cross."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You have looked left, but not right. Can you cross?",
+    "choices": [
+     "No, look right too",
+     "Yes, one look is enough",
+     "Yes, if it is quiet"
+    ],
+    "answer": 0,
+    "hint": "The code says look all around.",
+    "explain": "Look all around and listen. Clear on one side is not enough: a car may be coming the other way."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "At every kerb you look both ways, left and right: that is at least 2 looks. You cross {a} roads on the way to the park. How many looks is that at least?",
+    "answer": "2*a",
+    "hint": "Each road needs at least 2 looks. Add 2 for every road.",
+    "explain": "2 looks for each of {a} roads makes at least {=2*a} looks. Look all around every time, even on a quiet road.",
+    "params": {
+     "a": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "On a bend, why is it a poor place to cross?",
+    "choices": [
+     "You cannot see cars coming, and they cannot see you",
+     "The road is always empty there",
+     "There is never a kerb"
+    ],
+    "answer": 0,
+    "hint": "Think about what is hidden around the corner.",
+    "explain": "A bend hides cars until they are close, and hides you from drivers. Pick a straight stretch or a crossing."
+   }
+  ]
+ }
+}
