@@ -82,8 +82,8 @@ def gate_lab_registered(lesson, path):
     errs, src = [], lab_file(lab)
     if not src:
         return [f"lab: no learn/flag_*.js registers VIS.reg('{lab}')"]
-    if src.name not in (ROOT / "ext/learn_js.py").read_text():
-        errs.append(f"lab: {src.name} is not in LEARN_JS (ext/learn_js.py)")
+    if not any(f'"{src.name}"' in (ROOT / "ext" / part).read_text() for part in ("learn_js.py", "learn_js_labs.py")):
+        errs.append(f"lab: {src.name} is not in LEARN_JS (ext/learn_js.py or NEW_LABS in ext/learn_js_labs.py)")
     if lab not in json.loads((ROOT / "learn/flag_labs.json").read_text()):
         errs.append(f"lab: {lab} missing from learn/flag_labs.json (the flagship list read by validate_visuals.py)")
     if (ROOT / "learn/lesson.schema.json").read_text().count(f'"{lab}"') < 2:
@@ -279,7 +279,7 @@ def cmd_brief():
         print("queue empty: run `next` first"); return
     t = q["next"][0]
     print(f"Next topic: {t['name']} ({t['topic']}), {t['subject']}, ages {t['ages']}, unblocks {t['downstream']} topics, reels: {t['reels']}")
-    print("Write: learn/lessons/NNN-<slug>.json, a new learn/flag_<x>.js lab (register in LEARN_JS in ext/learn_js.py, learn/flag_labs.json, both schema enums),")
+    print("Write: learn/lessons/NNN-<slug>.json, a new learn/flag_<x>.js lab (register at the front of NEW_LABS in ext/learn_js_labs.py, learn/flag_labs.json, both schema enums),")
     print(f"and learn/pipeline/reviews/{t['topic']}.json. Then: python3 scripts/lesson_pipeline.py run <lesson.json> --push")
 
 
