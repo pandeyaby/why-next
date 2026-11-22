@@ -86,10 +86,10 @@ CLUSTERS6 = {
 ("Learning to Learn", 7): "Your child is learning to study worked examples and explain each step before trying one alone, to pin down a new idea with examples, non-examples and near misses, and to read a question twice and say what it is asking before they start.",
 
 # ---------------- wave 11: new young English, Learning to Learn and Personal & Social (20 Nov 2026)
-("Writing Composition", 4): "Your child is learning to recognise and write their own name, with a capital at the start.",
+("Writing Composition", 4): "Your child is learning to recognise and write their own name, with a capital at the start, and to write labels for things in their pictures and say a caption to go underneath.",
 ("Vocabulary", 3): "Your child is learning everyday names for the things around them — clothes, food, toys and animals — and a more exact word when you offer one.",
 ("Speaking & Listening", 3): "Your child is making up short stories in play, with a start, something that happens, and an ending.",
-("Responsible Decision-Making", 6): "Your child is learning rules that keep them safer — water safety with a grown-up, the difference between a good surprise and a worry secret, and why we do not share packed-lunch food.",
+("Responsible Decision-Making", 6): "Your child is learning rules that keep them safer — water safety with a grown-up, the difference between a good surprise and a worry secret, why we do not share packed-lunch food, and how to cross the road with a grown-up: stop, look, listen.",
 ("Responsible Decision-Making", 8): "Your child is learning when to get a grown-up or call 999, and what to say: their name, where they are and what has happened.",
 ("Emotional Literacy", 6): "Your child is learning to notice the feeling of being left out and to choose a helpful next step, such as asking to join in or telling a grown-up.",
 ("Emotional Literacy", 10): "Your child is learning what to do when a news story or video leaves them worried: stop watching, talk to a trusted adult, and not scroll for more.",
