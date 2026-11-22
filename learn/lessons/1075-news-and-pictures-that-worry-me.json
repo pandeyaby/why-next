@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_u9EAZ1hTKY",
+ "title": "News and pictures that worry me",
+ "audience": "family",
+ "keyIdea": "Feeling worried after scary news is normal. Notice it, then stop watching: more videos usually make worry bigger, not smaller. Tell a grown-up you trust what you saw and how you feel, without pretending you are fine, and check the facts together, because comments, rumours and old pictures shared again can make things look worse than they are.",
+ "familyTip": "Ask now and then: “Have you seen anything in the news that worried you?” Listen first and ask what they saw. Check the facts together on a trusted news site: where it is, who is helping, and whether a picture is new. Agree a rule: if a video worries you, stop it and come and tell me. No one gets in trouble for telling.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it help, or make the worry bigger? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Helps",
+    "Makes the worry bigger"
+   ],
+   "items": [
+    [
+     "Close the video",
+     0
+    ],
+    [
+     "Watch it again and again",
+     1
+    ],
+    [
+     "Tell a grown-up you trust",
+     0
+    ],
+    [
+     "Pretend you are fine",
+     1
+    ],
+    [
+     "Check the facts with a grown-up",
+     0
+    ],
+    [
+     "Send the scary clip to a younger cousin",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagnewsworry",
+  "caption": "Flagship lab: spot the signs of worry, stop an autoplay feed, help Rami tell his dad, check the facts together, then sort what helps.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Rami saw a news video about a big flood. Then his tummy felt tight. His heart beat fast. The picture kept popping into his head. That feeling is worry. Lots of people feel it after scary news. It does not mean something is wrong with you.",
+   "The phone kept playing more flood videos. Each one made Rami feel worse. Watching more does not calm worry. It makes it grow. So the first step is to stop: close the video and put the phone down.",
+   "Next, tell a grown-up you trust. You do not have to say “I am fine”. Say what you saw, how you feel, and what you want to know. Worries are not secrets, and no one is in trouble for telling.",
+   "Then check the facts together. Where is it? Who is helping? Is the picture new, or an old one shared again? A comment that says “It will happen here next!” is not a fact. Last, do something calm, like a walk or drawing."
+  ],
+  "adult": [
+   "Ages 10 to 11. Children meet upsetting news through autoplay feeds, shared clips and comments, not just TV. How much they watch matters. After the Boston Marathon bombing, people who took in six or more hours a day of coverage reported more acute stress than some who were there (Holman, Garfin and Silver 2014). Children far from the Oklahoma City bombing who watched more TV coverage of it had more stress symptoms (Pfefferbaum et al. 2001).",
+   "Advice for children from Childline and BBC Newsround agrees: it is normal to feel upset, take a break from the news, talk to an adult you trust, and get facts from a trusted source. Guidance for parents from the AAP and APA adds: ask what the child has seen, give honest facts at their level, say what keeps them safe, and point to the helpers. In England, the 2019 Health Education guidance asks primary schools to teach where to get support and that not everything online is true.",
+   "Common mistakes: thinking worry means something is wrong with you; believing more videos will bring calm; saying “I am fine” or keeping the worry secret; treating comments and rumours as facts; assuming a photo shared a lot today is new, when old photos are often shared again; and passing a scary clip on to a younger child. Be careful with the lab's worry meter: it is a picture of the idea, not a measure.",
+   "Related lessons: Telling a grown-up when something feels wrong covers who to tell. Simple calming strategies covers what to do in the body. Online identity and misinformation is the teen lesson on checking sources. This lesson joins them up for one moment: a news story that worries you."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Rami feels worried after a flood video. What should he do first?",
+   "choices": [
+    "Stop watching",
+    "Watch it again",
+    "Search for more videos"
+   ],
+   "answer": 0,
+   "hint": "Watching more makes the worry meter go which way?",
+   "explain": "Stop watching first. More videos make worry bigger, not smaller."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A photo is shared today, in {y}. It was first taken in {t}. How many years old is it?",
+   "answer": "y-t",
+   "hint": "Take the year it was taken away from this year: {y} − {t}.",
+   "explain": "{y} − {t} = {=y-t} years old. Old photos are often shared again as if they are new.",
+   "params": {
+    "y": [
+     2026,
+     2028
+    ],
+    "t": [
+     2015,
+     2021
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Dad asks Rami, “Are you OK?” Rami is still worried. What is best to say?",
+   "choices": [
+    "“I saw a video and I feel worried”",
+    "“I am fine”",
+    "“Nothing happened”"
+   ],
+   "answer": 0,
+   "hint": "Which answer lets Dad help?",
+   "explain": "Saying what you saw and how you feel lets a grown-up help. You do not have to pretend."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Each flood video adds {n} points to Rami’s worry meter. He watches {k} videos. How many points is that?",
+   "answer": "n*k",
+   "hint": "{n} points for each of {k} videos. Multiply.",
+   "explain": "{n} × {k} = {=n*k} points. The more he watches, the bigger the worry gets.",
+   "params": {
+    "n": [
+     2,
+     4
+    ],
+    "k": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A comment under a video says, “It will happen here next!” What is it?",
+   "choices": [
+    "Not a fact, check it with a grown-up",
+    "A fact, because lots of people liked it",
+    "A fact, because it is on a video"
+   ],
+   "answer": 0,
+   "hint": "Who wrote it? Did anyone check it?",
+   "explain": "It is not a fact. Anyone can write a comment, so check with a grown-up and a trusted news source."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Mia feels worried after scary news. Is something wrong with her?",
+    "choices": [
+     "No, lots of people feel worried after scary news",
+     "Yes, she should not feel that way",
+     "Yes, so she must hide it"
+    ],
+    "answer": 0,
+    "hint": "Think about how many people feel this after a scary story.",
+    "explain": "Feeling worried after scary news is normal. It is a sign to stop and tell someone."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which is a sign of worry?",
+    "choices": [
+     "The picture keeps popping into your head",
+     "You feel full after lunch",
+     "You want to play outside"
+    ],
+    "answer": 0,
+    "hint": "Worry changes your thoughts and your body.",
+    "explain": "A picture that keeps coming back is a sign of worry. So are a tight tummy and a fast heart."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Who should you tell about news that worries you?",
+    "choices": [
+     "A grown-up you trust, like a parent or teacher",
+     "A stranger in the comments",
+     "Nobody, keep it secret"
+    ],
+    "answer": 0,
+    "hint": "Who can help you check the facts and feel safe?",
+    "explain": "A grown-up you trust can listen, check the facts with you and help you feel safe."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A scary photo is being shared a lot today. Was it taken today?",
+    "choices": [
+     "Not always, old photos get shared again",
+     "Yes, people only share new photos",
+     "Yes, if it is shared a lot"
+    ],
+    "answer": 0,
+    "hint": "Can an old photo be posted again?",
+    "explain": "Not always. Old photos are often shared again, so a grown-up can check the date."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Ali’s little cousin asks about a scary video. What is best?",
+    "choices": [
+     "Do not show it, and tell a grown-up",
+     "Send it to him",
+     "Show him the scariest part"
+    ],
+    "answer": 0,
+    "hint": "Would the clip help him, or spread the worry?",
+    "explain": "Do not show it. Sending it spreads the worry. Tell a grown-up instead."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A flood is {d} km away from Rami’s home. A grown-up shows him on a map. How many metres is that? (1 km = 1000 m)",
+    "answer": "d*1000",
+    "hint": "Each km is 1000 m. Multiply {d} by 1000.",
+    "explain": "{d} × 1000 = {=d*1000} m. Checking the map shows how far away it really is.",
+    "params": {
+     "d": [
+      200,
+      900
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "It is bedtime and Zoe keeps thinking about the news. What helps?",
+    "choices": [
+     "Tell a grown-up, then do something calm",
+     "Search for more pictures in bed",
+     "Keep it to herself"
+    ],
+    "answer": 0,
+    "hint": "Which choice stops the worry growing?",
+    "explain": "Telling a grown-up and doing something calm help. More pictures in bed keep the worry going."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Rami’s worry meter is at {a}. Each extra video adds 3. He watches {k} more. Where is the meter now?",
+    "answer": "a+3*k",
+    "hint": "Work out 3 × {k} first, then add it to {a}.",
+    "explain": "3 × {k} = {=3*k}, and {a} + {=3*k} = {=a+3*k}. Each extra video makes the worry bigger, so stopping early helps.",
+    "params": {
+     "a": [
+      2,
+      6
+     ],
+     "k": [
+      1,
+      4
+     ]
+    }
+   }
+  ]
+ }
+}
