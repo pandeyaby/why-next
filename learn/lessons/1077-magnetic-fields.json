@@ -1,0 +1,279 @@
+{
+ "topicId": "mt_56aspHjU19",
+ "title": "Magnetic fields",
+ "audience": "learner",
+ "keyIdea": "A magnet's field is the space around it where it pushes or pulls on magnets and on iron or steel. A plotting compass lines up with the field, so joining compass arrows gives field lines: outside the magnet they run from N to S, never cross, and are closest at the poles, where the field is strongest. The Earth has a field like a giant bar magnet, and because a compass's N end is pulled to the Arctic, the magnetic pole there is a south pole.",
+ "familyTip": "If you have a fridge magnet or bar magnet and a phone or camping compass, slide the compass slowly round the magnet and watch the needle swing to follow it. Then move the compass far away: it settles back to pointing north. Ask: at what distance does the Earth's field win?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Strong field or weak field? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Strong field",
+    "Weak or no field"
+   ],
+   "items": [
+    [
+     "Right next to the N pole",
+     0
+    ],
+    [
+     "Right next to the S pole",
+     0
+    ],
+    [
+     "A long way from the magnet",
+     1
+    ],
+    [
+     "Where field lines are close together",
+     0
+    ],
+    [
+     "Where field lines are far apart",
+     1
+    ],
+    [
+     "In the gap where N faces S",
+     0
+    ],
+    [
+     "At a neutral point between two N poles",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmagfield",
+  "caption": "Flagship lab: plot a field with a compass, rank strong and weak spots, find a neutral point, set the Earth's magnet, sort myths.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A magnet has a magnetic field. It is the space around the magnet where it pushes or pulls on other magnets and on iron or steel. You cannot see the field, but you can map it. A plotting compass is a tiny magnet. Its N end lines up with the field wherever you put it.",
+   "Join up the compass arrows and you get field lines. Outside a magnet they go from the N pole round to the S pole. They never cross, because a compass can only point one way at each place. Where the lines are close together, the field is strong. That is at the poles. Far away the lines spread out and the field is weak.",
+   "Two magnets make one shared field. With N facing S, the lines run straight across the gap and the magnets attract. With N facing N, the lines turn away from each other and the magnets repel. Midway there is a neutral point. There the pushes cancel and there is no field.",
+   "The Earth has a magnetic field too, a bit like a giant bar magnet inside it. The N end of a compass points to the Arctic. Unlike poles attract, so the magnetic pole in the Arctic is really a south pole. Sailors and walkers use this to find north."
+  ],
+  "adult": [
+   "Ages 11 to 12. The KS3 science programme of study for England asks pupils to describe magnetic poles, attraction and repulsion, magnetic fields plotted with a compass and shown by field lines, and the Earth's magnetism, compass and navigation. NGSS MS-PS2-5 asks for evidence that fields exist between objects that push or pull without touching. It builds on the lesson Magnetic Poles.",
+   "By convention a field line points the way the N end of a compass points, so outside a magnet the lines leave N and enter S. Their spacing shows strength. The field fills the space in three dimensions; a drawing is a flat slice of it. The lab draws its lines from a simple model with one point pole near each end of the bar, which gives the right shape and the strong field at the poles.",
+   "The Earth's field is roughly that of a bar magnet tilted about 10° from the spin axis. The magnetic pole in the Arctic attracts the north-seeking end of a compass, so in magnet terms it is a south pole, even though it is called magnetic north. It drifts each year, so maps give a correction between true north and magnetic north. A compass needle lies flat, so it shows only the part of the field along the ground; near the poles the field also dips steeply into the ground.",
+   "Common mistakes: arrows drawn from S to N; thinking the field is strongest beside the middle; field lines that cross, or join between two N poles; thinking a compass close to a magnet still points north; calling the pole in the Arctic a north magnetic pole; and thinking the field stops at the edge of the magnet. Say 'north-seeking pole' when you explain why a compass points north. In the lab pupils drag a plotting compass round a bar magnet until the field lines appear, rank three spots by field strength, flip a second magnet to compare attract and repel patterns and find the neutral point, flip the magnet inside the Earth until compasses in three places point to the Arctic, and sort eight statements into true and myth."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Outside a bar magnet, which way do field lines point?",
+   "choices": [
+    "From the N pole to the S pole",
+    "From the S pole to the N pole",
+    "Straight out from both poles"
+   ],
+   "answer": 0,
+   "hint": "Field lines show the way the N end of a compass points.",
+   "explain": "A compass N end is pushed away from N and pulled towards S, so the lines run from N round to S."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a field drawing, {=b*k} lines pass through a small gap near a pole, and {b} lines pass through the same size gap far away. How many times stronger is the field near the pole?",
+   "answer": "k",
+   "hint": "Closer lines mean a stronger field. Compare how many lines share the same gap.",
+   "explain": "{=b*k} ÷ {b} = {k}. The lines are {k} times as crowded near the pole, so the field is {k} times as strong there.",
+   "params": {
+    "b": [
+     2,
+     4
+    ],
+    "k": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A plotting compass sits beside the middle of a bar magnet. Which way does its N end point?",
+   "choices": [
+    "Along the magnet, towards its S pole end",
+    "Straight at the magnet",
+    "To the Earth's North Pole"
+   ],
+   "answer": 0,
+   "hint": "Follow a field line as it passes the middle of the magnet.",
+   "explain": "Beside the middle, the field lines run along the magnet from the N end to the S end, so the needle points towards the S pole end."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Magnetic north is {d}° east of true north. A hill is on a true bearing of {b}°. What bearing do you set on your compass, in degrees?",
+   "answer": "b-d",
+   "hint": "Magnetic north is turned clockwise from true north, so compass bearings come out smaller.",
+   "explain": "When magnetic north is east of true north, take it away: {b}° − {d}° = {=b-d}°.",
+   "params": {
+    "d": [
+     2,
+     9
+    ],
+    "b": [
+     40,
+     120
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why does the N end of a compass point north?",
+   "choices": [
+    "The Arctic has a magnetic south pole that pulls it",
+    "The Arctic has a magnetic north pole that pulls it",
+    "The North Star pulls the needle"
+   ],
+   "answer": 0,
+   "hint": "Which poles attract each other: like poles or unlike poles?",
+   "explain": "Unlike poles attract. The N end is pulled to the Arctic, so the magnetic pole there is a south pole."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is a magnetic field?",
+    "choices": [
+     "The space round a magnet where it pushes or pulls magnetic things",
+     "The red and blue paint on a magnet",
+     "The lines printed on a magnet"
+    ],
+    "answer": 0,
+    "hint": "Think about where a compass needle swings near a magnet.",
+    "explain": "A field is the space round a magnet where magnets, iron and steel feel a force, even without touching."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Where are field lines closest together round a bar magnet?",
+    "choices": [
+     "At the poles",
+     "Beside the middle",
+     "Far from the magnet"
+    ],
+    "answer": 0,
+    "hint": "Where do paper clips cling to a bar magnet?",
+    "explain": "The lines crowd together at the poles, so the field is strongest there. That is why clips cling to the ends."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Two N poles face each other. What happens to the field lines between them?",
+    "choices": [
+     "They turn away, leaving a neutral point",
+     "They join straight across",
+     "They cross in the middle"
+    ],
+    "answer": 0,
+    "hint": "Like poles repel. Could lines leave one N pole and enter the other?",
+    "explain": "Lines leave both N poles and turn away from each other. Midway the pushes cancel at a neutral point with no field."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "An N pole faces an S pole across a gap. What is the field in the gap like?",
+    "choices": [
+     "Lines run straight across from N to S, and it is strong",
+     "There is no field in the gap",
+     "Lines go from S to N across the gap"
+    ],
+    "answer": 0,
+    "hint": "Unlike poles attract. Which way do field lines run?",
+    "explain": "The lines go straight across from the N pole to the S pole, packed close, so the field in the gap is strong."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Near a pole, {=b*k} field lines pass through a small square. Far away, only {b} lines pass through the same size square. How many times stronger is the field near the pole?",
+    "answer": "k",
+    "hint": "Divide the number of lines near the pole by the number far away.",
+    "explain": "{=b*k} ÷ {b} = {k}, so the field near the pole is {k} times as strong.",
+    "params": {
+     "b": [
+      2,
+      4
+     ],
+     "k": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "Magnetic north is {d}° west of true north. A church is on a true bearing of {b}°. What bearing do you set on your compass, in degrees?",
+    "answer": "b+d",
+    "hint": "Magnetic north is turned anticlockwise from true north, so compass bearings come out bigger.",
+    "explain": "When magnetic north is west of true north, add it on: {b}° + {d}° = {=b+d}°.",
+    "params": {
+     "d": [
+      2,
+      9
+     ],
+     "b": [
+      30,
+      150
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "You use a compass next to a steel car. Why might it point the wrong way?",
+    "choices": [
+     "The steel changes the field near the compass",
+     "Cars give off radio waves",
+     "Compasses only work in fields of grass"
+    ],
+    "answer": 0,
+    "hint": "Steel is a magnetic material.",
+    "explain": "Steel near a compass becomes magnetised and changes the field there, so the needle follows the car instead of the Earth."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why can two field lines never cross?",
+    "choices": [
+     "A compass can only point one way at each place",
+     "They would cancel and vanish",
+     "They are drawn on a flat page"
+    ],
+    "answer": 0,
+    "hint": "What would a compass do at a crossing point?",
+    "explain": "A crossing would give two directions at one place, but a compass can only point one way. So lines never cross."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Does a magnet's field stop at the edge of the magnet?",
+    "choices": [
+     "No, it spreads all round and gets weaker with distance",
+     "Yes, the field is only inside the magnet",
+     "Yes, it only lies flat on the table"
+    ],
+    "answer": 0,
+    "hint": "Does a compass react before it touches the magnet?",
+    "explain": "The field spreads into the space all round the magnet, above and below too, and weakens with distance."
+   }
+  ]
+ }
+}
