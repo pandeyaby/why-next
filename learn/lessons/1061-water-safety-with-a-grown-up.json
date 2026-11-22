@@ -1,0 +1,280 @@
+{
+ "topicId": "mt_2mKEQd1pOs",
+ "title": "Water safety with a grown-up",
+ "audience": "family",
+ "keyIdea": "Only go in water with a trusted grown-up who is watching you, even if you swim well. At the beach, swim between the red and yellow flags, where a lifeguard is watching, and stay where your grown-up can see you. Walk, do not run, by a pool, and go in at the shallow end. If someone is in trouble in the water, shout for a grown-up and throw something that floats: never jump in after them. If you fall in, lean back and float like a starfish, then shout and wave.",
+ "familyTip": "Before a trip to a pool or the beach, practise the four rules with your child: who must be there, where to swim, how to walk on a wet floor, and what to do if someone is in trouble. At the beach, walk to the red and yellow flags together and say, 'This is where we swim, because the lifeguard is watching here.' If you step away, even for a minute, take them with you.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Safe or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Safe to go in",
+    "Wait or stay out"
+   ],
+   "items": [
+    [
+     "Dad is watching you",
+     0
+    ],
+    [
+     "No grown-up is there",
+     1
+    ],
+    [
+     "Between the red and yellow flags",
+     0
+    ],
+    [
+     "A red flag is flying",
+     1
+    ],
+    [
+     "Walk to the steps",
+     0
+    ],
+    [
+     "Jump in after a friend",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwatersafe",
+  "caption": "Flagship lab: decide when it is OK to go in, pick a safe place on the beach, walk a wet poolside, help someone without jumping in, and float like a starfish.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Only go in the water if a trusted grown-up is with you and watching. A friend is not a grown-up. Even if you swim well, you still wait.",
+   "At the beach, swim between the red and yellow flags. That is where the lifeguard is watching. Stay close, so your grown-up can see you. A red flag means danger: do not swim there.",
+   "By a pool, the floor is wet. Walk, do not run, or you will slip. Go in at the shallow end, by the steps.",
+   "If a friend is in trouble in the water, shout for a grown-up. Throw a ring float to them. Do not jump in: they could pull you under too. If you fall in, lean back and float like a starfish. Then shout and wave."
+  ],
+  "adult": [
+   "Ages 6 to 7. The PSHE Association Programme of Study for key stage 1 asks children to recognise risk in everyday situations, to know ways to keep safe at a beach or swimming pool, and how to get help in an emergency (H29, H32, H36). This lesson applies that to water: pools, beaches, lakes and rivers. The rules come from the RLSS UK and RNLI Water Safety Code (Stop and Think, Stay Together, Float, Call 999 or 112), the RNLI Float to Live advice, and RNLI beach flag meanings.",
+   "Children often think being a strong swimmer is enough, or that a friend or a calm-looking lake makes it safe. Water can be cold, deep or moving, and even a short swim can tire a child quickly. At the beach, the red and yellow flags mark the area a lifeguard is watching; a red flag means danger and no swimming. Behind rocks or far out, a grown-up on the sand cannot see or reach them in time.",
+   "Common mistakes: going in alone because they swim well; treating a friend as a grown-up; swimming outside the flags or out of sight; running on a wet poolside; jumping in at the deep end; jumping in to rescue someone (they can be pulled under); and kicking hard after falling in, which tires them and can make them breathe in water. The right first help is to shout, throw something that floats, and not go in.",
+   "Before a trip, practise the four rules. At the beach, walk to the flags together and say why you swim there. If you step away, even for ice cream, take them with you. In the lab your child decides when it is OK to go in, picks safe places between the flags, walks a wet poolside, helps Sam by shouting and throwing a ring, and builds a starfish float."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You can swim a whole length. Can you go in with no grown-up there?",
+   "choices": [
+    "No, wait for a grown-up",
+    "Yes, I swim well",
+    "Yes, if a friend comes too"
+   ],
+   "answer": 0,
+   "hint": "Does being a strong swimmer change the rule about a grown-up?",
+   "explain": "Even strong swimmers only go in with a trusted grown-up watching. A friend is not a grown-up."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You walk {n} steps by the pool, then {k} more to the steps. How many steps is that?",
+   "answer": "n+k",
+   "hint": "Count the first steps, then count on the rest. Keep walking, do not run.",
+   "explain": "{n} steps and {k} more make {=n+k} steps. Walking keeps you from slipping.",
+   "params": {
+    "n": [
+     2,
+     6
+    ],
+    "k": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Where do lifeguards watch at the beach?",
+   "choices": [
+    "Between the red and yellow flags",
+    "By the red flag",
+    "Behind the rocks"
+   ],
+   "answer": 0,
+   "hint": "Look for two flags, one red and one yellow, close together.",
+   "explain": "Lifeguards watch the water between the red and yellow flags. A red flag means danger: do not swim there."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} children are in the water. Then {k} more go in with a grown-up. How many children are in the water?",
+   "answer": "n+k",
+   "hint": "Count the first group, then count on the children who just went in.",
+   "explain": "{n} children and {k} more make {=n+k} children in the water, all with a grown-up watching.",
+   "params": {
+    "n": [
+     1,
+     5
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A friend is in trouble in the water. What do you do first?",
+   "choices": [
+    "Shout for a grown-up",
+    "Jump in after them",
+    "Run home and hide"
+   ],
+   "answer": 0,
+   "hint": "Who can pull them out safely? Call that person first.",
+   "explain": "Shout for a grown-up first, so help is coming. Then throw something that floats. Never jump in."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "The floor by the pool is wet. How do you get to the steps?",
+    "choices": [
+     "Walk",
+     "Run",
+     "Jump in at the deep end"
+    ],
+    "answer": 0,
+    "hint": "What happens if you run on a wet floor?",
+    "explain": "Walk. Running on a wet floor makes you slip. Go in at the shallow end, by the steps."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A red flag is flying at the beach. What does it mean?",
+    "choices": [
+     "Danger: do not swim there",
+     "It is safe to swim",
+     "Swim close to the rocks"
+    ],
+    "answer": 0,
+    "hint": "A red flag is a warning. What should you do?",
+    "explain": "A red flag means danger. Never swim there. Swim only between the red and yellow flags."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "There is a ring float, and a friend is in trouble. What do you do?",
+    "choices": [
+     "Throw it to them",
+     "Swim out with it",
+     "Keep it on the side"
+    ],
+    "answer": 0,
+    "hint": "The ring helps only if your friend can hold it.",
+    "explain": "Throw the ring to them so they can hold it and float. Do not swim out or jump in."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "You fall in. What helps you most?",
+    "choices": [
+     "Lean back and float like a starfish",
+     "Kick and splash hard",
+     "Curl up tight"
+    ],
+    "answer": 0,
+    "hint": "What shape keeps you on the surface without tiring you?",
+    "explain": "Lean back and spread your arms and legs like a starfish. Then shout and wave for help."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Your grown-up went to get ice cream. Can you go in now?",
+    "choices": [
+     "No, wait until they are back",
+     "Yes, they will be quick",
+     "Yes, if I stay in the shallow end"
+    ],
+    "answer": 0,
+    "hint": "Is anyone watching you right now?",
+    "explain": "Wait. Your grown-up is not watching now, so you stay out until they are back."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "You shout for help {n} times. Then you shout 2 more times, and a grown-up comes. How many shouts is that?",
+    "answer": "n+2",
+    "hint": "Start at {n} and count on 2 more shouts.",
+    "explain": "{n} shouts and 2 more make {=n+2} shouts. Keep shouting until a grown-up comes.",
+    "params": {
+     "n": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The lake looks calm. Nobody is with you. Is it OK to go in?",
+    "choices": [
+     "No, wait for a grown-up",
+     "Yes, calm water is safe",
+     "Yes, if I can touch the bottom"
+    ],
+    "answer": 0,
+    "hint": "Can water still be cold or deep when it looks calm?",
+    "explain": "Calm water can still be cold and deep. Never go in with nobody there."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Where should you stay when you swim at the beach?",
+    "choices": [
+     "Where your grown-up can see you",
+     "Behind the rocks",
+     "Far out in deep water"
+    ],
+    "answer": 0,
+    "hint": "If you need help, can your grown-up reach you quickly?",
+    "explain": "Stay where your grown-up can see you, between the red and yellow flags. Behind the rocks or far out, help is too far away."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "You throw a ring float to a friend {n} times. Then you throw it 1 more time and they catch it. How many throws is that?",
+    "answer": "n+1",
+    "hint": "Start at {n} and count on 1 more throw.",
+    "explain": "{n} throws and 1 more make {=n+1} throws. The last one reached them.",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m10",
+    "prompt": "You have just walked to the steps at the shallow end. How do you go in?",
+    "choices": [
+     "Go in by the steps",
+     "Jump in at the deep end",
+     "Run and jump"
+    ],
+    "answer": 0,
+    "hint": "You do not know how deep the other end is.",
+    "explain": "Go in by the steps, at the shallow end, where you can stand."
+   }
+  ]
+ }
+}
