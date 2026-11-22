@@ -25,7 +25,7 @@ import src_teen_eng, src_teen_l2l, src_teen_psd  # noqa: F401,E402  (wave 6: sec
 import src_young8  # noqa: F401,E402  (wave 8: young English, Maths, PSD, Learning to Learn)
 import src_young9  # noqa: F401,E402  (wave 9: young Maths, Science, PSD)
 import src_young10  # noqa: F401,E402  (wave 10: young Maths, PSD, Learning to Learn)
-import src_young11_eng, src_young11_l2l, src_young11_psd  # noqa: F401,E402  (wave 11)
+import src_young11_eng, src_young11_l2l, src_young11_psd, src_young12  # noqa: F401,E402  (waves 11-12)
 
 EXT_VERSION = "whynext-0.6"
 PROJECT_NAME = "Why Next?"

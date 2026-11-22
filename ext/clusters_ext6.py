@@ -18,7 +18,7 @@ CLUSTERS6 = {
 ("Weather & Climate", 4): "Your child is noticing patterns in time and weather — day and night, sunrise and sunset, and the different weather of the seasons.",
 ("Counting & Cardinality", 2): "Your child is joining in with counting songs and rhymes and learning to say the number names in order.",
 ("Counting & Cardinality", 3): "Your child is learning to count small groups — seeing one, two or three at a glance, counting up to five objects, showing numbers on fingers, comparing which group has more and guessing how many before counting to check.",
-("Counting & Cardinality", 4): "Your child is linking written numerals 1 to 5 with the amounts they stand for, using first, second and third to say position, and knowing that zero means none.",
+("Counting & Cardinality", 4): "Your child is linking written numerals 1 to 5 with the amounts they stand for, using first, second and third to say position, knowing that zero means none, and counting claps, jumps and sounds as they happen.",
 ("Geometry", 2): "Your child is handling shapes — turning pieces until they fit into a shape sorter or puzzle and noticing edges, corners and curves.",
 ("Geometry", 3): "Your child is naming circles, squares and triangles and building towers and bridges with blocks.",
 ("Measurement", 2): "Your child is learning size words — big, small, tall, short and long — and putting things in order of size.",
