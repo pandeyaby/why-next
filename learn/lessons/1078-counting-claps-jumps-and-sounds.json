@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_r3o6BGgrJ5",
+ "title": "Counting claps, jumps and sounds",
+ "audience": "family",
+ "keyIdea": "You can count things you cannot touch, like claps, jumps, drum booms and bell rings. Say one number for each one as it happens, and stop when they stop: the last number is how many. A loud or quiet, big or small, fast or slow one still counts as one. Put up a finger for each one to keep track after the sound has gone. To jump 4 times, count each jump and stop on four.",
+ "familyTip": "Play a clapping game. Close your eyes while your child claps up to 5 times, and say how many; then swap. Try loud claps, quiet claps and quick claps. Ask for 'jump 3 times' and watch that they stop on three. Count the chimes of a clock or the beeps of the microwave together.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Can you count it? Drag each card, or tap it and then tap a box. Then count the sounds.",
+  "opts": {
+   "bins": [
+    "Things I can hold",
+    "Sounds and moves"
+   ],
+   "items": [
+    [
+     "3 apples",
+     0
+    ],
+    [
+     "4 claps",
+     1
+    ],
+    [
+     "2 shoes",
+     0
+    ],
+    [
+     "5 drum booms",
+     1
+    ],
+    [
+     "3 jumps",
+     1
+    ],
+    [
+     "6 blocks",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagactcount",
+  "caption": "Flagship lab: count drum booms, make the frog jump and stop, compare loud with quiet, keep track of a bell on fingers, spot a robot's slips.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "You can count things you can touch, like apples. You can count things you cannot touch too, like claps, jumps and drum booms.",
+   "Listen. Say one number for each boom: one, two, three. When the drum stops, you stop. The last number is how many.",
+   "A loud bang counts as one. A quiet tap counts as one too. A big jump and a small hop are one each.",
+   "A sound is gone fast. Put up a finger for each ring. When it stops, your fingers show how many. To jump 4 times, count each jump. Stop when you say four."
+  ],
+  "adult": [
+   "Ages 4 to 5, Reception. Development Matters (2021) asks children to count objects, actions and sounds. Gelman and Gallistel call this the abstraction principle: anything can be counted, not just things you can hold. Key words: count, how many, one each, stop, keep track, the same, more.",
+   "Counting sounds and actions is harder than counting things. A clap cannot be touched, moved aside or checked again, so the child must say each number at the moment it happens. Keep the counts to 6 or fewer and the pace slow at first. Fingers or marks on paper let the child keep a record once the sound has gone.",
+   "Common mistakes: saying a number before the first clap or after the last, missing a quick one, and thinking a big or loud clap counts as 2. Be careful with comparisons too: many children say 3 loud bangs are more than 3 quiet taps, or that big stamps beat more small taps. When making actions, watch for jumping past the number.",
+   "In the lab your child counts drum booms, makes a frog jump 4 and 6 times and stops, compares loud with quiet and a giant with a mouse, keeps track of a bell on their fingers, and checks a robot that makes these slips."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "The drum goes boom {a} times. How many booms?",
+   "answer": "a",
+   "hint": "Say one number for each boom. Stop when the drum stops.",
+   "explain": "One number for each boom, and the last number is how many: {=a} booms.",
+   "params": {
+    "a": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Mia claps {a} times, then {b} more times. How many claps in all?",
+   "answer": "a+b",
+   "hint": "Keep counting on from {a} with each new clap.",
+   "explain": "Count every clap, one number each: {a} and then {b} more makes {=a+b} claps.",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Can you count claps, even though you cannot hold them?",
+   "choices": [
+    "Yes, say one number for each clap",
+    "No, you can only count things you hold",
+    "Only if the claps are loud"
+   ],
+   "answer": 0,
+   "hint": "Think about counting the booms of a drum.",
+   "explain": "Yes. You can count anything, even sounds and moves: one number for each one as it happens."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A giant stamps 2 times. A mouse taps 4 times. Who made more?",
+   "choices": [
+    "The mouse",
+    "The giant",
+    "They are the same"
+   ],
+   "answer": 0,
+   "hint": "Count each one. Does a big stamp count as more than one?",
+   "explain": "A big stamp is still one. The giant made 2 and the mouse made 4, so the mouse made more."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You are asked to jump 3 times. When do you stop?",
+   "choices": [
+    "When I say three",
+    "When I say four",
+    "When I feel tired"
+   ],
+   "answer": 0,
+   "hint": "Count each jump as you do it.",
+   "explain": "Count one, two, three as you jump, and stop on three. Then you made exactly 3 jumps."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "numeric",
+    "id": "m1",
+    "prompt": "A bell rings {a} times. You put up a finger for each ring. How many fingers are up?",
+    "answer": "a",
+    "hint": "One finger goes up for each ring.",
+    "explain": "One finger for each ring, so {=a} fingers show {=a} rings.",
+    "params": {
+     "a": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "3 loud bangs and 3 quiet taps. Which is more?",
+    "choices": [
+     "The same",
+     "The loud bangs",
+     "The quiet taps"
+    ],
+    "answer": 0,
+    "hint": "Count each one. Does loud change the number?",
+    "explain": "Loud or quiet, each one counts as one. 3 and 3 are the same."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ben hears 4 claps and says '1, 2, 3, 4, 5'. What went wrong?",
+    "choices": [
+     "He kept counting after the claps stopped",
+     "Nothing, there were 5",
+     "He missed a clap"
+    ],
+    "answer": 0,
+    "hint": "How many numbers did he say? How many claps were there?",
+    "explain": "He said 5 numbers for 4 claps. Stop when the claps stop: there were 4."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Zoe claps 3 times. One clap is very big. How many claps?",
+    "choices": [
+     "3",
+     "4",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Is a big clap one clap or two?",
+    "explain": "A big clap is still one clap. One, two, three: 3 claps."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A frog jumps {a} times, then stops. How many jumps?",
+    "answer": "a",
+    "hint": "Say one number for each jump, and stop when the frog stops.",
+    "explain": "One number for each jump: the frog made {=a} jumps.",
+    "params": {
+     "a": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Sam claps 5 times fast. Leo counts '1, 2, 3, 4'. What went wrong?",
+    "choices": [
+     "Leo missed a quick clap",
+     "Nothing, 4 is right",
+     "Leo counted one twice"
+    ],
+    "answer": 0,
+    "hint": "Fast claps still need one number each.",
+    "explain": "There were 5 claps but only 4 numbers, so one quick clap was missed. The answer is 5."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "The clock chimed and stopped. How can you still tell how many chimes?",
+    "choices": [
+     "Put up a finger for each chime",
+     "You cannot, the sound has gone",
+     "Guess a big number"
+    ],
+    "answer": 0,
+    "hint": "What can keep a record of each chime?",
+    "explain": "A finger for each chime keeps track. When the sound stops, count your fingers."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which can you count?",
+    "choices": [
+     "Claps, jumps and apples",
+     "Only apples",
+     "Only claps"
+    ],
+    "answer": 0,
+    "hint": "Can you count a sound? Can you count a jump?",
+    "explain": "You can count all of them. Say one number for each one, things or sounds or moves."
+   }
+  ]
+ }
+}
