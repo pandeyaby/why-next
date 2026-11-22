@@ -1,0 +1,162 @@
+{
+ "topicId": "mt_oJeQou7nhQ",
+ "title": "Making my own example of a new idea",
+ "audience": "family",
+ "keyIdea": "When you learn a new idea, make up an example of your own, not the one you were shown. Then check it against the rule. If it does not fit, fix it and check again. Saying the teacher’s example back only shows you can remember it; a new example that fits shows you understand the idea.",
+ "familyTip": "When your child learns a new word or rule, ask: “Can you give me an example I haven’t heard yet?” Then ask: “How do you know it fits?” If it doesn’t fit, say “Good test! What would fix it?” Try it yourself too, and let them check your examples against the rule.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "The idea: a noun names a person, place or thing. The teacher’s example was dog. Copy, or a new example of your own?",
+  "opts": {
+   "bins": ["Copy of the teacher’s example", "A new example of my own"],
+   "items": [
+    ["dog", 0],
+    ["castle", 1],
+    ["the dog", 0],
+    ["grandma", 1],
+    ["Dog!", 0],
+    ["spoon", 1]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagownex",
+  "caption": "Flagship lab: spot copies, test your own even numbers with counters, build your own squares, fix examples that do not fit, and check with the rule.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Miss Lee says, “A noun names a person, place or thing. Dog is a noun.” Leo says, “Dog!” He is right, but he only said it back. That does not show he gets it.",
+   "So make an example of your own. Castle is a place. Grandma is a person. Spoon is a thing. They are new, and they fit the rule.",
+   "Then check your example. An even number makes pairs with none left over. Is 9 even? Put 9 counters in pairs. One is left over, so 9 does not fit. Try 10.",
+   "Make your examples look different. A big square is still a square. A square turned on its corner is still a square. Check the rule, not the looks. If your example does not fit, fix it and check again."
+  ],
+  "adult": [
+   "Ages 8 to 9. Making up an example of a new idea is a quick test of understanding. If a child can only repeat the taught example, they may be remembering, not understanding. Watson and Mason (2005) show how asking learners to make their own examples, then make another that looks different, builds a fuller idea. It fits the EEF guidance on metacognition: learners plan, check and fix their own work.",
+   "The checking step matters as much as the making. Studies by Rawson, Dunlosky and colleagues (2016) found that students who make their own examples often judge wrong ones to be right. So the lab never lets an example through on looks. Each one is tested against the rule: counters in pairs for even numbers, equal sides and square corners for squares, person, place or thing for nouns.",
+   "Common mistakes: thinking that repeating the taught example (or adding “the” or a capital letter) is a new example; keeping an example that does not fit because it is your own; thinking a square turned on its corner is a different shape (a known slip when children only see squares drawn flat); and checking by how something looks, how long a word is or how big a number is. Be careful with praise: praise the checking, not just the answer.",
+   "In the lab your child sorts copies from new examples, tests their own even numbers with counters, builds squares that look different on a dot grid, fixes three examples that do not fit, and picks the reason that checks each example against its rule."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc", "id": "p1",
+   "prompt": "Miss Lee says, “A noun names a person, place or thing, like dog.” Which is a new example of your own?",
+   "choices": ["castle", "the dog", "Dog!"],
+   "answer": 0,
+   "hint": "Which one is not Miss Lee’s dog again?",
+   "explain": "Castle is a place, so it is a noun, and Miss Lee did not say it. The other two are still her dog."
+  },
+  {
+   "type": "numeric", "id": "p2",
+   "prompt": "Ivy’s own even number makes {n} pairs of counters with none left over. What is her number?",
+   "answer": "2*n",
+   "hint": "Each pair has 2 counters. Count in twos {n} times.",
+   "explain": "{n} pairs of 2 make {=2*n}. It has none left over, so it is even.",
+   "params": {"n": [4, 9]}
+  },
+  {
+   "type": "mc", "id": "p3",
+   "prompt": "Kai says his own even number is 15. How can he check it?",
+   "choices": ["Put 15 counters in pairs and look for one left over", "See if 15 looks even", "Ask if 15 is a big number"],
+   "answer": 0,
+   "hint": "What does the rule for even numbers say?",
+   "explain": "Pair the counters. 15 leaves 1 over, so it is odd and Kai needs a new example."
+  },
+  {
+   "type": "numeric", "id": "p4",
+   "prompt": "Raj makes his own square with sides {n} cm long. How long are all 4 sides added together?",
+   "answer": "4*n",
+   "hint": "A square has 4 equal sides. Add {n} four times.",
+   "explain": "4 sides of {n} cm make {=4*n} cm. All 4 sides are equal, which is how you check it is a square.",
+   "params": {"n": [2, 9]}
+  },
+  {
+   "type": "mc", "id": "p5",
+   "prompt": "Mia turns a square so it stands on one corner. What is it now?",
+   "choices": ["Still a square", "A diamond, not a square", "A triangle"],
+   "answer": 0,
+   "hint": "Did turning it change its sides or its corners?",
+   "explain": "Still a square. It still has 4 equal sides and 4 square corners."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc", "id": "m1",
+    "prompt": "Leo says “dog” back to Miss Lee. What does that show?",
+    "choices": ["He can remember her example", "He understands nouns", "He made his own example"],
+    "answer": 0,
+    "hint": "Was dog his idea, or hers?",
+    "explain": "It shows he remembers her example. A new noun of his own would show he understands."
+   },
+   {
+    "type": "mc", "id": "m2",
+    "prompt": "A verb is a doing word, like run. Which is the best example of your own?",
+    "choices": ["swim", "run", "table"],
+    "answer": 0,
+    "hint": "Find a doing word that the teacher did not say.",
+    "explain": "Swim is a doing word and it is new. Run is a copy, and table is a thing, not a doing word."
+   },
+   {
+    "type": "numeric", "id": "m3",
+    "prompt": "Zak puts {n} counters into pairs. How many full pairs can he make?",
+    "answer": "(n-n%2)/2",
+    "hint": "Make pairs of 2 and count them. Leave out any counter on its own.",
+    "explain": "{n} counters make {=(n-n%2)/2} full pairs. If one is left over, the number is odd.",
+    "params": {"n": [7, 15]}
+   },
+   {
+    "type": "mc", "id": "m4",
+    "prompt": "Your own example does not fit the rule. What should you do?",
+    "choices": ["Fix it, then check it again", "Keep it, because it is your own", "Give up on the idea"],
+    "answer": 0,
+    "hint": "What helps you learn the idea better?",
+    "explain": "Fix it and check again. A wrong example is useful when you fix it."
+   },
+   {
+    "type": "mc", "id": "m5",
+    "prompt": "Which reason checks that 14 is even?",
+    "choices": ["14 makes 7 pairs with none left over", "14 is a big number", "14 looks even"],
+    "answer": 0,
+    "hint": "Which reason uses the rule for even numbers?",
+    "explain": "7 pairs with none left over uses the rule. Big numbers can be odd too, like 15."
+   },
+   {
+    "type": "mc", "id": "m6",
+    "prompt": "Rhyming words end with the same sound, like cat and hat. Which is a new example?",
+    "choices": ["bee and tree", "cat and hat", "bee and bin"],
+    "answer": 0,
+    "hint": "Find a pair the teacher did not say that ends with the same sound.",
+    "explain": "Bee and tree end with the same sound, and they are new. Bee and bin only start the same."
+   },
+   {
+    "type": "numeric", "id": "m7",
+    "prompt": "Your own square has sides {n} dots long. How many dots long are 2 of its sides added together?",
+    "answer": "2*n",
+    "hint": "All 4 sides of a square are equal, so add {n} and {n}.",
+    "explain": "{n} and {n} make {=2*n}. Every side of a square is the same length, whatever its size or turn.",
+    "params": {"n": [2, 6]}
+   },
+   {
+    "type": "mc", "id": "m8",
+    "prompt": "Raj says a door is a square. What is wrong?",
+    "choices": ["Its sides are not all equal", "Doors are too big to be squares", "Nothing is wrong"],
+    "answer": 0,
+    "hint": "Check the rule: 4 equal sides and 4 square corners.",
+    "explain": "A door is taller than it is wide, so its sides are not all equal. It is a rectangle."
+   },
+   {
+    "type": "mc", "id": "m9",
+    "prompt": "Why make your own example of a new idea?",
+    "choices": ["It tests if you understand", "It is quicker than listening", "So you never need to check"],
+    "answer": 0,
+    "hint": "What does a new example show that a copy does not?",
+    "explain": "It tests if you understand. And you always check it against the rule."
+   }
+  ]
+ }
+}
