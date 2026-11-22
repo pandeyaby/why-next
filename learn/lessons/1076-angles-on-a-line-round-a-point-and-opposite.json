@@ -1,0 +1,79 @@
+{
+ "topicId": "mt_QDTO3GAgcq",
+ "title": "Angles on a line, round a point and opposite",
+ "audience": "learner",
+ "keyIdea": "Angles on a straight line add up to 180°. Angles round a point add up to 360°. Where two straight lines cross, vertically opposite angles are equal, and angles next to each other add up to 180°. To find a missing angle, take the angles you know away from 180° or 360°, and name the fact you used, because diagrams are not drawn to scale.",
+ "familyTip": "Cross two pencils on a table and ask which angles match and why. Then lay one pencil along a ruler and open the other like a door: point to the two angles on the ruler's edge and ask what they add up to, however wide the door opens. For a missing angle, ask “Which fact did you use?” as well as “What is it?”",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Which fact fits? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["They add to 180°", "They add to 360°", "They are equal"],
+   "items": [
+    ["Two angles on a straight line", 0],
+    ["All the angles round a point", 1],
+    ["Vertically opposite angles", 2],
+    ["Two angles next to each other where lines cross", 0],
+    ["All four angles where two lines cross", 1],
+    ["Three angles on a straight line", 0],
+    ["Angles a and c across a crossing point", 2]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagangfact",
+  "caption": "Flagship lab: turn a ray on a line, find missing angles, share a full turn between three rays, match opposite angles, then give a reason for every angle.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "Angles on a straight line add up to 180°. A straight line is a half turn. A ray can split it into two angles. When one gets bigger, the other gets smaller, but together they always make 180°. So if one is 130°, the other is 180° − 130° = 50°.",
+   "Angles round a point add up to 360°. That is a full turn. If three equal angles meet at a point, each one is 360° ÷ 3 = 120°. To find a missing angle, add the ones you know. Then take the total away from 360°.",
+   "When two straight lines cross, they make four angles. The angles opposite each other are equal. We call them vertically opposite angles. The angles next to each other sit on a straight line, so they add up to 180°.",
+   "Diagrams are often not drawn to scale. So do not guess an angle by how it looks. Find it with a fact, and say which fact you used: straight line, round a point, or vertically opposite."
+  ],
+  "adult": [
+   "Ages 10 to 11. Year 6 of the National Curriculum in England asks pupils to recognise angles where they meet at a point, are on a straight line, or are vertically opposite, and to find missing angles. It builds on Year 5, where pupils learned that a straight line is 180° and a full turn is 360°. From 11 to 13 the same facts are used in longer chains with algebra.",
+   "Why the facts hold: a straight line is a half turn, so the angles along it fill 180°. A full turn is 360°. Where two lines cross, angles a and b sit on one line, so a + b = 180°. Angles b and c sit on the other line, so b + c = 180°. So a = c. This is Euclid's proof in Book I of the Elements.",
+   "Common mistakes: using 360° for a straight line, or 180° round a point; thinking the angles next to each other are equal; taking away from 90° instead of 180°; giving the total of the known angles as the answer; and reading an angle off the picture. Ask which fact your child used. They should name it, not just give a number.",
+   "In the lab your child turns a ray on a line and watches a + b stay at 180°, picks missing angles from chips that hide the usual slips, and turns three rays round a point until each angle is 120°. They also tap the partner of a yellow angle as two lines cross, and choose a reason card for each angle in a crossing."
+  ]
+ },
+ "practice": [
+  {"type": "mc", "id": "p1", "prompt": "Two angles are on a straight line. One is 70°. What is the other?", "choices": ["110°", "290°", "20°"], "answer": 0,
+   "hint": "Angles on a straight line add up to 180°, not 360° or 90°.", "explain": "180° − 70° = 110°. 290° used a full turn and 20° used a right angle."},
+  {"type": "numeric", "id": "p2", "prompt": "Two angles sit on a straight line. One is {a}°. What is the other, in degrees?", "answer": "180-a",
+   "hint": "A straight line is a half turn: the two angles add up to 180°.", "explain": "Angles on a straight line add to 180°, so the other is 180° − {a}° = {=180-a}°.", "params": {"a": [25, 155]}},
+  {"type": "numeric", "id": "p3", "prompt": "Three angles meet round a point: {a}°, {b}° and x. What is x, in degrees?", "answer": "360-a-b",
+   "hint": "Add the two angles you know, then take the total away from 360°.", "explain": "Angles round a point add to 360°: 360° − {a}° − {b}° = {=360-a-b}°.", "params": {"a": [100, 140], "b": [90, 130]}},
+  {"type": "mc", "id": "p4", "prompt": "Two straight lines cross. One angle is 64°. What is the angle opposite it?", "choices": ["64°", "116°", "296°"], "answer": 0,
+   "hint": "Opposite angles at a crossing are a matching pair.", "explain": "Vertically opposite angles are equal, so it is 64°. 116° is the angle next to it."},
+  {"type": "numeric", "id": "p5", "prompt": "Two straight lines cross. One angle is {a}°. What is the angle next to it, in degrees?", "answer": "180-a",
+   "hint": "The angle next to it shares a straight line with it.", "explain": "Angles next to each other at a crossing lie on a straight line: 180° − {a}° = {=180-a}°.", "params": {"a": [20, 80]}}
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {"type": "mc", "id": "m1", "prompt": "What do the angles round a point add up to?", "choices": ["360°", "180°", "90°"], "answer": 0,
+    "hint": "Going all the way round a point is one full turn.", "explain": "A full turn is 360°, so the angles round a point add up to 360°. 180° is a straight line."},
+   {"type": "numeric", "id": "m2", "prompt": "Three angles on a straight line are {a}°, {b}° and x. What is x, in degrees?", "answer": "180-a-b",
+    "hint": "Add the angles you know and take the total away from 180°.", "explain": "Angles on a straight line add to 180°: 180° − {a}° − {b}° = {=180-a-b}°.", "params": {"a": [30, 60], "b": [40, 80]}},
+   {"type": "mc", "id": "m3", "prompt": "Two straight lines cross. One angle is 125°. Which list shows all four angles in order round the point?", "choices": ["125°, 55°, 125°, 55°", "125°, 125°, 125°, 125°", "125°, 235°, 125°, 235°"], "answer": 0,
+    "hint": "Opposite angles match; angles next to each other add to 180°.", "explain": "Next to 125° is 180° − 125° = 55°, and opposite angles are equal: 125°, 55°, 125°, 55°. They add to 360°."},
+   {"type": "numeric", "id": "m4", "prompt": "Four angles meet round a point: {a}°, {b}°, {a}° and x. What is x, in degrees?", "answer": "360-2*a-b",
+    "hint": "Add all three known angles, then take the total from 360°.", "explain": "Round a point is 360°: 360° − {a}° − {b}° − {a}° = {=360-2*a-b}°.", "params": {"a": [70, 100], "b": [60, 100]}},
+   {"type": "mc", "id": "m5", "prompt": "Dan says the angle next to 40° on a straight line is 320°. What went wrong?", "choices": ["He used 360° instead of 180°", "He added instead of taking away", "Nothing: he is right"], "answer": 0,
+    "hint": "Work out 180° − 40° and compare it with Dan's answer.", "explain": "360° − 40° = 320°, so Dan used a full turn. On a straight line it is 180° − 40° = 140°."},
+   {"type": "mc", "id": "m6", "prompt": "An angle in a diagram looks like a right angle, but there is no square mark. What should you do?", "choices": ["Work it out with an angle fact", "Write 90° because it looks right", "Guess a number close to 90°"], "answer": 0,
+    "hint": "Are diagrams in questions always drawn to scale?", "explain": "Diagrams are often not drawn to scale, and only a square mark shows a right angle. Use a fact to find it."},
+   {"type": "numeric", "id": "m7", "prompt": "{n} equal angles meet round a point. How big is each one, in degrees?", "answer": "360/n",
+    "hint": "Share the full turn of 360° equally between the angles.", "explain": "360° ÷ {n} = {=360/n}° each.", "params": {"n": [3, 6]}},
+   {"type": "mc", "id": "m8", "prompt": "Two straight lines cross. Angle a is 30°. Angle b is next to it, and angle c is opposite b. What is c?", "choices": ["150°", "30°", "330°"], "answer": 0,
+    "hint": "Find b first with the straight-line fact, then use opposite angles.", "explain": "b = 180° − 30° = 150° (straight line), and c is opposite b, so c = 150° too."},
+   {"type": "mc", "id": "m9", "prompt": "Why are vertically opposite angles always equal?", "choices": ["Each one makes 180° with the same angle between them", "They are always both 90°", "The lines are the same length"], "answer": 0,
+    "hint": "Look at the angle that sits next to both of them.", "explain": "a + b = 180° and c + b = 180°, with the same b in both. So a and c must be equal."}
+  ]
+ }
+}
