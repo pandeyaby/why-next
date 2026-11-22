@@ -1,0 +1,246 @@
+{
+ "topicId": "mt_Tlc6CllAIj",
+ "title": "Practise the part I find hard",
+ "audience": "family",
+ "keyIdea": "After a quiz or a practice set, find the parts that were wrong or slow. A right answer that took a long time is still a hard part. Often the hard part is one step inside a question, not the whole topic. Spend most of your next practice there instead of redoing what you already do well, and check again later: as you improve, the hard part moves.",
+ "familyTip": "After homework or a quiz, ask two questions: “Which ones were wrong?” and “Which ones were right but slow?” Circle them together. Next time, start with only the circled kind, and keep the easy ones to one or two quick goes.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Hard part to practise, or already fluent? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Hard part: practise it",
+    "Fluent: quick check only"
+   ],
+   "items": [
+    [
+     "7 × 8 = 54, took 9 s",
+     0
+    ],
+    [
+     "2 × 7 = 14, took 2 s",
+     1
+    ],
+    [
+     "8 × 6 = 48, took 12 s",
+     0
+    ],
+    [
+     "10 × 6 = 60, took 1 s",
+     1
+    ],
+    [
+     "Every exchange in column subtraction goes wrong",
+     0
+    ],
+    [
+     "Spellings I wrote quickly and right",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaghardpart",
+  "caption": "Flagship lab: mark wrong and slow answers, find the step that goes wrong, build a 10-try plan, race two plans, re-sort after a recheck.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "After a quiz, look at more than your score. Find the ones you got wrong. Then find the ones you got right but slowly. If you had to stop and work it out, it is not easy yet. Those are your hard parts too.",
+   "Look inside each wrong answer. Leo got 3 take-away sums wrong. But he did most of each sum right. He went wrong at the same step each time: swapping a ten for ten ones. So that one step is his hard part, not all of take-away.",
+   "Now plan your next practice. Put most of your time on the hard part. Doing the easy ones again feels nice, but it does not help much. You know them already.",
+   "Check again after a few days. Some hard parts will be quick and right now. Take them out of your daily practice, but try them now and then so they stay easy. Then find the next hard part."
+  ],
+  "adult": [
+   "Ages 10 to 11. This builds on noticing what is tricky: the learner uses their own results to choose what to practise. Two signs mark a weak spot: errors, and correct answers that are slow. The England multiplication tables check gives 6 seconds a question, a useful line between fluent recall and working it out. Deliberate practice research (Ericsson, Krampe and Tesch-Römer 1993) finds that gains come from practice aimed at specific weaknesses, with feedback.",
+   "Errors often come from one faulty step rather than the whole skill. In column subtraction, a common bug is taking the smaller digit from the larger in each column instead of exchanging (Brown and Burton 1978). Children who make it get all exchange sums wrong and all non-exchange sums right, so the fix is practice on exchanging, not more mixed sums. Feedback that targets the process helps more than a score alone (Hattie and Timperley 2007).",
+   "Common mistakes: counting only wrong answers and ignoring slow ones; redoing a whole test, which spends most tries on what is already known; deciding a whole topic is the problem when one step is; staying with easy practice because it feels good; and dropping a fixed fact for good, so it fades. Be careful: the lab's five-day race is a picture of the idea, not real data.",
+   "In the lab your child marks Ana's wrong and slow answers, finds the step where each of Leo's wrong sums went wrong, builds a 10-try plan, races two plans over five days, and sorts new results into keep practising or easy now. Related lessons: Deliberate practice covers practice design for older learners; Noticing when something is tricky comes before this one."
+  ]
+ },
+ "practice": [
+  {
+   "type": "numeric",
+   "id": "p1",
+   "prompt": "A quiz has 10 questions. You got {a} wrong, and 2 more were right but slow. How many hard parts do you have?",
+   "answer": "a+2",
+   "hint": "Count the wrong ones and the slow right ones.",
+   "explain": "{a} wrong plus 2 slow makes {=a+2} hard parts to practise.",
+   "params": {
+    "a": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You have 10 practice tries. You put {a} of them on the hard part. How many go on things you already know?",
+   "answer": "10-a",
+   "hint": "Take the tries on the hard part away from 10.",
+   "explain": "10 take away {a} is {=10-a}, so {=10-a} tries go on what you already know.",
+   "params": {
+    "a": [
+     3,
+     8
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Zara got 7 × 6 right, but it took her 15 seconds. Is it a hard part?",
+   "choices": [
+    "Yes: it was slow",
+    "No: it was right",
+    "Only if she gets it wrong next time"
+   ],
+   "answer": 0,
+   "hint": "Think about whether she knew it or worked it out.",
+   "explain": "Yes. A right answer that takes a long time is not fluent yet, so it belongs in her practice."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Leo gets every subtraction wrong that needs an exchange, and every other one right. What should he practise?",
+   "choices": [
+    "Sums that need an exchange",
+    "All of subtraction again",
+    "Only easy sums"
+   ],
+   "answer": 0,
+   "hint": "Find the one step that keeps going wrong.",
+   "explain": "His slip is one step: exchanging a ten. Sums that need an exchange give him practice right on that step."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which plan for 10 tries is best, if 7 × 8 and 8 × 7 are hard?",
+   "choices": [
+    "8 tries on 7 × 8 and 8 × 7, 2 on others",
+    "1 try on each of 10 facts",
+    "10 tries on facts you know"
+   ],
+   "answer": 0,
+   "hint": "Put the tries where they change something.",
+   "explain": "Most tries on the two hard facts fix them fastest, with a couple of quick goes on the rest."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You scored 9 out of 10. What do you practise next?",
+    "choices": [
+     "The wrong one, and any that were slow",
+     "Nothing: 9 is good",
+     "The whole test again"
+    ],
+    "answer": 0,
+    "hint": "A high score can still hide a slow one.",
+    "explain": "Look past the score. Practise the wrong answer and any right ones that were slow."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Why does redoing the whole test waste practice time?",
+    "choices": [
+     "Most tries go on what you already know",
+     "Tests are too short",
+     "It is too hard"
+    ],
+    "answer": 0,
+    "hint": "Count how many of the questions were already easy.",
+    "explain": "If 8 of 10 were easy, 8 of every 10 tries go on things that will not change."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "You got {a} out of 10 right on a quiz. How many did you get wrong?",
+    "answer": "10-a",
+    "hint": "Take the right ones away from 10.",
+    "explain": "10 take away {a} is {=10-a} wrong. Those are hard parts, plus any slow right ones.",
+    "params": {
+     "a": [
+      5,
+      9
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A plan has 10 tries. {a} are on easy facts. How many are on the hard part?",
+    "answer": "10-a",
+    "hint": "Take the easy tries away from 10.",
+    "explain": "10 take away {a} is {=10-a} tries on the hard part.",
+    "params": {
+     "a": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A fact was hard last week. Now it is quick and right. What should you do?",
+    "choices": [
+     "Take it out of daily practice, and check it now and then",
+     "Practise it every day for ever",
+     "Never look at it again"
+    ],
+    "answer": 0,
+    "hint": "It is easy now, but it can fade.",
+    "explain": "Move it out of daily practice so tries go to the next hard part, and check it now and then so it stays easy."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Jo gets long division wrong, always at the take-away step. What is the hard part?",
+    "choices": [
+     "The take-away step",
+     "All of division",
+     "Writing the answer"
+    ],
+    "answer": 0,
+    "hint": "Look for the step where it goes wrong every time.",
+    "explain": "The hard part is the one step that goes wrong. Practising that step fixes all the sums that use it."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is a sign that a right answer is still a hard part?",
+    "choices": [
+     "It took a long time",
+     "It was in pen",
+     "It came first in the quiz"
+    ],
+    "answer": 0,
+    "hint": "Think about how the answer was found.",
+    "explain": "If you had to stop and work it out, it is not fluent yet. Slow and right is still a hard part."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Sam likes practising the facts he already knows. Why does it help less?",
+    "choices": [
+     "They change very little",
+     "They are too hard",
+     "They take too long"
+    ],
+    "answer": 0,
+    "hint": "Ask what is left to get better at.",
+    "explain": "Facts you already know are fluent. Practising them feels good, but the tries that help are on the hard part."
+   }
+  ]
+ }
+}
