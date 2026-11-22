@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_MJNtGaVyKv",
+ "title": "Calling 999 or getting a grown-up",
+ "audience": "family",
+ "keyIdea": "An emergency is when someone is badly hurt, cannot breathe, will not wake up, there is a fire, or someone is in danger. If a grown-up is near, fetch them fast. If not, call 999 yourself (in a fire, get out first). Say where you are, what has happened and your name, speak slowly, and stay on the line until the call handler says you can go. 999 is never for practice or small bumps.",
+ "familyTip": "Practise a pretend call with a toy phone, never a real one: you be the call handler. Ask “Where are you?” and check your child can say your full address, or name a street sign or shop when you are out. Show them where the Emergency button is on your locked phone. If you live outside the UK, teach your own number (for example 112, 911 or 000).",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Help now, or can it wait? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Help now: 999 or a grown-up",
+    "Not an emergency"
+   ],
+   "items": [
+    [
+     "Grandad cannot breathe properly",
+     0
+    ],
+    [
+     "I grazed my knee",
+     1
+    ],
+    [
+     "Smoke is coming from the kitchen",
+     0
+    ],
+    [
+     "My tablet is lost",
+     1
+    ],
+    [
+     "Someone is breaking in",
+     0
+    ],
+    [
+     "I want to see if 999 works",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagemcall",
+  "caption": "Flagship lab: sort emergencies, pick who to go to first, dial 999 on a locked phone, choose the service, then answer the call handler.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "An emergency is when someone is badly hurt, cannot breathe or will not wake up. A fire is an emergency. So is a person who is in danger. A grazed knee or a lost toy is not.",
+   "If a grown-up is near, run and get them. They will know what to do. If no grown-up can help, you can call 999 yourself. In a fire, get out first. Then call from outside.",
+   "You do not need the code to call. Tap Emergency on the lock screen and dial 9 9 9. The call is free. In the UK, 112 works too. Other countries use other numbers, like 911.",
+   "A call handler will ask which service you need: ambulance, fire or police. Then say where you are, what has happened and your name. Speak slowly. Do not hang up until they say you can go. Never call 999 as a joke or to test it."
+  ],
+  "adult": [
+   "Ages 8 to 10. The DfE Health Education guidance (2019) says that by the end of primary school pupils should know how to make a clear and efficient call to the emergency services if necessary. The PSHE Association Programme of Study asks key stage 2 pupils to learn when and how to contact the emergency services. In the UK, 999 and 112 both reach the police, fire service, ambulance and coastguard; calls are free and can be made from a locked phone with no credit.",
+   "The lab follows the order a child faces. First decide if it is an emergency at all (NHS guidance lists not breathing, not waking up, heavy bleeding and choking among reasons to call). Then decide who acts first: fetching a nearby adult is usually best, calling yourself is right when no adult can help, and in a fire the fire service rule is get out, stay out, call 999. Then dial from the lock screen, name the service, and answer the call handler's questions.",
+   "Common mistakes: calling 999 for a small cut or a lost item; making a test or joke call, which ties up a line and can be an offence; staying in a smoky building to phone; thinking a locked phone or no credit means you cannot call; not knowing your address; talking too fast; and hanging up as soon as the problem has been said. Be careful not to make children afraid to call: if they are truly unsure and no adult is there, calling and explaining is the right choice.",
+   "Ambulance call handlers usually ask for the address first, then what has happened. When out, children can give a street sign, a shop or a landmark. This lesson covers the call itself; the lesson Fire safety: get out and stay out covers escaping a fire, and Telling a grown-up when something feels wrong covers everyday worries."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which of these is an emergency where you need help now?",
+   "choices": [
+    "Grandad cannot breathe properly",
+    "My pencil broke",
+    "I cannot find my shoe"
+   ],
+   "answer": 0,
+   "hint": "Is someone badly hurt, not breathing, in a fire or in danger?",
+   "explain": "Grandad cannot breathe properly. That needs help now: a grown-up, or 999 if no grown-up can help."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "On a pretend call with a toy phone you say 3 things: where you are, what happened and your name. You practise {n} times. How many things do you say in all?",
+   "answer": "3*n",
+   "hint": "Each practice is 3 things. Count in threes {n} times.",
+   "explain": "{n} lots of 3 is {=3*n}. Practising with a toy phone, never a real one, makes a real call easier.",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "There is smoke in your house. What do you do first?",
+   "choices": [
+    "Get out, then call 999",
+    "Stay inside and call 999",
+    "Hide under the bed"
+   ],
+   "answer": 0,
+   "hint": "Where is it safe to make the call?",
+   "explain": "Get out first, stay out, then call 999 from outside. Never stay in smoke to call."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "The call handler asks you {n} questions. You have answered {k}. How many are left?",
+   "answer": "n-k",
+   "hint": "Start with {n} questions and take away the {k} you answered.",
+   "explain": "{n} take away {k} is {=n-k}. Keep answering, and stay on until they say you can go.",
+   "params": {
+    "n": [
+     4,
+     6
+    ],
+    "k": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You have told the call handler what happened. What now?",
+   "choices": [
+    "Stay on the line until they say you can go",
+    "Hang up straight away",
+    "Call again to check"
+   ],
+   "answer": 0,
+   "hint": "Who decides when the call is over?",
+   "explain": "Stay on the line. The call handler may have more questions or tell you how to help."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Mum is in the garden. Your little brother fell and his leg looks wrong. What first?",
+    "choices": [
+     "Run and get Mum",
+     "Call 999 without telling Mum",
+     "Wait and see"
+    ],
+    "answer": 0,
+    "hint": "Is there a grown-up close by?",
+    "explain": "Run and get Mum. A grown-up is near, and she will decide if 999 is needed."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You are alone with Gran. She fell and will not wake up. What do you do?",
+    "choices": [
+     "Call 999 yourself",
+     "Wait for Mum to get home",
+     "Go out to play"
+    ],
+    "answer": 0,
+    "hint": "Can a grown-up help right now?",
+    "explain": "Call 999 yourself. Not waking up is an emergency, and no grown-up is there to help."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Someone is breaking into the house next door. Which service do you ask for?",
+    "choices": [
+     "Police",
+     "Fire",
+     "Ambulance"
+    ],
+    "answer": 0,
+    "hint": "Which service deals with danger from a person?",
+    "explain": "Police. Fire is for fire and smoke; ambulance is for someone badly hurt or ill."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "The phone is locked and you do not know the code. Can you call 999?",
+    "choices": [
+     "Yes, tap Emergency on the lock screen",
+     "No, you need the code",
+     "No, you need credit"
+    ],
+    "answer": 0,
+    "hint": "Look at the bottom of the lock screen.",
+    "explain": "Yes. Tap Emergency and dial 999. No code or credit is needed, and the call is free."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Your friend says, “Let’s call 999 for fun.” What do you say?",
+    "choices": [
+     "No, it is only for real emergencies",
+     "Yes, if we hang up fast",
+     "Yes, it is free"
+    ],
+    "answer": 0,
+    "hint": "What could happen to someone who really needs help?",
+    "explain": "No. A joke call can stop a real emergency getting through."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "You practise saying your address with a grown-up {n} times a day for {k} days. How many practices is that?",
+    "answer": "n*k",
+    "hint": "{n} practices each day, for {k} days. Multiply.",
+    "explain": "{n} times {k} is {=n*k}. Knowing your address by heart helps the call handler find you fast.",
+    "params": {
+     "n": [
+      1,
+      3
+     ],
+     "k": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "You are at the park, not at home. The call handler asks where you are. What helps?",
+    "choices": [
+     "Say a street sign or big building you can see",
+     "Say “I don’t know” and stop",
+     "Hang up and walk home"
+    ],
+    "answer": 0,
+    "hint": "What can you see around you?",
+    "explain": "Say what you can see: a street sign, a shop or a big building. It helps them find you."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which of these is not an emergency?",
+    "choices": [
+     "A small paper cut",
+     "A kitchen fire",
+     "A boy choking who cannot breathe"
+    ],
+    "answer": 0,
+    "hint": "Which one can a plaster fix?",
+    "explain": "A small paper cut. Tell a grown-up and use a plaster. The others need help now."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "An ambulance is {n} minutes away. The call handler says, “Stay on the line.” After {k} minutes, how many minutes until it comes?",
+    "answer": "n-k",
+    "hint": "Start at {n} minutes and take away the {k} that have passed.",
+    "explain": "{n} take away {k} is {=n-k} minutes. Keep listening to the call handler until help comes.",
+    "params": {
+     "n": [
+      8,
+      12
+     ],
+     "k": [
+      1,
+      5
+     ]
+    }
+   }
+  ]
+ }
+}
