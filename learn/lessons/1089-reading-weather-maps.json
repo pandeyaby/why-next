@@ -1,0 +1,266 @@
+{
+ "topicId": "mt_3pgTpuetKi",
+ "title": "Reading weather maps",
+ "audience": "learner",
+ "keyIdea": "A weather map uses symbols to show the weather in each place. A cloud with drops means rain, flakes mean snow, a lightning bolt means thunder, and a cloud on its own means cloudy but dry. Numbers in circles are temperatures in °C. A wind arrow points the way the wind is blowing, but the wind is named from where it comes from, and the number is its speed. Charts of weather data show patterns, such as which months are wettest, and the way weather moves lets you predict what comes next.",
+ "familyTip": "Watch a TV or online weather forecast together. Pause the map and ask: where will it rain? Which way is the wind blowing, and what is it called? Then check the sky the next day to see if the forecast was right.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is rain or snow falling, or is it dry? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Rain or snow falling",
+    "Dry"
+   ],
+   "items": [
+    [
+     "Cloud with drops under it",
+     0
+    ],
+    [
+     "Sun",
+     1
+    ],
+    [
+     "Cloud on its own",
+     1
+    ],
+    [
+     "Cloud with snowflakes",
+     0
+    ],
+    [
+     "Sun peeping out from a cloud",
+     1
+    ],
+    [
+     "Cloud with lightning and drops",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagwxmap",
+  "caption": "Flagship lab: read symbols on an island map, order temperatures, name winds, read a rainfall chart, predict moving rain.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A weather map shows what the weather will be like in different places. Each place has a small picture called a symbol. A sun means a clear sky. A cloud on its own means it is cloudy but dry. Drops under a cloud mean rain, flakes mean snow, and a lightning bolt means thunder.",
+   "The numbers in coloured circles are temperatures in degrees Celsius, written °C. Blue circles show cold places and orange ones show warm places. Always read the number. A sunny place can still be cold, for example on a clear winter morning.",
+   "A wind arrow points the way the wind is blowing. But we name a wind from where it comes from. So an arrow that points east shows a west wind, because the wind comes from the west. The number next to the arrow is the wind speed in miles per hour (mph). A bigger number means a stronger wind.",
+   "Scientists also show weather in tables and charts. A bar chart of rainfall has one bar for each month. The tallest bar is the wettest month and the shortest is the driest. Weather moves too. If rain is moving east at a steady speed, you can work out when it will reach a town."
+  ],
+  "adult": [
+   "Ages 9 to 11. This fits KS2 science working scientifically: record data in tables and bar charts, spot patterns, and use results to make predictions. It also fits KS2 geography map skills and NGSS 3-ESS2-1. Key words: symbol, key, temperature in °C, precipitation, wind direction, wind speed in mph, bar chart, pattern, forecast and prediction.",
+   "The symbols and conventions follow the Met Office guides. On Met Office maps a wind arrow points the way the wind blows, with the average speed in the circle, while a wind is named from where it comes from, so a westerly blows from the west. Some maps use wind barbs, km/h, or arrows that point to where the wind comes from, so always check the key. The island, towns and numbers in the lab are made up for practice.",
+   "Common mistakes: reading any cloud as rain. Thinking sunny means warm, instead of reading the temperature. Naming a wind by where it is going. Thinking a longer arrow means a stronger wind, when the speed is the number. Putting −1 °C after 4 °C. Reading the tallest bar as the driest month. And assuming the weather will stay where it is now.",
+   "In the lab your child answers map questions by tapping towns. They put five towns in order from coldest to warmest. They name three winds from their arrows and find the strongest. They read a rainfall chart to find the wettest month, the driest month and the driest season. Then they drag a band of rain to where it will be at 3 pm and 6 pm."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "On a weather map, what does a cloud symbol with drops under it mean?",
+   "choices": [
+    "Rain",
+    "Snow",
+    "Cloudy and dry"
+   ],
+   "answer": 0,
+   "hint": "Look at what is under the cloud. Drops, flakes or nothing?",
+   "explain": "Rain. Drops under a cloud mean rain. Flakes would mean snow, and a cloud on its own means cloudy but dry."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A rainfall chart shows {a} mm in March and {b} mm in April. How many millimetres of rain fell in the two months together?",
+   "answer": "a+b",
+   "hint": "Read both bars, then add the two amounts.",
+   "explain": "{a} mm + {b} mm = {=a+b} mm of rain in March and April.",
+   "params": {
+    "a": [
+     30,
+     70
+    ],
+    "b": [
+     20,
+     60
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "A wind arrow on a weather map points west. What is the wind called?",
+   "choices": [
+    "An east wind",
+    "A west wind",
+    "A north wind"
+   ],
+   "answer": 0,
+   "hint": "Where does the arrow start? A wind is named from where it comes from.",
+   "explain": "An east wind. The arrow points west, so the wind is blowing from the east towards the west."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "On a weather map, Hilltop shows {a} °C and Seaside shows {b} °C. How many degrees warmer is Seaside?",
+   "answer": "b-a",
+   "hint": "Take the smaller temperature away from the bigger one.",
+   "explain": "{b} − {a} = {=b-a}. Seaside is {=b-a} degrees warmer than Hilltop.",
+   "params": {
+    "a": [
+     2,
+     8
+    ],
+    "b": [
+     12,
+     20
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Rain is moving east at 1 square of the map each hour. At 9 am it is 2 squares west of your town. When will it reach your town?",
+   "choices": [
+    "11 am",
+    "9 am",
+    "10 am"
+   ],
+   "answer": 0,
+   "hint": "How many squares does it have to move? How long does each square take?",
+   "explain": "11 am. It must move 2 squares, and each square takes 1 hour, so it arrives 2 hours after 9 am."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which weather symbol shows snow?",
+    "choices": [
+     "A cloud with snowflakes under it",
+     "A cloud with drops under it",
+     "A cloud with a lightning bolt"
+    ],
+    "answer": 0,
+    "hint": "Think of what falls in winter and looks like little stars.",
+    "explain": "A cloud with snowflakes. Drops mean rain, and a lightning bolt means thunder."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "One town shows a sun and 3 °C. Another shows rain and 12 °C. Which town is warmer?",
+    "choices": [
+     "The rainy town at 12 °C",
+     "The sunny town",
+     "You cannot tell from the map"
+    ],
+    "answer": 0,
+    "hint": "Which part of the map tells you how warm it is: the symbol or the number?",
+    "explain": "The rainy town at 12 °C. The temperature number tells you how warm it is. A sunny place can still be cold."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Two wind arrows show {a} mph and {b} mph. How many miles per hour stronger is the faster wind?",
+    "answer": "b-a",
+    "hint": "Take the smaller speed away from the bigger speed.",
+    "explain": "{b} − {a} = {=b-a}, so the faster wind is {=b-a} mph stronger.",
+    "params": {
+     "a": [
+      5,
+      12
+     ],
+     "b": [
+      20,
+      35
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "A wind is blowing from the south towards the north. What is it called?",
+    "choices": [
+     "A south wind",
+     "A north wind",
+     "An east wind"
+    ],
+    "answer": 0,
+    "hint": "Name the wind from where it starts.",
+    "explain": "A south wind. It comes from the south, even though it blows towards the north."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "How do you find the driest month on a rainfall bar chart?",
+    "choices": [
+     "Find the month with the shortest bar",
+     "Find the month with the tallest bar",
+     "Find the first month on the chart"
+    ],
+    "answer": 0,
+    "hint": "Each bar shows how much rain fell. Which bar shows the least?",
+    "explain": "Find the shortest bar. The shorter the bar, the less rain fell that month."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "A rainfall chart shows {a} mm in June, {b} mm in July and {c} mm in August. How much rain fell in the summer, in mm?",
+    "answer": "a+b+c",
+    "hint": "Add the three summer months together.",
+    "explain": "{a} + {b} + {c} = {=a+b+c} mm of rain in the summer.",
+    "params": {
+     "a": [
+      30,
+      50
+     ],
+     "b": [
+      20,
+      40
+     ],
+     "c": [
+      30,
+      60
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which temperature on a map is the coldest: 2 °C, 0 °C or −3 °C?",
+    "choices": [
+     "−3 °C",
+     "0 °C",
+     "2 °C"
+    ],
+    "answer": 0,
+    "hint": "Numbers below zero are colder than zero.",
+    "explain": "−3 °C. It is 3 degrees below zero, so it is colder than 0 °C and 2 °C."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A band of rain moved 30 km east in the last 2 hours. If its speed stays the same, how far east will it move in the next 2 hours?",
+    "choices": [
+     "About 30 km",
+     "About 0 km, because it will stop",
+     "About 60 km"
+    ],
+    "answer": 0,
+    "hint": "Same speed and the same time means the same distance.",
+    "explain": "About 30 km. At the same speed, it moves the same distance in the same time. Forecasters use this to predict when rain will arrive."
+   }
+  ]
+ }
+}

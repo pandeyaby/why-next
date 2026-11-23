@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Conventions checked against the Met Office guide 'What does this forecast mean?' (the arrow shows the direction the wind is blowing, the letter says where it blows from, an arrow pointing up is a southerly; speed is the average in mph) and Met Office Factsheet 11 'Interpreting weather charts' (a westerly blows from the west towards the east). Lab winds checked: West Port arrow east = west wind, North Bay arrow south = north wind, East Cove arrow north = south wind; strongest 30 mph. Temperature order −1, 4, 8, 10, 13 °C. Rainfall data sums: summer 35 + 30 + 40 = 105 mm, spring 140, winter 245, autumn 260; wettest Nov 110, driest Jul 30. Rain band 2 squares per 3 hours: square 4 at noon, 6 at 3 pm, 8 at 6 pm. The adult text says some maps (barbs, km/h, arrows pointing from the source) differ, so check the key. Parameterised answers a+b, b−a, a+b+c checked at the corners."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets slips seen in KS2 data and map work: a plain cloud read as rain (Weather symbols predict 'Rain is coming', symbol feedback 'That cloud has nothing under it: cloudy and dry', challenge 'cloud', sorter); sunny means warm (Temperatures predict 'Yes: sun means warm', the sunny town is 4 °C, challenge 'sun', m2); naming a wind by where it goes (Wind arrows predict 'From the east', named feedback 'The arrow ... points east, so the wind is going east', challenge 'from', p3, m4); longer arrow means stronger (challenge 'speed'); −1 °C after 4 °C (temperature order feedback, challenge 'neg', m7); tallest bar read as driest (chart feedback, challenge 'tall', m5); weather stays where it is (rain band feedback 'That is where the rain already is', challenge 'move', m8)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagwxmap is built on a made-up island map with five towns showing canvas-drawn Met Office style symbols, temperature circles, and wind arrows with speeds, plus a 12-month rainfall bar chart with season sums and a strip of 8 squares where a rain band is dragged forward in time. The existing weather labs are about different things: flagwxinst (which instrument measures what, and where to put it) and flagfcast (how forecasts are made from satellites, radar and computers); neither reads symbols, names winds from arrows or reads a rainfall chart. The lab_distinct gate measures it under 30% against every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Every task needs the learner to read the map: tapping a rain town for 'Where will it snow?' says the drops are rain; ordering temperatures shows the sunny town is cold; naming the West Port wind 'East wind' gets 'the arrow points east, so the wind is going east ... named from where it comes from: the west'; the chart highlights tapped bars with their values and adds the three months of a chosen season; the rain strip shows 9 am and 12 noon ghosts so the 2-squares-per-3-hours speed is found, not told. Done messages state each rule after the task."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option that the lab disproves: 'Rain is coming' for a plain grey cloud (East Cove is cloudy but dry), 'Yes: sun means warm' (sunny Sunford is 4 °C, second coldest) and 'From the east' for an arrow pointing east (West Port's eastward arrow is a west wind). The right option is second each time."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions with every wrong option tagged; each slip message names the error: cloud ('A cloud on its own means cloudy and dry'), sun ('Sunshine does not mean warm'), from ('A wind is named from where it comes from'), dir, speed ('The number is the speed ... whatever the arrow length'), neg ('Below zero is colder than zero'), tall ('The shortest bar is the month with the least rain'), move ('1 square each hour ... 3 squares'). Lab steps give town-specific messages for each wrong tap (4 per symbol question)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text Flesch-Kincaid grade 3.0 overall (limit 6.5) and adult text under 9.5, checked with learn/readability.py. Short sentences; the terms symbol, temperature in °C, mph, wind direction and bar chart are explained where they first appear. Lab banners are one or two short sentences."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler phrases (gate checked). Each kid paragraph teaches one map skill: symbols, temperatures, wind arrows and names, charts and prediction. The adult text gives the curriculum links, the Met Office conventions and their exceptions, named mistakes, and what the lab does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 390 px in light and dark themes and at 1200 px for every step: town names sit in pills that do not overlap the symbols (the North Bay label moves above its circle in the wind step so the south-pointing arrow shows), wind name chips are 2 × 2, the chart fits 12 bars with single-letter months on phones, and the rain strip squares are about 42 px wide. An iPhone 13 touch run tapped towns, a wind chip and a bar, and dragged the rain from square 4 to square 6."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Everything on the canvas also has a button: town buttons (with temperatures and wind speeds in their names), wind name buttons, 12 month buttons with aria-labels giving the rainfall, season buttons, and ◀ West / East ▶ / Put the rain here. The canvas aria-label and the live description repeat every message. scripts/pipeline/walk.cjs runs axe (WCAG 2.1 AA) in both themes on desktop and phone with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Met Office, 'What does this forecast mean?' guide: weather symbols, wind arrows and speeds (weather.metoffice.gov.uk/guides/what-does-this-forecast-mean)",
+  "Met Office National Meteorological Library Factsheet 11: Interpreting weather charts (2023)",
+  "Met Office, 'How we measure wind' (wind direction is reported from where the wind is blowing)",
+  "DfE (2013) National Curriculum in England: science programmes of study, KS2 working scientifically; geography programmes of study, KS2 geographical skills",
+  "NGSS 3-ESS2-1: represent data in tables and graphical displays to describe typical weather conditions expected during a particular season"
+ ]
+}
