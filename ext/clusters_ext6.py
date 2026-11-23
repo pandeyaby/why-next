@@ -88,6 +88,7 @@ CLUSTERS6 = {
 # ---------------- wave 11: new young English, Learning to Learn and Personal & Social (20 Nov 2026)
 ("Writing Composition", 4): "Your child is learning to recognise and write their own name, with a capital at the start, and to write labels for things in their pictures and say a caption to go underneath.",
 ("Vocabulary", 3): "Your child is learning everyday names for the things around them — clothes, food, toys and animals — and a more exact word when you offer one.",
+("Vocabulary", 4): "Your child is learning opposites — hot and cold, open and closed, happy and sad — and that swapping a word for its opposite changes what a sentence says.",
 ("Speaking & Listening", 3): "Your child is making up short stories in play, with a start, something that happens, and an ending.",
 ("Speaking & Listening", 4): "Your child is learning to talk about things that already happened, saying went, ate and saw (not goed or eated), adding -ed to doing words like jumped, and using yesterday, today and tomorrow to say when.",
 ("Geometry", 4): "Your child is learning that things look different from different places: a party hat is a triangle from the side but a circle from above, and a simple plan shows everything as a bird sees it from above.",
