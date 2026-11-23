@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked against CCSS 5.NF.B.7b (interpret division of a whole number by a unit fraction; 4 ÷ (1/5) = 20 because 20 × (1/5) = 4) and 5.NF.B.7c (real-world problems), and the NCETM 'how many ... fit into' (quotitive) model. Every lab value checked: 3 ÷ ½ = 6, 2 ÷ ¼ = 8, 20 × ⅕ = 4, 12 × ¼ = 3, story answers 3 ÷ ½ = 6 pieces, ½ ÷ 3 = ⅙, 3 ÷ 2 = 1½, 2 ÷ ⅓ = 6 scoops, 2 ÷ ½ = 4, 2 ÷ ¼ = 8, 2 ÷ ⅛ = 16, 5 ÷ ⅓ = 15, 4 ÷ ⅙ = 24, 6 ÷ ½ = 12; challenge 5 ÷ ⅕ = 25 vs 5 ÷ ½ = 10. Distractors are the real slip values (3 ÷ 2 = 1½, 5 ÷ 3 = 1⅔, 4 ÷ 6 = ⅔). Parameterised answers a*2, a*3, a*4, a*6 checked at every corner of their ranges."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented errors (Fischbein, Deri, Nello and Marino 1985 'division makes smaller'; Graeber and Tirosh 1990): 'Smaller: dividing always makes a number smaller' in the first prediction and challenge tag 'smaller' and m5; dividing by the denominator (cut options 1½ and ½, shortcut options 1⅔ and ⅔, challenge 'div'); multiplying by the fraction (challenge 'mult', p1 option ⅘); adding the numbers (options 6, 8, 10, 7, 9, 'add'); reversing ½ ÷ 3 and 3 ÷ ½ (story step, challenge 'flip', m7); bigger piece gives bigger answer (Smaller pieces predict, order step, challenge 'bigger', p5, m8)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagdivfrac is built on cutting wholes with a chosen cutter (halves, thirds, quarters) and counting the pieces, a bar of unit pieces grown along a number line in wholes to a dashed target so the inverse multiplication is seen, a story-to-number-sentence step that separates fitting (÷ ½) from sharing (÷ 3, ½ ÷ 3), an ordering step by piece size, and a wholes × pieces grid shortcut. The fraction lessons that exist (fractions on a number line, multiplying fractions by whole numbers, fractions as division) have no division by a unit fraction. The lab_distinct gate compares it with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner cuts the wholes and the pieces are numbered 1 to 6, so 3 ÷ ½ = 6 is counted, not told; a wrong cutter is named ('Those are thirds. 3 ÷ ½ asks how many halves fit'). Growing the bar shows n × ⅕ live, so reaching 4 wholes at 20 pieces makes the check by multiplying visible, and stopping at 4 pieces is diagnosed as 4/5. The order step shows 2, 4 and 8 pieces per whole side by side. Done messages state the rule a ÷ 1/b = a × b only after the tasks."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option the lab then disproves: 'Smaller: dividing always makes a number smaller' (the cut wholes give 6 pieces from 3), '⅘, because 4 ÷ 5 = ⅘' for how many fifths make 4 wholes (the bar reaches 4 only at 20), and '2 ÷ ½, because ½ is bigger than ¼' (the order step shows 2 ÷ ¼ = 8 is bigger). The right answer is second each time, so always taking the first option fails."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions, every wrong option tagged; the slip message names the error: div ('That divides by the bottom number. Dividing by ½ is not dividing by 2'), smaller ('makes the answer bigger, not smaller'), mult ('That multiplies by the fraction'), add ('That adds the numbers'), bigger ('Fifths are smaller than halves, so more of them fit: 25 and 10'), same, check ('multiply the answer by the fraction'), flip ('Order matters in division'). Lab steps give the same kind of specific message, including 12 hand-written story-mismatch messages."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text Flesch-Kincaid grade 1.9 overall (limit 6.5), adult 6.2 (limit 9.5), checked with learn/readability.py. Short sentences, one idea each; the terms unit fraction, divisor and quotient are introduced in plain words; symbols ½, ⅓, ¼, ⅕ match the lab."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "No filler phrases (gate checked). Each kid paragraph adds one idea: what a unit fraction is, 3 ÷ ½ by cutting, the shortcut with its check, and piece size plus order. The adult text gives the curriculum codes, the quotitive model and its link to the reciprocal rule, named mistakes, and what the lab does."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at 390 px in light and dark themes and at 1200 px for every step: banner and feedback text wrap inside the canvas, the three bars, number line ticks 0 to 5, 2 × 2 story tiles and three columns of order bars all fit; answer tiles are at least 42 px tall. A touch run on an iPhone 13 profile cut the wholes by tapping, dragged the bar end to 20 fifths, and tapped story and order tiles."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button: cutters (with aria-pressed) and 'Cut the next whole', answer buttons, ◀/▶ piece steps and Check, story sentence buttons and order buttons. The canvas aria-label and the live description repeat every message. scripts/pipeline/walk.cjs runs axe (WCAG 2.1 AA) in both themes on desktop and phone with no violations and no console errors."
+  }
+ },
+ "sources": [
+  "Common Core State Standards for Mathematics 5.NF.B.7a–c (corestandards.org)",
+  "DfE (2013) National Curriculum in England: mathematics programmes of study, Key Stage 2 Year 6 fractions and Key Stage 3 number",
+  "NCETM primary and secondary mastery materials on fractions: dividing by a unit fraction as 'how many fit into' (ncetm.org.uk)",
+  "Fischbein, E., Deri, M., Nello, M. S. and Marino, M. S. (1985) The role of implicit models in solving verbal problems in multiplication and division. Journal for Research in Mathematics Education 16(1), 3–17",
+  "Graeber, A. O. and Tirosh, D. (1990) Insights fourth and fifth graders bring to multiplication and division with decimals. Educational Studies in Mathematics 21, 565–588"
+ ]
+}
