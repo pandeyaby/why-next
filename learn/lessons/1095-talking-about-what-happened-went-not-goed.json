@@ -1,0 +1,271 @@
+{
+ "topicId": "mt_VrLvsO0CaA",
+ "title": "Talking about what happened: went, not goed",
+ "audience": "family",
+ "keyIdea": "When we talk about something that already happened, the doing word changes. Most doing words add -ed: jump becomes jumped, play becomes played, kick becomes kicked. Some common doing words change in their own way instead: go becomes went, eat becomes ate, run becomes ran, see becomes saw. So we say 'I went', not 'I goed'. Time words tell us when: yesterday and last night are the past, today and now are the present, and tomorrow is the future, which uses will: 'I will go'. The doing word has to match the time word.",
+ "familyTip": "At teatime, ask 'What did you do today?' and listen for went, ate and saw. If your child says 'I goed', do not correct them. Just say it back the right way, warmly: 'You went to the park! What did you see?' Hearing the right word often, in a real chat, is what fixes it.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it add -ed, or does it change? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Adds -ed",
+    "Changes"
+   ],
+   "items": [
+    [
+     "jump, jumped",
+     0
+    ],
+    [
+     "go, went",
+     1
+    ],
+    [
+     "play, played",
+     0
+    ],
+    [
+     "eat, ate",
+     1
+    ],
+    [
+     "kick, kicked",
+     0
+    ],
+    [
+     "run, ran",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagpasttalk",
+  "caption": "Flagship lab: sort by day, add -ed, find words that change, fix the robot, match the time word.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Yesterday is the day before today. It is done. Tomorrow has not come yet. When we talk about yesterday, the doing word changes. Today I jump. Yesterday I jumped.",
+   "Lots of doing words just add -ed. Jump, jumped. Play, played. Kick, kicked. Walk, walked. You can hear the end of the word change.",
+   "Some words do not add -ed. They change in their own way. Go, went. Eat, ate. Run, ran. See, saw. So we say I went to the park. We do not say I goed.",
+   "Time words tell us when. Yesterday I went. Today I go. Tomorrow I will go. Will is for things that have not happened yet."
+  ],
+  "adult": [
+   "Ages 4 to 5. This is Reception Communication and Language in DfE Development Matters (2021): children connect ideas and explain what is happening, and use past, present and future forms when they talk about events. The EYFS Early Learning Goal for Speaking expects children to offer explanations using past, present and future tenses. Key words: past, present, future, yesterday, today, tomorrow, doing word (verb), -ed ending.",
+   "Most English verbs make the past by adding -ed (regular verbs: jumped, played). Many of the most common verbs are irregular and change instead: go, went; eat, ate; see, saw; run, ran; come, came; have, had. Children first learn these as whole words. Then, as they discover the -ed rule, they often start to say goed, eated or runned. This is called over-regularisation, and it is a sign they have learned the rule (Marcus and colleagues, 1992).",
+   "These errors fade on their own as children hear the right forms again and again. The best help is a recast: repeat the child's sentence back the right way, without saying they were wrong ('You went to the park!'). Asking them to repeat a correction rarely helps at this age (Saxton 2005). Future time in English often uses will plus the verb (I will go), and time words such as yesterday, last night and tomorrow give clues about which form to use.",
+   "Common mistakes: goed, eated, runned and seed; once the irregular words are learned, thinking every -ed word is wrong (so 'jumped' gets fixed too); and mixing a time word with the wrong form ('Yesterday I will go', 'Tomorrow I saw'). In the lab your child puts 6 sentences on yesterday, today or tomorrow, runs an -ed machine on 4 words, finds the past of go, eat, run and see, checks 5 robot sentences, two of which are already right, and picks the word that fits 3 time words."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Yesterday I ___ to the park.",
+   "choices": [
+    "went",
+    "goed",
+    "go"
+   ],
+   "answer": 0,
+   "hint": "Go is a word that changes. It does not add -ed.",
+   "explain": "Yesterday I went to the park. Go changes to went. We do not say goed."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Yesterday I ___ in a puddle.",
+   "choices": [
+    "jumped",
+    "jump",
+    "will jump"
+   ],
+   "answer": 0,
+   "hint": "Jump is a word that adds -ed.",
+   "explain": "Yesterday I jumped. Jump adds -ed to tell about the past."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Yesterday you jumped {a} times, then you jumped {b} more times. How many times did you jump?",
+   "answer": "a+b",
+   "hint": "Start at {a} and count on {b} more.",
+   "explain": "{a} and {b} more make {=a+b}. You jumped {=a+b} times. Jumped ends in -ed because it already happened.",
+   "params": {
+    "a": [
+     2,
+     6
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You ate {a} grapes yesterday and {b} grapes today. How many grapes did you eat in all?",
+   "answer": "a+b",
+   "hint": "Put the grapes from both days together.",
+   "explain": "{a} and {b} make {=a+b} grapes. Eat changes to ate for yesterday: you ate {=a+b} grapes.",
+   "params": {
+    "a": [
+     1,
+     5
+    ],
+    "b": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which word tells about tomorrow?",
+   "choices": [
+    "will go",
+    "went",
+    "goed"
+   ],
+   "answer": 0,
+   "hint": "Tomorrow has not happened yet.",
+   "explain": "I will go. Will is for things that have not happened yet. Went is for the past."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which one is right?",
+    "choices": [
+     "I ate my lunch.",
+     "I eated my lunch.",
+     "I eat my lunch yesterday."
+    ],
+    "answer": 0,
+    "hint": "Eat is a word that changes.",
+    "explain": "I ate my lunch. Eat changes to ate. We do not say eated."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Yesterday I ___ fast.",
+    "choices": [
+     "ran",
+     "runned",
+     "will run"
+    ],
+    "answer": 0,
+    "hint": "Run is a word that changes.",
+    "explain": "Yesterday I ran fast. Run changes to ran. We do not say runned."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "The robot says: I played with my friend. Is it right?",
+    "choices": [
+     "Yes, play adds -ed",
+     "No, it should be plew",
+     "No, it should be play"
+    ],
+    "answer": 0,
+    "hint": "Some words add -ed, and that is right.",
+    "explain": "Yes. Play adds -ed: played. Not every word changes."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Last night I ___ a fox.",
+    "choices": [
+     "saw",
+     "see",
+     "seed"
+    ],
+    "answer": 0,
+    "hint": "See is a word that changes.",
+    "explain": "Last night I saw a fox. See changes to saw. Last night is in the past."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Yesterday you kicked the ball {a} times. Today you kicked it {b} times. How many kicks is that?",
+    "answer": "a+b",
+    "hint": "Add the kicks from yesterday and today.",
+    "explain": "{a} kicks and {b} kicks make {=a+b} kicks. Kick adds -ed: kicked.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      1,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Tomorrow I ___ Gran.",
+    "choices": [
+     "will see",
+     "saw",
+     "seed"
+    ],
+    "answer": 0,
+    "hint": "Tomorrow has not happened yet.",
+    "explain": "Tomorrow I will see Gran. Will is for things that have not happened yet."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "You went to {a} shops yesterday. You went to 1 more today. How many shops did you go to?",
+    "answer": "a+1",
+    "hint": "Start at {a} shops and count on 1 more shop for today.",
+    "explain": "{a} and 1 more make {=a+1} shops. Go changes to went: you went to {=a+1} shops.",
+    "params": {
+     "a": [
+      2,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which word tells about the past?",
+    "choices": [
+     "Yesterday",
+     "Tomorrow",
+     "Now"
+    ],
+    "answer": 0,
+    "hint": "The past is already done.",
+    "explain": "Yesterday is the day before today. It is in the past. Tomorrow has not happened yet."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Your friend says: I goed to the beach. What could you say?",
+    "choices": [
+     "You went to the beach!",
+     "Goed is right.",
+     "You will go to the beach!"
+    ],
+    "answer": 0,
+    "hint": "Say the sentence back with the right word.",
+    "explain": "You went to the beach! Saying it back the right way, kindly, helps your friend hear went."
+   }
+  ]
+ }
+}
