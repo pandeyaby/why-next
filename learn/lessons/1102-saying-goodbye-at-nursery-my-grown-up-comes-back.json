@@ -1,0 +1,160 @@
+{
+ "topicId": "mt_esoOSB7A7f",
+ "title": "Saying goodbye at nursery: my grown-up comes back",
+ "audience": "family",
+ "keyIdea": "At nursery or the childminder's, your grown-up always comes back. You can know when by the order of the day: after story time, not after the hug. A good goodbye is short and the same every day: a hug, a wave at the window and 'See you after story!' Your grown-up will always say goodbye and never sneak out. Feeling sad, worried or cross at goodbye is OK, and crying is not naughty, but hitting and throwing are not OK. Go to your key person for a cuddle, hold your teddy, take slow breaths and choose a game, and the worry gets smaller.",
+ "familyTip": "Pick a goodbye you can do every single day, such as one hug, one high five and 'See you after story!', then go, even if there are tears. Never slip out. At pick-up, say 'Story time, then me, just like I said', so your child learns that you come back when you promised.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Helps at goodbye, or does not help? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": ["Helps", "Does not help"],
+   "items": [["A hug and a wave", 0], ["Sneaking out", 1], ["Cuddle with my key person", 0], ["Waiting by the door all day", 1], ["My teddy from home", 0], ["A very long goodbye", 1]]
+  }
+ },
+ "lab": {
+  "type": "flagbyebye",
+  "caption": "Flagship lab: follow the picture plan to see when your grown-up comes back, build a good goodbye, sort OK from not OK, shrink a worry, watch a week.",
+  "opts": {"step": 0}
+ },
+ "explain": {
+  "kid": [
+   "At nursery, your grown-up says goodbye. Then you play. You have a snack and go outside. After story time, your grown-up comes back. Every day!",
+   "A good goodbye is quick. A hug. A wave at the window. 'See you after story!' Your grown-up will not sneak out. They will always say goodbye.",
+   "You might feel sad or worried when they go. That is OK. Crying is not naughty. But hitting is not OK. Say 'I feel sad' with words.",
+   "Go to your key person for a cuddle. Hold your teddy. Smell the flower, blow the candle. Pick a game. The worry gets smaller and smaller."
+  ],
+  "adult": [
+   "Ages 3 to 4. DfE Development Matters (2021) asks children of this age to show more confidence in new social situations, and the EYFS statutory framework (2024) gives every child a key person whose job is to help them settle. Children learn to calm down by being calmed by a trusted adult first (Development Matters, birth to three). Key words: goodbye, come back, key person, worried, after.",
+   "Young children cannot read a clock, so 'I'll be back at 3' means little. Tie your return to an event in the nursery day ('after story time') and point to it on the setting's picture timetable. Attachment research (Bowlby 1969; Ainsworth and colleagues 1978) explains why a trusted adult works as a safe base: a child who trusts you will come back is freer to explore and play.",
+   "Common mistakes: slipping out while the child is busy (it saves tears today but teaches them to watch the door tomorrow); long, repeated goodbyes that keep the worry going; promising a time the child cannot track; and treating tears as naughty. The AAP and ZERO TO THREE advise a short goodbye, the same each day, that you then follow through.",
+   "In the lab your child walks the picture plan of the day to find when the grown-up comes back, builds a 3-part goodbye (and hears why sneaking out and holding on do not help), sorts 6 goodbye actions into OK and not OK, shrinks a worry cloud with things that help, and taps through a week to see the grown-up come back every day."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Your grown-up says 'See you after story time.' When do they come back?",
+   "choices": ["After story time", "Right after the hug", "At bedtime"],
+   "answer": 0,
+   "hint": "Look at the picture plan. What comes just before your grown-up?",
+   "explain": "They come back after story time. The picture plan shows play, snack, outside, then story, then your grown-up."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "Your grown-up has to go to work. What is the best goodbye?",
+   "choices": ["A hug, a wave and 'See you after story!'", "They sneak out when you are not looking", "A very long goodbye, lots of times"],
+   "answer": 0,
+   "hint": "Think short, and the same every day.",
+   "explain": "A short goodbye with a hug and a wave is best. Sneaking out and long goodbyes make the worry bigger."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Your grown-up said goodbye on {a} days. They came back every day. How many times did they come back?",
+   "answer": "a",
+   "hint": "Every goodbye day, they came back once. Count the days.",
+   "explain": "They came back on all {a} days, so that is {a} times. Your grown-up always comes back.",
+   "params": {"a": [2, 5]}
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Leo gives {a} hugs and {b} waves at goodbye. How many things does he do?",
+   "answer": "a+b",
+   "hint": "Count the hugs, then count on the waves.",
+   "explain": "{a} hugs and {b} waves make {=a+b} things. A short goodbye like this is the same every day.",
+   "params": {"a": [1, 3], "b": [1, 3]}
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Mia cries when her dad goes. Is Mia being naughty?",
+   "choices": ["No, feeling sad is OK", "Yes, crying is naughty", "Yes, she must stop at once"],
+   "answer": 0,
+   "hint": "Is a feeling ever naughty? Think about what hurts someone.",
+   "explain": "Feeling sad is OK, and crying is not naughty. Hitting or throwing would not be OK."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You feel worried after goodbye. What can you do?",
+    "choices": ["Go to my key person", "Wait by the door all day", "Hide on my own"],
+    "answer": 0,
+    "hint": "Who at nursery is there to help you?",
+    "explain": "Go to your key person for a cuddle and help. Waiting by the door or hiding keeps the worry big."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Sam feels cross at goodbye. What is OK?",
+    "choices": ["Say 'I feel cross'", "Hit the door", "Throw the blocks"],
+    "answer": 0,
+    "hint": "Feelings are OK. Which one does not hurt anyone?",
+    "explain": "Saying 'I feel cross' is OK. Hitting and throwing can hurt, so they are not OK."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Story time is done. What happens now?",
+    "choices": ["My grown-up comes back", "I stay all night", "Nothing, I wait for ever"],
+    "answer": 0,
+    "hint": "Look at the end of the picture plan.",
+    "explain": "After story time, your grown-up comes back. They do it every day."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What makes a worry smaller?",
+    "choices": ["Holding my teddy and choosing a game", "Waiting by the door", "Hiding under a table"],
+    "answer": 0,
+    "hint": "Which one gets you playing?",
+    "explain": "Your teddy, a cuddle, slow breaths and a game all help. Waiting by the door or hiding keeps the worry big."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "There are {a} children at story time. Then {b} more come. How many grown-ups come back for them?",
+    "answer": "a+b",
+    "hint": "Each child has a grown-up who comes back. Count all the children.",
+    "explain": "{a} and {b} more make {=a+b} children, so {=a+b} grown-ups come back, one for each child.",
+    "params": {"a": [1, 5], "b": [1, 4]}
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Why does your grown-up always say goodbye?",
+    "choices": ["So you know they are going, and will come back", "So you cry", "So you can hide"],
+    "answer": 0,
+    "hint": "What would happen if you looked up and they were just gone?",
+    "explain": "A goodbye tells you they are going and coming back. Sneaking out would make you worry and watch the door."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "The picture plan has {a} pictures before story time. Story time is next. How many pictures is that with story time?",
+    "answer": "a+1",
+    "hint": "Count the pictures, then add 1 for story time.",
+    "explain": "{a} pictures and 1 more for story time make {=a+1}. After that, your grown-up comes back.",
+    "params": {"a": [2, 5]}
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which is a good goodbye?",
+    "choices": ["One hug and a wave, then go", "Ten hugs and coming back in again", "Going while I am not looking"],
+    "answer": 0,
+    "hint": "Short, the same every day, and never sneaky.",
+    "explain": "One hug and a wave, then go. Long goodbyes and sneaking out make it harder."
+   }
+  ]
+ }
+}
