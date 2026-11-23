@@ -1,0 +1,265 @@
+{
+ "topicId": "mt__RlZv8vzhE",
+ "title": "Mutually exclusive events and the OR rule",
+ "audience": "learner",
+ "keyIdea": "Two events are mutually exclusive when they cannot happen at the same time: no single outcome is in both. Rolling a 2 and rolling a 5 on one dice are mutually exclusive; rolling an even number and rolling a 6 are not, because 6 is in both. For mutually exclusive events, P(A or B) = P(A) + P(B). When events overlap, adding counts the shared outcomes twice, so take the overlap off once: P(A or B) = P(A) + P(B) − P(A and B). For a card from a 52-card pack, P(king or heart) = 4/52 + 13/52 − 1/52 = 16/52, because the king of hearts is in both.",
+ "familyTip": "Ask your child to invent two events for one dice roll that cannot both happen, and two that can. Then ask: 'If you add their chances, are you counting any number twice?' A deck of cards is a good test: kings and hearts share one card.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "On one go, can both events happen at once? Drag each pair, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Mutually exclusive",
+    "Can happen together"
+   ],
+   "items": [
+    [
+     "Dice: a 1 / a 4",
+     0
+    ],
+    [
+     "Dice: odd / a 3",
+     1
+    ],
+    [
+     "Card: a queen / a spade",
+     1
+    ],
+    [
+     "Card: a heart / a black card",
+     0
+    ],
+    [
+     "Counter 1-20: prime / even",
+     1
+    ],
+    [
+     "Counter 1-20: odd / multiple of 10",
+     0
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagorrule",
+  "caption": "Flagship lab: sort pairs of events, count A or B on twenty counters, see adding fail when events overlap, fill a Venn diagram, then test any two events.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Two events are mutually exclusive if they cannot both happen on the same go. Roll one dice. You cannot get a 2 and a 5 at once. So those two events are mutually exclusive.",
+   "Now take 'roll an even number' and 'roll a 6'. They sound different. But a 6 is even. So one roll can make both happen. They are not mutually exclusive. To check, look for one outcome that is in both events.",
+   "When two events are mutually exclusive, add to find the chance of one or the other. P(A or B) = P(A) + P(B). On a dice, P(1 or 6) = 1/6 + 1/6 = 2/6. Do not multiply. Multiplying is for two goes, such as one roll and then another.",
+   "When events overlap, adding counts the shared outcomes twice. Take the overlap off once. P(A or B) = P(A) + P(B) − P(A and B). In a pack of 52 cards, there are 4 kings and 13 hearts. The king of hearts is in both. So P(king or heart) = 4/52 + 13/52 − 1/52 = 16/52."
+  ],
+  "adult": [
+   "Ages 13 to 15. The KS3 programme of study asks pupils to record outcomes in sample spaces and Venn diagrams and to use the fact that the probabilities of mutually exclusive outcomes add up. GCSE adds the addition rule for mutually exclusive events and, at higher tier, P(A or B) = P(A) + P(B) − P(A and B).",
+   "Mutually exclusive is a property of a pair of events on the same trial: their intersection is empty. It is not the same as independent. Independence is about two trials or two events where one does not change the chance of the other. Two mutually exclusive events with non-zero chances are never independent, since if one happens the other cannot.",
+   "Common mistakes: treating events as mutually exclusive because they have different names (even and 6, prime and even, king and heart); multiplying for 'or'; adding when there is an overlap, so that a shared outcome is counted twice; and answers over 1, which are a sure sign of double counting. A Venn diagram makes the overlap visible.",
+   "In the lab, learners sort six pairs of events, count 'multiple of 5 or less than 4' on twenty counters to see 4/20 + 3/20 = 7/20, then count 'even or multiple of 5' and get 12/20 rather than 14/20. They place counters in a Venn diagram to find the overlap of 2, then test any two events with all four probabilities shown live."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "One fair dice is rolled. Which pair of events is mutually exclusive?",
+   "choices": [
+    "Rolling a 3 and rolling an even number",
+    "Rolling a 3 and rolling an odd number",
+    "Rolling a 6 and rolling more than 4"
+   ],
+   "answer": 0,
+   "hint": "For each pair, look for one number that is in both events.",
+   "explain": "3 is not even, so 'a 3' and 'even' share no outcome. 3 is odd, and 6 is more than 4, so the other pairs overlap."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A bag has 20 counters: {r} red, {b} blue, and the rest green. One counter is taken. P(red or blue) = ?/20. Give the top number.",
+   "answer": "r+b",
+   "hint": "A counter cannot be red and blue at once, so add the two counts.",
+   "explain": "Red and blue are mutually exclusive, so P(red or blue) = {r}/20 + {b}/20 = {=r+b}/20.",
+   "params": {
+    "r": [
+     2,
+     8
+    ],
+    "b": [
+     2,
+     8
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "In a class of 30, {f} play football, {t} play tennis and {k} play both. How many play football or tennis? (P(football or tennis) = ?/30)",
+   "answer": "f+t-k",
+   "hint": "Adding the two counts counts the 'both' group twice. Take them off once.",
+   "explain": "{f} + {t} − {k} = {=f+t-k}, so P(football or tennis) = {=f+t-k}/30.",
+   "params": {
+    "f": [
+     8,
+     14
+    ],
+    "t": [
+     6,
+     12
+    ],
+    "k": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "One card from a pack of 52. What is P(queen or club)?",
+   "choices": [
+    "16/52",
+    "17/52",
+    "4/52 × 13/52"
+   ],
+   "answer": 0,
+   "hint": "How many queens? How many clubs? Is any card both?",
+   "explain": "4 queens + 13 clubs − 1 queen of clubs = 16 cards, so 16/52. 17/52 counts the queen of clubs twice."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Ali says P(rain tomorrow) = 0.6 and P(sun tomorrow) = 0.7, so P(rain or sun) = 1.3. What is wrong?",
+   "choices": [
+    "Rain and sun can both happen in one day, so adding double counts",
+    "Nothing: add the chances",
+    "He should multiply: 0.42"
+   ],
+   "answer": 0,
+   "hint": "Can a probability be more than 1? What does that tell you?",
+   "explain": "A total over 1 is impossible. Rain and sun are not mutually exclusive, so the days with both were counted twice."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What does 'mutually exclusive' mean?",
+    "choices": [
+     "The events cannot happen at the same time",
+     "One event does not change the chance of the other",
+     "The events have different names"
+    ],
+    "answer": 0,
+    "hint": "Think of one go: can both happen?",
+    "explain": "Mutually exclusive means no outcome is in both events, so they cannot happen together. Independence is a different idea."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Counters numbered 1 to 20. Are 'prime' and 'even' mutually exclusive?",
+    "choices": [
+     "No, 2 is prime and even",
+     "Yes, primes are odd",
+     "Yes, they are different events"
+    ],
+    "answer": 0,
+    "hint": "Check the smallest prime.",
+    "explain": "2 is both prime and even, so the events overlap and are not mutually exclusive."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A spinner has 10 equal parts: {r} red, {y} yellow, the rest white. P(red or yellow) = ?/10. Give the top number.",
+    "answer": "r+y",
+    "hint": "The arrow stops on one part only, so add.",
+    "explain": "Red and yellow cannot both happen, so P(red or yellow) = {r}/10 + {y}/10 = {=r+y}/10.",
+    "params": {
+     "r": [
+      1,
+      4
+     ],
+     "y": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Counters 1 to 20. How many are even OR more than 15? (Even: 10. More than 15: 5. Both: 16, 18, 20.)",
+    "answer": 12,
+    "hint": "Add the two counts, then take off the counters in both.",
+    "explain": "10 + 5 − 3 = 12, so P(even or more than 15) = 12/20."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A and B are mutually exclusive. P(A) = 0.3 and P(B) = 0.5. What is P(A or B)?",
+    "choices": [
+     "0.8",
+     "0.15",
+     "0.2"
+    ],
+    "answer": 0,
+    "hint": "Mutually exclusive means no overlap, so just add.",
+    "explain": "0.3 + 0.5 = 0.8. 0.15 multiplies, which is for 'A and then B' on two goes."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "P(A) = 0.5, P(B) = 0.4 and P(A and B) = 0.1. What is P(A or B)?",
+    "choices": [
+     "0.8",
+     "0.9",
+     "1.0"
+    ],
+    "answer": 0,
+    "hint": "Add, then take the overlap off once.",
+    "explain": "0.5 + 0.4 − 0.1 = 0.8. 0.9 counts the overlap twice."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "A pack of {n} cards: {a} show a star, {b} show a moon, and no card shows both. How many cards show a star or a moon?",
+    "answer": "a+b",
+    "hint": "No card has both, so the events are mutually exclusive.",
+    "explain": "{a} + {b} = {=a+b} cards, so P(star or moon) = {=a+b}/{n}.",
+    "params": {
+     "n": [
+      30,
+      40
+     ],
+     "a": [
+      3,
+      10
+     ],
+     "b": [
+      3,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In a Venn diagram, where do outcomes that are in both A and B go?",
+    "choices": [
+     "In the overlap of the two circles",
+     "Outside both circles",
+     "In circle A only"
+    ],
+    "answer": 0,
+    "hint": "Both events at once means both circles at once.",
+    "explain": "The overlap holds A and B. Count it once when you find A or B."
+   }
+  ]
+ }
+}
