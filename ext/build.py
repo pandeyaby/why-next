@@ -15,7 +15,7 @@ OUT = os.path.join(ROOT, "out")
 sys.path.insert(0, HERE)
 
 import dsl  # noqa: E402
-import src_matter, src_energy, src_algebra, src_functions, src_forces  # noqa: F401,E402
+import src_matter, src_energy, src_algebra, src_functions, src_functions_modelling, src_forces  # noqa: F401,E402
 import src_waves, src_electricity, src_geometry, src_stats, src_calculus  # noqa: F401,E402  (wave 2)
 import src_organic, src_hypothesis, src_matrices, src_series  # noqa: F401,E402  (wave 3)
 import src_distributions, src_eigen, src_polar, src_aromatic, src_spectroscopy  # noqa: F401,E402  (wave 4)
