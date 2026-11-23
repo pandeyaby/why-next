@@ -1,0 +1,258 @@
+{
+ "topicId": "mt_5keoPlatpr",
+ "title": "Staying safe around dogs",
+ "audience": "family",
+ "keyIdea": "Before you touch any dog, ask its owner and your grown-up. If they say yes, let the dog come and sniff the back of your hand, then stroke it gently on its side, with no hugs and hands away from its eyes, mouth and ears. Leave a dog alone when it is eating, sleeping or busy with a toy. Look at the whole dog: yawning, licking its lips, a tucked tail, ears back or growling mean it wants space, even if its tail wags. If a dog you do not know runs up, be a tree: stand still, fold your arms and look at your feet.",
+ "familyTip": "Practise 'be a tree' at home as a game: someone calls 'dog!', and everyone freezes with arms folded, looking at their feet, until the 'dog' gets bored. On walks, practise asking an owner 'Can I say hello to your dog?', and praise your child when they wait for the answer.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Kind and safe, or not? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Kind and safe",
+    "Not safe"
+   ],
+   "items": [
+    [
+     "Ask before I stroke",
+     0
+    ],
+    [
+     "Pull its ears",
+     1
+    ],
+    [
+     "Let it sniff my hand",
+     0
+    ],
+    [
+     "Wake a sleeping dog",
+     1
+    ],
+    [
+     "Stand still like a tree",
+     0
+    ],
+    [
+     "Take its toy",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagdogsafe",
+  "caption": "Flagship lab: say hello in the right order, stroke the side, read how a dog feels, leave busy dogs alone, be a tree when a strange dog runs up.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Dogs can be great friends. But a dog does not know you yet. So stop, and ask the dog's owner first: can I say hello? Ask your grown-up too. If they say no, that is fine.",
+   "If they say yes, hold out the back of your hand. Let the dog come and sniff it. That is how a dog says hello. Then stroke its side, slow and soft. Do not hug a dog. Keep your hands away from its eyes, mouth and ears.",
+   "Dogs talk with their bodies. A wiggly body and a soft face mean happy. Yawning, licking its lips, a tucked tail, ears back or a growl mean leave me alone. A wagging tail is not enough. Look at the whole dog.",
+   "Leave a dog alone when it is eating, sleeping or chewing a toy. If a dog you do not know runs at you, be a tree. Stand still. Fold your arms. Look at your feet. Be quiet. The dog will get bored and go. Then walk away slowly and tell a grown-up."
+  ],
+  "adult": [
+   "Ages 4 to 5. This follows Dogs Trust's Be Dog Smart advice and The Kennel Club's 'Become a tree', and fits the EYFS early learning goal Managing Self: explain the reasons for rules and try to follow them. Children should ask the owner (and you) before touching any dog, let the dog choose to come and sniff the back of a loose fist, and stroke gently on the side or shoulder. Dogs Trust advises no hugs or kisses and hands away from a dog's eyes, mouth and ears, because these make many dogs feel trapped or worried. Key words: owner, permission, sniff, gentle, worried, growl, be a tree.",
+   "Leave a dog alone when it is busy: eating, drinking, sleeping, resting in its bed or chewing a toy. A dog disturbed then may guard its food or get a fright. Teach your child to read the whole dog. Worried signs include turning the head away, yawning, licking the lips, a tucked tail, ears pinned back, freezing or going stiff, showing the whites of the eyes, and growling. A wagging tail on its own does not mean a dog is friendly: a stiff, high wag can come before a snap.",
+   "Common mistakes: running up to a dog, hugging it or putting a face close to its face, patting the top of the head, waking a sleeping dog, taking a toy or food, and running or screaming when a dog runs up, which can start a chase. Most bites to young children are from a dog they know, often at home, so the same rules apply to your own dog and to friends' dogs. Never leave a young child alone with any dog, and be careful not to make your child afraid of all dogs: the aim is calm, kind habits.",
+   "In the lab your child puts asking, sniffing and stroking in order and sees the two mistakes rejected. They stroke a dog's side three times and learn why the face, tail and hugs are not okay. They sort six dog pictures into happy or leave me alone, including a dog wagging but growling. They find the three busy dogs, and they make a boy into a tree, while running, screaming and waving bring the dog closer."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You see a dog you would like to stroke. What do you do first?",
+   "choices": [
+    "Ask the owner if I can say hello",
+    "Run up and give it a hug",
+    "Pat it on the head"
+   ],
+   "answer": 0,
+   "hint": "The dog does not know you yet. Who do you need to ask?",
+   "explain": "Ask the owner, and your grown-up, first. If they say yes, let the dog sniff your hand, then stroke its side gently."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You stroke a dog's side {a} times. Then you stroke it {b} more times. How many gentle strokes is that?",
+   "answer": "a+b",
+   "hint": "Start with {a} and count on {b} more.",
+   "explain": "{a} strokes and {b} more make {=a+b} gentle strokes, all on the dog's side, slow and soft.",
+   "params": {
+    "a": [
+     1,
+     4
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "There are {a} dogs in the park. {b} of them are eating or asleep. How many dogs are not busy?",
+   "answer": "a-b",
+   "hint": "Take away the busy dogs. They need to be left alone.",
+   "explain": "{a} take away {b} leaves {=a-b} dogs that are not busy. Even then, ask the owner before you say hello.",
+   "params": {
+    "a": [
+     3,
+     6
+    ],
+    "b": [
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A dog is fast asleep in its bed. What do you do?",
+   "choices": [
+    "Let it sleep",
+    "Wake it up to play",
+    "Climb into its bed"
+   ],
+   "answer": 0,
+   "hint": "How would you feel if someone woke you with a poke?",
+   "explain": "Let a sleeping dog sleep. A dog woken suddenly can get a fright and may snap. Its bed is its own space."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A dog you do not know runs up to you. What do you do?",
+   "choices": [
+    "Stand still like a tree",
+    "Run away fast",
+    "Scream and wave my arms"
+   ],
+   "answer": 0,
+   "hint": "What makes a dog lose interest: a game of chase, or something still and quiet?",
+   "explain": "Be a tree: stand still, fold your arms, look at your feet and stay quiet. The dog gets bored and goes. Then tell a grown-up."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Where is the best place to stroke a dog?",
+    "choices": [
+     "Gently on its side",
+     "On its face, near its eyes",
+     "On its tail"
+    ],
+    "answer": 0,
+    "hint": "Keep away from its eyes, mouth and ears, and never pull its tail.",
+    "explain": "Gently on its side or shoulder. Hands near a dog's face can worry it, and pulling a tail hurts."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A dog yawns and turns its head away from you. How does it feel?",
+    "choices": [
+     "Worried",
+     "Sleepy and ready for a cuddle",
+     "Happy to play"
+    ],
+    "answer": 0,
+    "hint": "In the lab, which box did the yawning dog go in?",
+    "explain": "Yawning and turning away can mean a dog is worried and wants space. Leave it alone."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A dog sniffs your hand for {a} seconds, then {b} more seconds. How many seconds of sniffing is that?",
+    "answer": "a+b",
+    "hint": "Add the first sniff and the second sniff.",
+    "explain": "{a} seconds and {b} more make {=a+b} seconds. Sniffing is how a dog gets to know you.",
+    "params": {
+     "a": [
+      1,
+      5
+     ],
+     "b": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "You meet {a} dogs on a walk. You ask each owner once before you say hello. How many times do you ask?",
+    "answer": "a",
+    "hint": "Every dog and every owner is different, so you ask once for each dog.",
+    "explain": "One ask for each of the {a} dogs makes {a} asks. Every dog is different, so ask every time.",
+    "params": {
+     "a": [
+      1,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "A dog is wagging its tail, but it is growling and showing its teeth. What does it want?",
+    "choices": [
+     "To be left alone",
+     "To play with me",
+     "A big hug"
+    ],
+    "answer": 0,
+    "hint": "Look at the whole dog, not just the tail.",
+    "explain": "Growling and showing teeth mean stay away, even with a wagging tail. Walk away slowly and tell a grown-up."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Do most dogs like big hugs?",
+    "choices": [
+     "No, hugs can make them feel trapped",
+     "Yes, all dogs love hugs",
+     "Only if you squeeze tight"
+    ],
+    "answer": 0,
+    "hint": "Think about arms wrapped round a dog's neck, and a face close to its face.",
+    "explain": "Most dogs do not like hugs. They can feel trapped. Gentle strokes on the side are kinder."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "You were a tree, and the dog has gone away. What do you do now?",
+    "choices": [
+     "Walk away slowly and tell a grown-up",
+     "Chase after the dog",
+     "Run home as fast as I can"
+    ],
+    "answer": 0,
+    "hint": "Running can start a chase again.",
+    "explain": "Walk away slowly and tell a grown-up what happened. If the dog comes back, be a tree again."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "A dog is chewing its toy. What do you do?",
+    "choices": [
+     "Leave it alone",
+     "Take the toy away",
+     "Pull the toy to play"
+    ],
+    "answer": 0,
+    "hint": "Is the dog busy right now?",
+    "explain": "The dog is busy with its toy, so leave it alone. Taking a toy or food can make a dog snap."
+   }
+  ]
+ }
+}
