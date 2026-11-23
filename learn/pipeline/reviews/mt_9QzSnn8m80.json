@@ -1,0 +1,50 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Rules checked against the DfE (2013) KS3 mathematics programme of study (order positive and negative integers; use the four operations including with negative integers) and CCSS 6.NS.5, 6.NS.6, 6.NS.7 and 7.NS.1: p + q is the number |q| from p in the direction of q's sign, p − q = p + (−q), and the distance between two numbers is the absolute value of their difference. Every lab sum checked: −3 + 5 = 2, 4 + (−6) = −2, −2 + (−3) = −5, 5 − 8 = −3, −2 − 4 = −6, 3 − (−4) = 7; twins 6 − (−2) = 6 + 2 = 8, 6 + (−2) = 6 − 2 = 4, −1 − (−5) = −1 + 5 = 4, −4 − 3 = −4 + (−3) = −7; gaps −7 to 5 = 12, −4 to 6 = 10, −9 to −2 = 7. Parameterised answers checked at every corner: p2 a−b (−10..6), p4 a+b, p5 −a−b (−13..−3), m2 b−a, m4 a+b with a from −6 to 6, m6 a+b."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented directed-number errors (NCETM Year 7 directed number; Hart 1981 CSMS): ordering by digits (Opposites predict '−3 °C, because 3 is less than 8', challenge 'bigger', p1, m1); dropping the sign (a pin dropped at 8 for −8 is told it is on the wrong side of zero, challenge 'sign'); 4 + (−6) as 4 + 6 (Adding predict 'Bigger: adding always makes a number bigger', lab message 'That is 4 + 6. Adding a negative number moves left', challenge 'addneg', p2); 3 − (−4) as 3 − 4 (Subtracting predict '−1', lab message, challenge 'subneg', p3, m4, m8); 5 − 8 done as 8 − 5 (lab 'the wrong way round', challenge 'flip'); 'two minuses make a plus' misapplied to −2 − 3 (m3, adult text); gaps across zero by subtracting digits (gap option '2 degrees' with feedback, challenge 'gap')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagdirnum is built on a directed number line from −10 to 10: a pin placed from real contexts, a counter walked to the answer for additions and then for subtractions with the direction rule shown as a labelled hop, twin sums matched by the direction they move, and gaps split at zero into two hops. The temperature lesson's lab (measuring temperature with negative numbers) reads a thermometer and changes across zero; it has no addition or subtraction of negatives, no twins and no direction model. The lab_distinct gate measures it under 30% against every flagship lab, including flagrockcyc written in the same run."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner moves the counter and the lab confirms with a hop arrow labelled '+ (−3)' or '− (−4)', so the direction rule is seen, not told. Wrong landings are diagnosed: walking the wrong way, landing on a − b for a − (−b), the wrong order 8 − 5 for 5 − 8, or not moving. The twin step makes the learner state a − (−b) = a + b by matching, after doing it on the line; the gap step splits the count at zero so 7 + 5 = 12 is visible. Done messages state the rule after the task."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Three predictions, each with a tempting wrong option the lab disproves: '−3 °C, because 3 is less than 8' (the pins show −8 further left), 'Bigger: adding always makes a number bigger' (4 + (−6) lands on −2), and '−1' for 3 − (−4) (the counter must go to 7). The correct option is second in each, so always picking the first does not pass."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions; every wrong option is tagged and the message names the slip: bigger ('Further left is smaller. −9 is 9 below zero'), sign ('Keep the sign'), dir ('Adding a positive number moves right'), addneg ('Adding −7 is not adding 7'), subneg ('Taking away −3 is not taking away 3'), flip ('Taking away 2 moves left, further from zero'), gap ('That subtracts the digits. Across zero, add the parts'). Lab-step feedback is just as specific (see lab_teaches)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text uses short sentences and concrete contexts (weather, a lift, money owed) with one rule per paragraph; the adult text names the age, curriculum, key words, the model and the mistakes; validate_lessons readability passes for learner kid (limit 6.5) and adult (limit 9.5). Canvas prompts are one sum or one context at a time and every action is announced in the live region."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every sentence states a rule, an example or a mistake; the content gate finds no filler phrases and explanation overlap with every other lesson, including Measuring temperature with negative numbers and Evaluating expressions with negative values, is under the 12% limit. Items cover ordering, adding, subtracting, gaps and contexts, with five parameterised items."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on 390 px screenshots in light and dark: the line spans the canvas with every even number labelled and marked values in bold (neighbouring labels are dropped so they never overlap), the counter is at least 22 px across, the twin cards are about 48 px tall in two columns, option tiles fit one row, and the step buttons wrap below the canvas. Real touch-style drags were tested on iPhone 13 emulation: a wrong-way add, a correct add, the 8 − 5 flip and a sign slip all gave the right message."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Everything is possible without dragging: 1 left / 1 right / Pin it / Check buttons on every line step, a button for each twin card and each gap answer; the canvas aria-label carries every message; walk.cjs reports axe WCAG 2.1 AA clean in both themes on desktop and iPhone 13, every task completed by Show me, and no console errors."
+  }
+ },
+ "sources": [
+  "DfE (2013) National Curriculum in England: mathematics programmes of study, Key Stage 3 (Number: order positive and negative integers; use the four operations, including with negative integers)",
+  "Common Core State Standards for Mathematics 6.NS.5, 6.NS.6, 6.NS.7 and 7.NS.1 (corestandards.org)",
+  "NCETM Secondary Mastery professional development, Year 7 Directed number (ncetm.org.uk)",
+  "Hart, K. (ed.) (1981) Children's Understanding of Mathematics: 11-16 (CSMS), chapter on positive and negative numbers"
+ ]
+}
