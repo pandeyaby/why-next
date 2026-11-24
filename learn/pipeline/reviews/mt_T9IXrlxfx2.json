@@ -1,0 +1,51 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Checked for types of sentences: the four types are defined by clause count exactly as in the DfE KS2 grammar glossary terms (main clause, subordinate clause, relative clause), Crystal's Rediscover Grammar and Purdue OWL 'Sentence types' (simple 1 main; compound 2+ main joined by a coordinating conjunction; complex 1 main + 1+ subordinate; compound-complex 2+ main + 1+ subordinate). Every example sentence was hand-parsed: 'Tom and Priya laughed and cheered' is one clause; 'Maya, who hates spiders, screamed' is complex via a relative clause; 'then' and 'however' with only a comma are comma splices (Purdue OWL); a fronted subordinate clause takes a comma, an end one usually does not."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips for this topic: long means complex (elephant sentence prediction, challenge tag long), any 'and' means compound (Tom and Priya card, tag and), a comma starts a clause (After the long, stormy night prediction, Before dawn item, tag comma), comma splice with then or however (join step and prediction, tag splice), because or when make compound (trap messages, tag because), relative clauses are not clauses (Maya card, tag relative), and compound-complex means 'very long' (tag cc)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "flagsentype is built on this topic's own mechanism, clause counting: tap-to-test main clauses with phrase and subordinate rejections, a four-way type sort with clause-based feedback, an eight-conjunction join table that reports type, meaning fit and comma splices, a movable subordinate clause with a comma gap, and a paragraph remixer with a sentence-length and type bar chart. Distinct from flagclause (clauses vs phrases at age 7), flagcjoin (comma before and/but) and flagrunon; gate shows under 30% shingle overlap with every flagship lab."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners discover the rule by acting: tapping a phrase or a because-clause is refused with the reason, so 'can it stand alone?' becomes the test; the sort names the clause count on every answer; joining with then or however shows the comma splice and with because shows a back-to-front meaning; moving the clause shows the type stays complex; the remixer only accepts three or more types with a short final sentence. Each done line states the rule in one sentence after the learner has used it."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Five predictions, each with a tempting wrong answer the lab disproves: 'Two: there is a comma' (the phrase chunk is refused), 'Complex: it is long' (the elephant sentence sorts as simple), 'Yes: then joins them' (the join step flags a comma splice), 'Compound' after moving the clause (the label stays Complex), and 'A long sentence' as the stronger ending (the remixer only finishes on a short simple sentence). Each step's done message reveals the locked-in prediction."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions; every wrong option is tagged with its own slip message: long ('Length does not decide the type'), and ('And can join two subjects or two verbs inside one clause'), splice ('Then is an adverb, not a coordinating conjunction'), because, relative ('Which was soaked is a relative clause'), cc and comma ('After lunch has no verb, so it is a phrase'). In-step feedback is specific too, e.g. the trap message for sorting the bus sentence as compound."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Lesson text uses short sentences and defines each term before using it (main clause, subordinate clause, coordinating conjunction), with worked examples in every kid paragraph; kid and adult text pass learn/readability.py. Canvas chips use 14 to 18 px text and wrap inside their own chip, and every term is shown in colour plus words (green main, amber subordinate) so colour is never the only cue."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every sentence defines, exemplifies or checks: kid paragraphs cover clauses, the four types, length and shared subjects, and splices plus rhythm; adult paragraphs give the curriculum, the clause-counting test with full conjunction lists, the common mistakes, and what each lab step does. No filler phrases (gate clean) and no text repeated from the clauses, comma-joining or run-on lessons (under the 12% overlap limit)."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Checked on iPhone 13 screenshots in light and dark themes and at 1200 px: clause chips wrap within 390 px, the four type boxes form a 2 by 2 grid at the bottom, the 8 joining words form a 4 by 2 grid anchored to the bottom so they never fall off the canvas after a long message, the move-step help text wraps, and the remixer's bar chart scales its rows to fit."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Everything is doable with HTML buttons as well as canvas taps and drags (a button per chunk, per type, per joining word, clause to front or end, add or remove comma, rewrite part 1 to 3); the canvas aria-label is updated with every message; the challenge uses buttons with a polite live region. walk.cjs: axe (WCAG 2.1 AA) clean in both themes on desktop and iPhone 13, no console errors."
+  }
+ },
+ "sources": [
+  "DfE (2013) National curriculum in England: English programmes of study, Key Stage 3, and the English Appendix 2 grammar glossary (main clause, subordinate clause, relative clause, coordinating and subordinating conjunction)",
+  "Common Core State Standards ELA-Literacy L.7.1b: choose among simple, compound, complex, and compound-complex sentences to signal differing relationships among ideas",
+  "Crystal, D. (2004) Rediscover Grammar, 3rd edn, Longman: clause types and sentence classification",
+  "Purdue Online Writing Lab: 'Sentence Types' and 'Comma Splices' (then and however are adverbs; a comma alone cannot join independent clauses)",
+  "AQA GCSE English Language 8700 mark scheme, Paper 1 Question 5: 'uses a range of sentence forms for effect'"
+ ]
+}
