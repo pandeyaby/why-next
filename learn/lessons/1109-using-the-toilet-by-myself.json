@@ -1,0 +1,254 @@
+{
+ "topicId": "mt_uBAqWVEpTA",
+ "title": "Using the toilet by myself",
+ "audience": "family",
+ "keyIdea": "Your body gives you a feeling when you need a wee or a poo. Go to the toilet as soon as you feel it, even in the middle of a game: holding on can end in an accident. The steps always go in order: pants down, sit on the toilet, wipe from front to back with a little toilet paper, flush, pants up, then wash your hands with soap and dry them. Only wee, poo and toilet paper go down the toilet; wet wipes, paper towels and toys go in the bin or back on the shelf. An accident is not naughty: tell a grown-up, change into clean pants and wash your hands.",
+ "familyTip": "Say the steps out loud together each time, in the same order, and let your child do each one while you stand back. Watch for the wriggle or the hold, and say 'Your body is telling you. Let's go now, the game can wait.' After an accident, stay calm and matter-of-fact: 'Accidents happen. Let's get clean pants.'",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Can it go down the toilet? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Down the toilet",
+    "In the bin"
+   ],
+   "items": [
+    [
+     "Wee",
+     0
+    ],
+    [
+     "Wet wipe",
+     1
+    ],
+    [
+     "Poo",
+     0
+    ],
+    [
+     "Paper towel",
+     1
+    ],
+    [
+     "Toilet paper",
+     0
+    ],
+    [
+     "Nappy",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtoilet",
+  "caption": "Flagship lab: go when the feeling is little, put the toilet steps in order, wipe front to back, sort what can be flushed, and find what helps after an accident.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Your body tells you when you need a wee or a poo. You get a little feeling in your tummy. Go to the toilet now. Do not wait for the end of the game. The game can wait for you.",
+   "Do the steps in order. Pants down. Sit on the toilet. Wipe with a bit of paper. Flush. Pants up. Wash your hands with soap, then dry them.",
+   "Wipe from the front to the back. Use a fresh bit of paper each time. Then wash your hands, even if they look clean. Germs are too small to see.",
+   "Only wee, poo and toilet paper go down the toilet. Wet wipes go in the bin. If you have an accident, that is OK. It is not naughty. Tell a grown-up and put on clean pants."
+  ],
+  "adult": [
+   "Ages 3 to 4. DfE Development Matters (2021) asks 3 and 4 year olds to grow more independent in their own care needs. That includes using the toilet and washing and drying their hands. The EYFS goal for Managing Self includes going to the toilet alone. Key words: toilet, wee, poo, wipe, flush, wash, accident.",
+   "Toileting is a routine of steps. Children learn it best with the same words in the same order every time. The NHS potty training advice says to teach girls to wipe from front to back, and it suits boys too. It keeps germs from the bottom away from the front. Wash hands after every visit. Flushing and pulling pants up can come in either order, but washing and drying always come last.",
+   "Common mistakes: holding on to finish a game, skipping the hand wash because hands look clean, wiping back to front, and flushing wet wipes. ERIC, the bladder and bowel charity for children, says go as soon as you feel the need, because holding on leads to accidents. Water UK says only the 3 Ps go down: pee, poo and paper. Do not tell a child off for an accident. The NHS warns that worry makes accidents more likely, and it teaches children to hide them.",
+   "In the lab your child plays while a feeling meter rises, and must go while the feeling is still little. They put 7 toilet steps in order. Washing is refused until they have flushed and pulled their pants up, and running off is refused until their hands are dry. Then they wipe front to back three times, sort 6 things into 'down the toilet' or 'in the bin', and pick 4 things that help after an accident."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "You feel you need a wee. You are building a tall tower. What do you do?",
+   "choices": [
+    "Go to the toilet now",
+    "Finish the tower first",
+    "Wait until home time"
+   ],
+   "answer": 0,
+   "hint": "Your body is telling you. Can the tower wait?",
+   "explain": "Go now. The tower can wait. If you hold on, you might have an accident."
+  },
+  {
+   "type": "mc",
+   "id": "p2",
+   "prompt": "You have wiped. What do you do next?",
+   "choices": [
+    "Flush and pull my pants up",
+    "Run off to play",
+    "Sit back down again"
+   ],
+   "answer": 0,
+   "hint": "Think of the steps: wipe, then two more before you wash.",
+   "explain": "After wiping, flush and pull your pants up. Then wash and dry your hands. Then you can play."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You wipe {a} times. You use a fresh piece of paper each time. How many pieces of paper do you use?",
+   "answer": "a",
+   "hint": "One wipe uses one fresh piece. Count the wipes.",
+   "explain": "{a} wipes use {a} pieces of paper, one fresh piece each time. Then it all goes down the toilet.",
+   "params": {
+    "a": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You went to the toilet {a} times this morning and {b} times this afternoon. You washed your hands every time. How many times did you wash your hands?",
+   "answer": "a+b",
+   "hint": "Count the morning times, then count on the afternoon times.",
+   "explain": "{a} and {b} more make {=a+b}. Every toilet trip ends with washing your hands, so that is {=a+b} washes.",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Can a wet wipe go down the toilet?",
+   "choices": [
+    "No, it goes in the bin",
+    "Yes, it is like paper",
+    "Yes, if it is small"
+   ],
+   "answer": 0,
+   "hint": "Only 3 things go down the toilet. Is a wipe one of them?",
+   "explain": "No. Wet wipes do not break up like toilet paper, so they block the pipes. Put them in the bin."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which way do you wipe?",
+    "choices": [
+     "Front to back",
+     "Back to front",
+     "Any way at all"
+    ],
+    "answer": 0,
+    "hint": "Wipe away from the front, towards your bottom.",
+    "explain": "Wipe from the front to the back. That keeps germs from your bottom away from where wee comes out."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Your hands look clean after the toilet. Do you wash them?",
+    "choices": [
+     "Yes, every time",
+     "No, they look clean",
+     "Only if they are messy"
+    ],
+    "answer": 0,
+    "hint": "Can you see germs with your eyes? Think about that before you choose.",
+    "explain": "Wash every time. Germs are too small to see, so clean-looking hands can still have germs on them."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Oops, you had an accident. What do you do?",
+    "choices": [
+     "Tell a grown-up",
+     "Hide behind the sofa",
+     "Keep the wet pants on"
+    ],
+    "answer": 0,
+    "hint": "Who can help you get clean pants?",
+    "explain": "Tell a grown-up. Accidents happen, and you are not in trouble. They will help you change."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "What is the first toilet step?",
+    "choices": [
+     "Pants down",
+     "Flush",
+     "Wash my hands"
+    ],
+    "answer": 0,
+    "hint": "What do you do before you sit on the toilet?",
+    "explain": "Pants down comes first. Then sit, wipe, flush, pants up, wash and dry."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which of these can go down the toilet?",
+    "choices": [
+     "Toilet paper",
+     "A toy car",
+     "A paper towel"
+    ],
+    "answer": 0,
+    "hint": "Only wee, poo and one kind of paper.",
+    "explain": "Toilet paper can be flushed. Toys and paper towels block the pipes, so they never go down the toilet."
+   },
+   {
+    "type": "numeric",
+    "id": "m6",
+    "prompt": "There are {a} steps before you wash your hands. Then you wash, and then you dry. How many steps is that in all?",
+    "answer": "a+2",
+    "hint": "Count the steps, then count on 2 more: wash and dry.",
+    "explain": "{a} steps and 2 more make {=a+2}. Washing and drying always come at the end.",
+    "params": {
+     "a": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "When should you go to the toilet?",
+    "choices": [
+     "When I first feel I need to go",
+     "Only when it is really, really big",
+     "Only at home"
+    ],
+    "answer": 0,
+    "hint": "Listen to your body. Is a little feeling enough?",
+    "explain": "Go when you first feel it. Waiting until the feeling is really big can mean an accident."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Sam had {a} dry days and {b} days with an accident. How many days is that?",
+    "answer": "a+b",
+    "hint": "Count the dry days, then count on the accident days.",
+    "explain": "{a} and {b} more make {=a+b} days. Accident days are OK too: Sam told a grown-up and changed.",
+    "params": {
+     "a": [
+      2,
+      5
+     ],
+     "b": [
+      1,
+      2
+     ]
+    }
+   }
+  ]
+ }
+}
