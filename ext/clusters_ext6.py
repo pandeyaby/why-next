@@ -92,7 +92,7 @@ CLUSTERS6 = {
 ("Speaking & Listening", 3): "Your child is making up short stories in play, with a start, something that happens, and an ending.",
 ("Speaking & Listening", 4): "Your child is learning to talk about things that already happened, saying went, ate and saw (not goed or eated), adding -ed to doing words like jumped, and using yesterday, today and tomorrow to say when.",
 ("Geometry", 4): "Your child is learning that things look different from different places: a party hat is a triangle from the side but a circle from above, and a simple plan shows everything as a bird sees it from above.",
-("Responsible Decision-Making", 6): "Your child is learning rules that keep them safer — water safety with a grown-up, the difference between a good surprise and a worry secret, why we do not share packed-lunch food, and how to cross the road with a grown-up: stop, look, listen.",
+("Responsible Decision-Making", 6): "Your child is learning rules that keep them safer — water safety with a grown-up, the difference between a good surprise and a worry secret, why we do not share packed-lunch food, how to cross the road with a grown-up: stop, look, listen, and how to choose with money: needs before wants, and saving up for later.",
 ("Responsible Decision-Making", 8): "Your child is learning when to get a grown-up or call 999, and what to say: their name, where they are and what has happened.",
 ("Emotional Literacy", 6): "Your child is learning to notice the feeling of being left out and to choose a helpful next step, such as asking to join in or telling a grown-up.",
 ("Emotional Literacy", 10): "Your child is learning what to do when a news story or video leaves them worried: stop watching, talk to a trusted adult, and not scroll for more.",
