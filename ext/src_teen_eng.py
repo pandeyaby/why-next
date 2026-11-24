@@ -77,7 +77,8 @@ T("tn_crafted_narrative", P, WCO, "Crafting descriptive and narrative writing", 
    "Selects precise vocabulary instead of clichés"],
   "Given a photo of a storm, can {{name}} write an opening that zooms from the wide sky to one small detail, using short sentences to build tension?",
   [], [("mt_s6-6FYb5UQ", "h", "Crafted writing uses writing techniques for effect"),
-       ("mt_BLzNxSSdWu", "s", "Narrative writing draws on character and dialogue skills")])
+       ("mt_BLzNxSSdWu", "s", "Narrative writing draws on character and dialogue skills"),
+       ("mt_T9IXrlxfx2", "s", "Varying sentence length for pace means choosing among simple, compound, complex and compound-complex sentences on purpose")])
 
 T("tn_persuasive_speech", P, SL, "Giving a persuasive speech", "14-16",
   "Plan and deliver a persuasive speech to an audience, using rhetorical techniques, clear structure, eye contact and controlled pace, and respond to questions afterwards",
