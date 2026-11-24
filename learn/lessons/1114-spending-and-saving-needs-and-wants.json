@@ -1,0 +1,262 @@
+{
+ "topicId": "mt_sSLXM9P81u",
+ "title": "Spending and saving: needs and wants",
+ "audience": "family",
+ "keyIdea": "Money runs out, so we have to choose what to spend it on. A need is something we must have to live and stay well: food, water, a home, warm clothes and medicine. A want is nice to have, like toys, sweets and games. Wanting something a lot does not make it a need. Buy needs first, then wants if there is money left. To get something bigger, save a little each week in a safe place, like a money box or a bank. Money that is spent is gone. You cannot have every want, and choosing one can mean going without another.",
+ "familyTip": "Give your child a few coins and a short shopping list with one need and one want on it. Ask which goes in the basket first and why. At home, mark a jar with the price of something they would like, and add their savings each week so they can see it fill up.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Need or want? Drag each card into a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Need",
+    "Want"
+   ],
+   "items": [
+    [
+     "Bread",
+     0
+    ],
+    [
+     "Toy car",
+     1
+    ],
+    [
+     "Water",
+     0
+    ],
+    [
+     "Sweets",
+     1
+    ],
+    [
+     "Warm coat",
+     0
+    ],
+    [
+     "Football stickers",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagspend",
+  "caption": "Flagship lab: sort needs and wants, shop with £10, save for a kite, keep money safe and choose between wants.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A need is something you must have to live and stay well. Food, water, a home, a warm coat and medicine are needs. A want is nice to have. Toys, sweets and games are wants. Wanting sweets a lot does not make them a need.",
+   "Money runs out. So buy your needs first. If there is money left, you can buy a want. If you buy the toy first, there may be no money for food.",
+   "To get something big, like a kite, save a little each week. Put the money in a money box or a bank. Spend it on sweets and it is gone. It does not come back.",
+   "You cannot have every want. If you pick the ball, you may have to go without the comic. That is OK. You can save up for it next time."
+  ],
+  "adult": [
+   "Ages 6 to 7. This is the PSHE Association Programme of Study (2020), Key Stage 1 Living in the wider world, L10 to L13. Children learn what money is and where it comes from, how people choose to save and spend, the difference between needs and wants, and how to look after money. Key words: money, spend, save, need, want, choose, money box, bank.",
+   "A need is something people must have to live and stay safe and well. A want is something we would like but can live without. Some things can be either: a coat is a need, a fashion coat is a want. MoneyHelper's planning framework for ages 3 to 11 puts needs before wants and saving over time at this age. Research for the Money Advice Service found money habits are forming by about age 7.",
+   "Common mistakes: thinking 'I really want it' makes it a need; buying wants first and running short for needs; thinking spent money comes back; thinking a small amount is not worth saving; leaving money where it can be lost; and thinking you can have every want if you choose carefully.",
+   "In the lab your child sorts eight cards into needs and wants, shops with £10 and finds the robot does not fit with the food, saves £2 a week for 5 weeks to buy a £10 kite while the sweet shop tempts them, finds the safe places to keep money, and chooses wants with £5, seeing what they give up."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Which one is a need?",
+   "choices": [
+    "Water",
+    "A video game",
+    "Sweets"
+   ],
+   "answer": 0,
+   "hint": "Which one do you need to live and stay well?",
+   "explain": "Water is a need. We cannot live without it. Games and sweets are wants."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You save £{a} each week. How much have you saved after {b} weeks?",
+   "answer": "a*b",
+   "params": {
+    "a": [
+     1,
+     3
+    ],
+    "b": [
+     2,
+     5
+    ]
+   },
+   "hint": "Add £{a} once for each week.",
+   "explain": "£{a} each week for {b} weeks is £{=a*b}. Small amounts add up."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You have £{a}. You buy bread for £2. How much money is left?",
+   "answer": "a-2",
+   "params": {
+    "a": [
+     5,
+     10
+    ]
+   },
+   "hint": "Take away the cost of the bread.",
+   "explain": "£{a} take away £2 leaves £{=a-2}. Now you know what is left for a want."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "You have £5. You need milk, and you want a toy. What do you buy first?",
+   "choices": [
+    "The milk",
+    "The toy",
+    "Nothing, ever"
+   ],
+   "answer": 0,
+   "hint": "Which one must you have to live and stay well?",
+   "explain": "Buy the milk first. If there is money left, you can think about a want."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You spend your pocket money on sweets. Where is the money now?",
+   "choices": [
+    "It is gone",
+    "Back in my money box",
+    "It comes back tomorrow"
+   ],
+   "answer": 0,
+   "hint": "What happens to money when you pay for something?",
+   "explain": "The money now belongs to the shop. Once it is spent, it is gone."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Which one is a want?",
+    "choices": [
+     "A teddy",
+     "Food",
+     "Medicine when you are ill"
+    ],
+    "answer": 0,
+    "hint": "Which one could you live without?",
+    "explain": "A teddy is nice to have, so it is a want. Food and medicine are needs."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Mia says, 'I really, really want sweets, so they are a need.' Is she right?",
+    "choices": [
+     "No, wanting a lot does not make it a need",
+     "Yes, if you want it a lot",
+     "Yes, sweets are food"
+    ],
+    "answer": 0,
+    "hint": "Can Mia live and stay well without sweets?",
+    "explain": "Sweets are still a want. A need is something we must have to live and stay well."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A kite costs £10. You save £2 each week. How many weeks until you can buy it?",
+    "answer": 5,
+    "hint": "Count up in 2s until you reach 10.",
+    "explain": "2, 4, 6, 8, 10: that is 5 weeks of saving."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "You have £{a} in your money box. You save £{b} more. How much is in the box now?",
+    "answer": "a+b",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "b": [
+      1,
+      4
+     ]
+    },
+    "hint": "Add the new money to what is there.",
+    "explain": "£{a} and £{b} make £{=a+b}."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Where is the safest place to keep your money?",
+    "choices": [
+     "A money box at home",
+     "On a park bench",
+     "In a pocket with a hole"
+    ],
+    "answer": 0,
+    "hint": "Where can it not get lost or taken?",
+    "explain": "A money box keeps money safe. Money left out can be lost or taken."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You have £5. A ball costs £4 and a comic costs £3. What can you buy?",
+    "choices": [
+     "Only one of them",
+     "Both of them",
+     "Neither of them"
+    ],
+    "answer": 0,
+    "hint": "Add £4 and £3. Is that more than £5?",
+    "explain": "Both would cost £7, which is more than £5. So you choose one and go without the other."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which is a need in winter?",
+    "choices": [
+     "A warm coat",
+     "A new toy",
+     "A comic"
+    ],
+    "answer": 0,
+    "hint": "Which one keeps you safe and well in the cold?",
+    "explain": "A warm coat keeps you well in the cold, so it is a need."
+   },
+   {
+    "type": "numeric",
+    "id": "m9",
+    "prompt": "A kite costs £10. You have saved £{a}. How much more do you need to save?",
+    "answer": "10-a",
+    "params": {
+     "a": [
+      1,
+      9
+     ]
+    },
+    "hint": "Count on from £{a} up to £10.",
+    "explain": "£10 take away £{a} is £{=10-a}. Keep saving and you will get there."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Is saving £1 a week worth it?",
+    "choices": [
+     "Yes, it adds up over time",
+     "No, it is too little",
+     "No, only grown-ups save"
+    ],
+    "answer": 0,
+    "hint": "How much is £1 a week after 10 weeks?",
+    "explain": "£1 a week for 10 weeks is £10. Small amounts add up."
+   }
+  ]
+ }
+}
