@@ -1,0 +1,267 @@
+{
+ "topicId": "mt_n5_Jt4ExUd",
+ "title": "Patterns and codes for sending information",
+ "audience": "learner",
+ "keyIdea": "A code turns a message into a pattern, such as short and long beeps, flashes of light, or 1s and 0s, that can travel as sound, light or electricity. Morse code sends each letter as short and long signals, and the gaps between letters are part of the code. The most used letters get the shortest patterns, so messages are quicker. A picture can be sent as rows of 1s and 0s. Noise can spoil a signal, so engineers add checks, such as sending a message three times and trusting what most copies say. A code only works if sender and receiver agree it first.",
+ "familyTip": "Tap a message on the table in Morse code for each other: short tap, long tap, and a pause between letters. Start with SOS, then try your names. Then draw a 5 by 5 grid and send a tiny picture as five rows of 1s and 0s.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Morse code or picture code? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Morse code",
+    "Picture code"
+   ],
+   "items": [
+    [
+     "··· −−− ···",
+     0
+    ],
+    [
+     "01110",
+     1
+    ],
+    [
+     "·−",
+     0
+    ],
+    [
+     "10001",
+     1
+    ],
+    [
+     "−−·−",
+     0
+    ],
+    [
+     "00100",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmorse",
+  "caption": "Flagship lab: send SOS, find hidden readings in a gapless signal, design a fast code, decode a picture of 1s and 0s, and beat noise.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "How do you send a message to someone far away? Use a pattern that you both agree on. The pattern can travel as sound, as light, or along a wire. Morse code uses short and long signals. A long one lasts three times as long as a short one.",
+   "S is three short beeps and O is three long beeps, so the call for help, SOS, is ··· −−− ···. The gaps matter too. Without them, ···− could mean V, or S then T, or I then A. So Morse leaves a gap between letters and a longer gap between words.",
+   "The letters we use most got the shortest codes. E is one short beep and T is one long beep. Q is rare, so it got a long code. That keeps most messages quick to send.",
+   "Codes can send pictures too. Write 1 for each black square and 0 for each white one, row by row. Noise can flip a 1 into a 0. One fix is to send the message three times. Then, in each place, trust what most of the copies say."
+  ],
+  "adult": [
+   "Ages 9 to 10. This is NGSS 4-PS4-3: generate and compare multiple solutions that use patterns to transfer information, whose examples are drums sending coded information through sound, a grid of 1s and 0s sending a picture, and Morse code sending text. It builds on 1-PS4-4 (devices that send light or sound signals) and leads to MS-PS4-3, digitised signals. Key words: code, pattern, signal, encode, decode, sender, receiver, noise, reliable.",
+   "International Morse code (ITU-R M.1677-1) defines its timing in dot lengths: a dash is three dots, the space inside a letter is one dot, between letters three dots and between words seven. Alfred Vail and Samuel Morse gave the shortest codes to the most common letters by counting the type in a printer's case. In English text E makes up about 12.7% of letters, T 9.1%, A 8.2% and Q only 0.1% (Lewand 2000), and their codes are ·, −, ·− and −−·−.",
+   "With two symbols, each extra place doubles the number of patterns: 2 with one symbol, 4 with two, 8 with three and 16 with four. That gives 30 patterns of up to four symbols, enough for 26 letters. A picture sent as a grid of 1s and 0s is the same idea as the pixels on a screen. Sending a message three times and taking the majority in each place is the simplest error-correcting code; it fixes any single flipped signal.",
+   "Common mistakes: thinking the gaps do not matter; thinking Morse code follows alphabet order; swapping what 1 and 0 stand for; trusting one copy of a noisy message; thinking any pattern explains itself without an agreed code; and counting ·− and −· as the same pattern. In the lab your child sends SOS, finds 4 readings of one gapless signal, designs a code for E, T, A and Q, decodes a 5 by 5 picture and repairs a message from 3 noisy copies."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "What does the longer gap between two Morse letters tell the receiver?",
+   "choices": [
+    "That one letter has ended",
+    "That a long beep is coming",
+    "That the message is over"
+   ],
+   "answer": 0,
+   "hint": "Think about what went wrong when the signal ···− had no gaps.",
+   "explain": "It marks where one letter ends and the next begins. Without it, ···− could be read as V, S T or I A."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In Morse code a short beep lasts 1 unit and a long beep lasts 3 units. How many units of beeping are in {a} short beeps and {b} long beeps?",
+   "answer": "a+3*b",
+   "hint": "Count 1 for each short beep and 3 for each long one, then add.",
+   "explain": "{a} short beeps make {a} units and {b} long beeps make {=3*b} units, so {=a+3*b} units in all.",
+   "params": {
+    "a": [
+     1,
+     6
+    ],
+    "b": [
+     1,
+     5
+    ]
+   }
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A picture code sends rows of {a} squares, with a 1 or a 0 for each square. The picture has {b} rows. How many 1s and 0s are sent?",
+   "answer": "a*b",
+   "hint": "Each row sends one digit per square.",
+   "explain": "{b} rows of {a} digits is {a} × {b} = {=a*b} digits.",
+   "params": {
+    "a": [
+     3,
+     8
+    ],
+    "b": [
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which letter got the shortest Morse code?",
+   "choices": [
+    "E",
+    "A",
+    "Z"
+   ],
+   "answer": 0,
+   "hint": "Which letter do we use most in English?",
+   "explain": "E is the most used letter in English, so it got the shortest code: one short beep."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Three copies of a message arrive. In one place they say 1, 1 and 0. What was most likely sent?",
+   "choices": [
+    "1",
+    "0",
+    "There is no way to tell"
+   ],
+   "answer": 0,
+   "hint": "Count how many of the three copies agree in that place.",
+   "explain": "Two of the three copies say 1, so 1 was most likely sent. Noise flipped one copy."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is SOS in Morse code?",
+    "choices": [
+     "··· −−− ···",
+     "−−− ··· −−−",
+     "·−· ·−·"
+    ],
+    "answer": 0,
+    "hint": "S is short beeps and O is long beeps.",
+    "explain": "S is three short beeps and O is three long beeps, so SOS is ··· −−− ···."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A message is sent {a} times. In one place, every copy but one says 1. How many copies say 1?",
+    "answer": "a-1",
+    "hint": "Take away the one copy that was flipped.",
+    "explain": "{a} copies take away 1 leaves {=a-1} copies saying 1, so most copies agree on 1.",
+    "params": {
+     "a": [
+      3,
+      7
+     ]
+    }
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A short beep lasts {a} tenths of a second. A long beep lasts 3 times as long. How many tenths of a second is a long beep?",
+    "answer": "3*a",
+    "hint": "Multiply the short beep by 3.",
+    "explain": "3 × {a} = {=3*a} tenths of a second.",
+    "params": {
+     "a": [
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "How many different patterns of 2 symbols can you make from dot and dash?",
+    "choices": [
+     "4",
+     "3",
+     "2"
+    ],
+    "answer": 0,
+    "hint": "Write them out. Does ·− count as the same as −·?",
+    "explain": "There are 4: ··, ·−, −· and −−. Order matters, so ·− and −· are different."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "In a picture code, 1 means black and 0 means white. What does the row 11111 look like?",
+    "choices": [
+     "All five squares black",
+     "All five squares white",
+     "Black and white in turns"
+    ],
+    "answer": 0,
+    "hint": "Every digit in the row is a 1. What colour does 1 stand for?",
+    "explain": "Every digit is 1, so every square in the row is black."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "You want to send a message across a noisy football ground at night. Which signal is best?",
+    "choices": [
+     "Flashes of a torch",
+     "Drum beats",
+     "Shouting"
+    ],
+    "answer": 0,
+    "hint": "Noise drowns out sound, but the dark does not stop light.",
+    "explain": "A torch is best. The crowd's noise would drown a drum or a shout, and a flash shows up well in the dark."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why must the sender and the receiver agree on a code first?",
+    "choices": [
+     "Or the receiver cannot know what the patterns mean",
+     "Or the signal will not travel",
+     "Or the message gets longer"
+    ],
+    "answer": 0,
+    "hint": "Think of a torch flash that nobody agreed on.",
+    "explain": "A pattern carries meaning only if both people know the code. The signal still travels, but it means nothing to the receiver."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why does T have a short Morse code but Q a long one?",
+    "choices": [
+     "T is used much more than Q",
+     "T comes before Q in the alphabet",
+     "T is easier to say"
+    ],
+    "answer": 0,
+    "hint": "Look at how often each letter is used.",
+    "explain": "T makes up about 9 in every 100 letters and Q less than 1 in 100. Short codes for busy letters make messages quicker."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "In a picture code, 1 means black and 0 means white. Which row is black in the middle only?",
+    "choices": [
+     "00100",
+     "11011",
+     "10001"
+    ],
+    "answer": 0,
+    "hint": "Find the row with a single 1 in the third place.",
+    "explain": "00100 has one 1 in the middle, so only the middle square is black."
+   }
+  ]
+ }
+}

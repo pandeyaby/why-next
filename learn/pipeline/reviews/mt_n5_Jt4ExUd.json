@@ -1,0 +1,53 @@
+{
+ "topicId": "mt_n5_Jt4ExUd",
+ "title": "Patterns and codes for sending information",
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Codes for S, O, E, T, A, I, N, U, V and Q and the timing rules (dash = 3 dots; gap 1 inside a letter, 3 between letters, 7 between words) checked against ITU-R M.1677-1. Letter shares E 12.7%, T 9.1%, A 8.2%, Q 0.1% from Lewand 2000. All 8 gap placements of ···− were checked to give valid letters (V, S T, I A, E U, E E A, E I T, I E T, E E E T). The doubling count 2, 4, 8, 16 (30 patterns up to length 4) and the majority-of-three repair of 10110 from 10010, 11110 and 10111 were worked by hand."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented slips for coded signals at this age: gaps seen as optional (step 2 predict and 'gap'), codes assumed to follow alphabet order (step 3 predict and 'alpha'), 1 and 0 swapped in a pixel code (step 4 predict and 'flip'), trusting a single noisy copy (step 5 predict and 'one'), a code that nobody agreed ('agree'), and counting ·− and −· as one pattern ('count')."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "Five mechanisms unique to information coding: a three-key Morse sender that rejects missing letter gaps, a gapless ···− signal whose gaps the learner toggles to reveal 4 or more letter readings, a code-design step that refuses a long code for a frequent letter and compares 8 vs 14 symbols for EAT TEA, a 5 by 5 pixel decoder with row codes, and a 3-copy majority-vote repair of a noisy 5-bit message. None of these fit another topic by relabelling."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers each idea before the text states it: wrong beeps and a missing gap are refused with the reason; each new gap placement prints a different reading of the same beeps; the code step blocks a long code for E and then shows the symbol cost of a swap; the 1s turn into a face; picking the minority bit names how many copies disagree."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions, each with a tempting wrong option that the lab disproves: 'Yes, it can only be V' (4 readings appear), 'The first letters of the alphabet' (E and T get the 1-symbol codes and the swap costs 6 extra symbols), 'The middle three' for 10001 (the end squares go black), and 'No, the message is lost' (all 5 places are repaired)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "slip() gives a distinct message for each wrong tag: gap (lists the readings of ···−), alpha (E and T got the shortest codes), flip (reads 10001 digit by digit), one (any single copy might be the noisy one), agree (meaning needs an agreed code) and count (order matters, each symbol doubles)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text scores FK grade 1.4 and adult 7.1 by learn/readability.py, inside the learner limits of 6.5 and 9.5. Sentences are short, symbols are shown as well as named, and lab strips stay under two lines at 390 px."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every paragraph carries a fact or a check: what a code needs, Morse timing, why gaps exist, why E is short, pixels and majority repair; the adult text adds the NGSS link, ITU timing, letter frequencies, the doubling count and the common mistakes, with nothing repeated."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "At 390 px the canvas uses the tall ratio: the three keys sit in one row at full width, the gapless tape uses 70 px cells, the four code cards drop to a 2 by 2 grid, the pixel grid sits beside its row codes, and the 1 and 0 pads fill the bottom. Buttons below the canvas wrap."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every canvas action has a button twin: three keys, Add or Remove gap 1 to 3, one button per remaining code with a spoken dot/dash label, Black (1) or White (0) for the current square, and 1 or 0 for the current place. say() updates the canvas aria-label and the polite live region after every action."
+  }
+ },
+ "sources": [
+  "ITU-R Recommendation M.1677-1 (2009), International Morse code",
+  "Lewand, R. E. (2000), Cryptological Mathematics, Mathematical Association of America (English letter frequencies)",
+  "Smithsonian National Museum of American History, 'Morse code and the telegraph' (Vail and Morse counting type to assign short codes)",
+  "Hamming, R. W. (1950), Error detecting and error correcting codes, Bell System Technical Journal 29(2)",
+  "NGSS Lead States (2013), Next Generation Science Standards 4-PS4-3 and its clarification statement"
+ ]
+}
