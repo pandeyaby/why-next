@@ -28,7 +28,7 @@ CLUSTERS6 = {
 ("Emotional Literacy", 2): "Your child is learning names for four big feelings — happy, sad, angry and scared — and spotting them on faces.",
 ("Emotional Literacy", 3): "Your child is noticing where feelings show up in their body and what made them feel that way.",
 ("Self-Regulation & Resilience", 3): "Your child is learning to calm down with slow breaths or a cuddle and to wait a short time for a turn.",
-("Self-Regulation & Resilience", 4): "Your child is learning to have another go when something goes wrong, instead of giving up.",
+("Self-Regulation & Resilience", 4): "Your child is learning to have another go when something goes wrong, instead of giving up, and to switch off a screen when the timer rings, with screens kept away from meals and bedtime.",
 ("Friendship & Cooperation", 2): "Your child is moving from playing next to other children to playing with them, and learning to say please and thank you.",
 ("Friendship & Cooperation", 3): "Your child is learning to share toys and take turns in simple games.",
 ("Friendship & Cooperation", 4): "Your child is learning to ask to join in with other children's play, to say sorry and make up after a falling-out, and to ask before borrowing, look after the thing and give it back.",
