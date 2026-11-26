@@ -1,0 +1,275 @@
+{
+ "topicId": "mt_-ChhwQ9MUr",
+ "title": "Averages from frequency tables",
+ "audience": "family",
+ "keyIdea": "A frequency table lists each value (x) and how often it happens, its frequency (f). The row '2 goals, frequency 6' means 6 matches each had 2 goals, so that row holds 6 × 2 = 12 goals. The mode is the value with the biggest frequency: the value, not the frequency. The median is the middle value when all the values are written out in order. With n values in total, it sits at place (n + 1) ÷ 2, which you find with a running total of the frequencies; it is not the middle row. The mean is the total of the f × x column divided by the total frequency n, not by the number of rows. Check the mean: it must lie between the smallest and the largest value.",
+ "familyTip": "Next time you watch a team or play a game, keep a tally of goals or points per match for a few weeks. Turn it into a frequency table together, then ask your child to find the mode, the median and the mean, and to say whether each answer looks sensible next to the data.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Right method or a common slip? Drag each card into a box, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Right method",
+    "Common slip"
+   ],
+   "items": [
+    [
+     "Mode: the value with the biggest f",
+     0
+    ],
+    [
+     "Mode: the biggest frequency",
+     1
+    ],
+    [
+     "Mean: total f × x ÷ total f",
+     0
+    ],
+    [
+     "Mean: total f × x ÷ number of rows",
+     1
+    ],
+    [
+     "Median: the value at place (n + 1) ÷ 2",
+     0
+    ],
+    [
+     "Median: the middle row of the table",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagfreqavg",
+  "caption": "Flagship lab: build a table from results, tap the mode, find the middle place, fill the f × x column and drag bars to move the averages.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A frequency table saves writing every value out. Goals 0 to 4 sit in the first column (x). The frequency column (f) says how many matches had each score. The row '2 goals, frequency 6' means 6 matches with 2 goals each. That row holds 6 × 2 = 12 goals, not 6 and not 8.",
+   "The mode is the value that happens most often. Find the biggest frequency, then read across to its value. If 1 goal has frequency 10, the mode is 1 goal, not 10.",
+   "The median is the middle value in order. With n values, it is at place (n + 1) ÷ 2. For 30 matches that is 15.5, so it sits between the 15th and 16th values. Add up the frequencies down the table, a running total, until you pass that place. The middle row is not the median, because rows hold different numbers of values.",
+   "The mean is the total of all the values divided by how many there are. Multiply f × x for each row and add them up. Then divide by the total frequency. For goals with frequencies 7, 10, 6, 4 and 3, that is 46 ÷ 30 = 1.53 goals a match. Dividing by the 5 rows gives 9.2, which is more than any match had, so it must be wrong."
+  ],
+  "adult": [
+   "Ages 12 to 14. The National Curriculum for England (KS3 Statistics) asks pupils to describe and compare distributions using the mean, mode and median. GCSE content (S4) does the same from frequency tables. Key words: frequency, frequency table, mode, median, mean, total frequency, running total, f × x.",
+   "Facts used: all tables are made-up data chosen so the arithmetic is exact. Goals 0 to 4 with frequencies 7, 10, 6, 4, 3 give n = 30, total 46, mean 46 ÷ 30 = 1.53 (2 d.p.), median 1 (the 15th and 16th values) and mode 1. Books read with frequencies 2, 3, 4, 8, 4 give n = 21 and a median at the 11th value, 3 books, while the middle row is 2.",
+   "Common mistakes: giving the biggest frequency as the mode; taking the middle row as the median; giving (n + 1) ÷ 2 itself as the median instead of the value at that place; dividing the f × x total by the number of rows; adding f + x instead of multiplying; and not checking that the mean lies between the smallest and largest value. Pollatsek, Lima and Well (1981) found that even university students often average values without weighting them by frequency.",
+   "In the lab, pupils drop ten match results into a table. They tap the mode in two tables, where the frequency cell is a trap. They tap the middle place in a line of values written out in order. They fill the f × x column and pick the divisor. Last, they drag frequency bars and watch the mean, median and mode move."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Averages from frequency tables: goals 0, 1, 2, 3, 4 have frequencies 7, 10, 6, 4, 3. What is the mode?",
+   "choices": [
+    "1 goal",
+    "10",
+    "4 goals"
+   ],
+   "answer": 0,
+   "hint": "Find the biggest frequency, then read across to its value.",
+   "explain": "The biggest frequency is 10, in the 1 goal row, so the mode is 1 goal. 10 is how many matches, not the mode."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "In a frequency table, the row for {x} goals has frequency {f}. How many goals do those matches score altogether?",
+   "answer": "x*f",
+   "params": {
+    "x": [
+     2,
+     5
+    ],
+    "f": [
+     2,
+     9
+    ]
+   },
+   "hint": "Each of the {f} matches scored {x} goals. Multiply.",
+   "explain": "{f} × {x} = {=x*f} goals. Adding {f} + {x} would be the slip."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A table has {n} matches and the f × x column adds up to {=n*k} goals. What is the mean number of goals a match?",
+   "answer": "k",
+   "params": {
+    "n": [
+     10,
+     30
+    ],
+    "k": [
+     1,
+     3
+    ]
+   },
+   "hint": "Mean = total of f × x ÷ total frequency.",
+   "explain": "{=n*k} ÷ {n} = {k} goals a match. Divide by the number of matches, not the number of rows."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Pets 0, 1, 2, 3 have frequencies 4, 9, 5, 2, so n = 20. What is the median?",
+   "choices": [
+    "1 pet",
+    "1.5 pets",
+    "10"
+   ],
+   "answer": 0,
+   "hint": "(20 + 1) ÷ 2 = 10.5, so look at the 10th and 11th values. Use a running total: 4, 13, ...",
+   "explain": "The running total reaches 13 in the 1 pet row, so the 10th and 11th values are both 1. Median = 1 pet. 1.5 is the middle of the rows, and 10 is a place, not a value."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Goals 0 to 4 have frequencies 7, 10, 6, 4, 3 and the f × x total is 46. Jo says the mean is 46 ÷ 5 = 9.2. Why is she wrong?",
+   "choices": [
+    "She divided by the rows, not the 30 matches",
+    "She should add 46 and 5",
+    "She is right"
+   ],
+   "answer": 0,
+   "hint": "Can the mean be more than the biggest score, 4?",
+   "explain": "The mean is 46 ÷ 30 = 1.53. Dividing by 5 rows gives 9.2, more than any match had, so it cannot be right."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Shoe sizes 3, 4, 5, 6 have frequencies 2, 7, 9, 2. What is the mode?",
+    "choices": [
+     "Size 5",
+     "9",
+     "Size 6"
+    ],
+    "answer": 0,
+    "hint": "Which size has the biggest frequency?",
+    "explain": "Size 5 has the biggest frequency, 9, so the mode is size 5."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "A table shows 2 goals with frequency {a} and 3 goals with frequency {b}. What is the total of the f × x column?",
+    "answer": "2*a+3*b",
+    "params": {
+     "a": [
+      1,
+      6
+     ],
+     "b": [
+      1,
+      6
+     ]
+    },
+    "hint": "Work out f × x for each row, then add.",
+    "explain": "{a} × 2 + {b} × 3 = {=2*a+3*b} goals."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A table shows 0 goals with frequency {a} and 1 goal with frequency {b}. How many goals were scored altogether?",
+    "answer": "b",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "b": [
+      2,
+      8
+     ]
+    },
+    "hint": "How many goals does a 0 goals match add?",
+    "explain": "The 0 row adds {a} × 0 = 0 goals; the 1 row adds {b} × 1 = {b}. Total {b} goals, though there were {=a+b} matches."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Books read 0 to 4 have frequencies 2, 3, 4, 8, 4, so n = 21. What is the median?",
+    "choices": [
+     "3 books",
+     "2 books",
+     "11"
+    ],
+    "answer": 0,
+    "hint": "(21 + 1) ÷ 2 = 11. Running totals: 2, 5, 9, 17, ...",
+    "explain": "The running total passes 11 in the 3 books row, so the 11th value is 3. The middle row is 2 books, and 11 is the place."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Goals 0, 1, 2 have frequencies 3, 5, 2. What is the mean?",
+    "choices": [
+     "0.9 goals",
+     "3 goals",
+     "1 goal"
+    ],
+    "answer": 0,
+    "hint": "f × x total: 0 + 5 + 4. Total frequency: 3 + 5 + 2.",
+    "explain": "9 ÷ 10 = 0.9 goals. Dividing 9 by the 3 rows gives 3, and 1 goal is only the middle row."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Test scores go from 1 to 5. Which mean must be wrong?",
+    "choices": [
+     "6.2",
+     "3.4",
+     "1.8"
+    ],
+    "answer": 0,
+    "hint": "A mean lies between the smallest and largest value.",
+    "explain": "6.2 is bigger than the top score, 5, so it cannot be the mean. 3.4 and 1.8 are possible."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Why do we divide the f × x total by the total frequency?",
+    "choices": [
+     "It is how many values there are",
+     "It is the biggest number in the table",
+     "It is how many rows there are"
+    ],
+    "answer": 0,
+    "hint": "A mean shares the total equally between all the values.",
+    "explain": "The total frequency counts every value, so total ÷ total frequency shares the total equally between them."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "The mean of a goals table is 1.53, but no match had 1.53 goals. Is that a problem?",
+    "choices": [
+     "No, a mean can be a value no one had",
+     "Yes, it must be a whole number",
+     "Yes, it must be in the table"
+    ],
+    "answer": 0,
+    "hint": "Think of the mean as sharing the goals out equally.",
+    "explain": "A mean shares the total equally, so it can be a decimal like 1.53 that no single match scored."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Row: 3 goals, frequency 4. How many goals does this row add to the total?",
+    "choices": [
+     "12",
+     "4",
+     "7"
+    ],
+    "answer": 0,
+    "hint": "4 matches each scored 3 goals.",
+    "explain": "4 × 3 = 12 goals. 4 is only the number of matches, and 7 adds instead of multiplying."
+   }
+  ]
+ }
+}
