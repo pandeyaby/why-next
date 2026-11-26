@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_aHAM29nidj",
+ "title": "Counting in 3s, forwards and backwards",
+ "audience": "family",
+ "keyIdea": "Counting in 3s means adding 3 each time: 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. On a number track, each hop goes over two numbers and lands on the third. You do not count the number you start on. Counting backwards in 3s takes 3 away each time: 30, 27, 24, 21 and so on, back to 0. When you count groups of 3, such as the wheels on tricycles, the last number you say is how many things there are, not how many groups. Only the numbers you say are in the 3s count: 12, 21 and 27 are, but 13, 20 and 23 are not, even though 13 and 23 end in 3.",
+ "familyTip": "Count stairs in 3s together: say the numbers quietly for two steps and loudly on every third step: 1, 2, THREE, 4, 5, SIX. Then try it going back down from 30. Ask: if we are on 15 and go down 3 steps, where do we land?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Count in 3s from 0. Do you say each number? Drag each card into a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "I say it in the 3s",
+    "I skip it"
+   ],
+   "items": [
+    [
+     "9",
+     0
+    ],
+    [
+     "16",
+     1
+    ],
+    [
+     "18",
+     0
+    ],
+    [
+     "13",
+     1
+    ],
+    [
+     "30",
+     0
+    ],
+    [
+     "22",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagthrees",
+  "caption": "Flagship lab: hop a frog in 3s to 30 and back, fill gaps in 3s lines, count tricycle wheels in 3s, and sort numbers the frog lands on.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Counting in 3s means you add 3 each time. Say it with me: 0, 3, 6, 9, 12, 15. Each number is 3 more than the one before.",
+   "On a number track, a hop of 3 goes over two stones and lands on the third. Do not count the stone you start on. From 6, say 7, 8, 9. You land on 9.",
+   "Counting back in 3s takes 3 away each time. The numbers get smaller: 30, 27, 24, 21. From 18, a hop back lands on 15.",
+   "A tricycle has 3 wheels. To count the wheels on 4 tricycles, say 3, 6, 9, 12. The last number is how many wheels: 12. It is not 4. 4 is how many tricycles. Not every number is in the 3s count. You say 12 and 21. You do not say 13 or 23, even though they end in 3."
+  ],
+  "adult": [
+   "Ages 6 to 7. The National Curriculum for England (Year 2, Number and place value) asks children to count in steps of 2, 3 and 5 from 0, and in tens from any number, forward and backward. Key words: count on, count back, steps of 3, multiples of 3, number track, sequence.",
+   "Counting in 3s is the bridge from counting in 1s to the 3 times table. Each number said is a multiple of 3, and counting in 3s is a quick way to count equal groups of 3. Year 3 then moves on to counting in 4s, 8s, 50s and 100s.",
+   "Common mistakes: counting on in 1s or 2s instead of 3s; counting the start number as the first step, so a hop of 3 from 9 lands on 11; going up instead of down when counting back; thinking any number ending in 3, such as 13 or 23, is in the 3s count; and giving the number of groups instead of the total when counting groups of 3.",
+   "In the lab, children hop a frog in 3s along a number track from 0 to 30 and back again, with feedback that names the slip when a hop is the wrong size or goes the wrong way. They fill gaps in a forward and a backward 3s line, count the wheels on 6 tricycles in 3s, and sort numbers into those the frog lands on and those it hops over."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Counting in 3s, forwards and backwards: count in 3s from 0. What comes after 9?",
+   "choices": [
+    "12",
+    "10",
+    "13"
+   ],
+   "answer": 0,
+   "hint": "Add 3 to 9. Count on 3: 10, 11, ...",
+   "explain": "9 + 3 = 12. Counting 10, 11, 12 lands on 12. 10 is counting in 1s, and 13 is a hop of 4."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Count in 3s. The frog is on {=3*k}. It hops 3 more. Where does it land?",
+   "answer": "3*k+3",
+   "params": {
+    "k": [
+     1,
+     8
+    ]
+   },
+   "hint": "Count on 3 from {=3*k}. Do not count the stone it is on.",
+   "explain": "{=3*k} + 3 = {=3*k+3}. A hop of 3 goes over two stones and lands on the third."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "Count back in 3s. The frog is on {=3*k}. It hops back 3. Where does it land?",
+   "answer": "3*k-3",
+   "params": {
+    "k": [
+     2,
+     10
+    ]
+   },
+   "hint": "Counting back makes the number smaller. Take 3 away from {=3*k}.",
+   "explain": "{=3*k} − 3 = {=3*k-3}. Counting back goes to smaller numbers."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "There are {t} tricycles. Each one has 3 wheels. Count the wheels in 3s. How many wheels are there?",
+   "answer": "3*t",
+   "params": {
+    "t": [
+     2,
+     7
+    ]
+   },
+   "hint": "Say one number for each tricycle: 3, 6, 9, ... Stop after {t} numbers.",
+   "explain": "Counting {t} threes ends on {=3*t}, so there are {=3*t} wheels. {t} is how many tricycles, not wheels."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Count in 3s from 0. Which number do you say?",
+   "choices": [
+    "21",
+    "23",
+    "20"
+   ],
+   "answer": 0,
+   "hint": "Say the count: 15, 18, ... Which one do you reach?",
+   "explain": "15, 18, 21, 24. You say 21. 23 ends in 3, but it is not in the 3s count."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Fill the gap in the 3s count: 3, 6, __, 12.",
+    "choices": [
+     "9",
+     "8",
+     "10"
+    ],
+    "answer": 0,
+    "hint": "What is 6 + 3? Count on 3 from 6: 7, 8, ...",
+    "explain": "6 + 3 = 9, and 9 + 3 = 12. Each number is 3 more than the one before."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Count back in 3s: 24, 21, 18, ... What comes next?",
+    "choices": [
+     "15",
+     "21",
+     "16"
+    ],
+    "answer": 0,
+    "hint": "Counting back takes 3 away each time.",
+    "explain": "18 − 3 = 15. Going up to 21 is counting the wrong way."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Tom hops 3 from 12 on a number track. He says 12, 13, 14 and lands on 14. What went wrong?",
+    "choices": [
+     "He counted the start number, 12",
+     "He hopped too far",
+     "Nothing, 14 is right"
+    ],
+    "answer": 0,
+    "hint": "Which stones should he say as he hops?",
+    "explain": "Do not count the number you start on. From 12, say 13, 14, 15. He should land on 15."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Count in 3s from 0. Do you say 13?",
+    "choices": [
+     "No, the count goes 12, 15",
+     "Yes, it ends in 3",
+     "Yes, it is odd"
+    ],
+    "answer": 0,
+    "hint": "Say the count: 9, 12, ... What comes after 12?",
+    "explain": "The count goes 9, 12, 15, so 13 is hopped over. Ending in 3 does not make a number a 3s number."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "{s} stools have 3 legs each. Count the legs in 3s. How many legs?",
+    "answer": "3*s",
+    "hint": "Say one number for each stool: 3, 6, 9, ... Stop after {s} numbers.",
+    "explain": "Counting {s} threes ends on {=3*s}, so there are {=3*s} legs. {s} is how many stools, not legs.",
+    "params": {
+     "s": [
+      3,
+      8
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Fill the gap in the 3s count back: 30, 27, __, 21.",
+    "choices": [
+     "24",
+     "26",
+     "28"
+    ],
+    "answer": 0,
+    "hint": "What is 27 − 3? Count back 3 from 27: 26, 25, ...",
+    "explain": "27 − 3 = 24, and 24 − 3 = 21. Counting back makes each number 3 smaller."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Count in 3s from 0 to {=3*h}. How many hops of 3 does the frog make?",
+    "answer": "h",
+    "hint": "Count the hops: 3 is one hop, 6 is two hops, 9 is three hops, ...",
+    "explain": "{h} threes make {=3*h}, so the frog makes {h} hops of 3 to reach {=3*h}.",
+    "params": {
+     "h": [
+      4,
+      10
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Which line counts in 3s?",
+    "choices": [
+     "4, 7, 10, 13",
+     "4, 6, 8, 10",
+     "4, 5, 6, 7"
+    ],
+    "answer": 0,
+    "hint": "Check the jump from each number to the next.",
+    "explain": "4, 7, 10, 13 goes up 3 each time. The others go up 2 or 1 each time."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "The frog is on 15 and hops back 3. Where does it land?",
+    "choices": [
+     "12",
+     "18",
+     "13"
+    ],
+    "answer": 0,
+    "hint": "Back means smaller. Say 14, 13, ...",
+    "explain": "From 15, say 14, 13, 12. It lands on 12. 18 is a hop forward, and 13 is a hop of 2."
+   }
+  ]
+ }
+}
