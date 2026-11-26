@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_0h9V9gE_Nl",
+ "title": "Estimating the mean from grouped data",
+ "audience": "learner",
+ "keyIdea": "When data is grouped into classes such as 150 ≤ h < 160, the exact values are lost, so you can only estimate the mean. Use the midpoint of each class, halfway between its boundaries, to stand for every value in it. Multiply each frequency by its midpoint, add these f × midpoint values, and divide by the total frequency, not the number of classes. The answer is an estimate because the real values in a class may sit low or high in it rather than balancing around the midpoint. The modal class is the class with the biggest frequency, and the median class is the one that holds the middle value, found with a running total. A sensible estimate always lies inside the range of the classes.",
+ "familyTip": "Time how long five family members take to brush their teeth, then group the times into classes such as 0 to 1 minute and 1 to 2 minutes. Estimate the mean from the groups using midpoints, then work out the real mean from the exact times. How close was the estimate, and why is it not exact?",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Grouped data: is each step right, or a common slip? Drag each card into a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Right step",
+    "Common slip"
+   ],
+   "items": [
+    [
+     "Use 155 for the class 150 ≤ h < 160",
+     0
+    ],
+    [
+     "Use 150 for the class 150 ≤ h < 160",
+     1
+    ],
+    [
+     "Divide the f × midpoint total by the total frequency",
+     0
+    ],
+    [
+     "Divide the f × midpoint total by the number of classes",
+     1
+    ],
+    [
+     "Modal class: the class with the biggest frequency",
+     0
+    ],
+    [
+     "Median class: the middle row of the table",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaggmean",
+  "caption": "Flagship lab: pick class midpoints, build the f × midpoint column, slide pupils to see why it is an estimate, and find the modal and median classes.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Grouped data puts values into classes. The class 150 ≤ h < 160 holds every height from 150 cm up to, but not including, 160 cm. The table tells you how many pupils are in each class. It does not tell you their exact heights.",
+   "To estimate the mean, pick one value to stand for each class. Use the midpoint, halfway between the class boundaries. For 150 ≤ h < 160 the midpoint is (150 + 160) ÷ 2 = 155. The lower boundary, 150, would be too low for most pupils.",
+   "Next, multiply each frequency by its midpoint. Add up this f × midpoint column. Then divide by the total frequency, which is how many pupils there are. For 30 pupils with a total of 4780, the estimate is 4780 ÷ 30 = 159.3 cm. Dividing by the 5 classes gives 956 cm, which is clearly impossible.",
+   "The answer is only an estimate. The midpoint assumes the heights in a class balance out around the middle, but they might all be near the bottom or the top. The modal class has the biggest frequency. The median class holds the middle value: use a running total to find it, because the middle row is not always the median class."
+  ],
+  "adult": [
+   "Ages 13 to 15. The National Curriculum for England (KS3 Statistics) asks pupils to describe and compare distributions using measures of central tendency, and GCSE Mathematics (DfE 2013, S3 and S4) adds grouped frequency tables, the modal class and estimating the mean from grouped data using midpoints. Key words: class, class boundary, class width, midpoint, frequency, total frequency, f × midpoint, estimate, modal class, median class, running total.",
+   "Facts used: heights of 30 pupils are made-up data with classes 130 to 180 cm, frequencies 2, 5, 6, 12 and 5 and midpoints 135 to 175. The f × midpoint values are 270, 725, 930, 1980 and 875, which total 4780, so the estimate is 4780 ÷ 30 = 159.3 cm to 1 d.p. Running totals are 2, 7, 13, 25 and 30, so the 15th and 16th heights, and the median, lie in 160 ≤ h < 170, which is also the modal class. If all 12 pupils in that class were 161 cm, the true mean would be 157.7 cm; at 169 cm it would be 160.9 cm.",
+   "Common mistakes: using a class boundary, or the class width, instead of the midpoint; dividing by the number of classes instead of the total frequency; stopping at the f × midpoint total; believing the estimate is the exact mean; giving the biggest frequency itself as the modal class; taking the middle row as the median class; and not checking that the estimate lies inside the range of the classes. Watson and Moritz (2000) report that many secondary pupils compute means by rote without asking whether the answer is sensible.",
+   "In the lab, pupils place a pin at the value that stands for each class, with feedback when they choose a boundary. They fill the f × midpoint column and choose the divisor. They drag the 12 pupils in one class to its lowest and highest ends and watch the true mean move while the estimate stays fixed. Then they tap the modal class and the median class using a running total, and drag histogram bars to push the estimate above 165 cm and below 145 cm."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Estimating the mean from grouped data: what midpoint do you use for the class 150 ≤ h < 160?",
+   "choices": [
+    "155",
+    "150",
+    "10"
+   ],
+   "answer": 0,
+   "hint": "Find the value halfway between the two class boundaries.",
+   "explain": "(150 + 160) ÷ 2 = 155. 150 is the lower boundary and 10 is the class width; neither stands for the middle of the class."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A class is {a} ≤ t < {=a+10} minutes. What is its midpoint in minutes?",
+   "answer": "a+5",
+   "params": {
+    "a": [
+     10,
+     60
+    ]
+   },
+   "hint": "Add the two boundaries and halve the total.",
+   "explain": "({a} + {=a+10}) ÷ 2 = {=a+5} minutes, halfway between the boundaries."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "A grouped table has total frequency {n} and the f × midpoint column adds up to {=n*k}. Estimate the mean.",
+   "answer": "k",
+   "params": {
+    "n": [
+     20,
+     40
+    ],
+    "k": [
+     12,
+     30
+    ]
+   },
+   "hint": "Estimated mean = total of f × midpoint ÷ total frequency.",
+   "explain": "{=n*k} ÷ {n} = {k}. Divide by the total frequency, not by the number of classes."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "In a grouped table, the class 20 ≤ m < 30 has frequency {f}. What is its f × midpoint value?",
+   "answer": "25*f",
+   "params": {
+    "f": [
+     2,
+     12
+    ]
+   },
+   "hint": "Find the midpoint of 20 to 30 first, then multiply by the frequency.",
+   "explain": "The midpoint is 25, so f × midpoint = {f} × 25 = {=25*f}."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why is a mean worked out from a grouped frequency table only an estimate?",
+   "choices": [
+    "The exact values inside each class are not known",
+    "The midpoints have to be rounded",
+    "You divide by the number of classes"
+   ],
+   "answer": 0,
+   "hint": "What information does grouping the data throw away?",
+   "explain": "Grouping loses the exact values. The midpoint is used as a stand-in for every value in a class, so the result is an estimate."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Frequencies are 4, 11, 9 and 6 for the classes 0–10, 10–20, 20–30 and 30–40. What is the modal class?",
+    "choices": [
+     "10–20",
+     "11",
+     "20–30"
+    ],
+    "answer": 0,
+    "hint": "Find the biggest frequency, then read across to its class.",
+    "explain": "The biggest frequency is 11, in the class 10–20, so that is the modal class. 11 is a frequency, not a class."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Classes 0–10, 10–20, 20–30, 30–40 and 40–50 have frequencies 1, 2, 3, 10 and 4 (20 values). Which class holds the median?",
+    "choices": [
+     "30–40",
+     "20–30",
+     "40–50"
+    ],
+    "answer": 0,
+    "hint": "The median is at place (20 + 1) ÷ 2 = 10.5. Keep a running total.",
+    "explain": "Running totals are 1, 3, 6, 16, 20. The 10th and 11th values are in 30–40. The middle row, 20–30, ends at only 6."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "Times are grouped as 0 ≤ t < 10 (f = {a}) and 10 ≤ t < 20 (f = {b}). What is the total of the f × midpoint column?",
+    "answer": "5*a+15*b",
+    "params": {
+     "a": [
+      2,
+      8
+     ],
+     "b": [
+      2,
+      8
+     ]
+    },
+    "hint": "The midpoints are 5 and 15. Multiply each by its frequency, then add.",
+    "explain": "{a} × 5 + {b} × 15 = {=5*a+15*b}."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "A grouped table of {n} values has an f × midpoint total of {=n*m}. Estimate the mean.",
+    "answer": "m",
+    "params": {
+     "n": [
+      10,
+      50
+     ],
+     "m": [
+      40,
+      80
+     ]
+    },
+    "hint": "Divide the f × midpoint total by the total frequency.",
+    "explain": "{=n*m} ÷ {n} = {m}. That is an estimate, because the exact values are unknown."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Masses are grouped from 40 kg to 90 kg. Sam estimates the mean as 112 kg. What does this show?",
+    "choices": [
+     "He made a mistake: the mean must lie between 40 and 90 kg",
+     "The heaviest class has the most values",
+     "Grouped means can be above the range"
+    ],
+    "answer": 0,
+    "hint": "Can a mean be bigger than every value in the data?",
+    "explain": "A mean always lies between the smallest and largest values, so 112 kg is impossible. He probably divided by the number of classes."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "In the class 160 ≤ h < 170, all 12 heights are really 169 cm. Compared with the true mean, the midpoint estimate is…",
+    "choices": [
+     "Too low",
+     "Too high",
+     "Exactly right"
+    ],
+    "answer": 0,
+    "hint": "Is 165 above or below the real heights in that class?",
+    "explain": "The estimate counts those 12 pupils at 165 cm, below their real 169 cm, so it comes out too low."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Ali divides the f × midpoint total by 5 because the table has 5 classes. What should he divide by?",
+    "choices": [
+     "The total frequency",
+     "The class width",
+     "The biggest frequency"
+    ],
+    "answer": 0,
+    "hint": "The mean shares the total out between how many values?",
+    "explain": "The mean shares the total equally between all the values, so divide by the total frequency, the number of values."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "What is the midpoint of the class 2.5 ≤ x < 3.0?",
+    "choices": [
+     "2.75",
+     "2.5",
+     "0.5"
+    ],
+    "answer": 0,
+    "hint": "Add the boundaries and halve: (2.5 + 3.0) ÷ 2.",
+    "explain": "(2.5 + 3.0) ÷ 2 = 2.75. 2.5 is the lower boundary and 0.5 is the class width."
+   }
+  ]
+ }
+}
