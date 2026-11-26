@@ -16,3 +16,4 @@ import src_young21  # noqa: F401  (wave 21: young PSD spending and saving, needs
 import src_young22  # noqa: F401  (wave 22: young English writing instructions)
 import src_young23  # noqa: F401  (wave 23: young PSD screen time, knowing when to switch off)
 import src_young24  # noqa: F401  (wave 24: young English answering why questions with because)
+import src_young25  # noqa: F401  (wave 25: young Learning to Learn same and different, comparing two things)
