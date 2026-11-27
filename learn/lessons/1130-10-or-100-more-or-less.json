@@ -1,0 +1,288 @@
+{
+ "topicId": "mt_izien3ZX51",
+ "title": "10 or 100 more or less",
+ "audience": "family",
+ "keyIdea": "In a three-digit number, the hundreds digit counts hundreds, the tens digit counts tens and the ones digit counts ones. To find 10 more, add 1 to the tens digit: 10 more than 342 is 352. To find 10 less, take 1 from the tens digit: 10 less than 342 is 332. To find 100 more or 100 less, change the hundreds digit by 1: 100 more than 342 is 442, and 100 less is 242. The other digits stay the same. A column can hold at most 9, so when the tens go past 9, 10 tens make 1 hundred: 10 more than 395 is 405. When there are no tens to take, change 1 hundred into 10 tens first: 10 less than 503 is 493.",
+ "familyTip": "Play 'Up and down the lift' on a walk: say a number such as 360. One person says 'up 10' or 'down 100' and the other says the new number. Try numbers near a hundred too, like 395 up 10, or 503 down 10.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it 10 more or 100 more? Drag each card into a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "10 more",
+    "100 more"
+   ],
+   "items": [
+    [
+     "215 to 225",
+     0
+    ],
+    [
+     "215 to 315",
+     1
+    ],
+    [
+     "690 to 700",
+     0
+    ],
+    [
+     "380 to 480",
+     1
+    ],
+    [
+     "804 to 814",
+     0
+    ],
+    [
+     "199 to 299",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagtenmore",
+  "caption": "Flagship lab: add ten rods and take hundred flats, swap 10 tens for 1 hundred, fill a cross around 507, and sort changes by size.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A number like 342 is 3 hundreds, 4 tens and 2 ones. Each digit has its own place. 10 more means one more ten. Only the tens digit goes up. 342 and 10 more is 352. 10 less means one ten fewer, so 342 becomes 332.",
+   "100 more means one more hundred. Only the hundreds digit changes. 100 more than 342 is 442. 100 less than 342 is 242.",
+   "A place can hold 9 at most. 395 has 9 tens. Add one more ten and you have 10 tens. 10 tens make 1 hundred, so 395 and 10 more is 405.",
+   "Look at how much a number changed, not just which digit moved. 129 to 130 changes two digits, but it is only 1 more."
+  ],
+  "adult": [
+   "Ages 7 to 8. The National Curriculum for England (Year 3, Number and place value) asks children to find 10 or 100 more or less than a given number and to know the place value of each digit in a three-digit number. Common Core 2.NBT.8 asks for the same mentally for numbers 100 to 900. Key words: place value, hundreds, tens, ones, digit, more, less, exchange (regroup).",
+   "The idea is that adding 10 adds one unit to the tens place and adding 100 adds one unit to the hundreds place, so the other digits do not change. That is why it can be done in the head without written methods. It is the base for mental addition and subtraction of tens and hundreds, and for counting on in 10s or 100s from any number.",
+   "Common mistakes: changing the ones digit (342 + 10 written as 343); changing the wrong place (442); going up when asked for less; and missing the exchange when a column passes 9 or has nothing to take, writing 395 + 10 as 3105 or 305, or 503 - 10 as 403. Another slip is reading the size of a change from the digit that moved: 598 to 608 changes the hundreds digit but is only 10 more.",
+   "In the lab, children add ten rods to 342 and see only the tens digit move, take hundred flats from 875, and add tens to 386 until 10 rods must be swapped for 1 flat. They then fill a cross of 10 less, 10 more, 100 less and 100 more around 507, and sort six changes by whether they were 1, 10 or 100."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "10 or 100 more or less: what is 10 more than 342?",
+   "choices": [
+    "352",
+    "343",
+    "442"
+   ],
+   "answer": 0,
+   "hint": "10 more is one more ten. Which digit counts the tens?",
+   "explain": "342 has 4 tens. One more ten makes 5 tens, so 352. 343 is 1 more, and 442 is 100 more."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is 100 more than {=100*h+10*t+o}?",
+   "answer": "100*h+10*t+o+100",
+   "params": {
+    "h": [
+     1,
+     8
+    ],
+    "t": [
+     0,
+     9
+    ],
+    "o": [
+     0,
+     9
+    ]
+   },
+   "hint": "Only the hundreds digit changes. Add 1 to it.",
+   "explain": "{=100*h+10*t+o} has {h} hundreds. 100 more makes {=h+1} hundreds, so the answer is {=100*h+10*t+o+100}. The tens and ones stay the same."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What is 10 less than {=100*h+10*t+o}?",
+   "answer": "100*h+10*t+o-10",
+   "params": {
+    "h": [
+     1,
+     9
+    ],
+    "t": [
+     1,
+     9
+    ],
+    "o": [
+     0,
+     9
+    ]
+   },
+   "hint": "10 less is one ten fewer. Take 1 from the tens digit.",
+   "explain": "{=100*h+10*t+o} has {t} tens. One ten fewer leaves {=t-1} tens, so the answer is {=100*h+10*t+o-10}."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "What is 10 more than 395?",
+   "choices": [
+    "405",
+    "3105",
+    "305"
+   ],
+   "answer": 0,
+   "hint": "395 has 9 tens. What do 10 tens make?",
+   "explain": "9 tens and 1 more ten make 10 tens, which is 1 hundred. So the hundreds go from 3 to 4 and the tens go to 0: 405."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A shop has {=100*h+50} pencils. It sells 100 of them. How many pencils are left?",
+   "answer": "100*h+50-100",
+   "params": {
+    "h": [
+     2,
+     9
+    ]
+   },
+   "hint": "Selling 100 means 100 less. Which digit changes?",
+   "explain": "100 less than {=100*h+50} is {=100*h-50}. Only the hundreds digit goes down by 1."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What is 100 less than 640?",
+    "choices": [
+     "540",
+     "740",
+     "630"
+    ],
+    "answer": 0,
+    "hint": "Less makes the number smaller. 100 less changes the hundreds digit.",
+    "explain": "640 has 6 hundreds. One hundred fewer leaves 5 hundreds: 540. 740 is 100 more, and 630 is 10 less."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "What is 10 less than 503?",
+    "choices": [
+     "493",
+     "403",
+     "513"
+    ],
+    "answer": 0,
+    "hint": "503 has 0 tens. Change 1 hundred into 10 tens first.",
+    "explain": "503 is 5 hundreds, 0 tens, 3 ones, which is the same as 4 hundreds, 10 tens, 3 ones. Take 1 ten: 4 hundreds, 9 tens, 3 ones, so 493. 403 is 100 less."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Mia says 10 more than 268 is 269. What went wrong?",
+    "choices": [
+     "She added 1, not 10",
+     "She added 100",
+     "Nothing, 269 is right"
+    ],
+    "answer": 0,
+    "hint": "Which digit did she change? Which digit counts tens?",
+    "explain": "She changed the ones digit, so she added 1. 10 more changes the tens digit: 268 becomes 278."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "What is 10 more than {=100*h+10*t+o}?",
+    "answer": "100*h+10*t+o+10",
+    "params": {
+     "h": [
+      1,
+      9
+     ],
+     "t": [
+      0,
+      8
+     ],
+     "o": [
+      0,
+      9
+     ]
+    },
+    "hint": "One more ten. Add 1 to the tens digit.",
+    "explain": "{=100*h+10*t+o} has {t} tens. One more ten makes {=t+1} tens, so the answer is {=100*h+10*t+o+10}."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "Which change is 10 more?",
+    "choices": [
+     "598 to 608",
+     "598 to 599",
+     "598 to 698"
+    ],
+    "answer": 0,
+    "hint": "Work out each change. Do not just look at which digit moved.",
+    "explain": "598 + 10 = 608, because 9 tens and 1 ten make a new hundred. 598 to 599 is 1 more, and 598 to 698 is 100 more."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "What is 100 more than 900?",
+    "choices": [
+     "1000",
+     "910",
+     "9100"
+    ],
+    "answer": 0,
+    "hint": "9 hundreds and 1 more hundred make 10 hundreds. What is that called?",
+    "explain": "10 hundreds make 1000. 910 is 10 more, and 9100 comes from writing 10 hundreds in one place."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "{=100*h+10*t+5} is 100 more than a number. What is the number?",
+    "answer": "100*h+10*t+5-100",
+    "params": {
+     "h": [
+      2,
+      9
+     ],
+     "t": [
+      0,
+      9
+     ]
+    },
+    "hint": "The number is 100 less. Take 1 from the hundreds digit.",
+    "explain": "The number is 100 less than {=100*h+10*t+5}, which is {=100*h+10*t+5-100}. Only the hundreds digit changes."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "In 472, which digit changes when you find 100 less?",
+    "choices": [
+     "The 4",
+     "The 7",
+     "The 2"
+    ],
+    "answer": 0,
+    "hint": "Which digit counts the hundreds?",
+    "explain": "The 4 counts hundreds, so 100 less is 372. The 7 tens and 2 ones stay the same."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A jar has 284 beads. Sam puts in 10 more. How many beads now?",
+    "choices": [
+     "294",
+     "285",
+     "384"
+    ],
+    "answer": 0,
+    "hint": "10 more is one more ten. Add 1 to the tens digit of 284.",
+    "explain": "284 has 8 tens. One more ten makes 9 tens: 294. 285 is 1 more, and 384 is 100 more."
+   }
+  ]
+ }
+}
