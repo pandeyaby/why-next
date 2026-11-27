@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_cXKl97_HPd",
+ "title": "If I get lost: stop, stay and ask a safe helper",
+ "audience": "family",
+ "keyIdea": "If you get lost, stop. Do not run off to look, and stay inside the shop, park or zoo: never go out to the car park, the gate or the road. Ask a safe helper near you: a person who works there, at the till or with a name badge, a police officer, or a mum or dad with children. Tell them your name and your grown-up's name, and show the phone number on your wristband. Then stay with the helper. Never go off with anyone, even if they say they know where your grown-up is.",
+ "familyTip": "Before a busy trip, write your phone number on a wristband or a card in your child's pocket, and agree the plan: if you get lost, stop and go to the till. In the shop, play 'Who could help?' and let your child point to someone who works there.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Could they help if you are lost? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Safe helper",
+    "Not a helper"
+   ],
+   "items": [
+    [
+     "Person at the till",
+     0
+    ],
+    [
+     "A dog",
+     1
+    ],
+    [
+     "Police officer",
+     0
+    ],
+    [
+     "The car park",
+     1
+    ],
+    [
+     "Mum with her children",
+     0
+    ],
+    [
+     "A hiding place",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglost",
+  "caption": "Flagship lab: stop and stay, drag a lost child to a safe helper, say who you are, stay with the helper and get ready for a busy trip.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Oh no, you cannot see your grown-up! First, stop. Do not run off to look. Stay inside the shop or the park.",
+   "Find a safe helper. A person who works there can help. Look at the till, or for a name badge. A police officer can help, and so can a mum or dad with children.",
+   "Tell the helper your name and your grown-up's name. Show the number on your wristband. Then the helper can call your grown-up.",
+   "Stay with the helper. Some people may say, come with me. Say no. Wait with the helper until your grown-up comes."
+  ],
+  "adult": [
+   "Ages 4 to 5. This is part of keeping safe in the PSHE Association Programme of Study (2020), Key Stage 1: knowing the people whose job it is to help keep us safe. DfE Relationships Education guidance (2019) asks children to learn how to ask for help and to keep trying until they are heard. Key words: lost, safe helper, stay, uniform, name badge, till.",
+   "The advice follows NCMEC KidSmartz and Kidpower. A lost child should stop rather than wander, because a moving child is harder to find. In a shop, the best helper is a person who works there, at the till or the checkout. Out of doors, a parent with children is usually a safe choice. A child should never go out to the car park or the road, and should stay with the helper until the grown-up comes.",
+   "Common mistakes: running off to look; hiding because they feel scared or think they are in trouble; going outside to the car; giving no names because they are shy; and going off with someone who says they know where the grown-up is. Be careful not to make every stranger sound frightening. Most adults will help, and a child needs to feel brave enough to ask one.",
+   "In the lab your child chooses the first move in a shop, a park and a zoo, then drags a lost child to a safe helper. They pick what to tell the helper and decide what to do when someone says come with me. Last, they get ready for a busy trip. Each wrong turn gets its own reply that says what the slip was."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "If I get lost in a shop, what is the first thing to do?",
+   "choices": [
+    "Stop and stay in the shop",
+    "Run off to look for my grown-up",
+    "Go out to the car park"
+   ],
+   "answer": 0,
+   "hint": "Think about being easy to find. Does running help?",
+   "explain": "Stop and stay inside. If you run off, your grown-up will find it harder to see you."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A shop has {n} tills. One person works at each till. How many people at the tills could help a lost child?",
+   "answer": "n",
+   "params": {
+    "n": [
+     2,
+     6
+    ]
+   },
+   "hint": "One till has one person. Count the tills.",
+   "explain": "There are {n} tills with one person at each, so {n} people. Each of them is a safe helper."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Who is a safe helper in a shop?",
+   "choices": [
+    "A person at the till with a name badge",
+    "A dog by the door",
+    "Nobody, so I hide"
+   ],
+   "answer": 0,
+   "hint": "Who works in the shop? Look at the till.",
+   "explain": "A person who works in the shop can help. Look at the till, or for a name badge."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "{n} people work at the tills. Then 1 police officer walks in. How many safe helpers are there now?",
+   "answer": "n+1",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   },
+   "hint": "Count the people at the tills, then count 1 more.",
+   "explain": "{n} people at the tills and 1 police officer make {=n+1} safe helpers."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "A man says, \"Come to my car. I will find your mum.\" What do you do?",
+   "choices": [
+    "Say no and stay with the helper",
+    "Go with him to his car",
+    "Run out to the car park"
+   ],
+   "answer": 0,
+   "hint": "Do we ever go off with someone we do not know?",
+   "explain": "Never go off with anyone, even if they say they know your mum. Say no and stay inside with the helper."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You are lost in the park. Where do you stay?",
+    "choices": [
+     "In the park, near a helper",
+     "Out on the road",
+     "Deep in the bushes"
+    ],
+    "answer": 0,
+    "hint": "Is the road safe? Can anyone see you in the bushes?",
+    "explain": "Stay in the park where people can see you, and ask a safe helper."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The helper asks, \"Who are you with?\" What is a good answer?",
+    "choices": [
+     "My dad. His name is Tom.",
+     "I like trains.",
+     "Say nothing at all."
+    ],
+    "answer": 0,
+    "hint": "What does the helper need to know to find your grown-up?",
+    "explain": "Say who you are with and their name. Then the helper can look for them or call them."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "What can help a helper call your grown-up fast?",
+    "choices": [
+     "A wristband with the phone number",
+     "A big bag of sweets",
+     "A toy car"
+    ],
+    "answer": 0,
+    "hint": "What does a helper need to make a phone call?",
+    "explain": "A phone number on a wristband or a card lets the helper call your grown-up straight away."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Leo is lost, so he hides under a shelf. What was his slip?",
+    "choices": [
+     "If you hide, nobody can find or help you",
+     "Nothing, hiding is right",
+     "He should hide outside"
+    ],
+    "answer": 0,
+    "hint": "Can a helper see him under the shelf?",
+    "explain": "Hiding makes you hard to find. Stay where people can see you, and ask a safe helper."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "At a busy fair, {n} lost children wait with a helper at the desk. Then 1 mum comes for her child. How many children are still waiting?",
+    "answer": "n-1",
+    "hint": "Start with {n} children. One goes home. Count back 1.",
+    "explain": "{n} children and 1 goes home with her mum, so {=n-1} are still waiting. They stay with the helper until their grown-up comes.",
+    "params": {
+     "n": [
+      2,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "A lady says, \"Your mum is outside. Come with me.\" What do you do?",
+    "choices": [
+     "Say no and stay inside with the helper",
+     "Go outside with her",
+     "Go out on my own to look"
+    ],
+    "answer": 0,
+    "hint": "Do we go off with anyone? Do we go outside?",
+    "explain": "Never go off with anyone, and stay inside. The helper will call your mum, and she will come to you."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "At the zoo, {n} zoo keepers in uniform are near the gate. Then 2 more come. How many zoo keepers now?",
+    "answer": "n+2",
+    "params": {
+     "n": [
+      1,
+      5
+     ]
+    },
+    "hint": "Count the keepers you have, then count on 2 more.",
+    "explain": "{n} keepers and 2 more make {=n+2}. A zoo keeper in uniform is a safe helper at the zoo."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Why is it a slip to run on ahead in a busy shop?",
+    "choices": [
+     "Running ahead is how children get lost",
+     "It is not a slip, it is fun",
+     "Shops are always empty"
+    ],
+    "answer": 0,
+    "hint": "What happens if you cannot see your grown-up any more?",
+    "explain": "Running ahead is how children get lost. In busy places, stay close to your grown-up."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Sam is lost and starts to cry. Is that OK?",
+    "choices": [
+     "Yes, then he asks a safe helper",
+     "No, so he hides",
+     "No, so he runs home alone"
+    ],
+    "answer": 0,
+    "hint": "Feeling scared is normal. What helps next?",
+    "explain": "Feeling scared is OK. Take a breath, then ask a safe helper and stay with them."
+   }
+  ]
+ }
+}
