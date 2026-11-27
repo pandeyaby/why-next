@@ -1,0 +1,259 @@
+{
+ "topicId": "mt_ktTiQ3a67G",
+ "title": "Remembering where things are: look, say, check",
+ "audience": "family",
+ "keyIdea": "To remember where a thing is, look, say, check. Look: take a good long look while it is put away, not a quick peek. Say: say the place out loud with a place word and a thing you can see, like under the red cup or by the door. Keep saying it while you wait. Check: look again, and if you were wrong, look and say it again. A thing that always goes back to the same home is the easiest to find.",
+ "familyTip": "Play the cup game: hide a small toy under one of three cups while your child watches. Ask them to say where it is, count to five together, then let them find it. Back home, give shoes, coat and books one home each and say it together: shoes by the door.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it help you remember, or is it easy to forget? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Helps me remember",
+    "Easy to forget"
+   ],
+   "items": [
+    [
+     "A good long look",
+     0
+    ],
+    [
+     "A quick peek",
+     1
+    ],
+    [
+     "Say: under the red cup",
+     0
+    ],
+    [
+     "Say: over there",
+     1
+    ],
+    [
+     "Same home every day",
+     0
+    ],
+    [
+     "Drop it anywhere",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flaglooksay",
+  "caption": "Flagship lab: cup hiding games, a peek or a good look, words that say the place, putting things back and giving each thing a home.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Your head can keep a picture of where a thing is. Look, say, check helps it stay.",
+   "Look. Watch the toy go under the cup. Take a good long look. A quick peek is easy to forget.",
+   "Say. Say the place out loud: under the red cup. Over there is no help. Which cup? Where?",
+   "Check. Lift the cup and see. Wrong? That is OK. Look again and say it again. Shoes in the same home each day are easy to find."
+  ],
+  "adult": [
+   "Ages 3 to 4. Holding a place in mind for a few seconds uses working memory, and remembering where things are is called visual-spatial memory. Development Matters (2021) lists these as part of the Characteristics of Effective Learning: playing and exploring, and creating and thinking critically. The Harvard Center on the Developing Child (2014) suggests hiding games and matching games for ages 3 to 5 to practise it. Key words: look, say, check, where, under, next to, by, remember.",
+   "Young children can hold only a few things in mind at once, and a picture fades fast if nothing keeps it (Gathercole and Alloway, 2008). Saying the place out loud with a position word and a landmark, such as under the red cup, gives memory a second way in. Saying it again while waiting keeps it fresh. Looking again to check, without fuss, shows that a slip is a clue rather than a failure.",
+   "Common mistakes: glancing away while the thing is hidden, then guessing; vague words such as over there or under a cup when there are four cups; mixing up two hidden things; giving up after one wrong lift instead of looking again; and leaving things in a new place every day, so there is always a new place to remember. Praise the looking and the saying, not only the finding.",
+   "In the lab your child plays hiding games. They try a quick peek, then a good long look, and see which works. They pick the words that say where a toy is, keep two toys apart while a count runs, drag things back to where they were in a room (with a Look again button to check), and give shoes, a coat and a book their own homes, then find them the next day."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Mum hides the teddy. What helps you remember where?",
+   "choices": [
+    "A good long look",
+    "A quick peek",
+    "Looking at the window"
+   ],
+   "answer": 0,
+   "hint": "Which one gives your head time to keep the picture?",
+   "explain": "A good long look lets your head keep the picture. A quick peek is easy to forget."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "There are {n} cups. The teddy is under 1 cup. How many cups are empty?",
+   "answer": "n-1",
+   "hint": "Count all the cups, then take away the one with the teddy.",
+   "explain": "{n} cups and 1 has the teddy, so {=n-1} cups are empty. That is why you say which cup.",
+   "params": {
+    "n": [
+     2,
+     5
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "The key is under the blue cup. What do you say?",
+   "choices": [
+    "Under the blue cup",
+    "Over there",
+    "Under a cup"
+   ],
+   "answer": 0,
+   "hint": "Say a place word and which cup.",
+   "explain": "Under the blue cup says the place and which cup, so you can find it again."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "Sam hides {n} toys. Each toy goes under its own cup. How many places does he need to remember?",
+   "answer": "n",
+   "hint": "One toy, one place. Count the toys.",
+   "explain": "{n} toys under {n} cups is {n} places to remember. Saying each one out loud helps.",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "You lift a cup and it is empty. What now?",
+   "choices": [
+    "Look again and check",
+    "Say the toy is gone",
+    "Stop the game"
+   ],
+   "answer": 0,
+   "hint": "A wrong lift is a clue. What can you do next?",
+   "explain": "Look again and think where you saw it. Then check another cup."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "What are the three things to do?",
+    "choices": [
+     "Look, say, check",
+     "Peek, guess, cry",
+     "Run, hide, shout"
+    ],
+    "answer": 0,
+    "hint": "First you watch, then you talk, then you see.",
+    "explain": "Look where it goes, say the place, then check by looking again."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Which words say the place best?",
+    "choices": [
+     "By the door",
+     "Over there",
+     "Somewhere"
+    ],
+    "answer": 0,
+    "hint": "Which words name a thing you can see?",
+    "explain": "By the door has a place word and a thing you can see, so you can find it."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Where are shoes easy to find each day?",
+    "choices": [
+     "In the same home by the door",
+     "Wherever they were dropped",
+     "In a new place each day"
+    ],
+    "answer": 0,
+    "hint": "Which place stays the same every single day?",
+    "explain": "Shoes that always go home by the door are always there, so there is nothing new to remember."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "Gran puts {n} cups on the table. She hides a cookie under 1 cup. How many cups have no cookie?",
+    "answer": "n-1",
+    "hint": "All the cups, take away the one with the cookie.",
+    "explain": "{n} cups, 1 has the cookie, so {=n-1} have no cookie.",
+    "params": {
+     "n": [
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "You must wait before you can look. What helps you keep the place?",
+    "choices": [
+     "Say the place again",
+     "Think about lunch",
+     "Shut your eyes and nap"
+    ],
+    "answer": 0,
+    "hint": "What can you keep saying in your head?",
+    "explain": "Saying the place again while you wait keeps it fresh in your head."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "The ball is under red and the duck is under green. You want the duck. Which cup?",
+    "choices": [
+     "Green",
+     "Red",
+     "Any cup"
+    ],
+    "answer": 0,
+    "hint": "Say both: ball under red, duck under green.",
+    "explain": "The duck is under the green cup. Saying both places keeps the two toys apart."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "Mia has {n} things to put away. She has put 1 in its home. How many are left?",
+    "answer": "n-1",
+    "hint": "Start with all the things, then take away the one in its home.",
+    "explain": "{n} things and 1 is home, so {=n-1} are left to put in their homes.",
+    "params": {
+     "n": [
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "Leo looks away while Dad hides the car. What is his slip?",
+    "choices": [
+     "He did not watch where it went",
+     "Nothing, that is fine",
+     "He said the place"
+    ],
+    "answer": 0,
+    "hint": "What is the first part of look, say, check?",
+    "explain": "Look comes first. If you look away, there is no picture of the place to remember."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Your teddy was on the bed. Now it is not. What can you do?",
+    "choices": [
+     "Look again and check near the bed",
+     "Say it is lost for good",
+     "Never look for it"
+    ],
+    "answer": 0,
+    "hint": "Think where you saw it last, then look there.",
+    "explain": "Start where you last saw it, look again and check. A slip is a clue."
+   }
+  ]
+ }
+}
