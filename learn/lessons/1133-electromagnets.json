@@ -1,0 +1,263 @@
+{
+ "topicId": "mt_2qkn8Lhc8e",
+ "title": "Electromagnets",
+ "audience": "family",
+ "keyIdea": "An electric current makes a magnetic field. Round a straight wire the field goes in circles, so compasses near the wire point round it, and they all turn round if the current is reversed. Wind the wire into a coil and the circles add up to a field like a bar magnet's, with a north end where field lines come out and a south end where they go in. More current, more turns and a soft iron core each make the electromagnet stronger. Because the field comes from the current, switching off the current switches off the magnet, and soft iron lets go at once.",
+ "familyTip": "Wrap about 20 turns of insulated wire round a large iron nail, connect the ends to a battery for a few seconds only (the wire gets warm) and count how many paperclips it lifts. Then try 40 turns. Change one thing at a time, and disconnect the battery between tests.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it make an electromagnet stronger? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Stronger",
+    "Not stronger"
+   ],
+   "items": [
+    [
+     "More turns on the coil",
+     0
+    ],
+    [
+     "Turning the battery round",
+     1
+    ],
+    [
+     "A bigger current",
+     0
+    ],
+    [
+     "A copper core",
+     1
+    ],
+    [
+     "A soft iron core",
+     0
+    ],
+    [
+     "A thicker plastic coating on the wire",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagemag",
+  "caption": "Flagship lab: map the field round a wire, find a coil's north end, run fair tests on paperclips, switch off iron and steel, and sort uses.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "A current in a wire makes a magnetic field. Put small compasses round a wire. When the current is on, they point round the wire in a circle. Reverse the current and they all turn round.",
+   "Wind the wire into a coil. Now the field looks like a bar magnet's field. Field lines come out of the north end and go back in at the south end.",
+   "You can make the magnet stronger in three ways: more current, more turns, or a soft iron core inside the coil. A copper core does nothing, because copper is not magnetic.",
+   "Switch off the current and the field stops. A soft iron core lets go of its paperclips at once. That is why a scrapyard crane can pick up a car and then drop it."
+  ],
+  "adult": [
+   "Ages 12 to 13. The National Curriculum in England (KS3 Physics) lists the magnetic effect of a current and electromagnets. NGSS MS-PS2-3 asks students to use data to find what sets the strength of magnetic forces. Key words: magnetic field, field lines, current, coil, turns, core, soft iron, permanent magnet, fair test.",
+   "The field round a straight wire is a set of circles round the wire. It gets weaker further away. In a coil, the fields of the turns add up. The result looks like a bar magnet's field and is strong inside the coil. More current and more turns make it stronger. A soft iron core is magnetised by the coil and adds a much bigger field of its own. Soft iron loses this when the current stops, but steel keeps some, so cores are made of soft iron.",
+   "Common mistakes: thinking the compasses point at the wire, not round it; thinking any metal core helps, when copper and aluminium do not; changing the turns and the core in one test and blaming one of them; thinking the magnet stops because the iron runs out; and thinking that reversing the current changes the strength. It only swaps the poles.",
+   "In the lab your child moves a compass round a wire and reverses the current. They wind a coil and find its north end from the field arrows. They run tests in a simple model where more turns, more current and a better core lift more clips, and the lab flags any test that changes two things at once. Then they switch off iron and steel cores and sort real uses. Be careful with real batteries: a coil is close to a short circuit, so connect it only for a few seconds."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Electromagnets: which change makes one stronger?",
+   "choices": [
+    "More turns on the coil",
+    "A copper core",
+    "Turning the battery round"
+   ],
+   "answer": 0,
+   "hint": "Think of the three things that set the strength: current, turns and core.",
+   "explain": "More turns add more field. Copper is not magnetic, and turning the battery round only swaps north and south."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "An electromagnet with {n} turns lifts {k} paperclips. In a simple model the clips lifted are in proportion to the number of turns. How many clips with {=2*n} turns, if nothing else changes?",
+   "answer": "2*k",
+   "params": {
+    "n": [
+     10,
+     30
+    ],
+    "k": [
+     2,
+     6
+    ]
+   },
+   "hint": "The turns double. In proportion means the clips double too.",
+   "explain": "{=2*n} turns is twice {n} turns, so the model gives twice as many clips: 2 × {k} = {=2*k}."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Compasses sit round a straight wire. The current is switched on. Which way do they point?",
+   "choices": [
+    "In circles round the wire",
+    "Straight at the wire",
+    "All north, as before"
+   ],
+   "answer": 0,
+   "hint": "The field round a wire is a set of circles.",
+   "explain": "The field lines are circles round the wire, so each compass lines up along a circle."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "A coil lifts {k} clips with a current of 1 A. Assume the clips are in proportion to the current. How many clips at 3 A, with nothing else changed?",
+   "answer": "3*k",
+   "params": {
+    "k": [
+     2,
+     5
+    ]
+   },
+   "hint": "3 A is three times 1 A, so scale the clips the same way.",
+   "explain": "Three times the current gives three times the clips in this model: 3 × {k} = {=3*k}."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Why are crane electromagnets given soft iron cores, not steel?",
+   "choices": [
+    "Soft iron lets go when the current stops",
+    "Steel is not magnetic",
+    "Soft iron is lighter than steel"
+   ],
+   "answer": 0,
+   "hint": "What must the crane do with the car at the end?",
+   "explain": "Soft iron loses its magnetism when the current stops, so the crane can drop the load. Steel stays magnetised."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Why can an electromagnet be switched off?",
+    "choices": [
+     "Its field comes from the current",
+     "The iron core runs out of magnetism",
+     "The wire cools down"
+    ],
+    "answer": 0,
+    "hint": "Where does the field come from in the first place?",
+    "explain": "The current makes the field. Stop the current and the field stops."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "The current in a coil is reversed. What happens?",
+    "choices": [
+     "The north and south ends swap",
+     "It gets stronger",
+     "It stops working"
+    ],
+    "answer": 0,
+    "hint": "Reversing a current reverses its field.",
+    "explain": "The field reverses, so the ends swap. The strength is the same."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Ali adds more turns and an iron core at the same time and lifts more clips. What was the slip?",
+    "choices": [
+     "Two things changed, so Ali cannot tell which helped",
+     "Nothing, the test was fair",
+     "Ali should have used a copper core"
+    ],
+    "answer": 0,
+    "hint": "How many things should change in a fair test?",
+    "explain": "A fair test changes one thing and keeps the rest the same. With two changes, the cause is unclear."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "At which end of a coil do field lines come out?",
+    "choices": [
+     "The north end",
+     "The south end",
+     "Neither: they stay inside"
+    ],
+    "answer": 0,
+    "hint": "Think of a bar magnet's field.",
+    "explain": "Field lines come out of the north end and go back in at the south end, like a bar magnet."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "With an air core a coil lifts 2 clips. A soft iron core makes it {f} times as strong. How many clips does it lift now?",
+    "answer": "2*f",
+    "params": {
+     "f": [
+      4,
+      10
+     ]
+    },
+    "hint": "Multiply the clips by how many times stronger it is.",
+    "explain": "{f} times as strong gives {f} × 2 = {=2*f} clips in this model."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which core makes an electromagnet much stronger?",
+    "choices": [
+     "Soft iron",
+     "Copper",
+     "Plastic"
+    ],
+    "answer": 0,
+    "hint": "The core must be a magnetic material.",
+    "explain": "Soft iron is magnetic, so it is magnetised by the coil and adds to the field. Copper and plastic are not magnetic."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which of these needs an electromagnet?",
+    "choices": [
+     "A door bell",
+     "A fridge magnet",
+     "A compass needle"
+    ],
+    "answer": 0,
+    "hint": "Which one has to switch on and off?",
+    "explain": "A door bell pulls and lets go of its hammer again and again, so its magnet must switch on and off."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A coil with {=2*n} turns lifts 6 clips. In a simple model clips are in proportion to turns. How many clips with {n} turns?",
+    "answer": "3",
+    "params": {
+     "n": [
+      10,
+      20
+     ]
+    },
+    "hint": "Half the turns gives half the clips.",
+    "explain": "{n} turns is half of {=2*n} turns, so half of 6 clips: 3 clips."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A compass is moved further from a wire with a current. What happens?",
+    "choices": [
+     "It points more nearly north: the field is weaker",
+     "It spins faster",
+     "It points straight at the wire"
+    ],
+    "answer": 0,
+    "hint": "Is the field stronger close to the wire or far away?",
+    "explain": "The field round a wire gets weaker further away, so Earth's field wins and the compass points nearly north."
+   }
+  ]
+ }
+}
