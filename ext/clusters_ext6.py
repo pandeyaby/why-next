@@ -97,4 +97,7 @@ CLUSTERS6 = {
 ("Emotional Literacy", 6): "Your child is learning to notice the feeling of being left out and to choose a helpful next step, such as asking to join in or telling a grown-up.",
 ("Emotional Literacy", 10): "Your child is learning what to do when a news story or video leaves them worried: stop watching, talk to a trusted adult, and not scroll for more.",
 ("Self-Awareness", 6): "Your child is learning to name things they are already good at and things they are still practising, without putting themselves down.",
+
+# ---------------- wave 26: young English handwriting (27 Nov 2026)
+("Handwriting & Transcription", 3): "Your child is learning the pre-writing shapes that letters are made from: a line down from the top, a line across from the left, a circle that starts at the top and goes round to the left, and a cross made of a line down and a line across that meet in the middle.",
 }

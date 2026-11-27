@@ -36,6 +36,7 @@ SUBJECT_BY_DOMAIN = {
     "Responsible Decision-Making": "Personal & Social Development",
     "Reading Comprehension": "English",
     "Writing Composition": "English",
+    "Handwriting & Transcription": "English",  # wave 26 (pre-writing shapes, ages 3-4)
     "Speaking & Listening": "English",
     "Vocabulary": "English",
     "English Thinking": "English",
