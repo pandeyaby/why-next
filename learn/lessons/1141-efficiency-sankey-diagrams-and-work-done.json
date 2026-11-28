@@ -1,0 +1,269 @@
+{
+ "topicId": "mt_JyfLtl_nhw",
+ "title": "Efficiency, Sankey diagrams and work done",
+ "audience": "learner",
+ "keyIdea": "Energy is never used up; a device transfers it. The part that does the job is useful and the rest is wasted, mostly spreading out as thermal energy in the surroundings. Efficiency = useful output energy ÷ total input energy, as a decimal or a percentage: a bulb that turns 100 J into 10 J of light is 0.1, or 10%, efficient, and nothing can be more than 100% efficient. A Sankey diagram draws each transfer as an arrow whose width shows the energy, so the output arrows add up to the input arrow. Work done is energy transferred by a force: work done (J) = force (N) × distance moved (m).",
+ "familyTip": "Feel how warm a phone charger, a laptop and a lamp get after half an hour (do not touch hot bulbs). That warmth is wasted energy. Ask which device wastes the most and where the energy goes next. Then push a full laundry basket 2 m across the floor and estimate the work done if the push was about 50 N.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Useful or wasted? Drag each card into a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Useful",
+    "Wasted"
+   ],
+   "items": [
+    [
+     "Light from a lamp",
+     0
+    ],
+    [
+     "Heat from a lamp",
+     1
+    ],
+    [
+     "Kinetic energy of a fan's blades",
+     0
+    ],
+    [
+     "Sound from a fan's motor",
+     1
+    ],
+    [
+     "Thermal energy of the water in a kettle",
+     0
+    ],
+    [
+     "Thermal energy of the kettle's case",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsankey",
+  "caption": "Flagship lab: build Sankey diagrams for a bulb and a motor, mark efficiencies, push a box to do 600 J of work, and rank motors.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Energy is never used up. A device takes energy in and passes it on to other stores. The part that does the job you want is useful. The rest is wasted. Most wasted energy heats the device and the air around it, then spreads out so it is hard to use again.",
+   "A Sankey diagram shows this with arrows. The input arrow comes in from the left. The useful arrow goes straight on, and the wasted arrows bend down. The width of each arrow shows how many joules it carries, so the arrows out are as wide as the arrow in. A filament bulb that takes in 100 J and gives out 10 J of light wastes 90 J.",
+   "Efficiency tells you what part of the input is useful. Efficiency = useful output energy ÷ total input energy. A motor that takes in 200 J and gives 140 J of movement has an efficiency of 140 ÷ 200 = 0.7. Times it by 100 to get 70%. Nothing can beat 100%, because energy cannot be made.",
+   "Work done is energy moved by a force. Work done = force × distance moved, and it is measured in joules. Push a box with 200 N for 3 m and you do 600 J of work. If the box does not move, you do no work on it, however hard you push."
+  ],
+  "adult": [
+   "Ages 12 to 13. In England, Key Stage 3 science covers energy changes and transfers, and work done = force × distance. GCSE then gives the formal rule: efficiency = useful output energy ÷ total input energy, as a decimal or a percentage (AQA 8463, 4.1.2.2). Key words: store, transfer, useful, wasted, dissipated, efficiency, Sankey diagram, work done, joule, newton.",
+   "A Sankey diagram is drawn to scale. The width of each arrow shows the energy it carries. The useful output goes straight on and the wasted outputs bend away. The widths out add up to the width in, because energy is conserved. Efficiency compares the useful output with the total input, so it has no unit and can never pass 1, or 100%. Work done is the energy moved when a force moves something in the direction of the force: 1 J = 1 N × 1 m.",
+   "Common mistakes: saying wasted energy is used up or destroyed; drawing outputs that add up to more than the input; dividing the input by the output, which gives more than 100%; giving the wasted share or the wasted joules as the efficiency; calling the device with the most useful joules the best; and counting a push that moves nothing, or a bag held still, as work.",
+   "In the lab, learners set the light arrow on a bulb's Sankey diagram and watch the heat arrow take the other 90 J. Then they set a motor's three arrows to 140 J, 40 J and 20 J. They mark how efficient a motor and a kettle are on a scale that shades all of it past 100% as impossible. They drag a box to do 600 J of work with 200 N and then 300 N, and rank three motors."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Efficiency and Sankey diagrams: a lamp takes in 100 J and gives 25 J of light. How much energy is wasted?",
+   "choices": [
+    "75 J",
+    "0 J",
+    "125 J"
+   ],
+   "answer": 0,
+   "hint": "The outputs must add up to the input. What is left after the 25 J of light?",
+   "explain": "100 J − 25 J = 75 J is wasted, mostly by heating the lamp and the air. None of it is used up or destroyed."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "A device takes in 200 J and gives {=10*b} J of useful energy. What is its efficiency, as a percentage?",
+   "answer": "5*b",
+   "params": {
+    "b": [
+     1,
+     19
+    ]
+   },
+   "hint": "Efficiency = useful output ÷ total input. Then multiply by 100.",
+   "explain": "{=10*b} ÷ 200 is the same as {=5*b} ÷ 100, so the efficiency is {=5*b}%."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "You push a box {d} m with a force of {=10*f} N. How much work do you do, in joules?",
+   "answer": "10*f*d",
+   "params": {
+    "f": [
+     2,
+     30
+    ],
+    "d": [
+     1,
+     9
+    ]
+   },
+   "hint": "Work done = force × distance moved.",
+   "explain": "Work done = {=10*f} N × {d} m = {=10*f*d} J."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "A motor's Sankey diagram has 500 J in, 300 J kinetic out and 150 J thermal out. What does the sound arrow carry?",
+   "choices": [
+    "50 J",
+    "950 J",
+    "150 J"
+   ],
+   "answer": 0,
+   "hint": "All the output arrows together are as wide as the input arrow.",
+   "explain": "500 − 300 − 150 = 50 J. Adding them all gives 950 J, which is more energy out than in."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "A kettle takes in {=100*n} J and is 90% efficient. How much energy heats the water, in joules?",
+   "answer": "90*n",
+   "params": {
+    "n": [
+     10,
+     30
+    ]
+   },
+   "hint": "Useful energy = efficiency (as a decimal) times the input.",
+   "explain": "90% of {=100*n} J is 0.9 × {=100*n} = {=90*n} J. The other {=10*n} J is wasted heating the kettle and the air."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "Motor A: 1000 J in, 600 J useful. Motor B: 200 J in, 150 J useful. Which is more efficient?",
+    "choices": [
+     "B, at 75%",
+     "A, at 60%",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Work out useful ÷ input for each, not just the useful joules.",
+    "explain": "A is 600 ÷ 1000 = 60%. B is 150 ÷ 200 = 75%. B gives fewer joules but wastes a smaller fraction."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "A light bulb is said to be 130% efficient. Why can't that be true?",
+    "choices": [
+     "It would give out more energy than it takes in",
+     "Bulbs can only reach 50%",
+     "Efficiency has no upper limit"
+    ],
+    "answer": 0,
+    "hint": "What would 130% mean about the useful output compared with the input?",
+    "explain": "130% means the useful output is bigger than the input. Energy cannot be made, so no device can be more than 100% efficient."
+   },
+   {
+    "type": "numeric",
+    "id": "m3",
+    "prompt": "A lamp takes in 100 J and wastes {=10*w} J by heating. What is its efficiency, as a percentage?",
+    "answer": "100-10*w",
+    "params": {
+     "w": [
+      1,
+      9
+     ]
+    },
+    "hint": "Find the useful energy first: input minus wasted.",
+    "explain": "Useful = 100 − {=10*w} = {=100-10*w} J, so the efficiency is {=100-10*w} ÷ 100 = {=100-10*w}%."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "You hold a 50 N bag still for 20 seconds. How much work do you do on the bag?",
+    "choices": [
+     "0 J",
+     "1000 J",
+     "50 J"
+    ],
+    "answer": 0,
+    "hint": "Work done needs the force to move something. Does the bag move?",
+    "explain": "The bag does not move, so the distance is 0 m and 50 N × 0 m = 0 J. Time does not appear in work done = force × distance."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "A crane lifts a load with a force of {=100*f} N through {h} m. How much work does it do, in joules?",
+    "answer": "100*f*h",
+    "params": {
+     "f": [
+      1,
+      20
+     ],
+     "h": [
+      2,
+      15
+     ]
+    },
+    "hint": "Work done = force × distance moved in the direction of the force.",
+    "explain": "Work done = {=100*f} N × {h} m = {=100*f*h} J."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Where does most of the wasted energy from a car engine end up?",
+    "choices": [
+     "Spread out as thermal energy in the surroundings",
+     "Destroyed when the engine stops",
+     "Stored in the fuel tank"
+    ],
+    "answer": 0,
+    "hint": "Energy is never destroyed. What does a working engine feel like?",
+    "explain": "It heats the engine, the exhaust and the air, then spreads out into the surroundings, where it is very hard to use again."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "In a Sankey diagram, why must the output arrows together be as wide as the input arrow?",
+    "choices": [
+     "Energy is conserved, never made or destroyed",
+     "Wasted energy is always half",
+     "So the diagram fits on the page"
+    ],
+    "answer": 0,
+    "hint": "What does each arrow's width stand for?",
+    "explain": "Width shows energy. Energy is conserved, so the energy out (useful plus wasted) equals the energy in."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "A device is {=10*e}% efficient and takes in 500 J. How much useful energy does it give, in joules?",
+    "answer": "50*e",
+    "params": {
+     "e": [
+      1,
+      9
+     ]
+    },
+    "hint": "Find that percentage of the input.",
+    "explain": "{=10*e}% of 500 J = {=10*e} ÷ 100 × 500 = {=50*e} J. The rest is wasted."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "A motor takes in 400 J and gives 100 J of kinetic energy. Sam says its efficiency is 400%. What did Sam do?",
+    "choices": [
+     "Divided the input by the useful output",
+     "Added the energies together",
+     "Nothing, 400% is right"
+    ],
+    "answer": 0,
+    "hint": "Efficiency is useful divided by input. Which way round did Sam divide?",
+    "explain": "400 ÷ 100 = 4, or 400%, is upside down. The right sum is 100 ÷ 400 = 0.25, so the motor is 25% efficient."
+   }
+  ]
+ }
+}

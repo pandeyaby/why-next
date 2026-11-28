@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every figure was recomputed: bulb 100 J in, 10 J light, 90 J thermal (filament bulbs waste most of their input by heating); motor 140 + 40 + 20 = 200 J and 140 / 200 = 0.7 = 70%; kettle 1800 / 2000 = 0.9 = 90%; 200 N x 3 m = 300 N x 2 m = 600 J; motors A 600/1000 = 60%, B 150/200 = 75%, C 200/500 = 40%; challenge TV 100/400 = 25%, trolley 50 N x 4 m = 200 J, A 300/500 = 60% vs B 80/100 = 80%. Definitions match AQA 8463 4.1.2.2 (efficiency = useful output energy transfer / total input energy transfer) and 4.5.2 (W = F s, 1 J = 1 N m). Work done is described as needing movement in the direction of the force, so holding a bag still does no work on the bag (the body still uses energy, which the feedback says)."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented energy slips: energy 'used up' (bulb prediction option '0 J: the rest is used up'), outputs that exceed the input (motor sliders flag 'Out 220 J ≠ in 200 J'), dividing input by useful (143% prediction, 400% item, 145% button refused as impossible), giving the wasted share as the efficiency (30% and 10% buttons named 'the wasted share'), ranking by biggest useful output (motor A prediction and rank refusal), and force without movement or a held weight counting as work (box prediction, 0 m refusal, challenge bag)."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The lab draws live, to-scale Sankey diagrams whose arrow widths follow slider values, shows a mismatch bracket when outputs do not add up to the input, has an efficiency scale that shades past 100% as impossible, a box pushed along a metre floor with W = F x d updating live, and a ranking of motors by useful fraction. It is specific to energy efficiency and work and differs from the existing energy stores lab (flagenergy) and every other flagship; the lab_distinct shingle gate passed."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "Learners find the ideas by acting: lowering the light arrow makes the thermal arrow grow so the total stays 100 J; overshooting a motor arrow triggers the 'energy cannot be made' bracket; dragging the efficiency marker to 145% is refused in the red zone; pushing 0 m reads 200 N x 0 m = 0 J; ranking A first is refused with each fraction worked out. The story panel confirms each idea after the task."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions, each with a tempting wrong option the lab disproves: '0 J: the rest is used up' (the thermal arrow shows 90 J), 143% for the motor (the scale shades past 100% impossible and shows 140 / 200 = 70%), 200 J for an unmoved box (the readout shows 200 N x 0 m = 0 J), and motor A for 'most efficient' (the ranking shows 60% against B's 75%)."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Seven challenge questions, each wrong option tagged to its own slip with its own message: flip (input divided by output), waste (wasted joules given as efficiency), over/made (more than 100%), add and same (Sankey outputs must share the input), divide/addw (work = force x distance), time/force (no movement, no work, even though your arm tires), size and sameeff (compare fractions, not joules), store (wasted energy spreads into the surroundings)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Learner text reads at about grade 4 against the 6.5 limit and adult text at about grade 8 against 9.5 (learn/readability.py), using the curriculum terms store, transfer, useful, wasted, dissipated, efficiency, Sankey diagram, work done, joule and newton. Adult paragraphs were shortened from grade 12.2 before the gates ran. Lab messages are short and name the numbers, for example '200 N x 4 m = 800 J. That is too much: push it less far.'"
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Each learner paragraph teaches one idea with a worked number (wasted energy, Sankey widths, efficiency, work done); the adult paragraphs give the standards, the rules, the named mistakes and what the lab does. The content gate's filler list and the 12% similarity check against every other lesson pass."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at iPhone 13 (390 px) light and dark and 1200 px desktop for every step before and after Show me. Fixed from screenshots: on the kettle diagram the useful label 'Thermal (water) 1800 J (useful)' overlapped the input label, so labels became 'Water 1800 J ★' with a ★ = useful key. Slider rows are 42 px tall with 13 px knobs and a 44 px hit band, the box hit area is 74 px, motor cards are 74 px tall, and the button twins use the standard 44 px buttons."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has button twins with descriptive aria-labels, wrong choices included ('Make the light arrow 10 joules bigger. It is 50 joules now', 'Set the electric motor efficiency to 145 percent', 'Push the box 0 metres with 200 newtons', 'Put motor A, 1000 joules in and 600 useful, in the next place'). The canvas aria-label updates with every reply, the challenge uses real buttons and a polite live region, and the axe WCAG 2.1 AA run in the browser gate is clean in both themes on desktop and phone. Slider, scale, box and card drags were each tested with a mouse in Playwright."
+  }
+ },
+ "sources": [
+  "DfE (2013) National Curriculum in England: science programmes of study, Key Stage 3, Physics, Energy: energy changes and transfers; work done = force x distance",
+  "AQA GCSE Physics (8463) specification, 4.1.1.2 and 4.1.2.2 (efficiency = useful output energy transfer / total input energy transfer, as a decimal or percentage) and 4.5.2 Work done and energy transfer (W = F s; 1 joule = 1 newton-metre)",
+  "Institute of Physics, Supporting Physics Teaching 11-14: Energy (energy is not used up; dissipation to the surroundings by heating)"
+ ]
+}
