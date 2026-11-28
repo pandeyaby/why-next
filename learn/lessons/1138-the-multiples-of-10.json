@@ -1,0 +1,260 @@
+{
+ "topicId": "mt_zfy1gOEewd",
+ "title": "The multiples of 10",
+ "audience": "family",
+ "keyIdea": "Ten ones can be tied into one bundle called a ten. The multiples of 10 are 10, 20, 30, 40, 50, 60, 70, 80 and 90: they are one to nine tens and 0 ones. In 60 the 6 counts tens and the 0 says there are no loose ones. The 0 keeps the 6 in the tens place, so 6 tens is written 60, not 6. Number words that end in -ty name tens: sixty is 6 tens. Counting in tens adds one ten each time, so only the tens digit goes up.",
+ "familyTip": "Tie dry pasta, straws or lolly sticks into bundles of 10 with a hair band. Grab a few bundles and ask: how many tens, and what number is that? Then say it the other way: show me 70. Listen for sixty and sixteen and ask which one has more tens.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Is it a -ty number or a -teen number? Drag each card into a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Tens and 0 ones (-ty)",
+    "1 ten and some ones (-teen)"
+   ],
+   "items": [
+    [
+     "sixty: 60",
+     0
+    ],
+    [
+     "sixteen: 16",
+     1
+    ],
+    [
+     "forty: 40",
+     0
+    ],
+    [
+     "fourteen: 14",
+     1
+    ],
+    [
+     "ninety: 90",
+     0
+    ],
+    [
+     "nineteen: 19",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagmult10",
+  "caption": "Flagship lab: tie sticks into tens, make 60 on a mat, write 40 and 70, match sixty and sixteen, and jump to 100 in tens.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Count 10 sticks. Put a band round them. Now it is one bundle. We call it a ten. It is still 10 sticks. Count the bundles. 3 bundles is 3 tens. That is 30. 6 bundles is 6 tens. That is 60. There are no loose sticks, so there are 0 ones.",
+   "Look at 60. The 6 is in the tens place. The 0 is in the ones place. The 0 says no loose ones. If you leave off the 0, you write 6. That is only 6 sticks!",
+   "Listen to the words. Sixty ends in -ty. It means 6 tens. Sixteen ends in -teen. It is 1 ten and 6 ones. Sixty is much bigger.",
+   "Count in tens: 10, 20, 30, 40, 50, 60, 70, 80, 90. Each jump adds one bundle. Only the first digit goes up. After 90 comes 100. That is 10 tens."
+  ],
+  "adult": [
+   "Ages 6 to 7. Common Core 1.NBT.B.2 says children should understand that 10 can be thought of as a bundle of ten ones, called a ten, and that 10, 20, 30, 40, 50, 60, 70, 80 and 90 refer to one to nine tens and 0 ones. In England, Year 1 counts in multiples of ten and Year 2 recognises the place value of each digit in a two-digit number. Key words: ten, ones, bundle, multiple of 10, tens digit, ones digit, place value, zero holding the ones place.",
+   "The idea moves a child from counting single objects to counting groups as units. A ten is one thing worth ten, so 6 tens can be counted on six fingers but is worth 60. The zero is not decoration: it holds the ones place so the 6 stays in the tens place. This is the base for counting in tens from any number, adding and subtracting multiples of 10, and for 100 as ten tens.",
+   "Common mistakes: counting the sticks and calling 50 '50 tens'; writing 6 tens as 6 because the zero 'is nothing'; confusing sixty with sixteen, since English -ty and -teen sound alike; counting on by ones (20, 21) when asked to count in tens; and thinking the 0 in 90 means there is nothing at all. Watch also for children who say 'ten-ty' or write 100 as 1000 after 90.",
+   "In the lab children tie 30 loose sticks into three bundles, lay six bundles on a mat to make 60 (a single stick is refused because 60 has no ones), and write 40 and 70 with digit tiles in a Tens box and a Ones box. They then match sixty, sixteen, forty and fourteen to bundle pictures and jump a frog from 0 to 100 in tens."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "The multiples of 10: what number is 6 tens and 0 ones?",
+   "choices": [
+    "60",
+    "6",
+    "16"
+   ],
+   "answer": 0,
+   "hint": "Each ten is a bundle of 10 sticks. Count in tens six times.",
+   "explain": "10, 20, 30, 40, 50, 60. Six tens is 60. 6 would be 6 loose ones, and 16 is 1 ten and 6 ones."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "You have {t} bundles of 10 sticks. How many sticks is that?",
+   "answer": "10*t",
+   "params": {
+    "t": [
+     1,
+     9
+    ]
+   },
+   "hint": "Count in tens, one ten for each bundle: 10, 20, 30 and on.",
+   "explain": "{t} bundles of 10 is {t} tens, and {t} tens is {=10*t}. There are no loose sticks, so the ones digit is 0."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "How many tens are in {=10*t}?",
+   "answer": "t",
+   "params": {
+    "t": [
+     1,
+     9
+    ]
+   },
+   "hint": "Look at the tens digit. The 0 in the ones place means no loose ones.",
+   "explain": "{=10*t} is {t} tens and 0 ones, so there are {t} tens. Each ten is 10 sticks."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "Which number is forty?",
+   "choices": [
+    "40",
+    "14",
+    "4"
+   ],
+   "answer": 0,
+   "hint": "Words that end in -ty mean tens. Forty means 4 tens.",
+   "explain": "Forty is 4 tens and 0 ones: 40. Fourteen is 1 ten and 4 ones: 14. 4 is just 4 ones."
+  },
+  {
+   "type": "numeric",
+   "id": "p5",
+   "prompt": "Count in tens: {=10*t}, {=10*t+10}, ... What comes next?",
+   "answer": "10*t+20",
+   "params": {
+    "t": [
+     1,
+     7
+    ]
+   },
+   "hint": "Each jump adds 1 ten. The tens digit goes up by 1 and the ones digit stays 0.",
+   "explain": "{=10*t+10} is {=t+1} tens. One more ten makes {=t+2} tens, which is {=10*t+20}."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "How many tens are in 50?",
+    "choices": [
+     "5",
+     "50",
+     "0"
+    ],
+    "answer": 0,
+    "hint": "Count the bundles, not the sticks. 50 is 10, 20, 30, 40, 50.",
+    "explain": "50 is 5 tens and 0 ones. 50 is the number of sticks, not the number of bundles."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "Mia has 7 bundles of 10 straws. How many straws is that?",
+    "choices": [
+     "70",
+     "17",
+     "7"
+    ],
+    "answer": 0,
+    "hint": "Each bundle is 1 ten. 7 bundles is 7 tens.",
+    "explain": "7 tens and 0 ones is 70. 17 is 1 ten and 7 ones, and 7 is only 7 straws."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "In 90, what does the 0 tell you?",
+    "choices": [
+     "There are no ones",
+     "There is nothing at all",
+     "There are no tens"
+    ],
+    "answer": 0,
+    "hint": "The 0 is in the ones place. What does the ones place count?",
+    "explain": "The 9 shows 9 tens. The 0 is in the ones place and says there are no loose ones. It keeps the 9 in the tens place."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "Count in tens: 30, 40, 50. What comes next?",
+    "choices": [
+     "60",
+     "51",
+     "70"
+    ],
+    "answer": 0,
+    "hint": "Add one more ten. Only the tens digit goes up.",
+    "explain": "50 is 5 tens. One more ten is 6 tens: 60. 51 is 1 more, and 70 skips a ten."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Write {t} tens and 0 ones as a number.",
+    "answer": "10*t",
+    "params": {
+     "t": [
+      2,
+      9
+     ]
+    },
+    "hint": "Put {t} in the tens place and 0 in the ones place.",
+    "explain": "{t} tens and 0 ones is written {=10*t}. The 0 keeps the {t} in the tens place."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which number is sixty?",
+    "choices": [
+     "60",
+     "16",
+     "6"
+    ],
+    "answer": 0,
+    "hint": "Sixty ends in -ty, so it means tens: 6 tens.",
+    "explain": "Sixty is 6 tens: 60. Sixteen ends in -teen and is 1 ten and 6 ones: 16."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Sam writes 8 tens as 8. What did Sam forget?",
+    "choices": [
+     "The 0 in the ones place",
+     "A 1 at the front",
+     "Nothing, 8 is right"
+    ],
+    "answer": 0,
+    "hint": "Where does the 8 sit if it is on its own?",
+    "explain": "On its own, 8 sits in the ones place and means 8 ones. Writing 80 puts the 8 in the tens place, with 0 ones."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Count back in tens from {=10*t}. What comes next?",
+    "answer": "10*t-10",
+    "params": {
+     "t": [
+      2,
+      9
+     ]
+    },
+    "hint": "Counting back takes away 1 ten. The tens digit goes down by 1.",
+    "explain": "{=10*t} is {t} tens. One ten fewer is {=t-1} tens, which is {=10*t-10}."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Which is more: 3 tens or 9 ones?",
+    "choices": [
+     "3 tens",
+     "9 ones",
+     "They are the same"
+    ],
+    "answer": 0,
+    "hint": "Turn the tens into a number. 3 tens is 30.",
+    "explain": "3 tens is 30 and 9 ones is 9, so 3 tens is more. A bundle is one thing but it is worth 10."
+   }
+  ]
+ }
+}
