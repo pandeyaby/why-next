@@ -1,0 +1,312 @@
+{
+ "topicId": "mt_oDU_8zMZjp",
+ "title": "Mental adding and subtracting: a 3-digit number and ones",
+ "audience": "family",
+ "keyIdea": "To add or take away ones in your head, look for the next ten. If the ones do not pass a ten, only the ones digit changes: 342 + 5 = 347. If they do, split the ones so the first jump lands on the ten: 346 + 7 = 346 + 4 + 3 = 350 + 3 = 353. Taking away jumps back to the ten: 432 − 5 = 432 − 2 − 3 = 427. Passing a hundred changes the hundreds digit too: 397 + 5 = 402.",
+ "familyTip": "Draw a short number line from 340 to 360 on paper and use a coin as the marker. Say a start number and a few ones to add or take away. Ask: will you pass a ten, and how many get you there? Swap roles so your child sets you one, then make a slip on purpose, like 346 + 7 = 343, for them to catch.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does the tens digit change? Drag each card into a box, or tap it and then a box.",
+  "opts": {
+   "bins": [
+    "Only the ones digit changes",
+    "The tens digit changes too"
+   ],
+   "items": [
+    [
+     "523 + 4",
+     0
+    ],
+    [
+     "527 + 6",
+     1
+    ],
+    [
+     "365 − 2",
+     0
+    ],
+    [
+     "810 − 3",
+     1
+    ],
+    [
+     "742 + 7",
+     0
+    ],
+    [
+     "689 + 1",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagbridge3",
+  "caption": "Flagship lab: jump along a number line, bridge through 350, back through 430 and across 400, then sort sums by digits that change.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "Look at 342 + 5. You add 5 ones. The 2 ones grow to 7 ones. So 342 + 5 = 347. Only the last digit changed. The 3 and the 4 stay the same.",
+   "Now try 346 + 7. Jump to the next ten first. 346 needs 4 to get to 350. Split 7 into 4 and 3. Then 350 and 3 more is 353. The tens digit went up by 1.",
+   "Take away works the same way, but you jump back. For 432 − 5, jump back 2 to 430. You still have 3 to take away. 430 − 3 = 427.",
+   "Look out near a hundred. 397 + 3 = 400. Add the 2 left and you get 402. When you pass 400, the hundreds digit changes too. Count the jumps, not the number you start on."
+  ],
+  "adult": [
+   "Ages 7 to 8. The National Curriculum in England (Year 3) asks children to add and subtract numbers mentally, including a three-digit number and ones. Common Core 3.NBT.A.2 asks for fluent addition and subtraction within 1000 using strategies based on place value. Key words: ones, tens, hundreds, digit, multiple of ten, partition, number bond to 10, bridging through ten, number line.",
+   "The method is to bridge through ten. Partition the ones so that the first jump lands on the next multiple of ten, using a number bond to 10: 346 + 7 is 346 + 4 + 3, so 350 + 3 = 353. Taking away runs backwards: 432 − 5 is 432 − 2 − 3, so 430 − 3 = 427. If the ones do not pass a ten, only the ones digit changes. If the jump passes a hundred, as in 397 + 5 = 402, the tens and hundreds digits both change.",
+   "Common mistakes: writing the ones total beside the other digits (346 + 7 = 3413); keeping the tens digit when the ones pass ten (346 + 7 = 343); taking the smaller ones digit from the larger one in subtraction (432 − 5 = 433); keeping the hundreds digit when the count crosses a hundred (397 + 5 = 302); and counting the starting number as the first jump, so 342 + 5 becomes 346.",
+   "In the lab children drag a marker along a zoomed number line. They add 5 to 342 in one jump, then bridge 346 + 7 through 350, 432 − 5 back through 430 and 397 + 5 across 400. A jump that skips the ten, or lands one short, is refused with the reason. Then they sort six sums by which digits change."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "Mental adding: 346 + 7 = ?",
+   "choices": [
+    "353",
+    "343",
+    "3413"
+   ],
+   "answer": 0,
+   "hint": "346 needs 4 to make 350. Split 7 into 4 and 3.",
+   "explain": "346 + 4 = 350, and 350 + 3 = 353. The ones passed a ten, so the tens digit went up from 4 to 5."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "What is {=100*h+10*t+o} + {d}?",
+   "answer": "100*h+10*t+o+d",
+   "params": {
+    "h": [
+     2,
+     8
+    ],
+    "t": [
+     0,
+     8
+    ],
+    "o": [
+     5,
+     9
+    ],
+    "d": [
+     5,
+     9
+    ]
+   },
+   "hint": "Find the next ten after {=100*h+10*t+o}. How many ones get you there?",
+   "explain": "{=100*h+10*t+o} needs {=10-o} to make {=100*h+10*t+10}. Then add the {=o+d-10} left: {=100*h+10*t+o+d}."
+  },
+  {
+   "type": "numeric",
+   "id": "p3",
+   "prompt": "What is {=100*h+10*t+o} − {d}?",
+   "answer": "100*h+10*t+o-d",
+   "params": {
+    "h": [
+     2,
+     8
+    ],
+    "t": [
+     1,
+     9
+    ],
+    "o": [
+     1,
+     4
+    ],
+    "d": [
+     5,
+     9
+    ]
+   },
+   "hint": "Jump back to the ten first: {=100*h+10*t}. Then take away what is left.",
+   "explain": "Jump back {o} to {=100*h+10*t}. Then take away the {=d-o} left: {=100*h+10*t+o-d}."
+  },
+  {
+   "type": "mc",
+   "id": "p4",
+   "prompt": "397 + 5 = ?",
+   "choices": [
+    "402",
+    "302",
+    "3912"
+   ],
+   "answer": 0,
+   "hint": "The next ten after 397 is 400. How many ones get you there?",
+   "explain": "397 + 3 = 400, and 400 + 2 = 402. The jump passed a hundred, so the hundreds digit changed from 3 to 4."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which digit changes in 254 + 3?",
+   "choices": [
+    "Only the ones digit",
+    "The tens digit as well",
+    "The hundreds digit as well"
+   ],
+   "answer": 0,
+   "hint": "Does 254 + 3 reach 260? If not, the tens stay the same.",
+   "explain": "254 + 3 = 257. It does not reach 260, so only the ones digit changes, from 4 to 7."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "432 − 5 = ?",
+    "choices": [
+     "427",
+     "433",
+     "437"
+    ],
+    "answer": 0,
+    "hint": "Jump back 2 to 430 first. Then take away the 3 that are left.",
+    "explain": "432 − 2 = 430, and 430 − 3 = 427. 433 comes from doing 5 − 2, and 437 adds instead of taking away."
+   },
+   {
+    "type": "numeric",
+    "id": "m2",
+    "prompt": "Work it out in your head: {=100*h+10*t+o} + {d}",
+    "answer": "100*h+10*t+o+d",
+    "params": {
+     "h": [
+      1,
+      9
+     ],
+     "t": [
+      0,
+      9
+     ],
+     "o": [
+      1,
+      4
+     ],
+     "d": [
+      1,
+      5
+     ]
+    },
+    "hint": "Will the ones pass a ten? If not, only the ones digit changes.",
+    "explain": "{o} + {d} = {=o+d}, which does not pass a ten, so only the ones digit changes. The answer is {=100*h+10*t+o+d}."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "To work out 268 + 5, what is the best first jump?",
+    "choices": [
+     "2, to make 270",
+     "5, to make 273",
+     "3, to make 271"
+    ],
+    "answer": 0,
+    "hint": "Which number bond to 10 starts with 8?",
+    "explain": "8 + 2 = 10, so 268 + 2 = 270. Then add the 3 left: 273."
+   },
+   {
+    "type": "mc",
+    "id": "m4",
+    "prompt": "500 − 3 = ?",
+    "choices": [
+     "497",
+     "597",
+     "503"
+    ],
+    "answer": 0,
+    "hint": "Going back from 500 passes a hundred. What comes just before 500?",
+    "explain": "500 − 3 = 497. Going below 500 changes the hundreds digit from 5 to 4. 597 keeps the 5, and 503 adds."
+   },
+   {
+    "type": "numeric",
+    "id": "m5",
+    "prompt": "Work it out in your head: {=100*h+90+o} + {d}",
+    "answer": "100*h+90+o+d",
+    "params": {
+     "h": [
+      1,
+      8
+     ],
+     "o": [
+      5,
+      9
+     ],
+     "d": [
+      5,
+      9
+     ]
+    },
+    "hint": "The next ten is also the next hundred: {=100*h+100}.",
+    "explain": "{=100*h+90+o} needs {=10-o} to make {=100*h+100}. Then add the {=o+d-10} left: {=100*h+90+o+d}. The hundreds digit goes up because the jump passes {=100*h+100}."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Ben counts 342, 343, 344, 345, 346 on his fingers and says 342 + 5 = 346. What went wrong?",
+    "choices": [
+     "He counted 342 as a jump",
+     "He should count in tens",
+     "Nothing, 346 is right"
+    ],
+    "answer": 0,
+    "hint": "Where does the first jump from 342 land?",
+    "explain": "The first jump lands on 343, so 5 jumps land on 347. Ben counted the start number, which makes the answer 1 too small."
+   },
+   {
+    "type": "mc",
+    "id": "m7",
+    "prompt": "Which sum changes the hundreds digit?",
+    "choices": [
+     "495 + 8",
+     "258 + 6",
+     "631 − 4"
+    ],
+    "answer": 0,
+    "hint": "Which one passes a hundred, like 400 or 500?",
+    "explain": "495 + 8 = 503 passes 500. 258 + 6 = 264 passes only 260, and 631 − 4 = 627 passes only 630."
+   },
+   {
+    "type": "numeric",
+    "id": "m8",
+    "prompt": "Work it out in your head: {=100*h+o} − {d}",
+    "answer": "100*h+o-d",
+    "params": {
+     "h": [
+      2,
+      9
+     ],
+     "o": [
+      1,
+      4
+     ],
+     "d": [
+      5,
+      9
+     ]
+    },
+    "hint": "Jump back to {=100*h} first, then take away what is left.",
+    "explain": "Jump back {o} to {=100*h}. Then take away the {=d-o} left: {=100*h+o-d}. Going below {=100*h} changes the hundreds digit."
+   },
+   {
+    "type": "mc",
+    "id": "m9",
+    "prompt": "Mia writes 346 + 7 = 3413. What is wrong?",
+    "choices": [
+     "13 ones is 1 ten and 3 ones, so it is 353",
+     "She should write 3313",
+     "Nothing, it is right"
+    ],
+    "answer": 0,
+    "hint": "Can one place hold 13? What do 10 ones make?",
+    "explain": "Each place holds one digit. 6 + 7 = 13 ones, which is 1 ten and 3 ones, so the tens digit goes from 4 to 5: 353."
+   }
+  ]
+ }
+}

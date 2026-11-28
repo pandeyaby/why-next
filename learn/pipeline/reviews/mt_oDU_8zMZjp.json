@@ -1,0 +1,49 @@
+{
+ "scores": {
+  "accuracy": {
+   "score": 9,
+   "evidence": "Every sum was recomputed: 342 + 5 = 347, 346 + 7 = 353 via 350, 432 − 5 = 427 via 430, 397 + 5 = 402 via 400, 500 − 3 = 497, 268 + 5 = 273 via 270, and the six sort cards (257, 264, 503, 627, 704, 397) were checked by script against the 'which digits change' rule in bridge3_art.js. Parameterised items were checked at range corners by the items gate (for example p2 always has o + d of 10 or more so it always bridges, and t stays at 8 or under so it never crosses a hundred). The method matches NC England Y3 and NCETM bridging through ten."
+  },
+  "misconceptions": {
+   "score": 9,
+   "evidence": "Targets the documented Y3 slips: writing the ones total beside the digits (3413, 3912), keeping the tens digit after the ones pass ten (343), 'smaller from bigger' in the ones (432 − 5 = 433), keeping the hundreds digit across a hundred (302, 597), counting the start number as a jump (346 for 342 + 5), adding instead of taking away (437, 503), and splitting the ones without landing on the ten (268 + 3 + 2). Each appears in a prediction, a lab refusal or a challenge option."
+  },
+  "lab_distinct": {
+   "score": 9,
+   "evidence": "The lab is a zoomed three-digit number line with a draggable marker, where the first leg must land on the multiple of ten (350, 430, 400) and the second leg finishes the sum; a digit panel rings the digits that changed, and a final sort is by which digits change. It is about crossing a ten or a hundred with ones and would not work for the 2-digit Adding within 100 lab, the 10 or 100 more lab or the column regrouping lab by relabelling. lab_distinct gate passed against every flag_*.js (under 30% shingle overlap)."
+  },
+  "lab_teaches": {
+   "score": 9,
+   "evidence": "The learner discovers the rule by doing: in step 1 only the ones digit gets ringed; in step 2 jumping straight to 353 is refused ('stop at 350 first'), so the split 7 = 4 + 3 is built by the learner and shown as 'Split 7 = 4 + 3'; step 3 repeats it backwards; step 4 shows both the tens and hundreds rings light up at 400; step 5 asks them to predict which digits change before calculating. The text panel confirms each idea after the jump."
+  },
+  "predictions": {
+   "score": 9,
+   "evidence": "Four predictions, each with a tempting wrong option the lab then disproves: 'The tens digit' for 342 + 5 (the ring shows only the ones changed), 343 and 3413 for 346 + 7, 433 for 432 − 5 (from 5 − 2), and 302 or 3912 for 397 + 5 (the line visibly lands past 400). The reveal line names the right answer and why."
+  },
+  "challenge_feedback": {
+   "score": 9,
+   "evidence": "Six challenge questions, each wrong option tagged to its slip with its own message: tens ('the ones passed a ten, so the tens digit goes up by 1'), join ('10 ones make 1 ten'), flip ('you did 5 − 2 in the ones'), dir ('that adds instead of taking away'), hund ('the jump passes a hundred'), off ('Ben counted the start number'), place ('the 5 is ones, not tens'), split and split2 (268 needs exactly 2 to make 270). In the lab, a jump of the wrong length gets a reason (one short, not a ten, wrong direction, or skipped the bridge)."
+  },
+  "readability": {
+   "score": 9,
+   "evidence": "Kid text is short sentences with concrete numbers (FK estimate well under the family kid limit of 5.0); adult text 5.4 against the 10.0 limit, with curriculum key words named (partition, number bond to 10, bridging through ten, multiple of ten). validate_lessons readability check passes. Lab messages are one or two short sentences, for example 'That is only 4 jumps. Count the jumps, not the marks'."
+  },
+  "no_filler": {
+   "score": 9,
+   "evidence": "Every kid paragraph works one example (342 + 5, 346 + 7, 432 − 5, 397 + 5); the adult paragraphs give standards, the method, the named mistakes and what the lab does, with no throat-clearing. The content gate's filler list and the 12% similarity check against all 1,138 other lessons both pass."
+  },
+  "mobile": {
+   "score": 9,
+   "evidence": "Screenshots at iPhone 13 (390 px) in light and dark and at 1200 px desktop for every step before and after Show me. Fixed from screenshots: number labels on the line were 11 px and are now 12 px (14 px for tens), the empty band under the digit panel was removed by lowering the phone canvas ratio from 1.45 to 1.25, and repeated reply text under a finished banner was dropped. The line's drag band is 110 px tall, jump buttons and challenge buttons use the 56 px young size, sort cards are 56 px tall."
+  },
+  "accessibility": {
+   "score": 9,
+   "evidence": "Every drag has a button twin with a descriptive aria-label, wrong options included ('From 346, jump on 7 to 353', 'From 432, jump back 3 to 429', 'Put 254 + 3 in the box The tens digit too'). The canvas aria-label updates with every reply, the challenge uses real buttons and a polite live region, and the browser gate's axe WCAG 2.1 AA run is clean in both themes on desktop and phone. Drag with mouse was tested in Playwright (346 to 350 to 353 completes the step)."
+  }
+ },
+ "sources": [
+  "DfE (2013) National Curriculum in England: mathematics programmes of study, Year 3, Number: addition and subtraction ('add and subtract numbers mentally, including: a three-digit number and ones; a three-digit number and tens; a three-digit number and hundreds')",
+  "NCETM Primary Mastery Professional Development materials, Spine 1 Number, Addition and subtraction (bridging through ten: partition the number being added so the first step makes the next multiple of ten)",
+  "Common Core State Standards for Mathematics 3.NBT.A.2 (fluently add and subtract within 1000 using strategies and algorithms based on place value)"
+ ]
+}
