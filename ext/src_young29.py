@@ -15,8 +15,8 @@ already overlaps an existing lesson. Each fills a gap, checked against lesson ti
   (2022); Brown (1973) A First Language; Cleave et al. (2015) meta-analysis of recasts, AJSLP.
 - Staying safe in the sun (Personal & Social, Responsible Decision-Making 6-7): 'Weather and what to wear' (5-6)
   picks a sun hat and a T-shirt for a hot day; 'Sunlight warms things up' (5-6) is heat and shade as physics; 'Hot,
-  warm and cold' and 'Rules that keep us safe' (3-4) are about hot things that burn by touch. No lesson teaches sun
-  protection: the sun's UV light, not its heat, causes sunburn, so you can burn on a cloudy, breezy or cool day and
+  warm and cold' and 'Rules that keep us safe' (3-4) are about hot things that burn by touch; 'Protecting eyes from
+  sunlight' (7-8) is about never looking at the Sun and protecting the eyes. No lesson teaches sun protection for skin: the sun's UV light, not its heat, causes sunburn, so you can burn on a cloudy, breezy or cool day and
   in the water; the sun is strongest in the middle of the day, and when your shadow is shorter than you, find shade;
   cover up with a wide-brimmed hat, a T-shirt with sleeves and sunglasses; put sun cream (SPF 30 or more, 4 or 5 star
   UVA) on skin the clothes do not cover, including ears, neck, nose and the backs of hands and feet, and put more on

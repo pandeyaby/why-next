@@ -1,0 +1,250 @@
+{
+ "topicId": "mt_95uUiEEkQ7",
+ "title": "Staying safe in the sun",
+ "audience": "family",
+ "keyIdea": "The sun sends out UV light. You cannot see it or feel it, but it burns skin, so you can get sunburnt on a cloudy, breezy or cool day, and in the pool. UV is strongest in the middle of the day: when your shadow is shorter than you, play in the shade. Cover up with a wide-brimmed hat, a T-shirt with sleeves and sunglasses. Put sun cream (SPF 30 or more, with 4 or 5 stars) on all the skin your clothes do not cover, and put more on every 2 hours and after swimming or drying with a towel.",
+ "familyTip": "On the next sunny day, stand outside together at breakfast and again at lunchtime and compare your shadows. When a shadow is shorter than the person, find shade. Let your child put sun cream on your ears and the backs of your hands, then swap.",
+ "status": "self-checked",
+ "visual": {
+  "type": "sorter",
+  "caption": "Does it keep your skin safe in the sun? Drag each card, or tap it and then tap a box.",
+  "opts": {
+   "bins": [
+    "Keeps skin safe",
+    "Not enough"
+   ],
+   "items": [
+    [
+     "Play in the shade at midday",
+     0
+    ],
+    [
+     "A cloudy day, so no sun cream",
+     1
+    ],
+    [
+     "Wide-brimmed hat",
+     0
+    ],
+    [
+     "A cap that leaves ears bare",
+     1
+    ],
+    [
+     "Sun cream again after a swim",
+     0
+    ],
+    [
+     "Sun cream once in the morning only",
+     1
+    ]
+   ]
+  }
+ },
+ "lab": {
+  "type": "flagsunskin",
+  "caption": "Flagship lab: drag the sun and compare your shadow, test clouds, a breeze and the pool, dress for the sun, put on sun cream and plan a day at the pool.",
+  "opts": {
+   "step": 0
+  }
+ },
+ "explain": {
+  "kid": [
+   "The sun sends out UV light. You can not see it. You can not feel it. But it can burn your skin. Sunburn hurts, and it can make you poorly later on.",
+   "Look at your shadow. Is it shorter than you? Then the sun is high and strong. Play in the shade under a tree.",
+   "Clouds, a cool wind or the pool make you feel cool. But the UV still gets to you. You can burn when you do not feel hot.",
+   "Wear a hat with a wide brim, a T-shirt with sleeves and sunglasses. Put sun cream on all your bare skin: face, ears, neck, hands, legs and feet. Put more on after you swim, and every 2 hours."
+  ],
+  "adult": [
+   "Ages 6 to 7. By the end of primary school, DfE Health Education (2019) expects children to know about safe and unsafe sun exposure and how to reduce the risk of sun damage, including skin cancer. Key words: sun, UV (ultraviolet) light, sunburn, shade, shadow, sun cream, SPF, cover up.",
+   "The advice follows the NHS. Spend time in the shade between 11am and 3pm from March to October in the UK, and cover up with clothes, a wide-brimmed hat and sunglasses. Use sun cream with SPF 30 or more and 4 or 5 star UVA protection, put on enough, and put more on about every 2 hours and straight after swimming or towel drying. The shadow rule from the US EPA is an easy check for children: when your shadow is shorter than you, UV is strong.",
+   "Common mistakes: thinking a cloudy or cool day is safe (WHO notes that thin cloud lets most UV through); feeling cool in a breeze or the pool and staying out; a cap that leaves ears and the neck bare; a vest top or swimsuit with bare shoulders; missing ears, neck, the backs of hands and the tops of feet; and putting sun cream on once in the morning. Be careful to show sun cream as a normal daily habit, like brushing teeth, not a scary rule.",
+   "In the lab your child drags the sun across a summer day and compares the shadow with a line as tall as the child. They try clouds, a breeze and the pool while a heat meter drops and the UV meter stays up, dress the child, tap bare skin for sun cream, and choose when to put more on. Each wrong choice gets its own reply that names the slip."
+  ]
+ },
+ "practice": [
+  {
+   "type": "mc",
+   "id": "p1",
+   "prompt": "It is cloudy and cool at the beach. Can you get sunburnt?",
+   "choices": [
+    "Yes, UV gets through the clouds",
+    "No, it is not hot",
+    "Only if you go in the sea"
+   ],
+   "answer": 0,
+   "hint": "Is it heat or UV light that burns skin?",
+   "explain": "UV burns skin, not heat. Most UV gets through thin cloud, so you can burn on a cool, cloudy day."
+  },
+  {
+   "type": "numeric",
+   "id": "p2",
+   "prompt": "Sun cream goes on at {n} o'clock in the afternoon. You put more on 2 hours later. What time is that?",
+   "answer": "n+2",
+   "params": {
+    "n": [
+     1,
+     4
+    ]
+   },
+   "hint": "Start at {n} o'clock and count on 2 hours.",
+   "explain": "{n} o'clock and 2 more hours is {=n+2} o'clock. Sun cream wears off, so put more on every 2 hours."
+  },
+  {
+   "type": "mc",
+   "id": "p3",
+   "prompt": "Your shadow is shorter than you. What is the best thing to do?",
+   "choices": [
+    "Play in the shade",
+    "Stay out in the sun",
+    "Take your hat off"
+   ],
+   "answer": 0,
+   "hint": "A short shadow means the sun is high in the sky.",
+   "explain": "A short shadow means the sun is high and the UV is strong, so play in the shade."
+  },
+  {
+   "type": "numeric",
+   "id": "p4",
+   "prompt": "You are {n} blocks tall. At lunchtime your shadow is 2 blocks shorter than you. How long is your shadow?",
+   "answer": "n-2",
+   "params": {
+    "n": [
+     5,
+     8
+    ]
+   },
+   "hint": "Take 2 away from your height.",
+   "explain": "{n} take away 2 is {=n-2} blocks. That is shorter than you, so the sun is strong: find shade."
+  },
+  {
+   "type": "mc",
+   "id": "p5",
+   "prompt": "Which hat keeps the sun off your ears and neck?",
+   "choices": [
+    "A hat with a wide brim",
+    "A cap",
+    "A hat with no brim"
+   ],
+   "answer": 0,
+   "hint": "Which hat has a brim all the way round?",
+   "explain": "A wide brim goes all the way round, so it shades your face, ears and neck. A cap only shades the front."
+  }
+ ],
+ "mastery": {
+  "passMark": 4,
+  "draw": 5,
+  "pool": [
+   {
+    "type": "mc",
+    "id": "m1",
+    "prompt": "You swam, then dried off with a towel. What should you do now?",
+    "choices": [
+     "Put more sun cream on",
+     "Nothing, it lasts all day",
+     "Wait until home time"
+    ],
+    "answer": 0,
+    "hint": "What do water and a towel do to sun cream?",
+    "explain": "Water and towels rub sun cream off, so put more on straight away."
+   },
+   {
+    "type": "mc",
+    "id": "m2",
+    "prompt": "You have a T-shirt and shorts on. Where does sun cream go?",
+    "choices": [
+     "On the skin the clothes do not cover",
+     "On top of the T-shirt",
+     "Only on your nose"
+    ],
+    "answer": 0,
+    "hint": "Which skin can the sun reach?",
+    "explain": "Sun cream goes on bare skin: face, ears, neck, arms, hands, legs and feet."
+   },
+   {
+    "type": "mc",
+    "id": "m3",
+    "prompt": "Which places do people often miss with sun cream?",
+    "choices": [
+     "Ears, neck and the tops of feet",
+     "Under the T-shirt",
+     "The palms of your hands"
+    ],
+    "answer": 0,
+    "hint": "Think of the small bits at the edges.",
+    "explain": "Ears, the neck, the backs of hands and the tops of feet are easy to miss, and they burn too."
+   },
+   {
+    "type": "numeric",
+    "id": "m4",
+    "prompt": "{n} children go to the park. {m} of them wear a sun hat. How many still need a hat?",
+    "answer": "n-m",
+    "params": {
+     "n": [
+      5,
+      8
+     ],
+     "m": [
+      1,
+      4
+     ]
+    },
+    "hint": "Take the children with hats away from all the children.",
+    "explain": "{n} take away {m} is {=n-m}. Those {=n-m} children need a hat with a wide brim."
+   },
+   {
+    "type": "mc",
+    "id": "m5",
+    "prompt": "There is a cool breeze. Is the UV weaker?",
+    "choices": [
+     "No, the breeze only makes you feel cool",
+     "Yes, wind blows the UV away",
+     "Yes, so you need no sun cream"
+    ],
+    "answer": 0,
+    "hint": "Does wind change the light from the sun?",
+    "explain": "A breeze cools your skin, but the UV light is just as strong, so you can still burn."
+   },
+   {
+    "type": "mc",
+    "id": "m6",
+    "prompt": "Which top is best for a sunny day out?",
+    "choices": [
+     "A T-shirt with sleeves",
+     "A vest top",
+     "No top"
+    ],
+    "answer": 0,
+    "hint": "Which one covers your shoulders?",
+    "explain": "Sleeves cover your shoulders and the tops of your arms, which burn fast."
+   },
+   {
+    "type": "numeric",
+    "id": "m7",
+    "prompt": "You put sun cream on at {n} o'clock and again 2 hours later. Then again 2 hours after that. What time is the last one?",
+    "answer": "n+4",
+    "params": {
+     "n": [
+      5,
+      8
+     ]
+    },
+    "hint": "Count on 2 hours, then 2 more hours.",
+    "explain": "{n} and 2 hours is {=n+2}, and 2 more hours is {=n+4} o'clock."
+   },
+   {
+    "type": "mc",
+    "id": "m8",
+    "prompt": "When is the sun strongest in the UK in summer?",
+    "choices": [
+     "In the middle of the day, about 11 to 3",
+     "Early in the morning",
+     "In the evening"
+    ],
+    "answer": 0,
+    "hint": "When is your shadow the shortest?",
+    "explain": "The sun is highest around the middle of the day. The NHS says find shade from 11am to 3pm."
+   }
+  ]
+ }
+}
